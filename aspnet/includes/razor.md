@@ -1,0 +1,15 @@
+---
+ms.openlocfilehash: 514b6e4894c6fdf74921eaa8b5323c6109d4d7e0
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57141130"
+---
+<span data-ttu-id="15e08-101">Une version mise à jour de ce didacticiel est disponible [ici](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/start-mvc) à l’aide de la dernière version de [Visual Studio](https://visualstudio.microsoft.com/).</span><span class="sxs-lookup"><span data-stu-id="15e08-101">An updated version of this tutorial is available [here](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/start-mvc) using the latest version of [Visual Studio](https://visualstudio.microsoft.com/).</span></span> <span data-ttu-id="15e08-102">Utilise le nouveau didacticiel [ASP.NET Core MVC](https://docs.microsoft.com/aspnet/core/mvc/), qui fournit **nombreux** améliorations par rapport à ce didacticiel.</span><span class="sxs-lookup"><span data-stu-id="15e08-102">The new tutorial uses [ASP.NET Core MVC](https://docs.microsoft.com/aspnet/core/mvc/), which provides **many** improvements over this tutorial.</span></span>
+
+<span data-ttu-id="15e08-103">Ce didacticiel décrit ASP.NET Core MVC avec des contrôleurs et des vues.</span><span class="sxs-lookup"><span data-stu-id="15e08-103">This tutorial teaches ASP.NET Core MVC with controllers and views.</span></span> <span data-ttu-id="15e08-104">Les pages Razor sont une nouvelle alternative dans ASP.NET Core 2.0. Il s’agit d’un modèle de programmation basé sur les pages qui permet de créer une interface utilisateur web de manière plus facile et plus efficace.</span><span class="sxs-lookup"><span data-stu-id="15e08-104">Razor Pages is a new alternative in ASP.NET Core 2.0, a page-based programming model that makes building web UI easier and more productive.</span></span> <span data-ttu-id="15e08-105">Nous vous recommandons de suivre le didacticiel sur les [pages Razor](https://docs.microsoft.com/aspnet/core/mvc/razor-pages) avant la version MVC.</span><span class="sxs-lookup"><span data-stu-id="15e08-105">We recommend you try the [Razor Pages](https://docs.microsoft.com/aspnet/core/mvc/razor-pages) tutorial before the MVC version.</span></span> <span data-ttu-id="15e08-106">Le didacticiel sur les pages Razor :</span><span class="sxs-lookup"><span data-stu-id="15e08-106">The Razor Pages tutorial:</span></span>
+
+* <span data-ttu-id="15e08-107">est plus facile à suivre ;</span><span class="sxs-lookup"><span data-stu-id="15e08-107">Is easier to follow.</span></span>
+* <span data-ttu-id="15e08-108">couvre davantage de fonctionnalités ;</span><span class="sxs-lookup"><span data-stu-id="15e08-108">Covers more features.</span></span>
+* <span data-ttu-id="15e08-109">représente la meilleure approche pour le développement de nouvelles applications.</span><span class="sxs-lookup"><span data-stu-id="15e08-109">Is the preferred approach for new application development.</span></span>
