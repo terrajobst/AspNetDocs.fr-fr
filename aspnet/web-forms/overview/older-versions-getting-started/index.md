@@ -2,7 +2,7 @@
 uid: web-forms/overview/older-versions-getting-started/index
 title: Versions antérieures - prise en main de Web Forms | Microsoft Docs
 author: rick-anderson
-description: Documentation sur ASP.NET Web Forms 4 et versions antérieures.
+description: Didacticiel sur ASP.NET Web Forms 4 et versions antérieures.
 ms.author: riande
 ms.date: 10/18/2014
 ms.assetid: e03585c2-80bf-4083-99ba-9fcbc883ccd8
@@ -11,7 +11,7 @@ msc.type: chapter
 ---
 <a name="older-versions---web-forms-getting-started"></a>Versions antérieures - prise en main de Web Forms
 ====================
-> Documentation sur ASP.NET Web Forms 4 et versions antérieures.
+> Didacticiel sur ASP.NET Web Forms 4 et versions antérieures.
 
 
 - [ASP.NET 4 - Tailspin Spyworks](tailspin-spyworks/index.md)
