@@ -1,0 +1,18 @@
+[
+    {
+        "DinnerID": 53,
+        "Title": "<span data-ttu-id=\"eae18-101\">Dîner avec la famille</span><span class=\"sxs-lookup\"><span data-stu-id=\"eae18-101\">Dinner with the Family</span></span>",
+        "Latitude": 47.64312,
+        "Longitude": -122.130609,
+        "Description": "Fun dinner",
+        "RSVPCount": 2
+    },
+    {
+        "DinnerID": 54,
+        "Title": "<span data-ttu-id=\"eae18-102\">Un autre dîner</span><span class=\"sxs-lookup\"><span data-stu-id=\"eae18-102\">Another Dinner</span></span>",
+        "Latitude": 47.632546,
+        "Longitude": -122.21201,
+        "Description": "Dinner with Friends",
+        "RSVPCount": 3
+    }
+]
