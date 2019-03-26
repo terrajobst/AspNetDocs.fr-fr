@@ -399,7 +399,7 @@ description: 'Découvrez comment développer des applications web ASP.NET. Obten
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Temps réel</h3>
-                                                    <p>Découvrez comment créer une application de conversation avec ASP.NET SignalR 2 et Visual Studio.</p>
+                                                    <p>Découvrez comment créer une application de conversation avec ASP.NET SignalR 2 et Visual Studio.</p>
                                                 </div>
                                             </div>
                                         </div>
