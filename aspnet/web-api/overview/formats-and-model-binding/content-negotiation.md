@@ -8,12 +8,12 @@ ms.date: 05/20/2012
 ms.assetid: 0dd51b30-bf5a-419f-a1b7-2817ccca3c7d
 msc.legacyurl: /web-api/overview/formats-and-model-binding/content-negotiation
 msc.type: authoredcontent
-ms.openlocfilehash: e936bdfa52f786ec86d3e84eac3cd644225b6f92
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9cfbed49c1022fbf26160e89aed3ab474f5e0fdc
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039246"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425689"
 ---
 <a name="content-negotiation-in-aspnet-web-api"></a>Négociation de contenu dans l’API Web ASP.NET
 ====================
@@ -48,7 +48,7 @@ En réponse, le serveur peut envoyer :
 
 [!code-console[Main](content-negotiation/samples/sample3.cmd)]
 
-Dans cet exemple, le client a demandé JSON, Javascript ou « tout ce que » (\*/\*). Le serveur répond avec une représentation JSON de la `Product` objet. Notez que l’en-tête Content-Type dans la réponse est définie sur &quot;application/json&quot;.
+Dans cet exemple, le client a demandé JSON, Javascript ou « tout ce que » (\*/\*). Le serveur a répondu avec une représentation JSON de la `Product` objet. Notez que l’en-tête Content-Type dans la réponse est définie sur &quot;application/json&quot;.
 
 Un contrôleur peut également retourner un **HttpResponseMessage** objet. Pour spécifier un objet CLR pour le corps de réponse, appelez le **CreateResponse** méthode d’extension :
 
@@ -62,7 +62,7 @@ L’objet qui sérialise la ressource est appelé un *formateur média*. Formate
 
 Tout d’abord, le pipeline Obtient le **IContentNegotiator** service à partir de la **HttpConfiguration** objet. Il obtient également la liste des formateurs de médias à partir de la **HttpConfiguration.Formatters** collection.
 
-Ensuite, le pipeline appelle **IContentNegotiatior.Negotiate**, en passant dans :
+Ensuite, le pipeline appelle **IContentNegotiator.Negotiate**, en passant dans :
 
 - Le type d’objet à sérialiser
 - La collection de formateurs de médias
@@ -73,7 +73,7 @@ Le **Negotiate** méthode retourne deux informations :
 - Le formateur à utiliser
 - Le type de média pour la réponse
 
-Si aucun formateur n’est trouvée, le **Negotiate** retourne de la méthode **null**et du client reçoit HTTP 406 (non Acceptable).
+Si aucun formateur n’est trouvée, le **Negotiate** retourne de la méthode **null**, et le client reçoit l’erreur HTTP 406 (non Acceptable).
 
 Le code suivant montre comment un contrôleur peut appeler directement la négociation de contenu :
 

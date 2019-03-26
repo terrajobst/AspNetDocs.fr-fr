@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: bd356ca3-5bdb-4067-9dac-c9e9923a86e8
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: d84a525221e40b79853be55069367134d17fb5ec
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0f252fd5c0e5962353720e47ba888d2b6b325a1c
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035956"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421906"
 ---
 <a name="part-1-overview-and-file-new-project"></a>Partie 1 : Vue d’ensemble et Fichier->Nouveau projet
 ====================
@@ -60,7 +60,7 @@ Après avoir commandé, ils voient un écran de confirmation simple :
 
 ![](mvc-music-store-part-1/_static/image6.jpg)
 
-En plus de pages faceing de client, nous allons également générer une section de l’administrateur qui affiche une liste d’albums à partir de laquelle les administrateurs peuvent créer, modifier et supprimer des albums :
+En plus de pages des clients, nous allons également générer une section de l’administrateur qui affiche une liste d’albums à partir de laquelle les administrateurs peuvent créer, modifier et supprimer des albums :
 
 ![](mvc-music-store-part-1/_static/image7.jpg)
 

@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: c655c324-2ffa-4c21-8265-a254d79a693d
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a377dde0c4ed25aed549ca1f3b8eeeecece79517
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4558a309248c89483d198f47f731eee2a266695f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040126"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421464"
 ---
 <a name="debugging-stored-procedures-c"></a>Débogage des procédures stockées (C#)
 ====================
@@ -48,7 +48,7 @@ Le [vue d’ensemble de T-SQL et de débogage CLR dans SQL Server 2005](https://
 
 Visual Studio peut déboguer les procédures stockées sur des instances de SQL Server locaux et distants. Une instance de SQL Server locale est est installé sur le même ordinateur que Visual Studio. Si la base de données SQL Server que vous utilisez n’est pas situé sur votre ordinateur de développement, il est considéré comme une instance distante. Pour ces didacticiels nous avons été à l’aide des instances de SQL Server locales. Débogage des procédures stockées sur une instance distante de SQL server nécessite des étapes de configuration supplémentaires que lorsque le débogage des procédures stockées sur une instance locale.
 
-Si vous utilisez une instance de SQL Server locale, vous pouvez commencer à l’étape 1 et parcourez ce didacticiel à la fin. Si vous utilisez une instance distante de SQL Server, toutefois, vous ne serez devez d’abord pour vous assurer que lorsque vous déboguez votre sont enregistrés dans votre ordinateur de développement avec un compte d’utilisateur Windows qui dispose d’une connexion de SQL Server sur l’instance distante. Moveover, cette connexion de base de données et la connexion de base de données utilisée pour se connecter à la base de données à partir de l’application ASP.NET en cours d’exécution doit être membres de la `sysadmin` rôle. Consultez le débogage T-SQL de base de données d’objets dans la section des Instances distantes à la fin de ce didacticiel pour plus d’informations sur la configuration de Visual Studio et SQL Server pour déboguer une instance distante.
+Si vous utilisez une instance de SQL Server locale, vous pouvez commencer à l’étape 1 et parcourez ce didacticiel à la fin. Si vous utilisez une instance distante de SQL Server, toutefois, vous ne serez devez d’abord pour vous assurer que lorsque vous déboguez votre sont enregistrés dans votre ordinateur de développement avec un compte d’utilisateur Windows qui dispose d’une connexion de SQL Server sur l’instance distante. En outre, cette connexion de base de données et la connexion de base de données utilisée pour se connecter à la base de données à partir de l’application ASP.NET en cours d’exécution doivent être membres du `sysadmin` rôle. Consultez le débogage T-SQL de base de données d’objets dans la section des Instances distantes à la fin de ce didacticiel pour plus d’informations sur la configuration de Visual Studio et SQL Server pour déboguer une instance distante.
 
 Enfin, comprendre que la prise en charge pour les objets de base de données de T-SQL de débogage n’est pas en tant que fonctionnalité riche que le débogage de la prise en charge pour les applications .NET. Par exemple, les conditions de point d’arrêt et les filtres ne sont pas pris en charge, uniquement un sous-ensemble des fenêtres de débogage sont disponibles, vous ne pouvez pas utiliser Modifier & Continuer, la fenêtre exécution est rendue inutilisable et ainsi de suite. Consultez [Limitations sur les fonctionnalités et les commandes de débogueur](https://msdn.microsoft.com/library/ms165035(VS.80).aspx) pour plus d’informations.
 

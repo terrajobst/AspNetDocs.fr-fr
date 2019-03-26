@@ -8,12 +8,12 @@ ms.date: 11/13/2006
 ms.assetid: bbd6b7f7-b98a-48b4-93f3-341d6a4f53c0
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 64615f126f87cec7a96f86385ee7a717fdcdd103
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2d867c7ae073fafe1e9674deb7c03bf1cfd24dd7
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057666"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425832"
 ---
 <a name="paging-report-data-in-a-datalist-or-repeater-control-vb"></a>Pagination des données d’un rapport dans un contrôle DataList ou Repeater (VB)
 ====================
@@ -127,7 +127,7 @@ Dans la mesure où le `GetProductsAsPagedDataSource` méthode nécessite deux pa
 
 Les index de page et les valeurs de taille de page doivent être mémorisés entre les postbacks. Ils peuvent être stockées dans l’état d’affichage, rendues persistantes dans la chaîne de requête, stockées dans des variables de session ou conservés à l’aide d’une autre technique. Pour ce didacticiel, nous allons utiliser la chaîne de requête, ce qui a l’avantage de permettre une page particulière de données à être marqué d’un signet.
 
-En particulier, utilisez le pageIndex des champs de chaîne de requête et pageSize pour le `pageIndex` et `pageSize` paramètres, respectivement (voir la Figure 7). Prenez un moment pour définir les valeurs par défaut pour ces paramètres, comme les valeurs de chaîne de requête a gagné t être présent lorsqu’un utilisateur visite tout d’abord cette page. Pour `pageIndex`, la valeur par défaut la valeur est 0 (ce qui affiche la première page de données) et `pageSize` valeur par défaut de s à 4.
+En particulier, utilisez le pageIndex des champs de chaîne de requête et pageSize pour le `pageIndex` et `pageSize` paramètres, respectivement (voir la Figure 7). Prenez un moment pour définir les valeurs par défaut pour ces paramètres, comme les valeurs de chaîne de requête ne sera pas présentes lorsqu’un utilisateur visite tout d’abord cette page. Pour `pageIndex`, la valeur par défaut la valeur est 0 (ce qui affiche la première page de données) et `pageSize` valeur par défaut de s à 4.
 
 
 [![Utiliser la chaîne de requête comme Source pour les paramètres pageIndex et pageSize](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image14.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image13.png)

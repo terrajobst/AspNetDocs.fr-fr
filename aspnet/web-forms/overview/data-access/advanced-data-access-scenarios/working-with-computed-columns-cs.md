@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: 57459065-ed7c-4dfe-ac9c-54c093abc261
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5ef548c627cd40159bb3961f479401657a2ac394
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 097d68bdcde7de713ce2e7c829c0611d4c82d64d
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041936"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424749"
 ---
 <a name="working-with-computed-columns-c"></a>Utilisation de colonnes calculées (C#)
 ====================
@@ -32,7 +32,7 @@ Dans la mesure où une valeur de colonne calculée s est déterminée par une ex
 
 L’un des défis de l’utilisation de colonnes avec un TableAdapter qui utilise des instructions SQL ad hoc calculées est que le TableAdapter s `INSERT` et `UPDATE` requêtes sont automatiquement régénérées dès que l’Assistant Configuration de TableAdapter est terminé. Par conséquent, les colonnes calculées supprimé manuellement à partir de la `INSERT` et `UPDATE` requêtes réapparaissent si l’Assistant est relancée. Bien que les TableAdapters qui utilisent des procédures stockées ne pas être affectées par cette vulnérabilité, elles n’ont pas leurs propres particularités que nous étudierons à l’étape 3.
 
-Dans ce didacticiel, nous allons ajouter une colonne calculée à la `Suppliers` de table dans la base de données Northwind, puis créez un TableAdapter correspondant pour travailler avec cette table et sa colonne calculée. Nous aurons notre TableAdapter et utiliser des procédures stockées au lieu d’instructions SQL ad hoc afin que notre t ne de personnalisations perdues lors de l’Assistant Configuration de TableAdapter est utilisé.
+Dans ce didacticiel, nous allons ajouter une colonne calculée à la `Suppliers` de table dans la base de données Northwind, puis créez un TableAdapter correspondant pour travailler avec cette table et sa colonne calculée. Nous aurons notre TableAdapter et utiliser des procédures stockées au lieu d’instructions SQL ad hoc afin que notre personnalisations ne sont pas perdues lors de l’Assistant Configuration de TableAdapter est utilisé.
 
 Laissez s commencer !
 

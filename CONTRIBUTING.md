@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 75c8f58c6fece6b234a6cf5852d98e0ee583e614
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57797885"
----
 # <a name="contribute-to-the-aspnet-documentation"></a>Contribuer à la documentation ASP.NET
 
 Ce document aborde le processus de contribution aux articles et exemples de code qui sont hébergés sur le [site de la documentation ASP.NET](https://docs.microsoft.com/aspnet/). Les corrections de fautes de frappe et les nouveaux articles sont des contributions bienvenues.
@@ -18,28 +10,28 @@ Les articles sont stockés dans le dépôt en tant que fichiers Markdown. Pour a
 
 Vous devez avoir une connaissance élémentaire de [Git et GitHub.com](https://guides.github.com/activities/hello-world/).
 
-* Ouvrez un [problème](https://github.com/aspnet/Docs/issues/new) décrivant ce que vous voulez faire, par exemple changer un article existant ou en créer un. Nous demandons souvent le plan des nouvelles rubriques suggérées. Attendez l’approbation de l’équipe avant de vous investir davantage.
-* Dupliquez (fork) le dépôt [aspnet/Docs](https://github.com/aspnet/Docs/) et créez une branche pour vos modifications.
+* Ouvrez un [problème](https://github.com/aspnet/AspNetDocs/issues/new) décrivant ce que vous voulez faire, par exemple changer un article existant ou en créer un. Nous demandons souvent le plan des nouvelles rubriques suggérées. Attendez l’approbation de l’équipe avant de vous investir davantage.
+* Branche le [aspnet/AspNetDocs](https://github.com/aspnet/AspNetDocs/) dépôt et créer une branche pour vos modifications.
 * Soumettez une demande de tirage dans la branche master avec vos modifications.
 * Si votre demande de tirage se voit attribuer l’étiquette « cla-required », [signez le contrat CLA (Contribution License Agreement)](https://cla.dotnetfoundation.org/).
 * Répondez aux commentaires sur la demande de tirage.
 
 Pour obtenir un exemple où ce processus a conduit à la publication d’un nouvel article, consultez le [problème &num;67](https://github.com/dotnet/docs/issues/67) et la [demande de tirage &num;798](https://github.com/dotnet/docs/pull/798) dans le dépôt .NET Docs. Le nouvel article est [Documentation de votre code](https://docs.microsoft.com/dotnet/articles/csharp/codedoc).
 
-## <a name="docs-authoring-pack-extension-in-visual-studio-code"></a>Extension Docs Authoring Pack dans Visual Studio Code 
+## <a name="docs-authoring-pack-extension-in-visual-studio-code"></a>Extension Docs Authoring Pack dans Visual Studio Code
 
 Si vous utilisez Visual Studio Code pour contribuer à la documentation ASP.NET, vous pouvez augmenter votre productivité en installant l’extension [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack). L’extension fournit un éventail d’outils qui facilitent la vérification (linting) du code Markdown, la vérification orthographique du code et l’utilisation des modèles d’article.
 
 ## <a name="markdown-syntax"></a>Syntaxe Markdown
 
-Les articles sont écrits en [DFM (DocFX Flavored Markdown)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), qui est un sur-ensemble de [GFM (GitHub Flavored Markdown)](https://guides.github.com/features/mastering-markdown/). Pour obtenir des exemples de syntaxe DFM illustrant les fonctionnalités de l’interface utilisateur couramment utilisées dans la documentation ASP.NET, consultez [Metadata and Markdown Template](https://github.com/dotnet/docs/blob/master/styleguide/template.md) dans le guide de style du dépôt .NET Docs. 
+Les articles sont écrits en [DFM (DocFX Flavored Markdown)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), qui est un sur-ensemble de [GFM (GitHub Flavored Markdown)](https://guides.github.com/features/mastering-markdown/). Pour obtenir des exemples de syntaxe DFM pour les fonctionnalités de l’interface utilisateur couramment utilisés dans la documentation d’ASP.NET, consultez [métadonnées et modèle Markdown](https://github.com/dotnet/docs/blob/master/styleguide/template.md) dans le guide de style de référentiel de documentation de .NET.
 
 ## <a name="folder-structure-conventions"></a>Conventions relatives à la structure des dossiers
 
-Pour chaque fichier Markdown, un dossier pour les images et un dossier pour l’exemple de code peuvent exister. Si l’article est [fundamentals/configuration/index.md](https://github.com/aspnet/Docs/blob/master/aspnetcore/fundamentals/configuration/index.md), les images se trouvent dans [fundamentals/configuration/index/\_static](https://github.com/aspnet/Docs/tree/master/aspnetcore/fundamentals/configuration/index/_static), tandis que les exemples de fichiers de projet d’application se trouvent dans [fundamentals/configuration/index/sample](https://github.com/aspnet/Docs/tree/master/aspnetcore/fundamentals/configuration/index/sample). Une image dans le fichier *fundamentals/configuration/index.md* est affichée par le code Markdown suivant :
+Pour chaque fichier Markdown, un dossier pour les images et un dossier pour l’exemple de code peuvent exister. Si l’article est [signalr/overview/advanced/dependency-injection.md](https://github.com/aspnet/AspNetDocs/blob/master/aspnet/signalr/overview/advanced/dependency-injection.md), les images sont dans [signalr/overview/avancé/injection de dépendances /\_statique](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/signalr/overview/advanced/dependency-injection/_static) et l’exemple de projet d’application fichiers se trouvent dans [signalr/overview/avancé/dépendance-injection/samples](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/signalr/overview/advanced/dependency-injection/samples). Une image dans le *signalr/overview/advanced/dependency-injection.md* fichier est restitué par le code Markdown suivant :
 
-```
-![description of image for alt attribute](configuration/index/_static/imagename.png)
+```md
+![description of image for alt attribute](dependency-injection/_static/image1.png)
 ```
 
 Toutes les images doivent avoir un [texte de remplacement (alt)](https://wikipedia.org/wiki/Alt_attribute). Pour obtenir des conseils sur la spécification du texte de remplacement, consultez les ressources en ligne, telles que [WebAIM: Alternative Text](https://webaim.org/techniques/alttext/) (WebAIM : texte de remplacement).
@@ -50,13 +42,13 @@ Utilisez des minuscules pour les noms de fichiers Markdown et les noms de fichie
 
 Les liens internes doivent utiliser l’`uid` de l’article cible avec un lien xref (le texte du lien est défini sur le titre du contenu lié) :
 
-```
+```md
 <xref:uid_of_the_topic>
 ```
 
 Si le titre de l’article ne convient pas pour le texte du lien (par exemple, un mot ou une expression dans une phrase est le texte du lien), spécifiez le lien xref et le texte du lien comme suit :
 
-```
+```md
 [link text](xref:uid_of_the_topic)
 ```
 
@@ -71,38 +63,38 @@ N’incluez pas d’images avec les articles, sauf :
 
 Ces restrictions réduisent la taille du dépôt.
 
-Éventuellement, assurez-vous que les images et les captures d’écran utilisées dans la documentation sont compressées, ce qui permet de réduire la taille des fichiers et d’optimiser le chargement des pages. Parmi les outils connus, citons TinyPNG (utilisable par le biais du [site web TinyPNG](https://tinypng.com/) ou de l’[API TinyPNG](https://tinypng.com/developers)) ou l’extension Visual Studio [Image Optimizer](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ImageOptimizer). 
+Éventuellement, assurez-vous que les images et les captures d’écran utilisées dans la documentation sont compressées, ce qui permet de réduire la taille des fichiers et d’optimiser le chargement des pages. Parmi les outils connus, citons TinyPNG (utilisable par le biais du [site web TinyPNG](https://tinypng.com/) ou de l’[API TinyPNG](https://tinypng.com/developers)) ou l’extension Visual Studio [Image Optimizer](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ImageOptimizer).
 
 ## <a name="code-snippets"></a>Extraits de code
 
-Les articles contiennent souvent des extraits de code pour illustrer les points abordés. DFM vous permet de copier le code dans le fichier Markdown ou de faire référence à un fichier de code distinct. Nous préférons l’utilisation de fichiers de code distincts si possible afin de limiter les risques d’erreurs dans le code. Les fichiers de code sont stockés dans le dépôt, conformément à la structure de dossiers décrite précédemment pour les exemples de projets. 
+Les articles contiennent souvent des extraits de code pour illustrer les points abordés. DFM vous permet de copier le code dans le fichier Markdown ou de faire référence à un fichier de code distinct. Nous préférons l’utilisation de fichiers de code distincts si possible afin de limiter les risques d’erreurs dans le code. Les fichiers de code sont stockés dans le référentiel à l’aide de la structure de dossiers décrite précédemment pour les exemples de projets.
 
 Les exemples suivants illustrent la [syntaxe d’extraits de code DFM](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#code-snippet) à utiliser dans un fichier *configuration/index.md*.
 
 Pour afficher un fichier de code entier en tant qu’extrait de code :
 
-```
+```md
 [!code-csharp[](configuration/index/sample/Program.cs)]
 ```
 
 Pour afficher une partie d’un fichier en tant qu’extrait de code à l’aide de numéros de ligne :
 
-```
+```md
 [!code-csharp[](configuration/index/sample/Program.cs?range=1-10,20,30,40-50]
 [!code-html[](configuration/index/sample/Views/Home/Index.cshtml?range=1-10,20,30,40-50]
 ```
 
-Pour les extraits de code C#, référencez une [région C#](https://docs.microsoft.com/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-region). Si possible, utilisez des régions plutôt que des numéros de ligne, car les numéros de ligne dans un fichier de code ont tendance à changer au point de ne plus être synchronisés avec les références de numéro de ligne dans un fichier Markdown. Les régions C# peuvent être imbriquées. Si vous référencez la région externe, les directives `#region` et `#endregion` internes ne sont pas affichées dans un extrait de code. 
+Pour les extraits de code C#, référencez une [région C#](https://docs.microsoft.com/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-region). Si possible, utilisez des régions plutôt que des numéros de ligne, car les numéros de ligne dans un fichier de code ont tendance à changer au point de ne plus être synchronisés avec les références de numéro de ligne dans un fichier Markdown. Les régions C# peuvent être imbriquées. Si vous référencez la région externe, les directives `#region` et `#endregion` internes ne sont pas affichées dans un extrait de code.
 
 Pour afficher une région C# nommée « snippet_Example » :
 
-```
+```md
 [!code-csharp[](configuration/index/sample/Program.cs?name=snippet_Example)]
 ```
 
 Pour mettre en surbrillance les lignes sélectionnées dans un extrait de code affiché (généralement sous la forme d’un arrière-plan jaune) :
 
-```
+```md
 [!code-csharp[](configuration/index/sample/Program.cs?name=snippet_Example&highlight=1-3,10,20-25)]
 [!code-csharp[](configuration/index/sample/Program.cs?range=10-20&highlight=1-3]
 [!code-html[](configuration/index/sample/Views/Home/Index.cshtml?range=10-20&highlight=1-3]
@@ -116,13 +108,13 @@ Testez vos modifications avec l’[outil en ligne de commande DocFX](https://dot
 DocFX nécessite :
 
 * .NET Framework sur Windows.
-* Mono pour Linux ou macOS. 
+* Mono pour Linux ou macOS.
 
 ### <a name="windows-instructions"></a>Instructions pour Windows
 
 * Téléchargez et décompressez *docfx.zip* à partir des [versions DocFX](https://github.com/dotnet/docfx/releases).
 * Ajoutez DocFX à votre chemin (PATH).
-* Dans un shell de commande, accédez au dossier qui contient le fichier *docfx.json* (*aspnet* pour du contenu ASP.NET ou *aspnetcore* pour du contenu ASP.NET Core) et exécutez la commande suivante :
+* Dans un interpréteur de commandes, accédez à la *aspnet* dossier qui contient le *docfx.json* et exécutez la commande suivante :
 
   ```console
   docfx --serve
@@ -144,7 +136,7 @@ DocFX nécessite :
   alias docfx='mono $HOME/bin/docfx/docfx.exe'
   alias docfx-serve='mono $HOME/bin/docfx/docfx.exe --serve'
   ```
-* Dans un shell de commande, accédez au dossier qui contient le fichier *docfx.json* (*aspnet* pour du contenu ASP.NET ou *aspnetcore* pour du contenu ASP.NET Core) et exécutez la commande suivante pour créer et diffuser les documents via son alias :
+* Dans un interpréteur de commandes, accédez à la *aspnet* dossier qui contient le *docfx.json* et exécutez la commande suivante pour générer et traiter les documents par le biais de son alias :
 
   ```console
   docfx-serve
@@ -153,7 +145,7 @@ DocFX nécessite :
 
 ## <a name="voice-and-tone"></a>Style et ton
 
-Notre objectif est d’écrire une documentation facile à comprendre par le plus grand nombre. À cette fin, nous avons établi des instructions sur le style que nos collaborateurs sont invités à suivre. Pour plus d’informations, consultez [Voice and tone guidelines](https://github.com/dotnet/docs/blob/master/styleguide/voice-tone.md) dans le dépôt .NET.
+Notre objectif est d’écrire une documentation facile à comprendre par le plus grand nombre. À cette fin, nous avons établi des instructions sur le style que nos collaborateurs sont invités à suivre. Pour plus d’informations, consultez [instructions voix et au ton](https://github.com/dotnet/docs/blob/master/styleguide/voice-tone.md) dans le référentiel .NET.
 
 ## <a name="microsoft-writing-style-guide"></a>Guide de style d’écriture Microsoft
 
@@ -161,4 +153,4 @@ Le [Guide de style d’écriture Microsoft](https://docs.microsoft.com/style-gui
 
 ## <a name="redirects"></a>Redirections
 
-Si vous supprimez un article, changez son nom de fichier ou déplacez-le vers un autre dossier, créez une redirection afin que les personnes qui ont créé un signet pour l’article ne reçoivent pas une erreur *404 Non trouvé*. Ajoutez les redirections au [fichier de redirection dans la branche master](https://github.com/aspnet/Docs/blob/master/.openpublishing.redirection.json).
+Si vous supprimez un article, changez son nom de fichier ou déplacez-le vers un autre dossier, créez une redirection afin que les personnes qui ont créé un signet pour l’article ne reçoivent pas une erreur *404 Non trouvé*. Ajoutez les redirections au [fichier de redirection dans la branche master](https://github.com/aspnet/AspNetDocs/blob/master/.openpublishing.redirection.json).

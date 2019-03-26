@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 829f589f-e201-4f6e-9ae6-08ae84322065
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 955991c148d48020c66cbc63ec6da45e3a9cc282
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 389627e610eebcdabee9b4db524e5915186db099
+ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045306"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58440350"
 ---
 <a name="iteration-4--make-the-application-loosely-coupled-c"></a>Itération #4 : rendre l’application faiblement couplée (c#)
 ====================
@@ -61,7 +61,7 @@ Par exemple, imaginez que vous décidez de modifier la façon dont vous impléme
 
 Lorsqu’une application est faiblement couplée et quant à eux, vous pouvez apporter des modifications à une partie d’une application sans toucher aux autres parties d’une application. Par exemple, vous pouvez basculer des technologies d’accès aux données sans modifier votre logique de validation ou de contrôleur.
 
-Dans cette itération, nous profitons de plusieurs modèles de conception de logiciel qui nous permettent de refactoriser notre application de gestionnaire de contacts dans une application plus faiblement couplée. Lorsque nous avons terminé, le Gestionnaire de Contact a gagné t faire quoi que ce soit il n’a pas à le faire avant. Toutefois, nous serons en mesure de modifier l’application plus facilement à l’avenir.
+Dans cette itération, nous profitons de plusieurs modèles de conception de logiciel qui nous permettent de refactoriser notre application de gestionnaire de contacts dans une application plus faiblement couplée. Lorsque nous avons terminé, le Gestionnaire de contacts a remporté t faire quoi que ce soit qui ne fonctionnaient pas avant. Toutefois, nous serons en mesure de modifier l’application plus facilement à l’avenir.
 
 > [!NOTE] 
 > 
@@ -79,7 +79,7 @@ Implémentation du modèle de référentiel nous oblige à effectuer les deux é
 
 Tout d’abord, nous devons créer une interface qui décrit toutes les méthodes d’accès de données que nous devons effectuer. L’interface IContactManagerRepository est contenue dans le Listing 1. Cette interface décrit les cinq méthodes : CreateContact(), DeleteContact(), EditContact(), GetContact, and ListContacts().
 
-**Liste 1 - Models\IContactManagerRepositiory.cs**
+**Liste 1 - Models\IContactManagerRepository.cs**
 
 [!code-csharp[Main](iteration-4-make-the-application-loosely-coupled-cs/samples/sample1.cs)]
 
@@ -165,7 +165,7 @@ Nous souhaitons pouvoir séparer complètement notre couche de service à partir
 
 Toutefois, notre couche de service doit être en mesure de retransmettre des messages d’erreur de validation à la couche de contrôleur. Comment pouvons-nous permettre la couche de service communiquer les messages d’erreur de validation sans couplage le contrôleur et la couche de service ? Nous pouvons tirer parti d’un modèle de conception de logiciel nommé le [modèle Decorator](http://en.wikipedia.org/wiki/Decorator_pattern).
 
-Un contrôleur utilise un ModelStateDictionary nommé ModelState pour représenter les erreurs de validation. Par conséquent, il se peut que vous pouvez être tenté de passer de ModelState à partir de la couche de contrôleur à la couche de service. Toutefois, dans la couche de service à l’aide de ModelState rendrait votre couche de service dépend d’une fonctionnalité de l’infrastructure ASP.NET MVC. Ce serait incorrect, car un jour, vous souhaiterez peut-être utiliser la couche de service avec une application WPF au lieu d’une application ASP.NET MVC. Dans ce cas, t n’expliquerait pas vous souhaitez faire référence à l’infrastructure ASP.NET MVC pour utiliser la classe ModelStateDictionary.
+Un contrôleur utilise un ModelStateDictionary nommé ModelState pour représenter les erreurs de validation. Par conséquent, il se peut que vous pouvez être tenté de passer de ModelState à partir de la couche de contrôleur à la couche de service. Toutefois, dans la couche de service à l’aide de ModelState rendrait votre couche de service dépend d’une fonctionnalité de l’infrastructure ASP.NET MVC. Ce serait incorrect, car un jour, vous souhaiterez peut-être utiliser la couche de service avec une application WPF au lieu d’une application ASP.NET MVC. Dans ce cas, vous ne voudriez référencer l’infrastructure ASP.NET MVC pour utiliser la classe ModelStateDictionary.
 
 Le modèle Decorator vous permet d’encapsuler une classe existante dans une nouvelle classe pour implémenter une interface. Notre projet de gestionnaire de contacts inclut la classe ModelStateWrapper contenue dans la liste 7. La classe ModelStateWrapper implémente l’interface dans la liste 8.
 

@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: 6f81b633-9d01-4e52-ae4a-2ea6bc109475
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 28926276e183ae7cf7ed4087d8c73044741389e5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6733aa228bb96b5d34ae2770d32fe0063d7052f1
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034506"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424099"
 ---
 <a name="creating-a-customized-sorting-user-interface-c"></a>Création d’une interface utilisateur de tri personnalisée (C#)
 ====================
@@ -79,7 +79,7 @@ Lorsque le contrôle GridView est lié à une source de données, il crée un `G
 **Figure 3**: Une Technique consiste à ajouter des lignes de séparateur à la Source de données
 
 
-Utiliser les enregistrements de séparateur à terme entre guillemets, car il n’existe aucun enregistrement de séparation particulière ; au lieu de cela, nous devons d’une certaine manière indicateur servant à un enregistrement particulier dans la source de données comme un séparateur au lieu d’une ligne de données normale. Pour nos exemples, nous re liaison un `ProductsDataTable` instance au GridView, qui se compose de `ProductRows`. Nous pouvons également marquer un enregistrement en tant que ligne de séparateur en définissant son `CategoryID` propriété `-1` (étant donné que ce type t n’est pas parvenu valeur existe normalement).
+Utiliser les enregistrements de séparateur à terme entre guillemets, car il n’existe aucun enregistrement de séparation particulière ; au lieu de cela, nous devons d’une certaine manière indicateur servant à un enregistrement particulier dans la source de données comme un séparateur au lieu d’une ligne de données normale. Pour nos exemples, nous re liaison un `ProductsDataTable` instance au GridView, qui se compose de `ProductRows`. Nous pouvons également marquer un enregistrement en tant que ligne de séparateur en définissant son `CategoryID` propriété `-1` (dans la mesure où une telle valeur n’a pas pu existe normalement).
 
 Pour utiliser cette technique d nous devez effectuer les étapes suivantes :
 

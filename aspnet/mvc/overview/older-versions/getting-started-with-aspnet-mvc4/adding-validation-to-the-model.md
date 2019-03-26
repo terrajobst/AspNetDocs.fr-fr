@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 5d9a2999-fcc4-4c45-a018-271fddf74a3b
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-validation-to-the-model
 msc.type: authoredcontent
-ms.openlocfilehash: 5819d789f31b9452d40ae3aa7f821f101ae126ce
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c0cfd4f900c88f953cf7004a987bc267a1e1b4a2
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049476"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422031"
 ---
 <a name="adding-validation-to-the-model"></a>Ajout de la validation au modèle
 ====================
@@ -55,7 +55,7 @@ Nous allons utiliser des migrations pour mettre à jour le schéma. Générez la
 
 [!code-console[Main](adding-validation-to-the-model/samples/sample3.cmd)]
 
-Une fois cette commande terminée, Visual Studio ouvre le fichier de classe qui définit la nouvelle `DbMIgration` classe dérivée portant le nom spécifié (*AddDataAnnotationsMig*), puis, dans le `Up` (méthode), vous pouvez voir le code qui met à jour les contraintes du schéma. Le `Title` et `Genre` champs ne sont plus nullables (autrement dit, vous devez entrer une valeur) et le `Rating` champ a une longueur maximale de 5.
+Une fois cette commande terminée, Visual Studio ouvre le fichier de classe qui définit la nouvelle `DbMigration` classe dérivée portant le nom spécifié (*AddDataAnnotationsMig*), puis, dans le `Up` (méthode), vous pouvez voir le code qui met à jour les contraintes du schéma. Le `Title` et `Genre` champs ne sont plus nullables (autrement dit, vous devez entrer une valeur) et le `Rating` champ a une longueur maximale de 5.
 
 Les attributs de validation spécifient le comportement que vous souhaitez appliquer sur les propriétés du modèle sur lesquels ils sont appliqués. Le `Required` attribut indique qu’une propriété doit avoir une valeur ; dans cet exemple, un film doit avoir des valeurs pour le `Title`, `ReleaseDate`, `Genre`, et `Price` propriétés afin de pouvoir être valide. L’attribut `Range` contraint une valeur à une plage spécifiée. L’attribut `StringLength` vous permet de définir la longueur maximale d’une propriété de chaîne, et éventuellement sa longueur minimale. Types intrinsèques (tel que `decimal, int, float, DateTime`) sont obligatoires par défaut et n’avez pas besoin du `Required` attribut.
 

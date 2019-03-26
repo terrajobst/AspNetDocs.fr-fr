@@ -8,12 +8,12 @@ ms.date: 02/20/2005
 ms.assetid: 9c0cce4d-efd9-4c14-b0e8-a1a140abb3f4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/master-pages
 msc.type: authoredcontent
-ms.openlocfilehash: f40eb338a1b6b8eebb6578dd7938e96a05b1617f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 644beb37bf893a590be03dd0929c5870af6fbe87
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055116"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425767"
 ---
 <a name="master-pages"></a>Pages maîtres
 ====================
@@ -94,7 +94,7 @@ Dans cet atelier, vous créez une page maître et définissent trois contrôles 
 
 1. Placez le curseur dans chaque cellule de la table et définissez le *valign* propriété *haut*.
 2. À partir de la boîte à outils, insérez un contrôle ContentPlaceHolder dans la cellule supérieure de la table (la cellule d’en-tête.)
-3. Lorsque vous insérez ce contrôle ContentPlaceHolder, vous remarquerez que la hauteur de ligne peut prendre jusqu'à presque toute la page, comme indiqué dans la figure 4. Ne pas se préoccuper de qui a ce stade.
+3. Lorsque vous insérez ce contrôle ContentPlaceHolder, vous remarquerez que la hauteur de ligne peut prendre jusqu'à presque toute la page, comme indiqué dans la figure 4. Ne soyez pas inquiet à qui ce stade.
 
 
 ![L’espace vide est dans la même cellule comme ContentPlaceHolder](master-pages/_static/image1.gif)
@@ -127,7 +127,7 @@ Dans cet atelier, vous créez une page maître et définissent trois contrôles 
 2. Sélectionnez la exercise1.master dans l’instruction Select une boîte de dialogue de page maître comme indiqué dans la figure 7.
 3. Cliquez sur OK pour ajouter la nouvelle page de contenu.
 
-La nouvelle page de contenu s’affiche dans Visual Studio avec un contrôle de contenu pour chaque contrôle ContentPlaceHolder sur la page maître. Par défaut, les contrôles de contenu sont vides, afin que vous puissiez ajouter votre propre contenu. Si vous auriez un jour comme pour qu’ils puissent utiliser le contenu à partir du contrôle ContentPlaceHolder sur la page maître, cliquez simplement sur le symbole de balise active (la petite flèche noire dans le coin supérieur droit du contrôle) et choisissez *maîtres contenu par défaut* à partir de la balise active comme indiqué dans **figure 8**. Lorsque vous procédez ainsi, l’élément de menu change pour *créer un contenu personnalisé*. En cliquant sur à ce stade supprime le contenu à partir de la page maître, ce qui vous permet de définir le contenu personnalisé pour ce contrôle de contenu particulier.
+La nouvelle page de contenu s’affiche dans Visual Studio avec un contrôle de contenu pour chaque contrôle ContentPlaceHolder sur la page maître. Par défaut, les contrôles de contenu sont vides, afin que vous puissiez ajouter votre propre contenu. Si vous souhaitez que d’utiliser le contenu à partir du contrôle ContentPlaceHolder sur la page maître, cliquez simplement sur le symbole de balise active (la petite flèche noire dans le coin supérieur droit du contrôle) et choisissez *maîtres contenu par défaut* à partir de la balise active comme indiqué dans **figure 8**. Lorsque vous procédez ainsi, l’élément de menu change pour *créer un contenu personnalisé*. En cliquant sur à ce stade supprime le contenu à partir de la page maître, ce qui vous permet de définir le contenu personnalisé pour ce contrôle de contenu particulier.
 
 
 ![Définition d’un contrôle de contenu pour le contenu de Pages maître par défaut](master-pages/_static/image4.gif)

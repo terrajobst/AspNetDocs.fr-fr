@@ -8,12 +8,12 @@ ms.date: 03/06/2014
 ms.assetid: 7ef5f73c-ca60-43c1-bdb2-702800347e7e
 msc.legacyurl: /visual-studio/overview/2013/aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes
 msc.type: authoredcontent
-ms.openlocfilehash: 2a22c5b686cb8e02054f421f78a8fc910af7ce28
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bbb38ddde49cdeea4255e0e05bd559ddd9e5f692
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062736"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425988"
 ---
 <a name="aspnet-and-web-tools-20132--for-visual-studio-2013-release-notes"></a>ASP.NET et Web Tools 2013.2 pour Visual Studio 2013 - Notes de publication
 ====================
@@ -112,7 +112,7 @@ Firefox utilise son propre magasin de certificats, par conséquent, il contient 
 
     `<div data-bind="text: foo.bar.baz.etc" />`
 
-    Le IntelilSense affichée est la fonctionnalité IntelliSense complète de l’objet JavaScript.
+    L’IntelliSense affiché est la fonctionnalité IntelliSense complète de l’objet JavaScript.
 
     ![IntelliSense affichant complète JavaScript de l’objet](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image15.png)
 - **Nouveau sélecteur d’URL en HTML, Razor, CSS, moins et les documents Sass**: VS 2013 livrés avec aucun sélecteur d’URL en dehors des pages Web Forms. Le nouveau sélecteur d’URL pour HTML, Razor, CSS, LESS et Sass éditeurs est un sélecteur de frappe gratuit à la boîte de dialogue, fluent qui comprend '..' et fichier de filtres répertorie correctement des liens et des balises img.
@@ -177,12 +177,13 @@ Les captures d’écran suivantes illustrent les modèles de génération de mod
 NuGet 2.8.1 que RTM sera publié en avril 2014. Voici les points saillants dans les notes de publication, mais Veuillez vérifier le [notes de version complet](http://docs.nuget.org/docs/release-notes/nuget-2.8) pour plus d’informations sur ces modifications.
 
 - **Cible Windows Phone 8.1 Applications**: NuGet 2.8.1 prend désormais en charge le ciblage Windows Phone 8.1 Applications à l’aide des monikers du framework cible 'WindowsPhoneApp', 'WPA', 'WindowsPhoneApp81' et 'WPA81'.
+
 - **Résolution des correctifs pour les dépendances**: Lors de la résolution des dépendances de package, NuGet a implémenté par le passé d’une stratégie de sélection de la version majeure et mineure package le plus bas qui satisfait aux dépendances sur le package. Toutefois, contrairement à la version majeure et mineure, la version du correctif a été résolue toujours vers la version la plus élevée. Bien que le comportement a été bien intentionné, il créé un manque de déterminisme pour installer des packages avec des dépendances.
 - **DependencyVersion commutateur**: Si les modifications de NuGet 2.8 le *par défaut* comportement pour la résolution des dépendances, il ajoute également un contrôle plus précis sur le processus de résolution de dépendance via le commutateur - DependencyVersion dans la console du Gestionnaire de package. Le commutateur permet la résolution des dépendances à la version la plus basse possible (comportement par défaut), la version la plus élevée possible, ou le plus élevé version mineure ou patch. Ce commutateur fonctionne uniquement pour le package d’installation dans la commande powershell.
 - **Attribut de DependencyVersion**: Outre le commutateur - DependencyVersion détaillé plus haut, NuGet a permis la possibilité de définir un nouvel attribut dans le fichier nuget.config à définir ce qui est la valeur par défaut, si le commutateur - DependencyVersion n’est pas spécifié dans un appel à package d’installation. Cette valeur sera également être respectée par la boîte de dialogue Gestionnaire de Package NuGet pour les opérations de package d’installation. Pour définir cette valeur, ajoutez l’attribut ci-dessous à votre fichier nuget.config :
 
     `<config> <add key="dependencyversion" value="Highest" /> </config>`
-- **Afficher un aperçu des opérations de NuGet avec - whatif**: Certains packages NuGet peuvent avoir des graphiques de dépendance approfondie, et par conséquent, il peut s’avérer utile lors d’une installation, la désinstallation ou la mise à jour pour voir tout d’abord ce qui se produira. NuGet 2.8 ajoute la commande PowerShell standard-que se passe-t-il si basculer vers les commandes de package d’installation, désinstaller-package et package de mise à jour pour permettre la visualisation de la fermeture complète des packages à laquelle la commande sera appliquée.
+- **Afficher un aperçu des opérations de NuGet avec - WhatIf**: Certains packages NuGet peuvent avoir des graphiques de dépendance approfondie, et par conséquent, il peut s’avérer utile lors d’une installation, la désinstallation ou la mise à jour pour voir tout d’abord ce qui se produira. NuGet 2.8 ajoute la commande PowerShell standard-que se passe-t-il si basculer vers les commandes de package d’installation, désinstaller-package et package de mise à jour pour permettre la visualisation de la fermeture complète des packages à laquelle la commande sera appliquée.
 - **Rétrograder le Package**: Il n’est pas rare pour installer une version préliminaire d’un package afin d’étudier les nouvelles fonctionnalités et décider ensuite de revenir à la dernière version stable. Avant NuGet 2.8, c’était un processus en plusieurs étapes de la version préliminaire package et ses dépendances, installation et la désinstallation puis la version antérieure. Avec NuGet 2.8, toutefois, le package de mise à jour maintenant annule la fermeture de l’ensemble du package (par exemple, arborescence des dépendances du package) à la version précédente.
 - **Dépendances de développement**: Différents types de fonctionnalités peuvent être fournis sous forme de packages NuGet - y compris les outils qui sont utilisés pour optimiser le processus de développement. Ces composants, pendant qu’ils peuvent vous aider à développer un nouveau package, ne doivent pas être considérées publié une dépendance du nouveau package lorsqu’il est plus loin. NuGet 2.8 permet à un package pour s’identifier dans le fichier .nuspec comme un developmentDependency. Lors de l’installation, ces métadonnées également figurera dans le fichier packages.config du projet dans lequel le package a été installé. Lorsque ce fichier packages.config est analysé ultérieurement au cours du pack de nuget.exe pour les dépendances NuGet, il exclut ces dépendances marquées en tant que dépendances de développement.
 - **Fichiers packages.config individuels pour différentes plateformes**: Lors du développement d’applications pour plusieurs plateformes cibles, il est courant d’avoir des fichiers de projet différent pour chacun des environnements de build respectifs. Il est également courant de consommer différents packages NuGet dans différents fichiers projet, comme les packages ont différents niveaux de prise en charge pour les différentes plateformes. NuGet 2.8 fournit la prise en charge améliorée pour ce scénario en créant des fichiers packages.config différents pour les fichiers de projet spécifiques à la plateforme différent.
@@ -205,7 +206,7 @@ NuGet 2.8.1 que RTM sera publié en avril 2014. Voici les points saillants dans 
 - [Améliorations du routage d’attribut](../../../mvc/overview/releases/mvc51-release-notes.md#AttributeRouting)
 - [Prise en charge d’amorçage pour les modèles de l’éditeur](../../../mvc/overview/releases/mvc51-release-notes.md#Bootstrap)
 - [Prise en charge de l’énumération dans les vues](../../../mvc/overview/releases/mvc51-release-notes.md#Enum)
-- [Prise en charge de Unobstrusive de MinLength / MaxLength attributs](../../../mvc/overview/releases/mvc51-release-notes.md#Unobtrusive)
+- [Prise en charge discrète pour MinLength / MaxLength attributs](../../../mvc/overview/releases/mvc51-release-notes.md#Unobtrusive)
 - [Prise en charge le contexte 'THI' dans Ajax discrète](../../../mvc/overview/releases/mvc51-release-notes.md#thisContext)
 - Divers [des correctifs de bogues](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=MVC&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
 

@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: d57dfa2b-d627-45cb-b5b1-abbf3159d770
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/configuring-the-data-access-layer-s-connection-and-command-level-settings-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d44372ef3eaf7634d3bf3a82bd2c1eb1d710f786
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 37c537931008045c5c6438fe2097652438c7e8b1
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032366"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424909"
 ---
 <a name="configuring-the-data-access-layers-connection--and-command-level-settings-vb"></a>Configuration des paramètres de niveau connexion et commande de la couche d’accès aux données (VB)
 ====================
@@ -106,7 +106,7 @@ Avec cette classe partielle créée (et enregistré), ouvrez le `ProductsBLL` cl
 
 Cette classe partielle expose qu’une des propriétés de l’objet de connexion sous-jacent : `ConnectionString`. Si vous souhaitez que l’objet de connexion complète disponible au-delà des limites du TableAdapter, vous pouvez également modifier le `Connection` niveau de protection de la propriété s. Le code généré automatiquement, nous avons examiné à l’étape 1 a montré que le TableAdapter s `Connection` propriété est marquée comme `Friend`, ce qui signifie qu’il est uniquement accessible par les classes dans le même assembly. Cela peut être modifié, toutefois, via le TableAdapter s `ConnectionModifier` propriété.
 
-Ouvrez le `Northwind` jeu de données, cliquez sur le `ProductsTableAdatper` dans le concepteur et accédez à la fenêtre Propriétés. Vous y trouverez le `ConnectionModifier` définie sur sa valeur par défaut, `Assembly`. Pour rendre le `Connection` disponible en dehors de l’assembly de s DataSet typée, modification de la propriété le `ConnectionModifier` propriété `Public`.
+Ouvrez le `Northwind` jeu de données, cliquez sur le `ProductsTableAdapter` dans le concepteur et accédez à la fenêtre Propriétés. Vous y trouverez le `ConnectionModifier` définie sur sa valeur par défaut, `Assembly`. Pour rendre le `Connection` disponible en dehors de l’assembly de s DataSet typée, modification de la propriété le `ConnectionModifier` propriété `Public`.
 
 
 [![Le niveau d’accessibilité de connexion propriété s peut être configuré via la propriété ConnectionModifier](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image7.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image6.png)

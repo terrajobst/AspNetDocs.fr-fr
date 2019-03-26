@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: 08815768-2702-42ae-ae85-0a59934a11d1
 msc.legacyurl: /visual-studio/overview/2013/release-notes
 msc.type: authoredcontent
-ms.openlocfilehash: 43878bc101ef97e8bbb6c150f4125707da7660c9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cd6197a9cbed822ba874a19823521a3711be9201
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027436"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422712"
 ---
 <a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>ASP.NET et Web Tools pour Visual Studio 2013 - Notes de publication
 ====================
@@ -357,7 +357,7 @@ Dans un **auto-hébergé application**, la classe de démarrage est passée comm
 
 ### <a name="cross-domain-support"></a>Prise en charge des domaines
 
-Dans SignalR 1.x, des requêtes entre domaines ont été contrôlé par un indicateur EnableCrossDomain unique. Cet indicateur contrôlé demandes JSONP et CORS. Pour une flexibilité accrue, tous les CORS prennent en charge a été supprimée à partir du composant serveur de SignalR (langue du JavaScript toujours utiliser CORS normalement s’il est détecté que le navigateur prend en charge), et nouvel intergiciel (middleware) OWIN soit devenue disponible pour prendre en charge ces scénarios.
+Dans SignalR 1.x, des requêtes entre domaines ont été contrôlé par un indicateur EnableCrossDomain unique. Cet indicateur contrôlé demandes JSONP et CORS. Pour une flexibilité accrue, tous les CORS prennent en charge a été supprimée à partir du composant serveur de SignalR (clients JavaScript toujours utiliseront CORS normalement s’il est détecté que le navigateur prend en charge), et nouvel intergiciel (middleware) OWIN soit devenue disponible pour prendre en charge ces scénarios.
 
 Dans SignalR 2.0, si JSONP est requis sur le client (pour prendre en charge les demandes inter-domaines dans les navigateurs plus anciens), il doit être activée explicitement en définissant `EnableJSONP` sur le `HubConfiguration` objet `true`, comme illustré ci-dessous. JSONP est désactivée par défaut, car il est moins sécurisé que CORS.
 

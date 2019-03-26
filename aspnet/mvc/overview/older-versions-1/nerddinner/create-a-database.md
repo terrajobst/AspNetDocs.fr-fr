@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: 983f3ffa-08b8-4868-b8c9-aa34593fc683
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/create-a-database
 msc.type: authoredcontent
-ms.openlocfilehash: b6ab0740f251889f0fa0561809cac2bbe79bcb3a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 48ca2984ca8e4ec5b2bc49952a8718aa26138aea
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064906"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423700"
 ---
 <a name="create-a-database"></a>Créer une base de données
 ====================
@@ -94,7 +94,7 @@ Nous allons enregistrer et attribuez-lui le nom « RSVP ».
 
 Maintenant, nous avons deux tables au sein de notre base de données. Notre dernière étape de conception de schéma sera pour configurer une relation « un-à-plusieurs » entre ces deux tables – afin que nous pouvons associer chaque ligne Dinner à zéro ou plusieurs lignes RSVP qui s’y appliquent. Nous le ferons en configurant la RSVP colonne du tableau « DinnerID » pour avoir une relation de clé étrangère à la colonne « DinnerID » dans la table « Dîners ».
 
-Pour ce faire, nous allons ouvrir le tableau RSVP dans le Concepteur de tables en double-cliquant dessus dans l’Explorateur de serveurs. Nous allons ensuite sélectionner la colonne « DinnerID » qu’il contient, avec le bouton droit, puis choisissez la commande de menu contextuel « Relationshps... » :
+Pour ce faire, nous allons ouvrir le tableau RSVP dans le Concepteur de tables en double-cliquant dessus dans l’Explorateur de serveurs. Nous allons ensuite sélectionner la colonne « DinnerID » qu’il contient, avec le bouton droit, puis choisissez le « relations... » commande de menu contextuel :
 
 ![](create-a-database/_static/image12.png)
 

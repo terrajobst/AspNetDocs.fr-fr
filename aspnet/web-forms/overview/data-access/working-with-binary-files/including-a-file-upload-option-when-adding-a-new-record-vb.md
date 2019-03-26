@@ -8,12 +8,12 @@ ms.date: 03/27/2007
 ms.assetid: 5776281d-4637-4d1e-a65b-2621d2cade44
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 22ca0d85fac598b2f845be4bd5c18fdcbd3bc3a8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2c23cbac0a94607a05de4e1ef5b8e5b0874a1a5e
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061766"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424194"
 ---
 <a name="including-a-file-upload-option-when-adding-a-new-record-vb"></a>Inclusion d’une option de chargement de fichier lors de l’ajout d’un nouvel enregistrement (VB)
 ====================
@@ -73,7 +73,7 @@ Dans la mesure où la couche de présentation doit uniquement interagir avec la 
 [!code-vb[Main](including-a-file-upload-option-when-adding-a-new-record-vb/samples/sample2.vb)]
 
 > [!NOTE]
-> Assurez-vous que vous avez enregistré le DataSet typée avant d’ajouter le `InsertWithPicture` méthode à la couche BLL. Dans la mesure où le `CategoriesTableAdapter` code de la classe est généré automatiquement selon le jeu de données typé, si ne pas enregistrer tout d’abord vos modifications dans le DataSet typé la `Adapter` propriété a gagné t connaître le `InsertWithPicture` (méthode).
+> Assurez-vous que vous avez enregistré le DataSet typée avant d’ajouter le `InsertWithPicture` méthode à la couche BLL. Dans la mesure où le `CategoriesTableAdapter` code de la classe est généré automatiquement selon le jeu de données typé, si ne pas enregistrer tout d’abord vos modifications dans le DataSet typé la `Adapter` propriété ne saura pas sur le `InsertWithPicture` (méthode).
 
 
 ## <a name="step-3-listing-the-existing-categories-and-their-binary-data"></a>Étape 3 : Liste des catégories existantes et leurs données binaires
@@ -231,7 +231,7 @@ Let s prenez un moment pour tester l’interface d’insertion et `ItemInserting
 **Figure 9**: Un Message d’avertissement est affiché si un Type de fichier non valide est téléchargé ([cliquez pour afficher l’image en taille réelle](including-a-file-upload-option-when-adding-a-new-record-vb/_static/image16.png))
 
 
-Une fois avoir vérifié que la page nécessite une image à télécharger et gagné / t accepter des fichiers non PDF ou non JPG, ajouter une nouvelle catégorie avec une image JPG valide, si vous laissez le champ de la Brochure vide. Après avoir cliqué sur le bouton d’insertion, la page sera publication (postback) et un nouvel enregistrement sera ajouté à la `Categories` table avec le contenu binaire de l’image chargée s stockées directement dans la base de données. Le contrôle GridView est mis à jour et affiche une ligne pour la catégorie nouvellement ajoutée, mais, comme le montre la Figure 10, la nouvelle image de s catégorie s’affiche pas correctement.
+Après avoir vérifié que la page requiert une image pour être téléchargées et ne sont pas accepter des fichiers non PDF ou non JPG, ajouter une nouvelle catégorie avec une image JPG valide, si vous laissez le champ de la Brochure vide. Après avoir cliqué sur le bouton d’insertion, la page sera publication (postback) et un nouvel enregistrement sera ajouté à la `Categories` table avec le contenu binaire de l’image chargée s stockées directement dans la base de données. Le contrôle GridView est mis à jour et affiche une ligne pour la catégorie nouvellement ajoutée, mais, comme le montre la Figure 10, la nouvelle image de s catégorie s’affiche pas correctement.
 
 
 [![La nouvelle catégorie s Qu'image n’est pas affichée.](including-a-file-upload-option-when-adding-a-new-record-vb/_static/image10.gif)](including-a-file-upload-option-when-adding-a-new-record-vb/_static/image17.png)

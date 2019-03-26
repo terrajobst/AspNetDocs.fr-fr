@@ -8,18 +8,18 @@ ms.date: 06/09/2009
 ms.assetid: 051296f0-9519-4e78-835c-d868da13b0a0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 29ea7f376f61c242ab93cfb71e1a7b435c575482
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0783d59fe70ebed9f1f074d35a9f2e063720d27a
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051326"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424740"
 ---
 <a name="processing-unhandled-exceptions-vb"></a>Traitement des exceptions non gérées (VB)
 ====================
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Affichez ou téléchargez l’exemple de code](https://github.com/aspnet/Docs/tree/master/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-vb/samples) ([procédure de téléchargement](/aspnet/core/tutorials/index#how-to-download-a-sample))
+[Affichez ou téléchargez l’exemple de code](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-vb/samples) ([procédure de téléchargement](/aspnet/core/tutorials/index#how-to-download-a-sample))
 
 > Lorsqu’une erreur d’exécution se produit sur une application web en production, il est important pour avertir un développeur et d’enregistrer l’erreur afin qu’il peut être diagnostiqué à un moment ultérieur dans le temps. Ce didacticiel fournit une présentation de la façon dont ASP.NET traite les erreurs d’exécution et examine une façon d’exécuter un code personnalisé chaque fois qu’un bulles d’exception non gérée à l’exécution d’ASP.NET.
 

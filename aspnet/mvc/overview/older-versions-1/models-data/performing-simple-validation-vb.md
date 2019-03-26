@@ -8,12 +8,12 @@ ms.date: 03/02/2009
 ms.assetid: df6cf4b7-0bb3-4c4e-b17a-bd78a759a6bc
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1d0bd6917bab61b17d1cafcf0cd9eb1983275dc8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 31faf2e89e6acb25854455902c1a6fdffebd293c
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057646"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423180"
 ---
 <a name="performing-simple-validation-vb"></a>Réalisation d’une validation simple (VB)
 ====================
@@ -90,7 +90,7 @@ Il existe trois classes de feuille style en cascade utilisées pour contrôler l
 
 - entrée--erreur de validation est appliquée à la &lt;d’entrée&gt; balise rendue par Html.TextBox() helper.
 - champ--erreur de validation est appliquée à la &lt;span&gt; balise rendue par l’application d’assistance Html.ValidationMessage().
-- Résumé-erreurs de validation - appliquée à la &lt;ul&gt; balise rendue par l’application d’assistance Html.ValidationSumamry().
+- Résumé-erreurs de validation - appliquée à la &lt;ul&gt; balise rendue par l’application d’assistance Html.ValidationSummary().
 
 Vous pouvez modifier ces classes de feuille de style en cascade et par conséquent de modifier l’apparence des erreurs de validation, en modifiant le fichier Site.css situé dans le dossier de contenu.
 

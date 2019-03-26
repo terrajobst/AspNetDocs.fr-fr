@@ -8,23 +8,23 @@ ms.date: 02/20/2013
 ms.assetid: a3cef801-a54b-4ebd-93c3-55764e2e14b1
 msc.legacyurl: /visual-studio/overview/2012/windows-azure-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: a45b0ad2b61c2b78f7f06e85fe5e92193d73041d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cd3eed8c14103d29a66acd475fafe5ff3122a960
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052706"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421581"
 ---
-<a name="windows-azure-authentication"></a>Authentification Windows Azure
-====================
+# <a name="windows-azure-authentication"></a>Authentification Windows Azure
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Outils de Microsoft ASP.NET pour Windows Azure Active Directory fait simple activer l’authentification pour les applications web hébergées sur [Sites Web Windows Azure](https://www.windowsazure.com/home/features/web-sites/). Vous pouvez utiliser l’authentification Windows Azure pour authentifier les utilisateurs d’Office 365 à partir de votre organisation, les comptes d’entreprise synchronisés à partir de votre annuaire local Active Directory ou les utilisateurs créés dans votre propre domaine personnalisé de Windows Azure Active Directory. Activation de l’authentification de Windows Azure configure votre application pour authentifier les utilisateurs à l’aide d’un seul [Windows Azure Active Directory](https://docs.microsoft.com/azure/active-directory/) locataire.
-> 
+>
 > L’outil ASP.NET Windows Azure Authentication n’est pas pris en charge pour les rôles web dans un service cloud, mais nous prévoyons de le faire dans une version ultérieure. [Windows Identity Foundation](https://msdn.microsoft.com/library/hh291066(v=VS.110).aspx) (WIF) est pris en charge dans les rôles web Windows Azure.
-> 
+>
 > Pour plus d’informations sur la configuration de la synchronisation entre votre annuaire local Active Directory et votre locataire Windows Azure Active Directory, consultez [utiliser AD FS 2.0 pour implémenter et gérer l’authentification unique](https://technet.microsoft.com/library/jj205462.aspx).
-> 
+>
 > Windows Azure Active Directory est actuellement disponible en tant qu’un [libre service en version préliminaire](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
 
 
@@ -38,23 +38,23 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 Vous pouvez créer n’importe quelle Application Web avec Visual Studio 2012, ce didacticiel utilise le modèle d’intranet ASP.NET MVC.
 
-1. Créer une nouvelle Application Intranet ASP.NET MVC 4 et acceptez toutes les valeurs par défaut. (Il doit être un In **tra** net et non dans **RET** projet net).  
+1. Créer une nouvelle Application Intranet ASP.NET MVC 4 et acceptez toutes les valeurs par défaut. (Il doit être un In **tra** net et non dans **RET** projet net).
      ![](windows-azure-authentication/_static/image1.png)
 
 ## <a name="enable-window-azure-authentication-when-you-are-a-global-administrator-of-the-tenet"></a>Activer l’authentification de Windows Azure (lorsque vous êtes un administrateur du principe général)
 
 Si vous n’avez pas d’un locataire Windows Azure Active Directory existant (par exemple, via un compte Office 365 existant), vous pouvez créer un nouveau locataire en vous connectant à un [nouveau compte Windows Azure Active Directory](http://g.microsoftonline.com/0AX00en/5).
 
-1. Dans le menu projet, sélectionnez **activer l’authentification Windows Azure**:  
-  
+1. Dans le menu projet, sélectionnez **activer l’authentification Windows Azure**:
+
    ![](windows-azure-authentication/_static/image2.png)
 
 2. Entrez le domaine de votre locataire Windows Azure Active Directory (par exemple, contoso.onmicrosoft.com) et cliquez sur **activer**:
 
 ![](windows-azure-authentication/_static/image3.png)
 
-3. Dans l’authentification Web boîte de dialogue de connexion en tant qu’administrateur pour votre locataire Windows Azure Active Directory :  
-  
+3. Dans l’authentification Web boîte de dialogue de connexion en tant qu’administrateur pour votre locataire Windows Azure Active Directory :
+
    ![](windows-azure-authentication/_static/image4.png)
 
 ![](windows-azure-authentication/_static/image5.png)
@@ -65,19 +65,19 @@ Si vous n’avez pas de privilèges d’administrateur Global pour votre locatai
 
 ![](windows-azure-authentication/_static/image6.png)
 
-La boîte de dialogue affichera le **domaine**, **Id de Principal de l’Application** et **URL de réponse** qui sont requis pour l’approvisionnement de l’application avec Azure Active Directory principe. Vous devez donner à ces informations à une personne qui a des privilèges suffisants pour configurer l’application. Consultez[comment implémenter l’authentification unique avec Windows Azure Active Directory - Application ASP.NET](https://github.com/Azure-Samples/active-directory-dotnet-webapp-openidconnect) pour plus d’informations sur la façon d’utiliser l’applet de commande pour créer le principal du service manuellement.  
+La boîte de dialogue affichera le **domaine**, **Id de Principal de l’Application** et **URL de réponse** qui sont requis pour l’approvisionnement de l’application avec Azure Active Directory principe. Vous devez donner à ces informations à une personne qui a des privilèges suffisants pour configurer l’application. Consultez[comment implémenter l’authentification unique avec Windows Azure Active Directory - Application ASP.NET](https://github.com/Azure-Samples/active-directory-dotnet-webapp-openidconnect) pour plus d’informations sur la façon d’utiliser l’applet de commande pour créer le principal du service manuellement.
 Une fois que l’application a été configurée correctement, vous pouvez cliquer sur **continuer à mettre à jour web.config avec les paramètres sélectionnés**. Si vous souhaitez continuer à développer l’application lors de l’attente pour l’approvisionnement se produise, vous pouvez cliquer sur **fermer pour mémoriser les paramètres dans le fichier projet**. La prochaine fois vous appeler activer l’authentification Windows Azure et décochez la case à cocher approvisionnement, vous verrez les mêmes paramètres et vous pouvez cliquer sur **continuer**, puis cliquez sur, **appliquer ces paramètres dans le fichier web.config**.
 
 1. Patienter pendant que votre application est configurée pour l’authentification Windows Azure et configurée avec Windows Azure Active Directory.
-2. Une fois l’authentification Windows Azure a été activée pour votre application, cliquez sur **fermer :** 
+2. Une fois l’authentification Windows Azure a été activée pour votre application, cliquez sur **fermer :**
 
     ![](windows-azure-authentication/_static/image7.png)
-3. Appuyez sur F5 pour exécuter votre application. Il est possible que vous devez obtenir automatiquement redirigé vers la page de connexion. Utiliser les informations d’identification utilisateur de répertoire principe pour se connecter à l’application...  
+3. Appuyez sur F5 pour exécuter votre application. Il est possible que vous devez obtenir automatiquement redirigé vers la page de connexion. Utiliser les informations d’identification utilisateur de répertoire principe pour se connecter à l’application...
 
     ![](windows-azure-authentication/_static/image1.jpg)
 4. Étant donné que votre application utilise actuellement un certificat auto-signé de test vous recevrez un avertissement à partir du navigateur le certificat n’a pas été émis par une autorité de certification approuvée.
 
-    Cet avertissement peut être ignoré en toute sécurité pendant le développement local en cliquant sur **poursuivre sur ce site Web :** 
+    Cet avertissement peut être ignoré en toute sécurité pendant le développement local en cliquant sur **poursuivre sur ce site Web :**
 
     ![](windows-azure-authentication/_static/image8.png)
 5. Vous avez maintenant correctement connecté à votre application à l’aide de l’authentification Windows Azure !
@@ -88,8 +88,8 @@ L’activation de Windows Azure authentication apporte les modifications suivant
 
 - Une falsification de requête Anti-Cross-Site ([CSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))) classe ( *application\_Start\AntiXsrfConfig.cs* ) est ajouté à votre projet.
 - Les packages NuGet `System.IdentityModel.Tokens.ValidatingIssuerNameRegistry` est ajouté à votre projet.
-- Paramètres de Windows Identity Foundation dans votre application seront configurés pour accepter les jetons de sécurité à partir de votre locataire Windows Azure Active Directory. Cliquez sur l’image ci-dessous pour afficher une vue développée des modifications apportées à la *Web.config* fichier.  
-  
+- Paramètres de Windows Identity Foundation dans votre application seront configurés pour accepter les jetons de sécurité à partir de votre locataire Windows Azure Active Directory. Cliquez sur l’image ci-dessous pour afficher une vue développée des modifications apportées à la *Web.config* fichier.
+
      ![](windows-azure-authentication/_static/image9.png)
 - Un principal de service pour votre application dans votre locataire Windows Azure Active Directory est approvisionné.
 - HTTPS est activé.
@@ -100,7 +100,7 @@ Pour obtenir des instructions complètes, consultez [déploiement d’une Applic
 
 Pour publier une application à l’aide de l’authentification sur un Site Web Azure de Windows Azure :
 
-1. Cliquez avec le bouton droit sur votre application et sélectionnez **publier :** 
+1. Cliquez avec le bouton droit sur votre application et sélectionnez **publier :**
 
     ![](windows-azure-authentication/_static/image3.jpg)
 2. À partir de la boîte de dialogue Publier le site Web télécharger et importer un profil de publication pour votre Site Web Azure.
@@ -109,7 +109,7 @@ Pour publier une application à l’aide de l’authentification sur un Site Web
 3. Le **connexion** onglet montre le **URL de Destination** (URL publique pour votre application accessible sur). Cliquez sur **valider la connexion** pour tester votre connexion :
 
     ![](windows-azure-authentication/_static/image5.jpg)
-4. Si vous avez publié sur ce Site Web Azure précédemment envisagez de vérifier le **supprimer les fichiers supplémentaires à la destination** paramètre pour que votre application publie correctement. Notez que le **activer l’authentification Windows Azure** case à cocher est sélectionné.  
+4. Si vous avez publié sur ce Site Web Azure précédemment envisagez de vérifier le **supprimer les fichiers supplémentaires à la destination** paramètre pour que votre application publie correctement. Notez que le **activer l’authentification Windows Azure** case à cocher est activée.
 
     ![](windows-azure-authentication/_static/image10.png)
 5. Facultatif : Sur le **aperçu** onglet, cliquez sur **démarrer l’aperçu** pour afficher les fichiers déployés.
@@ -130,31 +130,31 @@ Pour publier une application à l’aide de l’authentification sur un Site Web
 9. Lorsque vous y êtes invité, connectez-vous en tant qu’utilisateur dans votre répertoire :
 
     ![](windows-azure-authentication/_static/image8.jpg)
-10. Vous avez maintenant correctement connecté à votre Azure hébergé l’application à l’aide de l’authentification Windows Azure.  
-  
+10. Vous avez maintenant correctement connecté à votre Azure hébergé l’application à l’aide de l’authentification Windows Azure.
+
      ![](windows-azure-authentication/_static/image9.jpg)
 
 ## <a name="known-issues"></a>Problèmes connus
 
-#### <a name="role-based-authorization-fails-when-using-windows-azure-authenticationopop"></a>Autorisation basée sur un rôle échoue lors de l’utilisation de Windows Azure Authentication < o : p >< / o : p >
+#### <a name="role-based-authorization-fails-when-using-windows-azure-authentication"></a>Autorisation basée sur un rôle échoue lors de l’utilisation de l’authentification Windows Azure
 
-L’authentification Windows Azure ne fournit pas actuellement la revendication de rôle nécessaires afin que l’autorisation basée sur le rôle peut être effectuée. Le rôle de l’utilisateur authentifié doit être récupéré manuellement à partir de Windows Azure Active Directory. < o : p >< / o : p >
+L’authentification Windows Azure ne fournit pas actuellement la revendication de rôle nécessaires afin que l’autorisation basée sur le rôle peut être effectuée. Le rôle de l’utilisateur authentifié doit être récupéré manuellement à partir de Windows Azure Active Directory.
 
-#### <a name="browsing-to-an-application-with-windows-azure-authentication-results-in-the-error-acs20016-the-domain-of-the-logged-in-user-livecom-does-not-match-any-allowed-domain-of-this-stsopop"></a>Accédant à une application avec des résultats de l’authentification Windows Azure dans l’erreur « ACS20016 le domaine de l’utilisateur connecté (live.com) ne correspond pas à toute autorisé domaine de ce STS » < o : p >< / o : p >
+#### <a name="browsing-to-an-application-with-windows-azure-authentication-results-in-the-error-acs20016-the-domain-of-the-logged-in-user-livecom-does-not-match-any-allowed-domain-of-this-sts"></a>Résultats de navigation à une application avec Windows Azure Authentication dans l’erreur « ACS20016 le domaine de l’utilisateur connecté (live.com) ne correspond pas à toute autorisé domaine de ce STS »
 
-Si vous êtes déjà connecté à un Account Microsoft (par exemple hotmail.com, live.com, outlook.com) et que vous tentez d’accéder à une application qui a activé l’authentification Windows Azure vous pouvez obtenir une réponse de 400 erreur, car le domaine de votre Account Microsoft n’est pas reconnu par Windows Azure Active Directory. Pour vous connecter à l’application, se déconnecter de votre Account Microsoft tout d’abord. < o : p >< / o : p >
+Si vous êtes déjà connecté à un Account Microsoft (par exemple hotmail.com, live.com, outlook.com) et que vous tentez d’accéder à une application qui a activé l’authentification Windows Azure vous pouvez obtenir une réponse de 400 erreur, car le domaine de votre Account Microsoft n’est pas reconnu par Windows Azure Active Directory. Pour vous connecter à l’application, se déconnecter de votre Account Microsoft premier.
 
-#### <a name="logging-into-an-application-with-windows-azure-authentication-enabled-and-a-x509certificatevalidationmode-other-than-none-results-in-certificate-validation-errors-for-the-accountsaccesscontrolwindowsnet-certificateopop"></a>Journalisation dans une application avec authentification Windows Azure est activée et un X509CertificateValidationMode autre que None entraîne des erreurs de validation de certificat pour le certificat accounts.accesscontrol.windows.net < o : p >< / o : p >
+#### <a name="logging-into-an-application-with-windows-azure-authentication-enabled-and-a-x509certificatevalidationmode-other-than-none-results-in-certificate-validation-errors-for-the-accountsaccesscontrolwindowsnet-certificate"></a>Journalisation dans une application avec authentification Windows Azure est activée et un X509CertificateValidationMode autre que None entraîne dans les erreurs de validation de certificat pour le certificat accounts.accesscontrol.windows.net
 
-Validation du certificat n’est pas obligatoire et doit rester désactivée. L’empreinte numérique du certificat de l’émetteur est validé par le WSFederationAuthenticationModule. < o : p >< / o : p >
+Validation du certificat n’est pas obligatoire et doit rester désactivée. L’empreinte numérique du certificat de l’émetteur est validé par le WSFederationAuthenticationModule.
 
-#### <a name="when-attempting-to-enable-windows-azure-authentication-the-web-authentication-dialog-shows-the-error-acs20016-the-domain-of-the-logged-in-user-contosoonmicrosoftcom-does-not-match-any-allowed-domain-of-this-stsopop"></a>Lorsque vous tentez d’activer l’authentification de Windows Azure la boîte de dialogue d’authentification Web affiche l’erreur « ACS20016 : Le domaine de l’utilisateur connecté (contoso.onmicrosoft.com) ne correspond pas à aucun domaine autorisé de ce STS. » < o : p >< / o : p >
+#### <a name="when-attempting-to-enable-windows-azure-authentication-the-web-authentication-dialog-shows-the-error-acs20016-the-domain-of-the-logged-in-user-contosoonmicrosoftcom-does-not-match-any-allowed-domain-of-this-sts"></a>Lorsque vous tentez d’activer l’authentification de Windows Azure la boîte de dialogue d’authentification Web affiche l’erreur « ACS20016 : Le domaine de l’utilisateur connecté (contoso.onmicrosoft.com) ne correspond pas à aucun domaine autorisé de ce STS. »
 
-Vous pouvez voir cette erreur lorsque vous avez précédemment connecté avec succès à l’aide d’un compte Windows Azure Active Directory différent de dans le même processus Visual Studio. Déconnectez-vous du compte spécifié, ou redémarrez Visual Studio. Si connecté précédemment et sélectionné l’option « Maintenir la connexion », vous devrez peut-être effacer les cookies du navigateur. < o : p >< / o : p >
+Vous pouvez voir cette erreur lorsque vous avez précédemment connecté avec succès à l’aide d’un compte Windows Azure Active Directory différent de dans le même processus Visual Studio. Déconnectez-vous du compte spécifié, ou redémarrez Visual Studio. Si connecté précédemment et sélectionné l’option « Maintenir la connexion » vous devez effacer les cookies de votre navigateur.
 
-## <a name="acs20012-the-request-is-not-a-valid-ws-federation-protocol-message-opop"></a>ACS20012: La demande n’est pas un message de protocole WS-Federation valid < o : p >< / o : p >
+## <a name="acs20012-the-request-is-not-a-valid-ws-federation-protocol-message"></a>ACS20012: La demande n’est pas un message de protocole WS-Federation valid
 
-Cela peut se produire si vous êtes déjà connecté avec certains autres ID Microsoft à un des services Azure. Fenêtre de navigateur d’utilisation privée telles que InPrivate dans Internet Explorer ou Incognito dans Chrome ou effacer tous les cookies. <o:p></o:p>
+Cela peut se produire si vous êtes déjà connecté avec certains autres ID Microsoft à un des services Azure. Fenêtre de navigateur d’utilisation privée telles que InPrivate dans Internet Explorer ou Incognito dans Chrome ou effacer tous les cookies.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 

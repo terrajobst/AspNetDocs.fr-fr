@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 8af630e0-fffa-4110-9eca-c96e201b2724
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 8bea3d4bc19a5a47240abeb2cc015116814a8fdf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: afd1551d72fa3a5b925d7499c86731db4b6f0b61
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043036"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422010"
 ---
 <a name="sorting-filtering-and-paging-with-the-entity-framework-in-an-aspnet-mvc-application-3-of-10"></a>Tri, filtrage et pagination avec Entity Framework dans une Application ASP.NET MVC (3 sur 10)
 ====================
@@ -89,7 +89,7 @@ Dans *Controllers\StudentController.cs*, remplacez le `Index` méthode avec le c
 
 [!code-csharp[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample4.cs?highlight=1,7-11)]
 
-Vous avez ajouté un paramètre `searchString` à la méthode `Index`. Vous avez également ajouté à l’instruction LINQ une `where` clause sélectionne uniquement les étudiants dont le prénom ou le nom contient la chaîne de recherche. La valeur de chaîne de recherche est reçue à partir d’une zone de texte que vous ajouterez à la vue Index. L’instruction qui ajoute le [où](https://msdn.microsoft.com/library/bb535040.aspx) clause est exécutée uniquement s’il existe une valeur à rechercher.
+Vous avez ajouté un paramètre `searchString` à la méthode `Index`. Vous avez également ajouté à l’instruction LINQ une `where` clause qui sélectionne uniquement les étudiants dont le prénom ou le nom contient la chaîne de recherche. La valeur de chaîne de recherche est reçue à partir d’une zone de texte que vous ajouterez à la vue Index. L’instruction qui ajoute le [où](https://msdn.microsoft.com/library/bb535040.aspx) clause est exécutée uniquement s’il existe une valeur à rechercher.
 
 > [!NOTE]
 > Dans de nombreux cas, vous pouvez appeler la même méthode sur un jeu d’entités Entity Framework ou comme méthode d’extension sur une collection en mémoire. Les résultats sont normalement les mêmes, mais dans certains cas, peuvent être différents. Par exemple, l’implémentation de .NET Framework de la `Contains` méthode retourne toutes les lignes lorsque vous lui passez une chaîne vide, mais le fournisseur Entity Framework pour SQL Server Compact 4.0 retourne zéro ligne pour les chaînes vides. Par conséquent, le code dans l’exemple (placer les `Where` instruction à l’intérieur d’un `if` instruction) permet de s’assurer que vous obtenez les mêmes résultats pour toutes les versions de SQL Server. En outre, l’implémentation de .NET Framework de la `Contains` méthode effectue une comparaison respectant la casse par défaut, mais les fournisseurs Entity Framework SQL Server effectuent des comparaisons sans respecter la casse par défaut. Par conséquent, l’appel la `ToUpper` méthode le test doit être explicitement non-respect de la casse garantit que les résultats ne changent pas lorsque vous modifiez le code ultérieurement d’utiliser un référentiel, ce qui retournera un `IEnumerable` collection au lieu d’un `IQueryable` objet. (Lorsque vous appelez la méthode `Contains` sur une collection `IEnumerable`, vous obtenez l’implémentation du .NET Framework ; lorsque vous l’appelez sur un objet `IQueryable`, vous obtenez l’implémentation du fournisseur de base de données.)

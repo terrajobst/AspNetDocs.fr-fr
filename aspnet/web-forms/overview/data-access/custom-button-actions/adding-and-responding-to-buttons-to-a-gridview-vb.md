@@ -8,12 +8,12 @@ ms.date: 09/13/2006
 ms.assetid: 06c6bbd2-4bdc-435b-87a3-df2c868f4baa
 msc.legacyurl: /web-forms/overview/data-access/custom-button-actions/adding-and-responding-to-buttons-to-a-gridview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0834d43f95bd19fffb603dcde640714bd779fd80
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3ebbf60ada1f50bb704118d0e81fb3c97c7e4386
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031556"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422227"
 ---
 <a name="adding-and-responding-to-buttons-to-a-gridview-vb"></a>Ajout et réponse à des boutons sur un GridView (VB)
 ====================
@@ -113,7 +113,7 @@ Avant d’ajouter le bouton Arrêter tous les produits pour le modèle de s Form
 **Figure 8**: Créer une nouvelle nommée de ObjectDataSource `SuppliersProductsDataSource` ([cliquez pour afficher l’image en taille réelle](adding-and-responding-to-buttons-to-a-gridview-vb/_static/image20.png))
 
 
-Configurer cette ObjectDataSource pour utiliser la classe ProductsBLL s `GetProductsBySupplierID(supplierID)` (méthode) (voir Figure 9). Bien que ce GridView autorise pour un prix du produit s à ajuster, il a gagné t être à l’aide intégrée, modification ou la suppression des fonctionnalités dans le contrôle GridView. Par conséquent, nous pouvons définir la liste déroulante (None) pour les opérations de mappage ObjectDataSource onglets UPDATE, INSERT et DELETE.
+Configurer cette ObjectDataSource pour utiliser la classe ProductsBLL s `GetProductsBySupplierID(supplierID)` (méthode) (voir Figure 9). Bien que ce GridView autorise pour un prix de s produit à ajuster, il n’utiliserez pas intégrés modification ou la suppression des fonctionnalités dans le contrôle GridView. Par conséquent, nous pouvons définir la liste déroulante (None) pour les opérations de mappage ObjectDataSource onglets UPDATE, INSERT et DELETE.
 
 
 [![Configurer la Source de données pour utiliser la classe ProductsBLL s GetProductsBySupplierID(supplierID) (méthode)](adding-and-responding-to-buttons-to-a-gridview-vb/_static/image22.png)](adding-and-responding-to-buttons-to-a-gridview-vb/_static/image21.png)

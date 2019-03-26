@@ -8,12 +8,12 @@ ms.date: 06/26/2007
 ms.assetid: 4e849bcc-c557-4bc3-937e-f7453ee87265
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-updating-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c878056273ea821e4dd4481fa1b6f7690f22b285
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 27c043ff64b80dfbe05795c20bb1e71723f93c75
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062476"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421568"
 ---
 <a name="batch-updating-c"></a>Mise à jour par lots (C#)
 ====================
@@ -241,7 +241,7 @@ Cette méthode commence par l’obtention de tous les produits dans un `Products
 
 Pour chaque ligne le `ProductID` est retiré de la `DataKeys` approprié et collection `ProductsRow` est sélectionné dans le `ProductsDataTable`. Les quatre contrôles d’entrée TemplateField sont référencés par programmation et leurs valeurs assignées à la `ProductsRow` s propriétés de l’instance. Après chaque GridView les valeurs de ligne s ont été utilisées pour mettre à jour le `ProductsDataTable`, il s passé à la couche BLL s `UpdateWithTransaction` méthode qui, comme nous l’avons vu dans le didacticiel précédent, appelle simplement vers le bas dans la couche DAL s `UpdateWithTransaction` (méthode).
 
-L’algorithme de mise à jour de lot utilisé pour ce didacticiel met à jour chaque ligne dans le `ProductsDataTable` qui correspond à une ligne dans le contrôle GridView, indépendamment de si les informations de produit s a été modifiées. Alors que ce blind met généralement à jour ne sont pas toujours un problème de performances, elles peuvent entraîner des enregistrements superflus si vous faites l’audit change à la table de base de données. Dans le [effectuant des mises à jour par lots](../editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs.md) didacticiel, nous avons exploré un lot de mise à jour d’interface avec le contrôle DataList et ajouté du code uniquement mise à jour les enregistrements qui ont été réellement modifiés par l’utilisateur. N’hésitez pas à utiliser les techniques de [effectuant des mises à jour par lots](../editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs.md) pour mettre à jour le code dans ce didacticiel, si vous le souhaitez.
+L’algorithme de mise à jour de lot utilisé pour ce didacticiel met à jour chaque ligne dans le `ProductsDataTable` qui correspond à une ligne dans le contrôle GridView, indépendamment de si les informations de produit s a été modifiées. Bien que ces mises à jour aveugle ne sont pas généralement un problème de performances, elles peuvent entraîner des enregistrements superflus si vous faites l’audit change à la table de base de données. Dans le [effectuant des mises à jour par lots](../editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs.md) didacticiel, nous avons exploré un lot de mise à jour d’interface avec le contrôle DataList et ajouté du code uniquement mise à jour les enregistrements qui ont été réellement modifiés par l’utilisateur. N’hésitez pas à utiliser les techniques de [effectuant des mises à jour par lots](../editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs.md) pour mettre à jour le code dans ce didacticiel, si vous le souhaitez.
 
 > [!NOTE]
 > Lors de la liaison de la source de données pour le contrôle GridView via sa balise active, Visual Studio affecte automatiquement les valeurs de clé primaire données source s au GridView s `DataKeyNames` propriété. Si vous n’avez pas lié à ObjectDataSource au GridView via la balise active de GridView s comme indiqué à l’étape 1, vous devez définir manuellement le s GridView `DataKeyNames` propriété ProductID afin d’accéder à la `ProductID` valeur pour chaque ligne via le `DataKeys` collection.
@@ -269,7 +269,7 @@ Pour ces types de situations, envisagez d’utiliser les éléments suivants `Ba
 
 `BatchMethodAlternate` démarre en créant un nouveau vide `ProductsDataTable` nommé `products`. Il puis parcourt le s GridView `Rows` collection et, pour chaque ligne Obtient les informations de produit spécifique à l’aide de la couche BLL s `GetProductByProductID(productID)` (méthode). Récupérées `ProductsRow` instance a ses propriétés mis à jour dans la même manière que `BatchUpdate`, mais après la mise à jour de la ligne, il est importé dans le `products``ProductsDataTable` via le s DataTable [ `ImportRow(DataRow)` méthode](https://msdn.microsoft.com/library/system.data.datatable.importrow(VS.80).aspx).
 
-Après le `foreach` boucle se termine, `products` contient un `ProductsRow` instance pour chaque ligne dans le contrôle GridView. Étant donné que chaque du `ProductsRow` instances ont été ajoutées à la `products` (au lieu de mise à jour), si nous transmettons à aveuglément le `UpdateWithTransaction` (méthode) le `ProductsTableAdatper` tente d’insérer les enregistrements de la base de données. Au lieu de cela, nous devons spécifier que chacune de ces lignes ont été modifiée (ne pas ajouté).
+Après le `foreach` boucle se termine, `products` contient un `ProductsRow` instance pour chaque ligne dans le contrôle GridView. Étant donné que chaque du `ProductsRow` instances ont été ajoutées à la `products` (au lieu de mise à jour), si nous transmettons à aveuglément le `UpdateWithTransaction` (méthode) le `ProductsTableAdapter` tente d’insérer les enregistrements de la base de données. Au lieu de cela, nous devons spécifier que chacune de ces lignes ont été modifiée (ne pas ajouté).
 
 Cela est possible en ajoutant une nouvelle méthode à la couche BLL nommée `UpdateProductsWithTransaction`. `UpdateProductsWithTransaction`, jeux illustré ci-dessous, le `RowState` de chacune de la `ProductsRow` instances dans le `ProductsDataTable` à `Modified` , puis transmet le `ProductsDataTable` à la couche DAL s `UpdateWithTransaction` (méthode).
 

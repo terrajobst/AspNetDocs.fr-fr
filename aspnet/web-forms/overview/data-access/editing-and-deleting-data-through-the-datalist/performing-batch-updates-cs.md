@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: 57743ca7-5695-4e07-aed1-44b297f245a9
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2ca91baa87d5bb748695b56bb8bf19698b0858f2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2de7cdbfc37140a4b60c3123524974c4f0ffa42f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051386"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425871"
 ---
 <a name="performing-batch-updates-c"></a>Réalisation de mises à jour par lots (C#)
 ====================
@@ -126,7 +126,7 @@ Lorsque l’utilisateur clique sur un des boutons tout mettre à jour, le `Updat
 
 ## <a name="updating-only-those-addresses-that-have-been-modified"></a>La mise à jour uniquement les adresses qui ont été modifiés
 
-L’algorithme de mise à jour de lot utilisé pour les appels de ce didacticiel le `UpdateSupplierAddress` méthode pour *chaque* fournisseur dans le contrôle DataList, indépendamment de si leurs informations d’adresse a été changées. Alors que ce blind met généralement à jour ne sont pas toujours un problème de performances, elles peuvent entraîner des enregistrements superflus si vous faites l’audit change à la table de base de données. Par exemple, si vous utilisez des déclencheurs pour enregistrer tous les `UPDATE` s pour le `Suppliers` table à une table d’audit, chaque fois qu’un utilisateur clique sur le bouton tout mettre à jour un enregistrement d’audit sera créé pour chaque fournisseur dans le système, que si l’utilisateur effectué à chaque modifications.
+L’algorithme de mise à jour de lot utilisé pour les appels de ce didacticiel le `UpdateSupplierAddress` méthode pour *chaque* fournisseur dans le contrôle DataList, indépendamment de si leurs informations d’adresse a été changées. Bien que ces mises à jour aveugle ne sont pas généralement un problème de performances, elles peuvent entraîner des enregistrements superflus si vous faites l’audit change à la table de base de données. Par exemple, si vous utilisez des déclencheurs pour enregistrer tous les `UPDATE` s pour le `Suppliers` table à une table d’audit, chaque fois qu’un utilisateur clique sur le bouton tout mettre à jour un enregistrement d’audit sera créé pour chaque fournisseur dans le système, que si l’utilisateur effectué à chaque modifications.
 
 Les classes ADO.NET DataTable et DataAdapter sont conçues pour prendre en charge les mises à jour par lots lorsque des enregistrements uniquement modifiés, supprimés et le nouveau conduit à toute communication de base de données. Chaque ligne de la table de données a un [ `RowState` propriété](https://msdn.microsoft.com/library/system.data.datarow.rowstate.aspx) qui indique si la ligne a été ajoutée au DataTable, supprimé, modifié, ou qu’il reste inchangée. Lorsqu’un DataTable est initialement renseigné, toutes les lignes sont marqués sans modification. Modification de la valeur d’une des colonnes de s de ligne de marque la ligne comme modifié.
 

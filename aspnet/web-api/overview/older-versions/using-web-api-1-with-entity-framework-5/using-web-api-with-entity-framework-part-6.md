@@ -8,12 +8,12 @@ ms.date: 07/04/2012
 ms.assetid: 91ee29ee-0689-40ee-914a-e7dd733b6622
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-6
 msc.type: authoredcontent
-ms.openlocfilehash: 642ff4554ed3664af0b5cc8e49d6b236c568131b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 21cfbd0bf691ea033e9a5a873ab49c83507750d5
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054436"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425962"
 ---
 <a name="part-6-creating-product-and-order-controllers"></a>Partie 6 : Création des contrôleurs de produit et de commande
 ====================
@@ -96,7 +96,7 @@ La dernière méthode de prendre en compte `PostOrder`. Pour l’instant, cette 
 
 [!code-json[Main](using-web-api-with-entity-framework-part-6/samples/sample10.json)]
 
-Il s’agit d’un ordre bien structuré et Entity Framework est heureusement insérer dans la base de données. Mais il contient une entité de produit qui n’existait pas précédemment. Le client venez de créer un nouveau produit dans notre base de données ! Il s’agit une surprise pour le département d’imprimerie ordre lorsqu’ils voient une commande pour koala ours. Est la morale, soyez très prudent sur les données que vous acceptez une demande POST ou PUT.
+Il s’agit d’un ordre bien structuré et Entity Framework est heureusement insérer dans la base de données. Mais il contient une entité de produit qui n’existait pas précédemment. Le client venez de créer un nouveau produit dans notre base de données ! Il s’agit une surprise au service de traitement de commande, lorsqu’ils voient une commande pour koala ours. Est la morale, soyez très prudent sur les données que vous acceptez une demande POST ou PUT.
 
 Pour éviter ce problème, modifiez le `PostOrder` méthode entrent en un `OrderDTO` instance. Utilisez le `OrderDTO` pour créer le `Order`.
 

@@ -8,12 +8,12 @@ ms.date: 02/05/2013
 ms.assetid: a8367c6d-ef94-4dff-a010-5eff9e6eea96
 msc.legacyurl: /single-page-application/overview/introduction/other-libraries
 msc.type: authoredcontent
-ms.openlocfilehash: 53c97580b45bb40a6c3256c8038ec5c8b861b69f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5503a00df707ee79282a32c77ed2287e93cf8f48
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025216"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425468"
 ---
 <a name="know-a-library-other-than-knockout"></a>Bibliothèques autres que Knockout
 ====================
@@ -48,7 +48,7 @@ Le modèle de Ember SPA est une nouvelle implémentation du modèle Knockout SPA
 
 [Modèle de serviette SPA à chaud](../templates/hottowel-template.md). Ce modèle permet d’utiliser plusieurs bibliothèques JavaScript, notamment Breeze et Knockout, RequireJS Twitter Bootstrap.
 
-Comparaison avec les autres modèles répertoriés ici, le teample Hot Towel fournit une application plus complète à partir de laquelle vous pouvez créer vos propres. Il existe plusieurs concepts à connaître, mais une fois que vous comprenez les, ce modèle peut être simplement ce que vous recherchez. Si vous souhaitez générer un projet SPA mais que vous ne pouvez pas décider de l’emplacement Démarrer, utilisez Hot Towel et en quelques secondes, vous aurez une application SPA et tous les outils que vous deviez générer sur celui-ci.
+Comparaison avec les autres modèles répertoriés ici, le modèle Hot Towel fournit une application plus complète à partir de laquelle vous pouvez créer vos propres. Il existe plusieurs concepts à connaître, mais une fois que vous comprenez les, ce modèle peut être simplement ce que vous recherchez. Si vous souhaitez générer un projet SPA mais que vous ne pouvez pas décider de l’emplacement Démarrer, utilisez Hot Towel et en quelques secondes, vous aurez une application SPA et tous les outils que vous deviez générer sur celui-ci.
 
 ## <a name="feature-table"></a>Tableau des fonctionnalités
 
@@ -60,7 +60,7 @@ Voici les fonctionnalités fournies par chaque modèle SPA :
 |      Exemple ToDo       |  &#10003;   |          |    &#10003;    | &#10003;  | &#10003; |           |
 |     Modèle de récupération      |             | &#10003; |                |           |          | &#10003;  |
 | Navigation et historique |             | &#10003; |    &#10003;    |           | &#10003; | &#10003;  |
-|        Suivies        |             |          |                |           |          |           |
+|        Bibliothèques       |             |          |                |           |          |           |
 |        Angular         |             |          |    &#10003;    |           |          |           |
 |    &#8195;Backbone     |             | &#10003; |                |           |          |           |
 |         Breeze         |             |          |    &#10003;    | &#10003;  |          | &#10003;  |

@@ -8,12 +8,12 @@ ms.date: 06/26/2007
 ms.assetid: cf025e08-48fc-4385-b176-8610aa7b5565
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-inserting-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 561acc9b473bac7d39e7ed4d511d8b979657131d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: afcfc92b4e0db8092f83b67c6c227af91bdc0cbb
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035746"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426045"
 ---
 <a name="batch-inserting-c"></a>Insertion par lots (C#)
 ====================
@@ -195,7 +195,7 @@ Ce code masque simplement la `DisplayInterface` volet et affiche le `InsertingIn
 Ensuite, créez les gestionnaires d’événements pour les produits d’ajouter des contrôles d’expédition et un bouton Annuler dans l’interface d’insertion. Un clic sur un de ces boutons, nous devons revenir à l’interface d’affichage. Créer `Click` gestionnaires d’événements pour les deux contrôles bouton afin qu’ils appellent `ReturnToDisplayInterface`, une méthode, nous allons ajouter momentanément. En plus de masquage le `InsertingInterface` panneau et affichant le `DisplayInterface` Panneau de configuration, le `ReturnToDisplayInterface` méthode doit retourner les contrôles Web à leur état de modification préalable. Cela implique la définition de la DropDownList `SelectedIndex` propriétés sur 0 et éliminant la `Text` propriétés des contrôles de zone de texte.
 
 > [!NOTE]
-> Envisagez ce qui peut se produire si nous fonctionné t revenir aux contrôles à leur état de modification préalable avant de retourner à l’interface d’affichage. Un utilisateur peut cliquer sur le bouton de la livraison du produit, entrez les produits à partir de l’expédition, puis cliquez sur Ajouter des produits à partir de l’expédition. Cela aurait ajouté les produits et renvoie l’utilisateur à l’interface d’affichage. À ce stade, l’utilisateur souhaite ajouter une autre expédition. Lorsque vous cliquez sur le bouton de la livraison du produit processus qu'elles restaurent à l’interface d’insertion, mais la liste DropDownList sélections et les valeurs de la zone de texte seraient toujours remplies de leurs valeurs précédentes.
+> Envisagez ce qui peut se produire si nous n’a pas retourné les contrôles à leur état de modification préalable avant de retourner à l’interface d’affichage. Un utilisateur peut cliquer sur le bouton de la livraison du produit, entrez les produits à partir de l’expédition, puis cliquez sur Ajouter des produits à partir de l’expédition. Cela aurait ajouté les produits et renvoie l’utilisateur à l’interface d’affichage. À ce stade, l’utilisateur souhaite ajouter une autre expédition. Lorsque vous cliquez sur le bouton de la livraison du produit processus qu'elles restaurent à l’interface d’insertion, mais la liste DropDownList sélections et les valeurs de la zone de texte seraient toujours remplies de leurs valeurs précédentes.
 
 
 [!code-csharp[Main](batch-inserting-cs/samples/sample5.cs)]
@@ -215,7 +215,7 @@ Prenez un moment pour tester cette page dans un navigateur. Lors de la visite de
 
 ## <a name="step-4-adding-the-products"></a>Étape 4 : Ajout de produits
 
-Tout ce qui reste pour ce didacticiel consiste à enregistrer les produits à la base de données dans les produits à ajouter à partir du bouton d’expédition s `Click` Gestionnaire d’événements. Cela est possible en créant un `ProductsDataTable` et en ajoutant un `ProductsRow` instance pour chacun de ces noms de produit fournies. Une fois ces `ProductsRow` s ont été ajoutées, nous apporterons un appel à la `ProductsBLL` classe s `UpdateWithTransaction` méthode en passant le `ProductsDataTable`. N’oubliez pas que le `UpdateWithTransaction` (méthode), qui a été créé dans le [encapsulant les Modifications de base de données dans une Transaction](wrapping-database-modifications-within-a-transaction-cs.md) passes (didacticiels), le `ProductsDataTable` à la `ProductsTableAdapter` s `UpdateWithTransaction` (méthode). À partir de là, une transaction ADO.NET est démarrée et les problèmes de TableAdatper un `INSERT` instruction à la base de données pour chaque ajouté `ProductsRow` dans le DataTable. En supposant que tous les produits sont ajoutés sans erreur, que la transaction est validée, sinon elle est restaurée.
+Tout ce qui reste pour ce didacticiel consiste à enregistrer les produits à la base de données dans les produits à ajouter à partir du bouton d’expédition s `Click` Gestionnaire d’événements. Cela est possible en créant un `ProductsDataTable` et en ajoutant un `ProductsRow` instance pour chacun de ces noms de produit fournies. Une fois ces `ProductsRow` s ont été ajoutées, nous apporterons un appel à la `ProductsBLL` classe s `UpdateWithTransaction` méthode en passant le `ProductsDataTable`. N’oubliez pas que le `UpdateWithTransaction` (méthode), qui a été créé dans le [encapsulant les Modifications de base de données dans une Transaction](wrapping-database-modifications-within-a-transaction-cs.md) passes (didacticiels), le `ProductsDataTable` à la `ProductsTableAdapter` s `UpdateWithTransaction` (méthode). À partir de là, une transaction ADO.NET est démarrée et les problèmes de TableAdapter une `INSERT` instruction à la base de données pour chaque ajouté `ProductsRow` dans le DataTable. En supposant que tous les produits sont ajoutés sans erreur, que la transaction est validée, sinon elle est restaurée.
 
 Le code pour ajouter des produits à partir du bouton d’expédition s `Click` Gestionnaire d’événements doit également effectuer un peu de vérification des erreurs. Dans la mesure où il n’y a aucune RequiredFieldValidators utilisé dans l’interface d’insertion, un utilisateur peut entrer un prix pour un produit tout en omettant son nom. Étant donné que le nom de produit s est obligatoire, si une telle condition qui se déroule nous devons avertir l’utilisateur et de poursuivre les insertions. L’ensemble `Click` code gestionnaire d’événements suit :
 

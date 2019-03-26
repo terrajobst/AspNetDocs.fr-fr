@@ -8,12 +8,12 @@ ms.date: 03/26/2015
 ms.assetid: c205805f-efdd-4fa7-9616-f26eab180611
 msc.legacyurl: /mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
 msc.type: authoredcontent
-ms.openlocfilehash: 94a72f22cbcd7fa84528dde502cceaa1e26dcaa1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ea149b6450cf02c993c7690752a05396802336be
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049226"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425052"
 ---
 <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Profiler et déboguer votre application ASP.NET MVC avec Glimpse
 ====================
@@ -58,7 +58,7 @@ Accédez à http://localhost:&lt; port #&gt;/glimpse.axd et cliquez sur le <stro
 
 Si vous avez votre barre des favoris affiché, vous pouvez faire glisser et déposer les boutons d’aperçu et ajoutez-les en tant que bookmarklets :
 
-![Internet Explorer avec Glimpse boookmarklets](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image5.png)
+![Internet Explorer avec Glimpse bookmarklets](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image5.png)
 
 Vous pouvez désormais parcourir votre application et le **têtes d’affichage** (HUD) s’affiche en bas de la page.
 
@@ -104,11 +104,11 @@ Le [onglet de liaison de modèle](http://getglimpse.com/Docs/Model-Binding-Tab) 
 <a id="da"></a>
 ## <a name="using-glimpse-on-azure"></a>À l’aide de Glimpse sur Azure
 
-La stratégie de sécurité d’aperçu par défaut autorise uniquement les données d’aperçu à afficher à partir de l’hôte local. Vous pouvez modifier cette stratégie de sécurité pour pouvoir afficher ces données sur un serveur distant (par exemple, une application web sur Azure). Pour les environnements de test sur Azure, ajouter la marque en surbrillance jusqu'à la partie inférieure de la *web.confg* fichier pour activer l’aperçu :
+La stratégie de sécurité d’aperçu par défaut autorise uniquement les données d’aperçu à afficher à partir de l’hôte local. Vous pouvez modifier cette stratégie de sécurité pour pouvoir afficher ces données sur un serveur distant (par exemple, une application web sur Azure). Pour les environnements de test sur Azure, ajouter la marque en surbrillance jusqu'à la partie inférieure de la *web.config* fichier pour activer l’aperçu :
 
 [!code-xml[Main](profile-and-debug-your-aspnet-mvc-app-with-glimpse/samples/sample3.xml?highlight=2-6)]
 
-Avec cette modification uniquement, n’importe quel utilisateur peut voir vos données d’aperçu sur un site distant. Envisagez d’ajouter le balisage ci-dessus à un profil de publication afin qu’il a déployé uniquement un appliqués lorsque vous utilisez ce profil de publication (par exemple, votre proifle test Azure.) Pour restreindre les données d’aperçu, nous allons ajouter le `canViewGlimpseData` rôle et d’autoriser uniquement les utilisateurs à ce rôle pour afficher les données d’aperçu.
+Avec cette modification uniquement, n’importe quel utilisateur peut voir vos données d’aperçu sur un site distant. Envisagez d’ajouter le balisage ci-dessus à un profil de publication afin qu’il a déployé uniquement un appliqués lorsque vous utilisez ce profil de publication (par exemple, votre profil de test Azure.) Pour restreindre les données d’aperçu, nous allons ajouter le `canViewGlimpseData` rôle et d’autoriser uniquement les utilisateurs à ce rôle pour afficher les données d’aperçu.
 
 Supprimez les commentaires de la *GlimpseSecurityPolicy.cs* du fichier et changer la [IsInRole](https://msdn.microsoft.com/library/system.security.principal.iprincipal.isinrole(v=vs.110).aspx) appeler à partir de `Administrator` à la `canViewGlimpseData` rôle :
 

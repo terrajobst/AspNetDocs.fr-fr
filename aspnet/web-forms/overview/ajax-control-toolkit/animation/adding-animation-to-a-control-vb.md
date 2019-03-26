@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: c120187e-963e-4439-bb85-32771bc7f1f4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/adding-animation-to-a-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9392b1bab2289d886baf308d05644afbdc42a13a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c76e488f36690acd1a6c48b87335a8e6f892f2a8
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032756"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421153"
 ---
 <a name="adding-animation-to-a-control-vb"></a>Ajout d’une animation à un contrôle (VB)
 ====================
@@ -65,7 +65,7 @@ Le framework est fourni avec un ensemble d’animations, chacun d’eux représe
 - `<Resize>` (modification de la taille)
 - `<Scale>` (proportionnellement à la taille de la variation)
 
-Dans cet exemple, le panneau est disparition en fondu. L’animation prend 1,5 secondes (`Duration` attribut), affichage des 24 images (étapes d’animation) par seconde (`Fps` attributs). Voici le balisage complet pour le `AnimationExtender` contrôle :
+Dans cet exemple, le panneau est disparition en fondu. L’animation prend 1,5 secondes (`Duration` attribut), affichage des 24 images (étapes d’animation) par seconde (`Fps` attribut). Voici le balisage complet pour le `AnimationExtender` contrôle :
 
 [!code-aspx[Main](adding-animation-to-a-control-vb/samples/sample5.aspx)]
 

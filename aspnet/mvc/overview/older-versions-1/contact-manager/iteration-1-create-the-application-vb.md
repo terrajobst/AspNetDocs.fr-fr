@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 5b033582-1646-42c2-b20d-7edc8814e970
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-1-create-the-application-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9369f843719d7198716ff83c5bbd5d3995f70973
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f1909279f36c0bd3bfb22fe7a892ef8cfad3052f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055426"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422868"
 ---
 <a name="iteration-1--create-the-application-vb"></a>Itération #1 : créer l’Application (VB)
 ====================
@@ -88,7 +88,7 @@ Comme alternative à l’exécution de chacune de ces téléchargements un par u
 Projet d’Application Web ASP.NET MVC. Lancez Visual Studio et sélectionnez l’option de menu **fichier, nouveau projet**. Le **nouveau projet** boîte de dialogue s’affiche (voir Figure 1). Sélectionnez le **Web** type de projet et le **Application Web ASP.NET MVC** modèle. Nommez votre nouveau projet *ContactManager* et cliquez sur le bouton OK.
 
 
-Assurez-vous que vous disposez de .NET Framework 3.5 est sélectionné dans la liste déroulante en haut à droite de la **nouveau projet** boîte de dialogue. Sinon, le modèle d’Application Web ASP.NET MVC a gagné t s’affichent.
+Assurez-vous que vous disposez de .NET Framework 3.5 est sélectionné dans la liste déroulante en haut à droite de la **nouveau projet** boîte de dialogue. Sinon, le modèle d’Application Web ASP.NET MVC ne s’affiche.
 
 
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-vb/_static/image1.jpg)](iteration-1-create-the-application-vb/_static/image1.png)
@@ -96,7 +96,7 @@ Assurez-vous que vous disposez de .NET Framework 3.5 est sélectionné dans la l
 **Figure 01**: La boîte de dialogue Nouveau projet ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-vb/_static/image2.png))
 
 
-Application ASP.NET MVC, le **créer un projet de Test unitaire** boîte de dialogue apparaît. Vous pouvez utiliser cette boîte de dialogue pour indiquer que vous souhaitez créer et ajouter un projet de test unitaire à votre solution lorsque vous créez votre application ASP.NET MVC. Bien que nous avons gagné t être création de tests unitaires dans cette itération, vous devez sélectionner l’option **Oui, créer un projet de test unitaire** , car nous prévoyons d’ajouter des tests unitaires dans une itération ultérieure. Ajout d’un projet de Test lorsque vous créez un nouveau projet ASP.NET MVC est beaucoup plus facile que l’ajout d’un projet de Test après avoir créé le projet ASP.NET MVC.
+Application ASP.NET MVC, le **créer un projet de Test unitaire** boîte de dialogue apparaît. Vous pouvez utiliser cette boîte de dialogue pour indiquer que vous souhaitez créer et ajouter un projet de test unitaire à votre solution lorsque vous créez votre application ASP.NET MVC. Bien que nous ne générer les tests unitaires dans cette itération, vous devez sélectionner l’option **Oui, créer un projet de test unitaire** , car nous prévoyons d’ajouter des tests unitaires dans une itération ultérieure. Ajout d’un projet de Test lorsque vous créez un nouveau projet ASP.NET MVC est beaucoup plus facile que l’ajout d’un projet de Test après avoir créé le projet ASP.NET MVC.
 
 > [!NOTE] 
 > 
@@ -175,7 +175,7 @@ Nous devons créer une table qui contient les colonnes suivantes :
 | Messagerie | nvarchar(255) | False |
 
 
-La première colonne, la colonne Id, est spéciale. Vous devez marquer la colonne Id comme une colonne d’identité et une colonne de clé primaire. Vous indiquez qu’une colonne est une colonne d’identité en développant des propriétés de colonne (coup de œil au bas de la Figure 6) et en faisant défiler jusqu'à la propriété de la spécification d’identité. Définir le **(est d’identité)** valeur à la propriété **Oui**.
+La première colonne, la colonne Id, est spéciale. Vous devez marquer la colonne Id comme une colonne d’identité et une colonne de clé primaire. Vous indiquez qu’une colonne est une colonne d’identité en développant les propriétés des colonnes (coup de œil au bas de la Figure 6) et en faisant défiler jusqu'à la propriété de la spécification d’identité. Définir le **(est d’identité)** valeur à la propriété **Oui**.
 
 Vous marquez une colonne comme colonne clé primaire en sélectionnant la colonne et en cliquant sur le bouton avec l’icône d’une clé. Une fois une colonne est marquée comme une colonne de clé primaire, une icône d’une clé s’affiche en regard de la colonne (voir Figure 6).
 
@@ -442,7 +442,7 @@ Le contenu de la vue Delete est contenu dans la liste 9. Cette vue contient un f
 
 ## <a name="changing-the-name-of-the-default-controller"></a>Modification du nom du contrôleur par défaut
 
-Il peut vous dérange pas que le nom de notre classe de contrôleur pour l’utilisation des contacts est nommé la classe HomeController. Le contrôleur de nommer les t ne doit pas ContactController ?
+Il peut vous dérange pas que le nom de notre classe de contrôleur pour l’utilisation des contacts est nommé la classe HomeController. Ne doit pas le contrôleur être nommé ContactController ?
 
 Ce problème est assez facile à résoudre. Tout d’abord, nous devons refactoriser le nom du contrôleur Home. Ouvrez la classe HomeController dans l’éditeur de Code Visual Studio, cliquez avec le bouton droit sur le nom de la classe et sélectionnez l’option de menu **renommer**. Cette option de menu ouvre la boîte de dialogue de changement de nom.
 

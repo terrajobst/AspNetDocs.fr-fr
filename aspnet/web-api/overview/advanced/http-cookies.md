@@ -8,12 +8,12 @@ ms.date: 09/17/2012
 ms.assetid: 243db2ec-8f67-4a5e-a382-4ddcec4b4164
 msc.legacyurl: /web-api/overview/advanced/http-cookies
 msc.type: authoredcontent
-ms.openlocfilehash: 61e0c47efdd92a3a0b329930aeec757b446eb9b8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ee717085a02f4c5f5d664cfd2fa82c21864e4055
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044736"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425819"
 ---
 <a name="http-cookies-in-aspnet-web-api"></a>Cookies HTTP dans l’API web ASP.NET
 ====================
@@ -25,7 +25,7 @@ Cette rubrique décrit comment envoyer et recevoir des cookies HTTP dans l’API
 
 Cette section donne un bref aperçu de la façon dont les cookies sont implémentés au niveau HTTP. Pour plus d’informations, consultez [RFC 6265](http://tools.ietf.org/html/rfc6265).
 
-Un cookie est un élément de données qui envoie par un serveur dans la réponse HTTP. Le client stocke le cookie (facultatif) et le retourne sur subsequet demandes. Ainsi, le client et le serveur partager l’état. Pour définir un cookie, le serveur inclut un en-tête Set-Cookie dans la réponse. Le format d’un cookie est une paire nom-valeur, avec des attributs facultatifs. Exemple :
+Un cookie est un élément de données qui envoie par un serveur dans la réponse HTTP. Le client stocke le cookie (facultatif) et le retourne pour les demandes suivantes. Ainsi, le client et le serveur partager l’état. Pour définir un cookie, le serveur inclut un en-tête Set-Cookie dans la réponse. Le format d’un cookie est une paire nom-valeur, avec des attributs facultatifs. Exemple :
 
 [!code-powershell[Main](http-cookies/samples/sample1.ps1)]
 

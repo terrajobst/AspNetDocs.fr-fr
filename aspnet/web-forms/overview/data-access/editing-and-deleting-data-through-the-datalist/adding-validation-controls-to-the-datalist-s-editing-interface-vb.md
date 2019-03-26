@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: 6b073fc6-524d-453d-be7c-0c30986de391
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/adding-validation-controls-to-the-datalist-s-editing-interface-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 6fe5fcba322f3d3a37b862f0a85810d8b4dda5f4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d4d7db91ebd495149bb322487b541e2965d4f5e5
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059336"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424671"
 ---
 <a name="adding-validation-controls-to-the-datalists-editing-interface-vb"></a>Ajout de contrôles Validation aux interfaces de modification du contrôle DataList (VB)
 ====================
@@ -156,10 +156,10 @@ Ajoutez le code suivant au début de la `UpdateCommand` Gestionnaire d’événe
 
 [!code-vb[Main](adding-validation-controls-to-the-datalist-s-editing-interface-vb/samples/sample2.vb)]
 
-Avec cet ajout, le produit va tenter de mettre à jour uniquement si les données envoyées sont valides. La plupart des utilisateurs qui ont remporté le t être en mesure de données non valides en raison des scripts côté client de contrôles validation de publication, mais les utilisateurs dont les navigateurs n prise en charge t JavaScript ou qui ont JavaScript prend en charge est désactivé, peuvent contourner les vérifications côté client et envoyer des données non valides.
+Avec cet ajout, le produit va tenter de mettre à jour uniquement si les données envoyées sont valides. La plupart des utilisateurs ne pourront pas les données non valides en raison des scripts côté client de contrôles de validation, de publication, mais les utilisateurs dont les navigateurs ne pas prendre en charge JavaScript ou qui ont désactivé de la prise en charge JavaScript peuvent contourner les vérifications côté client et envoyer des données non valides.
 
 > [!NOTE]
-> Le lecteur astucieux Rappelez-vous que lors de la mise à jour des données avec le contrôle GridView, nous n’a besoin à vérifier explicitement la `Page.IsValid` propriété dans notre classe code-behind de page s. Il s’agit, car le contrôle GridView consulte la `Page.IsValid` propriété nous et uniquement les continue avec la mise à jour uniquement si elle retourne une valeur de `True`.
+> Le lecteur astucieux souvenez-vous que lors de la mise à jour des données avec le contrôle GridView, il n’a pas que nous devons vérifier explicitement la `Page.IsValid` propriété dans notre classe code-behind de page s. Il s’agit, car le contrôle GridView consulte la `Page.IsValid` propriété nous et uniquement les continue avec la mise à jour uniquement si elle retourne une valeur de `True`.
 
 
 ## <a name="step-3-summarizing-data-entry-problems"></a>Étape 3 : Synthèse des problèmes de saisie de données

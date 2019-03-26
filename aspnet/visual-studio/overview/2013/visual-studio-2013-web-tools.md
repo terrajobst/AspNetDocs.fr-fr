@@ -8,18 +8,18 @@ ms.date: 07/16/2014
 ms.assetid: 09e82351-816b-402d-acd1-0f9ac6901d16
 msc.legacyurl: /visual-studio/overview/2013/visual-studio-2013-web-tools
 msc.type: authoredcontent
-ms.openlocfilehash: 82248efd767c1110b9a4067b7d0c0e2ecafcbef9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 54d86de49bf61305b17fc80964723c518abd467b
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049886"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423245"
 ---
 <a name="hands-on-lab-visual-studio-2013-web-tools"></a>Atelier pratique : Visual Studio 2013 Web Tools
 ====================
 par [Web Camps Team](https://twitter.com/webcamps)
 
-[Télécharger le Kit de formation de Web Camps](http://aka.ms/webcamps-training-kit)
+[Télécharger le Kit de formation de Web Camps](https://aka.ms/webcamps-training-kit)
 
 > Visual Studio est un environnement de développement excellente pour. Projets web et Windows en fonction du NET. Il inclut un éditeur de texte puissant qui peut facilement être utilisé pour modifier les fichiers autonomes sans projet.
 > 
@@ -27,7 +27,7 @@ par [Web Camps Team](https://twitter.com/webcamps)
 > 
 > Toute cette puissance est également disponible pour les extensions, rendant simple à étendre les éditeurs de nouvelles fonctionnalités puissantes pour répondre à vos besoins. Web Essentials est une collection de (principalement) les améliorations liées au web pour Visual Studio. Il inclut un grand nombre de nouveau saisies semi-automatiques IntelliSense (en particulier pour CSS), les nouvelles fonctionnalités de lien du navigateur, automatique des fichiers JSHint pour JavaScript, nouveaux avertissements pour HTML et CSS et de nombreuses autres fonctionnalités qui sont essentielles au développement web moderne.
 > 
-> Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 
 
 <a id="Overview"></a>
@@ -224,7 +224,7 @@ Dans cette tâche, vous allez utiliser le lien de navigateur **Mode inspecter** 
     ![Ouverture du fichier Site.css](visual-studio-2013-web-tools/_static/image16.png "ouverture du fichier Site.css")
 
     *Ouverture du fichier Site.css*
-5. Appuyez sur **CTRL** + **F** et type **.flip-Container .front** pour trouver le sélecteur CSS.
+5. Appuyez sur **CTRL** + **F** et type **.flip-container .front** pour trouver le sélecteur CSS.
 6. Cliquez sur le carré bleu clair dans la propriété de la bordure de la classe pour ouvrir le sélecteur de couleurs.
 
     ![Ouvrir le sélecteur de couleurs](visual-studio-2013-web-tools/_static/image17.png "ouvrir le sélecteur de couleurs")

@@ -8,12 +8,12 @@ ms.date: 06/06/2012
 ms.assetid: a56572ba-81c3-47af-826d-941e9c4775ec
 msc.legacyurl: /mvc/overview/performance/using-asynchronous-methods-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: 757b15c34f6fa0078d0bca0dfb38d553bb73809d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 20f8d6f459cefc6c1a2e7d5f64c6df4199f8ad24
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033266"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424467"
 ---
 <a name="using-asynchronous-methods-in-aspnet-mvc-4"></a>Utilisation de méthodes asynchrones dans ASP.NET MVC 4
 ====================
@@ -90,7 +90,7 @@ L’illustration suivante montre la vue gizmos à partir de l’exemple de proje
 
 ## <a id="CreatingAsynchGizmos"></a>  Création d’une méthode d’Action asynchrone Gizmos
 
-L’exemple utilise le nouveau [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) et [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) (disponible dans .NET 4.5 et Visual Studio 2012) de mots clés pour permettre au compilateur d’être chargée de maintenir les transformations complexes nécessaires pour programmation asynchrone. Le compilateur vous permet d’écrire le code à l’aide de que constructions de flux de contrôle synchrone de # et le compilateur applique automatiquement les transformations nécessaires pour utiliser des rappels afin d’éviter le blocage des threads.
+L’exemple utilise le nouveau [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) et [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) (disponible dans .NET 4.5 et Visual Studio 2012) de mots clés pour permettre au compilateur d’être chargée de maintenir les transformations complexes nécessaires pour programmation asynchrone. Le compilateur vous permet d’écrire le code à l’aide du C#de constructions de flux de contrôle synchrone et le compilateur applique automatiquement les transformations nécessaires pour utiliser des rappels afin d’éviter le blocage des threads.
 
 Le code suivant illustre la `Gizmos` méthode synchrone et le `GizmosAsync` méthode asynchrone. Si votre navigateur prend en charge la [HTML 5 `<mark>` élément](http://www.w3.org/wiki/HTML/Elements/mark), vous verrez les modifications dans `GizmosAsync` dans la mise en surbrillance jaune.
 

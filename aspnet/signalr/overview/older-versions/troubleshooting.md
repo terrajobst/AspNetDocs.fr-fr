@@ -8,12 +8,12 @@ ms.date: 06/05/2013
 ms.assetid: 347210ba-c452-4feb-886f-b51d89f58971
 msc.legacyurl: /signalr/overview/older-versions/troubleshooting
 msc.type: authoredcontent
-ms.openlocfilehash: d485829fb60b32b063405f37ae9c6c278bf7255b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 798c41ee36372d12f03d07bbd7af3a26c161d33f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063336"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423323"
 ---
 <a name="signalr-troubleshooting-signalr-1x"></a>Résolution des problèmes de SignalR (SignalR 1.x)
 ====================
@@ -69,7 +69,7 @@ SignalR utilise deux modèles de communication : Hubs et PersistentConnections.
 
 [!code-csharp[Main](troubleshooting/samples/sample3.cs)]
 
-**Code de serveur C# qui mappe un itinéraire vers un Hub ou à plusieurs hubs si vous possédez plusieurs applications**
+**C#code de serveur qui mappe un itinéraire à un concentrateur ou sur plusieurs hubs si vous possédez plusieurs applications**
 
 [!code-csharp[Main](troubleshooting/samples/sample4.cs)]
 

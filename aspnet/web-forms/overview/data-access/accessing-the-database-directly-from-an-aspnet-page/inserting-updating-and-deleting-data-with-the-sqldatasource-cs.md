@@ -8,12 +8,12 @@ ms.date: 02/20/2007
 ms.assetid: a526f0ec-779e-4a2b-a476-6604090d25ce
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/inserting-updating-and-deleting-data-with-the-sqldatasource-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2c52fcf746d80899d7ea568c8110c4dfa610224c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 06c5fea8a058f15e72d455cf0e15b462d8f91e38
+ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041366"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58440389"
 ---
 <a name="inserting-updating-and-deleting-data-with-the-sqldatasource-c"></a>Insertion, mise à jour et suppression de données avec SqlDataSource (C#)
 ====================
@@ -119,7 +119,7 @@ Avec le `DeleteCommand` propriété ajoutée, la balise active de GridView s con
 Lorsque vous cliquez sur un bouton Supprimer, une publication (postback) se produit, le contrôle GridView affecte le `ProductID` paramètre la valeur de la `DataKeys` valeur de collection pour la ligne dont bouton Supprimer l’utilisateur a cliqué et appelle les opérations de mappage SqlDataSource `Delete()` (méthode). Le contrôle SqlDataSource, puis se connecte à la base de données et exécute la `DELETE` instruction. Le contrôle GridView puis relie à SqlDataSource, récupérer et afficher l’ensemble actuel des produits (qui n’inclut plus l’enregistrement supprimé juste).
 
 > [!NOTE]
-> Étant donné que le contrôle GridView utilise son `DataKeys` collection pour remplir les paramètres SqlDataSource, il s vitales qui le s GridView `DataKeyNames` propriété être définie sur l’ou les colonnes qui constituent la clé primaire et que les opérations de mappage SqlDataSource `SelectCommand` retourne ces colonnes. En outre, il s important que le paramètre de nom dans le s SqlDataSource `DeleteCommand` est défini sur `@ProductID`. Si le `DataKeyNames` propriété n’est pas définie ou le paramètre n’est pas nommé `@ProductsID`, en cliquant sur le bouton Supprimer une publication (postback), tout en t gagné / supprime réellement de n’importe quel enregistrement.
+> Étant donné que le contrôle GridView utilise son `DataKeys` collection pour remplir les paramètres SqlDataSource, il s vitales qui le s GridView `DataKeyNames` propriété être définie sur l’ou les colonnes qui constituent la clé primaire et que les opérations de mappage SqlDataSource `SelectCommand` retourne ces colonnes. En outre, il s important que le paramètre de nom dans le s SqlDataSource `DeleteCommand` est défini sur `@ProductID`. Si le `DataKeyNames` propriété n’est pas définie ou le paramètre n’est pas nommé `@ProductsID`, en cliquant sur le bouton Supprimer entraîne une publication (postback), mais ne supprime pas réellement les enregistrements.
 
 
 Figure 5 illustre cette interaction graphiquement. Faire référence à la [examinant les événements associés insertion, mise à jour et suppression](../editing-inserting-and-deleting-data/examining-the-events-associated-with-inserting-updating-and-deleting-cs.md) didacticiel pour une présentation plus détaillée de la chaîne d’événements associée d’insertion, de la mise à jour et de suppression d’un contrôle Web de données.
@@ -192,7 +192,7 @@ Depuis la générer `INSERT`, `UPDATE`, et `DELETE` instructions option est uniq
 
 Bien que le `INSERT`, `UPDATE`, et `DELETE` instructions peuvent être entrés manuellement, envisagez de l’info-bulle de gagner du temps suivant. Initialement le programme d’installation SqlDataSource afin qu’il extrait des données uniquement dans le `Products` table. Utiliser les colonnes de spécifier de s d’Assistant Configurer la Source de données à partir d’un écran de la table ou la vue afin que vous pouvez générer automatiquement le `INSERT`, `UPDATE`, et `DELETE` instructions. À l’issue de l’Assistant, puis configurer le SelectQuery à partir de la fenêtre Propriétés (ou, vous pouvez également revenir à l’Assistant Configurer la Source de données, mais utilisez la spécifier une instruction SQL personnalisée ou une option de procédure stockée). Puis mettez à jour le `SELECT` instruction d’inclure le `JOIN` syntaxe. Cette technique offre les avantages de gagner du temps d’instructions SQL générées automatiquement, tout en permettant une plus personnalisée `SELECT` instruction.
 
-Une autre limitation de générer automatiquement le `INSERT`, `UPDATE`, et `DELETE` instructions qui correspond aux colonnes de la `INSERT` et `UPDATE` instructions sont basées sur les colonnes retournées par la `SELECT` instruction. Nous devons mettre à jour ou insérer des champs plus ou moins, toutefois. Par exemple, dans l’exemple à l’étape 2, peut-être que nous souhaitons avoir le `UnitPrice` BoundField être en lecture seule. Dans ce cas, il ne doit pas t s’affichent dans le `UpdateCommand`. Ou bien, nous pouvons choisir de définir la valeur d’un champ de table qui n’apparaît pas dans le contrôle GridView. Par exemple, lorsque vous ajoutez un nouvel enregistrement nous souhaiterons peut-être le `QuantityPerUnit` la valeur TODO.
+Une autre limitation de générer automatiquement le `INSERT`, `UPDATE`, et `DELETE` instructions qui correspond aux colonnes de la `INSERT` et `UPDATE` instructions sont basées sur les colonnes retournées par la `SELECT` instruction. Nous devons mettre à jour ou insérer des champs plus ou moins, toutefois. Par exemple, dans l’exemple à l’étape 2, peut-être que nous souhaitons avoir le `UnitPrice` BoundField être en lecture seule. Dans ce cas, il ne doit pas apparaître dans le `UpdateCommand`. Ou bien, nous pouvons choisir de définir la valeur d’un champ de table qui n’apparaît pas dans le contrôle GridView. Par exemple, lorsque vous ajoutez un nouvel enregistrement nous souhaiterons peut-être le `QuantityPerUnit` la valeur TODO.
 
 Si ces personnalisations sont requises, vous devez effectuer manuellement, par le biais de la fenêtre Propriétés, spécifiez une instruction SQL personnalisée ou option de procédure stockée dans l’Assistant ou via la syntaxe déclarative.
 
@@ -204,7 +204,7 @@ Si ces personnalisations sont requises, vous devez effectuer manuellement, par l
 
 Afin que les données de contrôles Web afin d’utiliser leurs intégrées d’insertion, la modification et la suppression de fonctionnalités, le contrôle de source de données qu’ils sont liés à doit offrir ce type de fonctionnalité. Pour le SqlDataSource, cela signifie que `INSERT`, `UPDATE`, et `DELETE` instructions SQL doivent être affectées à la `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés. Ces propriétés et les collections de paramètres correspondants, peuvent être ajoutées manuellement ou générées automatiquement via l’Assistant Configurer la Source de données. Dans ce didacticiel, nous avons examiné ces deux techniques.
 
-Nous avons examiné à l’aide de l’accès concurrentiel optimiste avec ObjectDataSource dans le [implémentation de l’accès concurrentiel optimiste](../editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs.md) didacticiel. Le contrôle SqlDataSource fournit également la prise en charge de l’accès concurrentiel optimiste. Comme indiqué à l’étape 2, lorsque vous générez automatiquement le `INSERT`, `UPDATE`, et `DELETE` offre de l’Assistant d’instructions, utilisez l’option d’accès concurrentiel optimiste. Comme nous le verrons dans le didacticiel suivant, à l’aide de l’accès concurrentiel optimiste avec SqlDataSource modifie le `WHERE` clauses dans le `UPDATE` et `DELETE` instructions pour vous assurer que les valeurs pour les autres colonnes réalisées t modifié les données depuis le derniers affichée sur la page.
+Nous avons examiné à l’aide de l’accès concurrentiel optimiste avec ObjectDataSource dans le [implémentation de l’accès concurrentiel optimiste](../editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs.md) didacticiel. Le contrôle SqlDataSource fournit également la prise en charge de l’accès concurrentiel optimiste. Comme indiqué à l’étape 2, lorsque vous générez automatiquement le `INSERT`, `UPDATE`, et `DELETE` offre de l’Assistant d’instructions, utilisez l’option d’accès concurrentiel optimiste. Comme nous le verrons dans le didacticiel suivant, à l’aide de l’accès concurrentiel optimiste avec SqlDataSource modifie le `WHERE` clauses dans le `UPDATE` et `DELETE` instructions pour vous assurer que les valeurs pour les autres colonnes n’ont pas changé depuis le derniers les données affichée sur la page.
 
 Bonne programmation !
 

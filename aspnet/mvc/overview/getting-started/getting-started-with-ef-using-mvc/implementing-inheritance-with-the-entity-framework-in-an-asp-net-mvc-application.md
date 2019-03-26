@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 08834147-77ec-454a-bb7a-d931d2a40dab
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/implementing-inheritance-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 79513edce7ac3044f6f547149400cba7d307edfa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3ebabd626e0b862e09f19552648406aab959f882
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027636"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423310"
 ---
 # <a name="template-implement-inheritance-with-ef-in-an-aspnet-mvc-5-app"></a>Modèle : Implémenter l’héritage avec Entity Framework dans une application ASP.NET MVC 5
 
@@ -73,7 +73,7 @@ Dans le *modèles* dossier, créez *Person.cs* et remplacez le code du modèle p
 
 ## <a name="update-instructor-and-student"></a>Mettre à jour Student et Instructor
 
-Maintenant mettre à jour le *Instructor.cs* et *Sudent.cs* à hériter des valeurs à partir de la *Person.sc*.
+Maintenant mettre à jour le *Instructor.cs* et *Student.cs* à hériter des valeurs à partir de la *Person.sc*.
 
 Dans *Instructor.cs*, dériver le `Instructor` classe à partir de la `Person` classe et supprimez les champs de clé et de nom. Le code ressemblera à l’exemple suivant :
 

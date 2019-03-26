@@ -8,12 +8,12 @@ ms.date: 03/08/2013
 ms.assetid: db31e909-563a-4516-aadd-62aa210ac7e4
 msc.legacyurl: /single-page-application/overview/templates/breezeangular-template
 msc.type: authoredcontent
-ms.openlocfilehash: a3e8b42cdadf99df6971a278834b1429e129ce72
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a3021f166262ee953b0cbe9ea88762a385925b88
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041186"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423098"
 ---
 <a name="breezeangular-template"></a>Modèle Breeze/Angular
 ====================
@@ -89,7 +89,7 @@ Vous êtes maintenant dans le sol de SPA. Tout ce que vous consultez et rencontr
 
 La logique de validation est effectuée côté client par Breeze. Attributs de validation sur les classes de modèle de serveur sont propagées vers le client et exécutées automatiquement avant que le client contacte le serveur.
 
-Passez en revue le trafic réseau. Notez qu’il n’y avait aucun appel au serveur lors de Breeze a détecté une erreur. Chaque modification valide a entraîné une demande POST en « / api/Todo/SaveChanges ». Breeze regroupe les modifications et les envoie ensemble en une seule requête pour le contrôleur d’API Web `SaveChanges` (méthode). Qui diffère du modèle KockoutJS SPA, ce qui rend PUT, POST et DELETE de requêtes pour chaque élément individuellement.
+Passez en revue le trafic réseau. Notez qu’il n’y avait aucun appel au serveur lors de Breeze a détecté une erreur. Chaque modification valide a entraîné une demande POST en « / api/Todo/SaveChanges ». Breeze regroupe les modifications et les envoie ensemble en une seule requête pour le contrôleur d’API Web `SaveChanges` (méthode). Qui diffère du modèle KnockoutJS SPA, ce qui rend PUT, POST et DELETE de requêtes pour chaque élément individuellement.
 
 En outre, ne notez aucun trafic réseau lorsque vous basculez entre la liste des tâches et sur les pages. C’est parce que la requête a été limitée dans le cache local de Breeze.
 
@@ -107,7 +107,7 @@ La pile côté serveur se compose d’un code de développeur et trois biblioth�
 
 ![](http://www.breezejs.com/sites/all/images/spa-template/ServerArchitecture.png)
 
-L’architecture de base est le même que le modèle KockoutJS SPA. Toutefois, l’implémentation est beaucoup plus simple : Les objets DTO ont été supprimés, et la plupart des détails de l’Entity Framework ont été déléguée Breeze.NET.
+L’architecture de base est le même que le modèle KnockoutJS SPA. Toutefois, l’implémentation est beaucoup plus simple : Les objets DTO ont été supprimés, et la plupart des détails de l’Entity Framework ont été déléguée Breeze.NET.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

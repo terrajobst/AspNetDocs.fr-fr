@@ -8,12 +8,12 @@ ms.date: 03/06/2007
 ms.assetid: 32377145-ec25-4715-8370-a1c590a331d5
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-radio-buttons-cs
 msc.type: authoredcontent
-ms.openlocfilehash: e1ac64a3c5023d83259f6e2d6facd8e248768c2d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4b2e50a4ede0dfa97df6fa73dbd5b16bfde59745
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046646"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421673"
 ---
 <a name="adding-a-gridview-column-of-radio-buttons-c"></a>Ajout d’une colonne GridView de cases d’option (C#)
 ====================
@@ -179,7 +179,7 @@ Il existe deux approches qui peuvent être effectuées pour injecter du balisage
 
 [!code-aspx[Main](adding-a-gridview-column-of-radio-buttons-cs/samples/sample5.aspx)]
 
-Ici, `GetUniqueRadioButton` et `GetRadioButtonValue` seraient des méthodes définies dans la classe code-behind qui retourné approprié `id` et `value` des valeurs pour chaque case d’option d’attribut. Cette approche fonctionne bien pour l’affectation de la `id` et `value` des attributs, mais s’avère insuffisant lorsque vous avez besoin spécifier le `checked` valeur d’attribut, car la syntaxe de liaison de données est exécutée uniquement lorsque des données sont tout d’abord liées au GridView. Par conséquent, si le contrôle GridView présente un état d’affichage est activé, les méthodes de mise en forme ne se déclenche lorsque la page est chargée (ou lorsque le contrôle GridView est explicitement de nouveau lié à la source de données) et par conséquent, la fonction qui définit le `checked` attribut a gagné t être appelée sur publication (postback). Il s un problème subtil au lieu de cela et un peu au-delà de la portée de cet article, donc je vais laisser à cela. Toutefois, j’ai faire vous encourage à essayer d’utiliser l’approche ci-dessus et par le biais d’utiliser au point où vous allez rester bloqué. Tel un t exercice a gagné obtenir n’importe quel plus proche vers une version opérationnelle, mais elle permet favoriser une meilleure compréhension de la GridView et le cycle de vie de liaison de données.
+Ici, `GetUniqueRadioButton` et `GetRadioButtonValue` seraient des méthodes définies dans la classe code-behind qui retourné approprié `id` et `value` des valeurs pour chaque case d’option d’attribut. Cette approche fonctionne bien pour l’affectation de la `id` et `value` des attributs, mais s’avère insuffisant lorsque vous avez besoin spécifier le `checked` valeur d’attribut, car la syntaxe de liaison de données est exécutée uniquement lorsque des données sont tout d’abord liées au GridView. Par conséquent, si le contrôle GridView présente un état d’affichage est activé, les méthodes de mise en forme ne se déclenche lorsque la page est chargée (ou lorsque le contrôle GridView est explicitement de nouveau lié à la source de données) et par conséquent, la fonction qui définit le `checked` attribut ne sera pas appelé sur publication (postback). Il s un problème subtil au lieu de cela et un peu au-delà de la portée de cet article, donc je vais laisser à cela. Toutefois, j’ai faire vous encourage à essayer d’utiliser l’approche ci-dessus et par le biais d’utiliser au point où vous allez rester bloqué. Un tel exercice n’obtiendrez plus proche de n’importe quel vers une version opérationnelle, mais elle permet favoriser une meilleure compréhension de la GridView et le cycle de vie de liaison de données.
 
 L’autre approche pour injecter personnalisé, balisage de bas niveau dans un modèle et l’approche que nous allons utiliser pour ce didacticiel consiste à ajouter un [contrôle Literal](https://msdn.microsoft.com/library/sz4949ks(VS.80).aspx) au modèle. Ensuite, dans le s GridView `RowCreated` ou `RowDataBound` Gestionnaire d’événements, le contrôle Literal est accessible par programmation et son `Text` propriété définie sur le balisage à émettre.
 

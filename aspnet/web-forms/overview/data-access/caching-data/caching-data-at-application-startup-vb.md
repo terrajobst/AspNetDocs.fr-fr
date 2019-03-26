@@ -8,12 +8,12 @@ ms.date: 05/30/2007
 ms.assetid: 84afe4ac-cc53-4f2e-a867-27eaf692c2df
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-at-application-startup-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9d997cb0af8487b2a9d849f24f3bff8df8611f6d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ef0a99a1601f40995c81a12f457303e040f57e29
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026646"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424610"
 ---
 <a name="caching-data-at-application-startup-vb"></a>Mise en cache de données au démarrage de l’application (VB)
 ====================
@@ -103,7 +103,7 @@ De même, le cache de données utilisable comme un magasin de cache, comme le mo
 
 [!code-vb[Main](caching-data-at-application-startup-vb/samples/sample5.vb)]
 
-Pour ajouter un élément au cache de données sans expiration temporelle, utilisez le `System.Web.Caching.Cache.NoAbsoluteExpiration` et `System.Web.Caching.Cache.NoSlidingExpiration` valeurs en tant que paramètres d’entrée. Cette surcharge particulière du cache de données s `Insert` méthode a été sélectionnée afin que nous pouvions spécifier la *priorité* de l’élément de cache. La priorité est utilisée pour déterminer les éléments à nettoyer à partir du cache lorsque la mémoire disponible est insuffisante. Ici, nous utilisons la priorité `NotRemovable`, ce qui garantit que cet élément de cache a gagné t être nettoyée.
+Pour ajouter un élément au cache de données sans expiration temporelle, utilisez le `System.Web.Caching.Cache.NoAbsoluteExpiration` et `System.Web.Caching.Cache.NoSlidingExpiration` valeurs en tant que paramètres d’entrée. Cette surcharge particulière du cache de données s `Insert` méthode a été sélectionnée afin que nous pouvions spécifier la *priorité* de l’élément de cache. La priorité est utilisée pour déterminer les éléments à nettoyer à partir du cache lorsque la mémoire disponible est insuffisante. Ici, nous utilisons la priorité `NotRemovable`, ce qui garantit que cet élément de cache ne sont pas être nettoyé.
 
 > [!NOTE]
 > Ce téléchargement didacticiel s implémente la `StaticCache` classe à l’aide de l’approche de variable membre statique. Le code pour les techniques de cache application état et les données est disponible dans les commentaires dans le fichier de classe.

@@ -8,24 +8,24 @@ ms.date: 07/16/2014
 ms.assetid: 4fe2558d-67cc-4d12-a5c1-6fb9f6f16137
 msc.legacyurl: /visual-studio/overview/2013/one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: c18911680b59448cd67190f71e951a3fcf3d0478
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 85e4369ee458043eec59fb27e317d18466f61f32
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044126"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422530"
 ---
 <a name="hands-on-lab-one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api"></a>Atelier pratique : One ASP.NET : Intégration d’ASP.NET Web Forms, MVC et API Web
 ====================
 par [Web Camps Team](https://twitter.com/webcamps)
 
-[Télécharger le Kit de formation de Web Camps](http://aka.ms/webcamps-training-kit)
+[Télécharger le Kit de formation de Web Camps](https://aka.ms/webcamps-training-kit)
 
 > ASP.NET est une infrastructure pour la création de sites Web, applications et services à l’aide de technologies spécialisées telles que MVC, API Web et d’autres. Avec le développement ASP.NET a vu depuis sa création et l’exprimée devez disposer de ces technologies intégrées, récents efforts ont été dans efforçant **One ASP.NET**.
 > 
 > Visual Studio 2013 introduit un nouveau système de projet unifié qui vous permet de créer une application et utiliser toutes les technologies ASP.NET dans un projet. Cette fonctionnalité vous évite de devoir choisir qu’une seule technologie au début d’un projet et le stick avec lui et à la place encourage l’utilisation de plusieurs frameworks ASP.NET au sein d’un projet.
 > 
-> Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 
 
 <a id="Overview"></a>

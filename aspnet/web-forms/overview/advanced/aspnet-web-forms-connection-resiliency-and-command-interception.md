@@ -8,12 +8,12 @@ ms.date: 03/31/2014
 ms.assetid: 6d497001-fa80-4765-b4cc-181fe90b894e
 msc.legacyurl: /web-forms/overview/advanced/aspnet-web-forms-connection-resiliency-and-command-interception
 msc.type: authoredcontent
-ms.openlocfilehash: 039923a91d957765fa8b2c0cfe11abc8790c1e88
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 067542e8b8aa9909bbb2147f8e11e34604986d87
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052676"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424025"
 ---
 <a name="aspnet-web-forms-connection-resiliency-and-command-interception"></a>Résilience des connexions et interception des commandes Web Forms ASP.NET
 ====================
@@ -141,7 +141,7 @@ Ensuite, vous allez créer les classes Entity Framework appellera chaque fois qu
 
 Ces lignes de code sont la cause de votre code de l’intercepteur à exécuter lors de l’Entity Framework envoie des requêtes à la base de données. Notez que parce que vous avez créé des classes de l’intercepteur distinct pour la simulation d’une erreur temporaire et la journalisation, vous pouvez indépendamment activer et désactiver les.   
   
- Vous pouvez ajouter des intercepteurs d’à l’aide de la `DbInterception.Add` méthode n’importe où dans votre code ; pas nécessairement se trouver dans le `Application_Start` (méthode). Une autre option, si vous n’avez pas ajouté les intercepteurs dans le `Application_Start` méthode, consisterait à mettre à jour ou ajoutez la classe nommée *WingtipToysConfiguration.cs* et placez le code ci-dessus à la fin du constructeur de la `WingtipToysbConfiguration` classe.
+ Vous pouvez ajouter des intercepteurs d’à l’aide de la `DbInterception.Add` méthode n’importe où dans votre code ; pas nécessairement se trouver dans le `Application_Start` (méthode). Une autre option, si vous n’avez pas ajouté les intercepteurs dans le `Application_Start` méthode, consisterait à mettre à jour ou ajoutez la classe nommée *WingtipToysConfiguration.cs* et placez le code ci-dessus à la fin du constructeur de la `WingtipToysConfiguration` classe.
 
 Partout où vous placez ce code, être veillez à ne pas exécuter `DbInterception.Add` de l’intercepteur même plusieurs fois, ou vous obtiendrez les instances supplémentaires de l’intercepteur. Par exemple, si vous ajoutez l’intercepteur de journalisation à deux reprises, vous verrez deux journaux pour chaque requête SQL.
 
@@ -156,7 +156,7 @@ Vous avez écrit le code de simulation d’erreur temporaire d’une manière qu
 3. Entrez un nouveau produit nommé « Lever » avec le fichier de description, prix et image approprié.
 4. Appuyez sur la **ajouter un produit** bouton.  
    Vous remarquerez que le navigateur semble bloquée pendant plusieurs secondes tandis que Entity Framework tente à nouveau la requête plusieurs fois. La première nouvelle tentative se produit très rapidement, puis l’attente augmente avant chaque nouvelle tentative supplémentaire. Ce processus d’attente plus avant chaque nouvelle tentative est appelée *interruption exponentielle* .
-5. Attendez que la page n’est plus atttempting à charger.
+5. Attendez que la page n’essaie plus de charger.
 6. Arrêtez le projet et examinez le Visual Studio **sortie** fenêtre pour afficher la sortie de traçage. Vous pouvez trouver la **sortie** en sélectionnant **déboguer**  - &gt; **Windows**  - &gt;  **Sortie**. Vous devrez peut-être défiler plusieurs autres journaux écrits par votre journal.  
   
    Notez que vous pouvez voir les requêtes SQL réelles envoyées à la base de données. Vous consultez quelques requêtes initiales et les commandes que Entity Framework pour commencer, la vérification de la table d’historique de version et la migration de base de données.   

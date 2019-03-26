@@ -2,18 +2,18 @@
 uid: web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-vb
 title: Tri personnalisé de données (VB) paginées | Microsoft Docs
 author: rick-anderson
-description: Dans le didacticiel précédent, nous avons appris à implémenter la pagination personnalisée lorsque presentating des données sur une page web. Dans ce didacticiel, nous expliquons comment étendre l’exemple précédent...
+description: Dans le didacticiel précédent, nous avons appris à implémenter la pagination personnalisée lors de la présentation des données sur une page web. Dans ce didacticiel, nous expliquons comment étendre l’exemple précédent...
 ms.author: riande
 ms.date: 08/15/2006
 ms.assetid: 4823a186-caaf-4116-a318-c7ff4d955ddc
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 63d10200300a015b35062409aba2fd7999de8c3c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3f40c2632e98dd8c64c985e44478a9739df473ca
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063346"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423130"
 ---
 <a name="sorting-custom-paged-data-vb"></a>Tri de données paginées personnalisées (VB)
 ====================
@@ -21,7 +21,7 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_26_VB.exe) ou [télécharger le PDF](sorting-custom-paged-data-vb/_static/datatutorial26vb1.pdf)
 
-> Dans le didacticiel précédent, nous avons appris à implémenter la pagination personnalisée lorsque presentating des données sur une page web. Dans ce didacticiel, nous expliquons comment étendre l’exemple précédent pour prendre en charge pour le tri de la pagination personnalisée.
+> Dans le didacticiel précédent, nous avons appris à implémenter la pagination personnalisée lors de la présentation des données sur une page web. Dans ce didacticiel, nous expliquons comment étendre l’exemple précédent pour prendre en charge pour le tri de la pagination personnalisée.
 
 
 ## <a name="introduction"></a>Introduction

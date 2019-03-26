@@ -8,12 +8,12 @@ ms.date: 07/16/2014
 ms.assetid: ba07958c-42e1-4da0-81db-ba6925ed6db0
 msc.legacyurl: /signalr/overview/getting-started/real-time-web-applications-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: d4998c8b739b4b1a06699a17464a7399a87a8595
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3db54a134e8f842cab1d3471c69f5a8e2039d83d
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039486"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423609"
 ---
 <a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Atelier pratique : Applications web temps réel avec SignalR
 ====================
@@ -22,7 +22,7 @@ par [Web Camps Team](https://twitter.com/webcamps)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-[Télécharger le Kit de formation de Web Camps](http://aka.ms/webcamps-training-kit)
+[Télécharger le Kit de formation de Web Camps](https://aka.ms/webcamps-training-kit)
 
 > Les applications Web en temps réel offrent la possibilité de pousser le côté serveur contenu aux clients connectés, comme le montre, en temps réel. Pour les développeurs ASP.NET, **ASP.NET SignalR** est une bibliothèque à ajouter des fonctionnalités web en temps réel à leurs applications. Il tire parti de plusieurs transports, en sélectionnant automatiquement le mieux transport disponible étant donné le client et mieux transport disponibles du serveur. Il tire parti de **WebSocket**, une API de HTML5 qui permet la communication bidirectionnelle entre le navigateur et le serveur.
 > 
@@ -34,7 +34,7 @@ par [Web Camps Team](https://twitter.com/webcamps)
 > 
 > ![Architecture de SignalR](real-time-web-applications-with-signalr/_static/image1.png)
 > 
-> Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 
 
 <a id="Overview"></a>

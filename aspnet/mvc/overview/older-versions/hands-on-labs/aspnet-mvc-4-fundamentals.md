@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: b7dba543-73c3-4534-a9a0-ba70fa2c6a8a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-fundamentals
 msc.type: authoredcontent
-ms.openlocfilehash: d8e837a5d56871d271590859c2e82336111cc87a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d3bc39a37cace003c3fda6691f0dd7f893128b07
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029406"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425247"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Concepts de base d’ASP.NET MVC 4
 
@@ -389,7 +389,7 @@ Le fichier **~/Views/Shared/\_layout.cshtml** vous permet de configurer un modè
    (C#)
 
     [!code-cshtml[Main](aspnet-mvc-4-fundamentals/samples/sample7.cshtml)]
-5. Inclure une balise div pour restituer la section de corps de chaque page. Remplacez  <strong>@RenderBody()</strong> avec le code higlighted suivant : (C#)
+5. Inclure une balise div pour restituer la section de corps de chaque page. Remplacez  <strong>@RenderBody()</strong> code en surbrillance avec les éléments suivants : (C#)
 
     [!code-cshtml[Main](aspnet-mvc-4-fundamentals/samples/sample8.cshtml)]
 
@@ -800,7 +800,7 @@ Dans cette tâche, vous allez ajouter un lien dans la vue de Store pour avoir un
    > 
    > Bien que cette approche fonctionne, elle dépend d’une chaîne codée en dur. Si vous renommez ultérieurement le contrôleur, vous devrez modifier cette instruction manuellement. Une meilleure alternative consiste à utiliser un **programme d’assistance HTML** (méthode). ASP.NET MVC inclut une méthode d’assistance HTML qui est disponible pour des tâches. Le **Html.ActionLink()** méthode d’assistance permet de facilement générer HTML **&lt;un&gt;** liens, s’assurer que les chemins d’URL sont correctement codées URL.
    > 
-   > Htlm.ActionLink a plusieurs surcharges. Dans cet exercice, vous utiliserez une fonction qui accepte trois paramètres :
+   > Html.ActionLink a plusieurs surcharges. Dans cet exercice, vous utiliserez une fonction qui accepte trois paramètres :
    > 
    > 1. Texte du lien, qui affiche le nom du Genre
    > 2. Nom d’action de contrôleur (**Parcourir**)
@@ -1017,7 +1017,7 @@ Cette annexe sera vous montrent comment créer un nouveau site web à partir du 
 1. Accédez à la [portail de gestion Windows Azure](https://manage.windowsazure.com/) et connectez-vous en utilisant les informations d’identification Microsoft associées à votre abonnement.
 
     > [!NOTE]
-    > Avec Windows Azure, vous pouvez héberger 10 Sites Web ASP.NET gratuitement et faites ensuite évoluer que votre trafic augmente. Vous pouvez vous inscrire [ici](http://aka.ms/aspnet-hol-azure).
+    > Avec Windows Azure, vous pouvez héberger 10 Sites Web ASP.NET gratuitement et faites ensuite évoluer que votre trafic augmente. Vous pouvez vous inscrire [ici](https://aka.ms/aspnet-hol-azure).
 
     ![Ouvrez une session sur le portail Windows Azure](aspnet-mvc-4-fundamentals/_static/image48.png "ouvrez une session sur le portail Windows Azure")
 

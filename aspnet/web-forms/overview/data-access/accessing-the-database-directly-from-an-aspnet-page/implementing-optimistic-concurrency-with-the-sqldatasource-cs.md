@@ -8,12 +8,12 @@ ms.date: 02/20/2007
 ms.assetid: df999966-ac48-460e-b82b-4877a57d6ab9
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/implementing-optimistic-concurrency-with-the-sqldatasource-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f2590e8e7712d719eb89403ef839f03066a93d2b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6569f8e8f11bb67bc0723908225c7fd663a845b3
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036076"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423957"
 ---
 <a name="implementing-optimistic-concurrency-with-the-sqldatasource-c"></a>Implémentation de l’accès concurrentiel optimiste avec SqlDataSource (C#)
 ====================
@@ -28,7 +28,7 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 Dans le didacticiel précédent, nous avons examiné comment ajouter l’insertion, de la mise à jour et de suppression des fonctionnalités au contrôle SqlDataSource. En bref, pour fournir ces fonctionnalités nous avions besoin spécifier le correspondantes `INSERT`, `UPDATE`, ou `DELETE` instruction SQL dans le contrôle s `InsertCommand`, `UpdateCommand`, ou `DeleteCommand` propriétés, ainsi que le texte approprié paramètres dans le `InsertParameters`, `UpdateParameters`, et `DeleteParameters` collections. Bien que ces propriétés et les collections peuvent être spécifiées manuellement, le bouton Avancé de configurer la Source de données Assistant s offre un générer `INSERT`, `UPDATE`, et `DELETE` case à cocher des instructions qui crée automatiquement ces instructions basé sur le `SELECT` instruction.
 
-En même temps que la génération `INSERT`, `UPDATE`, et `DELETE` instructions case à cocher, la boîte de dialogue Options de génération SQL avancées inclut une option de l’accès concurrentiel optimiste utiliser (voir Figure 1). Lorsqu’elle est activée, le `WHERE` clauses dans le nom généré automatiquement `UPDATE` et `DELETE` instructions ont été modifiées pour effectuer uniquement la mise à jour ou de suppression si t ne données base de données sous-jacente été modifiée depuis l’utilisateur dernier chargée des données dans la grille.
+En même temps que la génération `INSERT`, `UPDATE`, et `DELETE` instructions case à cocher, la boîte de dialogue Options de génération SQL avancées inclut une option de l’accès concurrentiel optimiste utiliser (voir Figure 1). Lorsqu’elle est activée, le `WHERE` clauses dans le nom généré automatiquement `UPDATE` et `DELETE` instructions sont modifiées uniquement pour effectuer la mise à jour ou supprimer si la base de données sous-jacente n’a pas été modifié dans la mesure où l’utilisateur dernier chargée des données dans la grille.
 
 
 ![Vous pouvez ajouter la prise en charge de l’accès concurrentiel optimiste à partir de l’avancée boîte de dialogue Options de génération SQL](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image1.gif)
@@ -52,7 +52,7 @@ La figure 2 illustre cette interaction.
 **Figure 2**: Lorsque deux utilisateurs simultanément mettre à jour un enregistrement il s potentiel pour un utilisateur s modifie à remplacer les autres opérations de mappage ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image2.png))
 
 
-Pour éviter ce type de dépliage, une forme de [contrôle d’accès concurrentiel](http://en.wikipedia.org/wiki/Concurrency_control) doit être implémentée. [L’accès concurrentiel optimiste](http://en.wikipedia.org/wiki/Optimistic_concurrency_control) l’objectif de ce didacticiel fonctionne sur l’hypothèse que bien que les conflits d’accès concurrentiel peut être ainsi, la grande majorité du temps ces conflits a gagné t surviennent. Par conséquent, si un conflit se produit, contrôle d’accès concurrentiel optimiste informe simplement l’utilisateur enregistrer leur modifications impossible, car un autre utilisateur a modifié les mêmes données.
+Pour éviter ce type de dépliage, une forme de [contrôle d’accès concurrentiel](http://en.wikipedia.org/wiki/Concurrency_control) doit être implémentée. [L’accès concurrentiel optimiste](http://en.wikipedia.org/wiki/Optimistic_concurrency_control) l’objectif de ce didacticiel fonctionne sur l’hypothèse que, bien que de là, peut-être être des conflits d’accès concurrentiel de maintenant, puis, la grande majorité du temps ces conflits ne surviennent. Par conséquent, si un conflit se produit, contrôle d’accès concurrentiel optimiste informe simplement l’utilisateur enregistrer leur modifications impossible, car un autre utilisateur a modifié les mêmes données.
 
 > [!NOTE]
 > Pour les applications où il est supposé qu’il y aura plusieurs conflits d’accès concurrentiel ou si ces conflits sont inacceptables, puis d’accès concurrentiel pessimiste contrôle peut être utilisé à la place. Faire référence à la [implémentation de l’accès concurrentiel optimiste](../editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs.md) didacticiel pour une discussion plus détaillée sur le contrôle d’accès concurrentiel pessimiste.
@@ -66,7 +66,7 @@ Contrôle d’accès concurrentiel optimiste fonctionne en veillant à ce que l�
 **Figure 3**: Pour la mise à jour ou de suppression pour réussir, le d’origine valeurs doit être égale aux valeurs de base de données ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image4.png))
 
 
-Il existe différentes approches d’implémentation de l’accès concurrentiel optimiste (consultez [Peter A. Bromberg](http://www.eggheadcafe.com/articles/pbrombergresume.asp) s [logique de la mise à jour d’accès concurrentiel Optmistic](http://www.eggheadcafe.com/articles/20050719.asp) pour un bref aperçu présentant un nombre d’options). La technique utilisée par SqlDataSource (ainsi que par le typés ADO.NET utilisé dans notre couche d’accès aux données) renforce la `WHERE` clause pour inclure une comparaison de toutes les valeurs d’origine. Ce qui suit `UPDATE` instruction, par exemple, des mises à jour le nom et le prix d’un produit uniquement si les valeurs actuelles de la base de données sont égales aux valeurs qui ont été récupérées à l’origine lors de la mise à jour l’enregistrement dans le contrôle GridView. Le `@ProductName` et `@UnitPrice` paramètres contiennent les nouvelles valeurs entrées par l’utilisateur, tandis que `@original_ProductName` et `@original_UnitPrice` contiennent les valeurs qui ont été chargées à l’origine dans le contrôle GridView lorsque l’utilisateur a cliqué sur le bouton Modifier :
+Il existe différentes approches d’implémentation de l’accès concurrentiel optimiste (consultez [Peter A. Bromberg](http://www.eggheadcafe.com/articles/pbrombergresume.asp)de [logique de la mise à jour d’accès concurrentiel optimiste](http://www.eggheadcafe.com/articles/20050719.asp) pour un bref aperçu présentant un nombre d’options). La technique utilisée par SqlDataSource (ainsi que par le typés ADO.NET utilisé dans notre couche d’accès aux données) renforce la `WHERE` clause pour inclure une comparaison de toutes les valeurs d’origine. Ce qui suit `UPDATE` instruction, par exemple, des mises à jour le nom et le prix d’un produit uniquement si les valeurs actuelles de la base de données sont égales aux valeurs qui ont été récupérées à l’origine lors de la mise à jour l’enregistrement dans le contrôle GridView. Le `@ProductName` et `@UnitPrice` paramètres contiennent les nouvelles valeurs entrées par l’utilisateur, tandis que `@original_ProductName` et `@original_UnitPrice` contiennent les valeurs qui ont été chargées à l’origine dans le contrôle GridView lorsque l’utilisateur a cliqué sur le bouton Modifier :
 
 
 [!code-sql[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample1.sql)]
@@ -129,7 +129,7 @@ Malheureusement, l’augmentée `UPDATE` et `DELETE` généré automatiquement l
 
 [!code-sql[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample6.sql)]
 
-Le `UnitPrice` colonne dans le `Products` table peut avoir `NULL` valeurs. Si un enregistrement particulier a un `NULL` valeur `UnitPrice`, le `WHERE` partie de la clause `[UnitPrice] = @original_UnitPrice` sera *toujours* ont la valeur False, car `NULL = NULL` retourne toujours False. Par conséquent, les enregistrements qui contiennent `NULL` valeurs ne peut pas être modifiés ou supprimés, comme le `UPDATE` et `DELETE` instructions `WHERE` clauses a gagné t retournent toutes les lignes pour mettre à jour ou supprimer.
+Le `UnitPrice` colonne dans le `Products` table peut avoir `NULL` valeurs. Si un enregistrement particulier a un `NULL` valeur `UnitPrice`, le `WHERE` partie de la clause `[UnitPrice] = @original_UnitPrice` sera *toujours* ont la valeur False, car `NULL = NULL` retourne toujours False. Par conséquent, les enregistrements qui contiennent `NULL` valeurs ne peut pas être modifiés ou supprimés, comme le `UPDATE` et `DELETE` instructions `WHERE` clauses ne retournent toutes les lignes pour mettre à jour ou supprimer.
 
 > [!NOTE]
 > Ce bogue a été signalé initialement à Microsoft en juin 2004 dans [SqlDataSource génère des instructions SQL inexactes](https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=93937) et disponible doit être résolu dans la prochaine version d’ASP.NET.
@@ -189,7 +189,7 @@ Lorsque la deuxième fenêtre de navigateur met à jour l’enregistrement, le n
 > Fonctionnement de Delete de la même manière. Avec deux fenêtres du navigateur ouvertes, commencez par modification d’un produit donné avec un et puis d’enregistrer ses modifications. Après avoir enregistré les modifications dans le navigateur, cliquez sur le bouton Supprimer pour le même produit dans l’autre. Étant donné que le don de valeurs d’origine t correspondre dans le `DELETE` instruction s `WHERE` clause, la suppression échoue en mode silencieux.
 
 
-L’utilisateur final s du point de vue dans la deuxième fenêtre de navigateur, après avoir cliqué sur le bouton de mise à jour la grille retourne au mode d’édition préalable, mais leurs modifications ont été perdues. Toutefois, cet emplacement s aucun retour visuel respecter leur t ne savais pas de modifications. Dans l’idéal, si un utilisateur s modifications sont perdues une violation d’accès concurrentiel, nous d notifier ces derniers et, peut-être, maintenir la grille en mode édition. Permettent de voir comment cela s.
+L’utilisateur final s du point de vue dans la deuxième fenêtre de navigateur, après avoir cliqué sur le bouton de mise à jour la grille retourne au mode d’édition préalable, mais leurs modifications ont été perdues. Toutefois, cet emplacement s aucun retour visuel leurs modifications n’a pas conserver. Dans l’idéal, si un utilisateur s modifications sont perdues une violation d’accès concurrentiel, nous d notifier ces derniers et, peut-être, maintenir la grille en mode édition. Permettent de voir comment cela s.
 
 ## <a name="step-3-determining-when-a-concurrency-violation-has-occurred"></a>Étape 3 : Déterminer quand une Violation d’accès concurrentiel s’est produite
 

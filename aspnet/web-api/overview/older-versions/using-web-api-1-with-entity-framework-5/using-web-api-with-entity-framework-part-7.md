@@ -8,12 +8,12 @@ ms.date: 07/04/2012
 ms.assetid: eb32a17b-626c-4373-9a7d-3387992f3c04
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: bb4704e7f4f13fab04acdbdd642174884517e18a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 91a6496e2640668c58ec0493d47d909e2de67367
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042406"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421348"
 ---
 <a name="part-7-creating-the-main-page"></a>Partie 7 : Création de la page principale
 ====================
@@ -61,7 +61,7 @@ En outre, notez le `total` propriété sur le `OrderDetailsViewModel`. Cette pro
 Ensuite, ajoutez ces fonctions à `AppViewModel`:
 
 - `resetCart` Supprime tous les éléments du panier.
-- `getDetails` Obtient les détails d’une commande (par pusing un nouveau `OrderDetailsViewModel` sur la `details` liste).
+- `getDetails` Obtient les détails d’une commande (en envoyant un nouveau `OrderDetailsViewModel` sur la `details` liste).
 - `createOrder` Crée un nouvel ordre et vide le panier d’achat.
 
 

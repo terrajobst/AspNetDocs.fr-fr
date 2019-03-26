@@ -8,12 +8,12 @@ ms.date: 01/17/2019
 ms.assetid: e879487e-dbcd-4b33-b092-d67c37ae768c
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 266c808e3525787181038d2de473194989039e02
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d96f2bef5fff6fbee8e0767b0fa735cbd68e2779
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038016"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421542"
 ---
 <a name="using-web-api-2-with-entity-framework-6"></a>Utilisation de Web API 2 avec Entity Framework 6
 ====================
@@ -91,7 +91,7 @@ Après avoir créé le projet, vous pouvez choisir de déployer dans Azure App S
 
    [![](part-1/_static/image16.png)](part-1/_static/image16.png)
 
-   Acceptez les valeurs par défaut ou entrez des valeurs différentes. Entrez un **Adminstrator Username** et **mot de passe administrateur** pour votre nouvelle base de données. Sélectionnez **OK** lorsque vous avez terminé. Le **créer App Service** page s’affiche de nouveau.
+   Acceptez les valeurs par défaut ou entrez des valeurs différentes. Entrez un **nom d’utilisateur administrateur** et **mot de passe administrateur** pour votre nouvelle base de données. Sélectionnez **OK** lorsque vous avez terminé. Le **créer App Service** page s’affiche de nouveau.
 
 5. Sélectionnez **créer** pour créer votre profil. Un message s’affiche dans le coin inférieur droit, indiquant que le déploiement est en cours. Après quelques instants, le **publier** fenêtre réapparaît.
 

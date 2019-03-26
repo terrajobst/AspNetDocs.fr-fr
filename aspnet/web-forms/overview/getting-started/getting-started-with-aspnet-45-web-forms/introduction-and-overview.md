@@ -8,12 +8,12 @@ ms.date: 01/09/2019
 ms.assetid: 9b96eaa1-8ef0-4338-a2e8-e0f970bfaf68
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
 msc.type: authoredcontent
-ms.openlocfilehash: fb41ce72e9454d8d670a0b95234d2bc3f909f0ee
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b51ffda9aa10dd8b1fe98c4b56f70994eb016cec
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039176"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425715"
 ---
 <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2017"></a>Bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2017
 ====================
@@ -158,7 +158,7 @@ Après avoir installé les composants requis, vous êtes prêt à commencer à c
 
 ## <a name="download-the-sample-application"></a>Télécharger l’exemple d’application
 
- Vous pouvez télécharger l’exemple terminé applicatiion à tout moment à partir du site d’exemples MSDN :
+ Vous pouvez télécharger l’exemple d’application complet à tout moment à partir du site d’exemples MSDN :
 
 [Bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2013 - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) (c#) 
 

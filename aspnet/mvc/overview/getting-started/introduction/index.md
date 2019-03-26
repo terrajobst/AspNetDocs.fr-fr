@@ -15,7 +15,7 @@ msc.type: chapter
 
 [!INCLUDE [consider RP](../../../../includes/razor.md)]
 
-Cette série de didacticiels suivante couvre ASP.NET MVC : Source se trouve sur [GitHub](https://github.com/aspnet/Docs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
+Cette série de didacticiels suivante couvre ASP.NET MVC : Source se trouve sur [GitHub](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
 
 - [Prise en main](getting-started.md)
 - [Ajout d’un contrôleur](adding-a-controller.md)

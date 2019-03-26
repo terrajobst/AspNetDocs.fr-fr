@@ -8,12 +8,12 @@ ms.date: 11/13/2006
 ms.assetid: f52c302a-1b7c-46fe-8a13-8412c95cbf6d
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 05fbc51d5341a4d3d634cbbc05c0e66a827b0394
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ec5124cb0b449db703988bdadbaa244ff72cf363
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042506"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425598"
 ---
 <a name="sorting-data-in-a-datalist-or-repeater-control-c"></a>Tri des données dans un contrôle DataList ou Repeater (C#)
 ====================
@@ -135,7 +135,7 @@ Avec l’objet DropDownList de tri est terminée, nous devons ensuite mettre à 
 
 
 > [!NOTE]
-> En cliquant sur le bouton d’actualisation génère les données automatiquement retriée car l’état d’affichage s Repeater a été désactivé, ce qui provoque le Repeater relier à sa source de données sur chaque publication (postback). Si vous avez déjà quitté l’état d’affichage Repeater s activée, modifier le tri déroulante liste a gagné t a aucun effet sur l’ordre de tri. Pour résoudre ce problème, créez un gestionnaire d’événements pour le bouton Actualiser s `Click` rebind le répéteur à sa source de données et événements (en appelant le Repeater s `DataBind()` méthode).
+> En cliquant sur le bouton d’actualisation génère les données automatiquement retriée car l’état d’affichage s Repeater a été désactivé, ce qui provoque le Repeater relier à sa source de données sur chaque publication (postback). Si vous avez déjà quitté l’état d’affichage Repeater s activée, modifier le tri déroulante liste n’a aucun effet sur l’ordre de tri. Pour résoudre ce problème, créez un gestionnaire d’événements pour le bouton Actualiser s `Click` rebind le répéteur à sa source de données et événements (en appelant le Repeater s `DataBind()` méthode).
 
 
 ## <a name="remembering-the-sort-expression-and-direction"></a>Mémorisation de l’Expression de tri et la Direction

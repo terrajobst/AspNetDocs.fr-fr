@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: adea836d-dbc2-4005-94ea-53aef09e9e34
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/implement-efficient-data-paging
 msc.type: authoredcontent
-ms.openlocfilehash: 2bef690355cd1f89a15a67f0c49775296d551136
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9a0b3357ef4ac9c884877474454089cc71692b7d
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060156"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426092"
 ---
 <a name="implement-efficient-data-paging"></a>Implémenter une pagination des données efficace
 ====================
@@ -42,7 +42,7 @@ Quand une demande est faite pour le */Dinners* URL, il récupère une liste de t
 
 ![](implement-efficient-data-paging/_static/image1.png)
 
-### <a name="understanding-iquerablelttgt"></a>Présentation IQuerable&lt;T&gt;
+### <a name="understanding-iqueryablelttgt"></a>Présentation IQueryable&lt;T&gt;
 
 *IQueryable&lt;T&gt;*  est une interface qui a été introduite avec LINQ en tant que partie du .NET 3.5. Il permet des scénarios puissants « exécution différée » dont nous pouvons tirer parti pour implémenter la prise en charge la pagination.
 

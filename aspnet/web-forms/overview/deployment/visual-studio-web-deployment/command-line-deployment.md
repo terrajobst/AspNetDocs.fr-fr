@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 82b8dea0-f062-4ee4-8784-3ffa30fbb1ca
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/command-line-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 9b2832dd23f68f9283983b52a85e8a9d5f85fd2f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cd31ae26f0b0b0ad8d333ae93aea9bae8f6a9fc1
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031426"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426014"
 ---
 <a name="aspnet-web-deployment-using-visual-studio-command-line-deployment"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Déploiement via la ligne de commande
 ====================
@@ -83,7 +83,7 @@ Si vous spécifiez un projet individuel au lieu d’une solution, vous devez ajo
 
 [!code-console[Main](command-line-deployment/samples/sample4.cmd?highlight=1)]
 
-Le numéro de version de Visual Studio 2010 est 10.0. Pour plus d’informations, consultez [compatibilité de projet Visual Studio et VisualStudioVersion](http://sedodream.com/2012/08/19/VisualStudioProjectCompatabilityAndVisualStudioVersion.aspx) sur le blog de Sayed Hashimi.
+Le numéro de version de Visual Studio 2010 est 10.0. Pour plus d’informations, consultez [compatibilité des projets Visual Studio et VisualStudioVersion](http://sedodream.com/2012/08/19/VisualStudioProjectCompatabilityAndVisualStudioVersion.aspx) sur le blog de Sayed Hashimi.
 
 ### <a name="specifying-the-publish-profile"></a>Spécifier le profil de publication
 

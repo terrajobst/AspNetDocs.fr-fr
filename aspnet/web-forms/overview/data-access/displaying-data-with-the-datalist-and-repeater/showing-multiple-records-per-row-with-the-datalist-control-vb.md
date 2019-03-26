@@ -8,12 +8,12 @@ ms.date: 09/13/2006
 ms.assetid: f555c531-bf33-4699-9987-42dbfef23c1f
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/showing-multiple-records-per-row-with-the-datalist-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7a23e8897e4fbdf84c4d6916c22bad9687fa5ee6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e8b5493694b24e4187ecb69ca8d2eff6a8507985
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046496"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421217"
 ---
 <a name="showing-multiple-records-per-row-with-the-datalist-control-vb"></a>Affichage de plusieurs enregistrements par ligne avec le contrôle DataList (VB)
 ====================
@@ -66,7 +66,7 @@ Prenez un moment pour consulter la page dans un navigateur. Comme le montre la F
 
 Tout le comportement par défaut pour le contrôle DataList consiste à disposer de ses éléments verticalement dans une table une seule colonne, plusieurs ligne, ce comportement peut facilement modifiables via le contrôle DataList s [ `RepeatDirection` propriété](https://msdn.microsoft.com/system.web.ui.webcontrols.datalist.repeatdirection.aspx). Le `RepeatDirection` propriété peut accepter une des deux valeurs possibles : `Horizontal` ou `Vertical` (la valeur par défaut).
 
-En modifiant le `RepeatDirection` propriété à partir de `Vertical` à `Horizontal`, le contrôle DataList restitue ses enregistrements dans une seule ligne, la création d’une colonne par un élément de source de données. Pour illustrer cela, cliquez sur le contrôle DataList dans le concepteur et puis, dans la fenêtre Propriétés, modifiez le `RepeatDirection` propriété à partir de `Vertical` à `Horiztonal`. Immédiatement lors de cette façon, le concepteur ajuste la disposition du contrôle DataList s, création d’une interface de ligne unique, plusieurs colonne (voir Figure 3).
+En modifiant le `RepeatDirection` propriété à partir de `Vertical` à `Horizontal`, le contrôle DataList restitue ses enregistrements dans une seule ligne, la création d’une colonne par un élément de source de données. Pour illustrer cela, cliquez sur le contrôle DataList dans le concepteur et puis, dans la fenêtre Propriétés, modifiez le `RepeatDirection` propriété à partir de `Vertical` à `Horizontal`. Immédiatement lors de cette façon, le concepteur ajuste la disposition du contrôle DataList s, création d’une interface de ligne unique, plusieurs colonne (voir Figure 3).
 
 
 [![Les éléments RepeatDirection propriété détermine comment la Direction le s DataList sont présentés](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image8.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image7.png)

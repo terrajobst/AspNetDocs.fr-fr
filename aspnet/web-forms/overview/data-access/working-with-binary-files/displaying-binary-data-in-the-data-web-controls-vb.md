@@ -8,12 +8,12 @@ ms.date: 03/27/2007
 ms.assetid: 9201656a-e1c2-4020-824b-18fb632d2925
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 42db8122d75689f8a0e6961826b06f53622d6313
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 19c377e0f0cd9b27ac7c05af0ab050d8e213fe69
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035646"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424649"
 ---
 <a name="displaying-binary-data-in-the-data-web-controls-vb"></a>Affichage de données binaires dans les contrôles web de données (VB)
 ====================
@@ -183,7 +183,7 @@ Le code ci-dessus suppose il s certains image fichier nommé `NoPictureAvailable
 Cette exception peut également se produire si le `CategoriesTableAdapter` s `GetCategoryWithBinaryDataByCategoryID` méthode s `SELECT` instruction a restauré vers la liste de colonnes de la requête principale s, ce qui peut se produire si vous utilisez des instructions SQL ad hoc et ve vous réexécutez l’Assistant TableAdapter s requête principale. Vérifiez que `GetCategoryWithBinaryDataByCategoryID` méthode s `SELECT` instruction inclut toujours le `Picture` colonne.
 
 > [!NOTE]
-> Chaque fois que le `DisplayCategoryPicture.aspx` est visitée, la base de données est accessible et que les données d’image de la catégorie spécifiée s sont retournées. Si la catégorie s image ne t changé depuis la dernière visite, c’est un effort inutile. Heureusement, HTTP permet *obtient conditionnel*. Avec une opération GET conditionnelle, le client qui effectue la requête HTTP envoie le long d’un [ `If-Modified-Since` en-tête HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) qui fournit la date et heure de la dernière récupération par le client cette ressource à partir du serveur web. Si le contenu n’a pas changé dans la mesure où cela spécifié date, le serveur web peut répondre avec un [code d’état non modifié (304)](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) et renoncer à renvoyer le contenu de la ressource demandée s. En bref, cette technique évite d’avoir à envoyer de nouveau contenu pour une ressource s’il n’a pas été modifié depuis le client dernier accès le serveur web.
+> Chaque fois que le `DisplayCategoryPicture.aspx` est visitée, la base de données est accessible et que les données d’image de la catégorie spécifiée s sont retournées. Si l’image de s catégorie n’a pas changé depuis la dernière visite, c’est un effort inutile. Heureusement, HTTP permet *obtient conditionnel*. Avec une opération GET conditionnelle, le client qui effectue la requête HTTP envoie le long d’un [ `If-Modified-Since` en-tête HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) qui fournit la date et heure de la dernière récupération par le client cette ressource à partir du serveur web. Si le contenu n’a pas changé dans la mesure où cela spécifié date, le serveur web peut répondre avec un [code d’état non modifié (304)](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) et renoncer à renvoyer le contenu de la ressource demandée s. En bref, cette technique évite d’avoir à envoyer de nouveau contenu pour une ressource s’il n’a pas été modifié depuis le client dernier accès le serveur web.
 
 
 Pour implémenter ce comportement, toutefois, vous devez ajouter les un `PictureLastModified` colonne à la `Categories` table pour capturer lorsque le `Picture` colonne a été mises à jour, ainsi que le code de vérification de la `If-Modified-Since` en-tête. Pour plus d’informations sur la `If-Modified-Since` en-tête et le workflow GET conditionnel, consultez [HTTP GET conditionnel pour les pirates RSS](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers) et [A plus approfondie examiner effectuant des requêtes HTTP dans une Page ASP.NET](http://aspnet.4guysfromrolla.com/articles/122204-1.aspx).

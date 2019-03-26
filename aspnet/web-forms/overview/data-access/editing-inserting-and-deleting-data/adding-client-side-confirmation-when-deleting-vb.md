@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 6331e02e-c465-4cdf-bd3f-f07680c289d6
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-vb
 msc.type: authoredcontent
-ms.openlocfilehash: deae088d1daa63e2936aedf80eded18588b1ec60
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2b0d7aeab357a0009c44a29ff66f22ce8a744a90
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026896"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422145"
 ---
 <a name="adding-client-side-confirmation-when-deleting-vb"></a>Ajout d’une confirmation côté client lors de la suppression (VB)
 ====================
@@ -38,7 +38,7 @@ Le code JavaScript `confirm(string)` fonction affiche son paramètre d’entrée
 **Figure 1**: Le code JavaScript `confirm(string)` méthode affiche un Messagebox modale, côté Client
 
 
-Au cours de l’envoi d’un formulaire, si la valeur `false` est retournée à partir d’un gestionnaire d’événements côté client, alors l’envoi du formulaire est annulée. À l’aide de cette fonctionnalité, nous pouvons avoir du côté client de bouton s Delete `onclick` Gestionnaire d’événements retournent la valeur d’un appel à `confirm("Are you sure you want to delete this product?")`. Si l’utilisateur clique sur Annuler, `confirm(string)` renvoie false, ce qui provoque l’envoi du formulaire d’annulation. Avec aucune publication (postback), le produit dont bouton Delete a gagné t être supprimé. Si, toutefois, l’utilisateur clique sur OK dans la boîte de dialogue de confirmation, la publication (postback) va continuer sans interruption, et le produit sera supprimé. Consultez [JavaScript à l’aide de s `confirm()` méthode à l’envoi d’un formulaire contrôle](http://www.webreference.com/programming/javascript/confirm/) pour plus d’informations sur cette technique.
+Au cours de l’envoi d’un formulaire, si la valeur `false` est retournée à partir d’un gestionnaire d’événements côté client, alors l’envoi du formulaire est annulée. À l’aide de cette fonctionnalité, nous pouvons avoir du côté client de bouton s Delete `onclick` Gestionnaire d’événements retournent la valeur d’un appel à `confirm("Are you sure you want to delete this product?")`. Si l’utilisateur clique sur Annuler, `confirm(string)` renvoie false, ce qui provoque l’envoi du formulaire d’annulation. Avec aucune publication (postback), ne sera pas supprimé le produit dont bouton Supprimer l’utilisateur a cliqué. Si, toutefois, l’utilisateur clique sur OK dans la boîte de dialogue de confirmation, la publication (postback) va continuer sans interruption, et le produit sera supprimé. Consultez [JavaScript à l’aide de s `confirm()` méthode à l’envoi d’un formulaire contrôle](http://www.webreference.com/programming/javascript/confirm/) pour plus d’informations sur cette technique.
 
 Ajouter le script côté client nécessaire est légèrement différente si vous utilisez des modèles que quand vous utilisez un CommandField. Par conséquent, dans ce didacticiel nous allons examiner un FormView et GridView exemple.
 

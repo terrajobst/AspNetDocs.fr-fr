@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 35b40b8f-2ca8-4ab3-9c19-f361a91a3647
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 55fab6bb7a1041a14f8734a0d2ae1238b3801149
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 719999f47dea7172f32a5040c79e569d0ec41ab0
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042956"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425901"
 ---
 <a name="an-overview-of-inserting-updating-and-deleting-data-vb"></a>Une vue d’ensemble de l’insertion, la mise à jour et suppression de données (VB)
 ====================
@@ -179,7 +179,7 @@ Le contrôle GridView fournit la prise en charge intégrée pour la modification
 Les valeurs affectées à la `DeleteParameters` sont les valeurs de la `DataKeyNames` ou les champs de la ligne dont bouton Supprimer l’utilisateur a cliqué. Par conséquent, il est essentiel que d’un GridView `DataKeyNames` propriété être définie correctement. S’il est manquant, le `DeleteParameters` sera attribué une valeur de `Nothing` à l’étape 1, qui à son tour n’implique pas de tous les enregistrements supprimés à l’étape 2.
 
 > [!NOTE]
-> Le `DataKeys` collection est stockée dans l’état du contrôle GridView s, ce qui signifie que le `DataKeys` valeurs seront mémorisés sur la publication (postback), même si l’état d’affichage GridView s a été désactivé. Toutefois, il est très important que l’état d’affichage reste activée pour les contrôles GridView qui prennent en charge la modification ou la suppression (le comportement par défaut). Si vous définissez le s GridView `EnableViewState` propriété `false`, la modification et suppression de comportement fonctionnent pour un seul utilisateur, mais s’il existe des utilisateurs simultanés, la suppression des données, il est possible que ces utilisateurs simultanés peuvent accidentellement supprimer ou modifier des enregistrements qu’ils fonctionné t avez l’intention. Consultez mon billet de blog, [Avertissement : Accès concurrentiel émettre avec ASP.NET 2.0 GridViews/DetailsView/FormViews que prise en charge la modification et/ou de suppression et dont l’état d’affichage est désactivé](http://scottonwriting.net/sowblog/posts/10054.aspx), pour plus d’informations.
+> Le `DataKeys` collection est stockée dans l’état du contrôle GridView s, ce qui signifie que le `DataKeys` valeurs seront mémorisés sur la publication (postback), même si l’état d’affichage GridView s a été désactivé. Toutefois, il est très important que l’état d’affichage reste activée pour les contrôles GridView qui prennent en charge la modification ou la suppression (le comportement par défaut). Si vous définissez le s GridView `EnableViewState` propriété `false`, la modification et suppression de comportement fonctionnent pour un seul utilisateur, mais s’il existe des utilisateurs simultanés, la suppression des données, il est possible que ces utilisateurs simultanés peuvent accidentellement supprimer ou modifier des enregistrements qu’ils ne le vouliez pas. Consultez mon billet de blog, [Avertissement : Accès concurrentiel émettre avec ASP.NET 2.0 GridViews/DetailsView/FormViews que prise en charge la modification et/ou de suppression et dont l’état d’affichage est désactivé](http://scottonwriting.net/sowblog/posts/10054.aspx), pour plus d’informations.
 
 
 Cet avertissement même s’applique également aux DetailsViews et FormViews.

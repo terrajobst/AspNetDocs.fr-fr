@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: eaece9f5-f80c-428b-b771-5db66d275b7d
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery
 msc.type: authoredcontent
-ms.openlocfilehash: f701488025ec84a17651f9abff43f84531d35689
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b384fe08ebd6a106b9469debfb13014e87534b8f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046936"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425923"
 ---
 <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Intégration continue et livraison continues (génération d’applications Cloud réalistes avec Azure)
 ====================
@@ -32,7 +32,7 @@ Le cloud vous permet de réduire le coût de maintenance d’un environnement de
 
 En général nous vous recommandons d’effectuer la livraison continue pour le développement et de vos environnements intermédiaires. La plupart des équipes, même chez Microsoft, nécessitent un processus de révision et approbation manuels pour le déploiement de production. Pour une production déploiement, que vous souhaiterez peut-être vous assurer qu’elle se produit lorsque des personnes clés de l’équipe de développement sont disponibles pour la prise en charge, ou pendant les périodes de faible trafic. Mais rien ne vous empêche d’automatiser complètement vos environnements de développement et de test afin que tout développeur doit faire est d’archiver une modification et un environnement est configuré pour les tests d’acceptation.
 
-Le diagramme suivant tiré [un Microsoft Patterns and Practices e-book sur la livraison continue](http://aka.ms/ReleasePipeline) illustre un flux de travail classique. Cliquez sur l’image pour l’afficher à taille réelle dans son contexte d’origine.
+Le diagramme suivant tiré [un Microsoft Patterns and Practices e-book sur la livraison continue](https://aka.ms/ReleasePipeline) illustre un flux de travail classique. Cliquez sur l’image pour l’afficher à taille réelle dans son contexte d’origine.
 
 [![Flux de travail de diffusion en continu](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
 
@@ -66,7 +66,7 @@ Pour plus d’informations, consultez [déployer une application web dans Azure 
 
 Consultez également les ressources suivantes :
 
-- [Création d’un Pipeline de mise en production avec Team Foundation Server 2012](http://aka.ms/ReleasePipeline). Ateliers pratiques, E-book et exemple de code par Microsoft Patterns and Practices, fournit une introduction complète à la livraison continue. Couvre l’utilisation de Visual Studio Lab Management et Visual Studio Release Management.
+- [Création d’un Pipeline de mise en production avec Team Foundation Server 2012](https://aka.ms/ReleasePipeline). Ateliers pratiques, E-book et exemple de code par Microsoft Patterns and Practices, fournit une introduction complète à la livraison continue. Couvre l’utilisation de Visual Studio Lab Management et Visual Studio Release Management.
 - [ALM Rangers DevOps outils et conseils](https://aka.ms/vsarsolutions/). Le groupe ALM Rangers a introduit le DevOps Workbench exemple le Guide de solution et des conseils pratiques en collaboration avec les modèles &amp; livre de pratiques *création d’un Pipeline de mise en production avec TFS 2012*, comme un excellent moyen de démarrer apprendre les concepts de DevOps &amp; Release Management pour TFS 2012 et pour vos premiers pas. Le guide explique comment créer une seule fois et déployer dans plusieurs environnements.
 - [Test de livraison continue avec Visual Studio 2012](https://msdn.microsoft.com/library/jj159345.aspx). Livre électronique par Microsoft Patterns and Practices, explique comment intégrer les tests automatisés avec la livraison continue.
 - [WindowsAzureDeploymentTracker](https://github.com/RyanTBerry/WindowsAzureDeploymentTracker). Code source pour un outil conçu pour capturer une build à partir de TFS (basé sur une étiquette), générez-le, empaqueter, permet à un utilisateur dans le rôle DevOps pour configurer des aspects spécifiques de celui-ci et les intégrer à Azure. L’outil effectue le suivi du processus de déploiement afin de permettre les opérations « Annuler » pour une version précédemment déployée. L’outil n’a aucune dépendance externe et peut fonctionner autonome à l’aide d’API de TFS et le Kit de développement.

@@ -8,12 +8,12 @@ ms.date: 05/29/2009
 ms.assetid: 0d23ff2b-f2ec-434a-be3b-1180beeccba3
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validation-with-the-data-annotation-validators-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 8159693adced7f102f6fe1457d7b103f8596d231
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6bfe11a40bbdf0cd9dfe4d81d9c7436a5adb9491
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025546"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420684"
 ---
 <a name="validation-with-the-data-annotation-validators-vb"></a>Validation avec les validateurs d’annotation de données (VB)
 ====================
@@ -55,7 +55,7 @@ Cette ligne de code enregistre le DataAnnotationsModelBinder en tant que le bind
 Lorsque vous utilisez le classeur de modèles des Annotations de données, vous utilisez les attributs de validateur pour effectuer la validation. L’espace de noms System.ComponentModel.DataAnnotations inclut les attributs du programme de validation suivants :
 
 - Plage : vous permet de valider si la valeur d’une propriété se situe entre une plage de valeurs spécifiée.
-- ReqularExpression – permet de valider si la valeur d’une propriété correspond à un modèle d’expression régulière spécifiée.
+- RegularExpression – permet de valider si la valeur d’une propriété correspond à un modèle d’expression régulière spécifiée.
 - Requis : vous permet de marquer une propriété en fonction des besoins.
 - StringLength – permet de spécifier une longueur maximale pour une propriété de chaîne.
 - Validation : classe de base pour tous les attributs du programme de validation.

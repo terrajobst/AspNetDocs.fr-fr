@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: 811a6ef2-ec66-4c8e-a089-6f795056e288
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5ebef919deeda409cfa6805b603f67ef96ff003e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 15e23b09df13f11c69a2fd6c721981e632a25434
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064956"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422114"
 ---
 <a name="paging-and-sorting-report-data-c"></a>Pagination et tri des données des rapports (C#)
 ====================
@@ -194,7 +194,7 @@ Ensuite, revenez à la `DataBound` Gestionnaire d’événements et ajoutez le c
 
 [!code-csharp[Main](paging-and-sorting-report-data-cs/samples/sample6.cs)]
 
-Ce code commence en supprimant les éléments dans le `PageList` DropDownList. Cela peut sembler superflu, dans la mesure où un t n’expliquerait pas attendre le nombre de pages à modifier, mais les autres utilisateurs peuvent être à l’aide du système simultanément, l’ajout ou suppression d’enregistrements à partir de la `Products` table. Insertions ou des suppressions peuvent modifier le nombre de pages de données.
+Ce code commence en supprimant les éléments dans le `PageList` DropDownList. Cela peut sembler superflu, dans la mesure où un n’aurait pas attendre le nombre de pages pour modifier, mais les autres utilisateurs peuvent être à l’aide du système simultanément, l’ajout ou suppression d’enregistrements à partir de la `Products` table. Insertions ou des suppressions peuvent modifier le nombre de pages de données.
 
 Ensuite, nous devons créer les numéros de page à nouveau et celui qui mappe au GridView actuel `PageIndex` sélectionné par défaut. Effectuer cette opération avec une boucle allant de 0 à `PageCount - 1`, ajout d’une nouvelle `ListItem` dans chaque itération et le paramètre son `Selected` propriété sur true si l’index d’itération actuelle est égale à la s GridView `PageIndex` propriété.
 
@@ -253,7 +253,7 @@ Lors de la liaison d’ObjectDataSource pour le contrôle GridView dans la liste
 
 [!code-aspx[Main](paging-and-sorting-report-data-cs/samples/sample9.aspx)]
 
-Un champ peut être configuré afin qu’il s ne pouvant pas être trié en effaçant les sa `SortExpression` propriété (l’affectation d’une chaîne vide). Pour illustrer cela, imaginez que nous ne savais pas t vouliez permettre à nos clients de trier de nos produits par prix. Le `UnitPrice` BoundField s `SortExpression` propriété peut être supprimée à partir du balisage déclaratif ou via la boîte de dialogue champs (qui est accessible en cliquant sur le lien Modifier les colonnes dans la balise active de GridView s).
+Un champ peut être configuré afin qu’il s ne pouvant pas être trié en effaçant les sa `SortExpression` propriété (l’affectation d’une chaîne vide). Pour illustrer cela, imaginez que nous ne voulions permettre à nos clients trier nos produits par prix. Le `UnitPrice` BoundField s `SortExpression` propriété peut être supprimée à partir du balisage déclaratif ou via la boîte de dialogue champs (qui est accessible en cliquant sur le lien Modifier les colonnes dans la balise active de GridView s).
 
 
 ![Les résultats ont été triés par le prix unitaire dans l’ordre croissant](paging-and-sorting-report-data-cs/_static/image27.png)

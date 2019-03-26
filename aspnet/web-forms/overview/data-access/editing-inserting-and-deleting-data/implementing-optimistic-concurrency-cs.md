@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 56e15b33-93b8-43ad-8e19-44c6647ea05c
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 700770946caa68fca2b3101dd91a683d10aae052
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 08a9e1db4f8c34b438d45c0fb74d852bbd249615
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059626"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422777"
 ---
 <a name="implementing-optimistic-concurrency-c"></a>Implémentation de l’accès concurrentiel optimiste (C#)
 ====================
@@ -60,7 +60,7 @@ Contrôle d’accès concurrentiel optimiste fonctionne en veillant à ce que l�
 **Figure 2**: Pour la mise à jour ou de suppression pour réussir, le d’origine valeurs doit être égale aux valeurs de base de données ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image6.png))
 
 
-Il existe différentes approches d’implémentation de l’accès concurrentiel optimiste (consultez [Peter A. Bromberg](http://peterbromberg.net/)de [logique de la mise à jour d’accès concurrentiel Optmistic](http://www.eggheadcafe.com/articles/20050719.asp) pour un bref aperçu présentant un nombre d’options). Le jeu de données typés ADO.NET fournit une implémentation qui peut être configurée avec simplement le cycle d’une case à cocher. L’activation de l’accès concurrentiel optimiste pour un TableAdapter dans le DataSet typé augmente le TableAdapter `UPDATE` et `DELETE` instructions pour inclure une comparaison de toutes les valeurs d’origine dans le `WHERE` clause. Ce qui suit `UPDATE` instruction, par exemple, des mises à jour le nom et le prix d’un produit uniquement si les valeurs actuelles de la base de données sont égales aux valeurs qui ont été récupérées à l’origine lors de la mise à jour l’enregistrement dans le contrôle GridView. Le `@ProductName` et `@UnitPrice` paramètres contiennent les nouvelles valeurs entrées par l’utilisateur, tandis que `@original_ProductName` et `@original_UnitPrice` contiennent les valeurs qui ont été chargées à l’origine dans le contrôle GridView lorsque l’utilisateur a cliqué sur le bouton Modifier :
+Il existe différentes approches d’implémentation de l’accès concurrentiel optimiste (consultez [Peter A. Bromberg](http://peterbromberg.net/)de [logique de la mise à jour d’accès concurrentiel optimiste](http://www.eggheadcafe.com/articles/20050719.asp) pour un bref aperçu présentant un nombre d’options). Le jeu de données typés ADO.NET fournit une implémentation qui peut être configurée avec simplement le cycle d’une case à cocher. L’activation de l’accès concurrentiel optimiste pour un TableAdapter dans le DataSet typé augmente le TableAdapter `UPDATE` et `DELETE` instructions pour inclure une comparaison de toutes les valeurs d’origine dans le `WHERE` clause. Ce qui suit `UPDATE` instruction, par exemple, des mises à jour le nom et le prix d’un produit uniquement si les valeurs actuelles de la base de données sont égales aux valeurs qui ont été récupérées à l’origine lors de la mise à jour l’enregistrement dans le contrôle GridView. Le `@ProductName` et `@UnitPrice` paramètres contiennent les nouvelles valeurs entrées par l’utilisateur, tandis que `@original_ProductName` et `@original_UnitPrice` contiennent les valeurs qui ont été chargées à l’origine dans le contrôle GridView lorsque l’utilisateur a cliqué sur le bouton Modifier :
 
 
 [!code-sql[Main](implementing-optimistic-concurrency-cs/samples/sample1.sql)]

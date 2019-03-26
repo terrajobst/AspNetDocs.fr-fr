@@ -8,12 +8,12 @@ ms.date: 01/28/2019
 ms.assetid: 20acee16-c70c-41e9-b38f-92bfcf9a4c1c
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-oauth-20-authorization-server
 msc.type: authoredcontent
-ms.openlocfilehash: b8451d2d9e346bd5e2f51ba45e48030a5221b549
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d5c8262d48c79616ca3069c37077ba99ffafb650
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059746"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426044"
 ---
 # <a name="owin-oauth-20-authorization-server"></a>Serveur d’autorisation OAuth 2.0 OWIN
 
@@ -238,7 +238,7 @@ Consultez *AuthorizationServer\ResourceServer\App\_Start\Startup.WebApi.cs* dans
 
 - `UseCors` méthode permet de CORS pour tous les domaines.
 - `UseOAuthBearerAuthentication` méthode permet d’intergiciel d’authentification du jeton de support OAuth qui recevra et valider le jeton de porteur dans l’en-tête d’autorisation dans la demande.
-- `Config.SuppressDefaultHostAuthenticaiton` Supprime la valeur par défaut hôte principal authentifié à partir de l’application, par conséquent, toutes les demandes seront anonymes après cet appel.
+- `Config.SuppressDefaultHostAuthentication` Supprime la valeur par défaut hôte principal authentifié à partir de l’application, par conséquent, toutes les demandes seront anonymes après cet appel.
 - `HostAuthenticationFilter` Active l’authentification uniquement pour le type d’authentification spécifié. Dans ce cas, il est de type d’authentification du porteur.
 
 Pour illustrer l’identité authentifiée, nous créons une classe ApiController pour générer des revendications de l’utilisateur actuel.

@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 969ab824-1b98-4552-81fe-b60ef5fc6887
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-custom-action-filters
 msc.type: authoredcontent
-ms.openlocfilehash: 0170fda6849c1dfb53b44908ea55ba2cad0dd067
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4c8628cc289610e287c0a3bc3c8a4c7a833c9fde
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036616"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423414"
 ---
 # <a name="aspnet-mvc-4-custom-action-filters"></a>Filtres d’actions personnalisés d’ASP.NET MVC 4
 
@@ -261,7 +261,7 @@ Dans cette tâche, vous allez créer un nouveau filtre d’Action personnalisé 
     [!code-csharp[Main](aspnet-mvc-4-custom-action-filters/samples/sample9.cs)]
 
     > [!NOTE]
-    > Ce filtre d’Action personnalisé est presque identique à celle que vous avez créé dans l’exercice précédent. La principale différence est qu’il a le *&quot;connecté par&quot;* attribut mis à jour avec le nom de cette nouvelle classe pour identifier le filtre de qui inscrit le journal.
+    > Ce filtre d’Action personnalisé est presque identique à celle que vous avez créé dans l’exercice précédent. La principale différence est qu’il a le *&quot;connecté par&quot;* attribut mis à jour avec le nom de cette nouvelle classe pour identifier quel filtre enregistré le journal.
 
 <a id="Ex2Task2"></a>
 
@@ -292,7 +292,7 @@ Dans cette tâche, vous ajoutez un nouveau filtre personnalisé dans la classe S
 <a id="Task_3_Managing_Filter_Ordering"></a>
 #### <a name="task-3-managing-filter-ordering"></a>Tâche 3 : La gestion de l’ordre de filtre
 
-Dans cette tâche, vous allez apprendre à gérer l’ordre d’exécution des filtres à l’aide de la propriété d’ordre.
+Dans cette tâche, vous allez apprendre à gérer l’ordre d’exécution des filtres à l’aide de la propriété Order.
 
 1. Ouvrez le **StoreController** classe situé dans **MvcMusicStore\Controllers** et spécifiez le **ordre** comme propriété dans les deux filtres illustré ci-dessous.
 
@@ -325,7 +325,7 @@ Dans cette tâche, vous allez apprendre à gérer l’ordre d’exécution des f
 <a id="Task_4_Registering_Filters_Globally"></a>
 #### <a name="task-4-registering-filters-globally"></a>Tâche 4 : L’inscription des filtres dans le monde entier
 
-Dans cette tâche, vous mettrez à jour la solution pour inscrire le nouveau filtre (**MyNewCustomActionFilter**) comme un filtre global. Ce faisant, il est déclenché par tous les effectuées d’actions dans l’application et pas seulement en StoreController celles comme dans la tâche précédente.
+Dans cette tâche, vous mettrez à jour la solution pour inscrire le nouveau filtre (**MyNewCustomActionFilter**) comme un filtre global. Ce faisant, il est déclenché par les actions exécutées dans l’application et pas seulement en StoreController celles comme dans la tâche précédente.
 
 1. Dans **StoreController** classe, supprimez **[MyNewCustomActionFilter]** attribut et la propriété d’ordre à partir de **[CustomActionFilter]**. Il doit ressembler à ce qui suit :
 
@@ -375,7 +375,7 @@ En fin de cet atelier pratique, vous avez appris à étendre un filtre d’actio
 
 Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un autre &quot;Express&quot; à l’aide de la version du **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. Les instructions suivantes vous guident dans les étapes requises pour installer *Visual studio Express 2012 pour Web* à l’aide de *Microsoft Web Platform Installer*.
 
-1. Accédez à [ [ https://go.microsoft.com/? linkid = 9810169](https://go.microsoft.com/?linkid=9810169)](https://go.microsoft.com/?linkid=9810169). Si vous avez déjà installé Web Platform Installer, vous pouvez également ouvrir il et recherchez le produit &quot; <em>Visual Studio Express 2012 pour le Web avec Windows Azure SDK</em>&quot;.
+1. Accédez à [https://go.microsoft.com/?linkid=9810169](https://go.microsoft.com/?linkid=9810169). Si vous avez déjà installé Web Platform Installer, vous pouvez également ouvrir il et recherchez le produit &quot; <em>Visual Studio Express 2012 pour le Web avec Windows Azure SDK</em>&quot;.
 2. Cliquez sur **installer maintenant**. Si vous n’avez pas **Web Platform Installer** vous allez être redirigé pour télécharger et installer en premier.
 3. Une fois **Web Platform Installer** est ouvert, cliquez sur **installer** pour démarrer le programme d’installation.
 
@@ -419,7 +419,7 @@ Cette annexe sera vous montrent comment créer un nouveau site web à partir du 
 1. Accédez à la [portail de gestion Windows Azure](https://manage.windowsazure.com/) et connectez-vous en utilisant les informations d’identification Microsoft associées à votre abonnement.
 
     > [!NOTE]
-    > Avec Windows Azure, vous pouvez héberger 10 Sites Web ASP.NET gratuitement et faites ensuite évoluer que votre trafic augmente. Vous pouvez vous inscrire [ici](http://aka.ms/aspnet-hol-azure).
+    > Avec Windows Azure, vous pouvez héberger 10 Sites Web ASP.NET gratuitement et faites ensuite évoluer que votre trafic augmente. Vous pouvez vous inscrire [ici](https://aka.ms/aspnet-hol-azure).
 
     ![Ouvrez une session sur le portail Windows Azure](aspnet-mvc-4-custom-action-filters/_static/image17.png "ouvrez une session sur le portail Windows Azure")
 

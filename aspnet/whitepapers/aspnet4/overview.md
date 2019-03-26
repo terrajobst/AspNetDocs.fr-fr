@@ -8,12 +8,12 @@ ms.date: 02/10/2010
 ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
-ms.openlocfilehash: 775286df610df9040cbf04125b1742b6befa055b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 93ee29ae125e9442ee755998768a8105dfb485c0
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043156"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424298"
 ---
 <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Vue d’ensemble du développement web ASP.NET 4 et Visual Studio 2010
 ====================
@@ -945,7 +945,7 @@ La valeur de *controlRenderingCompatibility* est une chaîne, ce qui permet de n
 
 Dans ASP.NET 3.5 SP1 et versions antérieures, l’infrastructure affiche le *désactivé* d’attribut dans le balisage HTML pour tout contrôle dont *activé* propriété définie sur *false*. Toutefois, conformément à la spécification HTML 4.01, uniquement *d’entrée* éléments doivent avoir cet attribut.
 
-Dans ASP.NET 4, vous pouvez définir le *controlRenderingCompatabilityVersion* propriété sur « 3.5 », comme dans l’exemple suivant :
+Dans ASP.NET 4, vous pouvez définir le *controlRenderingCompatibilityVersion* propriété sur « 3.5 », comme dans l’exemple suivant :
 
 [!code-xml[Main](overview/samples/sample70.xml)]
 
@@ -957,7 +957,7 @@ Le *étiquette* contrôle affichant le code HTML suivant :
 
 [!code-html[Main](overview/samples/sample72.html)]
 
-Dans ASP.NET 4, vous pouvez définir le *controlRenderingCompatabilityVersion* sur « 4.0 ». Dans ce cas, seuls les contrôles qui sont restituées *d’entrée* éléments affichera un *désactivé* attribut lorsque le contrôle *activé* propriété est définie sur *false* . Les contrôles qui ne sont pas rendent HTML *d’entrée* éléments sont rendus au lieu de cela un *classe* attribut qui fait référence à une classe CSS que vous pouvez utiliser pour définir un aspect désactivé pour le contrôle. Par exemple, le *étiquette* contrôle indiqué dans l’exemple précédent génère le balisage suivant :
+Dans ASP.NET 4, vous pouvez définir le *controlRenderingCompatibilityVersion* sur « 4.0 ». Dans ce cas, seuls les contrôles qui sont restituées *d’entrée* éléments affichera un *désactivé* attribut lorsque le contrôle *activé* propriété est définie sur *false* . Les contrôles qui ne sont pas rendent HTML *d’entrée* éléments sont rendus au lieu de cela un *classe* attribut qui fait référence à une classe CSS que vous pouvez utiliser pour définir un aspect désactivé pour le contrôle. Par exemple, le *étiquette* contrôle indiqué dans l’exemple précédent génère le balisage suivant :
 
 [!code-html[Main](overview/samples/sample73.html)]
 

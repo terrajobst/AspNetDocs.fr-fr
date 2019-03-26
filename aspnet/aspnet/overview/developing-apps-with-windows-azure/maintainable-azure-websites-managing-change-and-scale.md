@@ -8,18 +8,18 @@ ms.date: 07/16/2014
 ms.assetid: ecfd0eb4-c4ad-44e6-9db9-a2a66611ff6a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale
 msc.type: authoredcontent
-ms.openlocfilehash: bc6de2f0c8b2cd958c198abb90fc4ad97613e973
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 315e89c81782edf0875c65afd27153102d733050
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054536"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424246"
 ---
 <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Atelier pratique : Sites web Azure faciles à gérer : gestion des modifications et de la mise à l’échelle
 ====================
 par [Web Camps Team](https://twitter.com/webcamps)
 
-[Télécharger le Kit de formation de Web Camps](http://aka.ms/webcamps-training-kit)
+[Télécharger le Kit de formation de Web Camps](https://aka.ms/webcamps-training-kit)
 
 > Microsoft Azure rend plus facile créer et déployer des sites Web en production. Mais vous n’avez pas terminé lorsque votre application est en ligne, vous n’êtes pas familiarisé ! Vous devrez gérer variation exigences, mises à jour de la base de données, mise à l’échelle et bien plus encore. Heureusement, Azure App Service a prévu, avec de nombreuses fonctionnalités pour vous aider à conserver vos sites en cours d’exécution sans heurts.
 >
@@ -31,7 +31,7 @@ par [Web Camps Team](https://twitter.com/webcamps)
 >
 > Les bases de données SQL, il est important de tenir votre base de données productive lors du déploiement de nouvelles versions de votre application. Merci à **Migrations Entity Framework Code First**, le développement et le déploiement de votre modèle de données a été simplifié pour mettre à jour de vos environnements en quelques minutes. Ce laboratoire pratique vous montrera les différentes rubriques que vous pouvez rencontrer lors du déploiement de votre application web pour les environnements de production dans Microsoft Azure.
 >
-> Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 >
 > Pour plus de couverture approfondie de cette rubrique, consultez le [développement d’applications Cloud réalistes avec Azure e-book](building-real-world-cloud-apps-with-windows-azure/introduction.md).
 
@@ -62,10 +62,10 @@ Les éléments suivants sont nécessaire pour terminer ce laboratoire pratique 
 - [Système de contrôle de Version GIT](http://git-scm.com/download)
 - Un abonnement Microsoft Azure
 
-    - Inscrivez-vous pour un [version d’évaluation gratuite](http://aka.ms/watk-freetrial)
-    - Si vous êtes abonné à MSDN ou plateformes MSDN un Visual Studio Professional, Test Professional, Premium ou Ultimate, activer votre [avantage MSDN](http://aka.ms/watk-msdn) maintenant pour commencer à développer et tester sur Azure
-    - [BizSpark](http://aka.ms/watk-bizspark) les membres reçoivent automatiquement Azure avantage via leur Visual Studio Ultimate avec les abonnements MSDN
-    - Membres de la [Microsoft Partner Network](http://aka.ms/watk-mpn) programme Cloud Essentials recevoir des crédits mensuels Azure sans frais
+    - Inscrivez-vous pour un [version d’évaluation gratuite](https://aka.ms/watk-freetrial)
+    - Si vous êtes abonné à MSDN ou plateformes MSDN un Visual Studio Professional, Test Professional, Premium ou Ultimate, activer votre [avantage MSDN](https://aka.ms/watk-msdn) maintenant pour commencer à développer et tester sur Azure
+    - [BizSpark](https://aka.ms/watk-bizspark) les membres reçoivent automatiquement Azure avantage via leur Visual Studio Ultimate avec les abonnements MSDN
+    - Membres de la [Microsoft Partner Network](https://aka.ms/watk-mpn) programme Cloud Essentials recevoir des crédits mensuels Azure sans frais
 
 <a id="Setup"></a>
 ### <a name="setup"></a>Installation

@@ -8,12 +8,12 @@ ms.date: 04/16/2013
 ms.assetid: ad2a5da5-2e79-40ea-bc84-028d327f5982
 msc.legacyurl: /signalr/overview/older-versions/tutorial-high-frequency-realtime-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 6df35a420a0733003808a12d065b03f08ef56dd9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 60fffd7cd5139b2be34968c1f33474be867f0962
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048046"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422881"
 ---
 <a name="high-frequency-realtime-with-signalr-1x"></a>Temps réel haute fréquence avec SignalR 1.x
 ====================
@@ -136,7 +136,7 @@ Dans cette section, nous allons créer une application de navigateur qui envoie 
 
 ## <a name="add-the-client-loop"></a>Ajouter la boucle de client
 
-Étant donné que l’envoi de l’emplacement de la forme sur chaque événement mouse move créera un montant n’est pas nécessaire de trafic réseau, les messages à partir du client doivent être limitées. Nous allons utiliser le code javascript `setInterval` fonction pour configurer une boucle qui envoie des informations sur la nouvelle position sur le serveur à un taux fixe. Cette boucle est une représentation très basique d’une « boucle de jeu », une fonction appelée à plusieurs reprises qui gère toutes les fonctionnalités d’un jeu ou une autre simulation.
+Étant donné que l’envoi de l’emplacement de la forme sur chaque événement mouse move créera une quantité inutile de trafic réseau, les messages à partir du client doivent être limitées. Nous allons utiliser le code javascript `setInterval` fonction pour configurer une boucle qui envoie des informations sur la nouvelle position sur le serveur à un taux fixe. Cette boucle est une représentation très basique d’une « boucle de jeu », une fonction appelée à plusieurs reprises qui gère toutes les fonctionnalités d’un jeu ou une autre simulation.
 
 1. Mettre à jour le code client dans la page HTML pour correspondre à l’extrait de code suivant.
 

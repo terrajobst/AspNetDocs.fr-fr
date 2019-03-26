@@ -8,12 +8,12 @@ ms.date: 01/28/2019
 ms.assetid: c39b9965-545c-4b04-8f55-21be7f28a9e5
 msc.legacyurl: /aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead
 msc.type: authoredcontent
-ms.openlocfilehash: 512d2e2b39467635390fa175546f79d8c9f89f4a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a09169327d8eed45a83b232354af74a14aa89817
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038146"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425039"
 ---
 # <a name="what-not-to-do-in-aspnet-and-what-to-do-instead"></a>Ce qu’il ne faut pas faire dans ASP.NET et ce qu’il faut faire à la place
 
@@ -151,7 +151,7 @@ L’exemple suivant montre comment spécifier dans le fichier Web.config que l�
 
 Recommandation : Jamais défini sur false.
 
-Par défaut, EnbableViewStateMac est définie sur true. Même si votre application n’utilise pas l’état d’affichage, ne définissez pas EnableViewStateMac sur false. La valeur false rendre votre application vulnérable aux scripts entre sites.
+Par défaut, EnableViewStateMac a la valeur True. Même si votre application n’utilise pas l’état d’affichage, ne définissez pas EnableViewStateMac sur false. La valeur false rendre votre application vulnérable aux scripts entre sites.
 
 À partir de ASP.NET 4.5.2, le runtime applique **EnableViewStateMac = true**. Même si vous le définissez sur false, le runtime ignore cette valeur et se poursuit avec la valeur définie sur true. Pour plus d’informations, consultez [ASP.NET 4.5.2 et EnableViewStateMac](https://blogs.msdn.com/b/webdev/archive/2014/05/07/asp-net-4-5-2-and-enableviewstatemac.aspx).
 

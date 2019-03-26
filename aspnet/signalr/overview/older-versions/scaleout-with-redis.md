@@ -8,12 +8,12 @@ ms.date: 05/01/2013
 ms.assetid: 6abecf80-8ffa-41ba-b0d9-1d9edbe7687b
 msc.legacyurl: /signalr/overview/older-versions/scaleout-with-redis
 msc.type: authoredcontent
-ms.openlocfilehash: 74294bd04d5649f2ec54e58adb744f5e30525162
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bdeb9624180206b33d8fdb22b4a4fdaf4cb92294
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050586"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424766"
 ---
 <a name="signalr-scaleout-with-redis-signalr-1x"></a>Scale-out de SignalR avec Redis (SignalR 1.x)
 ====================
@@ -125,7 +125,7 @@ Incluent également le Service de gestion (répertorié sous « Outils de gesti
 
 ![](scaleout-with-redis/_static/image6.png)
 
-**Installer Web Deploy 3.0.** Lorsque vous exécutez le Gestionnaire des services Internet, il vous invite à installer Microsoft Web Platform, ou vous pouvez [télécharger l’intstaller](https://go.microsoft.com/fwlink/?LinkId=255386). Dans le programme d’installation de la plateforme, recherchez de Web Deploy et installer Web Deploy 3.0
+**Installer Web Deploy 3.0.** Lorsque vous exécutez le Gestionnaire des services Internet, il vous invite à installer Microsoft Web Platform, ou vous pouvez [télécharger le programme d’installation](https://go.microsoft.com/fwlink/?LinkId=255386). Dans le programme d’installation de la plateforme, recherchez de Web Deploy et installer Web Deploy 3.0
 
 ![](scaleout-with-redis/_static/image7.png)
 

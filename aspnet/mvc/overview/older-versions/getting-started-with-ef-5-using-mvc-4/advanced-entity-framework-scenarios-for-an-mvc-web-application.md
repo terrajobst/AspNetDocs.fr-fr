@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 64906a1d-f734-41cf-9615-ee95f8740996
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: 5fa6ff439790f70cd60d0985a791df26d69c7107
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 18a292ada33936ea03f2d51427c160541424c8d1
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059296"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425611"
 ---
 <a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>Scénarios Entity Framework avancés pour une Application Web MVC (10 sur 10)
 ====================
@@ -110,7 +110,7 @@ Dans *UnitOfWork.cs*, modifiez le `Course` type de référentiel à partir de `G
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample7.cs)]
 
-Dans *CourseContoller.cs*, ajoutez un `UpdateCourseCredits` méthode :
+Dans *CourseController.cs*, ajoutez un `UpdateCourseCredits` méthode :
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample8.cs)]
 

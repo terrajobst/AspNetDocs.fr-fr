@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 3e8b0627-3eb7-488e-807e-067cba7cec05
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 029c17d5f996f595aef1af68c3ddb9b21f99f5cf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4ea1713541c30623c0f7c8387318549dd36a125f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046796"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423583"
 ---
 <a name="strategies-for-database-development-and-deployment-c"></a>Stratégies pour le développement et le déploiement des bases de données (C#)
 ====================
@@ -66,7 +66,7 @@ Il existe un certain nombre d’inconvénients à cette approche. Pour commencer
 
 Le principal avantage de documenter les modifications de base de données dans une prose est sa simplicité. Vous n’avez pas une bonne connaissance de la nécessité t avec la syntaxe SQL pour la création et modification d’objets de base de données. Au lieu de cela, vous pouvez enregistrer les modifications dans une prose et leur implémentation via l’interface utilisateur graphique de s SQL Server Management Studio.
 
-Maintenir votre journal des modifications dans une prose est, certes, pas très sophistiqué et gagné / fonctionne correctement avec certains projets, telles que celles qui sont de grande taille dans la portée, ont des modifications fréquentes au modèle de données, ou impliquant plusieurs développeurs. Mais j’ai vu cette approche fonctionne très bien dans les petites, adeptes des projets qui ont uniquement des modifications au modèle de données occasionnelles et où le développeur Freelance n’a pas une expérience préalable conséquente dans la syntaxe SQL pour la création et modification d’objets de base de données.
+Maintien de votre journal des modifications dans une prose est, certes, pas très sophistiqué et ne fonctionnera pas correctement avec certains projets, telles que celles qui sont de grande taille dans la portée, ont des modifications fréquentes au modèle de données, ou impliquant plusieurs développeurs. Mais j’ai vu cette approche fonctionne très bien dans les petites, adeptes des projets qui ont uniquement des modifications au modèle de données occasionnelles et où le développeur Freelance n’a pas une expérience préalable conséquente dans la syntaxe SQL pour la création et modification d’objets de base de données.
 
 > [!NOTE]
 > Alors que les informations contenues dans le journal des modifications sont techniquement, nécessaire uniquement jusqu’au moment du déploiement, je vous recommande de conserver un historique des modifications. Mais au lieu de conserver un seul, toujours le fichier journal des modifications, envisagez de disposer d’un fichier journal de modification différente pour chaque version de base de données. En général, vous souhaitez version de la base de données chaque fois qu’elle est déployée. En conservant un journal des journaux des modifications n’importe quelle version de base de données en exécutant les scripts de journal de modification depuis la version 1 peut, à partir de la ligne de base, recréer et continuant jusqu'à ce que vous atteigniez la version que vous devrez recréer.

@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: 0f982827-f8f9-420d-b36b-57b23f5aa519
 msc.legacyurl: /web-forms/overview/data-access/masterdetail/master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 9d75c80b4c1bac5011acc896d91ff2fcd5a19298
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a5623c34ad7f8c9b5effed318a04b204ab66ecaa
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064796"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425195"
 ---
 <a name="masterdetail-using-a-selectable-master-gridview-with-a-details-detailview-c"></a>Représentation maître/détail utilisant un GridView maître pouvant être sélectionné avec une DetailView des détails (C#)
 ====================
@@ -153,7 +153,7 @@ Une fois le `productDetailsDataSource` ObjectDataSource a été correctement con
 
 Dans cette section et les didacticiels de trois précédents, nous avons vu un certain nombre de techniques permettant d’afficher les rapports maître/détail. Dans ce didacticiel, que nous avons examiné utilisant un GridView sélectionnable pour héberger les enregistrements maîtres et un contrôle DetailsView afin d’afficher des détails sur l’enregistrement principal sélectionné sur la même page. Dans les didacticiels précédents, nous avons vu comment afficher les rapports maître/détails à l’aide de DropDownList et l’affichage des enregistrements principaux sur une page web et les enregistrements de détail sur un autre.
 
-Ce didacticiel conclut notre examen des rapports maître/détail. En commençant par le suivant tutorialwe allons commencer notre exploration de la mise en forme personnalisée avec le GridView, DetailsView et FormView. Nous verrons comment personnaliser l’apparence de ces contrôles en fonction des données liées, comment synthétiser des données dans le pied de page du GridView et comment utiliser des modèles pour obtenir un degré plus élevé de contrôle sur la disposition.
+Ce didacticiel conclut notre examen des rapports maître/détail. En commençant par le didacticiel suivant, nous allons commencer notre exploration de la mise en forme personnalisée avec le GridView, DetailsView et FormView. Nous verrons comment personnaliser l’apparence de ces contrôles en fonction des données liées, comment synthétiser des données dans le pied de page du GridView et comment utiliser des modèles pour obtenir un degré plus élevé de contrôle sur la disposition.
 
 Bonne programmation !
 

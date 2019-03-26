@@ -8,12 +8,12 @@ ms.date: 02/25/2014
 ms.assetid: 66a837e9-600b-4b72-97a9-19804231c64a
 msc.legacyurl: /web-api/overview/testing-and-debugging/tracing-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: e0d525e497cf41a79820417a9c832fa6b5cd7f8a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 59bce8c511167e8ba8a8db6f1842e352c90f3039
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031536"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424896"
 ---
 <a name="tracing-in-aspnet-web-api-2"></a>Le traçage dans ASP.NET Web API 2
 ====================
@@ -89,7 +89,7 @@ Pour écrire une trace, vous pouvez appeler la **ITraceWriter.Trace** (méthode)
 
 Cette section décrit comment écrire un writer de suivi personnalisé pour l’API Web.
 
-Le package Microsoft.AspNet.WebApi.Tracing est basé sur une infrastructure de suivi plus général dans l’API Web. Au lieu d’utiliser Microsoft.AspNet.WebApi.Tracing, vous pouvez également incorporer dans une autre bibliothèque de traçage/invisible, tel que [NLog](http://nlog-project.org/) ou [log4net](http://logging.apache.org/log4net/).
+Le package Microsoft.AspNet.WebApi.Tracing est basé sur une infrastructure de suivi plus général dans l’API Web. Au lieu d’utiliser Microsoft.AspNet.WebApi.Tracing, vous pouvez également incorporer dans une autre bibliothèque de journalisation/suivi, tel que [NLog](http://nlog-project.org/) ou [log4net](http://logging.apache.org/log4net/).
 
 Pour collecter des traces, vous devez implémenter le **ITraceWriter** interface. Voici un exemple simple :
 
@@ -113,7 +113,7 @@ Writer de suivi qu’une seule peut être active. Par défaut, les API Web défi
 
 Le suivi dans l’API Web utilise un *façade* modèle : Lorsque le traçage est activé, les API Web encapsule les différentes parties du pipeline de requête avec les classes qui effectuent des appels de trace.
 
-Par exemple, lorsque vous sélectionnez un contrôleur, le pipeline utilise le **IHttpControllerSelector** interface. Avec le suivi activé, le pipleline insère une classe qui implémente **IHttpControllerSelector** mais via les appels à l’implémentation réelle :
+Par exemple, lorsque vous sélectionnez un contrôleur, le pipeline utilise le **IHttpControllerSelector** interface. Avec le suivi activé, le pipeline insère une classe qui implémente **IHttpControllerSelector** mais via les appels à l’implémentation réelle :
 
 ![Suivi de l’API Web utilise le modèle de façade.](tracing-in-aspnet-web-api/_static/image8.png)
 
