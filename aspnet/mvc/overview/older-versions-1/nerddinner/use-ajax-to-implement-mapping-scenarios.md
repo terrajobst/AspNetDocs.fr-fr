@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: f731990a-0a81-4d62-81df-87d676cdedd6
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-ajax-to-implement-mapping-scenarios
 msc.type: authoredcontent
-ms.openlocfilehash: f7de23ca46e6dc00fe8075e28068a8b3f95d02cd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9beddfcaf568bf374271fb9fcb3af3a38aff4b72
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053256"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424831"
 ---
 <a name="use-ajax-to-implement-mapping-scenarios"></a>Utiliser AJAX pour implémenter des scénarios de mappage
 ====================
@@ -150,7 +150,7 @@ Pour implémenter cela, nous allons créer une nouvelle classe « SearchControl
 
 [!code-csharp[Main](use-ajax-to-implement-mapping-scenarios/samples/sample10.cs)]
 
-Méthode d’action de la SearchController SearchByLocation appelle en interne la méthode FindByLocation sur DinnerRespository pour obtenir une liste de dîners à proximité. Au lieu de renvoyer les objets dîner directement au client, cependant, il retourne à la place les objets JsonDinner. La classe JsonDinner expose un sous-ensemble des propriétés de dîner (par exemple : pour des raisons de sécurité qu’il ne divulguer les noms des personnes qui ont répondu pour un dîner). Il inclut également une propriété RSVPCount qui n’existe pas sur dîner – et qui est calculé dynamiquement en comptant le nombre d’objets RSVP associé à un dîner particulier.
+Méthode d’action de la SearchController SearchByLocation appelle en interne la méthode FindByLocation sur DinnerRepository pour obtenir une liste de dîners à proximité. Au lieu de renvoyer les objets dîner directement au client, cependant, il retourne à la place les objets JsonDinner. La classe JsonDinner expose un sous-ensemble des propriétés de dîner (par exemple : pour des raisons de sécurité qu’il ne divulguer les noms des personnes qui ont répondu pour un dîner). Il inclut également une propriété RSVPCount qui n’existe pas sur dîner – et qui est calculé dynamiquement en comptant le nombre d’objets RSVP associé à un dîner particulier.
 
 Nous utilisons ensuite la méthode d’assistance Json() sur la classe de base du contrôleur retourne la séquence de dîners à l’aide d’un format de transmission basé sur JSON. JSON est un format de texte standard pour représenter des structures de données simples. Voici un exemple d’une liste au format JSON de deux objets JsonDinner aspect lorsque renvoyé à partir de notre méthode d’action :
 
