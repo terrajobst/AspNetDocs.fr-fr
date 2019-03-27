@@ -8,12 +8,12 @@ ms.date: 01/23/2019
 ms.assetid: 8d54180d-f826-4df7-b503-7debf5ed9fb3
 msc.legacyurl: /identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 47dc2c1044a5964624ba2f8af4f174a2fd99d3e8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 04e4bbc8b6405dc60b8335191d88920028eef599
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049686"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424844"
 ---
 # <a name="account-confirmation-and-password-recovery-with-aspnet-identity-c"></a>Compte de récupération de confirmation et le mot de passe avec ASP.NET Identity (C#)
 
@@ -133,7 +133,7 @@ OWIN `AuthenticationManager.SignIn` méthode passe dans le `ClaimsIdentity` et s
 
 ## <a name="email-confirmation"></a>E-mail de confirmation
 
-Il est judicieux de confirmer l’adresse de messagerie un nouvel utilisateur auprès de vérifier qu’ils ne sont pas emprunter l’identité d’une autre personne (autrement dit, ils n’ont pas inscrit auprès de quelqu'un d’autre e-mail). Supposons que vous ayez un forum de discussion : vous voudriez empêcher `"bob@example.com"` de s'inscrire en tant que `"joe@contoso.com"`. ans la confirmation par courrier électronique, `"joe@contoso.com"` pourrait recevoir du courrier indésirable à partir de votre application.  Supposons que Bob se soit accidentellement inscrit en tant que `"bib@example.com"` et ne l'ait pas remarqué, il ne serait pas en mesure d’utiliser le mot de passe de récupération, car l’application n’. E-mail de confirmation fournit uniquement une protection limitée des robots et ne fournit pas une protection à partir des expéditeurs de courrier indésirable déterminés, ils ont des alias de messagerie travail nombreux, qu'ils peuvent utiliser pour inscrire. Dans l’exemple ci-dessous, l’utilisateur ne pourra modifier son mot de passe jusqu'à ce que son compte a été confirmé (en les sélectionnant reçu sur le compte de messagerie avec qu'ils inscrits un lien de confirmation.) Vous pouvez appliquer ce flux de travail à d’autres scénarios, par exemple envoyer un lien pour confirmer et réinitialiser le mot de passe sur les nouveaux comptes créés par l’administrateur, en envoyant à l’utilisateur un e-mail lorsque qu’ils ont modifié leur profil et ainsi de suite. En règle générale, vous souhaitez empêcher les nouveaux utilisateurs d'envoyer des données à votre site web avant qu’ils soient confirmés par courrier électronique, par SMS ou via un autre mécanisme. <a id="build"></a>
+Il est judicieux de confirmer l’adresse de messagerie un nouvel utilisateur auprès de vérifier qu’ils ne sont pas emprunter l’identité d’une autre personne (autrement dit, ils n’ont pas inscrit auprès de quelqu'un d’autre e-mail). Supposons que vous ayez un forum de discussion : vous voudriez empêcher `"bob@example.com"` de s'inscrire en tant que `"joe@contoso.com"`. ans la confirmation par courrier électronique, `"joe@contoso.com"` pourrait recevoir du courrier indésirable à partir de votre application. Supposons que Bob accidentellement inscrit en tant que `"bib@example.com"` et vous l’auriez pas remarqué, il ne serait pas en mesure d’utiliser la récupération de mot de passe, car l’application n’a pas son adresse de messagerie correcte. E-mail de confirmation fournit uniquement une protection limitée des robots et ne fournit pas une protection à partir des expéditeurs de courrier indésirable déterminés, ils ont des alias de messagerie travail nombreux, qu'ils peuvent utiliser pour inscrire. Dans l’exemple ci-dessous, l’utilisateur ne pourra modifier son mot de passe jusqu'à ce que son compte a été confirmé (en les sélectionnant reçu sur le compte de messagerie avec qu'ils inscrits un lien de confirmation.) Vous pouvez appliquer ce flux de travail à d’autres scénarios, par exemple envoyer un lien pour confirmer et réinitialiser le mot de passe sur les nouveaux comptes créés par l’administrateur, en envoyant à l’utilisateur un e-mail lorsque qu’ils ont modifié leur profil et ainsi de suite. En règle générale, vous souhaitez empêcher les nouveaux utilisateurs d'envoyer des données à votre site web avant qu’ils soient confirmés par courrier électronique, par SMS ou via un autre mécanisme. <a id="build"></a>
 
 ## <a name="build-a-more-complete-sample"></a>Générer un exemple plus complet
 

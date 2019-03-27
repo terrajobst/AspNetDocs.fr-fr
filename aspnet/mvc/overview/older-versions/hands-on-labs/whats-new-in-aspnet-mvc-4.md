@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 48f7feb3-872f-485d-b96f-e30011ff8c4a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/whats-new-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: 9d5a51a5887ecbbc96fce1416b88aa849bc3674e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0c4b7b2641c91cbb63ec46fa707c004f7273a303
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053496"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422686"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Nouveautés d’ASP.NET MVC 4
 
@@ -144,7 +144,7 @@ Dans cet exercice, vous allez explorer les améliorations dans les modèles de p
     *jQuery Validation*
 
     > [!NOTE]
-    > Notez que les deux journaux dans les sections, de la première section, vous pouvez vous connecter en utilisant un compte inscrit à partir du site et dans la deuxième section, que vous pouvez altenativelly session à l’aide d’un autre service d’authentification tels que google (désactivé par défaut).
+    > Notez que le journal des deux sections, dans la première section, vous pouvez vous connecter à l’aide d’un compte inscrit à partir du site et dans la deuxième section, vous pouvez également vous connecter à l’aide d’un autre service d’authentification tels que google (désactivé par défaut).
 5. Fermez le navigateur pour arrêter le débogueur, revenez à Visual Studio.
 6. Ouvrez le fichier **AuthConfig.cs** situé sous le **application\_Démarrer** dossier.
 7. Supprimez le commentaire de la dernière ligne pour inscrire le client de Google pour *OAuth* l’authentification.
@@ -429,7 +429,7 @@ Les mises à jour de clés dans ASP.NET MVC 4 est la prise en charge pour le dé
 <a id="Task_2_-_Creating_Mobile_Views"></a>
 #### <a name="task-2---creating-mobile-views"></a>Tâche 2 : création de vues mobiles
 
-Dans cette tâche, vous allez créer une version mobile de la vue index avec un contenu adapté pour une meilleure appareance sur des appareils mobiles.
+Dans cette tâche, vous allez créer une version mobile de la vue index avec un contenu adapté pour une meilleure apparence dans les appareils mobiles.
 
 1. Copie le **Views\Home\Index.cshtml** afficher et la coller pour créer une copie, renommez le nouveau fichier à **Index.Mobile.cshtml**.
 2. Ouvrez le nouveau créé **Index.Mobile.cshtml** permet d’afficher et de remplacer la &lt;ul&gt; balise avec ce code. Ce faisant, vous a mis à jour le &lt;ul&gt; balise jQuery Mobile et annotations de données à utiliser les thèmes mobiles à partir de jQuery.
@@ -512,15 +512,15 @@ Dans cette tâche, vous allez explorer l’exemple d’implémentation d’un s�
 
     La vue partielle utilise la nouvelle méthode **ViewContext.HttpContext.GetOverriddenBrowser()** pour déterminer l’origine de la demande web et afficher le lien correspondant pour basculer une pour les vues de bureau ou Mobile.
 
-    Le **GetOverridenBrowser** méthode retourne un **HttpBrowserCapabilitiesBase** instance qui correspond à l’agent utilisateur actuellement défini pour la demande (réelle ou substituée). Vous pouvez utiliser cette valeur pour obtenir des propriétés telles que **IsMobileDevice**.
+    Le **GetOverriddenBrowser** méthode retourne un **HttpBrowserCapabilitiesBase** instance qui correspond à l’agent utilisateur actuellement défini pour la demande (réelle ou substituée). Vous pouvez utiliser cette valeur pour obtenir des propriétés telles que **IsMobileDevice**.
 
     ![Vue partielle ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image30.png "vue partielle ViewSwitcher")
 
     *Vue partielle ViewSwitcher*
 4. Ouvrez le **ViewSwitcherController.cs** classe situé dans le **contrôleurs** dossier. Consultez cette action SwitchView est appelée par le lien dans le composant ViewSwitcher et notez les nouvelles méthodes HttpContext.
 
-    - Le **HttpContext.ClearOverridenBrowser()** méthode supprime tout agent utilisateur substitué pour la requête actuelle.
-    - Le **HttpContext.SetOverridenBrowser()** méthode remplace la valeur de l’agent utilisateur réelle de la demande à l’aide de l’agent utilisateur spécifié.  
+    - Le **HttpContext.ClearOverriddenBrowser()** méthode supprime tout agent utilisateur substitué pour la requête actuelle.
+    - Le **HttpContext.SetOverriddenBrowser()** méthode remplace la valeur de l’agent utilisateur réelle de la demande à l’aide de l’agent utilisateur spécifié.  
         ![Contrôleur de ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image31.png "ViewSwitcher contrôleur")  
 *ViewSwitcher contrôleur*
 
@@ -580,8 +580,8 @@ Une fois ce code s’exécute lorsqu’un navigateur iPhone génère une demande
 > [!NOTE]
 > Cette méthode de test de la demande pour iPhone a été simplifié à des fins de démonstration et peut ne pas fonctionne comme prévu pour chaque chaîne d’agent utilisateur iPhone (pour le test de l’exemple respecte la casse).
 
-4. Créer une copie de la  **\_Layout.Mobile.cshtml** de fichiers dans le **Views\Shared** dossier et renommez la copie à &quot; **\_Layout.iPhone.csthml**&quot;.
-5. Ouvrez  **\_Layout.iPhone.csthml** vous avez créé à l’étape précédente.
+4. Créer une copie de la  **\_Layout.Mobile.cshtml** de fichiers dans le **Views\Shared** dossier et renommez la copie à &quot; **\_Layout.iPhone.cshtml**&quot;.
+5. Ouvrez  **\_Layout.iPhone.cshtml** vous avez créé à l’étape précédente.
 6. Rechercher l’élément div avec l’attribut data-role à **page** et modifiez le **data-theme** attribut &quot; **un**&quot;.
 
 
@@ -904,7 +904,7 @@ Cette annexe sera vous montrent comment créer un nouveau site web à partir du 
 1. Accédez à la [portail de gestion Windows Azure](https://manage.windowsazure.com/) et connectez-vous en utilisant les informations d’identification Microsoft associées à votre abonnement.
 
     > [!NOTE]
-    > Avec Windows Azure, vous pouvez héberger 10 Sites Web ASP.NET gratuitement et faites ensuite évoluer que votre trafic augmente. Vous pouvez vous inscrire [ici](http://aka.ms/aspnet-hol-azure).
+    > Avec Windows Azure, vous pouvez héberger 10 Sites Web ASP.NET gratuitement et faites ensuite évoluer que votre trafic augmente. Vous pouvez vous inscrire [ici](https://aka.ms/aspnet-hol-azure).
 
     ![Ouvrez une session sur le portail Windows Azure](whats-new-in-aspnet-mvc-4/_static/image61.png "ouvrez une session sur le portail Windows Azure")
 

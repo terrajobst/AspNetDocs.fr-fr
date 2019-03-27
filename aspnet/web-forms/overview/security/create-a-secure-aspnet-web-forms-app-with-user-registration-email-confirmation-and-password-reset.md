@@ -8,12 +8,12 @@ ms.date: 10/02/2014
 ms.assetid: 0a8d6044-5fab-4213-82d6-5618d5601358
 msc.legacyurl: /web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: acc13776840408756901e20589b9efacc83ff2a9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1bd90f0ceddee7d9e18c1cac2fadfb2c84841f19
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053646"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424636"
 ---
 <a name="create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset-c"></a>Créer une application Web Forms ASP.NET sécurisée avec inscription de l’utilisateur, confirmation par e-mail et réinitialisation du mot de passe (C#)
 ====================
@@ -152,7 +152,7 @@ Bien que vous avez confirmé que le compte de messagerie, à ce stade vous serai
 <a id="rsend"></a>
 ## <a name="resend-email-confirmation-link"></a>Renvoyer le lien de Confirmation de courrier électronique
 
-Une fois qu’un utilisateur crée un compte local, un lien de confirmation lui est envoyé par e-mail, qu’il doit utiliser avant de pouvoir se connecter. Si l’utilisateur supprime accidentellement l’e-mail de confirmation ou si l’e-mail n’arrive jamais, le lien de confirmation doit lui être renvoyé. Les modifications suivantes du code montrent comment faire cela.
+Une fois qu’un utilisateur crée un compte local, un lien de confirmation lui est envoyé par e-mail, qu’il doit utiliser avant de pouvoir se connecter. Si l’utilisateur supprime accidentellement l’e-mail de confirmation ou l’e-mail n’arrive jamais, ils doivent le lien de confirmation envoyé à nouveau. Les modifications suivantes du code montrent comment faire cela.
 
 
 1. Dans Visual Studio, ouvrez le **Login.aspx.cs** code-behind et ajoutez le Gestionnaire d’événements suivant après le `LogIn` Gestionnaire d’événements :   

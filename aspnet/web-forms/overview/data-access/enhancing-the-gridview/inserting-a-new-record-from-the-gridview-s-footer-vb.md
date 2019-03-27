@@ -8,12 +8,12 @@ ms.date: 03/06/2007
 ms.assetid: 528acc48-f20c-4b4e-aa16-4cc02f068ebb
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/inserting-a-new-record-from-the-gridview-s-footer-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0c661190125e818d3abaf54f50a0067d0944a956
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6e56c46d1f2574b9f228190e0e0c8205240015ed
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059386"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423948"
 ---
 <a name="inserting-a-new-record-from-the-gridviews-footer-vb"></a>Insertion d’un nouvel enregistrement à partir du pied de page d’un contrôle GridView (VB)
 ====================
@@ -207,7 +207,7 @@ Par conséquent, pour répondre à l’utilisateur clique sur le bouton Ajouter,
 [!code-vb[Main](inserting-a-new-record-from-the-gridview-s-footer-vb/samples/sample6.vb)]
 
 > [!NOTE]
-> Vous vous demandez peut-être pourquoi le Gestionnaire d’événements dérange vérifiant la `Page.IsValid` propriété. Après tout, gagné / t de la publication (postback) être supprimés si des données non valides sont fournies dans l’interface insertion ? Cette hypothèse est correcte en tant que l’utilisateur n’a pas désactivé JavaScript ou a pris des mesures pour contourner la logique de validation côté client. En bref, un ne doit jamais dépendre strictement validation côté client ; une vérification côté serveur pour la validité doit toujours être effectuée avant de travailler avec les données.
+> Vous vous demandez peut-être pourquoi le Gestionnaire d’événements dérange vérifiant la `Page.IsValid` propriété. Après tout, la publication (postback) ne sont pas être supprimée si les données non valides sont fournies dans l’interface insertion ? Cette hypothèse est correcte en tant que l’utilisateur n’a pas désactivé JavaScript ou a pris des mesures pour contourner la logique de validation côté client. En bref, un ne doit jamais dépendre strictement validation côté client ; une vérification côté serveur pour la validité doit toujours être effectuée avant de travailler avec les données.
 
 
 À l’étape 1, nous avons créé le `ProductsDataSource` ObjectDataSource telles que son `Insert()` méthode est mappée à la `ProductsBLL` classe s `AddProduct` (méthode). Pour insérer le nouvel enregistrement dans le `Products` table, nous pouvons simplement appeler les opérations de mappage ObjectDataSource `Insert()` méthode :

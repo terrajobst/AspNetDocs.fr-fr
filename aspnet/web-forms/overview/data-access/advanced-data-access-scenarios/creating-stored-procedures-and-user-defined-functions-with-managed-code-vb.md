@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: 8be9a51b-ea6b-46c7-bfa2-476d9b14c24c
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/creating-stored-procedures-and-user-defined-functions-with-managed-code-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 438ebfa474ab510d90738c4a3ee40e172d838dcb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1596e1c8c1b96fd41c842169b95914c7b02cf196
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030326"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424623"
 ---
 <a name="creating-stored-procedures-and-user-defined-functions-with-managed-code-vb"></a>Création de procédures stockées et de fonctions définies par l’utilisateur avec du code managé (VB)
 ====================
@@ -303,7 +303,7 @@ Maintenant que nous avons mis à jour de la couche d’accès aux données pour 
 
 [!code-vb[Main](creating-stored-procedures-and-user-defined-functions-with-managed-code-vb/samples/sample7.vb)]
 
-Les deux méthodes simplement appeler la méthode correspondante de la couche DAL et retourner le `ProductsDataTable` instance. Le `DataObjectMethodAttribute` balisage au-dessus de chaque méthode provoque ces méthodes à inclure dans la liste déroulante dans l’onglet de sélection de l’Assistant Source de données de configurer de s ObjectDataSource.
+Les deux méthodes simplement appeler la méthode correspondante de la couche DAL et retourner le `ProductsDataTable` instance. Le `DataObjectMethodAttribute` balisage au-dessus de chaque méthode provoque ces méthodes à inclure dans la liste déroulante dans l’onglet de sélection de l’Assistant Configurer la Source de données de s ObjectDataSource.
 
 ## <a name="step-8-invoking-the-managed-stored-procedures-from-the-presentation-layer"></a>Étape 8 : Appeler les procédures stockées managées à partir de la couche de présentation
 

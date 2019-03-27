@@ -8,12 +8,12 @@ ms.date: 02/20/2005
 ms.assetid: f2339485-5d78-4c5e-8c0a-dc9b8a315345
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/membership
 msc.type: authoredcontent
-ms.openlocfilehash: d7fa3cb61608ea089141931cb9362359cdc92619
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d4fab68555eeb27420e60a28aca2f2c0fb9a73e3
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031466"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421516"
 ---
 <a name="membership"></a>Appartenance
 ====================
@@ -42,7 +42,7 @@ L’appartenance est implémentée en suivant quatre étapes. N’oubliez pas qu
 
 ## <a name="creating-the-membership-database"></a>Création de la base de données d’appartenance
 
-Si vous utilisez SQL Server 7.0 ou ultérieure comme magasin de l’appartenance, vous pouvez utiliser le compte aspnet\_utilitaire regsql (disponible plus facilement à partir de l’invite Visual Studio .NET 2005 commande) pour configurer votre base de données. Le compte aspnet\_regsql utilitaire peut être utilisé comme un outil d’invite de commandes ou via un Assistant d’interface utilisateur. La méthode de l’Assistant est le moyen le plus simple de configurer votre base de données. Pour accéder à l’Assistant, exécutez simplement la commande suivante :
+Si vous utilisez SQL Server 7.0 ou plus tard en tant que votre magasin d’appartenance, vous pouvez utiliser le compte aspnet\_utilitaire regsql (disponible plus facilement à partir de l’invite Visual Studio .NET 2005 commande) pour configurer votre base de données. Le compte aspnet\_regsql utilitaire peut être utilisé comme un outil d’invite de commandes ou via un Assistant d’interface utilisateur. La méthode de l’Assistant est le moyen le plus simple de configurer votre base de données. Pour accéder à l’Assistant, exécutez simplement la commande suivante :
 
 `aspnet_regsql W`
 
@@ -107,7 +107,7 @@ Les contrôles d’ouverture de session suivantes sont disponibles dans ASP.NET 
 
 ## <a name="login-control"></a>Contrôle de connexion
 
-Le contrôle de connexion fournit une interface pour un utilisateur de se connecter à votre système d’appartenance. Il vous fournit un nom d’utilisateur et mot de passe textboxt et un bouton de connexion. Nombreuses autres fonctionnalités comme un lien d’inscription pour les personnes qui n’ont pas encore fait. ainsi, une case à cocher qui permet à l’utilisateur de connexion automatiquement lors des visites suivantes, un lien pour un rappel de mot de passe, un etc. courantes. Toutes les fonctionnalités du contrôle de connexion sont personnalisables via les propriétés du contrôle.
+Le contrôle de connexion fournit une interface pour un utilisateur de se connecter à votre système d’appartenance. Il vous fournit une zone de texte Nom d’utilisateur et mot de passe et un bouton de connexion. Nombreuses autres fonctionnalités comme un lien d’inscription pour les personnes qui n’ont pas encore fait. ainsi, une case à cocher qui permet à l’utilisateur de connexion automatiquement lors des visites suivantes, un lien pour un rappel de mot de passe, un etc. courantes. Toutes les fonctionnalités du contrôle de connexion sont personnalisables via les propriétés du contrôle.
 
 Dans ASP.NET 1.x, les développeurs devaient écrire une grande quantité de code pour effectuer une recherche lorsque vous utilisez l’authentification par formulaire. Avec l’appartenance d’ASP.NET 2.0, vous pouvez valider les utilisateurs sans écrire de code du tout. ASP.NET effectue automatiquement la recherche de l’utilisateur pour vous. (Si vous utilisez le contrôle de connexion sans l’appartenance d’ASP.NET, vous pouvez utiliser la **OnAuthenticate** méthode pour valider l’utilisateur.)
 

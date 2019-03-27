@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 0a1f88bd-97da-4ed1-86f1-605199dc75a4
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45
 msc.type: authoredcontent
-ms.openlocfilehash: 54e0234d6f13ce62803dbe55a836414a93a207b2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 78cb6dec71e6b4974fdea4f205d1a36ebdfc3104
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026476"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424442"
 ---
 <a name="whats-new-in-web-forms-in-aspnet-45"></a>Nouveautés de Web Forms dans ASP.NET 4.5
 ====================
@@ -51,7 +51,7 @@ Dans cet atelier, vous allez apprendre comment :
 - Utiliser les nouvelles fonctionnalités de liaison de modèle dans Web Forms
 - Utiliser des fournisseurs de valeurs pour le mappage des données de page aux méthodes de code-behind
 - Utiliser des Annotations de données pour la validation d’entrée utilisateur
-- Prendre advange d’unobstrusive la validation côté client avec jQuery dans les Web Forms
+- Tirer parti de la validation non obstrusive côté client avec jQuery dans les Web Forms
 - Implémenter la validation de demande granulaire
 - Implémenter une page asynchrone de traitement dans Web Forms
 
@@ -407,13 +407,13 @@ ASP.NET 4.5 introduit la validation des Web Forms annotations de données. Au li
     > [EmailAddress(ErrorMessage=&quot;Invalid Email&quot;), MaxLength(56)]: Two annotations in the same line.
     > 
     > Vous pouvez également définir vos propres messages d’erreur au sein de chaque attribut.
-3. Ouvrez **CustomerDetails.aspx** et supprimer tous les RequiredFieldvalidators pour les champs nom et prénom dans les sections EditItemTemplate et InsertItemTemplate du contrôle FormView.
+3. Ouvrez **CustomerDetails.aspx** et supprimer tous les RequiredFieldValidators pour les champs nom et prénom dans les sections EditItemTemplate et InsertItemTemplate du contrôle FormView.
 
     [!code-aspx[Main](whats-new-in-web-forms-in-aspnet-45/samples/sample24.aspx)]
 
     > [!NOTE]
     > L’un des avantages de l’utilisation d’annotations de données sont que la logique de validation n’est pas dupliquée dans vos pages d’application. Vous définissez une seule fois dans le modèle et l’utiliser sur toutes les pages d’application qui manipulent des données.
-4. Ouvrez **CustomerDetails.aspx** code-behind et recherchez la méthode SaveCustomer. Cette méthode est appelée lors de l’insertion d’un nouveau client et reçoit le paramètre de client à partir des valeurs de contrôle FormView. Lorsque le mappage entre les contrôles de page et le se produit lorsque des objets de paramètre, ASP.NET exécute la validation du modèle par rapport à toutes les annotations de données des attributs et remplir le dictionnaire ModelState avec les erreurs rencontrées, le cas échéant.
+4. Ouvrez **CustomerDetails.aspx** code-behind et recherchez la méthode SaveCustomer. Cette méthode est appelée lors de l’insertion d’un nouveau client et reçoit le paramètre de client à partir des valeurs de contrôle FormView. Lorsque le mappage entre la page de contrôle et l’objet de paramètre se produit, ASP.NET exécute la validation du modèle par rapport à tous les attributs d’annotation de données et remplir le dictionnaire ModelState avec les erreurs rencontrées, le cas échéant.
 
     Le ModelState.IsValid retournera uniquement la valeur true si tous les champs de votre modèle sont valides après avoir effectué la validation.
 
@@ -623,7 +623,7 @@ Dans ce laboratoire pratique, les concepts suivants ont été traités et prése
 - Utiliser les nouvelles fonctionnalités de liaison de modèle dans Web Forms
 - Utiliser des fournisseurs de valeurs pour le mappage des données de page aux méthodes de code-behind
 - Utiliser des Annotations de données pour la validation d’entrée utilisateur
-- Prendre advange d’unobstrusive la validation côté client avec jQuery dans les Web Forms
+- Tirer parti de la validation non obstrusive côté client avec jQuery dans les Web Forms
 - Implémenter la validation de demande granulaire
 - Implémenter une page asynchrone de traitement dans Web Forms
 
@@ -678,7 +678,7 @@ Cette annexe sera vous montrent comment créer un nouveau site web à partir du 
 1. Accédez à la [portail de gestion](https://manage.windowsazure.com/) et connectez-vous en utilisant les informations d’identification Microsoft associées à votre abonnement.
 
     > [!NOTE]
-    > Avec Azure, vous pouvez héberger 10 Sites Web ASP.NET gratuitement et faites ensuite évoluer que votre trafic augmente. Vous pouvez vous inscrire [ici](http://aka.ms/aspnet-hol-azure).
+    > Avec Azure, vous pouvez héberger 10 Sites Web ASP.NET gratuitement et faites ensuite évoluer que votre trafic augmente. Vous pouvez vous inscrire [ici](https://aka.ms/aspnet-hol-azure).
 
     ![Ouvrez une session sur le portail Windows Azure](whats-new-in-web-forms-in-aspnet-45/_static/image30.png "ouvrez une session sur le portail Windows Azure")
 

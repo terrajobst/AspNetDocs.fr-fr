@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
-ms.openlocfilehash: 17e11c33d6bf2a75e99e3bda4d6ab89c5b1631f9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9969a68a3e1aa043845fb5affd6d3b73dec4136d
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042856"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425390"
 ---
-<a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Options de stockage de données (création d’applications Cloud réalistes avec Azure)
-====================
+# <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Options de stockage de données (création d’applications Cloud réalistes avec Azure)
+
 par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -62,13 +62,13 @@ Les grands volumes de données que vous pouvez stocker dans les bases de donnée
 
 Sur Azure, [HDInsight](https://azure.microsoft.com/services/hdinsight/) afin de pouvoir traiter, analyser et obtenir de nouvelles informations provenant de big data à l’aide de la puissance de Hadoop. Par exemple, vous pouvez l’utiliser pour analyser les journaux de serveur web :
 
-- Activer la journalisation du serveur web à votre compte de stockage. Cela configure Azure pour écrire des journaux dans le Service Blob pour chaque requête HTTP à votre application. Le Service Blob est en gros fichier de stockage cloud, et il s’intègre parfaitement avec HDInsight. 
+- Activer la journalisation du serveur web à votre compte de stockage. Cela configure Azure pour écrire des journaux dans le Service Blob pour chaque requête HTTP à votre application. Le Service Blob est en gros fichier de stockage cloud, et il s’intègre parfaitement avec HDInsight.
 
     ![Journaux de stockage d’objets Blob](data-storage-options/_static/image2.png)
-- À mesure que l’application augmente le trafic, les journaux IIS du serveur web sont écrits dans stockage Blob. 
+- À mesure que l’application augmente le trafic, les journaux IIS du serveur web sont écrits dans stockage Blob.
 
     ![Journaux de serveur Web](data-storage-options/_static/image3.png)
-- Dans le portail, cliquez sur **New** - **Data Services** - **HDInsight** - **création rapide**, et spécifiez un nom de cluster HDInsight, la taille du cluster (nombre de nœuds de données de cluster HDInsight) et un nom d’utilisateur et le mot de passe pour le cluster HDInsight. 
+- Dans le portail, cliquez sur **New** - **Data Services** - **HDInsight** - **création rapide**, et spécifiez un nom de cluster HDInsight, la taille du cluster (nombre de nœuds de données de cluster HDInsight) et un nom d’utilisateur et le mot de passe pour le cluster HDInsight.
 
     ![HDInsight](data-storage-options/_static/image4.png)
 
@@ -175,7 +175,7 @@ Attendez quelques secondes, et que vous avez une base de données dans Azure, vo
 
 ![Base de données SQL créée](data-storage-options/_static/image10.png)
 
-Pour Azure en quelques secondes, qu’il vous faudra un jour ou une semaine ou plus pour accomplir dans l’environnement local. Et étant donné que vous pouvez tout aussi facilement créer bases de données automatiquement dans un script ou à l’aide d’une API de gestion, vous pouvez dynamiquement augmenter en répartissant vos données sur plusieurs bases de données < o : p >, tant que votre application qui a été programmée. </o : p >
+Pour Azure en quelques secondes, qu’il vous faudra un jour ou une semaine ou plus pour accomplir dans l’environnement local. Et étant donné que vous pouvez tout aussi facilement créer bases de données automatiquement dans un script ou à l’aide d’une API de gestion, vous pouvez dynamiquement augmenter en répartissant vos données sur plusieurs bases de données, tant que votre application qui a été programmée.
 
 Il s’agit d’un exemple de notre modèle Platform-as-a-Service. Vous n’êtes pas obligé de gérer les serveurs, nous le faisons. Vous n’êtes pas obligé de vous inquiétez pas sur les sauvegardes, nous le faisons. Il est en cours d’exécution dans une haute disponibilité, les données dans la base de données sont automatiquement répliquées sur trois serveurs. Si un ordinateur meurt, nous basculent automatiquement et vous ne perdez aucune donnée. Le serveur est mis à jour régulièrement, vous n’avez pas besoin de vous inquiétez pas à ce sujet.
 
@@ -267,7 +267,7 @@ Pour plus d'informations, voir les ressources ci-dessous.
 
 Choix d’une plate-forme de base de données :
 
-- [Accès de données pour les Solutions hautement évolutives : À l’aide de SQL, NoSQL et la persistance POLYGLOTTE](http://aka.ms/dag-doc). Livre électronique par Microsoft Patterns and Practices qui explore en profondeur les différents types de données stocke disponibles pour les applications cloud.
+- [Accès de données pour les Solutions hautement évolutives : À l’aide de SQL, NoSQL et la persistance POLYGLOTTE](https://aka.ms/dag-doc). Livre électronique par Microsoft Patterns and Practices qui explore en profondeur les différents types de données stocke disponibles pour les applications cloud.
 - [Microsoft Patterns and Practices - conseils Azure](https://msdn.microsoft.com/library/ff898430.aspx). Consultez Data Consistency Primer, réplication des données et obtenir des conseils de synchronisation, le modèle de Table d’Index, le modèle de vue matérialisée.
 - [BASE : Une Alternative Acid](http://queue.acm.org/detail.cfm?id=1394128). L’article sur les compromis entre la cohérence des données et l’évolutivité.
 - [Bases de sept données dans sept semaines : Un Guide pour les bases de données modernes et du mouvement NoSQL](https://www.amazon.com/Seven-Databases-Weeks-Modern-Movement/dp/1934356921). Livre par Eric Redmond et Jim R. Wilson. Fortement recommandé pour l’introduction de vous-même à l’ensemble des plateformes de stockage de données disponibles aujourd'hui.
