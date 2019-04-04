@@ -2,12 +2,18 @@
 uid: web-forms/videos/visual-studio-2010/index
 title: Conseils généraux de Visual Studio 2010 | Microsoft Docs
 author: rick-anderson
-description: 'Fonctionnalités de Visual Studio 2010, y compris ceux spécifiquement pour l’utilisation avec ASP.NET.'
+description: Fonctionnalités de Visual Studio 2010, y compris ceux spécifiquement pour l’utilisation avec ASP.NET.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: a1e1014d-085c-4e5a-8522-068387b6415d
 msc.legacyurl: /web-forms/videos/visual-studio-2010
 msc.type: chapter
+ms.openlocfilehash: 64e773bacea3792a74199ddb3961cf4f877d11d9
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57023746"
 ---
 <a name="general-vs-2010-tips"></a>Conseils généraux pour Visual Studio 2010
 ====================

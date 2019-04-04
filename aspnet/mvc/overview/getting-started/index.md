@@ -2,12 +2,18 @@
 uid: mvc/overview/getting-started/index
 title: Mise en route de ASP.NET MVC | Microsoft Docs
 author: rick-anderson
-description: 'En savoir plus sur ASP.NET MVC ASP.NET MVC offre un moyen puissant, basé sur des modèles pour créer des sites Web dynamiques qui permettent une séparation claire des préoccupations et ce g...'
+description: En savoir plus sur ASP.NET MVC ASP.NET MVC offre un moyen puissant, basé sur des modèles pour créer des sites Web dynamiques qui permettent une séparation claire des préoccupations et ce g...
 ms.author: riande
 ms.date: 08/31/2011
 ms.assetid: d916dbe0-1895-491b-8bb6-93f4594ce757
 msc.legacyurl: /mvc/overview/getting-started
 msc.type: chapter
+ms.openlocfilehash: a2b96388cb7408d3c5fa548d0f43cfb2287661bf
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57021756"
 ---
 <a name="aspnet-mvc-getting-started"></a>Mise en route de ASP.NET MVC
 ====================

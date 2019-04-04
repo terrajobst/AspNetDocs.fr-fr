@@ -8,6 +8,12 @@ ms.date: 05/16/2012
 ms.assetid: eacf0e3a-c2e9-4f77-a676-249146f393e8
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment
 msc.type: chapter
+ms.openlocfilehash: b042faf38fe0269508895f1b7826908cf086222d
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018806"
 ---
 <a name="aspnet-4---enterprise-deployment-series-4-advanced-topics"></a>ASP.NET 4 - Déploiement d’entreprise : série 4, Rubriques avancées
 ====================
