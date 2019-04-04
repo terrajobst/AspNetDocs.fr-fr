@@ -8,6 +8,12 @@ ms.date: 10/09/2014
 ms.assetid: 151cd274-3daa-4f88-ad3b-bffb99a9d545
 msc.legacyurl: /mvc/overview/older-versions
 msc.type: chapter
+ms.openlocfilehash: 25057283e20e437027f4b89c3c5972bca1312093
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57021946"
 ---
 <a name="older-versions---mvc-3-and-4"></a><span data-ttu-id="a3d50-103">Versions antérieures - MVC 3 et 4</span><span class="sxs-lookup"><span data-stu-id="a3d50-103">Older Versions - MVC 3 and 4</span></span>
 ====================

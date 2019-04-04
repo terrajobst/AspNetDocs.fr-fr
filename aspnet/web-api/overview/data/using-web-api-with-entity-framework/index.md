@@ -8,6 +8,12 @@ ms.date: 07/03/2012
 ms.assetid: 6c3c4f27-2fa3-49dc-bcaf-1ee3ef620f8e
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework
 msc.type: chapter
+ms.openlocfilehash: 89d129616130df1508f559a2abbb975a13fdc601
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019426"
 ---
 <a name="using-web-api-2-with-entity-framework-6"></a><span data-ttu-id="3620b-103">Utilisation de Web API 2 avec Entity Framework 6</span><span class="sxs-lookup"><span data-stu-id="3620b-103">Using Web API 2 with Entity Framework 6</span></span>
 ====================

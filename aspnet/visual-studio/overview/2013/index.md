@@ -2,12 +2,18 @@
 uid: visual-studio/overview/2013/index
 title: ASP.NET et Visual Studio 2013 | Microsoft Docs
 author: rick-anderson
-description: "Visual Studio\_2013"
+description: Visual Studio 2013
 ms.author: riande
 ms.date: 06/25/2013
 ms.assetid: 646edfc7-dc62-4fa0-84c2-926996c92aeb
 msc.legacyurl: /visual-studio/overview/2013
 msc.type: chapter
+ms.openlocfilehash: 74793becba663d163a31cb1b02654b7b6cb021af
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022326"
 ---
 <a name="aspnet-and-visual-studio-2013"></a><span data-ttu-id="db30a-103">ASP.NET et Visual Studio 2013</span><span class="sxs-lookup"><span data-stu-id="db30a-103">ASP.NET and Visual Studio 2013</span></span>
 ====================

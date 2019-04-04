@@ -8,6 +8,12 @@ ms.date: 05/18/2012
 ms.assetid: b8a43660-177f-4a00-bb51-be887364c607
 msc.legacyurl: /web-pages/videos/introduction
 msc.type: chapter
+ms.openlocfilehash: f645e05deb334346ed7199b804387a29e9538165
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020346"
 ---
 <a name="introduction-to-web-pages-videos"></a><span data-ttu-id="08ed4-103">Introduction aux vidéos de Pages Web</span><span class="sxs-lookup"><span data-stu-id="08ed4-103">Introduction to Web Pages Videos</span></span>
 ====================

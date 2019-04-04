@@ -8,6 +8,12 @@ ms.date: 10/02/2013
 ms.assetid: d3972a0e-9ff6-4de1-bf4d-c94943cab048
 msc.legacyurl: /identity/overview
 msc.type: book
+ms.openlocfilehash: 1b3d3e5eb153c4c311dfa426b1d5bed3c1d6c590
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57023286"
 ---
 <a name="aspnet-identity-overview"></a><span data-ttu-id="b7190-102">Vue d’ensemble de l’identité ASP.NET</span><span class="sxs-lookup"><span data-stu-id="b7190-102">ASP.NET Identity Overview</span></span>
 ====================

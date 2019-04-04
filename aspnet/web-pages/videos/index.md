@@ -8,6 +8,12 @@ ms.date: 05/18/2012
 ms.assetid: febf2824-4e3d-4dc6-84c5-f99777ec6144
 msc.legacyurl: /web-pages/videos
 msc.type: book
+ms.openlocfilehash: 8ad0a510ea62848b7a429c0bd4fa781b50c2ce53
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022606"
 ---
 <a name="videos"></a><span data-ttu-id="ae40f-102">Vidéos</span><span class="sxs-lookup"><span data-stu-id="ae40f-102">Videos</span></span>
 ====================

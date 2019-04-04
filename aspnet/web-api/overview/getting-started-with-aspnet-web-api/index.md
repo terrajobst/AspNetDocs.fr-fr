@@ -2,12 +2,18 @@
 uid: web-api/overview/getting-started-with-aspnet-web-api/index
 title: Prise en main l’API Web ASP.NET | Microsoft Docs
 author: rick-anderson
-description: 'En savoir plus sur ASP.NET Web API ASP.NET Web API est une infrastructure qui facilite la création de services HTTP qui atteignent une large gamme de clients, y compris les navigateurs...'
+description: En savoir plus sur ASP.NET Web API ASP.NET Web API est une infrastructure qui facilite la création de services HTTP qui atteignent une large gamme de clients, y compris les navigateurs...
 ms.author: riande
 ms.date: 01/17/2012
 ms.assetid: a36e178f-de46-46d9-b150-61fb3ba1b4d3
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api
 msc.type: chapter
+ms.openlocfilehash: 9350116f4a9dd3ca9faed402fd6f8bbba29f01a6
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019326"
 ---
 <a name="getting-started-with-aspnet-web-api"></a><span data-ttu-id="a6d9a-103">Prise en main l’API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="a6d9a-103">Getting Started with ASP.NET Web API</span></span>
 ====================

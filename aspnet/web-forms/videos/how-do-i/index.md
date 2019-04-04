@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: 27591afa-3c14-47e6-8323-573f8f7aa862
 msc.legacyurl: /web-forms/videos/how-do-i
 msc.type: chapter
+ms.openlocfilehash: d53304d60888de55ad474f5be8c0cfe6f8b122bb
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020246"
 ---
 <a name="how-do-i"></a><span data-ttu-id="5ca0a-104">Comment faire</span><span class="sxs-lookup"><span data-stu-id="5ca0a-104">How Do I?</span></span>
 ====================

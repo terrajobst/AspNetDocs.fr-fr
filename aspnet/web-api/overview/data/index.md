@@ -2,12 +2,18 @@
 uid: web-api/overview/data/index
 title: Utilisation des données dans l’API Web ASP.NET | Microsoft Docs
 author: rick-anderson
-description: 'Comment le programme CRUD (créer, lire, mettre à jour, supprimer) les opérations dans l’API Web.'
+description: Comment le programme CRUD (créer, lire, mettre à jour, supprimer) les opérations dans l’API Web.
 ms.author: riande
 ms.date: 10/23/2014
 ms.assetid: 995cbe38-7dbd-4c36-a5d0-a761944c7636
 msc.legacyurl: /web-api/overview/data
 msc.type: chapter
+ms.openlocfilehash: e926c82e84b7cac2ba69a8baa62d2719647523d2
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020426"
 ---
 <a name="working-with-data-in-aspnet-web-api"></a><span data-ttu-id="7a9db-103">Utilisation des données dans l’API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="7a9db-103">Working with Data in ASP.NET Web API</span></span>
 ====================

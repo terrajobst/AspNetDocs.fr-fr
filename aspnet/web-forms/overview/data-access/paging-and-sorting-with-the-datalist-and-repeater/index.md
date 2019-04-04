@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: 8996b59e-042c-4395-b28a-f1ab95ac16af
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater
 msc.type: chapter
+ms.openlocfilehash: d92c21dc854f849cea22ae3e4feb5559cb50270e
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019826"
 ---
 <a name="paging-and-sorting-with-the-datalist-and-repeater"></a><span data-ttu-id="6b91d-103">Affichage et tri avec les contrôles DataList et Repeater</span><span class="sxs-lookup"><span data-stu-id="6b91d-103">Paging and Sorting with the DataList and Repeater</span></span>
 ====================

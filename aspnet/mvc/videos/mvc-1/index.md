@@ -2,12 +2,18 @@
 uid: mvc/videos/mvc-1/index
 title: ASP.NET MVC 1 | Microsoft Docs
 author: rick-anderson
-description: "ASP.NET MVC\_1"
+description: ASP.NET MVC 1
 ms.author: riande
 ms.date: 11/14/2011
 ms.assetid: a780d06b-36cd-410a-b95a-b6b935b5a7fa
 msc.legacyurl: /mvc/videos/mvc-1
 msc.type: chapter
+ms.openlocfilehash: ab03d8df4b149e32dd32c26a5b9ae29e2b7be353
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022726"
 ---
 <a name="aspnet-mvc-1"></a><span data-ttu-id="eda5f-103">ASP.NET MVC 1</span><span class="sxs-lookup"><span data-stu-id="eda5f-103">ASP.NET MVC 1</span></span>
 ====================

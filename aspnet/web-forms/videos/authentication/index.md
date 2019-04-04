@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: 4a365e58-9b18-4bd2-bfd5-6981e7f2e179
 msc.legacyurl: /web-forms/videos/authentication
 msc.type: chapter
+ms.openlocfilehash: 00a91f03e05a56a3ebbe75f113b1330cffc57a99
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57021596"
 ---
 <a name="authentication"></a><span data-ttu-id="b7184-103">Authentification</span><span class="sxs-lookup"><span data-stu-id="b7184-103">Authentication</span></span>
 ====================

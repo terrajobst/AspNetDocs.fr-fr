@@ -2,12 +2,18 @@
 uid: web-forms/overview/getting-started/index
 title: Mise en route avec ASP.NET Web Forms | Microsoft Docs
 author: rick-anderson
-description: 'En savoir plus sur ASP.NET Web Forms ASP.NET Web Forms vous permet de générer des sites Web dynamiques à l’aide d’un modèle familier de glisser-déplacer, pilotée par événements. Une aire de conception et de hund...'
+description: En savoir plus sur ASP.NET Web Forms ASP.NET Web Forms vous permet de générer des sites Web dynamiques à l’aide d’un modèle familier de glisser-déplacer, pilotée par événements. Une aire de conception et de hund...
 ms.author: riande
 ms.date: 08/08/2011
 ms.assetid: f645d3b1-1092-43c6-a28a-074b413924b4
 msc.legacyurl: /web-forms/overview/getting-started
 msc.type: chapter
+ms.openlocfilehash: de5f8df4a6247ae41971867cafda15835b4944e4
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020326"
 ---
 <a name="getting-started-with-aspnet-web-forms"></a><span data-ttu-id="b530e-104">Mise en route avec ASP.NET Web Forms</span><span class="sxs-lookup"><span data-stu-id="b530e-104">Getting Started with ASP.NET Web Forms</span></span>
 ====================
