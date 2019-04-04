@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: 20060b05-3c1b-41ca-9621-4434ba233adc
 msc.legacyurl: /web-forms/videos/building-35-applications
 msc.type: chapter
+ms.openlocfilehash: 0c70223c81f598c83cc39c28d97364f5c8b1e92b
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020846"
 ---
 <a name="building-35-applications"></a><span data-ttu-id="0fa19-103">Création d’applications 3.5</span><span class="sxs-lookup"><span data-stu-id="0fa19-103">Building 3.5 Applications</span></span>
 ====================

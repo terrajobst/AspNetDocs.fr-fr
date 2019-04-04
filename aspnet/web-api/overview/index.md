@@ -8,6 +8,12 @@ ms.date: 01/17/2012
 ms.assetid: daca6735-b5d3-4ef5-af33-ee682926238b
 msc.legacyurl: /web-api/overview
 msc.type: book
+ms.openlocfilehash: 3246bdc946ad862a0fa1c03f69d4a4f1d067e24c
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57023396"
 ---
 <a name="web-api-guidance"></a><span data-ttu-id="1cb64-102">Guide de l’API Web</span><span class="sxs-lookup"><span data-stu-id="1cb64-102">Web API Guidance</span></span>
 ====================

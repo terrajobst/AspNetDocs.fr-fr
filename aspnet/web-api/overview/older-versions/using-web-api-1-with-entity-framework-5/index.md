@@ -8,6 +8,12 @@ ms.date: 06/16/2014
 ms.assetid: b380c940-84c4-4e4a-980a-fa69986e919b
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5
 msc.type: chapter
+ms.openlocfilehash: 805bf4e94dfbba7b8495ee42438b58bbad6e4b91
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57024026"
 ---
 <a name="using-aspnet-web-api-1-with-entity-framework-5"></a><span data-ttu-id="c3a82-103">Utilisation d’ASP.NET Web API 1 avec Entity Framework 5</span><span class="sxs-lookup"><span data-stu-id="c3a82-103">Using ASP.NET Web API 1 with Entity Framework 5</span></span>
 ====================

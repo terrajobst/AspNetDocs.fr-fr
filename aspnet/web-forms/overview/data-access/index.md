@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: cf54a6fb-a362-4481-b967-c158b98092f7
 msc.legacyurl: /web-forms/overview/data-access
 msc.type: chapter
+ms.openlocfilehash: 0060650de35a8693a9c1432876df1d4902bb1ade
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57023076"
 ---
 <a name="older-versions---data-access"></a><span data-ttu-id="bf3ff-103">Versions antérieures - Accès aux données</span><span class="sxs-lookup"><span data-stu-id="bf3ff-103">Older Versions - Data Access</span></span>
 ====================

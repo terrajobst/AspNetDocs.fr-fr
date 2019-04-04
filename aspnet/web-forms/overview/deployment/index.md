@@ -8,6 +8,12 @@ ms.date: 08/18/2011
 ms.assetid: 05e4c88f-5101-4277-a323-b6774d98f69e
 msc.legacyurl: /web-forms/overview/deployment
 msc.type: chapter
+ms.openlocfilehash: 660987c11fe57a858d5fa552a10e38e65a3d5555
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57023406"
 ---
 <a name="deployment"></a><span data-ttu-id="ef9be-103">Déploiement</span><span class="sxs-lookup"><span data-stu-id="ef9be-103">Deployment</span></span>
 ====================
