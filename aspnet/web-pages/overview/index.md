@@ -8,6 +8,12 @@ ms.date: 05/18/2012
 ms.assetid: 1a2ed0e8-63da-4110-9896-e2731d86f7c4
 msc.legacyurl: /web-pages/overview
 msc.type: book
+ms.openlocfilehash: f95d998b838e262dd1843c882dae466a88c23ad5
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57023986"
 ---
 <a name="web-pages-guidance"></a>Conseils de Pages Web
 ====================

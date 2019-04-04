@@ -8,6 +8,12 @@ ms.date: 10/23/2014
 ms.assetid: f5bc7426-27c6-492c-914f-b9d2eb49753d
 msc.legacyurl: /web-api/overview/older-versions
 msc.type: chapter
+ms.openlocfilehash: ac59f28d61cf2dceb030ee782069679ee7e1fab0
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018646"
 ---
 <a name="documentation-on-older-versions-of-web-api"></a>Documentation sur les Versions antérieures de l’API Web
 ====================

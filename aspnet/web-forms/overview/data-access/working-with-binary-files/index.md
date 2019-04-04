@@ -2,12 +2,18 @@
 uid: web-forms/overview/data-access/working-with-binary-files/index
 title: Utilisation des fichiers binaires | Microsoft Docs
 author: rick-anderson
-description: 'Ces didacticiels montrent comment permettre aux utilisateurs de télécharger des fichiers binaires (telles que des documents Word ou PDF) sur le serveur, où qu’elles puissent être stockées dans des dossiers ou dans la base de données.'
+description: Ces didacticiels montrent comment permettre aux utilisateurs de télécharger des fichiers binaires (telles que des documents Word ou PDF) sur le serveur, où qu’elles puissent être stockées dans des dossiers ou dans la base de données.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 2d08658a-16c4-4877-9f43-c6503adda7bf
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files
 msc.type: chapter
+ms.openlocfilehash: 2fa205c4c77d01661017daf53e12d71234cf22f6
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022746"
 ---
 <a name="working-with-binary-files"></a>Utilisation de fichiers binaires
 ====================

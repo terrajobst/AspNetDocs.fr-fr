@@ -8,6 +8,12 @@ ms.date: 11/14/2011
 ms.assetid: a923735c-2d34-456c-8327-40aa62a4c1d6
 msc.legacyurl: /web-forms/videos/data-access
 msc.type: chapter
+ms.openlocfilehash: f93a3b496b2a3bf7957687c7e1ba97db994b4712
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57022106"
 ---
 <a name="data-access"></a>Accès aux données
 ====================
