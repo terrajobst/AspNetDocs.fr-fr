@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-cs
-title: Ajout de colonnes de DataTable supplémentaires (c#) | Microsoft Docs
+title: Ajout de colonnes de DataTable supplémentaires (C#) | Microsoft Docs
 author: rick-anderson
 description: Lorsque vous utilisez l’Assistant TableAdapter pour créer un DataSet typé, le DataTable contient les colonnes retournées par la requête de base de données principale. Mais là...
 ms.author: riande

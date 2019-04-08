@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-cs
-title: Boutons personnalisés dans les contrôles DataList et Repeater (c#) | Microsoft Docs
+title: Boutons personnalisés dans les contrôles DataList et Repeater (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons créer une interface qui utilise un répéteur pour répertorier les catégories dans le système, chaque catégorie de fournir un bouton pour afficher ses associ...
 ms.author: riande

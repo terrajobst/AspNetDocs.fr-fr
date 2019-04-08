@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/basic-reporting/declarative-parameters-cs
-title: Paramètres déclaratifs (c#) | Microsoft Docs
+title: Paramètres déclaratifs (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous illustrerons comment utiliser un paramètre défini sur une valeur codée en dur pour sélectionner les données à afficher dans un contrôle DetailsView.
 ms.author: riande

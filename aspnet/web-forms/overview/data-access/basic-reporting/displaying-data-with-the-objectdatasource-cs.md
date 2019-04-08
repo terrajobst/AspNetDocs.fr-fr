@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/basic-reporting/displaying-data-with-the-objectdatasource-cs
-title: Affichage des données avec ObjectDataSource (c#) | Microsoft Docs
+title: Affichage des données avec ObjectDataSource (C#) | Microsoft Docs
 author: rick-anderson
 description: Ce didacticiel examine le contrôle ObjectDataSource à l’aide de ce contrôle, que vous pouvez lier des données récupérées à partir de la couche BLL créée dans le didacticiel précédent sans havi...
 ms.author: riande

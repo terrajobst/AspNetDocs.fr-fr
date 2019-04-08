@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/urls-in-master-pages-cs
-title: URL dans les Pages maîtres (c#) | Microsoft Docs
+title: URL dans les Pages maîtres (C#) | Microsoft Docs
 author: rick-anderson
 description: Adresses comment les URL dans la page maître peuvent fonctionner en raison du fichier de page maître en cours dans un autre répertoire relatif à la page de contenu. Examine la relocalisation...
 ms.author: riande

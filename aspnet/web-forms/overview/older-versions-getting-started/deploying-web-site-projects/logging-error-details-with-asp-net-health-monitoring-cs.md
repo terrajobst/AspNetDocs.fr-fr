@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs
-title: Journalisation des détails de l’erreur avec l’intégrité ASP.NET analyse (c#) | Microsoft Docs
+title: Journalisation des détails de l’erreur avec l’intégrité ASP.NET analyse (C#) | Microsoft Docs
 author: rick-anderson
 description: Système de surveillance de l’intégrité de Microsoft fournit un moyen facile et personnalisable pour vous connecter divers événements web, y compris les exceptions non gérées. Ce didacticiel décrit le transfert...
 ms.author: riande

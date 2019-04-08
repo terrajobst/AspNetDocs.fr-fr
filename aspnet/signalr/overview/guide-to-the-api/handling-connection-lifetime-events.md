@@ -254,7 +254,7 @@ SignalR version 2 n’a pas d’un API de serveur intégré pour la déconnexion
 
 SignalR 2.1 ajoute une surcharge au serveur `OnDisconnect` événement qui indique si le client déconnecté délibérément plutôt que de délai d’expiration. Le `StopCalled` paramètre a la valeur true si le client a fermé explicitement la connexion. Dans JavaScript, si une erreur de serveur ont conduit le client pour vous déconnecter, les informations d’erreur recevront au client comme `$.connection.hub.lastError`.
 
-**Code de serveur c# : `stopCalled` paramètre**
+**Code de serveur C# : `stopCalled` paramètre**
 
 [!code-csharp[Main](handling-connection-lifetime-events/samples/sample7.cs?highlight=1,3)]
 

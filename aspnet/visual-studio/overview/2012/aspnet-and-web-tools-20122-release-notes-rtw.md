@@ -85,7 +85,7 @@ Cette section décrit les fonctionnalités qui ont été introduites dans la ver
     - Prend en charge la coloration syntaxique des JsRender, Handlebars, CoffeeScript et angulaires.
     - L’éditeur HTML fournit Intellisense pour les liaisons de Knockout.
     - MOINS modification et le compilateur prend en charge pour activer la création de CSS dynamique à l’aide d’inférieur.
-    - Coller le code JSON comme une classe .NET. À l’aide de cette commande Collage spécial pour coller JSON dans un langage c# ou VB.NET fichier de code et Visual Studio génère automatiquement des classes .NET déduits à partir de JSON.
+    - Coller le code JSON comme une classe .NET. À l’aide de cette commande Collage spécial pour coller JSON dans un langage C# ou VB.NET fichier de code et Visual Studio génère automatiquement des classes .NET déduits à partir de JSON.
 - Prise en charge de l’émulateur mobile ajoute des points d’extensibilité afin que les émulateurs de fournisseurs tiers peuvent être installées comme une extension VSIX. Les émulateurs installés seront afficheront dans la liste déroulante F5, afin que les développeurs peuvent afficher un aperçu de leurs sites Web sur une variété de périphériques mobiles. En savoir plus sur cette fonctionnalité dans l’entrée de blog de Scott Hanselman sur [la nouvelle intégration BrowserStack avec Visual Studio](http://www.hanselman.com/blog/CrossBrowserDebuggingIntegratedIntoVisualStudioWithBrowserStack.aspx).
 
 <a id="_Web_Publishing"></a>

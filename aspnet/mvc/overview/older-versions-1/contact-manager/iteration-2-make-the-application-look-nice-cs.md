@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-2-make-the-application-look-nice-cs
-title: 'Itération #2 : donner l’application une apparence agréable (c#) | Microsoft Docs'
+title: 'Itération #2 : donner l’application une apparence agréable (C#) | Microsoft Docs'
 author: microsoft
 description: Dans cette itération, nous améliorer l’apparence de l’application en modifiant la valeur par défaut de page maître de vue ASP.NET MVC et en cascade de feuille de style.
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/25/2019
 ms.locfileid: "58422260"
 ---
-<a name="iteration-2--make-the-application-look-nice-c"></a>Itération #2 : donner l’application une apparence agréable (c#)
+<a name="iteration-2--make-the-application-look-nice-c"></a>Itération #2 : donner l’application une apparence agréable (C#)
 ====================
 by [Microsoft](https://github.com/microsoft)
 
@@ -24,7 +24,7 @@ by [Microsoft](https://github.com/microsoft)
 > Dans cette itération, nous améliorer l’apparence de l’application en modifiant la valeur par défaut de page maître de vue ASP.NET MVC et en cascade de feuille de style.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (c#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (C#)
   
 
 Dans cette série de didacticiels, nous créer une application de gestion des contacts entière à partir du début à la fin. L’application Gestionnaire de Contact permet vous permettent de stocker les informations de contact (noms, numéros de téléphone et adresses de messagerie) pour obtenir la liste de personnes.

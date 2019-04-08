@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs
-title: Maître/détail à l’aide d’une liste à puces des enregistrements maîtres avec une DataList des détails (c#) | Microsoft Docs
+title: Maître/détail à l’aide d’une liste à puces des enregistrements maîtres avec une DataList des détails (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel nous compressons le rapport de deux pages maître/détail du didacticiel précédent en une seule page affichant une liste à puces des noms de catégorie sur t...
 ms.author: riande

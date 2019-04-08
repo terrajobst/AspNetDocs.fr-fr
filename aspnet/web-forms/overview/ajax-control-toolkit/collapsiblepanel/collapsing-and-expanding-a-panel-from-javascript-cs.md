@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-cs
-title: Réduction et développement d’un panneau à partir de JavaScript (c#) | Microsoft Docs
+title: Réduction et développement d’un panneau à partir de JavaScript (C#) | Microsoft Docs
 author: wenz
 description: Le contrôle CollapsiblePanel dans ASP.NET AJAX Control Toolkit étend un panneau et lui fournit la fonctionnalité pour réduire son contenu et le développer un...
 ms.author: riande

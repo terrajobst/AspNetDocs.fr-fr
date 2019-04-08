@@ -1,6 +1,6 @@
 ---
 uid: signalr/overview/guide-to-the-api/hubs-api-guide-net-client
-title: Guide de l’API ASP.NET SignalR Hubs - Client .NET (c#) | Microsoft Docs
+title: Guide de l’API ASP.NET SignalR Hubs - Client .NET (C#) | Microsoft Docs
 author: bradygaster
 description: Ce document fournit une introduction à l’utilisation de l’API Hubs pour la version 2 dans les clients .NET, tels que Windows Store (WinRT), WPF, Silverlight et les inconvénients de SignalR...
 ms.author: bradyg
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57054766"
 ---
-<a name="aspnet-signalr-hubs-api-guide---net-client-c"></a>Guide de l’API ASP.NET SignalR Hubs - Client .NET (c#)
+<a name="aspnet-signalr-hubs-api-guide---net-client-c"></a>Guide de l’API ASP.NET SignalR Hubs - Client .NET (C#)
 ====================
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

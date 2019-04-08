@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-cs
-title: À l’aide d’ASP.NET MVC avec différentes Versions d’IIS (c#) | Microsoft Docs
+title: À l’aide d’ASP.NET MVC avec différentes Versions d’IIS (C#) | Microsoft Docs
 author: microsoft
 description: Dans ce didacticiel, vous allez apprendre à utiliser ASP.NET MVC et le routage d’URL, avec différentes versions d’Internet Information Services. Vous découvrez différentes stratégies...
 ms.author: riande

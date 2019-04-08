@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-cs
-title: Manipulation des propriétés de DropShadow depuis du Code Client (c#) | Microsoft Docs
+title: Manipulation des propriétés de DropShadow depuis du Code Client (C#) | Microsoft Docs
 author: wenz
 description: Personnalisation de l’Interface de contrôle DataList modification
 ms.author: riande

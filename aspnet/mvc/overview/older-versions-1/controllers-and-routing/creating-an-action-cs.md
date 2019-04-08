@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-cs
-title: Création d’une Action (c#) | Microsoft Docs
+title: Création d’une Action (C#) | Microsoft Docs
 author: microsoft
 description: Découvrez comment ajouter une nouvelle action à un contrôleur ASP.NET MVC. En savoir plus sur la configuration requise pour une méthode devant subir une action.
 ms.author: riande

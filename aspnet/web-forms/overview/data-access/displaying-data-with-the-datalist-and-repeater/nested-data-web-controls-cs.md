@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/nested-data-web-controls-cs
-title: Contrôles (c#) de Web de données imbriquées | Microsoft Docs
+title: Contrôles (C#) de Web de données imbriquées | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous explorerons comment utiliser un répéteur imbriquée dans une autre Repeater. Les exemples illustre comment remplir le Repeater interne à la fois d...
 ms.author: riande

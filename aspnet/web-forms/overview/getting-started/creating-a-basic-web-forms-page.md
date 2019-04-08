@@ -228,7 +228,7 @@ Pour cette procédure pas à pas, vous allez écrire du code qui lit le nom que 
 1. Basculez vers **conception** vue.
 2. Double-cliquez sur le [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) contrôle.
 
-    Par défaut, Visual Studio bascule vers un fichier code-behind et crée un gestionnaire d’événements squelette pour le [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) l’événement par défaut du contrôle, le [cliquez sur](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.click.aspx) événement. Le fichier code-behind sépare votre balisage de l’interface utilisateur (par exemple, HTML) à partir de votre code serveur (tel que c#).   
+    Par défaut, Visual Studio bascule vers un fichier code-behind et crée un gestionnaire d’événements squelette pour le [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) l’événement par défaut du contrôle, le [cliquez sur](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.click.aspx) événement. Le fichier code-behind sépare votre balisage de l’interface utilisateur (par exemple, HTML) à partir de votre code serveur (tel que C#).   
    Le curseur est positionné à ajouté du code pour ce gestionnaire d’événements.
 
     > [!NOTE] 

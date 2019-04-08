@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/understanding-action-filters-cs
-title: Présentation des filtres d’Action (c#) | Microsoft Docs
+title: Présentation des filtres d’Action (C#) | Microsoft Docs
 author: microsoft
 description: L’objectif de ce didacticiel est d’expliquer les filtres d’action. Un filtre d’action est un attribut que vous pouvez appliquer à une action de contrôleur--ou l’ensemble du contrôleur...
 ms.author: riande

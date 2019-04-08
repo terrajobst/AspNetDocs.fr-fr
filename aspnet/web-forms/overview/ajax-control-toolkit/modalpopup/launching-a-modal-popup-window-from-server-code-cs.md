@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/modalpopup/launching-a-modal-popup-window-from-server-code-cs
-title: Lancement d’une fenêtre contextuelle modale à partir du Code de serveur (c#) | Microsoft Docs
+title: Lancement d’une fenêtre contextuelle modale à partir du Code de serveur (C#) | Microsoft Docs
 author: wenz
 description: Le contrôle ModalPopup dans AJAX Control Toolkit offre un moyen simple de créer une contextuelle modale à l’aide de moyens de côté client. Toutefois, certains scénarios nécessitent que t...
 ms.author: riande

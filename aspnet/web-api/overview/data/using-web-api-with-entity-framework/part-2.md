@@ -25,7 +25,7 @@ Dans cette section, vous allez ajouter des classes de modèle qui définissent l
 
 ## <a name="add-model-classes"></a>Ajouter des Classes de modèle
 
-Dans ce didacticiel, nous allons créer la base de données à l’aide de l’approche « Code First » à Entity Framework (EF). Avec Code First, vous écrivez des classes c# qui correspondent aux tables de base de données et Entity Framework crée la base de données. (Pour plus d’informations, consultez [approches de développement Entity Framework](https://msdn.microsoft.com/library/ms178359%28v=vs.110%29.aspx#dbfmfcf).)
+Dans ce didacticiel, nous allons créer la base de données à l’aide de l’approche « Code First » à Entity Framework (EF). Avec Code First, vous écrivez des classes C# qui correspondent aux tables de base de données et Entity Framework crée la base de données. (Pour plus d’informations, consultez [approches de développement Entity Framework](https://msdn.microsoft.com/library/ms178359%28v=vs.110%29.aspx#dbfmfcf).)
 
 Commencez par définir nos objets de domaine en tant qu’Oct (plain-objets CLR). Nous allons créer les objets oct suivantes :
 

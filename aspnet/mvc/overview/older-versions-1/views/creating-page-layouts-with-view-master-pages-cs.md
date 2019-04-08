@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/views/creating-page-layouts-with-view-master-pages-cs
-title: Creating Page Layouts with View Master Pages (c#) | Microsoft Docs
+title: Creating Page Layouts with View Master Pages (C#) | Microsoft Docs
 author: microsoft
 description: Dans ce didacticiel, vous allez apprendre à créer une disposition commune pour plusieurs pages dans votre application en tirant parti de la vue de pages maîtres. Vous pouvez utiliser un...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-cs
-title: Pagination et tri rapports de données (c#) | Microsoft Docs
+title: Pagination et tri rapports de données (C#) | Microsoft Docs
 author: rick-anderson
 description: Pagination et tri sont deux fonctionnalités très courantes lors de l’affichage des données dans une application en ligne. Dans ce didacticiel, nous allons un premier aperçu de l’ajout du tri et...
 ms.author: riande

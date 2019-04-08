@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/caching-data/caching-data-at-application-startup-cs
-title: La mise en cache des données au démarrage de l’Application (c#) | Microsoft Docs
+title: La mise en cache des données au démarrage de l’Application (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans n’importe quelle application Web certaines données sont fréquemment utilisées et certaines données seront rarement utilisées. Nous pouvons améliorer les performances de notre b d’application ASP.NET...
 ms.author: riande

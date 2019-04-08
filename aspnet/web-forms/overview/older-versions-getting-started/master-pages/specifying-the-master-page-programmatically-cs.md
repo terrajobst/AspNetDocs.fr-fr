@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-cs
-title: Spécification de la Page maître par programmation (c#) | Microsoft Docs
+title: Spécification de la Page maître par programmation (C#) | Microsoft Docs
 author: rick-anderson
 description: Examine la définition du contenu de page maître par programmation via le Gestionnaire d’événements PreInit.
 ms.author: riande

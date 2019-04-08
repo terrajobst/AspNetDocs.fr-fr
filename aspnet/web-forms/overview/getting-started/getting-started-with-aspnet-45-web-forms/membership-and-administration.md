@@ -19,9 +19,9 @@ ms.locfileid: "57031056"
 ====================
 par [Erik Reitan](https://github.com/Erikre)
 
-[Télécharger le projet de Wingtip Toys exemple (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Télécharger le projet de Wingtip Toys exemple (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
+> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
 
 
 Ce didacticiel vous montre comment mettre à jour de l’exemple d’application Wingtip Toys pour ajouter un rôle personnalisé et utiliser ASP.NET Identity. Il montre également comment implémenter une page d’administration à partir duquel l’utilisateur avec un rôle personnalisé peut ajouter et supprimer des produits depuis le site Web.
@@ -127,7 +127,7 @@ En ajoutant un *Web.config* de fichiers à la *administrateur* dossier, vous pou
 
 1. Avec le bouton droit le *administrateur* dossier et sélectionnez **ajouter**  - &gt; **un nouvel élément**.  
    La boîte de dialogue **Ajouter un nouvel élément** s’affiche.
-2. Dans la liste des modèles web Visual c#, sélectionnez <strong>fichier de Configuration Web</strong>à partir de la liste du milieu, acceptez le nom par défaut <em>Web.config</em><strong>,</strong> , puis sélectionnez <strong>Ajouter</strong>.
+2. Dans la liste des modèles web Visual C#, sélectionnez <strong>fichier de Configuration Web</strong>à partir de la liste du milieu, acceptez le nom par défaut <em>Web.config</em><strong>,</strong> , puis sélectionnez <strong>Ajouter</strong>.
 3. Remplacez le contenu XML existant dans le *Web.config* fichier par le code suivant :  
 
     [!code-xml[Main](membership-and-administration/samples/sample4.xml)]

@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/views/passing-data-to-view-master-pages-cs
-title: Passage de données pour afficher les Pages maîtres (c#) | Microsoft Docs
+title: Passage de données pour afficher les Pages maîtres (C#) | Microsoft Docs
 author: microsoft
 description: L’objectif de ce didacticiel est d’expliquer comment vous pouvez passer des données à partir d’un contrôleur à une page maître de vue. Nous examinons les deux stratégies pour passer des données à une vue m...
 ms.author: riande

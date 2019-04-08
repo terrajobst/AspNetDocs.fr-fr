@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/custom-formatting/using-the-formview-s-templates-cs
-title: À l’aide de modèles de FormView (c#) | Microsoft Docs
+title: À l’aide de modèles de FormView (C#) | Microsoft Docs
 author: rick-anderson
 description: Contrairement à DetailsView, FormView n’est pas composé de champs. Au lieu de cela, le contrôle FormView est restitué à l’aide de modèles. Dans ce didacticiel, nous allons examiner à l’aide de la F....
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57054996"
 ---
-<a name="using-the-formviews-templates-c"></a>À l’aide de modèles de FormView (c#)
+<a name="using-the-formviews-templates-c"></a>À l’aide de modèles de FormView (C#)
 ====================
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 

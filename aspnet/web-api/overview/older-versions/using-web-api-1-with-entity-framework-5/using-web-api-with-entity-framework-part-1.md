@@ -54,7 +54,7 @@ Une certaine connaissance [ASP.NET MVC](../../../../mvc/index.md) s’avère ég
 
 - ASP.NET MVC génère des pages HTML pour le client.
 - API Web ASP.NET expose les opérations CRUD sur les données (products et orders).
-- Entity Framework traduit les modèles c# utilisés par l’API Web en entités de base de données.
+- Entity Framework traduit les modèles C# utilisés par l’API Web en entités de base de données.
 
 ![](using-web-api-with-entity-framework-part-1/_static/image3.png)
 

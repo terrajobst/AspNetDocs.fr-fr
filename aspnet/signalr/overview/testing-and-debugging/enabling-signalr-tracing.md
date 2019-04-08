@@ -118,14 +118,14 @@ Pour activer la journalisation dans le client .NET, définissez la connexion `Tr
 <a id="desktop_console"></a>
 ### <a name="logging-desktop-client-events-to-the-console"></a>Journalisation des événements de client de bureau dans la console
 
-Le code c# suivant montre comment enregistrer les événements dans le client .NET dans la console :
+Le code C# suivant montre comment enregistrer les événements dans le client .NET dans la console :
 
 [!code-csharp[Main](enabling-signalr-tracing/samples/sample4.cs?highlight=2-3)]
 
 <a id="desktop_text"></a>
 ### <a name="logging-desktop-client-events-to-a-text-file"></a>Journalisation des événements de client de bureau dans un fichier texte
 
-Le code c# suivant montre comment enregistrer les événements dans le client .NET dans un fichier texte :
+Le code C# suivant montre comment enregistrer les événements dans le client .NET dans un fichier texte :
 
 [!code-csharp[Main](enabling-signalr-tracing/samples/sample5.cs?highlight=4-5)]
 

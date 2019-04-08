@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-cs
-title: Liaison de données à un Accordion (c#) | Microsoft Docs
+title: Liaison de données à un Accordion (C#) | Microsoft Docs
 author: wenz
 description: Le contrôle Accordion dans AJAX Control Toolkit fournit plusieurs volets et permet à l’utilisateur afficher un d’eux à la fois. Panneaux sont généralement déclarés w...
 ms.author: riande

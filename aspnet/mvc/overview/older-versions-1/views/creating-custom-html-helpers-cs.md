@@ -1,6 +1,6 @@
 ---
 uid: aspnet/mvc/overview/older-versions-1/views/creating-custom-html-helpers-cs
-title: Création de Helpers HTML personnalisés (c#) | Microsoft Docs
+title: Création de Helpers HTML personnalisés (C#) | Microsoft Docs
 author: microsoft
 description: L’objectif de ce didacticiel consiste à montrer comment vous pouvez créer des programmes d’assistance HTML personnalisé que vous pouvez utiliser dans vos vues MVC. En tirant parti du programme d’assistance HTML...
 ms.author: riande

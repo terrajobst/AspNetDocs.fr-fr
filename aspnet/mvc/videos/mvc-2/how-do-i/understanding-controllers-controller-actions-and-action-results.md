@@ -19,7 +19,7 @@ ms.locfileid: "57042806"
 ====================
 par [Stephen Walther](https://github.com/StephenWalther)
 
-Dans ce didacticiel, Stephen Walther vous présente les contrôleurs ASP.NET MVC. Vous allez apprendre à créer de nouveaux contrôleurs et de retourner différents types de résultats d’action. Pour obtenir des informations supplémentaires relatives à cette vidéo, lisez le didacticiel « Présentation des contrôleurs, les Actions de contrôleur et les résultats d’Action » ([c#](../../../overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs.md), [VB](../../../overview/older-versions-1/controllers-and-routing/asp-net-mvc-controller-overview-vb.md)).
+Dans ce didacticiel, Stephen Walther vous présente les contrôleurs ASP.NET MVC. Vous allez apprendre à créer de nouveaux contrôleurs et de retourner différents types de résultats d’action. Pour obtenir des informations supplémentaires relatives à cette vidéo, lisez le didacticiel « Présentation des contrôleurs, les Actions de contrôleur et les résultats d’Action » ([C#](../../../overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs.md), [VB](../../../overview/older-versions-1/controllers-and-routing/asp-net-mvc-controller-overview-vb.md)).
 
 [&#9654;Regardez la vidéo (11 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/understanding-controllers-controller-actions-and-action-results)
 

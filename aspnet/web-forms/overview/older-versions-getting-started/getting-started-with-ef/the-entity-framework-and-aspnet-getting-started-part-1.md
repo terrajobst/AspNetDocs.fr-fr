@@ -21,7 +21,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 
 > L’exemple d’application web Contoso University montre comment créer des applications Web Forms ASP.NET à l’aide de l’Entity Framework 4.0 et Visual Studio 2010. L’exemple d’application est un site Web pour une université Contoso fictive. Il inclut des fonctionnalités telles que l'admission d’étudiant, la création de cours et les affectations de formateur.
 > 
-> Le didacticiel présente des exemples en c#. Le [exemple téléchargeable](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) contient le code en c# et Visual Basic.
+> Le didacticiel présente des exemples en C#. Le [exemple téléchargeable](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) contient le code en C# et Visual Basic.
 > 
 > ## <a name="database-first"></a>Tout d’abord la base de données
 > 

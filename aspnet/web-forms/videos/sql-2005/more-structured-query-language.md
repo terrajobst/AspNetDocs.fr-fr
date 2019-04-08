@@ -2,7 +2,7 @@
 uid: web-forms/videos/sql-2005/more-structured-query-language
 title: Plus Structured Query Language | Microsoft Docs
 author: microsoft
-description: Les débutants SQL Server découvre davantage d’instructions SQL telles que select secondaire et découvrez les procédures stockées et leurs équivalents dans les méthodes c# et VB.
+description: Les débutants SQL Server découvre davantage d’instructions SQL telles que select secondaire et découvrez les procédures stockées et leurs équivalents dans les méthodes C# et VB.
 ms.author: riande
 ms.date: 03/29/2006
 ms.assetid: f86aee1e-958a-4604-a593-dc40a1149239
@@ -19,7 +19,7 @@ ms.locfileid: "57036266"
 ====================
 by [Microsoft](https://github.com/microsoft)
 
-Les débutants SQL Server découvre davantage d’instructions SQL telles que select secondaire et découvrez les procédures stockées et leurs équivalents dans les méthodes c# et VB.
+Les débutants SQL Server découvre davantage d’instructions SQL telles que select secondaire et découvrez les procédures stockées et leurs équivalents dans les méthodes C# et VB.
 
 [&#9654;Regardez la vidéo (23 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/more-structured-query-language)
 

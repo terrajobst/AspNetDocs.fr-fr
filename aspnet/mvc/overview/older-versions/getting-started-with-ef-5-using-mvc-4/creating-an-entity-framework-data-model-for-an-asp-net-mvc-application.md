@@ -81,7 +81,7 @@ Si vous avez installé Visual Studio, le lien ci-dessus installe les composants 
 
 ## <a name="create-an-mvc-web-application"></a>Créer une Application Web MVC
 
-Ouvrez Visual Studio et créez un projet c# nommé « ContosoUniversity » en utilisant le **ASP.NET MVC 4 Web Application** modèle. Assurez-vous que vous ciblez **.NET Framework 4.5** (vous allez utiliser [ `enum` propriétés](https://msdn.microsoft.com/data/hh859576.aspx), et qui nécessite .NET 4.5).
+Ouvrez Visual Studio et créez un projet C# nommé « ContosoUniversity » en utilisant le **ASP.NET MVC 4 Web Application** modèle. Assurez-vous que vous ciblez **.NET Framework 4.5** (vous allez utiliser [ `enum` propriétés](https://msdn.microsoft.com/data/hh859576.aspx), et qui nécessite .NET 4.5).
 
 ![New_project_dialog_box](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image3.png)
 

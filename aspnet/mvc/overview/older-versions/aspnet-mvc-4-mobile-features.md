@@ -35,7 +35,7 @@ Vous aurez également besoin d’un émulateur de navigateur mobile. Les éléme
 - [Émulateur Mobile Opera](http://www.opera.com/developer/tools/mobile/)
 - [Apple Safari](http://www.apple.com/safari/download/) avec l’agent utilisateur défini sur iPhone. Pour obtenir des instructions sur la configuration de l’agent utilisateur dans Safari pour « iPhone », consultez [comment permettre à Safari prétendre qu’il est IE](http://www.davidalison.com/2008/05/how-to-let-safari-pretend-its-ie.html) sur le blog de David Alison.
 
-Projets Visual Studio avec code source c# sont disponibles pour accompagner cette rubrique :
+Projets Visual Studio avec code source C# sont disponibles pour accompagner cette rubrique :
 
 - [Téléchargement du projet de départ](https://go.microsoft.com/fwlink/?linkid=228307&amp;clcid=0x409)
 - [Téléchargement du projet terminé](https://go.microsoft.com/fwlink/?linkid=228306&amp;clcid=0x409)

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-cs
-title: Utilisation de HoverMenu avec un contrôle Repeater (c#) | Microsoft Docs
+title: Utilisation de HoverMenu avec un contrôle Repeater (C#) | Microsoft Docs
 author: wenz
 description: 'Le contrôle HoverMenu dans AJAX Control Toolkit fournit un effet de la fenêtre contextuelle simple : Lorsque le pointeur de la souris pointe sur un élément, une fenêtre contextuelle s’affiche en un seront...'
 ms.author: riande

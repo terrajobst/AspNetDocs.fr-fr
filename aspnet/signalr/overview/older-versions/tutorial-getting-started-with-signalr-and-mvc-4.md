@@ -72,7 +72,7 @@ Cette section montre comment créer une application ASP.NET MVC 4, ajoutez la bi
 
          ![Références de bibliothèque](tutorial-getting-started-with-signalr-and-mvc-4/_static/image6.png)
       5. Dans **l’Explorateur de solutions**, cliquez sur le projet, sélectionnez **ajouter | Nouveau dossier**, et ajoutez un nouveau dossier nommé **Hubs**.
-      6. Cliquez sur le **Hubs** dossier, cliquez sur **ajouter | Classe**et créez une nouvelle classe c# nommée **ChatHub.cs**. Vous utiliserez cette classe comme un concentrateur de serveur SignalR qui envoie des messages à tous les clients.
+      6. Cliquez sur le **Hubs** dossier, cliquez sur **ajouter | Classe**et créez une nouvelle classe C# nommée **ChatHub.cs**. Vous utiliserez cette classe comme un concentrateur de serveur SignalR qui envoie des messages à tous les clients.
 
 > [!NOTE]
 > Si vous utilisez Visual Studio 2012 et que vous avez installé le [mise à jour ASP.NET et Web Tools 2012.2](../../../visual-studio/overview/2012/aspnet-and-web-tools-20122-release-notes-rtw.md#_Installation), vous pouvez utiliser le nouveau modèle d’élément de SignalR pour créer la classe de concentrateur. Pour ce faire, cliquez sur le **Hubs** dossier, cliquez sur **ajouter | Un nouvel élément**, sélectionnez **classe de concentrateur SignalR (v1)** et nommez la classe **ChatHub.cs**.
@@ -149,7 +149,7 @@ Le code suivant déclare un proxy pour un concentrateur.
 [!code-javascript[Main](tutorial-getting-started-with-signalr-and-mvc-4/samples/sample6.js)]
 
 > [!NOTE]
-> Dans jQuery, la référence à la classe de serveur et de ses membres est en casse mixte. L’exemple de code fait référence à celle de C# **ChatHub** classe dans jQuery comme **chatHub**. Si vous souhaitez faire référence à la `ChatHub` classe dans jQuery avec Pascal conventionnel mise en majuscules comme vous le feriez en c#, modifiez le fichier de classe ChatHub.cs. Ajouter un `using` instruction pour référencer le `Microsoft.AspNet.SignalR.Hubs` espace de noms. Ajoutez ensuite le `HubName` attribut le `ChatHub` de classe, par exemple `[HubName("ChatHub")]`. Enfin, mettez à jour de votre référence de jQuery à la `ChatHub` classe.
+> Dans jQuery, la référence à la classe de serveur et de ses membres est en casse mixte. L’exemple de code fait référence à celle de C# **ChatHub** classe dans jQuery comme **chatHub**. Si vous souhaitez faire référence à la `ChatHub` classe dans jQuery avec Pascal conventionnel mise en majuscules comme vous le feriez en C#, modifiez le fichier de classe ChatHub.cs. Ajouter un `using` instruction pour référencer le `Microsoft.AspNet.SignalR.Hubs` espace de noms. Ajoutez ensuite le `HubName` attribut le `ChatHub` de classe, par exemple `[HubName("ChatHub")]`. Enfin, mettez à jour de votre référence de jQuery à la `ChatHub` classe.
 
 
 Le code suivant montre comment créer une fonction de rappel dans le script. La classe de concentrateur sur le serveur appelle cette fonction pour envoyer des mises à jour de contenu à chaque client. L’appel facultatif à la `htmlEncode` affiche la fonction moyen HTML encode le contenu du message avant de les afficher dans la page, comme un moyen d’empêcher l’injection de script.

@@ -19,7 +19,7 @@ ms.locfileid: "57048856"
 ====================
 par [Scott Stanfield](https://github.com/scottstanfield)
 
-Remplacer la logique de mise à jour, delete ou insert ORM générée par les vôtres via des procédures stockées. La vidéo montre également en détail comment utiliser le SQL Profiler pour surveiller les modifications dans l’ORM à partir de SQL généré pour nos procédures stockées SQL personnalisés. Dans la mesure où nous écrivons simplement SQL, les mêmes techniques s’appliquent à la fois c# et les développeurs VB.
+Remplacer la logique de mise à jour, delete ou insert ORM générée par les vôtres via des procédures stockées. La vidéo montre également en détail comment utiliser le SQL Profiler pour surveiller les modifications dans l’ORM à partir de SQL généré pour nos procédures stockées SQL personnalisés. Dans la mesure où nous écrivons simplement SQL, les mêmes techniques s’appliquent à la fois C# et les développeurs VB.
 
 [&#9654;Regardez la vidéo (15 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-linq-to-sql-updating-with-stored-procedures)
 

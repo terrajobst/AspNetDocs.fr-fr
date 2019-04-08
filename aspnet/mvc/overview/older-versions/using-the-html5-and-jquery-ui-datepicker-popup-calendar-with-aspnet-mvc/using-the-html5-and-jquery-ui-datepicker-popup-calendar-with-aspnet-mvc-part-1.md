@@ -34,7 +34,7 @@ Si vous utilisez Visual Studio 2010 au lieu de Visual Web Developer, installez l
 
 Ce didacticiel suppose que vous avez terminé la [mise en route avec MVC 3](../getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) didacticiel ou que vous êtes familiarisé avec le développement ASP.NET MVC. Ce didacticiel commence par le projet achevé du [mise en route avec MVC 3](../getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) didacticiel.
 
-Ce didacticiel montre le code en c#. Toutefois, le [projet de démarrage](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=15800) et projet terminé sont également disponibles dans Visual Basic.
+Ce didacticiel montre le code en C#. Toutefois, le [projet de démarrage](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=15800) et projet terminé sont également disponibles dans Visual Basic.
 
 Un projet Visual Studio avec C# et code source Visual Basic est disponible pour accompagner cette rubrique : [Télécharger](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=15800).
 

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-cs
-title: Lutte contre les robots (c#) | Microsoft Docs
+title: Lutte contre les robots (C#) | Microsoft Docs
 author: wenz
 description: Les robots automatisés plâtre weblogs et autres sites Web indésirable, envoyer des formulaires de commentaire sans interaction de l’utilisateur. Le contrôle nobot de dans la Con AJAX ASP.NET...
 ms.author: riande

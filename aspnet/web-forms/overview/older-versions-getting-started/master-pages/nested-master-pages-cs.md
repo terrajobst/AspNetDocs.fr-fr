@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/nested-master-pages-cs
-title: Imbriqué des Pages maîtres (c#) | Microsoft Docs
+title: Imbriqué des Pages maîtres (C#) | Microsoft Docs
 author: rick-anderson
 description: Montre comment imbriquer une page maître dans une autre.
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-a-route-constraint-cs
-title: Création d’une contrainte d’itinéraire (c#) | Microsoft Docs
+title: Création d’une contrainte d’itinéraire (C#) | Microsoft Docs
 author: StephenWalther
 description: Dans ce didacticiel, Stephen Walther montre comment vous pouvez contrôler la façon dont le navigateur demande itinéraires de correspondance en créant des contraintes de routage avec des expressions régulières.
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-custom-routes-cs
-title: Création de Routes personnalisées (c#) | Microsoft Docs
+title: Création de Routes personnalisées (C#) | Microsoft Docs
 author: microsoft
 description: Découvrez comment ajouter des itinéraires personnalisés à une application ASP.NET MVC. Dans ce didacticiel, vous allez apprendre à modifier la table d’itinéraires par défaut dans le fichier Global.asax.
 ms.author: riande

@@ -19,7 +19,7 @@ ms.locfileid: "57060516"
 ====================
 par [Stephen Walther](https://github.com/StephenWalther)
 
-Découvrez comment créer des tests unitaires pour les actions de contrôleur. Dans ce didacticiel, Stephen Walther montre comment tester si une action de contrôleur retourne une vue particulière, retourne un jeu de données particulier ou retourne un autre type de résultat d’action. Pour obtenir des informations supplémentaires relatives à cette vidéo, lisez le didacticiel « Création d’unité Tests pour les Applications ASP.NET MVC » ([c#](../../../overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs.md), [VB](../../../overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-vb.md)).
+Découvrez comment créer des tests unitaires pour les actions de contrôleur. Dans ce didacticiel, Stephen Walther montre comment tester si une action de contrôleur retourne une vue particulière, retourne un jeu de données particulier ou retourne un autre type de résultat d’action. Pour obtenir des informations supplémentaires relatives à cette vidéo, lisez le didacticiel « Création d’unité Tests pour les Applications ASP.NET MVC » ([C#](../../../overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs.md), [VB](../../../overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-vb.md)).
 
 [&#9654;Regardez la vidéo (15 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-unit-tests-for-aspnet-mvc-applications)
 

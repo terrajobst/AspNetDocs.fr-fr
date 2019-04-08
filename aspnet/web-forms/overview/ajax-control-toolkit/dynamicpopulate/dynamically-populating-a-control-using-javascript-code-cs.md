@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-using-javascript-code-cs
-title: Remplissage dynamique d’un contrôle à l’aide de Code JavaScript (c#) | Microsoft Docs
+title: Remplissage dynamique d’un contrôle à l’aide de Code JavaScript (C#) | Microsoft Docs
 author: wenz
 description: Le contrôle de DynamicPopulate dans ASP.NET AJAX Control Toolkit appelle un service web (ou une méthode de page) et remplit la valeur obtenue dans un contrôle cible sur t...
 ms.author: riande

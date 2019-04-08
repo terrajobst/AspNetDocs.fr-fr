@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-6-use-test-driven-development-cs
-title: 'Itération #6 : utiliser le développement piloté par test (c#) | Microsoft Docs'
+title: 'Itération #6 : utiliser le développement piloté par test (C#) | Microsoft Docs'
 author: microsoft
 description: Dans cette itération sixième, nous ajoutons les nouvelles fonctionnalités à notre application en écrivant des tests unitaires tout d’abord et écrire du code pour les tests unitaires. Dans cette itération,...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/26/2019
 ms.locfileid: "58440324"
 ---
-<a name="iteration-6--use-test-driven-development-c"></a>Itération #6 : utiliser le développement piloté par test (c#)
+<a name="iteration-6--use-test-driven-development-c"></a>Itération #6 : utiliser le développement piloté par test (C#)
 ====================
 by [Microsoft](https://github.com/microsoft)
 
@@ -24,7 +24,7 @@ by [Microsoft](https://github.com/microsoft)
 > Dans cette itération sixième, nous ajoutons les nouvelles fonctionnalités à notre application en écrivant des tests unitaires tout d’abord et écrire du code pour les tests unitaires. Dans cette itération, nous ajouter des groupes de contacts.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (c#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (C#)
   
 
 Dans cette série de didacticiels, nous créer une application de gestion des contacts entière à partir du début à la fin. L’application Gestionnaire de Contact permet vous permettent de stocker les informations de contact (noms, numéros de téléphone et adresses de messagerie) pour obtenir la liste de personnes.

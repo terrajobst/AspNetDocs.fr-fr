@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-cs
-title: ASP.NET, hébergement Options (c#) | Microsoft Docs
+title: ASP.NET, hébergement Options (C#) | Microsoft Docs
 author: rick-anderson
 description: Les applications web ASP.NET sont généralement conçues, créé, testé dans un environnement de développement local et doivent être déployées pour un o d’environnement de production...
 ms.author: riande

@@ -44,7 +44,7 @@ LINQ to SQL fournit un moyen simple pour mapper des tables de base de données a
 
 LINQ to SQL nous permet à éviter d’avoir à construire des instructions SQL pour récupérer et mettre à jour dîner et RSVP manuellement les objets de base de données. Au lieu de cela, nous allons définir les classes Dinner et RSVP, comment elles sont mappées vers/à partir de la base de données et les relations entre eux. LINQ to SQL sera, prend soin de génération de la logique d’exécution SQL appropriée à utiliser lors de l’exécution lorsque nous interagir et que vous les utilisez.
 
-Nous pouvons utiliser la prise en charge du langage LINQ dans Visual Basic et c# pour écrire des requêtes expressives qui récupèrent dîner et RSVP objets à partir de la base de données. Cela réduit la quantité de code de données nous devons écrire, et nous permet de créer des applications vraiment soignées.
+Nous pouvons utiliser la prise en charge du langage LINQ dans Visual Basic et C# pour écrire des requêtes expressives qui récupèrent dîner et RSVP objets à partir de la base de données. Cela réduit la quantité de code de données nous devons écrire, et nous permet de créer des applications vraiment soignées.
 
 ### <a name="adding-linq-to-sql-classes-to-our-project"></a>Ajout Classes LINQ to SQL à notre projet
 
@@ -92,7 +92,7 @@ Si vous n’aimez pas comment le concepteur a modélisé ou nommée d’une asso
 
 Visual Studio crée automatiquement les classes .NET qui représentent les modèles et les relations de base de données définies à l’aide du concepteur LINQ to SQL. Une classe LINQ to SQL DataContext est également généré pour chaque fichier LINQ to SQL concepteur ajouté à la solution. Étant donné que nous avons nommé notre LINQ à l’élément de classe SQL « NerdDinner », la classe DataContext créée sera appelée « NerdDinnerDataContext ». Cette classe NerdDinnerDataContext est le principal moyen de que nous interagissent avec la base de données.
 
-Notre classe NerdDinnerDataContext expose deux propriétés - « Dîners » et « RSVPs » - qui représentent les deux tables que nous FAÇONNÉES dans la base de données. Nous pouvons utiliser c# pour écrire des requêtes LINQ sur ces propriétés dans la requête et la récupération d’objets dîner et RSVP à partir de la base de données.
+Notre classe NerdDinnerDataContext expose deux propriétés - « Dîners » et « RSVPs » - qui représentent les deux tables que nous FAÇONNÉES dans la base de données. Nous pouvons utiliser C# pour écrire des requêtes LINQ sur ces propriétés dans la requête et la récupération d’objets dîner et RSVP à partir de la base de données.
 
 Le code suivant montre comment instancier un objet NerdDinnerDataContext et exécuter une requête LINQ pour obtenir une séquence de dîners qui se produisent dans le futur. Visual Studio fournit des fonctionnalités intellisense complètes lors de l’écriture de la requête LINQ et les objets retournés à partir de celui-ci sont fortement typées et prennent également en charge intellisense :
 
@@ -197,7 +197,7 @@ Cette approche fournit une infrastructure simple qui nous pouvons intégrer vali
 
 [!code-csharp[Main](build-a-model-with-business-rule-validations/samples/sample11.cs)]
 
-Nous utilisons la fonctionnalité « yield return » de c# pour retourner une séquence de n’importe quel RuleViolations. La six règle vérifie d’abord ci-dessus applique simplement que les propriétés de chaîne sur notre dîner ne peut pas être null ou vide. La dernière règle est un peu plus intéressante et appelle une méthode d’assistance de PhoneValidator.IsValidNumber() que nous l’ajoutions à notre projet pour vérifier que le ContactPhone numéro pays de format correspondances le dîner.
+Nous utilisons la fonctionnalité « yield return » de C# pour retourner une séquence de n’importe quel RuleViolations. La six règle vérifie d’abord ci-dessus applique simplement que les propriétés de chaîne sur notre dîner ne peut pas être null ou vide. La dernière règle est un peu plus intéressante et appelle une méthode d’assistance de PhoneValidator.IsValidNumber() que nous l’ajoutions à notre projet pour vérifier que le ContactPhone numéro pays de format correspondances le dîner.
 
 Nous pouvons utiliser. Prise en charge des expressions régulières du NET pour implémenter cette prise en charge de validation de téléphone. Voici une implémentation simple PhoneValidator que nous pouvons ajouter à notre projet qui permet d’ajouter des contrôles de modèle Regex spécifiques à un pays :
 

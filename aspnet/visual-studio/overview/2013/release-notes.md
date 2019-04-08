@@ -377,7 +377,7 @@ Les extraits de code suivants montrent comment implémenter des connexions inter
 
 [!code-csharp[Main](release-notes/samples/sample9.cs)]
 
-**Implémentation de demandes inter-domaines dans 2.0 SignalR (à partir d’un fichier de code c#)**
+**Implémentation de demandes inter-domaines dans 2.0 SignalR (à partir d’un fichier de code C#)**
 
 Le code suivant montre comment activer CORS ou JSONP dans un projet SignalR 2.0. Cet exemple de code utilise `Map` et `RunSignalR` au lieu de `MapSignalR`, de sorte que l’intergiciel (middleware) CORS s’exécute uniquement pour les demandes de SignalR qui nécessitent la prise en charge CORS (plutôt que pour tout le trafic sur le chemin spécifié dans `MapSignalR`.) `Map` peut également être utilisé pour n’importe quel autre intergiciel (middleware) qui doit s’exécuter pour un préfixe d’URL spécifique, plutôt que pour l’application entière.
 

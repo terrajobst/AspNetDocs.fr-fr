@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs
-title: Stratégies de développement de base de données et de déploiement (c#) | Microsoft Docs
+title: Stratégies de développement de base de données et de déploiement (C#) | Microsoft Docs
 author: rick-anderson
 description: Lorsque vous déployez une application orientée données pour la première fois que vous pouvez aveuglément copier la base de données dans l’environnement de développement à l’environnement de production. B...
 ms.author: riande

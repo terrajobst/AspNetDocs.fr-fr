@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/roles/creating-and-managing-roles-cs
-title: Créer et gérer des rôles (c#) | Microsoft Docs
+title: Créer et gérer des rôles (C#) | Microsoft Docs
 author: rick-anderson
 description: Ce didacticiel examine les étapes nécessaires à la configuration de l’infrastructure de rôles. Ensuite, nous allons créer des pages web pour créer et supprimer des rôles.
 ms.author: riande

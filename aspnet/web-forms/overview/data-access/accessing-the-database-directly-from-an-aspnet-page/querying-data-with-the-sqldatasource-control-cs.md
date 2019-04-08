@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs
-title: Interrogation des données avec le contrôle SqlDataSource (c#) | Microsoft Docs
+title: Interrogation des données avec le contrôle SqlDataSource (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans les didacticiels précédents, nous avons utilisé le contrôle ObjectDataSource pour séparer complètement la couche de présentation à partir de la couche d’accès aux données. À compter de cette terminologique...
 ms.author: riande

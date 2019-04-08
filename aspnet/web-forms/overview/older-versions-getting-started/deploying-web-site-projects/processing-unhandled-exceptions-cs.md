@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs
-title: Traitement des Exceptions non gérées (c#) | Microsoft Docs
+title: Traitement des Exceptions non gérées (C#) | Microsoft Docs
 author: rick-anderson
 description: Lorsqu’une erreur d’exécution se produit sur une application web en production, il est important pour avertir un développeur et d’enregistrer l’erreur afin qu’il peut être diagnostiqué en a la...
 ms.author: riande

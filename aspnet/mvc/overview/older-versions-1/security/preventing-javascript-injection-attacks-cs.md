@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/security/preventing-javascript-injection-attacks-cs
-title: Prévention des attaques d’injection de code JavaScript (c#) | Microsoft Docs
+title: Prévention des attaques d’injection de code JavaScript (C#) | Microsoft Docs
 author: StephenWalther
 description: Empêcher les attaques par Injection de JavaScript et attaques de script entre sites pour vous. Dans ce didacticiel, Stephen Walther explique comment vous pouvez facilement de...
 ms.author: riande

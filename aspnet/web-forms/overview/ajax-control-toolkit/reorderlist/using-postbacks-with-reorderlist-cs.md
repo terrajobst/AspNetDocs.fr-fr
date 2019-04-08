@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/reorderlist/using-postbacks-with-reorderlist-cs
-title: Utilisation de publications (postback) avec ReorderList (c#) | Microsoft Docs
+title: Utilisation de publications (postback) avec ReorderList (C#) | Microsoft Docs
 author: wenz
 description: Le contrôle ReorderList dans AJAX Control Toolkit fournit une liste qui peut être réorganisée par l’utilisateur via la fonction glisser- déposer. Chaque fois que la liste est réorganisée, un bon de commande...
 ms.author: riande

@@ -19,9 +19,9 @@ ms.locfileid: "57036926"
 ====================
 par [Erik Reitan](https://github.com/Erikre)
 
-[Télécharger le projet de Wingtip Toys exemple (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Télécharger le projet de Wingtip Toys exemple (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
+> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
 
 
 Ce didacticiel explique comment créer, accéder à et passez en revue les données à partir d’une base de données à l’aide de Web Forms ASP.NET et Entity Framework Code First. Ce didacticiel s’appuie sur le didacticiel précédent, « Créer le projet » et fait partie de la série de didacticiels Wingtip Toys Store. Lorsque vous avez terminé ce didacticiel, vous aurez créé un groupe de classes d’accès aux données qui se trouvent dans le *modèles* dossier du projet.
@@ -89,7 +89,7 @@ Vous avez peut-être remarqué que certains membres des classes ont des attribut
 
 Pour commencer à utiliser les classes pour accéder aux données, vous devez définir une classe de contexte. Comme mentionné précédemment, la classe de contexte gère les classes d’entité (tels que le `Product` classe et la `Category` classe) et fournit l’accès aux données à la base de données.
 
-Cette procédure ajoute une nouveau contexte classe c# à le *modèles* dossier.
+Cette procédure ajoute une nouveau contexte classe C# à le *modèles* dossier.
 
 1. Cliquez sur le *modèles* dossier, puis sélectionnez **ajouter**  - &gt; **un nouvel élément**.   
    La boîte de dialogue **Ajouter un nouvel élément** s’affiche.
@@ -106,7 +106,7 @@ Le `ProductContext` classe représente le contexte de base de données produit E
 
 Vous devrez exécuter une logique personnalisée pour initialiser la base de données la première utilisation le contexte. Ainsi, les données d’amorçage à ajouter à la base de données afin que vous pouvez afficher immédiatement les produits et des catégories.
 
-Cette procédure ajoute une nouvel initialiseur classe c# à le *modèles* dossier.
+Cette procédure ajoute une nouvel initialiseur classe C# à le *modèles* dossier.
 
 1. Créer un autre `Class` dans le *modèles* dossier et nommez-le *ProductDatabaseInitializer.cs*.
 2. Remplacez le code par défaut contenu dans la classe par le code suivant :   

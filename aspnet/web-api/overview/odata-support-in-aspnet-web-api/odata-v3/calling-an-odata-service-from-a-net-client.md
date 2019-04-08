@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-v3/calling-an-odata-service-from-a-net-client
-title: Appel d’un Service OData à partir d’un Client .NET (c#) | Microsoft Docs
+title: Appel d’un Service OData à partir d’un Client .NET (C#) | Microsoft Docs
 author: MikeWasson
-description: Ce didacticiel montre comment appeler un service OData à partir d’une application cliente en c#. Versions des logiciels utilisées dans le didacticiel de Visual Studio 2013 (fonctionne avec Visual S...
+description: Ce didacticiel montre comment appeler un service OData à partir d’une application cliente en C#. Versions des logiciels utilisées dans le didacticiel de Visual Studio 2013 (fonctionne avec Visual S...
 ms.author: riande
 ms.date: 02/26/2014
 ms.assetid: 6f448917-ad23-4dcc-9789-897fad74051b
@@ -21,7 +21,7 @@ par [Mike Wasson](https://github.com/MikeWasson)
 
 [Télécharger le projet terminé](http://code.msdn.microsoft.com/ASPNET-Web-API-OData-cecdb524)
 
-> Ce didacticiel montre comment appeler un service OData à partir d’une application cliente en c#.
+> Ce didacticiel montre comment appeler un service OData à partir d’une application cliente en C#.
 >
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versions des logiciels utilisées dans le didacticiel
 >

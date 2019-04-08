@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/accordion/dynamically-adding-an-accordion-pane-cs
-title: Ajout dynamique d’un volet Accordion (c#) | Microsoft Docs
+title: Ajout dynamique d’un volet Accordion (C#) | Microsoft Docs
 author: wenz
 description: Le contrôle Accordion dans AJAX Control Toolkit fournit plusieurs volets et permet à l’utilisateur afficher un d’eux à la fois. Panneaux sont généralement déclarés w...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57027306"
 ---
-<a name="dynamically-adding-an-accordion-pane-c"></a>Ajout dynamique d’un volet Accordion (c#)
+<a name="dynamically-adding-an-accordion-pane-c"></a>Ajout dynamique d’un volet Accordion (C#)
 ====================
 par [Christian Wenz](https://github.com/wenz)
 

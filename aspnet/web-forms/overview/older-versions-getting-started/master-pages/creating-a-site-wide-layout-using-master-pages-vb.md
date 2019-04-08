@@ -47,7 +47,7 @@ Ceci est le premier didacticiel d’une série de didacticiels qui explorent les
 - Découvrez comment spécifier un contenu de page maître lors de l’exécution, et
 - Autres avancées des rubriques de la page maître.
 
-Ces didacticiels sont conçues pour être concis et fournissent des instructions pas à pas avec de nombreuses captures d’écran pour vous guident tout au long du processus visuellement. Chaque didacticiel est disponible dans les versions de Visual Basic et c# et inclut un téléchargement de l’intégralité du code utilisé.
+Ces didacticiels sont conçues pour être concis et fournissent des instructions pas à pas avec de nombreuses captures d’écran pour vous guident tout au long du processus visuellement. Chaque didacticiel est disponible dans les versions de Visual Basic et C# et inclut un téléchargement de l’intégralité du code utilisé.
 
 Ce didacticiel inaugurale commence par examiner les concepts de base de page maître. Nous discuter comment des pages maîtres, examinez la création d’une page maître et les pages de contenu associées à l’aide de Visual Web Developer et voir comment les modifications apportées à une page maître sont immédiatement répercutées dans ses pages de contenu. C’est parti !
 

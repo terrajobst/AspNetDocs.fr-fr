@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-cs
-title: Ajustement de l’Index-Z d’un DropShadow (c#) | Microsoft Docs
+title: Ajustement de l’Index-Z d’un DropShadow (C#) | Microsoft Docs
 author: wenz
 description: Le contrôle DropShadow dans AJAX Control Toolkit étend un panneau avec une ombre portée. Toutefois cette ombre parfois est en conflit avec d’autres contrôles, pour le programme d’insta...
 ms.author: riande

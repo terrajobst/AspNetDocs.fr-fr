@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/masterdetail/master-detail-filtering-with-a-dropdownlist-cs
-title: Maître/détail filtrage avec une DropDownList (c#) | Microsoft Docs
+title: Maître/détail filtrage avec une DropDownList (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons voir comment afficher les enregistrements maîtres dans un contrôle DropDownList et les détails de l’élément de liste sélectionné dans un GridView.
 ms.author: riande

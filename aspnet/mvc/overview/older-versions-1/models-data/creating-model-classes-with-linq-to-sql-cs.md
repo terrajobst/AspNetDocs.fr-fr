@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/creating-model-classes-with-linq-to-sql-cs
-title: Création de Classes de modèle avec LINQ to SQL (c#) | Microsoft Docs
+title: Création de Classes de modèle avec LINQ to SQL (C#) | Microsoft Docs
 author: microsoft
 description: L’objectif de ce didacticiel est d’expliquer une méthode de création de classes de modèle pour une application ASP.NET MVC. Dans ce didacticiel, vous allez apprendre à créer le modèle c...
 ms.author: riande

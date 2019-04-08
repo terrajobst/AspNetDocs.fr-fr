@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs
-title: Tri personnalisé paginée des données (c#) | Microsoft Docs
+title: Tri personnalisé paginée des données (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans le didacticiel précédent, nous avons appris à implémenter la pagination personnalisée lors de la présentation des données sur une page web. Dans ce didacticiel, nous expliquons comment étendre l’exemple précédent...
 ms.author: riande

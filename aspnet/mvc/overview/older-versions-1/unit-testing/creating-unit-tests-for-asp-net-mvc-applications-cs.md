@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs
-title: Création de Tests unitaires pour les Applications ASP.NET MVC (c#) | Microsoft Docs
+title: Création de Tests unitaires pour les Applications ASP.NET MVC (C#) | Microsoft Docs
 author: StephenWalther
 description: Découvrez comment créer des tests unitaires pour les actions de contrôleur. Dans ce didacticiel, Stephen Walther montre comment tester si une action de contrôleur retourne une section...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/membership/user-based-authorization-cs
-title: Autorisation basée sur l’utilisateur (c#) | Microsoft Docs
+title: Autorisation basée sur l’utilisateur (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous examinerons limitant l’accès aux pages et en limitant les fonctionnalités de niveau de la page par le biais de diverses techniques.
 ms.author: riande

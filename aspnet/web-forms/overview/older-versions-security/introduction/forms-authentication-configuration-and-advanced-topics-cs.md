@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-cs
-title: Constitue la Configuration de l’authentification et les rubriques avancées (c#) | Microsoft Docs
+title: Constitue la Configuration de l’authentification et les rubriques avancées (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous examiner les différents paramètres d’authentification de formulaires et voir comment les modifier dans l’élément de formulaires. Cette suppression entraîne une détaillées...
 ms.author: riande

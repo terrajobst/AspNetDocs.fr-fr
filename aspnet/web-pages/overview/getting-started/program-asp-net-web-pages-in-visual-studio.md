@@ -79,7 +79,7 @@ Pour créer un site Web ASP.NET Razor dans Visual Studio :
 2. Dans le **fichier** menu, cliquez sur **nouveau Site Web**.
 
     ![créer un nouveau site web](program-asp-net-web-pages-in-visual-studio/_static/image2.png)
-3. Dans le **nouveau Site Web** boîte de dialogue, sélectionnez la langue à utiliser (Visual c# ou Visual Basic).
+3. Dans le **nouveau Site Web** boîte de dialogue, sélectionnez la langue à utiliser (Visual C# ou Visual Basic).
 4. Sélectionnez le **Site de Web ASP.NET (Razor)** modèle.
 
     ![site de Razor](program-asp-net-web-pages-in-visual-studio/_static/image3.png)
@@ -95,7 +95,7 @@ Maintenant que vous avez créé un site, vous pouvez voir le fonctionnement d’
 2. Après le `<h3>` balises dans la page, tapez `@ServerInfo.` (y compris le point). Notez comment IntelliSense affiche les méthodes disponibles pour le `ServerInfo` helper dans une liste déroulante.
 
     ![intellisense](program-asp-net-web-pages-in-visual-studio/_static/image4.png)
-3. Sélectionnez le `GetHtml` méthode à partir de la liste et appuyez sur ENTRÉE. IntelliSense remplit automatiquement la méthode. (Comme avec n’importe quelle méthode en c#, vous devez ajouter `()` caractères après la méthode.) Le code complet de le `GetHtml` méthode ressemble à l’exemple suivant :
+3. Sélectionnez le `GetHtml` méthode à partir de la liste et appuyez sur ENTRÉE. IntelliSense remplit automatiquement la méthode. (Comme avec n’importe quelle méthode en C#, vous devez ajouter `()` caractères après la méthode.) Le code complet de le `GetHtml` méthode ressemble à l’exemple suivant :
 
     [!code-cshtml[Main](program-asp-net-web-pages-in-visual-studio/samples/sample1.cshtml)]
 4. Appuyez sur Ctrl + F5 pour exécuter la page. Voici à quoi ressemble la page lorsque affiché dans un navigateur :

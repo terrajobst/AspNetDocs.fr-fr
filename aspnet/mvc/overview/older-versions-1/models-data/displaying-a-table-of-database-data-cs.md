@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-cs
-title: Affichage d’une Table de base de données (c#) | Microsoft Docs
+title: Affichage d’une Table de base de données (C#) | Microsoft Docs
 author: microsoft
 description: Dans ce didacticiel, je vais montrer deux méthodes d’affichage d’un ensemble d’enregistrements de base de données. Je montrerai des deux méthodes de mise en forme un jeu d’enregistrements de base de données dans le code HTML ta...
 ms.author: riande

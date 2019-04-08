@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/older-versions/self-host-a-web-api
-title: Self-Host ASP.NET Web API 1 (c#) | Microsoft Docs
+title: Self-Host ASP.NET Web API 1 (C#) | Microsoft Docs
 author: MikeWasson
 description: API Web ASP.NET ne nécessite pas d’IIS. Vous pouvez Self-host une API web dans votre propre processus hôte. Ce didacticiel montre comment héberger une API web à l’intérieur d’une console appl...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57040756"
 ---
-<a name="self-host-aspnet-web-api-1-c"></a>Self-Host ASP.NET Web API 1 (c#)
+<a name="self-host-aspnet-web-api-1-c"></a>Self-Host ASP.NET Web API 1 (C#)
 ====================
 par [Mike Wasson](https://github.com/MikeWasson)
 
@@ -127,7 +127,7 @@ Lorsque vous avez terminé d’auto-hébergement, veillez à supprimer la réser
 
 [!code-console[Main](self-host-a-web-api/samples/sample6.cmd)]
 
-## <a name="call-the-web-api-from-a-client-application-c"></a>Appeler l’API Web à partir d’une Application cliente (c#)
+## <a name="call-the-web-api-from-a-client-application-c"></a>Appeler l’API Web à partir d’une Application cliente (C#)
 
 Nous allons écrire une application console simple qui appelle l’API web.
 

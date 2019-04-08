@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/filteredtextbox/allowing-only-certain-characters-in-a-text-box-cs
-title: Autoriser seulement certains caractères dans une zone de texte (c#) | Microsoft Docs
+title: Autoriser seulement certains caractères dans une zone de texte (C#) | Microsoft Docs
 author: wenz
 description: Contrôles de validation ASP.NET peuvent garantir que seulement certains caractères sont autorisés dans l’entrée d’utilisateur. Toutefois cela toujours n’empêche pas les utilisateurs de taper non valides...
 ms.author: riande

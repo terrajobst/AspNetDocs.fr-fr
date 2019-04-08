@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/custom-formatting/using-templatefields-in-the-detailsview-control-cs
-title: Utilisation de TemplateField dans le contrôle DetailsView (c#) | Microsoft Docs
+title: Utilisation de TemplateField dans le contrôle DetailsView (C#) | Microsoft Docs
 author: rick-anderson
 description: Les mêmes fonctionnalités TemplateField disponibles avec le contrôle GridView sont également disponibles avec le contrôle DetailsView. Dans ce didacticiel, nous affichons un produit...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-cs
-title: Validation avec une couche de Service (c#) | Microsoft Docs
+title: Validation avec une couche de Service (C#) | Microsoft Docs
 author: StephenWalther
 description: Découvrez comment déplacer votre logique de validation en dehors de vos actions de contrôleur et dans une couche de service distinct. Dans ce didacticiel, Stephen Walther explique comment vous...
 ms.author: riande

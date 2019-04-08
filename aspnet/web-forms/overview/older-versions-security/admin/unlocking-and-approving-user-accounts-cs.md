@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/admin/unlocking-and-approving-user-accounts-cs
-title: Le déverrouillage et l’approbation des comptes d’utilisateur (c#) | Microsoft Docs
+title: Le déverrouillage et l’approbation des comptes d’utilisateur (C#) | Microsoft Docs
 author: rick-anderson
 description: Ce didacticiel montre comment créer une page web pour les administrateurs gérer les utilisateurs verrouillés et approuvé les États. Nous verrons également comment approuver les nouveaux utilisateurs o...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/mutuallyexclusivecheckbox/creating-mutually-exclusive-checkboxes-cs
-title: Création de cases à cocher mutuellement exclusives (c#) | Microsoft Docs
+title: Création de cases à cocher mutuellement exclusives (C#) | Microsoft Docs
 author: wenz
 description: 'Lorsque seul un ensemble d’options peuvent être sélectionnés, les cases d’option sont généralement utilisées. Il y a cependant un inconvénient : Une fois une case d’option dans un groupe est sélectionnée...'
 ms.author: riande

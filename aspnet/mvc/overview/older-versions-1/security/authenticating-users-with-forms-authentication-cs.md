@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-cs
-title: Authentification des utilisateurs avec Forms Authentication (c#) | Microsoft Docs
+title: Authentification des utilisateurs avec Forms Authentication (C#) | Microsoft Docs
 author: microsoft
 description: Découvrez comment utiliser l’attribut [Authorize] au mot de passe protéger certaines pages dans votre application MVC. Vous allez apprendre à utiliser le Site Web Administration trop...
 ms.author: riande

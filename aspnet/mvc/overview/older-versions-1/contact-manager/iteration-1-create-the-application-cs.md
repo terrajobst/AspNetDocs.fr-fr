@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-1-create-the-application-cs
-title: 'Itération #1 : créer l’Application (c#) | Microsoft Docs'
+title: 'Itération #1 : créer l’Application (C#) | Microsoft Docs'
 author: microsoft
 description: 'Dans la première itération, nous créons le Gestionnaire de Contact de la façon la plus simple possible. Nous ajoutons la prise en charge pour les opérations de base de données : Création, lecture, mise à jour et D....'
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/25/2019
 ms.locfileid: "58422673"
 ---
-<a name="iteration-1--create-the-application-c"></a>Itération #1 : créer l’Application (c#)
+<a name="iteration-1--create-the-application-c"></a>Itération #1 : créer l’Application (C#)
 ====================
 by [Microsoft](https://github.com/microsoft)
 

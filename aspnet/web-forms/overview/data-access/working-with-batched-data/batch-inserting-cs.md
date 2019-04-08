@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-batched-data/batch-inserting-cs
-title: Lot d’insertion (c#) | Microsoft Docs
+title: Lot d’insertion (C#) | Microsoft Docs
 author: rick-anderson
 description: Découvrez comment insérer plusieurs enregistrements de base de données en une seule opération. Dans la couche d’Interface utilisateur, nous étendons le contrôle GridView pour autoriser l’utilisateur à entrer plusieurs n...
 ms.author: riande

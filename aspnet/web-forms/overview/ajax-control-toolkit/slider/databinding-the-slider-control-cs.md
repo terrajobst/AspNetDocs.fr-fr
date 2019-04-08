@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/slider/databinding-the-slider-control-cs
-title: Liaison de données le contrôle Slider (c#) | Microsoft Docs
+title: Liaison de données le contrôle Slider (C#) | Microsoft Docs
 author: wenz
 description: Le contrôle Slider dans AJAX Control Toolkit fournit un contrôle slider graphique qui peut être contrôlé à l’aide de la souris. Il est possible de lier la position en cours...
 ms.author: riande

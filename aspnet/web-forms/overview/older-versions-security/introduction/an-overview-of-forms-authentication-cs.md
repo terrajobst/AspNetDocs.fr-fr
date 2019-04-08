@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-cs
-title: Une vue d’ensemble de l’authentification par formulaire (c#) | Microsoft Docs
+title: Une vue d’ensemble de l’authentification par formulaire (C#) | Microsoft Docs
 author: rick-anderson
 description: Création de Routes personnalisées
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57063886"
 ---
-<a name="an-overview-of-forms-authentication-c"></a>Une vue d’ensemble de l’authentification par formulaire (c#)
+<a name="an-overview-of-forms-authentication-c"></a>Une vue d’ensemble de l’authentification par formulaire (C#)
 ====================
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
@@ -79,7 +79,7 @@ Afin d’atteindre l’audience la plus large possible, le site Web ASP.NET que 
 > L’application web de démonstration utilisée dans chaque didacticiel est disponible en téléchargement. Cette application téléchargeable a été créée avec Visual Web Developer 2008 ciblé pour le .NET Framework version 3.5. Dans la mesure où l’application est ciblée pour .NET 3.5, son fichier Web.config inclut des éléments de configuration supplémentaires, spécifiques à 3.5. En résumé, si vous devez encore installer .NET 3.5 sur votre ordinateur, l’application web téléchargeable ne fonctionnera pas sans supprimer au préalable le balisage spécifique 3.5 à partir de Web.config.
 
 
-Avant que nous pouvons configurer l’authentification par formulaire, nous devons d’abord un site Web ASP.NET. Commencez par créer un nouveau fichier basé sur le système site Web ASP.NET. Pour ce faire, lancez Visual Web Developer et accédez au menu fichier et choisissez Nouveau Site Web, en affichant la boîte de dialogue Nouveau Site Web. Choisissez le modèle de Site Web ASP.NET, la valeur de la liste déroulante emplacement du système de fichiers, choisissez un dossier pour placer le site web, la valeur est le langage c#. Cela créera un nouveau site web avec une page Default.aspx ASP.NET, une application\_dossier de données et un fichier Web.config.
+Avant que nous pouvons configurer l’authentification par formulaire, nous devons d’abord un site Web ASP.NET. Commencez par créer un nouveau fichier basé sur le système site Web ASP.NET. Pour ce faire, lancez Visual Web Developer et accédez au menu fichier et choisissez Nouveau Site Web, en affichant la boîte de dialogue Nouveau Site Web. Choisissez le modèle de Site Web ASP.NET, la valeur de la liste déroulante emplacement du système de fichiers, choisissez un dossier pour placer le site web, la valeur est le langage C#. Cela créera un nouveau site web avec une page Default.aspx ASP.NET, une application\_dossier de données et un fichier Web.config.
 
 > [!NOTE]
 > Visual Studio prend en charge deux modes de gestion de projet : Projets de Site Web et projets d’Application Web. Projets de Site Web n’ont pas un fichier projet, alors que les projets d’Application Web imiter l’architecture de projet dans Visual Studio .NET 2002/2003 – ils incluent un fichier projet et compiler le code du projet source dans un assembly unique, qui est placé dans le dossier /bin. Visual Studio 2005 initialement le seul Site Web pris en charge les projets, bien que le modèle de projet d’Application Web a été réintroduit avec Service Pack 1 ; Visual Studio 2008 offre les deux modèles de projet. Visual Web Developer 2005 et 2008 éditions, toutefois, uniquement prennent en charge les projets de Site Web. J’utilise le modèle de projet de Site Web. Si vous utilisez une édition non-Express et que vous souhaitez utiliser le [modèle de projet d’Application Web](https://msdn.microsoft.com/library/aa730880%28vs.80%29.aspx) au lieu de cela, n’hésitez pas à le faire, mais n’oubliez pas qu’il existe peut-être des différences entre ce que vous voyez sur votre écran et les étapes que vous devez prendre par rapport à la captures d’écran indiqués et les instructions fournies dans ces didacticiels.

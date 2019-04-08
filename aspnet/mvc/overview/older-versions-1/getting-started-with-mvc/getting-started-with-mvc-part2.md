@@ -66,7 +66,7 @@ Là encore, / [Controller] / [ActionName] / [paramètres] contrôleur est donc H
 
 [![C’est la méthode d’action de bienvenue](getting-started-with-mvc-part2/_static/image10.png)](getting-started-with-mvc-part2/_static/image9.png)
 
-Modifions notre exemple légèrement afin que nous pouvons transmettre certaines informations à partir de l’URL vers notre contrôleur, par exemple comme suit : / HelloWorld/Welcome ? nom = Scott&amp;numtimes = 4. Modifier votre méthode de bienvenue pour inclure les deux paramètres et mise à jour, tel que ci-dessous. Notez que nous avons utilisé la fonctionnalité de paramètre facultatif de c# pour indiquer que le paramètre numTimes doivent par défaut 1 si elle n’est transmise.
+Modifions notre exemple légèrement afin que nous pouvons transmettre certaines informations à partir de l’URL vers notre contrôleur, par exemple comme suit : / HelloWorld/Welcome ? nom = Scott&amp;numtimes = 4. Modifier votre méthode de bienvenue pour inclure les deux paramètres et mise à jour, tel que ci-dessous. Notez que nous avons utilisé la fonctionnalité de paramètre facultatif de C# pour indiquer que le paramètre numTimes doivent par défaut 1 si elle n’est transmise.
 
 [!code-csharp[Main](getting-started-with-mvc-part2/samples/sample2.cs)]
 

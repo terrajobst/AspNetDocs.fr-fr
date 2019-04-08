@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs
-title: En spécifiant le titre, les balises Meta et les autres en-têtes HTML dans la Page maître (c#) | Microsoft Docs
+title: En spécifiant le titre, les balises Meta et les autres en-têtes HTML dans la Page maître (C#) | Microsoft Docs
 author: rick-anderson
 description: Examine les différentes techniques permettant de définir assortis &lt;head&gt; éléments dans la Page maître depuis la page de contenu.
 ms.author: riande

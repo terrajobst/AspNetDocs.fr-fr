@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/showing-multiple-records-per-row-with-the-datalist-control-cs
-title: Affichage de plusieurs enregistrements par ligne avec le contrôle DataList (c#) | Microsoft Docs
+title: Affichage de plusieurs enregistrements par ligne avec le contrôle DataList (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce court didacticiel nous allons découvrir comment personnaliser la disposition du contrôle DataList via ses propriétés RepeatColumns et RepeatDirection.
 ms.author: riande

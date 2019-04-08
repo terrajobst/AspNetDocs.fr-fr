@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/displaying-data-with-the-datalist-and-repeater-controls-cs
-title: Affichage de données avec les contrôles DataList et Repeater (c#) | Microsoft Docs
+title: Affichage de données avec les contrôles DataList et Repeater (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans les didacticiels précédents, nous avons utilisé le contrôle GridView pour afficher des données. À partir de ce didacticiel, nous intéresser à la construction des modèles de création de rapports courants avec...
 ms.author: riande

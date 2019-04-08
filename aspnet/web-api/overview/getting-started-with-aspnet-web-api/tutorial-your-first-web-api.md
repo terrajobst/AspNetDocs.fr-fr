@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
-title: Bien démarrer avec ASP.NET Web API 2 (c#)
+title: Bien démarrer avec ASP.NET Web API 2 (C#)
 author: MikeWasson
 description: HTTP n’est pas simplement pour servir des pages web. Il est également une plateforme puissante pour la création d’API qui exposent des services et données. HTTP est simple, flexible et ubiq...
 ms.author: riande
@@ -14,7 +14,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57060186"
 ---
-<a name="get-started-with-aspnet-web-api-2-c"></a>Bien démarrer avec ASP.NET Web API 2 (c#)
+<a name="get-started-with-aspnet-web-api-2-c"></a>Bien démarrer avec ASP.NET Web API 2 (C#)
 ====================
 par [Mike Wasson](https://github.com/MikeWasson)
 

@@ -19,7 +19,7 @@ ms.locfileid: "57053536"
 ====================
 par [Stephen Walther](https://github.com/StephenWalther)
 
-Des doutes quant aux modèles, vues et contrôleurs ? Dans ce didacticiel, Stephen Walther vous présente les différentes parties d’une application ASP.NET MVC. Pour obtenir des informations supplémentaires relatives à cette vidéo, lisez le didacticiel « Présentation des modèles, vues et contrôleurs » ([c#](../../../overview/older-versions-1/overview/understanding-models-views-and-controllers-cs.md), [VB](../../../overview/older-versions-1/overview/understanding-models-views-and-controllers-vb.md)).
+Des doutes quant aux modèles, vues et contrôleurs ? Dans ce didacticiel, Stephen Walther vous présente les différentes parties d’une application ASP.NET MVC. Pour obtenir des informations supplémentaires relatives à cette vidéo, lisez le didacticiel « Présentation des modèles, vues et contrôleurs » ([C#](../../../overview/older-versions-1/overview/understanding-models-views-and-controllers-cs.md), [VB](../../../overview/older-versions-1/overview/understanding-models-views-and-controllers-vb.md)).
 
 [&#9654;Regardez la vidéo (13 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/understanding-models-views-and-controllers)
 

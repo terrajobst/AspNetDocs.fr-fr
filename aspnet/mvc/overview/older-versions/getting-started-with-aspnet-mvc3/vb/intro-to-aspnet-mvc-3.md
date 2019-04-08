@@ -27,7 +27,7 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Si vous utilisez Visual Studio 2010 au lieu de Visual Web Developer 2010, installez les composants requis en cliquant sur le lien suivant : [Visual Studio 2010 prerequisites](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Un projet de Visual Web Developer avec le code source VB.NET est disponible pour accompagner cette rubrique. [Téléchargez la version VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez c#, basculez vers le [c# version](../cs/intro-to-aspnet-mvc-3.md) de ce didacticiel.
+> Un projet de Visual Web Developer avec le code source VB.NET est disponible pour accompagner cette rubrique. [Téléchargez la version VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez C#, basculez vers le [C# version](../cs/intro-to-aspnet-mvc-3.md) de ce didacticiel.
 
 
 Ce didacticiel vous apprend les notions de base de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express Service Pack 1, qui est une version gratuite de Microsoft Visual Studio. Avant de commencer, assurez-vous que vous avez installé les composants requis listés ci-dessous. Vous pouvez installer tous les en cliquant sur le lien suivant : [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Vous pouvez également installer individuellement les conditions préalables à l’aide des liens suivants :
@@ -70,7 +70,7 @@ Visual Web Developer est un environnement de développement intégré ou IDE. To
 
 ## <a name="creating-your-first-application"></a>Créer votre première Application
 
-Vous pouvez créer des applications à l’aide de votre choix de Visual Basic ou Visual c# comme langage de programmation. Pour ce didacticiel, sélectionnez Visual Basic sur la gauche, puis **Application Web de ASP.NET MVC 3**. Nommez votre projet « MvcMovie », puis **OK**.
+Vous pouvez créer des applications à l’aide de votre choix de Visual Basic ou Visual C# comme langage de programmation. Pour ce didacticiel, sélectionnez Visual Basic sur la gauche, puis **Application Web de ASP.NET MVC 3**. Nommez votre projet « MvcMovie », puis **OK**.
 
 ![1NewMVCproj_sm](intro-to-aspnet-mvc-3/_static/image7.png)
 

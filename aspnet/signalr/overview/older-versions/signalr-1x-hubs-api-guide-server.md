@@ -207,7 +207,7 @@ Pour exposer une méthode sur le Hub que vous souhaitez pouvoir être appelée �
 
 [!code-csharp[Main](signalr-1x-hubs-api-guide-server/samples/sample14.cs?highlight=3)]
 
-Vous pouvez spécifier un type de retour et paramètres, y compris les types complexes et les tableaux, comme vous le feriez dans n’importe quelle méthode c#. Toutes les données que vous recevez dans les paramètres ou retourner à l’appelant sont communiquées entre le client et le serveur à l’aide de JSON et SignalR gère la liaison d’objets complexes et des tableaux d’objets automatiquement.
+Vous pouvez spécifier un type de retour et paramètres, y compris les types complexes et les tableaux, comme vous le feriez dans n’importe quelle méthode C#. Toutes les données que vous recevez dans les paramètres ou retourner à l’appelant sont communiquées entre le client et le serveur à l’aide de JSON et SignalR gère la liaison d’objets complexes et des tableaux d’objets automatiquement.
 
 <a id="methodnames"></a>
 

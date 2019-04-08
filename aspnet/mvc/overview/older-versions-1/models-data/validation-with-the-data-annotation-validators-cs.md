@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/validation-with-the-data-annotation-validators-cs
-title: Validation avec les validateurs d’Annotation de données (c#) | Microsoft Docs
+title: Validation avec les validateurs d’Annotation de données (C#) | Microsoft Docs
 author: microsoft
 description: Tirez parti du Binder de modèle de Annotation de données pour effectuer la validation au sein d’une application ASP.NET MVC. Découvrez comment utiliser les différents types de programme de validation...
 ms.author: riande

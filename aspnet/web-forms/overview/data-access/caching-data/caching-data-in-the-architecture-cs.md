@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/caching-data/caching-data-in-the-architecture-cs
-title: La mise en cache des données dans l’Architecture (c#) | Microsoft Docs
+title: La mise en cache des données dans l’Architecture (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans le didacticiel précédent, nous avons appris à appliquer la mise en cache au niveau de la couche de présentation. Dans ce didacticiel, nous apprendre à tirer parti de notre architectu en couche...
 ms.author: riande

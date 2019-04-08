@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/rating/creating-a-rating-control-cs
-title: Création d’un contrôle Rating (c#) | Microsoft Docs
+title: Création d’un contrôle Rating (C#) | Microsoft Docs
 author: wenz
 description: De nombreux sites Web, à partir de commerce électronique aux sites de Communauté, offrent aux utilisateurs d’articles de taux ou éléments. Cela nécessite généralement des efforts de codage, mais nous avons le...
 ms.author: riande

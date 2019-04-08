@@ -1,6 +1,6 @@
 ---
 uid: signalr/overview/guide-to-the-api/hubs-api-guide-server
-title: Guide de l’API ASP.NET SignalR Hubs - serveur (c#) | Microsoft Docs
+title: Guide de l’API ASP.NET SignalR Hubs - serveur (C#) | Microsoft Docs
 author: bradygaster
 description: Ce document fournit une introduction à la programmation côté serveur de l’API des concentrateurs SignalR ASP.NET pour SignalR version 2, avec des exemples de code illustrant l’utilisation...
 ms.author: bradyg
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57035206"
 ---
-<a name="aspnet-signalr-hubs-api-guide---server-c"></a>Guide de l’API ASP.NET SignalR Hubs - serveur (c#)
+<a name="aspnet-signalr-hubs-api-guide---server-c"></a>Guide de l’API ASP.NET SignalR Hubs - serveur (C#)
 ====================
 par [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://github.com/tdykstra)
 
@@ -230,7 +230,7 @@ Pour exposer une méthode sur le Hub que vous souhaitez pouvoir être appelée �
 
 [!code-csharp[Main](hubs-api-guide-server/samples/sample14.cs?highlight=3)]
 
-Vous pouvez spécifier un type de retour et paramètres, y compris les types complexes et les tableaux, comme vous le feriez dans n’importe quelle méthode c#. Toutes les données que vous recevez dans les paramètres ou retourner à l’appelant sont communiquées entre le client et le serveur à l’aide de JSON et SignalR gère la liaison d’objets complexes et des tableaux d’objets automatiquement.
+Vous pouvez spécifier un type de retour et paramètres, y compris les types complexes et les tableaux, comme vous le feriez dans n’importe quelle méthode C#. Toutes les données que vous recevez dans les paramètres ou retourner à l’appelant sont communiquées entre le client et le serveur à l’aide de JSON et SignalR gère la liaison d’objets complexes et des tableaux d’objets automatiquement.
 
 <a id="methodnames"></a>
 
@@ -566,7 +566,7 @@ Dans votre classe de concentrateur, vous pouvez accéder à ces données dans le
 
 Dans VB.NET ou dans un concentrateur fortement typées, l’objet d’état de l’appelant n’est pas accessible via `Clients.Caller`; au lieu de cela, utilisez `Clients.CallerState` (introduite dans SignalR 2.1) :
 
-**À l’aide de CallerState en c#**
+**À l’aide de CallerState en C#**
 
 [!code-csharp[Main](hubs-api-guide-server/samples/sample59.cs?highlight=3-4)]
 

@@ -19,9 +19,9 @@ ms.locfileid: "57060926"
 ====================
 par [Erik Reitan](https://github.com/Erikre)
 
-[Télécharger le projet de Wingtip Toys exemple (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Télécharger le projet de Wingtip Toys exemple (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
+> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
 
 
 Dans ce didacticiel, vous allez modifier l’interface utilisateur de l’application Web par défaut pour prendre en charge les fonctionnalités de l’application avant de banque de Wingtip Toys. En outre, vous allez ajouter simple et navigation lié aux données. Ce didacticiel s’appuie sur le didacticiel précédent, « Créer la couche d’accès aux données » et fait partie de la série de didacticiels Wingtip Toys.
@@ -65,7 +65,7 @@ ASP.NET Web Forms contiennent généralement des directives qui vous permettent 
 
 La directive la plus couramment utilisée est la `@Page` directive, qui vous permet de spécifier de nombreuses options de configuration pour la page, y compris les éléments suivants :
 
-1. Le serveur de langage de programmation pour le code dans la page, tels que c#.
+1. Le serveur de langage de programmation pour le code dans la page, tels que C#.
 2. Si la page est une page avec un code serveur directement dans la page, qui est appelée une page à fichier unique, ou s’il s’agit d’une page avec le code dans un fichier de classe distincte, ce qui est appelé une page code-behind.
 3. Indique si la page a une page maître associée et doit donc être traitée comme une page de contenu.
 4. Débogage et options de suivi.
@@ -87,7 +87,7 @@ Lorsque la page s’exécute, ASP.NET identifie les contrôles serveur et exécu
 
 ### <a name="server-code"></a>Code serveur
 
-La plupart des applications Web Forms ASP.NET incluent du code qui s’exécute sur le serveur lors du traitement de la page. Comme mentionné ci-dessus, code de serveur peut être utilisé pour effectuer diverses opérations, telles que l’ajout de données à un contrôle ListView. ASP.NET prend en charge de nombreux langages pour s’exécuter sur le serveur, notamment c#, Visual Basic, J# et autres utilisateurs.
+La plupart des applications Web Forms ASP.NET incluent du code qui s’exécute sur le serveur lors du traitement de la page. Comme mentionné ci-dessus, code de serveur peut être utilisé pour effectuer diverses opérations, telles que l’ajout de données à un contrôle ListView. ASP.NET prend en charge de nombreux langages pour s’exécuter sur le serveur, notamment C#, Visual Basic, J# et autres utilisateurs.
 
 ASP.NET prend en charge deux modèles pour l’écriture de code serveur pour une page Web. Dans le modèle de fichier unique, le code de la page est dans un élément de script dans lequel la balise d’ouverture comprend le `runat="server"` attribut. Vous pouvez également créer le code de la page dans un fichier de classe distincte, ce qui est appelé le modèle code-behind. Dans ce cas, la page Web Forms ASP.NET ne contient généralement aucun code serveur. Au lieu de cela, le `@Page` directive inclut des informations qui lie la *.aspx* page avec son fichier code-behind associé.
 
@@ -121,7 +121,7 @@ L’image du logo référencé ci-dessus, ainsi que toutes les images de produit
 
 #### <a name="download-from-msdn-samples-site"></a>Télécharger à partir du site d’exemples de MSDN :
 
-[Bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2013 - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) (c#)
+[Bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2013 - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) (C#)
 
 Le téléchargement inclut des ressources dans le *WingtipToys-ressources* dossier qui sont utilisées pour créer l’exemple d’application.
 

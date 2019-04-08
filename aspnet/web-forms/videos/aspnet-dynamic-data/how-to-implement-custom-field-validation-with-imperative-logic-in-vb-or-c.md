@@ -1,6 +1,6 @@
 ---
 uid: web-forms/videos/aspnet-dynamic-data/how-to-implement-custom-field-validation-with-imperative-logic-in-vb-or-c
-title: Comment implémenter la Validation de champ personnalisé avec une logique impérative dans VB ou c# | Microsoft Docs
+title: Comment implémenter la Validation de champ personnalisé avec une logique impérative dans VB ou C# | Microsoft Docs
 author: JoeStagner
 description: Dans cette vidéo, nous créer sur la validation de champ déclarative que nous avons implémenté dans notre précédent dynamique données vidéo et ajouter une logique de programmation personnalisée à notre val...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57024306"
 ---
-<a name="how-to-implement-custom-field-validation-with-imperative-logic-in-vb-or-c"></a>Comment implémenter la Validation de champ personnalisé avec une logique impérative dans VB ou c#
+<a name="how-to-implement-custom-field-validation-with-imperative-logic-in-vb-or-c"></a>Comment implémenter la Validation de champ personnalisé avec une logique impérative dans VB ou C#
 ====================
 par [Joe Stagner](https://github.com/JoeStagner)
 

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-cs
-title: Ajout d’une Confirmation du côté Client lors de la suppression (c#) | Microsoft Docs
+title: Ajout d’une Confirmation du côté Client lors de la suppression (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans les interfaces, nous avons créé jusqu'à présent, un utilisateur peut supprimer accidentellement les données en cliquant sur le bouton Supprimer quand ils signifiait cliquer sur le bouton Modifier. Dans ce t...
 ms.author: riande

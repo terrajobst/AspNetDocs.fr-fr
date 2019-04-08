@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-7-add-ajax-functionality-cs
-title: 'Itération #7 : ajouter des fonctionnalités Ajax (c#) | Microsoft Docs'
+title: 'Itération #7 : ajouter des fonctionnalités Ajax (C#) | Microsoft Docs'
 author: microsoft
 description: Dans l’itération septième, nous améliorer la réactivité et les performances de notre application en ajoutant la prise en charge d’Ajax.
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57060596"
 ---
-<a name="iteration-7--add-ajax-functionality-c"></a>Itération #7 : ajouter des fonctionnalités Ajax (c#)
+<a name="iteration-7--add-ajax-functionality-c"></a>Itération #7 : ajouter des fonctionnalités Ajax (C#)
 ====================
 by [Microsoft](https://github.com/microsoft)
 
@@ -24,7 +24,7 @@ by [Microsoft](https://github.com/microsoft)
 > Dans l’itération septième, nous améliorer la réactivité et les performances de notre application en ajoutant la prise en charge d’Ajax.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (c#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (C#)
 
 Dans cette série de didacticiels, nous créer une application de gestion des contacts entière à partir du début à la fin. L’application Gestionnaire de Contact permet vous permettent de stocker les informations de contact (noms, numéros de téléphone et adresses de messagerie) pour obtenir la liste de personnes.
 

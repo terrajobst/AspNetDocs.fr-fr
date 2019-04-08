@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/modalpopup/positioning-a-modalpopup-cs
-title: Positionnement d’un ModalPopup (c#) | Microsoft Docs
+title: Positionnement d’un ModalPopup (C#) | Microsoft Docs
 author: wenz
 description: Le contrôle ModalPopup dans AJAX Control Toolkit offre un moyen simple de créer une contextuelle modale à l’aide de moyens de côté client. Toutefois le contrôle n’offre pas un...
 ms.author: riande

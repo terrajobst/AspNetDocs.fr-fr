@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/introduction/master-pages-and-site-navigation-cs
-title: Pages maîtres et Navigation de Site (c#) | Microsoft Docs
+title: Pages maîtres et Navigation de Site (C#) | Microsoft Docs
 author: rick-anderson
 description: L’une des caractéristiques communes des sites Web conviviales sont qu’ils disposent d’un schéma de mise en page et de navigation de page cohérente, à l’échelle du site. Ce didacticiel aborde la façon y...
 ms.author: riande

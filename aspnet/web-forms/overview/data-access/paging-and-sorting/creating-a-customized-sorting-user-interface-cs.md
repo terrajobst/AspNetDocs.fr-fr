@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-cs
-title: Création d’une Interface utilisateur de tri personnalisée (c#) | Microsoft Docs
+title: Création d’une Interface utilisateur de tri personnalisée (C#) | Microsoft Docs
 author: rick-anderson
 description: Lors de l’affichage d’une longue liste des données triées, il peut être très utile de regrouper les données associées en introduisant des lignes du séparateur. Dans ce didacticiel, nous verrons comment cre...
 ms.author: riande

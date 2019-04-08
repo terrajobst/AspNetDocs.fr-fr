@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-cs
-title: Contrôler l’ID d’affectation de noms dans les Pages de contenu (c#) | Microsoft Docs
+title: Contrôler l’ID d’affectation de noms dans les Pages de contenu (C#) | Microsoft Docs
 author: rick-anderson
 description: Explique comment les contrôles ContentPlaceHolder servent de conteneur d’attribution de noms et par conséquent facilitez l’utilisation par programmation un contrôle difficile (via FindConrol)...
 ms.author: riande
@@ -187,7 +187,7 @@ Par conséquent, avoir `Control.FindControl` rechercher simplement *contrôle*d�
 La bonne nouvelle est que nous pouvons créer notre propre `FindControl` méthode ce récursivement recherche tous les conteneurs d’attribution de noms. En fait, à l’aide de *méthodes d’extension* nous pouvons ajouter un `FindControlRecursive` méthode à la `Control` classe pour accompagner ses `FindControl` (méthode).
 
 > [!NOTE]
-> Méthodes d’extension sont une fonctionnalité nouvelle de c# 3.0 et Visual Basic 9, qui sont des langages fournis avec le .NET Framework version 3.5 et Visual Studio 2008. En bref, les méthodes d’extension permettent à un développeur pour créer une nouvelle méthode pour un type de classe existant via une syntaxe spéciale. Pour plus d’informations sur cette fonctionnalité utile, reportez-vous à mon article, [extension des fonctionnalités de Type Base avec les méthodes d’Extension](http://aspnet.4guysfromrolla.com/articles/120507-1.aspx).
+> Méthodes d’extension sont une fonctionnalité nouvelle de C# 3.0 et Visual Basic 9, qui sont des langages fournis avec le .NET Framework version 3.5 et Visual Studio 2008. En bref, les méthodes d’extension permettent à un développeur pour créer une nouvelle méthode pour un type de classe existant via une syntaxe spéciale. Pour plus d’informations sur cette fonctionnalité utile, reportez-vous à mon article, [extension des fonctionnalités de Type Base avec les méthodes d’Extension](http://aspnet.4guysfromrolla.com/articles/120507-1.aspx).
 
 
 Pour créer la méthode d’extension, ajoutez un nouveau fichier à la `App_Code` dossier nommé `PageExtensionMethods.cs`. Ajouter une méthode d’extension nommée `FindControlRecursive` qui prend comme entrée un `string` paramètre nommé `controlID`. Méthodes d’extension fonctionner correctement, il est essentiel que la classe elle-même et ses méthodes d’extension marqué `static`. En outre, toutes les méthodes d’extension doivent accepter comme leur premier paramètre un objet du type auquel s’applique la méthode d’extension et ce paramètre d’entrée doivent être précédées du mot clé `this`.
@@ -211,7 +211,7 @@ Entrez le code suivant dans le `SubmitButton_Click` Gestionnaire d’événement
 [!code-csharp[Main](control-id-naming-in-content-pages-cs/samples/sample13.cs)]
 
 > [!NOTE]
-> Étant donné que les méthodes d’extension débutent avec c# 3.0 et Visual Basic 9, si vous utilisez Visual Studio 2005 vous ne pouvez pas utiliser les méthodes d’extension. Au lieu de cela, vous devez implémenter la `FindControlRecursive` méthode dans une classe d’assistance. [Rick Strahl](http://www.west-wind.com/WebLog/default.aspx) a ce type d’exemple dans son billet de blog, [principale des Pages ASP.NET et `FindControl` ](http://www.west-wind.com/WebLog/posts/5127.aspx).
+> Étant donné que les méthodes d’extension débutent avec C# 3.0 et Visual Basic 9, si vous utilisez Visual Studio 2005 vous ne pouvez pas utiliser les méthodes d’extension. Au lieu de cela, vous devez implémenter la `FindControlRecursive` méthode dans une classe d’assistance. [Rick Strahl](http://www.west-wind.com/WebLog/default.aspx) a ce type d’exemple dans son billet de blog, [principale des Pages ASP.NET et `FindControl` ](http://www.west-wind.com/WebLog/posts/5127.aspx).
 
 
 ## <a name="step-4-using-the-correctidattribute-value-in-client-side-script"></a>Étape 4 : À l’aide de la bonne`id`valeur dans un Script côté Client de l’attribut

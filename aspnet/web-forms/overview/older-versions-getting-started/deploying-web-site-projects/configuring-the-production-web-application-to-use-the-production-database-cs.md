@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-the-production-web-application-to-use-the-production-database-cs
-title: Configuration de l’Application Web de Production à utiliser la base de données de Production (c#) | Microsoft Docs
+title: Configuration de l’Application Web de Production à utiliser la base de données de Production (C#) | Microsoft Docs
 author: rick-anderson
 description: Comme indiqué dans les didacticiels précédents, il n’est pas rare que les informations de configuration diffèrent entre les environnements de développement et de production. Il s’agit d’es...
 ms.author: riande

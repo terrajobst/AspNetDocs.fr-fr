@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-cs
-title: À l’aide de la classe TagBuilder pour générer des Helpers HTML (c#) | Microsoft Docs
+title: À l’aide de la classe TagBuilder pour générer des Helpers HTML (C#) | Microsoft Docs
 author: StephenWalther
 description: Stephen Walther vous présente une classe d’utilitaire utile dans l’infrastructure ASP.NET MVC nommé la classe TagBuilder. Vous pouvez utiliser la classe TagBuilder pour facilement...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57055926"
 ---
-<a name="using-the-tagbuilder-class-to-build-html-helpers-c"></a>À l’aide de la classe TagBuilder pour générer des Helpers HTML (c#)
+<a name="using-the-tagbuilder-class-to-build-html-helpers-c"></a>À l’aide de la classe TagBuilder pour générer des Helpers HTML (C#)
 ====================
 par [Stephen Walther](https://github.com/StephenWalther)
 

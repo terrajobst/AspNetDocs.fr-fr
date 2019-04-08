@@ -101,7 +101,7 @@ Dans l’Explorateur de solutions, cliquez sur le **modèles** dossier. Sélecti
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image4.png)
 
-Dans le **modèles** volet, sélectionnez **modèles installés** et développez le nœud c#. Dans c#, sélectionnez **Code**. Dans la liste des modèles de code, sélectionnez **Interface**. Nom de l’interface &quot;IProductRepository&quot;.
+Dans le **modèles** volet, sélectionnez **modèles installés** et développez le nœud C#. Dans C#, sélectionnez **Code**. Dans la liste des modèles de code, sélectionnez **Interface**. Nom de l’interface &quot;IProductRepository&quot;.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image5.png)
 

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/examining-the-events-associated-with-inserting-updating-and-deleting-cs
-title: Examen des événements associés de l’insertion, la mise à jour et suppression (c#) | Microsoft Docs
+title: Examen des événements associés de l’insertion, la mise à jour et suppression (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons examiner l’utilisation des événements qui se produisent avant, pendant et après une instruction insert, update ou delete d’opération d’un contrôle Web de données ASP.NET. W...
 ms.author: riande

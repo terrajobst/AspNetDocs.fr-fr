@@ -38,7 +38,7 @@ Listing 1 contient un simple contrôleur nommé ProductController.
 
 [!code-vb[Main](asp-net-mvc-controller-overview-vb/samples/sample1.vb)]
 
-Comme vous pouvez le voir à partir de la liste 1, un contrôleur est simplement une classe (une classe Visual Basic .NET ou c#). Un contrôleur est une classe qui dérive de la classe de base System.Web.Mvc.Controller. Un contrôleur hérite de cette classe de base, un contrôleur hérite de plusieurs méthodes utiles gratuitement (nous y reviendrons ces méthodes dans un instant).
+Comme vous pouvez le voir à partir de la liste 1, un contrôleur est simplement une classe (une classe Visual Basic .NET ou C#). Un contrôleur est une classe qui dérive de la classe de base System.Web.Mvc.Controller. Un contrôleur hérite de cette classe de base, un contrôleur hérite de plusieurs méthodes utiles gratuitement (nous y reviendrons ces méthodes dans un instant).
 
 ## <a name="understanding-controller-actions"></a>Présentation des Actions de contrôleur
 

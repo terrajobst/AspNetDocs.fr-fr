@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/formatting-the-datalist-and-repeater-based-upon-data-cs
-title: Mise en forme les contrôles DataList et Repeater en fonction des données (c#) | Microsoft Docs
+title: Mise en forme les contrôles DataList et Repeater en fonction des données (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous détaillerons à obtenir des exemples de la façon dont nous mettre en forme l’apparence des contrôles DataList et Repeater, à l’aide des fonctions de mise en forme avec...
 ms.author: riande

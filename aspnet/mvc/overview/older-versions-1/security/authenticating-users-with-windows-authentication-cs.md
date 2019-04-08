@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/security/authenticating-users-with-windows-authentication-cs
-title: L’authentification des utilisateurs avec l’authentification Windows (c#) | Microsoft Docs
+title: L’authentification des utilisateurs avec l’authentification Windows (C#) | Microsoft Docs
 author: microsoft
 description: Découvrez comment utiliser l’authentification Windows dans le contexte d’une application MVC. Vous allez apprendre à activer l’authentification Windows au sein de la quantité de co de votre application web...
 ms.author: riande

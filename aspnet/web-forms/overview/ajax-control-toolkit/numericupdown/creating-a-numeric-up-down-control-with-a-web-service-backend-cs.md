@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/numericupdown/creating-a-numeric-up-down-control-with-a-web-service-backend-cs
-title: Création d’un numérique haut/bas contrôle avec un Backend de Service Web (c#) | Microsoft Docs
+title: Création d’un numérique haut/bas contrôle avec un Backend de Service Web (C#) | Microsoft Docs
 author: wenz
 description: Au lieu de laisser un utilisateur de taper une valeur dans une case à cocher, contrôle (qui existe sur Windows et d’autres systèmes d’exploitation) haut/bas numérique peut s’avérer plus que c...
 ms.author: riande

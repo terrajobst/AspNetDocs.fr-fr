@@ -39,7 +39,7 @@ Il s’agit du premier didacticiel d’une série de didacticiels présentant de
 - Limiter l’accès à une page web, directory ou des fonctionnalités spécifiques en fonction du rôle de l’utilisateur connecté
 - Personnaliser et étendre ASP. Contrôles Web de sécurité du NET
 
-Ces didacticiels sont conçues pour être concis et fournissent des instructions pas à pas avec de nombreuses captures d’écran pour vous guident tout au long du processus visuellement. Chaque didacticiel est disponible dans les versions de Visual Basic et c# et inclut un téléchargement de l’intégralité du code utilisé. (Ce premier didacticiel se concentre sur les concepts de sécurité à partir d’un point de vue de haut niveau et par conséquent ne contient-elle pas de code associé).
+Ces didacticiels sont conçues pour être concis et fournissent des instructions pas à pas avec de nombreuses captures d’écran pour vous guident tout au long du processus visuellement. Chaque didacticiel est disponible dans les versions de Visual Basic et C# et inclut un téléchargement de l’intégralité du code utilisé. (Ce premier didacticiel se concentre sur les concepts de sécurité à partir d’un point de vue de haut niveau et par conséquent ne contient-elle pas de code associé).
 
 Dans ce didacticiel, nous aborderons les concepts de sécurité importantes et quelles fonctionnalités sont disponibles dans ASP.NET pour vous aider à implémenter l’authentification par formulaire, l’autorisation, comptes d’utilisateurs et rôles. C’est parti !
 

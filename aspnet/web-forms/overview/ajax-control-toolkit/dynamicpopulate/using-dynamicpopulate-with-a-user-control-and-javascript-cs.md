@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/dynamicpopulate/using-dynamicpopulate-with-a-user-control-and-javascript-cs
-title: Utilisation de DynamicPopulate avec un contrôle utilisateur et le JavaScript (c#) | Microsoft Docs
+title: Utilisation de DynamicPopulate avec un contrôle utilisateur et le JavaScript (C#) | Microsoft Docs
 author: wenz
 description: Le contrôle de DynamicPopulate dans ASP.NET AJAX Control Toolkit appelle un service web (ou une méthode de page) et remplit la valeur obtenue dans un contrôle cible sur t...
 ms.author: riande

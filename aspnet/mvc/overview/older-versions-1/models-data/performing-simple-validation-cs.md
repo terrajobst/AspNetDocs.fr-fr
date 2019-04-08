@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/performing-simple-validation-cs
-title: Effectuer une Validation Simple (c#) | Microsoft Docs
+title: Effectuer une Validation Simple (C#) | Microsoft Docs
 author: StephenWalther
 description: Découvrez comment effectuer la validation dans une application ASP.NET MVC. Dans ce didacticiel, Stephen Walther présente l’état du modèle et l’application d’assistance de validation HTML...
 ms.author: riande

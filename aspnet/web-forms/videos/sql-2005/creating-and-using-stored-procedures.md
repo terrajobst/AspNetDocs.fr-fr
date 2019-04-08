@@ -19,7 +19,7 @@ ms.locfileid: "57037666"
 ====================
 by [Microsoft](https://github.com/microsoft)
 
-Cette vidéo se développe sur la rubrique de procédures stockées qui a été introduit il y a de plusieurs leçons. Dans cette vidéo, nous expliquons la syntaxe de base pour créer et mettre à jour des procédures stockées, à l’aide des paramètres d’entrée et de sortie, valeurs de retour, la déclaration de variables et ajout d’autres éléments de programmation de T-SQL dans vos procédures stockées, comment exécuter des procédures stockées à partir de la fenêtre de requête et enfin la syntaxe Visual Basic et c# requises pour utiliser des procédures stockées dans vos propres applications.
+Cette vidéo se développe sur la rubrique de procédures stockées qui a été introduit il y a de plusieurs leçons. Dans cette vidéo, nous expliquons la syntaxe de base pour créer et mettre à jour des procédures stockées, à l’aide des paramètres d’entrée et de sortie, valeurs de retour, la déclaration de variables et ajout d’autres éléments de programmation de T-SQL dans vos procédures stockées, comment exécuter des procédures stockées à partir de la fenêtre de requête et enfin la syntaxe Visual Basic et C# requises pour utiliser des procédures stockées dans vos propres applications.
 
 [&#9654;Regardez la vidéo (42 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-and-using-stored-procedures)
 

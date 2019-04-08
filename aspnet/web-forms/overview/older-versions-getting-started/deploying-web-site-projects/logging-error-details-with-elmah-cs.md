@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs
-title: Journalisation des détails des erreurs avec ELMAH (c#) | Microsoft Docs
+title: Journalisation des détails des erreurs avec ELMAH (C#) | Microsoft Docs
 author: rick-anderson
 description: Erreur de journalisation des Modules et gestionnaires (ELMAH) offre une autre approche pour la journalisation des erreurs d’exécution dans un environnement de production. ELMAH une erreur s’est gratuit et open source...
 ms.author: riande
@@ -231,7 +231,7 @@ Le balisage suivant indique à ELMAH se ne pas les 404 erreurs.
 > N’oubliez pas que pour pouvoir utiliser le filtrage des erreurs que vous devez inscrire le `ErrorFilterModule` HTTP Module.
 
 
-Le `<equal>` élément à l’intérieur du `<test>` section est appelée une assertion. Si l’assertion a la valeur true, puis l’erreur est filtré à partir du journal de ELMAH. Il existe d’autres assertions disponibles, notamment : `<greater>`, `<greater-or-equal>`, `<not-equal>`, `<lesser>`, `<lesser-or-equal>`, et ainsi de suite. Vous pouvez également combiner des assertions à l’aide de la `<and>` et `<or>` opérateurs booléens. De plus, vous pouvez même inclure une expression JavaScript simple comme une assertion, ou écrire vos propres assertions en c# ou Visual Basic.
+Le `<equal>` élément à l’intérieur du `<test>` section est appelée une assertion. Si l’assertion a la valeur true, puis l’erreur est filtré à partir du journal de ELMAH. Il existe d’autres assertions disponibles, notamment : `<greater>`, `<greater-or-equal>`, `<not-equal>`, `<lesser>`, `<lesser-or-equal>`, et ainsi de suite. Vous pouvez également combiner des assertions à l’aide de la `<and>` et `<or>` opérateurs booléens. De plus, vous pouvez même inclure une expression JavaScript simple comme une assertion, ou écrire vos propres assertions en C# ou Visual Basic.
 
 Pour plus d’informations sur l’erreur de ELMAH fonctionnalités de filtrage, reportez-vous à la [section de filtrage des erreurs](https://code.google.com/p/elmah/wiki/ErrorFiltering) dans le [ELMAH wiki](https://code.google.com/p/elmah/w/list).
 

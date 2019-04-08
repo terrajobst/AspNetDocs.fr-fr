@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/modifying-animations-from-the-server-side-cs
-title: Modification d’Animations depuis le côté serveur (c#) | Microsoft Docs
+title: Modification d’Animations depuis le côté serveur (C#) | Microsoft Docs
 author: wenz
 description: Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Les animations peuvent également...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57041426"
 ---
-<a name="modifying-animations-from-the-server-side-c"></a>Modification d’Animations depuis le côté serveur (c#)
+<a name="modifying-animations-from-the-server-side-c"></a>Modification d’Animations depuis le côté serveur (C#)
 ====================
 par [Christian Wenz](https://github.com/wenz)
 

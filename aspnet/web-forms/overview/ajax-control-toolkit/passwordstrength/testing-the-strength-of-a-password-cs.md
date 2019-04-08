@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-cs
-title: Test de la force de mot de passe (c#) | Microsoft Docs
+title: Test de la force de mot de passe (C#) | Microsoft Docs
 author: wenz
 description: Presque n’importe où, les mots de passe sont requis afin que les utilisateurs différés ont tendance à choisir des mots de passe simples qui sont faciles à arrêter. Le contrôle PasswordStrength dans ASP. N....
 ms.author: riande

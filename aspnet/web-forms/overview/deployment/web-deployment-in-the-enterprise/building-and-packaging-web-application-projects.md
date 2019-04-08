@@ -34,13 +34,13 @@ Dans Visual Studio 2010, le processus de génération et de déploiement pour le
 
 ## <a name="how-does-the-wpp-work"></a>Comment fonctionne le WPP ?
 
-Si vous examinez le fichier projet pour c#-projet d’application web en fonction, vous pouvez voir qu’il importe de deux fichiers .targets.
+Si vous examinez le fichier projet pour C#-projet d’application web en fonction, vous pouvez voir qu’il importe de deux fichiers .targets.
 
 
 [!code-xml[Main](building-and-packaging-web-application-projects/samples/sample1.xml)]
 
 
-La première **importation** instruction est commune à tous les projets Visual c#. Ce fichier, *Microsoft.CSharp.targets*, contient les cibles et les tâches qui sont spécifiques à Visual c#. Par exemple, le compilateur c# (**Csc**) tâche est appelée ici. Le *Microsoft.CSharp.targets* de fichiers à son tour importations le *Microsoft.Common.targets* fichier. Définit les cibles qui sont communes à tous les projets, comme **Build**, **reconstruire**, **exécuter**, **compiler**, et **nettoyer** . La seconde **importation** instruction est spécifique aux projets d’application web. Le *Microsoft.WebApplication.targets* de fichiers à son tour importations le *Microsoft.Web.Publishing.targets* fichier. Le *Microsoft.Web.Publishing.targets* fichier essentiellement *est* les fournisseurs de services. Il définit des cibles, par exemple **Package** et **MSDeployPublish**, qui appeler Web Deploy pour effectuer diverses tâches de déploiement.
+La première **importation** instruction est commune à tous les projets Visual C#. Ce fichier, *Microsoft.CSharp.targets*, contient les cibles et les tâches qui sont spécifiques à Visual C#. Par exemple, le compilateur C# (**Csc**) tâche est appelée ici. Le *Microsoft.CSharp.targets* de fichiers à son tour importations le *Microsoft.Common.targets* fichier. Définit les cibles qui sont communes à tous les projets, comme **Build**, **reconstruire**, **exécuter**, **compiler**, et **nettoyer** . La seconde **importation** instruction est spécifique aux projets d’application web. Le *Microsoft.WebApplication.targets* de fichiers à son tour importations le *Microsoft.Web.Publishing.targets* fichier. Le *Microsoft.Web.Publishing.targets* fichier essentiellement *est* les fournisseurs de services. Il définit des cibles, par exemple **Package** et **MSDeployPublish**, qui appeler Web Deploy pour effectuer diverses tâches de déploiement.
 
 Pour comprendre comment ces cibles supplémentaires sont utilisés, dans l’exemple de solution du Gestionnaire de contacts, ouvrez le *Publish.proj* de fichiers et de jeter un coup de œil à la **BuildProjects** cible.
 

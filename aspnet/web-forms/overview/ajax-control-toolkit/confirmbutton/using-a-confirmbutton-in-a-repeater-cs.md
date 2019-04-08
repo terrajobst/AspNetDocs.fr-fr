@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-cs
-title: Utilisation d’un ConfirmButton dans un répéteur (c#) | Microsoft Docs
+title: Utilisation d’un ConfirmButton dans un répéteur (C#) | Microsoft Docs
 author: wenz
 description: L’extendeur ConfirmButton dans AJAX Control Toolkit crée un Oui/pas de fenêtre contextuelle lorsque l’utilisateur clique sur un bouton (y compris contrôle LinkButton). Uniquement si Oui est...
 ms.author: riande

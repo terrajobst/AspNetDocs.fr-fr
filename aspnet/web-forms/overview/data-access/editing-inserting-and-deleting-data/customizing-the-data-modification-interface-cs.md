@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/customizing-the-data-modification-interface-cs
-title: Personnalisation de l’Interface de Modification de données (c#) | Microsoft Docs
+title: Personnalisation de l’Interface de Modification de données (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons examiner comment personnaliser l’interface d’un GridView modifiable, en remplaçant la zone de texte standard et contrôle de case à cocher avec secondaire...
 ms.author: riande

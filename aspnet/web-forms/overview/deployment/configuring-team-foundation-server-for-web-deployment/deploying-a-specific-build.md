@@ -45,7 +45,7 @@ Pour ce faire, vous devez indiquer où trouver les packages web et les scripts d
 Dans le [exemple de solution](../web-deployment-in-the-enterprise/the-contact-manager-solution.md), le *Publish.proj* fichier déclare une propriété nommée **OutputRoot**. Comme son nom l’indique, il s’agit du dossier racine qui contient tout ce qui génère le processus de génération. Dans le *Publish.proj* de fichiers, vous pouvez voir que le **OutputRoot** propriété fait référence à l’emplacement racine pour toutes les ressources de déploiement.
 
 > [!NOTE]
-> **OutputRoot** est un nom de propriété couramment utilisés. Les fichiers de projet Visual c# et Visual Basic également déclarent cette propriété pour stocker l’emplacement racine de toutes les sorties de génération.
+> **OutputRoot** est un nom de propriété couramment utilisés. Les fichiers de projet Visual C# et Visual Basic également déclarent cette propriété pour stocker l’emplacement racine de toutes les sorties de génération.
 
 
 [!code-xml[Main](deploying-a-specific-build/samples/sample1.xml)]

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/membership/storing-additional-user-information-cs
-title: Stockage des informations utilisateur supplémentaires (c#) | Microsoft Docs
+title: Stockage des informations utilisateur supplémentaires (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel nous répondrons à cette question par la création d’une application de livre d’or très rudimentaires. Ce faisant, nous examinerons les différentes options pour modeli...
 ms.author: riande

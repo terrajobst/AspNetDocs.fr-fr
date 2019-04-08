@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/masterdetail/master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs
-title: Maître/détail utilisant un GridView maître avec une DetailView des détails (c#) | Microsoft Docs
+title: Maître/détail utilisant un GridView maître avec une DetailView des détails (C#) | Microsoft Docs
 author: rick-anderson
 description: Ce didacticiel aura un GridView dont les lignes incluent le nom et le prix de chaque produit ainsi que d’un bouton Sélectionner. En cliquant sur le bouton Sélectionner pour un particu...
 ms.author: riande

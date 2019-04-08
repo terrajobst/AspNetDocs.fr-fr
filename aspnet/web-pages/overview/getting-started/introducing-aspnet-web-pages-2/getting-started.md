@@ -63,7 +63,7 @@ Nous partons du principe que vous êtes familiarisé avec :
 - **Feuilles de style en cascade (CSS)**. Identique au code HTML.
 - **Idées de base de données**. Si vous avez utilisé une feuille de calcul pour les données et trié et filtré les données, ce qui sont le niveau d’expertise nous partons généralement pour cet ensemble de didacticiels.
 
-Nous supposons également que vous êtes intéressé par apprentissage de la programmation de base. Pages Web ASP.NET utilisent un langage de programmation appelé c#. Vous n’êtes pas obligé d’avoir n’importe quel arrière-plan en programmation, juste un intérêt qu’il contient. Si vous avez déjà rédigé un JavaScript dans une page web avant, vous avez beaucoup d’arrière-plan.
+Nous supposons également que vous êtes intéressé par apprentissage de la programmation de base. Pages Web ASP.NET utilisent un langage de programmation appelé C#. Vous n’êtes pas obligé d’avoir n’importe quel arrière-plan en programmation, juste un intérêt qu’il contient. Si vous avez déjà rédigé un JavaScript dans une page web avant, vous avez beaucoup d’arrière-plan.
 
 Notez que si vous êtes familiarisé avec la programmation, vous constaterez peut-être que ce didacticiel défini initialement déplace lentement pendant que nous présentons les programmeurs débutants rapidement. À mesure que nous au-delà de la première peu de didacticiels, cependant, il y aura moins de base de programmation pour expliquer et avance le long de choses à un élément plus rapide.
 

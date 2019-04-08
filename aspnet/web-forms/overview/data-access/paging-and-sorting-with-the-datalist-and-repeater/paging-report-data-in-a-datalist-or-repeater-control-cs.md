@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-cs
-title: Pagination des données de rapport dans un contrôle DataList ou Repeater (c#) | Microsoft Docs
+title: Pagination des données de rapport dans un contrôle DataList ou Repeater (C#) | Microsoft Docs
 author: rick-anderson
 description: Lors du Repeater ni DataList offre la pagination automatique ou prise en charge de tri, ce didacticiel montre comment ajouter la prise en charge la pagination pour le contrôle DataList ou Repeater...
 ms.author: riande

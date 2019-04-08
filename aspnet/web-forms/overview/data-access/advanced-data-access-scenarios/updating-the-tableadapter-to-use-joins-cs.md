@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-cs
-title: Mise à jour le TableAdapter à utiliser des jointures (c#) | Microsoft Docs
+title: Mise à jour le TableAdapter à utiliser des jointures (C#) | Microsoft Docs
 author: rick-anderson
 description: Lorsque vous travaillez avec une base de données, il est courant pour demander des données qui sont réparties sur plusieurs tables. Pour récupérer des données à partir de deux tables différentes, nous pouvons utiliser soit...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-cs
-title: Détermination des fichiers qui doivent être déployés (c#) | Microsoft Docs
+title: Détermination des fichiers qui doivent être déployés (C#) | Microsoft Docs
 author: rick-anderson
 description: Fichiers qui doivent être déployées à partir de l’environnement de développement à l’environnement de production dépend en partie indique si l’application ASP.NET de génération nous...
 ms.author: riande
@@ -32,7 +32,7 @@ En règle générale, tous les fichiers de prise en charge côté client doivent
 
 ## <a name="explicit-compilation-versus-automatic-compilation"></a>Compilation explicite par rapport à une Compilation automatique
 
-Les pages web ASP.NET sont divisées en code source et de balisage déclaratif. La partie du balisage déclaratif inclut HTML, les commandes et syntaxe de liaison de données ; la partie de code contient les gestionnaires d’événements écrits en code Visual Basic ou c#. Les portions du balisage et code sont généralement divisées en différents fichiers : `WebPage.aspx` contient le balisage déclaratif lors `WebPage.aspx.cs` héberge le code.
+Les pages web ASP.NET sont divisées en code source et de balisage déclaratif. La partie du balisage déclaratif inclut HTML, les commandes et syntaxe de liaison de données ; la partie de code contient les gestionnaires d’événements écrits en code Visual Basic ou C#. Les portions du balisage et code sont généralement divisées en différents fichiers : `WebPage.aspx` contient le balisage déclaratif lors `WebPage.aspx.cs` héberge le code.
 
 Considérez une page ASP.NET nommée Clock.aspx qui contient un contrôle étiquette dont la propriété Text est définie à la date et heure actuelles lorsque la page se charge. La partie du balisage déclaratif (dans `Clock.aspx`) contient le balisage pour un contrôle Web Label -`<asp:Label runat="server" id="TimeLabel" />` - lors de la partie du code (dans `Clock.aspx.cs`) aurait un `Page_Load` Gestionnaire d’événements par le code suivant :
 

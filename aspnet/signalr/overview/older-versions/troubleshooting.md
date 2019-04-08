@@ -65,7 +65,7 @@ SignalR utilise deux modèles de communication : Hubs et PersistentConnections.
 
 [!code-javascript[Main](troubleshooting/samples/sample2.js)]
 
-**Code de serveur c# qui mappe un itinéraire à une PersistentConnection**
+**Code de serveur C# qui mappe un itinéraire à une PersistentConnection**
 
 [!code-csharp[Main](troubleshooting/samples/sample3.cs)]
 
@@ -127,7 +127,7 @@ Si une connexion entre domaines (une connexion pour lequel l’URL de SignalR n�
 
 Une connexion dans une application cliente .NET qui utilise la sécurité de domaine peut échouer si la connexion n’est pas configurée correctement. Pour utiliser SignalR dans un environnement de domaine, définissez la propriété de connexion requis comme suit :
 
-**Code de client c# qui implémente les informations d’identification de connexion**
+**Code de client C# qui implémente les informations d’identification de connexion**
 
 [!code-csharp[Main](troubleshooting/samples/sample9.cs)]
 

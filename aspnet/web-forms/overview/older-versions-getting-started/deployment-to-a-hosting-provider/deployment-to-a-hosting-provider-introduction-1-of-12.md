@@ -68,7 +68,7 @@ Pour ce didacticiel, vous déployez un projet Web Forms ASP.NET, mais tout ce do
 
 ## <a name="programming-language"></a>Langage de programmation
 
-L’exemple d’application utilise c#, mais les didacticiels ne nécessitent pas de connaissances du langage c# et les techniques de déploiement illustrés par les didacticiels ne sont pas spécifiques au langage.
+L’exemple d’application utilise C#, mais les didacticiels ne nécessitent pas de connaissances du langage C# et les techniques de déploiement illustrés par les didacticiels ne sont pas spécifiques au langage.
 
 ## <a name="troubleshooting-during-this-tutorial"></a>Résolution des problèmes au cours de ce didacticiel
 

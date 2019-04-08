@@ -59,7 +59,7 @@ Visual Web Developer est un IDE ou l’environnement de développement intégré
 
 ## <a name="creating-your-first-application"></a>Créer votre première Application
 
-Vous pouvez créer des applications à l’aide de Visual Basic ou Visual c#. Pour l’instant, sélectionnez Visual c# sur la gauche, puis choisissez « Application Web de ASP.NET MVC 2. » Nommez votre projet « Movies » et cliquez sur OK.
+Vous pouvez créer des applications à l’aide de Visual Basic ou Visual C#. Pour l’instant, sélectionnez Visual C# sur la gauche, puis choisissez « Application Web de ASP.NET MVC 2. » Nommez votre projet « Movies » et cliquez sur OK.
 
 [![Nouveau projet](getting-started-with-mvc-part1/_static/image8.png)](getting-started-with-mvc-part1/_static/image7.png)
 

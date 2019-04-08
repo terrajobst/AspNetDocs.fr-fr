@@ -19,9 +19,9 @@ ms.locfileid: "57034626"
 ====================
 par [Erik Reitan](https://github.com/Erikre)
 
-[Télécharger le projet de Wingtip Toys exemple (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Télécharger le projet de Wingtip Toys exemple (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
+> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
 
 
 Ce didacticiel décrit comment modifier l’exemple d’application Wingtip Toys à inclure l’autorisation de l’utilisateur, inscription et paiement à l’aide de PayPal. Uniquement les utilisateurs qui sont connectés dans aura l’autorisation d’acheter des produits. Fonctionnalités de l’inscription utilisateur intégrés du modèle de projet Web Forms ASP.NET 4.5 incluent déjà une grande partie de ce dont vous avez besoin. Vous allez ajouter la fonctionnalité de validation d’Express PayPal. Dans ce didacticiel vous utiliser le développeur de PayPal environnement, de test et aucun fonds réels ne seront transférées. À la fin du didacticiel, vous allez tester l’application en sélectionnant les produits à ajouter au panier d’achat, en cliquant sur le bouton de validation et transfert de données vers le site web de test PayPal. Sur le site web de test PayPal, vous confirmez vos informations d’expédition et de paiement et puis revenez à l’exemple d’application Wingtip Toys local pour confirmer et terminer l’achat.
@@ -304,7 +304,7 @@ Vous devez placer la majorité du code PayPal en une seule classe. Cette classe 
 
 > [!NOTE] 
 > 
-> Dans cet exemple d’application vous ajoutez simplement informations d’identification dans un fichier c# (.cs). Toutefois, dans une solution implémentée, vous devez envisager de chiffrer vos informations d’identification dans un fichier de configuration.
+> Dans cet exemple d’application vous ajoutez simplement informations d’identification dans un fichier C# (.cs). Toutefois, dans une solution implémentée, vous devez envisager de chiffrer vos informations d’identification dans un fichier de configuration.
 
 
 La classe NVPAPICaller contient la majorité des fonctionnalités de PayPal. Le code dans la classe fournit les méthodes nécessaires pour effectuer un test d’achat à partir de l’environnement de test de PayPal. Les fonctions de PayPal trois suivantes sont utilisées pour effectuer des achats :

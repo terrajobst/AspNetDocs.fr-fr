@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-a-database-cs
-title: Déploiement d’une base de données (c#) | Microsoft Docs
+title: Déploiement d’une base de données (C#) | Microsoft Docs
 author: rick-anderson
 description: Déploiement d’une application web ASP.NET implique l’obtention de fichiers nécessaires et aux ressources à partir de l’environnement de développement à l’environnement de production. Pour da...
 ms.author: riande

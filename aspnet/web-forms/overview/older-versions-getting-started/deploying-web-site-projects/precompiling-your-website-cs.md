@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/precompiling-your-website-cs
-title: Précompilation de votre site Web (c#) | Microsoft Docs
+title: Précompilation de votre site Web (C#) | Microsoft Docs
 author: rick-anderson
 description: 'Visual Studio offre aux développeurs ASP.NET de deux types de projets : Projets d’Application Web (WAP) et les projets de Site Web (WSP). Parmi le principales différences betwe...'
 ms.author: riande

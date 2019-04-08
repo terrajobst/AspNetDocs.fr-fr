@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/custom-button-actions/adding-and-responding-to-buttons-to-a-gridview-cs
-title: Ajout et réponse à des boutons sur un GridView (c#) | Microsoft Docs
+title: Ajout et réponse à des boutons sur un GridView (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons examiner comment ajouter des boutons personnalisés, à la fois à un modèle et aux champs d’un contrôle GridView ou DetailsView. En particulier, nous allons build...
 ms.author: riande

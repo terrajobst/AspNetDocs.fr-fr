@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/roles/assigning-roles-to-users-cs
-title: Attribution de rôles aux utilisateurs (c#) | Microsoft Docs
+title: Attribution de rôles aux utilisateurs (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons créer deux pages ASP.NET afin de faciliter la gestion de ce que les utilisateurs appartiennent à quels rôles. La première page comprend les ressources nécessaires pour voir ce que...
 ms.author: riande

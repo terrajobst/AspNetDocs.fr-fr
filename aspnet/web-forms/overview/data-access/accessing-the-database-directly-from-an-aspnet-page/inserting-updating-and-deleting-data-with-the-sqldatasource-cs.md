@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/inserting-updating-and-deleting-data-with-the-sqldatasource-cs
-title: Insertion, mise à jour et suppression de données avec SqlDataSource (c#) | Microsoft Docs
+title: Insertion, mise à jour et suppression de données avec SqlDataSource (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans les didacticiels précédents, nous avons appris comment le contrôle ObjectDataSource autorisé pour l’insertion, la mise à jour et suppression de données. Le contrôle SqlDataSource prend en charge t...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/roles/role-based-authorization-cs
-title: Autorisation en fonction du rôle (c#) | Microsoft Docs
+title: Autorisation en fonction du rôle (C#) | Microsoft Docs
 author: rick-anderson
 description: Ce didacticiel commence par examiner comment le framework de rôles associe des rôles d’un utilisateur à son contexte de sécurité. Il examine ensuite comment appliquer des URL en fonction du rôle...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-cs
-title: Interaction avec la Page de contenu à partir de la Page maître (c#) | Microsoft Docs
+title: Interaction avec la Page de contenu à partir de la Page maître (C#) | Microsoft Docs
 author: rick-anderson
 description: Examine la manière d’appeler des méthodes, définissez des propriétés, etc. de la Page de contenu à partir du code dans la Page maître.
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/cascadingdropdown/presetting-list-entries-with-cascadingdropdown-cs
-title: Prédéfinition des entrées de liste avec CascadingDropDown (c#) | Microsoft Docs
+title: Prédéfinition des entrées de liste avec CascadingDropDown (C#) | Microsoft Docs
 author: wenz
 description: Le contrôle CascadingDropDown dans AJAX Control Toolkit étend un contrôle DropDownList afin que les modifications dans un DropDownList charges associés à des valeurs dans anoth...
 ms.author: riande

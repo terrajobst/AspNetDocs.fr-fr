@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-cs
-title: Bien démarrer avec AJAX Control Toolkit (c#) | Microsoft Docs
+title: Bien démarrer avec AJAX Control Toolkit (C#) | Microsoft Docs
 author: microsoft
 description: Apprendre tout ce que vous devez savoir pour commencer à utiliser les outils de contrôle AJAX.
 ms.author: riande

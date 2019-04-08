@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/masterdetail/master-detail-filtering-with-two-dropdownlists-cs
-title: Maître/détail filtrage avec deux DropDownList (c#) | Microsoft Docs
+title: Maître/détail filtrage avec deux DropDownList (C#) | Microsoft Docs
 author: rick-anderson
 description: Ce didacticiel développe la relation maître/détail pour ajouter une troisième couche, à l’aide de deux contrôles DropDownList pour sélectionner le dit parent et le grand-parent souhaité...
 ms.author: riande

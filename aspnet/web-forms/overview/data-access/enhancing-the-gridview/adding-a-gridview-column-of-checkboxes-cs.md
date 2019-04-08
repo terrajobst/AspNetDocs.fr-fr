@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs
-title: Ajout d’une colonne GridView de cases à cocher (c#) | Microsoft Docs
+title: Ajout d’une colonne GridView de cases à cocher (C#) | Microsoft Docs
 author: rick-anderson
 description: Ce didacticiel explique comment ajouter une colonne de cases à cocher à un contrôle GridView à permettre aux utilisateurs de manière intuitive de la sélection de plusieurs lignes de G....
 ms.author: riande

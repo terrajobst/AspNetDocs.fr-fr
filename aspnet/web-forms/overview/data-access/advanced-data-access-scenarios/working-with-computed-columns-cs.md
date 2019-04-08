@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-cs
-title: Utilisation des colonnes calculées (c#) | Microsoft Docs
+title: Utilisation des colonnes calculées (C#) | Microsoft Docs
 author: rick-anderson
 description: Lorsque vous créez une table de base de données, Microsoft SQL Server vous permet de définir une colonne calculée, dont la valeur est calculée à partir d’une expression pouvant généralement referen...
 ms.author: riande

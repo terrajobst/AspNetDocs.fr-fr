@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-cs
-title: Création d’une Interface pour sélectionner un compte d’utilisateur à partir de nombreux (c#) | Microsoft Docs
+title: Création d’une Interface pour sélectionner un compte d’utilisateur à partir de nombreux (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons créer une interface utilisateur avec une grille paginée, filtrable. En particulier, l’interface utilisateur se compose d’une série de type LinkButton pour...
 ms.author: riande

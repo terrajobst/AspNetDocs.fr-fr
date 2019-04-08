@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/basic-reporting/programmatically-setting-the-objectdatasource-s-parameter-values-cs
-title: Définition par programmation des valeurs de paramètre de l’ObjectDataSource (c#) | Microsoft Docs
+title: Définition par programmation des valeurs de paramètre de l’ObjectDataSource (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons examiner l’ajout d’une méthode à notre DAL et la couche BLL qui accepte un seul paramètre d’entrée et retourne des données. L’exemple définit ce paramètre...
 ms.author: riande

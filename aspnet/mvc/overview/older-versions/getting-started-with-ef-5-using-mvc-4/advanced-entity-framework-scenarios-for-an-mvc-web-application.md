@@ -276,7 +276,7 @@ Pour plus d’informations sur les autres rubriques relatives à MVC, telles que
 
 ## <a name="vb"></a>VB
 
-Lorsque le didacticiel a été généré au départ, nous avons fourni des versions de c# et VB de projet téléchargement terminé. Avec cette mise à jour, nous offrons un projet téléchargeable c# pour chaque chapitre faciliter la prise en main n’importe où dans la série, mais en raison de contraintes de temps et d’autres priorités que nous n’avez pas que pour VB. Si vous générez un projet Visual Basic à l’aide de ces didacticiels et que vous êtes prêt à partager avec d’autres personnes, faites-le nous savoir.
+Lorsque le didacticiel a été généré au départ, nous avons fourni des versions de C# et VB de projet téléchargement terminé. Avec cette mise à jour, nous offrons un projet téléchargeable C# pour chaque chapitre faciliter la prise en main n’importe où dans la série, mais en raison de contraintes de temps et d’autres priorités que nous n’avez pas que pour VB. Si vous générez un projet Visual Basic à l’aide de ces didacticiels et que vous êtes prêt à partager avec d’autres personnes, faites-le nous savoir.
 
 <a id="errors"></a>
 

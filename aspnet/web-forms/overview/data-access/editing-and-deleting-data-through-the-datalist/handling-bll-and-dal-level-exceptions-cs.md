@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-cs
-title: Gestion des Exceptions de niveau BLL et DAL (c#) | Microsoft Docs
+title: Gestion des Exceptions de niveau BLL et DAL (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons voir comment gérer les exceptions levées au cours de flux de travail mis à jour d’une DataList modifiable tact.
 ms.author: riande

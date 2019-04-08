@@ -54,7 +54,7 @@ Ce didacticiel vous explique comment créer une application ASP.NET qui est conf
 
 Les étapes suivantes utilisent [Visual Studio Express 2013 pour le Web](https://www.microsoft.com/download/details.aspx?id=40747)et nécessite [Visual Studio 2013 Update 3](https://www.microsoft.com/download/details.aspx?id=43721).
 
-1. Dans Visual Studio, cliquez sur **fichier** , puis **nouveau projet**. Sur le **nouveau projet** boîte de dialogue, sélectionnez le Web Visual c# de projet dans le menu de gauche, cliquez sur **OK**. Vous pouvez également décocher le **ajouter Application Insights au projet** si vous ne souhaitez pas la fonctionnalité pour votre application.
+1. Dans Visual Studio, cliquez sur **fichier** , puis **nouveau projet**. Sur le **nouveau projet** boîte de dialogue, sélectionnez le Web Visual C# de projet dans le menu de gauche, cliquez sur **OK**. Vous pouvez également décocher le **ajouter Application Insights au projet** si vous ne souhaitez pas la fonctionnalité pour votre application.
 2. Dans le **nouveau projet ASP.NET** boîte de dialogue, sélectionnez **MVC**, puis cliquez sur **modifier l’authentification**.
 
     ![](developing-aspnet-apps-with-windows-azure-active-directory/_static/image6.png)

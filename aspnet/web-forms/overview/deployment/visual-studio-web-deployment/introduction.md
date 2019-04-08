@@ -67,7 +67,7 @@ L’exemple d’application est un projet Web Forms ASP.NET, mais tout ce dont v
 
 ## <a name="programming-language"></a>Langage de programmation
 
-L’exemple d’application utilise c#, mais les didacticiels ne nécessitent pas de connaissances du langage c# et les techniques de déploiement illustrés par les didacticiels ne sont pas spécifiques au langage.
+L’exemple d’application utilise C#, mais les didacticiels ne nécessitent pas de connaissances du langage C# et les techniques de déploiement illustrés par les didacticiels ne sont pas spécifiques au langage.
 
 ## <a name="database-deployment-methods"></a>Méthodes de déploiement de base de données
 
@@ -147,7 +147,7 @@ Lorsque vous avez les composants requis installés, téléchargez le [applicatio
 
 Pour préparer le projet pour étudier les étapes du didacticiel, procédez comme suit :
 
-1. Enregistrer les fichiers de solution ContosoUniversity à partir du dossier c# dans un dossier nommé ContosoUniversity dans le dossier que vous utilisez pour travailler avec des projets Visual Studio.
+1. Enregistrer les fichiers de solution ContosoUniversity à partir du dossier C# dans un dossier nommé ContosoUniversity dans le dossier que vous utilisez pour travailler avec des projets Visual Studio.
 
     Par défaut, cela est le dossier suivant pour Visual Studio 2012 :
 

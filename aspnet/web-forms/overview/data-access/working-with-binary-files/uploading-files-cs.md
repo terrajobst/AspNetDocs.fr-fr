@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-binary-files/uploading-files-cs
-title: Téléchargement de fichiers (c#) | Microsoft Docs
+title: Téléchargement de fichiers (C#) | Microsoft Docs
 author: rick-anderson
 description: Découvrez comment permettre aux utilisateurs de télécharger les fichiers binaires (tels que des documents Word ou PDF) à votre site Web où ils peuvent être stockées dans le système de fichiers soit du serveur...
 ms.author: riande

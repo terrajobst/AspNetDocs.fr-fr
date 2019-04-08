@@ -19,7 +19,7 @@ ms.locfileid: "57049506"
 ====================
 par Eric Lee
 
-Cette vidéo montre comment utiliser la couverture du code comme métrique pour déterminer l’efficacité nos tests est d’une application Web ASP.NET. Lorsqu’un test est terminé, Visual Studio Team System signale sur le pourcentage de code qui a été exécutée et indique le code exécuté avec un arrière-plan vert et le code non exécutée avec un arrière-plan rouge, ce qui facilite visualiser le code qui a été couverte par le test. Vous apprendrez également comment vous pouvez utiliser c# ou Visual Basic pour étendre le test automatisé.
+Cette vidéo montre comment utiliser la couverture du code comme métrique pour déterminer l’efficacité nos tests est d’une application Web ASP.NET. Lorsqu’un test est terminé, Visual Studio Team System signale sur le pourcentage de code qui a été exécutée et indique le code exécuté avec un arrière-plan vert et le code non exécutée avec un arrière-plan rouge, ce qui facilite visualiser le code qui a été couverte par le test. Vous apprendrez également comment vous pouvez utiliser C# ou Visual Basic pour étendre le test automatisé.
 
 [&#9654;Regardez la vidéo (6 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/code-coverage-of-automated-tests)
 

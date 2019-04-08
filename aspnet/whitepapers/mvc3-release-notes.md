@@ -277,7 +277,7 @@ Ces bibliothèques sont incluses comme packages NuGet préinstallés.
 
 ADO.NET Entity Framework 4.1 inclut la fonctionnalité Code First. Code First est un nouveau modèle de développement pour ADO.NET Entity Framework qui fournit une alternative aux modèles Database First et Model First existants.
 
-Code First consiste à définir votre modèle à l’aide des classes POCO (« plain old CLR objects ») écrites en Visual Basic ou c#. Ces classes peuvent ensuite être mappés à une base de données existante ou être utilisés pour générer un schéma de base de données. Une configuration supplémentaire peut être fournie à l’aide de *DataAnnotations* attributs ou à l’aide d’API fluent.
+Code First consiste à définir votre modèle à l’aide des classes POCO (« plain old CLR objects ») écrites en Visual Basic ou C#. Ces classes peuvent ensuite être mappés à une base de données existante ou être utilisés pour générer un schéma de base de données. Une configuration supplémentaire peut être fournie à l’aide de *DataAnnotations* attributs ou à l’aide d’API fluent.
 
 Documentation sur l’utilisation de Code Firstwith ASP.NET MVC est disponible sur le site Web ASP.NET aux URL suivantes :
 
@@ -793,7 +793,7 @@ Par défaut, le code dans le \_viewstart.cshtml fichier s’applique également 
 
 ### <a id="0.1__Toc274034225"></a>  Nouvelle prise en charge pour la syntaxe Razor VBHTML
 
-L’aperçu de ASP.NET MVC précédente inclus la prise en charge pour les vues à l’aide de la syntaxe Razor basée sur c#. Ces vues utilisent l’extension de fichier .cshtml. Dans le cadre du travail en cours pour prendre en charge de Razor, la version bêta d’ASP.NET MVC 3 introduit la prise en charge de la syntaxe Razor dans Visual Basic, qui utilise l’extension de fichier .vbhtml.
+L’aperçu de ASP.NET MVC précédente inclus la prise en charge pour les vues à l’aide de la syntaxe Razor basée sur C#. Ces vues utilisent l’extension de fichier .cshtml. Dans le cadre du travail en cours pour prendre en charge de Razor, la version bêta d’ASP.NET MVC 3 introduit la prise en charge de la syntaxe Razor dans Visual Basic, qui utilise l’extension de fichier .vbhtml.
 
 Pour une introduction à l’utilisation de la syntaxe Visual Basic dans les pages VBHTML, consultez le didacticiel à l’adresse suivante :
 

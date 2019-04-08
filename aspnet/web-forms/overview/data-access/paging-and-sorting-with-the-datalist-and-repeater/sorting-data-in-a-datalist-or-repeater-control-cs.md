@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-cs
-title: Tri des données dans un contrôle DataList ou Repeater (c#) | Microsoft Docs
+title: Tri des données dans un contrôle DataList ou Repeater (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons examiner comment inclure la prise en charge dans les contrôles DataList et Repeater de tri, ainsi que comment construire DataList ou Repeater dont les données peuvent...
 ms.author: riande

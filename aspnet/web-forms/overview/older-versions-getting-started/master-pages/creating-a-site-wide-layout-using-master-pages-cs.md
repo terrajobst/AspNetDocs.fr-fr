@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-cs
-title: Création d’une disposition de l’échelle du Site à l’aide de Pages maîtres (c#) | Microsoft Docs
+title: Création d’une disposition de l’échelle du Site à l’aide de Pages maîtres (C#) | Microsoft Docs
 author: rick-anderson
 description: Ce didacticiel explique les principes de base de page maître. À savoir quelles sont les pages maîtres, en quoi un créer une page maître, quelles sont les espaces réservés contenu, en quoi un retour chariot...
 ms.author: riande
@@ -47,7 +47,7 @@ Ceci est le premier didacticiel d’une série de didacticiels qui explorent les
 - Découvrez comment spécifier un contenu de page maître lors de l’exécution, et
 - Autres avancées des rubriques de la page maître.
 
-Ces didacticiels sont conçues pour être concis et fournissent des instructions pas à pas avec de nombreuses captures d’écran pour vous guident tout au long du processus visuellement. Chaque didacticiel est disponible dans les versions de Visual Basic et c# et inclut un téléchargement de l’intégralité du code utilisé.
+Ces didacticiels sont conçues pour être concis et fournissent des instructions pas à pas avec de nombreuses captures d’écran pour vous guident tout au long du processus visuellement. Chaque didacticiel est disponible dans les versions de Visual Basic et C# et inclut un téléchargement de l’intégralité du code utilisé.
 
 Ce didacticiel inaugurale commence par examiner les concepts de base de page maître. Nous discuter comment des pages maîtres, examinez la création d’une page maître et les pages de contenu associées à l’aide de Visual Web Developer et voir comment les modifications apportées à une page maître sont immédiatement répercutées dans ses pages de contenu. C’est parti !
 
@@ -89,7 +89,7 @@ Maintenant que nous avons décrit le fonctionnement des pages maître, jetons un
 
 ## <a name="step-1-creating-a-master-page"></a>Étape 1 : Création d’une Page maître
 
-Avant que nous pouvons Explorer la création et l’utilisation des pages maîtres et de contenu, nous devons d’abord un site Web ASP.NET. Commencez par créer un nouveau fichier basé sur le système site Web ASP.NET. Pour ce faire, lancez Visual Web Developer et accédez au menu fichier et choisissez Nouveau Site Web, en affichant la boîte de dialogue Nouveau Site Web zone (voir Figure 4). Choisissez le modèle de Site Web ASP.NET, la valeur de la liste déroulante emplacement du système de fichiers, choisissez un dossier pour placer le site web, la valeur est le langage c#. Cela créera un nouveau site web avec un `Default.aspx` page ASP.NET, un `App_Data` dossier et un `Web.config` fichier.
+Avant que nous pouvons Explorer la création et l’utilisation des pages maîtres et de contenu, nous devons d’abord un site Web ASP.NET. Commencez par créer un nouveau fichier basé sur le système site Web ASP.NET. Pour ce faire, lancez Visual Web Developer et accédez au menu fichier et choisissez Nouveau Site Web, en affichant la boîte de dialogue Nouveau Site Web zone (voir Figure 4). Choisissez le modèle de Site Web ASP.NET, la valeur de la liste déroulante emplacement du système de fichiers, choisissez un dossier pour placer le site web, la valeur est le langage C#. Cela créera un nouveau site web avec un `Default.aspx` page ASP.NET, un `App_Data` dossier et un `Web.config` fichier.
 
 > [!NOTE]
 > Visual Studio prend en charge deux modes de gestion de projet : Projets de Site Web et projets d’Application Web. Projets de Site Web n’ont pas un fichier projet, alors que les projets d’Application Web imiter l’architecture de projet dans Visual Studio .NET 2002/2003 : elles incluent un fichier projet et compiler le code du projet source dans un assembly unique, qui est placé dans le `/bin` dossier. Les projets Visual Studio 2005 initialement uniquement pris en charge Web Site, bien que le [modèle de projet d’Application Web](https://msdn.microsoft.com/library/aa730880(vs.80).aspx) a été réintroduit avec Service Pack 1 ; Visual Studio 2008 offre les deux modèles de projet. Visual Web Developer 2005 et 2008 éditions, toutefois, uniquement prennent en charge les projets de Site Web. J’utilise le modèle de projet de Site Web pour mon démonstrations de cette série de didacticiels. Si vous utilisez une édition non-Express et que vous souhaitez utiliser le modèle de projet d’Application Web à la place, n’hésitez pas à faire, mais n’oubliez pas qu’il existe peut-être des différences entre ce que vous voyez sur votre écran et les étapes à suivre et les captures d’écran illustrés instructio NS fournis dans ces didacticiels.
@@ -112,7 +112,7 @@ Ajout d’un nouveau fichier de page maître via Visual Web Developer crée une 
 
 [!code-aspx[Main](creating-a-site-wide-layout-using-master-pages-cs/samples/sample1.aspx)]
 
-La première ligne dans le balisage déclaratif est la [ `@Master` directive](https://msdn.microsoft.com/library/ms228176.aspx). Le `@Master` directive est similaire à la [ `@Page` directive](https://msdn.microsoft.com/library/ydy4x04a.aspx) qui s’affiche dans les pages ASP.NET. Il définit le langage côté serveur (c#) et des informations sur l’emplacement et l’héritage de classe code-behind de la page maître.
+La première ligne dans le balisage déclaratif est la [ `@Master` directive](https://msdn.microsoft.com/library/ms228176.aspx). Le `@Master` directive est similaire à la [ `@Page` directive](https://msdn.microsoft.com/library/ydy4x04a.aspx) qui s’affiche dans les pages ASP.NET. Il définit le langage côté serveur (C#) et des informations sur l’emplacement et l’héritage de classe code-behind de la page maître.
 
 Le `DOCTYPE` et balisage déclaratif de la page s’affiche sous le `@Master` directive. La page inclut HTML statique, ainsi que quatre contrôles côté serveur :
 

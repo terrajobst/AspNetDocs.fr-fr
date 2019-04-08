@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs
-title: Ajout de contenu dynamique à une Page mise en cache (c#) | Microsoft Docs
+title: Ajout de contenu dynamique à une Page mise en cache (C#) | Microsoft Docs
 author: microsoft
 description: Découvrez comment combiner le contenu dynamique et mise en cache dans la même page. Post-cache vous permet d’afficher le contenu dynamique, tels que bannière publications o...
 ms.author: riande

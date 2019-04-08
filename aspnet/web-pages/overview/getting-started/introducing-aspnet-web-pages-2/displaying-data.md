@@ -216,7 +216,7 @@ Enfin, la troisième ligne indique à ASP.NET que vous souhaitez utiliser une in
 > 
 > **Structured Query Language (SQL)**
 > 
-> SQL est un langage qui est utilisé dans la plupart des bases de données relationnelles pour la gestion des données dans une base de données. Il inclut des commandes qui permettent de récupérer des données et mettre à jour, et qui vous permettent de créer, modifier et gérer des données dans les tables de base de données. SQL est différent de celui d’un langage de programmation (tel que c#). Avec SQL, vous indiquer la base de données à ce que vous voulez, et travail de la base de données consiste à déterminer comment obtenir les données ou d’effectuer la tâche. Voici des exemples de certaines commandes SQL et ce qu’ils font :
+> SQL est un langage qui est utilisé dans la plupart des bases de données relationnelles pour la gestion des données dans une base de données. Il inclut des commandes qui permettent de récupérer des données et mettre à jour, et qui vous permettent de créer, modifier et gérer des données dans les tables de base de données. SQL est différent de celui d’un langage de programmation (tel que C#). Avec SQL, vous indiquer la base de données à ce que vous voulez, et travail de la base de données consiste à déterminer comment obtenir les données ou d’effectuer la tâche. Voici des exemples de certaines commandes SQL et ce qu’ils font :
 > 
 > `Select * From Movies`
 > 
@@ -230,7 +230,7 @@ Enfin, la troisième ligne indique à ASP.NET que vous souhaitez utiliser une in
 > 
 > Cette commande permet d’insérer un nouvel enregistrement dans le *produit* table, la définition de la colonne de nom pour le « Croissant », la colonne de Description pour « Plaisir de non fiable A » et le prix à 1,99.
 > 
-> Notez que lorsque vous spécifiez une valeur non numérique, la valeur est placée entre guillemets simples (pas de doubles guillemets, comme dans c#). Vous utilisez ces guillemets autour des valeurs de texte ou de date, mais pas autour de nombres.
+> Notez que lorsque vous spécifiez une valeur non numérique, la valeur est placée entre guillemets simples (pas de doubles guillemets, comme dans C#). Vous utilisez ces guillemets autour des valeurs de texte ou de date, mais pas autour de nombres.
 > 
 > `DELETE FROM Product WHERE ExpirationDate < '01/01/2008'`
 > 
@@ -325,7 +325,7 @@ Exécutez la page. La grille affiche les 3 lignes à une heure, ainsi que des li
 
 ## <a name="coming-up-next"></a>Prochaine
 
-Dans le didacticiel suivant, vous allez apprendre à utiliser le code Razor et c# pour obtenir une entrée d’utilisateur dans un formulaire. Vous allez ajouter une zone de recherche à la page Movies afin que vous pouvez rechercher les films par titre ou le genre.
+Dans le didacticiel suivant, vous allez apprendre à utiliser le code Razor et C# pour obtenir une entrée d’utilisateur dans un formulaire. Vous allez ajouter une zone de recherche à la page Movies afin que vous pouvez rechercher les films par titre ou le genre.
 
 ## <a name="complete-listing-for-movies-page"></a>Liste complète de la Page de films
 

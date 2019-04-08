@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs
-title: Configuration d’un site Web qui utilise les Services d’Application (c#) | Microsoft Docs
+title: Configuration d’un site Web qui utilise les Services d’Application (C#) | Microsoft Docs
 author: rick-anderson
 description: ASP.NET version 2.0 a introduit une série de services d’application, qui font partie du .NET Framework et de répondre à une suite de bloc de construction de services qui yo...
 ms.author: riande
@@ -177,7 +177,7 @@ Rappelez-vous qu’un tutoriel précédent mis à jour l’application web de cr
 **Figure 5**: Les administrateurs peuvent créer des comptes d’utilisateur ([cliquez pour afficher l’image en taille réelle](configuring-a-website-that-uses-application-services-cs/_static/image15.jpg))
 
 
-Si vous avez besoin de toutes les fonctionnalités de l’extraction WSAT [ *propagée votre propre Site Web Administration outil*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), dans lequel l’auteur Dan Clem vous explique le processus de création d’un outil WSAT de type personnalisé. Dan partage son code source d’application s (en c#) et fournit des instructions détaillées pour l’ajouter à votre site Web hébergé.
+Si vous avez besoin de toutes les fonctionnalités de l’extraction WSAT [ *propagée votre propre Site Web Administration outil*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), dans lequel l’auteur Dan Clem vous explique le processus de création d’un outil WSAT de type personnalisé. Dan partage son code source d’application s (en C#) et fournit des instructions détaillées pour l’ajouter à votre site Web hébergé.
 
 ## <a name="summary"></a>Récapitulatif
 

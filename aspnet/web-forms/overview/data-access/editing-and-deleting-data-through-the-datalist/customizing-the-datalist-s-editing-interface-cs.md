@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/customizing-the-datalist-s-editing-interface-cs
-title: Personnalisation du contrôle DataList d’édition Interface (c#) | Microsoft Docs
+title: Personnalisation du contrôle DataList d’édition Interface (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons créer une interface plus riche de modification pour le contrôle DataList, qui inclut DropDownList et une case à cocher.
 ms.author: riande

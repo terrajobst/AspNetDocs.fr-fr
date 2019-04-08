@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-a-controller-cs
-title: Création d’un contrôleur (c#) | Microsoft Docs
+title: Création d’un contrôleur (C#) | Microsoft Docs
 author: StephenWalther
 description: Dans ce didacticiel, Stephen Walther montre comment vous pouvez ajouter un contrôleur à une application ASP.NET MVC.
 ms.author: riande

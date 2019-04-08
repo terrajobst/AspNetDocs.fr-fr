@@ -440,7 +440,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 <a id="CodeSnippetUsingKeyBoard"></a>
 
 <a id="To_add_a_code_snippet_using_the_keyboard_C_only"></a>
-### <a name="to-add-a-code-snippet-using-the-keyboard-c-only"></a>Pour ajouter un extrait de code à l’aide du clavier (c# uniquement)
+### <a name="to-add-a-code-snippet-using-the-keyboard-c-only"></a>Pour ajouter un extrait de code à l’aide du clavier (C# uniquement)
 
 1. Placez le curseur où vous souhaitez insérer le code.
 2. Commencez à taper le nom de l’extrait de code (sans espaces ou des traits d’union).
@@ -463,7 +463,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 <a id="CodeSnippetUsingMouse"></a>
 
 <a id="To_add_a_code_snippet_using_the_mouse_C_Visual_Basic_and_XML"></a>
-### <a name="to-add-a-code-snippet-using-the-mouse-c-visual-basic-and-xml"></a>Pour ajouter un extrait de code à l’aide de la souris (c#, Visual Basic et XML)
+### <a name="to-add-a-code-snippet-using-the-mouse-c-visual-basic-and-xml"></a>Pour ajouter un extrait de code à l’aide de la souris (C#, Visual Basic et XML)
 
 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
 2. Sélectionnez **insérer un extrait** suivie **mes extraits de Code**.

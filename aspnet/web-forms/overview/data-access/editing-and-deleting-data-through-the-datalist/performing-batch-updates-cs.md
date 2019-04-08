@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs
-title: Mise à jour par lots (c#) | Microsoft Docs
+title: Mise à jour par lots (C#) | Microsoft Docs
 author: rick-anderson
 description: Découvrez comment créer un entièrement modifiable DataList tous ses éléments où se trouvent dans modifier le mode et dont les valeurs peuvent être enregistrées en cliquant sur un bouton « Update All » sur le...
 ms.author: riande

@@ -57,11 +57,11 @@ Vous pouvez ajouter des pages d’aide à un projet d’API Web existant à l’
 
 À partir de la **outils** menu, sélectionnez **Gestionnaire de Package NuGet**, puis sélectionnez **Console du Gestionnaire de Package**. Dans le [Console du Gestionnaire de Package](http://docs.nuget.org/docs/start-here/using-the-package-manager-console) fenêtre, tapez les commandes suivantes :
 
-Pour un **c#** application : `Install-Package Microsoft.AspNet.WebApi.HelpPage`
+Pour un **C#** application : `Install-Package Microsoft.AspNet.WebApi.HelpPage`
 
 Pour un **Visual Basic** application : `Install-Package Microsoft.AspNet.WebApi.HelpPage.VB`
 
-Il existe deux packages, pour c# et l’autre pour Visual Basic. Veillez à utiliser celui qui correspond à votre projet.
+Il existe deux packages, pour C# et l’autre pour Visual Basic. Veillez à utiliser celui qui correspond à votre projet.
 
 Cette commande installe les assemblys nécessaires et ajoute les vues MVC pour les pages d’aide (situés dans le dossier zones/HelpPage). Vous devez manuellement ajouter un lien vers la page d’aide. L’URI est /Help. Pour créer un lien dans une vue razor, ajoutez ce qui suit :
 

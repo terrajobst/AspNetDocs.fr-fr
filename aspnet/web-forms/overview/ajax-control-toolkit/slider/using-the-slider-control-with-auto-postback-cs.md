@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-cs
-title: À l’aide du contrôle Slider avec publication automatique (c#) | Microsoft Docs
+title: À l’aide du contrôle Slider avec publication automatique (C#) | Microsoft Docs
 author: wenz
 description: Le contrôle Slider dans AJAX Control Toolkit fournit un contrôle slider graphique qui peut être contrôlé à l’aide de la souris. Il est possible de rendre la comptabilisation de curseur automatique...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57033636"
 ---
-<a name="using-the-slider-control-with-auto-postback-c"></a>À l’aide du contrôle Slider avec publication automatique (c#)
+<a name="using-the-slider-control-with-auto-postback-c"></a>À l’aide du contrôle Slider avec publication automatique (C#)
 ====================
 par [Christian Wenz](https://github.com/wenz)
 

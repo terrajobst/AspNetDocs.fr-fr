@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-batched-data/batch-deleting-cs
-title: Lot de suppression (c#) | Microsoft Docs
+title: Lot de suppression (C#) | Microsoft Docs
 author: rick-anderson
 description: Découvrez comment supprimer des enregistrements de base de données multiples dans une seule opération. Dans la couche d’Interface utilisateur, nous reposent sur un GridView amélioré créé dans une version tut...
 ms.author: riande

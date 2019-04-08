@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/admin/recovering-and-changing-passwords-cs
-title: Récupération et changement des mots de passe (c#) | Microsoft Docs
+title: Récupération et changement des mots de passe (C#) | Microsoft Docs
 author: rick-anderson
 description: ASP.NET inclut deux contrôles Web qui contribuent à la récupération et changement des mots de passe. Le contrôle PasswordRecovery Active un visiteur récupérer son pa perdu...
 ms.author: riande

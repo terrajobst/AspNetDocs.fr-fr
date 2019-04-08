@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs
-title: Affichage d’une Page d’erreur personnalisés (c#) | Microsoft Docs
+title: Affichage d’une Page d’erreur personnalisés (C#) | Microsoft Docs
 author: rick-anderson
 description: Ce que voit l’utilisateur lorsqu’une erreur d’exécution se produit dans une application web ASP.NET ? La réponse dépend du site Web &lt;customErrors&gt; configuration...
 ms.author: riande

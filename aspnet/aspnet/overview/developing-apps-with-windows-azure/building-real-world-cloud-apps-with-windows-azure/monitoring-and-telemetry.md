@@ -272,7 +272,7 @@ Documentation principalement sur la journalisation :
 - [Création de journaux structurées et explicites avec journalisation sémantique](https://channel9.msdn.com/Events/Build/2013/3-336). (Vidéo) Julian Dominguez présente le cas pour la journalisation sémantique avec prépare.
 - [EF6 Enregistrement SQL – partie 1 : Journalisation simple](http://blog.oneunicorn.com/2013/05/08/ef6-sql-logging-part-1-simple-logging/). Arthur Vickers montre comment enregistrer des requêtes exécutées par Entity Framework dans EF 6.
 - [Résilience des connexions et Interception des commandes avec Entity Framework dans une Application ASP.NET MVC](../../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md). Quatrième dans une série de didacticiels neuf parties, montre comment utiliser la fonctionnalité de l’interception de commande EF 6 pour enregistrer les commandes SQL envoyées à la base de données par Entity Framework.
-- [Améliorer la journalisation à l’aide des attributs d’informations appelant 5.0 c#](http://www.dotnetcurry.com/showarticle.aspx?ID=972). Comment se connecter facilement le nom de la méthode d’appel sans coder en dur dans les littéraux ou à l’aide de la réflexion pour obtenir de manuellement.
+- [Améliorer la journalisation à l’aide des attributs d’informations appelant 5.0 C#](http://www.dotnetcurry.com/showarticle.aspx?ID=972). Comment se connecter facilement le nom de la méthode d’appel sans coder en dur dans les littéraux ou à l’aide de la réflexion pour obtenir de manuellement.
 
 Documentation principalement sur la résolution des problèmes :
 

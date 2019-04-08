@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-acess-two-pages-datalist-cs
-title: Maître/détail filtrage entre les deux Pages (c#) | Microsoft Docs
+title: Maître/détail filtrage entre les deux Pages (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons comment séparer un rapport maître/détail sur deux pages. Dans la page 'master', nous utilisons un contrôle Repeater pour afficher une liste de categ...
 ms.author: riande

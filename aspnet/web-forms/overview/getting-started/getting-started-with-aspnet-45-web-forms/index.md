@@ -17,7 +17,7 @@ ms.locfileid: "57022646"
 ---
 <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2013"></a>Bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2013
 ====================
-> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un projet Visual Studio 2013 avec le code source c# est disponible pour accompagner cette série de didacticiels.
+> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un projet Visual Studio 2013 avec le code source C# est disponible pour accompagner cette série de didacticiels.
 
 
 - [Bien démarrer avec Web Forms et Visual Studio](introduction-and-overview.md)

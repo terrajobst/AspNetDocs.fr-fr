@@ -69,7 +69,7 @@ Si vous avez Visual Studio 2010, assurez-vous que [NuGet](https://visualstudioga
 ## <a name="create-the-project"></a>Créer le projet
 
 1. À partir de la **fichier** menu, cliquez sur **nouveau projet**.
-2. Dans le **nouveau projet** boîte de dialogue, développez **c#** sous **modèles** et sélectionnez **Web**.
+2. Dans le **nouveau projet** boîte de dialogue, développez **C#** sous **modèles** et sélectionnez **Web**.
 3. Sélectionnez le **Application Web ASP.NET vide** modèle, nommez le projet *SignalR.StockTicker*, puis cliquez sur **OK**.
 
     ![Boîte de dialogue Nouveau projet de test](tutorial-server-broadcast-with-aspnet-signalr/_static/image2.png)

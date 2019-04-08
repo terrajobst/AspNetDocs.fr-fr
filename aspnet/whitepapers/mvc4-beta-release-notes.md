@@ -242,7 +242,7 @@ La nouvelle fonctionnalité de recettes permet à Visual Studio générer le cod
 
 Vous pouvez maintenant écrire des méthodes d’action asynchrones des méthodes comme unique qui retournent un objet de type *tâche* ou *tâche&lt;ActionResult&gt;*.
 
-Par exemple, si vous utilisez Visual c# 5 (ou à l’aide de la [Async CTP](https://msdn.microsoft.com/vstudio/async.aspx)), vous pouvez créer une méthode d’action asynchrone qui ressemble à ceci :
+Par exemple, si vous utilisez Visual C# 5 (ou à l’aide de la [Async CTP](https://msdn.microsoft.com/vstudio/async.aspx)), vous pouvez créer une méthode d’action asynchrone qui ressemble à ceci :
 
 [!code-csharp[Main](mvc4-beta-release-notes/samples/sample8.cs)]
 
@@ -265,7 +265,7 @@ Version bêta d’ASP.NET MVC 4 prend en charge la version 1.5 de septembre 2011
     La solution de contournement consiste à compiler le projet pour obtenir les assemblys dans le dossier bin. Notez que si vous nettoyez le projet, ce qui supprime les assemblys dans le dossier bin, le problème de l’éditeur reviendra.
 
     Cela sera corrigé dans la prochaine version.
-- **Modèles de projet c# pour Visual Studio 11 Beta contiennent une chaîne de connexion incorrecte dans Global.asax.cs.** La connexion par défaut spécifiée dans l’Application\_Start (méthode) pour les projets créés dans Visual Studio 11 Beta contiennent une chaîne de connexion de base de données locale qui contient une barre oblique inverse sans séquence d’échappement (\) caractère. Cela entraîne une erreur de connexion lors de tentatives d’accès d’un DbContext d’Entity Framework, ce qui génère une erreur SqlException.
+- **Modèles de projet C# pour Visual Studio 11 Beta contiennent une chaîne de connexion incorrecte dans Global.asax.cs.** La connexion par défaut spécifiée dans l’Application\_Start (méthode) pour les projets créés dans Visual Studio 11 Beta contiennent une chaîne de connexion de base de données locale qui contient une barre oblique inverse sans séquence d’échappement (\) caractère. Cela entraîne une erreur de connexion lors de tentatives d’accès d’un DbContext d’Entity Framework, ce qui génère une erreur SqlException.
 
     Pour corriger ce problème, la séquence d’échappement le caractère barre oblique inverse dans l’application\_Start, méthode de Global.asax.cs afin qu’elle s’affiche comme suit :
 

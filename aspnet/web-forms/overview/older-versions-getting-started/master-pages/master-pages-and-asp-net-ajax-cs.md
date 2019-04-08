@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/master-pages-and-asp-net-ajax-cs
-title: Pages maîtres et ASP.NET AJAX (c#) | Microsoft Docs
+title: Pages maîtres et ASP.NET AJAX (C#) | Microsoft Docs
 author: rick-anderson
 description: Présente les options d’à l’aide d’ASP.NET AJAX et les pages maîtres. Examine à l’aide de la classe ScriptManagerProxy ; Explique comment les différents fichiers JS sont chargés dependi...
 ms.author: riande

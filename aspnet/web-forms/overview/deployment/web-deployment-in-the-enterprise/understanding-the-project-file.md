@@ -33,7 +33,7 @@ par [Jason Lee](https://github.com/jrjlee)
 
 ## <a name="msbuild-and-the-project-file"></a>MSBuild et le fichier de projet
 
-Lorsque vous créez et créez des solutions dans Visual Studio, Visual Studio utilise MSBuild pour générer chaque projet dans votre solution. Chaque projet Visual Studio inclut un fichier de projet MSBuild, avec une extension de fichier qui reflète le type de projet&#x2014;par exemple, un projet c# (.csproj), un projet Visual Basic.NET (.vbproj) ou un projet de base de données (.dbproj). Pour pouvoir générer un projet, MSBuild doit traiter le fichier projet associé au projet. Le fichier projet est un document XML qui contient toutes les informations et instructions que MSBuild a besoin pour générer votre projet, telles que le contenu à inclure, exigences de plates-formes, informations de versioning, serveur web ou paramètres du serveur de base de données et le tâches qui doivent être réalisées.
+Lorsque vous créez et créez des solutions dans Visual Studio, Visual Studio utilise MSBuild pour générer chaque projet dans votre solution. Chaque projet Visual Studio inclut un fichier de projet MSBuild, avec une extension de fichier qui reflète le type de projet&#x2014;par exemple, un projet C# (.csproj), un projet Visual Basic.NET (.vbproj) ou un projet de base de données (.dbproj). Pour pouvoir générer un projet, MSBuild doit traiter le fichier projet associé au projet. Le fichier projet est un document XML qui contient toutes les informations et instructions que MSBuild a besoin pour générer votre projet, telles que le contenu à inclure, exigences de plates-formes, informations de versioning, serveur web ou paramètres du serveur de base de données et le tâches qui doivent être réalisées.
 
 Fichiers projet MSBuild sont basées sur le [schéma XML MSBuild](https://msdn.microsoft.com/library/5dy88c2e.aspx), et ainsi le processus de génération est entièrement ouverte et transparente. En outre, vous n’avez pas besoin d’installer Visual Studio pour pouvoir utiliser le moteur MSBuild&#x2014;l’exécutable de MSBuild.exe fait partie du .NET Framework, et vous pouvez l’exécuter à partir d’une invite de commandes. En tant que développeur, vous pouvez créer vos propres fichiers de projet MSBuild, à l’aide du schéma XML MSBuild, d’imposer un contrôle sophistiqué et précis sur la façon dont vos projets sont générés et déployés. Ces fichiers de projet personnalisés fonctionnent dans la même façon que les fichiers de projet Visual Studio génère automatiquement.
 
@@ -155,7 +155,7 @@ Vous pouvez créer **ItemGroup** éléments dans le niveau racine **projet** él
 Dans le schéma MSBuild, un [tâche](https://msdn.microsoft.com/library/77f2hx1s.aspx) élément représente une instruction build individuel (ou une tâche). MSBuild inclut une multitude de tâches prédéfinies. Exemple :
 
 - Le **copie** tâche copie des fichiers vers un nouvel emplacement.
-- Le **Csc** tâche appelle le compilateur Visual c#.
+- Le **Csc** tâche appelle le compilateur Visual C#.
 - Le **Vbc** tâche appelle le compilateur Visual Basic.
 - Le **Exec** tâche exécute un programme spécifié.
 - Le **Message** tâche écrit un message dans un enregistreur d’événements.

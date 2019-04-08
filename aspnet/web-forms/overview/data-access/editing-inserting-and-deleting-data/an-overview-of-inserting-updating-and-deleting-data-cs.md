@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs
-title: Une vue d’ensemble de l’insertion, la mise à jour et suppression de données (c#) | Microsoft Docs
+title: Une vue d’ensemble de l’insertion, la mise à jour et suppression de données (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons voir comment mapper un ObjectDataSource Insert(), Update(), et des classes de méthodes Delete() aux méthodes de la couche BLL, ainsi que la configuration...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/25/2019
 ms.locfileid: "58424566"
 ---
-<a name="an-overview-of-inserting-updating-and-deleting-data-c"></a>Une vue d’ensemble de l’insertion, la mise à jour et suppression de données (c#)
+<a name="an-overview-of-inserting-updating-and-deleting-data-c"></a>Une vue d’ensemble de l’insertion, la mise à jour et suppression de données (C#)
 ====================
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 

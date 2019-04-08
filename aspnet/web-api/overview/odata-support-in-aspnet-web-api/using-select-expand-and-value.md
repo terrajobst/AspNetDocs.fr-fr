@@ -31,7 +31,7 @@ Pour cet article, je vais utiliser un service OData qui définit trois entités�
 
 ![](using-select-expand-and-value/_static/image1.png)
 
-Voici les classes c# qui définissent les modèles d’entité :
+Voici les classes C# qui définissent les modèles d’entité :
 
 [!code-csharp[Main](using-select-expand-and-value/samples/sample1.cs)]
 

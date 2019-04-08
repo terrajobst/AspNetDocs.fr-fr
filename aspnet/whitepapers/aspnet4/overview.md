@@ -1279,7 +1279,7 @@ Le concepteur Visual Web Developer dans Visual Studio 2010 a été mis à jour p
 
 ### <a name="html-and-javascript-snippets"></a>HTML et des extraits de code JavaScript
 
-Dans l’éditeur HTML, IntelliSense complète automatiquement les noms de balise. La fonctionnalité d’extraits de code IntelliSense complète automatiquement les balises entières et bien plus encore. Dans Visual Studio 2010, les extraits de code IntelliSense sont pris en charge pour JavaScript, ainsi que c# et Visual Basic, qui ont été pris en charge dans les versions antérieures de Visual Studio.
+Dans l’éditeur HTML, IntelliSense complète automatiquement les noms de balise. La fonctionnalité d’extraits de code IntelliSense complète automatiquement les balises entières et bien plus encore. Dans Visual Studio 2010, les extraits de code IntelliSense sont pris en charge pour JavaScript, ainsi que C# et Visual Basic, qui ont été pris en charge dans les versions antérieures de Visual Studio.
 
 Visual Studio 2010 inclut plus de 200 extraits de code qui vous aident à compléter automatiquement les balises ASP.NET et HTML courantes, notamment les attributs obligatoires (tels que runat = « server ») et les attributs courants spécifiques à une balise (tels que *ID*,  *DataSourceID*, *ControlToValidate*, et *texte*).
 

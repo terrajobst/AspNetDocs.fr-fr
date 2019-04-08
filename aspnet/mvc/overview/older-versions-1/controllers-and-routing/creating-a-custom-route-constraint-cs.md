@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-a-custom-route-constraint-cs
-title: Création d’une contrainte de Route personnalisée (c#) | Microsoft Docs
+title: Création d’une contrainte de Route personnalisée (C#) | Microsoft Docs
 author: StephenWalther
 description: Stephen Walther montre comment vous pouvez créer une contrainte d’itinéraire personnalisé. Nous implémentons un simple contrainte personnalisée qui empêche un itinéraire mis en correspondance w...
 ms.author: riande

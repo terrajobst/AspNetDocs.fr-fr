@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-cs
-title: Utilisation de plusieurs contrôles de fenêtre contextuelle (c#) | Microsoft Docs
+title: Utilisation de plusieurs contrôles de fenêtre contextuelle (C#) | Microsoft Docs
 author: wenz
 description: L’extendeur PopupControl dans les outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle lorsque n’importe quel autre contrôle est activé. Il est également possible d’utiliser m...
 ms.author: riande

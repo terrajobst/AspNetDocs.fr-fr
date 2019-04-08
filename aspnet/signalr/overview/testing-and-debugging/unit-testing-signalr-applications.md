@@ -63,7 +63,7 @@ Dans cette section, vous allez ajouter un test unitaire pour l’application cr�
 3. Si vous utilisez la version de téléchargement de l’application de mise en route, ouvrez **Console du Gestionnaire de Package** et cliquez sur **restaurer** pour ajouter le package de SignalR au projet.
 
     ![Restaurer des Packages](unit-testing-signalr-applications/_static/image1.png)
-4. Ajouter un projet à la solution pour le test unitaire. Avec le bouton droit de votre solution dans **l’Explorateur de solutions** et sélectionnez **ajouter**, **nouveau projet...** . Sous le **c#** nœud, sélectionnez le **Windows** nœud. Sélectionnez **bibliothèque de classes**. Nommez le nouveau projet **TestLibrary** et cliquez sur **OK**.
+4. Ajouter un projet à la solution pour le test unitaire. Avec le bouton droit de votre solution dans **l’Explorateur de solutions** et sélectionnez **ajouter**, **nouveau projet...** . Sous le **C#** nœud, sélectionnez le **Windows** nœud. Sélectionnez **bibliothèque de classes**. Nommez le nouveau projet **TestLibrary** et cliquez sur **OK**.
 
     ![Créer la bibliothèque de tests](unit-testing-signalr-applications/_static/image2.png)
 5. Ajoutez une référence dans le projet de bibliothèque de test au projet SignalRChat. Cliquez sur le **TestLibrary** de projet et sélectionnez **ajouter**, **référence...** . Sélectionnez le **projets** nœud sous la **Solution** nœud, puis vérifiez **SignalRChat**. Cliquez sur **OK**.

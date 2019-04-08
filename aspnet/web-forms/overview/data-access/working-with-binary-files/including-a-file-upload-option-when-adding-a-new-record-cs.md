@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-cs
-title: Option incluant un fichier de téléchargement lorsque vous ajoutez un nouvel enregistrement (c#) | Microsoft Docs
+title: Option incluant un fichier de téléchargement lorsque vous ajoutez un nouvel enregistrement (C#) | Microsoft Docs
 author: rick-anderson
 description: Ce didacticiel montre comment créer une interface Web qui permet à l’utilisateur à entrer des données de texte et télécharger les fichiers binaires. Pour illustrer l’options disponibles de t...
 ms.author: riande

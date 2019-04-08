@@ -96,7 +96,7 @@ Notre modèle de vue « Edit.aspx » à l’aide de plusieurs méthodes de «�
 
 ##### <a name="htmlbeginform-helper-method"></a>Méthode d’assistance de Html.BeginForm()
 
-La méthode d’assistance Html.BeginForm() est ce que le code HTML de sortie &lt;formulaire&gt; élément notre balisage. Dans notre modèle de vue Edit.aspx, vous remarquerez que nous appliquons une instruction « using » lors de l’utilisation de cette méthode c#. L’accolade ouvrante indique le début de la &lt;formulaire&gt; contenu et l’accolade fermante est ce qui indique la fin de la &lt;/forment&gt; élément :
+La méthode d’assistance Html.BeginForm() est ce que le code HTML de sortie &lt;formulaire&gt; élément notre balisage. Dans notre modèle de vue Edit.aspx, vous remarquerez que nous appliquons une instruction « using » lors de l’utilisation de cette méthode C#. L’accolade ouvrante indique le début de la &lt;formulaire&gt; contenu et l’accolade fermante est ce qui indique la fin de la &lt;/forment&gt; élément :
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample3.cs)]
 
@@ -122,7 +122,7 @@ Souvent, nous devrons effectuer la mise en forme personnalisée de la valeur de 
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample7.aspx)]
 
-Un troisième paramètre Html.TextBox() peut éventuellement être utilisé pour générer des attributs HTML supplémentaires. L’extrait de code ci-dessous montre comment restituer une taille supplémentaire = attribut « 30 » et une classe = attribut de « mycssclass » sur le &lt;d’entrée de type = « text » /&gt; élément. Notez comment nous avons échappement le nom de l’attribut de classe en utilisant un «@" character because "classe » est un mot clé réservé en c# :
+Un troisième paramètre Html.TextBox() peut éventuellement être utilisé pour générer des attributs HTML supplémentaires. L’extrait de code ci-dessous montre comment restituer une taille supplémentaire = attribut « 30 » et une classe = attribut de « mycssclass » sur le &lt;d’entrée de type = « text » /&gt; élément. Notez comment nous avons échappement le nom de l’attribut de classe en utilisant un «@" character because "classe » est un mot clé réservé en C# :
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample8.aspx)]
 

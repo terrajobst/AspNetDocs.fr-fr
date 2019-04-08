@@ -53,7 +53,7 @@ Ce document décrit les nouvelles fonctionnalités et améliorations introduites
 
 [La mise à niveau une Application ASP.NET MVC 1.0 vers ASP.NET MVC 2](aspnet-mvc2-upgrade-notes.md "aspnet-mvc2-mise à niveau-notes de publication")
 
-ASP.NET MVC 2 peut être installé côte à côte avec ASP.NET MVC 1.0 sur le même serveur. Flexibilité application aux développeurs de choisir quand mettre à niveau une application ASP.NET MVC 1.0 vers ASP.NET MVC 2. Ce décrit de document à la fois la mise à niveau manuellement et avec un Assistant dans Visual c#...
+ASP.NET MVC 2 peut être installé côte à côte avec ASP.NET MVC 1.0 sur le même serveur. Flexibilité application aux développeurs de choisir quand mettre à niveau une application ASP.NET MVC 1.0 vers ASP.NET MVC 2. Ce décrit de document à la fois la mise à niveau manuellement et avec un Assistant dans Visual C#...
 
 <a id="security"></a>
 ## <a name="aspnet-security-whitepapers"></a>Livres blancs de sécurité ASP.NET

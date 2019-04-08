@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-visual-studio-cs
-title: Déploiement de votre Site à l’aide de Visual Studio (c#) | Microsoft Docs
+title: Déploiement de votre Site à l’aide de Visual Studio (C#) | Microsoft Docs
 author: rick-anderson
 description: Visual Studio inclut des outils pour le déploiement d’un site Web. En savoir plus sur ces outils dans ce didacticiel.
 ms.author: riande

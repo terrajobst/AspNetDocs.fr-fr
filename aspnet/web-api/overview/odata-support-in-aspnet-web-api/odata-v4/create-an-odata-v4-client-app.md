@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-client-app
-title: Créer une application de Client OData v4 (c#) | Microsoft Docs
+title: Créer une application de Client OData v4 (C#) | Microsoft Docs
 author: MikeWasson
 description: ''
 ms.author: riande
@@ -53,7 +53,7 @@ Cliquez avec le bouton droit sur le projet. Sélectionnez **ajouter** &gt; **un 
 
 ![](create-an-odata-v4-client-app/_static/image5.png)
 
-Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **éléments Visual c#** &gt; **Code** &gt; **OData Client**. Nommez le modèle &quot;ProductClient.tt&quot;. Cliquez sur **ajouter** et cliquez sur l’avertissement de sécurité.
+Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **éléments Visual C#** &gt; **Code** &gt; **OData Client**. Nommez le modèle &quot;ProductClient.tt&quot;. Cliquez sur **ajouter** et cliquez sur l’avertissement de sécurité.
 
 [![](create-an-odata-v4-client-app/_static/image7.png)](create-an-odata-v4-client-app/_static/image6.png)
 

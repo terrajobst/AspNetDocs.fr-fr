@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-cs
-title: Contrôle l’affichage de données binaires dans le site Web de données (c#) | Microsoft Docs
+title: Contrôle l’affichage de données binaires dans le site Web de données (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous examinons les options de présenter des données binaires sur une page Web, y compris l’affichage d’un fichier image et la fourniture d’un lien 'Télécharger' f...
 ms.author: riande

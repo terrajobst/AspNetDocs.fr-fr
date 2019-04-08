@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-cs
-title: Débogage des procédures stockées (c#) | Microsoft Docs
+title: Débogage des procédures stockées (C#) | Microsoft Docs
 author: rick-anderson
 description: Les éditions Visual Studio Professional et Team System permettent de définir des points d’arrêt et de participer à des procédures stockées dans SQL Server, ainsi tout débogage stockées...
 ms.author: riande
@@ -36,7 +36,7 @@ Dans ce didacticiel, nous allons examiner pas à pas détaillé dans les procéd
 
 ## <a name="sql-server-debugging-concepts"></a>Concepts de débogage SQL Server
 
-Microsoft SQL Server 2005 a été conçu pour offrir une intégration avec le [Common Language Runtime (CLR)](https://msdn.microsoft.com/netframework/aa497266.aspx), qui est le runtime utilisé par tous les assemblys .NET. Par conséquent, SQL Server 2005 prend en charge les objets de base de données managés. Autrement dit, vous pouvez créer des objets de base de données tels que des procédures stockées et fonctions définies par l’utilisateur (UDF) en tant que méthodes dans une classe c#. Ainsi, ces procédures stockées et des UDF pour exploiter les fonctionnalités dans le .NET Framework et à partir de vos propres classes personnalisées. Bien entendu, SQL Server 2005 prend également en charge pour les objets de base de données de T-SQL.
+Microsoft SQL Server 2005 a été conçu pour offrir une intégration avec le [Common Language Runtime (CLR)](https://msdn.microsoft.com/netframework/aa497266.aspx), qui est le runtime utilisé par tous les assemblys .NET. Par conséquent, SQL Server 2005 prend en charge les objets de base de données managés. Autrement dit, vous pouvez créer des objets de base de données tels que des procédures stockées et fonctions définies par l’utilisateur (UDF) en tant que méthodes dans une classe C#. Ainsi, ces procédures stockées et des UDF pour exploiter les fonctionnalités dans le .NET Framework et à partir de vos propres classes personnalisées. Bien entendu, SQL Server 2005 prend également en charge pour les objets de base de données de T-SQL.
 
 SQL Server 2005 offre la prise en charge du débogage pour T-SQL et les objets de base de données managés. Toutefois, ces objets peuvent uniquement être débogués via les éditions de Visual Studio 2005 Professional et les systèmes de l’équipe. Dans ce didacticiel, nous allons examiner les objets de base de données débogage T-SQL. Le didacticiel suivant ressemble au débogage des objets de base de données managés.
 

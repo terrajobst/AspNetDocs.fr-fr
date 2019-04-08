@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-cs
-title: La mise à jour et suppression des données binaires existantes (c#) | Microsoft Docs
+title: La mise à jour et suppression des données binaires existantes (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans les didacticiels précédents, nous avons vu comment le contrôle GridView permet de facilement modifier et supprimer des données de texte. Dans ce didacticiel, nous voyons comment le contrôle GridView rendent...
 ms.author: riande

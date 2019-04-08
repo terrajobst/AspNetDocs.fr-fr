@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-cs
-title: Gestion des publications (postback) à partir d’un contrôle de fenêtre contextuelle avec un UpdatePanel (c#) | Microsoft Docs
+title: Gestion des publications (postback) à partir d’un contrôle de fenêtre contextuelle avec un UpdatePanel (C#) | Microsoft Docs
 author: wenz
 description: L’extendeur PopupControl dans les outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle lorsque n’importe quel autre contrôle est activé. Une attention particulière doit être réalisé...
 ms.author: riande

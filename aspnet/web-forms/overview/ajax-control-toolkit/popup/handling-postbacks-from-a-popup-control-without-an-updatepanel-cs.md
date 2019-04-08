@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-cs
-title: Gestion des publications (postback) à partir d’un contrôle Popup sans un UpdatePanel (c#) | Microsoft Docs
+title: Gestion des publications (postback) à partir d’un contrôle Popup sans un UpdatePanel (C#) | Microsoft Docs
 author: wenz
 description: L’extendeur PopupControl dans les outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle lorsque n’importe quel autre contrôle est activé. Lorsqu’une publication (postback) se produit en unités de recherche...
 ms.author: riande

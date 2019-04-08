@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/using-parameterized-queries-with-the-sqldatasource-cs
-title: À l’aide de requêtes paramétrables avec SqlDataSource (c#) | Microsoft Docs
+title: À l’aide de requêtes paramétrables avec SqlDataSource (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous continuer notre apparence au contrôle SqlDataSource et découvrez comment définir des requêtes paramétrables. Les paramètres peuvent être spécifiés à la fois la Décla...
 ms.author: riande

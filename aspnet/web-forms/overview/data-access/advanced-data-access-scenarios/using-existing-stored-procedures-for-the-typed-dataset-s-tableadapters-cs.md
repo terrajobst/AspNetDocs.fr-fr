@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs
-title: Utilisation existante des procédures stockées pour les TableAdapters de DataSet typé (c#) | Microsoft Docs
+title: Utilisation existante des procédures stockées pour les TableAdapters de DataSet typé (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans le didacticiel précédent, nous avons appris à utiliser l’Assistant TableAdapter pour générer de nouvelles procédures stockées. Dans ce didacticiel vous apprendre comment le TableAdapter même...
 ms.author: riande
@@ -195,7 +195,7 @@ Ce modèle peut être implémenté dans la syntaxe T-SQL en utilisant le modèle
 
 [!code-sql[Main](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs/samples/sample4.sql)]
 
-Le modèle commence par définir un `TRY...CATCH` bloquer, une construction de nouveau vers SQL Server 2005. Comme avec les `try...catch` bloque en c#, le code SQL `TRY...CATCH` bloc exécute les instructions dans le `TRY` bloc. Si n’importe quelle instruction génère une erreur, le contrôle est immédiatement transféré à la `CATCH` bloc.
+Le modèle commence par définir un `TRY...CATCH` bloquer, une construction de nouveau vers SQL Server 2005. Comme avec les `try...catch` bloque en C#, le code SQL `TRY...CATCH` bloc exécute les instructions dans le `TRY` bloc. Si n’importe quelle instruction génère une erreur, le contrôle est immédiatement transféré à la `CATCH` bloc.
 
 Si aucune erreur de l’exécution des instructions SQL cette composition de la transaction, la `COMMIT TRANSACTION` instruction valide les modifications et termine la transaction. Si, toutefois, une des instructions entraîne une erreur, le `ROLLBACK TRANSACTION` dans le `CATCH` bloc retourne la base de données à son état avant le début de la transaction. La procédure stockée génère également une erreur à l’aide de la [commande RAISERROR](https://msdn.microsoft.com/library/ms178592.aspx), ce qui conduit un `SqlException` être relevées dans l’application.
 

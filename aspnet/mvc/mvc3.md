@@ -81,7 +81,7 @@ Cela est pris en charge par NuGet nouvelle *la structure* package appelé **MvcS
 
 Autres fonctionnalités de MvcScaffolding incluent :
 
-- Prise en charge pour les projets c# et VB
+- Prise en charge pour les projets C# et VB
 - Prise en charge de Razor les ASPX afficher moteurs
 - Prend en charge la génération de modèles automatique dans des zones d’ASP.NET MVC et à l’aide de la vue personnalisée des dispositions/maîtres
 - Vous pouvez facilement personnaliser la sortie en modifiant les modèles T4
@@ -119,7 +119,7 @@ La boîte de dialogue Nouveau projet inclut une case à cocher Activer HTML 5 de
 ASP.NET MVC 3 est fourni avec un nouveau moteur d’affichage nommé Razor qui offre les avantages suivants :
 
 - Syntaxe Razor est claire et concise, nécessitant un nombre minimal de séquences de touches.
-- Razor est facile à apprendre, en partie, car il est basé sur les langages existants, tels que c# et Visual Basic.
+- Razor est facile à apprendre, en partie, car il est basé sur les langages existants, tels que C# et Visual Basic.
 - Visual Studio inclut la colorisation de code et IntelliSense pour la syntaxe Razor.
 - Les vues Razor peuvent être des tests unitaires sans devoir exécuter l’application ou lancer un serveur web.
 
