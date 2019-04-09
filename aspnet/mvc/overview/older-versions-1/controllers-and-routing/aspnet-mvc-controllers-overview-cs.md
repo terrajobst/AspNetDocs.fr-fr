@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs
-title: Vue d’ensemble du contrôleur ASP.NET MVC (c#) | Microsoft Docs
+title: Vue d’ensemble du contrôleur ASP.NET MVC (C#) | Microsoft Docs
 author: StephenWalther
 description: Dans ce didacticiel, Stephen Walther vous présente les contrôleurs ASP.NET MVC. Vous allez apprendre à créer de nouveaux contrôleurs et de retourner différents types de res d’action...
 ms.author: riande
@@ -38,7 +38,7 @@ Listing 1 contient un simple contrôleur nommé ProductController.
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample1.cs)]
 
-Comme vous pouvez le voir à partir de la liste 1, un contrôleur est simplement une classe (une classe Visual Basic .NET ou c#). Un contrôleur est une classe qui dérive de la classe de base System.Web.Mvc.Controller. Un contrôleur hérite de cette classe de base, un contrôleur hérite de plusieurs méthodes utiles gratuitement (nous y reviendrons ces méthodes dans un instant).
+Comme vous pouvez le voir à partir de la liste 1, un contrôleur est simplement une classe (une classe Visual Basic .NET ou C#). Un contrôleur est une classe qui dérive de la classe de base System.Web.Mvc.Controller. Un contrôleur hérite de cette classe de base, un contrôleur hérite de plusieurs méthodes utiles gratuitement (nous y reviendrons ces méthodes dans un instant).
 
 ## <a name="understanding-controller-actions"></a>Présentation des Actions de contrôleur
 
@@ -48,7 +48,7 @@ Un contrôleur expose les actions de contrôleur. Une action est une méthode su
 
 Dans ce cas, la méthode Index() est appelée sur la classe ProductController. La méthode Index() est un exemple d’une action de contrôleur.
 
-Une action de contrôleur doit être une méthode publique d’une classe de contrôleur. Méthodes c#, par défaut, sont des méthodes privées. Notez que toute méthode publique que vous ajoutez à une classe de contrôleur est exposée comme une action de contrôleur automatiquement (vous devez veiller à ce sujet dans la mesure où une action de contrôleur peut être appelée par n’importe qui dans l’univers en tapant l’URL de droite dans une barre d’adresses du navigateur).
+Une action de contrôleur doit être une méthode publique d’une classe de contrôleur. Méthodes C#, par défaut, sont des méthodes privées. Notez que toute méthode publique que vous ajoutez à une classe de contrôleur est exposée comme une action de contrôleur automatiquement (vous devez veiller à ce sujet dans la mesure où une action de contrôleur peut être appelée par n’importe qui dans l’univers en tapant l’URL de droite dans une barre d’adresses du navigateur).
 
 Il existe certaines exigences supplémentaires qui doivent être satisfaites par une action de contrôleur. Une méthode utilisée comme une action de contrôleur ne peut pas être surchargée. En outre, une action de contrôleur ne peut pas être une méthode statique. Autrement, vous pouvez utiliser pratiquement n’importe quelle méthode comme une action de contrôleur.
 

@@ -236,7 +236,7 @@ La solution de la table ci-dessus nous donne une mise en page de grille de nos d
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample10.aspx)]
 
-Nous utilisons le mot clé « var » au sein de l’instruction foreach ci-dessus comme nous une boucle sur chaque dîner dans notre modèle. Ceux êtes pas familiarisé avec c# 3.0 peuvent penser qu’à l’aide de « var » signifie que l’objet dîner est à liaison tardive. Cela signifie plutôt que le compilateur utilise l’inférence de type par rapport à la propriété fortement typée « Model » (qui est de type « IEnumerable&lt;dîner&gt;») et la compilation de la variable locale « dîner » en tant que Dinner type – ce qui signifie que nous obtenons complètes IntelliSense et le moment de la compilation vérifiant dans les blocs de code :
+Nous utilisons le mot clé « var » au sein de l’instruction foreach ci-dessus comme nous une boucle sur chaque dîner dans notre modèle. Ceux êtes pas familiarisé avec C# 3.0 peuvent penser qu’à l’aide de « var » signifie que l’objet dîner est à liaison tardive. Cela signifie plutôt que le compilateur utilise l’inférence de type par rapport à la propriété fortement typée « Model » (qui est de type « IEnumerable&lt;dîner&gt;») et la compilation de la variable locale « dîner » en tant que Dinner type – ce qui signifie que nous obtenons complètes IntelliSense et le moment de la compilation vérifiant dans les blocs de code :
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image21.png)
 

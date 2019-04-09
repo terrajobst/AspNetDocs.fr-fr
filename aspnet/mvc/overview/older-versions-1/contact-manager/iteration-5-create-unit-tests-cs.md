@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
-title: 'Itération #5 : créer des tests unitaires (c#) | Microsoft Docs'
+title: 'Itération #5 : créer des tests unitaires (C#) | Microsoft Docs'
 author: microsoft
 description: Dans la cinquième itération, nous faciliter notre application mettre à jour et modifier en ajoutant des tests unitaires. Nous simuler nos classes de modèle de données et générer des tests unitaires pour o...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/25/2019
 ms.locfileid: "58422166"
 ---
-<a name="iteration-5--create-unit-tests-c"></a>Itération #5 : créer des tests unitaires (c#)
+<a name="iteration-5--create-unit-tests-c"></a>Itération #5 : créer des tests unitaires (C#)
 ====================
 by [Microsoft](https://github.com/microsoft)
 
@@ -24,7 +24,7 @@ by [Microsoft](https://github.com/microsoft)
 > Dans la cinquième itération, nous faciliter notre application mettre à jour et modifier en ajoutant des tests unitaires. Nous simuler nos classes de modèle de données et générer des tests unitaires pour nos contrôleurs et la logique de validation.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (c#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (C#)
 
 Dans cette série de didacticiels, nous créer une application de gestion des contacts entière à partir du début à la fin. L’application Gestionnaire de Contact permet vous permettent de stocker les informations de contact (noms, numéros de téléphone et adresses de messagerie) pour obtenir la liste de personnes.
 

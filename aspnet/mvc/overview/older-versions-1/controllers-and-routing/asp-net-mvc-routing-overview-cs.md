@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs
-title: Présentation du routage ASP.NET MVC (c#) | Microsoft Docs
+title: Présentation du routage ASP.NET MVC (C#) | Microsoft Docs
 author: StephenWalther
 description: Dans ce didacticiel, Stephen Walther montre comment l’infrastructure ASP.NET MVC mappe les demandes du navigateur pour les actions de contrôleur.
 ms.author: riande
