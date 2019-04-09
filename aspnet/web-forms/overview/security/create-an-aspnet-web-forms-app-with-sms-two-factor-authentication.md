@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication
-title: Créer un site Web ASP.NET application Forms avec authentification à deux facteurs SMS (c#) | Microsoft Docs
+title: Créer un site Web ASP.NET application Forms avec authentification à deux facteurs SMS (C#) | Microsoft Docs
 author: Erikre
 description: Ce didacticiel vous montre comment créer une application ASP.NET Web Forms avec authentification à deux facteurs. Ce didacticiel a été conçu pour compléter le didacticiel intitulé Cr...
 ms.author: riande

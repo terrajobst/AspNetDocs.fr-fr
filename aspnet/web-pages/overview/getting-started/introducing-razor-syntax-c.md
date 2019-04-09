@@ -1,6 +1,6 @@
 ---
 uid: web-pages/overview/getting-started/introducing-razor-syntax-c
-title: Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor (c#) | Microsoft Docs
+title: Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor (C#) | Microsoft Docs
 author: Rick-Anderson
 description: Ce chapitre vous donne une vue d’ensemble de la programmation avec les Pages Web ASP.NET à l’aide de la syntaxe Razor. ASP.NET est la technologie de Microsoft pour les pa web dynamique en cours d’exécution...
 ms.author: riande
@@ -15,11 +15,11 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57032666"
 ---
-<a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-c"></a>Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor (c#)
+<a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-c"></a>Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor (C#)
 ====================
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Cet article vous donne une vue d’ensemble de la programmation avec les Pages Web ASP.NET à l’aide de la syntaxe Razor. ASP.NET est la technologie de Microsoft pour les pages web dynamiques en cours d’exécution sur les serveurs web. Cette articles est consacrée à l’aide du langage de programmation c#.
+> Cet article vous donne une vue d’ensemble de la programmation avec les Pages Web ASP.NET à l’aide de la syntaxe Razor. ASP.NET est la technologie de Microsoft pour les pages web dynamiques en cours d’exécution sur les serveurs web. Cette articles est consacrée à l’aide du langage de programmation C#.
 > 
 > **Ce que vous allez apprendre**:
 > 
@@ -42,7 +42,7 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 Cette section répertorie quelques conseils que vous devez absolument connaître lorsque vous commencez à écrire le code de serveur ASP.NET à l’aide de la syntaxe Razor.
 
 > [!NOTE]
-> La syntaxe Razor est basée sur le langage de programmation c#, et qui est la langue est utilisée plus souvent avec les Pages Web ASP.NET. Toutefois, la syntaxe Razor prend également en charge le langage Visual Basic et tout ce que vous voyez que vous pouvez également faire dans Visual Basic. Pour plus d’informations, consultez l’annexe [langage Visual Basic et la syntaxe](https://go.microsoft.com/fwlink/?LinkId=202908).
+> La syntaxe Razor est basée sur le langage de programmation C#, et qui est la langue est utilisée plus souvent avec les Pages Web ASP.NET. Toutefois, la syntaxe Razor prend également en charge le langage Visual Basic et tout ce que vous voyez que vous pouvez également faire dans Visual Basic. Pour plus d’informations, consultez l’annexe [langage Visual Basic et la syntaxe](https://go.microsoft.com/fwlink/?LinkId=202908).
 
 
 Vous trouverez plus d’informations sur la plupart de ces techniques de programmation plus loin dans l’article.
@@ -101,7 +101,7 @@ Un *chaîne* est une séquence de caractères qui sont traitées en tant que tex
 
 [!code-cshtml[Main](introducing-razor-syntax-c/samples/sample5.cshtml)]
 
-Si la chaîne que vous souhaitez afficher contient un caractère de barre oblique inverse ( `\` ) ou des guillemets doubles ( `"` ), utilisez un *littéral de chaîne textuelle* qui est préfixé avec le `@` opérateur. (En c#, le \ caractère a une signification spéciale, sauf si vous utilisez un littéral de chaîne textuelle.)
+Si la chaîne que vous souhaitez afficher contient un caractère de barre oblique inverse ( `\` ) ou des guillemets doubles ( `"` ), utilisez un *littéral de chaîne textuelle* qui est préfixé avec le `@` opérateur. (En C#, le \ caractère a une signification spéciale, sauf si vous utilisez un littéral de chaîne textuelle.)
 
 [!code-html[Main](introducing-razor-syntax-c/samples/sample6.html)]
 
@@ -114,12 +114,12 @@ Voici le résultat de l’utilisation de ces deux exemples dans une page :
 ![Razor-Img4](introducing-razor-syntax-c/_static/image4.jpg)
 
 > [!NOTE]
-> Notez que le `@` caractère est utilisé pour marquer des littéraux de chaîne textuelle dans c# et à marquer du code dans les pages ASP.NET.
+> Notez que le `@` caractère est utilisé pour marquer des littéraux de chaîne textuelle dans C# et à marquer du code dans les pages ASP.NET.
 
 
 ### <a name="6-code-is-case-sensitive"></a>6. Code respecte la casse
 
-En c#, mots clés (telles que `var`, `true`, et `if`) et les noms de variables respectent la casse. Les lignes suivantes de code créent deux variables différentes, `lastName` et `LastName.`
+En C#, mots clés (telles que `var`, `true`, et `if`) et les noms de variables respectent la casse. Les lignes suivantes de code créent deux variables différentes, `lastName` et `LastName.`
 
 [!code-cshtml[Main](introducing-razor-syntax-c/samples/sample8.cshtml)]
 
@@ -223,7 +223,7 @@ La syntaxe Razor offre toute la puissance d’ASP.NET, mais en utilisant une syn
 
 Vous avez vu précédemment un exemple de base de la création d’une page ASP.NET Web Pages, et comment vous pouvez ajouter du code de serveur à la balise HTML. Ici, vous allez apprendre les principes fondamentaux de l’écriture de code de serveur ASP.NET à l’aide de la syntaxe Razor &#8212; , autrement dit, les règles langage de programmation.
 
-Si vous êtes familiarisé avec la programmation (surtout si vous avez utilisé le C, C++, c#, Visual Basic ou JavaScript), une grande partie de ce que vous lire ici sera familier. Vous devrez probablement vous familiariser uniquement avec le code de serveur est ajouté à balisage dans *.cshtml* fichiers.
+Si vous êtes familiarisé avec la programmation (surtout si vous avez utilisé le C, C++, C#, Visual Basic ou JavaScript), une grande partie de ce que vous lire ici sera familier. Vous devrez probablement vous familiariser uniquement avec le code de serveur est ajouté à balisage dans *.cshtml* fichiers.
 
 <a id="BM_CombiningTextMarkupAndCode"></a>
 ### <a name="combining-text-markup-and-code-in-code-blocks"></a>Combinaison de texte, balisage et Code dans les blocs de Code
@@ -284,11 +284,11 @@ Ici est le même bloc de code, avec la ligne de code commentée afin qu’il ne 
 
 [!code-cshtml[Main](introducing-razor-syntax-c/samples/sample21.cshtml)]
 
-À l’intérieur d’un bloc de code, comme alternative à l’aide de syntaxe de commentaire Razor, vous pouvez utiliser la syntaxe de commentaire du langage de programmation que vous utilisez, comme c# :
+À l’intérieur d’un bloc de code, comme alternative à l’aide de syntaxe de commentaire Razor, vous pouvez utiliser la syntaxe de commentaire du langage de programmation que vous utilisez, comme C# :
 
 [!code-cshtml[Main](introducing-razor-syntax-c/samples/sample22.cshtml)]
 
-En c#, les commentaires à ligne unique sont précédées par le `//` caractères et commentaires à plusieurs lignes commencent par `/*` et se terminer par `*/`. (Comme avec les commentaires Razor, les commentaires c# ne sont pas rendus dans le navigateur.)
+En C#, les commentaires à ligne unique sont précédées par le `//` caractères et commentaires à plusieurs lignes commencent par `/*` et se terminer par `*/`. (Comme avec les commentaires Razor, les commentaires C# ne sont pas rendus dans le navigateur.)
 
 Pour le balisage, comme vous le savez probablement, vous pouvez créer un commentaire HTML :
 
@@ -300,7 +300,7 @@ Les commentaires HTML commencent par `<!--` caractères et se terminent par `-->
 
 Contrairement aux commentaires HTML, les commentaires Razor *sont* restitué dans la page et l’utilisateur puisse les voir en affichant la page source.
 
-Razor présente des limitations sur les blocs imbriqués de c#. Pour plus d’informations, consultez [Variables c# nommé et imbriqués blocs générer divisé le Code](http://aspnetwebstack.codeplex.com/workitem/1914)
+Razor présente des limitations sur les blocs imbriqués de C#. Pour plus d’informations, consultez [Variables C# nommé et imbriqués blocs générer divisé le Code](http://aspnetwebstack.codeplex.com/workitem/1914)
 
 ## <a name="variables"></a>Variables
 
@@ -426,7 +426,7 @@ Le tableau suivant répertorie les méthodes de conversion et de test habituelle
 
 ## <a name="operators"></a>Opérateurs
 
-Un opérateur est un mot clé ou un caractère qui indique à ASP.NET quel type de commande à effectuer dans une expression. Le langage c# (et la syntaxe Razor qui repose sur ce dernier) prend en charge de nombreux opérateurs, mais il vous suffit de reconnaître les quelques pour commencer. Le tableau suivant récapitule les opérateurs courants.
+Un opérateur est un mot clé ou un caractère qui indique à ASP.NET quel type de commande à effectuer dans une expression. Le langage C# (et la syntaxe Razor qui repose sur ce dernier) prend en charge de nombreux opérateurs, mais il vous suffit de reconnaître les quelques pour commencer. Le tableau suivant récapitule les opérateurs courants.
 
 
 :::row:::
@@ -816,4 +816,4 @@ Si votre code n’a pas gérer l’exception, vous voyez une page d’erreur com
 
 [ASP.NET](https://msdn.microsoft.com/library/ee532866.aspx)
 
-[Langage c#](https://msdn.microsoft.com/library/kx37x362.aspx)
+[Langage C#](https://msdn.microsoft.com/library/kx37x362.aspx)

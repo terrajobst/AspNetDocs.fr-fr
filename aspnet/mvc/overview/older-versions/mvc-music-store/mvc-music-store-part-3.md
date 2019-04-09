@@ -144,7 +144,7 @@ Nous pouvons maintenant modifier la logique pour retourner un objet d’Album à
 
 [!code-csharp[Main](mvc-music-store-part-3/samples/sample11.cs)]
 
-*Remarque : Si vous n’êtes pas familiarisé avec C#, vous pouvez considérer que var reprenant que notre variable album est à liaison tardive. Qui n’est pas correct : le compilateur c# à l’aide de-l’inférence de type en fonction de ce que nous allons affecter à la variable pour déterminer que cet album est de type Album et compilation de la variable locale album comme type d’Album, donc nous obtenons la vérification au moment de la compilation et l’éditeur de code Visual Studio prise en charge.*
+*Remarque : Si vous n’êtes pas familiarisé avec C#, vous pouvez considérer que var reprenant que notre variable album est à liaison tardive. Qui n’est pas correct : le compilateur C# à l’aide de-l’inférence de type en fonction de ce que nous allons affecter à la variable pour déterminer que cet album est de type Album et compilation de la variable locale album comme type d’Album, donc nous obtenons la vérification au moment de la compilation et l’éditeur de code Visual Studio prise en charge.*
 
 Nous allons maintenant créer un modèle de vue qui utilise notre Album pour générer une réponse HTML. Avant cela, nous devons générer le projet afin que la boîte de dialogue Ajouter une vue connaît de notre classe Album nouvellement créé. Vous pouvez générer le projet en sélectionnant le Debug⇨Build MvcMusicStore élément de menu (pour plus de crédibilité, vous pouvez utiliser le raccourci Ctrl-Maj-B de numéros pour générer le projet).
 

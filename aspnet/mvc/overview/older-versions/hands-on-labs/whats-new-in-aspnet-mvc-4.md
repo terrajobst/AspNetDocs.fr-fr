@@ -604,7 +604,7 @@ Maintenant, vous avez 3 mises en page dans votre application ASP.NET MVC 4 :
 <a id="Exercise_4_Using_Asynchronous_Controllers"></a>
 ### <a name="exercise-4-using-asynchronous-controllers"></a>Exercice 4 : À l’aide de contrôleurs asynchrones
 
-Microsoft .NET Framework 4.5 introduit de nouvelles fonctionnalités de langage dans c# et Visual Basic pour fournir une nouvelle fondation pour le comportement asynchrone dans la programmation .NET. Cette nouvelle foundation rend la programmation asynchrone similaire à - et aussi simple que la programmation synchrone. Vous êtes maintenant en mesure d’écrire des méthodes d’action asynchrones dans ASP.NET MVC 4 à l’aide de la **AsyncController** classe. Vous pouvez utiliser les méthodes d’action asynchrones pour la durée d’exécution longue, pas le processeur lié des demandes. Cela évite de bloquer le serveur Web de réaliser un travail pendant le traitement de la demande. La classe AsyncController est généralement utilisée pour les appels de service Web long terme.
+Microsoft .NET Framework 4.5 introduit de nouvelles fonctionnalités de langage dans C# et Visual Basic pour fournir une nouvelle fondation pour le comportement asynchrone dans la programmation .NET. Cette nouvelle foundation rend la programmation asynchrone similaire à - et aussi simple que la programmation synchrone. Vous êtes maintenant en mesure d’écrire des méthodes d’action asynchrones dans ASP.NET MVC 4 à l’aide de la **AsyncController** classe. Vous pouvez utiliser les méthodes d’action asynchrones pour la durée d’exécution longue, pas le processeur lié des demandes. Cela évite de bloquer le serveur Web de réaliser un travail pendant le traitement de la demande. La classe AsyncController est généralement utilisée pour les appels de service Web long terme.
 
 Cet exercice explique les principes fondamentaux de l’opération asynchrone dans ASP.NET MVC 4. Si vous souhaitez approfondir vos connaissances, vous pouvez consulter l’article suivant : [[https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)
 
@@ -650,7 +650,7 @@ Cet exercice explique les principes fondamentaux de l’opération asynchrone da
 8. Exécutez l'application. Vous ne remarquerez aucune modification majeure, mais votre code ne bloquera pas d’un thread du pool de threads apporter une meilleure utilisation des ressources du serveur et améliore les performances.
 
     > [!NOTE]
-    > Vous trouverez plus d’informations sur les nouvelles fonctionnalités de programmation asynchrones dans le laboratoire &quot; **la programmation asynchrone dans .NET 4.5 avec c# et Visual Basic** &quot; inclus dans le Kit de formation Visual Studio.
+    > Vous trouverez plus d’informations sur les nouvelles fonctionnalités de programmation asynchrones dans le laboratoire &quot; **la programmation asynchrone dans .NET 4.5 avec C# et Visual Basic** &quot; inclus dans le Kit de formation Visual Studio.
 
 <a id="Task_2_-_Handling_Time-Outs_with_Cancellation_Tokens"></a>
 #### <a name="task-2---handling-time-outs-with-cancellation-tokens"></a>Tâche 2 : délais d’expiration de la gestion des jetons d’annulation
@@ -723,7 +723,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *À l’aide d’extraits de code Visual Studio pour insérer du code dans votre projet*
 
-***Pour ajouter un extrait de code à l’aide du clavier (c# uniquement)***
+***Pour ajouter un extrait de code à l’aide du clavier (C# uniquement)***
 
 1. Placez le curseur où vous souhaitez insérer le code.
 2. Commencez à taper le nom de l’extrait de code (sans espaces ou des traits d’union).
@@ -743,7 +743,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *Appuyez sur Tab à nouveau et l’extrait de code seront développe.*
 
-***Pour ajouter un extrait de code à l’aide de la souris (c#, Visual Basic et XML)***
+***Pour ajouter un extrait de code à l’aide de la souris (C#, Visual Basic et XML)***
 
 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
 2. Sélectionnez **insérer un extrait** suivie **mes extraits de Code**.

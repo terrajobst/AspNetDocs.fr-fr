@@ -24,7 +24,7 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > Ce que vous allez apprendre :
 > 
 > - La syntaxe « Razor » de base que vous utilisez pour la programmation dans ASP.NET Web Pages.
-> - Une base en c#, qui est le langage de programmation que vous allez utiliser.
+> - Une base en C#, qui est le langage de programmation que vous allez utiliser.
 > - Certains concepts de programmation fondamentales pour les Pages Web.
 > - Comment installer des packages (composants qui contiennent du code prédéfini) à utiliser avec votre site.
 > - Comment utiliser *helpers* pour effectuer des tâches de programmation courantes.
@@ -36,7 +36,7 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > - Le `Gravatar` helper.
 
 
-Ce didacticiel est principalement un exercice de présentation de la syntaxe de programmation que vous utiliserez pour ASP.NET Web Pages. Vous allez découvrir *syntaxe Razor* et langage de programmation de code qui est écrit en c#. Vous avez obtenu un aperçu de cette syntaxe dans le didacticiel précédent ; Dans ce didacticiel, nous expliquerons la syntaxe plus.
+Ce didacticiel est principalement un exercice de présentation de la syntaxe de programmation que vous utiliserez pour ASP.NET Web Pages. Vous allez découvrir *syntaxe Razor* et langage de programmation de code qui est écrit en C#. Vous avez obtenu un aperçu de cette syntaxe dans le didacticiel précédent ; Dans ce didacticiel, nous expliquerons la syntaxe plus.
 
 Nous vous assurons que ce didacticiel implique le meilleur parti de programmation que vous verrez dans un didacticiel unique et qu’il s’agit du didacticiel uniquement qui est *uniquement* sur la programmation. Dans les didacticiels restants dans ce jeu, vous créerez réellement des pages de faire des choses intéressantes.
 
@@ -118,13 +118,13 @@ Comme prévu à partir de votre expérience dans le didacticiel précédent, le 
 
 > [!TIP] 
 > 
-> **Razor et c#**
+> **Razor et C#**
 > 
-> Jusqu'à présent, nous avons dit que vous travaillez avec la syntaxe Razor. C’est vrai, mais il n’est pas terminée. Le langage de programmation réel que vous utilisez est appelé *c#*. C# a été créé par Microsoft plus de dix ans plus tôt et est devenu l’un des langages de programmation principales pour la création d’applications de Windows. Toutes les règles que vous avez vu comment nommer une variable et comment créer des instructions et ainsi de suite sont réellement toutes les règles du langage c#.
+> Jusqu'à présent, nous avons dit que vous travaillez avec la syntaxe Razor. C’est vrai, mais il n’est pas terminée. Le langage de programmation réel que vous utilisez est appelé *C#*. C# a été créé par Microsoft plus de dix ans plus tôt et est devenu l’un des langages de programmation principales pour la création d’applications de Windows. Toutes les règles que vous avez vu comment nommer une variable et comment créer des instructions et ainsi de suite sont réellement toutes les règles du langage C#.
 > 
 > Razor fait référence plus précisément à l’ensemble des conventions de la façon dont vous incorporez ce code dans une page. Par exemple, la convention de l’utilisation de pour marquer du code dans la page et à l’aide de @ {} pour incorporer un bloc de code est l’aspect de Razor d’une page. Programmes d’assistance sont également considérés comme partie de Razor. Syntaxe Razor est utilisée dans des emplacements plus élevée qu’uniquement dans ASP.NET Web Pages. (Par exemple, il est utilisé dans les affichages ASP.NET MVC.)
 > 
-> Nous y fait allusion car si vous recherchez des informations sur la programmation ASP.NET Web Pages, vous trouverez un grand nombre de références à Razor. Toutefois, un grand nombre de ces références ne s’appliquent pas à ce que vous êtes cela et pouvez donc être déroutant. Et en fait, la plupart de vos questions sur la programmation vraiment vont être sur l’utilisation de c# ou de travailler avec ASP.NET. Par conséquent, si vous recherchez spécifiquement les informations sur Razor, vous ne trouviez pas les réponses que vous avez besoin.
+> Nous y fait allusion car si vous recherchez des informations sur la programmation ASP.NET Web Pages, vous trouverez un grand nombre de références à Razor. Toutefois, un grand nombre de ces références ne s’appliquent pas à ce que vous êtes cela et pouvez donc être déroutant. Et en fait, la plupart de vos questions sur la programmation vraiment vont être sur l’utilisation de C# ou de travailler avec ASP.NET. Par conséquent, si vous recherchez spécifiquement les informations sur Razor, vous ne trouviez pas les réponses que vous avez besoin.
 
 
 ## <a name="adding-some-conditional-logic"></a>Ajout d’une logique conditionnelle
@@ -230,7 +230,7 @@ Il existe une astuce ici, comme vous pouvez le voir. Comme son nom l’indique, 
 > 
 > **Types de données et les méthodes As()**
 > 
-> Nous avons seulement dit que jusqu'à présent, lorsque vous créez une variable, utiliser le mot clé var. N’est pas tout l’article, cependant. Afin de manipuler les valeurs, pour ajouter des numéros, ou concaténer des chaînes, ou comparer les dates ou tester pour la valeur true/false, c# doit fonctionner avec une représentation interne appropriée de la valeur. C# peut *généralement* déterminer ce que cette représentation doit être (autrement dit, ce qui *type* les données sont) en fonction de ce que vous faites avec les valeurs. Maintenant, puis, cependant, il ne peut pas le faire. Si ce n’est pas le cas, vous devez aider en explicitement indiquant comment c# doit représenter des données. La méthode AsBool fait, il indique à c# qu’une valeur de chaîne « true » ou « false » doit être traitée comme une valeur booléenne. Il existe des méthodes similaires pour représenter des chaînes comme d’autres types, tels que AsInt (considérer comme un entier), AsDateTime (considérer comme une date/heure), AsFloat (considérer comme un nombre à virgule flottante) et ainsi de suite. Lorsque vous utilisez en tant que méthodes (), si c# ne peut pas représenter la valeur de chaîne comme demandé, vous verrez une erreur.
+> Nous avons seulement dit que jusqu'à présent, lorsque vous créez une variable, utiliser le mot clé var. N’est pas tout l’article, cependant. Afin de manipuler les valeurs, pour ajouter des numéros, ou concaténer des chaînes, ou comparer les dates ou tester pour la valeur true/false, C# doit fonctionner avec une représentation interne appropriée de la valeur. C# peut *généralement* déterminer ce que cette représentation doit être (autrement dit, ce qui *type* les données sont) en fonction de ce que vous faites avec les valeurs. Maintenant, puis, cependant, il ne peut pas le faire. Si ce n’est pas le cas, vous devez aider en explicitement indiquant comment C# doit représenter des données. La méthode AsBool fait, il indique à C# qu’une valeur de chaîne « true » ou « false » doit être traitée comme une valeur booléenne. Il existe des méthodes similaires pour représenter des chaînes comme d’autres types, tels que AsInt (considérer comme un entier), AsDateTime (considérer comme une date/heure), AsFloat (considérer comme un nombre à virgule flottante) et ainsi de suite. Lorsque vous utilisez en tant que méthodes (), si C# ne peut pas représenter la valeur de chaîne comme demandé, vous verrez une erreur.
 
 
 Dans le balisage de la page, supprimez ou commentez cet élément (ici il est indiqué comme commenté) :
@@ -336,7 +336,7 @@ Ce code produit quelque chose comme le résultat suivant (l’image par défaut 
 
 ## <a name="coming-up-next"></a>Prochaine
 
-Pour conserver ce court didacticiel, nous avons dû vous concentrer sur quelques notions de base uniquement. Naturellement, il existe un *beaucoup* plus Razor et c#. Vous allez découvrir plus en tant que vous parcourez ces didacticiels. Si vous souhaitez en savoir plus sur les aspects de programmation de Razor et C# maintenant, vous pouvez lire une présentation plus poussée ici : [Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890).
+Pour conserver ce court didacticiel, nous avons dû vous concentrer sur quelques notions de base uniquement. Naturellement, il existe un *beaucoup* plus Razor et C#. Vous allez découvrir plus en tant que vous parcourez ces didacticiels. Si vous souhaitez en savoir plus sur les aspects de programmation de Razor et C# maintenant, vous pouvez lire une présentation plus poussée ici : [Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890).
 
 Le didacticiel suivant vous présente à travailler avec une base de données. Dans ce didacticiel, vous allez commencer à créer l’exemple d’application qui permet de répertorier vos films préférés.
 

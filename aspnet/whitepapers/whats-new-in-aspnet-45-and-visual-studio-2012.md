@@ -602,7 +602,7 @@ Si vous exécutez ensuite le site Web sur Windows 7 sans SP1 est installé, IIS 
 
 En mode conception, des propriétés complexes de contrôles de serveur souvent ont associé boîtes de dialogue et Assistants pour faciliter leur définition. Par exemple, vous pouvez utiliser une boîte de dialogue pour ajouter une source de données à un *Repeater* contrôler ou ajouter des colonnes à une *GridView* contrôle.
 
-Toutefois, ce type de l’aide de l’interface utilisateur de propriétés complexes n’était pas disponible en mode Source. Par conséquent, Visual Studio 11 présente les tâches guidées de vue de Source. Tâches guidées sont sensibles au contexte raccourcis pour les fonctionnalités couramment utilisées dans les éditeurs de c# et Visual Basic.
+Toutefois, ce type de l’aide de l’interface utilisateur de propriétés complexes n’était pas disponible en mode Source. Par conséquent, Visual Studio 11 présente les tâches guidées de vue de Source. Tâches guidées sont sensibles au contexte raccourcis pour les fonctionnalités couramment utilisées dans les éditeurs de C# et Visual Basic.
 
 Pour les contrôles Web Forms ASP.NET, tâche guidée apparaît sur les balises serveur comme un glyphe de petite lorsque le point d’insertion est à l’intérieur de l’élément :
 
@@ -686,7 +686,7 @@ Par défaut, le Gestionnaire d’événements utilise l’ID du contrôle pour l
 
 ![](whats-new-in-aspnet-45-and-visual-studio-2012/_static/image4.jpg)
 
-Le Gestionnaire d’événements résultant ressemblera à ceci (dans ce cas, en c#) :
+Le Gestionnaire d’événements résultant ressemblera à ceci (dans ce cas, en C#) :
 
 ![](whats-new-in-aspnet-45-and-visual-studio-2012/_static/image18.png)
 

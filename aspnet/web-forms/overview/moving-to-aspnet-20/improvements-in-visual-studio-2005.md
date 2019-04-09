@@ -54,7 +54,7 @@ Point seront abordés plus d’informations sur le serveur de développement ASP
 
 ## <a name="improved-file-management"></a>Gestion améliorée des fichiers
 
-Dans Visual Studio 2002 et 2003, un fichier projet (.vbproj pour VB.NET) et .csproj pour c# stockées des informations sur tous les fichiers dans l’application Web. L’affichage de l’Explorateur de solutions est basé sur les informations de fichier dans le fichier projet. Pour cette raison, l’Explorateur de solutions afficherait souvent des informations incorrectes dans les cas où les éditeurs externes ont été utilisés. Visual Studio 2002 et 2003 est souvent remplacer les modifications de fichier ou n’affiche pas la version la plus récente des fichiers.
+Dans Visual Studio 2002 et 2003, un fichier projet (.vbproj pour VB.NET) et .csproj pour C# stockées des informations sur tous les fichiers dans l’application Web. L’affichage de l’Explorateur de solutions est basé sur les informations de fichier dans le fichier projet. Pour cette raison, l’Explorateur de solutions afficherait souvent des informations incorrectes dans les cas où les éditeurs externes ont été utilisés. Visual Studio 2002 et 2003 est souvent remplacer les modifications de fichier ou n’affiche pas la version la plus récente des fichiers.
 
 Visual Studio 2005 ne contient plus le fichier projet. Au lieu de cela, il lit les informations de fichier et dossier directement à partir du disque, ce qui entraîne un affichage précis des fichiers dans votre projet. Étant donné que le dossier références dans Visual Studio 2002 et 2003 ne représente pas un dossier réel dans votre application Web, Visual Studio 2005 supprime également le dossier références de l’Explorateur de solutions. Pour accéder aux références de votre projet dans Visual Studio 2005, vous devez utiliser les pages de propriétés pour le projet.
 
@@ -266,7 +266,7 @@ Dans Visual Studio 2002 et 2003, les applications Web ont été compilées dans 
 > L’utilitaire de ligne de commande MSBuild peut également servir à créer des applications Web ASP.NET. Cet outil est abordé dans le module 9.
 
 
-Une autre amélioration de la compilation est la nouvelle option de générer, Page dans le menu Générer. Cette fonctionnalité permet à un développeur régénérer uniquement la page actuelle (avec, des cours et des dépendances) afin que les modifications peuvent être compilées plus rapidement. Étant donné que c# ne propose pas de compilation d’arrière-plan à des fins de mise à jour d’IntelliSense, etc., ils bénéficieront énormément cette fonctionnalité, car cela permet à IntelliSense à mettre à jour rapidement en reconstruisant simplement une seule page.
+Une autre amélioration de la compilation est la nouvelle option de générer, Page dans le menu Générer. Cette fonctionnalité permet à un développeur régénérer uniquement la page actuelle (avec, des cours et des dépendances) afin que les modifications peuvent être compilées plus rapidement. Étant donné que C# ne propose pas de compilation d’arrière-plan à des fins de mise à jour d’IntelliSense, etc., ils bénéficieront énormément cette fonctionnalité, car cela permet à IntelliSense à mettre à jour rapidement en reconstruisant simplement une seule page.
 
 Les propriétés de Build pour un projet vous autorise à configurer le type de build qui se produit avant l’exécution de la page de démarrage. Les développeurs peuvent choisir de ne créer la page active pour que Visual Studio puisse commencer à déboguer des applications plus rapidement après la modification du code.
 

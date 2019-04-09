@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset
-title: Créer une application Web Forms ASP.NET sécurisée avec inscription des utilisateurs, par e-mail de réinitialisation de mot de passe et de confirmation (c#) | Microsoft Docs
+title: Créer une application Web Forms ASP.NET sécurisée avec inscription des utilisateurs, par e-mail de réinitialisation de mot de passe et de confirmation (C#) | Microsoft Docs
 author: Erikre
 description: Ce didacticiel vous montre comment créer une application Web Forms ASP.NET avec inscription utilisateur, confirmation par courrier électronique et mot de passe réinitialisé à l’aide du membre de l’identité ASP.NET...
 ms.author: riande

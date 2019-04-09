@@ -25,7 +25,7 @@ L’ajout de modèles personnalisés était un processus complexe qui s’appuya
 
 Aucun des approches mentionnées précédemment est idéale afin de nous avons décidé de tirer parti de l’infrastructure existante fournie par [VSIX](https://msdn.microsoft.com/library/ff363239.aspx) extensions pour faciliter l’auteur, distribuer et installer des modèles MVC personnalisés à partir de MVC 4 pour Visual Studio 2012. Certains des avantages fournis par cette approche sont :
 
-- Une extension VSIX peut contenir plusieurs modèles qui prennent en charge différentes langues (c# et Visual Basic) et plusieurs moteurs d’affichage (ASPX et Razor).
+- Une extension VSIX peut contenir plusieurs modèles qui prennent en charge différentes langues (C# et Visual Basic) et plusieurs moteurs d’affichage (ASPX et Razor).
 - Une extension VSIX peut cibler plusieurs références (SKU) de Visual Studio, y compris les références (SKU) Express.
 - Le [galerie Visual Studio](https://visualstudiogallery.msdn.microsoft.com/) facilite la distribution de l’extension à un large public.
 - Extensions VSIX peuvent être mis à niveau ce qui facilite la création des corrections et mises à jour de vos modèles personnalisés.
@@ -38,7 +38,7 @@ Aucun des approches mentionnées précédemment est idéale afin de nous avons d
 
 ## <a name="example"></a>Exemple
 
-La première étape consiste à créer un projet VSIX à l’aide de c# ou Visual Basic. Sélectionnez **fichier > Nouveau projet**, puis cliquez sur **extensibilité** dans le volet gauche, sélectionnez le **projet VSIX**.
+La première étape consiste à créer un projet VSIX à l’aide de C# ou Visual Basic. Sélectionnez **fichier > Nouveau projet**, puis cliquez sur **extensibilité** dans le volet gauche, sélectionnez le **projet VSIX**.
 
 ![Nouveau projet](custom-mvc-templates/_static/image1.jpg)
 
@@ -90,7 +90,7 @@ Path=&quot;ProjectTemplates\MyMvcWebApplicationProjectTemplate.csaspx\BasicMvcWe
 
 ProjectType=&quot;MVC&quot;
 
-Language =&quot;c#&quot;
+Language =&quot;C#&quot;
 
 ViewEngine=&quot;Aspx&quot;
 
@@ -105,7 +105,7 @@ Version=&quot;4.0&quot;/&gt;
 Voici une explication des attributs personnalisés qui doivent être présents :
 
 - **ProjectType** doit être définie sur MVC.
-- **Langage** désigne le langage de développement pris en charge par le modèle. Les valeurs valides sont les c# ou VB.
+- **Langage** désigne le langage de développement pris en charge par le modèle. Les valeurs valides sont les C# ou VB.
 - **ViewEngine** désigne le moteur d’affichage pris en charge par le modèle telles que Aspx ou Razor. Vous pouvez spécifier une valeur personnalisée pour ce champ.
 - **TemplateId** permet de regrouper les modèles. Si la valeur correspond à un ID de modèle existant, il sera remplacer des modèles précédemment inscrits avec l’Assistant MVC.
 - **Titre** désigne la description courte est affichée dans l’Assistant MVC en dessous de chaque modèle de projet.

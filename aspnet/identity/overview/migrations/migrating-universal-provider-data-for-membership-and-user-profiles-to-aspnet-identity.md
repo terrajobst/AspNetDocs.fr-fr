@@ -1,6 +1,6 @@
 ---
 uid: identity/overview/migrations/migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity
-title: Migration des données du fournisseur universel pour l’appartenance et les profils utilisateur vers ASP.NET Identity (c#) | Microsoft Docs
+title: Migration des données du fournisseur universel pour l’appartenance et les profils utilisateur vers ASP.NET Identity (C#) | Microsoft Docs
 author: rustd
 description: Ce didacticiel décrit les étapes nécessaires à la migration des utilisateurs et les données de rôle et les données de profil utilisateur créées à l’aide de fournisseurs universels d’une application existante...
 ms.author: riande
