@@ -8,22 +8,22 @@ ms.date: 03/13/2007
 ms.assetid: 28d5bb59-9aad-4cdd-8088-1e9d3d230ac5
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-implement-the-incremental-page-display-pattern-using-http-get-and-post
 msc.type: video
-ms.openlocfilehash: c36b6d59dfa8d66f23542be466a1c614dfb263f2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e4766f6d20c17cf99c11fc634cf15743ef839716
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413709"
 ---
-<a name="how-do-i-implement-the-incremental-page-display-pattern-using-http-get-and-post"></a><span data-ttu-id="b823c-105">[Comment faire] Implémenter le modèle d’affichage de Page incrémentiel à l’aide de HTTP GET et POST ?</span><span class="sxs-lookup"><span data-stu-id="b823c-105">[How Do I:] Implement the Incremental Page Display Pattern using HTTP GET and POST?</span></span>
-====================
-<span data-ttu-id="b823c-106">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="b823c-106">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+# <a name="how-do-i-implement-the-incremental-page-display-pattern-using-http-get-and-post"></a><span data-ttu-id="a8503-105">[Comment faire] Implémenter le modèle d’affichage de Page incrémentiel à l’aide de HTTP GET et POST ?</span><span class="sxs-lookup"><span data-stu-id="a8503-105">[How Do I:] Implement the Incremental Page Display Pattern using HTTP GET and POST?</span></span>
 
-<span data-ttu-id="b823c-107">Cette vidéo examine un autre le AJAX incrémentielle Page modèle d’affichage dans lequel la page Web est récupérée et affichée de façon incrémentielle.</span><span class="sxs-lookup"><span data-stu-id="b823c-107">This video takes another look at the AJAX Incremental Page Display Pattern in which the Web page is retrieved and displayed incrementally.</span></span> <span data-ttu-id="b823c-108">Dans cette vidéo, les données sont récupérées à partir du serveur à l’aide de requêtes HTTP GET et POST, plutôt que la démonstration antérieure de l’utilisation d’appels de service Web.</span><span class="sxs-lookup"><span data-stu-id="b823c-108">In this video the data is retrieved from the server using HTTP GET and POST requests, rather than the earlier demonstration of using Web service calls.</span></span>
+<span data-ttu-id="a8503-106">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="a8503-106">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-[<span data-ttu-id="b823c-109">&#9654;Regardez la vidéo (19 minutes)</span><span class="sxs-lookup"><span data-stu-id="b823c-109">&#9654; Watch video (19 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-implement-the-incremental-page-display-pattern-using-http-get-and-post)
+<span data-ttu-id="a8503-107">Cette vidéo examine un autre le AJAX incrémentielle Page modèle d’affichage dans lequel la page Web est récupérée et affichée de façon incrémentielle.</span><span class="sxs-lookup"><span data-stu-id="a8503-107">This video takes another look at the AJAX Incremental Page Display Pattern in which the Web page is retrieved and displayed incrementally.</span></span> <span data-ttu-id="a8503-108">Dans cette vidéo, les données sont récupérées à partir du serveur à l’aide de requêtes HTTP GET et POST, plutôt que la démonstration antérieure de l’utilisation d’appels de service Web.</span><span class="sxs-lookup"><span data-stu-id="a8503-108">In this video the data is retrieved from the server using HTTP GET and POST requests, rather than the earlier demonstration of using Web service calls.</span></span>
+
+[<span data-ttu-id="a8503-109">&#9654;Regardez la vidéo (19 minutes)</span><span class="sxs-lookup"><span data-stu-id="a8503-109">&#9654; Watch video (19 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-implement-the-incremental-page-display-pattern-using-http-get-and-post)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="b823c-110">[Précédent](how-do-i-implement-the-ajax-incremental-page-display-pattern.md)
-> [Suivant](how-do-i-use-the-aspnet-ajax-updateprogress-control.md)</span><span class="sxs-lookup"><span data-stu-id="b823c-110">[Previous](how-do-i-implement-the-ajax-incremental-page-display-pattern.md)
+> <span data-ttu-id="a8503-110">[Précédent](how-do-i-implement-the-ajax-incremental-page-display-pattern.md)
+> [Suivant](how-do-i-use-the-aspnet-ajax-updateprogress-control.md)</span><span class="sxs-lookup"><span data-stu-id="a8503-110">[Previous](how-do-i-implement-the-ajax-incremental-page-display-pattern.md)
 [Next](how-do-i-use-the-aspnet-ajax-updateprogress-control.md)</span></span>

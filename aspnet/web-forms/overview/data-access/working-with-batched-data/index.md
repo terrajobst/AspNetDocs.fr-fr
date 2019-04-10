@@ -8,23 +8,23 @@ ms.date: 10/05/2011
 ms.assetid: 95a1d7d3-7fc2-44ac-b27b-912e0e045ee5
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data
 msc.type: chapter
-ms.openlocfilehash: 6f62a21af3b85bc341c202b7b44d6703c2da655c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: aeb462d639e1af99b22b13a8f102de0835afc832
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019256"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417947"
 ---
-<a name="working-with-batched-data"></a><span data-ttu-id="da927-103">Utilisation de données par lots</span><span class="sxs-lookup"><span data-stu-id="da927-103">Working with Batched Data</span></span>
-====================
-> <span data-ttu-id="da927-104">Ces didacticiels examinent la mise à jour, suppression et l’insertion des lots de données à l’aide de transactions.</span><span class="sxs-lookup"><span data-stu-id="da927-104">These tutorials look at updating, deleting, and inserting batches of data using transactions.</span></span>
+# <a name="working-with-batched-data"></a><span data-ttu-id="69d93-103">Utilisation de données par lots</span><span class="sxs-lookup"><span data-stu-id="69d93-103">Working with Batched Data</span></span>
+
+> <span data-ttu-id="69d93-104">Ces didacticiels examinent la mise à jour, suppression et l’insertion des lots de données à l’aide de transactions.</span><span class="sxs-lookup"><span data-stu-id="69d93-104">These tutorials look at updating, deleting, and inserting batches of data using transactions.</span></span>
 
 
-- [<span data-ttu-id="da927-105">Inclusion de modifications d’une base de données dans une transaction (C#)</span><span class="sxs-lookup"><span data-stu-id="da927-105">Wrapping Database Modifications within a Transaction (C#)</span></span>](wrapping-database-modifications-within-a-transaction-cs.md)
-- [<span data-ttu-id="da927-106">Mise à jour par lots (C#)</span><span class="sxs-lookup"><span data-stu-id="da927-106">Batch Updating (C#)</span></span>](batch-updating-cs.md)
-- [<span data-ttu-id="da927-107">Suppression par lots (C#)</span><span class="sxs-lookup"><span data-stu-id="da927-107">Batch Deleting (C#)</span></span>](batch-deleting-cs.md)
-- [<span data-ttu-id="da927-108">Insertion par lots (C#)</span><span class="sxs-lookup"><span data-stu-id="da927-108">Batch Inserting (C#)</span></span>](batch-inserting-cs.md)
-- [<span data-ttu-id="da927-109">Inclusion de modifications d’une base de données dans une transaction (VB)</span><span class="sxs-lookup"><span data-stu-id="da927-109">Wrapping Database Modifications within a Transaction (VB)</span></span>](wrapping-database-modifications-within-a-transaction-vb.md)
-- [<span data-ttu-id="da927-110">Mise à jour par lots (VB)</span><span class="sxs-lookup"><span data-stu-id="da927-110">Batch Updating (VB)</span></span>](batch-updating-vb.md)
-- [<span data-ttu-id="da927-111">Suppression par lots (VB)</span><span class="sxs-lookup"><span data-stu-id="da927-111">Batch Deleting (VB)</span></span>](batch-deleting-vb.md)
-- [<span data-ttu-id="da927-112">Insertion par lots (VB)</span><span class="sxs-lookup"><span data-stu-id="da927-112">Batch Inserting (VB)</span></span>](batch-inserting-vb.md)
+- [<span data-ttu-id="69d93-105">Inclusion de modifications d’une base de données dans une transaction (C#)</span><span class="sxs-lookup"><span data-stu-id="69d93-105">Wrapping Database Modifications within a Transaction (C#)</span></span>](wrapping-database-modifications-within-a-transaction-cs.md)
+- [<span data-ttu-id="69d93-106">Mise à jour par lots (C#)</span><span class="sxs-lookup"><span data-stu-id="69d93-106">Batch Updating (C#)</span></span>](batch-updating-cs.md)
+- [<span data-ttu-id="69d93-107">Suppression par lots (C#)</span><span class="sxs-lookup"><span data-stu-id="69d93-107">Batch Deleting (C#)</span></span>](batch-deleting-cs.md)
+- [<span data-ttu-id="69d93-108">Insertion par lots (C#)</span><span class="sxs-lookup"><span data-stu-id="69d93-108">Batch Inserting (C#)</span></span>](batch-inserting-cs.md)
+- [<span data-ttu-id="69d93-109">Inclusion de modifications d’une base de données dans une transaction (VB)</span><span class="sxs-lookup"><span data-stu-id="69d93-109">Wrapping Database Modifications within a Transaction (VB)</span></span>](wrapping-database-modifications-within-a-transaction-vb.md)
+- [<span data-ttu-id="69d93-110">Mise à jour par lots (VB)</span><span class="sxs-lookup"><span data-stu-id="69d93-110">Batch Updating (VB)</span></span>](batch-updating-vb.md)
+- [<span data-ttu-id="69d93-111">Suppression par lots (VB)</span><span class="sxs-lookup"><span data-stu-id="69d93-111">Batch Deleting (VB)</span></span>](batch-deleting-vb.md)
+- [<span data-ttu-id="69d93-112">Insertion par lots (VB)</span><span class="sxs-lookup"><span data-stu-id="69d93-112">Batch Inserting (VB)</span></span>](batch-inserting-vb.md)
