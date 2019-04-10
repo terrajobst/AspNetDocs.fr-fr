@@ -8,15 +8,15 @@ ms.date: 04/29/2013
 ms.assetid: 3fd9f11c-799b-4001-bd60-1e70cfc61c19
 msc.legacyurl: /signalr/overview/older-versions/scaleout-in-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 78e53c38ec760334cecee0431d52d993a657b908
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9bad72d31a0ebc491910ebb128b3b3a7fb537958
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065536"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402685"
 ---
-<a name="introduction-to-scaleout-in-signalr-1x"></a>Introduction au scale-out dans SignalR 1.x
-====================
+# <a name="introduction-to-scaleout-in-signalr-1x"></a>Introduction au scale-out dans SignalR 1.x
+
 par [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -44,9 +44,9 @@ Si vous déployez votre application sur Azure, envisagez d’utiliser l’infras
 
 Les rubriques suivantes contiennent des didacticiels pas à pas pour chaque fond de panier :
 
-- [Montée en puissance parallèle de SignalR avec Azure Service Bus](scaleout-with-windows-azure-service-bus.md)
-- [Montée en puissance parallèle de SignalR avec Redis](scaleout-with-redis.md)
-- [Montée en puissance parallèle de SignalR avec SQL Server](scaleout-with-sql-server.md)
+- [Scale-out de SignalR avec Azure Service Bus](scaleout-with-windows-azure-service-bus.md)
+- [Scale-out de SignalR avec Redis](scaleout-with-redis.md)
+- [Scale-out de SignalR avec SQL Server](scaleout-with-sql-server.md)
 
 ## <a name="implementation"></a>Implémentation
 

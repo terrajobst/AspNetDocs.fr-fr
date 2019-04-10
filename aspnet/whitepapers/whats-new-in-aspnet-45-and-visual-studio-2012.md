@@ -8,15 +8,15 @@ ms.date: 02/29/2012
 ms.assetid: ba1fabb4-31a3-4ebf-8327-41a6bbba6eaf
 msc.legacyurl: /whitepapers/whats-new-in-aspnet-45-and-visual-studio-2012
 msc.type: content
-ms.openlocfilehash: 6bbfb4aa7f29e4c189da4dfdca6f2113c7550b68
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5f50721b6f263b9cb025f5fa57c923dadeddcd28
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045046"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410589"
 ---
-<a name="whats-new-in-aspnet-45-and-visual-studio-2012"></a>Nouveautés d’ASP.NET 4.5 et de Visual Studio 2012
-====================
+# <a name="whats-new-in-aspnet-45-and-visual-studio-2012"></a>Nouveautés d’ASP.NET 4.5 et de Visual Studio 2012
+
 > Ce document décrit les nouvelles fonctionnalités et améliorations introduites dans ASP.NET 4.5. Il décrit également les améliorations apportées pour le développement web dans Visual Studio 2012. Ce document a été initialement publié sur le 29 février 2012.
 
 
@@ -42,10 +42,10 @@ ms.locfileid: "57045046"
         - [À l’aide de la compilation JIT multicœur pour un démarrage plus rapide](#_Toc_perf_4)
         - [Paramétrage du garbage collection optimiser pour la mémoire](#_Toc_perf_5)
         - [La lecture anticipée pour les applications web](#_Toc_perf_6)
-- [ASP.NET Web Forms](#_Toc318097385)
+- [ASP.NET Web Forms](#_Toc318097385)
 
     - [Contrôles de données fortement typées](#_Toc318097386)
-    - [Liaison de données](#_Toc318097387)
+    - [Liaison de modèle](#_Toc318097387)
 
         - [Sélection de données](#_Toc318097388)
         - [Fournisseurs de valeurs](#_Toc318097389)
@@ -54,7 +54,7 @@ ms.locfileid: "57045046"
     - [Validation non obstrusive](#_Toc318097392)
     - [Mises à jour HTML5](#_Toc318097393)
 - [ASP.NET MVC 4](#_Toc318097394)
-- [ASP.NET Web Pages 2](#_Toc318097395)
+- [Pages web ASP.NET 2](#_Toc318097395)
 - [Visual Studio 2012 Release Candidate](#_Toc318097396)
 
     - [Projet partage entre Visual Studio 2010 et Visual Studio 2012 Release Candidate (compatibilité des projets)](#project-compatibility)
@@ -71,16 +71,16 @@ ms.locfileid: "57045046"
         - [Génération de gestionnaire d’événements](#_Toc318097404)
         - [Mise en retrait intelligente](#_Toc318097405)
         - [Réduction automatique de la saisie semi-automatique des instructions](#_Toc318097406)
-    - [Éditeur JavaScript](#_Toc318097407)
+    - [éditeur de code JavaScript](#_Toc318097407)
 
-        - [Code en mode plan](#_Toc318097408)
+        - [Plan du code](#_Toc318097408)
         - [Accolades correspondantes](#_Toc318097409)
         - [Atteindre la définition](#_Toc318097410)
         - [Prise en charge de ECMAScript5](#_Toc318097411)
-        - [IntelliSense de DOM](#_Toc318097412)
+        - [DOM IntelliSense](#_Toc318097412)
         - [Surcharges de signature VSDOC](#_Toc318097413)
         - [Références implicites](#_Toc318097414)
-    - [Éditeur CSS](#_Toc318097415)
+    - [éditeur CSS](#_Toc318097415)
 
         - [Réduction automatique de la saisie semi-automatique des instructions](#_Toc318097416)
         - [Mise en retrait hiérarchique.](#_Toc318097417)
@@ -602,7 +602,7 @@ Si vous exécutez ensuite le site Web sur Windows 7 sans SP1 est installé, IIS 
 
 En mode conception, des propriétés complexes de contrôles de serveur souvent ont associé boîtes de dialogue et Assistants pour faciliter leur définition. Par exemple, vous pouvez utiliser une boîte de dialogue pour ajouter une source de données à un *Repeater* contrôler ou ajouter des colonnes à une *GridView* contrôle.
 
-Toutefois, ce type de l’aide de l’interface utilisateur de propriétés complexes n’était pas disponible en mode Source. Par conséquent, Visual Studio 11 présente les tâches guidées de vue de Source. Tâches guidées sont sensibles au contexte raccourcis pour les fonctionnalités couramment utilisées dans les éditeurs de C# et Visual Basic.
+Toutefois, ce type de l’aide de l’interface utilisateur de propriétés complexes n’était pas disponible en mode Source. Par conséquent, Visual Studio 11 présente les tâches guidées de vue de Source. Tâches guidées sont sensibles au contexte raccourcis pour les fonctionnalités couramment utilisées dans les éditeurs de c# et Visual Basic.
 
 Pour les contrôles Web Forms ASP.NET, tâche guidée apparaît sur les balises serveur comme un glyphe de petite lorsque le point d’insertion est à l’intérieur de l’élément :
 
@@ -686,7 +686,7 @@ Par défaut, le Gestionnaire d’événements utilise l’ID du contrôle pour l
 
 ![](whats-new-in-aspnet-45-and-visual-studio-2012/_static/image4.jpg)
 
-Le Gestionnaire d’événements résultant ressemblera à ceci (dans ce cas, en C#) :
+Le Gestionnaire d’événements résultant ressemblera à ceci (dans ce cas, en c#) :
 
 ![](whats-new-in-aspnet-45-and-visual-studio-2012/_static/image18.png)
 

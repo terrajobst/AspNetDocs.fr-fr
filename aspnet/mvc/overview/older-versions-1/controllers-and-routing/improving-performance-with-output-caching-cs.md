@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-cs
-title: Amélioration des performances avec la sortie mise en cache (C#) | Microsoft Docs
+title: Amélioration des performances avec la sortie mise en cache (c#) | Microsoft Docs
 author: microsoft
 description: Dans ce didacticiel, vous découvrez comment vous pouvez améliorer considérablement les performances des applications web ASP.NET MVC en tirant parti de la mise en cache de sortie. Vous...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 521c9117-81cd-4d8d-9d96-0256dc7bf50f
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 516c370941b8f7e5f3528953491057973679586d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5dd5b96d0365c55cbbfa2dfe0856beda41f915e1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049346"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384759"
 ---
-<a name="improving-performance-with-output-caching-c"></a>Amélioration des performances avec la mise en cache de la sortie (C#)
-====================
+# <a name="improving-performance-with-output-caching-c"></a>Amélioration des performances avec la mise en cache de la sortie (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Dans ce didacticiel, vous découvrez comment vous pouvez améliorer considérablement les performances des applications web ASP.NET MVC en tirant parti de la mise en cache de sortie. Vous allez apprendre à mettre en cache le résultat retourné par une action de contrôleur afin que le même contenu n’ait pas besoin soit créée chaque fois qu'un nouvel utilisateur appelle l’action.

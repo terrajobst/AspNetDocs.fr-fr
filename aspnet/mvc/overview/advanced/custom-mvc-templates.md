@@ -8,15 +8,15 @@ ms.date: 12/10/2012
 ms.assetid: b0a214c7-2f38-4dbc-b47f-bd7bd9df97bd
 msc.legacyurl: /mvc/overview/advanced/custom-mvc-templates
 msc.type: authoredcontent
-ms.openlocfilehash: 3c14bc6feb144a52773bf7bd4c23df24966a9ebb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0603bc24e070e223551813f66a75889a2e46fd35
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033866"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379545"
 ---
-<a name="custom-mvc-template"></a>Modèle MVC personnalisé
-====================
+# <a name="custom-mvc-template"></a>Modèle MVC personnalisé
+
 par [Jacques Eloff](https://github.com/joeloff)
 
 La version de MVC 3 Tools Update pour Visual Studio 2010 a introduit un Assistant de projet distinct pour les projets MVC. La modification a été motivée par deux facteurs. Tout d’abord, l’introduction de nouveaux modèles dans MVC 3 et la prise en charge pour les moteurs d’affichage supplémentaires tels que Razor entraîner surpeuplement la boîte de dialogue Nouveau projet dans Visual Studio. Deuxièmement, les clients avaient été demandé pour les points d’extensibilité et l’Assistant Nouveau projet MVC serait nous offre l’opportunité de répondre à ces demandes.
@@ -25,7 +25,7 @@ L’ajout de modèles personnalisés était un processus complexe qui s’appuya
 
 Aucun des approches mentionnées précédemment est idéale afin de nous avons décidé de tirer parti de l’infrastructure existante fournie par [VSIX](https://msdn.microsoft.com/library/ff363239.aspx) extensions pour faciliter l’auteur, distribuer et installer des modèles MVC personnalisés à partir de MVC 4 pour Visual Studio 2012. Certains des avantages fournis par cette approche sont :
 
-- Une extension VSIX peut contenir plusieurs modèles qui prennent en charge différentes langues (C# et Visual Basic) et plusieurs moteurs d’affichage (ASPX et Razor).
+- Une extension VSIX peut contenir plusieurs modèles qui prennent en charge différentes langues (c# et Visual Basic) et plusieurs moteurs d’affichage (ASPX et Razor).
 - Une extension VSIX peut cibler plusieurs références (SKU) de Visual Studio, y compris les références (SKU) Express.
 - Le [galerie Visual Studio](https://visualstudiogallery.msdn.microsoft.com/) facilite la distribution de l’extension à un large public.
 - Extensions VSIX peuvent être mis à niveau ce qui facilite la création des corrections et mises à jour de vos modèles personnalisés.
@@ -38,7 +38,7 @@ Aucun des approches mentionnées précédemment est idéale afin de nous avons d
 
 ## <a name="example"></a>Exemple
 
-La première étape consiste à créer un projet VSIX à l’aide de C# ou Visual Basic. Sélectionnez **fichier > Nouveau projet**, puis cliquez sur **extensibilité** dans le volet gauche, sélectionnez le **projet VSIX**.
+La première étape consiste à créer un projet VSIX à l’aide de c# ou Visual Basic. Sélectionnez **fichier > Nouveau projet**, puis cliquez sur **extensibilité** dans le volet gauche, sélectionnez le **projet VSIX**.
 
 ![Nouveau projet](custom-mvc-templates/_static/image1.jpg)
 
@@ -90,7 +90,7 @@ Path=&quot;ProjectTemplates\MyMvcWebApplicationProjectTemplate.csaspx\BasicMvcWe
 
 ProjectType=&quot;MVC&quot;
 
-Language =&quot;C#&quot;
+Language =&quot;c#&quot;
 
 ViewEngine=&quot;Aspx&quot;
 
@@ -105,7 +105,7 @@ Version=&quot;4.0&quot;/&gt;
 Voici une explication des attributs personnalisés qui doivent être présents :
 
 - **ProjectType** doit être définie sur MVC.
-- **Langage** désigne le langage de développement pris en charge par le modèle. Les valeurs valides sont les C# ou VB.
+- **Langage** désigne le langage de développement pris en charge par le modèle. Les valeurs valides sont les c# ou VB.
 - **ViewEngine** désigne le moteur d’affichage pris en charge par le modèle telles que Aspx ou Razor. Vous pouvez spécifier une valeur personnalisée pour ce champ.
 - **TemplateId** permet de regrouper les modèles. Si la valeur correspond à un ID de modèle existant, il sera remplacer des modèles précédemment inscrits avec l’Assistant MVC.
 - **Titre** désigne la description courte est affichée dans l’Assistant MVC en dessous de chaque modèle de projet.

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-cs
-title: À l’aide de contrôles AJAX Control Toolkit et extendeurs de contrôle (c#) | Microsoft Docs
+title: À l’aide de contrôles AJAX Control Toolkit et extendeurs de contrôle (C#) | Microsoft Docs
 author: microsoft
 description: Découvrez comment ajouter des contrôles AJAX Control Toolkit et extendeurs à vos pages ASP.NET.
 ms.author: riande
@@ -10,7 +10,7 @@ msc.legacyurl: /web-forms/overview/ajax-control-toolkit/getting-started/using-aj
 msc.type: authoredcontent
 ms.openlocfilehash: 18ee6dd71fe0e84ec7628eba63aabeee0690d0b3
 ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57056506"

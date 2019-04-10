@@ -8,15 +8,15 @@ ms.date: 02/16/2008
 ms.assetid: c28ba88d-3a93-47f5-a306-049bd766714d
 msc.legacyurl: /mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: a7f4afd70a17281123a7448a00896c186b9a00f8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 84af745d338e38ece438fa58d51d0929c7b92967
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030366"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408457"
 ---
-<a name="aspnet-mvc-views-overview-vb"></a>Vue d’ensemble des vues ASP.NET MVC (VB)
-====================
+# <a name="aspnet-mvc-views-overview-vb"></a>Vue d’ensemble des vues ASP.NET MVC (VB)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Qu’est une vue de MVC ASP.NET, et en quoi est-il différent d’une page HTML ? Dans ce didacticiel, Stephen Walther vous présente les vues et montre comment vous pouvez tirer parti des données d’affichage et de programmes d’assistance HTML dans une vue.
@@ -83,7 +83,7 @@ Notez que le corps de la page HTML dans le Listing 2 contient le script suivant�
 
 &lt;% Response.Write(DateTime.Now)%&gt;
 
-Vous utilisez les délimiteurs de script &lt;et %&gt; pour marquer le début et la fin d’un script. Ce script est écrit en Visual Basic. Il affiche la date et heure actuelles en appelant la méthode Response.Write () pour afficher le contenu dans le navigateur. Les délimiteurs de script &lt;et %&gt; peut être utilisée pour exécuter une ou plusieurs instructions.
+Vous utilisez les délimiteurs de script &lt;et %&gt; pour marquer le début et la fin d’un script. Ce script est écrit en Visual basic. Il affiche la date et heure actuelles en appelant la méthode Response.Write () pour afficher le contenu dans le navigateur. Les délimiteurs de script &lt;et %&gt; peut être utilisée pour exécuter une ou plusieurs instructions.
 
 Étant donné que vous appelez donc souvent Response.Write (), Microsoft vous offre un raccourci pour appeler la méthode Response.Write (). La vue dans la liste 3 utilise les délimiteurs &lt;% = et %&gt; sous forme de raccourci pour l’appel Response.Write ().
 
@@ -91,7 +91,7 @@ Vous utilisez les délimiteurs de script &lt;et %&gt; pour marquer le début et 
 
 [!code-aspx[Main](asp-net-mvc-views-overview-vb/samples/sample3.aspx)]
 
-Vous pouvez utiliser n’importe quel langage .NET pour générer le contenu dynamique dans une vue. Normalement, vous allez utiliser Visual Basic .NET ou C# écrire vos contrôleurs et les vues.
+Vous pouvez utiliser n’importe quel langage .NET pour générer le contenu dynamique dans une vue. Normalement, vous allez utiliser Visual Basic .NET ou c# écrire vos contrôleurs et les vues.
 
 ## <a name="using-html-helpers-to-generate-view-content"></a>À l’aide de programmes d’assistance HTML pour générer le contenu de la vue
 
@@ -99,12 +99,12 @@ Pour le rendre plus facile d’ajouter du contenu à une vue, vous pouvez tirer 
 
 Par exemple, la vue dans la liste 4 tire parti de trois programmes d’assistance HTML--les programmes d’assistance BeginForm(), TextBox() et Password()--pour générer un compte de connexion forment (voir Figure 1).
 
-**Listing 4 -- \Views\Home\Login.aspx**
+**Liste 4--\Views\Home\Login.aspx**
 
 [!code-aspx[Main](asp-net-mvc-views-overview-vb/samples/sample4.aspx)]
 
 
-[![La boîte de dialogue Nouveau projet](asp-net-mvc-views-overview-vb/_static/image1.jpg)](asp-net-mvc-views-overview-vb/_static/image1.png)
+[![Tboîte de dialogue Nouveau projet he](asp-net-mvc-views-overview-vb/_static/image1.jpg)](asp-net-mvc-views-overview-vb/_static/image1.png)
 
 **Figure 01**: Un formulaire de connexion standard ([cliquez pour afficher l’image en taille réelle](asp-net-mvc-views-overview-vb/_static/image2.png))
 

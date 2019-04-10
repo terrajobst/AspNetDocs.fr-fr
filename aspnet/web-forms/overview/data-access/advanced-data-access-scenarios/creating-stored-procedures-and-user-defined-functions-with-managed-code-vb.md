@@ -10,7 +10,7 @@ msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/cr
 msc.type: authoredcontent
 ms.openlocfilehash: 1596e1c8c1b96fd41c842169b95914c7b02cf196
 ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/25/2019
 ms.locfileid: "58424623"
@@ -21,7 +21,7 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_75_VB.zip) ou [télécharger le PDF](creating-stored-procedures-and-user-defined-functions-with-managed-code-vb/_static/datatutorial75vb1.pdf)
 
-> Microsoft SQL Server 2005 s’intègre avec le Common Language Runtime .NET pour permettre aux développeurs de créer des objets de base de données par le biais du code managé. Ce didacticiel montre comment créer des procédures stockées managées et managées des fonctions définies par l’utilisateur avec votre code Visual Basic ou c#. Nous avons également Découvrez comment ces éditions de Visual Studio vous permettent de déboguer ces objets de base de données managés.
+> Microsoft SQL Server 2005 s’intègre avec le Common Language Runtime .NET pour permettre aux développeurs de créer des objets de base de données par le biais du code managé. Ce didacticiel montre comment créer des procédures stockées managées et managées des fonctions définies par l’utilisateur avec votre code Visual Basic ou C#. Nous avons également Découvrez comment ces éditions de Visual Studio vous permettent de déboguer ces objets de base de données managés.
 
 
 ## <a name="introduction"></a>Introduction
@@ -484,7 +484,7 @@ Pour illustrer ces tâches, permettent de créer un nouveau s gérés procédure
 
 Ce code est presque identique à celle de la `GetProductsWithPriceLessThan` méthode créée à l’étape 5. Les seules différences sont les noms de méthode, le `WHERE` clause et le nom du paramètre utilisé dans la requête. Dans le `GetProductsWithPriceLessThan` (méthode), le `WHERE` clause lire : `WHERE UnitPrice < @MaxPrice`. Ici, dans `GetProductsWithPriceGreaterThan`, nous utilisons : `WHERE UnitPrice > @MinPrice` .
 
-Nous devons maintenant compiler cette classe dans un assembly. À partir de la ligne de commande, accédez au répertoire où vous avez enregistré le `GetProductsWithPriceGreaterThan.vb` de fichiers et d’utiliser le compilateur c# (`csc.exe`) pour compiler le fichier de classe dans un assembly :
+Nous devons maintenant compiler cette classe dans un assembly. À partir de la ligne de commande, accédez au répertoire où vous avez enregistré le `GetProductsWithPriceGreaterThan.vb` de fichiers et d’utiliser le compilateur C# (`csc.exe`) pour compiler le fichier de classe dans un assembly :
 
 
 [!code-console[Main](creating-stored-procedures-and-user-defined-functions-with-managed-code-vb/samples/sample18.cmd)]
@@ -570,7 +570,7 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 
 ## <a name="special-thanks-to"></a>Remerciements
 
-Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Entraîner un réviseur pour ce didacticiel a été S ren Jacob Lauritsen. En plus d’étudier cet article, le S ren également créé le projet Visual c# Express Edition inclus dans ce téléchargement de l’article %s pour la compilation manuellement les objets de base de données managés. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Entraîner un réviseur pour ce didacticiel a été S ren Jacob Lauritsen. En plus d’étudier cet article, le S ren également créé le projet Visual C# Express Edition inclus dans ce téléchargement de l’article %s pour la compilation manuellement les objets de base de données managés. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Précédent](debugging-stored-procedures-vb.md)

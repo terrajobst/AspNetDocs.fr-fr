@@ -8,15 +8,15 @@ ms.date: 02/07/2014
 ms.assetid: 5da59646-e973-41cd-88a9-c6b2c0594027
 msc.legacyurl: /web-pages/overview/getting-started/introducing-razor-syntax-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 17a3a4925766b74446955a8e3a6fddbf9d29a721
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e6b63afb9492e810e19999c7c7ffe074ad510bda
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061906"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406767"
 ---
-<a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-visual-basic"></a>Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor (Visual Basic)
-====================
+# <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-visual-basic"></a>Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor (Visual Basic)
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Cet article vous donne une vue d’ensemble de la programmation avec les Pages Web ASP.NET à l’aide de la syntaxe Razor et Visual Basic. ASP.NET est la technologie de Microsoft pour les pages web dynamiques en cours d’exécution sur les serveurs web.
@@ -37,10 +37,10 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > Ce didacticiel fonctionne également avec ASP.NET Web Pages 2.
 
 
-Utilisation de la plupart des exemples de l’utilisation d’ASP.NET Web Pages avec syntaxe Razor C#. Mais la syntaxe Razor prend également en charge Visual Basic. Pour programmer une page de web ASP.NET dans Visual Basic, vous créez une page web avec un *.vbhtml* extension de nom de fichier, puis ajoutez le code Visual Basic. Cet article vous donne une vue d’ensemble de l’utilisation avec le langage Visual Basic et de la syntaxe pour créer des pages Web ASP.NET.
+Utilisation de la plupart des exemples de l’utilisation d’ASP.NET Web Pages avec syntaxe Razor c#. Mais la syntaxe Razor prend également en charge Visual Basic. Pour programmer une page de web ASP.NET dans Visual Basic, vous créez une page web avec un *.vbhtml* extension de nom de fichier, puis ajoutez le code Visual Basic. Cet article vous donne une vue d’ensemble de l’utilisation avec le langage Visual Basic et de la syntaxe pour créer des pages Web ASP.NET.
 
 > [!NOTE]
-> Les modèles de site Web par défaut de Microsoft WebMatrix (**boulangerie**, **galerie de photos**, et **Starter Site**, etc.) sont disponibles dans les versions de C# et Visual Basic. Vous pouvez installer les modèles Visual Basic par comme packages NuGet. Les modèles de site Web sont installés dans le dossier racine de votre site dans un dossier nommé *Templates Microsoft*.
+> Les modèles de site Web par défaut de Microsoft WebMatrix (**boulangerie**, **galerie de photos**, et **Starter Site**, etc.) sont disponibles dans les versions de c# et Visual Basic. Vous pouvez installer les modèles Visual Basic par comme packages NuGet. Les modèles de site Web sont installés dans le dossier racine de votre site dans un dossier nommé *Templates Microsoft*.
 
 
 ## <a name="the-top-8-programming-tips"></a>Les meilleurs conseils de programmation 8
@@ -179,7 +179,7 @@ Cette procédure vous montre comment créer une page qui illustre des techniques
 
 Vous avez vu précédemment un exemple de base de la création d’une page web ASP.NET et comment vous pouvez ajouter du code de serveur à la balise HTML. Ici, vous allez apprendre les principes fondamentaux de l’utilisation de Visual Basic pour écrire du code de serveur ASP.NET à l’aide de la syntaxe Razor &#8212; , autrement dit, les règles langage de programmation.
 
-Si vous êtes familiarisé avec la programmation (surtout si vous avez utilisé le C, C++, C#, Visual Basic ou JavaScript), une grande partie de ce que vous lire ici sera familier. Vous devrez probablement vous familiariser uniquement avec le code de WebMatrix est ajouté à balisage dans *.vbhtml* fichiers.
+Si vous êtes familiarisé avec la programmation (surtout si vous avez utilisé le C, C++, c#, Visual Basic ou JavaScript), une grande partie de ce que vous lire ici sera familier. Vous devrez probablement vous familiariser uniquement avec le code de WebMatrix est ajouté à balisage dans *.vbhtml* fichiers.
 
 ### <a id="BM_CombiningTextMarkupAndCode"></a>  Combinaison de texte, balisage et code dans les blocs de code
 
@@ -284,7 +284,9 @@ Le tableau suivant répertorie les méthodes de conversion et de test habituelle
         <strong>Example</strong>
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `AsInt(), IsInt()`
@@ -296,7 +298,9 @@ Le tableau suivant répertorie les méthodes de conversion et de test habituelle
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample23.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `AsBool(), IsBool()`
@@ -308,7 +312,9 @@ Le tableau suivant répertorie les méthodes de conversion et de test habituelle
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample24.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `AsFloat(), IsFloat()`
@@ -320,7 +326,9 @@ Le tableau suivant répertorie les méthodes de conversion et de test habituelle
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample25.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `AsDecimal(), IsDecimal()`
@@ -332,7 +340,9 @@ Le tableau suivant répertorie les méthodes de conversion et de test habituelle
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample26.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `AsDateTime(), IsDateTime()`
@@ -344,7 +354,9 @@ Le tableau suivant répertorie les méthodes de conversion et de test habituelle
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample27.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `ToString()`
@@ -374,7 +386,9 @@ Un opérateur est un mot clé ou un caractère qui indique à ASP.NET quel type 
         <strong>Examples</strong>
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `+ - * /`
@@ -386,7 +400,9 @@ Un opérateur est un mot clé ou un caractère qui indique à ASP.NET quel type 
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample29.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `=`
@@ -398,7 +414,9 @@ Un opérateur est un mot clé ou un caractère qui indique à ASP.NET quel type 
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample30.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `<>`
@@ -410,7 +428,9 @@ Un opérateur est un mot clé ou un caractère qui indique à ASP.NET quel type 
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample31.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `< > <= >=`
@@ -422,7 +442,9 @@ Un opérateur est un mot clé ou un caractère qui indique à ASP.NET quel type 
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample32.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `&`
@@ -434,7 +456,9 @@ Un opérateur est un mot clé ou un caractère qui indique à ASP.NET quel type 
         [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample33.vbhtml)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `+= -=`
@@ -446,7 +470,9 @@ Un opérateur est un mot clé ou un caractère qui indique à ASP.NET quel type 
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample34.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `.`
@@ -458,7 +484,9 @@ Un opérateur est un mot clé ou un caractère qui indique à ASP.NET quel type 
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample35.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `()`
@@ -470,7 +498,9 @@ Un opérateur est un mot clé ou un caractère qui indique à ASP.NET quel type 
         [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample36.vbhtml)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `Not`
@@ -482,7 +512,9 @@ Un opérateur est un mot clé ou un caractère qui indique à ASP.NET quel type 
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample37.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `AndAlso OrElse`

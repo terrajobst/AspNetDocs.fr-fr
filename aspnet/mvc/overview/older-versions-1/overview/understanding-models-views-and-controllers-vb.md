@@ -10,7 +10,7 @@ msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-models-view
 msc.type: authoredcontent
 ms.openlocfilehash: 15d4e7d7b6a2662296b8e3647cd60187de580789
 ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57029176"
@@ -30,7 +30,7 @@ Après avoir lu ce didacticiel, vous devez comprendre comment les différentes p
 
 Le modèle de Visual Studio par défaut pour la création d’Applications Web ASP.NET MVC inclut une exemple très simple d’application qui peut être utilisée pour comprendre les différentes parties d’une application ASP.NET MVC. Nous profitons de cette application simple dans ce didacticiel.
 
-Vous créez une application ASP.NET MVC avec le modèle MVC en lançant Visual Studio 2008 et en sélectionnant l’option de menu fichier, nouveau projet (voir Figure 1). Dans la boîte de dialogue Nouveau projet, sélectionnez votre langage de programmation préféré sous Types de projets (Visual Basic ou c#), puis sélectionnez **Application Web ASP.NET MVC** sous modèles. Cliquez sur le bouton OK.
+Vous créez une application ASP.NET MVC avec le modèle MVC en lançant Visual Studio 2008 et en sélectionnant l’option de menu fichier, nouveau projet (voir Figure 1). Dans la boîte de dialogue Nouveau projet, sélectionnez votre langage de programmation préféré sous Types de projets (Visual Basic ou C#), puis sélectionnez **Application Web ASP.NET MVC** sous modèles. Cliquez sur le bouton OK.
 
 
 [![Boîte de dialogue Nouveau projet](understanding-models-views-and-controllers-vb/_static/image1.jpg)](understanding-models-views-and-controllers-vb/_static/image1.png)
@@ -138,7 +138,7 @@ La demande est acheminée vers l’action Index() sur la classe HomeController.
 
 Un contrôleur est chargé de contrôler la façon dont un utilisateur interagit avec une application MVC. Un contrôleur contient la logique de contrôle de flux pour une application ASP.NET MVC. Un contrôleur détermine quelle réponse à renvoyer à un utilisateur lorsqu’un utilisateur effectue une demande de navigateur.
 
-Un contrôleur est simplement une classe (par exemple, une classe Visual Basic ou c#). L’exemple de l’application ASP.NET MVC inclut un contrôleur nommé HomeController.vb situé dans le dossier contrôleurs. Le contenu du fichier HomeController.vb est reproduit dans le Listing 2.
+Un contrôleur est simplement une classe (par exemple, une classe Visual Basic ou C#). L’exemple de l’application ASP.NET MVC inclut un contrôleur nommé HomeController.vb situé dans le dossier contrôleurs. Le contenu du fichier HomeController.vb est reproduit dans le Listing 2.
 
 **Listing 2 - HomeController.cs**
 
@@ -170,7 +170,7 @@ Le fichier dans le Listing 3 contient la vue About.aspx.
 
 Si vous ignorez la première ligne dans la liste 3, la plupart du reste de la vue se compose du code HTML standard. Vous pouvez modifier le contenu de la vue en entrant le code HTML que vous souhaitez ici.
 
-Une vue est très similaire à une page dans les Pages ASP ou ASP.NET Web Forms. Une vue peut contenir des scripts et le contenu HTML. Vous pouvez écrire les scripts dans votre .NET préféré (par exemple, c# ou Visual Basic .NET) de langage de programmation. Vous utilisez des scripts pour afficher le contenu dynamique tel que la base de données.
+Une vue est très similaire à une page dans les Pages ASP ou ASP.NET Web Forms. Une vue peut contenir des scripts et le contenu HTML. Vous pouvez écrire les scripts dans votre .NET préféré (par exemple, C# ou Visual Basic .NET) de langage de programmation. Vous utilisez des scripts pour afficher le contenu dynamique tel que la base de données.
 
 ## <a name="understanding-models"></a>Présentation des modèles
 

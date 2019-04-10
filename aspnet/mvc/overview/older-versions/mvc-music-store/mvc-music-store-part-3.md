@@ -8,15 +8,15 @@ ms.date: 04/21/2011
 ms.assetid: 94297aa0-1f2d-4d72-bbcb-63f64653e0c0
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-3
 msc.type: authoredcontent
-ms.openlocfilehash: 828ff18abcc5932f82be71a45ebde589eeb051fa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ce866a169e69c0d85fe18ddeccf271f1f235d440
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049276"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381118"
 ---
-<a name="part-3-views-and-viewmodels"></a>Partie 3 : Vues et modèles de vue
-====================
+# <a name="part-3-views-and-viewmodels"></a>Partie 3 : Vues et modèles de vue
+
 par [Jon Galloway](https://github.com/jongalloway)
 
 > Le Store de musique MVC est une application du didacticiel qui présente et explique étape par étape comment utiliser ASP.NET MVC et Visual Studio pour le développement web.  
@@ -144,7 +144,7 @@ Nous pouvons maintenant modifier la logique pour retourner un objet d’Album à
 
 [!code-csharp[Main](mvc-music-store-part-3/samples/sample11.cs)]
 
-*Remarque : Si vous n’êtes pas familiarisé avec C#, vous pouvez considérer que var reprenant que notre variable album est à liaison tardive. Qui n’est pas correct : le compilateur C# à l’aide de-l’inférence de type en fonction de ce que nous allons affecter à la variable pour déterminer que cet album est de type Album et compilation de la variable locale album comme type d’Album, donc nous obtenons la vérification au moment de la compilation et l’éditeur de code Visual Studio prise en charge.*
+*Remarque : Si vous n’êtes pas familiarisé avec C#, vous pouvez considérer que var reprenant que notre variable album est à liaison tardive. Qui n’est pas correct : le compilateur c# à l’aide de-l’inférence de type en fonction de ce que nous allons affecter à la variable pour déterminer que cet album est de type Album et compilation de la variable locale album comme type d’Album, donc nous obtenons la vérification au moment de la compilation et l’éditeur de code Visual Studio prise en charge.*
 
 Nous allons maintenant créer un modèle de vue qui utilise notre Album pour générer une réponse HTML. Avant cela, nous devons générer le projet afin que la boîte de dialogue Ajouter une vue connaît de notre classe Album nouvellement créé. Vous pouvez générer le projet en sélectionnant le Debug⇨Build MvcMusicStore élément de menu (pour plus de crédibilité, vous pouvez utiliser le raccourci Ctrl-Maj-B de numéros pour générer le projet).
 

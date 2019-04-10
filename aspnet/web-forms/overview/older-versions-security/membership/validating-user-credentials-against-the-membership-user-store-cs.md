@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-cs
-title: Validation des informations d’identification de l’utilisateur sur le Store d’utilisateur d’appartenance (c#) | Microsoft Docs
+title: Validation des informations d’identification de l’utilisateur sur le Store d’utilisateur d’appartenance (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons examiner comment valider les informations d’identification d’un utilisateur par rapport au magasin d’utilisateur d’appartenance à l’aide de moyens de programmation et le contrôle de connexion...
 ms.author: riande
@@ -10,7 +10,7 @@ msc.legacyurl: /web-forms/overview/older-versions-security/membership/validating
 msc.type: authoredcontent
 ms.openlocfilehash: ac04ee84ad30015ec3dea272c2b143bb2dae25e5
 ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57041176"

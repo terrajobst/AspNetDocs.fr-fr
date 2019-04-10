@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: accfa16a-ab15-4c26-9ad4-babdc2a77d2e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction
 msc.type: authoredcontent
-ms.openlocfilehash: c496e93d7517bc187514d5fa2dfa90d29c5f47f9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bf9cf1f5be22a5b97ec964277c11ae21066676f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412409"
 ---
-<a name="building-real-world-cloud-apps-with-azure"></a>Création d’applications Cloud réalistes avec Azure
-====================
+# <a name="building-real-world-cloud-apps-with-azure"></a>Création d’applications Cloud réalistes avec Azure
+
 par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -100,7 +100,7 @@ Ce livre électronique explique treize recommandé de modèles pour le développ
     - Activer la haute disponibilité et améliorer l’évolutivité en coupler faiblement des niveaux web et worker.
     - Démonstration : Files d’attente de stockage Azure dans l’application Fix It.
 - [Plus de modèles d’application et les conseils cloud](more-patterns-and-guidance.md).
-- [Annexe : La solution exemple d’Application](the-fix-it-sample-application.md)
+- [Annexe : Exemple d’application Fix It](the-fix-it-sample-application.md)
 
     - Problèmes connus
     - Meilleures pratiques
@@ -175,4 +175,4 @@ Vidéos :
 - [Éléments internes de Sites Web Azure avec Nir Mashkowski](https://channel9.msdn.com/Shows/Web+Camps+TV/Windows-Azure-Web-Sites-Internals-with-Nir-Mashkowski).
 
 > [!div class="step-by-step"]
-> [Next](automate-everything.md)
+> [Suivant](automate-everything.md)

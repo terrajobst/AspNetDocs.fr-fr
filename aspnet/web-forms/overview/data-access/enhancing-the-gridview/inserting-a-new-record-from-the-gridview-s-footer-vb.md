@@ -8,15 +8,15 @@ ms.date: 03/06/2007
 ms.assetid: 528acc48-f20c-4b4e-aa16-4cc02f068ebb
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/inserting-a-new-record-from-the-gridview-s-footer-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 6e56c46d1f2574b9f228190e0e0c8205240015ed
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 251cd769672f1610ac7c51772882b0c166184372
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423948"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397433"
 ---
-<a name="inserting-a-new-record-from-the-gridviews-footer-vb"></a>Insertion d’un nouvel enregistrement à partir du pied de page d’un contrôle GridView (VB)
-====================
+# <a name="inserting-a-new-record-from-the-gridviews-footer-vb"></a>Insertion d’un nouvel enregistrement à partir du pied de page d’un contrôle GridView (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_53_VB.exe) ou [télécharger le PDF](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/datatutorial53vb1.pdf)
@@ -31,7 +31,7 @@ Comme indiqué dans le [une vue d’ensemble d’insertion, mise à jour et supp
 Lors de l’ajout de fonctionnalités d’insertion pour le contrôle GridView, nous sommes doit décider sur comment les nouveaux enregistrements sera ajoutée, création de l’interface d’insertion et écrire le code pour insérer le nouvel enregistrement. Dans ce didacticiel, que nous examinerons d’ajout de l’interface d’insertion pour le pied de page s GridView de lignes (voir Figure 1). La cellule de pied de page pour chaque colonne inclut les données appropriées collection élément d’interface utilisateur (une zone de texte pour le nom du produit s, un DropDownList pour le fournisseur et ainsi de suite). Nous avons également besoin d’une colonne pour un ajout bouton qui, d’un clic, entraîne une publication (postback) et insérer un nouvel enregistrement dans le `Products` table en utilisant les valeurs fournies dans la ligne de pied de page.
 
 
-[![La ligne de pied de page fournit une Interface pour l’ajout de nouveaux produits](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image1.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image1.png)
+[![TIl ligne de pied de page fournit une Interface pour l’ajout de nouveaux produits](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image1.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image1.png)
 
 **Figure 1**: La ligne de pied de page fournit une Interface pour l’ajout de nouveaux produits ([cliquez pour afficher l’image en taille réelle](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image2.png))
 
@@ -41,7 +41,7 @@ Lors de l’ajout de fonctionnalités d’insertion pour le contrôle GridView, 
 Avant de nous nous-mêmes concernent à la création de l’interface d’insertion dans le pied de page s GridView, permettent de concentrer tout d’abord de s sur l’ajout d’un GridView à la page qui répertorie les produits dans la base de données. Commencez par ouvrir le `InsertThroughFooter.aspx` page dans le `EnhancedGridView` dossier et faites glisser un GridView à partir de la boîte à outils vers le concepteur, en définissant le s GridView `ID` propriété `Products`. Ensuite, utilisez la balise active de s GridView pour lier à un nouveau ObjectDataSource nommé `ProductsDataSource`.
 
 
-[![Créer un nouveau ObjectDataSource nommé ProductsDataSource](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image2.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image3.png)
+[![Ccréer un nouveau ProductsDataSource de nommé ObjectDataSource](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image2.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image3.png)
 
 **Figure 2**: Créer une nouvelle nommée de ObjectDataSource `ProductsDataSource` ([cliquez pour afficher l’image en taille réelle](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image4.png))
 
@@ -49,12 +49,12 @@ Avant de nous nous-mêmes concernent à la création de l’interface d’insert
 Configurer l’ObjectDataSource à utiliser le `ProductsBLL` classe s `GetProducts()` méthode pour récupérer des informations de produit. Pour ce didacticiel, vous permettre s strictement sur l’ajout de fonctionnalités de l’insertion et ne vous inquiétez pas sur la modification et suppression. Par conséquent, assurez-vous que la liste déroulante dans l’onglet Insertion a la valeur `AddProduct()` et que les listes déroulantes dans les onglets UPDATE et DELETE sont définis sur (aucun).
 
 
-[![Mapper la méthode AddProduct à la méthode de Insert() s ObjectDataSource](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image3.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image5.png)
+[![MPA la méthode AddProduct à la méthode de Insert() ObjectDataSource s](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image3.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image5.png)
 
 **Figure 3**: Carte le `AddProduct` méthode au s ObjectDataSource `Insert()` (méthode) ([cliquez pour afficher l’image en taille réelle](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image6.png))
 
 
-[![Définir les listes déroulantes de mise à jour et supprimer les tabulations à (None)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image4.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image7.png)
+[![Set les listes déroulantes de mise à jour et supprimer les tabulations à (None)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image4.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image7.png)
 
 **Figure 4**: La valeur est la mise à jour et supprimer des onglets liste déroulante répertorie (aucun) ([cliquez pour afficher l’image en taille réelle](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image8.png))
 
@@ -69,7 +69,7 @@ Dans la mesure où il existe près de 80 produits dans la base de données, un u
 [!code-aspx[Main](inserting-a-new-record-from-the-gridview-s-footer-vb/samples/sample1.aspx)]
 
 
-[![Tous les champs de données de produit sont affichés dans un GridView de réserve paginée](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image5.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image9.png)
+[![All que les champs de données de produit sont affichés dans un GridView paginée](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image5.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image9.png)
 
 **Figure 5**: Tous les champs de données de produit sont affichés dans un GridView paginée ([cliquez pour afficher l’image en taille réelle](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image10.png))
 
@@ -79,7 +79,7 @@ Dans la mesure où il existe près de 80 produits dans la base de données, un u
 Ainsi que son en-tête et les lignes de données, le contrôle GridView inclut une ligne de pied de page. Les lignes d’en-tête et pied de page sont affichées en fonction des valeurs de la s GridView [ `ShowHeader` ](https://msdn.microsoft.com/en-gb/library/system.web.ui.webcontrols.gridview.showheader.aspx) et [ `ShowFooter` ](https://msdn.microsoft.com/en-gb/library/system.web.ui.webcontrols.gridview.showfooter.aspx) propriétés. Pour afficher la ligne de pied de page, il suffit de définir la `ShowFooter` propriété `True`. Comme le montre la Figure 6, définissant le `ShowFooter` propriété `True` ajoute une ligne de pied de page à la grille.
 
 
-[![Pour afficher la ligne de pied de page, la valeur ShowFooter True](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image6.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image11.png)
+[![To afficher la ligne de pied de page, la valeur ShowFooter True](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image6.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image11.png)
 
 **Figure 6**: Pour afficher la ligne de pied de page, définissez `ShowFooter` à `True` ([cliquez pour afficher l’image en taille réelle](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image12.png))
 
@@ -96,7 +96,7 @@ Notez que la ligne de pied de page a une couleur d’arrière-plan rouge foncé.
 Après avoir défini le `ShowFooter` propriété `True`, prenez un moment pour afficher la sortie dans un navigateur. Actuellement, t n de ligne de pied de page contiennent tout texte ou les contrôles Web. À l’étape 3, nous allons modifier le pied de page pour chaque champ GridView pour qu’elle inclue l’interface d’insertion appropriée.
 
 
-[![La ligne de pied de page vide est affichée au-dessus de la pagination contrôles d’Interface](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image7.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image13.png)
+[![TIl ligne de pied de page vide est affichée au-dessus de la pagination contrôles d’Interface](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image7.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image13.png)
 
 **Figure 7**: La ligne de pied de page vide est affichée au-dessus de la pagination contrôles d’Interface ([cliquez pour afficher l’image en taille réelle](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image14.png))
 
@@ -130,7 +130,7 @@ Maintenant que chaque champ GridView a été converti en un TemplateField, nous 
 Pour créer l’interface de modification, cliquez sur le lien Modifier les modèles à partir de la balise active de s GridView. Ensuite, dans la liste déroulante, sélectionnez le champ approprié s `FooterTemplate` et faites glisser le contrôle approprié à partir de la boîte à outils vers le concepteur.
 
 
-[![Ajouter l’Interface insertion appropriée à chaque FooterTemplate s de champ](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image9.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image15.png)
+[![Ajj l’Interface d’insertion appropriée pour chaque champ s FooterTemplate](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image9.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image15.png)
 
 **Figure 9**: Ajouter l’Interface appropriée d’insertion pour chaque champ s `FooterTemplate` ([cliquez pour afficher l’image en taille réelle](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image16.png))
 
@@ -166,7 +166,7 @@ Après avoir créé la multitude de l’insertion des interfaces dans les `Foote
 Lorsqu’ils sont affichés via un navigateur, la ligne de pied de page du GridView s inclut désormais la fin de l’interface insertion (voir Figure 10). À ce stade, l’insertion interface n’inclure un moyen de l’utilisateur indiquer que s she entré les données pour le nouveau produit et qu’il souhaite insérer un nouvel enregistrement dans la base de données. En outre, nous ve encore pour traiter la façon dont les données entrées dans le pied de page seront traduit dans un nouvel enregistrement dans le `Products` base de données. À l’étape 4, nous allons étudier comment inclure un bouton d’ajout à l’interface d’insertion et comment exécuter du code sur publication (postback) quand il s cliqué. Étape 5 montre comment insérer un nouvel enregistrement en utilisant les données dans le pied de page.
 
 
-[![Le pied de page du GridView fournit une Interface pour ajouter un nouvel enregistrement](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image10.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image17.png)
+[![TIl pied de page GridView fournit une Interface pour ajouter un nouvel enregistrement](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image10.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image17.png)
 
 **Figure 10**: Le pied de page du GridView fournit une Interface pour ajouter un nouvel enregistrement ([cliquez pour afficher l’image en taille réelle](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image18.png))
 
@@ -178,7 +178,7 @@ Nous devons inclure un bouton Ajouter quelque part dans l’interface d’insert
 À partir du concepteur, cliquez sur le lien Modifier les modèles dans la balise active de s GridView, puis choisissez le `ProductID` champ s `FooterTemplate` dans la liste déroulante. Ajouter un contrôle bouton Web (ou un LinkButton ou ImageButton, si vous préférez) pour le paramètre de modèle, son ID `AddProduct`, ses `CommandName` INSERT et son `Text` propriété à ajouter comme indiqué dans la Figure 11.
 
 
-[![Placez le bouton Ajouter dans FooterTemplate s ProductID TemplateField](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image11.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image19.png)
+[![Ple bouton Ajouter dans le s ProductID TemplateField FooterTemplate à dentelle](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image11.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image19.png)
 
 **Figure 11**: Placez le bouton Ajouter dans le `ProductID` TemplateField s `FooterTemplate` ([cliquez pour afficher l’image en taille réelle](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image20.png))
 
@@ -186,7 +186,7 @@ Nous devons inclure un bouton Ajouter quelque part dans l’interface d’insert
 Une fois que vous avez déjà inclus le bouton Ajouter, testez la page dans un navigateur. Notez que lorsque vous cliquez sur le bouton Ajouter avec des données non valides dans l’interface d’insertion, la publication (postback) est court-circuitée bref et le contrôle ValidationSummary indique les données non valides (voir Figure 12). Avec les données entrées appropriés, en cliquant sur le bouton Ajouter provoque une publication (postback). Aucun enregistrement n’est ajouté à la base de données, toutefois. Nous devrons écrire un peu de code pour effectuer l’insertion.
 
 
-[![Le bouton Ajouter publication (postback) est court-circuitée courte s’il existe des données non valides dans l’Interface d’insertion](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image12.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image21.png)
+[![TIl s du bouton Ajouter publication (postback) est court-circuitée courte s’il existe des données non valides dans l’Interface insertion](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image12.gif)](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image21.png)
 
 **Figure 12**: Le bouton Ajouter publication (postback) est court-circuitée courte s’il existe des données non valides dans l’Interface d’insertion ([cliquez pour afficher l’image en taille réelle](inserting-a-new-record-from-the-gridview-s-footer-vb/_static/image22.png))
 

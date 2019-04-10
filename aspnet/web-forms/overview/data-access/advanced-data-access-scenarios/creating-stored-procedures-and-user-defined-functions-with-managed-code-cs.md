@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/creating-stored-procedures-and-user-defined-functions-with-managed-code-cs
-title: Création de procédures stockées et fonctions définies par l’utilisateur avec Managed Code (c#) | Microsoft Docs
+title: Création de procédures stockées et fonctions définies par l’utilisateur avec Managed Code (C#) | Microsoft Docs
 author: rick-anderson
 description: Microsoft SQL Server 2005 s’intègre avec le Common Language Runtime .NET pour permettre aux développeurs de créer des objets de base de données par le biais du code managé. Ce didacticiel...
 ms.author: riande
@@ -10,7 +10,7 @@ msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/cr
 msc.type: authoredcontent
 ms.openlocfilehash: fb4a867d5868e8000fcd10130401a9e169b6f49f
 ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57057896"
@@ -21,7 +21,7 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_75_CS.zip) ou [télécharger le PDF](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/datatutorial75cs1.pdf)
 
-> Microsoft SQL Server 2005 s’intègre avec le Common Language Runtime .NET pour permettre aux développeurs de créer des objets de base de données par le biais du code managé. Ce didacticiel montre comment créer des procédures stockées managées et managées des fonctions définies par l’utilisateur avec votre code Visual Basic ou c#. Nous avons également Découvrez comment ces éditions de Visual Studio vous permettent de déboguer ces objets de base de données managés.
+> Microsoft SQL Server 2005 s’intègre avec le Common Language Runtime .NET pour permettre aux développeurs de créer des objets de base de données par le biais du code managé. Ce didacticiel montre comment créer des procédures stockées managées et managées des fonctions définies par l’utilisateur avec votre code Visual Basic ou C#. Nous avons également Découvrez comment ces éditions de Visual Studio vous permettent de déboguer ces objets de base de données managés.
 
 
 ## <a name="introduction"></a>Introduction
@@ -30,7 +30,7 @@ Utilisent des bases de données comme s Microsoft SQL Server 2005 la [Transact-S
 
 Fondamentalement, SQL est conçu pour travailler avec des jeux de données. Le `SELECT`, `UPDATE`, et `DELETE` instructions s’appliquent à tous les enregistrements dans la table correspondante par nature et sont limitées uniquement par leur `WHERE` clauses. Encore il existe de nombreuses fonctionnalités de langage conçues pour travailler avec un seul enregistrement à la fois et de manipulation des données scalaires. [`CURSOR` s](http://www.sqlteam.com/item.asp?ItemID=553) autoriser pour un jeu d’enregistrements à être bouclée via un à la fois. Comme les fonctions de manipulation de chaîne `LEFT`, `CHARINDEX`, et `PATINDEX` fonctionnent avec des données scalaires. SQL inclut également des instructions de flux de contrôle telles que `IF` et `WHILE`.
 
-Antérieures à Microsoft SQL Server 2005, les procédures stockées et des UDF peuvent être définies uniquement comme une collection d’instructions T-SQL. SQL Server 2005, cependant, a été conçu pour offrir une intégration avec le [Common Language Runtime (CLR)](https://msdn.microsoft.com/netframework/aa497266.aspx), qui est le runtime utilisé par tous les assemblys .NET. Par conséquent, les procédures stockées et les UDF dans une base de données SQL Server 2005 peut être créés à l’aide de code managé. Autrement dit, vous pouvez créer une procédure stockée ou UDF en tant que méthode dans une classe c#. Ainsi, ces procédures stockées et des UDF pour exploiter les fonctionnalités dans le .NET Framework et à partir de vos propres classes personnalisées.
+Antérieures à Microsoft SQL Server 2005, les procédures stockées et des UDF peuvent être définies uniquement comme une collection d’instructions T-SQL. SQL Server 2005, cependant, a été conçu pour offrir une intégration avec le [Common Language Runtime (CLR)](https://msdn.microsoft.com/netframework/aa497266.aspx), qui est le runtime utilisé par tous les assemblys .NET. Par conséquent, les procédures stockées et les UDF dans une base de données SQL Server 2005 peut être créés à l’aide de code managé. Autrement dit, vous pouvez créer une procédure stockée ou UDF en tant que méthode dans une classe C#. Ainsi, ces procédures stockées et des UDF pour exploiter les fonctionnalités dans le .NET Framework et à partir de vos propres classes personnalisées.
 
 Dans ce didacticiel, nous allons examiner comment créer géré procédures stockées et les fonctions définies par l’utilisateur et comment les intégrer dans notre base de données Northwind. Laissez s commencer !
 
@@ -78,7 +78,7 @@ Cliquez sur le bouton OK pour attacher la base de données. La boîte de dialogu
 
 ## <a name="step-2-creating-a-new-solution-and-sql-server-project-in-visual-studio"></a>Étape 2 : Création d’une Solution et un projet SQL Server dans Visual Studio
 
-Pour créer des procédures stockées managées ou UDF dans SQL Server 2005, nous allons écrire la procédure stockée et la logique de l’UDF en tant que code c# dans une classe. Une fois que le code a été écrit, nous devons compiler cette classe dans un assembly (un `.dll` fichier), inscrire l’assembly avec la base de données SQL Server, puis créer une procédure stockée ou un objet de fonction UDF dans la base de données qui pointe vers la méthode correspondante dans l’assembly. Ces étapes peuvent toutes être effectuées manuellement. Nous pouvons créer le code dans n’importe quel texte éditeur, le compiler depuis la ligne de commande à l’aide du compilateur c# ([`csc.exe`](https://msdn.microsoft.com/library/ms379563(vs.80).aspx)), inscrivez-le auprès de la base de données à l’aide de la [ `CREATE ASSEMBLY` ](https://msdn.microsoft.com/library/ms189524.aspx) commande ou de la gestion Studio et ajoutez la procédure stockée ou un objet de fonction UDF via un moyen similaire. Heureusement, les versions Professional et les systèmes de l’équipe de Visual Studio incluent un type de projet SQL Server qui automatise les tâches. Dans ce didacticiel nous étudierons utilisant le type de projet SQL Server pour créer une procédure stockée managée et UDF.
+Pour créer des procédures stockées managées ou UDF dans SQL Server 2005, nous allons écrire la procédure stockée et la logique de l’UDF en tant que code C# dans une classe. Une fois que le code a été écrit, nous devons compiler cette classe dans un assembly (un `.dll` fichier), inscrire l’assembly avec la base de données SQL Server, puis créer une procédure stockée ou un objet de fonction UDF dans la base de données qui pointe vers la méthode correspondante dans l’assembly. Ces étapes peuvent toutes être effectuées manuellement. Nous pouvons créer le code dans n’importe quel texte éditeur, le compiler depuis la ligne de commande à l’aide du compilateur C# ([`csc.exe`](https://msdn.microsoft.com/library/ms379563(vs.80).aspx)), inscrivez-le auprès de la base de données à l’aide de la [ `CREATE ASSEMBLY` ](https://msdn.microsoft.com/library/ms189524.aspx) commande ou de la gestion Studio et ajoutez la procédure stockée ou un objet de fonction UDF via un moyen similaire. Heureusement, les versions Professional et les systèmes de l’équipe de Visual Studio incluent un type de projet SQL Server qui automatise les tâches. Dans ce didacticiel nous étudierons utilisant le type de projet SQL Server pour créer une procédure stockée managée et UDF.
 
 > [!NOTE]
 > Si vous utilisez Visual Web Developer ou l’Édition Standard de Visual Studio, vous devrez utiliser l’approche manuelle à la place. Étape 13 fournit des instructions détaillées pour effectuer ces étapes manuellement. Je vous encourage à lire les étapes 2 à 12 avant de lire l’étape 13 dans la mesure où ces étapes comprennent les instructions de configuration SQL Server importantes qui doivent être appliquées quel que soit la version de Visual Studio que vous utilisez.
@@ -141,7 +141,7 @@ Laisser s démarrer en ajoutant une procédure stockée qui retourne simplement 
 **Figure 8**: Ajouter un nouveau stockées procédure nommée `GetDiscontinuedProducts.cs` ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image14.png))
 
 
-Cela va créer un nouveau fichier de classe c# avec le contenu suivant :
+Cela va créer un nouveau fichier de classe C# avec le contenu suivant :
 
 
 [!code-csharp[Main](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/samples/sample2.cs)]
@@ -227,7 +227,7 @@ La plupart des requêtes et des procédures stockées que nous avons créé dans
 
 Pour créer une procédure stockée managée qui accepte des paramètres d’entrée, vous devez simplement spécifier ces paramètres dans la définition de méthode s. Pour illustrer ceci, s permettent d’ajouter une autre procédure stockée managée pour le `ManagedDatabaseConstructs` projet nommé `GetProductsWithPriceLessThan`. Cette procédure stockée managée accepte un paramètre d’entrée, en spécifiant un prix et renverra tous les produits dont `UnitPrice` champ est inférieure à la valeur du paramètre s.
 
-Pour ajouter une nouvelle procédure stockée pour le projet, cliquez sur le `ManagedDatabaseConstructs` nom du projet et choisissez d’ajouter une nouvelle procédure stockée. Nommez le fichier `GetProductsWithPriceLessThan.cs`. Comme nous l’avons vu à l’étape 3, cela créera un nouveau fichier de classe c# avec une méthode nommée `GetProductsWithPriceLessThan` placé dans le `partial` classe `StoredProcedures`.
+Pour ajouter une nouvelle procédure stockée pour le projet, cliquez sur le `ManagedDatabaseConstructs` nom du projet et choisissez d’ajouter une nouvelle procédure stockée. Nommez le fichier `GetProductsWithPriceLessThan.cs`. Comme nous l’avons vu à l’étape 3, cela créera un nouveau fichier de classe C# avec une méthode nommée `GetProductsWithPriceLessThan` placé dans le `partial` classe `StoredProcedures`.
 
 Mise à jour le `GetProductsWithPriceLessThan` définition de méthode s afin qu’il accepte un [ `SqlMoney` ](https://msdn.microsoft.com/library/system.data.sqltypes.sqlmoney.aspx) paramètre d’entrée nommé `price` et écrire le code pour exécuter et retourner des résultats de la requête :
 
@@ -343,7 +343,7 @@ Pour plus de vous entraîner, ajoutez un contrôle TextBox et GridView une autre
 
 ## <a name="step-9-creating-and-calling-t-sql-udfs"></a>Étape 9 : Création et l’appel des UDF de T-SQL
 
-Fonctions définies par l’utilisateur ou UDF, sont la base de données objets étroitement imiter la sémantique des fonctions dans les langages de programmation. Comme une fonction dans c#, UDF peuvent inclure un nombre variable de paramètres d’entrée et retourner une valeur d’un type particulier. Une fonction UDF peut retourner des données scalaires - une chaîne, un entier et ainsi de suite - ou données tabulaires. Laissez s jeter un coup de œil sur les deux types de fichiers UDF, en commençant par une fonction UDF qui retourne un type de données scalaire.
+Fonctions définies par l’utilisateur ou UDF, sont la base de données objets étroitement imiter la sémantique des fonctions dans les langages de programmation. Comme une fonction dans C#, UDF peuvent inclure un nombre variable de paramètres d’entrée et retourner une valeur d’un type particulier. Une fonction UDF peut retourner des données scalaires - une chaîne, un entier et ainsi de suite - ou données tabulaires. Laissez s jeter un coup de œil sur les deux types de fichiers UDF, en commençant par une fonction UDF qui retourne un type de données scalaire.
 
 La fonction UDF suivante calcule la valeur estimée de l’inventaire d’un produit spécifique. Pour ce faire, la prise de trois paramètres d’entrée - le `UnitPrice`, `UnitsInStock`, et `Discontinued` valeurs pour un produit particulier - et retourne une valeur de type `money`. Il calcule la valeur estimée de l’inventaire en multipliant le `UnitPrice` par le `UnitsInStock`. Pour les articles abandonnés, cette valeur est réduit de moitié.
 
@@ -484,7 +484,7 @@ Pour illustrer ces tâches, permettent de créer un nouveau s gérés procédure
 
 Ce code est presque identique à celle de la `GetProductsWithPriceLessThan` méthode créée à l’étape 5. Les seules différences sont les noms de méthode, le `WHERE` clause et le nom du paramètre utilisé dans la requête. Dans le `GetProductsWithPriceLessThan` (méthode), le `WHERE` clause lire : `WHERE UnitPrice < @MaxPrice`. Ici, dans `GetProductsWithPriceGreaterThan`, nous utilisons : `WHERE UnitPrice > @MinPrice` .
 
-Nous devons maintenant compiler cette classe dans un assembly. À partir de la ligne de commande, accédez au répertoire où vous avez enregistré le `GetProductsWithPriceGreaterThan.cs` de fichiers et d’utiliser le compilateur c# (`csc.exe`) pour compiler le fichier de classe dans un assembly :
+Nous devons maintenant compiler cette classe dans un assembly. À partir de la ligne de commande, accédez au répertoire où vous avez enregistré le `GetProductsWithPriceGreaterThan.cs` de fichiers et d’utiliser le compilateur C# (`csc.exe`) pour compiler le fichier de classe dans un assembly :
 
 
 [!code-console[Main](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/samples/sample18.cmd)]
@@ -500,10 +500,10 @@ Si le dossier contenant `csc.exe` dans pas dans le système s `PATH`, vous devre
 **Figure 29**: Compiler `GetProductsWithPriceGreaterThan.cs` dans un Assembly ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image71.png))
 
 
-Le `/t` indicateur spécifie que le fichier de classe c# doit être compilé dans une DLL (au lieu d’un fichier exécutable). Le `/out` indicateur spécifie le nom de l’assembly résultant.
+Le `/t` indicateur spécifie que le fichier de classe C# doit être compilé dans une DLL (au lieu d’un fichier exécutable). Le `/out` indicateur spécifie le nom de l’assembly résultant.
 
 > [!NOTE]
-> Au lieu de compiler le `GetProductsWithPriceGreaterThan.cs` fichier de classe à partir de la ligne de commande que vous pouvez également utiliser [Visual c# Express Edition](https://msdn.microsoft.com/vstudio/express/visualcsharp/) ou créer un projet de bibliothèque de classes distinct dans Visual Studio Standard Edition. S ren Jacob Lauritsen a fourni bien vouloir tel un projet Visual c# Express Edition avec le code pour le `GetProductsWithPriceGreaterThan` de procédures stockées et les deux gérés des procédures stockées et UDF créé lors des étapes 3, 5 et 10. Projet de s S ren inclut également les commandes T-SQL nécessaires pour ajouter les objets de base de données correspondante.
+> Au lieu de compiler le `GetProductsWithPriceGreaterThan.cs` fichier de classe à partir de la ligne de commande que vous pouvez également utiliser [Visual C# Express Edition](https://msdn.microsoft.com/vstudio/express/visualcsharp/) ou créer un projet de bibliothèque de classes distinct dans Visual Studio Standard Edition. S ren Jacob Lauritsen a fourni bien vouloir tel un projet Visual C# Express Edition avec le code pour le `GetProductsWithPriceGreaterThan` de procédures stockées et les deux gérés des procédures stockées et UDF créé lors des étapes 3, 5 et 10. Projet de s S ren inclut également les commandes T-SQL nécessaires pour ajouter les objets de base de données correspondante.
 
 
 Le code compilé dans un assembly, nous sommes prêts à inscrire l’assembly dans la base de données SQL Server 2005. Cela peut être effectué via T-SQL, à l’aide de la commande `CREATE ASSEMBLY`, ou via SQL Server Management Studio. Laissez le focus s à l’aide de Management Studio.
@@ -543,7 +543,7 @@ Comme le montre la Figure 32, la commande ci-dessus affiche des informations pou
 
 ## <a name="summary"></a>Récapitulatif
 
-Microsoft SQL Server 2005 s’intègre avec le Common Language Runtime (CLR), ce qui permet aux objets de base de données d’être créé à l’aide de code managé. Auparavant, ces objets de base de données peuvent uniquement être créés à l’aide de T-SQL, mais nous pouvons maintenant créer ces objets à l’aide de la programmation des langages tels que c# .NET. Dans ce didacticiel, que nous avons créé deux gérés des procédures stockées et une fonction définie par l’utilisateur géré.
+Microsoft SQL Server 2005 s’intègre avec le Common Language Runtime (CLR), ce qui permet aux objets de base de données d’être créé à l’aide de code managé. Auparavant, ces objets de base de données peuvent uniquement être créés à l’aide de T-SQL, mais nous pouvons maintenant créer ces objets à l’aide de la programmation des langages tels que C# .NET. Dans ce didacticiel, que nous avons créé deux gérés des procédures stockées et une fonction définie par l’utilisateur géré.
 
 Visual Studio s type de projet SQL Server facilite la création, la compilation et déploiement d’objets de base de données managés. En outre, il offre la prise en charge du débogage enrichi. Toutefois, les types de projet SQL Server sont uniquement disponibles dans les éditions Professional et les systèmes de l’équipe de Visual Studio. Pour ceux à l’aide de Visual Web Developer ou l’Édition Standard de Visual Studio, la création, compilation et étapes de déploiement doit être effectuée manuellement, comme nous l’avons vu à l’étape 13.
 
@@ -570,7 +570,7 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 
 ## <a name="special-thanks-to"></a>Remerciements
 
-Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Entraîner un réviseur pour ce didacticiel a été S ren Jacob Lauritsen. En plus d’étudier cet article, le S ren également créé le projet Visual c# Express Edition inclus dans ce téléchargement de l’article %s pour la compilation manuellement les objets de base de données managés. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Entraîner un réviseur pour ce didacticiel a été S ren Jacob Lauritsen. En plus d’étudier cet article, le S ren également créé le projet Visual C# Express Edition inclus dans ce téléchargement de l’article %s pour la compilation manuellement les objets de base de données managés. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Précédent](debugging-stored-procedures-cs.md)

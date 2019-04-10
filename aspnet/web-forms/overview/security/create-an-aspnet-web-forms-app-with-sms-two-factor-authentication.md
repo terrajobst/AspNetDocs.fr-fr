@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication
-title: Créer un site Web ASP.NET application Forms avec authentification à deux facteurs SMS (C#) | Microsoft Docs
+title: Créer un site Web ASP.NET application Forms avec authentification à deux facteurs SMS (c#) | Microsoft Docs
 author: Erikre
 description: Ce didacticiel vous montre comment créer une application ASP.NET Web Forms avec authentification à deux facteurs. Ce didacticiel a été conçu pour compléter le didacticiel intitulé Cr...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 10/09/2014
 ms.assetid: 716264ae-ab72-45de-bfc5-53a6237089cf
 msc.legacyurl: /web-forms/overview/security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: 7ad3b7a453a40f2708902ae5b9e5cb75b931d54d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2010de510cf44bba1b95d29dbdb573ab78f452f7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028716"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411356"
 ---
-<a name="create-an-aspnet-web-forms-app-with-sms-two-factor-authentication-c"></a>Créer une application Web Forms ASP.NET avec authentification à deux facteurs par SMS (C#)
-====================
+# <a name="create-an-aspnet-web-forms-app-with-sms-two-factor-authentication-c"></a>Créer une application Web Forms ASP.NET avec authentification à deux facteurs par SMS (C#)
+
 par [Erik Reitan](https://github.com/Erikre)
 
 [Télécharger l’application Web Forms ASP.NET avec messagerie et d’authentification à deux facteurs SMS](https://code.msdn.microsoft.com/ASPNET-Web-Forms-App-with-5a0ff94e)
@@ -33,7 +33,7 @@ Ce didacticiel vous guide à travers les étapes requises pour créer une applic
 - [Créer une application Web Forms ASP.NET](#createWebForms)
 - [Le programme d’installation de SMS et authentification à deux facteurs](#SMS)
 - [Activer l’authentification à deux facteurs pour l’utilisateur inscrit](#use2FA)
-- [Ressources supplémentaires pour MSBuild](#addRes)
+- [Ressources supplémentaires](#addRes)
 
 <a id="createWebForms"></a>
 ## <a name="create-an-aspnet-web-forms-app"></a>Créer une application Web Forms ASP.NET
@@ -109,9 +109,9 @@ Ce didacticiel utilise Twilio, mais vous pouvez utiliser n’importe quel fourni
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 - [Authentification à deux facteurs par SMS et e-mail avec ASP.NET Identity](../../../identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
-- [Des liens vers les ressources recommandées sur ASP.NET Identity](../../../identity/overview/getting-started/aspnet-identity-recommended-resources.md)
+- [Ressources recommandées pour des liens vers ASP.NET Identity](../../../identity/overview/getting-started/aspnet-identity-recommended-resources.md)
 - [Déployer une application de formulaires Web ASP.NET sécurisée avec appartenance, OAuth et base de données SQL sur un site Web Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/)
 - [Série de didacticiels ASP.NET Web Forms - ajouter le fournisseur OAuth 2.0](../getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md#OAuthWebForms)
 - [Série de didacticiels Web Forms ASP.NET - activer SSL pour le projet](../getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md#SSLWebForms)
 - [Confirmation de compte et de récupération de mot de passe avec ASP.NET Identity](../../../identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
-- [Création de l’application dans Facebook et connexion de l’application au projet](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md#fb)
+- [Création de l’application dans Facebook et la connexion de l’application au projet](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md#fb)

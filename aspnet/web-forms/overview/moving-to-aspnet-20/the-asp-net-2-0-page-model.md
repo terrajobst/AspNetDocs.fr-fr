@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: af4575a3-0ae3-4638-ba4d-218fad7a1642
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/the-asp-net-2-0-page-model
 msc.type: authoredcontent
-ms.openlocfilehash: 4452169a01276cbc60f2a2057e6b560022ccd7c0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 09f8389a04c5600ca9ee8365a9dc5a0d607c0a4d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057256"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403920"
 ---
-<a name="the-aspnet-20-page-model"></a>Le modèle de Page 2.0 ASP.NET
-====================
+# <a name="the-aspnet-20-page-model"></a>Le modèle de Page 2.0 ASP.NET
+
 by [Microsoft](https://github.com/microsoft)
 
 > Dans ASP.NET 1.x, les développeurs devaient choisir entre un modèle de code inline et un modèle de code code-behind. Code-behind peut être implémenté à l’aide de l’attribut Src ou l’attribut code-behind de la @Page directive. Dans ASP.NET 2.0, les développeurs ont toujours un choix entre le code inline et code-behind, mais il améliorations significatives ont été pour le modèle code-behind.
@@ -34,7 +34,7 @@ Dans ASP.NET 1.x, le modèle code-behind consistait en un fichier ASPX (formulai
 
 ## <a name="the-code-behind-model-in-aspnet-20"></a>Le modèle Code-Behind dans ASP.NET 2.0
 
-ASP.NET 2.0 améliore considérablement ce modèle. Dans ASP.NET 2.0, le code-behind est implémenté à l’aide de la nouvelle *des classes partielles* fourni dans ASP.NET 2.0. La classe code-behind dans ASP.NET 2.0 est défini comme une classe partielle, ce qui signifie qu’il contient uniquement une partie de la définition de classe. La partie restante de la définition de classe est générée dynamiquement par ASP.NET 2.0 à l’aide de la page ASPX lors de l’exécution, ou lorsque le site Web est précompilé. Le lien entre le fichier code-behind et la page ASPX est toujours établi à l’aide de la directive @ Page. Toutefois, au lieu d’un attribut de code-behind ou Src, ASP.NET 2.0 utilise désormais l’attribut CodeFile. L’attribut Inherits permet également de spécifier le nom de classe pour la page.
+ASP.NET 2.0 améliore considérablement ce modèle. Dans ASP.NET 2.0, le code-behind est implémenté à l’aide de la nouvelle *des classes partielles* fourni dans ASP.NET 2.0. La classe code-behind dans ASP.NET 2.0 est définie comme une classe partielle, ce qui signifie qu’il contient uniquement une partie de la définition de classe. La partie restante de la définition de classe est générée dynamiquement par ASP.NET 2.0 à l’aide de la page ASPX lors de l’exécution, ou lorsque le site Web est précompilé. Le lien entre le fichier code-behind et la page ASPX est toujours établi à l’aide de la directive @ Page. Toutefois, au lieu d’un attribut de code-behind ou Src, ASP.NET 2.0 utilise désormais l’attribut CodeFile. L’attribut Inherits permet également de spécifier le nom de classe pour la page.
 
 Une directive @ Page classique peut ressembler à ceci :
 
@@ -265,7 +265,7 @@ Cette propriété retourne l’objet PageStatePersister pour la page. Cette prop
 
 ## <a name="uniquefilepathsuffix"></a>UniqueFilePathSuffix
 
-Cette propriété retourne un suffic unique qui est ajouté au chemin de fichier pour la mise en cache des navigateurs. La valeur par défaut est \_ \_ufps = et un nombre à 6 chiffres.
+Cette propriété retourne un suffixe unique qui est ajouté au chemin de fichier pour la mise en cache des navigateurs. La valeur par défaut est \_ \_ufps = et un nombre à 6 chiffres.
 
 ## <a name="new-public-methods-for-the-page-class"></a>Nouvelles méthodes publiques pour la classe de Page
 
@@ -508,7 +508,7 @@ N’oubliez pas que *cbRef* est la valeur de retour de l’appel à GetCallbackE
 
 ## <a name="step-4--register-the-client-side-script"></a>Étape 4 : Inscrivez le Script côté Client
 
-Rappelez-vous que l’appel à GetCallbackEventReference spécifié qu’un script côté client appelée **ShowCompanyName** serait exécuté lorsque le rappel côté serveur réussit. Ce script doit être ajouté à la page à l’aide d’une instance ClientScriptManager. (La classe ClientScriptManager seront décrits plus loin dans ce module). Vous effectuez donc ce type :
+Rappelez-vous que l’appel à GetCallbackEventReference spécifié qu’un script côté client appelée **ShowCompanyName** serait exécuté lorsque le rappel côté serveur réussit. Ce script doit être ajouté à la page à l’aide d’une instance ClientScriptManager. (La classe ClientScriptManager est abordée plus loin dans ce module.) Vous effectuez donc ce type :
 
 [!code-javascript[Main](the-asp-net-2-0-page-model/samples/sample16.js)]
 

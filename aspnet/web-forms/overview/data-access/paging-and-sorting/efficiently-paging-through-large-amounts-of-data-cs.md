@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-cs
-title: Pagination efficace dans de grandes quantités de données (c#) | Microsoft Docs
+title: Pagination efficace dans de grandes quantités de données (C#) | Microsoft Docs
 author: rick-anderson
 description: Ne convient pas l’option de la pagination par défaut d’un contrôle de présentation des données lorsque vous travaillez avec grandes quantités de données, comme son retriev de contrôle de source données sous-jacent...
 ms.author: riande
@@ -10,7 +10,7 @@ msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/efficiently-pa
 msc.type: authoredcontent
 ms.openlocfilehash: feebee845a19a7cb462127a893a30ac7e0761965
 ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57051726"

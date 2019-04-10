@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: f2339485-5d78-4c5e-8c0a-dc9b8a315345
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/membership
 msc.type: authoredcontent
-ms.openlocfilehash: d4fab68555eeb27420e60a28aca2f2c0fb9a73e3
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: f3f8c649932682fd96e0640ddf4595c19c755909
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421516"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408184"
 ---
-<a name="membership"></a>Appartenance
-====================
+# <a name="membership"></a>Appartenance
+
 by [Microsoft](https://github.com/microsoft)
 
 > L’appartenance ASP.NET s’appuie sur la réussite du modèle d’authentification de formulaires à partir d’ASP.NET 1.x. Authentification par formulaire ASP.NET fournit un moyen pratique d’intégrer un formulaire de connexion dans votre application ASP.NET et valider des utilisateurs par rapport à une base de données ou autre magasin de données.

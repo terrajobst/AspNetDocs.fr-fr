@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/masterdetail/master-detail-filtering-across-two-pages-cs
-title: Maître/détail filtrage entre les deux Pages (c#) | Microsoft Docs
+title: Maître/détail filtrage entre les deux Pages (C#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons implémenter ce modèle à l’aide d’un GridView pour répertorier les fournisseurs dans la base de données. Chaque ligne du fournisseur dans le contrôle GridView contiendra une vue...
 ms.author: riande
@@ -10,7 +10,7 @@ msc.legacyurl: /web-forms/overview/data-access/masterdetail/master-detail-filter
 msc.type: authoredcontent
 ms.openlocfilehash: 69e5f010507784229360f71cf6f570b342f5ff46
 ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57036876"

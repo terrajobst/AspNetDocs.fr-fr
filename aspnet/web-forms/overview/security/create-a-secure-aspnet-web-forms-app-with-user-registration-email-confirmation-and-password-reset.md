@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset
-title: Créer une application Web Forms ASP.NET sécurisée avec inscription des utilisateurs, par e-mail de réinitialisation de mot de passe et de confirmation (C#) | Microsoft Docs
+title: Créer une application Web Forms ASP.NET sécurisée avec inscription des utilisateurs, par e-mail de réinitialisation de mot de passe et de confirmation (c#) | Microsoft Docs
 author: Erikre
 description: Ce didacticiel vous montre comment créer une application Web Forms ASP.NET avec inscription utilisateur, confirmation par courrier électronique et mot de passe réinitialisé à l’aide du membre de l’identité ASP.NET...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 10/02/2014
 ms.assetid: 0a8d6044-5fab-4213-82d6-5618d5601358
 msc.legacyurl: /web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: 1bd90f0ceddee7d9e18c1cac2fadfb2c84841f19
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3df728891103de9c8e461ab9507237c9b14e8251
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424636"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390686"
 ---
-<a name="create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset-c"></a>Créer une application Web Forms ASP.NET sécurisée avec inscription de l’utilisateur, confirmation par e-mail et réinitialisation du mot de passe (C#)
-====================
+# <a name="create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset-c"></a>Créer une application Web Forms ASP.NET sécurisée avec inscription de l’utilisateur, confirmation par e-mail et réinitialisation du mot de passe (C#)
+
 par [Erik Reitan](https://github.com/Erikre)
 
 > Ce didacticiel vous montre comment créer une application Web Forms ASP.NET avec inscription de l’utilisateur, confirmation par courrier électronique et mot de passe réinitialisé à l’aide du système d’appartenance ASP.NET Identity. Ce didacticiel a été basé sur de Rick Anderson [didacticiel MVC](../../../mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md).
@@ -34,7 +34,7 @@ Ce didacticiel vous guide à travers les étapes requises pour créer une applic
 - [Réinitialisation et la récupération de mot de passe](#reset)
 - [Renvoyer le lien de Confirmation de courrier électronique](#rsend)
 - [Résolution des problèmes de l’application](#dbg)
-- [Ressources supplémentaires pour MSBuild](#addRes)
+- [Ressources supplémentaires](#addRes)
 
 <a id="createWebForms"></a>
 ## <a name="create-an-aspnet-web-forms-app"></a>Créer une application Web Forms ASP.NET
@@ -183,7 +183,7 @@ Si vous ne recevez un e-mail contenant le lien pour vérifier vos informations d
 <a id="addRes"></a>
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- [Des liens vers les ressources recommandées sur ASP.NET Identity](../../../identity/overview/getting-started/aspnet-identity-recommended-resources.md)
+- [Ressources recommandées pour des liens vers ASP.NET Identity](../../../identity/overview/getting-started/aspnet-identity-recommended-resources.md)
 - [Confirmation de compte et de récupération de mot de passe avec ASP.NET Identity](../../../identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
 - [Série de didacticiels ASP.NET Web Forms - ajouter le fournisseur OAuth 2.0](../getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md#OAuthWebForms)
 - [Déployer une application de formulaires Web ASP.NET sécurisée avec appartenance, OAuth et base de données SQL dans Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/)

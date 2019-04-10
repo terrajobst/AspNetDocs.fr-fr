@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: 81ed82bf-b940-44f1-b94a-555d0cb7cc98
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/form-basics
 msc.type: authoredcontent
-ms.openlocfilehash: 28385ac2244ab0bfb38ee5fcbc64e6e11804612b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f88f7a31551abda029bee0ec16aa35ce2ef5d2f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028216"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385954"
 ---
-<a name="introducing-aspnet-web-pages---html-form-basics"></a>Présentation des Pages Web ASP.NET - principes de base de formulaire HTML
-====================
+# <a name="introducing-aspnet-web-pages---html-form-basics"></a>Présentation des Pages Web ASP.NET - principes de base de formulaire HTML
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Ce didacticiel vous montre les principes fondamentaux de la création d’un formulaire d’entrée et comment gérer l’entrée de l’utilisateur lorsque vous utilisez les Pages Web ASP.NET (Razor). Et maintenant que vous avez une base de données, vous allez utiliser vos compétences en matière de formulaire pour permettre aux utilisateurs de rechercher des films spécifiques dans la base de données. Il part du principe que vous avez terminé la série via [Introduction à affichage des données à l’aide de ASP.NET Web Pages](/aspnet/web-pages/overview/getting-started/introducing-aspnet-web-pages-2/displaying-data).
@@ -356,7 +356,7 @@ Dans le didacticiel suivant, vous allez créer une page qui utilise un formulair
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- [Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Présentation de la programmation Web ASP.NET à l'aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Une Clause SQL WHERE](http://www.w3schools.com/sql/sql_where.asp) sur le site W3Schools
 - [Définitions de méthode](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) article sur le site du W3C
 

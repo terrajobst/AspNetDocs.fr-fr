@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: 7d82d5e9-0619-4f22-9e03-32a6d52940a5
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
 msc.type: authoredcontent
-ms.openlocfilehash: 22ef4c2908783e513bfb6fb63364e71378cb8719
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: da1136e085776c63886b6ac25533521fa1479d4f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027646"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406286"
 ---
-<a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Single Sign-On (génération d’applications Cloud réalistes avec Azure)
-====================
+# <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Single Sign-On (génération d’applications Cloud réalistes avec Azure)
+
 par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)

@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 48f7feb3-872f-485d-b96f-e30011ff8c4a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/whats-new-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: 0c4b7b2641c91cbb63ec46fa707c004f7273a303
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: b9da2522cfaed324a23f43265d4e234ebb4950bd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422686"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411122"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Nouveautés d’ASP.NET MVC 4
 
@@ -173,14 +173,14 @@ Dans cet exercice, vous allez explorer les améliorations dans les modèles de p
 
    *Le modèle de projet Application Internet ASP.NET MVC 4*
 
-   - **HTML 5 balisage**
+    - **HTML 5 balisage**
 
        Parcourir les vues de modèle pour découvrir le nouveau balisage de thème.
 
        ![Nouveau modèle, à l’aide de Razor et HTML5 balisage About.cshtml.](whats-new-in-aspnet-mvc-4/_static/image10.png "Nouveau modèle, à l’aide de Razor et HTML5 balisage About.cshtml.")
 
        *Nouveau modèle, en utilisant le balisage Razor et HTML5 (About.cshtml).*
-   - **Bibliothèques JavaScript mis à jour**
+    - **Bibliothèques JavaScript mis à jour**
 
        Le modèle par défaut de ASP.NET MVC 4 inclut désormais KnockoutJS, une infrastructure MVVM JavaScript qui vous permet de créer de riches et applications web hautement réactives à l’aide de JavaScript et HTML. Comme dans MVC 3, jQuery et bibliothèques d’interface utilisateur jQuery sont également inclus dans ASP.NET MVC 4.
 
@@ -250,11 +250,11 @@ La flexibilité fournie par la technique de rendu adaptatif permet toute personn
 > Le format de base d’une requête de média est : @media \[Étendue : tous les | poche | imprimer | projection | écran\] ([ : valeur de propriété] et... propriété : valeur)
 
 
-Exemples de requêtes de média : &gt;  <strong>@media tous les et (la largeur maximale : 1000px) et (la largeur minimale : 700px) {}:</strong> Pour toutes les résolutions entre 700px et 1000px.
+Exemples de requêtes de média : &gt;  **@media tous les et (la largeur maximale : 1000px) et (la largeur minimale : 700px) {}:** Pour toutes les résolutions entre 700px et 1000px.
 
-> <strong>@media écran et (la largeur minimale : 400px) et (la largeur maximale : 700px) {...} :</strong> Uniquement pour les écrans. La résolution doit être compris entre 400 et 700px.
+> **@media écran et (la largeur minimale : 400px) et (la largeur maximale : 700px) {...} :** Uniquement pour les écrans. La résolution doit être compris entre 400 et 700px.
 > 
-> <strong>@media ordinateur de poche et (la largeur minimale : 20em), écran et (la largeur minimale : 20em) {...} :</strong> Pour les ordinateurs de poche (mobile et appareils) et les écrans. La largeur minimale doit être supérieure à 20em.
+> **@media ordinateur de poche et (la largeur minimale : 20em), écran et (la largeur minimale : 20em) {...} :** Pour les ordinateurs de poche (mobile et appareils) et les écrans. La largeur minimale doit être supérieure à 20em.
 > 
 > Vous trouverez plus d’informations sur la [W3C site](http://www.w3.org/TR/css3-mediaqueries/).
 
@@ -263,7 +263,7 @@ Vous allez maintenant Explorer le fonctionnement de rendu adaptable, améliorer 
 
 1. Ouvrez le **PhotoGallery.sln** solution que vous avez créé à la tâche 1 et sélectionnez le **PhotoGallery** projet. Appuyez sur **F5** pour exécuter la solution.
 2. Redimensionner la largeur du navigateur, définissant les fenêtres à la moitié ou au moins un quart de sa taille d’origine. Notez que se passe-t-il avec les éléments dans l’en-tête : Certains éléments n’apparaîtront pas dans la zone visible de l’en-tête.
-3. Ouvrez <strong>Site.css</strong> fichier à partir de l’Explorateur de Solution Visual Studio, situé dans <strong>contenu</strong> dossier du projet. Appuyez sur <strong>CTRL + F</strong> pour ouvrir recherche intégrée de Visual Studio et écrire <strong>@media</strong> pour localiser le <strong>requête de média CSS</strong>.
+3. Ouvrez **Site.css** fichier à partir de l’Explorateur de Solution Visual Studio, situé dans **contenu** dossier du projet. Appuyez sur **CTRL + F** pour ouvrir recherche intégrée de Visual Studio et écrire **@media** pour localiser le **requête de média CSS**.
 
     La condition de requête de média définie dans ce modèle fonctionne de cette façon : Lorsque la taille de la fenêtre du navigateur est ci-dessous **850 px**, les règles CSS appliquées sont celles définies à l’intérieur de ce bloc de média.
 
@@ -274,13 +274,13 @@ Vous allez maintenant Explorer le fonctionnement de rendu adaptable, améliorer 
 
     ![Dans la gauche, la page est mise la @media style, dans la droite, le style est omis](whats-new-in-aspnet-mvc-4/_static/image17.png "gauche, la page demande le @media style, dans la droite, le style est omis")
 
-    <em>Gauche, la page demande le @media style, dans la droite, le style est omis.</em>
+    *Gauche, la page demande le @media style, dans la droite, le style est omis.*
 
     À présent, penchons-nous sur ce qui se passe sur les appareils mobiles :
 
     ![Dans la gauche, la page est mise la @media style, dans la droite, le style est omis](whats-new-in-aspnet-mvc-4/_static/image18.png "gauche, la page demande le @media style, dans la droite, le style est omis")
 
-    <em>Gauche, la page demande le @media style, dans la droite, le style est omis.</em>
+    *Gauche, la page demande le @media style, dans la droite, le style est omis.*
 
     Bien que vous pouvez remarquer que les modifications lorsque la page est affichée dans un navigateur Web ne sont pas très importantes, lors de l’utilisation d’un appareil mobile, les différences deviennent plus évidents. Sur le côté gauche de l’image, nous pouvons voir que le style personnalisé amélioré la lisibilité.
 
@@ -543,11 +543,11 @@ Dans cette tâche, vous mettrez à jour le mode Poste de travail afin d’inclur
     ![Afficher le sélecteur de rendu en mode Bureau](whats-new-in-aspnet-mvc-4/_static/image32.png "basculeur restitué en mode bureau")
 
     *Sélecteur de vue restituée dans la vue bureau*
-7. Basculez vers l’affichage Mobile à nouveau et accédez à <strong>sur</strong> page (http://localhost[port] / Home/sur). Notez que, même si vous n’avez pas créé une vue About.Mobile.cshtml, la page About est affichée à l’aide de la disposition mobile (\_Layout.Mobile.cshtml).
+7. Basculez vers l’affichage Mobile à nouveau et accédez à **sur** page (http://localhost[port] / Home/sur). Notez que, même si vous n’avez pas créé une vue About.Mobile.cshtml, la page About est affichée à l’aide de la disposition mobile (\_Layout.Mobile.cshtml).
 
     ![Sur la page](whats-new-in-aspnet-mvc-4/_static/image33.png "sur la page")
 
-    *Sur la page*
+    *Page About*
 8. Enfin, ouvrez le site dans un navigateur Web de bureau. Notez qu’aucune des précédentes mises à jour a affecté l’affichage de bureau.
 
     ![Vue bureau PhotoGallery](whats-new-in-aspnet-mvc-4/_static/image34.png "vue bureau PhotoGallery")
@@ -604,7 +604,7 @@ Maintenant, vous avez 3 mises en page dans votre application ASP.NET MVC 4 :
 <a id="Exercise_4_Using_Asynchronous_Controllers"></a>
 ### <a name="exercise-4-using-asynchronous-controllers"></a>Exercice 4 : À l’aide de contrôleurs asynchrones
 
-Microsoft .NET Framework 4.5 introduit de nouvelles fonctionnalités de langage dans C# et Visual Basic pour fournir une nouvelle fondation pour le comportement asynchrone dans la programmation .NET. Cette nouvelle foundation rend la programmation asynchrone similaire à - et aussi simple que la programmation synchrone. Vous êtes maintenant en mesure d’écrire des méthodes d’action asynchrones dans ASP.NET MVC 4 à l’aide de la **AsyncController** classe. Vous pouvez utiliser les méthodes d’action asynchrones pour la durée d’exécution longue, pas le processeur lié des demandes. Cela évite de bloquer le serveur Web de réaliser un travail pendant le traitement de la demande. La classe AsyncController est généralement utilisée pour les appels de service Web long terme.
+Microsoft .NET Framework 4.5 introduit de nouvelles fonctionnalités de langage dans c# et Visual Basic pour fournir une nouvelle fondation pour le comportement asynchrone dans la programmation .NET. Cette nouvelle foundation rend la programmation asynchrone similaire à - et aussi simple que la programmation synchrone. Vous êtes maintenant en mesure d’écrire des méthodes d’action asynchrones dans ASP.NET MVC 4 à l’aide de la **AsyncController** classe. Vous pouvez utiliser les méthodes d’action asynchrones pour la durée d’exécution longue, pas le processeur lié des demandes. Cela évite de bloquer le serveur Web de réaliser un travail pendant le traitement de la demande. La classe AsyncController est généralement utilisée pour les appels de service Web long terme.
 
 Cet exercice explique les principes fondamentaux de l’opération asynchrone dans ASP.NET MVC 4. Si vous souhaitez approfondir vos connaissances, vous pouvez consulter l’article suivant : [[https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)
 
@@ -650,7 +650,7 @@ Cet exercice explique les principes fondamentaux de l’opération asynchrone da
 8. Exécutez l'application. Vous ne remarquerez aucune modification majeure, mais votre code ne bloquera pas d’un thread du pool de threads apporter une meilleure utilisation des ressources du serveur et améliore les performances.
 
     > [!NOTE]
-    > Vous trouverez plus d’informations sur les nouvelles fonctionnalités de programmation asynchrones dans le laboratoire &quot; **la programmation asynchrone dans .NET 4.5 avec C# et Visual Basic** &quot; inclus dans le Kit de formation Visual Studio.
+    > Vous trouverez plus d’informations sur les nouvelles fonctionnalités de programmation asynchrones dans le laboratoire &quot; **la programmation asynchrone dans .NET 4.5 avec c# et Visual Basic** &quot; inclus dans le Kit de formation Visual Studio.
 
 <a id="Task_2_-_Handling_Time-Outs_with_Cancellation_Tokens"></a>
 #### <a name="task-2---handling-time-outs-with-cancellation-tokens"></a>Tâche 2 : délais d’expiration de la gestion des jetons d’annulation
@@ -723,7 +723,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *À l’aide d’extraits de code Visual Studio pour insérer du code dans votre projet*
 
-***Pour ajouter un extrait de code à l’aide du clavier (C# uniquement)***
+***Pour ajouter un extrait de code à l’aide du clavier (c# uniquement)***
 
 1. Placez le curseur où vous souhaitez insérer le code.
 2. Commencez à taper le nom de l’extrait de code (sans espaces ou des traits d’union).
@@ -743,7 +743,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *Appuyez sur Tab à nouveau et l’extrait de code seront développe.*
 
-***Pour ajouter un extrait de code à l’aide de la souris (C#, Visual Basic et XML)***
+***Pour ajouter un extrait de code à l’aide de la souris (c#, Visual Basic et XML)***
 
 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
 2. Sélectionnez **insérer un extrait** suivie **mes extraits de Code**.
@@ -764,7 +764,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un autre &quot;Express&quot; à l’aide de la version du **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. Les instructions suivantes vous guident dans les étapes requises pour installer *Visual studio Express 2012 pour Web* à l’aide de *Microsoft Web Platform Installer*.
 
-1. Accédez à [ [ https://go.microsoft.com/?linkid=9810169 ](https://go.microsoft.com/?linkid=9810169) ](https://go.microsoft.com/?linkid=9810169). Si vous avez déjà installé Web Platform Installer, vous pouvez également ouvrir il et recherchez le produit &quot; <em>Visual Studio Express 2012 pour le Web avec Windows Azure SDK</em>&quot;.
+1. Accédez à [ [ https://go.microsoft.com/?linkid=9810169 ](https://go.microsoft.com/?linkid=9810169) ](https://go.microsoft.com/?linkid=9810169). Si vous avez déjà installé Web Platform Installer, vous pouvez également ouvrir il et recherchez le produit &quot; *Visual Studio Express 2012 pour le Web avec Windows Azure SDK*&quot;.
 2. Cliquez sur **installer maintenant**. Si vous n’avez pas **Web Platform Installer** vous allez être redirigé pour télécharger et installer en premier.
 3. Une fois **Web Platform Installer** est ouvert, cliquez sur **installer** pour démarrer le programme d’installation.
 
@@ -780,7 +780,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](whats-new-in-aspnet-mvc-4/_static/image46.png)
 
-    *Progression de l’installation*
+    *Progression de l'installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](whats-new-in-aspnet-mvc-4/_static/image47.png)
@@ -805,7 +805,7 @@ Pour exécuter votre site dans un appareil simulé iPhone, vous pouvez utiliser 
 <a id="Task_1_-_Installing_WebMatrix_2"></a>
 #### <a name="task-1---installing-webmatrix-2"></a>Tâche 1 : installation de WebMatrix 2
 
-1. Accédez à [ [ https://go.microsoft.com/?linkid=9809776 ](https://go.microsoft.com/?linkid=9809776) ](https://go.microsoft.com/?linkid=9810169). Si vous avez déjà installé Web Platform Installer, vous pouvez également ouvrir il et recherchez le produit &quot; <em>WebMatrix 2</em>&quot;.
+1. Accédez à [ [ https://go.microsoft.com/?linkid=9809776 ](https://go.microsoft.com/?linkid=9809776) ](https://go.microsoft.com/?linkid=9810169). Si vous avez déjà installé Web Platform Installer, vous pouvez également ouvrir il et recherchez le produit &quot; *WebMatrix 2*&quot;.
 2. Cliquez sur **installer maintenant**. Si vous n’avez pas **Web Platform Installer** vous allez être redirigé pour télécharger et installer en premier.
 3. Une fois **Web Platform Installer** est ouvert, cliquez sur **installer** pour démarrer le programme d’installation.
 
@@ -821,7 +821,7 @@ Pour exécuter votre site dans un appareil simulé iPhone, vous pouvez utiliser 
 
     ![Progression de l’installation](whats-new-in-aspnet-mvc-4/_static/image51.png "progression de l’Installation")
 
-    *Progression de l’installation*
+    *Progression de l'installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![L’installation est terminée](whats-new-in-aspnet-mvc-4/_static/image52.png "l’Installation est terminée")
@@ -875,7 +875,7 @@ Pour exécuter votre site dans un appareil simulé iPhone, vous pouvez utiliser 
 3. Dans le &quot;naviguer avec&quot; boîte de dialogue, cliquez sur **ajouter**.
 4. Dans le &quot;ajouter un programme&quot; boîte de dialogue, utilisez les valeurs suivantes :
 
-   - <strong>Programme</strong>: C:\Users\*{CurrentUser}<em>\AppData\Local\Microsoft\WebMatrix\Extensions\20\iPhoneSimulator\ElectricMobileSim\ElectricMobileSim.exe * (le chemin de mise à jour en conséquence)</em>
+   - **Programme**: C:\Users\*{CurrentUser}*\AppData\Local\Microsoft\WebMatrix\Extensions\20\iPhoneSimulator\ElectricMobileSim\ElectricMobileSim.exe *(le chemin de mise à jour en conséquence)*
    - **Arguments**: &quot;1&quot;
    - **Nom convivial**: iPhone simulateur
 

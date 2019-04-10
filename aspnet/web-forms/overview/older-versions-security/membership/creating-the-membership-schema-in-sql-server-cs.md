@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/membership/creating-the-membership-schema-in-sql-server-cs
-title: Création du schéma d’appartenance dans SQL Server (c#) | Microsoft Docs
+title: Création du schéma d’appartenance dans SQL Server (C#) | Microsoft Docs
 author: rick-anderson
 description: Ce didacticiel commence par examiner des techniques permettant d’ajouter le schéma nécessaire à la base de données pour pouvoir utiliser SqlMembershipProvider. Ensuite, nous wi...
 ms.author: riande
@@ -10,7 +10,7 @@ msc.legacyurl: /web-forms/overview/older-versions-security/membership/creating-t
 msc.type: authoredcontent
 ms.openlocfilehash: 425dea8233eb6b5be7c3a3945d953ef47056f114
 ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57045406"

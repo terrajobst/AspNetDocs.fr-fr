@@ -8,15 +8,15 @@ ms.date: 08/30/2013
 ms.assetid: 0ee21741-c1bf-4025-a9b0-24580cae24bc
 msc.legacyurl: /aspnet/overview/owin-and-katana/an-overview-of-project-katana
 msc.type: authoredcontent
-ms.openlocfilehash: 52007eba109de28c6d178505b82b1d5ff2883b47
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 72f70faa151007558ecbb270143ecd5b37c2134d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040736"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392571"
 ---
-<a name="an-overview-of-project-katana"></a>Vue d’ensemble du projet Katana
-====================
+# <a name="an-overview-of-project-katana"></a>Vue d’ensemble du projet Katana
+
 par [Howard Dierking](https://github.com/howarddierking)
 
 > L’infrastructure ASP.NET existe depuis plus de dix ans, et la plateforme a activé le développement d’innombrables sites et services Web. Comme les stratégies de développement d’applications Web ont évolué, l’infrastructure a été capable d’évoluer à l’étape des technologies telles que ASP.NET MVC et API Web ASP.NET. Développement d’applications Web utilise son étape suivante dans le monde du cloud computing, projet [Katana](https://channel9.msdn.com/Shows/Web+Camps+TV/The-Katana-Project-OWIN-for-ASPNET) fournit le jeu sous-jacent de composants pour les applications ASP.NET, leur permettant d’être flexible et portable léger et offrent de meilleures performances : autrement dit, le projet [Katana](https://channel9.msdn.com/Shows/Web+Camps+TV/The-Katana-Project-OWIN-for-ASPNET) cloud permet d’optimiser vos applications ASP.NET.
