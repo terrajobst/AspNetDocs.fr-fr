@@ -8,21 +8,21 @@ ms.date: 07/16/2014
 ms.assetid: ba07958c-42e1-4da0-81db-ba6925ed6db0
 msc.legacyurl: /signalr/overview/getting-started/real-time-web-applications-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 3db54a134e8f842cab1d3471c69f5a8e2039d83d
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 9904582450d4386ef8b8656078f6d40dbd1e10be
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423609"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412006"
 ---
-<a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Atelier pratique : Applications web temps réel avec SignalR
-====================
+# <a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Atelier pratique : Applications web temps réel avec SignalR
+
 
 par [Web Camps Team](https://twitter.com/webcamps)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-[Télécharger le Kit de formation de Web Camps](https://aka.ms/webcamps-training-kit)
+[Télécharger Web Camps Training Kit, version d’octobre 2015](https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b)
 
 > Les applications Web en temps réel offrent la possibilité de pousser le côté serveur contenu aux clients connectés, comme le montre, en temps réel. Pour les développeurs ASP.NET, **ASP.NET SignalR** est une bibliothèque à ajouter des fonctionnalités web en temps réel à leurs applications. Il tire parti de plusieurs transports, en sélectionnant automatiquement le mieux transport disponible étant donné le client et mieux transport disponibles du serveur. Il tire parti de **WebSocket**, une API de HTML5 qui permet la communication bidirectionnelle entre le navigateur et le serveur.
 > 
@@ -34,8 +34,7 @@ par [Web Camps Team](https://twitter.com/webcamps)
 > 
 > ![Architecture de SignalR](real-time-web-applications-with-signalr/_static/image1.png)
 > 
-> Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
-
+> Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Web Camps, version d’octobre 2015, disponible à l’adresse [ https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b ](https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b).  Veuillez noter que le lien de programme d’installation sur cette page ne fonctionne plus ; Utilisez un des liens sous la section de ressources à la place.
 
 <a id="Overview"></a>
 ## <a name="overview"></a>Vue d'ensemble
@@ -77,7 +76,7 @@ Dans le document de laboratoire, vous serez invité à insérer des blocs de cod
 > Chaque exercice est accompagnée d’une solution de départ située dans le **commencer** dossier de l’exercice qui vous permet de suivre chaque exercice indépendamment des autres. N’oubliez pas que les extraits de code sont ajoutés au cours d’un exercice sont manquants à partir de ces solutions de démarrage et peut ne pas fonctionnent jusqu'à ce que vous avez terminé l’exercice. Dans le code source pour un exercice, vous y trouverez également un **fin** dossier qui contient une solution Visual Studio avec le code qui résulte d’effectuer les étapes dans l’exercice correspondant. Si vous avez besoin d’aide au cours de cet atelier, vous pouvez utiliser ces solutions en tant que guide.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Exercices
@@ -394,7 +393,7 @@ Dans cette tâche, vous allez configurer **Geek questionnaire** pour se connecte
 
     *Table des Messages de fond de panier*
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Récapitulatif

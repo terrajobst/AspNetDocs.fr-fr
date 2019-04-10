@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: 9715a121-fa55-4f1b-a5d2-fb3f6cd8be8f
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/setting-folder-permissions
 msc.type: authoredcontent
-ms.openlocfilehash: 930f46c0ddb0b77525098291393e526107a542d2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0a9181f741452e4abe256c9eab04615ce9819ff1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421691"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-setting-folder-permissions"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Définition des autorisations des dossiers
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-setting-folder-permissions"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Définition des autorisations des dossiers
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet de démarrage](http://go.microsoft.com/fwlink/p/?LinkId=282627)

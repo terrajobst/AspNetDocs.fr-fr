@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: ba92788f-9f03-44b1-b6b2-af8413e6a35d
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: eab69e93417ddedea9214523de34697b044a871e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 66a784430de734c8b1387c950382472ce59d5ccc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422133"
 ---
-<a name="configuring-a-web-server-for-web-deploy-publishing-offline-deployment"></a>Configuration d’un serveur web pour la publication Web Deploy (Déploiement hors connexion)
-====================
+# <a name="configuring-a-web-server-for-web-deploy-publishing-offline-deployment"></a>Configuration d’un serveur web pour la publication Web Deploy (Déploiement hors connexion)
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit comment configurer un serveur web IIS pour prendre en charge le déploiement et la publication web en mode hors connexion.
 > 

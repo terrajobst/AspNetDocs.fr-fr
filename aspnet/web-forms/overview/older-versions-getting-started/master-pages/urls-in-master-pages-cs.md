@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/urls-in-master-pages-cs
-title: URL dans les Pages maîtres (C#) | Microsoft Docs
+title: URL dans les Pages maîtres (c#) | Microsoft Docs
 author: rick-anderson
 description: Adresses comment les URL dans la page maître peuvent fonctionner en raison du fichier de page maître en cours dans un autre répertoire relatif à la page de contenu. Examine la relocalisation...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/10/2008
 ms.assetid: 48b58a18-5ea4-468c-b326-f35331b3e1e9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/urls-in-master-pages-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 6f22159c4e70beeb590039ea0d4b8126c5424bd5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a218dffb3d23ca95e9864fb7b272bc6a004386c4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57078574"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421197"
 ---
-<a name="urls-in-master-pages-c"></a>URL dans les pages maîtres (C#)
-====================
+# <a name="urls-in-master-pages-c"></a>URL dans les pages maîtres (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_04_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_04_CS.pdf)
@@ -75,7 +75,7 @@ Le `~/Admin/Default.aspx` page de contenu est envoyé le même code HTML le `foo
 Étant donné que le `<img>` l’élément `src` attribut est une URL relative, le navigateur tente de rechercher un `Images` dossier par rapport à l’emplacement du dossier de la page web. En d’autres termes, le navigateur recherche le fichier image `Admin/Images/PoweredByASPNET.gif`.
 
 
-[![Impossible de trouver le fichier Image de PoweredByASPNET.gif](urls-in-master-pages-cs/_static/image3.png)](urls-in-master-pages-cs/_static/image2.png)
+[![TIl PoweredByASPNET.gif Image de fichier ne peut pas être trouvée](urls-in-master-pages-cs/_static/image3.png)](urls-in-master-pages-cs/_static/image2.png)
 
 **Figure 02**: Le `PoweredByASPNET.gif` Image fichier est introuvable ([cliquez pour afficher l’image en taille réelle](urls-in-master-pages-cs/_static/image4.png))
 
@@ -92,7 +92,7 @@ Pour remédier à l’image rompue indiqué dans la Figure 2, nous devons mettre
 Prenez un moment pour mettre à jour le `<img>` l’élément `src` attribut à une URL absolue à l’aide d’une des formes illustrés ci-dessus, puis visitez le `~/Admin/Default.aspx` page via un navigateur. Cette fois, le navigateur sera correctement rechercher et afficher le `PoweredByASPNET.gif` fichier image (voir Figure 3).
 
 
-[![Le PoweredByASPNET.gif Image est maintenant affichée](urls-in-master-pages-cs/_static/image6.png)](urls-in-master-pages-cs/_static/image5.png)
+[![TIl PoweredByASPNET.gif Image est maintenant affichée](urls-in-master-pages-cs/_static/image6.png)](urls-in-master-pages-cs/_static/image5.png)
 
 **Figure 03**: Le `PoweredByASPNET.gif` Image est maintenant affichée ([cliquez pour afficher l’image en taille réelle](urls-in-master-pages-cs/_static/image7.png))
 

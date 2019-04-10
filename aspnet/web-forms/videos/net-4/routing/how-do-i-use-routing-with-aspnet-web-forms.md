@@ -8,15 +8,15 @@ ms.date: 10/15/2010
 ms.assetid: a3ab6cd9-8f71-4b73-9336-21c0de078269
 msc.legacyurl: /web-forms/videos/net-4/routing/how-do-i-use-routing-with-aspnet-web-forms
 msc.type: video
-ms.openlocfilehash: b1bba2725f893032f49fa1d43dbc7348f2c21e6e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f5036d780ed4fd0dd8caabbf4badb39fd9ee2de3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051526"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417063"
 ---
-<a name="how-do-i-use-routing-with-aspnet-web-forms"></a>Comment faire Utiliser le routage avec ASP.NET Web Forms ?
-====================
+# <a name="how-do-i-use-routing-with-aspnet-web-forms"></a>Comment faire Utiliser le routage avec ASP.NET Web Forms ?
+
 par [Chris Pels](https://twitter.com/chrispels)
 
 Dans cette vidéo, Chris Pels montre comment implémenter le routage pour les Web Forms dans ASP.NET 4. Tout d’abord, le concept d’une URL de routage est comparé au mappage de l’URL à un fichier physique dans le site. Ensuite, un exemple d’itinéraire pour une URL est définie dans global.asax d’Application de fichiers\_Gestionnaire d’événements de début. L’itinéraire contient une valeur paramétrée que l’utilisateur peut entrer dans l’URL. Un exemple de page est ensuite créé et la valeur de paramètre d’itinéraire est extrait dans la Page\_Gestionnaire d’événements Load. Ensuite, un deuxième itinéraire qui a plusieurs paramètres et les itinéraires vers la même page que l’itinéraire initial est défini. La Page\_Gestionnaire d’événements Load est développé pour extraire la valeur de paramètre d’itinéraire supplémentaires et afficher des informations différentes en fonction des valeurs qui ont été transmis à la page.

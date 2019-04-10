@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: d1608db3-660d-4079-8c15-f452ff01f1db
 msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-the-asp-net-mvc-execution-process
 msc.type: authoredcontent
-ms.openlocfilehash: 3a3bcf4b78e3b19fb4d293f67b68c3a790d05221
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4a47f51b08b66dfe9636b3992786df19d0ad72ad
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045236"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414931"
 ---
-<a name="understanding-the-aspnet-mvc-execution-process"></a>Présentation du processus d’exécution d’ASP.NET MVC
-====================
+# <a name="understanding-the-aspnet-mvc-execution-process"></a>Présentation du processus d’exécution d’ASP.NET MVC
+
 by [Microsoft](https://github.com/microsoft)
 
 > Découvrez comment l’infrastructure ASP.NET MVC traite une demande de navigateur pas à pas.

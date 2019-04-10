@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs
-title: Ajout de contenu dynamique à une Page mise en cache (C#) | Microsoft Docs
+title: Ajout de contenu dynamique à une Page mise en cache (c#) | Microsoft Docs
 author: microsoft
 description: Découvrez comment combiner le contenu dynamique et mise en cache dans la même page. Post-cache vous permet d’afficher le contenu dynamique, tels que bannière publications o...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 2ddd4407-d143-4a94-877c-21771bfb97a6
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 26e40ff9659a4b8552b2a087c7c948c9f1f1554c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c126270304178d178f4b8f9739fa5c51e5dd0551
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424168"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415360"
 ---
-<a name="adding-dynamic-content-to-a-cached-page-c"></a>Ajout de contenu dynamique à une page mise en cache (C#)
-====================
+# <a name="adding-dynamic-content-to-a-cached-page-c"></a>Ajout de contenu dynamique à une page mise en cache (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Découvrez comment combiner le contenu dynamique et mise en cache dans la même page. Post-cache vous permet d’afficher le contenu dynamique, tels que les publications de bannière ou de nouveaux éléments au sein d’une page qui a été une sortie mise en cache.
@@ -93,10 +93,6 @@ Lorsque vous demandez la page rendue par la vue dans la liste 5, une publication
 Ce didacticiel vous a expliqué comment vous pouvez mettre à jour dynamiquement le contenu dans une page mise en cache. Vous avez appris comment utiliser la méthode HttpResponse.WriteSubstitution() pour permettre à injecter dans une page mise en cache du contenu dynamique. Vous avez également appris comment encapsuler l’appel à la méthode WriteSubstitution() dans une méthode d’assistance HTML.
 
 Tirer parti de la mise en cache si possible : il peut avoir un impact considérable sur les performances de vos applications web. Comme expliqué dans ce didacticiel, vous pouvez tirer parti de la mise en cache même lorsque vous avez besoin afficher le contenu dynamique dans vos pages.
-
-## 
-
-## 
 
 > [!div class="step-by-step"]
 > [Précédent](improving-performance-with-output-caching-cs.md)

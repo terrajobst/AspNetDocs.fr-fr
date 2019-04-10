@@ -8,15 +8,15 @@ ms.date: 09/18/2008
 ms.assetid: 5c107c6e-9fb7-4206-bd3f-221cb0767f8a
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-send-templated-emails-for-health-monitoring-events-in-aspnet
 msc.type: video
-ms.openlocfilehash: 0556fcde5489821b4d0b83b9de3410e25c9c5a15
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e7b929c6e186e59b43180e8f26cf0f8b4608328f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417986"
 ---
-<a name="how-do-i-send-templated-emails-for-health-monitoring-events-in-aspnet"></a>[Comment faire] Envoyer des courriers électroniques basé sur un modèle d’intégrité de la surveillance des événements dans ASP.NET
-====================
+# <a name="how-do-i-send-templated-emails-for-health-monitoring-events-in-aspnet"></a>[Comment faire] Envoyer des courriers électroniques basé sur un modèle d’intégrité de la surveillance des événements dans ASP.NET
+
 par [Chris Pels](https://twitter.com/chrispels)
 
 Dans cette vidéo, Chris Pels montre comment utiliser le TemplatedEmailWebEventProvider pour envoyer des e-mails lorsque des événements de contrôle d’intégrité se produisent qui utilisent un modèle de contenu de l’e-mail. Tout d’abord, consultez Comment configurer le &lt;fournisseur&gt; et &lt;règles&gt; éléments dans le fichier web.config pour implémenter l’utilisation d’e-mail basé sur un modèle et associer un événement avec le fournisseur de messagerie basé sur un modèle de contrôle d’état. Une fois que le fournisseur basé sur un modèle est configuré, consultez Comment créer le modèle d’e-mail à l’aide des pages .aspx comme standard. Découvrez quelles informations sont disponibles dans la classe MailEventNotificaitonInfo qui est passée par le TemplatedEmailWebEventProvider à la page .aspx de modèle. Voir comment elle peut être utilisée pour inclure toutes les informations sont appropriées dans le contenu de l’e-mail. Enfin, afficher le site web de test qui envoie des messages électroniques en réponse aux événements de contrôle d’intégrité. Ensuite, affichez les réelle des e-mails reçus qui contiennent les informations d’événement basées sur le modèle de contrôle d’état.

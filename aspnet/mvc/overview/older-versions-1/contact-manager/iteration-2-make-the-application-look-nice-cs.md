@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-2-make-the-application-look-nice-cs
-title: 'Itération #2 : donner l’application une apparence agréable (C#) | Microsoft Docs'
+title: 'Itération #2 : donner l’application une apparence agréable (c#) | Microsoft Docs'
 author: microsoft
 description: Dans cette itération, nous améliorer l’apparence de l’application en modifiant la valeur par défaut de page maître de vue ASP.NET MVC et en cascade de feuille de style.
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: f1173feb-11ee-4017-8f3f-86599ea6ae13
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-2-make-the-application-look-nice-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d5e12f4ec9a6e8c53ee88388355ecfbd81b100c3
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 6d3286a0ec2b03f6efdc56fd9816029482a879a6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422260"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415425"
 ---
-<a name="iteration-2--make-the-application-look-nice-c"></a>Itération #2 : donner l’application une apparence agréable (C#)
-====================
+# <a name="iteration-2--make-the-application-look-nice-c"></a>Itération #2 : donner l’application une apparence agréable (c#)
+
 by [Microsoft](https://github.com/microsoft)
 
 [Télécharger le Code](iteration-2-make-the-application-look-nice-cs/_static/contactmanager_2_cs1.zip)
@@ -24,7 +24,7 @@ by [Microsoft](https://github.com/microsoft)
 > Dans cette itération, nous améliorer l’apparence de l’application en modifiant la valeur par défaut de page maître de vue ASP.NET MVC et en cascade de feuille de style.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (C#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (c#)
   
 
 Dans cette série de didacticiels, nous créer une application de gestion des contacts entière à partir du début à la fin. L’application Gestionnaire de Contact permet vous permettent de stocker les informations de contact (noms, numéros de téléphone et adresses de messagerie) pour obtenir la liste de personnes.
@@ -50,7 +50,7 @@ Nous générer l’application sur de multiples itérations. Avec chaque itérat
 L’objectif de cette itération consiste à améliorer l’apparence de l’application Gestionnaire de contacts. Actuellement, le Gestionnaire de Contact utilise la page maître de vue ASP.NET MVC par défaut et la feuille de style en cascade (voir Figure 1). Ces ne pas sembler incorrecte, mais je ne voulez pas le Gestionnaire de contacts pour rechercher tout comme chaque autre site Web ASP.NET MVC. Je souhaite remplacer ces fichiers avec des fichiers personnalisés.
 
 
-[![La boîte de dialogue Nouveau projet](iteration-2-make-the-application-look-nice-cs/_static/image1.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image1.png)
+[![Tboîte de dialogue Nouveau projet he](iteration-2-make-the-application-look-nice-cs/_static/image1.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image1.png)
 
 **Figure 01**: L’apparence par défaut d’une Application ASP.NET MVC ([cliquez pour afficher l’image en taille réelle](iteration-2-make-the-application-look-nice-cs/_static/image2.png))
 
@@ -68,7 +68,7 @@ La galerie de conception MVC ASP.NET est une ressource gratuite fournie par Micr
 La galerie de conception MVC ASP.NET héberge une collection de conceptions de site Web gratuit qui ont été créées spécifiquement pour l’utilisation dans un projet ASP.NET MVC. Conceptions sont chargées par les membres de la Communauté. Les visiteurs de la galerie peuvent voter pour leurs conceptions Favoris (voir Figure 2).
 
 
-[![La boîte de dialogue Nouveau projet](iteration-2-make-the-application-look-nice-cs/_static/image2.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image3.png)
+[![Tboîte de dialogue Nouveau projet he](iteration-2-make-the-application-look-nice-cs/_static/image2.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image3.png)
 
 **Figure 02**: La galerie de conception MVC ASP.NET ([cliquez pour afficher l’image en taille réelle](iteration-2-make-the-application-look-nice-cs/_static/image4.png))
 
@@ -83,17 +83,17 @@ Alors que je rédige ce didacticiel, la conception plus populaires dans la galer
 6. Sélectionnez l’option de menu de Visual Studio **Édition, rechercher et remplacer, remplacement rapide** et remplacez *[Nomdemonprojet]* avec *ContactManager* (voir Figure 5).
 
 
-[![La boîte de dialogue Nouveau projet](iteration-2-make-the-application-look-nice-cs/_static/image3.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image5.png)
+[![Tboîte de dialogue Nouveau projet he](iteration-2-make-the-application-look-nice-cs/_static/image3.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image5.png)
 
 **Figure 03**: Déblocage d’un fichier téléchargé à partir du web ([cliquez pour afficher l’image en taille réelle](iteration-2-make-the-application-look-nice-cs/_static/image6.png))
 
 
-[![La boîte de dialogue Nouveau projet](iteration-2-make-the-application-look-nice-cs/_static/image4.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image7.png)
+[![Tboîte de dialogue Nouveau projet he](iteration-2-make-the-application-look-nice-cs/_static/image4.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image7.png)
 
 **Figure 04**: En remplaçant les fichiers dans l’Explorateur de solutions ([cliquez pour afficher l’image en taille réelle](iteration-2-make-the-application-look-nice-cs/_static/image8.png))
 
 
-[![La boîte de dialogue Nouveau projet](iteration-2-make-the-application-look-nice-cs/_static/image5.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image9.png)
+[![Tboîte de dialogue Nouveau projet he](iteration-2-make-the-application-look-nice-cs/_static/image5.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image9.png)
 
 **Figure 05**: En remplaçant [nom_projet] avec ContactManager ([cliquez pour afficher l’image en taille réelle](iteration-2-make-the-application-look-nice-cs/_static/image10.png))
 
@@ -101,7 +101,7 @@ Alors que je rédige ce didacticiel, la conception plus populaires dans la galer
 Après avoir effectué ces étapes, votre application web utilise la nouvelle conception. La page dans la Figure 6 illustre l’apparence de l’application Gestionnaire de contacts avec la conception d’octobre.
 
 
-[![La boîte de dialogue Nouveau projet](iteration-2-make-the-application-look-nice-cs/_static/image6.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image11.png)
+[![Tboîte de dialogue Nouveau projet he](iteration-2-make-the-application-look-nice-cs/_static/image6.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image11.png)
 
 **Figure 06**: ContactManager avec le modèle d’octobre ([cliquez pour afficher l’image en taille réelle](iteration-2-make-the-application-look-nice-cs/_static/image12.png))
 
@@ -115,7 +115,7 @@ Toutefois, vous devrez peut-être créer une conception totalement unique pour v
 J’ai compressé le Gestionnaire de Contact à partir de l’itération #1 et envoyé le projet à la société de conception. Il ne sont pas propriétaire (dommage que leur !) de Visual Studio, mais qui n’a pas présenter un problème. Ils ont été en mesure de télécharger Microsoft Visual Web Developer gratuitement à partir de la [ https://www.asp.net ](https://www.asp.net) site Web et ouvrez l’application Gestionnaire de contacts dans Visual Web Developer. Dans quelques jours, ils avaient produites la conception dans la Figure 7.
 
 
-[![La boîte de dialogue Nouveau projet](iteration-2-make-the-application-look-nice-cs/_static/image7.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image13.png)
+[![Tboîte de dialogue Nouveau projet he](iteration-2-make-the-application-look-nice-cs/_static/image7.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image13.png)
 
 **Figure 07**: La conception du Gestionnaire de contacts ASP.NET MVC ([cliquez pour afficher l’image en taille réelle](iteration-2-make-the-application-look-nice-cs/_static/image14.png))
 
@@ -139,7 +139,7 @@ La méthode Html.ActionLink() restitue un lien HTML complet. La méthode Url.Act
 En outre, notez que la nouvelle conception inclut à la fois sélectionnés et des onglets. Par exemple, dans la Figure 8, le **créer un nouveau Contact** onglet est sélectionné et le **mes Contacts** onglet n’est pas sélectionnée.
 
 
-[![La boîte de dialogue Nouveau projet](iteration-2-make-the-application-look-nice-cs/_static/image8.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image15.png)
+[![Tboîte de dialogue Nouveau projet he](iteration-2-make-the-application-look-nice-cs/_static/image8.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image15.png)
 
 **Figure 08**: Sélectionnés et onglets ([cliquez pour afficher l’image en taille réelle](iteration-2-make-the-application-look-nice-cs/_static/image16.png))
 

@@ -8,15 +8,15 @@ ms.date: 10/13/2010
 ms.assetid: c8511ebe-68bc-4240-87c3-d5ced84a3f37
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: 44205f0ef59e00ad9fb1c45fdc0ba8934b5804cc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f5431d60506f5b0a0f4bbcd8e86b316c728a1191
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060426"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415919"
 ---
-<a name="part-7-membership-and-authorization"></a>Partie 7 : Appartenance et autorisation
-====================
+# <a name="part-7-membership-and-authorization"></a>Partie 7 : Appartenance et autorisation
+
 par [Jon Galloway](https://github.com/jongalloway)
 
 > Le Store de musique MVC est une application du didacticiel qui présente et explique étape par étape comment utiliser ASP.NET MVC et Visual Studio pour le développement web.  
@@ -72,14 +72,14 @@ Cliquez sur le bouton précédent, puis cliquez sur le lien d’utilisateur de c
 
 Renseignez les champs des informations sur la gauche en utilisant les informations suivantes :
 
-| **Champ** | **Valeur** |
+| **Champ** | **Value** |
 | --- | --- |
 | **Nom d'utilisateur** | Administrateur |
 | **Mot de passe** | password123 ! |
 | **Confirmer le mot de passe** | password123 ! |
 | **Message électronique** | (n’importe quelle adresse de messagerie fonctionneront) |
-| **Question de sécurité** | (comme vous le souhaitez) |
-| **Réponse de sécurité** | (comme vous le souhaitez) |
+| **Question de sécurité ** | (comme vous le souhaitez) |
+| **Réponse de sécurité ** | (comme vous le souhaitez) |
 
 *Remarque : Vous pouvez évidemment utiliser n’importe quel mot de passe que vous souhaitez. Les paramètres de sécurité de mot de passe par défaut exigent un mot de passe qui est de 7 caractères et qui contient un caractère non alphanumérique.*
 

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-cs
-title: Utilisation d’un ConfirmButton dans un répéteur (C#) | Microsoft Docs
+title: Utilisation d’un ConfirmButton dans un répéteur (c#) | Microsoft Docs
 author: wenz
 description: L’extendeur ConfirmButton dans AJAX Control Toolkit crée un Oui/pas de fenêtre contextuelle lorsque l’utilisateur clique sur un bouton (y compris contrôle LinkButton). Uniquement si Oui est...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: a973ed3e-400c-4925-ace2-0b086b479301
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 614b5b1edaa164cca30b2142d1e0c02771153403
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1ab979f220c06d22f51931c7c00fc4d273731f85
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062326"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413943"
 ---
-<a name="using-a-confirmbutton-in-a-repeater-c"></a>Utilisation d’un ConfirmButton dans un répéteur (C#)
-====================
+# <a name="using-a-confirmbutton-in-a-repeater-c"></a>Utilisation d’un ConfirmButton dans un répéteur (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/8/6/d/86dea6c6-bb92-4fa6-aa14-f8c0f82100f5/ConfirmButton1.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/confirmbutton1CS.pdf)
@@ -47,9 +47,9 @@ Cette source de données peut ensuite être utilisée dans un répéteur. Comme 
 [!code-aspx[Main](using-a-confirmbutton-in-a-repeater-cs/samples/sample3.aspx)]
 
 
-[![Le bouton de confirmation s’affiche en regard de chaque entrée à partir de la source de données](using-a-confirmbutton-in-a-repeater-cs/_static/image2.png)](using-a-confirmbutton-in-a-repeater-cs/_static/image1.png)
+[![Til confirmer bouton s’affiche en regard de chaque entrée à partir de la source de données](using-a-confirmbutton-in-a-repeater-cs/_static/image2.png)](using-a-confirmbutton-in-a-repeater-cs/_static/image1.png)
 
 Le bouton de confirmation s’affiche en regard de chaque entrée à partir de la source de données ([cliquez pour afficher l’image en taille réelle](using-a-confirmbutton-in-a-repeater-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Next](using-a-confirmbutton-in-a-repeater-vb.md)
+> [Suivant](using-a-confirmbutton-in-a-repeater-vb.md)

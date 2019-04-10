@@ -8,21 +8,21 @@ ms.date: 01/20/2011
 ms.assetid: 3124f28e-cc32-418a-afe3-519fa56f4c36
 msc.legacyurl: /whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application
 msc.type: content
-ms.openlocfilehash: 1693838a74f0564e38e11a2827cceb3d6474677b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: db8f336f3fd9a88dfb32f99510fc53cd7b4a5178
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038856"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415984"
 ---
-<a name="how-to-add-mobile-pages-to-your-aspnet-web-forms--mvc-application"></a>Procédure : Ajouter des pages mobiles à votre application ASP.NET Web Forms / MVC
-====================
-> **S’applique à**
+# <a name="how-to-add-mobile-pages-to-your-aspnet-web-forms--mvc-application"></a>Procédure : Ajouter des pages mobiles à votre application ASP.NET Web Forms / MVC
+
+> **S'applique à**
 > 
 > - Version de Web Forms ASP.NET 4.0
 > - ASP.NET MVC version 3.0
 > 
-> **Résumé**
+> **Récapitulatif**
 > 
 > Cette procédure décrit différentes façons de servir des pages optimisées pour les appareils mobiles à partir de vos pages Web Forms ASP.NET / application MVC et suggère architecturales et les problèmes à prendre en compte lorsque vous ciblez une large gamme de périphériques de conception. Ce document explique également pourquoi ASP.NET Mobile Controls à partir d’ASP.NET 2.0 à 3.5 sont désormais obsolètes et présente des alternatives modernes.
 
@@ -240,7 +240,7 @@ Ensuite, notez qu’en ajoutant un deuxième HomeController à votre application
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample9.cs)]
 
-Maintenant l’erreur passera et l’URL http://<em>votresite</em>/ atteindra la page d’accueil de bureau et http://<em>yoursite</em>/mobile/ va atteindre la page d’accueil mobile.
+Maintenant l’erreur passera et l’URL http :\/\/*votresite*/ atteindra la page d’accueil de bureau et http :\/\/*yoursite*/mobile/ sera Atteindre la page d’accueil mobile.
 
 ### <a name="redirecting-mobile-visitors-to-your-mobile-area"></a>Redirection des visiteurs mobiles à votre zone mobile
 

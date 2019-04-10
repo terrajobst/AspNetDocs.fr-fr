@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: c711b453-01ac-4e65-a48c-93d99bf22e58
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/performing-a-what-if-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 054b15e1e58164ec7e85c77c39fb47bcb47879b9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a222aa6bf52ee72e6a0f4ac5503b4b4f78d294fb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058306"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414320"
 ---
-<a name="performing-a-what-if-deployment"></a>Exécution d’un déploiement « Scénario »
-====================
+# <a name="performing-a-what-if-deployment"></a>Exécution d’un déploiement « Scénario »
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique explique comment effectuer « what if » (ou simulés) déploiements à l’aide de l’outil de déploiement Web Internet Information Services (IIS) (Web Deploy) et VSDBCMD. Cela vous permet de déterminer l’impact de votre logique de déploiement sur un environnement cible particulier avant de déployer réellement votre application.
 

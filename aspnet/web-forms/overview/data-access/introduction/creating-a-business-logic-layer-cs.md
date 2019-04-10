@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/introduction/creating-a-business-logic-layer-cs
-title: Création d’une couche de logique métier (C#) | Microsoft Docs
+title: Création d’une couche de logique métier (c#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons voir comment centraliser vos règles d’entreprise dans une couche BLL (Business Logic) qui sert d’intermédiaire pour l’échange de données entre t...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: 85554606-47cb-4e4f-9848-eed9da579056
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-business-logic-layer-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0db90f1e87bcaac51ca08ef1a8b258c93be8f613
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fd3bf46394f562462c561bf06370d2f372e47d0a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027876"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415261"
 ---
-<a name="creating-a-business-logic-layer-c"></a>Création d’une couche de logique métier (C#)
-====================
+# <a name="creating-a-business-logic-layer-c"></a>Création d’une couche de logique métier (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/4/6/3/463cf87c-4724-4cbc-b7b5-3f866f43ba50/ASPNET_Data_Tutorial_2_CS.exe) ou [télécharger le PDF](creating-a-business-logic-layer-cs/_static/datatutorial02cs1.pdf)
@@ -73,7 +73,7 @@ ProductsBLL.cs
 
 Les méthodes qui retournent des données `GetProducts`, `GetProductByProductID`, `GetProductsByCategoryID`, et `GetProductBySuppliersID` sont assez simples car ils appellent simplement vers le bas dans la couche DAL. Bien que dans certains scénarios il peut y avoir des règles d’entreprise qui doivent être implémentées à ce niveau (par exemple, les règles d’autorisation en fonction de l’utilisateur actuellement connecté ou le rôle auquel appartient l’utilisateur), nous laisserons simplement ces méthodes en tant que-est. Pour ces méthodes, puis, la couche BLL sert simplement un proxy via lequel la couche de présentation accède aux données sous-jacentes à partir de la couche d’accès aux données.
 
-Le `AddProduct` et `UpdateProduct` méthodes à la fois prendre en tant que paramètres, les valeurs pour les différents champs de produit et ajouter un nouveau produit ou mettre à jour une existante, respectivement. Depuis de nombreuses le `Product` les colonnes de la table peuvent accepter `NULL` valeurs (`CategoryID`, `SupplierID`, et `UnitPrice`, pour citer que quelques), les paramètres d’entrée pour `AddProduct` et `UpdateProduct` qui correspondent à une telle utilisation de colonnes [types nullable](https://msdn.microsoft.com/library/1t3y8s4s(v=vs.80).aspx). Types Nullable débutez avec .NET 2.0 et fournir une technique de qui indique si un type valeur doit, au lieu de cela, être `null`. En C#, vous pouvez marquer un type valeur comme un type nullable en ajoutant `?` après le type (comme `int? x;`). Reportez-vous à la [Types Nullable](https://msdn.microsoft.com/library/1t3y8s4s.aspx) section dans le [Guide de programmation C#](https://msdn.microsoft.com/library/67ef8sbd%28VS.80%29.aspx) pour plus d’informations.
+Le `AddProduct` et `UpdateProduct` méthodes à la fois prendre en tant que paramètres, les valeurs pour les différents champs de produit et ajouter un nouveau produit ou mettre à jour une existante, respectivement. Depuis de nombreuses le `Product` les colonnes de la table peuvent accepter `NULL` valeurs (`CategoryID`, `SupplierID`, et `UnitPrice`, pour citer que quelques), les paramètres d’entrée pour `AddProduct` et `UpdateProduct` qui correspondent à une telle utilisation de colonnes [types nullable](https://msdn.microsoft.com/library/1t3y8s4s(v=vs.80).aspx). Types Nullable débutez avec .NET 2.0 et fournir une technique de qui indique si un type valeur doit, au lieu de cela, être `null`. En c#, vous pouvez marquer un type valeur comme un type nullable en ajoutant `?` après le type (comme `int? x;`). Reportez-vous à la [Types Nullable](https://msdn.microsoft.com/library/1t3y8s4s.aspx) section dans le [Guide de programmation c#](https://msdn.microsoft.com/library/67ef8sbd%28VS.80%29.aspx) pour plus d’informations.
 
 Les trois méthodes retournent une valeur booléenne indiquant si une ligne a été insérée, mise à jour ou supprimée, car l’opération peut ne pas entraîne une ligne concernée. Par exemple, si le développeur de pages appelle `DeleteProduct` en passant un `ProductID` pour un produit inexistante, la `DELETE` instruction émise à la base de données n’a aucun effet et par conséquent le `DeleteProduct` méthode retournera `false`.
 
@@ -127,7 +127,7 @@ Pour utiliser la couche BLL de nouvelles classes, tout cela doit être modifiée
 Les classes de la couche BLL sont également accessible déclarative (comme vous pouvez le DataSet typé) à l’aide de l’ObjectDataSource. Nous allons aborder l’ObjectDataSource plus en détail dans les didacticiels suivants.
 
 
-[![La liste de produits s’affiche dans un GridView](creating-a-business-logic-layer-cs/_static/image4.png)](creating-a-business-logic-layer-cs/_static/image3.png)
+[![TIl liste de produits s’affiche dans un GridView](creating-a-business-logic-layer-cs/_static/image4.png)](creating-a-business-logic-layer-cs/_static/image3.png)
 
 **Figure 3**: La liste de produits s’affiche dans un GridView ([cliquez pour afficher l’image en taille réelle](creating-a-business-logic-layer-cs/_static/image5.png))
 
@@ -146,7 +146,7 @@ Ces règles peuvent et doivent être exprimés au niveau de la base de données.
 En plus en appliquant ces règles à la base de données qu’ils doivent également être appliquées au niveau du jeu de données. En fait, la longueur de champ et si une valeur est obligatoire ou facultatif sont déjà capturés pour l’ensemble de chaque DataTable de DataColumns. Pour afficher la validation au niveau du champ existante fournie automatiquement, accédez au Concepteur de DataSet, sélectionnez un champ à partir d’une des tables et puis accédez à la fenêtre Propriétés. Comme le montre la Figure 4, le `QuantityPerUnit` DataColumn dans le `ProductsDataTable` a une longueur maximale de 20 caractères et autorise `NULL` valeurs. Si vous tentez de définir la `ProductsDataRow`de `QuantityPerUnit` propriété une valeur de chaîne plue de 20 caractères un `ArgumentException` sera levée.
 
 
-[![Le DataColumn fournit une Validation au niveau du champ de base](creating-a-business-logic-layer-cs/_static/image7.png)](creating-a-business-logic-layer-cs/_static/image6.png)
+[![TIl DataColumn fournit au niveau du champ Validation de base](creating-a-business-logic-layer-cs/_static/image7.png)](creating-a-business-logic-layer-cs/_static/image6.png)
 
 **Figure 4**: Le DataColumn fournit au niveau du champ Validation de base ([cliquez pour afficher l’image en taille réelle](creating-a-business-logic-layer-cs/_static/image8.png))
 
@@ -154,7 +154,7 @@ En plus en appliquant ces règles à la base de données qu’ils doivent égale
 Malheureusement, nous ne pouvons pas spécifier les vérifications des limites, telles que la `UnitPrice` valeur doit être supérieure ou égale à zéro, via la fenêtre Propriétés. Pour fournir ce type de validation au niveau du champ que nous avons besoin créer un gestionnaire d’événements pour le DataTable [ColumnChanging](https://msdn.microsoft.com/library/system.data.datatable.columnchanging%28VS.80%29.aspx) événement. Comme mentionné dans le [didacticiel précédent](creating-a-data-access-layer-cs.md), les objets DataSet, DataTables et DataRow créés par le DataSet typé peuvent être étendus via l’utilisation des classes partielles. À l’aide de cette technique, nous pouvons créer un `ColumnChanging` Gestionnaire d’événements pour le `ProductsDataTable` classe. Commencez par créer une classe dans le `App_Code` dossier nommé `ProductsDataTable.ColumnChanging.cs`.
 
 
-[![Ajoutez une nouvelle classe dans le dossier App_Code](creating-a-business-logic-layer-cs/_static/image10.png)](creating-a-business-logic-layer-cs/_static/image9.png)
+[![Aune nouvelle classe dans le dossier App_Code de jj](creating-a-business-logic-layer-cs/_static/image10.png)](creating-a-business-logic-layer-cs/_static/image9.png)
 
 **Figure 5**: Ajoutez une nouvelle classe à la `App_Code` dossier ([cliquez pour afficher l’image en taille réelle](creating-a-business-logic-layer-cs/_static/image11.png))
 

@@ -8,18 +8,18 @@ ms.date: 01/13/2008
 ms.assetid: ab68a92b-fc81-40a4-a7dc-406625d2c5d4
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c293f4946001d0940c7e12b67f4fbc63cf5ca18c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1b6675a933f04b3eb7f5111b2ccd16c44baab7ba
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043626"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414346"
 ---
-<a name="security-basics-and-aspnet-support-vb"></a>Concepts de base et prise en charge de la sécurité par ASP.NET (VB)
-====================
+# <a name="security-basics-and-aspnet-support-vb"></a>Concepts de base et prise en charge de la sécurité par ASP.NET (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_vb.pdf)
+[Télécharger le PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_vb.pdf)
 
 > Il s’agit du premier didacticiel d’une série de didacticiels présentant des techniques pour l’authentification des visiteurs via un formulaire web, autoriser l’accès à certaines pages et fonctionnalités et la gestion des comptes d’utilisateur dans une application ASP.NET.
 
@@ -39,7 +39,7 @@ Il s’agit du premier didacticiel d’une série de didacticiels présentant de
 - Limiter l’accès à une page web, directory ou des fonctionnalités spécifiques en fonction du rôle de l’utilisateur connecté
 - Personnaliser et étendre ASP. Contrôles Web de sécurité du NET
 
-Ces didacticiels sont conçues pour être concis et fournissent des instructions pas à pas avec de nombreuses captures d’écran pour vous guident tout au long du processus visuellement. Chaque didacticiel est disponible dans les versions de Visual Basic et C# et inclut un téléchargement de l’intégralité du code utilisé. (Ce premier didacticiel se concentre sur les concepts de sécurité à partir d’un point de vue de haut niveau et par conséquent ne contient-elle pas de code associé).
+Ces didacticiels sont conçues pour être concis et fournissent des instructions pas à pas avec de nombreuses captures d’écran pour vous guident tout au long du processus visuellement. Chaque didacticiel est disponible dans les versions de Visual Basic et c# et inclut un téléchargement de l’intégralité du code utilisé. (Ce premier didacticiel se concentre sur les concepts de sécurité à partir d’un point de vue de haut niveau et par conséquent ne contient-elle pas de code associé).
 
 Dans ce didacticiel, nous aborderons les concepts de sécurité importantes et quelles fonctionnalités sont disponibles dans ASP.NET pour vous aider à implémenter l’authentification par formulaire, l’autorisation, comptes d’utilisateurs et rôles. C’est parti !
 
@@ -139,7 +139,7 @@ Microsoft fournit deux classes de fournisseur d’appartenance dans le .NET Fram
 Cette série de didacticiels consacrée exclusivement SqlMembershipProvider.
 
 
-[![Le modèle permet à différentes implémentations du fournisseur en toute transparence sur secteur dans l’infrastructure](security-basics-and-asp-net-support-vb/_static/image4.png)](security-basics-and-asp-net-support-vb/_static/image3.png)
+[![TIl modèle permet à différentes implémentations du fournisseur en toute transparence sur secteur dans l’infrastructure](security-basics-and-asp-net-support-vb/_static/image4.png)](security-basics-and-asp-net-support-vb/_static/image3.png)
 
 **Figure 03**: Le modèle permet à différentes implémentations du fournisseur en toute transparence sur secteur dans l’infrastructure ([cliquez pour afficher l’image en taille réelle](security-basics-and-asp-net-support-vb/_static/image5.png))
 

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-cs
-title: Pagination des données de rapport dans un contrôle DataList ou Repeater (C#) | Microsoft Docs
+title: Pagination des données de rapport dans un contrôle DataList ou Repeater (c#) | Microsoft Docs
 author: rick-anderson
 description: Lors du Repeater ni DataList offre la pagination automatique ou prise en charge de tri, ce didacticiel montre comment ajouter la prise en charge la pagination pour le contrôle DataList ou Repeater...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 11/13/2006
 ms.assetid: e8e0809b-25c4-4c3b-8d12-9a17048148ae
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: bd66affc6ceab864ca753287f484a37c7671f20f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 4657d1ffbcae90a9a0bc283c0d6f604891e29d13
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423050"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414463"
 ---
-<a name="paging-report-data-in-a-datalist-or-repeater-control-c"></a>Pagination des données d’un rapport dans un contrôle DataList ou Repeater (C#)
-====================
+# <a name="paging-report-data-in-a-datalist-or-repeater-control-c"></a>Pagination des données d’un rapport dans un contrôle DataList ou Repeater (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_44_CS.exe) ou [télécharger le PDF](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/datatutorial44cs1.pdf)
@@ -53,7 +53,7 @@ Avant de commencer ce didacticiel, laissez s tout d’abord prendre un moment po
 Ensuite, ouvrez le `Default.aspx` page et faites glisser le `SectionLevelTutorialListing.ascx` contrôle utilisateur à partir de la `UserControls` dossier sur l’aire de conception. Ce contrôle utilisateur, que nous avons créée dans le [Pages maîtres et Navigation du Site](../introduction/master-pages-and-site-navigation-cs.md) didacticiel, énumère le plan du site et affiche ces didacticiels dans la section en cours dans une liste à puces.
 
 
-[![Ajouter le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image3.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image2.png)
+[![AJJ le contrôle utilisateur SectionLevelTutorialListing.ascx à Default.aspx](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image3.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image2.png)
 
 **Figure 2**: Ajouter le `SectionLevelTutorialListing.ascx` contrôle utilisateur à `Default.aspx` ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image4.png))
 
@@ -110,7 +110,7 @@ Ajoutez une méthode à la `ProductsBLL` classe nommée `GetProductsAsPagedDataS
 Avec le `GetProductsAsPagedDataSource` méthode ajoutée à la `ProductsBLL` (classe), nous pouvons créer un contrôle DataList ou le Repeater qui fournit la pagination par défaut. Commencez par ouvrir le `Paging.aspx` page dans le `PagingSortingDataListRepeater` dossier et faites glisser un contrôle DataList à partir de la boîte à outils vers le concepteur, en définissant le contrôle DataList s `ID` propriété `ProductsDefaultPaging`. À partir de la balise active DataList s, créez un nouveau ObjectDataSource nommé `ProductsDefaultPagingDataSource` et configurez-la afin qu’il récupère des données à l’aide du `GetProductsAsPagedDataSource` (méthode).
 
 
-[![Créer un ObjectDataSource et configurez-le pour utiliser le () GetProductsAsPagedDataSource (méthode)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image8.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image7.png)
+[![Créer un ObjectDataSource et configurez-le pour utiliser la méthode de () GetProductsAsPagedDataSource](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image8.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image7.png)
 
 **Figure 5**: Créer un ObjectDataSource et configurez-le pour utiliser le `GetProductsAsPagedDataSource` `()` (méthode) ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image9.png))
 
@@ -118,7 +118,7 @@ Avec le `GetProductsAsPagedDataSource` méthode ajoutée à la `ProductsBLL` (cl
 Définir les listes déroulantes dans la mise à jour, insertion et supprimer des onglets à (None).
 
 
-[![Définir les listes de liste déroulante dans la mise à jour, insertion et supprimer des onglets à (None)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image11.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image10.png)
+[![Set les listes déroulantes dans les onglets UPDATE, INSERT et DELETE (None)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image11.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image10.png)
 
 **Figure 6**: Définir les listes de liste déroulante dans la mise à jour, insertion et supprimer des onglets à (None) ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image12.png))
 
@@ -130,7 +130,7 @@ Les index de page et les valeurs de taille de page doivent être mémorisés ent
 En particulier, utilisez le pageIndex des champs de chaîne de requête et pageSize pour le `pageIndex` et `pageSize` paramètres, respectivement (voir la Figure 7). Prenez un moment pour définir les valeurs par défaut pour ces paramètres, comme les valeurs de chaîne de requête ne sera pas présentes lorsqu’un utilisateur visite tout d’abord cette page. Pour `pageIndex`, la valeur par défaut la valeur est 0 (ce qui affiche la première page de données) et `pageSize` valeur par défaut de s à 4.
 
 
-[![Utiliser la chaîne de requête comme Source pour les paramètres pageIndex et pageSize](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image14.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image13.png)
+[![Use la chaîne de requête comme Source pour les paramètres pageIndex et pageSize](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image14.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image13.png)
 
 **Figure 7**: Utiliser la chaîne de requête comme Source pour le `pageIndex` et `pageSize` paramètres ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image15.png))
 
@@ -149,7 +149,7 @@ Après avoir apporté ces modifications, le balisage de s contrôles DataList et
 Lors de l’initialement visite cette page via un navigateur, ni le `pageIndex` ni `pageSize` paramètres querystring sont fournis. Par conséquent, les valeurs par défaut de 0 et 4 sont utilisés. Comme le montre la Figure 8, cela entraîne un contrôle DataList qui affiche les quatre premiers produits.
 
 
-[![Les quatre premiers produits sont répertoriés.](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image17.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image16.png)
+[![THE premiers produits de quatre répertoriés](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image17.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image16.png)
 
 **Figure 8**: Les quatre premiers produits sont répertoriés ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image18.png))
 
@@ -157,7 +157,7 @@ Lors de l’initialement visite cette page via un navigateur, ni le `pageIndex` 
 Sans une interface de pagination, là s actuellement non simple signifie pour un utilisateur de naviguer vers la deuxième page de données. Nous allons créer une interface de pagination à l’étape 4. Pour l’instant, cependant, la pagination peut uniquement faire directement en spécifiant les critères de la pagination dans la chaîne de requête. Par exemple, pour afficher la deuxième page, modifiez l’URL dans la barre d’adresse de navigateur s à partir de `Paging.aspx` à `Paging.aspx?pageIndex=2` et appuyez sur ENTRÉE. Cela entraîne la deuxième page de données à afficher (voir Figure 9).
 
 
-[![La deuxième Page de données s’affiche.](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image20.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image19.png)
+[![TIl deuxième Page de données est affiché](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image20.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image19.png)
 
 **Figure 9**: La deuxième Page de données s’affiche ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image21.png))
 
@@ -238,12 +238,12 @@ S permettent de réaliser l’interface de pagination en informant l’utilisate
 La figure 10 illustre `Paging.aspx` lors de la première visite. Étant donné que la chaîne de requête est vide, le contrôle DataList est par défaut affichant les quatre premiers produits ; les boutons premier et précédent sont désactivées. Cliquez sur Suivant pour afficher les quatre enregistrements (voir Figure 11) ; le premier et précédent sont maintenant activées.
 
 
-[![La première Page de données s’affiche.](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image23.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image22.png)
+[![TIl première Page de données est affiché](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image23.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image22.png)
 
 **Figure 10**: La première Page de données s’affiche ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image24.png))
 
 
-[![La deuxième Page de données s’affiche.](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image26.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image25.png)
+[![TIl deuxième Page de données est affiché](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image26.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image25.png)
 
 **Figure 11**: La deuxième Page de données s’affiche ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image27.png))
 
@@ -279,4 +279,4 @@ Bonne programmation !
 Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Les réviseurs tête pour ce didacticiel ont été Liz Shulok, Ken Pespisa et Bernadette Leigh. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Next](sorting-data-in-a-datalist-or-repeater-control-cs.md)
+> [Suivant](sorting-data-in-a-datalist-or-repeater-control-cs.md)

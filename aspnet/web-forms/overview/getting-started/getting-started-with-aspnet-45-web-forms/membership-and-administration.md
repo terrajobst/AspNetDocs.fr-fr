@@ -8,20 +8,20 @@ ms.date: 09/08/2014
 ms.assetid: 732a2316-e49f-4f72-becd-0cd72f14457e
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/membership-and-administration
 msc.type: authoredcontent
-ms.openlocfilehash: 23d08d5a05a8321fbc794e2c9b54cc39c9b5baf6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7263a7d7ee791be8a1369934aac4d091736a658b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031056"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417479"
 ---
-<a name="membership-and-administration"></a>Appartenance et administration
-====================
+# <a name="membership-and-administration"></a>Appartenance et administration
+
 par [Erik Reitan](https://github.com/Erikre)
 
-[Télécharger le projet de Wingtip Toys exemple (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Télécharger le projet de Wingtip Toys exemple (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
+> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
 
 
 Ce didacticiel vous montre comment mettre à jour de l’exemple d’application Wingtip Toys pour ajouter un rôle personnalisé et utiliser ASP.NET Identity. Il montre également comment implémenter une page d’administration à partir duquel l’utilisateur avec un rôle personnalisé peut ajouter et supprimer des produits depuis le site Web.
@@ -66,12 +66,12 @@ ASP.NET Web Forms fournit des capacités d’appartenance. En utilisant le modè
    La lettre « A » au début de la méthode de mise en surbrillance est soulignée.
 7. Placez le curseur sur la lettre « A » et cliquez sur l’interface utilisateur qui vous permet de générer un stub de méthode pour le `AddUserAndRole` (méthode). 
 
-    ![L’appartenance et Advministration - générer le Stub de méthode](membership-and-administration/_static/image1.png)
+    ![Appartenance et Administration - générer le Stub de méthode](membership-and-administration/_static/image1.png)
 8. Cliquez sur l’option intitulée :  
     `Generate method stub for "AddUserAndRole" in "WingtipToys.Logic.RoleActions"`
 9. Ouvrez le *RoleActions.cs* de fichiers à partir de la *logique* dossier.  
    Le `AddUserAndRole` méthode a été ajoutée au fichier de classe.
-10. Modifier le *RoleActions.cs* fichier en supprimant le `NotImplementedeException` et en ajoutant le code mis en surbrillance en jaune, afin qu’il apparaisse comme suit :  
+10. Modifier le *RoleActions.cs* fichier en supprimant le `NotImplementedException` et en ajoutant le code mis en surbrillance en jaune, afin qu’il apparaisse comme suit :  
 
     [!code-csharp[Main](membership-and-administration/samples/sample3.cs?highlight=5-7,15-51)]
 
@@ -127,7 +127,7 @@ En ajoutant un *Web.config* de fichiers à la *administrateur* dossier, vous pou
 
 1. Avec le bouton droit le *administrateur* dossier et sélectionnez **ajouter**  - &gt; **un nouvel élément**.  
    La boîte de dialogue **Ajouter un nouvel élément** s’affiche.
-2. Dans la liste des modèles web Visual C#, sélectionnez <strong>fichier de Configuration Web</strong>à partir de la liste du milieu, acceptez le nom par défaut <em>Web.config</em><strong>,</strong> , puis sélectionnez <strong>Ajouter</strong>.
+2. Dans la liste des modèles web Visual c#, sélectionnez <strong>fichier de Configuration Web</strong>à partir de la liste du milieu, acceptez le nom par défaut <em>Web.config</em><strong>,</strong> , puis sélectionnez <strong>Ajouter</strong>.
 3. Remplacez le contenu XML existant dans le *Web.config* fichier par le code suivant :  
 
     [!code-xml[Main](membership-and-administration/samples/sample4.xml)]

@@ -8,15 +8,15 @@ ms.date: 10/29/2009
 ms.assetid: b9fb1e01-06d9-43d9-9e8f-5fa1e4c6a211
 msc.legacyurl: /web-forms/videos/authentication/sql-injection-defense
 msc.type: video
-ms.openlocfilehash: 388217f314b7e44e33f830328120e85d11e92ea0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2ba52c94737dfc165831ef094d04a333c4fcf133
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030746"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414112"
 ---
-<a name="sql-injection-defense"></a>Défense contre les injections de code SQL
-====================
+# <a name="sql-injection-defense"></a>Défense contre les injections de code SQL
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Une vulnérabilité d’injection de code SQL dans votre application peut endommager votre journée entière. Dans cette vidéo, Joe Stagner de Microsoft explique comment les attaques par Injection SQL peuvent se produire qu’une personne malintentionnée peut faire et comment protéger votre application ASP.NET contre les vulnérabilités d’Injection SQL.

@@ -8,15 +8,15 @@ ms.date: 01/31/2007
 ms.assetid: 1c83e543-3f56-42ed-9d10-ac3f8dd26093
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-dynamicpopulate-extender
 msc.type: video
-ms.openlocfilehash: c14c18f28a513de0dd85b34fc3ab548086fd9855
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 674eabeb5e3678662a0f523899d83ba66a61dbd2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041976"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415997"
 ---
-<a name="how-do-i-use-the-aspnet-ajax-dynamicpopulate-extender"></a>[Comment faire] Utiliser l’extendeur DynamicPopulate d’ASP.NET AJAX ?
-====================
+# <a name="how-do-i-use-the-aspnet-ajax-dynamicpopulate-extender"></a>[Comment faire] Utiliser l’extendeur DynamicPopulate d’ASP.NET AJAX ?
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Regardez une démonstration de l’utilisation de l’extendeur DynamicPopulate d’AJAX ASP.NET pour remplir dynamiquement une zone d’une page web avec les résultats d’un appel asynchrone à une méthode web.

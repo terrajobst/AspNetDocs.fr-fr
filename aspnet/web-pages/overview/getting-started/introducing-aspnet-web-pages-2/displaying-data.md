@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: b3a006a0-3ea2-4d45-b833-e20e3a3c0a1a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/displaying-data
 msc.type: authoredcontent
-ms.openlocfilehash: 9158a1f53268daec6e6fbdf003dd73e1d62cc667
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5415913626eb063a4cb1013ba03857c130487f42
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031246"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412175"
 ---
-<a name="introducing-aspnet-web-pages---displaying-data"></a>Présentation des Pages Web ASP.NET - affichage des données
-====================
+# <a name="introducing-aspnet-web-pages---displaying-data"></a>Présentation des Pages Web ASP.NET - affichage des données
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Ce didacticiel vous montre comment créer une base de données dans WebMatrix et comment afficher les données de la base de données dans une page lorsque vous utilisez les Pages Web ASP.NET (Razor). Il part du principe que vous avez terminé la série via [Introduction à la programmation de Pages Web ASP.NET](../introducing-razor-syntax-c.md).
@@ -214,9 +214,9 @@ Enfin, la troisième ligne indique à ASP.NET que vous souhaitez utiliser une in
 
 > [!TIP] 
 > 
-> **Structured Query Language (SQL)**
+> **SQL (Structured Query Language)**
 > 
-> SQL est un langage qui est utilisé dans la plupart des bases de données relationnelles pour la gestion des données dans une base de données. Il inclut des commandes qui permettent de récupérer des données et mettre à jour, et qui vous permettent de créer, modifier et gérer des données dans les tables de base de données. SQL est différent de celui d’un langage de programmation (tel que C#). Avec SQL, vous indiquer la base de données à ce que vous voulez, et travail de la base de données consiste à déterminer comment obtenir les données ou d’effectuer la tâche. Voici des exemples de certaines commandes SQL et ce qu’ils font :
+> SQL est un langage qui est utilisé dans la plupart des bases de données relationnelles pour la gestion des données dans une base de données. Il inclut des commandes qui permettent de récupérer des données et mettre à jour, et qui vous permettent de créer, modifier et gérer des données dans les tables de base de données. SQL est différent de celui d’un langage de programmation (tel que c#). Avec SQL, vous indiquer la base de données à ce que vous voulez, et travail de la base de données consiste à déterminer comment obtenir les données ou d’effectuer la tâche. Voici des exemples de certaines commandes SQL et ce qu’ils font :
 > 
 > `Select * From Movies`
 > 
@@ -230,7 +230,7 @@ Enfin, la troisième ligne indique à ASP.NET que vous souhaitez utiliser une in
 > 
 > Cette commande permet d’insérer un nouvel enregistrement dans le *produit* table, la définition de la colonne de nom pour le « Croissant », la colonne de Description pour « Plaisir de non fiable A » et le prix à 1,99.
 > 
-> Notez que lorsque vous spécifiez une valeur non numérique, la valeur est placée entre guillemets simples (pas de doubles guillemets, comme dans C#). Vous utilisez ces guillemets autour des valeurs de texte ou de date, mais pas autour de nombres.
+> Notez que lorsque vous spécifiez une valeur non numérique, la valeur est placée entre guillemets simples (pas de doubles guillemets, comme dans c#). Vous utilisez ces guillemets autour des valeurs de texte ou de date, mais pas autour de nombres.
 > 
 > `DELETE FROM Product WHERE ExpirationDate < '01/01/2008'`
 > 
@@ -325,7 +325,7 @@ Exécutez la page. La grille affiche les 3 lignes à une heure, ainsi que des li
 
 ## <a name="coming-up-next"></a>Prochaine
 
-Dans le didacticiel suivant, vous allez apprendre à utiliser le code Razor et C# pour obtenir une entrée d’utilisateur dans un formulaire. Vous allez ajouter une zone de recherche à la page Movies afin que vous pouvez rechercher les films par titre ou le genre.
+Dans le didacticiel suivant, vous allez apprendre à utiliser le code Razor et c# pour obtenir une entrée d’utilisateur dans un formulaire. Vous allez ajouter une zone de recherche à la page Movies afin que vous pouvez rechercher les films par titre ou le genre.
 
 ## <a name="complete-listing-for-movies-page"></a>Liste complète de la Page de films
 
@@ -333,7 +333,7 @@ Dans le didacticiel suivant, vous allez apprendre à utiliser le code Razor et C
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- [Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Présentation de la programmation Web ASP.NET à l'aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 
 > [!div class="step-by-step"]
 > [Précédent](intro-to-web-pages-programming.md)

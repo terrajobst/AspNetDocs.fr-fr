@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/creating-model-classes-with-linq-to-sql-cs
-title: Création de Classes de modèle avec LINQ to SQL (C#) | Microsoft Docs
+title: Création de Classes de modèle avec LINQ to SQL (c#) | Microsoft Docs
 author: microsoft
 description: L’objectif de ce didacticiel est d’expliquer une méthode de création de classes de modèle pour une application ASP.NET MVC. Dans ce didacticiel, vous allez apprendre à créer le modèle c...
 ms.author: riande
@@ -8,18 +8,18 @@ ms.date: 10/07/2008
 ms.assetid: f84b4a16-e8bb-49e8-87a0-1832879a3501
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-linq-to-sql-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c76e92ebfab1db162151ea5753888a60a4d54e59
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d1895b03a2aa877bfd279995dc5647c5efefade6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046986"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414203"
 ---
-<a name="creating-model-classes-with-linq-to-sql-c"></a>Création de classes de modèle avec LINQ to SQL (C#)
-====================
+# <a name="creating-model-classes-with-linq-to-sql-c"></a>Création de classes de modèle avec LINQ to SQL (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_10_CS.pdf)
+[Télécharger le PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_10_CS.pdf)
 
 > L’objectif de ce didacticiel est d’expliquer une méthode de création de classes de modèle pour une application ASP.NET MVC. Dans ce didacticiel, vous allez apprendre à créer des classes de modèle et effectuer des accès de base de données en tirant parti de Microsoft LINQ to SQL.
 
@@ -43,7 +43,7 @@ Dans ce didacticiel, j’utilise LINQ to SQL pour interroger et mettre à jour d
 Dans ce didacticiel--afin d’illustrer comment vous pouvez créer des classes de modèle--nous générer une application de base de données de film simple. La première étape consiste à créer une base de données. Avec le bouton droit de l’application\_dossier de données dans la fenêtre Explorateur de solutions, puis sélectionnez l’option de menu **ajouter, nouvel élément**. Sélectionnez le **base de données SQL Server** modèle, attribuez-lui le nom MoviesDB.mdf, puis cliquez sur le **ajouter** bouton (voir Figure 1).
 
 
-[![Ajout d’une nouvelle base de données de SQL Server](creating-model-classes-with-linq-to-sql-cs/_static/image2.png)](creating-model-classes-with-linq-to-sql-cs/_static/image1.png)
+[![Ajout une nouvelle base de données de SQL Server](creating-model-classes-with-linq-to-sql-cs/_static/image2.png)](creating-model-classes-with-linq-to-sql-cs/_static/image1.png)
 
 **Figure 01**: Ajout d’une nouvelle base de données de SQL Server ([cliquez pour afficher l’image en taille réelle](creating-model-classes-with-linq-to-sql-cs/_static/image3.png))
 
@@ -53,7 +53,7 @@ Après avoir créé la nouvelle base de données, vous pouvez ouvrir la base de 
 La fenêtre Explorateur de serveurs est appelée la fenêtre Explorateur de base de données lors de l’utilisation de Visual Web Developer.
 
 
-[![À l’aide de la fenêtre Explorateur de serveurs](creating-model-classes-with-linq-to-sql-cs/_static/image5.png)](creating-model-classes-with-linq-to-sql-cs/_static/image4.png)
+[![Uconnexion à la fenêtre Explorateur de serveurs](creating-model-classes-with-linq-to-sql-cs/_static/image5.png)](creating-model-classes-with-linq-to-sql-cs/_static/image4.png)
 
 **Figure 02**: À l’aide de la fenêtre Explorateur de serveurs ([cliquez pour afficher l’image en taille réelle](creating-model-classes-with-linq-to-sql-cs/_static/image6.png))
 
@@ -61,7 +61,7 @@ La fenêtre Explorateur de serveurs est appelée la fenêtre Explorateur de base
 Nous devons ajouter une table à notre base de données qui représente notre films. Cliquez sur le dossier Tables et sélectionnez l’option de menu **ajouter une nouvelle Table**. Cette option de menu ouvre le Concepteur de tables (voir Figure 3).
 
 
-[![À l’aide de la fenêtre Explorateur de serveurs](creating-model-classes-with-linq-to-sql-cs/_static/image8.png)](creating-model-classes-with-linq-to-sql-cs/_static/image7.png)
+[![Uconnexion à la fenêtre Explorateur de serveurs](creating-model-classes-with-linq-to-sql-cs/_static/image8.png)](creating-model-classes-with-linq-to-sql-cs/_static/image7.png)
 
 **Figure 03**: Le Concepteur de tables ([cliquez pour afficher l’image en taille réelle](creating-model-classes-with-linq-to-sql-cs/_static/image9.png))
 
@@ -83,7 +83,7 @@ Ensuite, vous devez marquer la colonne Id comme une colonne d’identité, affec
 Notre modèle MVC contiendra LINQ aux classes SQL représentant la table de base de données tblMovie. Le moyen le plus simple de créer ces classes LINQ to SQL consiste à cliquez sur le dossier Modèles, sélectionnez **ajouter, nouvel élément**, sélectionnez le LINQ au modèle de Classes SQL, nommez les classes Movie.dbml, puis cliquez sur le **ajouter**bouton (voir Figure 4).
 
 
-[![Création de LINQ aux classes SQL](creating-model-classes-with-linq-to-sql-cs/_static/image11.png)](creating-model-classes-with-linq-to-sql-cs/_static/image10.png)
+[![Création au LINQ aux classes SQL](creating-model-classes-with-linq-to-sql-cs/_static/image11.png)](creating-model-classes-with-linq-to-sql-cs/_static/image10.png)
 
 **Figure 04**: Création de LINQ aux classes SQL ([cliquez pour afficher l’image en taille réelle](creating-model-classes-with-linq-to-sql-cs/_static/image12.png))
 
@@ -91,7 +91,7 @@ Notre modèle MVC contiendra LINQ aux classes SQL représentant la table de base
 Immédiatement après avoir créé le film Classes LINQ to SQL, le concepteur objet/relationnel s’affiche. Vous pouvez faire glisser des tables de base de données de la fenêtre de l’Explorateur de serveurs vers le concepteur objet/relationnel pour créer des Classes LINQ to SQL qui représentent des tables de base de données particulière. Nous devons ajouter la table de base de données tblMovie sur le Concepteur Objet/Relationnel (voir Figure 5).
 
 
-[![À l’aide du concepteur objet/relationnel](creating-model-classes-with-linq-to-sql-cs/_static/image14.png)](creating-model-classes-with-linq-to-sql-cs/_static/image13.png)
+[![Uà l’aide du concepteur objet/relationnel](creating-model-classes-with-linq-to-sql-cs/_static/image14.png)](creating-model-classes-with-linq-to-sql-cs/_static/image13.png)
 
 **Figure 05**: À l’aide du concepteur objet/relationnel ([cliquez pour afficher l’image en taille réelle](creating-model-classes-with-linq-to-sql-cs/_static/image15.png))
 
@@ -131,7 +131,7 @@ Si vous exécutez l’application après avoir modifié le `HomeController` clas
 Pour ajouter des enregistrements à la `tblMovies` table de base de données, cliquez sur le `tblMovies` de base de données de table dans la fenêtre Explorateur de serveurs (fenêtre de l’Explorateur de base de données dans Visual Web Developer) et sélectionnez l’option de menu Afficher les données de Table. Vous pouvez insérer `movie` enregistrements à l’aide de la grille qui s’affiche (voir Figure 6).
 
 
-[![Insertion de films](creating-model-classes-with-linq-to-sql-cs/_static/image17.png)](creating-model-classes-with-linq-to-sql-cs/_static/image16.png)
+[![Inserting films](creating-model-classes-with-linq-to-sql-cs/_static/image17.png)](creating-model-classes-with-linq-to-sql-cs/_static/image16.png)
 
 **Figure 06**: Insertion de films ([cliquez pour afficher l’image en taille réelle](creating-model-classes-with-linq-to-sql-cs/_static/image18.png))
 
@@ -139,7 +139,7 @@ Pour ajouter des enregistrements à la `tblMovies` table de base de données, cl
 Après avoir ajouté des enregistrements de base de données pour le `tblMovies` table et que vous exécutez l’application, vous verrez la page dans la Figure 7. Tous les enregistrements de base de données de film sont affichés dans une liste à puces.
 
 
-[![Affichage des films avec la vue Index](creating-model-classes-with-linq-to-sql-cs/_static/image20.png)](creating-model-classes-with-linq-to-sql-cs/_static/image19.png)
+[![Dl’affichage des films avec la vue Index](creating-model-classes-with-linq-to-sql-cs/_static/image20.png)](creating-model-classes-with-linq-to-sql-cs/_static/image19.png)
 
 **Figure 07**: Affichage des films avec la vue Index ([cliquez pour afficher l’image en taille réelle](creating-model-classes-with-linq-to-sql-cs/_static/image21.png))
 

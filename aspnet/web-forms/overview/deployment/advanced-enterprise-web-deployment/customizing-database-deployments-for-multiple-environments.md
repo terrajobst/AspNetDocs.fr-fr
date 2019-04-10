@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: a172979a-1318-4318-a9c6-4f9560d26267
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/customizing-database-deployments-for-multiple-environments
 msc.type: authoredcontent
-ms.openlocfilehash: 52fb2539ef388d129f88aa8aa87088e2d4a41ccf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 865e901618b48bc4bfdc6d7a3ca4e8868d4cb46b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055126"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412981"
 ---
-<a name="customizing-database-deployments-for-multiple-environments"></a>Personnalisation de déploiements de base de données pour plusieurs environnements
-====================
+# <a name="customizing-database-deployments-for-multiple-environments"></a>Personnalisation de déploiements de base de données pour plusieurs environnements
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit comment personnaliser les propriétés d’une base de données pour les environnements cibles spécifiques dans le cadre du processus de déploiement.
 > 
@@ -139,7 +139,7 @@ Pour plus d’informations sur le déploiement des projets de base de données �
 Ces articles sur MSDN fournissent des instructions plus générales sur le déploiement de la base de données :
 
 - [Une vue d’ensemble de paramètres de projet de base de données](https://msdn.microsoft.com/library/aa833291(v=VS.100).aspx)
-- [Guide pratique pour Configurer les propriétés des détails du déploiement](https://msdn.microsoft.com/library/dd172125.aspx)
+- [Procédure : Configurer les propriétés des détails du déploiement](https://msdn.microsoft.com/library/dd172125.aspx)
 - [Créer et déployer des bases de données dans un environnement de développement isolé](https://msdn.microsoft.com/library/dd193409.aspx)
 - [Créer et déployer des bases de données dans un environnement intermédiaire ou d’un environnement de Production](https://msdn.microsoft.com/library/dd193413.aspx)
 

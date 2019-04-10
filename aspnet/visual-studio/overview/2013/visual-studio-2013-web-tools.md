@@ -8,15 +8,15 @@ ms.date: 07/16/2014
 ms.assetid: 09e82351-816b-402d-acd1-0f9ac6901d16
 msc.legacyurl: /visual-studio/overview/2013/visual-studio-2013-web-tools
 msc.type: authoredcontent
-ms.openlocfilehash: 54d86de49bf61305b17fc80964723c518abd467b
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 874542305bd3f47066cfae595919285ed079aa53
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423245"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421067"
 ---
-<a name="hands-on-lab-visual-studio-2013-web-tools"></a>Atelier pratique : Visual Studio 2013 Web Tools
-====================
+# <a name="hands-on-lab-visual-studio-2013-web-tools"></a>Atelier pratique : Visual Studio 2013 Web Tools
+
 par [Web Camps Team](https://twitter.com/webcamps)
 
 [Télécharger le Kit de formation de Web Camps](https://aka.ms/webcamps-training-kit)
@@ -74,7 +74,7 @@ Dans le document de laboratoire, vous serez invité à insérer des blocs de cod
 > Chaque exercice est accompagnée d’une solution de départ située dans le **commencer** dossier de l’exercice qui vous permet de suivre chaque exercice indépendamment des autres. N’oubliez pas que les extraits de code sont ajoutés au cours d’un exercice sont manquants à partir de ces solutions de démarrage et peut ne pas fonctionnent jusqu'à ce que vous avez terminé l’exercice. Dans le code source pour un exercice, vous y trouverez également un **fin** dossier qui contient une solution Visual Studio avec le code qui résulte d’effectuer les étapes dans l’exercice correspondant. Si vous avez besoin d’aide au cours de cet atelier, vous pouvez utiliser ces solutions en tant que guide.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Exercices
@@ -324,7 +324,7 @@ Dans cette tâche, vous allez utiliser le lien de navigateur **Mode Création** 
 
     ![Fenêtre liste d’erreurs](visual-studio-2013-web-tools/_static/image32.png "fenêtre liste d’erreurs")
 
-    *Fenêtre Liste d’erreurs*
+    *Liste d'erreurs (fenêtre)*
 3. Dans le **Web Essentials** boîte de dialogue, cliquez sur **Oui** pour insérer une description &lt;meta&gt; balise.
 
     ![Boîte de dialogue Web Essentials](visual-studio-2013-web-tools/_static/image33.png "boîte de dialogue Web Essentials")
@@ -511,7 +511,7 @@ Avec Web Essentials 2013, feuilles de style et pages HTML génère la liste des 
 
     *Lecteur audio inclus dans la vue*
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Récapitulatif

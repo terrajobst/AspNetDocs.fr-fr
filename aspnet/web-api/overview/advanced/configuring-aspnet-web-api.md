@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/advanced/configuring-aspnet-web-api
-title: Configuration d’ASP.NET Web API 2 | Microsoft Docs
+title: La configuration ASP.NET Web API 2 - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: 'Configurer des API Web ASP.NET 2 pour ASP.NET 4.x : Configurer les paramètres d’hébergement ASP.NET 4.x, OWIN d’auto-hébergement globale des services et configuration du contrôleur préliminaire.'
 ms.author: riande
 ms.date: 03/31/2014
+ms.custom: seoapril2019
 ms.assetid: 9e10a700-8d91-4d2e-a31e-b8b569fe867c
 msc.legacyurl: /web-api/overview/advanced/configuring-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 270268b77f398084169843e20b0a2bf9f1c2a011
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 39629ba404e536b29318db00bce8c4443a782497
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423154"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411941"
 ---
-<a name="configuring-aspnet-web-api-2"></a>Configuration d’ASP.NET Web API 2
-====================
+# <a name="configuring-aspnet-web-api-2"></a>Configuration d’ASP.NET Web API 2
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 Cette rubrique décrit comment configurer l’API Web ASP.NET.
@@ -35,14 +36,14 @@ Paramètres de configuration Web API sont définies dans le [HttpConfiguration](
 | Membre | Description |
 | --- | --- |
 | **DependencyResolver** | Permet l’injection de dépendances pour les contrôleurs. Consultez [à l’aide du résolveur de dépendance Web API](dependency-injection.md). |
-| **Les filtres** | Filtres d’action. |
+| **Filtres** | Filtres d’action. |
 | **Formateurs** | [Formateurs de type de média](../formats-and-model-binding/media-formatters.md). |
 | **IncludeErrorDetailPolicy** | Spécifie si le serveur doit inclure des détails de l’erreur, telles que les messages d’exception et des traces de pile dans les messages de réponse HTTP. Consultez [IncludeErrorDetailPolicy](https://msdn.microsoft.com/library/system.web.http.includeerrordetailpolicy(v=vs.108)). |
-| **Initializer** | Une fonction qui effectue l’initialisation finale de la **HttpConfiguration**. |
+| **Initialiseur** | Une fonction qui effectue l’initialisation finale de la **HttpConfiguration**. |
 | **MessageHandlers** | [Gestionnaires de messages HTTP](http-message-handlers.md). |
 | **ParameterBindingRules** | Une collection de règles pour la liaison de paramètres sur les actions de contrôleur. |
-| **Propriétés** | Un jeu de propriétés génériques. |
-| **Itinéraires** | La collection d’itinéraires. Consultez [routage dans ASP.NET Web API](../web-api-routing-and-actions/routing-in-aspnet-web-api.md). |
+| **Properties** | Un jeu de propriétés génériques. |
+| **Routes** | La collection d’itinéraires. Consultez [routage dans ASP.NET Web API](../web-api-routing-and-actions/routing-in-aspnet-web-api.md). |
 | **Services** | La collection de services. Consultez [Services](#services). |
 
 

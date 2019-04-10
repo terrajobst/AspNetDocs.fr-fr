@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/animating-in-response-to-user-interaction-cs
-title: Animation en réponse à une Interaction utilisateur (C#) | Microsoft Docs
+title: Animation en réponse à une Interaction utilisateur (c#) | Microsoft Docs
 author: wenz
 description: Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Les animations peuvent étoiles...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: ea26549d-fbbf-4973-a108-b14cd1d6de26
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/animating-in-response-to-user-interaction-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 9de99b3194a5517047e40922d89c28e341ba8e20
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c0e2888207e4fa0363fc3b357ae00108ffe817f5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032416"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415217"
 ---
-<a name="animating-in-response-to-user-interaction-c"></a>Animation en réponse à une interaction utilisateur (C#)
-====================
+# <a name="animating-in-response-to-user-interaction-c"></a>Animation en réponse à une interaction utilisateur (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation6.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation6CS.pdf)
@@ -59,7 +59,7 @@ Dans ce scénario, `<OnClick>` est utilisé. Lorsque l’utilisateur clique sur 
 [!code-aspx[Main](animating-in-response-to-user-interaction-cs/samples/sample5.aspx)]
 
 
-[![Un clic de souris démarre l’animation](animating-in-response-to-user-interaction-cs/_static/image2.png)](animating-in-response-to-user-interaction-cs/_static/image1.png)
+[![A clic de souris démarre l’animation](animating-in-response-to-user-interaction-cs/_static/image2.png)](animating-in-response-to-user-interaction-cs/_static/image1.png)
 
 Un clic de souris démarre l’animation ([cliquez pour afficher l’image en taille réelle](animating-in-response-to-user-interaction-cs/_static/image3.png))
 

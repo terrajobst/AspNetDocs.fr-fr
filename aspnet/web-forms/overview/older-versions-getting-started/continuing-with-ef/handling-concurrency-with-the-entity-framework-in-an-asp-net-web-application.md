@@ -8,15 +8,15 @@ ms.date: 01/26/2011
 ms.assetid: a5aa22a6-fb7f-4f41-9c7f-addda151940b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: 6b10aca944a322cae252666218aee4d5a2d6ed35
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fc9ce539005bce1790c726dfb859305f4ff78a6b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422562"
 ---
-<a name="handling-concurrency-with-the-entity-framework-40-in-an-aspnet-4-web-application"></a>Gestion des accès concurrentiels avec Entity Framework 4.0 dans une Application Web 4 ASP.NET
-====================
+# <a name="handling-concurrency-with-the-entity-framework-40-in-an-aspnet-4-web-application"></a>Gestion des accès concurrentiels avec Entity Framework 4.0 dans une Application Web 4 ASP.NET
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels s’appuie sur l’application web Contoso University créé par le [mise en route avec Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) série de didacticiels. Si vous n’avez pas effectué les didacticiels précédents, comme point de départ pour ce didacticiel vous pouvez [télécharger l’application](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que vous l’auriez créée. Vous pouvez également [télécharger l’application](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) qui est créé par la série de didacticiels terminée. Si vous avez des questions sur les didacticiels, vous pouvez les publier à le [forum ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).

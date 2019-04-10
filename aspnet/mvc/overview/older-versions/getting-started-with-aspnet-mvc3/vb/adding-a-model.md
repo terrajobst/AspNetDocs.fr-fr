@@ -8,15 +8,15 @@ ms.date: 01/12/2011
 ms.assetid: b3aa7720-5c78-4ca2-baef-9a52234fb7ce
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/adding-a-model
 msc.type: authoredcontent
-ms.openlocfilehash: b1370148018faa8c6c884251bfa86761f45d7e49
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 568617ee138e1c810498990db0e38ecc7a1177b7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058046"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422419"
 ---
-<a name="adding-a-model-vb"></a>Ajout d’un modèle (VB)
-====================
+# <a name="adding-a-model-vb"></a>Ajout d’un modèle (VB)
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Ce didacticiel vous apprend les notions de base de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express Service Pack 1, qui est une version gratuite de Microsoft Visual Studio. Avant de commencer, assurez-vous que vous avez installé les composants requis listés ci-dessous. Vous pouvez installer tous les en cliquant sur le lien suivant : [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Vous pouvez également installer individuellement les conditions préalables à l’aide des liens suivants :
@@ -27,7 +27,7 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Si vous utilisez Visual Studio 2010 au lieu de Visual Web Developer 2010, installez les composants requis en cliquant sur le lien suivant : [Visual Studio 2010 prerequisites](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Un projet de Visual Web Developer avec le code source VB.NET est disponible pour accompagner cette rubrique. [Téléchargez la version VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez C#, basculez vers le [C# version](../cs/adding-a-model.md) de ce didacticiel.
+> Un projet de Visual Web Developer avec le code source VB.NET est disponible pour accompagner cette rubrique. [Téléchargez la version VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez c#, basculez vers le [c# version](../cs/adding-a-model.md) de ce didacticiel.
 
 
 ## <a name="adding-a-model"></a>Ajout d’un modèle
@@ -71,8 +71,6 @@ Le `MovieDBContext` classe que vous avez créé gère la tâche de connexion à 
 Ouvrez la racine de l’application *Web.config* fichier. (Pas le *Web.config* de fichiers dans le *vues* dossier.) L’image ci-dessous affiche les deux *Web.config* fichiers ; ouvrir le *Web.config* fichier entourée en rouge.
 
 ![](adding-a-model/_static/image2.png)
-
-## 
 
 Ajoutez la chaîne de connexion suivante à la `<connectionStrings>` élément dans le *Web.config* fichier.
 

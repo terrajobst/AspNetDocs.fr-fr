@@ -8,15 +8,15 @@ ms.date: 02/20/2007
 ms.assetid: a8fa72ee-8328-4854-a419-c1b271772303
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/implementing-optimistic-concurrency-with-the-sqldatasource-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 879f0f491461ec49c4eef9dc8add747ac2b22f90
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: da0df163d7c3b68246a84ff490471e64c142a8f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422101"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416517"
 ---
-<a name="implementing-optimistic-concurrency-with-the-sqldatasource-vb"></a>Implémentation de l’accès concurrentiel optimiste avec SqlDataSource (VB)
-====================
+# <a name="implementing-optimistic-concurrency-with-the-sqldatasource-vb"></a>Implémentation de l’accès concurrentiel optimiste avec SqlDataSource (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_50_VB.exe) ou [télécharger le PDF](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/datatutorial50vb1.pdf)
@@ -47,7 +47,7 @@ Imaginez que deux utilisateurs, Jisun et Sam, ont été les deux accédant à un
 La figure 2 illustre cette interaction.
 
 
-[![Lorsque deux utilisateurs mettre à jour simultanément un enregistrement il s pour un utilisateur s les modifications potentielles pour remplacer les autres opérations de mappage](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image2.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image1.png)
+[![Wpoule deux utilisateurs simultanément mise à jour un enregistrement il s potentiel pour un utilisateur s change pour remplacer les autres opérations de mappage](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image2.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image1.png)
 
 **Figure 2**: Lorsque deux utilisateurs simultanément mettre à jour un enregistrement il s potentiel pour un utilisateur s modifie à remplacer les autres opérations de mappage ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image2.png))
 
@@ -61,7 +61,7 @@ Pour éviter ce type de dépliage, une forme de [contrôle d’accès concurrent
 Contrôle d’accès concurrentiel optimiste fonctionne en veillant à ce que l’enregistrement en cours de mise à jour ou supprimé a les mêmes valeurs, comme c’était le cas au démarrage de la mise à jour ou la suppression des processus. Par exemple, lorsque vous cliquez sur le bouton Modifier dans un GridView modifiable, les valeurs de l’enregistrement s sont lire à partir de la base de données et affichées dans les zones de texte et d’autres contrôles Web. Ces valeurs d’origine sont enregistrés par le contrôle GridView. Versions ultérieures, une fois que l’utilisateur modifie son et clique sur le bouton de mise à jour, la `UPDATE` instruction utilisée doit prendre en compte les valeurs d’origine ainsi que les nouvelles valeurs et uniquement mettre à jour l’enregistrement de base de données sous-jacent si les valeurs d’origine que l’utilisateur a commencé à modifier sont identiques aux valeurs toujours dans la base de données. Figure 3 illustre cette séquence d’événements.
 
 
-[![Pour la mise à jour ou la suppression réussisse, les valeurs d’origine doivent être égales pour les valeurs actuelles de la base de données](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image3.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image3.png)
+[![Fou bien, Update ou Delete réussisse, les valeurs d’origine doivent être égales pour les valeurs actuelles de la base de données](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image3.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image3.png)
 
 **Figure 3**: Pour la mise à jour ou de suppression pour réussir, le d’origine valeurs doit être égale aux valeurs de base de données ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image4.png))
 
@@ -78,7 +78,7 @@ Comme nous le verrons dans ce didacticiel, il est aussi simple que la vérificat
 Commencez par ouvrir le `OptimisticConcurrency.aspx` page à partir de la `SqlDataSource` dossier. Faites glisser un contrôle SqlDataSource à partir de la boîte à outils vers le concepteur, les paramètres de son `ID` propriété `ProductsDataSourceWithOptimisticConcurrency`. Ensuite, cliquez sur le lien configurer la Source de données à partir de la balise active de contrôle s. Dans le premier écran dans l’Assistant, choisissez de travailler avec le `NORTHWINDConnectionString` et cliquez sur Suivant.
 
 
-[![Choisissez de travailler avec le NORTHWINDConnectionString](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image4.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image5.png)
+[![Choisissez pour travailler avec le NORTHWINDConnectionString](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image4.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image5.png)
 
 **Figure 4**: Choisissez de travailler avec les `NORTHWINDConnectionString` ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image6.png))
 
@@ -86,7 +86,7 @@ Commencez par ouvrir le `OptimisticConcurrency.aspx` page à partir de la `SqlDa
 Pour cet exemple, nous ajouterons un GridView qui permet aux utilisateurs de modifier le `Products` table. Par conséquent, à partir de la configuration de l’écran de l’instruction Select, choisissez le `Products` table dans la liste déroulante et sélectionnez le `ProductID`, `ProductName`, `UnitPrice`, et `Discontinued` colonnes, comme illustré à la Figure 5.
 
 
-[![À partir de la Table Products, retourner le ProductID, ProductName, UnitPrice et les colonnes supprimées](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image5.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image7.png)
+[![FROM de la Table Products, retourner le ProductID, ProductName, UnitPrice et les colonnes supprimées](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image5.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image7.png)
 
 **Figure 5**: À partir de la `Products` Table, retournez le `ProductID`, `ProductName`, `UnitPrice`, et `Discontinued` colonnes ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image8.png))
 
@@ -152,7 +152,7 @@ Cette application à notre exemple donne le résultat suivant modifié `UpdateCo
 Avec SqlDataSource configuré pour prendre en charge l’accès concurrentiel optimiste, il reste qu’à ajouter un contrôle Web de données à la page qui utilise ce contrôle d’accès concurrentiel. Pour ce didacticiel, permettent d’ajouter un GridView qui fournit à la fois modifier et supprimer des fonctionnalités s. Pour ce faire, faites glisser un GridView à partir de la boîte à outils vers le concepteur et le jeu de son `ID` à `Products`. À partir de la balise active de s GridView, liez-le à le `ProductsDataSourceWithOptimisticConcurrency` contrôle SqlDataSource ajouté à l’étape 1. Enfin, vérifiez les options Activer la modification et activer la suppression à partir de la balise active.
 
 
-[![Lier le contrôle GridView à SqlDataSource et activer la modification et suppression](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image6.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image9.png)
+[![Bchercher le contrôle GridView à la SqlDataSource et activer la modification et suppression](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image6.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image9.png)
 
 **Figure 6**: Lier le contrôle GridView à SqlDataSource et d’activer la modification et de suppression ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image10.png))
 
@@ -173,7 +173,7 @@ Pour afficher le contrôle d’accès concurrentiel optimiste en action, ouvrez 
 Dans la deuxième fenêtre de navigateur, modifier le prix (mais laisser le nom du produit en tant que sa valeur d’origine) et cliquez sur la mise à jour. Lors de la publication, la grille retourne au mode édition préalable, mais la modification du prix n’est pas enregistrée. Le second navigateur montre la même valeur que le premier le nouveau nom de produit avec l’ancien prix. Les modifications apportées dans la deuxième fenêtre de navigateur ont été perdues. En outre, les modifications ont été perdues au lieu de cela en mode silencieux, en ne raison d’aucune exception ou un message indiquant qu’une violation d’accès concurrentiel s’est produite.
 
 
-[![Les modifications dans la deuxième fenêtre de navigateur ont été perdues en mode silencieux](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image7.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image11.png)
+[![TIl modifie dans le deuxième navigateur fenêtre ont été en mode silencieux perdus](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image7.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image11.png)
 
 **Figure 7**: Les modifications dans le deuxième navigateur fenêtre ont été en mode silencieux perdus ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image12.png))
 
@@ -196,7 +196,7 @@ L’utilisateur final s du point de vue dans la deuxième fenêtre de navigateur
 Dans la mesure où une violation d’accès concurrentiel rejette les modifications a été, il serait intéressant avertir l’utilisateur lorsqu’une violation d’accès concurrentiel s’est produite. Pour avertir l’utilisateur, s permettent d’ajouter un contrôle Web Label en haut de la page nommée `ConcurrencyViolationMessage` dont `Text` propriété affiche le message suivant : Vous avez tenté de mettre à jour ou supprimer un enregistrement qui a été mises à jour simultanément par un autre utilisateur. Passez en revue les modifications des autres utilisateurs puis rétablir votre mise à jour ou supprimer. Définir le contrôle d’étiquette s `CssClass` propriété à avertissement, qui est une classe CSS définie dans `Styles.css` qui affiche le texte dans une police rouge, italique, gras et grande. Enfin, définissez l’étiquette s `Visible` et `EnableViewState` propriétés à `False`. Cela permet de masquer l’étiquette à l’exception uniquement ces publications où nous définissons explicitement son `Visible` propriété `True`.
 
 
-[![Ajouter un contrôle étiquette à la Page pour afficher l’avertissement](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image8.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image13.png)
+[![Ajj un contrôle étiquette à la Page pour afficher l’avertissement](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image8.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image13.png)
 
 **Figure 8**: Ajouter un contrôle étiquette à la Page pour afficher l’avertissement ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image14.png))
 
@@ -213,7 +213,7 @@ Dans les deux gestionnaires d’événements, nous vérifions le `e.AffectedRows
 Comme le montre la Figure 9, ces deux gestionnaires d’événements, un message très sensible s’affiche chaque fois qu’une violation d’accès concurrentiel se produit.
 
 
-[![Un Message s’affiche en cas d’une Violation d’accès concurrentiel](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image9.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image15.png)
+[![A Message s’affiche en cas d’une Violation d’accès concurrentiel](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image9.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image15.png)
 
 **Figure 9**: Un Message s’affiche en cas d’une Violation d’accès concurrentiel ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-with-the-sqldatasource-vb/_static/image16.png))
 

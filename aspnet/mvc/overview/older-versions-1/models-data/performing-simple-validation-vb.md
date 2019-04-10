@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: df6cf4b7-0bb3-4c4e-b17a-bd78a759a6bc
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 31faf2e89e6acb25854455902c1a6fdffebd293c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c7a1b9e82defaae71f0a911e5e4321f6e15ad8bf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423180"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422614"
 ---
-<a name="performing-simple-validation-vb"></a>Réalisation d’une validation simple (VB)
-====================
+# <a name="performing-simple-validation-vb"></a>Réalisation d’une validation simple (VB)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Découvrez comment effectuer la validation dans une application ASP.NET MVC. Dans ce didacticiel, Stephen Walther présente vous à l’état du modèle et les programmes d’assistance HTML de validation.
@@ -56,12 +56,12 @@ Les programmes d’assistance Html.ValidationMessage() et Html.ValidationSummary
 Assurez-vous que vous générez votre application avant d’ajouter une vue. Sinon, la liste des classes n’apparaître pas dans le **afficher la classe de données** liste déroulante.
 
 
-[![La boîte de dialogue Nouveau projet](performing-simple-validation-vb/_static/image1.jpg)](performing-simple-validation-vb/_static/image1.png)
+[![Tboîte de dialogue Nouveau projet he](performing-simple-validation-vb/_static/image1.jpg)](performing-simple-validation-vb/_static/image1.png)
 
 **Figure 01**: Ajout d’une vue ([cliquez pour afficher l’image en taille réelle](performing-simple-validation-vb/_static/image2.png))
 
 
-[![La boîte de dialogue Nouveau projet](performing-simple-validation-vb/_static/image2.jpg)](performing-simple-validation-vb/_static/image3.png)
+[![Tboîte de dialogue Nouveau projet he](performing-simple-validation-vb/_static/image2.jpg)](performing-simple-validation-vb/_static/image3.png)
 
 **Figure 02**: Création d’une vue fortement typée ([cliquez pour afficher l’image en taille réelle](performing-simple-validation-vb/_static/image4.png))
 
@@ -79,7 +79,7 @@ Le programme d’assistance Html.ValidationMessage() est appelée en regard de c
 La page dans la Figure 3 illustre les messages d’erreur affichés par les programmes d’assistance de validation lorsque le formulaire est envoyé avec les champs manquants et des valeurs non valides.
 
 
-[![La boîte de dialogue Nouveau projet](performing-simple-validation-vb/_static/image3.jpg)](performing-simple-validation-vb/_static/image5.png)
+[![Tboîte de dialogue Nouveau projet he](performing-simple-validation-vb/_static/image3.jpg)](performing-simple-validation-vb/_static/image5.png)
 
 **Figure 03**: La vue Create soumise avec des problèmes ([cliquez pour afficher l’image en taille réelle](performing-simple-validation-vb/_static/image6.png))
 
@@ -104,7 +104,7 @@ Vous pouvez modifier ces classes de feuille de style en cascade et par conséque
 Si vous envoyez le formulaire HTML pour la création d’un produit et que vous entrez une valeur non valide pour le champ price et aucune valeur pour le champ UnitsInStock, vous obtiendrez les messages de validation affichés dans la Figure 4. D'où proviennent ces messages d’erreur de validation ?
 
 
-[![La boîte de dialogue Nouveau projet](performing-simple-validation-vb/_static/image4.jpg)](performing-simple-validation-vb/_static/image7.png)
+[![Tboîte de dialogue Nouveau projet he](performing-simple-validation-vb/_static/image4.jpg)](performing-simple-validation-vb/_static/image7.png)
 
 **Figure 04**: Erreurs de Validation de prebinding ([cliquez pour afficher l’image en taille réelle](performing-simple-validation-vb/_static/image8.png))
 

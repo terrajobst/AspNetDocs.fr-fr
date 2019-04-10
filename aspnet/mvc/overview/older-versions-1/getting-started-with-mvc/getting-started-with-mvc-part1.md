@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: bf4a1c19-0a94-4208-b268-a96ddcf26946
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part1
 msc.type: authoredcontent
-ms.openlocfilehash: 2d9c1dd0dd3c9f892b42b0f29ac3361a7f2b638c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: dcc2e703829cfa0b77575870feff451fd0738f56
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037256"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416491"
 ---
-<a name="intro-to-aspnet-mvc"></a>Introduction à ASP.NET MVC
-====================
+# <a name="intro-to-aspnet-mvc"></a>Introduction à ASP.NET MVC
+
 par [Scott Hanselman](https://github.com/shanselman)
 
 > > [!NOTE]
@@ -32,7 +32,7 @@ Assurons-nous que notre première Application Web ASP.NET MVC à l’aide [Visua
 
 Voici deux captures d’écran de l’application que vous allez générer. Vous aurez une table simple de films avec diverses colonnes.
 
-[![Liste de films - Windows Internet Explorer (12)](getting-started-with-mvc-part1/_static/image2.png)](getting-started-with-mvc-part1/_static/image1.png)
+[![Movie liste - Windows Internet Explorer (12)](getting-started-with-mvc-part1/_static/image2.png)](getting-started-with-mvc-part1/_static/image1.png)
 
 Et vous aurez un formulaire de création afin de pouvoir ajouter à la liste de films.
 
@@ -59,7 +59,7 @@ Visual Web Developer est un IDE ou l’environnement de développement intégré
 
 ## <a name="creating-your-first-application"></a>Créer votre première Application
 
-Vous pouvez créer des applications à l’aide de Visual Basic ou Visual C#. Pour l’instant, sélectionnez Visual C# sur la gauche, puis choisissez « Application Web de ASP.NET MVC 2. » Nommez votre projet « Movies » et cliquez sur OK.
+Vous pouvez créer des applications à l’aide de Visual Basic ou Visual c#. Pour l’instant, sélectionnez Visual c# sur la gauche, puis choisissez « Application Web de ASP.NET MVC 2. » Nommez votre projet « Movies » et cliquez sur OK.
 
 [![Nouveau projet](getting-started-with-mvc-part1/_static/image8.png)](getting-started-with-mvc-part1/_static/image7.png)
 
@@ -77,9 +77,9 @@ Il s’agit d’une flèche verte pointant vers la droite qui compilera votre pr
 
 Ainsi, Visual Web Developer démarrer un serveur web de développement et d’exécuter notre application web (il n’existe aucune configuration ou les étapes manuelles requises pour activer cette option). Puis il lance un navigateur et configurez-le pour parcourir la page d’accueil de l’application. Ci-dessous, notez que la barre d’adresses du navigateur indique « localhost » et pas quelque chose comme example.com. C’est parce que localhost pointe toujours vers votre propre ordinateur local - qui dans ce cas s’exécute l’application que nous venez de créer.
 
-[![Page d’accueil](getting-started-with-mvc-part1/_static/image13.png)](getting-started-with-mvc-part1/_static/image12.png)
+[![Home Page](getting-started-with-mvc-part1/_static/image13.png)](getting-started-with-mvc-part1/_static/image12.png)
 
 Prêt à l’emploi ce modèle par défaut donne vous deux pages à visiter et une page de connexion de base. Nous allons modifier le fonctionnement de cette application et en savoir un peu sur ASP.NET MVC dans le processus. Fermez votre navigateur et vous permet de modifier du code.
 
 > [!div class="step-by-step"]
-> [Next](getting-started-with-mvc-part2.md)
+> [Suivant](getting-started-with-mvc-part2.md)

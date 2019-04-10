@@ -8,15 +8,15 @@ ms.date: 11/14/2011
 ms.assetid: db4eca5d-b625-4e67-8e5b-a844639d4354
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup
 msc.type: chapter
-ms.openlocfilehash: 3b859ce51df5b55b236fb8fbafa94ab2530558b1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c797e6556282ef6570d50d8a3e77587ac30dbbea
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022066"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415230"
 ---
-<a name="modalpopup"></a>ModalPopup
-====================
+# <a name="modalpopup"></a>ModalPopup
+
 > Ce didacticiel montre comment utiliser le contrôle ModalPopup, ce qui vous permet de créer l’équivalent d’une boîte de dialogue modale.
 
 

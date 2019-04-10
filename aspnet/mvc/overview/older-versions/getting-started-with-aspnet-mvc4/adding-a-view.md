@@ -8,15 +8,15 @@ ms.date: 08/28/2012
 ms.assetid: dde851d7-882e-4d99-9b96-cf96daed81cc
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-view
 msc.type: authoredcontent
-ms.openlocfilehash: 7b55a55db6207b8ff18b2dd207e919cee45f6973
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1ab1ea8b277b48b3b72edb9dd45aa4cc2937ffa8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030376"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418051"
 ---
-<a name="adding-a-view"></a>Ajout d’une vue
-====================
+# <a name="adding-a-view"></a>Ajout d’une vue
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
@@ -25,7 +25,7 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 Dans cette section vous allez modifier la `HelloWorldController` classe à utiliser la vue fichiers de modèle proprement encapsulent le processus de génération des réponses HTML à un client.
 
-Vous allez créer un fichier de modèle de vue à l’aide du [moteur d’affichage Razor](https://weblogs.asp.net/scottgu/archive/2010/07/02/introducing-razor.aspx) introduite avec ASP.NET MVC 3. Modèles de vue Razor ont une *.cshtml* extension de fichier et offrent un moyen élégant pour créer le HTML de sortie à l’aide de C#. Razor réduit le nombre de caractères et des touches du clavier nécessaires lors de l’écriture d’un modèle de vue et permet un rapide, fluide de flux de travail de codage.
+Vous allez créer un fichier de modèle de vue à l’aide du [moteur d’affichage Razor](https://weblogs.asp.net/scottgu/archive/2010/07/02/introducing-razor.aspx) introduite avec ASP.NET MVC 3. Modèles de vue Razor ont une *.cshtml* extension de fichier et offrent un moyen élégant pour créer le HTML de sortie à l’aide de c#. Razor réduit le nombre de caractères et des touches du clavier nécessaires lors de l’écriture d’un modèle de vue et permet un rapide, fluide de flux de travail de codage.
 
 Actuellement, la méthode `Index` retourne une chaîne avec un message qui est codé en dur dans la classe du contrôleur. Modifier le `Index` méthode pour retourner un `View` de l’objet, comme indiqué dans le code suivant :
 
@@ -75,7 +75,7 @@ Tout d’abord, vous souhaitez modifier le &quot;votre logo ici.&quot; titre en 
 
 ![_LayoutCshtml](adding-a-view/_static/image7.png)
 
-Modèles de disposition permettent de spécifier la disposition du conteneur HTML de votre site au même endroit et de l’appliquer sur plusieurs pages de votre site. Recherchez la ligne `@RenderBody()`. `RenderBody` est un espace réservé dans lequel toutes les pages spécifiques aux vues que vous créez s’affichent, &quot;encapsulées&quot; dans la page de disposition. Par exemple, si vous sélectionnez le lien About, le *Views\Home\About.cshtml* vue est restituée à l’intérieur de la `RenderBody` (méthode).
+Modèles de disposition permettent de spécifier la disposition du conteneur HTML de votre site au même endroit et de l’appliquer sur plusieurs pages de votre site. Recherchez la ligne `@RenderBody()`. `RenderBody` est un espace réservé où tous les affichage spécifique au pages que vous créez s’affichent, &quot;encapsulé&quot; dans la page de disposition. Par exemple, si vous sélectionnez le lien About, le *Views\Home\About.cshtml* vue est restituée à l’intérieur de la `RenderBody` (méthode).
 
 Modifiez le titre du titre du site dans le modèle de disposition &quot;votre logo ici&quot; à &quot;MVC Movie&quot;.
 

@@ -8,18 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: eb35710d-1d99-44ac-b61f-e50af8cb328a
 msc.legacyurl: /mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 2bce5456d9c5465156daf511d0f75a68b35cf7d9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 47d42b8017837f15e0d56dfb3565257164c97bbe
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033346"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421028"
 ---
-<a name="creating-unit-tests-for-aspnet-mvc-applications-vb"></a>Création de tests unitaires pour les applications ASP.NET MVC (VB)
-====================
+# <a name="creating-unit-tests-for-aspnet-mvc-applications-vb"></a>Création de tests unitaires pour les applications ASP.NET MVC (VB)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
-[Télécharger PDF](http://download.microsoft.com/download/8/4/8/84843d8d-1575-426c-bcb5-9d0c42e51416/ASPNET_MVC_Tutorial_07_VB.pdf)
+[Télécharger le PDF](http://download.microsoft.com/download/8/4/8/84843d8d-1575-426c-bcb5-9d0c42e51416/ASPNET_MVC_Tutorial_07_VB.pdf)
 
 > Découvrez comment créer des tests unitaires pour les actions de contrôleur. Dans ce didacticiel, Stephen Walther montre comment tester si une action de contrôleur retourne une vue particulière, retourne un jeu de données particulier ou retourne un autre type de résultat d’action.
 
@@ -59,12 +59,12 @@ Cette action de contrôleur retourne également une vue nommée `Details`. Toute
 Vous pouvez exécuter le test unitaire dans le Listing 2 soit en entrant la combinaison de touches **Ctrl + R, A** ou en cliquant sur le **exécuter tous les Tests de la Solution** bouton (voir Figure 1). Si le test réussit, vous verrez la fenêtre Résultats des tests dans la Figure 2.
 
 
-[![Exécuter tous les Tests dans la Solution](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image2.png)](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image1.png)
+[![RAnnuler l’ensemble des Tests dans la Solution](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image2.png)](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image1.png)
 
 **Figure 01**: Exécuter tous les Tests dans la Solution ([cliquez pour afficher l’image en taille réelle](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image3.png))
 
 
-[![Succès !](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image5.png)](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image4.png)
+[![Success !](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image5.png)](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image4.png)
 
 **Figure 02**: Opération réussie ([Cliquez pour afficher l’image en taille réelle](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image6.png))
 

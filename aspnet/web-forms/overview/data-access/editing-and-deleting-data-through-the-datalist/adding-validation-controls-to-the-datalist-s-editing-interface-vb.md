@@ -8,15 +8,15 @@ ms.date: 10/30/2006
 ms.assetid: 6b073fc6-524d-453d-be7c-0c30986de391
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/adding-validation-controls-to-the-datalist-s-editing-interface-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d4d7db91ebd495149bb322487b541e2965d4f5e5
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: e91ba6a0c4d2f9cad6d88119e7f33931b7ba5772
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424671"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412799"
 ---
-<a name="adding-validation-controls-to-the-datalists-editing-interface-vb"></a>Ajout de contrôles Validation aux interfaces de modification du contrôle DataList (VB)
-====================
+# <a name="adding-validation-controls-to-the-datalists-editing-interface-vb"></a>Ajout de contrôles Validation aux interfaces de modification du contrôle DataList (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_39_VB.exe) ou [télécharger le PDF](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/datatutorial39vb1.pdf)
@@ -45,7 +45,7 @@ Avant que nous pouvons examiner l’exemple précédent pour inclure la validati
 3. Copiez le texte dans le `<asp:Content>` et `</asp:Content>` les balises (lignes 3 à 32), comme illustré dans la Figure 1.
 
 
-[![Copiez le texte au sein de la &lt;asp : Content&gt; contrôle](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image2.png)](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image1.png)
+[![Ccopier le texte dans le &lt;asp : Content&gt; contrôle](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image2.png)](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image1.png)
 
 **Figure 2**: Copiez le texte au sein de la `<asp:Content>` contrôle ([cliquez pour afficher l’image en taille réelle](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image3.png))
 
@@ -59,7 +59,7 @@ Pour copier le code source, ouvrez le `ErrorHandling.aspx.vb` page puis copiez s
 Après avoir déplacé le contenu et le code à partir de `ErrorHandling.aspx` à `UIValidation.aspx`, prenez un moment pour tester les pages dans un navigateur. Vous devez voir la même sortie et rencontrez les mêmes fonctionnalités dans chacune de ces deux pages (voir Figure 2).
 
 
-[![La Page UIValidation.aspx reproduit la fonctionnalité dans ErrorHandling.aspx](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image5.png)](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image4.png)
+[![TIl UIValidation.aspx Page reproduit la fonctionnalité dans ErrorHandling.aspx](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image5.png)](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image4.png)
 
 **Figure 2**: Le `UIValidation.aspx` Page reproduit la fonctionnalité dans `ErrorHandling.aspx` ([cliquez pour afficher l’image en taille réelle](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image6.png))
 
@@ -85,7 +85,7 @@ Dans notre didacticiel, nous devez utiliser un contrôle RequiredFieldValidator 
 Permettent de commencer par ajouter les contrôles de validation nécessaire à la DataList s s `EditItemTemplate`. Cette tâche peut être effectuée via le concepteur en cliquant sur le lien Modifier les modèles à partir de la balise active de DataList s, ou via la syntaxe déclarative. Permettent d’étape s via le processus à l’aide de l’option Modifier les modèles à partir de la vue de conception. Après avoir choisi de modifier le contrôle DataList s `EditItemTemplate`, ajoutez un contrôle RequiredFieldValidator en le faisant glisser à partir de la boîte à outils dans l’interface de modification de modèle, en le plaçant après le `ProductName` zone de texte.
 
 
-[![Ajoutez un contrôle RequiredFieldValidator à EditItemTemplate après la zone de texte ProductName](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image8.png)](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image7.png)
+[![Ajj un contrôle RequiredFieldValidator à la EditItemTemplate après le ProductName zone de texte](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image8.png)](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image7.png)
 
 **Figure 3**: Ajoutez un contrôle RequiredFieldValidator à la `EditItemTemplate After` le `ProductName` zone de texte ([cliquez pour afficher l’image en taille réelle](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image9.png))
 
@@ -95,7 +95,7 @@ Tous les contrôles de validation fonctionnent en validant l’entrée d’un co
 Après avoir défini ces trois propriétés de RequiredFieldValidator, votre écran doit ressembler à la Figure 4.
 
 
-[![Définir le RequiredFieldValidator s ControlToValidate, message d’erreur et les propriétés de texte](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image11.png)](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image10.png)
+[![Set la ControlToValidate s RequiredFieldValidator, message d’erreur et les propriétés de texte](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image11.png)](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image10.png)
 
 **Figure 4**: Définir les opérations de mappage RequiredFieldValidator `ControlToValidate`, `ErrorMessage`, et `Text` propriétés ([cliquez pour afficher l’image en taille réelle](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image12.png))
 
@@ -112,7 +112,7 @@ Après avoir ajouté ces deux contrôles de validation, le contrôle DataList s 
 Après avoir apporté ces modifications, ouvrez la page dans un navigateur. Si vous tentez d’omettre le nom ou entrez une valeur de prix non valide lors de la modification d’un produit, un astérisque apparaît en regard de la zone de texte. Comme le montre la Figure 5, une valeur de prix qui inclut le symbole monétaire tels que 19,95 $ est considéré comme non valide. Les opérations de mappage CompareValidator `Currency` `Type` permettant de séparateurs de chiffres (par exemple, des virgules ou des points, selon les paramètres de culture) et un signe de début plus ou moins, contrairement à *pas* autoriser un symbole monétaire. Ce comportement peut perplex utilisateurs comme l’interface de modification affiche actuellement le `UnitPrice` en utilisant le format de devise.
 
 
-[![Un astérisque apparaît en regard des zones de texte avec une entrée non valide](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image14.png)](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image13.png)
+[![An astérisque apparaît en regard des zones de texte avec une entrée non valide](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image14.png)](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image13.png)
 
 **Figure 5**: Un astérisque apparaît à côté de zones de texte avec une entrée non valide ([cliquez pour afficher l’image en taille réelle](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image15.png))
 
@@ -169,7 +169,7 @@ Outre les contrôles de validation de cinq, ASP.NET propose le [contrôle Valida
 Pour ce faire, faites glisser un contrôle ValidationSummary à partir de la boîte à outils vers le concepteur. L’emplacement de t ValidationSummary contrôle n’a pas grande importance depuis que nous allons configurer pour afficher uniquement le résumé en tant qu’un élément messagebox. Après avoir ajouté le contrôle, définissez son [ `ShowSummary` propriété](https://msdn.microsoft.com/library/system.web.ui.webcontrols.validationsummary.showsummary(VS.80).aspx) à `False` et son [ `ShowMessageBox` propriété](https://msdn.microsoft.com/library/system.web.ui.webcontrols.validationsummary.showmessagebox(VS.80).aspx) à `True`. Ainsi, les erreurs de validation sont résumées dans un messagebox côté client (voir Figure 6).
 
 
-[![Les erreurs de Validation sont résumés dans Messagebox côté Client](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image17.png)](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image16.png)
+[![TErreurs de Validation he sont résumées dans un Messagebox côté Client](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image17.png)](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image16.png)
 
 **Figure 6**: Les erreurs de Validation sont résumés dans Messagebox côté Client ([cliquez pour afficher l’image en taille réelle](adding-validation-controls-to-the-datalist-s-editing-interface-vb/_static/image18.png))
 

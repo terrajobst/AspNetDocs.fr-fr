@@ -8,15 +8,15 @@ ms.date: 01/14/2008
 ms.assetid: 829d2f56-5c48-445b-b826-3418a450c788
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-vb
 msc.type: authoredcontent
-ms.openlocfilehash: eb533cf763c2f3132ea0a5420b4d4cbea16c61cd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c992c782ce52066452b42bc09052ec1985e13200
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061426"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417089"
 ---
-<a name="forms-authentication-configuration-and-advanced-topics-vb"></a>Configuration et questions avancées de l’authentification par formulaire (VB)
-====================
+# <a name="forms-authentication-configuration-and-advanced-topics-vb"></a>Configuration et questions avancées de l’authentification par formulaire (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/ASPNET_Security_Tutorial_03_VB.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial03_AuthAdvanced_vb.pdf)
@@ -84,7 +84,7 @@ L’expiration définit une heure absolue à l’avenir que lorsque le ticket d�
 La figure 1 illustre le flux de travail lorsque slidingExpiration est définie sur false et le délai d’expiration est défini sur 30. Notez que le ticket d’authentification généré lors de la connexion contient la date d’expiration, et cette valeur n’est pas mis à jour sur les demandes suivantes. Si le FormsAuthenticationModule détecte que le ticket a expiré, il ignore et traite la demande comme anonyme.
 
 
-[![Une représentation graphique de slidingExpiration d’expiration lors du Ticket d’authentification par formulaires a la valeur false](forms-authentication-configuration-and-advanced-topics-vb/_static/image2.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image1.png)
+[![A Représentation graphique de slidingExpiration d’expiration lors du Ticket d’authentification par formulaires est false](forms-authentication-configuration-and-advanced-topics-vb/_static/image2.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image1.png)
 
 **Figure 01**: Une représentation graphique de slidingExpiration d’expiration lors du Ticket d’authentification par formulaires est false ([cliquez pour afficher l’image en taille réelle](forms-authentication-configuration-and-advanced-topics-vb/_static/image3.png))
 
@@ -92,7 +92,7 @@ La figure 1 illustre le flux de travail lorsque slidingExpiration est définie s
 La figure 2 illustre le flux de travail lorsque slidingExpiration est définie sur true et le délai d’expiration est définie sur 30. Lorsqu’une demande authentifiée est reçue (avec un ticket non expirés) son expiration est mis à jour au nombre de délai d’attente de minutes à l’avenir.
 
 
-[![Une représentation graphique du Ticket d’authentification par formulaires lorsque slidingExpiration est true](forms-authentication-configuration-and-advanced-topics-vb/_static/image5.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image4.png)
+[![A Une représentation graphique du Ticket d’authentification par formulaires lorsque slidingExpiration est true](forms-authentication-configuration-and-advanced-topics-vb/_static/image5.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image4.png)
 
 **Figure 02**: Une représentation graphique du Ticket d’authentification par formulaires lorsque slidingExpiration est true ([cliquez pour afficher l’image en taille réelle](forms-authentication-configuration-and-advanced-topics-vb/_static/image6.png))
 
@@ -181,7 +181,7 @@ Pour garantir l’authenticité d’un ticket, le système d’authentification 
 Lors de la création (ou modifier) un ticket, le système d’authentification forms crée un MAC et l’attache aux données du ticket. Lorsqu’une demande ultérieure arrive, le système d’authentification forms compare les données MAC et ticket pour valider l’authenticité des données de ticket. La figure 3 illustre ce flux de travail sous forme graphique.
 
 
-[![L’authenticité du Ticket est assurée via un MAC](forms-authentication-configuration-and-advanced-topics-vb/_static/image8.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image7.png)
+[![TAuthenticité du Ticket he est assurée via un MAC](forms-authentication-configuration-and-advanced-topics-vb/_static/image8.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image7.png)
 
 **Figure 03**: L’authenticité du Ticket est assurée via un MAC ([cliquez pour afficher l’image en taille réelle](forms-authentication-configuration-and-advanced-topics-vb/_static/image9.png))
 
@@ -238,7 +238,7 @@ Pour stocker des données utilisateur dans le ticket d’authentification, nous 
 Chaque fois que nous avons besoin d’accéder aux données stockées dans le ticket, nous pouvons faire, en saisissant le FormsAuthenticationTicket de la demande actuelle et la désérialisation de la propriété UserData. Dans le cas de la date de naissance et employeur exemple de nom, nous fractionnerait la chaîne UserData en deux sous-chaînes en fonction du délimiteur (|).
 
 
-[![Informations utilisateur supplémentaires peuvent être stockées dans le Ticket d’authentification](forms-authentication-configuration-and-advanced-topics-vb/_static/image11.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image10.png)
+[![Asupplémentaires utilisateur les informations peuvent être stockées dans le Ticket d’authentification](forms-authentication-configuration-and-advanced-topics-vb/_static/image11.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image10.png)
 
 **Figure 04**: Supplémentaires utilisateur informations peuvent être stockées dans le Ticket d’authentification ([cliquez pour afficher l’image en taille réelle](forms-authentication-configuration-and-advanced-topics-vb/_static/image12.png))
 
@@ -302,7 +302,7 @@ Si Request.IsAuthenticated est True, propriété de texte de la WelcomeBackMessa
 La figure 5 illustre une capture d’écran de cet affichage en action. Connectez-vous en tant que Scott affiche un message d’accueil précédent qui inclut la société et le titre de Scott.
 
 
-[![Société et le titre actuellement connecté sur l’utilisateur sont affichés.](forms-authentication-configuration-and-advanced-topics-vb/_static/image14.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image13.png)
+[![TEntreprise he actuellement connecté sur l’utilisateur et le titre sont affichés](forms-authentication-configuration-and-advanced-topics-vb/_static/image14.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image13.png)
 
 **Figure 05**: Société actuellement connecté sur l’utilisateur et le titre sont affichés ([cliquez pour afficher l’image en taille réelle](forms-authentication-configuration-and-advanced-topics-vb/_static/image15.png))
 
@@ -338,7 +338,7 @@ Pour ce didacticiel, nous allons créer les objets principal et identity personn
 Ensuite, ajoutez deux nouveaux fichiers de classe à l’application\_dossier de Code, un seul CustomIdentity.vb nommée et l’autre nommé CustomPrincipal.vb.
 
 
-[![Ajoutez les CustomIdentity et les Classes de CustomPrincipal à votre projet](forms-authentication-configuration-and-advanced-topics-vb/_static/image17.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image16.png)
+[![AJJ le CustomIdentity et Classes CustomPrincipal à votre projet](forms-authentication-configuration-and-advanced-topics-vb/_static/image17.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image16.png)
 
 **Figure 06**: Ajouter les CustomIdentity et les Classes de CustomPrincipal à votre projet ([cliquez pour afficher l’image en taille réelle](forms-authentication-configuration-and-advanced-topics-vb/_static/image18.png))
 
@@ -362,7 +362,7 @@ Le pipeline ASP.NET prend une demande entrante et la traite via un nombre d’é
 Après l’événement AuthenticateRequest, le pipeline ASP.NET déclenche le [PostAuthenticateRequest événement](https://msdn.microsoft.com/library/system.web.httpapplication.postauthenticaterequest.aspx), qui est l’endroit où nous pouvons remplacer l’objet GenericPrincipal créé par FormsAuthenticationModule avec une instance de notre Objet CustomPrincipal. La figure 7 illustre ce flux de travail.
 
 
-[![L’objet GenericPrincipal est remplacé par un CustomPrincipal dans l’événement PostAuthenticationRequest](forms-authentication-configuration-and-advanced-topics-vb/_static/image20.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image19.png)
+[![TIl GenericPrincipal est remplacé par un CustomPrincipal dans l’événement PostAuthenticationRequest](forms-authentication-configuration-and-advanced-topics-vb/_static/image20.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image19.png)
 
 **Figure 07**: L’objet GenericPrincipal est remplacé par un CustomPrincipal dans l’événement PostAuthenticationRequest ([cliquez pour afficher l’image en taille réelle](forms-authentication-configuration-and-advanced-topics-vb/_static/image21.png))
 
@@ -370,7 +370,7 @@ Après l’événement AuthenticateRequest, le pipeline ASP.NET déclenche le [P
 Pour exécuter le code en réponse à un événement de pipeline ASP.NET, nous pouvons créer le Gestionnaire d’événements appropriée dans Global.asax ou créer notre propre HTTP Module. Pour ce didacticiel nous allons créer le Gestionnaire d’événements dans Global.asax. Commencez par ajouter Global.asax à votre site Web. Avec le bouton droit sur le nom du projet dans l’Explorateur de solutions et ajouter un élément de type classe d’Application globale nommée Global.asax.
 
 
-[![Ajouter un fichier Global.asax à votre site Web](forms-authentication-configuration-and-advanced-topics-vb/_static/image23.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image22.png)
+[![Ajj un fichier Global.asax pour votre site Web](forms-authentication-configuration-and-advanced-topics-vb/_static/image23.png)](forms-authentication-configuration-and-advanced-topics-vb/_static/image22.png)
 
 **Figure 08**: Ajouter un fichier Global.asax à votre site Web ([cliquez pour afficher l’image en taille réelle](forms-authentication-configuration-and-advanced-topics-vb/_static/image24.png))
 
@@ -411,7 +411,7 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 
 - [DISSECTION l’authentification par formulaire](http://aspnet.4guysfromrolla.com/articles/072005-1.aspx)
 - [Explication : Authentification par formulaire dans ASP.NET 2.0](https://msdn.microsoft.com/library/aa480476.aspx)
-- [Guide pratique pour Protéger l’authentification par formulaire dans ASP.NET 2.0](https://msdn.microsoft.com/library/ms998310.aspx)
+- [Procédure : Protéger l’authentification par formulaire dans ASP.NET 2.0](https://msdn.microsoft.com/library/ms998310.aspx)
 - [Professional ASP.NET 2.0 Security, l’appartenance et la gestion de rôle](http://www.wrox.com/WileyCDA/WroxTitle/productCd-0764596985.html) (ISBN : 978-0-7645-9698-8)
 - [Sécurisation des contrôles de connexion](https://msdn.microsoft.com/library/ms178346.aspx)
 - [Le &lt;authentification&gt; élément](https://msdn.microsoft.com/library/532aee0e.aspx)

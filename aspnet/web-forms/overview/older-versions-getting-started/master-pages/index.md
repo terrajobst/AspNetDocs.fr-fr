@@ -8,15 +8,15 @@ ms.date: 11/04/2011
 ms.assetid: bc30f0ec-cf8f-4a33-9eee-513be872ac9c
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages
 msc.type: chapter
-ms.openlocfilehash: 129d1992d702e8f3deeaa29ed089f04999cd1e5f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9119e16fbd6ac872cfcdf5497c5ca3d8d0b5d5e2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413618"
 ---
-<a name="aspnet-35---web-forms-master-pages"></a>ASP.NET 3.5 - Pages maîtres Web Forms
-====================
+# <a name="aspnet-35---web-forms-master-pages"></a>ASP.NET 3.5 - Pages maîtres Web Forms
+
 > Comment créer et utiliser des pages maîtres ASP.NET et des pages de contenu pour créer une disposition cohérente dans les applications Web Forms.
 
 
@@ -25,8 +25,8 @@ ms.locfileid: "57019466"
 - [Spécification du titre, des balises META et d’autres en-têtes HTML dans la page maître (C#)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md)
 - [URL dans les pages maîtres (C#)](urls-in-master-pages-cs.md)
 - [Contrôler le nommage des ID dans les pages de contenu (C#)](control-id-naming-in-content-pages-cs.md)
-- [Interaction avec la page maître depuis la page de contenu (C#)](interacting-with-the-master-page-from-the-content-page-cs.md)
-- [Interaction avec la page de contenu depuis la page maître (C#)](interacting-with-the-content-page-from-the-master-page-cs.md)
+- [Interaction avec la page de contenu à partir de la page maître (C#)](interacting-with-the-master-page-from-the-content-page-cs.md)
+- [Interaction avec la page de contenu à partir de la page maître (C#)](interacting-with-the-content-page-from-the-master-page-cs.md)
 - [Pages maîtres et ASP.NET AJAX (C#)](master-pages-and-asp-net-ajax-cs.md)
 - [Spécification de la page maître par programmation (C#)](specifying-the-master-page-programmatically-cs.md)
 - [Pages maîtres imbriquées (C#)](nested-master-pages-cs.md)
@@ -35,8 +35,8 @@ ms.locfileid: "57019466"
 - [Spécification du titre, des balises META et d’autres en-têtes HTML dans la page maître (VB)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md)
 - [URL dans les pages maîtres (VB)](urls-in-master-pages-vb.md)
 - [Contrôler le nommage des ID dans les pages de contenu (VB)](control-id-naming-in-content-pages-vb.md)
-- [Interaction avec la page maître depuis la page de contenu (VB)](interacting-with-the-master-page-from-the-content-page-vb.md)
-- [Interaction avec la page de contenu depuis la page maître (VB)](interacting-with-the-content-page-from-the-master-page-vb.md)
+- [Interaction avec la page de contenu à partir de la page maître (VB)](interacting-with-the-master-page-from-the-content-page-vb.md)
+- [Interaction avec la page de contenu à partir de la page maître (VB)](interacting-with-the-content-page-from-the-master-page-vb.md)
 - [Pages maîtres et ASP.NET AJAX (VB)](master-pages-and-asp-net-ajax-vb.md)
 - [Spécification de la page maître par programmation (VB)](specifying-the-master-page-programmatically-vb.md)
 - [Pages maîtres imbriquées (VB)](nested-master-pages-vb.md)

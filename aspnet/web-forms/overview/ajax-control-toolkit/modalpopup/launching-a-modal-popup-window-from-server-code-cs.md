@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/modalpopup/launching-a-modal-popup-window-from-server-code-cs
-title: Lancement d’une fenêtre contextuelle modale à partir du Code de serveur (C#) | Microsoft Docs
+title: Lancement d’une fenêtre contextuelle modale à partir du Code de serveur (c#) | Microsoft Docs
 author: wenz
 description: Le contrôle ModalPopup dans AJAX Control Toolkit offre un moyen simple de créer une contextuelle modale à l’aide de moyens de côté client. Toutefois, certains scénarios nécessitent que t...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 2f67d8ef-73ca-447d-a0cc-6e3168431e6a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/launching-a-modal-popup-window-from-server-code-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b59997d5c3e841d36d475431b02d3df2d1a4b666
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1fd12181e26012c59bde3e6fe153c196d8bf0d31
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413189"
 ---
-<a name="launching-a-modal-popup-window-from-server-code-c"></a>Lancement d’une fenêtre contextuelle modale à partir de code serveur (C#)
-====================
+# <a name="launching-a-modal-popup-window-from-server-code-c"></a>Lancement d’une fenêtre contextuelle modale à partir de code serveur (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup1.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup1CS.pdf)
@@ -65,9 +65,9 @@ Le `pageLoad()` fonction JavaScript est une fonction spéciale qui est exécuté
 Le `$find()` fonction recherche un élément nommé dans la page et attend l’ID côté serveur en tant que paramètre. Par conséquent, `$find("mpe")` retourne la représentation sous forme de client du contrôle ModalPopup ; son `show()` méthode permet de la fenêtre contextuelle s’affichent.
 
 
-[![La fenêtre contextuelle modale s’affiche lorsque l’utilisateur clique sur un des boutons](launching-a-modal-popup-window-from-server-code-cs/_static/image2.png)](launching-a-modal-popup-window-from-server-code-cs/_static/image1.png)
+[![Tfenêtre contextuelle modale he apparaît lorsque l’utilisateur clique sur un des boutons](launching-a-modal-popup-window-from-server-code-cs/_static/image2.png)](launching-a-modal-popup-window-from-server-code-cs/_static/image1.png)
 
 La fenêtre contextuelle modale s’affiche lorsque l’utilisateur clique sur un des boutons ([cliquez pour afficher l’image en taille réelle](launching-a-modal-popup-window-from-server-code-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Next](using-modalpopup-with-a-repeater-control-cs.md)
+> [Suivant](using-modalpopup-with-a-repeater-control-cs.md)

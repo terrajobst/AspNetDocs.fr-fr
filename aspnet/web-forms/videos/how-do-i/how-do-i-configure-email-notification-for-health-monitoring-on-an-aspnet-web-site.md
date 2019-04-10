@@ -8,15 +8,15 @@ ms.date: 09/11/2008
 ms.assetid: 1fa884c0-582e-4dc6-abb6-a5ec70d43ffb
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-configure-email-notification-for-health-monitoring-on-an-aspnet-web-site
 msc.type: video
-ms.openlocfilehash: 205e02cf5fce8cd80afa15b462e3784be7b40fbf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8c6512cebfb141dbf2f4c19e614aac99ccd41dac
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059676"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413696"
 ---
-<a name="how-do-i-configure-email-notification-for-health-monitoring-on-an-aspnet-web-site"></a>[Comment faire] Configurer la Notification par courrier électronique pour l’intégrité de l’analyse sur un Site Web ASP.NET
-====================
+# <a name="how-do-i-configure-email-notification-for-health-monitoring-on-an-aspnet-web-site"></a>[Comment faire] Configurer la Notification par courrier électronique pour l’intégrité de l’analyse sur un Site Web ASP.NET
+
 par [Chris Pels](https://twitter.com/chrispels)
 
 Dans cette vidéo Chris Pels montre comment configurer la notification par courrier électronique pour l’intégrité de la surveillance dans un site web ASP.NET. Tout d’abord, consultez Comment configurer l’envoi de courrier électronique dans un site web ASP.NET à l’aide de la &lt;emailSettings&gt; élément dans le fichier web.config. Ensuite, découvrez comment ajouter la SimpleMailWebEventProvider qui envoie des e-mails pour les événements de contrôle en tant que fournisseur d’état. Consultez ensuite le contrôle des événements qui peuvent être utilisées avec notification par courrier électronique en examinant la configuration d’analyse l’intégrité au niveau machine d’état standard. Après avoir examiné les événements disponibles, consultez une règle implémentée qui mappe le « tous les événements » au fournisseur de messagerie. Lors du démarrage du site web plusieurs e-mails sont envoyés, puis examiner lorsqu’ils sont reçus dans Outlook. Enfin, certains principes de base dont les événements peuvent être mappés au fournisseur de messagerie analyse d’intégrité sont présentés.

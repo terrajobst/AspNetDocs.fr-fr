@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs
-title: Journalisation des détails des erreurs avec ELMAH (C#) | Microsoft Docs
+title: Journalisation des détails des erreurs avec ELMAH (c#) | Microsoft Docs
 author: rick-anderson
 description: Erreur de journalisation des Modules et gestionnaires (ELMAH) offre une autre approche pour la journalisation des erreurs d’exécution dans un environnement de production. ELMAH une erreur s’est gratuit et open source...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/09/2009
 ms.assetid: 11f6fe44-64ef-4a38-a3b4-35c7bb992352
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4337500e0da3c6a75737438f3eeed731350847dd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 02c4371cccb56f0ef7c0a6244c3dcd8a30d241b0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041286"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415646"
 ---
-<a name="logging-error-details-with-elmah-c"></a>Journalisation des détails des erreurs avec ELMAH (C#)
-====================
+# <a name="logging-error-details-with-elmah-c"></a>Journalisation des détails des erreurs avec ELMAH (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/1/0/C/10CC829F-A808-4302-97D3-59989B8F9C01/ASPNET_Hosting_Tutorial_14_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial14_ELMAH_cs.pdf)
@@ -231,7 +231,7 @@ Le balisage suivant indique à ELMAH se ne pas les 404 erreurs.
 > N’oubliez pas que pour pouvoir utiliser le filtrage des erreurs que vous devez inscrire le `ErrorFilterModule` HTTP Module.
 
 
-Le `<equal>` élément à l’intérieur du `<test>` section est appelée une assertion. Si l’assertion a la valeur true, puis l’erreur est filtré à partir du journal de ELMAH. Il existe d’autres assertions disponibles, notamment : `<greater>`, `<greater-or-equal>`, `<not-equal>`, `<lesser>`, `<lesser-or-equal>`, et ainsi de suite. Vous pouvez également combiner des assertions à l’aide de la `<and>` et `<or>` opérateurs booléens. De plus, vous pouvez même inclure une expression JavaScript simple comme une assertion, ou écrire vos propres assertions en C# ou Visual Basic.
+Le `<equal>` élément à l’intérieur du `<test>` section est appelée une assertion. Si l’assertion a la valeur true, puis l’erreur est filtré à partir du journal de ELMAH. Il existe d’autres assertions disponibles, notamment : `<greater>`, `<greater-or-equal>`, `<not-equal>`, `<lesser>`, `<lesser-or-equal>`, et ainsi de suite. Vous pouvez également combiner des assertions à l’aide de la `<and>` et `<or>` opérateurs booléens. De plus, vous pouvez même inclure une expression JavaScript simple comme une assertion, ou écrire vos propres assertions en c# ou Visual Basic.
 
 Pour plus d’informations sur l’erreur de ELMAH fonctionnalités de filtrage, reportez-vous à la [section de filtrage des erreurs](https://code.google.com/p/elmah/wiki/ErrorFiltering) dans le [ELMAH wiki](https://code.google.com/p/elmah/w/list).
 

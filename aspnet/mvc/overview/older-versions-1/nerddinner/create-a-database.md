@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: 983f3ffa-08b8-4868-b8c9-aa34593fc683
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/create-a-database
 msc.type: authoredcontent
-ms.openlocfilehash: 48ca2984ca8e4ec5b2bc49952a8718aa26138aea
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 6299e5d306ce59687d91658e36685cc6b3255269
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423700"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415061"
 ---
-<a name="create-a-database"></a>Créer une base de données
-====================
+# <a name="create-a-database"></a>Créer une base de données
+
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Télécharger le PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Il s’agit d’étape 2 a gratuit [« « l’application NerdDinner](introducing-the-nerddinner-tutorial.md) qui présente en détail comment créer un petit mais terminé, l’application web à l’aide d’ASP.NET MVC 1.
 > 

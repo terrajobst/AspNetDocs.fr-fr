@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-cs
-title: Utilisation de plusieurs contrôles de fenêtre contextuelle (C#) | Microsoft Docs
+title: Utilisation de plusieurs contrôles de fenêtre contextuelle (c#) | Microsoft Docs
 author: wenz
 description: L’extendeur PopupControl dans les outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle lorsque n’importe quel autre contrôle est activé. Il est également possible d’utiliser m...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 91511b0b-311d-481f-9e7c-73f07b813b79
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8cf7f929b696240e6805a74fb576ad56738491fa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2d13fbfdb8d2fe66c5ff036060b9289017f79d14
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035416"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421535"
 ---
-<a name="using-multiple-popup-controls-c"></a>Utilisation de plusieurs contrôles de fenêtre contextuelle (C#)
-====================
+# <a name="using-multiple-popup-controls-c"></a>Utilisation de plusieurs contrôles de fenêtre contextuelle (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PopupControl1.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/popupcontrol1CS.pdf)
@@ -49,9 +49,9 @@ La page contient également deux zones de texte. Chaque zone de texte, la fenêt
 Chaque fois que vous cliquez dans un champ de texte, un calendrier apparaît désormais sous le champ, ce qui vous permet de sélectionner une date. (Retour de la date sélectionnée dans les zones de texte sera développée dans un autre didacticiel.)
 
 
-[![Le calendrier s’affiche lorsque l’utilisateur clique dans la zone de texte](using-multiple-popup-controls-cs/_static/image2.png)](using-multiple-popup-controls-cs/_static/image1.png)
+[![TIl calendrier s’affiche lorsque l’utilisateur clique dans la zone de texte](using-multiple-popup-controls-cs/_static/image2.png)](using-multiple-popup-controls-cs/_static/image1.png)
 
 Le calendrier s’affiche lorsque l’utilisateur clique dans la zone de texte ([cliquez pour afficher l’image en taille réelle](using-multiple-popup-controls-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Next](handling-postbacks-from-a-popup-control-with-an-updatepanel-cs.md)
+> [Suivant](handling-postbacks-from-a-popup-control-with-an-updatepanel-cs.md)

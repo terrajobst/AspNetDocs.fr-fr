@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider
-title: Implémentation d’un fournisseur de stockage ASP.NET Identity MySQL personnalisé | Microsoft Docs
+title: Implémentation d’un fournisseur de stockage ASP.NET Identity MySQL personnalisé - ASP.NET 4.x
 author: raquelsa
 description: ASP.NET Identity est un système extensible qui vous permet de créer votre propre fournisseur de stockage et le connecter à votre application sans utiliser de nouveau l’appli...
 ms.author: riande
 ms.date: 05/22/2015
 ms.assetid: 248f5fe7-39ba-40ea-ab1e-71a69b0bd649
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider
 msc.type: authoredcontent
-ms.openlocfilehash: 4f9803f0717245ede73466f4c54c2aa3b7ae3882
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 224fa56a455affcbbdf76eceee5422850415037e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425949"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420768"
 ---
-<a name="implementing-a-custom-mysql-aspnet-identity-storage-provider"></a>Implémentation d’un fournisseur de stockage ASP.NET Identity MySQL personnalisé
-====================
+# <a name="implementing-a-custom-mysql-aspnet-identity-storage-provider"></a>Implémentation d’un fournisseur de stockage ASP.NET Identity MySQL personnalisé
+
 par [Raquel Soares De Almeida](https://github.com/raquelsa), [Suhas Joshi](https://github.com/suhasj), [Tom FitzMacken](https://github.com/tfitzmac)
 
 > ASP.NET Identity est un système extensible qui vous permet de créer votre propre fournisseur de stockage et le connecter à votre application sans utiliser de nouveau l’application. Cette rubrique décrit comment créer un fournisseur de stockage MySQL pour ASP.NET Identity. Pour une vue d’ensemble de la création de fournisseurs de stockage personnalisés, consultez [vue d’ensemble de stockage fournisseurs personnalisés pour ASP.NET Identity](overview-of-custom-storage-providers-for-aspnet-identity.md).

@@ -8,15 +8,15 @@ ms.date: 05/12/2009
 ms.assetid: f47e6224-c2e5-4472-b069-b6c7b6115200
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/htmleditor/how-do-i-use-the-html-editor-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 7bd7c5a604c897ac6dce92123e9e7ae4157d3e0e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8027a77ab3504848a28ce9bdc7779092b28759ce
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037496"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421158"
 ---
-<a name="how-do-i-use-the-html-editor-control-c"></a>Comment utiliser le contrôle de l’éditeur HTML ? (C#)
-====================
+# <a name="how-do-i-use-the-html-editor-control-c"></a>Comment utiliser le contrôle de l’éditeur HTML ? (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
 > HTMLEditor est un contrôle ASP.NET AJAX qui vous permet de facilement créer et modifier le contenu HTML via des boutons dans une barre d’outils.
@@ -25,7 +25,7 @@ by [Microsoft](https://github.com/microsoft)
 L’objectif de ce didacticiel est de vous fournir une vue d’ensemble du contrôle d’éditeur HTML accompagnant les outils de contrôle AJAX. L’éditeur HTML inclut des options pour la modification de la taille de police, en sélectionnant une police, modifier la couleur d’arrière-plan, la modification de la couleur de premier plan, l’ajout de liens, ajout d’images, modification de l’alignement de texte et effectuer les opérations couper, copier et coller des opérations (voir Figure 1).
 
 
-[![L’éditeur HTML](how-do-i-use-the-html-editor-control-cs/_static/image1.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image1.png)
+[![TIl éditeur HTML](how-do-i-use-the-html-editor-control-cs/_static/image1.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image1.png)
 
 **Figure 01**: L’éditeur HTML ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-html-editor-control-cs/_static/image2.png))
 
@@ -33,7 +33,7 @@ L’objectif de ce didacticiel est de vous fournir une vue d’ensemble du contr
 L’éditeur HTML vous permet d’entrer le contenu à l’aide d’un mode de conception, ou vous pouvez entrer directement HTML. Vous avez également fourni avec l’option pour afficher un aperçu de votre contenu HTML (voir Figure 2).
 
 
-[![Conception, HTML et l’aperçu boutons](how-do-i-use-the-html-editor-control-cs/_static/image2.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image3.png)
+[![DCréation, HTML et afficher un aperçu des boutons](how-do-i-use-the-html-editor-control-cs/_static/image2.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image3.png)
 
 **Figure 02**: Conception, HTML et l’aperçu boutons ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-html-editor-control-cs/_static/image4.png))
 
@@ -49,7 +49,7 @@ Vous devez placer le contrôle ScriptManager en haut de la page avant les autres
 Le contrôle de l’éditeur HTML se trouve dans la boîte à outils avec le reste des contrôles AJAX Control Toolkit. Elle se nomme le contrôle de l’éditeur (voir Figure 3).
 
 
-[![Le contrôle de l’éditeur HTML](how-do-i-use-the-html-editor-control-cs/_static/image3.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image5.png)
+[![TIl contrôle d’éditeur HTML](how-do-i-use-the-html-editor-control-cs/_static/image3.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image5.png)
 
 **Figure 03**: Le contrôle de l’éditeur HTML ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-html-editor-control-cs/_static/image6.png))
 
@@ -63,7 +63,7 @@ Une fois que vous faites glisser l’éditeur HTML sur une page, vous pouvez dé
 La page dans le Listing 1 contient un contrôle de l’éditeur HTML, un contrôle de bouton et un contrôle littéral. Lorsque vous cliquez sur le bouton, le contenu de l’éditeur HTML s’affiche dans le contrôle Literal (voir Figure 4).
 
 
-[![Envoi d’un formulaire avec un éditeur HTML](how-do-i-use-the-html-editor-control-cs/_static/image4.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image7.png)
+[![Senvoi d’un formulaire avec un éditeur HTML](how-do-i-use-the-html-editor-control-cs/_static/image4.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image7.png)
 
 **Figure 04**: Envoi d’un formulaire avec un éditeur HTML ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-html-editor-control-cs/_static/image8.png))
 
@@ -75,7 +75,7 @@ La propriété de contenu de l’éditeur HTML est utilisée pour récupérer le
 Vous pouvez personnaliser exactement les boutons s’affichent dans l’éditeur. Par exemple, vous souhaiterez peut-être supprimer l’onglet HTML pour empêcher les utilisateurs de basculer l’éditeur HTML en mode HTML. Ou, vous souhaiterez peut-être supprimer la liste de déroulante de taille de police pour empêcher les utilisateurs de la création de texte trop important dans un forum de message post (voir Figure 5).
 
 
-[![Un éditeur HTML personnalisé](how-do-i-use-the-html-editor-control-cs/_static/image5.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image9.png)
+[![A Éditeur HTML personnalisé](how-do-i-use-the-html-editor-control-cs/_static/image5.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image9.png)
 
 **Figure 05**: A personnalisé éditeur HTML ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-html-editor-control-cs/_static/image10.png))
 
@@ -109,4 +109,4 @@ Par exemple, imaginez que vous créez une application de blog. Dans ce cas, il e
 Dans ce didacticiel, vous ont été fournies avec une vue d’ensemble du contrôle d’éditeur HTML inclus dans les outils de contrôle AJAX. Vous avez appris comment utiliser l’éditeur HTML pour accepter un contenu riche à partir d’un utilisateur et de soumettre le contenu vers le serveur. Nous avons abordé également comment vous pouvez personnaliser les boutons de barre d’outils qui sont affichés dans l’éditeur HTML. Enfin, vous avez appris à éviter les attaques de script entre sites lors de l’utilisation de l’éditeur HTML d’accepter l’entrée potentiellement malveillante.
 
 > [!div class="step-by-step"]
-> [Next](how-do-i-use-the-html-editor-control-vb.md)
+> [Suivant](how-do-i-use-the-html-editor-control-vb.md)

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-batched-data/batch-deleting-cs
-title: Lot de suppression (C#) | Microsoft Docs
+title: Lot de suppression (c#) | Microsoft Docs
 author: rick-anderson
 description: Découvrez comment supprimer des enregistrements de base de données multiples dans une seule opération. Dans la couche d’Interface utilisateur, nous reposent sur un GridView amélioré créé dans une version tut...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/26/2007
 ms.assetid: ac6916d0-a5ab-4218-9760-7ba9e72d258c
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-deleting-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c5b4d3c21fad9000ae50ecb35a5d94d176a135ee
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: da913e08cd007a89b659f87ef30ea15160692c09
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036496"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416946"
 ---
-<a name="batch-deleting-c"></a>Suppression par lots (C#)
-====================
+# <a name="batch-deleting-c"></a>Suppression par lots (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_65_CS.zip) ou [télécharger le PDF](batch-deleting-cs/_static/datatutorial65cs1.pdf)
@@ -31,7 +31,7 @@ Le [didacticiel précédent](batch-updating-cs.md) exploré la création d’un 
 Toute personne ayant utilisé un client de messagerie en ligne est déjà familiarisé avec un des plus courants suppression par lots interfaces : bouton d’une case à cocher de chaque ligne dans une grille avec un correspondant supprimer tous les éléments sélectionnés (voir Figure 1). Ce didacticiel est court au lieu de cela, car nous ve déjà fait tout le travail dans les didacticiels précédents lors de la création de l’interface basée sur le web et une méthode pour supprimer une série d’enregistrements en une seule opération atomique. Dans le [Ajout d’une colonne GridView de cases à cocher](../enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs.md) didacticiel, nous avons créé un GridView avec une colonne de cases à cocher et dans le [encapsulant les Modifications de base de données dans une Transaction](wrapping-database-modifications-within-a-transaction-cs.md) didacticiel, nous avons créé une méthode dans la couche BLL par une transaction pour supprimer un `List<T>` de `ProductID` valeurs. Dans ce didacticiel, nous s’appuient sur et fusion de notre expérience précédente pour créer un exemple de suppression du lot de travail.
 
 
-[![Chaque ligne inclut une case à cocher](batch-deleting-cs/_static/image1.gif)](batch-deleting-cs/_static/image1.png)
+[![ECCA effectué ligne inclut une case à cocher](batch-deleting-cs/_static/image1.gif)](batch-deleting-cs/_static/image1.png)
 
 **Figure 1**: Chaque ligne inclut une case à cocher ([cliquez pour afficher l’image en taille réelle](batch-deleting-cs/_static/image2.png))
 
@@ -41,7 +41,7 @@ Toute personne ayant utilisé un client de messagerie en ligne est déjà famili
 Étant donné que nous avons déjà créé le lot de suppression de l’interface dans le [Ajout d’une colonne GridView de cases à cocher](../enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs.md) didacticiel, nous pouvons simplement le copier à `BatchDelete.aspx` au lieu de sa création à partir de zéro. Commencez par ouvrir le `BatchDelete.aspx` page dans le `BatchData` dossier et le `CheckBoxField.aspx` page dans le `EnhancedGridView` dossier. À partir de la `CheckBoxField.aspx` page, accédez à la vue de Source et copier le balisage entre les `<asp:Content>` balises comme indiqué dans la Figure 2.
 
 
-[![Copiez le balisage déclaratif de CheckBoxField.aspx dans le Presse-papiers](batch-deleting-cs/_static/image2.gif)](batch-deleting-cs/_static/image3.png)
+[![Ccopier le balisage déclaratif de CheckBoxField.aspx dans le Presse-papiers](batch-deleting-cs/_static/image2.gif)](batch-deleting-cs/_static/image3.png)
 
 **Figure 2**: Copiez le balisage déclaratif de `CheckBoxField.aspx` dans le Presse-papiers ([cliquez pour afficher l’image en taille réelle](batch-deleting-cs/_static/image4.png))
 
@@ -54,7 +54,7 @@ Ensuite, accédez à la vue de Source dans `BatchDelete.aspx` et collez le conte
 Après avoir copié sur le balisage déclaratif et le code source, prenez un moment pour tester `BatchDelete.aspx` en l’affichant via un navigateur. Vous devriez voir un GridView répertoriant les dix premiers produits dans un GridView avec chaque ligne indiquant le nom de produit s, la catégorie et le prix, ainsi que d’une case à cocher. Il doit y avoir trois boutons : Vérifie toutes les, tout décocher et supprimer des produits sélectionnés. En cliquant sur le bouton Vérifier tout de sélectionne toutes les cases à cocher, tandis que désélectionner tout Efface toutes les cases à cocher. En cliquant sur Supprimer les produits sélectionnés affiche un message qui répertorie les `ProductID` valeurs des produits sélectionnés, mais ne supprime ne pas réellement les produits.
 
 
-[![L’Interface à partir de CheckBoxField.aspx a été déplacé vers BatchDeleting.aspx](batch-deleting-cs/_static/image3.gif)](batch-deleting-cs/_static/image5.png)
+[![TIl Interface à partir de CheckBoxField.aspx a été déplacé vers BatchDeleting.aspx](batch-deleting-cs/_static/image3.gif)](batch-deleting-cs/_static/image5.png)
 
 **Figure 3**: L’Interface à partir de `CheckBoxField.aspx` a été déplacé vers `BatchDeleting.aspx` ([cliquez pour afficher l’image en taille réelle](batch-deleting-cs/_static/image6.png))
 
@@ -82,12 +82,12 @@ Le code de mise à jour crée un `List<T>` de type `int` (`productIDsToDelete`) 
 Figure 4 illustre le contrôle GridView après qu’un nombre de lignes ont été sélectionné pour suppression. La figure 5 illustre l’écran immédiatement après la suppression de produits sélectionnée a cliqué. Notez que dans la Figure 5 la `ProductID` les valeurs des enregistrements supprimés sont affichées dans l’étiquette située sous le contrôle GridView et les lignes ne sont plus dans le contrôle GridView.
 
 
-[![Les produits sélectionnés seront supprimés.](batch-deleting-cs/_static/image4.gif)](batch-deleting-cs/_static/image7.png)
+[![Til les produits sélectionnés est supprimé](batch-deleting-cs/_static/image4.gif)](batch-deleting-cs/_static/image7.png)
 
 **Figure 4**: Le sélectionné produits seront supprimées ([cliquez pour afficher l’image en taille réelle](batch-deleting-cs/_static/image8.png))
 
 
-[![Les valeurs de ProductID produits supprimés sont répertoriés sous le GridView.](batch-deleting-cs/_static/image5.gif)](batch-deleting-cs/_static/image9.png)
+[![TIl a des valeurs de ProductID des produits supprimés sont répertoriés sous le GridView](batch-deleting-cs/_static/image5.gif)](batch-deleting-cs/_static/image9.png)
 
 **Figure 5**: Les produits supprimés `ProductID` les valeurs sont répertoriées sous le GridView ([cliquez pour afficher l’image en taille réelle](batch-deleting-cs/_static/image10.png))
 

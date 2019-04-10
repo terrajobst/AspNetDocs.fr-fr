@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: ecb004b5-82c0-44fb-bcaf-233fffac6195
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-vb
 msc.type: authoredcontent
-ms.openlocfilehash: a900a074e1507965e7d60e8de4202de57dc6180e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b01913b3ad3291d90bdf9455c3d35bb7b36b3f28
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043246"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415243"
 ---
-<a name="adjusting-the-z-index-of-a-dropshadow-vb"></a>Ajustement de l’index-Z d’un DropShadow (VB)
-====================
+# <a name="adjusting-the-z-index-of-a-dropshadow-vb"></a>Ajustement de l’index-Z d’un DropShadow (VB)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/5/1/6/51652a81-500b-4f6b-88d3-617103e7941e/DropShadow1.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dropshadow1VB.pdf)
@@ -56,12 +56,12 @@ Lorsque vous exécutez ce script, les entrées de menu apparaissent sous le pann
 Ensuite, le `DropShadowExtender` contrôle n’est pas en conflit plus avec le contrôle de Menu.
 
 
-[![Avant : L’entrée de menu n’est pas visible](adjusting-the-z-index-of-a-dropshadow-vb/_static/image2.png)](adjusting-the-z-index-of-a-dropshadow-vb/_static/image1.png)
+[![Bxécuter : L’entrée de menu n’est pas visible](adjusting-the-z-index-of-a-dropshadow-vb/_static/image2.png)](adjusting-the-z-index-of-a-dropshadow-vb/_static/image1.png)
 
 Avant : L’entrée de menu n’est pas visible ([cliquez pour afficher l’image en taille réelle](adjusting-the-z-index-of-a-dropshadow-vb/_static/image3.png))
 
 
-[![Après : L’entrée de menu s’affiche](adjusting-the-z-index-of-a-dropshadow-vb/_static/image5.png)](adjusting-the-z-index-of-a-dropshadow-vb/_static/image4.png)
+[![Arès : L’entrée de menu apparaît](adjusting-the-z-index-of-a-dropshadow-vb/_static/image5.png)](adjusting-the-z-index-of-a-dropshadow-vb/_static/image4.png)
 
 Après : L’entrée de menu s’affiche ([cliquez pour afficher l’image en taille réelle](adjusting-the-z-index-of-a-dropshadow-vb/_static/image6.png))
 

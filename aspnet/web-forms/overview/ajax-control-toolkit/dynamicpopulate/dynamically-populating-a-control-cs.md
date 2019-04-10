@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-cs
-title: Remplissage dynamique d’un contrôle (C#) | Microsoft Docs
+title: Remplissage dynamique d’un contrôle (c#) | Microsoft Docs
 author: wenz
 description: Le contrôle de DynamicPopulate dans ASP.NET AJAX Control Toolkit appelle un service web (ou une méthode de page) et remplit la valeur obtenue dans un contrôle cible sur t...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: e1fec43e-1daf-49d2-b0c7-7f1b930455cc
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1f37a3a41c7b83738f97c0daacd781c52b55abc8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 42c1cd684196c026f1435cba289fc2535187087c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029506"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417297"
 ---
-<a name="dynamically-populating-a-control-c"></a>Remplissage dynamique d’un contrôle (C#)
-====================
+# <a name="dynamically-populating-a-control-c"></a>Remplissage dynamique d’un contrôle (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/d/8/f/d8f2f6f9-1b7c-46ad-9252-e1fc81bdea3e/dynamicpopulate0.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dynamicpopulate0CS.pdf)
@@ -66,9 +66,9 @@ Comme vous pouvez le voir, le contrôle nécessite des informations mais tout ce
 Exécuter la page ASP.NET dans le navigateur, puis cliquez sur le bouton ; Vous recevrez la date actuelle au format de mois-jour-année.
 
 
-[![Un clic sur le bouton récupère la date à partir du serveur](dynamically-populating-a-control-cs/_static/image2.png)](dynamically-populating-a-control-cs/_static/image1.png)
+[![A Cliquez sur le bouton récupère la date à partir du serveur](dynamically-populating-a-control-cs/_static/image2.png)](dynamically-populating-a-control-cs/_static/image1.png)
 
 Un clic sur le bouton récupère la date à partir du serveur ([cliquez pour afficher l’image en taille réelle](dynamically-populating-a-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Next](dynamically-populating-a-control-using-javascript-code-cs.md)
+> [Suivant](dynamically-populating-a-control-using-javascript-code-cs.md)

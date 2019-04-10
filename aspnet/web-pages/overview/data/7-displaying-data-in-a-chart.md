@@ -8,15 +8,15 @@ ms.date: 05/22/2012
 ms.assetid: f889fd46-4dac-4ecb-83d8-60e64c22036e
 msc.legacyurl: /web-pages/overview/data/7-displaying-data-in-a-chart
 msc.type: authoredcontent
-ms.openlocfilehash: 00529355476e88c47ab790121ae77202aa5e7b76
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f97f214abeaeb88634dd10aaebacc0d58e91ab84
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061096"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422458"
 ---
-<a name="displaying-data-in-a-chart-with-aspnet-web-pages-razor"></a>Affichage des données dans un graphique avec les Pages Web ASP.NET (Razor)
-====================
+# <a name="displaying-data-in-a-chart-with-aspnet-web-pages-razor"></a>Affichage des données dans un graphique avec les Pages Web ASP.NET (Razor)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Cet article explique comment utiliser un graphique pour afficher des données dans un site Web ASP.NET Web Pages (Razor) à l’aide de la `Chart` helper.
@@ -42,7 +42,7 @@ Lorsque vous souhaitez afficher vos données sous forme graphique, vous pouvez u
 
 | **Graphique en aires** ![Description : Image du type de graphique en aires](7-displaying-data-in-a-chart/_static/image1.jpg) | **Graphique à barres** ![Description : Image du type de graphique à barres](7-displaying-data-in-a-chart/_static/image2.jpg) |
 | --- | --- |
-| **Histogramme** ![Description : Image de la colonne du type de graphique](7-displaying-data-in-a-chart/_static/image3.jpg) | **Graphique en courbes** ![Description : Image de la ligne du type de graphique](7-displaying-data-in-a-chart/_static/image4.jpg) |
+| **Histogramme** ![Description : Image du type d'histogramme](7-displaying-data-in-a-chart/_static/image3.jpg) | **Graphique en courbes** ![Description : Image du type de graphique en courbes](7-displaying-data-in-a-chart/_static/image4.jpg) |
 | **Graphique à secteurs** ![Description : Image du type de graphique à secteurs](7-displaying-data-in-a-chart/_static/image5.jpg) | **Graphique boursier** ![Description : Image du type de graphique boursier](7-displaying-data-in-a-chart/_static/image6.jpg) |
 
 ### <a name="chart-elements"></a>Éléments de graphique

@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
-title: Vue d’ensemble (C#) des vues ASP.NET MVC | Microsoft Docs
+title: Vue d’ensemble (c#) des vues ASP.NET MVC | Microsoft Docs
 author: StephenWalther
 description: Qu’est une vue de MVC ASP.NET, et en quoi est-il différent d’une page HTML ? Dans ce didacticiel, Stephen Walther présente les vues et montre comment vous pouvez t...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/16/2008
 ms.assetid: 152ab1e5-aec2-4ea7-b8cc-27a24dd9acb8
 msc.legacyurl: /mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a8e64a99549584f150d64d909ac97210257b1147
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b4c35761f9cd44c866242cfe6f4f2d924e81d754
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042966"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421327"
 ---
-<a name="aspnet-mvc-views-overview-c"></a>Vue d’ensemble des vues ASP.NET MVC (C#)
-====================
+# <a name="aspnet-mvc-views-overview-c"></a>Vue d’ensemble des vues ASP.NET MVC (C#)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Qu’est une vue de MVC ASP.NET, et en quoi est-il différent d’une page HTML ? Dans ce didacticiel, Stephen Walther vous présente les vues et montre comment vous pouvez tirer parti des données d’affichage et de programmes d’assistance HTML dans une vue.
@@ -83,7 +83,7 @@ Notez que le corps de la page HTML dans le Listing 2 contient le script suivant�
 
 &lt;% Response.Write(DateTime.Now);%&gt;
 
-Vous utilisez les délimiteurs de script &lt;et %&gt; pour marquer le début et la fin d’un script. Ce script est écrit en C#. Il affiche la date et heure actuelles en appelant la méthode Response.Write () pour afficher le contenu dans le navigateur. Les délimiteurs de script &lt;et %&gt; peut être utilisée pour exécuter une ou plusieurs instructions.
+Vous utilisez les délimiteurs de script &lt;et %&gt; pour marquer le début et la fin d’un script. Ce script est écrit en c#. Il affiche la date et heure actuelles en appelant la méthode Response.Write () pour afficher le contenu dans le navigateur. Les délimiteurs de script &lt;et %&gt; peut être utilisée pour exécuter une ou plusieurs instructions.
 
 Étant donné que vous appelez donc souvent Response.Write (), Microsoft vous offre un raccourci pour appeler la méthode Response.Write (). La vue dans la liste 3 utilise les délimiteurs &lt;% = et %&gt; sous forme de raccourci pour l’appel Response.Write ().
 
@@ -99,12 +99,12 @@ Pour le rendre plus facile d’ajouter du contenu à une vue, vous pouvez tirer 
 
 Par exemple, la vue dans la liste 4 tire parti de trois programmes d’assistance HTML--les programmes d’assistance BeginForm(), TextBox() et Password()--pour générer un compte de connexion forment (voir Figure 1).
 
-**Listing 4 -- \Views\Home\Login.aspx**
+**Liste 4--\Views\Home\Login.aspx**
 
 [!code-aspx[Main](asp-net-mvc-views-overview-cs/samples/sample4.aspx)]
 
 
-[![La boîte de dialogue Nouveau projet](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
+[![Tboîte de dialogue Nouveau projet he](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
 
 **Figure 01**: Un formulaire de connexion standard ([cliquez pour afficher l’image en taille réelle](asp-net-mvc-views-overview-cs/_static/image2.png))
 
@@ -150,4 +150,4 @@ Vous avez également la possibilité de passer des données d’affichage fortem
 Ce didacticiel fournit une brève introduction aux vues ASP.NET MVC, afficher les données et les programmes d’assistance HTML. Dans la première section, vous avez appris à ajouter de nouvelles vues à votre projet. Vous avez appris que vous devez ajouter une vue vers le dossier approprié pour appeler à partir d’un contrôleur spécifique. Ensuite, nous avons abordé le sujet de programmes d’assistance HTML. Vous avez appris comment HTML Helpers permettent de générer facilement du contenu HTML standard. Enfin, vous avez appris à tirer parti des données d’affichage pour passer des données à partir d’un contrôleur à une vue.
 
 > [!div class="step-by-step"]
-> [Next](creating-custom-html-helpers-cs.md)
+> [Suivant](creating-custom-html-helpers-cs.md)

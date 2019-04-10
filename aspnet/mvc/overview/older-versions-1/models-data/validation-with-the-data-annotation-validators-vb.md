@@ -8,15 +8,15 @@ ms.date: 05/29/2009
 ms.assetid: 0d23ff2b-f2ec-434a-be3b-1180beeccba3
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validation-with-the-data-annotation-validators-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 6bfe11a40bbdf0cd9dfe4d81d9c7436a5adb9491
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 6893d1f2445452b1d802b89027b09d8294bdc5b7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58420684"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422835"
 ---
-<a name="validation-with-the-data-annotation-validators-vb"></a>Validation avec les validateurs d’annotation de données (VB)
-====================
+# <a name="validation-with-the-data-annotation-validators-vb"></a>Validation avec les validateurs d’annotation de données (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Tirez parti du Binder de modèle de Annotation de données pour effectuer la validation au sein d’une application ASP.NET MVC. Découvrez comment utiliser les différents types d’attributs de validateur et de les manipuler dans Microsoft Entity Framework.

@@ -8,15 +8,15 @@ ms.date: 06/11/2014
 ms.assetid: 43a6cce7-a3ef-42aa-ad06-90d36d49f098
 msc.legacyurl: /web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: e1bb1aa120ced95db7674eae1831f2a2c7356fc0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9fa71bec14a2ba4d14f01661ad2bf41975f4f55e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413800"
 ---
-<a name="unit-testing-controllers-in-aspnet-web-api-2"></a>Tests unitaires des contrôleurs dans ASP.NET Web API 2
-====================
+# <a name="unit-testing-controllers-in-aspnet-web-api-2"></a>Tests unitaires des contrôleurs dans ASP.NET Web API 2
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 > Cette rubrique décrit certaines techniques spécifiques pour les tests unitaires des contrôleurs dans Web API 2. Avant de lire cette rubrique, vous pouvez souhaiter lire le didacticiel [Unit Test API Web ASP.NET 2](unit-testing-with-aspnet-web-api.md), qui montre comment ajouter un projet de test unitaire à votre solution.

@@ -8,15 +8,15 @@ ms.date: 02/09/2007
 ms.assetid: c2a80ef9-3dc4-4051-8103-495ddf1b8a46
 msc.legacyurl: /web-forms/videos/vs-2005/introduction-to-load-testing-web-applications-with-team-system
 msc.type: video
-ms.openlocfilehash: 80cdacade368e4daa9bfeef02f08794aa51973e3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a25e98a3486a443f878c1b721e748d13a9d5ad90
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038656"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413592"
 ---
-<a name="introduction-to-load-testing-web-applications-with-team-system"></a>Introduction à charger le test des Applications Web avec Team System
-====================
+# <a name="introduction-to-load-testing-web-applications-with-team-system"></a>Introduction à charger le test des Applications Web avec Team System
+
 par Eric Lee
 
 Dans cette vidéo, nous voyons comment vous pouvez charger test vos applications web à l’aide des fonctionnalités de Visual Studio Team System de test de charge.

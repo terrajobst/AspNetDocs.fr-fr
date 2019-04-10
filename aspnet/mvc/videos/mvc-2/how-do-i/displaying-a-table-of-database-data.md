@@ -8,15 +8,15 @@ ms.date: 08/20/2008
 ms.assetid: 00a12df9-1f89-4fc5-9d43-19a8d5b80392
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i/displaying-a-table-of-database-data
 msc.type: video
-ms.openlocfilehash: baf7a037b5315cc15f8d0fb78e509bc675863f18
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5b26ef9ddb1461d01f7e6862f1cd5605fee532a8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027486"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421717"
 ---
-<a name="displaying-a-table-of-database-data"></a>Affichage d’une table de données de la base de données
-====================
+# <a name="displaying-a-table-of-database-data"></a>Affichage d’une table de données de la base de données
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 Vous voulez afficher un ensemble d’enregistrements de base de données dans une vue ASP.NET MVC ? Découvrez deux méthodes d’affichage des enregistrements dans une table HTML. Vous allez apprendre à exécuter l’ensemble de la mise en forme en ligne. Vous allez également apprendre à créer un modèle avec un contrôle utilisateur de ASP.NET MVC.

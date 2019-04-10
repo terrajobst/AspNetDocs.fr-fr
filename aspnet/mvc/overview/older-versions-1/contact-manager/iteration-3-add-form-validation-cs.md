@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-cs
-title: 'Itération #3 : ajouter une validation de formulaire (C#) | Microsoft Docs'
+title: 'Itération #3 : ajouter une validation de formulaire (c#) | Microsoft Docs'
 author: microsoft
 description: Dans la troisième itération, nous ajouter la validation de formulaire de base. Nous empêcher des personnes à partir de l’envoi d’un formulaire sans compléter les champs obligatoires. Nous avons également valider emai...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 51a0d175-913b-43d8-95e3-840fb96ad1a9
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4115b3898415d63ffb122f3d0fea93022f2baa02
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 973878ef0afd62035b3fc840371e6c6223c8951c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030416"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413787"
 ---
-<a name="iteration-3--add-form-validation-c"></a>Itération #3 : ajouter une validation de formulaire (C#)
-====================
+# <a name="iteration-3--add-form-validation-c"></a>Itération #3 : ajouter une validation de formulaire (c#)
+
 by [Microsoft](https://github.com/microsoft)
 
 [Télécharger le Code](iteration-3-add-form-validation-cs/_static/contactmanager_3_cs1.zip)
@@ -24,7 +24,7 @@ by [Microsoft](https://github.com/microsoft)
 > Dans la troisième itération, nous ajouter la validation de formulaire de base. Nous empêcher des personnes à partir de l’envoi d’un formulaire sans compléter les champs obligatoires. Nous avons également valider que les adresses de messagerie et les numéros de téléphone.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (C#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (c#)
   
 
 Dans cette série de didacticiels, nous créer une application de gestion des contacts entière à partir du début à la fin. L’application Gestionnaire de Contact permet vous permettent de stocker les informations de contact (noms, numéros de téléphone et adresses de messagerie) pour obtenir la liste de personnes.
@@ -51,7 +51,7 @@ Nous générer l’application sur de multiples itérations. Avec chaque itérat
 Dans ce deuxième itération de l’application Gestionnaire de contacts, nous ajouter la validation de formulaire de base. Nous empêcher des personnes de soumettre un contact sans entrer de valeurs pour les champs obligatoires. Nous avons également valider que les numéros de téléphone et adresses de messagerie (voir Figure 1).
 
 
-[![La boîte de dialogue Nouveau projet](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
+[![Tboîte de dialogue Nouveau projet he](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
 
 **Figure 01**: Un formulaire avec la validation ([cliquez pour afficher l’image en taille réelle](iteration-3-add-form-validation-cs/_static/image2.png))
 
@@ -66,7 +66,7 @@ Dans cette itération, pour simplifier les choses, nous écrire tout le code de 
 
 Permettent de commencer par ajouter la logique de validation à la vue Create s. Heureusement, étant donné que nous avons généré la vue de créer avec Visual Studio, la vue Create contient déjà toute la logique d’interface utilisateur nécessaires pour afficher les messages de validation. La vue de créer est contenue dans le Listing 1.
 
-**Listing 1 - \Views\Contact\Create.aspx**
+**Liste 1 - \Views\Contact\Create.aspx**
 
 [!code-aspx[Main](iteration-3-add-form-validation-cs/samples/sample1.aspx)]
 

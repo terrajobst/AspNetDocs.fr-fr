@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: a7fe5de5-a964-4780-ae5e-70821dfb50a0
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-vb
 msc.type: authoredcontent
-ms.openlocfilehash: bfce413cd45daab62a247d596d9b51cb82cc7f97
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4254b7e1f2086a9cc5fbc1e8c2a4f7e2e3d2925e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416569"
 ---
-<a name="changing-an-animation-using-client-side-code-vb"></a>Changement d’une animation avec du code côté client (VB)
-====================
+# <a name="changing-an-animation-using-client-side-code-vb"></a>Changement d’une animation avec du code côté client (VB)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation11.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation11VB.pdf)
@@ -71,7 +71,7 @@ Le code JavaScript suivant assigne cette descripting JSON pour le `OnClick` anim
 [!code-html[Main](changing-an-animation-using-client-side-code-vb/samples/sample7.html)]
 
 
-[![L’animation s’exécute immédiatement, sans un clic de souris (et avec très peu de balisage)](changing-an-animation-using-client-side-code-vb/_static/image2.png)](changing-an-animation-using-client-side-code-vb/_static/image1.png)
+[![Tanimation de he s’exécute immédiatement, sans un clic de souris (et avec très peu de balisage)](changing-an-animation-using-client-side-code-vb/_static/image2.png)](changing-an-animation-using-client-side-code-vb/_static/image1.png)
 
 L’animation s’exécute immédiatement, sans un clic de souris (et avec très peu de balisage) ([cliquez pour afficher l’image en taille réelle](changing-an-animation-using-client-side-code-vb/_static/image3.png))
 

@@ -8,15 +8,15 @@ ms.date: 07/21/2010
 ms.assetid: 94ea1a70-a9bc-4241-8f36-08366d64bab9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3
 msc.type: authoredcontent
-ms.openlocfilehash: f55b29a271dbdb72d3e2249ed74517b77d78cf5e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: badae58d5b43fb2674f4918f54f999ff48d0b5b0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034846"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418012"
 ---
-<a name="part-3-layout-and-category-menu"></a>Partie 3 : Mise en page et menu Catégorie
-====================
+# <a name="part-3-layout-and-category-menu"></a>Partie 3 : Mise en page et menu Catégorie
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 > Tailspin Spyworks montre comment extrêmement simple est de créer des applications puissantes et évolutives pour la plate-forme .NET. Il montre comment utiliser les nouvelles fonctionnalités dans ASP.NET 4 pour créer un magasin en ligne, y compris les achats, extraction et administration.
@@ -66,7 +66,7 @@ Notez l’instruction « Eval » : &lt;% # Eval("CategoryName") %&gt;
 
 La syntaxe ASP.NET &lt;% # %&gt; est une convention de raccourci qui indique à l’exécution pour exécuter tout ce qui est contenu dans et générer les résultats « en ligne ».
 
-L’instruction Eval("CategoryName") indique que, pour l’entrée actuelle dans la collection liée d’éléments de données, extraire la valeur de noms d’élément de modèle d’entité « CatagoryName ». Il s’agit d’une syntaxe concise pour une fonctionnalité très puissante.
+L’instruction Eval("CategoryName") indique que, pour l’entrée actuelle dans la collection liée d’éléments de données, extraire la valeur de noms d’élément de modèle d’entité « CategoryName ». Il s’agit d’une syntaxe concise pour une fonctionnalité très puissante.
 
 Permet d’exécuter l’application maintenant.
 

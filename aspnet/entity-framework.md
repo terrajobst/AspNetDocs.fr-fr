@@ -9,15 +9,15 @@ ms.date: 03/12/2010
 ms.technology: aspnet
 msc.legacyurl: /entity-framework
 msc.type: content
-ms.openlocfilehash: 4f18afb9df3d486845d33735d045ee26f59b3f97
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bcbd98f88b1e7e292961326061404ce91d157b32
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045326"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414554"
 ---
-<a name="entity-framework"></a>Entity Framework
-====================
+# <a name="entity-framework"></a>Entity Framework
+
 Entity Framework (EF) est un mappeur objet-relationnel qui permet aux développeurs .NET de travailler avec des données relationnelles à l’aide des objets spécifiques au domaine. Du coup, ils n’ont plus à écrire une grande partie du code d’accès aux données qu’ils doivent généralement écrire.
 
 
@@ -31,4 +31,4 @@ Utiliser Entity Framework avec ASP.NET
 
 - [Didacticiels de formulaires Web](web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
 - [Didacticiels MVC](mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)
-- [Exemple d’application](https://webpifeed.blob.core.windows.net/webpifeed/Partners/ASP.NET%20MVC%20Application%20Using%20Entity%20Framework%20Code%20First.zip)
+- [Exemple d’Application](https://webpifeed.blob.core.windows.net/webpifeed/Partners/ASP.NET%20MVC%20Application%20Using%20Entity%20Framework%20Code%20First.zip)

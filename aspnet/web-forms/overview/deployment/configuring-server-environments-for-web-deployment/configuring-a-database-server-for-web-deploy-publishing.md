@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: e7c447f9-eddf-4bbe-9f18-3326d965d093
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-database-server-for-web-deploy-publishing
 msc.type: authoredcontent
-ms.openlocfilehash: 0f8639efcfcd02c9fdb65ce3ed25272965be8aa8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2cd99e23904276e89cf043a2332ad07c0f01716d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031696"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415347"
 ---
-<a name="configuring-a-database-server-for-web-deploy-publishing"></a>Configuration d’un serveur de base de données pour la publication Web Deploy
-====================
+# <a name="configuring-a-database-server-for-web-deploy-publishing"></a>Configuration d’un serveur de base de données pour la publication Web Deploy
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit comment configurer un serveur de base de données SQL Server 2008 R2 pour prendre en charge la publication et déploiement web.
 > 

@@ -1,25 +1,26 @@
 ---
 uid: web-api/overview/error-handling/web-api-global-error-handling
-title: Global Gestion des erreurs dans ASP.NET Web API 2 | Microsoft Docs
+title: Global Gestion des erreurs dans ASP.NET Web API 2 - ASP.NET 4.x
 author: davidmatson
-description: ''
+description: Une vue d’ensemble globale de gestion d’erreurs dans ASP.NET Web API 2 pour ASP.NET 4.x.
 ms.author: riande
 ms.date: 02/03/2014
+ms.custom: seoapril2019
 ms.assetid: bffd7863-f63b-4b23-a13c-372b5492e9fb
 msc.legacyurl: /web-api/overview/error-handling/web-api-global-error-handling
 msc.type: authoredcontent
-ms.openlocfilehash: 3e371760d2b34eb2be492e6ebbb33a5f9f7eff10
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7d9f4fb9909671d7c4c8ee2aa9285b0186c4b125
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058976"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414372"
 ---
-<a name="global-error-handling-in-aspnet-web-api-2"></a>Global Gestion des erreurs dans ASP.NET Web API 2
-====================
+# <a name="global-error-handling-in-aspnet-web-api-2"></a>Global Gestion des erreurs dans ASP.NET Web API 2
+
 par [David Matson](https://github.com/davidmatson), [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
-Aujourd'hui il n’existe aucun moyen facile dans l’API Web pour vous connecter ou gérer les erreurs dans le monde entier. Certaines exceptions non gérées peuvent être traitées via [filtres d’exception](exception-handling.md), mais il existe un nombre de cas qui ne peut pas gérer les filtres d’exception. Exemple :
+Cette rubrique fournit une vue d’ensemble globale de gestion d’erreurs dans ASP.NET Web API 2 pour ASP.NET 4.x. Aujourd'hui il n’existe aucun moyen facile dans l’API Web pour vous connecter ou gérer les erreurs dans le monde entier. Certaines exceptions non gérées peuvent être traitées via [filtres d’exception](exception-handling.md), mais il existe un nombre de cas qui ne peut pas gérer les filtres d’exception. Exemple :
 
 1. Exceptions levées à partir des constructeurs de contrôleur.
 2. Exceptions levées à partir des gestionnaires de messages.

@@ -8,15 +8,15 @@ ms.date: 02/16/2009
 ms.assetid: b7cce113-c82c-45bf-b97b-357e5d9f7f56
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-route-constraint-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0a8e540a00d852d5b710bfdbf63a68f6e6d280ee
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8c7b2274ff396f222382488ed877599e86ae5b99
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032186"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412682"
 ---
-<a name="creating-a-route-constraint-vb"></a>Création d’une contrainte de route (VB)
-====================
+# <a name="creating-a-route-constraint-vb"></a>Création d’une contrainte de route (VB)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Dans ce didacticiel, Stephen Walther montre comment vous pouvez contrôler la façon dont le navigateur demande itinéraires de correspondance en créant des contraintes de routage avec des expressions régulières.
@@ -51,7 +51,7 @@ Malheureusement, l’itinéraire correspond également les URL suivantes :
 Étant donné que l’action Details() attend un paramètre de type entier, qui effectue une requête qui contient l’autre chose qu’une valeur entière provoque une erreur. Par exemple, si vous tapez l’URL /Product/apple dans votre navigateur, vous obtiendrez la page d’erreur dans la Figure 1.
 
 
-[![La boîte de dialogue Nouveau projet](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
+[![Tboîte de dialogue Nouveau projet he](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
 
 **Figure 01**: Voir une page explode ([cliquez pour afficher l’image en taille réelle](creating-a-route-constraint-vb/_static/image2.png))
 

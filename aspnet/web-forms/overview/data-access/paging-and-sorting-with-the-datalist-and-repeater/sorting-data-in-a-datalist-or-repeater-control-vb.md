@@ -8,15 +8,15 @@ ms.date: 11/13/2006
 ms.assetid: 97c13898-0741-45f9-b3fa-7540ab1679e6
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 58d4c14e2b888f933457fe421235499943354182
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 844b05f2b046d2c865805150b6ddc5b9c2ebb658
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422921"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414151"
 ---
-<a name="sorting-data-in-a-datalist-or-repeater-control-vb"></a>Tri des données dans un contrôle DataList ou Repeater (VB)
-====================
+# <a name="sorting-data-in-a-datalist-or-repeater-control-vb"></a>Tri des données dans un contrôle DataList ou Repeater (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_45_VB.exe) ou [télécharger le PDF](sorting-data-in-a-datalist-or-repeater-control-vb/_static/datatutorial45vb1.pdf)
@@ -56,7 +56,7 @@ Avant de nous soucier d’implémenter les fonctionnalités associées au tri, p
 **Figure 1**: Créer un ObjectDataSource et configurez-le pour utiliser le `GetProductsAsPagedDataSource()` (méthode) ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image3.png))
 
 
-[![Définir les listes de liste déroulante dans la mise à jour, insertion et supprimer des onglets à (None)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image5.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image4.png)
+[![Set les listes déroulantes dans les onglets UPDATE, INSERT et DELETE (None)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image5.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image4.png)
 
 **Figure 2**: Définir les listes de liste déroulante dans la mise à jour, insertion et supprimer des onglets à (None) ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image6.png))
 
@@ -71,7 +71,7 @@ Après avoir ajouté le `ItemTemplate`, le balisage déclaratif s Repeater et Ob
 Figure 3 illustre cette page lorsqu’ils sont affichés via un navigateur.
 
 
-[![Chaque produit s, nom de fournisseur et la catégorie s’affiche.](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image8.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image7.png)
+[![ECCA s, nom de fournisseur et la catégorie de produit s’affiche](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image8.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image7.png)
 
 **Figure 3**: Chaque nom de produit, le fournisseur et la catégorie s’affiche ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image9.png))
 
@@ -90,7 +90,7 @@ Le *sortExpression* valeur doit être attribuée le nom du champ de données pou
 Continuez et essayez d’autres valeurs codées en dur pour *sortExpression* et les résultats des tests dans un navigateur. Comme illustré dans la Figure 4, lorsque vous utilisez DESC ProductName comme le *sortExpression*, les produits sont triés par leur nom dans l’ordre alphabétique inverse.
 
 
-[![Les produits sont triés par leur nom dans l’ordre alphabétique inverse](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image11.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image10.png)
+[![TIl produits sont triés par leur nom dans l’ordre alphabétique inverse](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image11.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image10.png)
 
 **Figure 4**: Les produits sont triés par leur nom dans l’ordre alphabétique inverse ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image12.png))
 
@@ -124,12 +124,12 @@ Avec l’objet DropDownList de tri est terminée, nous devons ensuite mettre à 
 À ce stade, lors de la visite de tout d’abord la page, les produits sont initialement triés par le `ProductName` champ de données, tel qu’il s le `SortBy` `ListItem` sélectionné par défaut (voir Figure 6). En sélectionnant une autre option comme catégorie de tri et en cliquant sur Actualiser pour provoquer une publication (postback) et retrier les données par le nom de catégorie, comme le montre la Figure 7.
 
 
-[![Les produits sont initialement triés par leur nom](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image15.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image14.png)
+[![THE produits sont initialement triés par leur nom](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image15.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image14.png)
 
 **Figure 6**: Les produits sont initialement triés par leur nom ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image16.png))
 
 
-[![Les produits sont maintenant triés par catégorie](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image18.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image17.png)
+[![THE produits sont maintenant triés par catégorie](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image18.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image17.png)
 
 **Figure 7**: Les produits sont maintenant triés par catégorie ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image19.png))
 
@@ -151,7 +151,7 @@ Exemples de futures de ce didacticiel Explorez comment conserver les détails de
 Dans le [didacticiel précédent](paging-report-data-in-a-datalist-or-repeater-control-vb.md) nous avons examiné comment implémenter la pagination par défaut avec une DataList. Permettent d’étendre cet exemple précédent afin d’inclure la possibilité de trier les données paginées s. Commencez par ouvrir le `SortingWithDefaultPaging.aspx` et `Paging.aspx` des pages dans le `PagingSortingDataListRepeater` dossier. À partir de la `Paging.aspx` page, cliquez sur le bouton de la Source pour afficher le balisage déclaratif page s. Copiez le texte sélectionné (voir Figure 8) et collez-le dans le balisage déclaratif de `SortingWithDefaultPaging.aspx` entre le `<asp:Content>` balises.
 
 
-[![Répliquer le balisage déclaratif dans le &lt;asp : Content&gt; balises de Paging.aspx à SortingWithDefaultPaging.aspx](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image21.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image20.png)
+[![RDupliquer le balisage déclaratif dans le &lt;asp : Content&gt; balises de Paging.aspx à SortingWithDefaultPaging.aspx](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image21.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image20.png)
 
 **Figure 8**: Répliquer le balisage déclaratif dans le `<asp:Content>` balises à partir de `Paging.aspx` à `SortingWithDefaultPaging.aspx` ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image22.png))
 
@@ -185,7 +185,7 @@ Après ces modifications, le balisage déclaratif de s ObjectDataSource doit res
 À ce stade, le `SortingWithDefaultPaging.aspx` page triera ses résultats par ordre alphabétique par nom de produit (voir Figure 9). C’est pourquoi, par défaut, une valeur de ProductName est passée en tant que le `GetProductsSortedAsPagedDataSource` méthode s *sortExpression* paramètre.
 
 
-[![Par défaut, les résultats sont triés par nom de produit](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image24.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image23.png)
+[![Bpar défaut de y, les résultats sont triés par nom de produit](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image24.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image23.png)
 
 **Figure 9**: Par défaut, les résultats sont triés par `ProductName` ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image25.png))
 
@@ -214,12 +214,12 @@ Ensuite, créez un `Click` pour chaque gestionnaire d’événements. Les gestio
 Lors de la première visite la page, les données sont triées par ordre alphabétique par nom de produit (voir la Figure 9). Cliquez sur le bouton suivant pour passer à la deuxième page de données, puis cliquez sur le tri par un bouton de la catégorie. Cela nous ramène à la première page de données, triées par nom de catégorie (voir Figure 10). De même, en cliquant sur le tri par un bouton de fournisseur trie les données par le fournisseur à partir de la première page de données. Le choix de tri est mémorisé comme les données sont paginées par le biais. Figure 11 illustre la page après le tri par catégorie et ensuite passer à la page treizième de données.
 
 
-[![Les produits sont triées par catégorie](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image27.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image26.png)
+[![THE produits sont triées par catégorie](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image27.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image26.png)
 
 **Figure 10**: Les produits sont triées par catégorie ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image28.png))
 
 
-[![L’Expression de tri est mémorisée lorsque la pagination via le données](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image30.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image29.png)
+[![TIl Expression de tri est mémorisée lorsque la pagination via le données](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image30.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image29.png)
 
 **Figure 11**: L’Expression de tri est mémorisée lorsque la pagination via le données ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image31.png))
 
@@ -237,7 +237,7 @@ Ces méthodes peuvent être utilisées pour page efficacement et de tri des donn
 Ouvrir le `SortingWithCustomPaging.aspx` page dans le `PagingSortingDataListRepeater` dossier et ajoutez un répéteur à la page, le paramètre son `ID` propriété `Products`. À partir de la balise active Repeater s, créer un nouveau ObjectDataSource nommé `ProductsDataSource`. Configurez-le pour sélectionner ses données à partir de la `ProductsBLL` classe s `GetProductsPaged` (méthode).
 
 
-[![Configurer pour utiliser la méthode de GetProductsPaged ProductsBLL classe s ObjectDataSource](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image33.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image32.png)
+[![Cconfiguration de l’ObjectDataSource d’utiliser la classe ProductsBLL s GetProductsPaged méthode](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image33.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image32.png)
 
 **Figure 12**: Configurer l’ObjectDataSource à utiliser le `ProductsBLL` classe s `GetProductsPaged` (méthode) ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image34.png))
 
@@ -245,7 +245,7 @@ Ouvrir le `SortingWithCustomPaging.aspx` page dans le `PagingSortingDataListRepe
 Définir les listes déroulantes dans la mise à jour, insertion et supprimer des onglets à (None) et puis cliquez sur le bouton suivant. L’Assistant Configurer la Source de données invite désormais l’utilisateur pour les sources de la `GetProductsPaged` méthode s *startRowIndex* et *maximumRows* paramètres d’entrée. En réalité, ces paramètres d’entrée sont ignorées. Au lieu de cela, le *startRowIndex* et *maximumRows* valeurs sont transmises dans les `Arguments` propriété dans le s ObjectDataSource `Selecting` Gestionnaire d’événements, tout comme la façon dont nous avons spécifié le *sortExpression* dans cette démonstration premier didacticiel s. Par conséquent, laissez le paramètre source listes déroulantes dans l’Assistant définie sur None.
 
 
-[![Conservez le paramètre Sources None](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image36.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image35.png)
+[![Laisser le paramètre Sources valeur None](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image36.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image35.png)
 
 **Figure 13**: Laissez le paramètre Sources défini sur None ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image37.png))
 
@@ -267,7 +267,7 @@ Prenez un moment pour visiter la page via un navigateur et notez qu’aucun enre
 Avec cette modification, la page, lorsqu’ils sont affichés via un navigateur, affiche les cinq premiers produits.
 
 
-[![Les cinq premiers enregistrements sont affichés.](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image39.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image38.png)
+[![THE première cinq enregistrements sont affichés](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image39.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image38.png)
 
 **Figure 14**: Les cinq premiers enregistrements sont affichés ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image40.png))
 
@@ -313,17 +313,17 @@ Enfin, nous devons désactiver les boutons de premier et précédent dans l’in
 Après avoir ajouté ces `Click` gestionnaires d’événements et le code pour activer ou désactiver les éléments d’interface de pagination en fonction de l’index de ligne de début actuelle, la page de test dans un navigateur. Lorsque la Figure 15 illustre, lors de la première visite la page de la première et les boutons précédent sont désactivées. Clic sur suivant montre la deuxième page de données, tandis qu’en cliquant sur la dernière affiche la dernière page (voir les Figures 16 et 17). Lors de l’affichage de la dernière page de données, le suivant et le dernier boutons sont désactivés.
 
 
-[![Les boutons Précédent et dernière sont désactivées lors de l’affichage de la première Page de produits](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image42.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image41.png)
+[![TIl précédent et dernier boutons sont désactivées lors de l’affichage de la première Page de produits](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image42.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image41.png)
 
 **Figure 15**: Les boutons Précédent et dernière sont désactivées lors de l’affichage de la première Page de produits ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image43.png))
 
 
-[![La deuxième Page de produits sont Dispalyed](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image45.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image44.png)
+[![TIl deuxième Page de produits sont affichés](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image45.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image44.png)
 
-**Figure 16**: La deuxième Page de produits sont Dispalyed ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image46.png))
+**Figure 16**: La deuxième Page de produits sont affichés ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image46.png))
 
 
-[![En cliquant sur la dernière affiche la dernière Page de données](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image48.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image47.png)
+[![Ccliquant sur dernière affiche la Page finale de données](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image48.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image47.png)
 
 **Figure 17**: En cliquant sur la dernière affiche la Page de données finale ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image49.png))
 
@@ -366,7 +366,7 @@ Créer `Click` gestionnaires d’événements pour ces trois contrôles de bouto
 S résume-t-elle est ! Pendant que vous rencontrez un nombre d’étapes de la pagination personnalisée et le tri implémenté, les étapes ont été très similaires à celles nécessaires pour la pagination par défaut. Figure 18 montre les produits lors de l’affichage de la dernière page de données triés par catégorie.
 
 
-[![La dernière Page de données, trié par catégorie, s’affiche.](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image51.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image50.png)
+[![TIl dernière Page de données, trié par catégorie, s’affiche.](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image51.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image50.png)
 
 **Figure 18**: La dernière Page de données, trié par catégorie, s’affiche ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image52.png))
 

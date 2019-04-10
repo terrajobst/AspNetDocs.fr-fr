@@ -8,15 +8,15 @@ ms.date: 02/13/2014
 ms.assetid: 0acfec5a-48f2-4766-a801-a0f426966f0a
 msc.legacyurl: /web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio
 msc.type: authoredcontent
-ms.openlocfilehash: 5b8df17ec1021d133579e23cb4f5b0d0f67d4c7c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6d25eb99f87c4c3d2c96e021e79a13c90da4a035
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058316"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414489"
 ---
-<a name="programming-aspnet-web-pages-razor-using-visual-studio"></a>Programmation de Pages Web ASP.NET (Razor) à l’aide de Visual Studio
-====================
+# <a name="programming-aspnet-web-pages-razor-using-visual-studio"></a>Programmation de Pages Web ASP.NET (Razor) à l’aide de Visual Studio
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Cet article explique comment vous pouvez utiliser Visual Studio ou Visual Web Developer Express pour le programme des sites Web ASP.NET Web Pages (Razor).
@@ -58,8 +58,8 @@ Le tableau suivant récapitule la prise en charge pour les Pages Web ASP.NET dan
 
 |  | Visual Studio 2010 | Visual Studio 2012 | Visual Studio 2013 |
 | --- | --- | --- | --- |
-| **ASP.NET Web Pages 2** | Installer ASP.NET MVC 4 | (Inclus) | (Inclus) |
-| **Pages Web ASP.NET 3** |  | Mise à jour à ASP.NET Web Pages NuGet via 3 | (Inclus) |
+| **Pages web ASP.NET 2** | Installer ASP.NET MVC 4 | (Inclus) | (Inclus) |
+| **Pages web ASP.NET 3** |  | Mise à jour à ASP.NET Web Pages NuGet via 3 | (Inclus) |
 
 Pour travailler avec Visual Studio 2010, consultez [prise en charge pour les Pages Web ASP.NET dans Visual Studio 2010 installation](#vs2010support).
 
@@ -79,7 +79,7 @@ Pour créer un site Web ASP.NET Razor dans Visual Studio :
 2. Dans le **fichier** menu, cliquez sur **nouveau Site Web**.
 
     ![créer un nouveau site web](program-asp-net-web-pages-in-visual-studio/_static/image2.png)
-3. Dans le **nouveau Site Web** boîte de dialogue, sélectionnez la langue à utiliser (Visual C# ou Visual Basic).
+3. Dans le **nouveau Site Web** boîte de dialogue, sélectionnez la langue à utiliser (Visual c# ou Visual Basic).
 4. Sélectionnez le **Site de Web ASP.NET (Razor)** modèle.
 
     ![site de Razor](program-asp-net-web-pages-in-visual-studio/_static/image3.png)
@@ -95,7 +95,7 @@ Maintenant que vous avez créé un site, vous pouvez voir le fonctionnement d’
 2. Après le `<h3>` balises dans la page, tapez `@ServerInfo.` (y compris le point). Notez comment IntelliSense affiche les méthodes disponibles pour le `ServerInfo` helper dans une liste déroulante.
 
     ![intellisense](program-asp-net-web-pages-in-visual-studio/_static/image4.png)
-3. Sélectionnez le `GetHtml` méthode à partir de la liste et appuyez sur ENTRÉE. IntelliSense remplit automatiquement la méthode. (Comme avec n’importe quelle méthode en C#, vous devez ajouter `()` caractères après la méthode.) Le code complet de le `GetHtml` méthode ressemble à l’exemple suivant :
+3. Sélectionnez le `GetHtml` méthode à partir de la liste et appuyez sur ENTRÉE. IntelliSense remplit automatiquement la méthode. (Comme avec n’importe quelle méthode en c#, vous devez ajouter `()` caractères après la méthode.) Le code complet de le `GetHtml` méthode ressemble à l’exemple suivant :
 
     [!code-cshtml[Main](program-asp-net-web-pages-in-visual-studio/samples/sample1.cshtml)]
 4. Appuyez sur Ctrl + F5 pour exécuter la page. Voici à quoi ressemble la page lorsque affiché dans un navigateur :

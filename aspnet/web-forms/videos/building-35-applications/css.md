@@ -8,15 +8,15 @@ ms.date: 04/30/2009
 ms.assetid: 50a55e3b-3f5c-429b-baf9-730221e9ef4c
 msc.legacyurl: /web-forms/videos/building-35-applications/css
 msc.type: video
-ms.openlocfilehash: f11d3a72db7adc376cf1213eba1f1a820471305f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 04cea82af810f08e1d425fcbf3d3c2639fbc3775
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058416"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412045"
 ---
-<a name="css"></a>CSS
-====================
+# <a name="css"></a>CSS
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Feuilles de Style en cascade font partie intégrante de développement web moderne et Visual Web Developer 2008 inclut une collection de CSS puissants outils pour faciliter la création de. Dans cette vidéo Découvrez de VWD éditeur CSS, générateur, Manager et IntelliSense.

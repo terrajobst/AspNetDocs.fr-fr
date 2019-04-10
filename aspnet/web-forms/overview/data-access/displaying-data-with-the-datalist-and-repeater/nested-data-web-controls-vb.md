@@ -8,15 +8,15 @@ ms.date: 09/13/2006
 ms.assetid: 8b7fcf7b-722b-498d-a4e4-7c93701e0c95
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/nested-data-web-controls-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 5e0807f6db3ad4ef9377843d60824e6cd43dd245
-ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
+ms.openlocfilehash: 0d0aa2c52df284bae48907d0c0c1e5d4587c1b9e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58440376"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421418"
 ---
-<a name="nested-data-web-controls-vb"></a>Contrôles web de données imbriquées (VB)
-====================
+# <a name="nested-data-web-controls-vb"></a>Contrôles web de données imbriquées (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_32_VB.exe) ou [télécharger le PDF](nested-data-web-controls-vb/_static/datatutorial32vb1.pdf)
@@ -35,7 +35,7 @@ Modèles peuvent également contenir d’autres contrôles Web de données. Autr
 Dans ce didacticiel, nous explorerons comment utiliser un répéteur imbriquée dans une autre Repeater. Le Repeater externe contient un élément pour chaque catégorie dans la base de données, affichant le nom de catégorie s et la description. Chaque élément de catégorie s Repeater interne affiche les informations concernant chaque produit appartenant à cette catégorie (voir Figure 1) dans une liste à puces. Nos exemples illustre comment remplir le Repeater interne de façon déclarative et par programme.
 
 
-[![Chaque catégorie, ainsi que ses produits, sont répertoriés.](nested-data-web-controls-vb/_static/image2.png)](nested-data-web-controls-vb/_static/image1.png)
+[![ECCA catégorie, ainsi que ses produits, sont répertoriés](nested-data-web-controls-vb/_static/image2.png)](nested-data-web-controls-vb/_static/image1.png)
 
 **Figure 1**: Chaque catégorie, ainsi que ses produits, sont répertoriés ([cliquez pour afficher l’image en taille réelle](nested-data-web-controls-vb/_static/image3.png))
 
@@ -55,7 +55,7 @@ Commencez par ouvrir le `NestedControls.aspx` page dans le `DataListRepeaterBasi
 Configurer l’ObjectDataSource afin qu’il extrait ses données à partir de la `CategoriesBLL` classe s `GetCategories` (méthode).
 
 
-[![Configurer pour utiliser la classe CategoriesBLL s méthode GetCategories ObjectDataSource](nested-data-web-controls-vb/_static/image8.png)](nested-data-web-controls-vb/_static/image7.png)
+[![Cconfiguration de l’ObjectDataSource d’utiliser la classe CategoriesBLL s méthode GetCategories](nested-data-web-controls-vb/_static/image8.png)](nested-data-web-controls-vb/_static/image7.png)
 
 **Figure 3**: Configurer l’ObjectDataSource à utiliser le `CategoriesBLL` classe s `GetCategories` (méthode) ([cliquez pour afficher l’image en taille réelle](nested-data-web-controls-vb/_static/image9.png))
 
@@ -68,7 +68,7 @@ Pour spécifier le modèle de s Repeater contenu nous avons besoin accéder à l
 Figure 4 illustre notre progression lorsqu’ils sont affichés via un navigateur.
 
 
-[![Chaque nom de catégorie et la Description sont répertorié, séparés par une barre horizontale](nested-data-web-controls-vb/_static/image11.png)](nested-data-web-controls-vb/_static/image10.png)
+[![ECCA s nom de catégorie et la Description est répertorié, séparés par une barre horizontale](nested-data-web-controls-vb/_static/image11.png)](nested-data-web-controls-vb/_static/image10.png)
 
 **Figure 4**: Chaque nom de catégorie et la Description sont répertorié, séparés par une barre horizontale ([cliquez pour afficher l’image en taille réelle](nested-data-web-controls-vb/_static/image12.png))
 
@@ -116,7 +116,7 @@ Ce gestionnaire d’événements démarre en veillant à ce que nous re traiteme
 Avec ce gestionnaire d’événements, le `ProductsByCategoryList` Repeater dans chaque `RepeaterItem` est lié à ces produits dans le `RepeaterItem` catégorie de s. La figure 5 illustre une capture d’écran de la sortie résultante.
 
 
-[![Le Repeater externe répertorie chaque catégorie ; Celui interne répertorie les produits pour cette catégorie](nested-data-web-controls-vb/_static/image14.png)](nested-data-web-controls-vb/_static/image13.png)
+[![TIl Repeater répertorie chaque catégorie externe ; Celui interne répertorie les produits pour cette catégorie](nested-data-web-controls-vb/_static/image14.png)](nested-data-web-controls-vb/_static/image13.png)
 
 **Figure 5**: Le Repeater externe répertorie chaque catégorie ; les listes d’un seul interne les produits pour cette catégorie ([cliquez pour afficher l’image en taille réelle](nested-data-web-controls-vb/_static/image15.png))
 

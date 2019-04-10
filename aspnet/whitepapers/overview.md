@@ -8,15 +8,15 @@ ms.date: 11/15/2011
 ms.assetid: d5e79470-01f2-4d65-8077-11c3e10a6784
 msc.legacyurl: /whitepapers
 msc.type: content
-ms.openlocfilehash: 5017efc4d141afba206aaca5a8b5e6bab996ebbf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4745e68053fae38019b6121295382a170fd2d858
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062956"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412929"
 ---
-<a name="whitepapers"></a>Livres blancs
-====================
+# <a name="whitepapers"></a>Livres blancs
+
 > Sur cette page, vous trouverez des livres blancs pour vous aider à installer et configurer ASP.NET et pour vous aider à écrire des applications ASP.NET sécurisées, rapides et flexibles.
 > 
 > - [ASP.NET 4](#aspnet4)
@@ -53,7 +53,7 @@ Ce document décrit les nouvelles fonctionnalités et améliorations introduites
 
 [La mise à niveau une Application ASP.NET MVC 1.0 vers ASP.NET MVC 2](aspnet-mvc2-upgrade-notes.md "aspnet-mvc2-mise à niveau-notes de publication")
 
-ASP.NET MVC 2 peut être installé côte à côte avec ASP.NET MVC 1.0 sur le même serveur. Flexibilité application aux développeurs de choisir quand mettre à niveau une application ASP.NET MVC 1.0 vers ASP.NET MVC 2. Ce décrit de document à la fois la mise à niveau manuellement et avec un Assistant dans Visual C#...
+ASP.NET MVC 2 peut être installé côte à côte avec ASP.NET MVC 1.0 sur le même serveur. Flexibilité application aux développeurs de choisir quand mettre à niveau une application ASP.NET MVC 1.0 vers ASP.NET MVC 2. Ce décrit de document à la fois la mise à niveau manuellement et avec un Assistant dans Visual c#...
 
 <a id="security"></a>
 ## <a name="aspnet-security-whitepapers"></a>Livres blancs de sécurité ASP.NET

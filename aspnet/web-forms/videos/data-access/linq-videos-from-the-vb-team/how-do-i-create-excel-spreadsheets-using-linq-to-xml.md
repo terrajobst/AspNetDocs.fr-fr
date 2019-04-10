@@ -8,15 +8,15 @@ ms.date: 11/15/2007
 ms.assetid: 147e51e3-3488-4e48-a06c-059c2cebd728
 msc.legacyurl: /web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml
 msc.type: video
-ms.openlocfilehash: 45b63e2b0b5885b1a1ad04f9f8bea7ecade99ad4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1483030faf631099b8c044d1fbbdd000128f4fce
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414190"
 ---
-<a name="how-do-i-create-excel-spreadsheets-using-linq-to-xml"></a>[Comment faire] Créer des feuilles de calcul Excel à l’aide de LINQ to XML ?
-====================
+# <a name="how-do-i-create-excel-spreadsheets-using-linq-to-xml"></a>[Comment faire] Créer des feuilles de calcul Excel à l’aide de LINQ to XML ?
+
 par [Beth Massi](https://github.com/bethmassi)
 
 Les développeurs Visual Basic vous apprendrez à interroger leur base de données SQL Server afin de créer facilement des feuilles de calcul Excel directement dans l’éditeur de Visual Basic à l’aide de LINQ to XML.

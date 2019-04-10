@@ -8,15 +8,15 @@ ms.date: 08/03/2007
 ms.assetid: ad8dd396-30f7-4abe-ac02-a0b84422e5be
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/protecting-connection-strings-and-other-configuration-information-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 61ac52ffe28762ce0cf8892621343f71e73a9ca7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: eab1ad6cd4636ab3d35988ec8dc762c8a8f51ef4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421132"
 ---
-<a name="protecting-connection-strings-and-other-configuration-information-c"></a>Protection des chaînes de connexion et d’autres informations de configuration (C#)
-====================
+# <a name="protecting-connection-strings-and-other-configuration-information-c"></a>Protection des chaînes de connexion et d’autres informations de configuration (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_73_CS.zip) ou [télécharger le PDF](protecting-connection-strings-and-other-configuration-information-cs/_static/datatutorial73cs1.pdf)
@@ -31,7 +31,7 @@ Informations de configuration pour les applications ASP.NET sont généralement 
 Dans la mesure où `Web.config` peut contenir des données sensibles telles que des chaînes de connexion, il est important que le contenu de `Web.config` être conservées en toute sécurité masqué des personnes non autorisées. Par défaut, n’importe quel HTTP des demandes dans un fichier avec le `.config` extension est gérée par le moteur ASP.NET, qui retourne le *ce type de page n’est pas pris en charge* message s’affiché dans la Figure 1. Cela signifie que les visiteurs ne peuvent pas afficher vos `Web.config` s le contenu du fichier en entrant simplement http://www.YourServer.com/Web.config dans la barre d’adresse de leur navigateur s.
 
 
-[![Visite de Web.config via un navigateur retourne ce type de page non pris en charge Message](protecting-connection-strings-and-other-configuration-information-cs/_static/image2.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image1.png)
+[![Visiting Web.config via un navigateur retourne ce type de page n’est pas pris en charge Message](protecting-connection-strings-and-other-configuration-information-cs/_static/image2.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image1.png)
 
 **Figure 1**: Visite `Web.config` via un navigateur retourne ce type de page non pris en charge Message ([cliquez pour afficher l’image en taille réelle](protecting-connection-strings-and-other-configuration-information-cs/_static/image3.png))
 
@@ -83,7 +83,7 @@ Sous la zone de texte, ajoutez deux contrôles bouton nommés `EncryptConnString
 À ce stade votre écran doit ressembler à la Figure 2.
 
 
-[![Ajouter une zone de texte et deux contrôles bouton à la Page](protecting-connection-strings-and-other-configuration-information-cs/_static/image5.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image4.png)
+[![Ajj une zone de texte et deux contrôles Web de bouton à la Page](protecting-connection-strings-and-other-configuration-information-cs/_static/image5.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image4.png)
 
 **Figure 2**: Ajouter une zone de texte et les deux contrôles bouton à la Page ([cliquez pour afficher l’image en taille réelle](protecting-connection-strings-and-other-configuration-information-cs/_static/image6.png))
 
@@ -111,7 +111,7 @@ Après avoir appelé la `ProtectSection(provider)` ou `UnprotectSection` (métho
 Une fois que vous avez entré le code ci-dessus, la tester en vous rendant sur le `EncryptingConfigSections.aspx` page via un navigateur. Vous devez voir initialement une page qui répertorie le contenu du `Web.config` avec la `<connectionStrings>` section affichée en texte brut (voir Figure 3).
 
 
-[![Ajouter une zone de texte et deux contrôles bouton à la Page](protecting-connection-strings-and-other-configuration-information-cs/_static/image8.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image7.png)
+[![Ajj une zone de texte et deux contrôles Web de bouton à la Page](protecting-connection-strings-and-other-configuration-information-cs/_static/image8.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image7.png)
 
 **Figure 3**: Ajouter une zone de texte et les deux contrôles bouton à la Page ([cliquez pour afficher l’image en taille réelle](protecting-connection-strings-and-other-configuration-information-cs/_static/image9.png))
 
@@ -126,7 +126,7 @@ Pour plus d’informations sur la validation de la demande, son objectif, commen
 Après la désactivation de la validation de demande pour la page, essayez de cliquer à nouveau sur le bouton chiffrer des chaînes de connexion. Lors de la publication, le fichier de configuration est accessible et que son `<connectionStrings>` section chiffrée à l’aide du fournisseur DPAPI. La zone de texte est ensuite mis à jour pour afficher les nouvelles `Web.config` contenu. Comme le montre la Figure 4, le `<connectionStrings>` informations sont chiffrées.
 
 
-[![En cliquant sur le chiffrer connexion chaînes bouton chiffre le &lt;connectionString&gt; Section](protecting-connection-strings-and-other-configuration-information-cs/_static/image11.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image10.png)
+[![Ccliquant sur le chiffrer connexion chaînes bouton chiffre le &lt;connectionString&gt; Section](protecting-connection-strings-and-other-configuration-information-cs/_static/image11.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image10.png)
 
 **Figure 4**: En cliquant sur le chiffrer connexion chaînes bouton chiffre le `<connectionString>` Section ([cliquez pour afficher l’image en taille réelle](protecting-connection-strings-and-other-configuration-information-cs/_static/image12.png))
 
@@ -143,7 +143,7 @@ Le texte chiffré `<connectionStrings>` section générée sur mon ordinateur su
 Lorsque les informations de chaîne de connexion sont accessible à partir `Web.config` - soit par le code que nous écrire à partir d’un contrôle SqlDataSource, ou le code généré automatiquement les TableAdapters dans nos jeux de données typés - il est automatiquement déchiffrée. En bref, nous n’avez pas besoin ajouter n’importe quel code supplémentaire ou une logique pour déchiffrer le texte chiffré `<connectionString>` section. Pour illustrer cela, reportez-vous à l’un des didacticiels antérieures à ce stade, telles que le didacticiel complet Simple à partir de la section rapports de base (`~/BasicReporting/SimpleDisplay.aspx`). Comme le montre la Figure 5, le didacticiel fonctionne exactement comme nous qu’elle devrait, indiquant que les informations de chaîne de connexion chiffrée sont automatiquement déchiffrées par la page ASP.NET.
 
 
-[![La couche d’accès aux données déchiffre automatiquement les informations de chaîne de connexion](protecting-connection-strings-and-other-configuration-information-cs/_static/image14.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image13.png)
+[![TIl couche d’accès aux données déchiffre automatiquement les informations de chaîne de connexion](protecting-connection-strings-and-other-configuration-information-cs/_static/image14.png)](protecting-connection-strings-and-other-configuration-information-cs/_static/image13.png)
 
 **Figure 5**: La couche d’accès aux données déchiffre automatiquement les informations de chaîne de connexion ([cliquez pour afficher l’image en taille réelle](protecting-connection-strings-and-other-configuration-information-cs/_static/image15.png))
 
@@ -218,8 +218,8 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 - [Génération de l’Application ASP.NET sécurisées : L’authentification, autorisation et Communication sécurisée](https://msdn.microsoft.com/library/aa302392.aspx)
 - [Chiffrement des informations de Configuration dans ASP.NET 2.0 Applications](http://aspnet.4guysfromrolla.com/articles/021506-1.aspx)
 - [Chiffrement `Web.config` valeurs dans ASP.NET 2.0](https://weblogs.asp.net/scottgu/archive/2006/01/09/434893.aspx)
-- [Guide pratique pour Chiffrer les Sections de Configuration dans ASP.NET 2.0 à l’aide de DPAPI](https://msdn.microsoft.com/library/ms998280.aspx)
-- [Guide pratique pour Chiffrer les Sections de Configuration dans ASP.NET 2.0 à l’aide de RSA](https://msdn.microsoft.com/library/ms998283.aspx)
+- [Procédure : Chiffrer les Sections de Configuration dans ASP.NET 2.0 à l’aide de DPAPI](https://msdn.microsoft.com/library/ms998280.aspx)
+- [Procédure : Chiffrer les Sections de Configuration dans ASP.NET 2.0 à l’aide de RSA](https://msdn.microsoft.com/library/ms998283.aspx)
 - [L’API de Configuration dans .NET 2.0](http://www.odetocode.com/Articles/418.aspx)
 - [Protection des données Windows](https://msdn.microsoft.com/library/ms995355.aspx)
 
