@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: 24ad086d-865e-433c-9ac9-05f1a553da16
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/introduction
 msc.type: authoredcontent
-ms.openlocfilehash: a227f6564607ed9e909fc4d6297d7370f8fb62b5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0edab77cd973af129e54c7867265f86b47c349a6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057656"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410134"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-introduction"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Introduction
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-introduction"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Introduction
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet de démarrage](http://go.microsoft.com/fwlink/p/?LinkId=282627)
@@ -67,7 +67,7 @@ L’exemple d’application est un projet Web Forms ASP.NET, mais tout ce dont v
 
 ## <a name="programming-language"></a>Langage de programmation
 
-L’exemple d’application utilise C#, mais les didacticiels ne nécessitent pas de connaissances du langage C# et les techniques de déploiement illustrés par les didacticiels ne sont pas spécifiques au langage.
+L’exemple d’application utilise c#, mais les didacticiels ne nécessitent pas de connaissances du langage c# et les techniques de déploiement illustrés par les didacticiels ne sont pas spécifiques au langage.
 
 ## <a name="database-deployment-methods"></a>Méthodes de déploiement de base de données
 
@@ -147,7 +147,7 @@ Lorsque vous avez les composants requis installés, téléchargez le [applicatio
 
 Pour préparer le projet pour étudier les étapes du didacticiel, procédez comme suit :
 
-1. Enregistrer les fichiers de solution ContosoUniversity à partir du dossier C# dans un dossier nommé ContosoUniversity dans le dossier que vous utilisez pour travailler avec des projets Visual Studio.
+1. Enregistrer les fichiers de solution ContosoUniversity à partir du dossier c# dans un dossier nommé ContosoUniversity dans le dossier que vous utilisez pour travailler avec des projets Visual Studio.
 
     Par défaut, cela est le dossier suivant pour Visual Studio 2012 :
 
@@ -200,4 +200,4 @@ Les fonctionnalités suivantes de l’application affectent le déploiement ou c
 Dans ce premier didacticiel de la série, vous avez téléchargé l’exemple de projet Visual Studio et passé en revue les fonctionnalités de site qui affectent la façon dont vous déployez l’application. Dans les didacticiels suivants, vous préparer pour le déploiement en définissant une partie de ces éléments à être gérées automatiquement. D’autres vous prendre soin de manuellement.
 
 > [!div class="step-by-step"]
-> [Next](preparing-databases.md)
+> [Suivant](preparing-databases.md)

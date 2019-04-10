@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/admin/unlocking-and-approving-user-accounts-cs
-title: Le déverrouillage et l’approbation des comptes d’utilisateur (C#) | Microsoft Docs
+title: Le déverrouillage et l’approbation des comptes d’utilisateur (c#) | Microsoft Docs
 author: rick-anderson
 description: Ce didacticiel montre comment créer une page web pour les administrateurs gérer les utilisateurs verrouillés et approuvé les États. Nous verrons également comment approuver les nouveaux utilisateurs o...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 04/01/2008
 ms.assetid: 5346aab1-9974-489f-a065-ae3883b8a350
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/unlocking-and-approving-user-accounts-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1a8373f62833c3a76d2e7f96193e5ecbe2d9c593
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d4e8591f3090de8f931ffd8eb1dd0a1138674842
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038486"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410043"
 ---
-<a name="unlocking-and-approving-user-accounts-c"></a>Déblocage et approbation des comptes d’utilisateur (C#)
-====================
+# <a name="unlocking-and-approving-user-accounts-c"></a>Déblocage et approbation des comptes d’utilisateur (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/CS.14.zip) ou [télécharger le PDF](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/aspnet_tutorial14_UnlockAndApprove_cs.pdf)
@@ -49,7 +49,7 @@ Ouvrez le `ManageUsers.aspx` page et ajoutez un HyperLinkField à la `UserAccoun
 Après avoir ajouté le HyperLinkField GridView, prenez un moment pour afficher la `ManageUsers.aspx` page via un navigateur. Comme le montre la Figure 1, chaque ligne GridView inclut désormais un lien « Gérer ». Le lien « Gérer » de Bruce pointe vers `UserInformation.aspx?user=Bruce`, tandis que le lien « Gérer » de Dave pointe vers `UserInformation.aspx?user=Dave`.
 
 
-[![Ajoute le HyperLinkField un](unlocking-and-approving-user-accounts-cs/_static/image2.png)](unlocking-and-approving-user-accounts-cs/_static/image1.png)
+[![THE HyperLinkField ajoute un](unlocking-and-approving-user-accounts-cs/_static/image2.png)](unlocking-and-approving-user-accounts-cs/_static/image1.png)
 
 **Figure 1**: Le HyperLinkField ajoute un lien « Gérer » pour chaque compte d’utilisateur ([cliquez pour afficher l’image en taille réelle](unlocking-and-approving-user-accounts-cs/_static/image3.png))
 
@@ -72,7 +72,7 @@ Nous sommes maintenant prêts à implémenter l’interface utilisateur dans `Us
 Après avoir ajouté ces contrôles, la vue de conception dans Visual Studio doit ressembler à la capture d’écran de la Figure 2.
 
 
-[![Créer l’Interface utilisateur pour UserInformation.aspx](unlocking-and-approving-user-accounts-cs/_static/image5.png)](unlocking-and-approving-user-accounts-cs/_static/image4.png)
+[![Ccréer un à l’Interface utilisateur pour UserInformation.aspx](unlocking-and-approving-user-accounts-cs/_static/image5.png)](unlocking-and-approving-user-accounts-cs/_static/image4.png)
 
 **Figure 2**: Créer l’Interface utilisateur pour `UserInformation.aspx` ([cliquez pour afficher l’image en taille réelle](unlocking-and-approving-user-accounts-cs/_static/image6.png))
 
@@ -98,7 +98,7 @@ Revenez à Visual Studio et créer des gestionnaires d’événements pour le `I
 Ces gestionnaires d’événements en place, visitez la page et non approuvées un utilisateur. Comme le montre la Figure 3, vous devez voir un bref message sur la page indiquant que l’utilisateur `IsApproved` propriété a été correctement modifiée.
 
 
-[![Chris a été non approuvé](unlocking-and-approving-user-accounts-cs/_static/image8.png)](unlocking-and-approving-user-accounts-cs/_static/image7.png)
+[![Cressources humaines a été approuvé](unlocking-and-approving-user-accounts-cs/_static/image8.png)](unlocking-and-approving-user-accounts-cs/_static/image7.png)
 
 **Figure 3**: Chris a été non approuvé ([cliquez pour afficher l’image en taille réelle](unlocking-and-approving-user-accounts-cs/_static/image9.png))
 
@@ -106,7 +106,7 @@ Ces gestionnaires d’événements en place, visitez la page et non approuvées 
 Ensuite, déconnexion et essayez de vous connecter en tant que l’utilisateur dont le compte a été simplement non approuvées. Étant donné que l’utilisateur n’est pas approuvé, ils ne peuvent pas se connecter. Par défaut, le contrôle de connexion affiche le message même si l’utilisateur ne peut pas ouvrir une session, quelle que soit la raison. Mais, dans le <a id="Tutorial6"> </a> [ *validation utilisateur informations d’identification par rapport à l’appartenance utilisateur Store* ](../membership/validating-user-credentials-against-the-membership-user-store-cs.md) didacticiel, nous avons recherché à améliorer le contrôle de connexion pour afficher un message plus approprié. Comme le montre la Figure 4, Chris voit un message expliquant qu’il ne peut pas se connecter, car son compte n’est pas encore approuvé.
 
 
-[![Chris impossible, car son compte de connexion est non approuvé](unlocking-and-approving-user-accounts-cs/_static/image11.png)](unlocking-and-approving-user-accounts-cs/_static/image10.png)
+[![Cressources humaines ne peut pas se connecter car son compte est non approuvé](unlocking-and-approving-user-accounts-cs/_static/image11.png)](unlocking-and-approving-user-accounts-cs/_static/image10.png)
 
 **Figure 4**: Chris impossible, car son compte de connexion est non approuvé ([cliquez pour afficher l’image en taille réelle](unlocking-and-approving-user-accounts-cs/_static/image12.png))
 
@@ -166,7 +166,7 @@ Le `SendingMail` événement est déclenché après le `CreatedUser` événement
 L’effet net est que les nouveaux utilisateurs sont non approuvés, ce qui signifie qu’ils ne peuvent pas se connecter au site. En outre, ils sont envoyés automatiquement un e-mail contenant un lien vers l’URL de vérification (voir Figure 6).
 
 
-[![Le nouvel utilisateur reçoit un E-mail contenant un lien vers l’URL de vérification](unlocking-and-approving-user-accounts-cs/_static/image17.png)](unlocking-and-approving-user-accounts-cs/_static/image16.png)
+[![TJohn nouvel utilisateur reçoit un E-mail contenant un lien vers l’URL de vérification](unlocking-and-approving-user-accounts-cs/_static/image17.png)](unlocking-and-approving-user-accounts-cs/_static/image16.png)
 
 **Figure 6**: Le nouvel utilisateur reçoit un E-mail contenant un lien vers l’URL de vérification ([cliquez pour afficher l’image en taille réelle](unlocking-and-approving-user-accounts-cs/_static/image18.png))
 
@@ -188,7 +188,7 @@ La majeure partie du code ci-dessus vérifie que le `UserId` fourni par le biais
 La figure 7 illustre le `Verification.aspx` page quand consultées via un navigateur.
 
 
-[![Le nouveau compte d’utilisateur est maintenant approuvées](unlocking-and-approving-user-accounts-cs/_static/image20.png)](unlocking-and-approving-user-accounts-cs/_static/image19.png)
+[![THE compte nouveau d’utilisateur est maintenant approuvées](unlocking-and-approving-user-accounts-cs/_static/image20.png)](unlocking-and-approving-user-accounts-cs/_static/image19.png)
 
 **Figure 7**: Le nouveau compte d’utilisateur est maintenant approuvées ([cliquez pour afficher l’image en taille réelle](unlocking-and-approving-user-accounts-cs/_static/image21.png))
 

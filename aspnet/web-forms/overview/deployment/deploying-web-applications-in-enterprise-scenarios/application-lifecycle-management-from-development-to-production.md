@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: f97a1145-6470-4bca-8f15-ccfb25fb903c
 msc.legacyurl: /web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: 998191a21388d76fb18b59fca9bcea7a40507c86
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3b7f154936222c85bd7897ea10cbb5ae9d1aa670
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425572"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408938"
 ---
-<a name="application-lifecycle-management-from-development-to-production"></a>Gestion du cycle de vie des applications : du développement à la production
-====================
+# <a name="application-lifecycle-management-from-development-to-production"></a>Gestion du cycle de vie des applications : du développement à la production
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique illustre comment une entreprise fictive gère le déploiement d’une application de web ASP.NET dans les environnements de test, intermédiaire et de production dans le cadre d’un processus de développement continu. Tout au long de la rubrique, les liens sont fournis pour plus d’informations et procédures pas à pas sur la façon d’effectuer des tâches spécifiques.
 > 

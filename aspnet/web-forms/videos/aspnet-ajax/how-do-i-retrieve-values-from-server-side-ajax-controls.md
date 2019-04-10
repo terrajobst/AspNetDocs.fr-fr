@@ -8,15 +8,15 @@ ms.date: 02/21/2008
 ms.assetid: 9d770bb5-fd76-4ae9-a11b-9783f394a24f
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-retrieve-values-from-server-side-ajax-controls
 msc.type: video
-ms.openlocfilehash: 6911f167b16e3caa1bf942d454f0aacd583383d7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7426399a0f114d66355cfed5df87df7ba6c54df4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037166"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408067"
 ---
-<a name="how-do-i-retrieve-values-from-server-side-ajax-controls"></a>[Comment faire] Récupérer des valeurs de contrôles AJAX côté serveur
-====================
+# <a name="how-do-i-retrieve-values-from-server-side-ajax-controls"></a>[Comment faire] Récupérer des valeurs de contrôles AJAX côté serveur
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Dans cette vidéo, je vais vous montrer comment récupérer des valeurs à partir de contrôles d’AJAX côté serveur telles que celles de la boîte à outils AJAX.

@@ -8,15 +8,15 @@ ms.date: 08/03/2007
 ms.assetid: 9ed8ccb5-5f31-4eb4-976d-cabf4b45ca09
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 106f7498a70339556d0662a986d71a01a21074ab
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 6dda18eb27d45f8dfdb4803cf3aca3ffe96bf11e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424532"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406559"
 ---
-<a name="debugging-stored-procedures-vb"></a>Débogage des procédures stockées (VB)
-====================
+# <a name="debugging-stored-procedures-vb"></a>Débogage des procédures stockées (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_74_VB.zip) ou [télécharger le PDF](debugging-stored-procedures-vb/_static/datatutorial74vb1.pdf)
@@ -67,7 +67,7 @@ Dans la mesure où le `Products_SelectByCategoryID` procédure stockée attend u
 Après avoir fourni la valeur pour le `@CategoryID` paramètre, la procédure stockée est exécutée. Au lieu d’exécuter jusqu'à la fin, cependant, le débogueur interrompt l’exécution à la première instruction. Notez la flèche jaune dans la marge, indiquant l’emplacement actuel dans la procédure stockée. Vous pouvez afficher et modifier les valeurs de paramètre via la fenêtre Espion ou en pointant sur le nom du paramètre dans la procédure stockée.
 
 
-[![Le débogueur a interrompu sur la première instruction de la procédure stockée](debugging-stored-procedures-vb/_static/image3.png)](debugging-stored-procedures-vb/_static/image2.png)
+[![TIl débogueur s’est arrêté à la première instruction de la procédure stockée](debugging-stored-procedures-vb/_static/image3.png)](debugging-stored-procedures-vb/_static/image2.png)
 
 **Figure 2**: Le débogueur a interrompu sur la première instruction de la procédure stockée ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image4.png))
 
@@ -85,7 +85,7 @@ Pendant le débogage d’une procédure stockée directement à partir de l’Ex
 Avant que nous pouvons commencer le débogage des procédures stockées appelées à partir de l’application, nous devons indiquer à l’application web ASP.NET à intégrer avec le débogueur SQL Server. Démarrer en cliquant sur le nom du site Web dans l’Explorateur de solutions (`ASPNET_Data_Tutorial_74_VB`). Choisissez l’option de Pages de propriétés dans le menu contextuel, sélectionnez l’élément Options de démarrage sur la gauche et cochez la case de SQL Server dans la section débogueurs (voir Figure 3).
 
 
-[![Cochez la case à cocher du serveur SQL dans les Pages de propriétés d’Application s](debugging-stored-procedures-vb/_static/image6.png)](debugging-stored-procedures-vb/_static/image5.png)
+[![Ccocher la case à cocher du serveur SQL dans les Pages de propriétés de seconde Application](debugging-stored-procedures-vb/_static/image6.png)](debugging-stored-procedures-vb/_static/image5.png)
 
 **Figure 3**: Cochez la case à cocher du serveur SQL dans les Pages de propriétés de seconde Application ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image7.png))
 
@@ -108,7 +108,7 @@ Pour le regroupement de connexion désactivée, mise à jour le `NORTHWNDConnect
 Ouvrez le `Products_SelectByCategoryID` procédure stockée et définissez un point d’arrêt au début de la `SELECT` instruction en cliquant dans la marge à l’emplacement approprié ou en plaçant votre curseur au début de la `SELECT` instruction et en appuyant sur F9. Comme l’illustre la Figure 4, le point d’arrêt apparaît sous la forme d’un cercle rouge dans la marge.
 
 
-[![Définir un point d’arrêt dans le Products_SelectByCategoryID procédure stockée](debugging-stored-procedures-vb/_static/image9.png)](debugging-stored-procedures-vb/_static/image8.png)
+[![Set un point d’arrêt dans le Products_SelectByCategoryID de procédure stockée](debugging-stored-procedures-vb/_static/image9.png)](debugging-stored-procedures-vb/_static/image8.png)
 
 **Figure 4**: Définir un point d’arrêt dans le `Products_SelectByCategoryID` la procédure stockée ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image10.png))
 
@@ -126,12 +126,12 @@ Le jeu de point d’arrêt et l’option de débogage de l’Application est act
 Le `Products_SelectByCategoryID` procédure stockée a été créée dans le [à l’aide des procédures stockées existantes pour s DataSet typée TableAdapters](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md) didacticiel. La page web correspondante (`~/AdvancedDAL/ExistingSprocs.aspx`) contient un GridView qui affiche les résultats retournés par cette procédure stockée. Visitez cette page via le navigateur. Lorsque vous atteignez la page, le point d’arrêt dans le `Products_SelectByCategoryID` procédure stockée est atteint et que le contrôle retourné à Visual Studio. Comme à l’étape 1, vous pouvez parcourir les instructions de procédure stockée s et la vue et modifier les valeurs de paramètre.
 
 
-[![La Page ExistingSprocs.aspx affiche initialement les boissons](debugging-stored-procedures-vb/_static/image13.png)](debugging-stored-procedures-vb/_static/image12.png)
+[![TIl ExistingSprocs.aspx Page affiche initialement les boissons](debugging-stored-procedures-vb/_static/image13.png)](debugging-stored-procedures-vb/_static/image12.png)
 
 **Figure 6**: Le `ExistingSprocs.aspx` Page affiche initialement les boissons ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image14.png))
 
 
-[![La procédure stockée s point d’arrêt a été atteint.](debugging-stored-procedures-vb/_static/image16.png)](debugging-stored-procedures-vb/_static/image15.png)
+[![TIl s de la procédure stockée point d’arrêt a été atteinte](debugging-stored-procedures-vb/_static/image16.png)](debugging-stored-procedures-vb/_static/image15.png)
 
 **Figure 7**: Le s de la procédure stockée point d’arrêt a été atteint ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image17.png))
 
@@ -144,7 +144,7 @@ En tant que la fenêtre Espion dans la Figure 7 montre, la valeur de la `@Catego
 **Figure 8**: Choisissez une catégorie différente dans la liste déroulante ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image20.png))
 
 
-[![Le @CategoryID paramètre reflète la catégorie sélectionnée à partir de la Page Web](debugging-stored-procedures-vb/_static/image22.png)](debugging-stored-procedures-vb/_static/image21.png)
+[![Til @CategoryID paramètre reflète la catégorie sélectionnée dans la Page Web](debugging-stored-procedures-vb/_static/image22.png)](debugging-stored-procedures-vb/_static/image21.png)
 
 **Figure 9**: Le `@CategoryID` paramètre reflète la catégorie sélectionnée dans la Page Web ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image23.png))
 

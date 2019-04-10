@@ -8,15 +8,15 @@ ms.date: 07/16/2014
 ms.assetid: ecfd0eb4-c4ad-44e6-9db9-a2a66611ff6a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale
 msc.type: authoredcontent
-ms.openlocfilehash: 315e89c81782edf0875c65afd27153102d733050
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ec0058472f8bc1d8d58e7c78deeb8b6097532510
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424246"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409731"
 ---
-<a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Atelier pratique : Sites web Azure faciles à gérer : gestion des modifications et de la mise à l’échelle
-====================
+# <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Atelier pratique : Sites web Azure faciles à gérer : gestion des modifications et de la mise à l’échelle
+
 par [Web Camps Team](https://twitter.com/webcamps)
 
 [Télécharger le Kit de formation de Web Camps](https://aka.ms/webcamps-training-kit)
@@ -89,7 +89,7 @@ Dans le document de laboratoire, vous serez invité à insérer des blocs de cod
 > Chaque exercice est accompagnée d’une solution de départ située dans le **commencer** dossier de l’exercice qui vous permet de suivre chaque exercice indépendamment des autres. N’oubliez pas que les extraits de code sont ajoutés au cours d’un exercice sont manquants à partir de ces solutions de démarrage et peut ne pas fonctionnent jusqu'à ce que vous avez terminé l’exercice. Dans le code source pour un exercice, vous y trouverez également un **fin** dossier qui contient une solution Visual Studio avec le code qui résulte d’effectuer les étapes dans l’exercice correspondant. Si vous avez besoin d’aide au cours de cet atelier, vous pouvez utiliser ces solutions en tant que guide.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Exercices
@@ -131,7 +131,7 @@ Dans cette tâche, vous allez passer par les étapes d’activation **Migrations
 
     ![L’activation de Migrations](maintainable-azure-websites-managing-change-and-scale/_static/image1.png "autorisant la migration")
 
-    *L’activation des Migrations*
+    *Activation des migrations*
 
     > [!NOTE]
     > Cette commande ajoute un **Migrations** dossier au projet Geek questionnaire qui contient un fichier appelé **Configuration.cs**. Le **Configuration** classe vous permet de configurer le comportement de Migrations pour votre contexte.
@@ -909,7 +909,7 @@ Maintenant vous exécutez le test de charge que vous avez créé dans la tâche 
     > - Réduire les valeurs minimale et maximales de la **unité centrale cible** plage dans la configuration de mise à l’échelle de votre application web
     > - Exécuter le test de charge dans le cloud avec **Plans de Test Azure**. Plus d’informations [ici](/azure/devops/test/load-test/index?view=vsts)
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Récapitulatif

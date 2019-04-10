@@ -8,22 +8,22 @@ ms.date: 01/26/2011
 ms.assetid: 244278c1-fec8-4255-8a8a-13bde491c4f5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started
 msc.type: authoredcontent
-ms.openlocfilehash: 5eaeaa0aa474e1aed86954e6c10dd1703b938944
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c0f11019c7410b756d592066a7fe33b3e26fd383
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065406"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407196"
 ---
-<a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-1-getting-started"></a>À l’aide d’Entity Framework 4.0 et que le contrôle ObjectDataSource, partie 1 : Prise en main
-====================
+# <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-1-getting-started"></a>À l’aide d’Entity Framework 4.0 et que le contrôle ObjectDataSource, partie 1 : Prise en main
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels s’appuie sur l’application web Contoso University créé par le [mise en route avec Entity Framework 4.0](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) série de didacticiels. Si vous n’avez pas effectué les didacticiels précédents, comme point de départ pour ce didacticiel vous pouvez [télécharger l’application](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que vous l’auriez créée. Vous pouvez également [télécharger l’application](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) qui est créé par la série de didacticiels terminée.
 > 
 > L’exemple d’application web Contoso University montre comment créer des applications Web Forms ASP.NET à l’aide de l’Entity Framework 4.0 et Visual Studio 2010. L’exemple d’application est un site Web pour une université Contoso fictive. Il inclut des fonctionnalités telles que l'admission d’étudiant, la création de cours et les affectations de formateur.
 > 
-> Le didacticiel présente des exemples en C#. Le [exemple téléchargeable](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) contient le code en C# et Visual Basic.
+> Le didacticiel présente des exemples en c#. Le [exemple téléchargeable](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) contient le code en c# et Visual Basic.
 > 
 > ## <a name="database-first"></a>Tout d’abord la base de données
 > 
@@ -322,4 +322,4 @@ Modifier une valeur de champ ou sélectionnez un autre administrateur, cliquez s
 Ceci termine l’introduction à l’utilisation de la `ObjectDataSource` contrôle pour CRUD de base (créer, lire, mettre à jour, supprimer) des opérations avec Entity Framework. Vous avez créé une application à n niveaux simple, mais la couche de logique métier est toujours étroitement liée à la couche d’accès aux données, ce qui complique les tests d’unités automatisés. Dans ce didacticiel, vous verrez comment implémenter le modèle de référentiel pour faciliter les tests unitaires.
 
 > [!div class="step-by-step"]
-> [Next](using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+> [Suivant](using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)

@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 0e7b4d85-2c46-4eaf-b6a8-6cd566a67334
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9402d7e053ef11eeefa92d112b05ec255d5ec6f7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0f824bd5e080d42a9df3525ca47b87bcef407f7a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033666"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405623"
 ---
-<a name="improving-performance-with-output-caching-vb"></a>Amélioration des performances avec la mise en cache de la sortie (VB)
-====================
+# <a name="improving-performance-with-output-caching-vb"></a>Amélioration des performances avec la mise en cache de la sortie (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Dans ce didacticiel, vous découvrez comment vous pouvez améliorer considérablement les performances des applications web ASP.NET MVC en tirant parti de la mise en cache de sortie. Vous allez apprendre à mettre en cache le résultat retourné par une action de contrôleur afin que le même contenu n’ait pas besoin soit créée chaque fois qu'un nouvel utilisateur appelle l’action.

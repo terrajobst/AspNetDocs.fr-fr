@@ -8,15 +8,15 @@ ms.date: 07/16/2007
 ms.assetid: e129b2c2-8587-4ff1-b455-7f14cb28bcf9
 msc.legacyurl: /web-forms/videos/vs-2005/how-do-i-use-generic-tests
 msc.type: video
-ms.openlocfilehash: fabeff4743a28015b55c98071e8df40015710dd1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 32d970a5eba2eb7a5344c43e65e40c0ff6670632
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035806"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411681"
 ---
-<a name="how-do-i-use-generic-tests"></a>[Comment faire] Utiliser des Tests génériques ?
-====================
+# <a name="how-do-i-use-generic-tests"></a>[Comment faire] Utiliser des Tests génériques ?
+
 par [Chris Menegay](https://twitter.com/CMenegay)
 
 Un test générique est un programme existant qui est encapsulé et disponibles en tant que test dans Visual Studio Team System. Dans cette vidéo, nous voir une démonstration de la façon dont un programme shell encapsulée accepte une valeur d’entrée à partir de notre environnement de test et comment la valeur de sortie du programme est utilisé pour déterminer si le test a réussi ou a échoué.

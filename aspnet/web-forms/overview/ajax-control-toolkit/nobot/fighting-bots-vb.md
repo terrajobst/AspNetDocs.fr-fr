@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: e9803150-452d-4521-97e3-d75d5599383c
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 8b2a2d2d72bfcf3ce8b3b345fda0bad5a37818ee
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6baf5447d31d00b89cb7ddf526553456fecbbf6e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409471"
 ---
-<a name="fighting-bots-vb"></a>Lutte contre les robots (VB)
-====================
+# <a name="fighting-bots-vb"></a>Lutte contre les robots (VB)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/NoBot0.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/nobot0VB.pdf)
@@ -65,7 +65,7 @@ Enfin, vous avez besoin d’un formulaire à envoyer et un élément d’étique
 Lorsque vous exécutez ce script et désactivez JavaScript ou envoyez le formulaire dans les deux premières secondes ou soumettez le formulaire sept fois au sein de trente secondes, vous obtiendrez un message d’erreur. Toutefois utiliser ce contrôle avec soin, puisque qu’environ 90 à 95 % des utilisateurs ont JavaScript activated, par conséquent 5-10 % des utilisateurs ne sera pas `NoBot`du test.
 
 
-[![Ce message d’erreur peut être dû à un robot](fighting-bots-vb/_static/image2.png)](fighting-bots-vb/_static/image1.png)
+[![Tmessage d’erreur peut être dû à un robot](fighting-bots-vb/_static/image2.png)](fighting-bots-vb/_static/image1.png)
 
 Ce message d’erreur peut être dû à un robot ([cliquez pour afficher l’image en taille réelle](fighting-bots-vb/_static/image3.png))
 

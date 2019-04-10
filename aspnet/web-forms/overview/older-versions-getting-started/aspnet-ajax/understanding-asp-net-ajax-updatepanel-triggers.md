@@ -8,18 +8,18 @@ ms.date: 03/12/2008
 ms.assetid: faab8503-2984-48a9-8a40-7728461abc50
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-updatepanel-triggers
 msc.type: authoredcontent
-ms.openlocfilehash: 9501a2e855bdffe8c9d85c0dd0d836f50935b306
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e3821eee8c7bf2c2f9b45ea75ade2bd5b3b8ef19
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025296"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406260"
 ---
-<a name="understanding-aspnet-ajax-updatepanel-triggers"></a>Présentation des déclencheurs UpdatePanel d’ASP.NET AJAX
-====================
+# <a name="understanding-aspnet-ajax-updatepanel-triggers"></a>Présentation des déclencheurs UpdatePanel d’ASP.NET AJAX
+
 par [Scott Cate](https://github.com/scottcate)
 
-[Télécharger PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial02_Triggers_cs.pdf)
+[Télécharger le PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial02_Triggers_cs.pdf)
 
 > Lorsque vous travaillez dans l’éditeur de balisage dans Visual Studio, vous pouvez remarquer (à partir d’IntelliSense) qu’il existe deux éléments enfants d’un contrôle UpdatePanel. Un d’eux est l’élément de déclencheurs, qui spécifie les contrôles sur la page (ou le contrôle utilisateur, si vous en utilisez un) qui déclenchera un rendu partiel du contrôle UpdatePanel dans lequel réside l’élément.
 
@@ -32,7 +32,7 @@ Ce livre blanc examine les fonctionnalités de déclencheurs de XML d’ASP.NET 
 
 Ce livre blanc est basé sur la version bêta 2 de .NET Framework 3.5 et Visual Studio 2008. Les Extensions ASP.NET AJAX, précédemment un assembly de module complémentaire ciblé sur ASP.NET 2.0, sont désormais intégrées dans la bibliothèque de classes de Base .NET Framework. Ce livre blanc suppose également que vous allez travailler avec Visual Studio 2008, pas Visual Web Developer Express et fournissez des procédures pas à pas en fonction de l’interface utilisateur de Visual Studio (bien que les listes de codes sera entièrement compatibles, indépendamment du environnement de développement).
 
-## <a name="triggers"></a>*Déclencheurs*
+## *<a name="triggers"></a>Déclencheurs*
 
 Déclencheurs d’un UpdatePanel donné, par défaut, incluent automatiquement tous les contrôles enfants qui appellent une publication (postback), y compris (par exemple) des contrôles de zone de texte qui ont leur `AutoPostBack` propriété définie sur **true**. Toutefois, il est possible que les déclencheurs peuvent être également inclus de manière déclarative à l’aide de balisage ; Cela s’effectue dans le `<triggers>` section de la déclaration du contrôle UpdatePanel. Bien que les déclencheurs sont accessibles le `Triggers` propriété de collection, il est recommandé d’enregistrer des déclencheurs de rendu partiel au moment de l’exécution (par exemple, si un contrôle n’est pas disponible au moment du design) à l’aide de la `RegisterAsyncPostBackControl(Control)` méthode de la Objet de ScriptManager pour votre page, dans le `Page_Load` événement. N’oubliez pas que les Pages sont sans état, et par conséquent, vous devez réinscrire ces contrôles chaque fois qu’ils sont créés.
 
@@ -40,7 +40,7 @@ Inclusion de déclencheur enfant automatique peut également être désactivée 
 
 Notez que lorsque les contrôles UpdatePanel sont imbriqués, quand l’UpdateMode est définie sur **conditionnel**, si l’enfant UpdatePanel est déclenchée, mais le parent n’est pas, puis uniquement l’enfant actualise UpdatePanel. Toutefois, si le parent UpdatePanel est actualisé, puis l’UpdatePanel enfant sera également actualisé.
 
-## <a name="the-lttriggersgt-element"></a>*Le &lt;déclencheurs&gt; élément*
+## *<a name="the-lttriggersgt-element"></a>Le &lt;déclencheurs&gt; élément*
 
 Lorsque vous travaillez dans l’éditeur de balisage dans Visual Studio, vous pouvez remarquer (à partir d’IntelliSense) qu’il existe deux éléments enfants d’un `UpdatePanel` contrôle. Est l’élément plus souvent vu le `<ContentTemplate>` élément, qui encapsule essentiellement le contenu qui se déroulera par le panneau de mise à jour (le contenu pour lequel nous mettons en place le rendu partiel). L’autre élément est la `<Triggers>` élément, qui spécifie les contrôles sur la page (ou le contrôle utilisateur, si vous en utilisez un) qui déclenchera un rendu partiel du contrôle UpdatePanel dans lequel le &lt;déclencheurs&gt; élément réside.
 
@@ -50,16 +50,16 @@ Le `<asp:AsyncPostBackTrigger>` élément est particulièrement utile dans la me
 
 De même, le `<asp:PostBackTrigger>` élément peut être utilisé pour restituer une page partielle de déclencheur, mais qui nécessite un aller-retour complet sur le serveur. Cet élément de déclencheur permettre également être utilisé pour forcer un rendu de page complète quand un contrôle sinon normalement déclenche un rendu de page partielle (par exemple, lorsqu’un `Button` contrôle existe dans le `<ContentTemplate>` élément d’un contrôle UpdatePanel). Là encore, l’élément PostBackTrigger peut spécifier n’importe quel contrôle qui est un enfant de n’importe quel contrôle UpdatePanel dans l’unité actuelle d’encapsulation.
 
-## <a name="lttriggersgt-element-reference"></a>*&lt;Déclencheurs&gt; référence des éléments*
+## *<a name="lttriggersgt-element-reference"></a>&lt;Déclencheurs&gt; référence des éléments*
 
 *Descendants de balisage :*
 
-| **Tag** | **Description** |
+| **Balise** | **Description** |
 | --- | --- |
 | &lt;asp:AsyncPostBackTrigger&gt; | Spécifie un événement qui entraîne une mise à jour de page partielle pour le contrôle UpdatePanel qui contient cette référence de déclencheur et contrôle. |
 | &lt;asp:PostBackTrigger&gt; | Spécifie un contrôle et un événement qui entraîne une mise à jour de page entière (une actualisation complète de la page). Cette balise peut être utilisée pour forcer une actualisation complète quand un contrôle déclenche sinon le rendu partiel. |
 
-## <a name="walkthrough-cross-updatepanel-triggers"></a>*Procédure pas à pas : Déclencheurs de cross-UpdatePanel*
+## *<a name="walkthrough-cross-updatepanel-triggers"></a>Procédure pas à pas : Déclencheurs de cross-UpdatePanel*
 
 1. Créer une nouvelle page ASP.NET avec un objet de ScriptManager définir pour activer le rendu partiel. Ajouter deux UpdatePanel à cette page - dans la première, inclure une étiquette (Label1) et deux contrôles bouton (Button1 et Button2). Button1 doit indiquer Cliquez pour mettre à jour à la fois et Button2 doit indiquer Cliquez pour mettre à jour de cela, ou quelque chose le long de ces lignes. Dans la deuxième UpdatePanel, inclure uniquement un contrôle Label (Label2), mais définissez sa propriété de couleur de premier plan sur autre chose que la valeur par défaut pour les distinguer.
 2. Définissez la propriété UpdateMode les deux balises UpdatePanel pour **conditionnel**.
@@ -82,7 +82,7 @@ De même, le `<asp:PostBackTrigger>` élément peut être utilisé pour restitue
 ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-updatepanel-triggers/_static/image3.png))
 
 
-## <a name="under-the-hood"></a>*Rouages du système*
+## *<a name="under-the-hood"></a>Sous le capot*
 
 Utilisation de l’exemple que nous venez de créer, nous pouvons Examinons ce que fait ASP.NET AJAX et de fonctionnement de notre déclencheurs UpdatePanel d’entre-Panneau de configuration. Pour ce faire, nous nous efforcerons de la source HTML de la page générée, ainsi que l’extension de Mozilla Firefox appelé FireBug - avec celui-ci, nous pouvons facilement examiner les renvois AJAX. Nous allons également utiliser l’outil de .NET Reflector de Lutz Roeder. Ces deux outils sont disponibles gratuitement en ligne et accessible avec une recherche sur internet.
 
@@ -122,7 +122,7 @@ Par exemple, nous allons ajouter deux contrôles supplémentaires à la page, en
 
 Et Voici le nouveau code-behind :
 
-**Liste 4 : Codebehind**
+**Liste 4 : Code-behind**
 
 [!code-csharp[Main](understanding-asp-net-ajax-updatepanel-triggers/samples/sample4.cs)]
 

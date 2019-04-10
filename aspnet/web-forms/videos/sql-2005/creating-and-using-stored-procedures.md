@@ -8,18 +8,18 @@ ms.date: 11/14/2006
 ms.assetid: 817bc763-7faa-4ac5-880b-b3f5531e9d07
 msc.legacyurl: /web-forms/videos/sql-2005/creating-and-using-stored-procedures
 msc.type: video
-ms.openlocfilehash: f8397bfa9a6d162cfc6158fbd138dccf90d7e8a3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ee6735e406cc28370b9b5a91611c686ad0f39260
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037666"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408847"
 ---
-<a name="creating-and-using-stored-procedures"></a>Création et utilisation de procédures stockées
-====================
+# <a name="creating-and-using-stored-procedures"></a>Création et utilisation de procédures stockées
+
 by [Microsoft](https://github.com/microsoft)
 
-Cette vidéo se développe sur la rubrique de procédures stockées qui a été introduit il y a de plusieurs leçons. Dans cette vidéo, nous expliquons la syntaxe de base pour créer et mettre à jour des procédures stockées, à l’aide des paramètres d’entrée et de sortie, valeurs de retour, la déclaration de variables et ajout d’autres éléments de programmation de T-SQL dans vos procédures stockées, comment exécuter des procédures stockées à partir de la fenêtre de requête et enfin la syntaxe Visual Basic et C# requises pour utiliser des procédures stockées dans vos propres applications.
+Cette vidéo se développe sur la rubrique de procédures stockées qui a été introduit il y a de plusieurs leçons. Dans cette vidéo, nous expliquons la syntaxe de base pour créer et mettre à jour des procédures stockées, à l’aide des paramètres d’entrée et de sortie, valeurs de retour, la déclaration de variables et ajout d’autres éléments de programmation de T-SQL dans vos procédures stockées, comment exécuter des procédures stockées à partir de la fenêtre de requête et enfin la syntaxe Visual Basic et c# requises pour utiliser des procédures stockées dans vos propres applications.
 
 [&#9654;Regardez la vidéo (42 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-and-using-stored-procedures)
 

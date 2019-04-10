@@ -8,15 +8,15 @@ ms.date: 01/20/2014
 ms.assetid: 979d6c9f-0129-4e5b-ae56-4507b281b86d
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2
 msc.type: authoredcontent
-ms.openlocfilehash: 22eb2fd748d52ec95e813ada8b1bf3b4826ad573
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 65e2268418501f89a77a0ba20f7960a618c2e9b7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034276"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405454"
 ---
-<a name="attribute-routing-in-aspnet-web-api-2"></a>Routage par attributs dans ASP.NET Web API 2
-====================
+# <a name="attribute-routing-in-aspnet-web-api-2"></a>Routage par attributs dans ASP.NET Web API 2
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 *Routage* est comment l’API Web correspond à un URI à une action. Web API 2 prend en charge un nouveau type de routage, appelé *routage par attributs*. Comme son nom l’indique, le routage par attributs utilise les attributs pour définir des itinéraires. Routage par attributs vous donne davantage de contrôle sur les URI dans votre API web. Par exemple, vous pouvez facilement créer des URI qui décrivent les hiérarchies de ressources.
@@ -228,8 +228,8 @@ Vous pouvez également spécifier une valeur par défaut dans le modèle d’iti
 
 Il est presque identique à l’exemple précédent, mais il existe une légère différence de comportement lorsque la valeur par défaut est appliquée.
 
-- Dans le premier exemple (« {lcid ?} »), la valeur par défaut 1033 est affectée directement au paramètre de méthode, donc le paramètre aura cette valeur exacte.
-- Dans le deuxième exemple (« {lcid = 1033} »), la valeur par défaut de « 1033 » passe par le processus de liaison de modèle. Le binder de modèle par défaut convertira « 1033 » à la valeur numérique 1033. Toutefois, vous pouvez connecter dans un classeur de modèles personnalisés, ce qui peut faire quelque chose de différent.
+- Dans le premier exemple (« {lcid:int ?} »), la valeur par défaut 1033 est affectée directement au paramètre de méthode, donc le paramètre aura cette valeur exacte.
+- Dans le deuxième exemple (« {lcid:int = 1033} »), la valeur par défaut de « 1033 » passe par le processus de liaison de modèle. Le binder de modèle par défaut convertira « 1033 » à la valeur numérique 1033. Toutefois, vous pouvez connecter dans un classeur de modèles personnalisés, ce qui peut faire quelque chose de différent.
 
 (Dans la plupart des cas, sauf si vous avez des classeurs de modèles personnalisés dans votre pipeline, les deux formes sera équivalentes.)
 

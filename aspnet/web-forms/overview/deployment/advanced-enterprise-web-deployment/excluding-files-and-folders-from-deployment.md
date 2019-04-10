@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: f4cc2d40-6a78-429b-b06f-07d000d4caad
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/excluding-files-and-folders-from-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: fd7357a94ab09effcec86f3725a37cfb2ef4746a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4da291af4042e6e09c6917703b160ca717eecd15
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051026"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407989"
 ---
-<a name="excluding-files-and-folders-from-deployment"></a>Exclusion de fichiers et de dossiers pour le déploiement
-====================
+# <a name="excluding-files-and-folders-from-deployment"></a>Exclusion de fichiers et de dossiers pour le déploiement
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit comment vous pouvez exclure des fichiers et dossiers à partir d’un package de déploiement web lorsque vous générez et empaqueter un projet d’application web.
 

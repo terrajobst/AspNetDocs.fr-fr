@@ -8,15 +8,15 @@ ms.date: 10/17/2013
 ms.assetid: 08815768-2702-42ae-ae85-0a59934a11d1
 msc.legacyurl: /visual-studio/overview/2013/release-notes
 msc.type: authoredcontent
-ms.openlocfilehash: cd6197a9cbed822ba874a19823521a3711be9201
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8234bd1b7eb74d9b03e507f00d9ad937314288be
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411278"
 ---
-<a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>ASP.NET et Web Tools pour Visual Studio 2013 - Notes de publication
-====================
+# <a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>ASP.NET et Web Tools pour Visual Studio 2013 - Notes de publication
+
 by [Microsoft](https://github.com/microsoft)
 
 > Ce document décrit la version de ASP.NET et Web Tools pour Visual Studio 2013.
@@ -26,7 +26,7 @@ by [Microsoft](https://github.com/microsoft)
 
 - [Notes d’installation](#TOC1)
 - [Documentation](#TOC2)
-- [Configuration logicielle requise](#TOC4)
+- [Configuration logicielle](#TOC4)
 
 ### <a name="new-features-in-aspnet-and-web-tools-for-visual-studio-2013"></a>Nouvelles fonctionnalités dans ASP.NET et Web Tools pour Visual Studio 2013
 
@@ -38,13 +38,13 @@ by [Microsoft](https://github.com/microsoft)
 - [Prise en charge des applications Azure App Service Web dans Visual Studio](#waws)
 - [Améliorations de la publication sur le Web](#publish)
 - [NuGet 2.7](#nuget)
-- [ASP.NET Web Forms](#TOC9)
+- [ASP.NET Web Forms](#TOC9)
 - [ASP.NET MVC 5](#TOC10)
-- [ASP.NET Web API 2](#TOC11)
-- [ASP.NET SignalR](#TOC13)
+- [API web ASP.NET 2](#TOC11)
+- [SignalR ASP.NET](#TOC13)
 - [ASP.NET Identity](#TOC8)
 - [Composants Microsoft OWIN](#TOC7)
-- [Entity Framework 6](#ef6)
+- [Entity Framework 6](#ef6)
 - [Razor ASP.NET 3](#TOC14)
 - [ASP.NET App Suspend](#TOC15)
 - [Problèmes connus et les modifications avec rupture](#knownissues)
@@ -135,7 +135,7 @@ Dans Visual Studio 2013 avec le SDK Azure pour .NET 2.2, vous pouvez utiliser **
 Pour plus d'informations, reportez-vous aux ressources suivantes :
 
 - [Créer une application web ASP.NET dans Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-get-started/)
-- [Résoudre les problèmes d’une application web dans Azure App Service avec Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
+- [Dépanner une application web dans Azure App Service à l’aide de Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
 
 <a id="publish"></a>
 ## <a name="web-publish-enhancements"></a>Améliorations de la publication sur le Web
@@ -377,7 +377,7 @@ Les extraits de code suivants montrent comment implémenter des connexions inter
 
 [!code-csharp[Main](release-notes/samples/sample9.cs)]
 
-**Implémentation de demandes inter-domaines dans 2.0 SignalR (à partir d’un fichier de code C#)**
+**Implémentation de demandes inter-domaines dans 2.0 SignalR (à partir d’un fichier de code c#)**
 
 Le code suivant montre comment activer CORS ou JSONP dans un projet SignalR 2.0. Cet exemple de code utilise `Map` et `RunSignalR` au lieu de `MapSignalR`, de sorte que l’intergiciel (middleware) CORS s’exécute uniquement pour les demandes de SignalR qui nécessitent la prise en charge CORS (plutôt que pour tout le trafic sur le chemin spécifié dans `MapSignalR`.) `Map` peut également être utilisé pour n’importe quel autre intergiciel (middleware) qui doit s’exécuter pour un préfixe d’URL spécifique, plutôt que pour l’application entière.
 

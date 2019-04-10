@@ -8,21 +8,21 @@ ms.date: 09/28/2011
 ms.assetid: 67bdeec1-5301-4756-8615-cd9e8c5749e0
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3
 msc.type: chapter
-ms.openlocfilehash: 6540ddc8ac9938236461dbf09380495ab5324a20
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 20fdfd00826d1b033c2d5dd9500915cb784896e5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021506"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406455"
 ---
-<a name="getting-started-with-aspnet-mvc3"></a>Bien démarrer avec ASP.NET MVC 3
-====================
+# <a name="getting-started-with-aspnet-mvc3"></a>Bien démarrer avec ASP.NET MVC 3
+
 > Les principes fondamentaux de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express.
 
 
-- [Bien démarrer avec ASP.NET MVC 3 (C#)](cs/index.md)
+- [Bien démarrer avec ASP.NET MVC 3 (C#)](cs/index.md)
 
-    - [Introduction à ASP.NET MVC 3 (C#)](cs/intro-to-aspnet-mvc-3.md)
+    - [Introduction à ASP.NET MVC 3 (C#)](cs/intro-to-aspnet-mvc-3.md)
     - [Ajout d’un contrôleur (C#)](cs/adding-a-controller.md)
     - [Ajout d’une vue (C#)](cs/adding-a-view.md)
     - [Ajout d’un modèle (C#)](cs/adding-a-model.md)

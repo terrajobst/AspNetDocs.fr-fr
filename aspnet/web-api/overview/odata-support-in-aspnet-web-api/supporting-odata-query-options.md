@@ -1,23 +1,26 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options
-title: Prise en charge des Options de requête OData dans ASP.NET Web API 2 | Microsoft Docs
+title: Prise en charge des Options de requête OData dans ASP.NET Web API 2 - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Vue d’ensemble des exemples de code présente les Options de requête OData prise en charge dans ASP.NET Web API 2 pour ASP.NET 4.x.
 ms.author: riande
 ms.date: 02/04/2013
+ms.custom: seoapril2019
 ms.assetid: 50e6e62b-e72e-4a29-8293-4b67377bd21f
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options
 msc.type: authoredcontent
-ms.openlocfilehash: 8745183125c9dd1dcc7cb0e146367a893bdb0170
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 428e4942e42436585049c1e84cd7b07a4a79c0d1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050876"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411564"
 ---
-<a name="supporting-odata-query-options-in-aspnet-web-api-2"></a>Prise en charge des Options de requête OData dans ASP.NET Web API 2
-====================
+# <a name="supporting-odata-query-options-in-aspnet-web-api-2"></a>Prise en charge des Options de requête OData dans ASP.NET Web API 2
+
 par [Mike Wasson](https://github.com/MikeWasson)
+
+Cette vue d’ensemble des exemples de code illustre les Options de requête OData prise en charge dans ASP.NET Web API 2 pour ASP.NET 4.x. 
 
 OData définit les paramètres qui peuvent être utilisées pour modifier une requête OData. Le client envoie ces paramètres dans la chaîne de requête de l’URI de demande. Par exemple, pour trier les résultats, un client utilise le paramètre $orderby :
 

@@ -8,15 +8,15 @@ ms.date: 05/21/2008
 ms.assetid: 866a7177-6884-451e-88f4-c934b1dd1af5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 18e2dfdf5cf3d5802bf94d797795fc0f12bdc95b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 488988bbf540cc809579a5ad5f80cb772ed6b1bf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040226"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408366"
 ---
-<a name="multiple-contentplaceholders-and-default-content-vb"></a>ContentPlaceHolders multiples et contenu par défaut (VB)
-====================
+# <a name="multiple-contentplaceholders-and-default-content-vb"></a>ContentPlaceHolders multiples et contenu par défaut (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_02_VB.zip) ou [télécharger le PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_02_VB.pdf)
@@ -37,7 +37,7 @@ De nombreuses conceptions de site Web contient plusieurs domaines personnalisés
 La figure 1 montre `Default.aspx` lorsqu’ils sont affichés via un navigateur. La zone entourée en rouge est le balisage spécifiques à la page correspondant à `MainContent`.
 
 
-[![La région encerclée affiche la zone personnalisable actuellement sur une base de Page par Page](multiple-contentplaceholders-and-default-content-vb/_static/image2.png)](multiple-contentplaceholders-and-default-content-vb/_static/image1.png)
+[![Til avec cercle région affiche la zone actuellement personnalisable sur une base de Page par Page](multiple-contentplaceholders-and-default-content-vb/_static/image2.png)](multiple-contentplaceholders-and-default-content-vb/_static/image1.png)
 
 **Figure 01**: La région avec cercle affiche la zone actuellement personnalisable sur une base de Page par Page ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-vb/_static/image3.png))
 
@@ -45,7 +45,7 @@ La figure 1 montre `Default.aspx` lorsqu’ils sont affichés via un navigateur.
 Imaginez qu’en plus de la région indiquée dans la Figure 1, nous devons également ajouter des éléments spécifiques à la page à la colonne de gauche sous les leçons et les actualités sections. Pour ce faire, nous ajoutons un autre contrôle ContentPlaceHolder à la page maître. Pour suivre la procédure, ouvrez le `Site.master` page dans Visual Web Developer maître et faites glisser un contrôle ContentPlaceHolder à partir de la boîte à outils vers le concepteur, après la section d’actualités. Définir le ContentPlaceHolder `ID` à `LeftColumnContent`.
 
 
-[![Ajouter un contrôle ContentPlaceHolder à la colonne de gauche de la Page maître](multiple-contentplaceholders-and-default-content-vb/_static/image5.png)](multiple-contentplaceholders-and-default-content-vb/_static/image4.png)
+[![Aun contrôle ContentPlaceHolder à la colonne de gauche de la Page principale de jj](multiple-contentplaceholders-and-default-content-vb/_static/image5.png)](multiple-contentplaceholders-and-default-content-vb/_static/image4.png)
 
 **Figure 02**: Ajouter un contrôle ContentPlaceHolder à la colonne de gauche de la Page maître ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-vb/_static/image6.png))
 
@@ -67,7 +67,7 @@ Entrez du contenu dans le contrôle de contenu faisant référence à la `MainCo
 Après avoir ajouté ce balisage, visitez la page via un navigateur. Comme le montre la Figure 3, le balisage est placé dans le `Content3` contrôle de contenu s’affiche dans la colonne de gauche sous la section Actualités (entourée en rouge). Le balisage est placé dans `Content2` s’affiche dans la partie droite de la page (encerclée en bleu).
 
 
-[![La colonne de gauche inclut désormais le contenu propre à la Page sous la Section Actualités](multiple-contentplaceholders-and-default-content-vb/_static/image8.png)](multiple-contentplaceholders-and-default-content-vb/_static/image7.png)
+[![TIl gauche colonne maintenant inclut spécifiques à la Page contenu sous le News Section](multiple-contentplaceholders-and-default-content-vb/_static/image8.png)](multiple-contentplaceholders-and-default-content-vb/_static/image7.png)
 
 **Figure 03**: La colonne maintenant inclut spécifiques à la Page contenu sous le News Section gauche ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-vb/_static/image9.png))
 
@@ -81,7 +81,7 @@ Contrairement à la plupart des contrôles Web ASP.NET, la boîte à outils de V
 Pour ajouter un contrôle de contenu pour le `LeftColumnContent` ContentPlaceHolder à `About.aspx`, développez la balise active de ContentPlaceHolder, puis cliquez sur le lien Créer un contenu personnalisé.
 
 
-[![La vue de conception de About.aspx affiche LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image11.png)](multiple-contentplaceholders-and-default-content-vb/_static/image10.png)
+[![TIl conception afficher pour About.aspx montre LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image11.png)](multiple-contentplaceholders-and-default-content-vb/_static/image10.png)
 
 **Figure 04**: La vue de conception pour `About.aspx` montre le `LeftColumnContent` ContentPlaceHolder ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-vb/_static/image12.png))
 
@@ -97,7 +97,7 @@ ASP.NET ne nécessite pas que toutes les pages de contenu incluent des contrôle
 Actuellement, `Default.aspx` contient deux contrôles de contenu pour le `head` et `MainContent` ContentPlaceHolders ; il n’a pas d’un contrôle de contenu pour `LeftColumnContent`. Par conséquent, lorsque `Default.aspx` est rendu le `LeftColumnContent` le contenu de ContentPlaceHolder par défaut est utilisé. Étant donné que nous devons encore définir n’importe quel contenu par défaut pour cette ContentPlaceHolder, l’effet net est qu’aucune balise n’est émis pour cette région. Pour vérifier ce comportement, visitez `Default.aspx` via un navigateur. Comme le montre la Figure 5, aucune balise n’est émis dans la colonne de gauche sous la section d’actualités.
 
 
-[![Aucun contenu n’est rendu pour LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image14.png)](multiple-contentplaceholders-and-default-content-vb/_static/image13.png)
+[![No le que contenu est restitué pour LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image14.png)](multiple-contentplaceholders-and-default-content-vb/_static/image13.png)
 
 **Figure 05**: Aucun contenu n’est rendu pour le `LeftColumnContent` ContentPlaceHolder ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-vb/_static/image15.png))
 
@@ -123,7 +123,7 @@ Ouvrez le `Site.master` page maître et ajoutez le balisage suivant à la colonn
 Après avoir ajouté ce balisage mode de création de votre page maître doit ressembler à la Figure 6.
 
 
-[![La Page maître inclut un contrôle de connexion](multiple-contentplaceholders-and-default-content-vb/_static/image17.png)](multiple-contentplaceholders-and-default-content-vb/_static/image16.png)
+[![TIl Page maître inclut un contrôle de connexion](multiple-contentplaceholders-and-default-content-vb/_static/image17.png)](multiple-contentplaceholders-and-default-content-vb/_static/image16.png)
 
 **Figure 06**: La Page maître inclut un contrôle de connexion ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-vb/_static/image18.png))
 
@@ -145,7 +145,7 @@ Après avoir défini le contenu pour le `MainContent` et `LeftColumnContent` ré
 Figure 7 illustre cette page lorsqu’ils sont affichés via un navigateur. Étant donné que cette page spécifie un contrôle de contenu pour le `QuickLoginUI` ContentPlaceHolder, ce paramètre remplace le contenu par défaut spécifié dans la page maître. L’effet net est que le contrôle de connexion affiché dans la conception de la page maître (voir Figure 6) n'est pas restituée dans cette page.
 
 
-[![La Page de connexion Represses contenu de par défaut de la QuickLoginUI ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image20.png)](multiple-contentplaceholders-and-default-content-vb/_static/image19.png)
+[![TIl Page de connexion Represses par défaut contenu la QuickLoginUI ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image20.png)](multiple-contentplaceholders-and-default-content-vb/_static/image19.png)
 
 **Figure 07**: La Page de connexion Represses la `QuickLoginUI` par défaut contenu de ContentPlaceHolder ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-vb/_static/image21.png))
 
@@ -161,7 +161,7 @@ Pour supprimer le contrôle de contenu, vous pouvez supprimer son balisage décl
 La figure 8 illustre `Default.aspx` lorsqu’ils sont affichés via un navigateur. N’oubliez pas que `Default.aspx` a uniquement deux contrôles de contenu spécifiées dans son balisage déclaratif - un pour `head` et l’autre pour `MainContent`. Par conséquent, la valeur par défaut du contenu pour le `LeftColumnContent` et `QuickLoginUI` ContentPlaceHolders sont affichés.
 
 
-[![Le contenu par défaut pour les LeftColumnContent QuickLoginUI ContentPlaceHolders sont affichés](multiple-contentplaceholders-and-default-content-vb/_static/image23.png)](multiple-contentplaceholders-and-default-content-vb/_static/image22.png)
+[![TIl est par défaut le contenu pour le LeftColumnContent et QuickLoginUI ContentPlaceHolders sont affichées](multiple-contentplaceholders-and-default-content-vb/_static/image23.png)](multiple-contentplaceholders-and-default-content-vb/_static/image22.png)
 
 **Figure 08**: Le contenu par défaut pour le `LeftColumnContent` et `QuickLoginUI` ContentPlaceHolders sont affichés ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-vb/_static/image24.png))
 

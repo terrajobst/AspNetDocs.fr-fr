@@ -8,15 +8,15 @@ ms.date: 02/10/2010
 ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
-ms.openlocfilehash: 93ee29ae125e9442ee755998768a8105dfb485c0
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 0991ce5c866aa9e31ef23812e953d9ee10dda3d1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424298"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409718"
 ---
-<a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Vue d’ensemble du développement web ASP.NET 4 et Visual Studio 2010
-====================
+# <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Vue d’ensemble du développement web ASP.NET 4 et Visual Studio 2010
+
 > Ce document fournit une vue d’ensemble d’un grand nombre des nouvelles fonctionnalités pour ASP.NET qui sont inclus dans le.NET Framework 4 et Visual Studio 2010.
 > 
 > [Téléchargez ce livre blanc](https://download.microsoft.com/download/7/1/A/71A105A9-89D6-4201-9CC5-AD6A3B7E2F22/ASP_NET_4_and_Visual_Studio_2010_Web_Development_Overview.pdf)
@@ -24,7 +24,7 @@ ms.locfileid: "58424298"
 
 **Sommaire**
 
-**[Core Services](#0.2__Toc253429238 "_Toc253429238")**  
+**[Services principaux](#0.2__Toc253429238 "_Toc253429238")**  
 [Refactorisation du fichier Web.config](#0.2__Toc253429239 "_Toc253429239")  
 [La mise en cache de sortie extensible](#0.2__Toc253429240 "_Toc253429240")  
 [Démarrage automatique des Applications Web](#0.2__Toc253429241 "_Toc253429241")  
@@ -202,7 +202,7 @@ ASP.NET 4 vous permet également de configurer les caractères qui sont utilisé
 
 [!code-xml[Main](overview/samples/sample11.xml)]
 
-Par défaut, le <em>requestPathInvalidChars</em> attribut définit huit caractères comme étant non valide. (Dans la chaîne est assignée à <em>requestPathInvalidChars</em> par défaut<em>,</em>l’inférieur à (&lt;), supérieur à (&gt;) et « et commercial » (&amp;) sont des caractères codé, car le `Web.config` est un fichier XML.) Vous pouvez personnaliser le jeu de caractères non valides en fonction des besoins.
+Par défaut, le *requestPathInvalidChars* attribut définit huit caractères comme étant non valide. (Dans la chaîne est assignée à *requestPathInvalidChars* par défaut, le moins de (&lt;), supérieur à (&gt;) et « et commercial » (&amp;) caractères sont encodés, étant donné que le `Web.config` fichier est un fichier XML.) Vous pouvez personnaliser le jeu de caractères non valides en fonction des besoins.
 
 > [!NOTE]
 > Remarque ASP.NET 4 rejette toujours les chemins d’URL qui contiennent des caractères dans la plage ASCII de 0 x 00 à 0x1F, car ce sont des caractères d’URL non valides, tel que défini dans la RFC 2396 de l’IETF ([http://www.ietf.org/rfc/rfc2396.txt](http://www.ietf.org/rfc/rfc2396.txt)). Sur les versions de Windows Server qui exécutent IIS 6 ou une version ultérieure, le pilote de périphérique de protocole http.sys rejette automatiquement les URL avec ces caractères.
@@ -446,14 +446,14 @@ La liste suivante présente des fichiers de définition de nouveau navigateur :
 - *blackberry.browser*
 - *chrome.browser*
 - *Default.Browser*
-- *firefox.browser*
+- *Firefox.Browser*
 - *gateway.browser*
-- *generic.browser*
+- *Generic.browser situé*
 - *ie.browser*
 - *iemobile.browser*
-- *iphone.browser*
+- *iPhone.Browser*
 - *opera.browser*
-- *safari.browser*
+- *Safari.Browser*
 
 #### <a name="using-browser-capabilities-providers"></a>À l’aide de fournisseurs de fonctionnalités de navigateur
 
@@ -628,7 +628,7 @@ Le *RouteParameter* classe vous permet de spécifier les données d’itinérair
 
 [!code-aspx[Main](overview/samples/sample46.aspx)]
 
-Dans ce cas, la valeur de la searchterm de paramètre d’itinéraire sera utilisée pour le @companyname paramètre dans le <em>sélectionnez</em> instruction.
+Dans ce cas, la valeur de la searchterm de paramètre d’itinéraire sera utilisée pour le @companyname paramètre dans le *sélectionnez* instruction.
 
 <a id="0.2__Toc224729037"></a><a id="0.2__Toc253429261"></a><a id="0.2__Toc243304635"></a>
 
@@ -982,7 +982,7 @@ Vous pouvez ensuite définir une classe CSS qui s’applique uniquement à la *m
 Par défaut, les contrôles serveur Web ASP.NET suivants qui prennent en charge les modèles sont automatiquement encapsulées dans une table externe qui est utilisée pour appliquer des styles inline :
 
 - *FormView*
-- *Connexion*
+- *Connexion *
 - *PasswordRecovery*
 - *ChangePassword*
 - *Assistant*
@@ -1279,7 +1279,7 @@ Le concepteur Visual Web Developer dans Visual Studio 2010 a été mis à jour p
 
 ### <a name="html-and-javascript-snippets"></a>HTML et des extraits de code JavaScript
 
-Dans l’éditeur HTML, IntelliSense complète automatiquement les noms de balise. La fonctionnalité d’extraits de code IntelliSense complète automatiquement les balises entières et bien plus encore. Dans Visual Studio 2010, les extraits de code IntelliSense sont pris en charge pour JavaScript, ainsi que C# et Visual Basic, qui ont été pris en charge dans les versions antérieures de Visual Studio.
+Dans l’éditeur HTML, IntelliSense complète automatiquement les noms de balise. La fonctionnalité d’extraits de code IntelliSense complète automatiquement les balises entières et bien plus encore. Dans Visual Studio 2010, les extraits de code IntelliSense sont pris en charge pour JavaScript, ainsi que c# et Visual Basic, qui ont été pris en charge dans les versions antérieures de Visual Studio.
 
 Visual Studio 2010 inclut plus de 200 extraits de code qui vous aident à compléter automatiquement les balises ASP.NET et HTML courantes, notamment les attributs obligatoires (tels que runat = « server ») et les attributs courants spécifiques à une balise (tels que *ID*,  *DataSourceID*, *ControlToValidate*, et *texte*).
 

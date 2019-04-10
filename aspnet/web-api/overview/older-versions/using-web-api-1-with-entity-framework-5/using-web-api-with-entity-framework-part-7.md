@@ -8,15 +8,15 @@ ms.date: 07/04/2012
 ms.assetid: eb32a17b-626c-4373-9a7d-3387992f3c04
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: 91a6496e2640668c58ec0493d47d909e2de67367
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 028631f8855e4d94bebb0e965de75c4025e22859
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421348"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409263"
 ---
-<a name="part-7-creating-the-main-page"></a>Partie 7 : Création de la page principale
-====================
+# <a name="part-7-creating-the-main-page"></a>Partie 7 : Création de la page principale
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 [Télécharger le projet terminé](http://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)
@@ -91,7 +91,7 @@ Voici les liaisons pour le panier d’achat :
 
 Il effectue une itération sur le tableau de panier et affiche le nom, le prix et la quantité. Notez que le lien « Supprimer » et le bouton « Créer une commande » sont liés aux fonctions de modèle de vue.
 
-**Commandes**
+**Orders**
 
 Voici les liaisons pour obtenir la liste de commandes :
 
@@ -99,7 +99,7 @@ Voici les liaisons pour obtenir la liste de commandes :
 
 Il effectue une itération sur les commandes et qui affiche l’ID de commande. L’événement de clic sur le lien est lié à la `getDetails` (fonction).
 
-**Détails de la commande**
+**Order Details**
 
 Voici les liaisons pour les détails de commande :
 

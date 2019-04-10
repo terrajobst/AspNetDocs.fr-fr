@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
-title: 'Itération #5 : créer des tests unitaires (C#) | Microsoft Docs'
+title: 'Itération #5 : créer des tests unitaires (c#) | Microsoft Docs'
 author: microsoft
 description: Dans la cinquième itération, nous faciliter notre application mettre à jour et modifier en ajoutant des tests unitaires. Nous simuler nos classes de modèle de données et générer des tests unitaires pour o...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 28ad8f80-b8a5-444e-b478-8b15a846060c
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b2e96c996905bc73698d1c0b11df97d1dd366172
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 68080859e205283f56d8f543bfa06b76bb22a39d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422166"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408860"
 ---
-<a name="iteration-5--create-unit-tests-c"></a>Itération #5 : créer des tests unitaires (C#)
-====================
+# <a name="iteration-5--create-unit-tests-c"></a>Itération #5 : créer des tests unitaires (c#)
+
 by [Microsoft](https://github.com/microsoft)
 
 [Télécharger le Code](iteration-5-create-unit-tests-cs/_static/contactmanager_5_cs1.zip)
@@ -24,7 +24,7 @@ by [Microsoft](https://github.com/microsoft)
 > Dans la cinquième itération, nous faciliter notre application mettre à jour et modifier en ajoutant des tests unitaires. Nous simuler nos classes de modèle de données et générer des tests unitaires pour nos contrôleurs et la logique de validation.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (C#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (c#)
 
 Dans cette série de didacticiels, nous créer une application de gestion des contacts entière à partir du début à la fin. L’application Gestionnaire de Contact permet vous permettent de stocker les informations de contact (noms, numéros de téléphone et adresses de messagerie) pour obtenir la liste de personnes.
 
@@ -117,12 +117,12 @@ Avant de pouvoir utiliser Moq, vous devez suivre les étapes suivantes :
 5. Après avoir effectué ces étapes, votre dossier références doit ressembler à la Figure 2.
 
 
-[![Déblocage Moq](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
+[![Unblocking Moq](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
 
 **Figure 01**: Déblocage Moq ([cliquez pour afficher l’image en taille réelle](iteration-5-create-unit-tests-cs/_static/image2.png))
 
 
-[![Références après l’ajout de Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
+[![References après l’ajout de Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
 
 **Figure 02**: Références après l’ajout de Moq ([cliquez pour afficher l’image en taille réelle](iteration-5-create-unit-tests-cs/_static/image4.png))
 
@@ -185,7 +185,7 @@ Les tests restants vérifient que lorsque la méthode CreateContact() est appel�
 Vous pouvez exécuter les tests unitaires dans le Listing 1 en sélectionnant l’option de menu **série de tests, tous les Tests de la Solution (CTRL + R, A)**. Les résultats des tests sont affichés dans la fenêtre Résultats des tests (voir Figure 4).
 
 
-[![Résultats des tests](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
+[![TRésultats de l’outil est](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
 
 **Figure 04**: Résultats des tests ([cliquez pour afficher l’image en taille réelle](iteration-5-create-unit-tests-cs/_static/image8.png))
 

@@ -8,20 +8,20 @@ ms.date: 10/06/2010
 ms.assetid: f44c166e-7e91-48a0-a6f8-d9285f3594e5
 msc.legacyurl: /whitepapers/mvc3-release-notes
 msc.type: content
-ms.openlocfilehash: 7342b5f4a7e2327f3f3850941510a6e46ec30842
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 36bc314c6709c34863d86158419257be99f4084f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063866"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407105"
 ---
-<a name="aspnet-mvc-3"></a>ASP.NET MVC
-====================
-- [Vue d’ensemble](#overview)
+# <a name="aspnet-mvc-3"></a>ASP.NET MVC
+
+- [Vue d'ensemble](#overview)
 - [Notes d’installation](#installation-notes)
-- [Configuration logicielle requise](#software-requirements)
+- [Configuration logicielle](#software-requirements)
 - [Documentation](#documentation)
-- [Prise en charge](#support)
+- [Assistance](#support)
 - [La mise à niveau d’un projet ASP.NET MVC 2 vers ASP.NET MVC 3 mis à jour](#upgrading)
 - [ASP.NET MVC 3 Tools Update (12 avril 2011)](#tu-changes)
 
@@ -60,7 +60,7 @@ ms.locfileid: "57063866"
 - [ASP.NET MVC 3 Release Candidate (9 novembre 2010)](#TOC_ASP_NET_3_RC)
 
     - [Nouvelles fonctionnalités dans ASP.NET MVC 3 RC](#_Toc276711785)
-    - [Gestionnaire de Package NuGet](#_Toc276711786)
+    - [NuGet Package Manager](#_Toc276711786)
     - [Amélioration « Nouveau projet » boîte de dialogue](#_Toc276711787)
     - [Contrôleurs sessionless](#_Toc276711788)
     - [Nouveaux attributs de Validation](#_Toc276711789)
@@ -277,7 +277,7 @@ Ces bibliothèques sont incluses comme packages NuGet préinstallés.
 
 ADO.NET Entity Framework 4.1 inclut la fonctionnalité Code First. Code First est un nouveau modèle de développement pour ADO.NET Entity Framework qui fournit une alternative aux modèles Database First et Model First existants.
 
-Code First consiste à définir votre modèle à l’aide des classes POCO (« plain old CLR objects ») écrites en Visual Basic ou C#. Ces classes peuvent ensuite être mappés à une base de données existante ou être utilisés pour générer un schéma de base de données. Une configuration supplémentaire peut être fournie à l’aide de *DataAnnotations* attributs ou à l’aide d’API fluent.
+Code First consiste à définir votre modèle à l’aide des classes POCO (« plain old CLR objects ») écrites en Visual Basic ou c#. Ces classes peuvent ensuite être mappés à une base de données existante ou être utilisés pour générer un schéma de base de données. Une configuration supplémentaire peut être fournie à l’aide de *DataAnnotations* attributs ou à l’aide d’API fluent.
 
 Documentation sur l’utilisation de Code Firstwith ASP.NET MVC est disponible sur le site Web ASP.NET aux URL suivantes :
 
@@ -435,7 +435,7 @@ Lorsque le *Html.ValidationMessage* méthode affiche un message de validation, i
 <a id="_Toc2_10"></a>
 ### <a name="fixed-model-declaration-to-not-add-whitespace-to-the-document"></a>Fixe @model déclaration de ne pas ajouter un espace blanc au Document
 
-Dans les versions antérieures, le <em>@model</em> déclaration en haut d’une vue ajouté une ligne vide à la sortie HTML rendue. Ce problème a été résolu afin que la déclaration n’introduit pas d’espace blanc.
+Dans les versions antérieures, le *@model* déclaration en haut d’une vue ajouté une ligne vide à la sortie HTML rendue. Ce problème a été résolu afin que la déclaration n’introduit pas d’espace blanc.
 
 <a id="_Toc2_11"></a>
 ### <a name="added-fileextensions-property-to-view-engines-to-support-engine-specific-file-names"></a>Propriété ajoutée « FileExtensions » pour les moteurs d’affichage pour prendre en charge les noms de fichier spécifique de moteur
@@ -462,7 +462,7 @@ Dans les versions antérieures, les valeurs explicites ont été passés à la *
 - Dans les versions précédentes d’ASP.NET MVC, les filtres d’action ont été créés par la demande, sauf dans certains cas. Ce comportement n’a jamais été un comportement de garantie, mais simplement un détail d’implémentation et le contrat pour les filtres était de prendre en compte sans état. Dans ASP.NET MVC 3, les filtres sont mis en cache en plus agressive. Par conséquent, les filtres d’action personnalisée qui stockent pas correctement état de l’instance peuvent être rompues.
 - L’ordre d’exécution des filtres d’exception a été modifiée pour les filtres d’exception qui ont le même *ordre* valeur. Dans ASP.NET MVC 2 et versions antérieures, les filtres d’exception sur le contrôleur ayant le même *ordre* valeur que ceux sur une méthode d’action étaient exécutés avant les filtres d’exception sur la méthode d’action. Cela serait généralement le cas lorsque les filtres d’exception étaient appliqués sans spécifier *ordre* valeur. Dans ASP.NET MVC 3, cette commande a été inversée afin que le Gestionnaire d’exceptions plus spécifique s’exécute en premier. Comme dans les versions antérieures, si le *ordre* propriété est explicitement spécifiée, les filtres sont exécutés dans l’ordre spécifié.
 - Une nouvelle propriété nommée *FileExtensions* a été ajouté à la *VirtualPathProviderViewEngine* classe de base. Quand ASP.NET recherche une vue par chemin d’accès (pas par nom), uniquement les affichages avec une extension de fichier contenues dans la liste spécifiée par cette nouvelle propriété sont considérées comme. Il s’agit d’une modification avec rupture dans les applications où un fournisseur de générations personnalisé est inscrit afin d’activer une extension de fichier personnalisé pour les vues de formulaire Web et le fournisseur de référence ces vues à l’aide d’un chemin d’accès complet plutôt qu’un nom. La solution de contournement consiste à modifier la valeur de la *FileExtensions* propriété à inclure l’extension de fichier personnalisé.
-- Les implémentations de fabrique de contrôleur personnalisé qui implémentent directement le <em>IControllerFactory</em> interface doit fournir une implémentation de la nouvelle <em>GetControllerSessionBehavior</em>  <em>méthode qui a été ajoutée à l’interface dans cette version</em>. En règle générale, il est recommandé de ne pas implémenter cette interface directement et à la place de dériver votre classe de <em>DefaultControllerFactory</em>.
+- Les implémentations de fabrique de contrôleur personnalisé qui implémentent directement le *IControllerFactory* interface doit fournir une implémentation de la nouvelle *GetControllerSessionBehavior* méthode qui a été ajouté à l’interface dans cette version. En règle générale, il est recommandé de ne pas implémenter cette interface directement et à la place de dériver votre classe de *DefaultControllerFactory*.
 
 <a id="_Toc2_KI"></a>
 ## <a name="known-issues"></a>Problèmes connus
@@ -793,7 +793,7 @@ Par défaut, le code dans le \_viewstart.cshtml fichier s’applique également 
 
 ### <a id="0.1__Toc274034225"></a>  Nouvelle prise en charge pour la syntaxe Razor VBHTML
 
-L’aperçu de ASP.NET MVC précédente inclus la prise en charge pour les vues à l’aide de la syntaxe Razor basée sur C#. Ces vues utilisent l’extension de fichier .cshtml. Dans le cadre du travail en cours pour prendre en charge de Razor, la version bêta d’ASP.NET MVC 3 introduit la prise en charge de la syntaxe Razor dans Visual Basic, qui utilise l’extension de fichier .vbhtml.
+L’aperçu de ASP.NET MVC précédente inclus la prise en charge pour les vues à l’aide de la syntaxe Razor basée sur c#. Ces vues utilisent l’extension de fichier .cshtml. Dans le cadre du travail en cours pour prendre en charge de Razor, la version bêta d’ASP.NET MVC 3 introduit la prise en charge de la syntaxe Razor dans Visual Basic, qui utilise l’extension de fichier .vbhtml.
 
 Pour une introduction à l’utilisation de la syntaxe Visual Basic dans les pages VBHTML, consultez le didacticiel à l’adresse suivante :
 

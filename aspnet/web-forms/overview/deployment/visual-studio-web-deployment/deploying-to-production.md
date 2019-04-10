@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: 416438a1-3b2f-4d27-bf53-6b76223c33bf
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: f71d8311cbb1131d9c30c0bd9071a1c6c90f9976
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 19cda45ce1b425462ec491bcc86b7a0b76dec162
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045846"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409796"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Déploiement à des fins de production
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Déploiement à des fins de production
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet de démarrage](http://go.microsoft.com/fwlink/p/?LinkId=282627)
@@ -247,7 +247,7 @@ Le processus de création d’une application web de production et de déploieme
 
 ### <a name="edit-the-pubxml-file-to-exclude-robotstxt"></a>Modifiez le fichier .pubxml pour exclure robots.txt
 
-Les fichiers sont nommés de profil de publication &lt;profilename&gt;*.pubxml* et se trouvent dans le *PublishProfiles* dossier. Le *PublishProfiles* dossier se trouve sous le *propriétés* dossier dans une application web C# de projet, sous la *mon projet* dossier dans un projet d’application web Visual Basic, ou sous le *Application\_données* dossier dans un projet d’application web. Chaque *.pubxml* fichier contient des paramètres qui s’appliquent à un profil de publication. Les valeurs que vous entrez dans l’Assistant Publier le site Web sont stockés dans ces fichiers, et vous pouvez les modifier pour créer ou modifier les paramètres qui ne sont pas disponibles dans l’interface utilisateur de Visual Studio.
+Les fichiers sont nommés de profil de publication &lt;profilename&gt;*.pubxml* et se trouvent dans le *PublishProfiles* dossier. Le *PublishProfiles* dossier se trouve sous le *propriétés* dossier dans une application web c# de projet, sous la *mon projet* dossier dans un projet d’application web Visual Basic, ou sous le *Application\_données* dossier dans un projet d’application web. Chaque *.pubxml* fichier contient des paramètres qui s’appliquent à un profil de publication. Les valeurs que vous entrez dans l’Assistant Publier le site Web sont stockés dans ces fichiers, et vous pouvez les modifier pour créer ou modifier les paramètres qui ne sont pas disponibles dans l’interface utilisateur de Visual Studio.
 
 Par défaut, *.pubxml* fichiers sont inclus dans le projet lorsque vous créez un profil de publication, mais vous pouvez les exclure du projet et Visual Studio sera toujours les utiliser. Visual Studio recherche les *PublishProfiles* dossier pour *.pubxml* fichiers, quelle que soit la si elles figurent dans le projet.
 
@@ -276,7 +276,7 @@ Un *.pubxml* fichier contient les paramètres qui se rapportent à un profil de 
 
     ![Aperçu des fichiers à être publié en production](deploying-to-production/_static/image14.png)
 
-    Passez en revue la liste des fichiers qui seront copiés. Vous verrez que tous les *.cs* fichiers, y compris *. aspx.cs*, *. aspx.designer.cs*, *Master.cs*, et  *Master.Designer.cs* fichiers sont omis. Tout ce code a été compilé dans le *ContosoUniversity.dll* et *ContosUniversity.pdb* les fichiers que vous trouverez dans le *bin* dossier. Étant donné qu’uniquement le *.dll* est nécessaire pour exécuter l’application et vous avez spécifié précédemment que seuls les fichiers nécessaires pour exécuter l’application doivent être déployées, non *.cs* fichiers ont été copiés vers la destination environnement. Le *obj* dossier et le *ContosoUniversity.csproj* et *. csproj.user* fichiers sont omis par la même raison.
+    Passez en revue la liste des fichiers qui seront copiés. Vous verrez que tous les *.cs* fichiers, y compris *. aspx.cs*, *. aspx.designer.cs*, *Master.cs*, et  *Master.Designer.cs* fichiers sont omis. Tout ce code a été compilé dans le *ContosoUniversity.dll* et *ContosoUniversity.pdb* les fichiers que vous trouverez dans le *bin* dossier. Étant donné qu’uniquement le *.dll* est nécessaire pour exécuter l’application et vous avez spécifié précédemment que seuls les fichiers nécessaires pour exécuter l’application doivent être déployées, non *.cs* fichiers ont été copiés vers la destination environnement. Le *obj* dossier et le *ContosoUniversity.csproj* et *. csproj.user* fichiers sont omis par la même raison.
 
     Cliquez sur **publier** à déployer dans l’environnement de production.
 2. Tester en production, suivant la même procédure que vous avez utilisé pour l’environnement intermédiaire.

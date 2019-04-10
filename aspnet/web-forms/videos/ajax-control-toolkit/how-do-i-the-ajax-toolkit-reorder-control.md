@@ -8,15 +8,15 @@ ms.date: 02/21/2008
 ms.assetid: 1bc7e41a-633c-4ade-ba7a-486c9484a0ba
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-the-ajax-toolkit-reorder-control
 msc.type: video
-ms.openlocfilehash: d16ecfca0783622e4616863e680b3de78c445762
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 81a2ff1ae7deb69902e9e366cc68f9bb4fdadc0b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407144"
 ---
-<a name="how-do-i-the-ajax-toolkit-reorder-control"></a>[Comment faire] Le contrôle de la réorganisation de la boîte à outils AJAX
-====================
+# <a name="how-do-i-the-ajax-toolkit-reorder-control"></a>[Comment faire] Le contrôle de la réorganisation de la boîte à outils AJAX
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Dans cette vidéo, je vais vous montrer l’utilisation du contrôle de renouvellement de commande qui est fourni avec le Kit d’outils AJAX. La réorganisation control permet de que vous présenter à vos utilisateurs une liste d’éléments de données qui peuvent être réorganisées en tant que l’utilisateur préfère.

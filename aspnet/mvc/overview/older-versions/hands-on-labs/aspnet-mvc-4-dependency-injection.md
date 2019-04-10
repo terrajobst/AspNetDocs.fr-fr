@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 84c7baca-1c54-4c44-8f52-4282122d6acb
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 52aba3fa5948d32180fbf135444433771b17756d
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 86781a1f46ce0c01a5d70b1f0cf8a81f3f96a032
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425638"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405922"
 ---
 # <a name="aspnet-mvc-4-dependency-injection"></a>Injection de dépendances d’ASP.NET MVC 4
 
@@ -91,7 +91,7 @@ Pour des raisons pratiques, une grande partie du code que vous gérez le long de
 
 Si vous n’êtes pas familiarisé avec les extraits de Code Visual Studio et que vous souhaitiez savoir comment les utiliser, vous pouvez faire référence à l’annexe de ce document &quot; [annexe b : À l’aide d’extraits de Code](#AppendixB)&quot;.
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -484,7 +484,7 @@ Dans cette tâche, vous exécutez l’application et que le filtre d’action pe
     *Trace de l’application - détails de la demande*
 4. Fermez le navigateur.
 
-* * *
+---
 
 <a id="Summary"></a>
 
@@ -524,7 +524,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](aspnet-mvc-4-dependency-injection/_static/image16.png)
 
-    *Progression de l’installation*
+    *Progression de l'installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](aspnet-mvc-4-dependency-injection/_static/image17.png)

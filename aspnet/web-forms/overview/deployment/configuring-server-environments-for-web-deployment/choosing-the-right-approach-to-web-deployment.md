@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: 787a53fd-9901-4a11-9d58-61e0509cda45
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 0b21852a1db2862a8452e332021b55ce7f1db423
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 65b77b016e02c2d9c8ff2b925b1567f26a6a05cc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036316"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407911"
 ---
-<a name="choosing-the-right-approach-to-web-deployment"></a>Choix de la bonne approche pour le déploiement web
-====================
+# <a name="choosing-the-right-approach-to-web-deployment"></a>Choix de la bonne approche pour le déploiement web
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Lorsque vous travaillez avec l’Internet Information Services (IIS) outil de déploiement Web (Web Deploy) 2.0 ou version ultérieure, il existe trois approches principales, que vous pouvez utiliser pour vos applications web empaquetée sur un serveur web. Vous pouvez :
 > 

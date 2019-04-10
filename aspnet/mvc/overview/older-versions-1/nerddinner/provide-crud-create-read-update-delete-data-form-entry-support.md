@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: bbb976e5-6150-4283-a374-c22fbafe29f5
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/provide-crud-create-read-update-delete-data-form-entry-support
 msc.type: authoredcontent
-ms.openlocfilehash: 45d74249a34fc7e37e9776a398615d2f613a7582
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 242665b3ba2e2ad2157abbe2c44ae207f15e72ce
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031736"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410862"
 ---
-<a name="provide-crud-create-read-update-delete-data-form-entry-support"></a>Fournir une prise en charge des entrées dans les formulaires de données CRUD (créer, lire, mettre à jour, supprimer)
-====================
+# <a name="provide-crud-create-read-update-delete-data-form-entry-support"></a>Fournir une prise en charge des entrées dans les formulaires de données CRUD (créer, lire, mettre à jour, supprimer)
+
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Télécharger le PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Il s’agit d’étape 5 a gratuit [« « l’application NerdDinner](introducing-the-nerddinner-tutorial.md) qui présente en détail comment créer un petit mais terminé, l’application web à l’aide d’ASP.NET MVC 1.
 > 
@@ -36,20 +36,20 @@ Nous avons introduit des contrôleurs et des vues et vu comment les utiliser pou
 
 Nous avons ajouté précédemment des méthodes d’action à DinnersController qui a implémenté la prise en charge des deux URL : */Dinners* et */Dinners/détails / [id]*.
 
-| **URL** | **VERB** | **Fonction** |
+| **URL** | **VERB** | **Objectif** |
 | --- | --- | --- |
 | */Dinners/* | GET | Afficher une liste HTML de dîners à venir. |
-| */Dinners/Details/[id]* | GET | Afficher des détails sur un dîner spécifique. |
+| */Dinners/détails / [id]* | GET | Afficher des détails sur un dîner spécifique. |
 
-Nous allons maintenant ajouter des méthodes d’action pour implémenter les trois URL supplémentaires : <em>/Dinners/modification / [id], / dîners/création,</em>et<em>/Dinners/Delete / [id]</em>. Ces URL permettra la prise en charge pour l’éditions dîners existants, création de nouveau dîners et la suppression des dîners.
+Nous allons maintenant ajouter des méthodes d’action pour implémenter les trois URL supplémentaires : */Dinners/modification / [id]*, */dîners/créer*, et */Dinners/Delete / [id]*. Ces URL permettra la prise en charge pour l’éditions dîners existants, création de nouveau dîners et la suppression des dîners.
 
 Nous prendrons en charge les interactions de verbe HTTP GET et HTTP POST à la fois avec ces nouvelles URL. Les requêtes HTTP GET à ces URL affiche la vue HTML initiale des données (un formulaire rempli avec les données dîner dans le cas de « modifier », un formulaire vide dans le cas de « créer » et un écran de confirmation de suppression dans le cas de « delete »). Les requêtes HTTP POST à ces URL seront enregistrement ou de suppression/mise à jour les données dîner dans notre DinnerRepository (et à partir de là à la base de données).
 
-| **URL** | **VERB** | **Fonction** |
+| **URL** | **VERB** | **Objectif** |
 | --- | --- | --- |
 | */Dinners/Edit/[id]* | GET | Afficher un formulaire HTML modifiable rempli avec les données de dîner. |
 | PUBLIER | Enregistrez les modifications de formulaire pour un dîner particulier à la base de données. |
-| */Dinners/Create* | GET | Afficher un formulaire HTML vide qui permet aux utilisateurs de définir de nouvelles dîners. |
+| */ Dîners/création* | GET | Afficher un formulaire HTML vide qui permet aux utilisateurs de définir de nouvelles dîners. |
 | PUBLIER | Créer un nouveau dîner et l’enregistrer dans la base de données. |
 | */Dinners/Delete/[id]* | GET | Affichage supprimer l’écran de confirmation. |
 | PUBLIER | Supprime le dîner spécifié à partir de la base de données. |
@@ -96,7 +96,7 @@ Notre modèle de vue « Edit.aspx » à l’aide de plusieurs méthodes de «�
 
 ##### <a name="htmlbeginform-helper-method"></a>Méthode d’assistance de Html.BeginForm()
 
-La méthode d’assistance Html.BeginForm() est ce que le code HTML de sortie &lt;formulaire&gt; élément notre balisage. Dans notre modèle de vue Edit.aspx, vous remarquerez que nous appliquons une instruction « using » lors de l’utilisation de cette méthode C#. L’accolade ouvrante indique le début de la &lt;formulaire&gt; contenu et l’accolade fermante est ce qui indique la fin de la &lt;/forment&gt; élément :
+La méthode d’assistance Html.BeginForm() est ce que le code HTML de sortie &lt;formulaire&gt; élément notre balisage. Dans notre modèle de vue Edit.aspx, vous remarquerez que nous appliquons une instruction « using » lors de l’utilisation de cette méthode c#. L’accolade ouvrante indique le début de la &lt;formulaire&gt; contenu et l’accolade fermante est ce qui indique la fin de la &lt;/forment&gt; élément :
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample3.cs)]
 
@@ -122,7 +122,7 @@ Souvent, nous devrons effectuer la mise en forme personnalisée de la valeur de 
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample7.aspx)]
 
-Un troisième paramètre Html.TextBox() peut éventuellement être utilisé pour générer des attributs HTML supplémentaires. L’extrait de code ci-dessous montre comment restituer une taille supplémentaire = attribut « 30 » et une classe = attribut de « mycssclass » sur le &lt;d’entrée de type = « text » /&gt; élément. Notez comment nous avons échappement le nom de l’attribut de classe en utilisant un «@" character because "classe » est un mot clé réservé en C# :
+Un troisième paramètre Html.TextBox() peut éventuellement être utilisé pour générer des attributs HTML supplémentaires. L’extrait de code ci-dessous montre comment restituer une taille supplémentaire = attribut « 30 » et une classe = attribut de « mycssclass » sur le &lt;d’entrée de type = « text » /&gt; élément. Notez comment nous avons échappement le nom de l’attribut de classe en utilisant un «@" character because "classe » est un mot clé réservé en c# :
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample8.aspx)]
 
@@ -138,7 +138,7 @@ Nous allons commencer en ajoutant une méthode d’action « Modifier » surch
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample9.cs)]
 
-Lorsque l’attribut [AcceptVerbs] est appliqué aux méthodes d’action surchargé, ASP.NET MVC gère automatiquement la distribution des demandes à la méthode d’action appropriée selon le verbe HTTP entrante. Des demandes HTTP POST à <em>/Dinners/modification / [id]</em> URL passera à la méthode Edit ci-dessus, lors de toutes les autres demandes de verbe HTTP à <em>/Dinners/modification / [id]</em>URL passera à la première méthode de modification, nous avons implémenté (qui pas avoir un attribut [AcceptVerbs]).
+Lorsque l’attribut [AcceptVerbs] est appliqué aux méthodes d’action surchargé, ASP.NET MVC gère automatiquement la distribution des demandes à la méthode d’action appropriée selon le verbe HTTP entrante. Des demandes HTTP POST à */Dinners/modification / [id]* URL passera à la méthode Edit ci-dessus, lors de toutes les autres demandes de verbe HTTP à */Dinners/modification / [id]* URL passera à la première méthode de modification, nous avons implémenté (qui pas avoir un `[AcceptVerbs]` attribut).
 
 | **Rubrique de côté : Pourquoi la différence par le biais de verbes HTTP ?** |
 | --- |
@@ -228,7 +228,7 @@ La méthode d’assistance Html.ValidationMessage() prend également en charge u
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample18.aspx)]
 
-Génère le code ci-dessus :  <em>&lt;span classe = « erreur de validation de champ »&gt;\*&lt;/span&gt;</em>plutôt que le texte d’erreur par défaut lorsqu’une erreur est présente pour le Propriété de EventDate.
+Génère le code ci-dessus : *&lt;span classe = « erreur de validation de champ »&gt;\*&lt;/span&gt;* plutôt que le texte d’erreur par défaut lorsqu’une erreur est présente pour le Propriété de EventDate.
 
 ##### <a name="htmlvalidationsummary-helper-method"></a>Méthode d’assistance de Html.ValidationSummary()
 

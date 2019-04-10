@@ -8,15 +8,15 @@ ms.date: 01/28/2011
 ms.assetid: 51b447d5-eaa1-4df1-917c-f4f2746ed62d
 msc.legacyurl: /mobile/tested-devices
 msc.type: content
-ms.openlocfilehash: 4576e176f3b5d6e3a1fbec16f098c64ec3f0d54d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ecf8b7d90358fa0410ded9bd33c711016b4cd1d4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034376"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411057"
 ---
-<a name="aspnet-mobile-controls-tested-devices"></a>Appareils testés pour les contrôles mobiles ASP.NET
-====================
+# <a name="aspnet-mobile-controls-tested-devices"></a>Appareils testés pour les contrôles mobiles ASP.NET
+
 > Les appareils et navigateurs suivants ont été testées avec la version 1.0 de Microsoft Mobile Internet Toolkit et les contrôles mobiles ASP.NET.
 > 
 > - Microsoft Mobile Internet Toolkit [MMIT 1.0] : *(Janvier 15, 2002)*

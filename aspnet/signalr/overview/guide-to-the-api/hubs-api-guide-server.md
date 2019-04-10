@@ -1,6 +1,6 @@
 ---
 uid: signalr/overview/guide-to-the-api/hubs-api-guide-server
-title: Guide de l’API ASP.NET SignalR Hubs - serveur (C#) | Microsoft Docs
+title: Guide de l’API ASP.NET SignalR Hubs - serveur (c#) | Microsoft Docs
 author: bradygaster
 description: Ce document fournit une introduction à la programmation côté serveur de l’API des concentrateurs SignalR ASP.NET pour SignalR version 2, avec des exemples de code illustrant l’utilisation...
 ms.author: bradyg
@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: b19913e5-cd8a-4e4b-a872-5ac7a858a934
 msc.legacyurl: /signalr/overview/guide-to-the-api/hubs-api-guide-server
 msc.type: authoredcontent
-ms.openlocfilehash: a28663c8d5c679f85e863e7d0b4523a6f4dd4a1f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: adfd540562ec54938860740ab280c770e24f492e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411408"
 ---
-<a name="aspnet-signalr-hubs-api-guide---server-c"></a>Guide de l’API ASP.NET SignalR Hubs - serveur (C#)
-====================
+# <a name="aspnet-signalr-hubs-api-guide---server-c"></a>Guide de l’API ASP.NET SignalR Hubs - serveur (c#)
+
 par [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://github.com/tdykstra)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -230,7 +230,7 @@ Pour exposer une méthode sur le Hub que vous souhaitez pouvoir être appelée �
 
 [!code-csharp[Main](hubs-api-guide-server/samples/sample14.cs?highlight=3)]
 
-Vous pouvez spécifier un type de retour et paramètres, y compris les types complexes et les tableaux, comme vous le feriez dans n’importe quelle méthode C#. Toutes les données que vous recevez dans les paramètres ou retourner à l’appelant sont communiquées entre le client et le serveur à l’aide de JSON et SignalR gère la liaison d’objets complexes et des tableaux d’objets automatiquement.
+Vous pouvez spécifier un type de retour et paramètres, y compris les types complexes et les tableaux, comme vous le feriez dans n’importe quelle méthode c#. Toutes les données que vous recevez dans les paramètres ou retourner à l’appelant sont communiquées entre le client et le serveur à l’aide de JSON et SignalR gère la liaison d’objets complexes et des tableaux d’objets automatiquement.
 
 <a id="methodnames"></a>
 
@@ -270,7 +270,7 @@ L’exemple suivant montre la même méthode codée pour exécuter de façon syn
 
 [!code-csharp[Main](hubs-api-guide-server/samples/sample19.cs)]
 
-**Asynchrone**
+**Asynchronous**
 
 [!code-csharp[Main](hubs-api-guide-server/samples/sample20.cs?highlight=1,7-8)]
 
@@ -566,7 +566,7 @@ Dans votre classe de concentrateur, vous pouvez accéder à ces données dans le
 
 Dans VB.NET ou dans un concentrateur fortement typées, l’objet d’état de l’appelant n’est pas accessible via `Clients.Caller`; au lieu de cela, utilisez `Clients.CallerState` (introduite dans SignalR 2.1) :
 
-**À l’aide de CallerState en C#**
+**À l’aide de CallerState en c#**
 
 [!code-csharp[Main](hubs-api-guide-server/samples/sample59.cs?highlight=3-4)]
 

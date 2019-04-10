@@ -8,16 +8,17 @@ ms.date: 03/03/2014
 ms.assetid: a2f1c635-0817-4a9a-8c13-d5b5d29727c0
 msc.legacyurl: /web-forms/overview/getting-started/creating-a-basic-web-forms-page
 msc.type: authoredcontent
-ms.openlocfilehash: eb1a4632caf00097012bd1757da44016a076630f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bf3336c2467553ba3714bbd4fbb41a35a0490768
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026226"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410602"
 ---
 # <a name="using-visual-studio-2013-to-create-a-basic-aspnet-45-web-forms-page"></a>À l’aide de Visual Studio 2013 pour créer une Page ASP.NET 4.5 Web Forms base
+# 
 
-=== par [Erik Reitan](https://github.com/Erikre)
+par [Erik Reitan](https://github.com/Erikre)
 
 [!INCLUDE[](~/includes/rp.md)]
 
@@ -61,7 +62,7 @@ Dans cette partie de la procédure pas à pas, vous créez un projet d’applica
 3. Sélectionnez le **modèles**  - &gt; **Visual C#**  - &gt; **Web** groupe de modèles sur la gauche.
 4. Choisissez le **Application Web ASP.NET** modèle dans la colonne centrale.
 5. Nommez votre projet ***BasicWebApp*** et cliquez sur le **OK** bouton.   
-![Boîte de dialogue Nouveau projet](creating-a-basic-web-forms-page/_static/image2.png)
+![Boîte de dialogue Nouveau projet de test](creating-a-basic-web-forms-page/_static/image2.png)
 6. Ensuite, sélectionnez le **Web Forms** modèle et cliquez sur le **OK** bouton pour créer le projet.  
 ![Boîte de dialogue Nouveau projet ASP.NET](creating-a-basic-web-forms-page/_static/image3.png)  
 
@@ -108,7 +109,7 @@ Lorsque vous créez une nouvelle application Web Forms à l’aide du **Applicat
 2. Dans **l’Explorateur de solutions**, cliquez sur le nom d’application Web (dans ce didacticiel est le nom de l’application **BasicWebSite**), puis cliquez sur **ajouter**  - &gt; **Un nouvel élément**.   
 La boîte de dialogue **Ajouter un nouvel élément** s’affiche.
 3. Sélectionnez le **Visual C#**  - &gt; **Web** groupe de modèles sur la gauche. Ensuite, sélectionnez **Web Form** à partir du milieu de liste et nommez-le *PremièrePageWeb.aspx*.   
-    ![Ajouter un nouvel élément](creating-a-basic-web-forms-page/_static/image6.png)
+    ![Boîte de dialogue Ajouter un nouvel élément](creating-a-basic-web-forms-page/_static/image6.png)
 4. Cliquez sur **ajouter** pour ajouter la page web à votre projet.  
 Visual Studio crée la page et l’ouvre.
 
@@ -187,7 +188,7 @@ Visual Studio vous propose différentes façons de définir les propriétés des
 ### <a name="to-set-control-properties"></a>Pour définir les propriétés de contrôle
 
 
-1. Tout d’abord, afficher le **propriétés** windows en sélectionnant à partir de la **vue** menu -&gt; **Windows autres**  - &gt; **Fenêtre de propriétés**. Vous pouvez également sélectionner **F4** pour afficher le **propriétés** fenêtre.
+1. Tout d’abord, afficher le **propriétés** windows en sélectionnant à partir de la **vue** menu -&gt; **Windows autres**  - &gt; **Fenêtre Propriétés**. Vous pouvez également sélectionner **F4** pour afficher le **propriétés** fenêtre.
 2. Sélectionnez le [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) contrôle, puis, dans le **propriétés** fenêtre, définissez la valeur de **texte** à **nom d’affichage**. Le texte que vous avez entré s’affiche sur le bouton dans le concepteur, comme indiqué dans l’illustration suivante.
 
     ![Définir le texte du bouton](creating-a-basic-web-forms-page/_static/image10.png "texte du bouton Définir")
@@ -228,7 +229,7 @@ Pour cette procédure pas à pas, vous allez écrire du code qui lit le nom que 
 1. Basculez vers **conception** vue.
 2. Double-cliquez sur le [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) contrôle.
 
-    Par défaut, Visual Studio bascule vers un fichier code-behind et crée un gestionnaire d’événements squelette pour le [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) l’événement par défaut du contrôle, le [cliquez sur](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.click.aspx) événement. Le fichier code-behind sépare votre balisage de l’interface utilisateur (par exemple, HTML) à partir de votre code serveur (tel que C#).   
+    Par défaut, Visual Studio bascule vers un fichier code-behind et crée un gestionnaire d’événements squelette pour le [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) l’événement par défaut du contrôle, le [cliquez sur](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.click.aspx) événement. Le fichier code-behind sépare votre balisage de l’interface utilisateur (par exemple, HTML) à partir de votre code serveur (tel que c#).   
    Le curseur est positionné à ajouté du code pour ce gestionnaire d’événements.
 
     > [!NOTE] 

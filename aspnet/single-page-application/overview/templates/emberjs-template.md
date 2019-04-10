@@ -8,15 +8,15 @@ ms.date: 01/30/2013
 ms.assetid: 04d5f142-5f62-494a-b5ea-4f3d068d34cb
 msc.legacyurl: /single-page-application/overview/templates/emberjs-template
 msc.type: authoredcontent
-ms.openlocfilehash: 69331dc1cf2aacf306b55b49402f7df90f5e2c99
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: e2bb8a13a0036f1fcfdcfd03a6a6e74e886a7f2c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421972"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406858"
 ---
-<a name="emberjs-template"></a>Modèle EmberJS
-====================
+# <a name="emberjs-template"></a>Modèle EmberJS
+
 par [Xinyang Qiu](https://github.com/xqiu)
 
 > Le modèle MVC EmberJS est rédigé par Nathan Totten, Thiago Santos et Xinyang Qiu.

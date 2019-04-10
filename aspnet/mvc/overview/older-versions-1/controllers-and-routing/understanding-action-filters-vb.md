@@ -8,18 +8,18 @@ ms.date: 10/16/2008
 ms.assetid: e83812f2-c53e-4a43-a7c1-d64c59ecf694
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/understanding-action-filters-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0116306afdf21cb24a374013bb54ada54e5699ea
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bbedc11b9b1225b1047350c1c84a116ecef0c380
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036296"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407404"
 ---
-<a name="understanding-action-filters-vb"></a>Présentation des filtres d’actions (VB)
-====================
+# <a name="understanding-action-filters-vb"></a>Présentation des filtres d’actions (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_14_VB.pdf)
+[Télécharger le PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_14_VB.pdf)
 
 > L’objectif de ce didacticiel est d’expliquer les filtres d’action. Un filtre d’action est un attribut que vous pouvez appliquer à une action de contrôleur--ou un ensemble du contrôleur--qui modifie la façon dont dans lequel l’action est exécutée.
 
@@ -49,7 +49,7 @@ Par exemple, le contrôleur de données dans la liste 1 expose une action nommé
 Si vous appelez plusieurs fois le `Index()` action en entrant l’URL/Data/Index dans la barre d’adresses de votre navigateur et en appuyant sur l’actualisation bouton plusieurs fois, vous verrez le même temps pendant 10 secondes. La sortie de la `Index()` action est mise en cache pendant 10 secondes (voir Figure 1).
 
 
-[![Temps en cache](understanding-action-filters-vb/_static/image2.png)](understanding-action-filters-vb/_static/image1.png)
+[![Ctemps résultant](understanding-action-filters-vb/_static/image2.png)](understanding-action-filters-vb/_static/image1.png)
 
 **Figure 01**: Heure de mise en cache ([cliquez pour afficher l’image en taille réelle](understanding-action-filters-vb/_static/image3.png))
 
@@ -107,7 +107,7 @@ Afin d’illustrer comment vous pouvez créer un filtre d’action personnalisé
 Dans la liste 2, le `OnActionExecuting()`, `OnActionExecuted()`, `OnResultExecuting()`, et `OnResultExecuted()` toutes les méthodes appellent le `Log()` (méthode). Le nom de la méthode et les données d’itinéraire actuel est passé à la `Log()` (méthode). Le `Log()` méthode écrit un message dans la fenêtre Sortie de Visual Studio (voir Figure 2).
 
 
-[![Écriture dans la fenêtre Sortie de Visual Studio](understanding-action-filters-vb/_static/image5.png)](understanding-action-filters-vb/_static/image4.png)
+[![Writing à la fenêtre Sortie de Visual Studio](understanding-action-filters-vb/_static/image5.png)](understanding-action-filters-vb/_static/image4.png)
 
 **Figure 02**: Écriture dans la fenêtre Sortie de Visual Studio ([cliquez pour afficher l’image en taille réelle](understanding-action-filters-vb/_static/image6.png))
 

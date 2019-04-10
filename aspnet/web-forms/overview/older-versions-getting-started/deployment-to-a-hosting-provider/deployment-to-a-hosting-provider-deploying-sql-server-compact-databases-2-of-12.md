@@ -8,15 +8,15 @@ ms.date: 11/17/2011
 ms.assetid: c3c76516-4c48-4153-bd03-d70e3a3edbb0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 9b3d47c3c8fe5f0b37f1d45e19341df3f91a5bb0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cc8568847e050e868a3e7563b5fc1fc6fbf25d86
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059356"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405480"
 ---
-<a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-sql-server-compact-databases---2-of-12"></a>Déploiement d’une Application de Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : Déploiement de SQL Server Compact bases de données - 2 de 12
-====================
+# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-sql-server-compact-databases---2-of-12"></a>Déploiement d’une Application de Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : Déploiement de SQL Server Compact bases de données - 2 de 12
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet de démarrage](http://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
@@ -138,7 +138,7 @@ Cette sélection de menu ajoute le code suivant aux `using` instructions située
 > [!NOTE]
 > Dans SSMS `Seed`Explorateur d’objets, avec le bouton droit bases de données et cliquez sur attacher. Une alternative consiste à ajouter du code aux méthodes `Up` et `Down` de chaque classe de migration. Les méthodes `Up` et `Down` contiennent du code qui implémente les modifications de base de données. Vous en trouverez des exemples dans le didacticiel [Déploiement d'une base de données Update](deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md).
 > 
-> Vous pouvez également écrire du code qui exécute des instructions SQL à l'aide de la méthode `Sql`. Par exemple, si vous ajoutez une colonne Budget à la table Department et souhaitez initialiser tous les budgets de département à 1 000,00 $ dans le cadre d'une migration, vous pouvez ajouter la ligne de code suivante à la méthode `Up` pour cette migration:
+> Vous pouvez également écrire du code qui exécute des instructions SQL à l'aide de la méthode `Sql`. Par exemple, si vous ajoutiez une colonne de Budget pour la table Department et que vous voulez initialiser tous les budgets de département à 1 000,00 $ dans le cadre d’une migration, vous pouvez ajouter la ligne suivante de code pour le `Up` méthode pour que la migration :
 > 
 > `Sql("UPDATE Department SET Budget = 1000");`
 > 

@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-client-app
-title: Créer une application de Client OData v4 (C#) | Microsoft Docs
+title: Créer une application de Client OData v4 (c#) | Microsoft Docs
 author: MikeWasson
 description: ''
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/26/2014
 ms.assetid: 47202362-3808-4add-9a69-c9d1f91d5e4e
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-client-app
 msc.type: authoredcontent
-ms.openlocfilehash: 4d62a64006e2a500e0379419dbebe7ddff16fba5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 14d4b01a2ea8a4582294053416b626e7f1801b50
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061196"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411512"
 ---
-<a name="create-an-odata-v4-client-app-c"></a>Créer une application cliente OData v4 (C#)
-====================
+# <a name="create-an-odata-v4-client-app-c"></a>Créer une application cliente OData v4 (C#)
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 Dans le didacticiel précédent, vous avez créé un service OData de base qui prend en charge les opérations CRUD. Maintenant nous allons créer un client pour le service.
@@ -53,7 +53,7 @@ Cliquez avec le bouton droit sur le projet. Sélectionnez **ajouter** &gt; **un 
 
 ![](create-an-odata-v4-client-app/_static/image5.png)
 
-Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **éléments Visual C#** &gt; **Code** &gt; **OData Client**. Nommez le modèle &quot;ProductClient.tt&quot;. Cliquez sur **ajouter** et cliquez sur l’avertissement de sécurité.
+Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **éléments Visual c#** &gt; **Code** &gt; **OData Client**. Nommez le modèle &quot;ProductClient.tt&quot;. Cliquez sur **ajouter** et cliquez sur l’avertissement de sécurité.
 
 [![](create-an-odata-v4-client-app/_static/image7.png)](create-an-odata-v4-client-app/_static/image6.png)
 

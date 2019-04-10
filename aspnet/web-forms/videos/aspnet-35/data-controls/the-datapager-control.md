@@ -8,15 +8,15 @@ ms.date: 11/15/2007
 ms.assetid: 561fc945-2506-4549-af92-af92556df266
 msc.legacyurl: /web-forms/videos/aspnet-35/data-controls/the-datapager-control
 msc.type: video
-ms.openlocfilehash: d4df212d36e778547a3996e5d125dc69e810afa8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d59358f99a71d9583df1cc3cfee37303b625e95a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065396"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406975"
 ---
-<a name="the-datapager-control"></a>Le contrôle DataPager
-====================
+# <a name="the-datapager-control"></a>Le contrôle DataPager
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Le contrôle DataPager est généralement utilisé avec le contrôle ListView. Le contrôle ListView est piloté par les données. Tout d’abord créer un contrôle ListView et fournir des données. Supprimez ensuite le contrôle DataPager sur la page pour améliorer la page web de point de vue fonctionnel. Si vous avez regardé pas la ListView contrôle guide--je vidéo il serait préférable pour l’examiner avant d’utiliser le contrôle DataPager.

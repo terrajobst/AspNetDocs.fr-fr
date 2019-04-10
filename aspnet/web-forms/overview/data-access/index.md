@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: cf54a6fb-a362-4481-b967-c158b98092f7
 msc.legacyurl: /web-forms/overview/data-access
 msc.type: chapter
-ms.openlocfilehash: 0060650de35a8693a9c1432876df1d4902bb1ade
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d2f9d48618a102df7ea24a6d2a80b5c3026c7752
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023076"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405402"
 ---
-<a name="older-versions---data-access"></a>Versions antérieures - Accès aux données
-====================
+# <a name="older-versions---data-access"></a>Versions antérieures - Accès aux données
+
 > Comment effectuer diverses tâches liées aux données à l’aide de contrôles de données Web Forms ASP.NET.
 
 
@@ -130,7 +130,7 @@ ms.locfileid: "57023076"
 
     - [Boutons personnalisés dans les contrôles DataList et Repeater (C#)](custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-cs.md)
     - [Boutons personnalisés dans les contrôles DataList et Repeater (VB)](custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-vb.md)
-- [Accès à la base de données directement depuis une page ASP.NET](accessing-the-database-directly-from-an-aspnet-page/index.md)
+- [Accès à la base de données directement à partir d’une page ASP.NET](accessing-the-database-directly-from-an-aspnet-page/index.md)
 
     - [Interrogation des données avec le contrôle SqlDataSource (C#)](accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs.md)
     - [Utilisation de requêtes paramétrables avec SqlDataSource (C#)](accessing-the-database-directly-from-an-aspnet-page/using-parameterized-queries-with-the-sqldatasource-cs.md)

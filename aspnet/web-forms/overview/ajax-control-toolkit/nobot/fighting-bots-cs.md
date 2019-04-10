@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-cs
-title: Lutte contre les robots (C#) | Microsoft Docs
+title: Lutte contre les robots (c#) | Microsoft Docs
 author: wenz
 description: Les robots automatisés plâtre weblogs et autres sites Web indésirable, envoyer des formulaires de commentaire sans interaction de l’utilisateur. Le contrôle nobot de dans la Con AJAX ASP.NET...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 0a1917e0-884a-4576-8e93-9ed660faae51
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 52ed34e7640cd125a3b4c3b50ab760a7c1d713f1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 178d839f67d70670b3b5acf470acb7ae8cf1c33f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035396"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405805"
 ---
-<a name="fighting-bots-c"></a>Lutte contre les robots (C#)
-====================
+# <a name="fighting-bots-c"></a>Lutte contre les robots (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/NoBot0.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/nobot0CS.pdf)
@@ -65,9 +65,9 @@ Enfin, vous avez besoin d’un formulaire à envoyer et un élément d’étique
 Lorsque vous exécutez ce script et désactivez JavaScript ou envoyez le formulaire dans les deux premières secondes ou soumettez le formulaire sept fois au sein de trente secondes, vous obtiendrez un message d’erreur. Toutefois utiliser ce contrôle avec soin, puisque qu’environ 90 à 95 % des utilisateurs ont JavaScript activated, par conséquent 5-10 % des utilisateurs ne sera pas `NoBot`du test.
 
 
-[![Ce message d’erreur peut être dû à un robot](fighting-bots-cs/_static/image2.png)](fighting-bots-cs/_static/image1.png)
+[![Tmessage d’erreur peut être dû à un robot](fighting-bots-cs/_static/image2.png)](fighting-bots-cs/_static/image1.png)
 
 Ce message d’erreur peut être dû à un robot ([cliquez pour afficher l’image en taille réelle](fighting-bots-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Next](fighting-bots-vb.md)
+> [Suivant](fighting-bots-vb.md)

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-cs
-title: Une vue d’ensemble de l’authentification par formulaire (C#) | Microsoft Docs
+title: Une vue d’ensemble de l’authentification par formulaire (c#) | Microsoft Docs
 author: rick-anderson
 description: Création de Routes personnalisées
 ms.author: riande
@@ -8,22 +8,22 @@ ms.date: 01/14/2008
 ms.assetid: de2d65b9-aadc-42ba-abe1-4e87e66521a0
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 64c8ccbc82a5c80a6f1e3199bfceb62add6cde51
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5bb3cf45e50e480d81a441280842c1eec58f4877
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063886"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406871"
 ---
-<a name="an-overview-of-forms-authentication-c"></a>Une vue d’ensemble de l’authentification par formulaire (C#)
-====================
+# <a name="an-overview-of-forms-authentication-c"></a>Une vue d’ensemble de l’authentification par formulaire (c#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/ASPNET_Security_Tutorial_02_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial02_FormsAuth_cs.pdf)
 
 > Dans ce didacticiel nous activera à partir de la discussion simple pour implémentation ; en particulier, nous allons examiner l’implémentation de l’authentification par formulaire. L’application web que nous commençons à construire dans ce didacticiel continueront à être créés dans les didacticiels suivants, nous passons à partir de l’authentification par formulaire simple à l’appartenance et les rôles.
 > 
-> Consultez cette vidéo pour plus d’informations sur cette rubrique : [À l’aide de l’authentification de base formulaires dans ASP.NET](# "using-basic-forms-authentication-in-aspnet").
+> Consultez cette vidéo pour plus d’informations sur cette rubrique : [À l’aide de la base de l’authentification par formulaire dans ASP.NET](../../../videos/authentication/using-basic-forms-authentication-in-aspnet.md).
 
 
 ## <a name="introduction"></a>Introduction
@@ -79,13 +79,13 @@ Afin d’atteindre l’audience la plus large possible, le site Web ASP.NET que 
 > L’application web de démonstration utilisée dans chaque didacticiel est disponible en téléchargement. Cette application téléchargeable a été créée avec Visual Web Developer 2008 ciblé pour le .NET Framework version 3.5. Dans la mesure où l’application est ciblée pour .NET 3.5, son fichier Web.config inclut des éléments de configuration supplémentaires, spécifiques à 3.5. En résumé, si vous devez encore installer .NET 3.5 sur votre ordinateur, l’application web téléchargeable ne fonctionnera pas sans supprimer au préalable le balisage spécifique 3.5 à partir de Web.config.
 
 
-Avant que nous pouvons configurer l’authentification par formulaire, nous devons d’abord un site Web ASP.NET. Commencez par créer un nouveau fichier basé sur le système site Web ASP.NET. Pour ce faire, lancez Visual Web Developer et accédez au menu fichier et choisissez Nouveau Site Web, en affichant la boîte de dialogue Nouveau Site Web. Choisissez le modèle de Site Web ASP.NET, la valeur de la liste déroulante emplacement du système de fichiers, choisissez un dossier pour placer le site web, la valeur est le langage C#. Cela créera un nouveau site web avec une page Default.aspx ASP.NET, une application\_dossier de données et un fichier Web.config.
+Avant que nous pouvons configurer l’authentification par formulaire, nous devons d’abord un site Web ASP.NET. Commencez par créer un nouveau fichier basé sur le système site Web ASP.NET. Pour ce faire, lancez Visual Web Developer et accédez au menu fichier et choisissez Nouveau Site Web, en affichant la boîte de dialogue Nouveau Site Web. Choisissez le modèle de Site Web ASP.NET, la valeur de la liste déroulante emplacement du système de fichiers, choisissez un dossier pour placer le site web, la valeur est le langage c#. Cela créera un nouveau site web avec une page Default.aspx ASP.NET, une application\_dossier de données et un fichier Web.config.
 
 > [!NOTE]
 > Visual Studio prend en charge deux modes de gestion de projet : Projets de Site Web et projets d’Application Web. Projets de Site Web n’ont pas un fichier projet, alors que les projets d’Application Web imiter l’architecture de projet dans Visual Studio .NET 2002/2003 – ils incluent un fichier projet et compiler le code du projet source dans un assembly unique, qui est placé dans le dossier /bin. Visual Studio 2005 initialement le seul Site Web pris en charge les projets, bien que le modèle de projet d’Application Web a été réintroduit avec Service Pack 1 ; Visual Studio 2008 offre les deux modèles de projet. Visual Web Developer 2005 et 2008 éditions, toutefois, uniquement prennent en charge les projets de Site Web. J’utilise le modèle de projet de Site Web. Si vous utilisez une édition non-Express et que vous souhaitez utiliser le [modèle de projet d’Application Web](https://msdn.microsoft.com/library/aa730880%28vs.80%29.aspx) au lieu de cela, n’hésitez pas à le faire, mais n’oubliez pas qu’il existe peut-être des différences entre ce que vous voyez sur votre écran et les étapes que vous devez prendre par rapport à la captures d’écran indiqués et les instructions fournies dans ces didacticiels.
 
 
-[![Créer un Site Web de système de nouveau fichier](an-overview-of-forms-authentication-cs/_static/image3.png)](an-overview-of-forms-authentication-cs/_static/image2.png)
+[![Ccréer un Site Web de New File System-Based](an-overview-of-forms-authentication-cs/_static/image3.png)](an-overview-of-forms-authentication-cs/_static/image2.png)
 
 **Figure 2**: Créer un Site Web de New File System-Based ([cliquez pour afficher l’image en taille réelle](an-overview-of-forms-authentication-cs/_static/image4.png))
 
@@ -95,7 +95,7 @@ Avant que nous pouvons configurer l’authentification par formulaire, nous devo
 Ensuite, ajoutez une nouvelle Page maître au site dans le répertoire racine nommé Site.master. [Pages maîtres](https://msdn.microsoft.com/library/wtxbf3hh.aspx) permettent à un développeur définir un modèle de l’échelle du site qui peut être appliqué aux pages ASP.NET. Le principal avantage des pages maîtres est que son apparence globale du site peut être définie dans un emplacement unique, ce qui le rend facile à mettre à jour ou modifier la mise en page du site.
 
 
-[![Ajouter une Page maître nommée Site.master au site Web](an-overview-of-forms-authentication-cs/_static/image6.png)](an-overview-of-forms-authentication-cs/_static/image5.png)
+[![Ajj un Site.master nommé de Page maître au site Web](an-overview-of-forms-authentication-cs/_static/image6.png)](an-overview-of-forms-authentication-cs/_static/image5.png)
 
 **Figure 3**: Ajouter un Site.master nommé de Page maître au site Web ([cliquez pour afficher l’image en taille réelle](an-overview-of-forms-authentication-cs/_static/image7.png))
 
@@ -109,7 +109,7 @@ Une page maître définit la disposition de page statiques et les régions qui p
 Avec le balisage ci-dessus, basculer vers la vue de conception montre mise en page de la page maître. Toutes les pages ASP.NET qui utilisent cette page maître aura cette mise en page uniforme, avec la possibilité de spécifier le balisage pour le `MainContent` région.
 
 
-[![La Page maître, lorsqu’ils sont affichés via la vue de conception](an-overview-of-forms-authentication-cs/_static/image9.png)](an-overview-of-forms-authentication-cs/_static/image8.png)
+[![TIl Page maître, lorsque affichés via le mode Design](an-overview-of-forms-authentication-cs/_static/image9.png)](an-overview-of-forms-authentication-cs/_static/image8.png)
 
 **Figure 4**: La Page maître, lorsque affichés via le mode création ([cliquez pour afficher l’image en taille réelle](an-overview-of-forms-authentication-cs/_static/image10.png))
 
@@ -121,7 +121,7 @@ Avec le balisage ci-dessus, basculer vers la vue de conception montre mise en pa
 Ensuite, avec le bouton droit sur le nom du projet dans l’Explorateur de solutions et choisissez d’ajouter un nouveau formulaire Web nommé Default.aspx. Cette fois-ci, cochez la case « Sélectionner la page maître » et choisissez la page maître Site.master dans la liste.
 
 
-[![Ajoutez une nouvelle Page Default.aspx choix sélectionner une Page maître](an-overview-of-forms-authentication-cs/_static/image12.png)](an-overview-of-forms-authentication-cs/_static/image11.png)
+[![Aun nouveau Default.aspx Page choix pour sélectionner une Page maître de jj](an-overview-of-forms-authentication-cs/_static/image12.png)](an-overview-of-forms-authentication-cs/_static/image11.png)
 
 **Figure 5**: Ajouter un nouveau Default.aspx Page choix pour sélectionner une Page maître ([cliquez pour afficher l’image en taille réelle](an-overview-of-forms-authentication-cs/_static/image13.png))
 
@@ -158,7 +158,7 @@ Par défaut, les applications ASP.NET utilisent l’authentification Windows. Po
 Si votre projet ne contient pas encore un fichier Web.config, ajoutez un maintenant en cliquant sur le nom du projet dans l’Explorateur de solutions, en choisissant Ajouter un nouvel élément et l’ajout d’un fichier de Configuration Web.
 
 
-[![Si votre projet n’inclut pas encore de Web.config, ajoutez-le maintenant](an-overview-of-forms-authentication-cs/_static/image16.png)](an-overview-of-forms-authentication-cs/_static/image15.png)
+[![If votre projet n’a pas encore inclure le fichier Web.config, ajoutez-le maintenant](an-overview-of-forms-authentication-cs/_static/image16.png)](an-overview-of-forms-authentication-cs/_static/image15.png)
 
 **Figure 7**: Si votre projet est pas encore inclure Web.config, ajoutez maintenant ([cliquez pour afficher l’image en taille réelle](an-overview-of-forms-authentication-cs/_static/image17.png))
 
@@ -190,7 +190,7 @@ La page de connexion a trois rôles :
 Commençons par la première tâche. Ajouter une nouvelle page ASP.NET pour le répertoire du site racine nommé Login.aspx et l’associer à la page maître Site.master.
 
 
-[![Ajoutez une nouvelle Page ASP.NET nommé Login.aspx](an-overview-of-forms-authentication-cs/_static/image19.png)](an-overview-of-forms-authentication-cs/_static/image18.png)
+[![Ajj un Login.aspx nouveau ASP.NET Page nommée](an-overview-of-forms-authentication-cs/_static/image19.png)](an-overview-of-forms-authentication-cs/_static/image18.png)
 
 **Figure 8**: Ajouter un nouveau Login.aspx de nommé ASP.NET Page ([cliquez pour afficher l’image en taille réelle](an-overview-of-forms-authentication-cs/_static/image20.png))
 
@@ -204,7 +204,7 @@ Ajouter deux zones de texte à Login.aspx et définissez leurs `ID` propriétés
 [!code-aspx[Main](an-overview-of-forms-authentication-cs/samples/sample4.aspx)]
 
 
-[![La Page de connexion contient deux zones de texte, une case à cocher, un bouton et une étiquette](an-overview-of-forms-authentication-cs/_static/image22.png)](an-overview-of-forms-authentication-cs/_static/image21.png)
+[![TIl Login Page contient deux zones de texte, une case à cocher, un bouton et une étiquette](an-overview-of-forms-authentication-cs/_static/image22.png)](an-overview-of-forms-authentication-cs/_static/image21.png)
 
 **Figure 9**: La connexion Page contient deux zones de texte, une case à cocher, un bouton et une étiquette ([cliquez pour afficher l’image en taille réelle](an-overview-of-forms-authentication-cs/_static/image23.png))
 
@@ -250,7 +250,7 @@ Lors de la création de formulaires ticket d’authentification, nous utilisons 
 Pour tester la page de connexion, reportez-vous au dans un navigateur. Commencez par entrer des informations d’identification non valides, comme un nom d’utilisateur de « Nope » et un mot de passe de « incorrect ». Lorsque vous cliquez sur le bouton de connexion se produira une publication (postback) et l’étiquette InvalidCredentialsMessage s’affichera.
 
 
-[![L’étiquette InvalidCredentialsMessage est affichée lors de la saisie informations d’identification erronées](an-overview-of-forms-authentication-cs/_static/image25.png)](an-overview-of-forms-authentication-cs/_static/image24.png)
+[![TIl InvalidCredentialsMessage étiquette est affichée lors de la saisie informations d’identification erronées](an-overview-of-forms-authentication-cs/_static/image25.png)](an-overview-of-forms-authentication-cs/_static/image24.png)
 
 **Figure 10**: L’étiquette InvalidCredentialsMessage est affichée lors de la saisie informations d’identification erronées ([cliquez pour afficher l’image en taille réelle](an-overview-of-forms-authentication-cs/_static/image26.png))
 
@@ -379,7 +379,7 @@ Avec cet ajout à la page maître Site.master, chaque page de notre site Web aff
 Étant donné que nous avons ajouté la vue de connexion à la page maître, elle peut apparaître dans chaque page sur notre site. Toutefois, il peut être pages web où nous ne souhaitons pas afficher ce message. Une telle page est la page de connexion, dans la mesure où un lien vers la page de connexion semble hors place il. Étant donné que nous avons placé le contrôle LoginView dans ContentPlaceHolder dans la page maître, nous pouvons remplacer ce balisage par défaut dans notre page de contenu. Ouvrez Login.aspx et accédez au concepteur. Étant donné que nous n’avons pas explicitement défini un contrôle de contenu dans Login.aspx pour LoginContent ContentPlaceHolder dans la page maître, la page de connexion affichera le balisage de la page maître par défaut pour cette ContentPlaceHolder. Vous pouvez voir cela via le concepteur – LoginContent ContentPlaceHolder montre le balisage par défaut (le contrôle LoginView).
 
 
-[![La Page de connexion affiche la valeur par défaut le contenu de la Page maître LoginContent ContentPlaceHolder](an-overview-of-forms-authentication-cs/_static/image33.png)](an-overview-of-forms-authentication-cs/_static/image32.png)
+[![TIl Page de connexion affiche le contenu par défaut pour LoginContent ContentPlaceHolder's the Master Page](an-overview-of-forms-authentication-cs/_static/image33.png)](an-overview-of-forms-authentication-cs/_static/image32.png)
 
 **Figure 16**: La Page de connexion affiche le contenu par défaut pour LoginContent ContentPlaceHolder's the Master Page ([cliquez pour afficher l’image en taille réelle](an-overview-of-forms-authentication-cs/_static/image34.png))
 
@@ -393,7 +393,7 @@ Pour remplacer le balisage par défaut pour LoginContent ContentPlaceHolder, cli
 Figure 17 montre la page Login.aspx quand consultées à partir d’un navigateur après avoir apporté cette modification. Notez qu’il n’existe aucun « Hello, stranger » ou « Bienvenue, *nom d’utilisateur*» message dans le volet de navigation gauche &lt;div&gt; qu’il existe lors de la visite de Default.aspx.
 
 
-[![La Page de connexion masque le balisage de la LoginContent ContentPlaceHolder par défaut](an-overview-of-forms-authentication-cs/_static/image36.png)](an-overview-of-forms-authentication-cs/_static/image35.png)
+[![TIl Page de connexion le masque balisage par défaut LoginContent ContentPlaceHolder](an-overview-of-forms-authentication-cs/_static/image36.png)](an-overview-of-forms-authentication-cs/_static/image35.png)
 
 **Figure 17**: La Page de connexion masque balisage par défaut LoginContent ContentPlaceHolder ([cliquez pour afficher l’image en taille réelle](an-overview-of-forms-authentication-cs/_static/image37.png))
 
@@ -424,12 +424,12 @@ Dans la mesure où le LoginStatus se trouve en dehors du contrôle LoginView, il
 Figure 18 montre Default.aspx lorsque Jisun visite. Notez que la colonne de gauche affiche le message « Bienvenue, Jisun » ainsi qu’un lien à déconnecter. Cliquant sur la LinkButton de déconnexion provoque une publication (postback), Jisun déconnecte le système et elle redirige ensuite vers déconnexion.aspx. Comme le montre la Figure 19, au terme du délai que jisun atteint déconnexion.aspx elle a déjà été déconnectée et restent donc anonyme. Par conséquent, la colonne de gauche affiche le texte « Bienvenue stranger » et un lien vers la page de connexion.
 
 
-[![Affiche de default.aspx](an-overview-of-forms-authentication-cs/_static/image39.png)](an-overview-of-forms-authentication-cs/_static/image38.png)
+[![Default.aspx Shows](an-overview-of-forms-authentication-cs/_static/image39.png)](an-overview-of-forms-authentication-cs/_static/image38.png)
 
 **Figure 18**: Default.aspx affiche « Bienvenue, Jisun » avec un LinkButton « Déconnexion » ([cliquez pour afficher l’image en taille réelle](an-overview-of-forms-authentication-cs/_static/image40.png))
 
 
-[![Déconnexion.aspx montre](an-overview-of-forms-authentication-cs/_static/image42.png)](an-overview-of-forms-authentication-cs/_static/image41.png)
+[![Logout.aspx montre](an-overview-of-forms-authentication-cs/_static/image42.png)](an-overview-of-forms-authentication-cs/_static/image41.png)
 
 **Figure 19**: Déconnexion.aspx affiche « Bienvenue, stranger » avec un LinkButton « Connexion » ([cliquez pour afficher l’image en taille réelle](an-overview-of-forms-authentication-cs/_static/image43.png))
 
@@ -455,7 +455,7 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 - [Modifications entre la sécurité IIS6 et IIS7](https://www.iis.net/articles/view.aspx/IIS7/Managing-IIS7/Configuring-Security/Changes-between-IIS6-and-IIS7-Security)
 - [Contrôles de connexion ASP.NET](https://msdn.microsoft.com/library/d51ttbhx.aspx)
 - [Professional ASP.NET 2.0 Security, l’appartenance et la gestion de rôle](http://www.wrox.com/WileyCDA/WroxTitle/productCd-0764596985.html) (ISBN : 978-0-7645-9698-8)
-- [Le `<authentication>` élément](https://msdn.microsoft.com/library/532aee0e.aspx)
+- [Élément `<authentication>`](https://msdn.microsoft.com/library/532aee0e.aspx)
 - [Le `<forms>` élément pour `<authentication>`](https://msdn.microsoft.com/library/1d3t3c61.aspx)
 
 ### <a name="video-training-on-topics-contained-in-this-tutorial"></a>Vidéos de formation sur les rubriques contenues dans ce didacticiel

@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: 1bc333c5-f096-4ea7-b170-779accc21c1a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
 msc.type: authoredcontent
-ms.openlocfilehash: a73fac6107be45455465b506a019bcc9a41b1deb
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: d3a965ccf7ca001d3178819f88836b59f2893bb0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425520"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406416"
 ---
-<a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Annexe : Le correctif il exemple d’Application (création d’applications de Cloud réalistes avec Azure)
-====================
+# <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Annexe : Le correctif il exemple d’Application (création d’applications de Cloud réalistes avec Azure)
+
 par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Téléchargez le correctif il de projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4)
@@ -26,7 +26,7 @@ par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 Cette annexe à Building Real World Cloud Apps with Azure e-book contient les sections suivantes qui fournissent des informations supplémentaires sur le Fix It exemple d’application que vous pouvez télécharger :
 
 - [Problèmes connus](#knownissues)
-- [Bonnes pratiques](#bestpractices)
+- [meilleures pratiques recommandées.](#bestpractices)
 - [Comment exécuter l’application à partir de Visual Studio sur votre ordinateur local](#run-in-vs)
 - [Comment déployer l’application de base dans Azure App Service Web Apps en utilisant les scripts Windows PowerShell](#deploybase)
 - [Résolution des problèmes de scripts Windows PowerShell](#troubleshooting)

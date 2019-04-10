@@ -8,15 +8,15 @@ ms.date: 02/20/2014
 ms.assetid: fc49bcb9-f1a9-4048-8c3f-b60951853200
 msc.legacyurl: /web-pages/overview/getting-started/11-adding-email-to-your-web-site
 msc.type: authoredcontent
-ms.openlocfilehash: f388ac1a97bde39cffe6b592b436d7af0d419a5f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0263f736b96f8e8572536f3783d86c261d7c0512
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038396"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411226"
 ---
-<a name="sending-email-from-an-aspnet-web-pages-razor-site"></a>Envoi d’E-mails à partir d’un Site ASP.NET Web Pages (Razor)
-====================
+# <a name="sending-email-from-an-aspnet-web-pages-razor-site"></a>Envoi d’E-mails à partir d’un Site ASP.NET Web Pages (Razor)
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Cet article explique comment envoyer un message électronique à partir d’un site Web lorsque vous utilisez les Pages Web ASP.NET (Razor).
@@ -136,5 +136,5 @@ Vous pouvez également envoyer des fichiers qui sont joints aux messages électr
 
 
 - [ASP.NET Web Pages (Razor) - Guide de résolution des problèmes](https://go.microsoft.com/fwlink/?LinkId=253001)
-- [Simple Mail Transfer Protocol](https://msdn.microsoft.com/library/aa480435.aspx)
+- [Protocole SMTP](https://msdn.microsoft.com/library/aa480435.aspx)
 - [Personnalisation du comportement de l’échelle du Site pour ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202906)

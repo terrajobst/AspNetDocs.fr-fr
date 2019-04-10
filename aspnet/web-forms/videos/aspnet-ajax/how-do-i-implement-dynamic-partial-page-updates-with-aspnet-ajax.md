@@ -8,15 +8,15 @@ ms.date: 01/25/2007
 ms.assetid: 7559a912-2753-4866-a140-a4c6cefee00c
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-implement-dynamic-partial-page-updates-with-aspnet-ajax
 msc.type: video
-ms.openlocfilehash: 626f103c59afc0843f821d6475393b61347492f8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c032609a440ea8cb0d6e11759994581011daf70c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030596"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410199"
 ---
-<a name="how-do-i-implement-dynamic-partial-page-updates-with-aspnet-ajax"></a>[Comment faire] Implémenter les mises à jour de Page partielles dynamiques avec ASP.NET AJAX ?
-====================
+# <a name="how-do-i-implement-dynamic-partial-page-updates-with-aspnet-ajax"></a>[Comment faire] Implémenter les mises à jour de Page partielles dynamiques avec ASP.NET AJAX ?
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Dans cette vidéo, vous allez apprendre à ajouter des mises à jour de page partielles dynamiques à votre application ASP.NET à l’aide de Microsoft ASP.NET AJAX. En particulier, vous allez apprendre à utiliser le TimerControl pour gérer la fréquence des rappels AJAX.

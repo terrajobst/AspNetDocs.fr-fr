@@ -8,22 +8,22 @@ ms.date: 08/31/2011
 ms.assetid: d916dbe0-1895-491b-8bb6-93f4594ce757
 msc.legacyurl: /mvc/overview/getting-started
 msc.type: chapter
-ms.openlocfilehash: a2b96388cb7408d3c5fa548d0f43cfb2287661bf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f588af70f3928285274ef6bf14f58697190943ff
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021756"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405818"
 ---
-<a name="aspnet-mvc-getting-started"></a>Mise en route de ASP.NET MVC
-====================
+# <a name="aspnet-mvc-getting-started"></a>Mise en route de ASP.NET MVC
+
 > Le guide suivant explique ASP.NET MVC et montre comment commencer.
 
 
 - [Bien démarrer avec ASP.NET MVC 5](introduction/index.md)
 
     - [Prise en main](introduction/getting-started.md)
-    - [Ajout d’un contrôleur](introduction/adding-a-controller.md)
+    - [Ajour d’un contrôleur](introduction/adding-a-controller.md)
     - [Ajout d’une vue](introduction/adding-a-view.md)
     - [Ajout d’un modèle](introduction/adding-a-model.md)
     - [Création d’une chaîne de connexion et utilisation de SQL Server LocalDB](introduction/creating-a-connection-string.md)
@@ -33,7 +33,7 @@ ms.locfileid: "57021756"
     - [Ajout d’un nouveau champ](introduction/adding-a-new-field.md)
     - [Ajout de la validation](introduction/adding-validation.md)
     - [Examen des méthodes Details et Delete](introduction/examining-the-details-and-delete-methods.md)
-- [Bien démarrer avec EF 6 avec MVC 5](getting-started-with-ef-using-mvc/index.md)
+- [Bien démarrer avec EF 6 avec MVC 5](getting-started-with-ef-using-mvc/index.md)
 
     - [Création d’un modèle de données Entity Framework](getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)
     - [Implémentation de la fonctionnalité CRUD de base](getting-started-with-ef-using-mvc/implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md)
@@ -44,17 +44,17 @@ ms.locfileid: "57021756"
     - [Lecture de données associées](getting-started-with-ef-using-mvc/reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md)
     - [Mise à jour de données associées](getting-started-with-ef-using-mvc/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md)
     - [Procédures asynchrones et stockées](getting-started-with-ef-using-mvc/async-and-stored-procedures-with-the-entity-framework-in-an-asp-net-mvc-application.md)
-    - [Gestion des accès concurrentiels](getting-started-with-ef-using-mvc/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application.md)
+    - [Gestion de l'accès concurrentiel](getting-started-with-ef-using-mvc/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application.md)
     - [Implémentation de l’héritage](getting-started-with-ef-using-mvc/implementing-inheritance-with-the-entity-framework-in-an-asp-net-mvc-application.md)
     - [Scénarios Entity Framework avancés](getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application.md)
 - [EF Database First avec ASP.NET MVC](database-first-development/index.md)
 
-    - [Bien démarrer avec Entity Framework 6 Database First avec MVC 5](database-first-development/setting-up-database.md)
+    - [Bien démarrer avec Entity Framework 6 Database First avec MVC 5](database-first-development/setting-up-database.md)
     - [Création de l’application web et des modèles de données](database-first-development/creating-the-web-application.md)
     - [Génération de vues](database-first-development/generating-views.md)
     - [Modification de la base de données](database-first-development/changing-the-database.md)
     - [Personnalisation d’une vue](database-first-development/customizing-a-view.md)
     - [Amélioration de la validation des données](database-first-development/enhancing-data-validation.md)
-- [Cycle de vie d’une application ASP.NET MVC 5](lifecycle-of-an-aspnet-mvc-5-application.md)
+- [Cycle de vie d’une application ASP.NET MVC 5](lifecycle-of-an-aspnet-mvc-5-application.md)
 - [Ressources recommandées pour MVC](recommended-resources-for-mvc.md)
-- [Didacticiels et articles recommandés pour MVC](mvc-learning-sequence.md)
+- [Tutoriels et articles recommandés pour MVC](mvc-learning-sequence.md)

@@ -8,15 +8,15 @@ ms.date: 1/04/2019
 ms.assetid: 64a491a8-0ed6-4c2f-9c1c-412962eb6006
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/display_data_items_and_details
 msc.type: authoredcontent
-ms.openlocfilehash: acc2f8e78375ef0455d467e2af750ecbee623224
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 54896da5565c9383f13fc352da26bbdc3cb63a76
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044636"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405363"
 ---
-<a name="display-data-items-and-details"></a>Afficher les éléments de données et les détails
-====================
+# <a name="display-data-items-and-details"></a>Afficher les éléments de données et les détails
+
 par [Erik Reitan](https://github.com/Erikre)
 
 > Cette série de didacticiels vous enseigne les principes fondamentaux de la création d’une application Web Forms ASP.NET avec ASP.NET 4.7 et Microsoft Visual Studio 2017.
@@ -39,9 +39,9 @@ Dans ce didacticiel, vous allez apprendre à afficher les éléments de données
 
 Vous pouvez utiliser plusieurs options pour lier des données à un contrôle serveur. Les plus courantes sont les suivantes :
 
- * Ajout d’un contrôle de source de données
- * Ajout de code manuellement
- * À l’aide de la liaison de modèle
+* Ajout d’un contrôle de source de données
+* Ajout de code manuellement
+* À l’aide de la liaison de modèle
 
 ### <a name="use-a-data-source-control-to-bind-data"></a>Utiliser un contrôle de source de données pour lier des données
 

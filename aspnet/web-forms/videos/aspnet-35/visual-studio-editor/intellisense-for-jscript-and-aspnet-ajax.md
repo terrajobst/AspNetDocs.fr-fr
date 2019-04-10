@@ -8,15 +8,15 @@ ms.date: 11/15/2007
 ms.assetid: 9d490341-f228-432e-a386-e6e51476c165
 msc.legacyurl: /web-forms/videos/aspnet-35/visual-studio-editor/intellisense-for-jscript-and-aspnet-ajax
 msc.type: video
-ms.openlocfilehash: d331977eb78ad56686fa437979a54bd25d59a89d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: be9719fa00f381b76236b964eb14f070c7b0f2bc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409861"
 ---
-<a name="intellisense-for-jscript-and-aspnet-ajax"></a>IntelliSense pour Jscript et ASP.NET AJAX
-====================
+# <a name="intellisense-for-jscript-and-aspnet-ajax"></a>IntelliSense pour Jscript et ASP.NET AJAX
+
 par [Chris Pels](https://twitter.com/chrispels)
 
 Cette vidéo fournit une vue d’ensemble des nouvelles fonctionnalités Intellisense pour JavaScript dans Visual Studio 2008, y compris les méthodes JavaScript core, les fichiers .js externe dans les pages .aspx, entre les fichiers .js externe, avec les bibliothèques de Microsoft core comme MicrosoftAjax.js, client Comportements JavaScript, les contrôles et les bibliothèques et les services web. En outre, l’intégration des nouveaux commentaires XML pour JavaScript IntelliSense est illustrée.

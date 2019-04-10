@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 778b9009-76f2-4665-940e-afc0e35bc917
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dynamicpopulate/using-dynamicpopulate-with-a-user-control-and-javascript-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b863cb0045fcec202931148bff5befa7ed62db4d
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 6aee7a07402e407b4c7b0bcd7a5e926955bf96b1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424142"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410732"
 ---
-<a name="using-dynamicpopulate-with-a-user-control-and-javascript-vb"></a>Utilisation de DynamicPopulate avec un contrôle utilisateur et JavaScript (VB)
-====================
+# <a name="using-dynamicpopulate-with-a-user-control-and-javascript-vb"></a>Utilisation de DynamicPopulate avec un contrôle utilisateur et JavaScript (VB)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/d/8/f/d8f2f6f9-1b7c-46ad-9252-e1fc81bdea3e/dynamicpopulate2.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dynamicpopulate2VB.pdf)
@@ -67,7 +67,7 @@ Enfin, ajoutez le contrôle utilisateur à la page. Vous devez uniquement défin
 Et voilà ! La page se comporte comme prévu : Un utilisateur clique sur un des boutons radio, le contrôle dans la boîte à outils appelle le service web et affiche la date actuelle au format souhaité.
 
 
-[![Les boutons radio résident dans un contrôle utilisateur](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image2.png)](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image1.png)
+[![Tcases d’option he résident dans un contrôle utilisateur](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image2.png)](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image1.png)
 
 Les boutons radio résident dans un contrôle utilisateur ([cliquez pour afficher l’image en taille réelle](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image3.png))
 
