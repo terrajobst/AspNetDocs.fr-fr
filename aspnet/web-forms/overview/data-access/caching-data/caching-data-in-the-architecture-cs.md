@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/caching-data/caching-data-in-the-architecture-cs
-title: La mise en cache des données dans l’Architecture (C#) | Microsoft Docs
+title: La mise en cache des données dans l’Architecture (c#) | Microsoft Docs
 author: rick-anderson
 description: Dans le didacticiel précédent, nous avons appris à appliquer la mise en cache au niveau de la couche de présentation. Dans ce didacticiel, nous apprendre à tirer parti de notre architectu en couche...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 05/30/2007
 ms.assetid: d29a7c41-0628-4a23-9dfc-bfea9c6c1054
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-in-the-architecture-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 3971140aa7a6c829287e74df804694c19e34adcf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7637e23678af80ae037292fd3f89ef74167c8242
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028046"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419247"
 ---
-<a name="caching-data-in-the-architecture-c"></a>Mise en cache de données dans l’architecture (C#)
-====================
+# <a name="caching-data-in-the-architecture-c"></a>Mise en cache de données dans l’architecture (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_59_CS.exe) ou [télécharger le PDF](caching-data-in-the-architecture-cs/_static/datatutorial59cs1.pdf)
@@ -159,7 +159,7 @@ Avec cette modification à `AddCacheItem(key, value)`, invaliding le cache est a
 La mise en cache de couche s classes et des méthodes peuvent servir à manipuler les données en utilisant les techniques nous ve examiné tout au long de ces didacticiels. Pour illustrer l’utilisation des données mises en cache, enregistrer vos modifications dans le `ProductsCL` classe, puis ouvrez le `FromTheArchitecture.aspx` page dans le `Caching` dossier et ajoutez un GridView. À partir de la balise active de s GridView, créez un nouveau ObjectDataSource. Dans l’étape de première Assistant s vous devriez voir le `ProductsCL` classe en tant qu’une des options dans la liste déroulante.
 
 
-[![La classe ProductsCL est incluse dans la liste déroulante d’objets Business](caching-data-in-the-architecture-cs/_static/image5.png)](caching-data-in-the-architecture-cs/_static/image4.png)
+[![TIl ProductsCL classe est inclus dans la liste déroulante d’objets Business](caching-data-in-the-architecture-cs/_static/image5.png)](caching-data-in-the-architecture-cs/_static/image4.png)
 
 **Figure 4**: Le `ProductsCL` classe est incluse dans la liste déroulante d’objets Business ([cliquez pour afficher l’image en taille réelle](caching-data-in-the-architecture-cs/_static/image6.png))
 
@@ -167,7 +167,7 @@ La mise en cache de couche s classes et des méthodes peuvent servir à manipule
 Après avoir sélectionné `ProductsCL`, cliquez sur Suivant. La liste déroulante dans l’onglet sélection a deux éléments - `GetProducts()` et `GetProductsByCategoryID(categoryID)` et l’onglet de mise à jour a l’unique `UpdateProduct` de surcharge. Choisissez le `GetProducts()` méthode à partir de l’onglet Sélection et la `UpdateProducts` méthode à partir de l’onglet de mise à jour et cliquez sur Terminer.
 
 
-[![Les méthodes de classe ProductsCL s sont répertoriés dans la liste déroulante répertorie](caching-data-in-the-architecture-cs/_static/image8.png)](caching-data-in-the-architecture-cs/_static/image7.png)
+[![Til que productscl classe s méthodes sont répertoriées dans la liste déroulante répertorie](caching-data-in-the-architecture-cs/_static/image8.png)](caching-data-in-the-architecture-cs/_static/image7.png)
 
 **Figure 5**: Le `ProductsCL` les méthodes de classe s sont répertoriées dans la liste déroulante répertorie ([cliquez pour afficher l’image en taille réelle](caching-data-in-the-architecture-cs/_static/image9.png))
 

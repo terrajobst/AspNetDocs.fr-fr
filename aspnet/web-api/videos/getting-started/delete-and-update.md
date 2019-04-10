@@ -8,15 +8,15 @@ ms.date: 02/15/2012
 ms.assetid: c7b6d27f-e2e9-481f-94e5-0ec7ceca9273
 msc.legacyurl: /web-api/videos/getting-started/delete-and-update
 msc.type: video
-ms.openlocfilehash: 6eaefd34f933d544aeed87a0177162fa0033da99
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6926ff6373c69d9521dca6353219dac6592f14f6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419559"
 ---
-<a name="aspnet-web-api-part-3-delete-and-update"></a>API Web ASP.NET, partie 3 : Supprimer et mettre à jour
-====================
+# <a name="aspnet-web-api-part-3-delete-and-update"></a>API Web ASP.NET, partie 3 : Supprimer et mettre à jour
+
 par [Jon Galloway](https://github.com/jongalloway)
 
 > [!NOTE]

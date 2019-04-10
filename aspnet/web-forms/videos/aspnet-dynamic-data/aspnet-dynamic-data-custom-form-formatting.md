@@ -8,15 +8,15 @@ ms.date: 12/11/2008
 ms.assetid: acd329de-7676-41b4-8638-189f3e1039f7
 msc.legacyurl: /web-forms/videos/aspnet-dynamic-data/aspnet-dynamic-data-custom-form-formatting
 msc.type: video
-ms.openlocfilehash: 4969ad4ff4c804d78fe6deeed5ccb9ed8d1faae8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 957107636a68a2636d9a1d0c965ea55d074e92c8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050346"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420092"
 ---
-<a name="aspnet-dynamic-data-custom-form-formatting"></a>Mise en forme de formulaire personnalisé ASP.NET Dynamic Data
-====================
+# <a name="aspnet-dynamic-data-custom-form-formatting"></a>Mise en forme de formulaire personnalisé ASP.NET Dynamic Data
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Dans cette vidéo vous donne un aperçu de la configuration de l’esthétique d’une application dynamique des données jusqu'à les spécificités très d’affichage de chaque champ.

@@ -8,15 +8,15 @@ ms.date: 05/12/2009
 ms.assetid: 9f8fa166-49a2-402c-b236-20caef0c658f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-vb
 msc.type: authoredcontent
-ms.openlocfilehash: bbf90d65a0be0eeb4150609aca9cf192f516abf3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0b00fd5dc12c21183ef61d7ebb23211a1aa4719e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035426"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418961"
 ---
-<a name="get-started-with-the-ajax-control-toolkit-vb"></a>Bien démarrer avec AJAX Control Toolkit (VB)
-====================
+# <a name="get-started-with-the-ajax-control-toolkit-vb"></a>Bien démarrer avec AJAX Control Toolkit (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Apprendre tout ce que vous devez savoir pour commencer à utiliser les outils de contrôle AJAX.
@@ -29,7 +29,7 @@ AJAX Control Toolkit contient plus de 30 contrôles gratuits que vous pouvez uti
 Le [AJAX Control Toolkit](http://devexpress.com/act) est un projet open source développé par les membres de la Communauté ASP.NET et de l’équipe ASP.NET.
 
 
-[![Télécharger les outils de contrôle AJAX](get-started-with-the-ajax-control-toolkit-vb/_static/image1.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image1.png)
+[![Downloading AJAX Control Toolkit](get-started-with-the-ajax-control-toolkit-vb/_static/image1.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image1.png)
 
 **Figure 01**: Téléchargement AJAX Control Toolkit ([cliquez pour afficher l’image en taille réelle](get-started-with-the-ajax-control-toolkit-vb/_static/image2.png))
 
@@ -37,7 +37,7 @@ Le [AJAX Control Toolkit](http://devexpress.com/act) est un projet open source d
 Après avoir téléchargé le fichier, vous devez débloquer le fichier. Cliquez sur le fichier, sélectionnez Propriétés, puis cliquez sur le **Unblock** bouton (voir Figure 2).
 
 
-[![Débloquant le fichier ZIP de boîte à outils de contrôle AJAX](get-started-with-the-ajax-control-toolkit-vb/_static/image2.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image3.png)
+[![Unblocking le fichier ZIP de boîte à outils de contrôle AJAX](get-started-with-the-ajax-control-toolkit-vb/_static/image2.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image3.png)
 
 **Figure 02**: Débloquant le fichier ZIP de boîte à outils de contrôle AJAX ([cliquez pour afficher l’image en taille réelle](get-started-with-the-ajax-control-toolkit-vb/_static/image4.png))
 
@@ -49,7 +49,7 @@ Une fois que vous débloquez le fichier, vous pouvez décompresser le fichier :
 Pour utiliser les outils de contrôle AJAX le plus simple consiste à ajouter le Kit de ressources à votre boîte à outils Visual Studio/Visual Web Developer (voir Figure 3). De cette façon, vous pouvez simplement faire glisser un contrôle de boîte à outils sur une page lorsque vous souhaitez l’utiliser.
 
 
-[![Outils de contrôle AJAX s’affiche dans la boîte à outils](get-started-with-the-ajax-control-toolkit-vb/_static/image3.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image5.png)
+[![AOutils de contrôle JAX apparaît dans la boîte à outils](get-started-with-the-ajax-control-toolkit-vb/_static/image3.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image5.png)
 
 **Figure 03**: Outils de contrôle AJAX s’affiche dans la boîte à outils ([cliquez pour afficher l’image en taille réelle](get-started-with-the-ajax-control-toolkit-vb/_static/image6.png))
 
@@ -61,7 +61,7 @@ Tout d’abord, vous devez ajouter un onglet de boîte à outils de contrôle AJ
 3. Entrez un nouvel onglet appelé AJAX Control Toolkit.
 
 
-[![Ajout d’un nouvel onglet](get-started-with-the-ajax-control-toolkit-vb/_static/image4.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image7.png)
+[![Aun nouvel onglet de jout](get-started-with-the-ajax-control-toolkit-vb/_static/image4.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image7.png)
 
 **Figure 04**: Ajout d’un nouvel onglet ([cliquez pour afficher l’image en taille réelle](get-started-with-the-ajax-control-toolkit-vb/_static/image8.png))
 

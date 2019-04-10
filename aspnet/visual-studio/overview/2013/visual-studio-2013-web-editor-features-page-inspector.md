@@ -8,15 +8,15 @@ ms.date: 10/17/2013
 ms.assetid: 17b67048-c61c-4ac0-a73a-a8079b493253
 msc.legacyurl: /visual-studio/overview/2013/visual-studio-2013-web-editor-features-page-inspector
 msc.type: video
-ms.openlocfilehash: c32b4171202d2bb11a523b8882f70b7b2750ad6f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: aa6a01a37b6f39f87e2b77d351b221aee415a3c5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421724"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418844"
 ---
-<a name="visual-studio-2013-web-editor-features---page-inspector"></a>Fonctionnalités de l’éditeur web de Visual Studio 2013 - Inspecteur de page
-====================
+# <a name="visual-studio-2013-web-editor-features---page-inspector"></a>Fonctionnalités de l’éditeur web de Visual Studio 2013 - Inspecteur de page
+
 par [Scott Hanselman](https://github.com/shanselman)
 
 Scott Hanselman vous explique comment la fonctionnalité de l’inspecteur de Page dans Visual Studio 2013 vous permet de travailler de manière interactive avec le balisage de la page rendue, entièrement intégré avec le code source qui rendait.

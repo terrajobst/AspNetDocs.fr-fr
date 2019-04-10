@@ -8,18 +8,18 @@ ms.date: 04/01/2009
 ms.assetid: 492f5ae2-bad7-4107-89a9-f04a9525dee7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 95df9c7595dc10f2bfce44845236d11457b8b3cb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8651ab58cb79a2c7b2ac67b0095542ab3a575534
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418402"
 ---
-<a name="aspnet-hosting-options-vb"></a>Options d’hébergement ASP.NET (VB)
-====================
+# <a name="aspnet-hosting-options-vb"></a>Options d’hébergement ASP.NET (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial01_Basics_vb.pdf)
+[Télécharger le PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial01_Basics_vb.pdf)
 
 > Les applications web ASP.NET sont généralement conçues, créées et testées dans un environnement de développement local et un doivent être déployées dans un environnement de production dès qu’elle sera prête à être publiée. Ce didacticiel fournit une vue d’ensemble du processus de déploiement et sert d’introduction à cette série de didacticiels.
 

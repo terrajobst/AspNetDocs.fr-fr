@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-cs
-title: Ajout d’une Confirmation du côté Client lors de la suppression (C#) | Microsoft Docs
+title: Ajout d’une Confirmation du côté Client lors de la suppression (c#) | Microsoft Docs
 author: rick-anderson
 description: Dans les interfaces, nous avons créé jusqu'à présent, un utilisateur peut supprimer accidentellement les données en cliquant sur le bouton Supprimer quand ils signifiait cliquer sur le bouton Modifier. Dans ce t...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 07/17/2006
 ms.assetid: f6e2a12a-2b5e-48fd-8db3-1e94a500c19a
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a3e35e7b27d646569692a2eb715dcf40b7967473
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: d7a6f29dc660cff2bfa9db8f9790d73e51a2cc1c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423193"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420131"
 ---
-<a name="adding-client-side-confirmation-when-deleting-c"></a>Ajout d’une confirmation côté client lors de la suppression (C#)
-====================
+# <a name="adding-client-side-confirmation-when-deleting-c"></a>Ajout d’une confirmation côté client lors de la suppression (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_22_CS.exe) ou [télécharger le PDF](adding-client-side-confirmation-when-deleting-cs/_static/datatutorial22cs1.pdf)
@@ -65,7 +65,7 @@ Dans la mesure où il a été lié à un contrôle ObjectDataSource qui prend un
 Avec ces modifications, nous avons une page web entièrement fonctionnelle qui permet à un utilisateur de basculer entre les produits celui à la fois, avec la possibilité de supprimer un produit en cliquant simplement sur le bouton Supprimer. Figure 2 illustre une capture d’écran de notre progression jusqu'à présent lorsqu’ils sont affichés via un navigateur.
 
 
-[![Le contrôle FormView affiche des informations sur un produit unique](adding-client-side-confirmation-when-deleting-cs/_static/image3.png)](adding-client-side-confirmation-when-deleting-cs/_static/image2.png)
+[![TIl FormView affiche des informations sur un seul produit](adding-client-side-confirmation-when-deleting-cs/_static/image3.png)](adding-client-side-confirmation-when-deleting-cs/_static/image2.png)
 
 **Figure 2**: Les FormView montre plus d’informations sur un produit unique ([cliquez pour afficher l’image en taille réelle](adding-client-side-confirmation-when-deleting-cs/_static/image4.png))
 
@@ -85,7 +85,7 @@ S résume-t-elle est ! Figure 3 illustre une capture d’écran de cette confir
 > La chaîne passée dans le `confirm(string)` fonction JavaScript est délimitée par des apostrophes (au lieu des guillemets). Dans JavaScript, les chaînes peuvent être délimités à l’aide de type caractère. Nous utilisons des apostrophes ici afin que les séparateurs pour la chaîne passée dans `confirm(string)` n’introduisent pas une ambiguïté avec séparateurs utilisés pour le `OnClientClick` valeur de propriété.
 
 
-[![Une Confirmation est maintenant affichée lorsque en cliquant sur le bouton Supprimer](adding-client-side-confirmation-when-deleting-cs/_static/image6.png)](adding-client-side-confirmation-when-deleting-cs/_static/image5.png)
+[![A La confirmation est maintenant affichée lorsque en cliquant sur le bouton Supprimer](adding-client-side-confirmation-when-deleting-cs/_static/image6.png)](adding-client-side-confirmation-when-deleting-cs/_static/image5.png)
 
 **Figure 3**: Une Confirmation est maintenant affichée lorsque en cliquant sur le bouton Supprimer ([cliquez pour afficher l’image en taille réelle](adding-client-side-confirmation-when-deleting-cs/_static/image7.png))
 
@@ -127,7 +127,7 @@ Avec ces modifications terminées, cliquez sur un bouton Supprimer affiche dans 
 > Cette technique peut également être utilisée pour accéder par programme le bouton Supprimer dans le CommandField dans un contrôle DetailsView. Pour le contrôle DetailsView, toutefois, vous d créer un gestionnaire d’événements pour le `DataBound` événement, dans la mesure où le contrôle DetailsView n’a pas un `RowDataBound` événement.
 
 
-[![En cliquant sur le bouton de suppression de s GridView affiche une boîte de dialogue de Confirmation personnalisé](adding-client-side-confirmation-when-deleting-cs/_static/image9.png)](adding-client-side-confirmation-when-deleting-cs/_static/image8.png)
+[![Ccliquant sur le s GridView affiche de bouton Supprimer une boîte de dialogue de Confirmation personnalisé](adding-client-side-confirmation-when-deleting-cs/_static/image9.png)](adding-client-side-confirmation-when-deleting-cs/_static/image8.png)
 
 **Figure 4**: En cliquant sur le bouton Supprimer de s GridView affiche une boîte de dialogue de Confirmation personnalisé ([cliquez pour afficher l’image en taille réelle](adding-client-side-confirmation-when-deleting-cs/_static/image10.png))
 

@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-cs
-title: Authentification des utilisateurs avec Forms Authentication (C#) | Microsoft Docs
+title: Authentification des utilisateurs avec Forms Authentication (c#) | Microsoft Docs
 author: microsoft
 description: Découvrez comment utiliser l’attribut [Authorize] au mot de passe protéger certaines pages dans votre application MVC. Vous allez apprendre à utiliser le Site Web Administration trop...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 239fd3ca-5630-4b8d-bc4b-2f906b1d3504
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d69ae977b3e6a323d1dff1443f09ac40e8f9a449
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b52abab12503918603419c9ccfabefcffdfd7e06
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418272"
 ---
-<a name="authenticating-users-with-forms-authentication-c"></a>Authentification des utilisateurs avec l’authentification par formulaire (C#)
-====================
+# <a name="authenticating-users-with-forms-authentication-c"></a>Authentification des utilisateurs avec l’authentification par formulaire (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Découvrez comment utiliser l’attribut [Authorize] au mot de passe protéger certaines pages dans votre application MVC. Vous allez apprendre à utiliser l’outil d’Administration de Site Web pour créer et gérer des utilisateurs et des rôles. Vous allez également apprendre à configurer où sont stockées les informations de compte et le rôle d’utilisateur.
@@ -150,4 +150,4 @@ Après avoir créé la connexion requise, vous devez mapper la connexion à un u
 Dans ce didacticiel, vous avez appris à utiliser l’authentification par formulaire lors de la création d’une application ASP.NET MVC. Tout d’abord, vous avez appris à créer de nouveaux utilisateurs et rôles en tirant parti de l’outil d’Administration de Site Web. Ensuite, vous avez appris à utiliser l’attribut [Authorize] pour empêcher les utilisateurs non autorisés d’appeler des actions de contrôleur. Enfin, vous avez appris à configurer votre application MVC pour stocker les informations d’utilisateur et rôle dans une base de données de production.
 
 > [!div class="step-by-step"]
-> [Next](authenticating-users-with-windows-authentication-cs.md)
+> [Suivant](authenticating-users-with-windows-authentication-cs.md)

@@ -8,18 +8,18 @@ ms.date: 05/03/2012
 ms.assetid: 48cfe378-d62a-48c6-a4db-6be3cead6898
 msc.legacyurl: /web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios
 msc.type: authoredcontent
-ms.openlocfilehash: fa06538dcd9e087df52a76588e084a527867bf84
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f8d55cb98e6943ef2a7c7eb05f7f771b5f5e63ef
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420404"
 ---
-<a name="deploying-web-applications-in-enterprise-scenarios-using-visual-studio-2010"></a>Déployer des applications web dans des scénarios d’entreprise avec Visual Studio 2010
-====================
+# <a name="deploying-web-applications-in-enterprise-scenarios-using-visual-studio-2010"></a>Déployer des applications web dans des scénarios d’entreprise avec Visual Studio 2010
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette série de didacticiels décrit les outils et techniques que vous pouvez utiliser pour déployer des applications web dans différents scénarios d’entreprise. Il explique comment rendre la meilleure façon d’utiliser des technologies telles que Visual Studio 2010, Microsoft Build Engine (MSBuild), Internet Information Services (IIS) 7.5, l’outil de déploiement Web IIS (Web Deploy), le Web Farm Framework (WFF) et utilitaires comme VSDBCMD.exe à Simplifiez et gérer le processus de déploiement. Il inclut des présentations de concepts et tâches des conseils qui vous aideront à :
 > 
@@ -46,7 +46,7 @@ Benjamin Curry est technicien principal avec [contenu Master](http://www.content
 
 Cette série de didacticiels est pour les développeurs d’applications web ASP.NET et aux architectes de solutions qui utilisent Visual Studio 2010 pour créer des applications web d’entreprise. Pour tirer le meilleur parti du contenu, vous devez être familiarisé avec Visual Studio 2010 et êtes déjà familiarisé avec TFS, ainsi que d’une prise de conscience des technologies de plate-forme web Microsoft tels que ASP.NET MVC 3, Windows Communication Foundation (WCF), IIS, SQL Serveur et les projets de base de données de Visual Studio. Toutefois, vous n’avez pas besoin être familiarisé avec les technologies et outils de déploiement ou avez besoin de savoir comment configurer des systèmes d’intégration continue.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Pour suivre les procédures pas à pas et effectuer les tâches qui décrivent ces didacticiels, vous devez installer ce logiciel sur votre ordinateur de développement :
 
@@ -78,4 +78,4 @@ Cette série inclut quatre jeux de didacticiel. Chacun se concentre sur les diff
 Cette série de didacticiels utilise un exemple de solution avec un niveau réaliste de complexité, ainsi que d’un scénario de déploiement d’une entreprise fictive, pour fournir une implémentation de référence et pour donner les tâches et les procédures pas à pas un contexte commun. La rubrique suivante, [déploiement Web d’entreprise : Vue d’ensemble du scénario](enterprise-web-deployment-scenario-overview.md), présente le scénario et l’exemple de solution. À partir de là, vous pouvez travailler via les didacticiels et les rubriques qui correspondent le mieux à vos besoins.
 
 > [!div class="step-by-step"]
-> [Next](enterprise-web-deployment-scenario-overview.md)
+> [Suivant](enterprise-web-deployment-scenario-overview.md)

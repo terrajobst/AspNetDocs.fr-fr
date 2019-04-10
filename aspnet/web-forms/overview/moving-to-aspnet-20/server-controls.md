@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 43f6ac47-76fc-4cf7-8e9f-c18ce673dfd8
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/server-controls
 msc.type: authoredcontent
-ms.openlocfilehash: ecf99fa894c1f662542aa8a613195b828bf2c67b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bfbc151af40bf7ccceb5ac298ba812730d4e4ed9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061436"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420755"
 ---
-<a name="server-controls"></a>Contrôles serveur
-====================
+# <a name="server-controls"></a>Contrôles serveur
+
 by [Microsoft](https://github.com/microsoft)
 
 > ASP.NET 2.0 améliore les contrôles de serveur à bien des égards. Dans ce module, nous aborderons certaines des modifications architecturales à la façon dont ASP.NET 2.0 et Visual Studio 2005 traite les contrôles serveur.
@@ -99,7 +99,7 @@ Dans ASP.NET 2.0, la définition de type de document par défaut est la suivante
 
 [!code-html[Main](server-controls/samples/sample7.html)]
 
-Si vous choisissez, vous pouvez modifier la conformité de XHML par défaut via le nœud xhtmlConformance dans le fichier de configuration. Par exemple, le nœud suivant dans le fichier web.config sera alors la conformité XHTML XHTML 1.0 Strict :
+Si vous choisissez, vous pouvez modifier la conformité XHTML par défaut via le nœud xhtmlConformance dans le fichier de configuration. Par exemple, le nœud suivant dans le fichier web.config sera alors la conformité XHTML XHTML 1.0 Strict :
 
 [!code-xml[Main](server-controls/samples/sample8.xml)]
 

@@ -8,15 +8,15 @@ ms.date: 04/11/2014
 ms.assetid: 07aa855a-92ee-4d43-ba66-5bfd7de20ee6
 msc.legacyurl: /aspnet/overview/owin-and-katana/host-owin-in-an-azure-worker-role
 msc.type: authoredcontent
-ms.openlocfilehash: dbf0964695dd2592d063b05c0778923edffe8e2e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 129b6a8f411d482de75e7e5edc5cc919b4d2de52
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058036"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419520"
 ---
-<a name="host-owin-in-an-azure-worker-role"></a>Héberger OWIN dans un rôle worker Azure
-====================
+# <a name="host-owin-in-an-azure-worker-role"></a>Héberger OWIN dans un rôle worker Azure
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 > Ce didacticiel montre comment l’auto-hébergement OWIN dans un rôle de travail Microsoft Azure.
@@ -37,7 +37,7 @@ par [Mike Wasson](https://github.com/MikeWasson)
 
 Démarrez Visual Studio avec des privilèges d’administrateur. Des privilèges d’administrateur sont nécessaires pour déboguer l’application localement, à l’aide de l’émulateur de calcul Azure.
 
-Sur le **fichier** menu, cliquez sur **New**, puis cliquez sur **projet**. À partir de **modèles installés**, sous Visual C#, cliquez sur **Cloud** puis cliquez sur **Windows Azure Cloud Service**. Nommez le projet « AzureApp » et cliquez sur **OK**.
+Sur le **fichier** menu, cliquez sur **New**, puis cliquez sur **projet**. À partir de **modèles installés**, sous Visual c#, cliquez sur **Cloud** puis cliquez sur **Windows Azure Cloud Service**. Nommez le projet « AzureApp » et cliquez sur **OK**.
 
 [![](host-owin-in-an-azure-worker-role/_static/image2.png)](host-owin-in-an-azure-worker-role/_static/image1.png)
 
@@ -116,7 +116,7 @@ L’émulateur de calcul attribue une adresse IP locale au point de terminaison.
 
 [![](host-owin-in-an-azure-worker-role/_static/image10.png)](host-owin-in-an-azure-worker-role/_static/image9.png)
 
-Recherchez l’adresse IP sous déploiements de Service, déploiement [id], détails du Service. Ouvrez un navigateur web et accédez à http://<em>adresse</em>, où <em>adresse</em> est l’adresse IP affectée par l’émulateur de calcul ; par exemple, `http://127.0.0.1:80`. Vous devez voir la page d’accueil OWIN :
+Recherchez l’adresse IP sous déploiements de Service, déploiement [id], détails du Service. Ouvrez un navigateur web et accédez à http :\/\/*adresse*, où *adresse* est l’adresse IP affectée par l’émulateur de calcul ; par exemple, `http://127.0.0.1:80`. Vous devez voir la page d’accueil OWIN :
 
 ![](host-owin-in-an-azure-worker-role/_static/image11.png)
 

@@ -8,15 +8,15 @@ ms.date: 07/23/2014
 ms.assetid: 5b59c0d3-dd21-43bf-bb4d-e008f011296d
 msc.legacyurl: /ajax/cdn/jquery-mobile/cdnjquerymobile10rc1
 msc.type: content
-ms.openlocfilehash: 7c64d21469543e77a65de11bf626740baab9494e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 09ecfa7fad0af2dc92fbd1ba3c09ab648227833d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027756"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420066"
 ---
-<a name="jquery-mobile-10-rc1-on-the-microsoft-ajax-cdn"></a>jQuery Mobile 1.0 RC1 sur le CDN Microsoft Ajax
-====================
+# <a name="jquery-mobile-10-rc1-on-the-microsoft-ajax-cdn"></a>jQuery Mobile 1.0 RC1 sur le CDN Microsoft Ajax
+
 La bibliothèque jQuery Mobile 1.0 RC 1 inclut les fichiers suivants :
 
 - https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.0rc1/jquery.mobile-1.0rc1.js

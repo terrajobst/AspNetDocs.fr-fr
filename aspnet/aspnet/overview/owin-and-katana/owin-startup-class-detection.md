@@ -8,15 +8,15 @@ ms.date: 01/28/2019
 ms.assetid: 08257f55-36f4-4e39-9c88-2a5602838c79
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-startup-class-detection
 msc.type: authoredcontent
-ms.openlocfilehash: 0b34cca8b48383dbb028106651758dff889ed614
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e4d9424d691f92aacf078faed09689daa40a44fd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418337"
 ---
-<a name="owin-startup-class-detection"></a>Détection de classe de démarrage OWIN
-====================
+# <a name="owin-startup-class-detection"></a>Détection de classe de démarrage OWIN
+
 
 > Ce didacticiel montre comment configurer la classe de démarrage OWIN est chargée. Pour plus d’informations sur OWIN, consultez [une vue d’ensemble du projet Katana](an-overview-of-project-katana.md). Ce didacticiel a été rédigé par Rick Anderson ( [ @RickAndMSFT ](https://twitter.com/#!/RickAndMSFT) ), Praburaj Thiagarajan et Howard Dierking ( [ @howard \_dierking](https://twitter.com/howard_dierking) ).
 >
@@ -79,7 +79,8 @@ ms.locfileid: "57039776"
      > [!NOTE]
      > Dans le code ci-dessus nous avons mis en commentaire le `OwinStartup` attribut et nous allons s’appuyer sur la convention de l’exécution de la classe nommée `Startup` .-Press ***F5*** pour exécuter l’application. Cliquez sur Actualiser plusieurs fois.
 
-    ![](owin-startup-class-detection/_static/image4.png) Remarque : Le nombre indiqué dans les images dans ce didacticiel ne correspondra pas le numéro que vous voyez. La chaîne de milliseconde est utilisée pour afficher une nouvelle réponse lorsque vous actualisez la page.
+    ![](owin-startup-class-detection/_static/image4.png)
+  Remarque : Le nombre indiqué dans les images dans ce didacticiel ne correspondra pas le numéro que vous voyez. La chaîne de milliseconde est utilisée pour afficher une nouvelle réponse lorsque vous actualisez la page.
   Vous pouvez voir les informations de trace dans le **sortie** fenêtre.
 
     ![](owin-startup-class-detection/_static/image5.png)

@@ -8,15 +8,15 @@ ms.date: 03/26/2015
 ms.assetid: c205805f-efdd-4fa7-9616-f26eab180611
 msc.legacyurl: /mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
 msc.type: authoredcontent
-ms.openlocfilehash: ea149b6450cf02c993c7690752a05396802336be
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 078382191595d1f65b5ebe9d0de8d41cd70e376d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425052"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419884"
 ---
-<a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Profiler et déboguer votre application ASP.NET MVC avec Glimpse
-====================
+# <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Profiler et déboguer votre application ASP.NET MVC avec Glimpse
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Aperçu est plein essor et en constante évolution de la famille de packages NuGet d’open source qui fournit les données de performances détaillées, débogage et des informations de diagnostic pour les applications ASP.NET. Il est très facile à installer, léger et ultra rapide et affiche les mesures de performances clés en bas de chaque page. Il vous permet d’approfondir votre application lorsque vous avez besoin savoir ce qui se passait au niveau du serveur. Aperçu fournit des informations précieuses tellement que nous vous recommandons de qu'utiliser cela dans votre cycle de développement, y compris votre environnement de test Azure. Tandis que [Fiddler](http://www.telerik.com/fiddler) et [les outils de développement F-12](https://msdn.microsoft.com/library/ie/gg589512(v=vs.85).aspx) fournissent un côté client vue Aperçu fournit une vue détaillée à partir du serveur. Ce didacticiel aborde l’utilisation de l’aperçu ASP.NET MVC et les packages d’EF, mais de nombreux autres packages sont disponibles. Lorsque cela est possible de lier sera à approprié [apercevoir docs](http://getglimpse.com/Docs/) dont j’ai aider à maintenir. Aperçu est un projet open source, vous pouvez trop contribuer au code source et la documentation.
@@ -25,10 +25,10 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [L’installation d’aperçu](#ig)
 - [Activer l’aperçu pour localhost](#eg)
 - [L’onglet de la chronologie](#Time)
-- [Liaison de données](#mb)
-- [Itinéraires](#route)
+- [Liaison de modèle](#mb)
+- [Routes](#route)
 - [À l’aide de Glimpse sur Azure](#da)
-- [Ressources supplémentaires pour MSBuild](#addRes)
+- [Ressources supplémentaires](#addRes)
 
 <a id="ig"></a>
 ## <a name="installing-glimpse"></a>L’installation d’aperçu

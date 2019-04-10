@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: ff03dcc0-da97-458d-838f-0823e7482642
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part2
 msc.type: authoredcontent
-ms.openlocfilehash: b593c6225c05c7405c9d8b78abfd29a087d47b04
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 84f9c822f041808184b2c586ce933ba3b24615dc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421257"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419832"
 ---
-<a name="adding-a-controller"></a>Ajour d’un contrôleur
-====================
+# <a name="adding-a-controller"></a>Ajour d’un contrôleur
+
 par [Scott Hanselman](https://github.com/shanselman)
 
 > > [!NOTE]
@@ -40,7 +40,7 @@ Nous allons créer un nouveau contrôleur en double-cliquant sur le dossier cont
 
 Nommez votre contrôleur « HelloWorldController » et cliquez sur Ajouter.
 
-[![Ajouter la boîte de dialogue contrôleur](getting-started-with-mvc-part2/_static/image4.png)](getting-started-with-mvc-part2/_static/image3.png)
+[![Ajj boîte de dialogue contrôleur](getting-started-with-mvc-part2/_static/image4.png)](getting-started-with-mvc-part2/_static/image3.png)
 
 Notez que, dans l’Explorateur de solutions sur la droite qui a un nouveau fichier a été créé pour vous avez appelé HelloWorldController.cs et ce fichier est maintenant ouvert dans le **IDE**.
 
@@ -58,15 +58,15 @@ ASP.NET MVC appelle les différentes classes de contrôleur (et les différentes
 
 La première partie de l’URL détermine la classe de contrôleur à exécuter. Par conséquent, /HelloWorld mappe à la classe HelloWorldController. La deuxième partie de l’URL détermine la méthode d’Action sur la classe à exécuter. Par conséquent, /HelloWorld/Index provoquerait la méthode Index() de la classe HelloWorldController à exécuter. Notez que nous n’avions à visiter /HelloWorld ci-dessus et la méthode Qu'index a été impliquée. Il s’agit d’une méthode nommée « Index » étant la méthode par défaut qui sera appelée sur un contrôleur s’il n’est pas explicitement spécifié.
 
-[![Mon action par défaut](getting-started-with-mvc-part2/_static/image8.png)](getting-started-with-mvc-part2/_static/image7.png)
+[![TVoici mon action par défaut](getting-started-with-mvc-part2/_static/image8.png)](getting-started-with-mvc-part2/_static/image7.png)
 
 À présent, voyons `http://localhost:xx/HelloWorld/Welcome.` maintenant notre méthode Bienvenue a exécuté et a retourné de sa chaîne au format HTML.
 
 Là encore, / [Controller] / [ActionName] / [paramètres] contrôleur est donc HelloWorld et bienvenue est la méthode dans ce cas. Nous n’avons pas encore fini les paramètres.
 
-[![C’est la méthode d’action de bienvenue](getting-started-with-mvc-part2/_static/image10.png)](getting-started-with-mvc-part2/_static/image9.png)
+[![Tson est la méthode d’action Accueil](getting-started-with-mvc-part2/_static/image10.png)](getting-started-with-mvc-part2/_static/image9.png)
 
-Modifions notre exemple légèrement afin que nous pouvons transmettre certaines informations à partir de l’URL vers notre contrôleur, par exemple comme suit : / HelloWorld/Welcome ? nom = Scott&amp;numtimes = 4. Modifier votre méthode de bienvenue pour inclure les deux paramètres et mise à jour, tel que ci-dessous. Notez que nous avons utilisé la fonctionnalité de paramètre facultatif de C# pour indiquer que le paramètre numTimes doivent par défaut 1 si elle n’est transmise.
+Modifions notre exemple légèrement afin que nous pouvons transmettre certaines informations à partir de l’URL vers notre contrôleur, par exemple comme suit : / HelloWorld/Welcome ? nom = Scott&amp;numtimes = 4. Modifier votre méthode de bienvenue pour inclure les deux paramètres et mise à jour, tel que ci-dessous. Notez que nous avons utilisé la fonctionnalité de paramètre facultatif de c# pour indiquer que le paramètre numTimes doivent par défaut 1 si elle n’est transmise.
 
 [!code-csharp[Main](getting-started-with-mvc-part2/samples/sample2.cs)]
 

@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 0e23ff32-646d-43f3-8bec-6b2313d3abd6
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/data-bound-controls
 msc.type: authoredcontent
-ms.openlocfilehash: b115109c7307d05dc9e620378a51a71407204740
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 016dfa2a5a5fb9aaed0e1c60194e53ac9ccb8b36
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056366"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419585"
 ---
-<a name="data-bound-controls"></a>Contrôles liés aux données
-====================
+# <a name="data-bound-controls"></a>Contrôles liés aux données
+
 by [Microsoft](https://github.com/microsoft)
 
 > La plupart des applications ASP.NET s’appuient sur une certaine de présentation des données à partir d’une source de données back-end. Contrôles liés aux données ont été une partie essentielle de manipulation des données dans des applications Web dynamiques. ASP.NET 2.0 introduit des améliorations importantes aux contrôles liés aux données, notamment une nouvelle classe BaseDataBoundControl et la syntaxe déclarative.
@@ -86,7 +86,7 @@ Pour afficher des publicités à partir du fichier XML ci-dessus, ajoutez un con
 
 Si vous choisissez d’utiliser une table de base de données comme source de données pour votre contrôle AdRotator, vous devez d’abord configurer une base de données en utilisant le schéma suivant :
 
-| **Nom de colonne** | **Type de données** | **Description** |
+| **Nom de la colonne** | **Type de données** | **Description** |
 | --- | --- | --- |
 | Id | int | Clé primaire. Cette colonne peut porter n’importe quel nom. |
 | ImageUrl | nvarchar(*length*) | URL relative ou absolue de l’image à afficher pour la publicité. |
@@ -195,7 +195,7 @@ Vous pouvez personnaliser l’apparence du contrôle GridView en définissant le
 
 Vous pouvez également afficher ou masquer les différentes parties du contrôle. Le tableau suivant répertorie les propriétés qui contrôlent les parties sont affichés ou masqués.
 
-| **Property** | **Description** |
+| **Propriété** | **Description** |
 | --- | --- |
 | ShowFooter | Affiche ou masque la section de pied de page du contrôle GridView. |
 | ShowHeader | Affiche ou masque la section d’en-tête du contrôle GridView. |
@@ -204,7 +204,7 @@ Vous pouvez également afficher ou masquer les différentes parties du contrôle
 
 Le contrôle GridView fournit plusieurs événements que vous pouvez programmer. Cela permet d’exécuter une routine personnalisée lorsqu’un événement se produit. Le tableau suivant répertorie les événements pris en charge par le contrôle GridView.
 
-| **Event** | **Description** |
+| **Événement** | **Description** |
 | --- | --- |
 | PageIndexChanged | Se produit lorsque l’utilisateur clique sur un des boutons du pagineur, mais une fois que le contrôle GridView gère l’opération de pagination. Cet événement est couramment utilisé lorsque vous avez besoin effectuer une tâche une fois que l’utilisateur navigue vers une autre page dans le contrôle. |
 | PageIndexChanging | Se produit lorsque l’utilisateur clique sur un des boutons du pagineur, mais avant que le contrôle GridView contrôle l’opération de pagination. Cet événement est souvent utilisé pour annuler l’opération de pagination. |
@@ -262,7 +262,7 @@ Le contrôle FormView fournit plusieurs fonctionnalités intégrées qui permett
 
 Étant donné que le contrôle FormView utilise des modèles, il ne fournit pas un moyen de générer automatiquement des boutons de commande pour effectuer la mise à jour, la suppression ou l’insertion d’opérations. Vous devez inclure manuellement ces boutons de commande dans le modèle approprié. Le contrôle FormView reconnaît certains boutons qui ont leur **CommandName** propriétés ont des valeurs spécifiques. Le tableau suivant répertorie les boutons de commande qui reconnaît le contrôle FormView.
 
-| **Button** | **Valeur de CommandName** | **Description** |
+| **Bouton** | **Valeur de CommandName** | **Description** |
 | --- | --- | --- |
 | Annuler | « Annuler » | Utilisé dans la mise à jour ou d’opérations d’insertion pour annuler l’opération et ignorer les valeurs entrées par l’utilisateur. Le contrôle FormView retourne ensuite au mode spécifié par la propriété DefaultMode. |
 | Supprimer | "Delete" | Utilisé dans les opérations de suppression pour supprimer l’enregistrement affiché à partir de la source de données. Déclenche les événements ItemDeleting et ItemDeleted. |
@@ -296,7 +296,7 @@ Vous pouvez personnaliser l’apparence du contrôle FormView en définissant le
 
 Le contrôle FormView fournit plusieurs événements que vous pouvez programmer. Cela permet d’exécuter une routine personnalisée lorsqu’un événement se produit. Le tableau suivant répertorie les événements pris en charge par le contrôle FormView.
 
-| **Event** | **Description** |
+| **Événement** | **Description** |
 | --- | --- |
 | ItemCommand | Se produit lorsque l’utilisateur clique sur un bouton dans un contrôle FormView. Cet événement est souvent utilisé pour effectuer une tâche lorsqu’un clic est effectué dans le contrôle. |
 | ItemCreated | Se produit une fois que tous les objets FormViewRow sont créés dans le contrôle FormView. Cet événement est souvent utilisé pour modifier les valeurs d’un enregistrement avant son affichage. |
@@ -388,7 +388,7 @@ Vous pouvez personnaliser l’apparence du contrôle DetailsView en définissant
 
 Le contrôle DetailsView fournit plusieurs événements que vous pouvez programmer. Cela permet d’exécuter une routine personnalisée lorsqu’un événement se produit. Le tableau suivant répertorie les événements pris en charge par le contrôle DetailsView. Le contrôle DetailsView hérite également ces événements de ses classes de base : Liaison de données, liée aux données, supprimé, Init, Load, PreRender et rendu.
 
-| **Event** | **Description** |
+| **Événement** | **Description** |
 | --- | --- |
 | ItemCommand | Se produit lorsqu’un clic est effectué dans le contrôle DetailsView. |
 | ItemCreated | Se produit une fois que tous les objets DetailsViewRow sont créés dans le contrôle DetailsView. Cet événement est souvent utilisé pour modifier les valeurs d’un enregistrement avant son affichage. |
@@ -508,7 +508,7 @@ Le contrôle TreeView possède plusieurs propriétés qui affectent le fonctionn
 
 Le **ShowCheckBoxes** propriété affecte les nœuds affichent une case à cocher lors du rendu ou non. Les valeurs valides pour cette propriété sont **aucun**, **racine**, **Parent**, **feuille**, et **tous les**. Ces modifications concernent le contrôle TreeView comme suit :
 
-| **Valeur de propriété** | **Effect** |
+| **Valeur de la propriété** | **Effet** |
 | --- | --- |
 | Aucun. | Cases à cocher ne sont pas affichés sur tous les nœuds. Il s'agit du paramètre par défaut. |
 | Racine | Une case à cocher est affichée uniquement sur le nœud racine. |
@@ -587,7 +587,7 @@ Un contrôle SiteMapPath est composé d’objets de SiteMapNodeItem. Il existe t
 
 Les propriétés qui contrôlent le fonctionnement du contrôle SiteMapPath sont comme suit :
 
-| **Property** | **Description de propriété** |
+| **Propriété** | **Description de propriété** |
 | --- | --- |
 | ParentLevelsDisplayed | Contrôle le nombre de nœuds parents est affiché. La valeur par défaut est -1 n’impose aucune restriction sur le nombre de nœuds parents affichés. |
 | PathDirection | Contrôle la direction du contrôle SiteMapPath. Les valeurs valides sont RootToCurrent (valeur par défaut) et CurrentToRoot. |

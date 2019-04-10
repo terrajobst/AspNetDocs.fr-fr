@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure
-title: Meilleures pratiques pour le déploiement des mots de passe et autres données sensibles sur ASP.NET et Azure App Service | Microsoft Docs
+title: Déploiement des mots de passe et autres données sensibles dans ASP.NET et Azure App Service - ASP.NET 4.x
 author: Rick-Anderson
 description: Ce didacticiel montre comment votre code peut stocker en toute sécurité et accéder aux informations sécurisées. Le point le plus important est que vous ne devez jamais stocker les mots de passe ou autres sen...
 ms.author: riande
 ms.date: 05/21/2015
 ms.assetid: 97902c66-cb61-4d11-be52-73f962f2db0a
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure
 msc.type: authoredcontent
-ms.openlocfilehash: 8b5d6bf9fad72218341e4e0b90144da01abea3aa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2620d9e2eaf3c7719d9a289e42bb91270708ae79
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046886"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419442"
 ---
-<a name="best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure-app-service"></a>Bonnes pratiques pour le déploiement des mots de passe et d’autres données sensibles sur ASP.NET et Azure App Service
-====================
+# <a name="best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure-app-service"></a>Bonnes pratiques pour le déploiement des mots de passe et d’autres données sensibles sur ASP.NET et Azure App Service
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Ce didacticiel montre comment votre code peut stocker en toute sécurité et accéder aux informations sécurisées. Le point le plus important est que vous ne devez jamais stocker les mots de passe ou d’autres données sensibles dans le code source, et vous ne devez pas utiliser les clés secrètes de production en mode de développement et de test.
@@ -31,7 +32,7 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [Applications de console de WebJobs](#wj)
 - [Déploiement de secrets dans Azure](#da)
 - [Notes pour sur site et PHP](#not)
-- [Ressources supplémentaires pour MSBuild](#addRes)
+- [Ressources supplémentaires](#addRes)
 
 <a id="pwd"></a>
 ## <a name="working-with-passwords-in-the-development-environment"></a>Utilisation de mots de passe dans l’environnement de développement
