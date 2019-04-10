@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-cs
-title: Pagination efficace dans de grandes quantités de données (C#) | Microsoft Docs
+title: Pagination efficace dans de grandes quantités de données (c#) | Microsoft Docs
 author: rick-anderson
 description: Ne convient pas l’option de la pagination par défaut d’un contrôle de présentation des données lorsque vous travaillez avec grandes quantités de données, comme son retriev de contrôle de source données sous-jacent...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 08/15/2006
 ms.assetid: 59c01998-9326-4ecb-9392-cb9615962140
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: feebee845a19a7cb462127a893a30ac7e0761965
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
-ms.translationtype: HT
+ms.openlocfilehash: 21f37dc1ffbcb7e8e15e4bed261b68ffc0388c21
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388424"
 ---
-<a name="efficiently-paging-through-large-amounts-of-data-c"></a>Pagination efficace dans de grandes quantités de données (C#)
-====================
+# <a name="efficiently-paging-through-large-amounts-of-data-c"></a>Pagination efficace dans de grandes quantités de données (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_25_CS.exe) ou [télécharger le PDF](efficiently-paging-through-large-amounts-of-data-cs/_static/datatutorial25cs1.pdf)
@@ -191,7 +191,7 @@ Après avoir créé la procédure stockée, prenez un moment pour faire des test
 Une fois ces choix des valeurs de paramètres d’entrée, la fenêtre Sortie affiche les résultats. La figure 8 illustre les résultats lors du passage de 10 à la fois pour le `@startRowIndex` et `@maximumRows` paramètres.
 
 
-[![Les enregistrements que s’affiche dans la deuxième Page de données sont retournées.](efficiently-paging-through-large-amounts-of-data-cs/_static/image9.png)](efficiently-paging-through-large-amounts-of-data-cs/_static/image8.png)
+[![TIl enregistre que s’affiche dans la deuxième Page de données sont retournées](efficiently-paging-through-large-amounts-of-data-cs/_static/image9.png)](efficiently-paging-through-large-amounts-of-data-cs/_static/image8.png)
 
 **Figure 8**: Les enregistrements que s’affiche dans la deuxième Page de données sont retournés ([cliquez pour afficher l’image en taille réelle](efficiently-paging-through-large-amounts-of-data-cs/_static/image10.png))
 
@@ -293,7 +293,7 @@ Notez que le `EnablePaging` et `SelectCountMethod` propriétés ont été défin
 Après avoir apporté ces modifications, visitez cette page via un navigateur. Vous devriez voir 10 produits répertoriés, classés par ordre alphabétique. Prenez un moment pour parcourir les données d’une page à la fois. Il n’existe aucune différence visuelle à partir de la perspective de s utilisateur final entre la pagination par défaut et la pagination personnalisée, plus efficacement la pagination personnalisée pages dans de grandes quantités de données, car elle récupère uniquement les enregistrements qui doivent être affichés pour une page donnée.
 
 
-[![Les données, trié par le produit s nom, est notifié par radiomessagerie à l’aide personnalisée la pagination](efficiently-paging-through-large-amounts-of-data-cs/_static/image20.png)](efficiently-paging-through-large-amounts-of-data-cs/_static/image19.png)
+[![THE données, classés par le nom de produit, est notifié par radiomessagerie à l’aide personnalisée la pagination](efficiently-paging-through-large-amounts-of-data-cs/_static/image20.png)](efficiently-paging-through-large-amounts-of-data-cs/_static/image19.png)
 
 **Figure 17**: Les données, trié par le produit s nom, est personnalisé paginée à l’aide de pagination ([cliquez pour afficher l’image en taille réelle](efficiently-paging-through-large-amounts-of-data-cs/_static/image21.png))
 
@@ -309,7 +309,7 @@ En cliquant sur le dernier lien de page provoque une publication (postback) et i
 Notre implémentation de la pagination personnalisée actuelle nécessite que l’ordre selon lequel les données sont paginées via être spécifié de manière statique lorsque vous créez le `GetProductsPaged` procédure stockée. Toutefois, vous avez peut-être noté que la balise active de GridView s contient une case à cocher Activer le tri en plus de l’option Activer la pagination. Malheureusement, ajout de prise en charge de tri pour le contrôle GridView avec notre implémentation de la pagination personnalisée en cours ne concerne que les enregistrements sur la page actuellement affichée de données. Par exemple, si vous configurez le contrôle GridView pour prennent également en charge la pagination et, lors de l’affichage de la première page de données, trier par nom de produit par ordre décroissant, il sera inverser l’ordre des produits sur la page 1. Comme le montre la Figure 18, par exemple montre crevettes tigres en tant que le premier produit lors du tri par ordre alphabétique inverse, qui ignore les 71 autres produits qui suivent crevettes tigres, par ordre alphabétique ; Seuls les enregistrements sur la première page sont prises en compte dans le tri.
 
 
-[![Uniquement les données affichées sur la Page actuelle est triée.](efficiently-paging-through-large-amounts-of-data-cs/_static/image23.png)](efficiently-paging-through-large-amounts-of-data-cs/_static/image22.png)
+[![Oeules les données affichées sur la Page actuelle est triée](efficiently-paging-through-large-amounts-of-data-cs/_static/image23.png)](efficiently-paging-through-large-amounts-of-data-cs/_static/image22.png)
 
 **Figure 18**: Uniquement les données affichées sur la Page actuelle est triée ([cliquez pour afficher l’image en taille réelle](efficiently-paging-through-large-amounts-of-data-cs/_static/image24.png))
 

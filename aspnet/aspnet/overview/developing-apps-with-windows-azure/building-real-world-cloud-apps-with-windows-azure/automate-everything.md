@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: ba6e6baa-9b9f-471f-b39d-b007a3addadc
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/automate-everything
 msc.type: authoredcontent
-ms.openlocfilehash: 18e988279b56e479b0bb27de2f01ab22a2e70301
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: d27c8c1910a79cea8ccdf4231d3bc2b80a20dc68
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418363"
 ---
-<a name="automate-everything-building-real-world-cloud-apps-with-azure"></a>Automatiser tout (création d’applications de Cloud réalistes avec Azure)
-====================
+# <a name="automate-everything-building-real-world-cloud-apps-with-azure"></a>Automatiser tout (création d’applications de Cloud réalistes avec Azure)
+
 par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -125,7 +125,7 @@ La première chose que fait le script est de créer l’application web en appel
 
 ### <a name="create-the-storage-account"></a>Créer le compte de stockage
 
-Puis exécute le script principal le <em>New-AzureStorage.ps1</em> de script, en spécifiant «<em>&lt;websitename&gt;</em>stockage » pour le nom de compte de stockage, et du mêmes centre de données emplacement en tant que l’application web.
+Puis exécute le script principal le *New-AzureStorage.ps1* de script, en spécifiant «*&lt;websitename&gt;* stockage » pour le nom de compte de stockage, et du mêmes centre de données emplacement en tant que l’application web.
 
 [!code-powershell[Main](automate-everything/samples/sample4.ps1?highlight=3)]
 

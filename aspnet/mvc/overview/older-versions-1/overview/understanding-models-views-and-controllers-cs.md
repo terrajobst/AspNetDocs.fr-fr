@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/overview/understanding-models-views-and-controllers-cs
-title: Présentation des modèles, vues et contrôleurs (C#) | Microsoft Docs
+title: Présentation des modèles, vues et contrôleurs (c#) | Microsoft Docs
 author: StephenWalther
 description: Des doutes quant aux modèles, vues et contrôleurs ? Dans ce didacticiel, Stephen Walther vous présente les différentes parties d’une application ASP.NET MVC.
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 08/19/2008
 ms.assetid: 87313792-0a96-4caf-89fc-1457d54e5c1e
 msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-models-views-and-controllers-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5e9186a6c261266de8f1a1509a49b84b359bd920
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
-ms.translationtype: HT
+ms.openlocfilehash: 8c57345c510ad0afccaabf377fda35afbfc05e17
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040576"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383406"
 ---
-<a name="understanding-models-views-and-controllers-c"></a>Présentation des modèles, des vues et des contrôleurs (C#)
-====================
+# <a name="understanding-models-views-and-controllers-c"></a>Présentation des modèles, des vues et des contrôleurs (C#)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Des doutes quant aux modèles, vues et contrôleurs ? Dans ce didacticiel, Stephen Walther vous présente les différentes parties d’une application ASP.NET MVC.
@@ -30,10 +30,10 @@ Après avoir lu ce didacticiel, vous devez comprendre comment les différentes p
 
 Le modèle de Visual Studio par défaut pour la création d’Applications Web ASP.NET MVC inclut une exemple très simple d’application qui peut être utilisée pour comprendre les différentes parties d’une application ASP.NET MVC. Nous profitons de cette application simple dans ce didacticiel.
 
-Vous créez une application ASP.NET MVC avec le modèle MVC en lançant Visual Studio 2008 et en sélectionnant l’option de menu fichier, nouveau projet (voir Figure 1). Dans la boîte de dialogue Nouveau projet, sélectionnez votre langage de programmation préféré sous Types de projets (Visual Basic ou C#), puis sélectionnez **Application Web ASP.NET MVC** sous modèles. Cliquez sur le bouton OK.
+Vous créez une application ASP.NET MVC avec le modèle MVC en lançant Visual Studio 2008 et en sélectionnant l’option de menu fichier, nouveau projet (voir Figure 1). Dans la boîte de dialogue Nouveau projet, sélectionnez votre langage de programmation préféré sous Types de projets (Visual Basic ou c#), puis sélectionnez **Application Web ASP.NET MVC** sous modèles. Cliquez sur le bouton OK.
 
 
-[![Boîte de dialogue Nouveau projet](understanding-models-views-and-controllers-cs/_static/image1.jpg)](understanding-models-views-and-controllers-cs/_static/image1.png)
+[![Nboîte de dialogue Nouveau projet](understanding-models-views-and-controllers-cs/_static/image1.jpg)](understanding-models-views-and-controllers-cs/_static/image1.png)
 
 **Figure 01**: Boîte de dialogue Nouveau projet ([cliquez pour afficher l’image en taille réelle](understanding-models-views-and-controllers-cs/_static/image2.png))
 
@@ -41,7 +41,7 @@ Vous créez une application ASP.NET MVC avec le modèle MVC en lançant Visual S
 Lorsque vous créez une application ASP.NET MVC, le **créer un projet de Test unitaire** boîte de dialogue s’affiche (voir Figure 2). Cette boîte de dialogue vous permet de créer un projet distinct dans votre solution pour tester votre application ASP.NET MVC. Sélectionnez l’option **non, ne pas créer de projet de test unitaire** et cliquez sur le **OK** bouton.
 
 
-[![Créer la boîte de dialogue de Test unitaire](understanding-models-views-and-controllers-cs/_static/image2.jpg)](understanding-models-views-and-controllers-cs/_static/image3.png)
+[![Ccréer un dialogue de Test unitaire](understanding-models-views-and-controllers-cs/_static/image2.jpg)](understanding-models-views-and-controllers-cs/_static/image3.png)
 
 **Figure 02**: Créer la boîte de dialogue de Test unitaire ([cliquez pour afficher l’image en taille réelle](understanding-models-views-and-controllers-cs/_static/image4.png))
 
@@ -51,7 +51,7 @@ Après le MVC ASP.NET nouvelle application est créée. Vous verrez plusieurs do
 Si vous développez le dossier contrôleurs, vous devez voir un fichier nommé AccountController.cs et un fichier nommé HomeController.cs. Si vous développez le dossier Views, vous devez voir trois sous-dossiers nommés Account, Home et Shared. Si vous développez le dossier de base, vous verrez deux fichiers supplémentaires nommés About.aspx et Index.aspx (voir Figure 3). Ces fichiers constituent l’exemple d’application inclus avec le modèle ASP.NET MVC par défaut.
 
 
-[![La fenêtre Explorateur de solutions](understanding-models-views-and-controllers-cs/_static/image3.jpg)](understanding-models-views-and-controllers-cs/_static/image5.png)
+[![TIl fenêtre Explorateur de solutions](understanding-models-views-and-controllers-cs/_static/image3.jpg)](understanding-models-views-and-controllers-cs/_static/image5.png)
 
 **Figure 03**: La fenêtre Explorateur de solutions ([cliquez pour afficher l’image en taille réelle](understanding-models-views-and-controllers-cs/_static/image6.png))
 
@@ -61,7 +61,7 @@ Vous pouvez exécuter l’exemple d’application en sélectionnant l’option d
 Lorsque vous exécutez tout d’abord une application ASP.NET, dans la Figure 4, la boîte de dialogue s’affiche qui recommande l’activation du mode débogage. Cliquez sur le bouton OK et l’application s’exécutera.
 
 
-[![Boîte de dialogue débogage non activé](understanding-models-views-and-controllers-cs/_static/image4.jpg)](understanding-models-views-and-controllers-cs/_static/image7.png)
+[![Ddialogue de pas activée débo](understanding-models-views-and-controllers-cs/_static/image4.jpg)](understanding-models-views-and-controllers-cs/_static/image7.png)
 
 **Figure 04**: Boîte de dialogue pas activé le débogage ([cliquez pour afficher l’image en taille réelle](understanding-models-views-and-controllers-cs/_static/image8.png))
 
@@ -69,7 +69,7 @@ Lorsque vous exécutez tout d’abord une application ASP.NET, dans la Figure 4,
 Lorsque vous exécutez une application ASP.NET MVC, Visual Studio lance l’application dans votre navigateur web. L’exemple d’application se compose de deux pages : la page d’Index et de la page About. Lorsque l’application démarre tout d’abord, la page d’Index s’affiche (voir Figure 5). Vous pouvez accéder à la page About en cliquant sur le lien du menu en haut à droite de l’application.
 
 
-[![La Page d’Index](understanding-models-views-and-controllers-cs/_static/image10.png)](understanding-models-views-and-controllers-cs/_static/image9.png)
+[![TIl Page d’Index](understanding-models-views-and-controllers-cs/_static/image10.png)](understanding-models-views-and-controllers-cs/_static/image9.png)
 
 **Figure 05**: La Page d’Index ([cliquez pour afficher l’image en taille réelle](understanding-models-views-and-controllers-cs/_static/image11.png))
 
@@ -122,7 +122,7 @@ Contrôleur = employé
 
 action = Index
 
-Id = 
+Id = ��
 
 Enfin, si vous ouvrez une Application ASP.NET MVC sans fournir n’importe quelle URL (par exemple, `http://localhost`), l’URL est analysé comme suit :
 
@@ -130,7 +130,7 @@ contrôleur = Home
 
 action = Index
 
-Id = 
+Id = ��
 
 La demande est acheminée vers l’action Index() sur la classe HomeController.
 
@@ -138,7 +138,7 @@ La demande est acheminée vers l’action Index() sur la classe HomeController.
 
 Un contrôleur est chargé de contrôler la façon dont un utilisateur interagit avec une application MVC. Un contrôleur contient la logique de contrôle de flux pour une application ASP.NET MVC. Un contrôleur détermine quelle réponse à renvoyer à un utilisateur lorsqu’un utilisateur effectue une demande de navigateur.
 
-Un contrôleur est simplement une classe (par exemple, une classe Visual Basic ou C#). L’exemple de l’application ASP.NET MVC inclut un contrôleur nommé HomeController.cs situé dans le dossier contrôleurs. Le contenu du fichier HomeController.cs est reproduit dans le Listing 2.
+Un contrôleur est simplement une classe (par exemple, une classe Visual Basic ou c#). L’exemple de l’application ASP.NET MVC inclut un contrôleur nommé HomeController.cs situé dans le dossier contrôleurs. Le contenu du fichier HomeController.cs est reproduit dans le Listing 2.
 
 **Listing 2 - HomeController.cs**
 
@@ -170,7 +170,7 @@ Le fichier dans le Listing 3 contient la vue About.aspx.
 
 Si vous ignorez la première ligne dans la liste 3, la plupart du reste de la vue se compose du code HTML standard. Vous pouvez modifier le contenu de la vue en entrant le code HTML que vous souhaitez ici.
 
-Une vue est très similaire à une page dans les Pages ASP ou ASP.NET Web Forms. Une vue peut contenir des scripts et le contenu HTML. Vous pouvez écrire les scripts dans votre .NET préféré (par exemple, C# ou Visual Basic .NET) de langage de programmation. Vous utilisez des scripts pour afficher le contenu dynamique tel que la base de données.
+Une vue est très similaire à une page dans les Pages ASP ou ASP.NET Web Forms. Une vue peut contenir des scripts et le contenu HTML. Vous pouvez écrire les scripts dans votre .NET préféré (par exemple, c# ou Visual Basic .NET) de langage de programmation. Vous utilisez des scripts pour afficher le contenu dynamique tel que la base de données.
 
 ## <a name="understanding-models"></a>Présentation des modèles
 

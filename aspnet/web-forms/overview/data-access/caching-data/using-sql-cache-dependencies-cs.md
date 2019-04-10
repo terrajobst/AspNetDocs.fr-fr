@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/caching-data/using-sql-cache-dependencies-cs
-title: À l’aide de dépendances de Cache SQL (C#) | Microsoft Docs
+title: À l’aide de dépendances de Cache SQL (c#) | Microsoft Docs
 author: rick-anderson
 description: La stratégie de mise en cache la plus simple consiste à autoriser les données mises en cache expirent après une période spécifiée. Mais cette approche simple signifie que le données mises en cache maintai...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 05/30/2007
 ms.assetid: 0e91842c-7f10-4aed-8c23-4ee3e2774014
 msc.legacyurl: /web-forms/overview/data-access/caching-data/using-sql-cache-dependencies-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ddd0ce9e8e0f69da6f9c0f65165e4842d460f0c0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
-ms.translationtype: HT
+ms.openlocfilehash: e70a21e2752c7c8fc8be332a98e1cf7e40b01412
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417687"
 ---
-<a name="using-sql-cache-dependencies-c"></a>Utilisation de dépendances de cache SQL (C#)
-====================
+# <a name="using-sql-cache-dependencies-c"></a>Utilisation de dépendances de cache SQL (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_61_CS.zip) ou [télécharger le PDF](using-sql-cache-dependencies-cs/_static/datatutorial61cs1.pdf)
@@ -87,7 +87,7 @@ Commencez par fermer Visual Studio. Ensuite, ouvrez SQL Server Management Studio
 Une fois connecté au serveur, Management Studio affiche le serveur et contenir des sous-dossiers pour les bases de données, sécurité et ainsi de suite. Avec le bouton droit sur le dossier bases de données et choisissez l’option d’attachement. Cela fera apparaître la boîte de dialogue Attacher les bases de données boîte (voir Figure 2). Cliquez sur le bouton Ajouter, puis sélectionnez le `NORTHWND.MDF` dossier de base de données dans votre s d’application web `App_Data` dossier.
 
 
-[![Attacher le fichier NORTHWND. Fichiers MDF de base de données à partir du dossier App_Data](using-sql-cache-dependencies-cs/_static/image2.gif)](using-sql-cache-dependencies-cs/_static/image1.png)
+[![Aattac le fichier NORTHWND. Base de données MDF à partir du dossier App_Data](using-sql-cache-dependencies-cs/_static/image2.gif)](using-sql-cache-dependencies-cs/_static/image1.png)
 
 **Figure 2**: Attacher le `NORTHWND.MDF` de base de données à partir de la `App_Data` dossier ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image2.png))
 
@@ -143,7 +143,7 @@ Le [la mise en cache des données avec ObjectDataSource](caching-data-with-the-o
 Pour illustrer l’utilisation déclarative de dépendances de cache SQL, ouvrez le `SqlCacheDependencies.aspx` page dans le `Caching` dossier et faites glisser un GridView à partir de la boîte à outils vers le concepteur. Définir les opérations de mappage GridView `ID` à `ProductsDeclarative` et, à partir de sa balise active, choisir de lier à un nouveau ObjectDataSource nommé `ProductsDataSourceDeclarative`.
 
 
-[![Créer un nouveau ObjectDataSource nommé ProductsDataSourceDeclarative](using-sql-cache-dependencies-cs/_static/image5.gif)](using-sql-cache-dependencies-cs/_static/image3.png)
+[![Ccréer un nouveau ProductsDataSourceDeclarative de nommé ObjectDataSource](using-sql-cache-dependencies-cs/_static/image5.gif)](using-sql-cache-dependencies-cs/_static/image3.png)
 
 **Figure 5**: Créer une nouvelle nommée de ObjectDataSource `ProductsDataSourceDeclarative` ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image4.png))
 
@@ -151,12 +151,12 @@ Pour illustrer l’utilisation déclarative de dépendances de cache SQL, ouvrez
 Configurer l’ObjectDataSource à utiliser le `ProductsBLL` classe et définissez la liste déroulante dans l’onglet Sélection à `GetProducts()`. Dans l’onglet mise à jour, choisissez le `UpdateProduct` surcharge avec trois paramètres d’entrée - `productName`, `unitPrice`, et `productID`. Définir les listes déroulantes (None) dans les onglets INSERT et DELETE.
 
 
-[![Utilisez la surcharge de UpdateProduct avec trois paramètres d’entrée](using-sql-cache-dependencies-cs/_static/image6.gif)](using-sql-cache-dependencies-cs/_static/image5.png)
+[![Use la surcharge UpdateProduct avec trois paramètres d’entrée](using-sql-cache-dependencies-cs/_static/image6.gif)](using-sql-cache-dependencies-cs/_static/image5.png)
 
 **Figure 6**: Utilisez la surcharge de UpdateProduct avec trois paramètres d’entrée ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image6.png))
 
 
-[![Définition de la liste déroulante (None) pour l’insertion et supprimer les tabulations](using-sql-cache-dependencies-cs/_static/image7.gif)](using-sql-cache-dependencies-cs/_static/image7.png)
+[![SOnglets de la liste déroulante (None) pour l’insertion et de suppression et](using-sql-cache-dependencies-cs/_static/image7.gif)](using-sql-cache-dependencies-cs/_static/image7.png)
 
 **Figure 7**: Définir la liste déroulante (None) pour l’insérer et supprimer des onglets ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image8.png))
 
@@ -178,7 +178,7 @@ N’oubliez pas que les opérations de mappage ObjectDataSource `Selecting` év�
 Maintenant, visitez cette page via un navigateur. Dans la mesure où ve encore à implémenter toute la mise en cache, chaque fois que vous page, triez ou modifiez la grille de la page doit afficher le texte, l’événement de sélection de l’option déclenché, comme le montre la Figure 8.
 
 
-[![Le s ObjectDataSource événement Selecting déclenche chaque fois que le contrôle GridView est par radiomessagerie, modifié, ou les trié](using-sql-cache-dependencies-cs/_static/image8.gif)](using-sql-cache-dependencies-cs/_static/image9.png)
+[![TIl s ObjectDataSource sélection événement déclenche chaque fois que le contrôle GridView est par radiomessagerie, modifié, ou les Sorted](using-sql-cache-dependencies-cs/_static/image8.gif)](using-sql-cache-dependencies-cs/_static/image9.png)
 
 **Figure 8**: Les opérations de mappage ObjectDataSource `Selecting` événement se déclenche à chaque fois le contrôle GridView est paginé, modifiée ou Sorted ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image10.png))
 
@@ -197,7 +197,7 @@ Où *databaseName* est le nom de la base de données comme spécifié dans le `n
 Le contrôle GridView dans `SqlCacheDependencies.aspx` affiche les données des deux tables - `Products` et `Categories` (le produit s `CategoryName` champ est récupéré un `JOIN` sur `Categories`). Par conséquent, nous voulons spécifier deux dépendances de cache SQL : NorthwindDB:Products ; NorthwindDB:Categories.
 
 
-[![Configurer l’ObjectDataSource pour prendre en charge la mise en cache à l’aide de dépendances de Cache SQL sur les produits et les catégories](using-sql-cache-dependencies-cs/_static/image9.gif)](using-sql-cache-dependencies-cs/_static/image11.png)
+[![Cconfiguration de l’ObjectDataSource pour la prise en charge la mise en cache à l’aide de dépendances de Cache SQL sur les produits et les catégories](using-sql-cache-dependencies-cs/_static/image9.gif)](using-sql-cache-dependencies-cs/_static/image11.png)
 
 **Figure 9**: Configurer l’ObjectDataSource pour la prise en charge la mise en cache à l’aide de dépendances de Cache SQL `Products` et `Categories` ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image12.png))
 
@@ -207,7 +207,7 @@ Après avoir configuré l’ObjectDataSource pour prendre en charge la mise en c
 Après le déclenchement de la pagination dans la grille et noter l’absence de l’événement de sélection de l’option texte, ouvrez une nouvelle fenêtre de navigateur et accédez au didacticiel principes de base dans l’édition, insertion et suppression de section (`~/EditInsertDelete/Basics.aspx`). Mettre à jour le nom ou le prix d’un produit. À partir de la première fenêtre de navigateur, affichez ensuite une autre page de données, trier la grille ou cliquez sur un bouton de modification de ligne s. Cette fois-ci, l’événement de sélection de l’option déclenché doit réapparaître, car la base de données sous-jacente données a été modifié (voir Figure 10). Si le texte n’apparaît pas, attendez quelques instants et réessayez. N’oubliez pas que le service d’interrogation vérifie les modifications apportées à la `Products` table chaque `pollTime` millisecondes, donc il existe un délai entre lorsque les données sous-jacentes sont mis à jour et lorsque les données mises en cache soit supprimées.
 
 
-[![Modification de la Table de produits d’exclure les données de produit mis en cache](using-sql-cache-dependencies-cs/_static/image10.gif)](using-sql-cache-dependencies-cs/_static/image13.png)
+[![Modifying la Table de produits exclure les données mises en cache de produit](using-sql-cache-dependencies-cs/_static/image10.gif)](using-sql-cache-dependencies-cs/_static/image13.png)
 
 **Figure 10**: Modification de la Table de produits d’exclure les données mises en cache de produit ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image14.png))
 
@@ -241,17 +241,17 @@ Mettre à jour de ce code pour utiliser un `SqlCacheDependency` de l’objet au 
 Pour tester cette fonctionnalité, ajoutez un GridView à la page sous existant `ProductsDeclarative` GridView. Définir cette nouvelle s GridView `ID` à `ProductsProgrammatic` et via sa balise active, liez-le à une nouvelle ObjectDataSource nommé `ProductsDataSourceProgrammatic`. Configurer l’ObjectDataSource à utiliser le `ProductsCL` (classe), définissant les listes déroulantes dans l’instruction SELECT et les onglets de mise à jour à `GetProducts` et `UpdateProduct`, respectivement.
 
 
-[![Configurer pour utiliser la classe ProductsCL ObjectDataSource](using-sql-cache-dependencies-cs/_static/image11.gif)](using-sql-cache-dependencies-cs/_static/image15.png)
+[![Cconfiguration de l’ObjectDataSource d’utiliser la classe ProductsCL](using-sql-cache-dependencies-cs/_static/image11.gif)](using-sql-cache-dependencies-cs/_static/image15.png)
 
 **Figure 11**: Configurer l’ObjectDataSource à utiliser le `ProductsCL` classe ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image16.png))
 
 
-[![Sélectionnez la méthode GetProducts dans la liste déroulante de s onglet Sélection](using-sql-cache-dependencies-cs/_static/image12.gif)](using-sql-cache-dependencies-cs/_static/image17.png)
+[![Schoisir la méthode GetProducts à partir de la liste déroulante de s onglet Sélectionner](using-sql-cache-dependencies-cs/_static/image12.gif)](using-sql-cache-dependencies-cs/_static/image17.png)
 
 **Figure 12**: Sélectionnez le `GetProducts` méthode à partir de la liste déroulante de s Sélectionnez un onglet ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image18.png))
 
 
-[![Choisissez la méthode UpdateProduct dans la liste déroulante de mise à jour onglet s](using-sql-cache-dependencies-cs/_static/image13.gif)](using-sql-cache-dependencies-cs/_static/image19.png)
+[![Cla méthode UpdateProduct à partir de la liste déroulante de s onglet de mise à jour de hoisir](using-sql-cache-dependencies-cs/_static/image13.gif)](using-sql-cache-dependencies-cs/_static/image19.png)
 
 **Figure 13**: Choisissez la méthode UpdateProduct à partir de la liste déroulante de s onglet de mise à jour ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image20.png))
 

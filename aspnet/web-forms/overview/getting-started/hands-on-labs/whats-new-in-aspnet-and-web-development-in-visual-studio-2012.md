@@ -8,15 +8,15 @@ ms.date: 02/18/2013
 ms.assetid: 6d40d276-1642-4a77-b6c9-02ac914f6805
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: 6d5af6563bdf3872110497f4b142dd7353c8d64c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3833e3f3c6c49ff2b317ad04aff33c9119cb1f41
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426118"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420209"
 ---
-<a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Nouveautés du développement ASP.NET et web dans Visual Studio 2012
-====================
+# <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Nouveautés du développement ASP.NET et web dans Visual Studio 2012
+
 par [Web Camps Team](https://twitter.com/webcamps)
 
 > La nouvelle version de Visual Studio introduit de nombreuses améliorations axées sur l’amélioration de l’expérience et les performances lorsque vous travaillez avec les technologies Web. Les éditeurs de Visual Studio pour CSS, JavaScript et HTML ont été complètement repensées pour inclure de nombreux les aides de code plus dans la demande, telles que IntelliSense et de mise en retrait automatique. Concernant les performances, regroupement et minimisation sont désormais intégrés que le temps de charge des fonctionnalités intégrées pour réduire facilement la page.
@@ -63,7 +63,7 @@ Ce laboratoire pratique sur comprend les exercices suivants :
 1. [Exercice 1 : Quelles sont les nouveautés dans l’éditeur CSS](#Exercise1)
 2. [Exercice 2 : Quelles sont les nouveautés dans l’éditeur HTML](#Exercise2)
 3. [Exercice 3 : Quelles sont les nouveautés dans l’éditeur JavaScript](#Exercise3)
-4. [Exercice 4 : Regroupement et minimisation](#Exercise4)
+4. [Exercice 4 : Bundles et minimisation](#Exercise4)
 
 Durée estimée pour effectuer ce laboratoire : **60 minutes**.
 
@@ -707,7 +707,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image61.png)
 
-    *Progression de l’installation*
+    *Progression de l'installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image62.png)
@@ -720,7 +720,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     *VS Express pour une vignette de Web*
 
-* * *
+---
 
 <a id="AppendixB"></a>
 
