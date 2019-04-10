@@ -8,15 +8,15 @@ ms.date: 07/17/2006
 ms.assetid: 56e15b33-93b8-43ad-8e19-44c6647ea05c
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 08a9e1db4f8c34b438d45c0fb74d852bbd249615
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 2fb954cca01b2201f574a86233af5aa6731568b0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422777"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401216"
 ---
-<a name="implementing-optimistic-concurrency-c"></a>Implémentation de l’accès concurrentiel optimiste (C#)
-====================
+# <a name="implementing-optimistic-concurrency-c"></a>Implémentation de l’accès concurrentiel optimiste (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_21_CS.exe) ou [télécharger le PDF](implementing-optimistic-concurrency-cs/_static/datatutorial21cs1.pdf)
@@ -31,7 +31,7 @@ Pour les applications web qui autorisent uniquement aux utilisateurs d’affiche
 Par exemple, imaginez que deux utilisateurs, Jisun et Sam, ont été les deux accédant à une page dans l’application, aux visiteurs de mettre à jour et supprimer les produits à travers un contrôle GridView. Cliquez sur le bouton Modifier dans le contrôle GridView en même temps. Jisun remplace le nom de produit « Thé Chai » et clique sur le bouton de mise à jour. Le résultat net est une `UPDATE` instruction est envoyée à la base de données définit *tous les* des champs modifiables du produit (même si Jisun mise à jour uniquement un champ, `ProductName`). À ce stade, la base de données a les valeurs « Chai thé », la catégorie boissons, le fournisseur liquides exotiques, et ainsi de suite de ce produit particulier. Toutefois, le contrôle GridView à l’écran de Sam affiche toujours le nom du produit dans la ligne GridView modifiable en tant que « Martin ». Quelques secondes après que les modifications de Jisun ont été validées, Sam met à jour de la catégorie à Condiments et clique sur mise à jour. Il en résulte un `UPDATE` instruction envoyée à la base de données qui définit le nom de produit à « Martin », le `CategoryID` à l’ID de la catégorie boissons correspondant et ainsi de suite. Modifications du Jisun au nom du produit ont été remplacées. La figure 1 présente graphiquement cette série d’événements.
 
 
-[![Lorsque deux utilisateurs mettre à jour simultanément un enregistrement il s pour un utilisateur s les modifications potentielles pour remplacer les autres opérations de mappage](implementing-optimistic-concurrency-cs/_static/image2.png)](implementing-optimistic-concurrency-cs/_static/image1.png)
+[![Wpoule deux utilisateurs simultanément mise à jour un enregistrement il s potentiel pour un utilisateur s change pour remplacer les autres opérations de mappage](implementing-optimistic-concurrency-cs/_static/image2.png)](implementing-optimistic-concurrency-cs/_static/image1.png)
 
 **Figure 1**: Lorsque deux utilisateurs simultanément mettre à jour un enregistrement il s potentiel pour un utilisateur s modifie à remplacer les autres opérations de mappage ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image3.png))
 
@@ -55,7 +55,7 @@ Tous les nos didacticiels jusqu'à présent ont utilisé la stratégie de résol
 Contrôle d’accès concurrentiel optimiste fonctionne en veillant à ce que l’enregistrement en cours de mise à jour ou supprimé a les mêmes valeurs, comme c’était le cas au démarrage de la mise à jour ou la suppression des processus. Par exemple, lorsque vous cliquez sur le bouton Modifier dans un GridView modifiable, les valeurs de l’enregistrement sont lire à partir de la base de données et affichées dans les zones de texte et d’autres contrôles Web. Ces valeurs d’origine sont enregistrés par le contrôle GridView. Plus tard, une fois que l’utilisateur effectue ses modifications et clique sur le bouton de mise à jour, les valeurs d’origine ainsi que les nouvelles valeurs sont envoyées à la couche de logique métier, puis à la couche d’accès aux données. La couche d’accès aux données doit émettre une instruction SQL qui met à jour uniquement l’enregistrement si les valeurs d’origine que l’utilisateur a commencé à modifier sont identiques aux valeurs toujours dans la base de données. La figure 2 illustre cette séquence d’événements.
 
 
-[![Pour la mise à jour ou la suppression réussisse, les valeurs d’origine doivent être égales pour les valeurs actuelles de la base de données](implementing-optimistic-concurrency-cs/_static/image5.png)](implementing-optimistic-concurrency-cs/_static/image4.png)
+[![Fou bien, Update ou Delete réussisse, les valeurs d’origine doivent être égales pour les valeurs actuelles de la base de données](implementing-optimistic-concurrency-cs/_static/image5.png)](implementing-optimistic-concurrency-cs/_static/image4.png)
 
 **Figure 2**: Pour la mise à jour ou de suppression pour réussir, le d’origine valeurs doit être égale aux valeurs de base de données ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image6.png))
 
@@ -78,7 +78,7 @@ Plutôt que d’étendre notre existant les TableAdapters de couche DAL pour uti
 Pour créer un nouveau DataSet typé, cliquez sur le `DAL` dossier au sein de la `App_Code` dossier et ajouter un nouveau DataSet nommé `NorthwindOptimisticConcurrency`. Comme nous l’avons vu dans le premier didacticiel, cela donc ajoutera un nouveau TableAdapter au DataSet typé, lancement automatique de l’Assistant Configuration de TableAdapter. Dans le premier écran, nous allons vous y êtes invités à spécifier la base de données pour se connecter à : se connecter à la même base de données Northwind à l’aide du `NORTHWNDConnectionString` définir à partir de `Web.config`.
 
 
-[![Se connecter à la même base de données Northwind](implementing-optimistic-concurrency-cs/_static/image8.png)](implementing-optimistic-concurrency-cs/_static/image7.png)
+[![Connecter à la même base de données Northwind](implementing-optimistic-concurrency-cs/_static/image8.png)](implementing-optimistic-concurrency-cs/_static/image7.png)
 
 **Figure 3**: Se connecter à la même base de données Northwind ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image9.png))
 
@@ -86,7 +86,7 @@ Pour créer un nouveau DataSet typé, cliquez sur le `DAL` dossier au sein de la
 Ensuite, nous allons vous y êtes invités dans la procédure interroger les données : via une instruction SQL ad hoc, une nouvelle procédure stockée ou un existant de la procédure stockée. Étant donné que nous avons utilisé des requêtes SQL ad hoc dans notre DAL d’origine, utilisez cette option ici également.
 
 
-[![Spécifier les données à récupérer à l’aide d’une instruction SQL de Ad-Hoc](implementing-optimistic-concurrency-cs/_static/image11.png)](implementing-optimistic-concurrency-cs/_static/image10.png)
+[![Spécifier les données à récupérer à l’aide une instruction SQL de Ad-Hoc](implementing-optimistic-concurrency-cs/_static/image11.png)](implementing-optimistic-concurrency-cs/_static/image10.png)
 
 **Figure 4**: Spécifier les données à récupérer à l’aide d’une instruction SQL de Ad-Hoc ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image12.png))
 
@@ -97,7 +97,7 @@ Dans l’écran suivant, entrez la requête SQL à utiliser pour récupérer les
 [!code-sql[Main](implementing-optimistic-concurrency-cs/samples/sample2.sql)]
 
 
-[![Utiliser la même requête SQL à partir du TableAdapter de produits dans la couche DAL d’origine](implementing-optimistic-concurrency-cs/_static/image14.png)](implementing-optimistic-concurrency-cs/_static/image13.png)
+[![Use la même requête SQL à partir du TableAdapter de produits dans la couche DAL d’origine](implementing-optimistic-concurrency-cs/_static/image14.png)](implementing-optimistic-concurrency-cs/_static/image13.png)
 
 **Figure 5**: Utilisez la même requête SQL à partir de la `Products` TableAdapter dans la couche DAL d’origine ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image15.png))
 
@@ -105,7 +105,7 @@ Dans l’écran suivant, entrez la requête SQL à utiliser pour récupérer les
 Avant de passer à l’écran suivant, cliquez sur le bouton Options avancées. Pour que ce contrôle de l’accès concurrentiel optimiste emploient TableAdapter, simplement cocher la case à cocher « Utiliser l’accès concurrentiel optimiste ».
 
 
-[![Activer le contrôle d’accès concurrentiel optimiste par chèques le &quot;accès concurrentiel optimiste&quot; case à cocher](implementing-optimistic-concurrency-cs/_static/image17.png)](implementing-optimistic-concurrency-cs/_static/image16.png)
+[![EActiver le contrôle d’accès concurrentiel optimiste par chèques le &quot;accès concurrentiel optimiste&quot; case à cocher](implementing-optimistic-concurrency-cs/_static/image17.png)](implementing-optimistic-concurrency-cs/_static/image16.png)
 
 **Figure 6**: Activer le contrôle d’accès concurrentiel optimiste en cochant la case « Utiliser l’accès concurrentiel optimiste » ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image18.png))
 
@@ -113,7 +113,7 @@ Avant de passer à l’écran suivant, cliquez sur le bouton Options avancées. 
 Enfin, indiquer le TableAdapter d’utiliser les modèles d’accès aux données qui les remplir un DataTable et retournent un DataTable ; Indiquez également que les méthodes directes de base de données doivent être créés. Modifier le nom de méthode pour la valeur de retour un modèle de DataTable à partir de GetData à GetProducts, afin de refléter les conventions d’affectation de noms, que nous avons utilisé dans notre DAL d’origine.
 
 
-[![Avoir le TableAdapter à utiliser tous les modèles d’accès aux données](implementing-optimistic-concurrency-cs/_static/image20.png)](implementing-optimistic-concurrency-cs/_static/image19.png)
+[![Have le TableAdapter utilisent tous les modèles accès aux données](implementing-optimistic-concurrency-cs/_static/image20.png)](implementing-optimistic-concurrency-cs/_static/image19.png)
 
 **Figure 7**: Avoir le TableAdapter utilisent tous les modèles accès aux données ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image21.png))
 
@@ -121,7 +121,7 @@ Enfin, indiquer le TableAdapter d’utiliser les modèles d’accès aux donnée
 À l’issue de l’Assistant, le Concepteur de DataSet inclut une fortement typée `Products` DataTable et TableAdapter. Prenez un moment pour renommer la table de données à partir de `Products` à `ProductsOptimisticConcurrency`, ce que vous pouvez faire en cliquant sur la barre de titre de la table de données et en sélectionnant Renommer dans le menu contextuel.
 
 
-[![Une table de données et d’un TableAdapter ont été ajoutés au DataSet typé](implementing-optimistic-concurrency-cs/_static/image23.png)](implementing-optimistic-concurrency-cs/_static/image22.png)
+[![A DataTable et TableAdapter ont été ajoutés au DataSet typé](implementing-optimistic-concurrency-cs/_static/image23.png)](implementing-optimistic-concurrency-cs/_static/image22.png)
 
 **Figure 8**: Un DataTable et TableAdapter ont été ajoutés au DataSet typé ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image24.png))
 
@@ -143,7 +143,7 @@ Nous ne sont pas ajouter les tables de données supplémentaires pour le DataSet
 Pour ce faire, cliquez sur la barre de titre du TableAdapter (le droit de la zone au-dessus de la `Fill` et `GetProducts` les noms de méthode) et choisissez Ajouter une requête dans le menu contextuel. Cette action lance l’Assistant Configuration de requêtes TableAdapter. Comme avec la configuration initiale de notre TableAdapter, choisir de créer le `GetProductByProductID(productID)` à l’aide d’une instruction SQL d’ad-hoc (méthode) (voir Figure 4). Dans la mesure où le `GetProductByProductID(productID)` méthode retourne des informations sur un produit particulier, d’indiquer que cette requête est un `SELECT` type qui retourne des lignes de requête.
 
 
-[![Marquez le Type de requête comme un &quot;LECT qui retourne des lignes&quot;](implementing-optimistic-concurrency-cs/_static/image26.png)](implementing-optimistic-concurrency-cs/_static/image25.png)
+[![MArk Type de la requête comme un &quot;LECT qui retourne des lignes&quot;](implementing-optimistic-concurrency-cs/_static/image26.png)](implementing-optimistic-concurrency-cs/_static/image25.png)
 
 **Figure 9**: Marquez le Type de requête comme un «`SELECT` qui retourne des lignes » ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image27.png))
 
@@ -151,7 +151,7 @@ Pour ce faire, cliquez sur la barre de titre du TableAdapter (le droit de la zon
 Dans l’écran suivant, nous avons invités pour la requête SQL à utiliser avec la requête du TableAdapter par défaut préchargée. Augmenter la requête existante pour inclure la clause `WHERE ProductID = @ProductID`, comme illustré dans la Figure 10.
 
 
-[![Ajouter un WHERE Clause à la requête préchargée renvoie un enregistrement de produit spécifique](implementing-optimistic-concurrency-cs/_static/image29.png)](implementing-optimistic-concurrency-cs/_static/image28.png)
+[![Aune Clause WHERE à la requête Pre-Loaded pour retourner un enregistrement de produit spécifique de jj](implementing-optimistic-concurrency-cs/_static/image29.png)](implementing-optimistic-concurrency-cs/_static/image28.png)
 
 **Figure 10**: Ajouter un `WHERE` Clause à la requête Pre-Loaded pour retourner un enregistrement de produit spécifique ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image30.png))
 
@@ -159,7 +159,7 @@ Dans l’écran suivant, nous avons invités pour la requête SQL à utiliser av
 Enfin, modifiez les noms de méthode générée à `FillByProductID` et `GetProductByProductID`.
 
 
-[![Renommez les méthodes FillByProductID et GetProductByProductID](implementing-optimistic-concurrency-cs/_static/image32.png)](implementing-optimistic-concurrency-cs/_static/image31.png)
+[![Rnommer la les méthodes FillByProductID et GetProductByProductID](implementing-optimistic-concurrency-cs/_static/image32.png)](implementing-optimistic-concurrency-cs/_static/image31.png)
 
 **Figure 11**: Renommez les méthodes à `FillByProductID` et `GetProductByProductID` ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image33.png))
 
@@ -232,7 +232,7 @@ Avec la couche DAL et de la couche BLL complète, reste qu’à créer une page 
 Commencez par ouvrir le `OptimisticConcurrency.aspx` page dans le `EditInsertDelete` dossier et en ajoutant un GridView vers le concepteur, en définissant son `ID` propriété `ProductsGrid`. À partir de la balise active le contrôle GridView, choisir de créer un nouveau ObjectDataSource nommé `ProductsOptimisticConcurrencyDataSource`. Dans la mesure où nous voulons cette ObjectDataSource à utiliser la couche DAL qui prend en charge l’accès concurrentiel optimiste, configurez-le pour utiliser le `ProductsOptimisticConcurrencyBLL` objet.
 
 
-[![Que l’utilisation de l’ObjectDataSource l’objet de ProductsOptimisticConcurrencyBLL](implementing-optimistic-concurrency-cs/_static/image36.png)](implementing-optimistic-concurrency-cs/_static/image35.png)
+[![HEnregistrer l’utilisation de l’ObjectDataSource l’objet ProductsOptimisticConcurrencyBLL](implementing-optimistic-concurrency-cs/_static/image36.png)](implementing-optimistic-concurrency-cs/_static/image35.png)
 
 **Figure 13**: Avoir l’utilisation de l’ObjectDataSource le `ProductsOptimisticConcurrencyBLL` objet ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image37.png))
 
@@ -294,7 +294,7 @@ Plus précisément, les valeurs d’origine du GridView affectés les valeurs da
 Pour voir pourquoi il est important, prenez un moment pour visitez notre page dans un navigateur. Comme prévu, le contrôle GridView répertorie chaque produit avec le bouton Edit et Delete dans la colonne de gauche.
 
 
-[![Les produits sont répertoriés dans un GridView](implementing-optimistic-concurrency-cs/_static/image39.png)](implementing-optimistic-concurrency-cs/_static/image38.png)
+[![THE produits sont répertoriés dans un GridView](implementing-optimistic-concurrency-cs/_static/image39.png)](implementing-optimistic-concurrency-cs/_static/image38.png)
 
 **Figure 14**: Les produits sont répertoriés dans un GridView ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image40.png))
 
@@ -302,7 +302,7 @@ Pour voir pourquoi il est important, prenez un moment pour visitez notre page da
 Si vous cliquez sur le bouton Supprimer pour tout produit, un `FormatException` est levée.
 
 
-[![Tentez de supprimer n’importe quel produit entraîne une exception FormatException](implementing-optimistic-concurrency-cs/_static/image42.png)](implementing-optimistic-concurrency-cs/_static/image41.png)
+[![Attempting à supprimer n’importe quel produit entraîne une exception FormatException](implementing-optimistic-concurrency-cs/_static/image42.png)](implementing-optimistic-concurrency-cs/_static/image41.png)
 
 **Figure 15**: Tente de supprimer n’importe quel produit entraîne un `FormatException` ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image43.png))
 
@@ -323,7 +323,7 @@ Pour mon exemple j’ai opté pour la deuxième approche, ajout d’un serveur W
 Après la résolution de ce problème, essayez de cliquer à nouveau sur le bouton Supprimer pour tous les produits. Cette fois, vous obtiendrez un `InvalidOperationException` lorsque ObjectDataSource tente d’appeler la couche de logique métier `UpdateProduct` (méthode).
 
 
-[![ObjectDataSource ne peut pas trouver de méthode avec les paramètres d’entrée qu’il veut envoyer](implementing-optimistic-concurrency-cs/_static/image45.png)](implementing-optimistic-concurrency-cs/_static/image44.png)
+[![TIl ObjectDataSource ne peut pas trouver une méthode avec les paramètres d’entrée qu’il veut envoi](implementing-optimistic-concurrency-cs/_static/image45.png)](implementing-optimistic-concurrency-cs/_static/image44.png)
 
 **Figure 16**: ObjectDataSource ne peut pas trouver de méthode avec les paramètres d’entrée qu’il veut envoyer ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image46.png))
 
@@ -342,7 +342,7 @@ Pour vérifier que les violations d’accès concurrentiel sont détectées (plu
 Dans l’autre instance de fenêtre de navigateur, toutefois, la zone de texte du nom de produit indique toujours « Martin ». Dans cette deuxième fenêtre de navigateur, mettez à jour le `UnitPrice` à `25.00`. Sans prise en charge l’accès concurrentiel optimiste, en cliquant sur la mise à jour dans la deuxième instance de navigateur modifierait le nom du produit à « Martin », en écrasant les modifications apportées par la première instance de navigateur. Avec les employés l’accès concurrentiel optimiste, toutefois, en cliquant sur le bouton de mise à jour dans la deuxième instance du navigateur entraîne un [DBConcurrencyException](https://msdn.microsoft.com/library/system.data.dbconcurrencyexception.aspx).
 
 
-[![Lorsqu’une Violation d’accès concurrentiel est détectée, un DBConcurrencyException est levé.](implementing-optimistic-concurrency-cs/_static/image48.png)](implementing-optimistic-concurrency-cs/_static/image47.png)
+[![Wla levée de poule qu'une Violation d’accès concurrentiel est détectée, un DBConcurrencyException](implementing-optimistic-concurrency-cs/_static/image48.png)](implementing-optimistic-concurrency-cs/_static/image47.png)
 
 **Figure 17**: Lorsqu’une Violation d’accès concurrentiel est détectée, un `DBConcurrencyException` est levée ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image49.png))
 
@@ -369,7 +369,7 @@ En plus du paramètre leurs `Visible`, `EnabledViewState`, et `Text` propriété
 Après avoir ajouté ces étiquettes, le concepteur dans Visual Studio doit ressembler à la Figure 18.
 
 
-[![Deux contrôles Label ont été ajoutés à la Page](implementing-optimistic-concurrency-cs/_static/image51.png)](implementing-optimistic-concurrency-cs/_static/image50.png)
+[![TContrôles d’étiquette WO ont été ajoutés à la Page](implementing-optimistic-concurrency-cs/_static/image51.png)](implementing-optimistic-concurrency-cs/_static/image50.png)
 
 **Figure 18**: Deux étiquettes contrôles ont été ajoutés à la Page ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image52.png))
 
@@ -388,7 +388,7 @@ Comme nous l’avons vu dans la *BLL - gestion et les Exceptions au niveau de la
 Dans d’un `DBConcurrencyException` exception, ce gestionnaire d’événements affiche les `UpdateConflictMessage` contrôle Label et indique que l’exception a été gérée. Avec ce code en place, lorsqu’une violation d’accès concurrentiel se produit quand la mise à jour un enregistrement, les modifications de l’utilisateur sont perdues, dans la mesure où ils seraient ont remplacé les modifications d’un autre utilisateur en même temps. En particulier, le contrôle GridView est rétabli à son état préalable Édition et lié à la base de données actuelle. Cela met à jour la ligne GridView avec les modifications des autres utilisateurs, qui étaient précédemment pas visibles. En outre, le `UpdateConflictMessage` contrôle Label explique à l’utilisateur que s’est-il passé. Cette séquence d’événements est détaillée dans la Figure 19.
 
 
-[![Un utilisateur s mises à jour sont perdues à la Face d’une Violation d’accès concurrentiel](implementing-optimistic-concurrency-cs/_static/image54.png)](implementing-optimistic-concurrency-cs/_static/image53.png)
+[![A Utilisateur s mises à jour sont perdues à la Face d’une Violation d’accès concurrentiel](implementing-optimistic-concurrency-cs/_static/image54.png)](implementing-optimistic-concurrency-cs/_static/image53.png)
 
 **Figure 19**: Un utilisateur s mises à jour sont perdues à la Face d’une Violation d’accès concurrentiel ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image55.png))
 
@@ -409,7 +409,7 @@ La valeur de retour pour une méthode de la couche de logique métier peut être
 Face à une violation d’accès concurrentiel, la demande de suppression de l’utilisateur est annulée. Le contrôle GridView est actualisé, affichant les modifications qui se sont produites pour cet enregistrement entre le moment où l’utilisateur chargement de la page et quand il a cliqué sur le bouton Supprimer. Lorsqu’une telle violation se passe réellement, le `DeleteConflictMessage` étiquette s’affiche, expliquant que s’est-il passé (voir la Figure 20).
 
 
-[![Un utilisateur s Delete est annulé en cas d’une Violation d’accès concurrentiel](implementing-optimistic-concurrency-cs/_static/image57.png)](implementing-optimistic-concurrency-cs/_static/image56.png)
+[![A Utilisateur s Delete est annulée en cas d’une Violation d’accès concurrentiel](implementing-optimistic-concurrency-cs/_static/image57.png)](implementing-optimistic-concurrency-cs/_static/image56.png)
 
 **Figure 20**: Un utilisateur s Delete est annulé en cas d’une Violation d’accès concurrentiel ([cliquez pour afficher l’image en taille réelle](implementing-optimistic-concurrency-cs/_static/image58.png))
 

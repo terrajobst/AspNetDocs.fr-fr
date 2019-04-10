@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: 5a2a927b-14cb-40bc-867a-f0680f9febd7
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/web-config-transformations
 msc.type: authoredcontent
-ms.openlocfilehash: 58f3daac5e9fbe6d327f19b6ae78ea17a26cd7e7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 15a5984048ba2aca9fedcb7bc4bb77eb440f21ee
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379454"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-webconfig-file-transformations"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Transformations du fichier Web.config
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-webconfig-file-transformations"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Transformations du fichier Web.config
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet de démarrage](http://go.microsoft.com/fwlink/p/?LinkId=282627)

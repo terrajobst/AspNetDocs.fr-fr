@@ -8,15 +8,15 @@ ms.date: 01/12/2012
 ms.assetid: 53767e05-c8ab-42e1-a94b-22d906195200
 msc.legacyurl: /mvc/overview/older-versions/working-with-the-dropdownlist-box-and-jquery/using-the-dropdownlist-helper-with-aspnet-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: 11b874d2d07c84631c6c5c266c22c6de49d40cf2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2a4d991205351531129480bee221651021483967
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050576"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396250"
 ---
-<a name="using-the-dropdownlist-helper-with-aspnet-mvc"></a>Utilisation du helper DropDownList avec ASP.NET MVC
-====================
+# <a name="using-the-dropdownlist-helper-with-aspnet-mvc"></a>Utilisation du helper DropDownList avec ASP.NET MVC
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 Ce didacticiel vous apprend les notions de base de l’utilisation de la [DropDownList](https://msdn.microsoft.com/library/dd492948.aspx) helper et [ListBox](https://msdn.microsoft.com/library/system.web.mvc.html.selectextensions.listbox.aspx) helper dans une application Web ASP.NET MVC. Vous pouvez utiliser Microsoft Visual Web Developer 2010 Express Service Pack 1, qui est une version gratuite de Microsoft Visual Studio pour suivre le didacticiel. Avant de commencer, assurez-vous que vous avez installé les composants requis listés ci-dessous. Vous pouvez installer tous les en cliquant sur le lien suivant : [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Vous pouvez également installer individuellement les conditions préalables à l’aide des liens suivants :
@@ -25,9 +25,9 @@ Ce didacticiel vous apprend les notions de base de l’utilisation de la [DropDo
 - [Mettre à jour des outils ASP.NET MVC 3](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=MVC3)
 - [SQL Server Compact 4.0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(runtime + outils prennent en charge)
 
-Si vous utilisez Visual Studio 2010 au lieu de Visual Web Developer 2010, installez les composants requis en cliquant sur le lien suivant : [Visual Studio 2010 prerequisites](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack). Ce didacticiel suppose que vous avez terminé la [Introduction à ASP.NET MVC](../getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) didacticiel ou[ASP.NET MVC Music Store](../mvc-music-store/mvc-music-store-part-1.md) didacticiel ou que vous êtes familiarisé avec le développement ASP.NET MVC. Ce didacticiel commence par un projet modifié à partir de la [ASP.NET MVC Music Store](../mvc-music-store/mvc-music-store-part-1.md) didacticiel. Vous pouvez télécharger le projet de démarrage avec le lien suivant [télécharger la version C#](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=15829).
+Si vous utilisez Visual Studio 2010 au lieu de Visual Web Developer 2010, installez les composants requis en cliquant sur le lien suivant : [Visual Studio 2010 prerequisites](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack). Ce didacticiel suppose que vous avez terminé la [Introduction à ASP.NET MVC](../getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) didacticiel ou[ASP.NET MVC Music Store](../mvc-music-store/mvc-music-store-part-1.md) didacticiel ou que vous êtes familiarisé avec le développement ASP.NET MVC. Ce didacticiel commence par un projet modifié à partir de la [ASP.NET MVC Music Store](../mvc-music-store/mvc-music-store-part-1.md) didacticiel. Vous pouvez télécharger le projet de démarrage avec le lien suivant [télécharger la version c#](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=15829).
 
-Un projet de Visual Web Developer avec la fin du didacticiel code source C# est disponible pour accompagner cette rubrique. [Télécharger](https://code.msdn.microsoft.com/Using-the-DropDownList-67f9367d).
+Un projet de Visual Web Developer avec la fin du didacticiel code source c# est disponible pour accompagner cette rubrique. [Télécharger](https://code.msdn.microsoft.com/Using-the-DropDownList-67f9367d).
 
 ### <a name="what-youll-build"></a>Ce que vous allez générer
 
@@ -190,7 +190,7 @@ Ouvrez le *Views\Home\MultiSelectCountry.cshtml* fichier, puis ajoutez un `htmlA
 
 [!code-cshtml[Main](using-the-dropdownlist-helper-with-aspnet-mvc/samples/sample12.cshtml)]
 
-Dans le code ci-dessus, nous avons ajouté l’attribut HTML et la valeur d’attribut `class = "chzn-select"`. Le \@ caractère classe précédente n’a rien à voir avec le moteur d’affichage Razor. `class` est un [mot clé C#](https://msdn.microsoft.com/library/x53a06bb.aspx). Mots clés C# ne peuvent pas être utilisés comme identificateurs, sauf s’ils incluent \@ comme préfixe. Dans l’exemple ci-dessus, `@class` est un identificateur valide mais **classe** n’est pas car **classe** est un mot clé.
+Dans le code ci-dessus, nous avons ajouté l’attribut HTML et la valeur d’attribut `class = "chzn-select"`. Le \@ caractère classe précédente n’a rien à voir avec le moteur d’affichage Razor. `class` est un [ C# mot clé](https://msdn.microsoft.com/library/x53a06bb.aspx). Mots clés c# ne peuvent pas être utilisés comme identificateurs, sauf s’ils incluent \@ comme préfixe. Dans l’exemple ci-dessus, `@class` est un identificateur valide mais **classe** n’est pas car **classe** est un mot clé.
 
 Ajoutez des références à la *Chosen/chosen.jquery.js* et *Chosen/chosen.css* fichiers. Le *Chosen/chosen.jquery.js* et implémente le fonctionnellement du plug-in sélectionné. Le *Chosen/chosen.css* fichier fournit le style. Ajoutez ces références au bas de la *Views\Home\MultiSelectCountry.cshtml* fichier. Le code suivant montre comment référencer le plug-in sélectionné.
 
@@ -215,4 +215,4 @@ Exécutez l’application et accédez à la `MultiSelectCountry` vue. Essayez d�
 Dans la section suivante, vous verrez comment le mécanisme de génération de modèles automatique ASP.NET MVC fonctionne avec le **DropDownList** helper.
 
 > [!div class="step-by-step"]
-> [Next](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)
+> [Suivant](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)

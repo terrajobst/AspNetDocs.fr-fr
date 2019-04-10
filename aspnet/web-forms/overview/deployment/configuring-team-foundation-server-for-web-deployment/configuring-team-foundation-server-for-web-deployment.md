@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: ff55233a-e795-4007-a4fc-861fe1bb590b
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/configuring-team-foundation-server-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 2b668f2e9bdf73632b8b076416c9ccc5cf34a7ed
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 188ab63dd84be5559d5a3646eb95caa77ab01bd1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058826"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391999"
 ---
-<a name="configuring-team-foundation-server-for-web-deployment"></a>Configuration de Team Foundation Server pour le déploiement web
-====================
+# <a name="configuring-team-foundation-server-for-web-deployment"></a>Configuration de Team Foundation Server pour le déploiement web
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Ce didacticiel vous explique comment configurer Team Foundation Server (TFS) 2010 pour créer des solutions et de déployer le contenu web dans différents environnements cibles. Cela inclut des scénarios d’intégration continue (CI), où vous déployez automatiquement du contenu chaque fois qu’un développeur apporte une modification. Il peut également inclure des scénarios de déclencheur manuel, où un administrateur peut vouloir déclencher le déploiement d’une build spécifique dans un environnement intermédiaire une fois la build a été vérifiée et validée dans l’environnement de test. Les rubriques de ce didacticiel va vous guider dans le processus d’ensemble de la configuration, y compris :
 > 
@@ -75,4 +75,4 @@ Cela fait partie d’une série de cinq didacticiels sur le déploiement de web-
 - [Avancées de déploiement Web d’entreprise](../advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md). Ce didacticiel explique comment effectuer diverses tâches de déploiement plus avancées, telles que la personnalisation des déploiements de base de données pour plusieurs environnements, à l’exclusion de fichiers et dossiers de déploiement et en prenant des applications web en mode hors connexion pendant le processus de déploiement .
 
 > [!div class="step-by-step"]
-> [Next](creating-a-team-project-in-tfs.md)
+> [Suivant](creating-a-team-project-in-tfs.md)

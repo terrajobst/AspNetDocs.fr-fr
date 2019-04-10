@@ -8,15 +8,15 @@ ms.date: 01/17/2019
 ms.assetid: df001954-18bf-4550-b03d-43911a0ea186
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-search
 msc.type: authoredcontent
-ms.openlocfilehash: ada125c917656f3a83524ff39e53b4cfc041a497
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7b49c1e6425080693229c6c132df3879504c835c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029696"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379532"
 ---
-<a name="search"></a>Rechercher
-====================
+# <a name="search"></a>Rechercher
+
 
 [!INCLUDE [Tutorial Note](sample/code-location.md)]
 
@@ -54,7 +54,7 @@ Si le `searchString` paramètre contient une chaîne, la requête de films est m
 Le code `s => s.Title` ci-dessus est une [expression lambda](https://msdn.microsoft.com/library/bb397687.aspx). Les expressions lambda sont utilisées dans fondées sur une méthode [LINQ](https://msdn.microsoft.com/library/bb397926.aspx) de requêtes en tant qu’arguments aux méthodes d’opérateur de requête standard telles que la [où](https://msdn.microsoft.com/library/system.linq.enumerable.where.aspx) méthode utilisée dans le code ci-dessus. Requêtes LINQ ne sont pas exécutées quand elles sont définies ou quand elles sont modifiées en appelant une méthode telle que `Where` ou `OrderBy`. Au lieu de cela, l’exécution de requête est différée, ce qui signifie que l’évaluation d’une expression est retardée jusqu'à ce que sa valeur réalisée est une itération réelle ou le [ `ToList` ](https://msdn.microsoft.com/library/bb342261.aspx) méthode est appelée. Dans le `Search` exemple, la requête est exécutée dans le *Index.cshtml* vue. Pour plus d’informations sur l’exécution différée des requêtes, consultez [Exécution de requête](https://msdn.microsoft.com/library/bb738633.aspx).
 
 > [!NOTE]
-> Le [Contains](https://msdn.microsoft.com/library/bb155125.aspx) méthode est exécutée sur la base de données, pas le code C# ci-dessus. Sur la base de données, [Contains](https://msdn.microsoft.com/library/bb155125.aspx) est mappé à [SQL LIKE](https://msdn.microsoft.com/library/ms179859.aspx), qui respecte la casse.
+> Le [Contains](https://msdn.microsoft.com/library/bb155125.aspx) méthode est exécutée sur la base de données, pas le code c# ci-dessus. Sur la base de données, [Contains](https://msdn.microsoft.com/library/bb155125.aspx) est mappé à [SQL LIKE](https://msdn.microsoft.com/library/ms179859.aspx), qui respecte la casse.
 
 Maintenant vous pouvez mettre à jour le `Index` vue qui affiche le formulaire à l’utilisateur.
 

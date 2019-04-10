@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 2bb109d2-e299-46ea-9054-fa0263b59165
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/caching
 msc.type: authoredcontent
-ms.openlocfilehash: 5c97464ee50291338a80120a86b1b86b07bc672d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e16415df5bd4203995bec943ffa682f7da82357
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032926"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400202"
 ---
-<a name="caching"></a>Mise en cache
-====================
+# <a name="caching"></a>Mise en cache
+
 by [Microsoft](https://github.com/microsoft)
 
 > Il est important pour une application ASP.NET performante de comprendre de mise en cache. ASP.NET 1.x proposé trois options différentes pour la mise en cache ; la mise en cache de sortie, la mise en cache de fragment et l’API du cache.
@@ -56,7 +56,7 @@ Pour invalider l’élément qui a été insérée au-dessus, supprimez simpleme
 
 Notez que la clé de l’élément qui joue à la clé de cache doit être identique à la valeur ajoutée au tableau de clés de cache.
 
-## <a name="polling-based-sql-cache-dependenciesemalso-called-table-based-dependenciesem"></a>Reposant sur l’interrogation des dépendances de Cache SQL<em>(également appelé dépendances basées sur une Table)</em>
+## <a name="polling-based-sql-cache-dependenciesalso-called-table-based-dependencies"></a>En fonction d’interrogation SQL Cache Dependencies(Also called Table-Based Dependencies)
 
 SQL Server 7 et 2000 utiliser le modèle d’interrogation pour les dépendances de cache SQL. Le modèle d’interrogation utilise un déclencheur sur une table de base de données qui est déclenchée lors de la modification des données dans la table. Qui déclenchent des mises à jour un **changeId** de la table de notification ASP.NET vérifie régulièrement. Si le **changeId** champ a été mis à jour, ASP.NET sait que les données ont changé et n’invalide les données en cache.
 
@@ -72,7 +72,7 @@ La ligne de commande suivante enregistre la table Products dans la base de donn�
 
 Voici une explication des commutateurs de ligne de commande utilisé dans la commande ci-dessus :
 
-| **Commutateur de ligne de commande** | **Fonction** |
+| **Commutateur de ligne de commande** | **Objectif** |
 | --- | --- |
 | S - *server* | Spécifie le nom du serveur. |
 | -ed | Spécifie que la base de données doit être activée pour la dépendance de cache SQL. |

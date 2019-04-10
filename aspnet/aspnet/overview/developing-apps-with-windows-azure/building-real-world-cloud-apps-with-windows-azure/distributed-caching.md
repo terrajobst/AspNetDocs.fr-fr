@@ -8,15 +8,15 @@ ms.date: 07/20/2015
 ms.assetid: 406518e9-3817-49ce-8b90-e82bc461e2c0
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/distributed-caching
 msc.type: authoredcontent
-ms.openlocfilehash: 26866ef9d13a198aab627ccf0f5e1ff3d2304427
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 61837d0087a297b6a677eb3503ce3e6c13d5e0ac
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039806"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397472"
 ---
-<a name="distributed-caching-building-real-world-cloud-apps-with-azure"></a>Mise en cache (Building Real-World Cloud d’applications distribuées avec Azure)
-====================
+# <a name="distributed-caching-building-real-world-cloud-apps-with-azure"></a>Mise en cache (Building Real-World Cloud d’applications distribuées avec Azure)
+
 par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)

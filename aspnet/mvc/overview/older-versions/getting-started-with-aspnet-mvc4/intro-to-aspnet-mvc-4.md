@@ -8,15 +8,15 @@ ms.date: 08/15/2012
 ms.assetid: ed66530a-04d5-49eb-b76a-85be1f57c437
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: ea3d1517192ded0e5372c49897bb1fec33324b6f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ecc0733c2850bc157c7ee5b251787152393481fc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385247"
 ---
-<a name="intro-to-aspnet-mvc-4"></a>Introduction à ASP.NET MVC
-====================
+# <a name="intro-to-aspnet-mvc-4"></a>Introduction à ASP.NET MVC
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Une version mise à jour si ce didacticiel est disponible [ici](../../getting-started/introduction/getting-started.md) à l’aide de [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013). Le nouveau didacticiel utilise ASP.NET MVC 5, qui fournit de nombreuses améliorations de ce didacticiel.
@@ -30,7 +30,7 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 >
 > Si vous utilisez Visual Studio 2010 au lieu de Visual Web Developer 2010, installez le [programme d’installation WPI pour ASP.NET MVC 4](https://go.microsoft.com/fwlink/?LinkId=243392) et : [Prérequis pour le Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack)
 >
-> Un projet de Visual Web Developer avec code source C# est disponible pour accompagner cette rubrique. [Téléchargez la version C#](https://code.msdn.microsoft.com/Intro-to-ASPNET-MVC-4-61d0219d/file/114480/1/MvcMovie.zip).
+> Un projet de Visual Web Developer avec code source c# est disponible pour accompagner cette rubrique. [Téléchargez la version c#](https://code.msdn.microsoft.com/Intro-to-ASPNET-MVC-4-61d0219d/file/114480/1/MvcMovie.zip).
 >
 > Dans le didacticiel, vous exécutez l’application dans Visual Studio. Vous pouvez également rendre l’application disponible sur Internet en la déployant sur un fournisseur d’hébergement. Microsoft propose d’hébergement web gratuit pour jusqu'à 10 sites web dans un [compte d’évaluation de Windows Azure gratuit](https://www.windowsazure.com/pricing/free-trial/?WT.mc_id=A443DD604). Pour plus d’informations sur la façon de déployer un projet web Visual Studio sur un Site Web de Windows Azure, consultez [créer et déployer un site web ASP.NET et la base de données SQL avec Visual Studio](https://docs.microsoft.com/dotnet/azure/). Ce didacticiel montre également comment utiliser des Migrations Entity Framework Code First pour déployer votre base de données SQL Server sur Windows Azure SQL Database (anciennement SQL Azure).
 >
@@ -61,7 +61,7 @@ Visual Studio est un environnement de développement intégré ou IDE. Tout comm
 
 ## <a name="creating-your-first-application"></a>Créer votre première Application
 
-Vous pouvez créer des applications à l’aide de Visual Basic ou Visual C# comme langage de programmation. Sélectionnez Visual C# sur la gauche, puis sélectionnez **ASP.NET MVC 4 Web Application**. Nommez votre projet &quot;MvcMovie&quot; puis cliquez sur **OK**.
+Vous pouvez créer des applications à l’aide de Visual Basic ou Visual c# comme langage de programmation. Sélectionnez Visual c# sur la gauche, puis sélectionnez **ASP.NET MVC 4 Web Application**. Nommez votre projet &quot;MvcMovie&quot; puis cliquez sur **OK**.
 
 ![](intro-to-aspnet-mvc-4/_static/image4.png)
 
@@ -86,4 +86,4 @@ F5 provoque Visual Studio pour démarrer IIS Express et exécuter votre applicat
 Dès ce modèle par défaut vous donne les pages Accueil, Contact et sur. Il prend en charge pour vous inscrire et connecter et vous lie à Facebook et Twitter. L’étape suivante consiste à modifier le fonctionnement de cette application et en savoir un peu sur ASP.NET MVC. Fermez votre navigateur et nous allons modifier du code.
 
 > [!div class="step-by-step"]
-> [Next](adding-a-controller.md)
+> [Suivant](adding-a-controller.md)

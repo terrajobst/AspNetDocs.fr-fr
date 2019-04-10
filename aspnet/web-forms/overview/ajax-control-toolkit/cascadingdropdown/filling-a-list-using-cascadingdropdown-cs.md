@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs
-title: Remplissage d’une liste avec CascadingDropDown (C#) | Microsoft Docs
+title: Remplissage d’une liste avec CascadingDropDown (c#) | Microsoft Docs
 author: wenz
 description: Le contrôle CascadingDropDown dans AJAX Control Toolkit étend un contrôle DropDownList afin que les modifications dans un DropDownList charges associés à des valeurs dans anoth...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: f949aafa-fe57-43b0-b722-f0dd33a900be
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 15368ea543702eeda1b6a63f53acdc6c336b49e7
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: a9a3bf12b721c8f5eec21f3090142e40e74b0b9c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58420788"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395639"
 ---
-<a name="filling-a-list-using-cascadingdropdown-c"></a>Remplissage d’une liste avec CascadingDropDown (C#)
-====================
+# <a name="filling-a-list-using-cascadingdropdown-c"></a>Remplissage d’une liste avec CascadingDropDown (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown0.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown0CS.pdf)
@@ -46,7 +46,7 @@ Pour cette liste, un extendeur CascadingDropDown est ajouté. Il envoie une dema
 - `Category`: Informations de catégorie sont soumises à la méthode web lorsqu’elle est appelée
 - `PromptText`: Texte affiché lorsque le chargement asynchrone des données de liste à partir du serveur
 
-Voici le balisage pour le `CascadingDropDown` élément. La seule différence entre C# et VB est le nom du service web associé :
+Voici le balisage pour le `CascadingDropDown` élément. La seule différence entre c# et VB est le nom du service web associé :
 
 [!code-aspx[Main](filling-a-list-using-cascadingdropdown-cs/samples/sample3.aspx)]
 
@@ -61,9 +61,9 @@ Par conséquent, l’aspect important est que la méthode doit retourner un tabl
 Chargement de la page dans le navigateur déclenche la liste à remplir avec les trois fournisseurs.
 
 
-[![La liste est remplie automatiquement](filling-a-list-using-cascadingdropdown-cs/_static/image2.png)](filling-a-list-using-cascadingdropdown-cs/_static/image1.png)
+[![Tliste de he est automatiquement](filling-a-list-using-cascadingdropdown-cs/_static/image2.png)](filling-a-list-using-cascadingdropdown-cs/_static/image1.png)
 
 La liste est remplie automatiquement ([cliquez pour afficher l’image en taille réelle](filling-a-list-using-cascadingdropdown-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Next](using-cascadingdropdown-with-a-database-cs.md)
+> [Suivant](using-cascadingdropdown-with-a-database-cs.md)

@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: f640e063-150e-453d-8cfc-7e54a6ce0f1e
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-7-add-ajax-functionality-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0b9c6ff228e73ce63f7a0b046110db656103d6d5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3df4258b2de309aed5a3a598caeb1e7332c321f6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383956"
 ---
-<a name="iteration-7--add-ajax-functionality-vb"></a>Itération #7 : ajouter des fonctionnalités Ajax (VB)
-====================
+# <a name="iteration-7--add-ajax-functionality-vb"></a>Itération #7 : ajouter des fonctionnalités Ajax (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
 [Télécharger le Code](iteration-7-add-ajax-functionality-vb/_static/contactmanager_7_vb1.zip)
@@ -94,7 +94,7 @@ Ajoutez le code JavaScript suivant inclut à l’intérieur de la &lt;head&gt; b
 Laissez s commencez par modifier notre vue Index afin qu’en cliquant sur un groupe de contacts met à jour uniquement pour la région de la vue qui affiche les contacts. La zone rouge dans la Figure 1 contient la région que nous souhaitons mettre à jour.
 
 
-[![La mise à jour uniquement les contacts](iteration-7-add-ajax-functionality-vb/_static/image1.jpg)](iteration-7-add-ajax-functionality-vb/_static/image1.png)
+[![USeuls les contacts jour](iteration-7-add-ajax-functionality-vb/_static/image1.jpg)](iteration-7-add-ajax-functionality-vb/_static/image1.png)
 
 **Figure 01**: La mise à jour uniquement les contacts ([cliquez pour afficher l’image en taille réelle](iteration-7-add-ajax-functionality-vb/_static/image2.png))
 
@@ -194,7 +194,7 @@ Lorsqu’un utilisateur atteint le précédent du navigateur ou le bouton suivan
 Actuellement, pour supprimer un contact, vous devez cliquer sur le lien Supprimer et puis cliquez sur le bouton de suppression affiché dans la page de confirmation de suppression (voir Figure 2). Cela semble être un grand nombre de demandes de pages de faire quelque chose de simple comme la suppression d’un enregistrement de base de données.
 
 
-[![La page de confirmation de suppression](iteration-7-add-ajax-functionality-vb/_static/image2.jpg)](iteration-7-add-ajax-functionality-vb/_static/image3.png)
+[![TIl page Confirmer la suppression](iteration-7-add-ajax-functionality-vb/_static/image2.jpg)](iteration-7-add-ajax-functionality-vb/_static/image3.png)
 
 **Figure 02**: La page de confirmation de suppression ([cliquez pour afficher l’image en taille réelle](iteration-7-add-ajax-functionality-vb/_static/image4.png))
 
@@ -220,7 +220,7 @@ Le paramètre AjaxOptions a deux propriétés. Tout d’abord, la propriété co
 
 Liste 7 contient une nouvelle action AjaxDelete() qui a été ajoutée au contrôleur de Contact.
 
-**Listing 7 - Controllers\ContactController.vb (AjaxDelete)**   
+**Liste 7 - Controllers\ContactController.vb (AjaxDelete)**   
 
 [!code-vb[Main](iteration-7-add-ajax-functionality-vb/samples/sample12.vb)]
 

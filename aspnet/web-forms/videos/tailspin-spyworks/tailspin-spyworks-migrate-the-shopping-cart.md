@@ -8,15 +8,15 @@ ms.date: 06/29/2010
 ms.assetid: 1dcc27a0-f9a9-4e34-94bf-7c35190ea08d
 msc.legacyurl: /web-forms/videos/tailspin-spyworks/tailspin-spyworks-migrate-the-shopping-cart
 msc.type: video
-ms.openlocfilehash: d96b3bba8013c984ae0f2df12085e0e9bd1813cd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bb7a6e1208d97cf27e05a6ab5753d02485addc8e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059896"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59378960"
 ---
-<a name="tailspin-spyworks---migrate-the-shopping-cart"></a>Tailspin Spyworks - Migrer le panier d’achat
-====================
+# <a name="tailspin-spyworks---migrate-the-shopping-cart"></a>Tailspin Spyworks - Migrer le panier d’achat
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Joe Stagner montre comment convertir le panier d’achat d’un utilisateur anonyme à un autre authentifié avant la dernière extraction Tailspin Spyworks notre exemple d’application Web Forms.

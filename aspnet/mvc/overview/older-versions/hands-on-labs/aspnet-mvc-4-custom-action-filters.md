@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 969ab824-1b98-4552-81fe-b60ef5fc6887
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-custom-action-filters
 msc.type: authoredcontent
-ms.openlocfilehash: 4c8628cc289610e287c0a3bc3c8a4c7a833c9fde
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 32587c7b0fd3075cd46678922b40bda2019f3a26
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423414"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381131"
 ---
 # <a name="aspnet-mvc-4-custom-action-filters"></a>Filtres d’actions personnalisés d’ASP.NET MVC 4
 
@@ -59,7 +59,7 @@ Pour des raisons pratiques, une grande partie du code que vous gérez le long de
 
 Si vous n’êtes pas familiarisé avec les extraits de Code Visual Studio et que vous souhaitiez savoir comment les utiliser, vous pouvez faire référence à l’annexe de ce document &quot; [annexe c : À l’aide d’extraits de Code](#AppendixC)&quot;.
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -144,7 +144,7 @@ Dans cette tâche, vous allez créer une classe d’attributs de filtre personna
       > Un des avantages de l’utilisation de NuGet est que vous n’êtes pas obligé expédier toutes les bibliothèques dans votre projet, ce qui réduit la taille du projet. Avec NuGet Power Tools, en spécifiant les versions de package dans le fichier Packages.config, vous serez en mesure de télécharger toutes les bibliothèques nécessaires à la première fois que vous exécutez le projet. C’est pourquoi vous devrez exécuter ces étapes après avoir ouvert une solution existante à partir de ce laboratoire.
       > 
       > Pour plus d’informations, consultez cet article : [ http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages ](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages).
-2. Ajoutez une nouvelle classe C# dans le **filtres** dossier et nommez-le *CustomActionFilter.cs*. Ce dossier stocke tous les filtres personnalisés.
+2. Ajoutez une nouvelle classe c# dans le **filtres** dossier et nommez-le *CustomActionFilter.cs*. Ce dossier stocke tous les filtres personnalisés.
 3. Ouvrez **CustomActionFilter.cs** et ajoutez une référence à **System.Web.Mvc** et **MvcMusicStore.Models** espaces de noms :
 
     (Code Snippet - *filtres d’Action personnalisés ASP.NET MVC 4 - Ex1-CustomActionFilterNamespaces*)
@@ -234,7 +234,7 @@ Pour plus d’informations sur l’ordre d’exécution de filtres d’Action pe
 <a id="Ex2Task1"></a>
 
 <a id="Task_1_Creating_a_new_Custom_Action_Filter"></a>
-#### <a name="task-1-creating-a-new-custom-action-filter"></a>Tâche 1 : Création d’un nouveau filtre d’Action personnalisé
+#### <a name="task-1-creating-a-new-custom-action-filter"></a>Tâche 1 : Création d’un nouveau filtre d’Action personnalisé
 
 Dans cette tâche, vous allez créer un nouveau filtre d’Action personnalisé à injecter dans la classe StoreController, apprendre à gérer l’ordre d’exécution des filtres.
 
@@ -248,7 +248,7 @@ Dans cette tâche, vous allez créer un nouveau filtre d’Action personnalisé 
         > Un des avantages de l’utilisation de NuGet est que vous n’êtes pas obligé expédier toutes les bibliothèques dans votre projet, ce qui réduit la taille du projet. Avec NuGet Power Tools, en spécifiant les versions de package dans le fichier Packages.config, vous serez en mesure de télécharger toutes les bibliothèques nécessaires à la première fois que vous exécutez le projet. C’est pourquoi vous devrez exécuter ces étapes après avoir ouvert une solution existante à partir de ce laboratoire.
         > 
         > Pour plus d’informations, consultez cet article : [ http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages ](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages).
-2. Ajoutez une nouvelle classe C# dans le **filtres** dossier et nommez-le *MyNewCustomActionFilter.cs*
+2. Ajoutez une nouvelle classe c# dans le **filtres** dossier et nommez-le *MyNewCustomActionFilter.cs*
 3. Ouvrez **MyNewCustomActionFilter.cs** et ajoutez une référence à **System.Web.Mvc** et **MvcMusicStore.Models** espace de noms :
 
     (Code Snippet - *filtres d’Action personnalisés ASP.NET MVC 4 - Ex2-MyNewCustomActionFilterNamespaces*)
@@ -290,7 +290,7 @@ Dans cette tâche, vous ajoutez un nouveau filtre personnalisé dans la classe S
 <a id="Ex2Task3"></a>
 
 <a id="Task_3_Managing_Filter_Ordering"></a>
-#### <a name="task-3-managing-filter-ordering"></a>Tâche 3 : La gestion de l’ordre de filtre
+#### <a name="task-3-managing-filter-ordering"></a>Tâche 3 : La gestion de l’ordre de filtre
 
 Dans cette tâche, vous allez apprendre à gérer l’ordre d’exécution des filtres à l’aide de la propriété Order.
 
@@ -354,7 +354,7 @@ Dans cette tâche, vous mettrez à jour la solution pour inscrire le nouveau fil
 > En outre, vous pouvez déployer cette application à Sites Web Windows Azure suit [annexe b : Publication d’une Application ASP.NET MVC 4, à l’aide de Web Deploy](#AppendixB).
 
 
-* * *
+---
 
 <a id="Summary"></a>
 
@@ -391,7 +391,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](aspnet-mvc-4-custom-action-filters/_static/image14.png)
 
-    *Progression de l’installation*
+    *Progression de l'installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](aspnet-mvc-4-custom-action-filters/_static/image15.png)
@@ -555,7 +555,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *À l’aide d’extraits de code Visual Studio pour insérer du code dans votre projet*
 
-***Pour ajouter un extrait de code à l’aide du clavier (C# uniquement)***
+***Pour ajouter un extrait de code à l’aide du clavier (c# uniquement)***
 
 1. Placez le curseur où vous souhaitez insérer le code.
 2. Commencez à taper le nom de l’extrait de code (sans espaces ou des traits d’union).
@@ -575,7 +575,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *Appuyez sur Tab à nouveau et l’extrait de code seront développe.*
 
-***Pour ajouter un extrait de code à l’aide de la souris (C#, Visual Basic et XML)*** 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
+***Pour ajouter un extrait de code à l’aide de la souris (c#, Visual Basic et XML)*** 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
 
 1. Sélectionnez **insérer un extrait** suivie **mes extraits de Code**.
 2. Choisissez l’extrait de code approprié dans la liste, en cliquant dessus.

@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 093c1362-f10b-407c-a708-be370f4b62b0
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-entity-framework-scaffolding-and-migrations
 msc.type: authoredcontent
-ms.openlocfilehash: 649f83d54bfdb3367d9cea056a53a614f982adec
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ca47f6fe6d55153354d38fcf1ba5e844215279b2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422959"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389035"
 ---
 # <a name="aspnet-mvc-4-entity-framework-scaffolding-and-migrations"></a>Génération de modèles automatique et migrations d’ASP.NET MVC 4 Entity Framework
 
@@ -58,7 +58,7 @@ Pour des raisons pratiques, une grande partie du code que vous gérez le long de
 
 Si vous n’êtes pas familiarisé avec les extraits de Code Visual Studio et que vous souhaitiez savoir comment les utiliser, vous pouvez faire référence à l’annexe de ce document &quot; [annexe b : À l’aide d’extraits de Code](#AppendixB)&quot;.
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -110,7 +110,7 @@ Dans cet exercice, vous allez apprendre à utiliser la structure ASP.NET MVC 4 a
 
     ![Génération de l’application](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image3.png "génération de l’application")
 
-    *Génération de l’application*
+    *Génération de l'application*
 7. Dans l’Explorateur de solutions, cliquez sur le dossier contrôleurs, puis sélectionnez **ajouter | Contrôleur**.
 8. Nommez le contrôleur *PersonController* et terminez le **les options de génération de modèles automatique** avec les valeurs suivantes.
 
@@ -231,7 +231,7 @@ Dans cette tâche, vous mettrez à jour la base de données à l’aide des Migr
 
     ![La mise à jour de la base de données](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image17.png "mise à jour de la base de données")
 
-    *La mise à jour de la base de données*
+    *Mise à jour de la base de données*
 
     Cela ajoutera le **MiddleName** colonne dans le **personnes** table pour correspondre à la définition actuelle de la **personne** classe.
 9. Une fois que la base de données est mis à jour, cliquez sur le dossier Controller et sélectionnez **ajouter | Contrôleur** pour ajouter le contrôleur de personne (complète avec les mêmes valeurs). Cela met à jour les méthodes existantes et les vues Ajout du nouvel attribut.
@@ -260,7 +260,7 @@ Dans cette tâche, vous mettrez à jour la base de données à l’aide des Migr
 
     ![Deuxième prénom édition](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image21.png "édition du deuxième prénom")
 
-* * *
+---
 
 <a id="Summary"></a>
 
@@ -292,7 +292,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image24.png)
 
-    *Progression de l’installation*
+    *Progression de l'installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image25.png)
@@ -316,7 +316,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *À l’aide d’extraits de code Visual Studio pour insérer du code dans votre projet*
 
-***Pour ajouter un extrait de code à l’aide du clavier (C# uniquement)***
+***Pour ajouter un extrait de code à l’aide du clavier (c# uniquement)***
 
 1. Placez le curseur où vous souhaitez insérer le code.
 2. Commencez à taper le nom de l’extrait de code (sans espaces ou des traits d’union).
@@ -336,7 +336,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *Appuyez sur Tab à nouveau et l’extrait de code seront développe.*
 
-***Pour ajouter un extrait de code à l’aide de la souris (C#, Visual Basic et XML)*** 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
+***Pour ajouter un extrait de code à l’aide de la souris (c#, Visual Basic et XML)*** 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
 
 1. Sélectionnez **insérer un extrait** suivie **mes extraits de Code**.
 2. Choisissez l’extrait de code approprié dans la liste, en cliquant dessus.

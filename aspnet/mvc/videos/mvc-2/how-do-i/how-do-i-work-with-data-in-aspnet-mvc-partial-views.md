@@ -8,15 +8,15 @@ ms.date: 12/11/2009
 ms.assetid: 2f0d41d2-2860-4113-8f5e-0efdd29abf7b
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i/how-do-i-work-with-data-in-aspnet-mvc-partial-views
 msc.type: video
-ms.openlocfilehash: f9f12579e2e0d0eb9edcc9d310e8244675e03270
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b407f802dd4afd1de03a485709d87b886e8444e9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044006"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401320"
 ---
-<a name="how-do-i-work-with-data-in-aspnet-mvc-partial-views"></a>Comment faire Utiliser des données dans les vues partielles ASP.NET MVC ?
-====================
+# <a name="how-do-i-work-with-data-in-aspnet-mvc-partial-views"></a>Comment faire Utiliser des données dans les vues partielles ASP.NET MVC ?
+
 par [Chris Pels](https://twitter.com/chrispels)
 
 Dans cette vidéo Chris Pels montre comment organiser et de transmettre des données aux vues partielles dans une application MVC. Un exemple d’application MVC est créé qui contient les modèles de domaine pour plusieurs entités métier ainsi qu’un modèle de vue que les instances des classes de packages. Une vue de démonstration est ensuite créée, ainsi que des vues partielles, qui sont fortement typées et rendre utiliser de la classe de modèle de vue. Les vues partielles sont ensuite ajoutés à la vue de démonstration et de l’instance du modèle de vue est utilisé pour transmettre facilement les données appropriées avec les vues partielles. Enfin, les utilisations des concepts implémentés dans l’exemple dans une application MVC plus complète sont traitées.

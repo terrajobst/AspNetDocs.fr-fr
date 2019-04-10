@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/getting-started/database-first-development/creating-the-web-application
-title: 'Tutoriel : Créer le l’Application Web et les modèles de données pour Entity Framework Database First avec ASP.NET MVC'
+title: 'Tutoriel : Créer l’Application Web et les modèles de données pour EF Database First avec ASP.NET MVC'
 description: Ce didacticiel se concentre sur la création de l’application web et la génération de modèles de données basés sur vos tables de base de données.
 author: Rick-Anderson
 ms.author: riande
@@ -9,14 +9,14 @@ ms.topic: tutorial
 ms.assetid: bc8f2bd5-ff57-4dcd-8418-a5bd517d8953
 msc.legacyurl: /mvc/overview/getting-started/database-first-development/creating-the-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: 481a0ee9b19e5d35d736b2cc937a124900bce446
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 30fd42be5677df6fa6ee0630914098c30d21385b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426131"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404518"
 ---
-# <a name="tutorial-create-the-the-web-application-and-data-models-for-ef-database-first-with-aspnet-mvc"></a>Tutoriel : Créer le l’Application Web et les modèles de données pour Entity Framework Database First avec ASP.NET MVC
+# <a name="tutorial-create-the-web-application-and-data-models-for-ef-database-first-with-aspnet-mvc"></a>Tutoriel : Créer l’Application Web et les modèles de données pour EF Database First avec ASP.NET MVC
 
  À l’aide de la structure ASP.NET MVC et Entity Framework, vous pouvez créer une application web qui fournit une interface à une base de données existante. Cette série de didacticiels vous montre comment générer du code qui permet aux utilisateurs d’afficher, modifier, créer et supprimer automatiquement les données qui résident dans une table de base de données. Le code généré correspond aux colonnes dans la table de base de données.
 
@@ -104,4 +104,4 @@ Dans ce didacticiel, vous avez effectué les actions suivantes :
 
 Passez au didacticiel suivant pour apprendre à créer génère du code basé sur les modèles de données.
 > [!div class="nextstepaction"]
-> [Génération de vues](generating-views.md)
+> [Génération d'affichages](generating-views.md)

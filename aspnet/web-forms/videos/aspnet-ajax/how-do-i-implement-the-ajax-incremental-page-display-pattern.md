@@ -8,15 +8,15 @@ ms.date: 03/05/2007
 ms.assetid: 17dfc331-1186-4240-8abf-f0220c90e081
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-implement-the-ajax-incremental-page-display-pattern
 msc.type: video
-ms.openlocfilehash: 4a8f5e6acab452650996fcd8702b8078251d47cb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f4678ca375c55c7bd3b02fb9707059418adb1bb7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053716"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395184"
 ---
-<a name="how-do-i-implement-the-ajax-incremental-page-display-pattern"></a>[Comment faire] Implémenter le modèle d’affichage de Page incrémentiel AJAX ?
-====================
+# <a name="how-do-i-implement-the-ajax-incremental-page-display-pattern"></a>[Comment faire] Implémenter le modèle d’affichage de Page incrémentiel AJAX ?
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 En règle générale lorsqu’une page Web est demandée, l’utilisateur doit attendre pendant que la page entière est récupérée à partir du serveur après lequel la page terminé apparaît soudainement dans le navigateur. Cette vidéo montre comment le modèle d’affichage Page incrémentielle AJAX améliore l’expérience utilisateur par rapidement et facilement extraire et afficher des parties de la page Web.

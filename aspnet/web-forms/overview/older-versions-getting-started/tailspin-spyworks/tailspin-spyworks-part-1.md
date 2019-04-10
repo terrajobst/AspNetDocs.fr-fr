@@ -8,15 +8,15 @@ ms.date: 07/21/2010
 ms.assetid: 15d4652b-d5aa-4172-b186-2c7f96ba316d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: d2e4b36c9029e86eea9b09974839e96e9aa39ced
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 70d2efb789d694a0aaecc046615c7b3622079dc1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033396"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385356"
 ---
-<a name="part-1-file--new-project"></a>Partie 1 : Fichier -> Nouveau projet
-====================
+# <a name="part-1-file--new-project"></a>Partie 1 : Fichier -> Nouveau projet
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 > Tailspin Spyworks montre comment extrêmement simple est de créer des applications puissantes et évolutives pour la plate-forme .NET. Il montre comment utiliser les nouvelles fonctionnalités dans ASP.NET 4 pour créer un magasin en ligne, y compris les achats, extraction et administration.
@@ -103,4 +103,4 @@ Nous allons également déplacer la Page maître dans le répertoire de Styles. 
 Une fois cela que nous devons modifier la page maître références dans tous les fichiers .aspx générés par la valeur par défaut des pages Web Forms ASP.NET.
 
 > [!div class="step-by-step"]
-> [Next](tailspin-spyworks-part-2.md)
+> [Suivant](tailspin-spyworks-part-2.md)

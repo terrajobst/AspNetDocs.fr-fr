@@ -8,15 +8,15 @@ ms.date: 07/01/2007
 ms.assetid: 99b23369-dac6-458b-b002-56be35f43236
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-resizablecontrol-extender
 msc.type: video
-ms.openlocfilehash: d597b8bbb60827e3cbcea16c49e5deb9d20ee357
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4ce14e555b8ef2e2746832322a488733a7c5c377
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035696"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398837"
 ---
-<a name="how-do-i-use-the-aspnet-ajax-resizablecontrol-extender"></a>[Comment faire] Utiliser l’extendeur ResizableControl d’ASP.NET AJAX ?
-====================
+# <a name="how-do-i-use-the-aspnet-ajax-resizablecontrol-extender"></a>[Comment faire] Utiliser l’extendeur ResizableControl d’ASP.NET AJAX ?
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 L’extendeur ResizableControl d’ASP.NET AJAX Control Toolkit permet au développeur de spécifier une région de la page Web que l’utilisateur peut redimensionner dynamiquement. Cette vidéo montre comment configurer l’apparence de la région redimensionnable et comment exécuter un script côté client lors de redimensionnement.

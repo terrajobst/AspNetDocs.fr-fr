@@ -8,15 +8,15 @@ ms.date: 03/26/2007
 ms.assetid: 806acc93-7f97-4ba1-92a5-f90146bd51f8
 msc.legacyurl: /web-forms/videos/vs-2005/the-effects-of-caching
 msc.type: video
-ms.openlocfilehash: f31631f42f909c43e1e155b9caf1937940e77897
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5deccb253b2e8e6b853f615413da3b9b161239b9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026496"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380516"
 ---
-<a name="the-effects-of-caching"></a>Les effets de la mise en cache
-====================
+# <a name="the-effects-of-caching"></a>Les effets de la mise en cache
+
 par Eric Lee
 
 Quasiment toutes les applications Web aujourd'hui devant accéder aux données à partir d’une base de données, mais cette opération courante peut avoir un impact réel sur les performances globales de l’application. Cette vidéo illustre comment Visual Studio Team System peuvent vous aider à déterminer si votre application effectue des appels redondants vers la base de données et montre comment vous pouvez utiliser ASP.NET 2.0 source de données de la mise en cache pour éliminer les appels redondants.

@@ -8,15 +8,15 @@ ms.date: 08/08/2014
 ms.assetid: 30060acb-be3e-4347-996f-3870f0c37829
 msc.legacyurl: /signalr/overview/testing-and-debugging/enabling-signalr-tracing
 msc.type: authoredcontent
-ms.openlocfilehash: c6515e3653798ef50e2d2dcb7354ffed407a190e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1dadbdb6fa1dc58b855402f1d6f18e8af861f756
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034106"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399357"
 ---
-<a name="enabling-signalr-tracing"></a>Activation du traçage SignalR
-====================
+# <a name="enabling-signalr-tracing"></a>Activation du traçage SignalR
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -118,14 +118,14 @@ Pour activer la journalisation dans le client .NET, définissez la connexion `Tr
 <a id="desktop_console"></a>
 ### <a name="logging-desktop-client-events-to-the-console"></a>Journalisation des événements de client de bureau dans la console
 
-Le code C# suivant montre comment enregistrer les événements dans le client .NET dans la console :
+Le code c# suivant montre comment enregistrer les événements dans le client .NET dans la console :
 
 [!code-csharp[Main](enabling-signalr-tracing/samples/sample4.cs?highlight=2-3)]
 
 <a id="desktop_text"></a>
 ### <a name="logging-desktop-client-events-to-a-text-file"></a>Journalisation des événements de client de bureau dans un fichier texte
 
-Le code C# suivant montre comment enregistrer les événements dans le client .NET dans un fichier texte :
+Le code c# suivant montre comment enregistrer les événements dans le client .NET dans un fichier texte :
 
 [!code-csharp[Main](enabling-signalr-tracing/samples/sample5.cs?highlight=4-5)]
 

@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: 86c14aab-c2dd-4f73-b40c-c6d52fa44950
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/adding-content-to-source-control
 msc.type: authoredcontent
-ms.openlocfilehash: 2119705a75d0717d05d4a7db69b3f5d38b1cdd45
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a609b761543e4994aa4a7f86636bd16e9cd74683
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050856"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396718"
 ---
-<a name="adding-content-to-source-control"></a>Ajout de contenu au contrôle de code source
-====================
+# <a name="adding-content-to-source-control"></a>Ajout de contenu au contrôle de code source
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique explique comment ajouter du contenu à un contrôle de code source Team Foundation Server (TFS) 2010. Il décrit comment ajouter des solutions et des projets à un projet d’équipe dans TFS, et elle explique comment ajouter des dépendances externes telles que des infrastructures ou des assemblys au contrôle de code source.
 

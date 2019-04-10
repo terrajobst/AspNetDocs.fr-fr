@@ -8,15 +8,15 @@ ms.date: 03/09/2009
 ms.assetid: f52814a3-b458-415c-ab9f-b0f904c48705
 msc.legacyurl: /web-forms/videos/iis/creating-a-site-with-iis7-manager
 msc.type: video
-ms.openlocfilehash: 818a2d4a896730c54720df898fa6152349cbbfd5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cead55311660a630ca5fe906e1afe8767c75aa7f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048636"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394526"
 ---
-<a name="creating-a-site-with-iis7-manager"></a>Création d’un site avec le Gestionnaire IIS7
-====================
+# <a name="creating-a-site-with-iis7-manager"></a>Création d’un site avec le Gestionnaire IIS7
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Cette vidéo montre le processus d’approvisionnement pour les nouveaux sites web avec IIS 7.

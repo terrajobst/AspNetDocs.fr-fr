@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/disabling-actions-during-animation-cs
-title: Désactivation d’Actions pendant une Animation (C#) | Microsoft Docs
+title: Désactivation d’Actions pendant une Animation (c#) | Microsoft Docs
 author: wenz
 description: Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Il prend également en charge d’action...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 918026b4-2f63-421d-8546-df12856960a8
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/disabling-actions-during-animation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4315f06ea1599bacb93a23a3759610e19754cfba
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1cce2b05f125902ab05d493bebe753b2060b4d95
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044346"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384277"
 ---
-<a name="disabling-actions-during-animation-c"></a>Désactivation d’actions pendant une animation (C#)
-====================
+# <a name="disabling-actions-during-animation-c"></a>Désactivation d’actions pendant une animation (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation7.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation7CS.pdf)
@@ -55,7 +55,7 @@ Il serait également possible d’activer de nouveau au bouton après l’animat
 Toutefois dans le scénario fourni cela serait inutile puisque le bouton Fondu et n’est pas visible à la fin de l’animation.
 
 
-[![Le bouton est désactivé dès que l’animation s’exécute](disabling-actions-during-animation-cs/_static/image2.png)](disabling-actions-during-animation-cs/_static/image1.png)
+[![THE bouton est désactivé dès que l’animation s’exécute](disabling-actions-during-animation-cs/_static/image2.png)](disabling-actions-during-animation-cs/_static/image1.png)
 
 Le bouton est désactivé dès que l’animation s’exécute ([cliquez pour afficher l’image en taille réelle](disabling-actions-during-animation-cs/_static/image3.png))
 

@@ -8,15 +8,15 @@ ms.date: 07/11/2008
 ms.assetid: 32d54638-71b2-491d-81f4-f7417a13a62f
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: afcec6cb7a6763d068301c7afdd28ff560a3065b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 986c4b109fc0e809867853da728bcd12654a80ec
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027386"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394677"
 ---
-<a name="interacting-with-the-master-page-from-the-content-page-c"></a>Interaction avec la page de contenu à partir de la page maître (C#)
-====================
+# <a name="interacting-with-the-master-page-from-the-content-page-c"></a>Interaction avec la page de contenu à partir de la page maître (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/1/8/4/184e24fa-fcc8-47fa-ac99-4b6a52d41e97/ASPNET_MasterPages_Tutorial_06_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/e/b/4/eb4abb10-c416-4ba4-9899-32577715b1bd/ASPNET_MasterPages_Tutorial_06_CS.pdf)
@@ -61,7 +61,7 @@ Pour résoudre ce problème afin que l’enregistrement juste-ajouté s’affich
 Ouvrez le `Site.master` page maître et ajoutez une étiquette et un contrôle GridView à la `leftContent` `<div>`. Désactivez out l’étiquette `Text` propriété, la valeur son `EnableViewState` propriété sur false et son `ID` propriété `GridMessage`; définir le GridView `ID` propriété `RecentProducts`. Ensuite, à partir du concepteur, développez la balise active le contrôle GridView et choisissez de le lier à une source de données. Cette opération lance l’Assistant Configuration de Source de données. Étant donné que la base de données Northwind dans la `App_Data` dossier est une base de données Microsoft SQL Server, choisissez de créer un SqlDataSource en sélectionnant (voir Figure 1) ; nommez SqlDataSource `RecentProductsDataSource`.
 
 
-[![Lier le contrôle GridView à un contrôle SqlDataSource nommé RecentProductsDataSource](interacting-with-the-master-page-from-the-content-page-cs/_static/image2.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image1.png)
+[![Bchercher le contrôle GridView à un contrôle SqlDataSource nommé RecentProductsDataSource](interacting-with-the-master-page-from-the-content-page-cs/_static/image2.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image1.png)
 
 **Figure 01**: Lier le contrôle GridView à un contrôle SqlDataSource nommé `RecentProductsDataSource` ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image3.png))
 
@@ -69,7 +69,7 @@ Ouvrez le `Site.master` page maître et ajoutez une étiquette et un contrôle G
 L’étape suivante nous demande de spécifier ce que la base de données pour se connecter à. Choisissez le `NORTHWIND.MDF` de base de données de fichier à partir de la liste déroulante et cliquez sur Suivant. Comme il s’agit de la première fois que nous avons utilisé cette base de données, l’Assistant propose stocker la chaîne de connexion dans `Web.config`. Il a à stocker la chaîne de connexion en utilisant le nom `NorthwindConnectionString`.
 
 
-[![Se connecter à la base de données Northwind](interacting-with-the-master-page-from-the-content-page-cs/_static/image5.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image4.png)
+[![Connecter à la base de données Northwind](interacting-with-the-master-page-from-the-content-page-cs/_static/image5.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image4.png)
 
 **Figure 02**: Se connecter à la base de données Northwind ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image6.png))
 
@@ -87,7 +87,7 @@ L’Assistant Configurer la Source de données fournit deux moyens par lequel no
 Le `TOP 5` mot clé retourne uniquement les cinq premiers enregistrements de la requête. Le `Products` clé primaire de la table, `ProductID`, est un `IDENTITY` colonne, ce qui nous permet de garantir que chaque produit de nouveau ajouté à la table a une valeur supérieure à l’entrée précédente. Par conséquent, trier les résultats par `ProductID` dans l’ordre décroissant renvoie les produits compter le plus récemment créées.
 
 
-[![Retourner les cinq produits les plus récentes](interacting-with-the-master-page-from-the-content-page-cs/_static/image8.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image7.png)
+[![Retourner les cinq plus récemment ajouté produits](interacting-with-the-master-page-from-the-content-page-cs/_static/image8.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image7.png)
 
 **Figure 03**: Retourner les cinq plus récemment ajouté produits ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image9.png))
 
@@ -102,7 +102,7 @@ Comme vous pouvez le voir, le balisage contient : le contrôle Web Label (`Grid
 Avec ce GridView créé et son contrôle SqlDataSource configuré, visitez le site Web via un navigateur. Comme le montre la Figure 4, vous verrez une grille dans l’angle inférieur gauche qui répertorie les cinq plus récemment ajouté des produits.
 
 
-[![Le contrôle GridView affiche cinq produits les plus récentes](interacting-with-the-master-page-from-the-content-page-cs/_static/image11.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image10.png)
+[![TIl GridView affiche les cinq plus récemment ajouté produits](interacting-with-the-master-page-from-the-content-page-cs/_static/image11.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image10.png)
 
 **Figure 04**: Le contrôle GridView affiche les cinq plus récemment ajouté produits ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image12.png))
 
@@ -116,7 +116,7 @@ Avec ce GridView créé et son contrôle SqlDataSource configuré, visitez le si
 La tâche suivante consiste à créer une page de contenu à partir de laquelle un utilisateur peut ajouter un nouveau produit à la `Products` table. Ajoutez une nouvelle page de contenu pour le `Admin` dossier nommé `AddProduct.aspx`, veillez à lier à la `Site.master` page maître. La figure 5 illustre l’Explorateur de solutions, une fois que cette page a été ajoutée au site Web.
 
 
-[![Ajouter une nouvelle Page ASP.NET dans le dossier Admin](interacting-with-the-master-page-from-the-content-page-cs/_static/image14.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image13.png)
+[![Ajj une nouvelle Page ASP.NET dans le dossier Admin](interacting-with-the-master-page-from-the-content-page-cs/_static/image14.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image13.png)
 
 **Figure 05**: Ajoutez une nouvelle Page ASP.NET pour le `Admin` dossier ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image15.png))
 
@@ -145,7 +145,7 @@ Après la fin de l’Assistant accédez à la balise active de DetailsView et co
 C’est aussi simple que cela ! Nous allons tester cette page. Visitez `AddProduct.aspx` via un navigateur, entrez un nom et le prix (voir Figure 6).
 
 
-[![Ajouter un nouveau produit à la base de données](interacting-with-the-master-page-from-the-content-page-cs/_static/image17.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image16.png)
+[![Ajj un nouveau produit à la base de données](interacting-with-the-master-page-from-the-content-page-cs/_static/image17.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image16.png)
 
 **Figure 06**: Ajouter un nouveau produit à la base de données ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image18.png))
 
@@ -199,7 +199,7 @@ Le `Master` propriété retourne un objet de type [ `MasterPage` ](https://msdn.
 Maintenant que nous avons converti la faiblement typé `Page.Master` propriété à la `Site` type, nous pouvons référencer les propriétés et méthodes spécifiques au Site. Comme le montre la Figure 7, la propriété publique `GridMessageText` apparaît dans la liste déroulante IntelliSense.
 
 
-[![IntelliSense affiche notre Page principale propriétés et méthodes publiques](interacting-with-the-master-page-from-the-content-page-cs/_static/image20.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image19.png)
+[![IntelliSense présente les propriétés publiques et les méthodes de notre Page maître](interacting-with-the-master-page-from-the-content-page-cs/_static/image20.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image19.png)
 
 **Figure 07**: IntelliSense affiche notre Page principale propriétés et méthodes publiques ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image21.png))
 
@@ -237,7 +237,7 @@ Le code ci-dessus utilise les deux le faiblement typé `Page.Master` propriété
 La figure 8 illustre la `AddProduct.aspx` page immédiatement après un nouveau produit - de Scott Soda - a été ajoutée à la base de données. Notez que le nom du produit juste-ajouté est indiqué dans l’étiquette de la page maître et que le contrôle GridView a été actualisé pour inclure le produit et son prix.
 
 
-[![Affichent le produit ajouté juste de l’étiquette et GridView de la Page maître](interacting-with-the-master-page-from-the-content-page-cs/_static/image23.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image22.png)
+[![TÉtiquette de la Page he Master et GridView affichent le produit Just-Added](interacting-with-the-master-page-from-the-content-page-cs/_static/image23.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image22.png)
 
 **Figure 08**: Affichent le produit Just-Added de l’étiquette et GridView de la Page maître ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image24.png))
 
@@ -258,7 +258,7 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 
 - [L’accès et la mise à jour des données dans ASP.NET](http://aspnet.4guysfromrolla.com/articles/011106-1.aspx)
 - [Pages maître ASP.NET : Conseils, astuces et pièges](http://www.odetocode.com/articles/450.aspx)
-- [`@MasterType` dans ASP.NET 2.0](http://odetocode.com/Blogs/scott/archive/2005/07/16/1944.aspx)
+- [`@MasterType` in ASP.NET 2.0](http://odetocode.com/Blogs/scott/archive/2005/07/16/1944.aspx)
 - [Informations de transmission entre le contenu et les Pages maîtres](http://aspnet.4guysfromrolla.com/articles/013107-1.aspx)
 - [Utilisation des données dans les didacticiels ASP.NET](../../data-access/index.md)
 

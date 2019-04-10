@@ -8,30 +8,30 @@ ms.date: 02/14/2013
 ms.assetid: 9534e58b-1d15-4f1d-b04c-10c79b9d8227
 msc.legacyurl: /visual-studio/overview/2012/aspnet-and-web-tools-20122-release-notes-rtw
 msc.type: content
-ms.openlocfilehash: 0566a362b36f6cfb73b6479cd490e82c63455459
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e4545f36d5a2668bc6a21249a89a94ece9bb2ca2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030196"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397979"
 ---
-<a name="aspnet-and-web-tools-20122-release-notes"></a>ASP.NET et Web Tools 2012.2 - Notes de publication
-====================
+# <a name="aspnet-and-web-tools-20122-release-notes"></a>ASP.NET et Web Tools 2012.2 - Notes de publication
+
 > Ce document décrit la version d’ASP.NET et Web Tools 2012.2. Il est une mise à jour des outils de Visual Studio Web et ASP.NET.
 
 
 - [Notes d’installation](#_Installation)
 - [Documentation](#_Documentation)
-- [Prise en charge](#_Support)
-- [Configuration logicielle requise](#_Software_Requirements)
+- [Assistance](#_Support)
+- [Configuration logicielle](#_Software_Requirements)
 - [Nouvelles fonctionnalités dans ASP.NET et Web Tools 2012.2](#_New_Features_in)
 
     - [Outillage](#_Tooling)
     - [Publication Web](#_Web_Publishing)
     - [Modèles ASP.NET MVC](#_Templates)
-    - [API Web ASP.NET](#_ASP.NET_Web_API)
+    - [API web ASP.NET](#_ASP.NET_Web_API)
 
-    - [ASP.NET SignalR](#_ASP.NET_SignalR)
+    - [SignalR ASP.NET](#_ASP.NET_SignalR)
     - [URL conviviales ASP.NET](#_ASP.NET_Friendly_URLs)
 - [Problèmes connus et les modifications avec rupture](#_Known_Issues_and)
 
@@ -85,7 +85,7 @@ Cette section décrit les fonctionnalités qui ont été introduites dans la ver
     - Prend en charge la coloration syntaxique des JsRender, Handlebars, CoffeeScript et angulaires.
     - L’éditeur HTML fournit Intellisense pour les liaisons de Knockout.
     - MOINS modification et le compilateur prend en charge pour activer la création de CSS dynamique à l’aide d’inférieur.
-    - Coller le code JSON comme une classe .NET. À l’aide de cette commande Collage spécial pour coller JSON dans un langage C# ou VB.NET fichier de code et Visual Studio génère automatiquement des classes .NET déduits à partir de JSON.
+    - Coller le code JSON comme une classe .NET. À l’aide de cette commande Collage spécial pour coller JSON dans un langage c# ou VB.NET fichier de code et Visual Studio génère automatiquement des classes .NET déduits à partir de JSON.
 - Prise en charge de l’émulateur mobile ajoute des points d’extensibilité afin que les émulateurs de fournisseurs tiers peuvent être installées comme une extension VSIX. Les émulateurs installés seront afficheront dans la liste déroulante F5, afin que les développeurs peuvent afficher un aperçu de leurs sites Web sur une variété de périphériques mobiles. En savoir plus sur cette fonctionnalité dans l’entrée de blog de Scott Hanselman sur [la nouvelle intégration BrowserStack avec Visual Studio](http://www.hanselman.com/blog/CrossBrowserDebuggingIntegratedIntoVisualStudioWithBrowserStack.aspx).
 
 <a id="_Web_Publishing"></a>

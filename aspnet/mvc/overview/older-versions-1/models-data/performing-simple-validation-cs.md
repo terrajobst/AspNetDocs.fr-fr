@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/performing-simple-validation-cs
-title: Effectuer une Validation Simple (C#) | Microsoft Docs
+title: Effectuer une Validation Simple (c#) | Microsoft Docs
 author: StephenWalther
 description: Découvrez comment effectuer la validation dans une application ASP.NET MVC. Dans ce didacticiel, Stephen Walther présente l’état du modèle et l’application d’assistance de validation HTML...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 21383c9d-6aea-4bad-a99b-b5f2c9d6503f
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8ee1d892cd58534c2b64455efed01aa8c2dfdcce
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 12fe89ec83a33ece2971c8186783326d165cbf79
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061986"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388502"
 ---
-<a name="performing-simple-validation-c"></a>Réalisation d’une validation simple (C#)
-====================
+# <a name="performing-simple-validation-c"></a>Réalisation d’une validation simple (C#)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Découvrez comment effectuer la validation dans une application ASP.NET MVC. Dans ce didacticiel, Stephen Walther présente vous à l’état du modèle et les programmes d’assistance HTML de validation.
@@ -56,12 +56,12 @@ Les programmes d’assistance Html.ValidationMessage() et Html.ValidationSummary
 Assurez-vous que vous générez votre application avant d’ajouter une vue. Sinon, la liste des classes n’apparaître pas dans le **afficher la classe de données** liste déroulante.
 
 
-[![La boîte de dialogue Nouveau projet](performing-simple-validation-cs/_static/image1.jpg)](performing-simple-validation-cs/_static/image1.png)
+[![Tboîte de dialogue Nouveau projet he](performing-simple-validation-cs/_static/image1.jpg)](performing-simple-validation-cs/_static/image1.png)
 
 **Figure 01**: Ajout d’une vue ([cliquez pour afficher l’image en taille réelle](performing-simple-validation-cs/_static/image2.png))
 
 
-[![La boîte de dialogue Nouveau projet](performing-simple-validation-cs/_static/image2.jpg)](performing-simple-validation-cs/_static/image3.png)
+[![Tboîte de dialogue Nouveau projet he](performing-simple-validation-cs/_static/image2.jpg)](performing-simple-validation-cs/_static/image3.png)
 
 **Figure 02**: Création d’une vue fortement typée ([cliquez pour afficher l’image en taille réelle](performing-simple-validation-cs/_static/image4.png))
 
@@ -79,7 +79,7 @@ Le programme d’assistance Html.ValidationMessage() est appelée en regard de c
 La page dans la Figure 3 illustre les messages d’erreur affichés par les programmes d’assistance de validation lorsque le formulaire est envoyé avec les champs manquants et des valeurs non valides.
 
 
-[![La boîte de dialogue Nouveau projet](performing-simple-validation-cs/_static/image3.jpg)](performing-simple-validation-cs/_static/image5.png)
+[![Tboîte de dialogue Nouveau projet he](performing-simple-validation-cs/_static/image3.jpg)](performing-simple-validation-cs/_static/image5.png)
 
 **Figure 03**: La vue Create soumise avec des problèmes ([cliquez pour afficher l’image en taille réelle](performing-simple-validation-cs/_static/image6.png))
 
@@ -104,7 +104,7 @@ Vous pouvez modifier ces classes de feuille de style en cascade et par conséque
 Si vous envoyez le formulaire HTML pour la création d’un produit et que vous entrez une valeur non valide pour le champ price et aucune valeur pour le champ UnitsInStock, vous obtiendrez les messages de validation affichés dans la Figure 4. D'où proviennent ces messages d’erreur de validation ?
 
 
-[![La boîte de dialogue Nouveau projet](performing-simple-validation-cs/_static/image4.jpg)](performing-simple-validation-cs/_static/image7.png)
+[![Tboîte de dialogue Nouveau projet he](performing-simple-validation-cs/_static/image4.jpg)](performing-simple-validation-cs/_static/image7.png)
 
 **Figure 04**: Erreurs de Validation de prebinding ([cliquez pour afficher l’image en taille réelle](performing-simple-validation-cs/_static/image8.png))
 

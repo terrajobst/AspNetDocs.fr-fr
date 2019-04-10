@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 6f7b1c74-cc73-42f9-8ef0-8b3d058dabfa
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit
 msc.type: chapter
-ms.openlocfilehash: 389a7563ca2c95563cd57326122a4a801e9e91e6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 938d7f696e12496fc4ae79c51e9446d71a898e3e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019006"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382886"
 ---
-<a name="ajax-control-toolkit"></a>Ajax Control Toolkit
-====================
+# <a name="ajax-control-toolkit"></a>Ajax Control Toolkit
+
 > Comment créer très réactive ASP.NET Web pages à l’aide d’Ajax Control Toolkit.
 
 
@@ -56,7 +56,7 @@ ms.locfileid: "57019006"
 - [Utiliser le contrôle Rating AJAX du kit de ressources ASP.NET](utilize-the-ajax-rating-control-in-the-aspnet-toolkit.md)
 - [Extendeurs de contrôle](control-extenders.md)
 - [Sélecteur de couleurs](color-picker.md)
-- [Zone de liste déroulante](combo-box.md)
+- [Combo Box](combo-box.md)
 - [Contrôle Editor](editor-control.md)
 - [Contrôle Editor personnalisé](editor-control-custom.md)
 - [Créer un extendeur personnalisé](create-a-new-custom-extender.md)

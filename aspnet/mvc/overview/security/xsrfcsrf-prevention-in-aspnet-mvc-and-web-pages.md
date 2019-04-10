@@ -8,15 +8,15 @@ ms.date: 03/14/2013
 ms.assetid: aadc5fa4-8215-4fc7-afd5-bcd2ef879728
 msc.legacyurl: /mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 5db661cccc58d1101f95091b069ab5cbfe78a378
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: de0e9cc168b9f18fd2bd83329106df45d7551b1a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063946"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386553"
 ---
-<a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prévention de XSRF/CSRF dans ASP.NET MVC et les pages web
-====================
+# <a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prévention de XSRF/CSRF dans ASP.NET MVC et les pages web
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Requête intersites falsification (également appelé XSRF ou CSRF) est une attaque contre les applications hébergées sur le web par laquelle un site web malveillant peut influencer l’interaction entre un navigateur client et un site web approuvé par ce navigateur. Ces attaques sont rendues possibles, car les navigateurs web envoient automatiquement avec chaque demande de jetons d’authentification à un site web. L’exemple canonique est un cookie d’authentification, tels que ASP. Ticket d’authentification par formulaire du NET. Toutefois, les sites web qui utilisent n’importe quel mécanisme d’authentification persistant (par exemple, l’authentification Windows, Basic et ainsi de suite) peuvent être ciblés par ces attaques.
@@ -160,7 +160,7 @@ Le *GetTokens* méthode prend comme entrée un XSRF demande vérification sessio
 
 Le développeur peut configurer le système anti-XSRF à partir de l’Application\_Démarrer. La configuration est par programmation. Les propriétés de la méthode statique *AntiForgeryConfig* type sont décrits ci-dessous. Vous devez définir la propriété UniqueClaimTypeIdentifier la plupart des utilisateurs à l’aide de revendications.
 
-| **Property** | **Description** |
+| **Propriété** | **Description** |
 | --- | --- |
 | **AdditionalDataProvider** | Un [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) qui fournit des données supplémentaires pendant la génération de jetons et consomme des données supplémentaires pendant la validation du jeton. La valeur par défaut est *null*. Pour plus d’informations, consultez le [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) section. |
 | **CookieName** | Chaîne qui fournit le nom du cookie HTTP qui est utilisé pour stocker le jeton de session anti-XSRF. Si cette valeur n’est pas définie, un nom est automatiquement généré en fonction de chemin d’accès virtuel de l’application déployée. La valeur par défaut est *null*. |

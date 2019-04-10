@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: 742df67f-484d-4ef3-af6b-8c791e556b43
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part4
 msc.type: authoredcontent
-ms.openlocfilehash: 596a491b4152da341a7779236dab17967a6de670
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b75057f3128662a9bbdd641dc0a7c1ba09fbbe87
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044216"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388190"
 ---
-<a name="creating-a-database"></a>Création d’une base de données
-====================
+# <a name="creating-a-database"></a>Création d’une base de données
+
 par [Scott Hanselman](https://github.com/shanselman)
 
 > Il s’agit d’un didacticiel de débutant qui présente les principes de base d’ASP.NET MVC. Vous allez créer une application web simple qui lit et écrit à partir d’une base de données. Visitez le [centre d’apprentissage ASP.NET MVC](../../../index.md) pour rechercher d’autres ASP.NET MVC didacticiels et exemples.
@@ -32,11 +32,11 @@ Dans la boîte de dialogue Choisir la Source de données, sélectionnez Microsof
 
 Dans la boîte de dialogue Ajouter une connexion, entrez «. \SQLEXPRESS » pour le nom de votre serveur, puis entrez « Movies » comme nom pour votre nouvelle base de données.
 
-[![Ajouter la boîte de dialogue Connexion](getting-started-with-mvc-part4/_static/image4.png)](getting-started-with-mvc-part4/_static/image3.png)
+[![Aboîte de dialogue Connexion jj](getting-started-with-mvc-part4/_static/image4.png)](getting-started-with-mvc-part4/_static/image3.png)
 
 Cliquez sur OK et vous demandera si vous souhaitez créer cette base de données. Sélectionnez Oui.
 
-[![Créez des films ?](getting-started-with-mvc-part4/_static/image6.png)](getting-started-with-mvc-part4/_static/image5.png)
+[![Ccréer des films ?](getting-started-with-mvc-part4/_static/image6.png)](getting-started-with-mvc-part4/_static/image5.png)
 
 Vous avez maintenant une base de données vide dans l’Explorateur de serveurs.
 
@@ -44,19 +44,19 @@ Vous avez maintenant une base de données vide dans l’Explorateur de serveurs.
 
 Cliquez avec le bouton droit sur les Tables et cliquez sur Ajouter une Table. Le Concepteur de tables s’affiche. Ajouter des colonnes pour l’Id, Title, ReleaseDate, Genre et prix. Cliquez avec le bouton droit sur la colonne d’ID et cliquez sur définie la clé primaire. Voici quelles mes zones de conception ressemble.
 
-[![Éditeur de Table de base de données](getting-started-with-mvc-part4/_static/image9.png)](getting-started-with-mvc-part4/_static/image8.png)
+[![Dbase de données Table éditeur](getting-started-with-mvc-part4/_static/image9.png)](getting-started-with-mvc-part4/_static/image8.png)
 
 En outre, sélectionnez la colonne d’Id et sous propriétés de colonne ci-dessous, remplacez « Spécification d’identité » sur « Oui ».
 
-[![IsIdentity - propriétés des colonnes](getting-started-with-mvc-part4/_static/image11.png)](getting-started-with-mvc-part4/_static/image10.png)
+[![IsIdentity - propriétés de la colonne](getting-started-with-mvc-part4/_static/image11.png)](getting-started-with-mvc-part4/_static/image10.png)
 
 Lorsque c’est terminé, cliquez sur l’icône Enregistrer dans la barre d’outils ou sélectionnez fichier | Enregistrer dans le menu et nommez votre table «**film**» (singulier). Nous avons une base de données et une table !
 
-[![Choisissez le nom](getting-started-with-mvc-part4/_static/image13.png)](getting-started-with-mvc-part4/_static/image12.png)
+[![Choisissez nom](getting-started-with-mvc-part4/_static/image13.png)](getting-started-with-mvc-part4/_static/image12.png)
 
 Revenez à l’Explorateur de serveurs et cliquez avec le bouton droit sur la table Movie, puis sélectionnez « Afficher des données de Table ». Entrez quelques films par conséquent, notre base de données a des données.
 
-[![Modification de la Table de base de données](getting-started-with-mvc-part4/_static/image15.png)](getting-started-with-mvc-part4/_static/image14.png)
+[![DModification de la Table de base de données](getting-started-with-mvc-part4/_static/image15.png)](getting-started-with-mvc-part4/_static/image14.png)
 
 ## <a name="creating-a-model"></a>Création d’un modèle
 
@@ -72,11 +72,11 @@ Cliquez sur le bouton « Ajouter ». Cela lance le « Assistant EDM ».
 
 Dans la nouvelle boîte de dialogue qui s’affiche, sélectionnez Générer à partir de la base de données. Étant donné que nous avons simplement une base de données, nous devons uniquement indiquer à Entity Framework sur notre nouvelle base de données et sa table. Cliquez sur Suivant pour enregistrer notre connexion de base de données dans la configuration de notre application web. Maintenant, vérifier les Tables et les films case à cocher et cliquez sur Terminer.
 
-[![Assistant Entity Data Model](getting-started-with-mvc-part4/_static/image21.png)](getting-started-with-mvc-part4/_static/image20.png)
+[![EParallèlement Assistant EDM](getting-started-with-mvc-part4/_static/image21.png)](getting-started-with-mvc-part4/_static/image20.png)
 
 Maintenant, nous pouvons voir notre nouvelle table Movie dans Entity Framework Designer et y accéder à partir du code.
 
-[![Films - Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part4/_static/image23.png)](getting-started-with-mvc-part4/_static/image22.png)
+[![Movies - Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part4/_static/image23.png)](getting-started-with-mvc-part4/_static/image22.png)
 
 Sur l’aire de conception, vous pouvez voir une classe « Film ». Cette classe correspond à la table « Movie » dans notre base de données, et chaque propriété qu’il contient est mappée à une colonne avec la table. Chaque instance d’une classe « Film » correspond à une ligne dans la table « Movie ».
 

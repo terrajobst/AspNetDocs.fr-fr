@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 2aebcde0-b04c-47db-b9c9-077714a5db77
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc
 msc.type: chapter
-ms.openlocfilehash: 1e8d7c267edf9fe6953f24515eb8ed1be9a040cc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 34fd3fb357c7a6c33b3a551b0cda7029e807da2c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019686"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399058"
 ---
-<a name="getting-started-with-entity-framework-6-code-first-using-mvc-5"></a>Bien démarrer avec Entity Framework 6 Code First en utilisant MVC 5
-====================
+# <a name="getting-started-with-entity-framework-6-code-first-using-mvc-5"></a>Bien démarrer avec Entity Framework 6 Code First en utilisant MVC 5
+
 > Principes de base de l’utilisation d’Entity Framework 6 pour afficher et modifier des données dans une application ASP.NET MVC 5.
 
 
@@ -29,6 +29,6 @@ ms.locfileid: "57019686"
 - [Lecture de données associées](reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 - [Mise à jour de données associées](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 - [Procédures asynchrones et stockées](async-and-stored-procedures-with-the-entity-framework-in-an-asp-net-mvc-application.md)
-- [Gestion des accès concurrentiels](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application.md)
+- [Gestion de l'accès concurrentiel](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 - [Implémentation de l’héritage](implementing-inheritance-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 - [Scénarios Entity Framework avancés](advanced-entity-framework-scenarios-for-an-mvc-web-application.md)

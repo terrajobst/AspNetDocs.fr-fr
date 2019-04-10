@@ -1,25 +1,26 @@
 ---
 uid: web-api/overview/formats-and-model-binding/model-validation-in-aspnet-web-api
-title: Validation de modèle dans l’API Web ASP.NET | Microsoft Docs
+title: Validation de modèle dans l’API Web ASP.NET - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Vue d’ensemble de la validation de modèle dans ASP.NET Web API d’ASP.NET 4.x.
 ms.author: riande
 ms.date: 07/20/2012
+ms.custom: seoapril2019
 ms.assetid: 7d061207-22b8-4883-bafa-e89b1e7749ca
 msc.legacyurl: /web-api/overview/formats-and-model-binding/model-validation-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 611a6466e160387592df678b3b8556625ff8e234
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d4e792f8cc2f79c2ab82c5a74fd50f49475fac4f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033406"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404570"
 ---
-<a name="model-validation-in-aspnet-web-api"></a>Validation de modèle dans l’API Web ASP.NET
-====================
+# <a name="model-validation-in-aspnet-web-api"></a>Validation de modèle dans l’API Web ASP.NET
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
-Lorsqu’un client envoie des données à votre API web, souvent voulez-vous valider les données avant tout traitement. Cet article montre comment annoter vos modèles, utilisez les annotations pour la validation de données et gérer les erreurs de validation dans votre API web.
+Cet article montre comment annoter vos modèles, utilisez les annotations pour la validation de données et gérer les erreurs de validation dans votre API web. Lorsqu’un client envoie des données à votre API web, souvent voulez-vous valider les données avant tout traitement. 
 
 ## <a name="data-annotations"></a>Annotations de données
 

@@ -8,15 +8,15 @@ ms.date: 02/10/2010
 ms.assetid: bdea2003-e964-4db5-9092-d56cc7560616
 msc.legacyurl: /whitepapers/side-by-side-with-10
 msc.type: content
-ms.openlocfilehash: b5457a62e127ba555674fbe3b9f75552cad041c7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c4a371958d8de72628c037b3568551aaa91e0153
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026736"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380702"
 ---
-<a name="aspnet-side-by-side-execution-of-net-framework-10-and-11"></a>ASP.NET - Exécution côte à côte de .NET Framework 1.0 et 1.1
-====================
+# <a name="aspnet-side-by-side-execution-of-net-framework-10-and-11"></a>ASP.NET - Exécution côte à côte de .NET Framework 1.0 et 1.1
+
 > Ce livre blanc décrit comment installer .NET 1.0 et 1.1 de .NET sur votre ordinateur, ce qui permet une application Web ASP.NET pour s’exécuter sur des versions du framework.
 > 
 > S’applique à ASP.NET 1.0 et ASP.NET 1.1.

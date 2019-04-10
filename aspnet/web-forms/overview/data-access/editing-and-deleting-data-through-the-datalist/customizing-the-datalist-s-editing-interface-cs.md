@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/customizing-the-datalist-s-editing-interface-cs
-title: Personnalisation du contrôle DataList d’édition Interface (C#) | Microsoft Docs
+title: Personnalisation du contrôle DataList d’édition Interface (c#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons créer une interface plus riche de modification pour le contrôle DataList, qui inclut DropDownList et une case à cocher.
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 10/30/2006
 ms.assetid: a5d13067-ddfb-4c36-8209-0f69fd40e45c
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/customizing-the-datalist-s-editing-interface-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 7f7723895dd50b1923de49ca4a3a7055bbad5fe4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0bbb6dd95196e46b00c35b269eacfc1b53e75c86
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57078548"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379649"
 ---
-<a name="customizing-the-datalists-editing-interface-c"></a>Personnalisation de l’interface de modification du contrôle DataList (C#)
-====================
+# <a name="customizing-the-datalists-editing-interface-c"></a>Personnalisation de l’interface de modification du contrôle DataList (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_40_CS.exe) ou [télécharger le PDF](customizing-the-datalist-s-editing-interface-cs/_static/datatutorial40cs1.pdf)
@@ -37,7 +37,7 @@ Le `EditItemTemplate` peut également être étendue pour inclure les contrôles
 Dans ce didacticiel, nous allons créer une interface plus riche de modification pour le contrôle DataList, qui inclut DropDownList et une case à cocher. En particulier, nous allons créer un contrôle DataList qui affiche des informations de produit et autorise le nom de produit s, fournisseur, catégorie et état abandonné à mettre à jour (voir Figure 1).
 
 
-[![L’Interface de modification inclut une zone de texte, deux DropDownList et une case à cocher](customizing-the-datalist-s-editing-interface-cs/_static/image2.png)](customizing-the-datalist-s-editing-interface-cs/_static/image1.png)
+[![TIl édition Interface inclut une zone de texte, deux DropDownList et une case à cocher](customizing-the-datalist-s-editing-interface-cs/_static/image2.png)](customizing-the-datalist-s-editing-interface-cs/_static/image1.png)
 
 **Figure 1**: L’Interface de modification inclut une case à cocher, une zone de texte et deux DropDownList ([cliquez pour afficher l’image en taille réelle](customizing-the-datalist-s-editing-interface-cs/_static/image3.png))
 
@@ -47,7 +47,7 @@ Dans ce didacticiel, nous allons créer une interface plus riche de modification
 Avant de pouvoir créer l’interface modifiable de s DataList, nous devons d’abord générer l’interface en lecture seule. Commencez par ouvrir le `CustomizedUI.aspx` page à partir de la `EditDeleteDataList` dossier et, à partir du concepteur, ajoutez un contrôle DataList à la page, définissant son `ID` propriété `Products`. À partir de la balise active de s DataList, créez un nouveau ObjectDataSource. Nommez cette nouvelle ObjectDataSource `ProductsDataSource` et configurez-le pour récupérer des données à partir de la `ProductsBLL` classe s `GetProducts` (méthode). Comme avec les didacticiels DataList modifiables précédents, nous mettrons à jour les informations de s produit modifié en accédant directement à la couche de logique métier. En conséquence, définissez les listes déroulantes dans la mise à jour, insertion et supprimer des onglets à (None).
 
 
-[![Définir les listes déroulantes UPDATE, INSERT et DELETE onglets à (None)](customizing-the-datalist-s-editing-interface-cs/_static/image5.png)](customizing-the-datalist-s-editing-interface-cs/_static/image4.png)
+[![Set les listes déroulantes UPDATE, INSERT et DELETE onglets à (None)](customizing-the-datalist-s-editing-interface-cs/_static/image5.png)](customizing-the-datalist-s-editing-interface-cs/_static/image4.png)
 
 **Figure 2**: La valeur est la mise à jour, insertion et supprimer des onglets liste déroulante répertorie (aucun) ([cliquez pour afficher l’image en taille réelle](customizing-the-datalist-s-editing-interface-cs/_static/image6.png))
 
@@ -60,7 +60,7 @@ Après avoir configuré l’ObjectDataSource, Visual Studio crée une valeur par
 Le balisage ci-dessus présente les informations de produit en utilisant un &lt;h4&gt; titre pour le nom du produit s et quatre colonnes `<table>` pour les champs restants. Le `ProductPropertyLabel` et `ProductPropertyValue` classes CSS, définies dans `Styles.css`, ont été abordés dans les didacticiels précédents. Figure 3 illustre notre progression lorsqu’ils sont affichés via un navigateur.
 
 
-[![Le nom du fournisseur, catégorie, état abandonné et prix de chaque produit s’affiche.](customizing-the-datalist-s-editing-interface-cs/_static/image8.png)](customizing-the-datalist-s-editing-interface-cs/_static/image7.png)
+[![TIl nom, fournisseur, catégorie, état abandonné et prix de chaque produit s’affiche](customizing-the-datalist-s-editing-interface-cs/_static/image8.png)](customizing-the-datalist-s-editing-interface-cs/_static/image7.png)
 
 **Figure 3**: Le nom du fournisseur, catégorie, état abandonné et prix de chaque produit s’affiche ([cliquez pour afficher l’image en taille réelle](customizing-the-datalist-s-editing-interface-cs/_static/image9.png))
 
@@ -72,7 +72,7 @@ La première étape de génération personnalisée DataList interface de modific
 Pour personnaliser l’interface de modification, cliquez sur le lien Modifier les modèles à partir de la balise active DataList s et choisissez la `EditItemTemplate` option dans la liste déroulante. Ajouter un contrôle DropDownList pour la `EditItemTemplate` et définissez son `ID` à `Categories`.
 
 
-[![Ajouter un contrôle DropDownList pour les catégories](customizing-the-datalist-s-editing-interface-cs/_static/image11.png)](customizing-the-datalist-s-editing-interface-cs/_static/image10.png)
+[![Ajj un DropDownList pour les catégories](customizing-the-datalist-s-editing-interface-cs/_static/image11.png)](customizing-the-datalist-s-editing-interface-cs/_static/image10.png)
 
 **Figure 4**: Ajouter un contrôle DropDownList pour les catégories ([cliquez pour afficher l’image en taille réelle](customizing-the-datalist-s-editing-interface-cs/_static/image12.png))
 
@@ -80,12 +80,12 @@ Pour personnaliser l’interface de modification, cliquez sur le lien Modifier l
 Ensuite, à partir de la balise active de s DropDownList, sélectionnez l’option de choisir la Source de données et créer un nouveau ObjectDataSource nommé `CategoriesDataSource`. Configurer cette ObjectDataSource à utiliser le `CategoriesBLL` classe s `GetCategories()` (méthode) (voir Figure 5). Ensuite, les opérations de mappage DropDownList Assistant de Configuration de Source de données vous invite à entrer pour les champs de données à utiliser pour chaque `ListItem` s `Text` et `Value` propriétés. Affiche la liste DropDownList le `CategoryName` champ de données et utilisez le `CategoryID` comme valeur, comme illustré dans la Figure 6.
 
 
-[![Créer un nouveau ObjectDataSource nommé CategoriesDataSource](customizing-the-datalist-s-editing-interface-cs/_static/image14.png)](customizing-the-datalist-s-editing-interface-cs/_static/image13.png)
+[![Ccréer un nouveau CategoriesDataSource de nommé ObjectDataSource](customizing-the-datalist-s-editing-interface-cs/_static/image14.png)](customizing-the-datalist-s-editing-interface-cs/_static/image13.png)
 
 **Figure 5**: Créer une nouvelle nommée de ObjectDataSource `CategoriesDataSource` ([cliquez pour afficher l’image en taille réelle](customizing-the-datalist-s-editing-interface-cs/_static/image15.png))
 
 
-[![Configurer l’affichage de s DropDownList et que la valeur des champs](customizing-the-datalist-s-editing-interface-cs/_static/image17.png)](customizing-the-datalist-s-editing-interface-cs/_static/image16.png)
+[![Configurer le s DropDownList affichage et les champs de valeur](customizing-the-datalist-s-editing-interface-cs/_static/image17.png)](customizing-the-datalist-s-editing-interface-cs/_static/image16.png)
 
 **Figure 6**: Configurer les champs de valeur et un DropDownList s affichage ([cliquez pour afficher l’image en taille réelle](customizing-the-datalist-s-editing-interface-cs/_static/image18.png))
 
@@ -102,7 +102,7 @@ N’hésitez pas à disposer de l’interface de modification comme vous le souh
 [!code-aspx[Main](customizing-the-datalist-s-editing-interface-cs/samples/sample2.aspx)]
 
 
-[![L’Interface de modification est définie comme l’Interface en lecture seule](customizing-the-datalist-s-editing-interface-cs/_static/image20.png)](customizing-the-datalist-s-editing-interface-cs/_static/image19.png)
+[![TIl Interface d’édition est définie comme l’Interface en lecture seule](customizing-the-datalist-s-editing-interface-cs/_static/image20.png)](customizing-the-datalist-s-editing-interface-cs/_static/image19.png)
 
 **Figure 7**: L’Interface de modification est définie comme l’Interface en lecture seule ([cliquez pour afficher l’image en taille réelle](customizing-the-datalist-s-editing-interface-cs/_static/image21.png))
 
@@ -119,7 +119,7 @@ Créez ces deux gestionnaires d’événements et demandez-leur d’utiliser le 
 Avec ces deux gestionnaires d’événements en place, en cliquant sur le bouton Modifier affiche l’interface de modification et en cliquant sur le bouton Annuler retourne l’élément modifié en mode en lecture seule. La figure 8 illustre le contrôle DataList une fois que le bouton Modifier a été cliqué pour Chef Anton s Gumbo Mix. Dans la mesure où ve encore pour ajouter une syntaxe de liaison de données à l’interface de modification, le `ProductName` zone de texte est vide, le `Discontinued` case à cocher désactivée et les premiers éléments sélectionnés à partir de la `Categories` et `Suppliers` DropDownList.
 
 
-[![En cliquant sur le bouton Edition affiche l’Interface de modification](customizing-the-datalist-s-editing-interface-cs/_static/image23.png)](customizing-the-datalist-s-editing-interface-cs/_static/image22.png)
+[![Ccliquant sur le bouton Edition affiche l’Interface de modification](customizing-the-datalist-s-editing-interface-cs/_static/image23.png)](customizing-the-datalist-s-editing-interface-cs/_static/image22.png)
 
 **Figure 8**: En cliquant sur le bouton Modifier affiche l’Interface de modification ([cliquez pour afficher l’image en taille réelle](customizing-the-datalist-s-editing-interface-cs/_static/image24.png))
 
@@ -131,7 +131,7 @@ Pour afficher les valeurs de s produit actuel dans l’interface de modification
 Affecter le `ProductName` valeur au champ de données le `ProductName` s de la zone de texte `Text` propriété, le `CategoryID` et `SupplierID` valeurs de champ de données le `Categories` et `Suppliers` DropDownList `SelectedValue` propriétés et le `Discontinued` données champ valeur pour le `Discontinued` case à cocher s `Checked` propriété. Après avoir apporté ces modifications, par le biais du concepteur ou directement le balisage déclaratif, visitez la page via un navigateur et cliquez sur le bouton Modifier pour Chef Anton s Gumbo Mix. Comme le montre la Figure 9, la syntaxe de liaison de données a ajouté les valeurs actuelles dans la zone de texte, DropDownList, case à cocher.
 
 
-[![En cliquant sur le bouton Edition affiche l’Interface de modification](customizing-the-datalist-s-editing-interface-cs/_static/image26.png)](customizing-the-datalist-s-editing-interface-cs/_static/image25.png)
+[![Ccliquant sur le bouton Edition affiche l’Interface de modification](customizing-the-datalist-s-editing-interface-cs/_static/image26.png)](customizing-the-datalist-s-editing-interface-cs/_static/image25.png)
 
 **Figure 9**: En cliquant sur le bouton Modifier affiche l’Interface de modification ([cliquez pour afficher l’image en taille réelle](customizing-the-datalist-s-editing-interface-cs/_static/image27.png))
 
@@ -167,7 +167,7 @@ Après avoir apporté ces modifications, le balisage DropDownList dans le contr�
 Prenez un moment pour consulter notre progression via un navigateur. Lorsque vous modifiez un produit, notez que le `Categories` et `Suppliers` DropDownList les deux avoir la valeur (aucune) option au début de la liste DropDownList.
 
 
-[![Les catégories et les fournisseurs DropDownList comprennent un (aucun) Option](customizing-the-datalist-s-editing-interface-cs/_static/image29.png)](customizing-the-datalist-s-editing-interface-cs/_static/image28.png)
+[![THE catégories et fournisseurs DropDownList comprennent un (aucun) Option](customizing-the-datalist-s-editing-interface-cs/_static/image29.png)](customizing-the-datalist-s-editing-interface-cs/_static/image28.png)
 
 **Figure 10**: Le `Categories` et `Suppliers` DropDownList comprennent un (aucun) Option ([cliquez pour afficher l’image en taille réelle](customizing-the-datalist-s-editing-interface-cs/_static/image30.png))
 

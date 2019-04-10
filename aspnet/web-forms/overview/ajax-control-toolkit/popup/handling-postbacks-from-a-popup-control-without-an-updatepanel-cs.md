@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-cs
-title: Gestion des publications (postback) à partir d’un contrôle Popup sans un UpdatePanel (C#) | Microsoft Docs
+title: Gestion des publications (postback) à partir d’un contrôle Popup sans un UpdatePanel (c#) | Microsoft Docs
 author: wenz
 description: L’extendeur PopupControl dans les outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle lorsque n’importe quel autre contrôle est activé. Lorsqu’une publication (postback) se produit en unités de recherche...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 25444121-5a72-4dac-8e50-ad2b7ac667af
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 3ad041b3df270e65c1dd39cf0cb6adb28b57880e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 06713aaf84ecfa5a793c32e3762cb4790235bf8c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036846"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385993"
 ---
-<a name="handling-postbacks-from-a-popup-control-without-an-updatepanel-c"></a>Gestion des publications (postback) à partir d’un contrôle de fenêtre contextuelle sans un UpdatePanel (C#)
-====================
+# <a name="handling-postbacks-from-a-popup-control-without-an-updatepanel-c"></a>Gestion des publications (postback) à partir d’un contrôle de fenêtre contextuelle sans un UpdatePanel (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PopupControl3.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/popupcontrol3CS.pdf)
@@ -49,12 +49,12 @@ Dans le code côté serveur, la valeur du champ masqué doit être lues. Dans la
 [!code-aspx[Main](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/samples/sample4.aspx)]
 
 
-[![Le calendrier s’affiche lorsque l’utilisateur clique dans la zone de texte](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image2.png)](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image1.png)
+[![TIl calendrier s’affiche lorsque l’utilisateur clique dans la zone de texte](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image2.png)](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image1.png)
 
 Le calendrier s’affiche lorsque l’utilisateur clique dans la zone de texte ([cliquez pour afficher l’image en taille réelle](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image3.png))
 
 
-[![En cliquant sur une date de la place dans la zone de texte](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image5.png)](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image4.png)
+[![Coubliez sur une date place dans la zone de texte](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image5.png)](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image4.png)
 
 En cliquant sur une date de la place dans la zone de texte ([cliquez pour afficher l’image en taille réelle](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image6.png))
 

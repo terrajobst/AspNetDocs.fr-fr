@@ -8,15 +8,15 @@ ms.date: 02/20/2014
 ms.assetid: b5c268dd-ca6a-4562-b94c-a220fcf01f58
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/displaying-maps-in-an-aspnet-web-pages-site
 msc.type: authoredcontent
-ms.openlocfilehash: cde27c54b11ee91b193dffd61e3a354c6cf2449a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6e5c01c3602bd313ebca467b65563b7abfd7ffe2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57024366"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400098"
 ---
-<a name="displaying-maps-in-an-aspnet-web-pages-razor-site"></a>Affichage des mappages dans un Site ASP.NET Web Pages (Razor)
-====================
+# <a name="displaying-maps-in-an-aspnet-web-pages-razor-site"></a>Affichage des mappages dans un Site ASP.NET Web Pages (Razor)
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Cet article explique comment afficher des cartes interactives sur des pages dans un site Web de Pages Web ASP.NET (Razor) en fonction de mappage des services fournis par Bing, Google, MapQuest et Yahoo.

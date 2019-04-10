@@ -8,15 +8,15 @@ ms.date: 02/10/2010
 ms.assetid: 1365eebb-bdf7-4a05-8d18-7f200531be55
 msc.legacyurl: /whitepapers/ms03-32-issue
 msc.type: content
-ms.openlocfilehash: 9041f8d15a449a517594f8051c3d9f0ceb18a8a3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: faad1530a499fd3f46a6a6c6e7c194ba6c55fa6c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386292"
 ---
-<a name="fix-for-server-application-unavailable-error-after-applying-security-update-for-ie"></a>Correctif pour l’erreur « Application serveur non disponible » après application de la mise à jour de sécurité pour Internet Explorer
-====================
+# <a name="fix-for-server-application-unavailable-error-after-applying-security-update-for-ie"></a>Correctif pour l’erreur « Application serveur non disponible » après application de la mise à jour de sécurité pour Internet Explorer
+
 > Cet article décrit le correctif logiciel qui résout un problème avec la mise à jour de sécurité MS03-32 pour Internet Explorer qui affecte les applications ASP.NET 1.0 s’exécutant sur Windows XP Professionnel.
 > 
 > S’applique à ASP.NET 1.0 et Windows XP Professionnel.
@@ -60,16 +60,16 @@ Le tableau ci-dessous présente les plateformes et la version affectée par ce p
 
 | .NET Framework | Plateforme | Affectés |
 | --- | --- | --- |
-| Version 1.0 | Windows 2000 Professionnel | Aucune |
-| Version 1.0 | Windows 2000 Server | Aucune |
+| Version 1.0 | Windows 2000 Professionnel | Non |
+| Version 1.0 | Windows 2000 Server | Non |
 | Version 1.0 | Windows XP Professionnel | Oui |
-| Version 1.0 | Windows Server 2003 | Aucune |
-| Version 1.0 | Windows XP Édition familiale avec Cassini | Aucune |
-| Version 1.1 | Windows 2000 Professionnel | Aucune |
-| Version 1.1 | Windows 2000 Server | Aucune |
-| Version 1.1 | Windows XP Professionnel | Aucune |
-| Version 1.1 | Windows Server 2003 | Aucune |
-| Version 1.1 | Windows XP Édition familiale avec Cassini | Aucune |
+| Version 1.0 | Windows Server 2003 | Non |
+| Version 1.0 | Windows XP Édition familiale avec Cassini | Non |
+| Version 1.1 | Windows 2000 Professionnel | Non |
+| Version 1.1 | Windows 2000 Server | Non |
+| Version 1.1 | Windows XP Professionnel | Non |
+| Version 1.1 | Windows Server 2003 | Non |
+| Version 1.1 | Windows XP Édition familiale avec Cassini | Non |
 
 Merci,   
  L’équipe ASP.NET

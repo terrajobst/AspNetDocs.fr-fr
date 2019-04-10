@@ -8,15 +8,15 @@ ms.date: 08/19/2008
 ms.assetid: 4bc8d19a-80f1-44b4-adbf-95ed22d691ca
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c20626b24e43031fc4103365396fc26b6a6daf93
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c135bacd7f9f87fac87a3c8cf41bad359bb3c0a2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038056"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379181"
 ---
-<a name="aspnet-mvc-routing-overview-vb"></a>Vue d’ensemble du routage ASP.NET MVC (VB)
-====================
+# <a name="aspnet-mvc-routing-overview-vb"></a>Vue d’ensemble du routage ASP.NET MVC (VB)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Dans ce didacticiel, Stephen Walther montre comment l’infrastructure ASP.NET MVC mappe les demandes du navigateur pour les actions de contrôleur.
@@ -95,7 +95,7 @@ Enfin, l’appel à la méthode Index() dans la liste des 5 avec la base de l’
 [!code-vb[Main](asp-net-mvc-routing-overview-vb/samples/sample5.vb)]
 
 
-[![Appel d’une action de contrôleur qui attend une valeur de paramètre](asp-net-mvc-routing-overview-vb/_static/image1.jpg)](asp-net-mvc-routing-overview-vb/_static/image1.png)
+[![Invoking une action de contrôleur qui attend une valeur de paramètre](asp-net-mvc-routing-overview-vb/_static/image1.jpg)](asp-net-mvc-routing-overview-vb/_static/image1.png)
 
 **Figure 01**: Appel d’une action de contrôleur qui attend une valeur de paramètre ([cliquez pour afficher l’image en taille réelle](asp-net-mvc-routing-overview-vb/_static/image2.png))
 

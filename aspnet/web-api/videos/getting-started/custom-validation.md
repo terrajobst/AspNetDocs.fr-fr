@@ -8,15 +8,15 @@ ms.date: 02/15/2012
 ms.assetid: f8eadb72-fa15-4537-8c6d-1b120e6d3aab
 msc.legacyurl: /web-api/videos/getting-started/custom-validation
 msc.type: video
-ms.openlocfilehash: 3c5b3c3d7f985a78806c49db3203152d8b746e10
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1e941830f741c4d21b9320561a4b10b0fa729c1d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054196"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390049"
 ---
-<a name="aspnet-web-api-part-5-custom-validation"></a>API Web ASP.NET, partie 5 : Validation personnalisée
-====================
+# <a name="aspnet-web-api-part-5-custom-validation"></a>API Web ASP.NET, partie 5 : Validation personnalisée
+
 par [Jon Galloway](https://github.com/jongalloway)
 
 > [!NOTE]

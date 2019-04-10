@@ -8,18 +8,18 @@ ms.date: 04/23/2009
 ms.assetid: 07b8905d-78ac-4252-97fb-8675b3fb0bbf
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b44ef5e92df8cc3b8660a8ce9e4ccc9b74c135d2
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: afd287836337d0f9411daac805c3e9bcbb2dbadb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422725"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385070"
 ---
-<a name="strategies-for-database-development-and-deployment-vb"></a>Stratégies pour le développement et le déploiement des bases de données (VB)
-====================
+# <a name="strategies-for-database-development-and-deployment-vb"></a>Stratégies pour le développement et le déploiement des bases de données (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial10_DBDevel_vb.pdf)
+[Télécharger le PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial10_DBDevel_vb.pdf)
 
 > Lorsque vous déployez une application orientée données pour la première fois que vous pouvez aveuglément copier la base de données dans l’environnement de développement à l’environnement de production. Mais effectuant un blind copie dans les déploiements suivants remplacera toutes les données entrées dans la base de données de production. Au lieu de cela, le déploiement d’une base de données implique appliquer les modifications apportées à la base de données de développement depuis le dernier déploiement sur la base de données de production. Ce didacticiel examine ces défis et propose des stratégies différentes pour vous aider à chronicling et appliquer les modifications apportées à la base de données depuis le dernier déploiement.
 
@@ -99,7 +99,7 @@ Il existe une variété d’outils de comparaison de base de données tierce pro
 Démarrage de SQL Compare la boîte de dialogue de projets de comparaison s’ouvre, affichant les projets enregistrés SQL Compare. Créer un nouveau projet. Cette action lance l’Assistant Configuration de projet, qui vous invite à entrer pour plus d’informations sur les bases de données à comparer (voir Figure 1). Entrez les informations pour les bases de données d’environnement de développement et de production.
 
 
-[![Comparer le développement et les bases de données de Production](strategies-for-database-development-and-deployment-vb/_static/image2.jpg)](strategies-for-database-development-and-deployment-vb/_static/image1.jpg)
+[![Ccomparer le développement et les bases de données de Production](strategies-for-database-development-and-deployment-vb/_static/image2.jpg)](strategies-for-database-development-and-deployment-vb/_static/image1.jpg)
 
 **Figure 1**: Comparer le développement et les bases de données de Production ([cliquez pour afficher l’image en taille réelle](strategies-for-database-development-and-deployment-vb/_static/image3.jpg))
 
@@ -116,7 +116,7 @@ Après avoir sélectionné les bases de données à comparer (et examiner les op
 > Les modifications de modèle de données effectuées dans ce didacticiel ont été résolues pour illustrer l’utilisation d’un outil de comparaison de base de données. Vous trouverez pas ces modifications dans la base de données dans les didacticiels futures.
 
 
-[![SQL Compare répertorie les différences entre le développement et les bases de données de Production](strategies-for-database-development-and-deployment-vb/_static/image5.jpg)](strategies-for-database-development-and-deployment-vb/_static/image4.jpg)
+[![SComparaison QL répertorie les différences entre le développement et les bases de données de Production](strategies-for-database-development-and-deployment-vb/_static/image5.jpg)](strategies-for-database-development-and-deployment-vb/_static/image4.jpg)
 
 **Figure 2**: SQL Compare répertorie les différences entre le développement et les bases de données de Production ([cliquez pour afficher l’image en taille réelle](strategies-for-database-development-and-deployment-vb/_static/image6.jpg))
 
@@ -128,7 +128,7 @@ Sélection d’un objet de base de données affiche la fenêtre différences SQL
 Après avoir examiné les différences et en sélectionnant les objets que vous souhaitez synchroniser, l’étape suivante consiste à générer les commandes SQL nécessaires pour mettre à jour le schéma de s de base de données de production pour correspondre à la base de données de développement. Cela s’effectue via l’Assistant synchronisation. L’Assistant synchronisation confirme quels objets pour synchroniser et résume l’action planifier (voir Figure 3). Vous pouvez synchroniser les bases de données immédiatement ou générer un script avec les commandes SQL qui peut être exécuté à tout moment.
 
 
-[![Utilisez l’Assistant de synchronisation pour synchroniser vos schémas de bases de données](strategies-for-database-development-and-deployment-vb/_static/image8.jpg)](strategies-for-database-development-and-deployment-vb/_static/image7.jpg)
+[![Use l’Assistant de synchronisation pour synchroniser vos schémas de bases de données](strategies-for-database-development-and-deployment-vb/_static/image8.jpg)](strategies-for-database-development-and-deployment-vb/_static/image7.jpg)
 
 **Figure 3**: Utilisez l’Assistant de synchronisation pour synchroniser vos schémas de bases de données ([cliquez pour afficher l’image en taille réelle](strategies-for-database-development-and-deployment-vb/_static/image9.jpg))
 

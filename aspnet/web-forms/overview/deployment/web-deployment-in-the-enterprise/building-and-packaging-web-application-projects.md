@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: 94e92f80-a7e3-4d18-9375-ff8be5d666ac
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/building-and-packaging-web-application-projects
 msc.type: authoredcontent
-ms.openlocfilehash: 406b8e6daf47196eb98700efe41e34c02d5682d3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 82134b8da7ab5ca49fef8e769128db9010fd231f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028696"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396328"
 ---
-<a name="building-and-packaging-web-application-projects"></a>Génération et empaquetage des projets d’application web
-====================
+# <a name="building-and-packaging-web-application-projects"></a>Génération et empaquetage des projets d’application web
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Lorsque vous souhaitez déployer un projet d’application web dans un environnement de serveur distant, votre première tâche consiste à générer le projet et générer un package de déploiement web. Cette rubrique décrit comment le processus de génération fonctionne pour les projets d’application web. En particulier, elle explique :
 > 
@@ -34,13 +34,13 @@ Dans Visual Studio 2010, le processus de génération et de déploiement pour le
 
 ## <a name="how-does-the-wpp-work"></a>Comment fonctionne le WPP ?
 
-Si vous examinez le fichier projet pour C#-projet d’application web en fonction, vous pouvez voir qu’il importe de deux fichiers .targets.
+Si vous examinez le fichier projet pour c#-projet d’application web en fonction, vous pouvez voir qu’il importe de deux fichiers .targets.
 
 
 [!code-xml[Main](building-and-packaging-web-application-projects/samples/sample1.xml)]
 
 
-La première **importation** instruction est commune à tous les projets Visual C#. Ce fichier, *Microsoft.CSharp.targets*, contient les cibles et les tâches qui sont spécifiques à Visual C#. Par exemple, le compilateur C# (**Csc**) tâche est appelée ici. Le *Microsoft.CSharp.targets* de fichiers à son tour importations le *Microsoft.Common.targets* fichier. Définit les cibles qui sont communes à tous les projets, comme **Build**, **reconstruire**, **exécuter**, **compiler**, et **nettoyer** . La seconde **importation** instruction est spécifique aux projets d’application web. Le *Microsoft.WebApplication.targets* de fichiers à son tour importations le *Microsoft.Web.Publishing.targets* fichier. Le *Microsoft.Web.Publishing.targets* fichier essentiellement *est* les fournisseurs de services. Il définit des cibles, par exemple **Package** et **MSDeployPublish**, qui appeler Web Deploy pour effectuer diverses tâches de déploiement.
+La première **importation** instruction est commune à tous les projets Visual c#. Ce fichier, *Microsoft.CSharp.targets*, contient les cibles et les tâches qui sont spécifiques à Visual c#. Par exemple, le compilateur c# (**Csc**) tâche est appelée ici. Le *Microsoft.CSharp.targets* de fichiers à son tour importations le *Microsoft.Common.targets* fichier. Définit les cibles qui sont communes à tous les projets, comme **Build**, **reconstruire**, **exécuter**, **compiler**, et **nettoyer** . La seconde **importation** instruction est spécifique aux projets d’application web. Le *Microsoft.WebApplication.targets* de fichiers à son tour importations le *Microsoft.Web.Publishing.targets* fichier. Le *Microsoft.Web.Publishing.targets* fichier essentiellement *est* les fournisseurs de services. Il définit des cibles, par exemple **Package** et **MSDeployPublish**, qui appeler Web Deploy pour effectuer diverses tâches de déploiement.
 
 Pour comprendre comment ces cibles supplémentaires sont utilisés, dans l’exemple de solution du Gestionnaire de contacts, ouvrez le *Publish.proj* de fichiers et de jeter un coup de œil à la **BuildProjects** cible.
 

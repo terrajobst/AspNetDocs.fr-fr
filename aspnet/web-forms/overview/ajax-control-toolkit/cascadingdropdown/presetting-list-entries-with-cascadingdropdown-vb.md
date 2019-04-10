@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: ec61ced7-bbca-4bdd-aa3b-80878f295181
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/presetting-list-entries-with-cascadingdropdown-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 3816ce9d5b148ec9c18eef64d963c4465c219674
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6e685d599e3dbc095631e3c28a603ac9c38f799c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57024336"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385889"
 ---
-<a name="presetting-list-entries-with-cascadingdropdown-vb"></a>Prédéfinition des entrées de liste avec CascadingDropDown (VB)
-====================
+# <a name="presetting-list-entries-with-cascadingdropdown-vb"></a>Prédéfinition des entrées de liste avec CascadingDropDown (VB)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown2.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/CascadingDropDown2VB.pdf)
@@ -53,7 +53,7 @@ La méthode retourne un tableau de type valeur de CascadingDropDown. Le construc
 Chargement de la page dans le navigateur remplira la liste déroulante avec trois fournisseurs, l’autre qui est présélectionnée.
 
 
-[![La liste est remplie et présélectionnée automatiquement](presetting-list-entries-with-cascadingdropdown-vb/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-vb/_static/image1.png)
+[![THE liste est remplie et présélectionnée automatiquement](presetting-list-entries-with-cascadingdropdown-vb/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-vb/_static/image1.png)
 
 La liste est remplie et présélectionnée automatiquement ([cliquez pour afficher l’image en taille réelle](presetting-list-entries-with-cascadingdropdown-vb/_static/image3.png))
 

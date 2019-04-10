@@ -8,15 +8,15 @@ ms.date: 02/10/2014
 ms.assetid: 2a2c1833-0bfe-4e2e-9cc0-341b52c7b121
 msc.legacyurl: /web-pages/overview/testing-and-debugging/aspnet-web-pages-razor-troubleshooting-guide
 msc.type: authoredcontent
-ms.openlocfilehash: ec8cdda5c5b298736a650f82cd6b52d73b6dfe3d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: adbaa5cbda4a60a8b222ba49bb148b28b2e214cc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061296"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389204"
 ---
-<a name="aspnet-web-pages-razor-troubleshooting-guide"></a>ASP.NET Web Pages (Razor) - Guide de résolution des problèmes
-====================
+# <a name="aspnet-web-pages-razor-troubleshooting-guide"></a>ASP.NET Web Pages (Razor) - Guide de résolution des problèmes
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Cet article décrit les problèmes que vous pourriez rencontrer lorsque vous travaillez avec ASP.NET Web Pages (Razor) et certaines solutions suggérées.
@@ -36,7 +36,7 @@ Cette rubrique contient les sections suivantes :
 - [Problèmes avec le Code Razor](#IssuesWithRazorCode)
 - [Problèmes de sécurité et d’appartenance](#membership)
 - [Problèmes liés à l’envoi de courrier électronique](#email)
-- [Ressources supplémentaires pour MSBuild](#AdditionalResources)
+- [Ressources supplémentaires](#AdditionalResources)
 
 Pour les questions générales, consultez [ASP.NET Web Pages (Razor) FAQ](https://go.microsoft.com/fwlink/?LinkId=253000).
 
@@ -136,12 +136,12 @@ Remplacez les valeurs appropriées pour `your-SMTP-server-name`, et ainsi de sui
 
 - *Échec de l’envoi de courrier.*
 
-    ou
+    - ou -
 
     *Une tentative de connexion a échoué car la partie connectée n’a pas répondu convenablement après une période de temps ou la connexion établie a échoué, car l’hôte connecté n’a pas répondu*
 
     Cette erreur signifie généralement que l’application ne peut pas se connecter au serveur SMTP. Vérifiez le nom du serveur et le numéro de port.
-- <em>La boîte aux lettres non disponible. La réponse du serveur était : 5.1.0 &lt; someuser@invaliddomain &gt; expéditeur rejeté : domaine de l’expéditeur non valide</em>
+- *La boîte aux lettres non disponible. La réponse du serveur était : 5.1.0 &lt; someuser@invaliddomain &gt; expéditeur rejeté : domaine de l’expéditeur non valide*
 
     Ce message peut indiquer que le `From` adresse n’est pas correcte ou est manquant.
 - *La chaîne spécifiée n’est pas sous la forme requise pour une adresse de messagerie.*
@@ -155,6 +155,6 @@ Remplacez les valeurs appropriées pour `your-SMTP-server-name`, et ainsi de sui
 <a id="AdditionalResources"></a>
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-[Pages web ASP.NET - Questions fréquentes (FAQ) (Razor)](https://go.microsoft.com/fwlink/?LinkId=253000)
+[ASP.NET Web Pages - Questions fréquentes (FAQ) (Razor)](https://go.microsoft.com/fwlink/?LinkId=253000)
 
 [WebMatrix et ASP.NET Web Pages](https://forums.asp.net/1224.aspx/1?WebMatrix) forum sur le site Web ASP.NET

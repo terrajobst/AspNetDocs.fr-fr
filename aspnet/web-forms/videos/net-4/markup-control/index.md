@@ -8,15 +8,15 @@ ms.date: 11/14/2011
 ms.assetid: 36667bfc-90ba-4c37-8c1c-65b6642e6d47
 msc.legacyurl: /web-forms/videos/net-4/markup-control
 msc.type: chapter
-ms.openlocfilehash: 02011e2fc2ff66225c37da44bf1d589f3ae6d847
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4721799cb7042f597153edbe74326d0eb748fb9b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023686"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394222"
 ---
-<a name="markup-control"></a>Contrôle du balisage
-====================
+# <a name="markup-control"></a>Contrôle du balisage
+
 > Cette série de vidéos présente des améliorations apportées aux contrôles pour les pages Web Forms dans ASP.NET 4.
 
 

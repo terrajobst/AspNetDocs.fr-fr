@@ -8,15 +8,15 @@ ms.date: 08/15/2006
 ms.assetid: 4823a186-caaf-4116-a318-c7ff4d955ddc
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 3f40c2632e98dd8c64c985e44478a9739df473ca
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ca1bf281130bf2c726b6147f90733c8a83754563
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423130"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399579"
 ---
-<a name="sorting-custom-paged-data-vb"></a>Tri de données paginées personnalisées (VB)
-====================
+# <a name="sorting-custom-paged-data-vb"></a>Tri de données paginées personnalisées (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_26_VB.exe) ou [télécharger le PDF](sorting-custom-paged-data-vb/_static/datatutorial26vb1.pdf)
@@ -71,7 +71,7 @@ Prenez un moment pour tester cette procédure stockée avec des valeurs différe
 **Figure 1**: Essayez les différentes valeurs des procédure stockée s trois paramètres d’entrée
 
 
-[![La procédure stockée s les résultats sont affichés dans la fenêtre Sortie](sorting-custom-paged-data-vb/_static/image3.png)](sorting-custom-paged-data-vb/_static/image2.png)
+[![Ts de la procédure stockée he les résultats sont affichés dans la fenêtre Sortie](sorting-custom-paged-data-vb/_static/image3.png)](sorting-custom-paged-data-vb/_static/image2.png)
 
 **Figure 2**: La procédure stockée s les résultats sont affichés dans la fenêtre de sortie ([cliquez pour afficher l’image en taille réelle](sorting-custom-paged-data-vb/_static/image4.png))
 
@@ -145,7 +145,7 @@ Pour activer le tri dans le contrôle GridView, simplement cocher la case à coc
 La figure 7 illustre la première page de résultats triés par le `UnitPrice` dans l’ordre croissant.
 
 
-[![Les résultats sont triés par le prix unitaire](sorting-custom-paged-data-vb/_static/image10.png)](sorting-custom-paged-data-vb/_static/image9.png)
+[![THE résultats sont triés par le prix unitaire](sorting-custom-paged-data-vb/_static/image10.png)](sorting-custom-paged-data-vb/_static/image9.png)
 
 **Figure 7**: Les résultats sont triés par le prix unitaire ([cliquez pour afficher l’image en taille réelle](sorting-custom-paged-data-vb/_static/image11.png))
 
@@ -166,7 +166,7 @@ Cette exception se produit parce que le `SortExpression` des s GridView `Supplie
 **Figure 9**: Modifier l’élément SortExpression s de nom fournisseur BoundField CompanyName
 
 
-[![Les résultats peuvent désormais être triées par fournisseur](sorting-custom-paged-data-vb/_static/image15.png)](sorting-custom-paged-data-vb/_static/image14.png)
+[![TIl résultats peuvent désormais être triées par fournisseur](sorting-custom-paged-data-vb/_static/image15.png)](sorting-custom-paged-data-vb/_static/image14.png)
 
 **Figure 10**: Les résultats peuvent désormais être triées par fournisseur ([cliquez pour afficher l’image en taille réelle](sorting-custom-paged-data-vb/_static/image16.png))
 

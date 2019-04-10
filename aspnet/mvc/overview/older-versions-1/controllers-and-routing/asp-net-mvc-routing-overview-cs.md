@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs
-title: Présentation du routage ASP.NET MVC (C#) | Microsoft Docs
+title: Présentation du routage ASP.NET MVC (c#) | Microsoft Docs
 author: StephenWalther
 description: Dans ce didacticiel, Stephen Walther montre comment l’infrastructure ASP.NET MVC mappe les demandes du navigateur pour les actions de contrôleur.
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 08/19/2008
 ms.assetid: 5b39d2d5-4bf9-4d04-94c7-81b84dfeeb31
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 188490c5ca075710dcbdcd1c325808f7c1d383bc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e2f2246e2126bd6e648f861bcb296fab62a748bb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050976"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380104"
 ---
-<a name="aspnet-mvc-routing-overview-c"></a>Vue d’ensemble du routage ASP.NET MVC (C#)
-====================
+# <a name="aspnet-mvc-routing-overview-c"></a>Vue d’ensemble du routage ASP.NET MVC (C#)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Dans ce didacticiel, Stephen Walther montre comment l’infrastructure ASP.NET MVC mappe les demandes du navigateur pour les actions de contrôleur.
@@ -95,7 +95,7 @@ Enfin, l’appel à la méthode Index() dans la liste des 5 avec la base de l’
 [!code-csharp[Main](asp-net-mvc-routing-overview-cs/samples/sample5.cs)]
 
 
-[![Appel d’une action de contrôleur qui attend une valeur de paramètre](asp-net-mvc-routing-overview-cs/_static/image1.jpg)](asp-net-mvc-routing-overview-cs/_static/image1.png)
+[![Invoking une action de contrôleur qui attend une valeur de paramètre](asp-net-mvc-routing-overview-cs/_static/image1.jpg)](asp-net-mvc-routing-overview-cs/_static/image1.png)
 
 **Figure 01**: Appel d’une action de contrôleur qui attend une valeur de paramètre ([cliquez pour afficher l’image en taille réelle](asp-net-mvc-routing-overview-cs/_static/image2.png))
 
@@ -107,4 +107,4 @@ L’URL de base/Index/3, quant à eux, fonctionne parfaitement avec l’action d
 L’objectif de ce didacticiel est de vous fournir une brève introduction au routage ASP.NET. Nous avons examiné la table d’itinéraires par défaut que vous obtenez avec une application ASP.NET MVC. Vous avez appris comment l’itinéraire par défaut mappe des URL à actions du contrôleur.
 
 > [!div class="step-by-step"]
-> [Next](understanding-action-filters-cs.md)
+> [Suivant](understanding-action-filters-cs.md)

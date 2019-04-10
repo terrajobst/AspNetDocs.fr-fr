@@ -8,47 +8,46 @@ ms.date: 10/18/2014
 ms.assetid: e03585c2-80bf-4083-99ba-9fcbc883ccd8
 msc.legacyurl: /web-forms/overview/older-versions-getting-started
 msc.type: chapter
-ms.openlocfilehash: 3ba0db2036def3f1cb1a08b3602f6c52eb1488d1
-ms.sourcegitcommit: 4b0e4dcecb00dd4f519aab5fcf7cc1673ad75060
+ms.openlocfilehash: 94c995ee1e636f1250efb3a90887d8d73badeca7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57963861"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393637"
 ---
-<a name="older-versions---web-forms-getting-started"></a>Versions antérieures - prise en main de Web Forms
-====================
-> Didacticiel sur ASP.NET Web Forms 4 et versions antérieures.
+# <a name="older-versions---web-forms-getting-started"></a>Versions antérieures - prise en main de Web Forms
 
+> Documentation sur ASP.NET Web Forms 4 et versions antérieures.
 
-- [ASP.NET 4 - Tailspin Spyworks](tailspin-spyworks/index.md)
+- [ASP.NET 4 - Tailspin Spyworks](tailspin-spyworks/index.md)
 
     - [Partie 1 : Fichier -> Nouveau projet](tailspin-spyworks/tailspin-spyworks-part-1.md)
-    - [Partie 2 : Couche d’accès aux données](tailspin-spyworks/tailspin-spyworks-part-2.md)
-    - [Partie 3 : Mise en page et Menu catégorie](tailspin-spyworks/tailspin-spyworks-part-3.md)
+    - [Partie 2 : Couche d'accès aux données](tailspin-spyworks/tailspin-spyworks-part-2.md)
+    - [Partie 3 : Mise en page et menu Catégorie](tailspin-spyworks/tailspin-spyworks-part-3.md)
     - [Partie 4 : Liste des produits](tailspin-spyworks/tailspin-spyworks-part-4.md)
     - [Partie 5 : Logique métier](tailspin-spyworks/tailspin-spyworks-part-5.md)
     - [Partie 6 : Appartenance ASP.NET](tailspin-spyworks/tailspin-spyworks-part-6.md)
     - [Partie 7 : Ajout de fonctionnalités](tailspin-spyworks/tailspin-spyworks-part-7.md)
-    - [Partie 8 : Pages finales, gestion des exceptions et Conclusion](tailspin-spyworks/tailspin-spyworks-part-8.md)
-- [ASP.NET 4 - Bien démarrer avec Entity Framework 4 et Web Forms](getting-started-with-ef/index.md)
+    - [Partie 8 : Pages finales, gestion des exceptions et conclusion](tailspin-spyworks/tailspin-spyworks-part-8.md)
+- [ASP.NET 4 - Bien démarrer avec Entity Framework 4 et Web Forms](getting-started-with-ef/index.md)
 
-    - [Bien démarrer avec Entity Framework 4.0 Database First](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
-    - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 2](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md)
-    - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 3](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-3.md)
-    - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 4](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-4.md)
+    - [Bien démarrer avec Entity Framework 4.0 Database First](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
+    - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 2](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md)
+    - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 3](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-3.md)
+    - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 4](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-4.md)
     - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 5](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-5.md)
-    - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 6](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-6.md)
-    - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 7](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-7.md)
-    - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 8](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
-- [ASP.NET 4 - Continuer avec Entity Framework 4 et Web Forms](continuing-with-ef/index.md)
+    - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 6](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-6.md)
+    - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 7](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-7.md)
+    - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 8](getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
+- [ASP.NET 4 - Continuer avec Entity Framework 4 et Web Forms](continuing-with-ef/index.md)
 
-    - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 1 : Mise en route](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
-    - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 2 : Ajout d’une couche de logique métier et les Tests unitaires](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
-    - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 3 : Tri et filtrage](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
-    - [Gestion des accès concurrentiels avec Entity Framework 4.0 dans ASP.NET 4](continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)
-    - [Optimisation des performances avec Entity Framework 4.0 dans ASP.NET 4](continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
-    - [Nouveautés d’Entity Framework 4.0](continuing-with-ef/what-s-new-in-the-entity-framework-4.md)
-- [ASP.NET 4 - Déploiement web avec SQL Server Compact avec Visual Studio](deployment-to-a-hosting-provider/index.md)
+    - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 1 : Prise en main](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
+    - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 2 : Ajout d’une couche de logique métier et de tests unitaires](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+    - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 3 : Tri et filtrage](continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
+    - [Gestion des accès concurrentiels avec Entity Framework 4.0 dans ASP.NET 4](continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)
+    - [Optimisation des performances avec Entity Framework 4.0 dans ASP.NET 4](continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
+    - [Nouveautés d’Entity Framework 4.0](continuing-with-ef/what-s-new-in-the-entity-framework-4.md)
+- [ASP.NET 4 - Déploiement web avec SQL Server Compact avec Visual Studio](deployment-to-a-hosting-provider/index.md)
 
     - [Déploiement web Visual Studio avec SQL Server Compact - Introduction](deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-introduction-1-of-12.md)
     - [Déploiement web Visual Studio avec SQL Server Compact - Déploiement de bases de données SQL Server Compact](deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md)
@@ -62,7 +61,7 @@ ms.locfileid: "57963861"
     - [Déploiement web Visual Studio avec SQL Server Compact - Migration vers SQL Server](deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12.md)
     - [Déploiement web Visual Studio avec SQL Server Compact - Déploiement d’une mise à jour de base de données SQL Server](deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12.md)
     - [Déploiement web Visual Studio avec SQL Server Compact - Résolution des problèmes](deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md)
-- [ASP.NET 3.5 - AJAX](aspnet-ajax/index.md)
+- [ASP.NET 3.5 - AJAX](aspnet-ajax/index.md)
 
     - [Présentation des mises à jour de page partielles avec ASP.NET AJAX](aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax.md)
     - [Présentation des déclencheurs UpdatePanel d’ASP.NET AJAX](aspnet-ajax/understanding-asp-net-ajax-updatepanel-triggers.md)
@@ -70,15 +69,15 @@ ms.locfileid: "57963861"
     - [Présentation de la localisation d’ASP.NET AJAX](aspnet-ajax/understanding-asp-net-ajax-localization.md)
     - [Présentation des services web ASP.NET AJAX](aspnet-ajax/understanding-asp-net-ajax-web-services.md)
     - [Présentation des fonctionnalités de débogage d’ASP.NET AJAX](aspnet-ajax/understanding-asp-net-ajax-debugging-capabilities.md)
-- [ASP.NET 3.5 - Pages maîtres Web Forms](master-pages/index.md)
+- [ASP.NET 3.5 - Pages maîtres Web Forms](master-pages/index.md)
 
     - [Création d’une disposition à l’échelle d’un site avec des pages maîtres (C#)](master-pages/creating-a-site-wide-layout-using-master-pages-cs.md)
     - [ContentPlaceHolders multiples et contenu par défaut (C#)](master-pages/multiple-contentplaceholders-and-default-content-cs.md)
     - [Spécification du titre, des balises META et d’autres en-têtes HTML dans la page maître (C#)](master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md)
     - [URL dans les pages maîtres (C#)](master-pages/urls-in-master-pages-cs.md)
     - [Contrôler le nommage des ID dans les pages de contenu (C#)](master-pages/control-id-naming-in-content-pages-cs.md)
-    - [Interaction avec la page maître depuis la page de contenu (C#)](master-pages/interacting-with-the-master-page-from-the-content-page-cs.md)
-    - [Interaction avec la page de contenu depuis la page maître (C#)](master-pages/interacting-with-the-content-page-from-the-master-page-cs.md)
+    - [Interaction avec la page de contenu à partir de la page maître (C#)](master-pages/interacting-with-the-master-page-from-the-content-page-cs.md)
+    - [Interaction avec la page de contenu à partir de la page maître (C#)](master-pages/interacting-with-the-content-page-from-the-master-page-cs.md)
     - [Pages maîtres et ASP.NET AJAX (C#)](master-pages/master-pages-and-asp-net-ajax-cs.md)
     - [Spécification de la page maître par programmation (C#)](master-pages/specifying-the-master-page-programmatically-cs.md)
     - [Pages maîtres imbriquées (C#)](master-pages/nested-master-pages-cs.md)
@@ -87,12 +86,12 @@ ms.locfileid: "57963861"
     - [Spécification du titre, des balises META et d’autres en-têtes HTML dans la page maître (VB)](master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md)
     - [URL dans les pages maîtres (VB)](master-pages/urls-in-master-pages-vb.md)
     - [Contrôler le nommage des ID dans les pages de contenu (VB)](master-pages/control-id-naming-in-content-pages-vb.md)
-    - [Interaction avec la page maître depuis la page de contenu (VB)](master-pages/interacting-with-the-master-page-from-the-content-page-vb.md)
-    - [Interaction avec la page de contenu depuis la page maître (VB)](master-pages/interacting-with-the-content-page-from-the-master-page-vb.md)
+    - [Interaction avec la page de contenu à partir de la page maître (VB)](master-pages/interacting-with-the-master-page-from-the-content-page-vb.md)
+    - [Interaction avec la page de contenu à partir de la page maître (VB)](master-pages/interacting-with-the-content-page-from-the-master-page-vb.md)
     - [Pages maîtres et ASP.NET AJAX (VB)](master-pages/master-pages-and-asp-net-ajax-vb.md)
     - [Spécification de la page maître par programmation (VB)](master-pages/specifying-the-master-page-programmatically-vb.md)
     - [Pages maîtres imbriquées (VB)](master-pages/nested-master-pages-vb.md)
-- [Déploiement de projets de site web dans Visual Studio 2008 et antérieur](deploying-web-site-projects/index.md)
+- [Déploiement de projets de site web dans Visual Studio 2008 et versions antérieures](deploying-web-site-projects/index.md)
 
     - [Options d’hébergement ASP.NET (C#)](deploying-web-site-projects/asp-net-hosting-options-cs.md)
     - [Détermination des fichiers qui doivent être déployés (C#)](deploying-web-site-projects/determining-what-files-need-to-be-deployed-cs.md)
@@ -106,7 +105,7 @@ ms.locfileid: "57963861"
     - [Stratégies pour le développement et le déploiement des bases de données (C#)](deploying-web-site-projects/strategies-for-database-development-and-deployment-cs.md)
     - [Affichage d’une page d’erreur personnalisée (C#)](deploying-web-site-projects/displaying-a-custom-error-page-cs.md)
     - [Traitement des exceptions non gérées (C#)](deploying-web-site-projects/processing-unhandled-exceptions-cs.md)
-    - [Journalisation des détails des erreurs avec la surveillance de l’intégrité ASP.NET (C#)](deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs.md)
+    - [Journalisation des détails des erreurs avec la supervision de l’intégrité ASP.NET (C#)](deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs.md)
     - [Journalisation des détails des erreurs avec ELMAH (C#)](deploying-web-site-projects/logging-error-details-with-elmah-cs.md)
     - [Précompilation de votre site web (C#)](deploying-web-site-projects/precompiling-your-website-cs.md)
     - [Utilisateurs et rôles sur un site web de production (C#)](deploying-web-site-projects/users-and-roles-on-the-production-website-cs.md)
@@ -122,7 +121,7 @@ ms.locfileid: "57963861"
     - [Stratégies pour le développement et le déploiement des bases de données (VB)](deploying-web-site-projects/strategies-for-database-development-and-deployment-vb.md)
     - [Affichage d’une page d’erreur personnalisée (VB)](deploying-web-site-projects/displaying-a-custom-error-page-vb.md)
     - [Traitement des exceptions non gérées (VB)](deploying-web-site-projects/processing-unhandled-exceptions-vb.md)
-    - [Journalisation des détails des erreurs avec la surveillance de l’intégrité ASP.NET (VB)](deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-vb.md)
+    - [Journalisation des détails des erreurs avec la supervision de l’intégrité ASP.NET (VB)](deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-vb.md)
     - [Journalisation des détails des erreurs avec ELMAH (VB)](deploying-web-site-projects/logging-error-details-with-elmah-vb.md)
     - [Précompilation de votre site web (VB)](deploying-web-site-projects/precompiling-your-website-vb.md)
     - [Utilisateurs et rôles sur un site web de production (VB)](deploying-web-site-projects/users-and-roles-on-the-production-website-vb.md)

@@ -8,15 +8,15 @@ ms.date: 04/20/2010
 ms.assetid: 69a8d6f8-4b10-4602-8822-2d6c05fc432b
 msc.legacyurl: /whitepapers/what-is-new-in-aspnet-mvc
 msc.type: content
-ms.openlocfilehash: 82a3fd4fe74202ed9a23298390322458cfc029f8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7f846e807309f3123db52b3053b9aa8d6aca81e6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030996"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394833"
 ---
-<a name="whats-new-in-aspnet-mvc-2"></a>Nouveautés d’ASP.NET MVC 2
-====================
+# <a name="whats-new-in-aspnet-mvc-2"></a>Nouveautés d’ASP.NET MVC 2
+
 > Ce document décrit les nouvelles fonctionnalités et améliorations introduites dans ASP.NET MVC 2. Ce document est également disponible pour [télécharger](https://download.microsoft.com/download/F/1/6/F16F9AF9-8EF4-4845-BC97-639791D5699C/WhatIsNewInMVC_2.pdf)
 
 
@@ -24,7 +24,7 @@ ms.locfileid: "57030996"
 [La mise à niveau d’un projet ASP.NET MVC 1.0 vers ASP.NET MVC 2](#_TOC2)   
 [Nouvelles fonctionnalités](#_TOC3)   
 [Programmes d’assistance basés sur des modèles](#_TOC3_1)   
-[Zones](#_TOC3_2)   
+[Zones (Areas)](#_TOC3_2)   
 [Prise en charge pour les contrôleurs asynchrones](#_TOC3_3)   
 [Prise en charge de DefaultValueAttribute dans les paramètres de méthode d’Action](#_TOC3_4)   
 [Prise en charge pour la liaison de données binaires de classeurs de modèles](#_TOC3_5)   

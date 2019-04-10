@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: 7e85c70e-1a88-4408-8b3d-29611c7713ed
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/publishing
 msc.type: authoredcontent
-ms.openlocfilehash: bd6611a03ee4940f5d4176ce23464f313b9ec884
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ece436d44908497d6cf10017ba1ee285bfb4a5b2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029756"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382097"
 ---
-<a name="introducing-aspnet-web-pages---publishing-a-site-by-using-webmatrix"></a>Présentation des Pages Web ASP.NET - publication d’un Site à l’aide de WebMatrix
-====================
+# <a name="introducing-aspnet-web-pages---publishing-a-site-by-using-webmatrix"></a>Présentation des Pages Web ASP.NET - publication d’un Site à l’aide de WebMatrix
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Ce didacticiel est le dernier volet de l’ensemble de didacticiels qui présente ASP.NET Web Pages et WebMatrix de Microsoft. Il explique comment publier votre site sur Internet afin que d’autres peuvent utiliser. Il part du principe que vous avez terminé la série via [création d’une zone de recherche cohérents pour les Sites ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=251585).
@@ -43,8 +43,8 @@ Ce didacticiel contient quatre sections :
 
 1. [Configuration de la page par défaut](#defaultpage)
 2. Publication (choisissez une des opérations suivantes)  
- a. [Publication de votre Site vers Microsoft Azure](#azure)  
- b. [Publication de votre Site pour une société d’hébergement Web](#host)
+ A. [Publication de votre Site vers Microsoft Azure](#azure)  
+ B. [Publication de votre Site pour une société d’hébergement Web](#host)
 3. [La mise à jour le Site actif : Republication](#update)
 
 <a id="defaultpage"></a>

@@ -2,26 +2,26 @@
 uid: web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-vb
 title: Contrôler l’ID d’affectation de noms dans les Pages de contenu (VB) | Microsoft Docs
 author: rick-anderson
-description: Explique comment les contrôles ContentPlaceHolder servent de conteneur d’attribution de noms et par conséquent facilitez l’utilisation par programmation un contrôle difficile (via FindConrol)...
+description: Explique comment les contrôles ContentPlaceHolder servent de conteneur d’attribution de noms et par conséquent facilitez l’utilisation par programmation un contrôle difficile (via FindControl)...
 ms.author: riande
 ms.date: 06/10/2008
 ms.assetid: dbb024a6-f043-4fc5-ad66-56556711875b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 6e9a751538ca28250e4e776ff2c6c3f0185ffbe6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: dd60d02c2c3840edd4c0e1244623fcea0cb2db0b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059306"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386318"
 ---
-<a name="control-id-naming-in-content-pages-vb"></a>Contrôler le nommage des ID dans les pages de contenu (VB)
-====================
+# <a name="control-id-naming-in-content-pages-vb"></a>Contrôler le nommage des ID dans les pages de contenu (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_05_VB.zip) ou [télécharger le PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_05_VB.pdf)
 
-> Explique comment les contrôles ContentPlaceHolder servent de conteneur d’attribution de noms et par conséquent facilitez l’utilisation par programmation un contrôle difficile (via FindConrol). Examine ce problème et les solutions de contournement. Explique également comment accéder par programme à la valeur de ClientID résultante.
+> Explique comment les contrôles ContentPlaceHolder servent de conteneur d’attribution de noms et par conséquent facilitez l’utilisation par programmation un contrôle difficile (via FindControl). Examine ce problème et les solutions de contournement. Explique également comment accéder par programme à la valeur de ClientID résultante.
 
 
 ## <a name="introduction"></a>Introduction
@@ -83,7 +83,7 @@ Pour mieux comprendre les modifications ASP.NET moteur permet le rendu `id` cont
 Figure 3 montre la page lorsqu’ils sont affichés via le Concepteur de Visual Studio.
 
 
-[![La Page inclut trois contrôles Web : une zone de texte, bouton et une étiquette](control-id-naming-in-content-pages-vb/_static/image4.png)](control-id-naming-in-content-pages-vb/_static/image3.png)
+[![THE Page inclut trois les contrôles Web : une zone de texte, un bouton et une étiquette](control-id-naming-in-content-pages-vb/_static/image4.png)](control-id-naming-in-content-pages-vb/_static/image3.png)
 
 **Figure 03**: Les Page inclut trois contrôles Web : une zone de texte, bouton et une étiquette ([cliquez pour afficher l’image en taille réelle](control-id-naming-in-content-pages-vb/_static/image5.png))
 
@@ -133,7 +133,7 @@ Bien que la syntaxe utilisée pour appeler le `FindControl` méthode diffère l�
 Après avoir entré ce code, visitez le `IDIssues.aspx` page via un navigateur, entrez votre âge, puis cliquez sur le bouton « Submit ». Lorsque vous cliquez sur le bouton « Submit » un `NullReferenceException` est déclenché (voir Figure 5).
 
 
-[![Une exception NullReferenceException est levée.](control-id-naming-in-content-pages-vb/_static/image8.png)](control-id-naming-in-content-pages-vb/_static/image7.png)
+[![A Exception NullReferenceException est levée](control-id-naming-in-content-pages-vb/_static/image8.png)](control-id-naming-in-content-pages-vb/_static/image7.png)
 
 **Figure 05**: Un `NullReferenceException` est déclenché ([cliquez pour afficher l’image en taille réelle](control-id-naming-in-content-pages-vb/_static/image9.png))
 
@@ -173,7 +173,7 @@ Heureusement, une référence à la page maître est accessible via la `Page` la
 Cette fois-ci, visitez la page via un navigateur, entrer votre âge et en cliquant sur le bouton « Submit » affiche le message dans le `Results` de l’étiquette, comme prévu.
 
 
-[![Âge de l’utilisateur est affiché dans l’étiquette](control-id-naming-in-content-pages-vb/_static/image11.png)](control-id-naming-in-content-pages-vb/_static/image10.png)
+[![Tdurée de vie de l’utilisateur est affichée dans l’étiquette](control-id-naming-in-content-pages-vb/_static/image11.png)](control-id-naming-in-content-pages-vb/_static/image10.png)
 
 **Figure 06**: Âge de l’utilisateur est affiché dans l’étiquette ([cliquez pour afficher l’image en taille réelle](control-id-naming-in-content-pages-vb/_static/image12.png))
 
@@ -187,7 +187,7 @@ Par conséquent, avoir `Control.FindControl` rechercher simplement *contrôle*d�
 La bonne nouvelle est que nous pouvons créer notre propre `FindControl` méthode ce récursivement recherche tous les conteneurs d’attribution de noms. En fait, à l’aide de *méthodes d’extension* nous pouvons ajouter un `FindControlRecursive` méthode à la `Control` classe pour accompagner ses `FindControl` (méthode).
 
 > [!NOTE]
-> Méthodes d’extension sont une fonctionnalité nouvelle de C# 3.0 et Visual Basic 9, qui sont des langages fournis avec le .NET Framework version 3.5 et Visual Studio 2008. En bref, les méthodes d’extension permettent à un développeur pour créer une nouvelle méthode pour un type de classe existant via une syntaxe spéciale. Pour plus d’informations sur cette fonctionnalité utile, reportez-vous à mon article, [extension des fonctionnalités de Type Base avec les méthodes d’Extension](http://aspnet.4guysfromrolla.com/articles/120507-1.aspx).
+> Méthodes d’extension sont une fonctionnalité nouvelle de c# 3.0 et Visual Basic 9, qui sont des langages fournis avec le .NET Framework version 3.5 et Visual Studio 2008. En bref, les méthodes d’extension permettent à un développeur pour créer une nouvelle méthode pour un type de classe existant via une syntaxe spéciale. Pour plus d’informations sur cette fonctionnalité utile, reportez-vous à mon article, [extension des fonctionnalités de Type Base avec les méthodes d’Extension](http://aspnet.4guysfromrolla.com/articles/120507-1.aspx).
 
 
 Pour créer la méthode d’extension, ajoutez un nouveau fichier à la `App_Code` dossier nommé `PageExtensionMethods.vb`. Ajouter une méthode d’extension nommée `FindControlRecursive` qui prend comme entrée un `String` paramètre nommé `controlID`. Méthodes d’extension fonctionner correctement, il est essentiel que la classe est marquée comme un `Module` et que les méthodes d’extension avoir pour préfixe le `<Extension()>` attribut. En outre, toutes les méthodes d’extension doivent accepter comme leur premier paramètre, un objet du type auquel la méthode d’extension s’applique.
@@ -200,7 +200,7 @@ Ajoutez le code suivant à la `PageExtensionMethods.vb` fichier pour définir ce
 Avec ce code en place, revenez à la `IDIssues.aspx` classe code-behind de la page et commentez actuel `FindControl` les appels de méthode. Remplacez-les par des appels à `Page.FindControlRecursive("controlID")`. Trouvée concernant les méthodes d’extension est qu’ils apparaissent directement dans les listes déroulantes IntelliSense. Comme le montre la Figure 7, lorsque vous tapez `Page` , puis appuyez sur la période, le `FindControlRecursive` méthode est incluse dans la liste déroulante, ainsi que l’autre IntelliSense `Control` méthodes de la classe.
 
 
-[![Méthodes d’extension sont inclus dans l’IntelliSense listes déroulantes](control-id-naming-in-content-pages-vb/_static/image14.png)](control-id-naming-in-content-pages-vb/_static/image13.png)
+[![Eles méthodes XTension sont inclus dans l’IntelliSense déroulantes](control-id-naming-in-content-pages-vb/_static/image14.png)](control-id-naming-in-content-pages-vb/_static/image13.png)
 
 **Figure 07**: Méthodes d’extension sont inclus dans l’IntelliSense listes déroulantes ([cliquez pour afficher l’image en taille réelle](control-id-naming-in-content-pages-vb/_static/image15.png))
 
@@ -211,7 +211,7 @@ Entrez le code suivant dans le `SubmitButton_Click` Gestionnaire d’événement
 [!code-vb[Main](control-id-naming-in-content-pages-vb/samples/sample13.vb)]
 
 > [!NOTE]
-> Étant donné que les méthodes d’extension débutent avec C# 3.0 et Visual Basic 9, si vous utilisez Visual Studio 2005 vous ne pouvez pas utiliser les méthodes d’extension. Au lieu de cela, vous devez implémenter la `FindControlRecursive` méthode dans une classe d’assistance. [Rick Strahl](http://www.west-wind.com/WebLog/default.aspx) a ce type d’exemple dans son billet de blog, [principale des Pages ASP.NET et `FindControl` ](http://www.west-wind.com/WebLog/posts/5127.aspx).
+> Étant donné que les méthodes d’extension débutent avec c# 3.0 et Visual Basic 9, si vous utilisez Visual Studio 2005 vous ne pouvez pas utiliser les méthodes d’extension. Au lieu de cela, vous devez implémenter la `FindControlRecursive` méthode dans une classe d’assistance. [Rick Strahl](http://www.west-wind.com/WebLog/default.aspx) a ce type d’exemple dans son billet de blog, [principale des Pages ASP.NET et `FindControl` ](http://www.west-wind.com/WebLog/posts/5127.aspx).
 
 
 ## <a name="step-4-using-the-correctidattribute-value-in-client-side-script"></a>Étape 4 : À l’aide de la bonne`id`valeur dans un Script côté Client de l’attribut
@@ -256,7 +256,7 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 - [Pages maître ASP.NET et `FindControl`](http://www.west-wind.com/WebLog/posts/5127.aspx)
 - [Création d’Interfaces utilisateur Dynamic Data](https://msdn.microsoft.com/library/aa479330.aspx)
 - [Extension des fonctionnalités de Type de Base avec les méthodes d’Extension](http://aspnet.4guysfromrolla.com/articles/120507-1.aspx)
-- [Guide pratique pour Contenu de la Page maître ASP.NET de référence](https://msdn.microsoft.com/library/xxwa0ff0.aspx)
+- [Procédure : Contenu de la Page maître ASP.NET de référence](https://msdn.microsoft.com/library/xxwa0ff0.aspx)
 - [Master Pages : Conseils, astuces et pièges](http://www.odetocode.com/articles/450.aspx)
 - [Utilisation de Script côté Client](https://msdn.microsoft.com/library/aa479302.aspx)
 

@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: 52d6c941-2cd9-442f-9872-2c798d6d90cd
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices
 msc.type: authoredcontent
-ms.openlocfilehash: 930b9be35ef2e0dd85cee8f6584b9e90c80933b9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1b9c7bacb37cc4487fb3af392a6048021679718d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029226"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396731"
 ---
-<a name="web-development-best-practices-building-real-world-cloud-apps-with-azure"></a>Web Development Best Practices (génération d’applications Cloud réalistes avec Azure)
-====================
+# <a name="web-development-best-practices-building-real-world-cloud-apps-with-azure"></a>Web Development Best Practices (génération d’applications Cloud réalistes avec Azure)
+
 par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -89,7 +89,7 @@ Windows Azure a un CDN, et vous pouvez utiliser les autres CDN dans une applicat
 <a id="async"></a>
 ## <a name="use-net-45s-async-support-to-avoid-blocking-calls"></a>Prise en charge asynchrone de .NET 4.5 permet d’éviter de bloquer les appels
 
-.NET 4.5 amélioré les langages de programmation C# et VB afin de simplifier au maximum gérer des tâches de façon asynchrone. L’avantage de la programmation asynchrone n’est pas seulement pour le traitement parallèle des situations telles que lorsque vous souhaitez lancer plusieurs appels de service web simultanément. Il permet également de votre serveur web effectuer plus efficacement et fiable dans des conditions de charge élevée. Un serveur web uniquement un nombre limité de threads disponibles, et dans des conditions de charge élevée lorsque tous les threads sont en cours d’utilisation, les demandes entrantes doivent attendre jusqu'à ce que les threads ne sont pas libérées. Si votre code d’application ne gère pas les tâches comme la base de données de requêtes et des appels de service web asynchrone, nombre de threads est inutilement immobilisé pendant que le serveur attend une réponse d’e/s. Cela limite la quantité de trafic que le serveur peut gérer dans des conditions de charge élevée. Avec la programmation asynchrone, les threads qui attendent pour un service web ou d’une base de données pour retourner des données sont libérées jusqu'à nouvelles demandes de service jusqu'à ce que les données de la réception. Dans un serveur web occupé, des centaines voire des milliers de demandes peuvent ensuite être traitées rapidement qui sinon d’attente des threads être libéré.
+.NET 4.5 amélioré les langages de programmation c# et VB afin de simplifier au maximum gérer des tâches de façon asynchrone. L’avantage de la programmation asynchrone n’est pas seulement pour le traitement parallèle des situations telles que lorsque vous souhaitez lancer plusieurs appels de service web simultanément. Il permet également de votre serveur web effectuer plus efficacement et fiable dans des conditions de charge élevée. Un serveur web uniquement un nombre limité de threads disponibles, et dans des conditions de charge élevée lorsque tous les threads sont en cours d’utilisation, les demandes entrantes doivent attendre jusqu'à ce que les threads ne sont pas libérées. Si votre code d’application ne gère pas les tâches comme la base de données de requêtes et des appels de service web asynchrone, nombre de threads est inutilement immobilisé pendant que le serveur attend une réponse d’e/s. Cela limite la quantité de trafic que le serveur peut gérer dans des conditions de charge élevée. Avec la programmation asynchrone, les threads qui attendent pour un service web ou d’une base de données pour retourner des données sont libérées jusqu'à nouvelles demandes de service jusqu'à ce que les données de la réception. Dans un serveur web occupé, des centaines voire des milliers de demandes peuvent ensuite être traitées rapidement qui sinon d’attente des threads être libéré.
 
 Comme vous l’avez vu précédemment, il est aussi facile à diminuer le nombre de serveurs web gère votre site web car il s’agit en augmenter la taille. Par conséquent, si un serveur peut obtenir un débit supérieur, vous n’avez pas besoin que plusieurs d'entre eux et vous pouvant réduire vos coûts, car vous avez besoin de moins de serveurs pour un volume de trafic donné que vous le feriez dans le cas contraire.
 
@@ -151,7 +151,7 @@ CDN :
 Programmation asynchrone :
 
 - [À l’aide de méthodes asynchrones dans ASP.NET MVC 4](../../../../mvc/overview/performance/using-asynchronous-methods-in-aspnet-mvc-4.md). Didacticiel par Rick Anderson.
-- [Programmation asynchrone avec Async et Await (C# et Visual Basic)](https://msdn.microsoft.com/library/vstudio/hh191443.aspx). Livre blanc MSDN expliquant le raisonnement pour la programmation asynchrone, comment il fonctionne dans ASP.NET 4.5 et comment écrire du code pour l’implémenter.
+- [Programmation asynchrone avec Async et Await (c# et Visual Basic)](https://msdn.microsoft.com/library/vstudio/hh191443.aspx). Livre blanc MSDN expliquant le raisonnement pour la programmation asynchrone, comment il fonctionne dans ASP.NET 4.5 et comment écrire du code pour l’implémenter.
 - [Requête de Async Entity Framework et enregistrer](https://msdn.microsoft.com/data/jj819165)
 - [Comment créer des Applications Web ASP.NET à l’aide d’Async](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B337#fbid=tgkT4SR_DK7). Vidéo de présentation par Rowan Miller. Inclut une démonstration de graphique de la programmation asynchrone peut faciliter une augmentation considérable du débit de serveur web dans des conditions de charge élevée.
 - [Prévention de défaillance : Création de Services de Cloud évolutives, durables](https://channel9.msdn.com/Series/FailSafe). Série de vidéos de neuf parties par Ulrich Homann, Marc Mercuri et Mark Simms. Pour les discussions sur l’impact de la programmation asynchrone sur l’évolutivité, consultez épisode 4 et épisode 8.

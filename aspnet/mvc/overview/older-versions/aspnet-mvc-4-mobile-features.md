@@ -8,15 +8,15 @@ ms.date: 08/15/2012
 ms.assetid: 27dc4fc8-1b51-43b0-933f-fc1b52476523
 msc.legacyurl: /mvc/overview/older-versions/aspnet-mvc-4-mobile-features
 msc.type: authoredcontent
-ms.openlocfilehash: 6fe55a14b40f8c50dee91cdc7f59d0378f2a1ea2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: de65e01b888d9ed15da3903f086b40c49b32b9fb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402412"
 ---
-<a name="aspnet-mvc-4-mobile-features"></a>Fonctionnalités mobiles ASP.NET MVC 4
-====================
+# <a name="aspnet-mvc-4-mobile-features"></a>Fonctionnalités mobiles ASP.NET MVC 4
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Il existe désormais une version de MVC 5 de ce didacticiel avec des exemples de code à [déployer une Application Web de Mobile dans ASP.NET MVC 5 sur les Sites Web Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/).
@@ -35,7 +35,7 @@ Vous aurez également besoin d’un émulateur de navigateur mobile. Les éléme
 - [Émulateur Mobile Opera](http://www.opera.com/developer/tools/mobile/)
 - [Apple Safari](http://www.apple.com/safari/download/) avec l’agent utilisateur défini sur iPhone. Pour obtenir des instructions sur la configuration de l’agent utilisateur dans Safari pour « iPhone », consultez [comment permettre à Safari prétendre qu’il est IE](http://www.davidalison.com/2008/05/how-to-let-safari-pretend-its-ie.html) sur le blog de David Alison.
 
-Projets Visual Studio avec code source C# sont disponibles pour accompagner cette rubrique :
+Projets Visual Studio avec code source c# sont disponibles pour accompagner cette rubrique :
 
 - [Téléchargement du projet de départ](https://go.microsoft.com/fwlink/?linkid=228307&amp;clcid=0x409)
 - [Téléchargement du projet terminé](https://go.microsoft.com/fwlink/?linkid=228306&amp;clcid=0x409)
@@ -248,7 +248,7 @@ Actualiser le *AllTags* affichage dans le navigateur mobile. Vous pouvez désorm
 >
 > [!code-csharp[Main](aspnet-mvc-4-mobile-features/samples/sample15.cs)]
 >
->  et en ajoutant l’en-tête suivant pour le *Views\Shared\\_Layout.cshtml* fichier.
+> et en ajoutant l’en-tête suivant pour le *Views\Shared\\_Layout.cshtml* fichier.
 >
 > [!code-html[Main](aspnet-mvc-4-mobile-features/samples/sample16.html)]
 

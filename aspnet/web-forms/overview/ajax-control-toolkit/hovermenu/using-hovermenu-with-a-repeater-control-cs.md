@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-cs
-title: Utilisation de HoverMenu avec un contrôle Repeater (C#) | Microsoft Docs
+title: Utilisation de HoverMenu avec un contrôle Repeater (c#) | Microsoft Docs
 author: wenz
 description: 'Le contrôle HoverMenu dans AJAX Control Toolkit fournit un effet de la fenêtre contextuelle simple : Lorsque le pointeur de la souris pointe sur un élément, une fenêtre contextuelle s’affiche en un seront...'
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: e7700e7b-edc3-4183-a713-70e507cc7490
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 33f65a132ea9f0a939ab70ac249b397ea883ac8c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7f64e90eb2f8f87e2f382cb7897793e7071d305d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032376"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384498"
 ---
-<a name="using-hovermenu-with-a-repeater-control-c"></a>Utilisation de HoverMenu avec un contrôle Repeater (C#)
-====================
+# <a name="using-hovermenu-with-a-repeater-control-c"></a>Utilisation de HoverMenu avec un contrôle Repeater (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/b/0/6/b06fe835-5b8f-4c00-aef8-062c19d75b95/HoverMenu1.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/hovermenu1CS.pdf)
@@ -53,9 +53,9 @@ Ensuite, ajoutez un panneau qui sert de la fenêtre contextuelle modale :
 Maintenant chaque élément dans la source de données affiche une fenêtre contextuelle à droite (`PopupPosition` attribut) après un délai de 50 millisecondes (`PopDelay` attribut).
 
 
-[![Le menu sensitif qui s’affiche en regard de chaque élément dans le répéteur](using-hovermenu-with-a-repeater-control-cs/_static/image2.png)](using-hovermenu-with-a-repeater-control-cs/_static/image1.png)
+[![Tmenu de pointage he s’affiche en regard de chaque élément dans le répéteur](using-hovermenu-with-a-repeater-control-cs/_static/image2.png)](using-hovermenu-with-a-repeater-control-cs/_static/image1.png)
 
 Le menu sensitif qui s’affiche en regard de chaque élément dans le répéteur ([cliquez pour afficher l’image en taille réelle](using-hovermenu-with-a-repeater-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Next](using-hovermenu-with-a-repeater-control-vb.md)
+> [Suivant](using-hovermenu-with-a-repeater-control-vb.md)

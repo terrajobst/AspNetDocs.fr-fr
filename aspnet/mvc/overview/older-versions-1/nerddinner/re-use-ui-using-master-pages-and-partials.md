@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: d4243a4a-e91c-4116-9ae0-5c08e5285677
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/re-use-ui-using-master-pages-and-partials
 msc.type: authoredcontent
-ms.openlocfilehash: 0da32e6ac38f10df6e581517989b3b1fd2f2328c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e50fb6edb175bd1651212ae6b3daf7b1bf605068
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055996"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390140"
 ---
-<a name="re-use-ui-using-master-pages-and-partials"></a>Réutiliser l’interface utilisateur avec des pages maîtres et des vues partielles
-====================
+# <a name="re-use-ui-using-master-pages-and-partials"></a>Réutiliser l’interface utilisateur avec des pages maîtres et des vues partielles
+
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Télécharger le PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Il s’agit d’étape 7 a gratuit [« « l’application NerdDinner](introducing-the-nerddinner-tutorial.md) qui présente en détail comment créer un petit mais terminé, l’application web à l’aide d’ASP.NET MVC 1.
 > 

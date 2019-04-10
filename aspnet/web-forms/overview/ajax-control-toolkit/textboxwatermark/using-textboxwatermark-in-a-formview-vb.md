@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 41497361-7fba-4825-b36c-f58d79522a88
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b9a731be89d0582ebd411809a6bbcbee801fea2a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 056e89b20ccab0e56b1fab422c817d842beff446
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028246"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400839"
 ---
-<a name="using-textboxwatermark-in-a-formview-vb"></a>Utilisation de TextBoxWatermark dans un FormView (VB)
-====================
+# <a name="using-textboxwatermark-in-a-formview-vb"></a>Utilisation de TextBoxWatermark dans un FormView (VB)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/TextBoxWatermark1.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/textboxwatermark1VB.pdf)
@@ -49,7 +49,7 @@ N’oubliez pas le nom (`ID`) de la source de données, dans la mesure où il se
 Maintenant lorsque l’utilisateur modifie le mode d’insertion de la `FormView` contrôler, le champ de texte pour le nouveau fournisseur est prérempli grâce à la `TextBoxWatermarkExtender` contrôle. Un clic à l’intérieur de la zone de texte permet le texte de remplissage disparaissent.
 
 
-[![Le filigrane dans le champ provient de l’extendeur](using-textboxwatermark-in-a-formview-vb/_static/image2.png)](using-textboxwatermark-in-a-formview-vb/_static/image1.png)
+[![Tfiligrane de he dans le champ provient de l’extendeur](using-textboxwatermark-in-a-formview-vb/_static/image2.png)](using-textboxwatermark-in-a-formview-vb/_static/image1.png)
 
 Le filigrane dans le champ provient de l’extendeur ([cliquez pour afficher l’image en taille réelle](using-textboxwatermark-in-a-formview-vb/_static/image3.png))
 

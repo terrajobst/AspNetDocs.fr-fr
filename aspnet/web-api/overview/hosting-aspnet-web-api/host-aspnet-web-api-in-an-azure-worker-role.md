@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/hosting-aspnet-web-api/host-aspnet-web-api-in-an-azure-worker-role
-title: Héberger des API Web ASP.NET 2 dans un rôle Worker Azure | Microsoft Docs
+title: Héberger des API Web ASP.NET 2 dans un rôle de travail Azure - ASP.NET 4.x
 author: MikeWasson
-description: Ce didacticiel montre comment héberger ASP.NET Web API dans un rôle de travail Azure, à l’aide d’OWIN pour auto-héberger l’infrastructure API Web. Ouvrir l’Interface Web pour l’Allemagne de .NET (OWIN)...
+description: 'Tutoriel : Héberger des API Web ASP.NET dans un rôle de travail Azure, à l’aide d’OWIN pour auto-héberger l’infrastructure API Web.'
 ms.author: riande
 ms.date: 04/02/2014
+ms.custom: seoapril2019
 ms.assetid: 6980ee2e-d6b0-4a08-8fb6-ab96362dd0e3
 msc.legacyurl: /web-api/overview/hosting-aspnet-web-api/host-aspnet-web-api-in-an-azure-worker-role
 msc.type: authoredcontent
-ms.openlocfilehash: 40cb1a4514beaf81e7ed75bbd3e478f2ba146fe5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bfb23aafb814010e8651965dad91ca20a37fd786
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404622"
 ---
-<a name="host-aspnet-web-api-2-in-an-azure-worker-role"></a>Héberger des API Web ASP.NET 2 dans un rôle Worker Azure
-====================
+# <a name="host-aspnet-web-api-2-in-an-azure-worker-role"></a>Héberger des API Web ASP.NET 2 dans un rôle Worker Azure
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 > Ce didacticiel montre comment héberger ASP.NET Web API dans un rôle de travail Azure, à l’aide d’OWIN pour auto-héberger l’infrastructure API Web.
@@ -37,7 +38,7 @@ par [Mike Wasson](https://github.com/MikeWasson)
 
 Démarrez Visual Studio avec des privilèges d’administrateur. Des privilèges d’administrateur sont nécessaires pour déboguer l’application localement, à l’aide de l’émulateur de calcul Azure.
 
-Sur le **fichier** menu, cliquez sur **New**, puis cliquez sur **projet**. À partir de **modèles installés**, sous Visual C#, cliquez sur **Cloud** puis cliquez sur **Windows Azure Cloud Service**. Nommez le projet « AzureApp » et cliquez sur **OK**.
+Sur le **fichier** menu, cliquez sur **New**, puis cliquez sur **projet**. À partir de **modèles installés**, sous Visual c#, cliquez sur **Cloud** puis cliquez sur **Windows Azure Cloud Service**. Nommez le projet « AzureApp » et cliquez sur **OK**.
 
 [![](host-aspnet-web-api-in-an-azure-worker-role/_static/image2.png)](host-aspnet-web-api-in-an-azure-worker-role/_static/image1.png)
 

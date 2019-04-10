@@ -8,15 +8,15 @@ ms.date: 07/24/2008
 ms.assetid: e332a1e0-226d-40ad-be99-96f13ecaec24
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-use-the-fixednames-option-with-the-compiler-utility-for-maximum-flexibility
 msc.type: video
-ms.openlocfilehash: 07fa077f75034e5bb52e85e202b26b32e3822b77
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1b58f217716ecbc037aae736fd323bb7da8afbdd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055436"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398141"
 ---
-<a name="how-do-i-use-the-fixednames-option-with-the-compiler-utility-for-maximum-flexibility"></a>[Comment faire] Utilisez l’Option Fixednames avec l’utilitaire du compilateur pour une flexibilité maximale
-====================
+# <a name="how-do-i-use-the-fixednames-option-with-the-compiler-utility-for-maximum-flexibility"></a>[Comment faire] Utilisez l’Option Fixednames avec l’utilitaire du compilateur pour une flexibilité maximale
+
 par [Chris Pels](https://twitter.com/chrispels)
 
 Dans cette vidéo, Chris Pels affichera l’utilisation de l’option fixednames avec le compte aspnet\_utilitaire compiler.exe pour produire un fichier cohérent des noms dans la sortie de compilation. Tout d’abord, consultez Comment de sortie de la compilation d’aspnet\_compiler.exe utilitaire génère des fichiers de sortie pour un site web ASP.NET qui représentent les différents composants, y compris les dossiers, les thèmes et les pages du site. Voir comment les composants sont nommés et ce qu’ils contiennent en relation avec le site web d’origine. Ensuite, découvrez comment utiliser l’option fixednames pour normaliser les noms de fichiers de sortie basés sur les fichiers sources sur lesquelles ils sont basés. Ensuite, Découvrez les considérations sur l’utilisation de chacune des options de compilation lors du déploiement des mises à jour sur le site web compilé, en mettant l’accent sur les composants qui sont susceptibles d’être mis à jour.

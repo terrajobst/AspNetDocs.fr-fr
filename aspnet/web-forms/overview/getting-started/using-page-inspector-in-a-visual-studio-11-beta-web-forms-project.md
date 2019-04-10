@@ -8,24 +8,24 @@ ms.date: 08/15/2012
 ms.assetid: 2ece0bf4-aae5-4ff4-8f62-28e0819d4f86
 msc.legacyurl: /web-forms/overview/getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project
 msc.type: authoredcontent
-ms.openlocfilehash: d2c377f8466f8f324b75ce60860aa00c11bc0ffe
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c39e1cf42fde382a9e74d7f865f0dac1aa62ddc8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058476"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384231"
 ---
-<a name="using-page-inspector-for-visual-studio-2012-in-aspnet-web-forms"></a>Utilisation de l’Inspecteur de page pour Visual Studio 2012 dans Web Forms ASP.NET
-====================
+# <a name="using-page-inspector-for-visual-studio-2012-in-aspnet-web-forms"></a>Utilisation de l’Inspecteur de page pour Visual Studio 2012 dans Web Forms ASP.NET
+
 par Tim Ammann
 
 > L’inspecteur de page pour Visual Studio 2012 est un outil de développement web avec un navigateur intégré. Sélectionnez n’importe quel élément dans le navigateur intégré et l’inspecteur de Page instantanément met en surbrillance l’élément source et CSS. Vous pouvez parcourir n’importe quelle page dans votre application, rapidement rechercher les sources de balisage rendu et utiliser les outils de navigateur directement dans l’environnement Visual Studio.
 > 
-> Ce didacticiel shwos comment activer le Mode d’Inspection rapidement rechercher et modifier les règles CSS et du texte dans votre projet web. Ce didacticiel utilise un projet d’Application Web Forms, mais vous pouvez également utiliser l’inspecteur de Page pour les projets de Site Web et [MVC](https://go.microsoft.com/?linkid=9802002) applications.
+> Ce didacticiel montre comment activer le Mode d’Inspection rapidement rechercher et modifier les règles CSS et du texte dans votre projet web. Ce didacticiel utilise un projet d’Application Web Forms, mais vous pouvez également utiliser l’inspecteur de Page pour les projets de Site Web et [MVC](https://go.microsoft.com/?linkid=9802002) applications.
 > 
 > Le didacticiel comporte les sections suivantes :
 > 
-> [Composants requis](#_1_prerequisites)
+> [Prérequis](#_1_prerequisites)
 > 
 > [Créer une Application Web](#_2_creating_a)
 > 
@@ -39,7 +39,7 @@ par Tim Ammann
 > 
 > [Aperçu des modifications dans la fenêtre Styles CSS](#_7_previewing_css)
 > 
-> [CSS Auto Sync](#css_auto_sync)
+> [Synchronisation automatique CSS](#css_auto_sync)
 > 
 > [À l’aide du sélecteur de couleurs CSS](#css_color_picker)
 
@@ -198,7 +198,7 @@ Cliquez sur **inspecter** à placer l’inspecteur de Page en Mode d’Inspectio
 
 Dans le navigateur de l’inspecteur de Page, placez le pointeur de la souris sur la section « Page d’accueil » jusqu'à ce que le **div.content-wrapper** étiquette s’affiche. Cliquez une fois pour sélectionner cet élément.
 
-Le **styles** fenêtre affiche toutes les règles CSS pour cet élément. Faites défiler jusqu'à find .featured .content-wrapper du sélecteur de classe. Cliquez sur « .featured .content-wrapper ». Inspecteur de page ouvre le fichier CSS qui définit ce style (Site.css) et met en évidence le style CSS correspondant.
+Le **Styles** fenêtre affiche toutes les règles CSS pour cet élément. Faites défiler jusqu'à find .featured .content-wrapper du sélecteur de classe. Cliquez sur « .featured .content-wrapper ». Inspecteur de page ouvre le fichier CSS qui définit ce style (Site.css) et met en évidence le style CSS correspondant.
 
 ![Fichier CSS](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image18.png)
 

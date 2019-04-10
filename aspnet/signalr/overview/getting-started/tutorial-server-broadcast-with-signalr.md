@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 1568247f-60b5-4eca-96e0-e661fbb2b273
 msc.legacyurl: /signalr/overview/getting-started/tutorial-server-broadcast-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: a243c78c7d552f1c82a88c6083871fcd16538618
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: aa8c0be6e4a758da34fc6eed902e31049d0a9a9c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065756"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379727"
 ---
 # <a name="tutorial-server-broadcast-with-signalr-2"></a>Tutoriel : Serveur de diffusion avec SignalR 2
 
@@ -43,7 +43,7 @@ Dans ce didacticiel, vous avez effectué les actions suivantes :
 
 ## <a name="prerequisites"></a>Prérequis
 
- * [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) avec la **ASP.NET et développement web** charge de travail.
+* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) avec la **ASP.NET et développement web** charge de travail.
 
 ## <a name="create-the-project"></a>Créer le projet
 
@@ -75,7 +75,7 @@ Vous commencez par créer le *Stock* classe que vous utiliserez pour stocker et 
 
 ### <a name="create-the-stocktickerhub-and-stockticker-classes"></a>Créer les classes StockTickerHub et StockTicker
 
-Vous allez utiliser l’API de concentrateur SignalR pour gérer les interactions client-serveur. Un `StockTickerHub` classe qui dérive de la `SignalRHub` classe gérera reçoit des connexions et des appels de méthode à partir de clients. Vous devez également mettre à jour les données de stock et exécuter un `Timer` objet. Le `Timer` objet déclenche périodiquement des mises à jour de prix indépendants des connexions clientes. Vous ne pouvez pas mettre ces fonctions un `Hub` classe, étant donné que les concentrateurs sont temporaires. L’application crée un `Hub` instance de classe pour chaque tâche sur le concentrateur, telles que les connexions et les appels à partir du client au serveur. Par conséquent, le mécanisme qui conserve les données de stock, les prix des mises à jour et diffuse les mises à jour de prix doit s’exécuter dans une classe distincte. Vous allez nommer la classe `StockTicker`.
+Vous allez utiliser l’API de concentrateur SignalR pour gérer les interactions client-serveur. Un `StockTickerHub` classe qui dérive de SignalR `Hub` classe gérera reçoit des connexions et des appels de méthode à partir de clients. Vous devez également mettre à jour les données de stock et exécuter un `Timer` objet. Le `Timer` objet déclenche périodiquement des mises à jour de prix indépendants des connexions clientes. Vous ne pouvez pas mettre ces fonctions un `Hub` classe, étant donné que les concentrateurs sont temporaires. L’application crée un `Hub` instance de classe pour chaque tâche sur le concentrateur, telles que les connexions et les appels à partir du client au serveur. Par conséquent, le mécanisme qui conserve les données de stock, les prix des mises à jour et diffuse les mises à jour de prix doit s’exécuter dans une classe distincte. Vous allez nommer la classe `StockTicker`.
 
 ![Diffusion à partir de StockTicker](tutorial-server-broadcast-with-signalr/_static/image3.png)
 
@@ -480,7 +480,7 @@ Pour des didacticiels qui montrent des scénarios de communication d’égal à 
 
 Pour en savoir plus sur SignalR, consultez les ressources suivantes :
 
-* [ASP.NET SignalR](../../index.md)
+* [SignalR ASP.NET](../../index.md)
 * [Projet de SignalR](http://signalr.net/)
 * [SignalR GitHub et exemples](https://github.com/SignalR/SignalR)
 * [Wiki de SignalR](https://github.com/SignalR/SignalR/wiki)

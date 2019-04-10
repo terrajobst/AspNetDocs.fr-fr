@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: b715c4ec-6f4b-4f7e-8ee3-b1613477ce61
 msc.legacyurl: /web-forms/overview/older-versions-security/admin
 msc.type: chapter
-ms.openlocfilehash: dde25fe54cf7ba56790979328e7bc8b8a3301226
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c89da16bf4783198d2b4c173eba1b7a7191257a0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019066"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383110"
 ---
-<a name="aspnet-35---security-administration"></a>ASP.NET 3.5 - Administration de la sécurité
-====================
+# <a name="aspnet-35---security-administration"></a>ASP.NET 3.5 - Administration de la sécurité
+
 > Cette série de didacticiels vous montre une méthode pour créer une page d’administration qui vous permet de gérer des utilisateurs et des rôles.
 
 

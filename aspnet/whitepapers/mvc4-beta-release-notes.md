@@ -8,15 +8,15 @@ ms.date: 09/09/2011
 ms.assetid: 666407bb-81de-4319-89ba-0302c382a208
 msc.legacyurl: /whitepapers/mvc4-beta-release-notes
 msc.type: content
-ms.openlocfilehash: f1d949ec716ea8cb677c54fe5b07431161c58fbc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b7722d5c282f07b35dd18d08911fa562dae6afc2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065106"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387930"
 ---
-<a name="aspnet-mvc-4"></a>ASP.NET MVC 4
-====================
+# <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
+
 > Ce document décrit la version de la version bêta d’ASP.NET MVC 4 pour Visual Studio 2010.
 > 
 > > [!NOTE]
@@ -25,12 +25,12 @@ ms.locfileid: "57065106"
 
 - [Notes d’installation](#_Toc303253802)
 - [Documentation](#_Toc303253803)
-- [Prise en charge](#_Toc303253804)
-- [Configuration logicielle requise](#_Toc303253805)
+- [Assistance](#_Toc303253804)
+- [Configuration logicielle](#_Toc303253805)
 - [La mise à niveau d’un projet ASP.NET MVC 3 vers ASP.NET MVC 4](#_Toc303253806)
 - [Nouvelles fonctionnalités dans la version bêta d’ASP.NET MVC 4](#_Toc303253807)
 
-    - [API Web ASP.NET](#_Toc317096197)
+    - [API web ASP.NET](#_Toc317096197)
     - [Application de Page ASP.NET unique](#_Toc317096198)
     - [Améliorations apportées aux modèles de projet par défaut](#_Toc303253808)
     - [Modèle de projet mobile](#_Toc303253809)
@@ -242,7 +242,7 @@ La nouvelle fonctionnalité de recettes permet à Visual Studio générer le cod
 
 Vous pouvez maintenant écrire des méthodes d’action asynchrones des méthodes comme unique qui retournent un objet de type *tâche* ou *tâche&lt;ActionResult&gt;*.
 
-Par exemple, si vous utilisez Visual C# 5 (ou à l’aide de la [Async CTP](https://msdn.microsoft.com/vstudio/async.aspx)), vous pouvez créer une méthode d’action asynchrone qui ressemble à ceci :
+Par exemple, si vous utilisez Visual c# 5 (ou à l’aide de la [Async CTP](https://msdn.microsoft.com/vstudio/async.aspx)), vous pouvez créer une méthode d’action asynchrone qui ressemble à ceci :
 
 [!code-csharp[Main](mvc4-beta-release-notes/samples/sample8.cs)]
 
@@ -265,7 +265,7 @@ Version bêta d’ASP.NET MVC 4 prend en charge la version 1.5 de septembre 2011
     La solution de contournement consiste à compiler le projet pour obtenir les assemblys dans le dossier bin. Notez que si vous nettoyez le projet, ce qui supprime les assemblys dans le dossier bin, le problème de l’éditeur reviendra.
 
     Cela sera corrigé dans la prochaine version.
-- **Modèles de projet C# pour Visual Studio 11 Beta contiennent une chaîne de connexion incorrecte dans Global.asax.cs.** La connexion par défaut spécifiée dans l’Application\_Start (méthode) pour les projets créés dans Visual Studio 11 Beta contiennent une chaîne de connexion de base de données locale qui contient une barre oblique inverse sans séquence d’échappement (\) caractère. Cela entraîne une erreur de connexion lors de tentatives d’accès d’un DbContext d’Entity Framework, ce qui génère une erreur SqlException.
+- **Modèles de projet c# pour Visual Studio 11 Beta contiennent une chaîne de connexion incorrecte dans Global.asax.cs.** La connexion par défaut spécifiée dans l’Application\_Start (méthode) pour les projets créés dans Visual Studio 11 Beta contiennent une chaîne de connexion de base de données locale qui contient une barre oblique inverse sans séquence d’échappement (\) caractère. Cela entraîne une erreur de connexion lors de tentatives d’accès d’un DbContext d’Entity Framework, ce qui génère une erreur SqlException.
 
     Pour corriger ce problème, la séquence d’échappement le caractère barre oblique inverse dans l’application\_Start, méthode de Global.asax.cs afin qu’elle s’affiche comme suit :
 
@@ -300,7 +300,7 @@ Version bêta d’ASP.NET MVC 4 prend en charge la version 1.5 de septembre 2011
 - **Exécution d’un projet d’API Web par défaut affiche les instructions qui incorrectement diriger l’utilisateur d’ajouter des itinéraires à l’aide de la méthode RegisterApis, qui n’existe pas.** Itinéraires doivent être ajoutés à la méthode RegisterRoutes à l’aide de la table de routage ASP.NET.
 - **Installer la version bêta d’ASP.NET MVC 4, les applications ASP.NET MVC 3 RTM s’arrête.** Les applications ASP.NET MVC 3 qui ont été créées avec la version RTM (pas dont la version ASP.NET MVC 3 Tools Update) nécessitent les modifications suivantes afin de fonctionner côte à côte avec la version bêta d’ASP.NET MVC 4. Génération du projet sans apporter de ces résultats des mises à jour dans les erreurs de compilation. 
 
-    **Mises à jour requises**
+    **Mises à jour nécessaires**
 
   1. Dans le fichier racine Web.config, ajoutez un nouveau *&lt;appSettings&gt;* entrée avec la clé *webPages:Version* et la valeur *1.0.0.0*.
 

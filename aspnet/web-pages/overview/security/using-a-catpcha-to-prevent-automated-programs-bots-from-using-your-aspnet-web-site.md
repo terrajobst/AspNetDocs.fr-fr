@@ -8,15 +8,15 @@ ms.date: 05/21/2012
 ms.assetid: 2b381a41-2cb3-40c0-8545-1d393e22877f
 msc.legacyurl: /web-pages/overview/security/using-a-catpcha-to-prevent-automated-programs-bots-from-using-your-aspnet-web-site
 msc.type: authoredcontent
-ms.openlocfilehash: dc014f42490327743764787d58c613b7caa89f1f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e7baafda8c5b6de4ab0de46948f969a6f0cc21ad
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058296"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390907"
 ---
-<a name="using-a-captcha-to-prevent-bots-from-using-your-aspnet-web-razor-site"></a>Site à l’aide d’un test CAPTCHA pour empêcher des robots d’utiliser votre Razor Web ASP.NET)
-====================
+# <a name="using-a-captcha-to-prevent-bots-from-using-your-aspnet-web-razor-site"></a>Site à l’aide d’un test CAPTCHA pour empêcher des robots d’utiliser votre Razor Web ASP.NET)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Cet article explique comment utiliser ReCaptcha (une mesure de sécurité) pour empêcher les programmes automatisés (robots) d’effectuer des tâches dans un site Web ASP.NET Web Pages (Razor).
@@ -73,4 +73,4 @@ Dans les pages ASP.NET, vous pouvez utiliser la `ReCaptcha` helper pour restitue
 
 
 - [Personnalisation du comportement de l’échelle du Site pour les Sites ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202906)
-- [ReCaptcha site](https://www.google.com/recaptcha)
+- [Site de ReCaptcha](https://www.google.com/recaptcha)

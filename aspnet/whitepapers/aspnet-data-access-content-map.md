@@ -8,15 +8,15 @@ ms.date: 07/25/2013
 ms.assetid: f8157be1-4ab9-469e-ad3a-0ccc80b56c00
 msc.legacyurl: /whitepapers/aspnet-data-access-content-map
 msc.type: content
-ms.openlocfilehash: 6993c17c8de890cbaa40c619bcd20f494bfd2f90
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d120c184f6cf7dd0db075bbfac17214d7467664a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046686"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383718"
 ---
-<a name="aspnet-data-access---recommended-resources"></a>Accès aux données ASP.NET - Ressources recommandées
-====================
+# <a name="aspnet-data-access---recommended-resources"></a>Accès aux données ASP.NET - Ressources recommandées
+
 > Cette rubrique fournit des liens vers des ressources de documentation sur l’accès aux données dans les applications web ASP.NET, principalement par à l’aide d’Entity Framework et SQL Server.
 > 
 > Si vous connaissez un excellent blog valider, [stackoverflow](http://stackoverflow.com) thread ou un autre lien qui serait utile, [nous envoyer un e-mail](mailto:aspnetue@microsoft.com?subject=Data Access Content Map) avec le lien.
@@ -55,7 +55,7 @@ La rubrique contient les sections suivantes :
 - [Optimisation des performances accès aux données](#optimizingdataaccess)
 - [Déploiement d’une base de données](#deploying)
 - [L’accès aux données via un Service Web](#webservice)
-- [Ressources supplémentaires pour MSBuild](#additional)
+- [Ressources supplémentaires](#additional)
 
 <a id="gettingstarted"></a>
 

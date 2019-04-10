@@ -8,15 +8,15 @@ ms.date: 01/06/2011
 ms.assetid: 36c5beeb-45a7-48a0-9c30-f82cdf5c5f5f
 msc.legacyurl: /web-pages/readme
 msc.type: content
-ms.openlocfilehash: aa852e7bbd93622154d59e0d0a13ffa680812df2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7374b1afafa9ca63309f3c0369c5efd808f7f28a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050716"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401983"
 ---
-<a name="webmatrix-readme"></a>Fichier Lisez-moi de WebMatrix
-====================
+# <a name="webmatrix-readme"></a>Fichier Lisez-moi de WebMatrix
+
 13 janvier 2011
 
 ## <a name="contents"></a>Sommaire
@@ -25,13 +25,13 @@ ms.locfileid: "57050716"
 > Ce fichier Lisez-moi s’applique à la 1.0 version de WebMatrix.
 
 
-- [Vue d’ensemble](#Overview)
+- [Vue d'ensemble](#Overview)
 - [Installation](#Installation_Notes)
 - [Comment publier des Applications](#InstructionsForPublishingApplications)
 - [Modifications et les problèmes](#ChangesAndIssues)
 
     - [WebMatrix 1.0 Installation](#Known_Issues_Installation)
-    - [Pages Web ASP.NET](#Known_Issues_ASPNET)
+    - [Pages web ASP.NET](#Known_Issues_ASPNET)
     - [WebMatrix](#Known_Issues_WebMatrix)
     - [IIS Express](#Known_Issues_IISExpress)
     - [SQL Server Compact](#Known_Issues_SQLServerCompact)
@@ -121,7 +121,7 @@ Cette section du document décrit les nouvelles fonctionnalités, des modificati
 
 - [Nouvelles fonctionnalités](#NewFeatures)
 - [Modifications](#Changes)
-- [Problèmes](#Issues)
+- [Questions](#Issues)
 
 #### <a id="NewFeatures"></a>  Nouvelles fonctionnalités
 
@@ -255,9 +255,9 @@ Cette section du document décrit les nouvelles fonctionnalités, des modificati
 > 1. Copiez les assemblys du moteur de base de données à la *Bin* dossier (et sous-dossiers) de l’application sur l’ordinateur cible :  
 > 
 >    - Copy *C:\Program Files\Microsoft SQL Server Edition\v4.0\Desktop\System.Data.SqlServerCe.dll*   
->        **to** *\Bin*
->    - Copie <em>C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\x86\\</em><strong><em>à</em></strong>\Bin\x86*
->    - Copie <em>C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\amd64\\</em>* <strong>à</strong><em>\Bin\amd64</em>
+>      **to** *\Bin*
+>    - Copie *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\x86\\*  **à** *\Bin\x86*
+>    - Copie *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\amd64\\** **à** *\Bin\amd64*
 > 
 > 2. Dans le dossier racine du site Web, créez ou ouvrez un *web.config* fichier. (Dans WebMatrix, 1.0, ce type de fichier est disponible si vous cliquez sur **tous les** dans le **choisir un Type de fichier** boîte de dialogue.)
 > 3. Ajoutez l’élément suivant en tant qu’enfant de le `<configuration>` élément (pas à l’intérieur de la `<system.web>` élément) :

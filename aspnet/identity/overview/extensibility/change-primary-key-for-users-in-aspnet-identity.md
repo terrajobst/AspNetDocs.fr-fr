@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/extensibility/change-primary-key-for-users-in-aspnet-identity
-title: Modifiez la clé primaire pour les utilisateurs dans ASP.NET Identity | Microsoft Docs
+title: Modifiez la clé primaire pour les utilisateurs dans ASP.NET Identity - ASP.NET 4.x
 author: Rick-Anderson
 description: Dans Visual Studio 2013, l’application web par défaut utilise une valeur de chaîne pour la clé pour les comptes d’utilisateur. ASP.NET Identity vous permet de modifier le type de la...
 ms.author: riande
 ms.date: 09/30/2014
 ms.assetid: 44925849-5762-4504-a8cd-8f0cd06f6dc3
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/change-primary-key-for-users-in-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: d2856ce1ca61a29e091bfbd16647b673e6fc659b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 212b07494381d13f6ded96a41b846dcdf7e8ff16
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033806"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393741"
 ---
-<a name="change-primary-key-for-users-in-aspnet-identity"></a>Changer la clé principale pour les utilisateurs dans ASP.NET Identity
-====================
+# <a name="change-primary-key-for-users-in-aspnet-identity"></a>Changer la clé principale pour les utilisateurs dans ASP.NET Identity
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Dans Visual Studio 2013, l’application web par défaut utilise une valeur de chaîne pour la clé pour les comptes d’utilisateur. ASP.NET Identity vous permet de modifier le type de la clé pour répondre aux besoins de vos données. Par exemple, vous pouvez modifier le type de la clé à partir d’une chaîne en entier.

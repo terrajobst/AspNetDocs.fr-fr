@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/slider/databinding-the-slider-control-cs
-title: Liaison de données le contrôle Slider (C#) | Microsoft Docs
+title: Liaison de données le contrôle Slider (c#) | Microsoft Docs
 author: wenz
 description: Le contrôle Slider dans AJAX Control Toolkit fournit un contrôle slider graphique qui peut être contrôlé à l’aide de la souris. Il est possible de lier la position en cours...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: b7f77869-aa1d-4025-924f-622c57112db6
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/slider/databinding-the-slider-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 951a7484f0dbb14ee7f1e1d62c9666e5cc49e7c1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3f966869c106416886dfa4e9e3c2cf67ee5fe337
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045216"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385811"
 ---
-<a name="databinding-the-slider-control-c"></a>Liaison de données du contrôle Slider (C#)
-====================
+# <a name="databinding-the-slider-control-c"></a>Liaison de données du contrôle Slider (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/Slider0.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/slider0CS.pdf)
@@ -45,7 +45,7 @@ L’étape suivante est déjà la dernière étape. Le `SliderExtender` rend un 
 Comme vous pouvez le voir dans le navigateur, la liaison de données fonctionne dans les deux sens : entrant une nouvelle valeur dans la zone de texte des mises à jour la position du curseur. Si vous apportez à la deuxième zone de texte en lecture seule, vous pouvez ajouter une protection faible pour le champ de texte afin qu’il soit plus difficile pour l’utilisateur à mettre à jour manuellement la valeur y.
 
 
-[![Curseur et zone de texte sont synchronisés](databinding-the-slider-control-cs/_static/image2.png)](databinding-the-slider-control-cs/_static/image1.png)
+[![Szone de texte et lider sont synchronisés](databinding-the-slider-control-cs/_static/image2.png)](databinding-the-slider-control-cs/_static/image1.png)
 
 Curseur et zone de texte sont synchronisés ([cliquez pour afficher l’image en taille réelle](databinding-the-slider-control-cs/_static/image3.png))
 

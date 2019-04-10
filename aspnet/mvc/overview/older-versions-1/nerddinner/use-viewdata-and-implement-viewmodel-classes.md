@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: 5755ec4c-60f1-4057-9ec0-3a5de3a20e23
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-viewdata-and-implement-viewmodel-classes
 msc.type: authoredcontent
-ms.openlocfilehash: 8df1ca30f8c0415b68d29eeaa0f7d83a606989ff
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a27f895d80e92686c9f1d7339b51185694661f78
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025316"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389542"
 ---
-<a name="use-viewdata-and-implement-viewmodel-classes"></a>Utiliser ViewData et implémenter des classes ViewModel
-====================
+# <a name="use-viewdata-and-implement-viewmodel-classes"></a>Utiliser ViewData et implémenter des classes ViewModel
+
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Télécharger le PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Il s’agit d’étape 6 a gratuit [« « l’application NerdDinner](introducing-the-nerddinner-tutorial.md) qui présente en détail comment créer un petit mais terminé, l’application web à l’aide d’ASP.NET MVC 1.
 > 
@@ -70,7 +70,7 @@ Et maintenant notre scénario de modification DinnersController prend en charge 
 
 ### <a name="using-a-viewmodel-pattern"></a>À l’aide d’un modèle ViewModel
 
-L’approche de dictionnaire ViewData présente l’avantage d’être relativement rapide et facile à implémenter. Certains développeurs n’aiment pas à l’aide de dictionnaires basés sur chaîne, cependant, dans la mesure où les fautes de frappe peuvent entraîner des erreurs qui ne sont pas interceptées au moment de la compilation. Le dictionnaire ViewData non typé nécessite également à l’aide de l’opérateur « as » ou de conversion lors de l’utilisation d’un langage fortement typé tel que C# dans un modèle de vue.
+L’approche de dictionnaire ViewData présente l’avantage d’être relativement rapide et facile à implémenter. Certains développeurs n’aiment pas à l’aide de dictionnaires basés sur chaîne, cependant, dans la mesure où les fautes de frappe peuvent entraîner des erreurs qui ne sont pas interceptées au moment de la compilation. Le dictionnaire ViewData non typé nécessite également à l’aide de l’opérateur « as » ou de conversion lors de l’utilisation d’un langage fortement typé tel que c# dans un modèle de vue.
 
 Une autre approche que nous pourrions utiliser est un est communément appelée le modèle « ViewModel ». Lorsque vous utilisez ce modèle, que nous créons des classes fortement typées qui sont optimisés pour nos scénarios vue spécifique, et qui exposent des propriétés pour le valeurs/le contenu dynamique requises par nos modèles de vue. Nos classes de contrôleur peuvent remplir, puis transmettre ces classes d’affichage optimisé à notre modèle de vue à utiliser. Cela permet la sécurité de type, la vérification au moment de la compilation et intellisense de l’éditeur au sein des modèles de vue.
 

@@ -8,18 +8,18 @@ ms.date: 08/08/2011
 ms.assetid: b3fb4480-0f41-495b-add6-163ca92dc8a3
 msc.legacyurl: /web-forms/overview
 msc.type: book
-ms.openlocfilehash: 0c29a844bd227a79e6df5231e0903129e306742e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4b38d6b54f53508f7b568207fe7f1a624a7af5f3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023666"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402269"
 ---
-<a name="aspnet-web-forms-guidance"></a>Conseils de formulaires Web ASP.NET
-====================
+# <a name="aspnet-web-forms-guidance"></a>Conseils de formulaires Web ASP.NET
+
 - [Prise en main](getting-started/index.md)
 
-    - [Bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2013](getting-started/getting-started-with-aspnet-45-web-forms/index.md)
+    - [Bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2013](getting-started/getting-started-with-aspnet-45-web-forms/index.md)
 
         - [Bien démarrer avec Web Forms et Visual Studio](getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview.md)
         - [Créer le projet](getting-started/getting-started-with-aspnet-45-web-forms/create-the-project.md)
@@ -31,17 +31,17 @@ ms.locfileid: "57023666"
         - [Appartenance et administration](getting-started/getting-started-with-aspnet-45-web-forms/membership-and-administration.md)
         - [Routage d’URL](getting-started/getting-started-with-aspnet-45-web-forms/url-routing.md)
         - [Gestion des erreurs ASP.NET](getting-started/getting-started-with-aspnet-45-web-forms/aspnet-error-handling.md)
-    - [Création d’une page Web Forms de base dans Visual Studio 2013](getting-started/creating-a-basic-web-forms-page.md)
-    - [Édition du code Web Forms ASP.NET dans Visual Studio 2013](getting-started/code-editing-in-web-forms-pages.md)
-    - [Utilisation de l’Inspecteur de page pour Visual Studio 2012 dans Web Forms ASP.NET](getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project.md)
-    - [Travaux pratiques en ligne avec Visual Studio 2012](getting-started/hands-on-labs/index.md)
+    - [Création d’une page Web Forms de base dans Visual Studio 2013](getting-started/creating-a-basic-web-forms-page.md)
+    - [Édition du code Web Forms ASP.NET dans Visual Studio 2013](getting-started/code-editing-in-web-forms-pages.md)
+    - [Utilisation de l’Inspecteur de page pour Visual Studio 2012 dans Web Forms ASP.NET](getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project.md)
+    - [Travaux pratiques en ligne avec Visual Studio 2012](getting-started/hands-on-labs/index.md)
 
-        - [Nouveautés du développement ASP.NET et web dans Visual Studio 2012](getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012.md)
-        - [Nouveautés de Web Forms dans ASP.NET 4.5](getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45.md)
-        - [Utilisation de l’Inspecteur de page dans Visual Studio 2012](getting-started/hands-on-labs/using-page-inspector-in-visual-studio-2012.md)
-- [Utilisation des données](presenting-and-managing-data/index.md)
+        - [Nouveautés du développement ASP.NET et web dans Visual Studio 2012](getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012.md)
+        - [Nouveautés de Web Forms dans ASP.NET 4.5](getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45.md)
+        - [Utilisation de l’Inspecteur de page dans Visual Studio 2012](getting-started/hands-on-labs/using-page-inspector-in-visual-studio-2012.md)
+- [Utilisation de données](presenting-and-managing-data/index.md)
 
-    - [Liaison de modèle et Web Forms dans Visual Studio 2013](presenting-and-managing-data/model-binding/index.md)
+    - [Liaison de modèle et Web Forms dans Visual Studio 2013](presenting-and-managing-data/model-binding/index.md)
 
         - [Récupération et affichage de données](presenting-and-managing-data/model-binding/retrieving-data.md)
         - [Mise à jour, suppression et création de données](presenting-and-managing-data/model-binding/updating-deleting-and-creating-data.md)
@@ -55,7 +55,7 @@ ms.locfileid: "57023666"
     - [Créer une application Web Forms ASP.NET avec authentification à deux facteurs par SMS (C#)](security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication.md)
 - [Performances](performance-and-caching/index.md)
 
-    - [Utilisation de méthodes asynchrones dans ASP.NET 4.5](performance-and-caching/using-asynchronous-methods-in-aspnet-45.md)
+    - [Utilisation de méthodes asynchrones dans ASP.NET 4.5](performance-and-caching/using-asynchronous-methods-in-aspnet-45.md)
 - [Déploiement](deployment/index.md)
 
     - [Déploiement web ASP.NET avec Visual Studio](deployment/visual-studio-web-deployment/index.md)
@@ -63,7 +63,7 @@ ms.locfileid: "57023666"
         - [Introduction](deployment/visual-studio-web-deployment/introduction.md)
         - [Préparation au déploiement de base de données](deployment/visual-studio-web-deployment/preparing-databases.md)
         - [Transformations du fichier Web.config](deployment/visual-studio-web-deployment/web-config-transformations.md)
-        - [Propriétés de projet](deployment/visual-studio-web-deployment/project-properties.md)
+        - [Propriétés du projet](deployment/visual-studio-web-deployment/project-properties.md)
         - [Déploiement à des fins de test](deployment/visual-studio-web-deployment/deploying-to-iis.md)
         - [Définition des autorisations des dossiers](deployment/visual-studio-web-deployment/setting-folder-permissions.md)
         - [Déploiement à des fins de production](deployment/visual-studio-web-deployment/deploying-to-production.md)
@@ -72,12 +72,12 @@ ms.locfileid: "57023666"
         - [Déploiement via la ligne de commande](deployment/visual-studio-web-deployment/command-line-deployment.md)
         - [Déploiement de fichiers supplémentaires](deployment/visual-studio-web-deployment/deploying-extra-files.md)
         - [Résolution des problèmes](deployment/visual-studio-web-deployment/troubleshooting.md)
-    - [ASP.NET 4 - Introduction au déploiement d’entreprise](deployment/deploying-web-applications-in-enterprise-scenarios/index.md)
+    - [ASP.NET 4 - Introduction au déploiement d’entreprise](deployment/deploying-web-applications-in-enterprise-scenarios/index.md)
 
-        - [Déployer des applications web dans des scénarios d’entreprise avec Visual Studio 2010](deployment/deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
-        - [Déploiement Web d’entreprise : Vue d’ensemble du scénario](deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
-        - [Gestion du cycle de vie des applications : Du développement à la Production](deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
-    - [ASP.NET 4 - Déploiement d’entreprise : série 1](deployment/web-deployment-in-the-enterprise/index.md)
+        - [Déployer des applications web dans des scénarios d’entreprise avec Visual Studio 2010](deployment/deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
+        - [Déploiement web d’entreprise : Vue d’ensemble du scénario](deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
+        - [Gestion du cycle de vie des applications : du développement à la production](deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
+    - [ASP.NET 4 - Déploiement d’entreprise : série 1](deployment/web-deployment-in-the-enterprise/index.md)
 
         - [Déploiement web dans l’entreprise](deployment/web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md)
         - [La solution Gestionnaire de contacts](deployment/web-deployment-in-the-enterprise/the-contact-manager-solution.md)
@@ -90,20 +90,20 @@ ms.locfileid: "57023666"
         - [Déploiement de projets de base de données](deployment/web-deployment-in-the-enterprise/deploying-database-projects.md)
         - [Création et exécution d’un fichier de commandes de déploiement](deployment/web-deployment-in-the-enterprise/creating-and-running-a-deployment-command-file.md)
         - [Installation manuelle de packages web](deployment/web-deployment-in-the-enterprise/manually-installing-web-packages.md)
-    - [ASP.NET 4 - Déploiement d’entreprise : série 2, configuration des serveurs](deployment/configuring-server-environments-for-web-deployment/index.md)
+    - [ASP.NET 4 - Déploiement d’entreprise : série 2, Configuration des serveurs](deployment/configuring-server-environments-for-web-deployment/index.md)
 
         - [Configuration d’environnements serveur pour le déploiement web](deployment/configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md)
         - [Choix de la bonne approche pour le déploiement web](deployment/configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md)
-        - [Scénario : Configuration d’un environnement de Test pour le déploiement Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
-        - [Scénario : Configuration d’un environnement de préproduction pour le déploiement Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
-        - [Scénario : Configuration d’un environnement de Production pour le déploiement Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
+        - [Scénario : configuration d’un environnement de test pour le déploiement web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
+        - [Scénario : configuration d’un environnement de préproduction pour le déploiement web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
+        - [Scénario : configuration d’un environnement de production pour le déploiement web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
         - [Configuration d’un serveur web pour la publication Web Deploy (Agent distant)](deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
         - [Configuration d’un serveur web pour la publication Web Deploy (Gestionnaire Web Deploy)](deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
         - [Configuration d’un serveur web pour la publication Web Deploy (Déploiement hors connexion)](deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)
         - [Configuration d’un serveur de base de données pour la publication Web Deploy](deployment/configuring-server-environments-for-web-deployment/configuring-a-database-server-for-web-deploy-publishing.md)
         - [Création d’une batterie de serveurs avec le framework de batterie de serveurs web](deployment/configuring-server-environments-for-web-deployment/creating-a-server-farm-with-the-web-farm-framework.md)
         - [Configuration des propriétés de déploiement pour un environnement cible](deployment/configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md)
-    - [ASP.NET 4 - Déploiement d’entreprise : série 3, configuration de TFS](deployment/configuring-team-foundation-server-for-web-deployment/index.md)
+    - [ASP.NET 4 - Déploiement d’entreprise : série 3, Configuration de TFS](deployment/configuring-team-foundation-server-for-web-deployment/index.md)
 
         - [Configuration de Team Foundation Server pour le déploiement web](deployment/configuring-team-foundation-server-for-web-deployment/configuring-team-foundation-server-for-web-deployment.md)
         - [Créer un projet d’équipe dans TFS](deployment/configuring-team-foundation-server-for-web-deployment/creating-a-team-project-in-tfs.md)
@@ -112,15 +112,15 @@ ms.locfileid: "57023666"
         - [Création d’une définition de build qui prend en charge le déploiement](deployment/configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md)
         - [Déploiement d’une build spécifique](deployment/configuring-team-foundation-server-for-web-deployment/deploying-a-specific-build.md)
         - [Configuration des autorisations pour le déploiement de Team Build](deployment/configuring-team-foundation-server-for-web-deployment/configuring-permissions-for-team-build-deployment.md)
-    - [ASP.NET 4 - Déploiement d’entreprise : série 4, Rubriques avancées](deployment/advanced-enterprise-web-deployment/index.md)
+    - [ASP.NET 4 - Déploiement d’entreprise : série 4, Rubriques avancées](deployment/advanced-enterprise-web-deployment/index.md)
 
         - [Déploiement web d’entreprise avancé](deployment/advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md)
-        - [Exécution d’un déploiement « Scénario »](deployment/advanced-enterprise-web-deployment/performing-a-what-if-deployment.md)
+        - [Exécution d’un déploiement « Scénario »](deployment/advanced-enterprise-web-deployment/performing-a-what-if-deployment.md)
         - [Personnalisation de déploiements de base de données pour plusieurs environnements](deployment/advanced-enterprise-web-deployment/customizing-database-deployments-for-multiple-environments.md)
         - [Déploiement d’appartenances aux rôles de base de données dans les environnements de test](deployment/advanced-enterprise-web-deployment/deploying-database-role-memberships-to-test-environments.md)
         - [Déploiement de bases de données d’appartenance pour les environnements d’entreprise](deployment/advanced-enterprise-web-deployment/deploying-membership-databases-to-enterprise-environments.md)
         - [Exclusion de fichiers et de dossiers pour le déploiement](deployment/advanced-enterprise-web-deployment/excluding-files-and-folders-from-deployment.md)
-        - [Passage d’applications web hors connexion avec Web Deploy ](deployment/advanced-enterprise-web-deployment/taking-web-applications-offline-with-web-deploy.md)
+        - [Passage d’applications web hors connexion avec Web Deploy](deployment/advanced-enterprise-web-deployment/taking-web-applications-offline-with-web-deploy.md)
         - [Exécution de scripts Windows PowerShell à partir de fichiers projet MSBuild](deployment/advanced-enterprise-web-deployment/running-windows-powershell-scripts-from-msbuild-project-files.md)
         - [Résolution des problèmes du processus d’empaquetage](deployment/advanced-enterprise-web-deployment/troubleshooting-the-packaging-process.md)
 - [Avancé](advanced/index.md)
@@ -128,35 +128,35 @@ ms.locfileid: "57023666"
     - [Résilience des connexions et interception des commandes Web Forms ASP.NET](advanced/aspnet-web-forms-connection-resiliency-and-command-interception.md)
 - [Versions antérieures - Bien démarrer](older-versions-getting-started/index.md)
 
-    - [ASP.NET 4 - Tailspin Spyworks](older-versions-getting-started/tailspin-spyworks/index.md)
+    - [ASP.NET 4 - Tailspin Spyworks](older-versions-getting-started/tailspin-spyworks/index.md)
 
         - [Partie 1 : Fichier -> Nouveau projet](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1.md)
-        - [Partie 2 : Couche d’accès aux données](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
-        - [Partie 3 : Mise en page et Menu catégorie](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
+        - [Partie 2 : Couche d'accès aux données](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
+        - [Partie 3 : Mise en page et menu Catégorie](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
         - [Partie 4 : Liste des produits](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4.md)
         - [Partie 5 : Logique métier](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
         - [Partie 6 : Appartenance ASP.NET](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-6.md)
         - [Partie 7 : Ajout de fonctionnalités](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7.md)
-        - [Partie 8 : Pages finales, gestion des exceptions et Conclusion](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8.md)
-    - [ASP.NET 4 - Bien démarrer avec Entity Framework 4 et Web Forms](older-versions-getting-started/getting-started-with-ef/index.md)
+        - [Partie 8 : Pages finales, gestion des exceptions et conclusion](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8.md)
+    - [ASP.NET 4 - Bien démarrer avec Entity Framework 4 et Web Forms](older-versions-getting-started/getting-started-with-ef/index.md)
 
-        - [Bien démarrer avec Entity Framework 4.0 Database First](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
-        - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 2](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md)
-        - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 3](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-3.md)
-        - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 4](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-4.md)
+        - [Bien démarrer avec Entity Framework 4.0 Database First](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
+        - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 2](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md)
+        - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 3](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-3.md)
+        - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 4](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-4.md)
         - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 5](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-5.md)
-        - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 6](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-6.md)
-        - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 7](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-7.md)
-        - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 8](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
-    - [ASP.NET 4 - Continuer avec Entity Framework 4 et Web Forms](older-versions-getting-started/continuing-with-ef/index.md)
+        - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 6](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-6.md)
+        - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 7](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-7.md)
+        - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 8](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
+    - [ASP.NET 4 - Continuer avec Entity Framework 4 et Web Forms](older-versions-getting-started/continuing-with-ef/index.md)
 
-        - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 1 : Mise en route](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
-        - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 2 : Ajout d’une couche de logique métier et les Tests unitaires](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
-        - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 3 : Tri et filtrage](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
-        - [Gestion des accès concurrentiels avec Entity Framework 4.0 dans ASP.NET 4](older-versions-getting-started/continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)
-        - [Optimisation des performances avec Entity Framework 4.0 dans ASP.NET 4](older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
-        - [Nouveautés d’Entity Framework 4.0](older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4.md)
-    - [ASP.NET 4 - Déploiement web avec SQL Server Compact avec Visual Studio](older-versions-getting-started/deployment-to-a-hosting-provider/index.md)
+        - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 1 : Prise en main](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
+        - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 2 : Ajout d’une couche de logique métier et de tests unitaires](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+        - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 3 : Tri et filtrage](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
+        - [Gestion des accès concurrentiels avec Entity Framework 4.0 dans ASP.NET 4](older-versions-getting-started/continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)
+        - [Optimisation des performances avec Entity Framework 4.0 dans ASP.NET 4](older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
+        - [Nouveautés d’Entity Framework 4.0](older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4.md)
+    - [ASP.NET 4 - Déploiement web avec SQL Server Compact avec Visual Studio](older-versions-getting-started/deployment-to-a-hosting-provider/index.md)
 
         - [Déploiement web Visual Studio avec SQL Server Compact - Introduction](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-introduction-1-of-12.md)
         - [Déploiement web Visual Studio avec SQL Server Compact - Déploiement de bases de données SQL Server Compact](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md)
@@ -170,7 +170,7 @@ ms.locfileid: "57023666"
         - [Déploiement web Visual Studio avec SQL Server Compact - Migration vers SQL Server](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12.md)
         - [Déploiement web Visual Studio avec SQL Server Compact - Déploiement d’une mise à jour de base de données SQL Server](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12.md)
         - [Déploiement web Visual Studio avec SQL Server Compact - Résolution des problèmes](older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md)
-    - [ASP.NET 3.5 - AJAX](older-versions-getting-started/aspnet-ajax/index.md)
+    - [ASP.NET 3.5 - AJAX](older-versions-getting-started/aspnet-ajax/index.md)
 
         - [Présentation des mises à jour de page partielles avec ASP.NET AJAX](older-versions-getting-started/aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax.md)
         - [Présentation des déclencheurs UpdatePanel d’ASP.NET AJAX](older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-updatepanel-triggers.md)
@@ -178,15 +178,15 @@ ms.locfileid: "57023666"
         - [Présentation de la localisation d’ASP.NET AJAX](older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-localization.md)
         - [Présentation des services web ASP.NET AJAX](older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-web-services.md)
         - [Présentation des fonctionnalités de débogage d’ASP.NET AJAX](older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-debugging-capabilities.md)
-    - [ASP.NET 3.5 - Pages maîtres Web Forms](older-versions-getting-started/master-pages/index.md)
+    - [ASP.NET 3.5 - Pages maîtres Web Forms](older-versions-getting-started/master-pages/index.md)
 
         - [Création d’une disposition à l’échelle d’un site avec des pages maîtres (C#)](older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-cs.md)
         - [ContentPlaceHolders multiples et contenu par défaut (C#)](older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-cs.md)
         - [Spécification du titre, des balises META et d’autres en-têtes HTML dans la page maître (C#)](older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md)
         - [URL dans les pages maîtres (C#)](older-versions-getting-started/master-pages/urls-in-master-pages-cs.md)
         - [Contrôler le nommage des ID dans les pages de contenu (C#)](older-versions-getting-started/master-pages/control-id-naming-in-content-pages-cs.md)
-        - [Interaction avec la page maître depuis la page de contenu (C#)](older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-cs.md)
-        - [Interaction avec la page de contenu depuis la page maître (C#)](older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-cs.md)
+        - [Interaction avec la page de contenu à partir de la page maître (C#)](older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-cs.md)
+        - [Interaction avec la page de contenu à partir de la page maître (C#)](older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-cs.md)
         - [Pages maîtres et ASP.NET AJAX (C#)](older-versions-getting-started/master-pages/master-pages-and-asp-net-ajax-cs.md)
         - [Spécification de la page maître par programmation (C#)](older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-cs.md)
         - [Pages maîtres imbriquées (C#)](older-versions-getting-started/master-pages/nested-master-pages-cs.md)
@@ -195,12 +195,12 @@ ms.locfileid: "57023666"
         - [Spécification du titre, des balises META et d’autres en-têtes HTML dans la page maître (VB)](older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md)
         - [URL dans les pages maîtres (VB)](older-versions-getting-started/master-pages/urls-in-master-pages-vb.md)
         - [Contrôler le nommage des ID dans les pages de contenu (VB)](older-versions-getting-started/master-pages/control-id-naming-in-content-pages-vb.md)
-        - [Interaction avec la page maître depuis la page de contenu (VB)](older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-vb.md)
-        - [Interaction avec la page de contenu depuis la page maître (VB)](older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-vb.md)
+        - [Interaction avec la page de contenu à partir de la page maître (VB)](older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-vb.md)
+        - [Interaction avec la page de contenu à partir de la page maître (VB)](older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-vb.md)
         - [Pages maîtres et ASP.NET AJAX (VB)](older-versions-getting-started/master-pages/master-pages-and-asp-net-ajax-vb.md)
         - [Spécification de la page maître par programmation (VB)](older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-vb.md)
         - [Pages maîtres imbriquées (VB)](older-versions-getting-started/master-pages/nested-master-pages-vb.md)
-    - [Déploiement de projets de site web dans Visual Studio 2008 et antérieur](older-versions-getting-started/deploying-web-site-projects/index.md)
+    - [Déploiement de projets de site web dans Visual Studio 2008 et versions antérieures](older-versions-getting-started/deploying-web-site-projects/index.md)
 
         - [Options d’hébergement ASP.NET (C#)](older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-cs.md)
         - [Détermination des fichiers qui doivent être déployés (C#)](older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-cs.md)
@@ -214,7 +214,7 @@ ms.locfileid: "57023666"
         - [Stratégies pour le développement et le déploiement des bases de données (C#)](older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs.md)
         - [Affichage d’une page d’erreur personnalisée (C#)](older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs.md)
         - [Traitement des exceptions non gérées (C#)](older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs.md)
-        - [Journalisation des détails des erreurs avec la surveillance de l’intégrité ASP.NET (C#)](older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs.md)
+        - [Journalisation des détails des erreurs avec la supervision de l’intégrité ASP.NET (C#)](older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs.md)
         - [Journalisation des détails des erreurs avec ELMAH (C#)](older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs.md)
         - [Précompilation de votre site web (C#)](older-versions-getting-started/deploying-web-site-projects/precompiling-your-website-cs.md)
         - [Utilisateurs et rôles sur un site web de production (C#)](older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-cs.md)
@@ -230,7 +230,7 @@ ms.locfileid: "57023666"
         - [Stratégies pour le développement et le déploiement des bases de données (VB)](older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-vb.md)
         - [Affichage d’une page d’erreur personnalisée (VB)](older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-vb.md)
         - [Traitement des exceptions non gérées (VB)](older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-vb.md)
-        - [Journalisation des détails des erreurs avec la surveillance de l’intégrité ASP.NET (VB)](older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-vb.md)
+        - [Journalisation des détails des erreurs avec la supervision de l’intégrité ASP.NET (VB)](older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-vb.md)
         - [Journalisation des détails des erreurs avec ELMAH (VB)](older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-vb.md)
         - [Précompilation de votre site web (VB)](older-versions-getting-started/deploying-web-site-projects/precompiling-your-website-vb.md)
         - [Utilisateurs et rôles sur un site web de production (VB)](older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-vb.md)
@@ -260,7 +260,7 @@ ms.locfileid: "57023666"
         - [Animation en réponse à une interaction utilisateur (C#)](ajax-control-toolkit/animation/animating-in-response-to-user-interaction-cs.md)
         - [Désactivation d’actions pendant une animation (C#)](ajax-control-toolkit/animation/disabling-actions-during-animation-cs.md)
         - [Déclenchement d’une animation dans un autre contrôle (C#)](ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs.md)
-        - [Modification d’animations depuis le côté serveur (C#)](ajax-control-toolkit/animation/modifying-animations-from-the-server-side-cs.md)
+        - [Modification d’animations à partir du côté serveur (C#)](ajax-control-toolkit/animation/modifying-animations-from-the-server-side-cs.md)
         - [Exécution d’animations avec du code côté client (C#)](ajax-control-toolkit/animation/executing-animations-using-client-side-code-cs.md)
         - [Changement d’une animation avec du code côté client (C#)](ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-cs.md)
         - [Animation d’un contrôle UpdatePanel (C#)](ajax-control-toolkit/animation/animating-an-updatepanel-control-cs.md)
@@ -273,7 +273,7 @@ ms.locfileid: "57023666"
         - [Animation en réponse à une interaction utilisateur (VB)](ajax-control-toolkit/animation/animating-in-response-to-user-interaction-vb.md)
         - [Désactivation d’actions pendant une animation (VB)](ajax-control-toolkit/animation/disabling-actions-during-animation-vb.md)
         - [Déclenchement d’une animation dans un autre contrôle (VB)](ajax-control-toolkit/animation/triggering-an-animation-in-another-control-vb.md)
-        - [Modification d’animations depuis le côté serveur (VB)](ajax-control-toolkit/animation/modifying-animations-from-the-server-side-vb.md)
+        - [Modification d’animations à partir du côté serveur (VB)](ajax-control-toolkit/animation/modifying-animations-from-the-server-side-vb.md)
         - [Exécution d’animations avec du code côté client (VB)](ajax-control-toolkit/animation/executing-animations-using-client-side-code-vb.md)
         - [Changement d’une animation avec du code côté client (VB)](ajax-control-toolkit/animation/changing-an-animation-using-client-side-code-vb.md)
         - [Animation d’un contrôle UpdatePanel (VB)](ajax-control-toolkit/animation/animating-an-updatepanel-control-vb.md)
@@ -307,9 +307,9 @@ ms.locfileid: "57023666"
     - [DropShadow](ajax-control-toolkit/dropshadow/index.md)
 
         - [Ajustement de l’index-Z d’un DropShadow (C#)](ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-cs.md)
-        - [Manipulation des propriétés de DropShadow depuis du code client (C#)](ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-cs.md)
+        - [Manipulation des propriétés de DropShadow à partir de code client (C#)](ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-cs.md)
         - [Ajustement de l’index-Z d’un DropShadow (VB)](ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-vb.md)
-        - [Manipulation des propriétés de DropShadow depuis du code client (VB)](ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-vb.md)
+        - [Manipulation des propriétés de DropShadow à partir de code client (VB)](ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-vb.md)
     - [DynamicPopulate](ajax-control-toolkit/dynamicpopulate/index.md)
 
         - [Remplissage dynamique d’un contrôle (C#)](ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-cs.md)
@@ -364,7 +364,7 @@ ms.locfileid: "57023666"
         - [Utilisation de plusieurs contrôles de fenêtre contextuelle (VB)](ajax-control-toolkit/popup/using-multiple-popup-controls-vb.md)
         - [Gestion des publications (postback) à partir d’un contrôle de fenêtre contextuelle avec un UpdatePanel (VB)](ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-vb.md)
         - [Gestion des publications (postback) à partir d’un contrôle de fenêtre contextuelle sans un UpdatePanel (VB)](ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-vb.md)
-    - [Rating](ajax-control-toolkit/rating/index.md)
+    - [Classification](ajax-control-toolkit/rating/index.md)
 
         - [Création d’un contrôle Rating (C#)](ajax-control-toolkit/rating/creating-a-rating-control-cs.md)
         - [Création d’un contrôle Rating (VB)](ajax-control-toolkit/rating/creating-a-rating-control-vb.md)
@@ -374,7 +374,7 @@ ms.locfileid: "57023666"
         - [Glisser-déplacer via ReorderList (C#)](ajax-control-toolkit/reorderlist/drag-and-drop-via-reorderlist-cs.md)
         - [Utilisation de publications (postback) avec ReorderList (VB)](ajax-control-toolkit/reorderlist/using-postbacks-with-reorderlist-vb.md)
         - [Glisser-déplacer via ReorderList (VB)](ajax-control-toolkit/reorderlist/drag-and-drop-via-reorderlist-vb.md)
-    - [Slider](ajax-control-toolkit/slider/index.md)
+    - [Curseur](ajax-control-toolkit/slider/index.md)
 
         - [Contrôle Slider avec publication (postback) automatique (C#)](ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-cs.md)
         - [Liaison de données du contrôle Slider (C#)](ajax-control-toolkit/slider/databinding-the-slider-control-cs.md)
@@ -498,7 +498,7 @@ ms.locfileid: "57023666"
 
         - [Boutons personnalisés dans les contrôles DataList et Repeater (C#)](data-access/custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-cs.md)
         - [Boutons personnalisés dans les contrôles DataList et Repeater (VB)](data-access/custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-vb.md)
-    - [Accès à la base de données directement depuis une page ASP.NET](data-access/accessing-the-database-directly-from-an-aspnet-page/index.md)
+    - [Accès à la base de données directement à partir d’une page ASP.NET](data-access/accessing-the-database-directly-from-an-aspnet-page/index.md)
 
         - [Interrogation des données avec le contrôle SqlDataSource (C#)](data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs.md)
         - [Utilisation de requêtes paramétrables avec SqlDataSource (C#)](data-access/accessing-the-database-directly-from-an-aspnet-page/using-parameterized-queries-with-the-sqldatasource-cs.md)
@@ -572,7 +572,7 @@ ms.locfileid: "57023666"
         - [Création de procédures stockées et de fonctions définies par l’utilisateur avec du code managé (VB)](data-access/advanced-data-access-scenarios/creating-stored-procedures-and-user-defined-functions-with-managed-code-vb.md)
 - [Versions antérieures - Sécurité](older-versions-security/index.md)
 
-    - [ASP.NET 3.5 - Introduction à la sécurité](older-versions-security/introduction/index.md)
+    - [ASP.NET 3.5 - Introduction à la sécurité](older-versions-security/introduction/index.md)
 
         - [Concepts de base et prise en charge de la sécurité par ASP.NET (C#)](older-versions-security/introduction/security-basics-and-asp-net-support-cs.md)
         - [Vue d’ensemble de l’authentification par formulaire (C#)](older-versions-security/introduction/an-overview-of-forms-authentication-cs.md)
@@ -580,7 +580,7 @@ ms.locfileid: "57023666"
         - [Concepts de base et prise en charge de la sécurité par ASP.NET (VB)](older-versions-security/introduction/security-basics-and-asp-net-support-vb.md)
         - [Vue d’ensemble de l’authentification par formulaire (VB)](older-versions-security/introduction/an-overview-of-forms-authentication-vb.md)
         - [Configuration et questions avancées de l’authentification par formulaire (VB)](older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-vb.md)
-    - [ASP.NET 3.5 - Appartenance](older-versions-security/membership/index.md)
+    - [ASP.NET 3.5 - Appartenance](older-versions-security/membership/index.md)
 
         - [Création du schéma d’appartenance dans SQL Server (C#)](older-versions-security/membership/creating-the-membership-schema-in-sql-server-cs.md)
         - [Création de comptes d’utilisateurs (C#)](older-versions-security/membership/creating-user-accounts-cs.md)
@@ -592,7 +592,7 @@ ms.locfileid: "57023666"
         - [Validation des informations d’identification de l’utilisateur par rapport au magasin d’utilisateurs d’appartenance (VB)](older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-vb.md)
         - [Autorisation basée sur l’utilisateur (VB)](older-versions-security/membership/user-based-authorization-vb.md)
         - [Stockage d’informations supplémentaires sur l’utilisateur (VB)](older-versions-security/membership/storing-additional-user-information-vb.md)
-    - [ASP.NET 3.5 - Rôles](older-versions-security/roles/index.md)
+    - [ASP.NET 3.5 - Rôles](older-versions-security/roles/index.md)
 
         - [Création et gestion de rôles (C#)](older-versions-security/roles/creating-and-managing-roles-cs.md)
         - [Attribution de rôles aux utilisateurs (C#)](older-versions-security/roles/assigning-roles-to-users-cs.md)
@@ -600,7 +600,7 @@ ms.locfileid: "57023666"
         - [Création et gestion de rôles (VB)](older-versions-security/roles/creating-and-managing-roles-vb.md)
         - [Attribution de rôles aux utilisateurs (VB)](older-versions-security/roles/assigning-roles-to-users-vb.md)
         - [Autorisation basée sur le rôle (VB)](older-versions-security/roles/role-based-authorization-vb.md)
-    - [ASP.NET 3.5 - Administration de la sécurité](older-versions-security/admin/index.md)
+    - [ASP.NET 3.5 - Administration de la sécurité](older-versions-security/admin/index.md)
 
         - [Création d’une interface pour sélectionner un compte d’utilisateur parmi de nombreux comptes (C#)](older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-cs.md)
         - [Récupération et changement des mots de passe (C#)](older-versions-security/admin/recovering-and-changing-passwords-cs.md)
@@ -608,10 +608,10 @@ ms.locfileid: "57023666"
         - [Création d’une interface pour sélectionner un compte d’utilisateur parmi de nombreux comptes (VB)](older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-vb.md)
         - [Récupération et changement des mots de passe (VB)](older-versions-security/admin/recovering-and-changing-passwords-vb.md)
         - [Déblocage et approbation des comptes d’utilisateur (VB)](older-versions-security/admin/unlocking-and-approving-user-accounts-vb.md)
-- [Versions antérieures - ASP.NET 2.0](moving-to-aspnet-20/index.md)
+- [Versions antérieures - ASP.NET 2.0](moving-to-aspnet-20/index.md)
 
-    - [Améliorations de Visual Studio 2005](moving-to-aspnet-20/improvements-in-visual-studio-2005.md)
-    - [Modèle de page ASP.NET 2.0](moving-to-aspnet-20/the-asp-net-2-0-page-model.md)
+    - [Améliorations de Visual Studio 2005](moving-to-aspnet-20/improvements-in-visual-studio-2005.md)
+    - [Modèle de page ASP.NET 2.0](moving-to-aspnet-20/the-asp-net-2-0-page-model.md)
     - [Contrôles serveur](moving-to-aspnet-20/server-controls.md)
     - [Pages maîtres](moving-to-aspnet-20/master-pages.md)
     - [Contrôles de source de données](moving-to-aspnet-20/data-source-controls.md)

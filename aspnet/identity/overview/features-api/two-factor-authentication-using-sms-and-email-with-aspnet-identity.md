@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
-title: Authentification à deux facteurs à l’aide de SMS et e-mail avec ASP.NET Identity | Microsoft Docs
+title: Authentification à deux facteurs à l’aide de SMS et e-mail avec ASP.NET Identity - ASP.NET 4.x
 author: HaoK
 description: Ce didacticiel vous explique comment configurer l’authentification à deux facteurs (2FA) à l’aide de SMS et e-mail. Cet article a été écrit par Rick Anderson ( @RickAndMSFT ), par...
 ms.author: riande
 ms.date: 09/15/2015
 ms.assetid: 053e23c4-13c9-40fa-87cb-3e9b0823b31e
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 4b253923696e35e59c196578a232f53c11671d16
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c41fc06ad98665f7d48efde030c1341b06e49dd0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043166"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395288"
 ---
-<a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Authentification à deux facteurs à l’aide de SMS et e-mail avec ASP.NET Identity
-====================
+# <a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Authentification à deux facteurs à l’aide de SMS et e-mail avec ASP.NET Identity
+
 par [arts martiaux Hao](https://github.com/HaoK), [Pranav Rastogi](https://github.com/rustd), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Suhas Joshi](https://github.com/suhasj)
 
 > Ce didacticiel vous explique comment configurer l’authentification à deux facteurs (2FA) à l’aide de SMS et e-mail.
@@ -52,8 +53,8 @@ Dans cette section, vous utiliserez NuGet pour télécharger un exemple que nous
    Dans ce didacticiel, nous allons utiliser [SendGrid](http://sendgrid.com/) pour envoyer un e-mail et [Twilio](https://www.twilio.com/) ou [ASPSMS](https://www.aspsms.com/asp.net/identity/testcredits/) pour sms aussi. Le `Identity.Samples` package installe le code que nous travaillons avec.
 3. Définir le [projet pour utiliser SSL](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md).
 4. *Facultatif* : Suivez les instructions de mon [didacticiel de confirmation de courrier électronique](account-confirmation-and-password-recovery-with-aspnet-identity.md) pour raccorder SendGrid puis exécuter l’application et inscrire un compte de messagerie.
-5. * Facultatif : * supprimer le code de confirmation de lien e-mail démonstration de l’exemple (le `ViewBag.Link` code dans le contrôleur de compte. Consultez le `DisplayEmail` et `ForgotPasswordConfirmation` méthodes d’action et les vues razor).
-6. <em>Facultatif : * supprimez la `ViewBag.Status` code à partir de contrôleurs de compte et de gérer et de la *Views\Account\VerifyCode.cshtml</em> et <em>Views\Manage\VerifyPhoneNumber.cshtml</em> les vues razor. Vous pouvez également, garder le `ViewBag.Status` affichage pour tester le fonctionne de cette application localement sans avoir à raccorder et envoyer des e-mails et des messages SMS.
+5. *Facultatif :* Supprimer le code de confirmation de lien e-mail démonstration de l’exemple (le `ViewBag.Link` code dans le contrôleur de compte. Consultez le `DisplayEmail` et `ForgotPasswordConfirmation` méthodes d’action et les vues razor).
+6. *Facultatif :* Supprimer le `ViewBag.Status` code à partir de contrôleurs de compte et de gérer et de la *Views\Account\VerifyCode.cshtml* et *Views\Manage\VerifyPhoneNumber.cshtml* les vues razor. Vous pouvez également, garder le `ViewBag.Status` affichage pour tester le fonctionne de cette application localement sans avoir à raccorder et envoyer des e-mails et des messages SMS.
 
 > [!NOTE]
 > Avertissement : Si vous modifiez les paramètres de sécurité dans cet exemple, les applications de productions devez sont soumis à un audit de sécurité appelle explicitement les modifications apportées.

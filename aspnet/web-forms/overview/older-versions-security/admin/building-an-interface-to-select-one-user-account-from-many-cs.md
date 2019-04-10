@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-cs
-title: Création d’une Interface pour sélectionner un compte d’utilisateur à partir de nombreux (C#) | Microsoft Docs
+title: Création d’une Interface pour sélectionner un compte d’utilisateur à partir de nombreux (c#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous allons créer une interface utilisateur avec une grille paginée, filtrable. En particulier, l’interface utilisateur se compose d’une série de type LinkButton pour...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 04/01/2008
 ms.assetid: 9e4e687c-b4ec-434f-a4ef-edb0b8f365e4
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 863ac36ae6a94ece841088db925c04deb3bf36c9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ed255b4d5938457e82c1fca4d759b6a5691c3f6c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061946"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401762"
 ---
-<a name="building-an-interface-to-select-one-user-account-from-many-c"></a>Création d’une interface pour sélectionner un compte d’utilisateur parmi de nombreux comptes (C#)
-====================
+# <a name="building-an-interface-to-select-one-user-account-from-many-c"></a>Création d’une interface pour sélectionner un compte d’utilisateur parmi de nombreux comptes (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/CS.12.zip) ou [télécharger le PDF](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/aspnet_tutorial12_SelectUser_cs.pdf)
@@ -56,7 +56,7 @@ Les pages ASP.NET dans le `Administration` dossier sont uniquement destinés aux
 À ce stade l’Explorateur de solutions de votre projet doit ressembler à l’écran illustré à la Figure 1.
 
 
-[![Un fichier Web.config et les quatre nouvelles Pages ont été ajoutés au site Web](building-an-interface-to-select-one-user-account-from-many-cs/_static/image2.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image1.png)
+[![Fnos nouvelles Pages et un fichier Web.config ont été ajoutés au site Web](building-an-interface-to-select-one-user-account-from-many-cs/_static/image2.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image1.png)
 
 **Figure 1**: Quatre nouvelles Pages et une `Web.config` fichier ont été ajoutés au site Web ([cliquez pour afficher l’image en taille réelle](building-an-interface-to-select-one-user-account-from-many-cs/_static/image3.png))
 
@@ -68,7 +68,7 @@ Enfin, mettez à jour le plan du site (`Web.sitemap`) pour inclure une entrée �
 Avec le plan de site mis à jour, visitez le site via un navigateur. Comme le montre la Figure 2, le volet de navigation de gauche maintenant inclut des éléments pour les didacticiels d’Administration.
 
 
-[![Le plan du Site comporte un nœud intitulé Administration des utilisateurs](building-an-interface-to-select-one-user-account-from-many-cs/_static/image5.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image4.png)
+[![TIl plan de Site inclut un nœud intitulé l’Administration des utilisateurs](building-an-interface-to-select-one-user-account-from-many-cs/_static/image5.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image4.png)
 
 **Figure 2**: Le plan de Site inclut un nœud intitulé l’Administration des utilisateurs ([cliquez pour afficher l’image en taille réelle](building-an-interface-to-select-one-user-account-from-many-cs/_static/image6.png))
 
@@ -82,7 +82,7 @@ Ouvrir le `ManageUsers.aspx` page dans le `Administration` dossier et en ajouter
 Pour afficher les informations de compte d’utilisateur de votre choix dans le contrôle GridView, définissez le GridView `AutoGenerateColumns` False à la propriété et ajoutez BoundFields pour le `UserName`, `Email`, et `Comment` propriétés et CheckBoxFields pour le `IsApproved`, `IsLockedOut`, et `IsOnline` propriétés. Cette configuration peut être appliquée par un balisage déclaratif du contrôle ou par le biais de la boîte de dialogue champs. Figure 3 illustre une capture d’écran des champs de la boîte de dialogue une fois que la case à cocher des champs de génération automatique a été désactivée et les BoundFields CheckBoxFields ont été ajouté et configuré.
 
 
-[![Ajouter trois BoundFields et trois CheckBoxFields au GridView](building-an-interface-to-select-one-user-account-from-many-cs/_static/image8.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image7.png)
+[![ADD BoundFields trois et trois CheckBoxFields au GridView](building-an-interface-to-select-one-user-account-from-many-cs/_static/image8.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image7.png)
 
 **Figure 3**: Ajouter trois BoundFields et trois CheckBoxFields au GridView ([cliquez pour afficher l’image en taille réelle](building-an-interface-to-select-one-user-account-from-many-cs/_static/image9.png))
 
@@ -98,7 +98,7 @@ Ensuite, nous devons écrire du code qui lie les comptes d’utilisateur pour le
 Prenez un moment pour tester la page via un navigateur. Comme le montre la Figure 4, le `UserAccounts` GridView répertorie le nom d’utilisateur, adresse de messagerie et autres informations pertinentes de compte pour tous les utilisateurs dans le système.
 
 
-[![Les comptes d’utilisateur sont répertoriés dans le contrôle GridView](building-an-interface-to-select-one-user-account-from-many-cs/_static/image11.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image10.png)
+[![TComptes d’utilisateur he sont répertoriés dans le contrôle GridView](building-an-interface-to-select-one-user-account-from-many-cs/_static/image11.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image10.png)
 
 **Figure 4**: Les comptes d’utilisateur sont répertoriés dans le contrôle GridView ([cliquez pour afficher l’image en taille réelle](building-an-interface-to-select-one-user-account-from-many-cs/_static/image12.png))
 
@@ -122,7 +122,7 @@ Cette méthode spécifie les options de filtrage en tant qu’éléments dans le
 La figure 5 illustre le `ManageUsers.aspx` page lorsqu’ils sont affichés via un navigateur.
 
 
-[![Le contrôle Repeater répertorie 27 LinkButton de filtrage](building-an-interface-to-select-one-user-account-from-many-cs/_static/image14.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image13.png)
+[![TIl Repeater répertorie 27 filtrage de type LinkButton](building-an-interface-to-select-one-user-account-from-many-cs/_static/image14.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image13.png)
 
 **Figure 5**: Le Repeater répertorie 27 filtrage type LinkButton ([cliquez pour afficher l’image en taille réelle](building-an-interface-to-select-one-user-account-from-many-cs/_static/image15.png))
 
@@ -152,7 +152,7 @@ Créer un gestionnaire d’événements pour le Repeater `ItemCommand` événeme
 Avec ce code en place, testez la fonctionnalité de filtrage. Lorsque la page est visitée en premier, tous les comptes d’utilisateur sont affichés (voir la Figure 5). En cliquant sur le LinkButton A entraîne une publication (postback) et filtre les résultats, affichant uniquement les comptes d’utilisateur qui commencent par un.
 
 
-[![Le filtrage de type LinkButton permet d’afficher les utilisateurs dont nom d’utilisateur commence par une lettre](building-an-interface-to-select-one-user-account-from-many-cs/_static/image17.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image16.png)
+[![Use le LinkButton de filtrage pour afficher les utilisateurs dont nom d’utilisateur commence par une lettre certains](building-an-interface-to-select-one-user-account-from-many-cs/_static/image17.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image16.png)
 
 **Figure 6**: Le filtrage de type LinkButton permet d’afficher les utilisateurs dont nom d’utilisateur commence par une lettre certains ([cliquez pour afficher l’image en taille réelle](building-an-interface-to-select-one-user-account-from-many-cs/_static/image18.png))
 
@@ -197,7 +197,7 @@ Ensuite, créez un gestionnaire d’événements pour chacun du LinkButton `Clic
 La figure 7 illustre le quatre LinkButton lorsqu’ils sont affichés via la vue de Visual Web Developer Design.
 
 
-[![Ajouter tout d’abord, précédent, suivant, et le dernier type LinkButton sous le contrôle GridView](building-an-interface-to-select-one-user-account-from-many-cs/_static/image20.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image19.png)
+[![Ajj premier, précédent, suivant et dernier LinkButton sous GridView](building-an-interface-to-select-one-user-account-from-many-cs/_static/image20.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image19.png)
 
 **Figure 7**: Ajoutez tout d’abord, précédent, suivant et dernier LinkButton sous GridView ([cliquez pour afficher l’image en taille réelle](building-an-interface-to-select-one-user-account-from-many-cs/_static/image21.png))
 
@@ -229,12 +229,12 @@ La dernière étape consiste à écrire le code pour le type LinkButton quatre `
 Les figures 8 et 9 montrant l’interface de pagination personnalisée en action. La figure 8 illustre la `ManageUsers.aspx` page lors de l’affichage de la première page de données pour tous les comptes d’utilisateur. Notez que seuls 10 des 13 comptes sont affichés. Cliquant sur le lien suivant ou dernière provoque une publication (postback), les mises à jour le `PageIndex` à 1 et lie la deuxième page de l’utilisateur des comptes à la grille (voir Figure 9).
 
 
-[![Les comptes d’utilisateur 10 premier sont affichés.](building-an-interface-to-select-one-user-account-from-many-cs/_static/image23.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image22.png)
+[![THE première 10 comptes d’utilisateur sont affichées](building-an-interface-to-select-one-user-account-from-many-cs/_static/image23.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image22.png)
 
 **Figure 8**: Les comptes d’utilisateur 10 premier sont affichés ([cliquez pour afficher l’image en taille réelle](building-an-interface-to-select-one-user-account-from-many-cs/_static/image24.png))
 
 
-[![Cliquez sur le lien suivant pour afficher la deuxième Page de comptes d’utilisateur](building-an-interface-to-select-one-user-account-from-many-cs/_static/image26.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image25.png)
+[![Ccliquant sur les affichages de lien suivant la deuxième Page de comptes d’utilisateur](building-an-interface-to-select-one-user-account-from-many-cs/_static/image26.png)](building-an-interface-to-select-one-user-account-from-many-cs/_static/image25.png)
 
 **Figure 9**: Cliquez sur le lien suivant pour afficher la deuxième Page de comptes d’utilisateur ([cliquez pour afficher l’image en taille réelle](building-an-interface-to-select-one-user-account-from-many-cs/_static/image27.png))
 
@@ -262,4 +262,4 @@ Scott Mitchell, auteur de plusieurs livres sur ASP/ASP.NET et fondateur de 4Guys
 Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Entraîner un réviseur pour ce didacticiel a été Alicja Maziarz. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Next](recovering-and-changing-passwords-cs.md)
+> [Suivant](recovering-and-changing-passwords-cs.md)

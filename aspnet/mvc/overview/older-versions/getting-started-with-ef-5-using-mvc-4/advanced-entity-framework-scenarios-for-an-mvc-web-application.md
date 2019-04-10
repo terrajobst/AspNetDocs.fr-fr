@@ -8,15 +8,15 @@ ms.date: 07/30/2013
 ms.assetid: 64906a1d-f734-41cf-9615-ee95f8740996
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: 18a292ada33936ea03f2d51427c160541424c8d1
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: a1218b1fb5a8ee28ea6ee3d3c5af979e86821ed7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425611"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391193"
 ---
-<a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>Scénarios Entity Framework avancés pour une Application Web MVC (10 sur 10)
-====================
+# <a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>Scénarios Entity Framework avancés pour une Application Web MVC (10 sur 10)
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet terminé](http://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
@@ -276,7 +276,7 @@ Pour plus d’informations sur les autres rubriques relatives à MVC, telles que
 
 ## <a name="vb"></a>VB
 
-Lorsque le didacticiel a été généré au départ, nous avons fourni des versions de C# et VB de projet téléchargement terminé. Avec cette mise à jour, nous offrons un projet téléchargeable C# pour chaque chapitre faciliter la prise en main n’importe où dans la série, mais en raison de contraintes de temps et d’autres priorités que nous n’avez pas que pour VB. Si vous générez un projet Visual Basic à l’aide de ces didacticiels et que vous êtes prêt à partager avec d’autres personnes, faites-le nous savoir.
+Lorsque le didacticiel a été généré au départ, nous avons fourni des versions de c# et VB de projet téléchargement terminé. Avec cette mise à jour, nous offrons un projet téléchargeable c# pour chaque chapitre faciliter la prise en main n’importe où dans la série, mais en raison de contraintes de temps et d’autres priorités que nous n’avez pas que pour VB. Si vous générez un projet Visual Basic à l’aide de ces didacticiels et que vous êtes prêt à partager avec d’autres personnes, faites-le nous savoir.
 
 <a id="errors"></a>
 
@@ -316,7 +316,8 @@ Une des causes de ce problème sont d’erreurs de validation lorsque la `Seed` 
 
 Message d’erreur :
 
-*Erreur HTTP 500.19 - erreur interne du serveur la page demandée est inaccessible, car les données de configuration de la page ne sont pas valides.*
+*HTTP Erreur 500.19 - Erreur de serveur interne  
+La page demandée est inaccessible, car les données de configuration de la page ne sont pas valides.*
 
 Solution :
 
@@ -326,7 +327,7 @@ Vous pouvez obtenir cette erreur consiste à partir de plusieurs copies de la so
 
 Message d’erreur :
 
-*Une erreur liée au réseau ou spécifique à l’instance s’est produite lors de l’établissement d’une connexion à SQL Server. Le serveur est introuvable ou n’est pas accessible. Vérifiez que le nom d’instance est correct et que SQL Server est configuré pour autoriser les connexions à distance. (fournisseur : Interfaces réseau SQL, erreur : 26 - erreur de localisation de Server/Instance spécifié)*
+*Une erreur liée au réseau ou spécifique à l’instance s’est produite lors de l’établissement d’une connexion à SQL Server. Le serveur est introuvable ou n’est pas accessible. Vérifiez que le nom de l’instance est correct et que SQL Server est configuré pour autoriser les connexions distantes. (fournisseur : Interfaces réseau SQL, erreur : 26 - Erreur lors de la localisation du serveur/de l’instance spécifiés)*
 
 Solution :
 

@@ -8,15 +8,15 @@ ms.date: 03/06/2007
 ms.assetid: deba7d7e-3da2-48a1-8a9e-49c36c4bcc39
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-implement-the-ajax-paging-pattern
 msc.type: video
-ms.openlocfilehash: 1db4791587855a29b609e34e955880a80e44018f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a332d8114e26fc23797176daa31940fa840a30fc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57024896"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386240"
 ---
-<a name="how-do-i-implement-the-ajax-paging-pattern"></a>[Comment faire] Implémenter le modèle de pagination AJAX ?
-====================
+# <a name="how-do-i-implement-the-ajax-paging-pattern"></a>[Comment faire] Implémenter le modèle de pagination AJAX ?
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Dans cette vidéo, nous voir comment utiliser ASP.NET AJAX pour implémenter le modèle de pagination, ce qui permet à l’application ASP.NET présenter une grande quantité de données comme étant divisée en plus petits « pages » de données, et autoriser l’utilisateur pour vous déplacer entre les pages.

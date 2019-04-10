@@ -5,22 +5,22 @@ description: Ajout d’une vue à une application MVC
 ms.author: riande
 ms.date: 01/23/2019
 uid: mvc/overview/getting-started/introduction/adding-a-view
-ms.openlocfilehash: afa7584529566ebe82a0eb3849de89bd0df064bd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 42469611f94b374d6692a1c2017aced77a0a414c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051006"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403855"
 ---
-<a name="adding-a-view"></a>Ajout d’une vue
-====================
+# <a name="adding-a-view"></a>Ajout d’une vue
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 [!INCLUDE [Tutorial Note](sample/code-location.md)]
 
 Dans cette section vous allez modifier la `HelloWorldController` classe à utiliser la vue fichiers de modèle proprement encapsulent le processus de génération des réponses HTML à un client. 
 
-Vous allez créer un fichier de modèle de vue à l’aide du [moteur d’affichage Razor](../../../../web-pages/overview/getting-started/introducing-razor-syntax-c.md). Modèles de vue Razor ont une *.cshtml* extension de fichier et offrent un moyen élégant pour créer le HTML de sortie à l’aide de C#. Razor réduit le nombre de caractères et des touches du clavier nécessaires lors de l’écriture d’un modèle de vue et permet un rapide, fluide de flux de travail de codage.
+Vous allez créer un fichier de modèle de vue à l’aide du [moteur d’affichage Razor](../../../../web-pages/overview/getting-started/introducing-razor-syntax-c.md). Modèles de vue Razor ont une *.cshtml* extension de fichier et offrent un moyen élégant pour créer le HTML de sortie à l’aide de c#. Razor réduit le nombre de caractères et des touches du clavier nécessaires lors de l’écriture d’un modèle de vue et permet un rapide, fluide de flux de travail de codage.
 
 Actuellement, la méthode `Index` retourne une chaîne avec un message qui est codé en dur dans la classe du contrôleur. Modifier le `Index` méthode à appeler les contrôleurs [vue](/dotnet/api/microsoft.aspnetcore.mvc.controller.view#Microsoft_AspNetCore_Mvc_Controller_View) méthode, comme indiqué dans le code suivant :
 
@@ -68,7 +68,7 @@ Tout d’abord, vous souhaitez modifier le &quot;nom de l’Application&quot; li
 
 ![_LayoutCshtml](adding-a-view/_static/image7.png)
 
-Modèles de disposition permettent de spécifier la disposition du conteneur HTML de votre site au même endroit et de l’appliquer sur plusieurs pages de votre site. Recherchez la ligne `@RenderBody()`. `RenderBody` est un espace réservé dans lequel toutes les pages spécifiques aux vues que vous créez s’affichent, &quot;encapsulées&quot; dans la page de disposition. Par exemple, si vous sélectionnez le **sur** lien, le *Views\Home\About.cshtml* vue est restituée à l’intérieur de la `RenderBody` (méthode).
+Modèles de disposition permettent de spécifier la disposition du conteneur HTML de votre site au même endroit et de l’appliquer sur plusieurs pages de votre site. Recherchez la ligne `@RenderBody()`. `RenderBody` est un espace réservé où tous les affichage spécifique au pages que vous créez s’affichent, &quot;encapsulé&quot; dans la page de disposition. Par exemple, si vous sélectionnez le **sur** lien, le *Views\Home\About.cshtml* vue est restituée à l’intérieur de la `RenderBody` (méthode).
 
 Changez le contenu de l’élément title. Modifier le [ActionLink](https://msdn.microsoft.com/library/dd504972(v=vs.108).aspx) dans le modèle de disposition &quot;nom de l’Application&quot; à &quot;MVC Movie&quot; et le contrôleur `Home` à `Movies`. Le fichier de disposition complète est illustré ci-dessous :
 

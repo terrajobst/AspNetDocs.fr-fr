@@ -8,15 +8,15 @@ ms.date: 06/21/2012
 ms.assetid: 8906f1e9-4b66-4a03-8e8a-9e9debf8ed91
 msc.legacyurl: /web-pages/overview/performance-and-traffic/bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site
 msc.type: authoredcontent
-ms.openlocfilehash: 7d2cb2fe311b8aff20bfb378b329286701ed5b7d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e42111ad71ec65581e56c73822e23ecd5fcbd58
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400449"
 ---
-<a name="bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site"></a>Bundles et minimisation des ressources dans un site ASP.NET Web Pages (Razor)
-====================
+# <a name="bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site"></a>Bundles et minimisation des ressources dans un site ASP.NET Web Pages (Razor)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Regroupement et minimisation manières pour accélérer votre site. Regroupement vous permet de combiner plusieurs JavaScript (*.js*) fichiers ou la feuille de style en cascade multiples (*.css*) de sorte qu’ils peuvent être téléchargés comme une unité, plutôt qu’une à la fois. Minimisation resserre les espaces blancs et effectue d’autres types de compression pour rendre les fichiers téléchargés en tant que petit un éventuel.

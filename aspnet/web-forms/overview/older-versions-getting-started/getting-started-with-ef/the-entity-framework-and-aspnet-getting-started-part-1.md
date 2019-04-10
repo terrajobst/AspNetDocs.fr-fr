@@ -8,20 +8,20 @@ ms.date: 12/03/2010
 ms.assetid: 5cb00916-8f46-491f-be25-4739a615d619
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: f9f100ccaf5e9cfdaf0633f9bfebbad273212a0e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 51e3010f6e01434c495201af4af3bbdcde993da7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054236"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398434"
 ---
-<a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms"></a>Bien démarrer avec Entity Framework 4.0 Database First et 4 d’ASP.NET Web Forms
-====================
+# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms"></a>Bien démarrer avec Entity Framework 4.0 Database First et 4 d’ASP.NET Web Forms
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 > L’exemple d’application web Contoso University montre comment créer des applications Web Forms ASP.NET à l’aide de l’Entity Framework 4.0 et Visual Studio 2010. L’exemple d’application est un site Web pour une université Contoso fictive. Il inclut des fonctionnalités telles que l'admission d’étudiant, la création de cours et les affectations de formateur.
 > 
-> Le didacticiel présente des exemples en C#. Le [exemple téléchargeable](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) contient le code en C# et Visual Basic.
+> Le didacticiel présente des exemples en c#. Le [exemple téléchargeable](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) contient le code en c# et Visual Basic.
 > 
 > ## <a name="database-first"></a>Tout d’abord la base de données
 > 
@@ -212,4 +212,4 @@ Entity Framework utilise XML pour stocker des informations sur la base de donné
 Vous venez de créer un site Web, une base de données et un modèle de données. La procédure suivante, vous commencerez utilisation des données à l’aide du modèle de données et ASP.NET `EntityDataSource` contrôle.
 
 > [!div class="step-by-step"]
-> [Next](the-entity-framework-and-aspnet-getting-started-part-2.md)
+> [Suivant](the-entity-framework-and-aspnet-getting-started-part-2.md)

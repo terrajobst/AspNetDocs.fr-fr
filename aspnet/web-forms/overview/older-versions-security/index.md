@@ -8,19 +8,19 @@ ms.date: 10/18/2014
 ms.assetid: 2f952638-6b1f-48b6-b019-1c5d1e9ab746
 msc.legacyurl: /web-forms/overview/older-versions-security
 msc.type: chapter
-ms.openlocfilehash: 5a2eeef18163d0d408e4aba33bad7464ebf600a8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: afd786a25c8dc23eba1bbf6ed3f6512c64f2e72d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023506"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59378573"
 ---
-<a name="older-versions---security"></a>Versions antérieures - Sécurité
-====================
+# <a name="older-versions---security"></a>Versions antérieures - Sécurité
+
 > Rubriques de sécurité, authentification et autorisation pour ASP.NET 4 et les applications Web Forms antérieures.
 
 
-- [ASP.NET 3.5 - Introduction à la sécurité](introduction/index.md)
+- [ASP.NET 3.5 - Introduction à la sécurité](introduction/index.md)
 
     - [Concepts de base et prise en charge de la sécurité par ASP.NET (C#)](introduction/security-basics-and-asp-net-support-cs.md)
     - [Vue d’ensemble de l’authentification par formulaire (C#)](introduction/an-overview-of-forms-authentication-cs.md)
@@ -28,7 +28,7 @@ ms.locfileid: "57023506"
     - [Concepts de base et prise en charge de la sécurité par ASP.NET (VB)](introduction/security-basics-and-asp-net-support-vb.md)
     - [Vue d’ensemble de l’authentification par formulaire (VB)](introduction/an-overview-of-forms-authentication-vb.md)
     - [Configuration et questions avancées de l’authentification par formulaire (VB)](introduction/forms-authentication-configuration-and-advanced-topics-vb.md)
-- [ASP.NET 3.5 - Appartenance](membership/index.md)
+- [ASP.NET 3.5 - Appartenance](membership/index.md)
 
     - [Création du schéma d’appartenance dans SQL Server (C#)](membership/creating-the-membership-schema-in-sql-server-cs.md)
     - [Création de comptes d’utilisateurs (C#)](membership/creating-user-accounts-cs.md)
@@ -40,7 +40,7 @@ ms.locfileid: "57023506"
     - [Validation des informations d’identification de l’utilisateur par rapport au magasin d’utilisateurs d’appartenance (VB)](membership/validating-user-credentials-against-the-membership-user-store-vb.md)
     - [Autorisation basée sur l’utilisateur (VB)](membership/user-based-authorization-vb.md)
     - [Stockage d’informations supplémentaires sur l’utilisateur (VB)](membership/storing-additional-user-information-vb.md)
-- [ASP.NET 3.5 - Rôles](roles/index.md)
+- [ASP.NET 3.5 - Rôles](roles/index.md)
 
     - [Création et gestion de rôles (C#)](roles/creating-and-managing-roles-cs.md)
     - [Attribution de rôles aux utilisateurs (C#)](roles/assigning-roles-to-users-cs.md)
@@ -48,7 +48,7 @@ ms.locfileid: "57023506"
     - [Création et gestion de rôles (VB)](roles/creating-and-managing-roles-vb.md)
     - [Attribution de rôles aux utilisateurs (VB)](roles/assigning-roles-to-users-vb.md)
     - [Autorisation basée sur le rôle (VB)](roles/role-based-authorization-vb.md)
-- [ASP.NET 3.5 - Administration de la sécurité](admin/index.md)
+- [ASP.NET 3.5 - Administration de la sécurité](admin/index.md)
 
     - [Création d’une interface pour sélectionner un compte d’utilisateur parmi de nombreux comptes (C#)](admin/building-an-interface-to-select-one-user-account-from-many-cs.md)
     - [Récupération et changement des mots de passe (C#)](admin/recovering-and-changing-passwords-cs.md)

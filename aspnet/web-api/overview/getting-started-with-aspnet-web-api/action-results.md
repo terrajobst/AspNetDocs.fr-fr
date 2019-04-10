@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/getting-started-with-aspnet-web-api/action-results
-title: Résultats de l’action dans Web API 2 | Microsoft Docs
+title: Résultats de l’action dans Web API 2 - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Décrit comment les API Web ASP.NET convertit la valeur de retour à partir d’une action de contrôleur dans un message de réponse HTTP dans ASP.NET 4.x.
 ms.author: riande
 ms.date: 02/03/2014
+ms.custom: seoapril2019
 ms.assetid: 2fc4797c-38ef-4cc7-926c-ca431c4739e8
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/action-results
 msc.type: authoredcontent
-ms.openlocfilehash: c255cebfd6b0c632c000d24288a4dd4cf73c8a1c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 87f71938a5c5f38d3a456ba9339540f67e236e1a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422023"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400891"
 ---
-<a name="action-results-in-web-api-2"></a>Résultats des actions dans l’API Web 2
-====================
+# <a name="action-results-in-web-api-2"></a>Résultats des actions dans l’API Web 2
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 Cette rubrique décrit comment les API Web ASP.NET convertit la valeur de retour à partir d’une action de contrôleur dans un message de réponse HTTP.

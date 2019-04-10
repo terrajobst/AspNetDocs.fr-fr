@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: c979535f-48a3-4ec4-a633-a77889b86ddb
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/deploying-a-specific-build
 msc.type: authoredcontent
-ms.openlocfilehash: e788f02795fc83ac98c5a0ba307f16b0f506e489
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0ab58aee6f1203beaf3990536b059f8209e66547
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062176"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393481"
 ---
-<a name="deploying-a-specific-build"></a>Déploiement d’une build spécifique
-====================
+# <a name="deploying-a-specific-build"></a>Déploiement d’une build spécifique
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit comment déployer des packages web et des scripts de base de données à partir d’une build précédente spécifique à une nouvelle destination, comme un environnement intermédiaire ou de production.
 
@@ -45,7 +45,7 @@ Pour ce faire, vous devez indiquer où trouver les packages web et les scripts d
 Dans le [exemple de solution](../web-deployment-in-the-enterprise/the-contact-manager-solution.md), le *Publish.proj* fichier déclare une propriété nommée **OutputRoot**. Comme son nom l’indique, il s’agit du dossier racine qui contient tout ce qui génère le processus de génération. Dans le *Publish.proj* de fichiers, vous pouvez voir que le **OutputRoot** propriété fait référence à l’emplacement racine pour toutes les ressources de déploiement.
 
 > [!NOTE]
-> **OutputRoot** est un nom de propriété couramment utilisés. Les fichiers de projet Visual C# et Visual Basic également déclarent cette propriété pour stocker l’emplacement racine de toutes les sorties de génération.
+> **OutputRoot** est un nom de propriété couramment utilisés. Les fichiers de projet Visual c# et Visual Basic également déclarent cette propriété pour stocker l’emplacement racine de toutes les sorties de génération.
 
 
 [!code-xml[Main](deploying-a-specific-build/samples/sample1.xml)]

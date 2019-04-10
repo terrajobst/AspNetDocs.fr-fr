@@ -8,15 +8,15 @@ ms.date: 04/04/2013
 ms.assetid: 00aca413-f067-4108-9bd1-cf21e64a2646
 msc.legacyurl: /single-page-application/overview/templates/backbonejs-template
 msc.type: authoredcontent
-ms.openlocfilehash: 325c4f5370340b2e223521fada77cf0e78a67b5b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8148974eacd1db05947ba54fe40776df69f92290
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025236"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404115"
 ---
-<a name="backbone-template"></a>Modèle Backbone
-====================
+# <a name="backbone-template"></a>Modèle Backbone
+
 par [Mads Kristensen](https://github.com/madskristensen)
 
 > Le modèle de SPA principal a été écrit par Kazi Manzur Rashid
@@ -72,7 +72,7 @@ Les événements sont toujours importantes lors de développement faiblement cou
 
 Dans Backbone.js, un routeur fournit des méthodes de routage de pages du côté client et en les connectant aux événements et actions. Le modèle définit un seul routeur dans router.ts. Le routeur crée les vues activables et conserve l’état en changeant d’affichage. (Vues activables sont décrits dans la section suivante.) Initialement, le projet comporte deux vues factices, propos et à domicile. Il a également une vue NotFound, qui s’affiche si l’itinéraire n’est pas connu.
 
-**Vues**
+**Affichages**
 
 Les vues sont définies dans ~/Scripts/application/vues. Il existe deux types de vues, les vues activables et les vues de la boîte de dialogue modale. Vues activables sont appelés par le routeur. Lorsqu’une vue activables est affichée, toutes les autres vues activables deviennent inactifs. Pour créer une vue activables, étendre l’affichage avec le `Activable` objet :
 

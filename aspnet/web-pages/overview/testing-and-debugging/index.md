@@ -8,15 +8,15 @@ ms.date: 09/08/2014
 ms.assetid: 1cc6d774-e991-4aa1-8efd-e83a4e0ba247
 msc.legacyurl: /web-pages/overview/testing-and-debugging
 msc.type: chapter
-ms.openlocfilehash: 47c99dd62796b6c0849ff1832550690aee6e43ea
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: daf4a1bee5d443ea6b7a5af3e5df85bfe12d0a34
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020146"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59378779"
 ---
-<a name="testing-and-debugging"></a>Test et débogage
-====================
+# <a name="testing-and-debugging"></a>Test et débogage
+
 > Comment tester et déboguer des applications ASP.NET Web Pages.
 
 

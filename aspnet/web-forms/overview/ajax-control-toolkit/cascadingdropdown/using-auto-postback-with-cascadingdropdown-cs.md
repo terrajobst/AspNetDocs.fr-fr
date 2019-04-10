@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-auto-postback-with-cascadingdropdown-cs
-title: À l’aide de la publication (Postback) automatique avec CascadingDropDown (C#) | Microsoft Docs
+title: À l’aide de la publication (Postback) automatique avec CascadingDropDown (c#) | Microsoft Docs
 author: wenz
 description: Le contrôle CascadingDropDown dans AJAX Control Toolkit étend un contrôle DropDownList afin que les modifications dans un DropDownList charges associés à des valeurs dans anoth...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 6755d8d9-14be-4a1d-86e5-1a6110f3dea8
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-auto-postback-with-cascadingdropdown-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 7c84951691935d9976f961f65f96fa70633ecbce
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 50bba1b798ddfaf69dd23098e31d446a7e7b9a1f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061326"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394612"
 ---
-<a name="using-auto-postback-with-cascadingdropdown-c"></a>Utilisation de la publication (postback) automatique avec CascadingDropDown (C#)
-====================
+# <a name="using-auto-postback-with-cascadingdropdown-c"></a>Utilisation de la publication (postback) automatique avec CascadingDropDown (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown3.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown3CS.pdf)
@@ -57,7 +57,7 @@ Chargement de la page dans le navigateur remplira la liste déroulante avec troi
 De cette façon, une publication (postback) est exécutée uniquement lorsqu’il existe en fait des éléments dans la liste et l’utilisateur sélectionne une entrée.
 
 
-[![Sélection d’un élément de liste entraîne une publication](using-auto-postback-with-cascadingdropdown-cs/_static/image2.png)](using-auto-postback-with-cascadingdropdown-cs/_static/image1.png)
+[![Sélection d’un élément de liste entraîne une publication (postback)](using-auto-postback-with-cascadingdropdown-cs/_static/image2.png)](using-auto-postback-with-cascadingdropdown-cs/_static/image1.png)
 
 Sélection d’un élément de liste entraîne une publication ([cliquez pour afficher l’image en taille réelle](using-auto-postback-with-cascadingdropdown-cs/_static/image3.png))
 

@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/improving-the-details-and-delete-methods
-title: Amélioration des méthodes Details et Delete (C#) | Microsoft Docs
+title: Amélioration des méthodes Details et Delete (c#) | Microsoft Docs
 author: Rick-Anderson
 description: Ce didacticiel vous apprend les bases de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express Service Pack 1, qui est en cours...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 01/12/2011
 ms.assetid: 3f42edd9-c5b8-4712-9055-970f7d38e350
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/improving-the-details-and-delete-methods
 msc.type: authoredcontent
-ms.openlocfilehash: 255374eb21568d05569f8af6727ad4b558acfc2f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d4003dba8530d2e72c514c572ffc28ef942fd437
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379363"
 ---
-<a name="improving-the-details-and-delete-methods-c"></a>Examen des méthodes Details et Delete (C#)
-====================
+# <a name="improving-the-details-and-delete-methods-c"></a>Examen des méthodes Details et Delete (C#)
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
@@ -31,7 +31,7 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Si vous utilisez Visual Studio 2010 au lieu de Visual Web Developer 2010, installez les composants requis en cliquant sur le lien suivant : [Visual Studio 2010 prerequisites](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Un projet de Visual Web Developer avec code source C# est disponible pour accompagner cette rubrique. [Téléchargez la version C#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez Visual Basic, basculez vers le [version Visual Basic](../vb/intro-to-aspnet-mvc-3.md) de ce didacticiel.
+> Un projet de Visual Web Developer avec code source c# est disponible pour accompagner cette rubrique. [Téléchargez la version c#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez Visual Basic, basculez vers le [version Visual Basic](../vb/intro-to-aspnet-mvc-3.md) de ce didacticiel.
 
 
 Dans cette partie du didacticiel, vous allez apporter des améliorations aux généré automatiquement `Details` et `Delete` méthodes. Ces modifications ne sont pas nécessaires, mais avec quelques petits extraits de code, vous pouvez facilement améliorer l’application.
@@ -74,7 +74,7 @@ Ce didacticiel de base a été de vous lancer dans la création de contrôleurs,
 
 Si vous souhaitez déployer votre application, il est utile pour le premier test de l’application sur votre serveur IIS 7 local. Vous pouvez utiliser cette [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=ASPNET;) lien pour activer le paramètre IIS pour les applications ASP.NET. Consultez les liens de déploiement suivants :
 
-- [Organigramme de déploiement ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx)
+- [Organigramme des informations relatives au déploiement ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx)
 - [L’activation d’IIS 7.x](https://blogs.msdn.com/b/rickandy/archive/2011/03/14/enabling-iis-7-x-on-windows-7-vista-sp1-windows-2008-windows-2008-r2.aspx)
 - [Déploiement de projets d’Application Web](https://msdn.microsoft.com/library/dd394698.aspx)
 

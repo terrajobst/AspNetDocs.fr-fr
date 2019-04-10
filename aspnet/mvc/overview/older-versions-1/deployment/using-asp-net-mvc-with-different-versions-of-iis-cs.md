@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-cs
-title: À l’aide d’ASP.NET MVC avec différentes Versions d’IIS (C#) | Microsoft Docs
+title: À l’aide d’ASP.NET MVC avec différentes Versions d’IIS (c#) | Microsoft Docs
 author: microsoft
 description: Dans ce didacticiel, vous allez apprendre à utiliser ASP.NET MVC et le routage d’URL, avec différentes versions d’Internet Information Services. Vous découvrez différentes stratégies...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 08/19/2008
 ms.assetid: b0cf4a34-2c1d-4717-bb54-ff029e722990
 msc.legacyurl: /mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-cs
 msc.type: authoredcontent
-ms.openlocfilehash: aa7d00c0f54212d495f48929ed2a453942a1ed7d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0ca34f670202a35c627a514d3394fa430f5d8f26
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039666"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396341"
 ---
-<a name="using-aspnet-mvc-with-different-versions-of-iis-c"></a>Utilisation d’ASP.NET MVC avec différentes versions d’IIS (C#)
-====================
+# <a name="using-aspnet-mvc-with-different-versions-of-iis-c"></a>Utilisation d’ASP.NET MVC avec différentes versions d’IIS (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Dans ce didacticiel, vous allez apprendre à utiliser ASP.NET MVC et le routage d’URL, avec différentes versions d’Internet Information Services. Vous découvrez des stratégies différentes pour l’utilisation d’ASP.NET MVC avec IIS 7.0 (mode classic), IIS 6.0 et versions antérieures d’IIS.
@@ -53,7 +53,7 @@ Le mode de traitement de demande est déterminé par le pool d’applications. V
 
 Par défaut, IIS est configuré pour prendre en charge les deux pools d’applications : **DefaultAppPool** et **Classic .NET AppPool**. Si DefaultAppPool est sélectionnée, votre application s’exécute en mode de traitement de requêtes intégré. Si .NET AppPool classique est sélectionné, votre application s’exécute en mode de traitement de la requête classique.
 
-[![La boîte de dialogue Nouveau projet](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.png)
+[![Tboîte de dialogue Nouveau projet he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.png)
 
 **Figure 1**: Détection du mode de traitement de demande ([cliquez pour afficher l’image en taille réelle](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image2.png))
 
@@ -92,7 +92,7 @@ L’itinéraire par défaut configuré dans le Listing 1 vous permet à l’URL 
 
 Malheureusement, les versions antérieures d’IIS ne sont pas transmettre ces demandes à l’infrastructure ASP.NET. Par conséquent, ces requêtes ne sont acheminées vers un contrôleur. Par exemple, si vous effectuez une demande de navigateur pour l’URL de base/Index puis vous obtiendrez la page d’erreur dans la Figure 2.
 
-[![La boîte de dialogue Nouveau projet](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.png)
+[![Tboîte de dialogue Nouveau projet he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.png)
 
 **Figure 2**: Réception d’une erreur 404 introuvable ([cliquez pour afficher l’image en taille réelle](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image4.png))
 
@@ -162,7 +162,7 @@ Voici comment vous activez un mappage de script générique pour IIS 7.0 :
 6. Entrez le nom MVC
 7. Cliquez sur le **OK** bouton
 
-[![La boîte de dialogue Nouveau projet](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.png)
+[![Tboîte de dialogue Nouveau projet he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.png)
 
 **Figure 3**: Création d’un mappage de script générique avec IIS 7.0 ([cliquez pour afficher l’image en taille réelle](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image6.png))
 
@@ -177,13 +177,13 @@ Suivez ces étapes pour créer un mappage de script générique avec IIS 6.0 :
 7. Décochez la case à cocher **vérifier l’existence du fichier**
 8. Cliquez sur le **OK** bouton
 
-[![La boîte de dialogue Nouveau projet](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image7.png)
+[![Tboîte de dialogue Nouveau projet he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image7.png)
 
 **Figure 4**: Création d’un mappage de script générique avec IIS 6.0 ([cliquez pour afficher l’image en taille réelle](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image8.png))
 
 Après avoir activé les mappages de scripts génériques, vous devez modifier la table de routage dans le fichier Global.asax afin qu’il inclue un itinéraire racine. Sinon, vous obtiendrez la page d’erreur dans la Figure 5 lorsque vous faites une demande pour la page de la racine de votre application. Vous pouvez utiliser le fichier Global.asax modifié sur la liste 4.
 
-[![La boîte de dialogue Nouveau projet](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image9.png)
+[![Tboîte de dialogue Nouveau projet he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image9.png)
 
 **Figure 5**: Erreur d’itinéraire racine manquant ([cliquez pour afficher l’image en taille réelle](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image10.png))
 
@@ -210,4 +210,4 @@ La première option vous oblige à modifier les URL utilisées dans votre applic
 La deuxième option consiste à créer un mappage de script générique. L’avantage de cette deuxième option est que vous n’avez pas besoin de modifier votre URL. L’inconvénient de cette deuxième option est qu’il peut affecter les performances de votre application ASP.NET MVC.
 
 > [!div class="step-by-step"]
-> [Next](using-asp-net-mvc-with-different-versions-of-iis-vb.md)
+> [Suivant](using-asp-net-mvc-with-different-versions-of-iis-vb.md)

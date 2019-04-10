@@ -8,15 +8,15 @@ ms.date: 06/16/2014
 ms.assetid: 88908ff8-51a9-40eb-931c-a8139128b680
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-2
 msc.type: authoredcontent
-ms.openlocfilehash: 162ef2cd4ba11040e1bc938617a36495489ba5bc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 57dacda421968f341284d89c9a3ad80040c16e25
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037286"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405077"
 ---
-<a name="add-models-and-controllers"></a>Ajouter des modèles et des contrôleurs
-====================
+# <a name="add-models-and-controllers"></a>Ajouter des modèles et des contrôleurs
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 [Télécharger le projet terminé](https://github.com/MikeWasson/BookService)
@@ -25,7 +25,7 @@ Dans cette section, vous allez ajouter des classes de modèle qui définissent l
 
 ## <a name="add-model-classes"></a>Ajouter des Classes de modèle
 
-Dans ce didacticiel, nous allons créer la base de données à l’aide de l’approche « Code First » à Entity Framework (EF). Avec Code First, vous écrivez des classes C# qui correspondent aux tables de base de données et Entity Framework crée la base de données. (Pour plus d’informations, consultez [approches de développement Entity Framework](https://msdn.microsoft.com/library/ms178359%28v=vs.110%29.aspx#dbfmfcf).)
+Dans ce didacticiel, nous allons créer la base de données à l’aide de l’approche « Code First » à Entity Framework (EF). Avec Code First, vous écrivez des classes c# qui correspondent aux tables de base de données et Entity Framework crée la base de données. (Pour plus d’informations, consultez [approches de développement Entity Framework](https://msdn.microsoft.com/library/ms178359%28v=vs.110%29.aspx#dbfmfcf).)
 
 Commencez par définir nos objets de domaine en tant qu’Oct (plain-objets CLR). Nous allons créer les objets oct suivantes :
 

@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: d37c93fc-25fd-4e94-8671-0d437beef206
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/entering-data
 msc.type: authoredcontent
-ms.openlocfilehash: e40d2962ccac56eaaf4812819aa42168e69295bc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d76f607f1d5e779d43ee15d8f2d697e7b0f147ae
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380117"
 ---
-<a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Présentation des Pages Web ASP.NET - saisie de données de base de données à l’aide de formulaires
-====================
+# <a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Présentation des Pages Web ASP.NET - saisie de données de base de données à l’aide de formulaires
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Ce didacticiel vous montre comment créer un formulaire d’entrée, puis entrez les données que vous obtenez à partir du formulaire dans une table de base de données lorsque vous utilisez les Pages Web ASP.NET (Razor). Il part du principe que vous avez terminé la série via [principes de base de formulaires HTML dans ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=251581).
@@ -253,7 +253,7 @@ Dans le didacticiel suivant, vous allez apprendre à permettre aux utilisateurs 
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- [Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Présentation de la programmation Web ASP.NET à l'aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Instruction SQL INSERT INTO](http://www.w3schools.com/sql/sql_insert.asp) sur le site W3Schools
 - [Validation des entrées d’utilisateur dans ASP.NET Web Pages des Sites](https://go.microsoft.com/fwlink/?LinkId=253002). Plus d’informations sur l’utilisation de la `Validation` helper.
 

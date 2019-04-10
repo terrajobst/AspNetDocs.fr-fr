@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-cs
-title: Ajustement de l’Index-Z d’un DropShadow (C#) | Microsoft Docs
+title: Ajustement de l’Index-Z d’un DropShadow (c#) | Microsoft Docs
 author: wenz
 description: Le contrôle DropShadow dans AJAX Control Toolkit étend un panneau avec une ombre portée. Toutefois cette ombre parfois est en conflit avec d’autres contrôles, pour le programme d’insta...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 14133833-e518-4347-87b9-6b6f71f14a77
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5cee2acfac74c0790a7ad82bbfb503a8a16f6b47
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cc9407ba15474f58437817c9536d6040e0ea2e84
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57024606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381438"
 ---
-<a name="adjusting-the-z-index-of-a-dropshadow-c"></a>Ajustement de l’index-Z d’un DropShadow (C#)
-====================
+# <a name="adjusting-the-z-index-of-a-dropshadow-c"></a>Ajustement de l’index-Z d’un DropShadow (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/5/1/6/51652a81-500b-4f6b-88d3-617103e7941e/DropShadow1.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dropshadow1CS.pdf)
@@ -56,14 +56,14 @@ Lorsque vous exécutez ce script, les entrées de menu apparaissent sous le pann
 Ensuite, le `DropShadowExtender` contrôle n’est pas en conflit plus avec le contrôle de Menu.
 
 
-[![Avant : L’entrée de menu n’est pas visible](adjusting-the-z-index-of-a-dropshadow-cs/_static/image2.png)](adjusting-the-z-index-of-a-dropshadow-cs/_static/image1.png)
+[![Bxécuter : L’entrée de menu n’est pas visible](adjusting-the-z-index-of-a-dropshadow-cs/_static/image2.png)](adjusting-the-z-index-of-a-dropshadow-cs/_static/image1.png)
 
 Avant : L’entrée de menu n’est pas visible ([cliquez pour afficher l’image en taille réelle](adjusting-the-z-index-of-a-dropshadow-cs/_static/image3.png))
 
 
-[![Après : L’entrée de menu s’affiche](adjusting-the-z-index-of-a-dropshadow-cs/_static/image5.png)](adjusting-the-z-index-of-a-dropshadow-cs/_static/image4.png)
+[![Arès : L’entrée de menu apparaît](adjusting-the-z-index-of-a-dropshadow-cs/_static/image5.png)](adjusting-the-z-index-of-a-dropshadow-cs/_static/image4.png)
 
 Après : L’entrée de menu s’affiche ([cliquez pour afficher l’image en taille réelle](adjusting-the-z-index-of-a-dropshadow-cs/_static/image6.png))
 
 > [!div class="step-by-step"]
-> [Next](manipulating-dropshadow-properties-from-client-code-cs.md)
+> [Suivant](manipulating-dropshadow-properties-from-client-code-cs.md)

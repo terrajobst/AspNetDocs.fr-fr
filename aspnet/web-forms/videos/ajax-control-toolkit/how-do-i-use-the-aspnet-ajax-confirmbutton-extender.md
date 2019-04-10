@@ -8,15 +8,15 @@ ms.date: 03/05/2007
 ms.assetid: 40287d43-6e0d-47ec-881f-c4dff970d1b9
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-confirmbutton-extender
 msc.type: video
-ms.openlocfilehash: 490e29d64e07fa24e135dce9389e63b67e54ec1d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8360f3eb26d9cfb46f36f5deed25acb45fbe070a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063066"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389113"
 ---
-<a name="how-do-i-use-the-aspnet-ajax-confirmbutton-extender"></a>[Comment faire] Utiliser l’extendeur ConfirmButton d’ASP.NET AJAX ?
-====================
+# <a name="how-do-i-use-the-aspnet-ajax-confirmbutton-extender"></a>[Comment faire] Utiliser l’extendeur ConfirmButton d’ASP.NET AJAX ?
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Découvrez comment l’extendeur ConfirmButton dans ASP.NET AJAX Control Toolkit fournit un moyen simple d’ajouter une boîte de dialogue de confirmation à l’événement click d’un contrôle Button, LinkButton ou ImageButton. Cela fournit à l’utilisateur avec l’option permettant d’annuler une action imminente.

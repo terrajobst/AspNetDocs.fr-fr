@@ -8,20 +8,20 @@ ms.date: 09/08/2014
 ms.assetid: 2ce36f78-8ecb-4ab1-b748-6d0ab633ea3f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
 msc.type: authoredcontent
-ms.openlocfilehash: 754f085e3e43f7efa155f410d02a0d29d3349612
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9e2cd1beca03b81140b9d58c5e43dbf7c6b8808b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055976"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393052"
 ---
-<a name="create-the-project"></a>Créer le projet
-====================
+# <a name="create-the-project"></a>Créer le projet
+
 par [Erik Reitan](https://github.com/Erikre)
 
-[Télécharger le projet de Wingtip Toys exemple (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Télécharger le projet de Wingtip Toys exemple (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
+> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
 
 
 Dans ce didacticiel vous créez, passez en revue et exécuter le projet par défaut dans Visual Studio, qui vous permettra de vous familiariser avec les fonctionnalités d’ASP.NET. En outre, vous allez examiner l’environnement Visual Studio.
@@ -70,11 +70,11 @@ Vous pouvez basculer entre **conception** vue et **Source** vue en sélectionnan
 > 
 > ASP.NET propose quatre structures de développement principal :
 > 
-> - [ASP.NET Web Forms](../../../index.md)  
->  L’infrastructure Web Forms destiné aux développeurs qui préfèrent la programmation déclarative et basée sur le contrôle, tels que Microsoft Windows Forms (WinForms) et WPF/XAML/Silverlight. Il offre un modèle de développement concepteur WYSIWYG, donc il est fréquemment utilisé avec les développeurs qui souhaitent pour un environnement de développement rapide d’applications pour le développement web. Si vous êtes novice en programmation du web et que vous êtes familiarisé avec les outils de développement de clients Microsoft RAD traditionnels (par exemple, pour Visual Basic et Visual C#), vous pouvez rapidement créer une application web sans avoir d’expérience en HTML et JavaScript.
+> - [ASP.NET Web Forms](../../../index.md)  
+>  L’infrastructure Web Forms destiné aux développeurs qui préfèrent la programmation déclarative et basée sur le contrôle, tels que Microsoft Windows Forms (WinForms) et WPF/XAML/Silverlight. Il offre un modèle de développement concepteur WYSIWYG, donc il est fréquemment utilisé avec les développeurs qui souhaitent pour un environnement de développement rapide d’applications pour le développement web. Si vous êtes novice en programmation du web et que vous êtes familiarisé avec les outils de développement de clients Microsoft RAD traditionnels (par exemple, pour Visual Basic et Visual c#), vous pouvez rapidement créer une application web sans avoir d’expérience en HTML et JavaScript.
 > - [ASP.NET MVC](../../../../mvc/index.md)  
 >  ASP.NET MVC destiné aux développeurs qui souhaitent dans les modèles et principes tels que le développement piloté par test, la séparation des préoccupations, inversion de contrôle (IoC) et l’injection de dépendance (DI). Cette infrastructure encourage en séparant la couche de logique métier d’une application web à partir de sa couche de présentation.
-> - [Pages Web ASP.NET](../../../../web-pages/index.md)  
+> - [Pages web ASP.NET](../../../../web-pages/index.md)  
 >  ASP.NET Web Pages destiné aux développeurs qui veulent un récit de développement web simple, le long des lignes de PHP. Dans le modèle de Pages Web, vous créez des pages HTML, puis ajoutez les code basé sur le serveur à la page afin de contrôler dynamiquement la façon dont ce balisage est rendu. Pages Web est spécifiquement conçu pour être un framework léger, et il est le point d’entrée le plus simple dans ASP.NET pour les personnes qui connaissez HTML mais de ne pas avoir une expérience de programmation large - par exemple, les étudiants ou amateurs. Il est également un bon moyen pour les développeurs web qui connaissent PHP ou des infrastructures similaires pour commencer à utiliser ASP.NET.
 > - [Application de Page ASP.NET unique](../../../../single-page-application/index.md)  
 >  Application de Page ASP.NET unique (SPA) vous permet de créer des applications qui incluent des interactions côté client significatives à l’aide de HTML 5, 3 de CSS et JavaScript. ASP.NET et Web Tools 2012.2 Update est livré un nouveau modèle pour la création d’applications à page unique à l’aide de knockout.js et API Web ASP.NET. Outre le nouveau modèle SPA, nouveaux modèles SPA créés par la Communauté sont également disponibles au téléchargement.
@@ -93,7 +93,7 @@ Dans Visual Studio, le **l’Explorateur de solutions** fenêtre vous permet de 
 
 Visual Studio crée certains dossiers initiales et les fichiers de votre projet. Les premiers fichiers vous travaillerez avec plus loin dans ce didacticiel sont les suivantes :
 
-| **Fichier** | **Fonction** |
+| **Fichier** | **Objectif** |
 | --- | --- |
 | *Default.aspx* | En général, la première page affichée lorsque l’application est exécutée dans un navigateur. |
 | *Site.Master* | Une page qui vous permet de créer une disposition et l’utilisation standard un comportement cohérent pour les pages dans votre application. |
@@ -114,7 +114,7 @@ Il existe trois pages principales dans cette application de Web par défaut : *
 
 ## <a name="aspnet-web-forms-background"></a>Web Forms ASP.NET en arrière-plan
 
-ASP.NET Web Forms sont des pages qui sont basées sur la technologie Microsoft ASP.NET, dans laquelle code qui s’exécute sur le serveur de manière dynamique génère la sortie de page Web sur le navigateur ou le périphérique client. Une page Web Forms ASP.NET restitue automatiquement le HTML conforme au navigateur correct des fonctionnalités telles que les styles, disposition et ainsi de suite. Web Forms sont compatibles avec n’importe quel langage pris en charge par le common language runtime .NET, tels que Microsoft Visual Basic et Microsoft Visual C#. En outre, les Web Forms reposent sur le [Microsoft .NET Framework](https://msdn.microsoft.com/vstudio/aa496123), qui fournit des avantages tels que d’un environnement géré, la sécurité de type et l’héritage.
+ASP.NET Web Forms sont des pages qui sont basées sur la technologie Microsoft ASP.NET, dans laquelle code qui s’exécute sur le serveur de manière dynamique génère la sortie de page Web sur le navigateur ou le périphérique client. Une page Web Forms ASP.NET restitue automatiquement le HTML conforme au navigateur correct des fonctionnalités telles que les styles, disposition et ainsi de suite. Web Forms sont compatibles avec n’importe quel langage pris en charge par le common language runtime .NET, tels que Microsoft Visual Basic et Microsoft Visual c#. En outre, les Web Forms reposent sur le [Microsoft .NET Framework](https://msdn.microsoft.com/vstudio/aa496123), qui fournit des avantages tels que d’un environnement géré, la sécurité de type et l’héritage.
 
 Quand une page Web Forms ASP.NET s’exécute, la page passe par un cycle de vie dans lequel il effectue une série d’étapes de traitement. Ces étapes incluent l’initialisation, l’instanciation des contrôles, restauration et la gestion de l’état, code gestionnaire d’événements en cours d’exécution et de rendu. Lorsque vous serez familiarisé avec la puissance d’ASP.NET Web Forms, il est important de comprendre le [cycle de vie de page ASP.NET](https://msdn.microsoft.com/library/ms178472(v=vs.100).aspx) afin que vous pouvez écrire du code à l’étape de cycle de vie approprié à l’effet que vous avez l’intention.
 
@@ -150,7 +150,7 @@ Lorsqu’un serveur Web reçoit une demande pour une page, il recherche la page,
 > 
 > Pour les navigateurs qui ne prennent pas en charge HTML5, vous pouvez utiliser [Modernizr](http://www.modernizr.com/). Modernizr est une bibliothèque JavaScript open source qui peut détecter si un navigateur prend en charge des fonctionnalités HTML5 et activez-les si elle n’est pas le cas. Dans le modèle d’Application ASP.NET Web Forms, Modernizr est installé sous forme de package NuGet.
 > 
-> **Bootstrap**
+> **Programme d’amorçage**
 > 
 > Utilisent les modèles de projet Visual Studio 2013 [Bootstrap](http://getbootstrap.com/), une infrastructure de mise en page et des thèmes créée par Twitter. Programme d’amorçage utilise CSS3 pour fournir une conception réactive, ce qui signifie que des dispositions puissent s’adapter dynamiquement aux tailles de fenêtre de navigateur différents. Vous pouvez également utiliser la fonctionnalité de thèmes de Bootstrap pour facilement effectuer un changement dans l’apparence de l’application. Par défaut, le modèle d’Application Web ASP.NET dans Visual Studio 2013 inclut Bootstrap comme package NuGet.
 > 
@@ -190,8 +190,8 @@ Dans ce didacticiel, vous avez créé, révisé et exécuter l’application de 
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-[Choisir le bon modèle de programmation](../../../videos/how-do-i/choosing-the-right-programming-model.md)   
-[Projets d’Application Web et projets de Site Web](https://msdn.microsoft.com/library/dd547590.aspx)   
+[Choix du bon modèle de programmation](../../../videos/how-do-i/choosing-the-right-programming-model.md)   
+[Projets d'application Web et projets de site Web](https://msdn.microsoft.com/library/dd547590.aspx)   
 [Vue d’ensemble de Pages de formulaires Web ASP.NET](https://msdn.microsoft.com/library/428509ah.aspx)
 
 > [!div class="step-by-step"]

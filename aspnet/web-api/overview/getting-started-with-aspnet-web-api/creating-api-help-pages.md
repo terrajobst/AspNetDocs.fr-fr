@@ -1,27 +1,28 @@
 ---
 uid: web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages
-title: Création de Pages d’aide pour l’API Web ASP.NET | Microsoft Docs
+title: Création de Pages d’aide pour l’API Web ASP.NET - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Ce didacticiel avec le code montre comment créer des pages d’aide pour l’API Web ASP.NET dans ASP.NET 4.x.
 ms.author: riande
 ms.date: 04/01/2013
+ms.custom: seoapril2019
 ms.assetid: 0150e67b-c50d-4613-83ea-7b4ef8cacc5a
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages
 msc.type: authoredcontent
-ms.openlocfilehash: fba368e4017fea65ff96e2540d486662cc6b45f8
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: e3f6a9b8a6835b034a075d580cd9a33136969990
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395012"
 ---
-<a name="creating-help-pages-for-aspnet-web-api"></a>Création de Pages d’aide pour l’API Web ASP.NET
-====================
+# <a name="creating-help-pages-for-aspnet-web-api"></a>Création de Pages d’aide pour l’API Web ASP.NET
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
-Lorsque vous créez une API web, il est souvent utile de créer une page d’aide, afin que les autres développeurs sache comment appeler votre API. Vous pouvez créer manuellement toute la documentation, mais il est préférable de créer automatiquement autant que possible.
+Ce didacticiel avec le code montre comment créer des pages d’aide pour l’API Web ASP.NET dans ASP.NET 4.x.
 
-Pour faciliter cette tâche, l’API Web ASP.NET fournit une bibliothèque pour générer automatiquement des pages d’aide en cours d’exécution.
+Lorsque vous créez une API web, il est souvent utile de créer une page d’aide, afin que les autres développeurs sache comment appeler votre API. Vous pouvez créer manuellement toute la documentation, mais il est préférable de créer automatiquement autant que possible. Pour faciliter cette tâche, l’API Web ASP.NET fournit une bibliothèque pour générer automatiquement des pages d’aide en cours d’exécution.
 
 ![](creating-api-help-pages/_static/image1.png)
 
@@ -57,11 +58,11 @@ Vous pouvez ajouter des pages d’aide à un projet d’API Web existant à l’
 
 À partir de la **outils** menu, sélectionnez **Gestionnaire de Package NuGet**, puis sélectionnez **Console du Gestionnaire de Package**. Dans le [Console du Gestionnaire de Package](http://docs.nuget.org/docs/start-here/using-the-package-manager-console) fenêtre, tapez les commandes suivantes :
 
-Pour un **C#** application : `Install-Package Microsoft.AspNet.WebApi.HelpPage`
+Pour un **c#** application : `Install-Package Microsoft.AspNet.WebApi.HelpPage`
 
 Pour un **Visual Basic** application : `Install-Package Microsoft.AspNet.WebApi.HelpPage.VB`
 
-Il existe deux packages, pour C# et l’autre pour Visual Basic. Veillez à utiliser celui qui correspond à votre projet.
+Il existe deux packages, pour c# et l’autre pour Visual Basic. Veillez à utiliser celui qui correspond à votre projet.
 
 Cette commande installe les assemblys nécessaires et ajoute les vues MVC pour les pages d’aide (situés dans le dossier zones/HelpPage). Vous devez manuellement ajouter un lien vers la page d’aide. L’URI est /Help. Pour créer un lien dans une vue razor, ajoutez ce qui suit :
 

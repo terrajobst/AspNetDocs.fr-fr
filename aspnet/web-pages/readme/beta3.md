@@ -8,27 +8,27 @@ ms.date: 01/10/2011
 ms.assetid: ffa3d5c9-91e5-4da3-b409-560b0c7fbbf0
 msc.legacyurl: /web-pages/readme/beta3
 msc.type: content
-ms.openlocfilehash: 3d729d1b0615533dddceff484acb3d42247f6cab
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7f0c5ff599235157bd11f5f86a26b8882e0f29dc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060496"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381807"
 ---
-<a name="web-matrix-and-aspnet-web-pages-razor-beta-3-release-readme"></a>Fichier Lisez-moi de WebMatrix et ASP.NET Web Pages (Razor) Bêta 3
-====================
+# <a name="web-matrix-and-aspnet-web-pages-razor-beta-3-release-readme"></a>Fichier Lisez-moi de WebMatrix et ASP.NET Web Pages (Razor) Bêta 3
+
 > Fichier Lisez-moi de WebMatrix et ASP.NET Web Pages (Razor) Bêta 3
 
 9 novembre 2010
 
 ## <a name="contents"></a>Sommaire
 
-- [Vue d’ensemble](#Overview)
+- [Vue d'ensemble](#Overview)
 - [Installation](#Installation_Notes)
 - [Nouvelles fonctionnalités, les modifications et les problèmes connus dans la version bêta 3](#Known_Issues)
 
     - [Problèmes d’Installation de WebMatrix](#Known_Issues_Installation)
-    - [Pages Web ASP.NET](#Known_Issues_ASPNET)
+    - [Pages web ASP.NET](#Known_Issues_ASPNET)
     - [SQL Server Compact](#Known_Issues_SQL_Server_Compact)
     - [Installation d’Applications](#Known_Issues_Installing_Applications)
     - [Publication d’Applications](#Known_Issues_Publishing_Applications)
@@ -118,7 +118,7 @@ Cette section du document décrit les nouvelles fonctionnalités, des modificati
 
 - [Nouvelles fonctionnalités](#NewFeatures)
 - [Modifications](#Changes)
-- [Problèmes](#Issues)
+- [Questions](#Issues)
 
 <a id="NewFeatures"></a>
 
@@ -454,7 +454,7 @@ Cette section du document décrit les nouvelles fonctionnalités, des modificati
 
 > Accédant à une application WCF génère une erreur semblable à celui-ci :
 > 
-> *Impossible de charger le fichier ou l’assembly ' Microsoft.Web.Administration, Version = 7.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35' ou une de ses dépendances. Le système ne parvient pas à localiser le fichier spécifié.*
+> *Impossible de charger le fichier ou l’assembly ' Microsoft.Web.Administration, Version = 7.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35' ou une de ses dépendances. Le système ne trouve pas le fichier spécifié.*
 > 
 > Cela se produit, car la version IIS Express Bêta ne prend pas en charge WCF par défaut.
 > 
@@ -548,6 +548,6 @@ Pour plus d’informations sur la version bêta 3 de WebMatrix, consultez les si
 - [ASP.NET](https://asp.net/webmatrix)
 - [Microsoft.com/web](https://www.microsoft.com/web)
 
-* * *
+---
 
 © 2010 Microsoft Corporation. Tous droits réservés. [Conditions d’utilisation](https://msdn.microsoft.cos/cc300389.aspx).

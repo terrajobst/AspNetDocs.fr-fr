@@ -8,18 +8,18 @@ ms.date: 03/03/2014
 ms.assetid: 5344b74e-b888-479a-92bc-601a33bd61a2
 msc.legacyurl: /web-forms/overview/getting-started/code-editing-in-web-forms-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 670f81ca1ef9923575cb2fee1747f06f426963d8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 328dc6fb61ac562131b11b36b40f574ca5a53866
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397368"
 ---
-<a name="code-editing-aspnet-web-forms-in-visual-studio-2013"></a>Édition du code Web Forms ASP.NET dans Visual Studio 2013
-====================
+# <a name="code-editing-aspnet-web-forms-in-visual-studio-2013"></a>Édition du code Web Forms ASP.NET dans Visual Studio 2013
+
 par [Erik Reitan](https://github.com/Erikre)
 
-Dans de nombreuses pages Web Form ASP.NET, écrivez du code dans Visual Basic, C# ou un autre langage. L’éditeur de code dans Visual Studio peut vous aider à écrire rapidement du code tout en vous aidant à éviter les erreurs. En outre, l’éditeur fournit des méthodes créer du code réutilisable pour aider à réduire la quantité de travail, que vous devez effectuer.
+Dans de nombreuses pages Web Form ASP.NET, écrivez du code dans Visual Basic, c# ou un autre langage. L’éditeur de code dans Visual Studio peut vous aider à écrire rapidement du code tout en vous aidant à éviter les erreurs. En outre, l’éditeur fournit des méthodes créer du code réutilisable pour aider à réduire la quantité de travail, que vous devez effectuer.
 
 Cette procédure pas à pas illustre différentes fonctionnalités de l’éditeur de code Visual Studio.
 
@@ -59,7 +59,7 @@ Dans cette partie de la procédure pas à pas, vous créez un projet d’applica
 3. Sélectionnez le **modèles**  - &gt; **Visual C#**  - &gt; **Web** groupe de modèles sur la gauche.
 4. Choisissez le **Application Web ASP.NET** modèle dans la colonne centrale.
 5. Nommez votre projet ***BasicWebApp*** et cliquez sur le **OK** bouton.   
-![Boîte de dialogue Nouveau projet](code-editing-in-web-forms-pages/_static/image2.png)
+![Boîte de dialogue Nouveau projet de test](code-editing-in-web-forms-pages/_static/image2.png)
 6. Ensuite, sélectionnez le **Web Forms** modèle et cliquez sur le **OK** bouton pour créer le projet.  
 ![Boîte de dialogue Nouveau projet ASP.NET](code-editing-in-web-forms-pages/_static/image3.png)  
 
@@ -77,7 +77,7 @@ Lorsque vous créez une nouvelle application Web Forms à l’aide du **Applicat
 1. Dans **l’Explorateur de solutions**, cliquez sur le nom d’application Web (dans ce didacticiel est le nom de l’application **BasicWebSite**), puis cliquez sur **ajouter**  - &gt; **Un nouvel élément**.   
 La boîte de dialogue **Ajouter un nouvel élément** s’affiche.
 2. Sélectionnez le **Visual C#**  - &gt; **Web** groupe de modèles sur la gauche. Ensuite, sélectionnez **Web Form** à partir du milieu de liste et nommez-le *PremièrePageWeb.aspx*.   
-    ![Ajouter un nouvel élément](code-editing-in-web-forms-pages/_static/image4.png)
+    ![Boîte de dialogue Ajouter un nouvel élément](code-editing-in-web-forms-pages/_static/image4.png)
 3. Cliquez sur **ajouter** pour ajouter la page Web Forms à votre projet.  
  Visual Studio crée la page et l’ouvre.
 4. Ensuite, définissez cette nouvelle page comme page de démarrage par défaut. Dans **l’Explorateur de solutions**, avec le bouton droit de la nouvelle page nommée *PremièrePageWeb.aspx* et sélectionnez **définir comme Page de démarrage**. La prochaine fois que vous exécutez cette application pour tester notre progression, vous verrez automatiquement cette nouvelle page dans le navigateur.
@@ -121,9 +121,9 @@ L’éditeur de code inclut des outils pour vous aider à effectuer diverses tâ
 
 Un scénario de refactorisation courant consiste à créer (extract) une méthode à partir du code qui se trouve dans un autre membre, tel qu’une méthode. Cela réduit la taille du membre d’origine et rend le code extrait réutilisable.
 
-Dans cette partie de la procédure pas à pas, vous écrire un code simple et ensuite extraire une méthode à partir de celui-ci. Refactorisation est prise en charge pour C#, vous allez donc créer une page qui utilise C# comme langage de programmation.
+Dans cette partie de la procédure pas à pas, vous écrire un code simple et ensuite extraire une méthode à partir de celui-ci. Refactorisation est prise en charge pour c#, vous allez donc créer une page qui utilise c# comme langage de programmation.
 
-### <a name="to-extract-a-method-in-a-c-page"></a>Pour extraire une méthode dans une page C#
+### <a name="to-extract-a-method-in-a-c-page"></a>Pour extraire une méthode dans une page c#
 
 1. Basculez vers **conception** vue.
 2. Dans le **boîte à outils**, à partir de la **Standard** onglet, faites glisser un [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) contrôle sur la page.
@@ -179,7 +179,7 @@ Lorsque vous travaillez avec des variables, ainsi que des objets, vous souhaiter
 
 Comme il existe de nombreuses tâches de codage que les développeurs Web Forms souvent amené à effectuer, l’éditeur de code fournit une bibliothèque d’extraits de code ou de blocs de code préécrit. Vous pouvez insérer ces extraits de code dans votre page.
 
-Chaque langue que vous utilisez dans Visual Studio présente de légères différences dans la façon de qu'insérer des extraits de code. Pour plus d’informations sur l’insertion des extraits de code, consultez [extraits de Code IntelliSense Visual Basic](https://msdn.microsoft.com/library/18yz4be4.aspx). Pour plus d’informations sur l’insertion des extraits de code dans Visual C#, consultez [extraits de Code Visual C#](https://msdn.microsoft.com/library/z41h7fat.aspx).
+Chaque langue que vous utilisez dans Visual Studio présente de légères différences dans la façon de qu'insérer des extraits de code. Pour plus d’informations sur l’insertion des extraits de code, consultez [extraits de Code IntelliSense Visual Basic](https://msdn.microsoft.com/library/18yz4be4.aspx). Pour plus d’informations sur l’insertion des extraits de code dans Visual c#, consultez [extraits de Code Visual C#](https://msdn.microsoft.com/library/z41h7fat.aspx).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -188,4 +188,4 @@ Cette procédure pas à pas a illustré les fonctionnalités de base de l’édi
 - En savoir plus sur les fonctionnalités d’IntelliSense, telles que la modification des options IntelliSense, la gestion des extraits de code et recherche d’extraits de code en ligne. Pour plus d’informations, consultez [Utilisation d’IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx).
 - Découvrez comment créer vos propres extraits de code. Pour plus d’informations, consultez [création et utilisation des extraits de Code IntelliSense](https://msdn.microsoft.com/library/ms165392.aspx)
 - En savoir plus sur les fonctionnalités spécifiques à Visual Basic IntelliSense des extraits de code, comme la personnalisation des extraits de code et de résolution des problèmes. Pour plus d’informations, consultez [extraits de Code IntelliSense Visual Basic](https://msdn.microsoft.com/library/18yz4be4.aspx)
-- En savoir plus sur C#-fonctionnalités spécifiques d’IntelliSense, telles que des extraits de code et de refactorisation. Pour plus d’informations, consultez [Visual C# IntelliSense](https://msdn.microsoft.com/library/43f44291.aspx).
+- En savoir plus sur c#-fonctionnalités spécifiques d’IntelliSense, telles que des extraits de code et de refactorisation. Pour plus d’informations, consultez [Visual c# IntelliSense](https://msdn.microsoft.com/library/43f44291.aspx).

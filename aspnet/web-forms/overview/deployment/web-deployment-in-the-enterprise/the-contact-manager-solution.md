@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: 4d8c8d19-055b-4b70-9ee1-f748f0db3a01
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/the-contact-manager-solution
 msc.type: authoredcontent
-ms.openlocfilehash: bc2fe88f4566d9fa144abcd2239f9008a1aefe83
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7998b5bb2983410479123514661a4ddb67afc8c6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060936"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398369"
 ---
-<a name="the-contact-manager-solution"></a>La solution Gestionnaire de contacts
-====================
+# <a name="the-contact-manager-solution"></a>La solution Gestionnaire de contacts
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cela [série de didacticiels](web-deployment-in-the-enterprise.md) utilise un exemple de solution&#x2014;la solution Gestionnaire de contacts&#x2014;pour représenter une application d’entreprise avec un niveau réaliste de complexité. Cette rubrique présente la solution de gestionnaire de contacts, décrit les composants clés de la solution et identifie les problèmes liés au déploiement de ce type d’application sur différentes plateformes de destination dans un environnement d’entreprise.
 > 

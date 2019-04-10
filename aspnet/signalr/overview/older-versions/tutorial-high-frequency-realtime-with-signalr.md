@@ -8,15 +8,15 @@ ms.date: 04/16/2013
 ms.assetid: ad2a5da5-2e79-40ea-bc84-028d327f5982
 msc.legacyurl: /signalr/overview/older-versions/tutorial-high-frequency-realtime-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 60fffd7cd5139b2be34968c1f33474be867f0962
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 179f6dd3a60f8c49770ee34af93d54defad0adc4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379407"
 ---
-<a name="high-frequency-realtime-with-signalr-1x"></a>Temps réel haute fréquence avec SignalR 1.x
-====================
+# <a name="high-frequency-realtime-with-signalr-1x"></a>Temps réel haute fréquence avec SignalR 1.x
+
 par [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -44,7 +44,7 @@ Bien que l’application fonctionne à l’aide de cette méthode, cela n’est 
 
 Ce didacticiel contient les sections suivantes :
 
-- [Composants requis](#prerequisites)
+- [Prérequis](#prerequisites)
 - [Créer le projet](#createtheproject)
 - [Ajoutez les packages ASP.NET SignalR et JQuery.UI NuGet](#nugetpackages)
 - [Créer l’application de base](#baseapp)
@@ -70,7 +70,7 @@ Si vous avez Visual Studio 2010, assurez-vous que [NuGet](https://visualstudioga
 Dans cette section, nous allons créer le projet dans Visual Studio.
 
 1. À partir de la **fichier** menu, cliquez sur **nouveau projet**.
-2. Dans le **nouveau projet** boîte de dialogue, développez **C#** sous **modèles** et sélectionnez **Web**.
+2. Dans le **nouveau projet** boîte de dialogue, développez **c#** sous **modèles** et sélectionnez **Web**.
 3. Sélectionnez le **Application Web ASP.NET vide** modèle, nommez le projet *MoveShapeDemo*, puis cliquez sur **OK**.
 
     ![Création du nouveau projet](tutorial-high-frequency-realtime-with-signalr/_static/image2.png)

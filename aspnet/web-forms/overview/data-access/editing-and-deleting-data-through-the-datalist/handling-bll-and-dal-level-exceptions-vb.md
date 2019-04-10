@@ -8,15 +8,15 @@ ms.date: 10/30/2006
 ms.assetid: ca665073-b379-4239-9404-f597663ca65e
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d52fadc1ddcc101d5815df6f1c1bc5eeba95d9b8
-ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
+ms.openlocfilehash: 358d8605ed602720c7dd1687c8bdbb4275753529
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58440363"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386097"
 ---
-<a name="handling-bll--and-dal-level-exceptions-vb"></a>Gestion des exceptions de niveau BLL et DAL (VB)
-====================
+# <a name="handling-bll--and-dal-level-exceptions-vb"></a>Gestion des exceptions de niveau BLL et DAL (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_38_VB.exe) ou [télécharger le PDF](handling-bll-and-dal-level-exceptions-vb/_static/datatutorial38vb1.pdf)
@@ -60,7 +60,7 @@ Après ces modifications, votre balisage déclaratif s de page doit ressembler �
 Prenez un moment pour consulter notre progression via un navigateur (voir Figure 2).
 
 
-[![Chaque produit inclut un bouton Modifier](handling-bll-and-dal-level-exceptions-vb/_static/image5.png)](handling-bll-and-dal-level-exceptions-vb/_static/image4.png)
+[![ECCA produit inclut un bouton Modifier](handling-bll-and-dal-level-exceptions-vb/_static/image5.png)](handling-bll-and-dal-level-exceptions-vb/_static/image4.png)
 
 **Figure 2**: Chaque produit inclut un bouton Modifier ([cliquez pour afficher l’image en taille réelle](handling-bll-and-dal-level-exceptions-vb/_static/image6.png))
 
@@ -115,12 +115,12 @@ Pour suivre ce didacticiel, appelez simplement la `DisplayExceptionDetails` mét
 Avec le `Try ... Catch` bloquer en place, les utilisateurs sont présentées avec un message d’erreur plus explicite, comme les Figures 4 et 5 show. Notez que, face à une exception, le contrôle DataList, reste dans le mode édition. Il s’agit, car une fois l’exception se produit, le flux de contrôle est immédiatement redirigé vers le `Catch` bloc, en ignorant le code qui retourne le contrôle DataList à son état avant modification.
 
 
-[![Un Message d’erreur s’affiche si un utilisateur omet un champ requis](handling-bll-and-dal-level-exceptions-vb/_static/image9.png)](handling-bll-and-dal-level-exceptions-vb/_static/image8.png)
+[![An Message d’erreur s’affiche si un utilisateur omet un champ requis](handling-bll-and-dal-level-exceptions-vb/_static/image9.png)](handling-bll-and-dal-level-exceptions-vb/_static/image8.png)
 
 **Figure 4**: Un Message d’erreur s’affiche si un utilisateur omet un champ requis ([cliquez pour afficher l’image en taille réelle](handling-bll-and-dal-level-exceptions-vb/_static/image10.png))
 
 
-[![Un Message d’erreur est affiché lorsque vous entrez vous un prix négatif](handling-bll-and-dal-level-exceptions-vb/_static/image12.png)](handling-bll-and-dal-level-exceptions-vb/_static/image11.png)
+[![An Message d’erreur est affiché lorsque vous entrez vous un prix négatif](handling-bll-and-dal-level-exceptions-vb/_static/image12.png)](handling-bll-and-dal-level-exceptions-vb/_static/image11.png)
 
 **Figure 5**: Un Message d’erreur est affiché lorsque vous entrez vous un prix négatif ([cliquez pour afficher l’image en taille réelle](handling-bll-and-dal-level-exceptions-vb/_static/image13.png))
 

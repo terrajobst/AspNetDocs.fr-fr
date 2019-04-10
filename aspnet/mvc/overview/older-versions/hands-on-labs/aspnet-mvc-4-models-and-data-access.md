@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 634ea84b-f904-4afe-b71b-49cccef4d9cc
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-models-and-data-access
 msc.type: authoredcontent
-ms.openlocfilehash: 10c2f6379f6d3139dd3bcf1027ff456e074298c3
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 53ca3bc4e550f488f3ae4c41f02a636e747107cb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425091"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384888"
 ---
 # <a name="aspnet-mvc-4-models-and-data-access"></a>Modèles ASP.NET MVC 4 et accès aux données
 
@@ -74,7 +74,7 @@ Pour des raisons pratiques, une grande partie du code que vous gérez le long de
 
 Si vous n’êtes pas familiarisé avec les extraits de Code Visual Studio et que vous souhaitiez savoir comment les utiliser, vous pouvez faire référence à l’annexe de ce document &quot; [annexe c : À l’aide d’extraits de Code](#AppendixC)&quot;.
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -181,7 +181,7 @@ Dans cette tâche, vous allez créer un modèle de données pour interagir avec 
 
     ![Diagramme de l’entité](aspnet-mvc-4-models-and-data-access/_static/image12.png "diagramme de l’entité")
 
-    *Diagramme de l’entité*
+    *Diagramme des entités*
 
     > [!NOTE]
     > Les modèles T4 (.tt) exécuter du code pour générer les classes d’entités et remplaceront les classes existantes portant le même nom. Dans cet exemple, les classes &quot;Album&quot;, &quot;Genre&quot; et &quot;artiste&quot; ont été remplacés par le code généré.
@@ -204,7 +204,7 @@ Dans cette tâche, vous allez vérifier que, bien que la génération du modèle
     ![Réussi des builds](aspnet-mvc-4-models-and-data-access/_static/image14.png "Builds a réussi")
 
     *Builds réussies*
-3. Tandis que le concepteur affiche les entités sous forme de diagramme, qu’ils sont véritablement de classes C#. Développez le **StoreDB.edmx** nœud dans l’Explorateur de solutions, puis **StoreDB.tt**, vous verrez les nouvelles entités générées.
+3. Tandis que le concepteur affiche les entités sous forme de diagramme, qu’ils sont véritablement de classes c#. Développez le **StoreDB.edmx** nœud dans l’Explorateur de solutions, puis **StoreDB.tt**, vous verrez les nouvelles entités générées.
 
     ![Les fichiers générés](aspnet-mvc-4-models-and-data-access/_static/image15.png "les fichiers générés")
 
@@ -514,7 +514,7 @@ Dans cette tâche, vous exécutez l’Application dans un navigateur web et obte
 > [!NOTE]
 > En outre, vous pouvez déployer cette application à Sites Web Windows Azure suit [annexe b : Publication d’une Application ASP.NET MVC 4, à l’aide de Web Deploy](#AppendixB).
 
-* * *
+---
 
 <a id="Summary"></a>
 
@@ -552,7 +552,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](aspnet-mvc-4-models-and-data-access/_static/image28.png)
 
-    *Progression de l’installation*
+    *Progression de l'installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](aspnet-mvc-4-models-and-data-access/_static/image29.png)
@@ -716,7 +716,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *À l’aide d’extraits de code Visual Studio pour insérer du code dans votre projet*
 
-***Pour ajouter un extrait de code à l’aide du clavier (C# uniquement)***
+***Pour ajouter un extrait de code à l’aide du clavier (c# uniquement)***
 
 1. Placez le curseur où vous souhaitez insérer le code.
 2. Commencez à taper le nom de l’extrait de code (sans espaces ou des traits d’union).
@@ -736,7 +736,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *Appuyez sur Tab à nouveau et l’extrait de code seront développe.*
 
-***Pour ajouter un extrait de code à l’aide de la souris (C#, Visual Basic et XML)*** 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
+***Pour ajouter un extrait de code à l’aide de la souris (c#, Visual Basic et XML)*** 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
 
 1. Sélectionnez **insérer un extrait** suivie **mes extraits de Code**.
 2. Choisissez l’extrait de code approprié dans la liste, en cliquant dessus.

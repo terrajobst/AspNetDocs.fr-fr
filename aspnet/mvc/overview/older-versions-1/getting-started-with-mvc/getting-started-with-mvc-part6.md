@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: a3a90963-0286-4fa0-9b3d-c230cc18b0a3
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part6
 msc.type: authoredcontent
-ms.openlocfilehash: 546c3e0a24ecd0d916c79e9ad12f62b926c760c5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f648e0cb53dd410105adc22401f19a5a15f9e8c1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045186"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380806"
 ---
-<a name="adding-a-create-method-and-create-view"></a>Ajout d’une méthode de création et d’une vue de création
-====================
+# <a name="adding-a-create-method-and-create-view"></a>Ajout d’une méthode de création et d’une vue de création
+
 par [Scott Hanselman](https://github.com/shanselman)
 
 > Il s’agit d’un didacticiel de débutant qui présente les principes de base d’ASP.NET MVC. Vous allez créer une application web simple qui lit et écrit à partir d’une base de données. Visitez le [centre d’apprentissage ASP.NET MVC](../../../index.md) pour rechercher d’autres ASP.NET MVC didacticiels et exemples.
@@ -38,7 +38,7 @@ Nous allons maintenant implémenter le modèle Create View que nous allons utili
 
 Nous allons sélectionner nous fera passer le modèle de vue une « séquence » en tant que classe de données d’affichage, et indiquer que nous voulons « structurer » un modèle « Créer ».
 
-[![Ajouter une vue](getting-started-with-mvc-part6/_static/image2.png)](getting-started-with-mvc-part6/_static/image1.png)
+[![Ajj affichage](getting-started-with-mvc-part6/_static/image2.png)](getting-started-with-mvc-part6/_static/image1.png)
 
 Après avoir cliqué sur le bouton Ajouter, modèle de vue \Movies\Create.aspx sera créé pour vous. Étant donné que nous avons sélectionné « Créer » dans la liste déroulante « Afficher le contenu », la boîte de dialogue Ajouter une vue « été généré automatiquement » du contenu par défaut pour nous. La génération de modèles automatique créé HTML &lt;formulaire&gt;, un emplacement pour l’erreur de validation des messages pour accéder et dans la mesure où la structure connaît des films, il créé étiquette et les champs pour chaque propriété de la classe.
 
@@ -48,7 +48,7 @@ Après avoir cliqué sur le bouton Ajouter, modèle de vue \Movies\Create.aspx s
 
 Nous allons maintenant créer un nouveau film et l’ajouter à la base de données. Nous allons faire en exécutant à nouveau l’application et visitez le « / Movies » URL et cliquez sur la « créer » lien pour ajouter un nouveau film.
 
-[![Créer - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image4.png)](getting-started-with-mvc-part6/_static/image3.png)
+[![CWindows Internet Explorer - reate](getting-started-with-mvc-part6/_static/image4.png)](getting-started-with-mvc-part6/_static/image3.png)
 
 Lorsque nous cliquons sur le bouton Créer, nous allons y publier (par HTTP POST) les données sur ce formulaire à la méthode /Movies/Create que nous venons de créer. Comme lorsque le système a pris le paramètre « numTimes » et « name » en dehors de l’URL et automatiquement les mappés à des paramètres sur une méthode précédemment, le système sera automatiquement prendre les champs de formulaire à partir d’une publication et les mapper à un objet. Dans ce cas, les valeurs des champs au format HTML tels que « ReleaseDate » et « Title » seront automatiquement placées dans les propriétés appropriées d’une nouvelle instance d’un film.
 
@@ -58,7 +58,7 @@ Nous allons examiner la deuxième méthode de création de notre MoviesControlle
 
 Cet objet de film a été ensuite transmis vers la version de [HttpPost] de notre méthode d’action de création, et nous avons enregistré dans la base de données et puis l’utilisateur est redirigé vers la méthode d’action Index() qui affiche le résultat enregistré dans la liste de films :
 
-[![Liste de films - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image6.png)](getting-started-with-mvc-part6/_static/image5.png)
+[![Movie liste - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image6.png)](getting-started-with-mvc-part6/_static/image5.png)
 
 Nous ne la vérification si notre films sont corrects, cependant, ainsi que la base de données ne nous permettre d’enregistrer un film avec aucun titre. Il serait intéressant que nous pourrions l’utilisateur qui a généré une erreur avant de la base de données. Nous allons faire ce qui suit en ajoutant la prise en charge de la validation à notre application.
 

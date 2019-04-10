@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: d4dfc435-bda6-4621-9762-9ba270f8de4e
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: dd6bf5d8eb8a05dad1d230ef40c9b863e2af7094
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1f25a9afdf379d725496bd88f6ac192ab19930ca
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036986"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384511"
 ---
 # <a name="tutorial-use-ef-migrations-in-an-aspnet-mvc-app-and-deploy-to-azure"></a>Tutoriel : Utiliser des Migrations Entity Framework dans une application ASP.NET MVC et le déployer dans Azure
 
@@ -168,8 +168,8 @@ Vous allez déployer la base de données à base de données SQL Azure. Base de 
 10. Modifier [classement](/sql/relational-databases/collations/collation-and-unicode-support) en fonction des besoins.
 11. Entrez un administrateur **nom d’utilisateur administrateur de SQL** et **mot de passe administrateur SQL**.
 
-   - Si vous avez sélectionné **serveur de base de données SQL**, définir un nouveau nom et mot de passe que vous utiliserez plus tard lorsque vous accédez à la base de données.
-   - Si vous avez sélectionné un serveur que vous avez créé précédemment, entrez les informations d’identification pour ce serveur.
+    - Si vous avez sélectionné **serveur de base de données SQL**, définir un nouveau nom et mot de passe que vous utiliserez plus tard lorsque vous accédez à la base de données.
+    - Si vous avez sélectionné un serveur que vous avez créé précédemment, entrez les informations d’identification pour ce serveur.
 
 12. Collecte de données de télémétrie peut être activée pour App Service à l’aide d’Application Insights. Avec peu de configuration, Application Insights collecte les événements précieux, exception, dépendance, demande et les informations de trace. Pour en savoir plus sur Application Insights, consultez [Azure Monitor](https://azure.microsoft.com/services/monitor/).
 13. Cliquez sur **créer** en bas pour indiquer que vous avez terminé.

@@ -8,15 +8,15 @@ ms.date: 02/18/2013
 ms.assetid: fdc3599a-5217-44c1-951f-0eec9812dce7
 msc.legacyurl: /signalr/overview/older-versions/tutorial-getting-started-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: b4b632a84e40aa0b73dfc7a30da0cf28249cc5b4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 288f5017acde5a103460ace688933609fba0b02c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046786"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391024"
 ---
-<a name="tutorial-getting-started-with-signalr-1x"></a>Tutoriel : Bien démarrer avec SignalR 1.x
-====================
+# <a name="tutorial-getting-started-with-signalr-1x"></a>Tutoriel : Bien démarrer avec SignalR 1.x
+
 par [Patrick Fletcher](https://github.com/pfletcher), [Tim Teebken](https://github.com/timlt)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]

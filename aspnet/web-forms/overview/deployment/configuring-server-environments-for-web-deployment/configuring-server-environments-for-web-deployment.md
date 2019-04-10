@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: 0bf0959b-4ca8-45de-bd13-b15347543b5a
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 4f6433f0b8a9ad3b3634c9bcd8d95015eebaa865
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 86ea4a2e17ec44a3716e1570e51a224144f1369c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043526"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386968"
 ---
-<a name="configuring-server-environments-for-web-deployment"></a>Configuration d’environnements serveur pour le déploiement web
-====================
+# <a name="configuring-server-environments-for-web-deployment"></a>Configuration d’environnements serveur pour le déploiement web
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Ce didacticiel vous explique comment configurer des environnements de serveur pour la prise en charge un seul clic, ou automatisé, de déploiement de site Web et de publication dans divers scénarios différents. Le didacticiel inclut des rubriques pour vous guider dans diverses tâches, telles que la configuration d’un serveur web pour prendre en charge les approches spécifiques pour le déploiement et la configuration d’une batterie de serveurs Web Farm Framework (WFF), ainsi que des présentations basées sur des scénarios qui fournissent à la fin conseils de bout en bout plus haut niveau.
 > 
@@ -31,9 +31,9 @@ par [Jason Lee](https://github.com/jrjlee)
 Ce didacticiel inclut les rubriques suivantes :
 
 - [Choix de la bonne approche pour le déploiement web](choosing-the-right-approach-to-web-deployment.md)
-- [Scénario : Configuration d’un environnement de Test pour le déploiement Web](scenario-configuring-a-test-environment-for-web-deployment.md)
-- [Scénario : Configuration d’un environnement de préproduction pour le déploiement Web](scenario-configuring-a-staging-environment-for-web-deployment.md)
-- [Scénario : Configuration d’un environnement de Production pour le déploiement Web](scenario-configuring-a-production-environment-for-web-deployment.md)
+- [Scénario : configuration d’un environnement de test pour le déploiement web](scenario-configuring-a-test-environment-for-web-deployment.md)
+- [Scénario : configuration d’un environnement de préproduction pour le déploiement web](scenario-configuring-a-staging-environment-for-web-deployment.md)
+- [Scénario : configuration d’un environnement de production pour le déploiement web](scenario-configuring-a-production-environment-for-web-deployment.md)
 - [Configuration d’un serveur web pour la publication Web Deploy (Agent distant)](configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
 - [Configuration d’un serveur web pour la publication Web Deploy (Gestionnaire Web Deploy)](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
 - [Configuration d’un serveur web pour la publication Web Deploy (Déploiement hors connexion)](configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)
@@ -66,4 +66,4 @@ Cela fait partie d’une série de cinq didacticiels sur le déploiement de web-
 - [Avancées de déploiement Web d’entreprise](../advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md). Ce didacticiel explique comment effectuer diverses tâches de déploiement plus avancées, telles que la personnalisation des déploiements de base de données pour plusieurs environnements, à l’exclusion de fichiers et dossiers de déploiement et en prenant des applications web en mode hors connexion pendant le processus de déploiement .
 
 > [!div class="step-by-step"]
-> [Next](choosing-the-right-approach-to-web-deployment.md)
+> [Suivant](choosing-the-right-approach-to-web-deployment.md)

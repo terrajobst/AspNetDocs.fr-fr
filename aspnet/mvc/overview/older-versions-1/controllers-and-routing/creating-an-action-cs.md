@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-cs
-title: Création d’une Action (C#) | Microsoft Docs
+title: Création d’une Action (c#) | Microsoft Docs
 author: microsoft
 description: Découvrez comment ajouter une nouvelle action à un contrôleur ASP.NET MVC. En savoir plus sur la configuration requise pour une méthode devant subir une action.
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: cb33b28c-3025-4bd1-a1fa-eaa3af7bb56f
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 243248ee30c6a2db7f102f7743d0393d4a6a9d24
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c66e066bd3e241e667924dacc114f57151df822a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056126"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389555"
 ---
-<a name="creating-an-action-c"></a>Création d’une action (C#)
-====================
+# <a name="creating-an-action-c"></a>Création d’une action (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Découvrez comment ajouter une nouvelle action à un contrôleur ASP.NET MVC. En savoir plus sur la configuration requise pour une méthode devant subir une action.
@@ -57,7 +57,7 @@ Si vous devez créer une méthode publique dans une classe de contrôleur et que
 Si vous tentez d’appeler l’action du contrôleur CompanySecrets() en tapant /Work/CompanySecrets dans la barre d’adresses de votre navigateur vous allez obtenir le message d’erreur dans la Figure 1.
 
 
-[![Appel d’une méthode NonAction](creating-an-action-cs/_static/image1.jpg)](creating-an-action-cs/_static/image1.png)
+[![Invoking une méthode NonAction](creating-an-action-cs/_static/image1.jpg)](creating-an-action-cs/_static/image1.png)
 
 **Figure 01**: Appel d’une méthode NonAction ([cliquez pour afficher l’image en taille réelle](creating-an-action-cs/_static/image2.png))
 

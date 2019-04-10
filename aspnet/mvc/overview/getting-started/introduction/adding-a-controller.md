@@ -8,15 +8,15 @@ ms.date: 10/17/2013
 ms.assetid: cc764f3b-6921-486a-8f44-c6ccd1249acd
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 4f2c56624ad9c2f750dfd9d7f84410622106fc21
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ad5f32a08270ce318c03e1b29acd74d12bbb3d3b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394053"
 ---
-<a name="adding-a-controller"></a>Ajour d’un contrôleur
-====================
+# <a name="adding-a-controller"></a>Ajour d’un contrôleur
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 [!INCLUDE [Tutorial Note](sample/code-location.md)]
@@ -74,7 +74,7 @@ Accédez à `http://localhost:xxxx/HelloWorld/Welcome`. Le `Welcome` méthode s�
 
 ![](adding-a-controller/_static/image6.png)
 
-Nous allons modifier légèrement l’exemple afin que vous pouvez passer des informations de paramètre à partir de l’URL au contrôleur (par exemple, */HelloWorld/Welcome ? nom = Scott&amp;numtimes = 4*). Modifier votre `Welcome` méthode pour inclure les deux paramètres comme indiqué ci-dessous. Notez que le code utilise la fonctionnalité de paramètre facultatif de C# pour indiquer que le `numTimes` paramètre par défaut 1 si aucune valeur n’est passée pour ce paramètre.
+Nous allons modifier légèrement l’exemple afin que vous pouvez passer des informations de paramètre à partir de l’URL au contrôleur (par exemple, */HelloWorld/Welcome ? nom = Scott&amp;numtimes = 4*). Modifier votre `Welcome` méthode pour inclure les deux paramètres comme indiqué ci-dessous. Notez que le code utilise la fonctionnalité de paramètre facultatif de c# pour indiquer que le `numTimes` paramètre par défaut 1 si aucune valeur n’est passée pour ce paramètre.
 
 [!code-csharp[Main](adding-a-controller/samples/sample3.cs)]
 

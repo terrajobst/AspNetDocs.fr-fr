@@ -8,18 +8,18 @@ ms.date: 10/07/2008
 ms.assetid: 5bb4587f-5bcd-44f5-b368-3c1709162b35
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d96f574c9284ab259b8733b3b8109ecd0b689aa8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c33812ab9d758c3155a2f75f59bfb63c55487dc7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064456"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396406"
 ---
-<a name="displaying-a-table-of-database-data-vb"></a>Affichage d’une table de données de la base de données (VB)
-====================
+# <a name="displaying-a-table-of-database-data-vb"></a>Affichage d’une table de données de la base de données (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_11_VB.pdf)
+[Télécharger le PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_11_VB.pdf)
 
 > Dans ce didacticiel, je vais montrer deux méthodes d’affichage d’un ensemble d’enregistrements de base de données. Je montrerai des deux méthodes de mise en forme d’un jeu d’enregistrements de base de données dans une table HTML. Tout d’abord, je montrerai comment vous pouvez mettre en forme les enregistrements de base de données directement dans une vue. Ensuite, je vais montrer comment vous pouvez tirer parti des vues partielles lors de la mise en forme d’enregistrements de base de données.
 
@@ -61,7 +61,7 @@ Après avoir cliqué sur le bouton Ajouter, l’Assistant Entity Data Model s’
 3. Dans le **choisir vos objets de base de données** étape, développez le nœud Tables, sélectionnez la table de films. Entrez l’espace de noms *modèles* et cliquez sur le **Terminer** bouton.
 
 
-[![Création de LINQ aux classes SQL](displaying-a-table-of-database-data-vb/_static/image1.jpg)](displaying-a-table-of-database-data-vb/_static/image1.png)
+[![Création au LINQ aux classes SQL](displaying-a-table-of-database-data-vb/_static/image1.jpg)](displaying-a-table-of-database-data-vb/_static/image1.png)
 
 **Figure 01**: Création de LINQ aux classes SQL ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image2.png))
 
@@ -69,7 +69,7 @@ Après avoir cliqué sur le bouton Ajouter, l’Assistant Entity Data Model s’
 Après avoir terminé l’Assistant Entity Data Model, Entity Data Model Designer s’ouvre. Le concepteur doit afficher l’entité de films (voir Figure 2).
 
 
-[![L’Entity Data Model Designer](displaying-a-table-of-database-data-vb/_static/image2.jpg)](displaying-a-table-of-database-data-vb/_static/image3.png)
+[![TIl Entity Data Model Designer](displaying-a-table-of-database-data-vb/_static/image2.jpg)](displaying-a-table-of-database-data-vb/_static/image3.png)
 
 **Figure 02**: L’Entity Data Model Designer ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image4.png))
 
@@ -83,7 +83,7 @@ Double-cliquez sur le nom de la classe sur l’aire du concepteur et modifiez le
 Maintenant que nous avons un moyen pour représenter des enregistrements de notre base de données, nous pouvons créer un contrôleur qui retourne la collection de films. Dans la fenêtre Explorateur de solutions Visual Studio, cliquez sur le dossier contrôleurs, puis sélectionnez l’option de menu **ajouter, de contrôleur** (voir Figure 3).
 
 
-[![Le contrôleur Menu ajouter](displaying-a-table-of-database-data-vb/_static/image3.jpg)](displaying-a-table-of-database-data-vb/_static/image5.png)
+[![Til ajouter contrôleur Menu](displaying-a-table-of-database-data-vb/_static/image3.jpg)](displaying-a-table-of-database-data-vb/_static/image5.png)
 
 **Figure 03**: Le contrôleur de Menu d’ajout ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image6.png))
 
@@ -91,7 +91,7 @@ Maintenant que nous avons un moyen pour représenter des enregistrements de notr
 Lorsque le **ajouter un contrôleur** boîte de dialogue s’affiche, entrez le nom du contrôleur MovieController (voir Figure 4). Cliquez sur le **ajouter** pour ajouter le nouveau contrôleur.
 
 
-[![La boîte de dialogue Ajouter un contrôleur](displaying-a-table-of-database-data-vb/_static/image4.jpg)](displaying-a-table-of-database-data-vb/_static/image7.png)
+[![Tboîte de dialogue Ajouter un contrôleur he](displaying-a-table-of-database-data-vb/_static/image4.jpg)](displaying-a-table-of-database-data-vb/_static/image7.png)
 
 **Figure 04**: La boîte de dialogue Ajouter un contrôleur ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image8.png))
 
@@ -113,7 +113,7 @@ Générez votre application en sélectionnant l’option de menu **créer, gén�
 L’action Index() de clic droit et sélectionnez l’option de menu **ajouter une vue** (voir Figure 5).
 
 
-[![Ajout d’une vue](displaying-a-table-of-database-data-vb/_static/image5.jpg)](displaying-a-table-of-database-data-vb/_static/image9.png)
+[![Ajout une vue](displaying-a-table-of-database-data-vb/_static/image5.jpg)](displaying-a-table-of-database-data-vb/_static/image9.png)
 
 **Figure 05**: Ajout d’une vue ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image10.png))
 
@@ -121,7 +121,7 @@ L’action Index() de clic droit et sélectionnez l’option de menu **ajouter u
 Dans le **ajouter une vue** boîte de dialogue, cochez la case intitulée **créer une vue fortement typée**. Sélectionnez la classe Movie comme le **afficher la classe de données**. Sélectionnez *liste* en tant que le **afficher le contenu** (voir Figure 6). Sélection de ces options génère une vue fortement typée qui affiche une liste de films.
 
 
-[![La boîte de dialogue Ajouter une vue](displaying-a-table-of-database-data-vb/_static/image6.jpg)](displaying-a-table-of-database-data-vb/_static/image11.png)
+[![Tboîte de dialogue Ajouter une vue he](displaying-a-table-of-database-data-vb/_static/image6.jpg)](displaying-a-table-of-database-data-vb/_static/image11.png)
 
 **Figure 06**: La boîte de dialogue Ajouter une vue ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image12.png))
 
@@ -135,7 +135,7 @@ Après avoir cliqué sur le **ajouter** bouton, la vue dans la liste 2 est gén�
 Vous pouvez exécuter l’application en sélectionnant l’option de menu **déboguer, démarrer le débogage** (ou en appuyant sur la touche F5). Exécution de l’application lance Internet Explorer. Si vous accédez à l’URL de /Movie vous verrez la page dans la Figure 7.
 
 
-[![Une table de films](displaying-a-table-of-database-data-vb/_static/image7.jpg)](displaying-a-table-of-database-data-vb/_static/image13.png)
+[![A table des films](displaying-a-table-of-database-data-vb/_static/image7.jpg)](displaying-a-table-of-database-data-vb/_static/image13.png)
 
 **Figure 07**: Une table de films ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image14.png))
 

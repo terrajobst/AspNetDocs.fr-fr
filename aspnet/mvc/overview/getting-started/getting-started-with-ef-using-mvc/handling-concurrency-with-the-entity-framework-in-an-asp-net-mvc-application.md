@@ -9,16 +9,13 @@ ms.date: 01/15/2019
 ms.assetid: be0c098a-1fb2-457e-b815-ddca601afc65
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: b513d7d86d382068bc1a8f1bcc61289ee946d38b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 11b1bc316f730e31b4a01924765db3c982783652
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064526"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383016"
 ---
-<a name="handling-concurrency-with-the-entity-framework-6-in-an-aspnet-mvc-5-application-10-of-12"></a>Gestion des accès concurrentiels avec Entity Framework 6 dans une Application ASP.NET MVC 5 (10 sur 12)
-====================
-
 # <a name="tutorial-handle-concurrency-with-ef-in-an-aspnet-mvc-5-app"></a>Tutoriel : Gérer l’accès concurrentiel avec Entity Framework dans une application ASP.NET MVC 5
 
 Dans les didacticiels précédents, vous avez appris comment mettre à jour des données. Ce didacticiel montre comment utiliser l’accès concurrentiel optimiste pour gérer les conflits quand plusieurs utilisateurs mettre à jour la même entité en même temps. Vous modifiez les pages web qui fonctionnent avec le `Department` entité afin qu’ils gèrent les erreurs d’accès concurrentiel. Les illustrations suivantes montrent les pages Edit et Delete, notamment certains messages qui sont affichés si un conflit d’accès concurrentiel se produit.

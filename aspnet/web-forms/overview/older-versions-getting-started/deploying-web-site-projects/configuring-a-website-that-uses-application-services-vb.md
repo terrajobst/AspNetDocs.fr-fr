@@ -8,15 +8,15 @@ ms.date: 04/23/2009
 ms.assetid: 9c31a42f-d8bb-4c0f-9ccc-597d4f70ac42
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 472770477e83fc0bbe24995e5558d0e8624082ae
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: b8ec246c2f35f3d7fa5bcf67aa6f157195028176
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426001"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379519"
 ---
-<a name="configuring-a-website-that-uses-application-services-vb"></a>Configuration d’un site web qui utilise les services d’application (VB)
-====================
+# <a name="configuring-a-website-that-uses-application-services-vb"></a>Configuration d’un site web qui utilise les services d’application (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_09_VB.zip) ou [télécharger le PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial09_AppServicesConfig_vb.pdf)
@@ -106,7 +106,7 @@ S permettent de voir comment ajouter les objets de base de données à la base d
 L’outil démarre en affichant un écran de démarrage qui explique son objectif. Cliquez sur Suivant pour passer à l’écran « Sélectionnez une Option de configuration », qui est indiqué dans la Figure 1. À partir de là, vous pouvez choisir d’ajouter les services d’application les objets de base de données ou les supprimer à partir d’une base de données. Étant donné que nous souhaitons ajouter ces objets à la base de données de production, sélectionnez l’option « Configurer SQL Server pour les services d’application » et cliquez sur Suivant.
 
 
-[![Choisissez de configurer SQL Server pour les Services d’Application](configuring-a-website-that-uses-application-services-vb/_static/image2.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image1.jpg)
+[![Choisissez pour configurer SQL Server pour les Services d’Application](configuring-a-website-that-uses-application-services-vb/_static/image2.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image1.jpg)
 
 **Figure 1**: Choisir de configurer SQL Server pour les Services d’Application ([cliquez pour afficher l’image en taille réelle](configuring-a-website-that-uses-application-services-vb/_static/image3.jpg))
 
@@ -117,7 +117,7 @@ L’outil démarre en affichant un écran de démarrage qui explique son objecti
 > Après avoir entré votre serveur de base de données et les informations d’identification, vous pouvez obtenir une erreur lors du développement de la liste déroulante de base de données. Le `aspnet_regsql.exe` outil requêtes le `sysdatabases` (table système) pour récupérer une liste de bases de données sur le serveur, mais certains web hébergeant les verrouiller de sociétés de leurs serveurs de base de données afin que ces informations ne sont pas disponibles publiquement. Si vous obtenez cette erreur, vous pouvez taper le nom de la base de données directement dans la liste déroulante.
 
 
-[![Fournir l’outil avec vos informations de connexion de base de données s](configuring-a-website-that-uses-application-services-vb/_static/image5.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image4.jpg)
+[![Supply le s outil avec votre base de données des informations de connexion](configuring-a-website-that-uses-application-services-vb/_static/image5.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image4.jpg)
 
 **Figure 2**: Fournir les informations de connexion de s avec votre base de l’outil ([cliquez pour afficher l’image en taille réelle](configuring-a-website-that-uses-application-services-vb/_static/image6.jpg))
 
@@ -125,7 +125,7 @@ L’outil démarre en affichant un écran de démarrage qui explique son objecti
 L’écran suivant récapitule les actions qui doivent avoir lieu, à savoir ce qui les objets de base de données d’application services vont être ajoutés à la base de données spécifié. Cliquez sur Suivant pour terminer cette action. Après quelques instants, le dernier écran s’affiche, en notant que les objets de base de données ont été ajoutés (voir Figure 3).
 
 
-[![Succès ! Les objets de base de données d’Application Services ont été ajoutés à la base de données de Production](configuring-a-website-that-uses-application-services-vb/_static/image8.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image7.jpg)
+[![Success ! Les objets de base de données d’Application Services ont été ajoutés à la base de données de Production](configuring-a-website-that-uses-application-services-vb/_static/image8.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image7.jpg)
 
 **Figure 3**: Opération réussie L’Application Services base de données objets ont été ajoutés à la base de données de Production ([cliquez pour afficher l’image en taille réelle](configuring-a-website-that-uses-application-services-vb/_static/image9.jpg))
 
@@ -133,7 +133,7 @@ L’écran suivant récapitule les actions qui doivent avoir lieu, à savoir ce 
 Pour vérifier que les objets de base de données d’application services ont été ajoutés à la base de données de production, ouvrez SQL Server Management Studio et connectez-vous à votre base de données de production. Comme le montre la Figure 4, vous devez maintenant voir les tables de base de données d’application services dans votre base de données, `aspnet_Applications`, `aspnet_Membership`, `aspnet_Users`, et ainsi de suite.
 
 
-[![Vérifier que les objets de base de données ont été ajoutés à la base de données de Production](configuring-a-website-that-uses-application-services-vb/_static/image11.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image10.jpg)
+[![Confirmer que les objets de base de données ont été ajoutés à la base de données de Production](configuring-a-website-that-uses-application-services-vb/_static/image11.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image10.jpg)
 
 **Figure 4**: Vérifier que les objets de base de données ont été ajoutés à la base de données de Production ([cliquez pour afficher l’image en taille réelle](configuring-a-website-that-uses-application-services-vb/_static/image12.jpg))
 
@@ -172,12 +172,12 @@ Rappelez-vous qu’un tutoriel précédent mis à jour l’application web de cr
 > Pour plus d’informations sur l’utilisation de l’appartenance et l’API de rôles, ainsi que les contrôles Web de ASP.NET associées à la connexion, veillez à lire mon [ *didacticiels de sécurité de site Web*](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md). Pour plus d’informations sur la personnalisation du contrôle CreateUserWizard, consultez le [ *création de comptes utilisateur* ](../../older-versions-security/membership/creating-user-accounts-vb.md) et [ *stockant des informations utilisateur supplémentaires* ](../../older-versions-security/membership/storing-additional-user-information-vb.md) didacticiels ou extraction [ *Erich Peterson* ](http://www.erichpeterson.com/) article s, [ *personnalisation du contrôle CreateUserWizard* ](http://aspnet.4guysfromrolla.com/articles/070506-1.aspx).
 
 
-[![Les administrateurs peuvent créer de nouveaux comptes d’utilisateur](configuring-a-website-that-uses-application-services-vb/_static/image14.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image13.jpg)
+[![Aadministrateurs peuvent créer des comptes d’utilisateur](configuring-a-website-that-uses-application-services-vb/_static/image14.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image13.jpg)
 
 **Figure 5**: Les administrateurs peuvent créer des comptes d’utilisateur ([cliquez pour afficher l’image en taille réelle](configuring-a-website-that-uses-application-services-vb/_static/image15.jpg))
 
 
-Si vous avez besoin de toutes les fonctionnalités de l’extraction WSAT [ *propagée votre propre Site Web Administration outil*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), dans lequel l’auteur Dan Clem vous explique le processus de création d’un outil WSAT de type personnalisé. Dan partage son code source d’application s (en C#) et fournit des instructions détaillées pour l’ajouter à votre site Web hébergé.
+Si vous avez besoin de toutes les fonctionnalités de l’extraction WSAT [ *propagée votre propre Site Web Administration outil*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), dans lequel l’auteur Dan Clem vous explique le processus de création d’un outil WSAT de type personnalisé. Dan partage son code source d’application s (en c#) et fournit des instructions détaillées pour l’ajouter à votre site Web hébergé.
 
 ## <a name="summary"></a>Récapitulatif
 

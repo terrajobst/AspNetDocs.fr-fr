@@ -8,15 +8,15 @@ ms.date: 10/16/2008
 ms.assetid: a39182f9-a82c-41fa-9be0-92c2291a3a96
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-17-checkout-with-jeff-atwood
 msc.type: video
-ms.openlocfilehash: 667a40a58e6650cfa4757a805f9a2993866592f7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 78b62a7b9093ab6e8a6bfd3d7a01f136c47568f2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379025"
 ---
-<a name="aspnet-mvc-storefront-part-17-checkout-with-jeff-atwood"></a>Application Storefront ASP.NET MVC, partie 17 : Validation avec Jeff Atwood
-====================
+# <a name="aspnet-mvc-storefront-part-17-checkout-with-jeff-atwood"></a>Application Storefront ASP.NET MVC, partie 17 : Validation avec Jeff Atwood
+
 par [Rob Conery](https://github.com/robconery)
 
 Dans cet épisode, je prêt inscrire le processus de validation et discuter avec CodingHorror M. lui-même, Jeff Atwood. Nous parlons de toutes sortes d’opérations mais principalement discuter Open ID, CardSpace et comment Jeff aimeriez voir le processus de validation fonctionne dans un monde idéal. Je vous guide alors configuration CardSpace sur votre ordinateur local.

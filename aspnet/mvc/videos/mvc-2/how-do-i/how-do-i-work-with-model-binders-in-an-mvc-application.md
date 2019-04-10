@@ -8,15 +8,15 @@ ms.date: 12/30/2009
 ms.assetid: 55c2fa76-d5b9-43e7-921e-51a9b57dba30
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i/how-do-i-work-with-model-binders-in-an-mvc-application
 msc.type: video
-ms.openlocfilehash: 889506be05c617d64a7e1f7b9b70a7a1ed52ae0a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c81057a065e00834928eebe4bd129f3a4a8581f6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379012"
 ---
-<a name="how-do-i-work-with-model-binders-in-an-mvc-application"></a>Comment faire Travailler avec des classeurs de modèles dans une Application MVC ?
-====================
+# <a name="how-do-i-work-with-model-binders-in-an-mvc-application"></a>Comment faire Travailler avec des classeurs de modèles dans une Application MVC ?
+
 par [Chris Pels](https://twitter.com/chrispels)
 
 Dans cette vidéo Chris Pels montre comment utiliser les classeurs de modèles pour lier des données de formulaire à des objets métier complexes dans les modèles dans une application MVC. Tout d’abord, une application MVC est créée avec un modèle simple pour une classe de client, ainsi que d’un contrôleur et la vue permettant de modifier les données client. Ensuite, la liaison de modèle automatique de MVC est illustrée par la classe customer. Ensuite, l’attribut de liaison est indiqué et présenté comme un mécanisme permettant de contrôler les détails du processus de liaison pour inclure et exclure des propriétés spécifiques d’un objet complexe. Enfin, l’utilisation de préfixes d’espace de noms pour la segmentation des données de formulaire sur une page est abordée.

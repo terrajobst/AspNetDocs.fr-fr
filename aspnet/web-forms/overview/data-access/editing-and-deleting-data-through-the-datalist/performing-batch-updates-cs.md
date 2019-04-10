@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs
-title: Mise à jour par lots (C#) | Microsoft Docs
+title: Mise à jour par lots (c#) | Microsoft Docs
 author: rick-anderson
 description: Découvrez comment créer un entièrement modifiable DataList tous ses éléments où se trouvent dans modifier le mode et dont les valeurs peuvent être enregistrées en cliquant sur un bouton « Update All » sur le...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 10/30/2006
 ms.assetid: 57743ca7-5695-4e07-aed1-44b297f245a9
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2de7cdbfc37140a4b60c3123524974c4f0ffa42f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 388637d67594d6431a134673cf85b3b18098136e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425871"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402750"
 ---
-<a name="performing-batch-updates-c"></a>Réalisation de mises à jour par lots (C#)
-====================
+# <a name="performing-batch-updates-c"></a>Réalisation de mises à jour par lots (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_37_CS.exe) ou [télécharger le PDF](performing-batch-updates-cs/_static/datatutorial37cs1.pdf)
@@ -29,7 +29,7 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 Dans le [didacticiel précédent](an-overview-of-editing-and-deleting-data-in-the-datalist-cs.md) nous avons examiné comment créer un contrôle DataList au niveau élément. Comme le GridView modifiable standard, chaque élément dans le contrôle DataList inclus une modification du bouton qui, quand vous cliquez sur, serait que l’élément puisse être modifié. Bien que cela au niveau élément édition fonctionne bien pour les données qui sont uniquement mis à jour occasionnellement, certains scénarios de cas d’utilisation oblige l’utilisateur à modifier le nombre d’enregistrements. Si un utilisateur a besoin de modifier des dizaines d’enregistrements et est obligé de modifier, rendre leurs modifications, puis cliquez sur la mise à jour pour chacune d’elles, la quantité d’un clic sur peut entraver sa productivité. Dans ce cas, une meilleure option consiste à fournir un contrôle DataList entièrement modifiable, celui dans lequel *tous les* de ses éléments sont en mode édition et dont les valeurs peuvent être modifiées en cliquant sur un bouton de tout mettre à jour sur la page (voir Figure 1).
 
 
-[![Chaque élément dans un contrôle DataList modifiable entièrement peut être modifié.](performing-batch-updates-cs/_static/image2.png)](performing-batch-updates-cs/_static/image1.png)
+[![ECCA élément dans un contrôle DataList modifiable entièrement peut être modifiée](performing-batch-updates-cs/_static/image2.png)](performing-batch-updates-cs/_static/image1.png)
 
 **Figure 1**: Chaque élément dans un contrôle DataList modifiable complet peut être modifié ([cliquez pour afficher l’image en taille réelle](performing-batch-updates-cs/_static/image3.png))
 
@@ -50,7 +50,7 @@ Pour un contrôle DataList entièrement modifiable, nous voulons *tous les* de l
 Commencez par ouvrir le `BatchUpdate.aspx` page, ajoutez un contrôle DataList et définissez son `ID` propriété `Suppliers`. À partir de la balise active DataList s, choisir d’ajouter un nouveau contrôle ObjectDataSource nommé `SuppliersDataSource`.
 
 
-[![Créer un nouveau ObjectDataSource nommé SuppliersDataSource](performing-batch-updates-cs/_static/image5.png)](performing-batch-updates-cs/_static/image4.png)
+[![Ccréer un nouveau SuppliersDataSource de nommé ObjectDataSource](performing-batch-updates-cs/_static/image5.png)](performing-batch-updates-cs/_static/image4.png)
 
 **Figure 2**: Créer une nouvelle nommée de ObjectDataSource `SuppliersDataSource` ([cliquez pour afficher l’image en taille réelle](performing-batch-updates-cs/_static/image6.png))
 
@@ -58,12 +58,12 @@ Commencez par ouvrir le `BatchUpdate.aspx` page, ajoutez un contrôle DataList e
 Configurer l’ObjectDataSource pour récupérer des données à l’aide de la `SuppliersBLL` classe s `GetSuppliers()` (méthode) (voir Figure 3). Comme du didacticiel précédent, plutôt que de la mise à jour les informations de fournisseur via ObjectDataSource, nous allons travailler directement avec la couche de logique métier. Par conséquent, définissez la liste déroulante (aucun) dans l’onglet de mise à jour (voir Figure 4).
 
 
-[![Récupérer les informations de fournisseur à l’aide de la méthode GetSuppliers()](performing-batch-updates-cs/_static/image8.png)](performing-batch-updates-cs/_static/image7.png)
+[![Rles informations de fournisseur à l’aide de la méthode GetSuppliers() de récup](performing-batch-updates-cs/_static/image8.png)](performing-batch-updates-cs/_static/image7.png)
 
 **Figure 3**: Récupérer les informations de fournisseur à l’aide du `GetSuppliers()` (méthode) ([cliquez pour afficher l’image en taille réelle](performing-batch-updates-cs/_static/image9.png))
 
 
-[![Définissez la liste déroulante (aucun) dans l’onglet de mise à jour](performing-batch-updates-cs/_static/image11.png)](performing-batch-updates-cs/_static/image10.png)
+[![Set la liste déroulante (aucun) dans l’onglet de mise à jour](performing-batch-updates-cs/_static/image11.png)](performing-batch-updates-cs/_static/image10.png)
 
 **Figure 4**: Définissez la liste déroulante (aucun) dans l’onglet de mise à jour ([cliquez pour afficher l’image en taille réelle](performing-batch-updates-cs/_static/image12.png))
 
@@ -87,7 +87,7 @@ Dans le `ItemTemplate` je m à l’aide de deux nouvelles classes CSS, `Supplier
 Après avoir apporté ces modifications, visitez cette page via un navigateur. Comme le montre la Figure 5, chaque élément DataList affiche le nom du fournisseur au format texte et utilise des zones de texte pour afficher l’adresse, ville et pays.
 
 
-[![Chaque fournisseur dans le contrôle DataList est modifiable](performing-batch-updates-cs/_static/image14.png)](performing-batch-updates-cs/_static/image13.png)
+[![ECCA fournisseur dans le contrôle DataList est modifiable](performing-batch-updates-cs/_static/image14.png)](performing-batch-updates-cs/_static/image13.png)
 
 **Figure 5**: Chaque fournisseur dans le contrôle DataList est modifiable ([cliquez pour afficher l’image en taille réelle](performing-batch-updates-cs/_static/image15.png))
 
@@ -104,7 +104,7 @@ Commencez par l’ajout d’un contrôle bouton Web ci-dessus les contrôles Dat
 Figure 6 illustre la page après que les mise à jour tous les boutons ont été ajoutés.
 
 
-[![Deux boutons de toutes les mises à jour ont été ajoutées à la Page](performing-batch-updates-cs/_static/image17.png)](performing-batch-updates-cs/_static/image16.png)
+[![TWO mise à jour tous les boutons ont été ajoutés à la Page](performing-batch-updates-cs/_static/image17.png)](performing-batch-updates-cs/_static/image16.png)
 
 **Figure 6**: Deux boutons de toutes les mises à jour ont été ajoutées à la Page ([cliquez pour afficher l’image en taille réelle](performing-batch-updates-cs/_static/image18.png))
 

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs
-title: En spécifiant le titre, les balises Meta et les autres en-têtes HTML dans la Page maître (C#) | Microsoft Docs
+title: En spécifiant le titre, les balises Meta et les autres en-têtes HTML dans la Page maître (c#) | Microsoft Docs
 author: rick-anderson
 description: Examine les différentes techniques permettant de définir assortis &lt;head&gt; éléments dans la Page maître depuis la page de contenu.
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 05/21/2008
 ms.assetid: 0aa1c84f-c9e2-4699-b009-0e28643ecbc6
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: e3846ea696a1a5a29fd53d6753878fab9dd9a95d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 431d5a124017e2a23bfaa7579f63d61faf0b8ebd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379792"
 ---
-<a name="specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-c"></a>Spécification du titre, des balises META et d’autres en-têtes HTML dans la page maître (C#)
-====================
+# <a name="specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-c"></a>Spécification du titre, des balises META et d’autres en-têtes HTML dans la page maître (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_03_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_03_CS.pdf)
@@ -169,7 +169,7 @@ Après cela, visitez le site via un navigateur. Si vous visitez une page dont le
 La figure 5 illustre le `MultipleContentPlaceHolders.aspx` page lorsqu’ils sont affichés via un navigateur. Notez que le titre est précisément de la page Nom du fichier (moins l’extension), « MultipleContentPlaceHolders ».
 
 
-[![Si un titre n’est pas explicitement spécifié, le nom de fichier de la Page est automatiquement utilisé](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image6.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image5.png)
+[![If un titre est pas explicitement spécifié, nom de fichier de la Page est automatiquement utilisé](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image6.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image5.png)
 
 **Figure 05**: Si un titre n’est pas explicitement spécifié, le nom de fichier de la Page est automatiquement utilisé ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image7.png))
 
@@ -191,7 +191,7 @@ Le système de mappage de site est construit sur le [modèle de fournisseur](htt
 Commencez par créer un fichier de mappage de site dans le dossier de racine du site Web nommé `Web.sitemap`. Pour ce faire, avec le bouton droit sur le nom de site Web dans l’Explorateur de solutions, choisissez Ajouter un nouvel élément, sélectionnez le modèle de plan de Site. Assurez-vous que le fichier est nommé `Web.sitemap` et cliquez sur Ajouter.
 
 
-[![Ajoutez un fichier nommé Web.sitemap au dossier de racine du site Web](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image9.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image8.png)
+[![Ajj un Web.sitemap nommé du fichier au dossier de racine du site Web](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image9.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image8.png)
 
 **Figure 06**: Ajouter un fichier nommé `Web.sitemap` au dossier racine du site Web de ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image10.png))
 
@@ -224,7 +224,7 @@ Démarrez en supprimant le balisage existant de la liste non triée de la sectio
 À partir de l’Assistant de Configuration de Source de données choisir de lier le ListView à un nouveau contrôle SiteMapDataSource nommé `LessonsDataSource`. Le contrôle SiteMapDataSource retourne la structure hiérarchique du système de site map.
 
 
-[![Lier un contrôle SiteMapDataSource au contrôle ListView de LessonsList](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image13.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image12.png)
+[![Bchercher un contrôle SiteMapDataSource pour le contrôle ListView de LessonsList](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image13.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image12.png)
 
 **Figure 08**: Lier un contrôle SiteMapDataSource pour le `LessonsList` ListView contrôle ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image14.png))
 
@@ -239,7 +239,7 @@ Le `LayoutTemplate` génère le balisage pour une liste non triée (`<ul>...</ul
 Après avoir configuré les modèles de la ListView, visitez le site Web. Comme le montre la Figure 9, la section de leçons contient un seul élément de liste à puces, accueil. Où se trouvent les propos et à l’aide de leçons de contrôles ContentPlaceHolder plusieurs ? SiteMapDataSource est conçue pour retourner un ensemble hiérarchique de données, mais le contrôle ListView peut uniquement afficher un seul niveau de la hiérarchie. Par conséquent, seul le premier niveau de nœuds retourné par SiteMapDataSource s’affiche.
 
 
-[![La Section leçons contient un seul élément de liste](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image16.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image15.png)
+[![TIl leçons Section contient un seul élément de liste](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image16.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image15.png)
 
 **Figure 09**: La Section leçons contient un seul élément de liste ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image17.png))
 
@@ -254,7 +254,7 @@ Avec cette modification, le ListView affiche les éléments de liste à puces po
 En configurant SiteMapDataSource pour omettre le nœud de démarrage et en ajoutant explicitement un élément de liste à puces d’accueil, la section leçons affiche désormais la sortie prévue.
 
 
-[![La Section leçons contient un élément de liste à puces pour chaque nœud enfant et personnels](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image19.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image18.png)
+[![TIl leçons Section contient une liste à puces d’élément pour chaque nœud enfant et personnels](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image19.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image18.png)
 
 **Figure 10**: La Section leçons contient un élément de liste à puces pour chaque nœud enfant et personnels ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image20.png))
 

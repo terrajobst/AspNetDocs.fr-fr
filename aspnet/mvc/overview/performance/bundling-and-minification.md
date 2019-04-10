@@ -8,15 +8,15 @@ ms.date: 08/23/2012
 ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
-ms.openlocfilehash: 9b627a66007aec09a404147698e2bef06c7e7794
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9e4a2a9fc56393ac816f25a1039b233aa8961608
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053186"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383835"
 ---
-<a name="bundling-and-minification"></a>Bundles et minimisation
-====================
+# <a name="bundling-and-minification"></a>Bundles et minimisation
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Regroupement et minimisation sont deux techniques vous pouvez utiliser dans ASP.NET 4.5 pour améliorer les temps de chargement de demande. Regroupement et minimisation améliore les temps de chargement en réduisant le nombre de demandes au serveur et en réduisant la taille des ressources demandées (par exemple, CSS et JavaScript).
@@ -52,7 +52,7 @@ Après la minimisation, la fonction est réduite à ce qui suit :
 
 Outre la suppression de commentaires et l’espace blanc inutile, les paramètres suivants et les noms de variables ont été renommés (raccourci) comme suit :
 
-| **Original** | **Renamed** |
+| **D'origine** | **Affectation d'un nouveau nom** |
 | --- | --- |
 | imageTagAndImageID | n |
 | imageContext | t |
@@ -62,7 +62,7 @@ Outre la suppression de commentaires et l’espace blanc inutile, les paramètre
 
 Le tableau suivant montre plusieurs différences importantes entre la liste de toutes les ressources individuellement et à l’aide de regroupement et minimisation (B/M) dans l’exemple de programme.
 
-|  | **À l’aide de B/M** | **Sans B/M** | **Change** |
+|  | **À l’aide de B/M** | **Sans B/M** | **Modification** |
 | --- | --- | --- | --- |
 | **Demandes de fichiers** | 9 | 34 | 256% |
 | **Ko envoyé** | 3.26 | 11.92 | 266% |
@@ -157,15 +157,15 @@ Le chemin d’accès virtuel spécifié dans le `Include` (méthode) et la reche
 Prenez un projet avec les fichiers JavaScript suivants :
 
 - *Scripts\\Common\\AddAltToImg.js*
-- *Scripts\\Common\\ToggleDiv.js*
-- *Scripts\\Common\\ToggleImg.js*
+- *Scripts\\commune\\ToggleDiv.js*
+- *Scripts\\commune\\ToggleImg.js*
 - *Scripts\\commune\\Sub1\\ToggleLinks.js*
 
 ![dir imag](bundling-and-minification/_static/image7.png)
 
 Le tableau suivant présente les fichiers ajoutés à un ensemble en utilisant le caractère générique, comme indiqué :
 
-| **Call** | **Fichiers ajoutés ou Exception levée** |
+| **Appel** | **Fichiers ajoutés ou Exception levée** |
 | --- | --- |
 | Include("~/Scripts/Common/\*.js") | *AddAltToImg.js*, *ToggleDiv.js*, *ToggleImg.js* |
 | Include("~/Scripts/Common/T\*.js") | Exception de modèle non valide. Le caractère générique est uniquement autorisé sur le préfixe ou le suffixe. |

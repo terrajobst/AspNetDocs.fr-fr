@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-cs
-title: 'Itération #4 : rendre l’application faiblement couplée (C#) | Microsoft Docs'
+title: 'Itération #4 : rendre l’application faiblement couplée (c#) | Microsoft Docs'
 author: microsoft
 description: Dans ce quatrième itération, nous profitons de plusieurs modèles de conception de logiciels pour le rendre plus facile à gérer et modifier l’application Gestionnaire de contacts. Pré...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 829f589f-e201-4f6e-9ae6-08ae84322065
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 389627e610eebcdabee9b4db524e5915186db099
-ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
+ms.openlocfilehash: 8caa88d928517e1c71210cbe55e3961d4baf461a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58440350"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381274"
 ---
-<a name="iteration-4--make-the-application-loosely-coupled-c"></a>Itération #4 : rendre l’application faiblement couplée (C#)
-====================
+# <a name="iteration-4--make-the-application-loosely-coupled-c"></a>Itération #4 : rendre l’application faiblement couplée (c#)
+
 by [Microsoft](https://github.com/microsoft)
 
 [Télécharger le Code](iteration-4-make-the-application-loosely-coupled-cs/_static/contactmanager_4_cs1.zip)
@@ -24,7 +24,7 @@ by [Microsoft](https://github.com/microsoft)
 > Dans ce quatrième itération, nous profitons de plusieurs modèles de conception de logiciels pour le rendre plus facile à gérer et modifier l’application Gestionnaire de contacts. Par exemple, nous refactoriser notre application pour utiliser le modèle dépôt et le modèle d’Injection de dépendance.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (C#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (c#)
 
 Dans cette série de didacticiels, nous créer une application de gestion des contacts entière à partir du début à la fin. L’application Gestionnaire de Contact permet vous permettent de stocker les informations de contact (noms, numéros de téléphone et adresses de messagerie) pour obtenir la liste de personnes.
 

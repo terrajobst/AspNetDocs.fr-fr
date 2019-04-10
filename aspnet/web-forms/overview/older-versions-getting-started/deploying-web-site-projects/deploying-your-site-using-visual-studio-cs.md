@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-visual-studio-cs
-title: Déploiement de votre Site à l’aide de Visual Studio (C#) | Microsoft Docs
+title: Déploiement de votre Site à l’aide de Visual Studio (c#) | Microsoft Docs
 author: rick-anderson
 description: Visual Studio inclut des outils pour le déploiement d’un site Web. En savoir plus sur ces outils dans ce didacticiel.
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 04/01/2009
 ms.assetid: cde4ee53-a5d0-4937-a54b-67877e8266c3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-visual-studio-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 94f4f3e0d81f3cfae141c8306731cc8eef6f0efb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9512685672e42091e7be11c5710a2434ca8b0488
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033506"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392415"
 ---
-<a name="deploying-your-site-using-visual-studio-c"></a>Déploiement de votre site avec Visual Studio (C#)
-====================
+# <a name="deploying-your-site-using-visual-studio-c"></a>Déploiement de votre site avec Visual Studio (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_04_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial04_DeployingViaVS_cs.pdf)
@@ -45,7 +45,7 @@ Jetons un œil à l’utilisation de l’outil Copier le Site Web pour publier l
 Lancer le projet d’outil Copier le Site Web en cliquant sur l’icône Copier le Site Web dans l’Explorateur de solutions (cette icône est encerclée dans la Figure 1) ; ou bien, vous pouvez sélectionner l’option Copier le Site Web dans le menu du site Web. Chacune de ces approches lance l’interface utilisateur de copier le Site Web indiqué dans la Figure 1 ; seul le volet de gauche dans la Figure 1 est rempli, car nous devons encore se connecter à un serveur distant.
 
 
-[![Interface utilisateur de l’outil Copier le Site Web est divisée en deux volets.](deploying-your-site-using-visual-studio-cs/_static/image2.png)](deploying-your-site-using-visual-studio-cs/_static/image1.png)
+[![TInterface utilisateur de l’outil Web Site he copie est divisée en deux volets](deploying-your-site-using-visual-studio-cs/_static/image2.png)](deploying-your-site-using-visual-studio-cs/_static/image1.png)
 
 **Figure 1**: Interface utilisateur de l’outil Copier le Site Web est divisée en deux volets ([cliquez pour afficher l’image en taille réelle](deploying-your-site-using-visual-studio-cs/_static/image3.png))
 
@@ -72,7 +72,7 @@ Après que vous être connecté, l’outil Copier le Site Web charge les fichier
 Nous allons ajouter une nouvelle page au projet BookReviewsWSP, puis le déployer afin que nous pouvons voir l’outil Copier le Site Web en action. Créer une nouvelle page ASP.NET dans Visual Studio dans le répertoire racine nommé `Privacy.aspx`. Que la page à utiliser la page maître `Site.master` et ajoutez la déclaration de confidentialité de votre site à cette page. Figure 3 montre Visual Studio après que cette page a été créée.
 
 
-[![Ajouter une Page nommée &lt;code&gt;Privacy.aspx&lt;/code&gt; au dossier de racine du site Web](deploying-your-site-using-visual-studio-cs/_static/image8.png)](deploying-your-site-using-visual-studio-cs/_static/image7.png)
+[![Ajj une Page nommée &lt;code&gt;Privacy.aspx&lt;/code&gt; au dossier de racine du site Web](deploying-your-site-using-visual-studio-cs/_static/image8.png)](deploying-your-site-using-visual-studio-cs/_static/image7.png)
 
 **Figure 3**: Ajouter une Page nommée `Privacy.aspx` au dossier racine du site Web de ([cliquez pour afficher l’image en taille réelle](deploying-your-site-using-visual-studio-cs/_static/image9.png))
 
@@ -80,7 +80,7 @@ Nous allons ajouter une nouvelle page au projet BookReviewsWSP, puis le déploye
 Revenez ensuite à l’interface utilisateur de copier le Site Web. Comme le montre la Figure 4, le volet gauche inclut désormais les nouveaux fichiers - `Policy.aspx` et `Policy.aspx.cs`. De plus, ces fichiers sont marqués avec une icône de flèche et un état de nouveau, indiquant qu’elles existent sur le site local, mais pas sur le site distant.
 
 
-[![L’outil Copier le Site Web inclut la nouveau &lt;code&gt;Privacy.aspx&lt;/code&gt; Page dans le volet de gauche](deploying-your-site-using-visual-studio-cs/_static/image11.png)](deploying-your-site-using-visual-studio-cs/_static/image10.png)
+[![TIl outil Copier le Site Web inclut la nouveau &lt;code&gt;Privacy.aspx&lt;/code&gt; Page dans le volet de gauche](deploying-your-site-using-visual-studio-cs/_static/image11.png)](deploying-your-site-using-visual-studio-cs/_static/image10.png)
 
 **Figure 4**: L’outil Copier le Site Web inclut la nouveau `Privacy.aspx` Page dans le volet de gauche ([cliquez pour afficher l’image en taille réelle](deploying-your-site-using-visual-studio-cs/_static/image12.png))
 
@@ -90,7 +90,7 @@ Pour déployer les nouveaux fichiers, sélectionnez-les et puis cliquez sur l’
 En même temps que la liste de nouveaux fichiers, l’outil Copier le Site Web met en surbrillance tous les fichiers qui diffèrent entre les sites locaux et distants. Pour voir comment cela fonctionne, revenez à la `Privacy.aspx` page et ajouter quelques mots à la politique de confidentialité. Enregistrez la page, puis revenez à l’outil Copier le Site Web. Comme le montre la Figure 5, le `Privacy.aspx` page dans le volet de gauche a le statut Changed indiquant qu’il est désynchronisé avec le site distant.
 
 
-[![L’outil Copier le Site Web indique que le &lt;code&gt;Privacy.aspx&lt;/code&gt; Page a été modifiée.](deploying-your-site-using-visual-studio-cs/_static/image14.png)](deploying-your-site-using-visual-studio-cs/_static/image13.png)
+[![TIl outil Copier le Site Web indique que le &lt;code&gt;Privacy.aspx&lt;/code&gt; Page a été modifiée.](deploying-your-site-using-visual-studio-cs/_static/image14.png)](deploying-your-site-using-visual-studio-cs/_static/image13.png)
 
 **Figure 5**: L’outil Copier le Site Web indique que le `Privacy.aspx` Page a été modifiée ([cliquez pour afficher l’image en taille réelle](deploying-your-site-using-visual-studio-cs/_static/image15.png))
 
@@ -127,7 +127,7 @@ Pour l’application critique de livre le site distant contient les fichiers dé
 La figure 7 illustre les fichiers sur le site FTP après que l’opération de publication est terminée. Notez que seules les pages de balisage et les fichiers de prise en charge nécessaire du serveur et côté client ont été téléchargés.
 
 
-[![Uniquement les fichiers nécessaires ont été publiés dans l’environnement de Production](deploying-your-site-using-visual-studio-cs/_static/image20.png)](deploying-your-site-using-visual-studio-cs/_static/image19.png)
+[![Oeules que les fichiers nécessaires ont été publiés dans l’environnement de Production](deploying-your-site-using-visual-studio-cs/_static/image20.png)](deploying-your-site-using-visual-studio-cs/_static/image19.png)
 
 **Figure 7**: Uniquement le nécessaire fichiers ont été publiés dans l’environnement de Production ([cliquez pour afficher l’image en taille réelle](deploying-your-site-using-visual-studio-cs/_static/image21.png))
 
@@ -148,8 +148,8 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 
 - [Copie de Site Web avec l’outil Copier le Site Web](https://msdn.microsoft.com/library/1cc82atw.aspx)
 - [Comment faire Déployer un Site Web à l’aide de l’outil Copier le Site Web](../../../videos/how-do-i/how-do-i-deploy-a-web-site-using-the-copy-web-site-tool.md) (vidéo)
-- [Guide pratique pour Publier des projets d’Application Web](https://msdn.microsoft.com/library/aa983453.aspx)
-- [Guide pratique pour Publier des Sites Web](https://msdn.microsoft.com/library/20yh9f1b.aspx)
+- [Procédure : Publier des projets d’Application Web](https://msdn.microsoft.com/library/aa983453.aspx)
+- [Procédure : Publier des Sites Web](https://msdn.microsoft.com/library/20yh9f1b.aspx)
 - [Le programme d’installation et déploiement des projets dans Visual Studio](https://msdn.microsoft.com/library/wx3b589t.aspx)
 
 > [!div class="step-by-step"]

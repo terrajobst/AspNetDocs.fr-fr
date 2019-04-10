@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-controller
-title: Ajout d’un contrôleur (C#) | Microsoft Docs
+title: Ajout d’un contrôleur (c#) | Microsoft Docs
 author: Rick-Anderson
 description: Ce didacticiel vous apprend les notions de base de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express Service Pack 1, qui, je...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 01/12/2011
 ms.assetid: 0b8c56b5-fdf3-42dd-a866-98fbe0ab78a0
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 6a8cd7c166ea26b7e2ec4089194dc631db2b7353
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 18c8f2a95222a28d95950b34c816539f723542f2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422907"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396484"
 ---
-<a name="adding-a-controller-c"></a>Ajout d’un contrôleur (C#)
-====================
+# <a name="adding-a-controller-c"></a>Ajout d’un contrôleur (C#)
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
@@ -31,7 +31,7 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Si vous utilisez Visual Studio 2010 au lieu de Visual Web Developer 2010, installez les composants requis en cliquant sur le lien suivant : [Visual Studio 2010 prerequisites](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Un projet de Visual Web Developer avec code source C# est disponible pour accompagner cette rubrique. [Téléchargez la version C#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez Visual Basic, basculez vers le [version Visual Basic](../vb/intro-to-aspnet-mvc-3.md) de ce didacticiel.
+> Un projet de Visual Web Developer avec code source c# est disponible pour accompagner cette rubrique. [Téléchargez la version c#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez Visual Basic, basculez vers le [version Visual Basic](../vb/intro-to-aspnet-mvc-3.md) de ce didacticiel.
 
 
 MVC est l’acronyme *model-view-controller*. MVC est un modèle de développement d’applications sont bien structurée et facile à gérer. Applications basées sur MVC contiennent :
@@ -72,7 +72,7 @@ Accédez à `http://localhost:xxxx/HelloWorld/Welcome`. La méthode `Welcome` s�
 
 ![](adding-a-controller/_static/image7.png)
 
-Nous allons modifier légèrement l’exemple afin que vous pouvez passer des informations de paramètre à partir de l’URL au contrôleur (par exemple, */HelloWorld/Welcome ? nom = Scott&amp;numtimes = 4*). Modifier votre `Welcome` méthode pour inclure les deux paramètres comme indiqué ci-dessous. Notez que le code utilise la fonctionnalité de paramètre facultatif de C# pour indiquer que le `numTimes` paramètre par défaut 1 si aucune valeur n’est passée pour ce paramètre.
+Nous allons modifier légèrement l’exemple afin que vous pouvez passer des informations de paramètre à partir de l’URL au contrôleur (par exemple, */HelloWorld/Welcome ? nom = Scott&amp;numtimes = 4*). Modifier votre `Welcome` méthode pour inclure les deux paramètres comme indiqué ci-dessous. Notez que le code utilise la fonctionnalité de paramètre facultatif de c# pour indiquer que le `numTimes` paramètre par défaut 1 si aucune valeur n’est passée pour ce paramètre.
 
 [!code-csharp[Main](adding-a-controller/samples/sample2.cs)]
 

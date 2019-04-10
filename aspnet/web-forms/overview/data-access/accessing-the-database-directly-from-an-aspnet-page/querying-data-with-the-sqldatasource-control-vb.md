@@ -8,15 +8,15 @@ ms.date: 02/20/2007
 ms.assetid: b12f752d-3502-40a4-b695-fc7b7d08cfd3
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 341cd518b5875b6cc7739f88fc1a35687ea0e090
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d1e01c7693cc5d59b32019dfef1663863e7978c4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038826"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379844"
 ---
-<a name="querying-data-with-the-sqldatasource-control-vb"></a>Interrogation des données avec le contrôle SqlDataSource (VB)
-====================
+# <a name="querying-data-with-the-sqldatasource-control-vb"></a>Interrogation des données avec le contrôle SqlDataSource (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_47_VB.exe) ou [télécharger le PDF](querying-data-with-the-sqldatasource-control-vb/_static/datatutorial47vb1.pdf)
@@ -79,7 +79,7 @@ Avant de commencer la manière de travailler directement avec les données de ba
 Comme dans les autres dossiers, `Default.aspx` dans le `SqlDataSource` dossier répertorie les didacticiels dans sa section. N’oubliez pas que le `SectionLevelTutorialListing.ascx` contrôle utilisateur fournit cette fonctionnalité. Par conséquent, ajoutez ce contrôle utilisateur à `Default.aspx` en le faisant glisser à partir de l’Explorateur de solutions sur la page s en mode Création.
 
 
-[![Ajouter le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx](querying-data-with-the-sqldatasource-control-vb/_static/image5.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image4.gif)
+[![AJJ le contrôle utilisateur SectionLevelTutorialListing.ascx à Default.aspx](querying-data-with-the-sqldatasource-control-vb/_static/image5.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image4.gif)
 
 **Figure 4**: Ajouter le `SectionLevelTutorialListing.ascx` contrôle utilisateur à `Default.aspx` ([cliquez pour afficher l’image en taille réelle](querying-data-with-the-sqldatasource-control-vb/_static/image6.gif))
 
@@ -155,7 +155,7 @@ Le `SelectCommand` propriété spécifie l’instruction de SQL ad hoc ou procé
 Une fois que SqlDataSource a été configuré, il peut être lié à un contrôle Web, tel qu’un GridView ou d’un contrôle DetailsView de données. Pour ce didacticiel, permettent d’afficher les données dans un GridView s. Dans la boîte à outils, faites glisser un GridView sur la page, puis liez-le à le `ProductsDataSource` SqlDataSource en choisissant la source de données à partir de la liste déroulante dans la balise active de s GridView.
 
 
-[![Ajouter un GridView et le lier au contrôle SqlDataSource](querying-data-with-the-sqldatasource-control-vb/_static/image13.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image12.gif)
+[![Ajj un GridView et le lier au contrôle SqlDataSource](querying-data-with-the-sqldatasource-control-vb/_static/image13.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image12.gif)
 
 **Figure 10**: Ajouter un GridView et le lier au contrôle SqlDataSource ([cliquez pour afficher l’image en taille réelle](querying-data-with-the-sqldatasource-control-vb/_static/image14.gif))
 
@@ -170,7 +170,7 @@ Prenez un moment pour configurer les trois opérations de mappage GridView Bound
 Visitez cette page via un navigateur. Comme le montre la Figure 11, le contrôle GridView répertorie chaque produit s `ProductID`, `ProductName`, et `UnitPrice` valeurs.
 
 
-[![Le contrôle GridView affiche chaque produit s ProductID, ProductName et UnitPrice valeurs](querying-data-with-the-sqldatasource-control-vb/_static/image16.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image15.gif)
+[![TIl GridView affiche chaque produit s ProductID, ProductName et UnitPrice valeurs](querying-data-with-the-sqldatasource-control-vb/_static/image16.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image15.gif)
 
 **Figure 11**: Les opérations de mappage GridView affiche chaque produit `ProductID`, `ProductName`, et `UnitPrice` valeurs ([cliquez pour afficher l’image en taille réelle](querying-data-with-the-sqldatasource-control-vb/_static/image17.gif))
 
@@ -228,7 +228,7 @@ Après avoir spécifié la requête, cliquez sur Suivant pour passer à l’écr
 [!code-aspx[Main](querying-data-with-the-sqldatasource-control-vb/samples/sample5.aspx)]
 
 
-[![Le contrôle GridView affiche chaque ID de produit s, le nom de la catégorie de nom et associé](querying-data-with-the-sqldatasource-control-vb/_static/image22.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image21.gif)
+[![TIl GridView montre chaque ID produit s, le nom et le nom de catégorie associés](querying-data-with-the-sqldatasource-control-vb/_static/image22.gif)](querying-data-with-the-sqldatasource-control-vb/_static/image21.gif)
 
 **Figure 15**: Le GridView affiche chaque s Id_produit, le nom et le nom de catégorie associés ([cliquez pour afficher l’image en taille réelle](querying-data-with-the-sqldatasource-control-vb/_static/image23.gif))
 

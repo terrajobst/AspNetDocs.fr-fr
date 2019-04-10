@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: f8400241-4f4b-4bbd-9994-54fb64909e6e
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/configuring-a-tfs-build-server-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 534a0edf5c26dd2daec3c44e41410f8c5de96c15
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1500415c7ee017776c59acb05a2eaefc6956a41b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058106"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404697"
 ---
-<a name="configuring-a-tfs-build-server-for-web-deployment"></a>Configuration d’un serveur de builds TFS pour le déploiement web
-====================
+# <a name="configuring-a-tfs-build-server-for-web-deployment"></a>Configuration d’un serveur de builds TFS pour le déploiement web
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit comment préparer un serveur de builds de Team Foundation Server (TFS) pour générer et déployer vos solutions à l’aide de Team Build et l’outil de déploiement Web Internet Information Services (IIS) (Web Deploy).
 

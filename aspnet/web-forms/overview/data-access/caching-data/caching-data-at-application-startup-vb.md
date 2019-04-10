@@ -8,18 +8,18 @@ ms.date: 05/30/2007
 ms.assetid: 84afe4ac-cc53-4f2e-a867-27eaf692c2df
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-at-application-startup-vb
 msc.type: authoredcontent
-ms.openlocfilehash: ef0a99a1601f40995c81a12f457303e040f57e29
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 58c4654691084b9574283c03c77398cb43f6751a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424610"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393468"
 ---
-<a name="caching-data-at-application-startup-vb"></a>Mise en cache de données au démarrage de l’application (VB)
-====================
+# <a name="caching-data-at-application-startup-vb"></a>Mise en cache de données au démarrage de l’application (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger PDF](caching-data-at-application-startup-vb/_static/datatutorial60vb1.pdf)
+[Télécharger le PDF](caching-data-at-application-startup-vb/_static/datatutorial60vb1.pdf)
 
 > Dans n’importe quelle application Web certaines données sont fréquemment utilisées et certaines données seront rarement utilisées. Nous pouvons améliorer les performances de notre application ASP.NET en chargeant à l’avance les données fréquemment utilisées, une technique appelée. Ce didacticiel illustre une approche proactive chargement, qui consiste à charger des données dans le cache au démarrage de l’application.
 
@@ -119,7 +119,7 @@ Ajouter le `Global.asax` fichier à votre répertoire de racine de s d’applica
 > Si vous avez déjà un `Global.asax` fichier dans votre projet, la classe d’Application globale type d’élément ne sera pas répertorié dans la boîte de dialogue Ajouter un nouvel élément.
 
 
-[![Ajoutez le fichier Global.asax à votre répertoire racine de Web Application s](caching-data-at-application-startup-vb/_static/image4.png)](caching-data-at-application-startup-vb/_static/image3.png)
+[![Ale fichier Global.asax pour votre Application Web s répertoire racine de jj](caching-data-at-application-startup-vb/_static/image4.png)](caching-data-at-application-startup-vb/_static/image3.png)
 
 **Figure 3**: Ajouter le `Global.asax` fichier à votre Application Web s répertoire racine ([cliquez pour afficher l’image en taille réelle](caching-data-at-application-startup-vb/_static/image5.png))
 
@@ -142,7 +142,7 @@ Pour ces didacticiels, nous devons uniquement ajouter du code pour le `Applicati
 S résume-t-elle est ! Au démarrage de l’application, le `LoadStaticCache()` méthode saisir les informations de fournisseur à partir de la couche BLL et stockez-le dans une variable membre statique (ou le cache de stocker le code de fin à l’aide de la `StaticCache` classe). Pour vérifier ce comportement, définissez un point d’arrêt le `Application_Start` (méthode) et exécuter votre application. Notez que le point d’arrêt est atteint au démarrage de l’application. Les demandes suivantes, toutefois, n’entraînent pas la `Application_Start` méthode à exécuter.
 
 
-[![Utiliser un point d’arrêt pour vérifier que le Gestionnaire d’événements Application_Start est en cours d’exécution](caching-data-at-application-startup-vb/_static/image7.png)](caching-data-at-application-startup-vb/_static/image6.png)
+[![Use un point d’arrêt pour vérifier que le Gestionnaire d’événements Application_Start est en cours d’exécution](caching-data-at-application-startup-vb/_static/image7.png)](caching-data-at-application-startup-vb/_static/image6.png)
 
 **Figure 4**: Utiliser un point d’arrêt pour vérifier que le `Application_Start` Gestionnaire d’événements est en cours d’exécution ([cliquez pour afficher l’image en taille réelle](caching-data-at-application-startup-vb/_static/image8.png))
 
@@ -158,12 +158,12 @@ S résume-t-elle est ! Au démarrage de l’application, le `LoadStaticCache()`
 Commencez par ouvrir le `AtApplicationStartup.aspx` page dans le `Caching` dossier. Faites glisser un GridView à partir de la boîte à outils vers le concepteur, en définissant son `ID` propriété `Suppliers`. Ensuite, dans le contrôle GridView balise active s Choisissez Créer un nouveau ObjectDataSource nommé `SuppliersCachedDataSource`. Configurer l’ObjectDataSource à utiliser le `StaticCache` classe s `GetSuppliers()` (méthode).
 
 
-[![Configurer pour utiliser la classe StaticCache ObjectDataSource](caching-data-at-application-startup-vb/_static/image10.png)](caching-data-at-application-startup-vb/_static/image9.png)
+[![Cconfiguration de l’ObjectDataSource d’utiliser la classe StaticCache](caching-data-at-application-startup-vb/_static/image10.png)](caching-data-at-application-startup-vb/_static/image9.png)
 
 **Figure 5**: Configurer l’ObjectDataSource à utiliser le `StaticCache` classe ([cliquez pour afficher l’image en taille réelle](caching-data-at-application-startup-vb/_static/image11.png))
 
 
-[![Utilisez la méthode GetSuppliers() pour récupérer les données des fournisseurs mis en cache](caching-data-at-application-startup-vb/_static/image13.png)](caching-data-at-application-startup-vb/_static/image12.png)
+[![Ula méthode GetSuppliers() pour récupérer les données mises en cache des fournisseurs de se](caching-data-at-application-startup-vb/_static/image13.png)](caching-data-at-application-startup-vb/_static/image12.png)
 
 **Figure 6**: Utilisez le `GetSuppliers()` méthode pour récupérer les données mises en cache des fournisseurs ([cliquez pour afficher l’image en taille réelle](caching-data-at-application-startup-vb/_static/image14.png))
 
@@ -176,7 +176,7 @@ Commencez par ouvrir le `AtApplicationStartup.aspx` page dans le `Caching` dossi
 Figure 7 illustre la page lorsqu’ils sont affichés via un navigateur. La sortie est la même, nous avions extrait des données à partir de la couche BLL s `SuppliersBLL` classe, mais en utilisant la `StaticCache` classe renvoie les données des fournisseurs comme mis en cache au démarrage de l’application. Vous pouvez définir des points d’arrêt dans le `StaticCache` classe s `GetSuppliers()` méthode pour vérifier ce comportement.
 
 
-[![Les données des fournisseurs mis en cache s’affiche dans un GridView](caching-data-at-application-startup-vb/_static/image16.png)](caching-data-at-application-startup-vb/_static/image15.png)
+[![TIl a mis en cache les données des fournisseurs s’affiche dans un GridView](caching-data-at-application-startup-vb/_static/image16.png)](caching-data-at-application-startup-vb/_static/image15.png)
 
 **Figure 7**: Les données des fournisseurs mis en cache s’affiche dans un GridView ([cliquez pour afficher l’image en taille réelle](caching-data-at-application-startup-vb/_static/image17.png))
 

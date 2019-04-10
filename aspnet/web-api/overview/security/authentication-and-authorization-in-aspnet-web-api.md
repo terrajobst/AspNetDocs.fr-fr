@@ -8,15 +8,15 @@ ms.date: 11/27/2012
 ms.assetid: 6dfb51ea-9f4d-4e70-916c-8ef8344a88d6
 msc.legacyurl: /web-api/overview/security/authentication-and-authorization-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: a78606a74b2149e68e3b01f4fe204f4a13edf4b5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5dc4471039938a429a85c891594c3a6651c6ef9d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039096"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388528"
 ---
-<a name="authentication-and-authorization-in-aspnet-web-api"></a>Authentification et autorisation dans l’API Web ASP.NET
-====================
+# <a name="authentication-and-authorization-in-aspnet-web-api"></a>Authentification et autorisation dans l’API Web ASP.NET
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 Vous avez créé une API web, mais maintenant que vous souhaitez contrôler l’accès. Dans cette série d’articles, nous allons examiner certaines options pour sécuriser une API web des utilisateurs non autorisés. Cette série couvre l’authentification et autorisation.

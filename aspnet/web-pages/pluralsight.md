@@ -8,15 +8,15 @@ ms.date: 05/18/2012
 ms.assetid: 79eca52c-e7ad-44ab-a3e4-d8093e9da5a7
 msc.legacyurl: /web-pages/pluralsight
 msc.type: content
-ms.openlocfilehash: e4b60da0bb4e1d8fce0640516fa4f127dcc30f37
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 78e4d3aedd183e8ec91a8c833e4b60894ae214ec
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401190"
 ---
-<a name="webmatrix-and-web-pages-video-training-from-pluralsight"></a>Vidéo de formation à WebMatrix et à Web de Pluralsight
-====================
+# <a name="webmatrix-and-web-pages-video-training-from-pluralsight"></a>Vidéo de formation à WebMatrix et à Web de Pluralsight
+
 
 > [!NOTE] 
 > WebMatrix n’est plus recommandé comme un environnement de développement intégré pour ASP.NET Web Pages. Utilisez [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou [Visual Studio Code](https://code.visualstudio.com/).
@@ -27,7 +27,7 @@ ms.locfileid: "57048706"
 - [Sites et espaces de travail de fichiers](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m2&mode=live&clip=0&course=webmatrix-introduction)
 - [Utilisation des bases de données](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m3&mode=live&clip=0&course=webmatrix-introduction)
 - [Utilisation de Documents Web Standard](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m4&mode=live&clip=0&course=webmatrix-introduction)
-- [Pages Web ASP.NET](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m5&mode=live&clip=0&course=webmatrix-introduction)
+- [Pages web ASP.NET](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m5&mode=live&clip=0&course=webmatrix-introduction)
 - [Création de rapports et de déploiement](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m8&mode=live&clip=0&course=webmatrix-introduction)
 - [Contrôle de code source](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m9&mode=live&clip=0&course=webmatrix-introduction)
 - [Sites Web mobiles](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m10&mode=live&clip=0&course=webmatrix-introduction)

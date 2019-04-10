@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-cs
-title: Utilisation de TextBoxWatermark dans un FormView (C#) | Microsoft Docs
+title: Utilisation de TextBoxWatermark dans un FormView (c#) | Microsoft Docs
 author: wenz
 description: Le contrôle TextBoxWatermark dans AJAX Control Toolkit étend une zone de texte afin qu’un texte est affiché dans la zone. Lorsqu’un utilisateur clique dans la zone, il je...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: e6ee90bf-32a5-4987-a384-15cc7dd30c8a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 272befe4182a459c0e1f3b6668d252d9ba4715d0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 10c877e072d5caf23e78f49ebc71387fde20393d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038316"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393611"
 ---
-<a name="using-textboxwatermark-in-a-formview-c"></a>Utilisation de TextBoxWatermark dans un FormView (C#)
-====================
+# <a name="using-textboxwatermark-in-a-formview-c"></a>Utilisation de TextBoxWatermark dans un FormView (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/TextBoxWatermark1.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/textboxwatermark1CS.pdf)
@@ -49,9 +49,9 @@ N’oubliez pas le nom (`ID`) de la source de données, dans la mesure où il se
 Maintenant lorsque l’utilisateur modifie le mode d’insertion de la `FormView` contrôler, le champ de texte pour le nouveau fournisseur est prérempli grâce à la `TextBoxWatermarkExtender` contrôle. Un clic à l’intérieur de la zone de texte permet le texte de remplissage disparaissent.
 
 
-[![Le filigrane dans le champ provient de l’extendeur](using-textboxwatermark-in-a-formview-cs/_static/image2.png)](using-textboxwatermark-in-a-formview-cs/_static/image1.png)
+[![Tfiligrane de he dans le champ provient de l’extendeur](using-textboxwatermark-in-a-formview-cs/_static/image2.png)](using-textboxwatermark-in-a-formview-cs/_static/image1.png)
 
 Le filigrane dans le champ provient de l’extendeur ([cliquez pour afficher l’image en taille réelle](using-textboxwatermark-in-a-formview-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Next](using-textboxwatermark-with-validation-controls-cs.md)
+> [Suivant](using-textboxwatermark-with-validation-controls-cs.md)

@@ -8,15 +8,15 @@ ms.date: 01/15/2019
 ms.assetid: 03960de2-8d95-4444-9169-4426dcc64913
 msc.legacyurl: /signalr/overview/guide-to-the-api/handling-connection-lifetime-events
 msc.type: authoredcontent
-ms.openlocfilehash: 53151d369a14ef9a6fa034043d40ae30098a5067
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9e6b0b3b86839efa393659531d8b74770226f383
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036356"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401463"
 ---
-<a name="understanding-and-handling-connection-lifetime-events-in-signalr"></a>Présentation et gestion des événements de durée de vie des connexions dans SignalR
-====================
+# <a name="understanding-and-handling-connection-lifetime-events-in-signalr"></a>Présentation et gestion des événements de durée de vie des connexions dans SignalR
+
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
@@ -254,7 +254,7 @@ SignalR version 2 n’a pas d’un API de serveur intégré pour la déconnexion
 
 SignalR 2.1 ajoute une surcharge au serveur `OnDisconnect` événement qui indique si le client déconnecté délibérément plutôt que de délai d’expiration. Le `StopCalled` paramètre a la valeur true si le client a fermé explicitement la connexion. Dans JavaScript, si une erreur de serveur ont conduit le client pour vous déconnecter, les informations d’erreur recevront au client comme `$.connection.hub.lastError`.
 
-**Code de serveur C# : `stopCalled` paramètre**
+**C#code de serveur : `stopCalled` paramètre**
 
 [!code-csharp[Main](handling-connection-lifetime-events/samples/sample7.cs?highlight=1,3)]
 

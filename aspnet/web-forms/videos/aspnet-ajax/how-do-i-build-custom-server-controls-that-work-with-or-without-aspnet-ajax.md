@@ -8,15 +8,15 @@ ms.date: 09/01/2007
 ms.assetid: db9e13d3-c8f5-4051-ad9d-dc5649b1c41f
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-build-custom-server-controls-that-work-with-or-without-aspnet-ajax
 msc.type: video
-ms.openlocfilehash: ed086491e459e2277f155aa6abe6f0b2904344f9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 81fcc7b533f682d5f515847150345b08aff3d984
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032236"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398239"
 ---
-<a name="how-do-i-build-custom-server-controls-that-work-with-or-without-aspnet-ajax"></a>[Comment faire] Créer des contrôles serveur personnalisés qui fonctionnent avec ou sans ASP.NET AJAX ?
-====================
+# <a name="how-do-i-build-custom-server-controls-that-work-with-or-without-aspnet-ajax"></a>[Comment faire] Créer des contrôles serveur personnalisés qui fonctionnent avec ou sans ASP.NET AJAX ?
+
 par [Chris Pels](https://twitter.com/chrispels)
 
 Vous avez une idée pour un contrôle serveur personnalisé qui doit être en mesure de fonctionner sans ASP.NET AJAX, encore peut tirer parti d’ASP.NET AJAX s’il est disponible ? Dans cette vidéo, nous apprendre comment créer un contrôle serveur personnalisé qui ne fait pas référence à l’assembly d’ASP.NET AJAX, mais utilise la réflexion pour « lecture nice » avec le contrôle UpdatePanel d’ASP.NET AJAX.

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/formatting-the-datalist-and-repeater-based-upon-data-cs
-title: Mise en forme les contrôles DataList et Repeater en fonction des données (C#) | Microsoft Docs
+title: Mise en forme les contrôles DataList et Repeater en fonction des données (c#) | Microsoft Docs
 author: rick-anderson
 description: Dans ce didacticiel, nous détaillerons à obtenir des exemples de la façon dont nous mettre en forme l’apparence des contrôles DataList et Repeater, à l’aide des fonctions de mise en forme avec...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 09/13/2006
 ms.assetid: 83e3d759-82b8-41e6-8d62-f0f4b3edec41
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/formatting-the-datalist-and-repeater-based-upon-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4c3a6b085dbd9faec8dab45e64b10678aa9a73b3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7ea11f436d8f0455621d22c4d5a5b4d6b6ece68f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386422"
 ---
-<a name="formatting-the-datalist-and-repeater-based-upon-data-c"></a>Mise en forme des contrôles DataList et Repeater en fonction des données (C#)
-====================
+# <a name="formatting-the-datalist-and-repeater-based-upon-data-c"></a>Mise en forme des contrôles DataList et Repeater en fonction des données (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_30_CS.exe) ou [télécharger le PDF](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/datatutorial30cs1.pdf)
@@ -74,7 +74,7 @@ Avant de nous soucier de la mise en forme, s permettent de créer une page qui u
 Une fois que vous avez répliqué la fonctionnalité des contrôles DataList et ObjectDataSource depuis `Basics.aspx` dans `Formatting.aspx`, prenez un moment pour modifier le contrôle DataList s `ID` propriété à partir de `DataList1` à plus descriptif `ItemDataBoundFormattingExample`. Ensuite, affichez le contrôle DataList dans un navigateur. Comme le montre la Figure 1, la seule différence de mise en forme entre chaque produit est que fait alterner la couleur d’arrière-plan.
 
 
-[![Les produits sont répertoriés dans le contrôle DataList](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image2.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image1.png)
+[![THE produits sont répertoriés dans le contrôle DataList](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image2.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image1.png)
 
 **Figure 1**: Les produits sont répertoriés dans le contrôle DataList ([cliquez pour afficher l’image en taille réelle](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image3.png))
 
@@ -117,7 +117,7 @@ Pour appliquer la mise en forme, il suffit de définir les deux contrôles Web L
 Avec le `ItemDataBound` terminée de gestionnaire d’événements, de revoir le `Formatting.aspx` page dans un navigateur. Comme le montre la Figure 2, ces produits dont le prix sous $20,00 ont leur nom et le prix mis en surbrillance.
 
 
-[![Ces produits inférieur 20,00 $ sont mises en surbrillance](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image5.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image4.png)
+[![Ttuyau produits moins que $20,00 sont mises en surbrillance](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image5.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image4.png)
 
 **Figure 2**: Ces produits inférieur 20,00 $ sont mis en surbrillance ([cliquez pour afficher l’image en taille réelle](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image6.png))
 
@@ -129,7 +129,7 @@ Avec le `ItemDataBound` terminée de gestionnaire d’événements, de revoir le
 Le `RepeaterItem` s qui composent le contrôle Repeater, toutefois, don t offrent ces propriétés au niveau du style. Par conséquent, l’application mise en forme personnalisée pour le contrôle Repeater nécessite l’application de propriétés de style pour les contrôles Web dans les modèles Repeater s, comme nous l’avons fait dans la Figure 2.
 
 
-[![L’élément de produit entier est mis en surbrillance pour les produits sous 20,00 $](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image8.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image7.png)
+[![TIl tout élément de produit est mis en surbrillance pour les produits sous $20,00](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image8.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image7.png)
 
 **Figure 3**: L’élément de produit entier est mis en surbrillance pour les produits sous $20,00 ([cliquez pour afficher l’image en taille réelle](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image9.png))
 
@@ -141,7 +141,7 @@ Dans le *à l’aide de TemplateFields dans le contrôle GridView* didacticiel, 
 Pour illustrer les fonctions de mise en forme, s permettent de disposer des informations produit incluent le texte [DISCONTINUED] en regard du nom de produit s si elle s abandonné. En outre, let s ont if jaune en surbrillance prix il s inférieur à $20,00 (comme nous l’avons fait le `ItemDataBound` exemple de gestionnaire d’événements) ; si le prix est 20,00 $ ou s plus élevé, vous permettent pas d’afficher le prix réel, mais le texte, veuillez appeler à la place de devis. Figure 4 montre une capture d’écran des liste avec des ces règles de mise en forme des produits.
 
 
-[![Pour les produits coûteuse, le prix est remplacé par le texte, appelez de devis](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image11.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image10.png)
+[![Fou Expensive Products, le prix est remplacé par le texte, appelez de devis](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image11.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image10.png)
 
 **Figure 4**: Pour les produits coûteuse, le prix est remplacé par le texte, appelez de devis ([cliquez pour afficher l’image en taille réelle](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image12.png))
 
@@ -182,7 +182,7 @@ Pour afficher le prix, nous pouvons simplement définir la `UnitPriceLabel` éti
 Avec les appels aux fonctions de mise en forme en place, prenez un moment pour consulter notre progression dans un navigateur. Votre écran doit ressembler à la Figure 5, avec les produits interrompus, y compris le texte [DISCONTINUED] et les produits d’évaluation des coûts de plus de $ 20,00 par avoir leur prix remplacé par le texte, l’appel de devis.
 
 
-[![Pour les produits coûteuse, le prix est remplacé par le texte, appelez de devis](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image14.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image13.png)
+[![Fou Expensive Products, le prix est remplacé par le texte, appelez de devis](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image14.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image13.png)
 
 **Figure 5**: Pour les produits coûteuse, le prix est remplacé par le texte, appelez de devis ([cliquez pour afficher l’image en taille réelle](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image15.png))
 

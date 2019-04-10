@@ -8,15 +8,15 @@ ms.date: 10/16/2008
 ms.assetid: 81190124-d0f6-4e4b-a48f-2613cc5a6aa7
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal
 msc.type: video
-ms.openlocfilehash: 189125563764d4eb8e8bc42befb21239be1bd8d5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 772ddf69baf8daf5d3f0b13ed92efb80c561c38b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049186"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388828"
 ---
-<a name="aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal"></a>Application Storefront ASP.NET MVC, partie 22 : Restructuration, reroutage et PayPal
-====================
+# <a name="aspnet-mvc-storefront-part-22-restructuring-rerouting-and-paypal"></a>Application Storefront ASP.NET MVC, partie 22 : Restructuration, reroutage et PayPal
+
 par [Rob Conery](https://github.com/robconery)
 
 Dans cet épisode restructurer un peu afin de nettoyer certaines choses. J’ai également modifier les itinéraires pour être beaucoup plus simple. Enfin, j’ai ajouter PayPal comme une option d’extraction.

@@ -8,15 +8,15 @@ ms.date: 02/20/2014
 ms.assetid: 332fb3da-e2a5-460d-bb90-dd911e1e2c95
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/10-working-with-video
 msc.type: authoredcontent
-ms.openlocfilehash: 8f4b7186ae5c7b7b384ebcb23f7c9ad65caeb0bd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 204611513860e268001596b9c7ac9e9c023caa12
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034146"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399851"
 ---
-<a name="displaying-video-in-an-aspnet-web-pages-razor-site"></a>Affichage de vidéo dans un Site ASP.NET Web Pages (Razor)
-====================
+# <a name="displaying-video-in-an-aspnet-web-pages-razor-site"></a>Affichage de vidéo dans un Site ASP.NET Web Pages (Razor)
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Cet article explique comment utiliser un lecteur vidéo (média) dans un site Web ASP.NET Web Pages (Razor) pour permettre aux utilisateurs d’afficher les vidéos sont stockés sur le site. ASP.NET Web Pages avec syntaxe Razor vous permet de lire le Flash (*.swf*), Media Player (*.wmv*) et Silverlight (*.xap*) vidéos.

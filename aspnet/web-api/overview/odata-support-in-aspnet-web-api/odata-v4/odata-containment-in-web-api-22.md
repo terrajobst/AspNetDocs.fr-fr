@@ -8,15 +8,15 @@ ms.date: 06/27/2014
 ms.assetid: 5fbfefad-a17a-4c46-8646-f1ccd154cd56
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-containment-in-web-api-22
 msc.type: authoredcontent
-ms.openlocfilehash: aca263a04df25ca241bc0b9798b3a0b588d4cae8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fed55a4bf01e82af5167018f03e28a6274fcda78
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382197"
 ---
-<a name="containment-in-odata-v4-using-web-api-22"></a>Relation contenant-contenu dans OData v4 à l’aide de Web API 2.2
-====================
+# <a name="containment-in-odata-v4-using-web-api-22"></a>Relation contenant-contenu dans OData v4 à l’aide de Web API 2.2
+
 by Jinfu Tan
 
 > En règle générale, une entité est uniquement accessible si elle a été encapsulée dans un jeu d’entités. Mais OData v4 fournit deux options supplémentaires, Singleton et relation contenant-contenu, les deux API Web 2.2 prend en charge.

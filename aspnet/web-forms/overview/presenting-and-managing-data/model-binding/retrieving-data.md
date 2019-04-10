@@ -8,26 +8,26 @@ ms.date: 02/27/2014
 ms.assetid: 9f24fb82-c7ac-48da-b8e2-51b3da17e365
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data
 msc.type: authoredcontent
-ms.openlocfilehash: c53c27f4852eab9813bd917315111e7cd3b04953
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 29baaf2917e47ac46a78a252721be725b4e9b58f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056596"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398473"
 ---
-<a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Récupération et affichage des données avec la liaison de modèle et les web forms
-====================
+# <a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Récupération et affichage des données avec la liaison de modèle et les web forms
+
 
 > Cette série de didacticiels montre les aspects de base de l’utilisation de la liaison de modèle avec un projet Web Forms ASP.NET. Liaison de modèle rend interaction des données plus simple que vous traitez des données des objets de source (tels que ObjectDataSource ou SqlDataSource). Cette série commence par une partie introductive et progresse vers des concepts plus avancés dans les didacticiels suivants.
 > 
->  Le modèle de liaison de modèle fonctionne avec toute technologie d’accès aux données. Dans ce didacticiel, vous allez utiliser Entity Framework, mais vous pouvez utiliser la technologie d’accès aux données qui connaît plus. À partir d’un contrôle serveur lié aux données, tel qu’un contrôle GridView, ListView, DetailsView ou FormView, vous spécifiez les noms des méthodes à utiliser pour la sélection, la mise à jour, la suppression et la création de données. Dans ce didacticiel, vous spécifierez une valeur pour la méthode SelectMethod. 
+> Le modèle de liaison de modèle fonctionne avec toute technologie d’accès aux données. Dans ce didacticiel, vous allez utiliser Entity Framework, mais vous pouvez utiliser la technologie d’accès aux données qui connaît plus. À partir d’un contrôle serveur lié aux données, tel qu’un contrôle GridView, ListView, DetailsView ou FormView, vous spécifiez les noms des méthodes à utiliser pour la sélection, la mise à jour, la suppression et la création de données. Dans ce didacticiel, vous spécifierez une valeur pour la méthode SelectMethod. 
 > 
 > Dans cette méthode, vous fournissez la logique de récupération des données. Dans le didacticiel suivant, vous allez définir des valeurs pour UpdateMethod, DeleteMethod et InsertMethod.
 >
 > Vous pouvez [télécharger](https://go.microsoft.com/fwlink/?LinkId=286116) le projet complet dans C# ou Visual Basic. Le code téléchargeable fonctionne avec Visual Studio 2012 et versions ultérieures. Elle utilise le modèle Visual Studio 2012, qui est légèrement différent de celle du modèle de Visual Studio 2017 présentée dans ce didacticiel.
 > 
 > Dans le didacticiel, vous exécutez l’application dans Visual Studio. Vous pouvez également déployer l’application sur un fournisseur d’hébergement et rendez-le accessible sur internet. Microsoft propose d’hébergement web gratuit pour jusqu'à 10 sites web dans un  
->  [compte d’essai Azure gratuit](https://azure.microsoft.com/free/?WT.mc_id=A443DD604). Pour plus d’informations sur la façon de déployer un projet web Visual Studio sur Azure App Service Web Apps, consultez le [le déploiement Web ASP.NET à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md) série. Ce didacticiel montre également comment utiliser des Migrations Entity Framework Code First pour déployer votre base de données SQL Server vers Azure SQL Database.
+> [compte d’essai Azure gratuit](https://azure.microsoft.com/free/?WT.mc_id=A443DD604). Pour plus d’informations sur la façon de déployer un projet web Visual Studio sur Azure App Service Web Apps, consultez le [le déploiement Web ASP.NET à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md) série. Ce didacticiel montre également comment utiliser des Migrations Entity Framework Code First pour déployer votre base de données SQL Server vers Azure SQL Database.
 > 
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versions des logiciels utilisées dans le didacticiel
 > 
@@ -217,4 +217,4 @@ Dans ce didacticiel, vous créé des classes de modèle de données et généré
 Dans la prochaine [didacticiel](updating-deleting-and-creating-data.md) dans cette série, vous allez activer la mise à jour, la suppression et la création de données.
 
 > [!div class="step-by-step"]
-> [Next](updating-deleting-and-creating-data.md)
+> [Suivant](updating-deleting-and-creating-data.md)

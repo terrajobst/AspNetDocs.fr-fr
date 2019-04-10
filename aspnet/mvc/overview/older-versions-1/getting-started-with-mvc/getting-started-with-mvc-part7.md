@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: aa7b3e8e-e23d-49f1-b160-f99a7f2982bd
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part7
 msc.type: authoredcontent
-ms.openlocfilehash: 4c7867587ba0610f0f1c23d9a0b9fbdc4040de7c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3db6947f36eb51b41d929f8c7d8835a95db8ea75
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027626"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392350"
 ---
-<a name="adding-validation-to-the-model"></a>Ajout de la validation au modèle
-====================
+# <a name="adding-validation-to-the-model"></a>Ajout de la validation au modèle
+
 par [Scott Hanselman](https://github.com/shanselman)
 
 > Il s’agit d’un didacticiel de débutant qui présente les principes de base d’ASP.NET MVC. Vous allez créer une application web simple qui lit et écrit à partir d’une base de données. Visitez le [centre d’apprentissage ASP.NET MVC](../../../index.md) pour rechercher d’autres ASP.NET MVC didacticiels et exemples.
@@ -61,11 +61,11 @@ En outre, ajoutez la ligne unique ci-dessus le Html.BeginForm :
 
 Voici le code indiqué dans l’IDE.
 
-[![Films - Microsoft Visual Web Developer 2010 Express (10)](getting-started-with-mvc-part7/_static/image4.png)](getting-started-with-mvc-part7/_static/image3.png)
+[![Movies - Microsoft Visual Web Developer 2010 Express (10)](getting-started-with-mvc-part7/_static/image4.png)](getting-started-with-mvc-part7/_static/image3.png)
 
 Exécutez votre application et consultez à nouveau /Movies/Create et cliquez sur créer sans entrer de données. Les messages d’erreur apparaissent immédiatement sans la page flash que nous associons à l’envoi des données jusqu’au serveur. C’est parce que ASP.NET MVC est désormais la validation l’entrée à la fois sur le client (à l’aide de JavaScript) et sur le serveur.
 
-[![Créer - Windows Internet Explorer](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
+[![CWindows Internet Explorer - reate](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
 
 Cela est en ordre. Nous allons maintenant ajouter une colonne supplémentaire à la base de données.
 

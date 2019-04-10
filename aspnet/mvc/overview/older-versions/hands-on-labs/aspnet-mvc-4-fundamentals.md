@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: b7dba543-73c3-4534-a9a0-ba70fa2c6a8a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-fundamentals
 msc.type: authoredcontent
-ms.openlocfilehash: d3bc39a37cace003c3fda6691f0dd7f893128b07
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 38aea3b3480dde6ec6182a45c4f61f44eea8e05e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425247"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380221"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Concepts de base d’ASP.NET MVC 4
 
@@ -125,7 +125,7 @@ Dans cet exercice, vous allez apprendre à créer une application ASP.NET MVC da
 
 1. Dans cette tâche, vous allez créer un projet d’application ASP.NET MVC vide à l’aide du modèle MVC Visual Studio. Démarrer **Visual Studio Express pour Web**.
 2. Dans le menu **Fichier**, cliquez sur **Nouveau projet**.
-3. Dans le **nouveau projet** boîte de dialogue Sélectionnez le **ASP.NET MVC 4 Web Application** projet type, situé sous **Visual C#,** **Web** modèle liste.
+3. Dans le **nouveau projet** boîte de dialogue Sélectionnez le **ASP.NET MVC 4 Web Application** projet type, situé sous **Visual c#,** **Web** modèle liste.
 4. Modifier le **nom** à *MvcMusicStore*.
 5. Définir l’emplacement de la solution à l’intérieur d’un nouveau **commencer** dossier dans le dossier Source de cet exercice, par exemple **[YOUR-HOL-PATH] \Source\Ex01-CreatingMusicStoreProject\Begin**. Cliquez sur **OK**.
 
@@ -563,7 +563,7 @@ Dans cette tâche, vous mettrez à jour la **StoreController** à utiliser le **
     [!code-csharp[Main](aspnet-mvc-4-fundamentals/samples/sample13.cs)]
 
 > [!NOTE]
-> Si vous n’êtes pas familiarisé avec C#, vous pouvez supposer que l’utilisation **var** signifie que le **viewModel** variable est à liaison tardive. Qui n’est pas correct - le compilateur C# à l’aide en fonction de ce que vous affectez à la variable d’inférence de type pour déterminer si **viewModel** est de type **StoreIndexViewModel**. Par ailleurs, de compilation local **viewModel** variable comme un **StoreIndexViewModel** vous tapez get vérification de la compilation et la prise en charge de Visual Studio-éditeur de code.
+> Si vous n’êtes pas familiarisé avec c#, vous pouvez supposer que l’utilisation **var** signifie que le **viewModel** variable est à liaison tardive. Qui n’est pas correct - le compilateur c# à l’aide en fonction de ce que vous affectez à la variable d’inférence de type pour déterminer si **viewModel** est de type **StoreIndexViewModel**. Par ailleurs, de compilation local **viewModel** variable comme un **StoreIndexViewModel** vous tapez get vérification de la compilation et la prise en charge de Visual Studio-éditeur de code.
 
 <a id="Ex5Task4"></a>
 
@@ -588,7 +588,7 @@ Dans cette tâche, vous allez créer un modèle de vue qui utilise un objet Stor
 
     *Afficher la boîte de dialogue Ajouter*
 
-    Le **\Views\Store\Index.cshtml** afficher le fichier de modèle est créé et ouvert. Selon les informations fournies à la **ajouter une vue** boîte de dialogue de la dernière étape, la vue de modèle s’attend à recevoir un **StoreIndexViewModel** instance en tant que les données à utiliser pour générer une réponse HTML. Vous remarquerez que le modèle hérite d’un `ViewPage<musicstore.viewmodels.storeindexviewmodel>` en C#.
+    Le **\Views\Store\Index.cshtml** afficher le fichier de modèle est créé et ouvert. Selon les informations fournies à la **ajouter une vue** boîte de dialogue de la dernière étape, la vue de modèle s’attend à recevoir un **StoreIndexViewModel** instance en tant que les données à utiliser pour générer une réponse HTML. Vous remarquerez que le modèle hérite d’un `ViewPage<musicstore.viewmodels.storeindexviewmodel>` en c#.
 
 <a id="Ex5Task5"></a>
 
@@ -691,7 +691,7 @@ Un **StoreBrowseViewModel** servira dans cette tâche pour afficher les Albums q
 > [!NOTE]
 > What ' s **liste&lt;Album&gt;**  ? : À l’aide de cette définition de la **liste&lt;T&gt;**  type, où **T** contraint le type à des éléments de ce **liste** appartiennent dans ce cas, **Album** (ou un de ses descendants).
 > 
-> Cette capacité à concevoir des classes et méthodes qui diffèrent la spécification d’un ou plusieurs types jusqu'à ce que la classe ou la méthode est déclarée et instanciée par le code client est une fonctionnalité du langage C# appelé **génériques**.
+> Cette capacité à concevoir des classes et méthodes qui diffèrent la spécification d’un ou plusieurs types jusqu'à ce que la classe ou la méthode est déclarée et instanciée par le code client est une fonctionnalité du langage c# appelé **génériques**.
 > 
 > **Liste&lt;T&gt;**  est l’équivalent générique de la **ArrayList** de type et est disponible dans le **System.Collections.Generic** espace de noms. Un des avantages de l’utilisation de **génériques** est que dans la mesure où le type est spécifié, vous n’avez pas besoin prendre en charge de la vérification des opérations telles que le cast des éléments dans des types **Album** comme vous le feriez avec un **ArrayList**.
 
@@ -869,7 +869,7 @@ Dans cet exercice, vous allez explorer les améliorations dans les modèles de p
 <a id="Ex7Task1"></a>
 
 <a id="Task_1_Exploring_the_ASPNET_MVC_4_Internet_Application_Template"></a>
-#### <a name="task-1-exploring-the-aspnet-mvc-4-internet-application-template"></a>Tâche 1 : Explorer le modèle d’Application ASP.NET MVC 4 Internet
+#### <a name="task-1-exploring-the-aspnet-mvc-4-internet-application-template"></a>Tâche 1 : Explorer le modèle d’Application ASP.NET MVC 4 Internet
 
 1. Si elle est déjà ouverte, démarrez **Visual Studio Express pour le Web**
 2. Sélectionnez le **fichier | Nouveau | Projet** commande de menu. Dans le **nouveau projet** boîte de dialogue, sélectionnez le **Visual C# | Web** modèle dans le volet gauche arborescence, puis choisissez le **ASP.NET MVC 4 Web Application**. **Nom** le projet *MusicStore* et mettre à jour le **nom de la solution** à *commencer*, puis sélectionnez un emplacement (ou laissez la valeur par défaut) et cliquez sur **OK** .
@@ -947,7 +947,7 @@ Dans cet exercice, vous allez explorer les améliorations dans les modèles de p
 > En outre, vous pouvez déployer cette application à Sites Web Windows Azure suit [annexe b : Publication d’une Application ASP.NET MVC 4, à l’aide de Web Deploy](#AppendixB).
 
 
-* * *
+---
 
 <a id="Summary"></a>
 
@@ -989,7 +989,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](aspnet-mvc-4-fundamentals/_static/image45.png)
 
-    *Progression de l’installation*
+    *Progression de l'installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](aspnet-mvc-4-fundamentals/_static/image46.png)
@@ -1157,7 +1157,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *À l’aide d’extraits de code Visual Studio pour insérer du code dans votre projet*
 
-***Pour ajouter un extrait de code à l’aide du clavier (C# uniquement)***
+***Pour ajouter un extrait de code à l’aide du clavier (c# uniquement)***
 
 1. Placez le curseur où vous souhaitez insérer le code.
 2. Commencez à taper le nom de l’extrait de code (sans espaces ou des traits d’union).
@@ -1177,7 +1177,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *Appuyez sur Tab à nouveau et l’extrait de code seront développe.*
 
-***Pour ajouter un extrait de code à l’aide de la souris (C#, Visual Basic et XML)*** 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
+***Pour ajouter un extrait de code à l’aide de la souris (c#, Visual Basic et XML)*** 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
 
 1. Sélectionnez **insérer un extrait** suivie **mes extraits de Code**.
 2. Choisissez l’extrait de code approprié dans la liste, en cliquant dessus.

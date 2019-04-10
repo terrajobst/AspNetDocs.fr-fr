@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/security/preventing-javascript-injection-attacks-cs
-title: Prévention des attaques d’injection de code JavaScript (C#) | Microsoft Docs
+title: Prévention des attaques d’injection de code JavaScript (c#) | Microsoft Docs
 author: StephenWalther
 description: Empêcher les attaques par Injection de JavaScript et attaques de script entre sites pour vous. Dans ce didacticiel, Stephen Walther explique comment vous pouvez facilement de...
 ms.author: riande
@@ -8,18 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: d0136da6-81a4-4815-b002-baa84744c09e
 msc.legacyurl: /mvc/overview/older-versions-1/security/preventing-javascript-injection-attacks-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 77d0f0346e9eff756cd74c64c310918f3c367ab1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2d954cbc001a62f021f942f1ff44522a2769f516
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029826"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389574"
 ---
-<a name="preventing-javascript-injection-attacks-c"></a>Prévention des attaques par injection de code JavaScript (C#)
-====================
+# <a name="preventing-javascript-injection-attacks-c"></a>Prévention des attaques par injection de code JavaScript (C#)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
-[Télécharger PDF](http://download.microsoft.com/download/8/4/8/84843d8d-1575-426c-bcb5-9d0c42e51416/ASPNET_MVC_Tutorial_06_CS.pdf)
+[Télécharger le PDF](http://download.microsoft.com/download/8/4/8/84843d8d-1575-426c-bcb5-9d0c42e51416/ASPNET_MVC_Tutorial_06_CS.pdf)
 
 > Empêcher les attaques par Injection de JavaScript et attaques de script entre sites pour vous. Dans ce didacticiel, Stephen Walther explique comment vous pouvez facilement mettre en échec ces types d’attaques par codage votre contenu HTML.
 
@@ -33,7 +33,7 @@ Chaque fois que vous acceptez l’entrée d’utilisateur et réaffichez l’ent
 Imaginez que vous avez créé un site Web des commentaires de clients (voir Figure 1). Les clients peuvent visiter le site Web et entrer des commentaires sur leur expérience à l’aide de vos produits. Lorsqu’un client soumet leurs commentaires, les commentaires s’affiche de nouveau sur la page de commentaires.
 
 
-[![Site de commentaires client](preventing-javascript-injection-attacks-cs/_static/image2.png)](preventing-javascript-injection-attacks-cs/_static/image1.png)
+[![CSite de commentaires du client](preventing-javascript-injection-attacks-cs/_static/image2.png)](preventing-javascript-injection-attacks-cs/_static/image1.png)
 
 **Figure 01**: Site de commentaires client ([cliquez pour afficher l’image en taille réelle](preventing-javascript-injection-attacks-cs/_static/image3.png))
 
@@ -65,7 +65,7 @@ Imaginez que vous entrez le texte suivant dans le formulaire de commentaires cli
 Ce texte représente un script JavaScript qui affiche une boîte de message d’alerte. Une fois que quelqu'un envoie ce script dans les commentaires de formulaire, le message <em>Boo !</em> s’affiche chaque fois que tout le monde visite le site Web des commentaires des clients à l’avenir (voir Figure 2).
 
 
-[![Injection de code JavaScript](preventing-javascript-injection-attacks-cs/_static/image5.png)](preventing-javascript-injection-attacks-cs/_static/image4.png)
+[![JavaScript Injection](preventing-javascript-injection-attacks-cs/_static/image5.png)](preventing-javascript-injection-attacks-cs/_static/image4.png)
 
 **Figure 02**: L’injection de code JavaScript ([cliquez pour afficher l’image en taille réelle](preventing-javascript-injection-attacks-cs/_static/image6.png))
 
@@ -93,7 +93,7 @@ Notez que la valeur de `feedback.Message` est encodé en HTML avant la valeur es
 Quelles en moyenne au format HTML encoder une chaîne ? Lorsque vous HTML encoder une chaîne, dangereux caractères tels que `<` et `>` sont remplacés par des références d’entité HTML comme `&lt;` et `&gt;`. Par conséquent, lorsque la chaîne `<script>alert("Boo!")</script>` est au format HTML encodé, elles sont converties en `&lt;script&gt;alert(&quot;Boo!&quot;)&lt;/script&gt;`. La chaîne encodée ne s’exécute plus comme un script JavaScript lorsqu’il est interprété par un navigateur. Au lieu de cela, vous obtenez la page sans incidence dans la Figure 3.
 
 
-[![Vaincu attaque JavaScript](preventing-javascript-injection-attacks-cs/_static/image8.png)](preventing-javascript-injection-attacks-cs/_static/image7.png)
+[![Defeated JavaScript attaque](preventing-javascript-injection-attacks-cs/_static/image8.png)](preventing-javascript-injection-attacks-cs/_static/image7.png)
 
 **Figure 03**: Vaincu JavaScript attaque ([cliquez pour afficher l’image en taille réelle](preventing-javascript-injection-attacks-cs/_static/image9.png))
 

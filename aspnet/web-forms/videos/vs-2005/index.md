@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 1bcf9a1c-ed34-4ed0-ab91-253df08fc6ff
 msc.legacyurl: /web-forms/videos/vs-2005
 msc.type: chapter
-ms.openlocfilehash: 0085424743ad2592dd06c58adba801bd676f2c0f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 25d9cc02ef9b0e8f068c9e84469d9661b06f0b28
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022056"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381105"
 ---
-<a name="visual-studio-2005"></a>Visual Studio 2005
-====================
+# <a name="visual-studio-2005"></a>Visual Studio 2005
+
 > Comment travailler avec Visual Studio 2005, Team System et des compléments pour effectuer des tests, de déploiement et d’autres tâches.
 
 

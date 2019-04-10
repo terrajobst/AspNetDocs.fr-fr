@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: ec26f264-d0ea-4031-9943-825505a3ac4b
 msc.legacyurl: /mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 783c5f73709de37f79c472e10c79e284cf25f8fd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4fe34858aadb705ffb59e06ba805493d89aa4028
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049396"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403205"
 ---
-<a name="using-the-tagbuilder-class-to-build-html-helpers-vb"></a>À l’aide de la classe TagBuilder pour générer des Helpers HTML (VB)
-====================
+# <a name="using-the-tagbuilder-class-to-build-html-helpers-vb"></a>À l’aide de la classe TagBuilder pour générer des Helpers HTML (VB)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther vous présente une classe d’utilitaire utile dans l’infrastructure ASP.NET MVC nommé la classe TagBuilder. Vous pouvez utiliser la classe TagBuilder pour créer facilement des balises HTML.
@@ -65,7 +65,7 @@ Après avoir créé l’application d’assistance d’Image, vous pouvez utilis
 [!code-aspx[Main](using-the-tagbuilder-class-to-build-html-helpers-vb/samples/sample2.aspx)]
 
 
-[![La boîte de dialogue Nouveau projet](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.png)
+[![Tboîte de dialogue Nouveau projet he](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.png)
 
 **Figure 01**: À l’aide du programme d’assistance d’Image ([cliquez pour afficher l’image en taille réelle](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image2.png))
 

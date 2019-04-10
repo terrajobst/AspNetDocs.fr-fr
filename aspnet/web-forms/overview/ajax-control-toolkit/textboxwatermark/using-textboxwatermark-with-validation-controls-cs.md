@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-with-validation-controls-cs
-title: Utilisation de TextBoxWatermark avec des contrôles de Validation (C#) | Microsoft Docs
+title: Utilisation de TextBoxWatermark avec des contrôles de Validation (c#) | Microsoft Docs
 author: wenz
 description: Le contrôle TextBoxWatermark dans AJAX Control Toolkit étend une zone de texte afin qu’un texte est affiché dans la zone. Lorsqu’un utilisateur clique dans la zone, il je...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: d49940cb-d38c-456a-b800-5f0eb705d09f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-with-validation-controls-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 35dd340ffce7b83303a44a0d6532ce73be5350f0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f833868d9dbf51a9714b9bbe6730a24badc169d0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391011"
 ---
-<a name="using-textboxwatermark-with-validation-controls-c"></a>Utilisation de TextBoxWatermark avec des contrôles Validation (C#)
-====================
+# <a name="using-textboxwatermark-with-validation-controls-c"></a>Utilisation de TextBoxWatermark avec des contrôles Validation (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/TextBoxWatermark2.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/textboxwatermark2CS.pdf)
@@ -49,7 +49,7 @@ Enfin, ajoutez du code côté serveur pour le texte dans le champ de sortie si a
 [!code-aspx[Main](using-textboxwatermark-with-validation-controls-cs/samples/sample4.aspx)]
 
 
-[![Le programme de validation se plaint qu’il n’existe aucun texte dans le champ](using-textboxwatermark-with-validation-controls-cs/_static/image2.png)](using-textboxwatermark-with-validation-controls-cs/_static/image1.png)
+[![TValidateur de he se plaint que le champ n’est pas de texte](using-textboxwatermark-with-validation-controls-cs/_static/image2.png)](using-textboxwatermark-with-validation-controls-cs/_static/image1.png)
 
 Le programme de validation se plaint qu’il n’existe aucun texte dans le champ ([cliquez pour afficher l’image en taille réelle](using-textboxwatermark-with-validation-controls-cs/_static/image3.png))
 

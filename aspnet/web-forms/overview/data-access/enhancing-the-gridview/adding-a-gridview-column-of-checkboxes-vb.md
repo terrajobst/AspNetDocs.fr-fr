@@ -8,15 +8,15 @@ ms.date: 03/06/2007
 ms.assetid: 39253d05-75c0-41c7-b9d4-a6c58ecf69ce
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-vb
 msc.type: authoredcontent
-ms.openlocfilehash: bcd9bbfed6613e1ec02cbf0a6ddaf4086bc6d1c0
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8defaeb2454a1aa4a3fdd115a7a3e449bf668659
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422478"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383477"
 ---
-<a name="adding-a-gridview-column-of-checkboxes-vb"></a>Ajout d’une colonne GridView de cases à cocher (VB)
-====================
+# <a name="adding-a-gridview-column-of-checkboxes-vb"></a>Ajout d’une colonne GridView de cases à cocher (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_52_VB.exe) ou [télécharger le PDF](adding-a-gridview-column-of-checkboxes-vb/_static/datatutorial52vb1.pdf)
@@ -31,7 +31,7 @@ Dans le didacticiel précédent, nous avons examiné comment ajouter une colonne
 Dans ce didacticiel, nous verrons comment ajouter une colonne de cases à cocher et déterminer quelles cases à cocher ont été vérifiées lors de la publication. En particulier, nous allons créer un exemple qui reproduit fidèlement l’interface utilisateur du client sur le web. Notre exemple inclut un GridView paginé répertoriant les produits dans le `Products` table de base de données avec une case à cocher de chaque ligne (voir Figure 1). Un bouton Supprimer des produits sélectionnés, cette option supprime ces produits sélectionnés.
 
 
-[![Chaque ligne de produit inclut une case à cocher](adding-a-gridview-column-of-checkboxes-vb/_static/image1.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image1.png)
+[![ECCA produit ligne inclut une case à cocher](adding-a-gridview-column-of-checkboxes-vb/_static/image1.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image1.png)
 
 **Figure 1**: Chaque ligne de produit inclut une case à cocher ([cliquez pour afficher l’image en taille réelle](adding-a-gridview-column-of-checkboxes-vb/_static/image2.png))
 
@@ -41,17 +41,17 @@ Dans ce didacticiel, nous verrons comment ajouter une colonne de cases à cocher
 Avant de nous soucier d’ajout d’une colonne de cases à cocher, permettent de concentrer tout d’abord de s sur la liste des produits dans un GridView qui prend en charge la pagination. Commencez par ouvrir le `CheckBoxField.aspx` page dans le `EnhancedGridView` dossier et faites glisser un GridView à partir de la boîte à outils vers le concepteur, en définissant son `ID` à `Products`. Ensuite, choisissez lier le contrôle GridView à une nouvelle ObjectDataSource nommé `ProductsDataSource`. Configurer l’ObjectDataSource à utiliser le `ProductsBLL` classe, appelant le `GetProducts()` méthode pour retourner les données. Dans la mesure où ce GridView sera en lecture seule, définir les listes déroulantes dans la mise à jour, insertion et supprimer des onglets à (None).
 
 
-[![Créer un nouveau ObjectDataSource nommé ProductsDataSource](adding-a-gridview-column-of-checkboxes-vb/_static/image2.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image3.png)
+[![Ccréer un nouveau ProductsDataSource de nommé ObjectDataSource](adding-a-gridview-column-of-checkboxes-vb/_static/image2.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image3.png)
 
 **Figure 2**: Créer une nouvelle nommée de ObjectDataSource `ProductsDataSource` ([cliquez pour afficher l’image en taille réelle](adding-a-gridview-column-of-checkboxes-vb/_static/image4.png))
 
 
-[![Configurer l’ObjectDataSource pour récupérer des données à l’aide de la méthode GetProducts()](adding-a-gridview-column-of-checkboxes-vb/_static/image3.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image5.png)
+[![Cconfiguration de l’ObjectDataSource pour extraire des données à l’aide de la méthode GetProducts()](adding-a-gridview-column-of-checkboxes-vb/_static/image3.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image5.png)
 
 **Figure 3**: Configurer l’ObjectDataSource pour récupérer des données à l’aide du `GetProducts()` (méthode) ([cliquez pour afficher l’image en taille réelle](adding-a-gridview-column-of-checkboxes-vb/_static/image6.png))
 
 
-[![Définir les listes déroulantes dans la mise à jour, insertion et supprimer des onglets à (None)](adding-a-gridview-column-of-checkboxes-vb/_static/image4.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image7.png)
+[![Set les listes déroulantes dans la mise à jour, insertion et suppression des onglets à (None)](adding-a-gridview-column-of-checkboxes-vb/_static/image4.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image7.png)
 
 **Figure 4**: La valeur est la liste déroulante répertorie dans la mise à jour, insertion et supprimer des onglets (aucun) ([cliquez pour afficher l’image en taille réelle](adding-a-gridview-column-of-checkboxes-vb/_static/image8.png))
 
@@ -68,7 +68,7 @@ Après avoir apporté ces modifications, le balisage déclaratif s GridView, Obj
 Prenez un moment pour afficher la page dans un navigateur (voir Figure 5). À ce stade, vous devez voir le nom, la catégorie et le prix des dix premiers produits.
 
 
-[![Le nom, la catégorie et le prix des dix premiers produits sont répertoriés.](adding-a-gridview-column-of-checkboxes-vb/_static/image5.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image9.png)
+[![TIl nom, catégorie et le prix des dix premiers produits répertoriés](adding-a-gridview-column-of-checkboxes-vb/_static/image5.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image9.png)
 
 **Figure 5**: Le nom, la catégorie et le prix des dix premiers produits sont répertoriés ([cliquez pour afficher l’image en taille réelle](adding-a-gridview-column-of-checkboxes-vb/_static/image10.png))
 
@@ -80,7 +80,7 @@ Dans la mesure où ASP.NET 2.0 inclut une CheckBoxField, on pourrait penser qu�
 Au lieu de cela, nous devons ajouter un TemplateField et ajouter un contrôle de case à cocher Web à ses `ItemTemplate`. Lancez-vous et ajoutez un TemplateField pour le `Products` GridView et définissez-la comme le premier champ (extrême gauche). À partir de la balise active de s GridView, cliquez sur le lien Modifier les modèles et puis faites glisser un contrôle de case à cocher Web à partir de la boîte à outils dans le `ItemTemplate`. Définissez cette case à cocher s `ID` propriété `ProductSelector`.
 
 
-[![Ajoutez un contrôle de case à cocher Web nommé ProductSelector à ItemTemplate s TemplateField](adding-a-gridview-column-of-checkboxes-vb/_static/image6.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image11.png)
+[![Ajj un ProductSelector nommé de case à cocher Web contrôle le s TemplateField ItemTemplate](adding-a-gridview-column-of-checkboxes-vb/_static/image6.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image11.png)
 
 **Figure 6**: Ajouter un contrôle de case à cocher Web nommé `ProductSelector` au s TemplateField `ItemTemplate` ([cliquez pour afficher l’image en taille réelle](adding-a-gridview-column-of-checkboxes-vb/_static/image12.png))
 
@@ -88,7 +88,7 @@ Au lieu de cela, nous devons ajouter un TemplateField et ajouter un contrôle de
 Avec le contrôle TemplateField et la case à cocher Web ajouté, chaque ligne inclut désormais une case à cocher. Figure 7 illustre cette page, lorsqu’ils sont affichés via un navigateur, une fois le TemplateField et la case à cocher ont été ajoutés.
 
 
-[![Chaque ligne de produit inclut désormais une case à cocher](adding-a-gridview-column-of-checkboxes-vb/_static/image7.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image13.png)
+[![ECCA produit ligne inclut désormais une case à cocher](adding-a-gridview-column-of-checkboxes-vb/_static/image7.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image13.png)
 
 **Figure 7**: Chaque ligne de produit inclut désormais une case à cocher ([cliquez pour afficher l’image en taille réelle](adding-a-gridview-column-of-checkboxes-vb/_static/image14.png))
 
@@ -109,7 +109,7 @@ Le `Rows` propriété retourne une collection de `GridViewRow` instances cette c
 Avec l’ajout de ce gestionnaire d’événements, cliquez sur le bouton Supprimer des produits sélectionnés maintenant pour afficher le `ProductID` s des produits sélectionnés.
 
 
-[![Un clic sur le bouton Supprimer de produits sélectionnée est la ProductIDs de produits sélectionnée sont répertoriées](adding-a-gridview-column-of-checkboxes-vb/_static/image8.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image15.png)
+[![Wpoule le bouton Supprimer de produits sélectionné un clic sur le ProductIDs de produits sélectionnée sont répertoriées](adding-a-gridview-column-of-checkboxes-vb/_static/image8.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image15.png)
 
 **Figure 8**: Lorsque le bouton Supprimer de produits sélectionné un clic sur les produits sélectionnés `ProductID` s sont répertoriés ([cliquez pour afficher l’image en taille réelle](adding-a-gridview-column-of-checkboxes-vb/_static/image16.png))
 
@@ -136,7 +136,7 @@ Ensuite, créez `Click` gestionnaires d’événements pour le `CheckAll` et `Un
 Ce code, en cliquant sur le bouton Vérifier tout entraîne une publication et vérifie toutes les cases à cocher dans le contrôle GridView. De même, en cliquant sur Désélectionner tout Désélectionne toutes les cases à cocher. La figure 9 illustre l’écran une fois que le bouton Vérifier tout a été vérifié.
 
 
-[![En cliquant sur le contrôle que bouton tous sélectionne toutes les cases à cocher](adding-a-gridview-column-of-checkboxes-vb/_static/image9.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image17.png)
+[![Ccliquant sur les vérifier tous les bouton sélectionne toutes les cases à cocher](adding-a-gridview-column-of-checkboxes-vb/_static/image9.gif)](adding-a-gridview-column-of-checkboxes-vb/_static/image17.png)
 
 **Figure 9**: En cliquant sur les vérifier tous les bouton sélectionne toutes les cases à cocher ([cliquez pour afficher l’image en taille réelle](adding-a-gridview-column-of-checkboxes-vb/_static/image18.png))
 

@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-a-route-constraint-cs
-title: Création d’une contrainte d’itinéraire (C#) | Microsoft Docs
+title: Création d’une contrainte d’itinéraire (c#) | Microsoft Docs
 author: StephenWalther
 description: Dans ce didacticiel, Stephen Walther montre comment vous pouvez contrôler la façon dont le navigateur demande itinéraires de correspondance en créant des contraintes de routage avec des expressions régulières.
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/16/2009
 ms.assetid: 0bfd06b1-12d3-4fbb-9779-a82e5eb7fe7d
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-route-constraint-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 51d76248a59968e1d6befd5d5404f7bf6c2878e4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 42c0ce5e158e2fe9387ac218ac0762b6362094f9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049616"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389569"
 ---
-<a name="creating-a-route-constraint-c"></a>Création d’une contrainte de route (C#)
-====================
+# <a name="creating-a-route-constraint-c"></a>Création d’une contrainte de route (C#)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Dans ce didacticiel, Stephen Walther montre comment vous pouvez contrôler la façon dont le navigateur demande itinéraires de correspondance en créant des contraintes de routage avec des expressions régulières.
@@ -51,7 +51,7 @@ Malheureusement, l’itinéraire correspond également les URL suivantes :
 Étant donné que l’action Details() attend un paramètre de type entier, qui effectue une requête qui contient l’autre chose qu’une valeur entière provoque une erreur. Par exemple, si vous tapez l’URL /Product/apple dans votre navigateur, vous obtiendrez la page d’erreur dans la Figure 1.
 
 
-[![La boîte de dialogue Nouveau projet](creating-a-route-constraint-cs/_static/image1.jpg)](creating-a-route-constraint-cs/_static/image1.png)
+[![Tboîte de dialogue Nouveau projet he](creating-a-route-constraint-cs/_static/image1.jpg)](creating-a-route-constraint-cs/_static/image1.png)
 
 **Figure 01**: Voir une page explode ([cliquez pour afficher l’image en taille réelle](creating-a-route-constraint-cs/_static/image2.png))
 

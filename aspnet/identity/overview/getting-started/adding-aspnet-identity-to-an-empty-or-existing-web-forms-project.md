@@ -1,19 +1,20 @@
 ---
 uid: identity/overview/getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project
-title: Ajout d’ASP.NET Identity à un site Web vide ou existant constitue le projet | Microsoft Docs
+title: Ajout d’ASP.NET Identity à un site Web vide ou existant constitue le projet - ASP.NET 4.x
 author: raquelsa
-description: Ce didacticiel vous montre comment ajouter ASP.NET Identity (le nouveau système d’appartenance pour ASP.NET) à une application ASP.NET. Lorsque vous créez un nouveau Web Forms ou MVC...
+description: Ce didacticiel vous montre comment ajouter ASP.NET Identity (le système d’appartenance ASP.NET) à une application ASP.NET. Lorsque vous créez un nouveau Web Forms ou MVC...
 ms.author: riande
 ms.date: 01/22/2019
 ms.assetid: 1cbc0ed2-5bd6-4b62-8d34-4c193dcd8b25
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project
 msc.type: authoredcontent
-ms.openlocfilehash: cd28cc68db96b52eb205b8764aa2af014ffad9c3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8f66cdb46e4cd02509092ea3bdcb7af9c292eb8f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038276"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394313"
 ---
 # <a name="adding-aspnet-identity-to-an-empty-or-existing-web-forms-project"></a>Ajout d’ASP.NET Identity à un projet Web Forms vide ou existant
 
@@ -145,7 +146,7 @@ Notez que ce package installe les packages de dépendance : **EntityFramework**
     > [!NOTE] 
     > 
     > - Le `Page_Load` maintenant vérifie l’état de l’utilisateur actuel et prend des mesures en fonction de son `Context.User.Identity.IsAuthenticated` état.
-    >     **Affichage enregistré dans le nom d’utilisateur** : L’infrastructure d’identité Microsoft ASP.NET a ajouté des méthodes d’extension sur [System.Security.Principal.IIdentity](https://msdn.microsoft.com/library/system.security.principal.iidentity.aspx) qui permet d’obtenir le `UserName` et `UserId` pour l’utilisateur connecté. Ces méthodes d’extension sont définies dans le `Microsoft.AspNet.Identity.Core` assembly. Ces méthodes d’extension sont le remplacement pour [HttpContext.User.Identity.Name](https://msdn.microsoft.com/library/system.web.httpcontext.user.aspx) .
+    >   **Affichage enregistré dans le nom d’utilisateur** : L’infrastructure d’identité Microsoft ASP.NET a ajouté des méthodes d’extension sur [System.Security.Principal.IIdentity](https://msdn.microsoft.com/library/system.security.principal.iidentity.aspx) qui permet d’obtenir le `UserName` et `UserId` pour l’utilisateur connecté. Ces méthodes d’extension sont définies dans le `Microsoft.AspNet.Identity.Core` assembly. Ces méthodes d’extension sont le remplacement pour [HttpContext.User.Identity.Name](https://msdn.microsoft.com/library/system.web.httpcontext.user.aspx) .
     > - Méthode de connexion : `This` méthode remplace la précédente `CreateUser_Click` méthode dans cet exemple et cette maintenant se connecte l’utilisateur après avoir créé l’utilisateur.   
     >   L’infrastructure OWIN de Microsoft a ajouté des méthodes d’extension sur `System.Web.HttpContext` qui vous permet d’obtenir une référence à un `IOwinContext`. Ces méthodes d’extension sont définies dans `Microsoft.Owin.Host.SystemWeb` assembly. Le `OwinContext` classe expose un `IAuthenticationManager` propriété qui représente les fonctionnalités d’intergiciel (middleware) d’authentification disponibles sur la requête actuelle. Vous pouvez connecter l’utilisateur à l’aide de la `AuthenticationManager` de OWIN et l’appel `SignIn` et en passant le `ClaimsIdentity` comme indiqué ci-dessus. Identité ASP.NET et l’authentification des cookies OWIN étant système basé sur les revendications, l’infrastructure requiert l’application pour générer un `ClaimsIdentity` pour l’utilisateur. Le `ClaimsIdentity` contient des informations sur toutes les revendications pour l’utilisateur, telles que les rôles de l’utilisateur appartient. Vous pouvez également ajouter plusieurs revendications de l’utilisateur à ce stade, ce code connecte l’utilisateur et générer ainsi un cookie. Cet appel est analogue à [FormAuthentication.SetAuthCookie](https://msdn.microsoft.com/library/system.web.security.formsauthentication.setauthcookie.aspx) utilisé par le [FormsAuthentication](https://msdn.microsoft.com/library/system.web.security.formsauthenticationmodule.aspx) module.
     > - `SignOut` méthode : Obtient une référence à la `AuthenticationManager` de OWIN et appelle `SignOut`. Ce comportement est analogue à [FormsAuthentication.SignOut](https://msdn.microsoft.com/library/system.web.security.formsauthentication.signout.aspx) méthode utilisée par le [FormsAuthentication](https://msdn.microsoft.com/library/system.web.security.formsauthenticationmodule.aspx) module.

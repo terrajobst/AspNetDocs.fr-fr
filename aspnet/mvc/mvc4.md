@@ -8,15 +8,15 @@ ms.date: 09/12/2011
 ms.assetid: 1279f5b1-390f-4b4b-9e6e-f947cb1ef5f5
 msc.legacyurl: /mvc/mvc4
 msc.type: content
-ms.openlocfilehash: fe66e81734efda20dad515452bb13661dcbf0815
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b1c828825f15e2708541f9cefa20f3bc2d17b9fb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056166"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392909"
 ---
-<a name="aspnet-mvc-4"></a>ASP.NET MVC 4
-====================
+# <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
+
 ### <a name="top-features"></a>Fonctionnalités principales
 
 - API web ASP.NET
@@ -29,7 +29,7 @@ ms.locfileid: "57056166"
 
 ### <a name="whats-new-in-aspnet-mvc-4"></a>Nouveautés d’ASP.NET MVC 4
 
-- [API Web ASP.NET](../web-api/index.md)
+- [API web ASP.NET](../web-api/index.md)
 - Tutoriel : [Fonctionnalités mobiles d’ASP.NET MVC 4](overview/older-versions/aspnet-mvc-4-mobile-features.md)
 - [Notes de publication pour ASP.NET MVC 4](../whitepapers/mvc4-release-notes.md)
 - [Nouvelle série de didacticiels ASP.NET MVC 4](overview/older-versions/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4.md)
@@ -42,7 +42,7 @@ ms.locfileid: "57056166"
 
 ### <a name="install-visual-studio-2012-includes-aspnet-mvc-4"></a>Installez Visual Studio 2012 (inclut ASP.NET MVC 4)
 
-- [Visual Studio 2012 Ultimate](https://go.microsoft.com/fwlink/?linkid=247148)
+- [Visual Studio 2012 Ultimate](https://go.microsoft.com/fwlink/?linkid=247148)
 
 
 ### <a name="getting-help-and-reporting-issues"></a>Obtention d’aide et de signaler des problèmes

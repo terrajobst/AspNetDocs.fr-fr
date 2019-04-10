@@ -8,15 +8,15 @@ ms.date: 07/21/2010
 ms.assetid: 4fab47d5-a6ec-4fdc-91f0-651a093a24b9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4
 msc.type: authoredcontent
-ms.openlocfilehash: ca7eccd684473d9a1ec4a8adfd8690b291fe702f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 63afd25e2ccf22d3c7ae5c5048c80a8cf060d4cf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043266"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382821"
 ---
-<a name="part-4-listing-products"></a>Partie 4 : Liste des produits
-====================
+# <a name="part-4-listing-products"></a>Partie 4 : Liste des produits
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 > Tailspin Spyworks montre comment extrêmement simple est de créer des applications puissantes et évolutives pour la plate-forme .NET. Il montre comment utiliser les nouvelles fonctionnalités dans ASP.NET 4 pour créer un magasin en ligne, y compris les achats, extraction et administration.
@@ -50,7 +50,7 @@ Après la création de notre page Nous allons utiliser à nouveau d’une Source
 
 Pour effectuer cette opération nous indiquerons contrôle EntityDataSource génération automatique de la clause WHERE, et nous indiquons le WhereParameter.
 
-Vous vous rappellerez que lorsque nous avons créé les éléments de Menu dans notre « Menu de catégorie de produit » nous créée dynamiquement le lien en ajoutant le CatagoryID à la chaîne de requête pour chaque lien. Nous vous indique la Source de données d’entité de dériver le paramètre d’emplacement de ce paramètre de chaîne de requête.
+Vous vous rappellerez que lorsque nous avons créé les éléments de Menu dans notre « Menu de catégorie de produit » nous créée dynamiquement le lien en ajoutant la CategoryID à la chaîne de requête pour chaque lien. Nous vous indique la Source de données d’entité de dériver le paramètre d’emplacement de ce paramètre de chaîne de requête.
 
 [!code-aspx[Main](tailspin-spyworks-part-4/samples/sample1.aspx)]
 
@@ -79,7 +79,7 @@ Une fois que nos images de produit sont accessibles, nous pouvons tester notre p
 
 ![](tailspin-spyworks-part-4/_static/image6.jpg)
 
-Nous devons à présent implémenter la page ProductDetials.apsx et la fonctionnalité AddToCart.
+Nous devons à présent implémenter la page ProductDetails.aspx et la fonctionnalité AddToCart.
 
 Utilisez fichier -&gt;nouveau pour créer un nom de page ProductDetails.aspx à l’aide de la Page maître du site comme nous l’avons fait précédemment.
 
@@ -93,7 +93,7 @@ Le panier représentera une logique plus complexe dans notre application. Pour c
 
 Notez que nous ne choisissons pas le nom ShoppingCart.aspx.
 
-Notre base de données contient une table nommée « ShoppingCart ». Lorsque nous avons généré un Entity Data Model, une classe a été créée pour chaque table dans la base de données. Par conséquent, l’Entity Data Model généré une classe d’entité nommée « ShoppingCart ». Nous pouvons modifier le modèle afin que nous pourrions utiliser ce nom pour notre implémentation de panier d’achat ou l’étendre pour nos besoins, mais nous choisissons d’au lieu de cela pour simplement sélectionnez un nom qui permet d’éviter le conflit.
+Notre base de données contient une table nommée « ShoppingCart ». Lorsque nous avons généré un Entity Data Model, une classe a été créée pour chaque table dans la base de données. Par conséquent, l’Entity Data Model généré une classe d’entité nommée « ShoppingCart ». Nous pouvons modifier le modèle afin que nous pourrions utiliser ce nom pour notre implémentation de panier d’achat ou l’étendre pour nos besoins, mais nous choisiront à la place d’il suffit de sélectionner un nom qui permet d’éviter le conflit.
 
 Il est également important de noter que nous allons créer un panier d’achat simple et en incorporant la logique de panier d’achat avec l’affichage de panier d’achat. Nous pouvons également choisir d’implémenter notre panier d’achat dans une couche métier totalement distincte.
 

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/rating/creating-a-rating-control-cs
-title: Création d’un contrôle Rating (C#) | Microsoft Docs
+title: Création d’un contrôle Rating (c#) | Microsoft Docs
 author: wenz
 description: De nombreux sites Web, à partir de commerce électronique aux sites de Communauté, offrent aux utilisateurs d’articles de taux ou éléments. Cela nécessite généralement des efforts de codage, mais nous avons le...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 969fb28f-2bff-4fc4-b24a-27f5e2534a37
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/rating/creating-a-rating-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5776101d9e40f999806aefa5a9529dbef21af161
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fa118b4d733d7848b838f80e9918d62ae60033af
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048386"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59378973"
 ---
-<a name="creating-a-rating-control-c"></a>Création d’un contrôle Rating (C#)
-====================
+# <a name="creating-a-rating-control-c"></a>Création d’un contrôle Rating (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/rating0.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/rating0CS.pdf)
@@ -66,9 +66,9 @@ Dans le code côté serveur, accéder au contrôle d’évaluation par le biais 
 Enregistrez la page et chargez-le dans votre navigateur. Lorsque vous pointez sur les éléments de contrôle d’accès (initialement vide), un effet de JavaScript se produit : Les modifications de contrôle d’accès. Lorsque vous cliquez sur l’ensemble des étoiles, l’évaluation actuelle est conservée. Enfin, lorsque vous envoyez le formulaire, le code côté serveur génère le classement sélectionné.
 
 
-[![Création d’un système d’évaluation avec un minimum de code](creating-a-rating-control-cs/_static/image2.png)](creating-a-rating-control-cs/_static/image1.png)
+[![Création au système d’évaluation avec un minimum de code](creating-a-rating-control-cs/_static/image2.png)](creating-a-rating-control-cs/_static/image1.png)
 
 Création d’un système d’évaluation avec un minimum de code ([cliquez pour afficher l’image en taille réelle](creating-a-rating-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Next](creating-a-rating-control-vb.md)
+> [Suivant](creating-a-rating-control-vb.md)

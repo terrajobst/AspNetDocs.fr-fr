@@ -8,15 +8,15 @@ ms.date: 10/17/2013
 ms.assetid: a872d111-d4ea-4cfd-8ab6-314c4e12301c
 msc.legacyurl: /visual-studio/overview/2013/visual-studio-2013-web-editor-features-css
 msc.type: video
-ms.openlocfilehash: b0efe60750cb977467203d7e894a33a022774aa5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2802daed8fa053bc0f137ad3d26344ab5b1480f3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397797"
 ---
-<a name="visual-studio-2013-web-editor-features---css"></a>Fonctionnalités de l’éditeur web de Visual Studio 2013 - CSS
-====================
+# <a name="visual-studio-2013-web-editor-features---css"></a>Fonctionnalités de l’éditeur web de Visual Studio 2013 - CSS
+
 par [Scott Hanselman](https://github.com/shanselman)
 
 Scott Hanselman montre les fonctionnalités d’édition CSS dans Visual Studio 2013 et l’extension de Visual Studio Web Essentials.

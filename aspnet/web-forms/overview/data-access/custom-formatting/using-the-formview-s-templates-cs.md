@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/custom-formatting/using-the-formview-s-templates-cs
-title: À l’aide de modèles de FormView (C#) | Microsoft Docs
+title: À l’aide de modèles de FormView (c#) | Microsoft Docs
 author: rick-anderson
 description: Contrairement à DetailsView, FormView n’est pas composé de champs. Au lieu de cela, le contrôle FormView est restitué à l’aide de modèles. Dans ce didacticiel, nous allons examiner à l’aide de la F....
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: d3f062af-88cf-426d-af44-e41f32c41672
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-the-formview-s-templates-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1a7cf17d8cbd0a5a17a387b9a70336a1b06efde7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d275e3b154ca3397294d6cd0924cb6a50bbcef9a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054996"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395535"
 ---
-<a name="using-the-formviews-templates-c"></a>À l’aide de modèles de FormView (C#)
-====================
+# <a name="using-the-formviews-templates-c"></a>À l’aide de modèles de FormView (c#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/6/9/969e5c94-dfb6-4e47-9570-d6d9e704c3c1/ASPNET_Data_Tutorial_14_CS.exe) ou [télécharger le PDF](using-the-formview-s-templates-cs/_static/datatutorial14cs1.pdf)
@@ -40,7 +40,7 @@ Contrairement à DetailsView, FormView n’est pas composé de champs. Impossibl
 Dans ce didacticiel, nous allons examiner utilisant le contrôle FormView pour présenter un affichage moins rigid de produits. Au lieu d’avoir des champs pour le nom, catégorie, fournisseur et d’ainsi de suite, le contrôle FormView `ItemTemplate` affiche ces valeurs à l’aide d’une combinaison d’un élément d’en-tête et un `<table>` (voir Figure 1).
 
 
-[![Le contrôle FormView découpe de la disposition de grille illustrée dans le contrôle DetailsView](using-the-formview-s-templates-cs/_static/image2.png)](using-the-formview-s-templates-cs/_static/image1.png)
+[![THE FormView découpe de la mise en page Grid-Like vu dans le contrôle DetailsView](using-the-formview-s-templates-cs/_static/image2.png)](using-the-formview-s-templates-cs/_static/image1.png)
 
 **Figure 1**: Le contrôle FormView quitte la disposition Grid-Like vu dans le contrôle DetailsView ([cliquez pour afficher l’image en taille réelle](using-the-formview-s-templates-cs/_static/image3.png))
 
@@ -50,7 +50,7 @@ Dans ce didacticiel, nous allons examiner utilisant le contrôle FormView pour p
 Ouvrez le `FormView.aspx` page et faites glisser un FormView à partir de la boîte à outils vers le concepteur. Lorsque vous ajoutez le contrôle FormView il apparaît comme une zone grise, en nous demandant qu’un `ItemTemplate` est nécessaire.
 
 
-[![Le contrôle FormView ne peut pas être restitué dans le concepteur jusqu'à ce qu’un modèle ItemTemplate est fourni](using-the-formview-s-templates-cs/_static/image5.png)](using-the-formview-s-templates-cs/_static/image4.png)
+[![TIl FormView ne peut pas être restitué dans le concepteur jusqu'à ce qu’un modèle ItemTemplate est fourni](using-the-formview-s-templates-cs/_static/image5.png)](using-the-formview-s-templates-cs/_static/image4.png)
 
 **Figure 2**: Les FormView ne peut pas être restitué dans le concepteur jusqu'à ce qu’un `ItemTemplate` est fourni ([cliquez pour afficher l’image en taille réelle](using-the-formview-s-templates-cs/_static/image6.png))
 
@@ -88,12 +88,12 @@ Dans la mesure où aucun CheckBoxFields ne sont disponibles avec le contrôle Fo
 Avec la `ItemTemplate` terminée, les informations de produit s’affichent de manière beaucoup plus fluide. Comparez la sortie de DetailsView à partir du dernier didacticiel (Figure 3) avec la sortie générée par le contrôle FormView dans ce didacticiel (Figure 4).
 
 
-[![La sortie de DetailsView rigides](using-the-formview-s-templates-cs/_static/image8.png)](using-the-formview-s-templates-cs/_static/image7.png)
+[![TIl rigide DetailsView sortie](using-the-formview-s-templates-cs/_static/image8.png)](using-the-formview-s-templates-cs/_static/image7.png)
 
 **Figure 3**: La sortie de DetailsView rigide ([cliquez pour afficher l’image en taille réelle](using-the-formview-s-templates-cs/_static/image9.png))
 
 
-[![La sortie de FormView FLUIDE](using-the-formview-s-templates-cs/_static/image11.png)](using-the-formview-s-templates-cs/_static/image10.png)
+[![TIl FLUIDE FormView sortie](using-the-formview-s-templates-cs/_static/image11.png)](using-the-formview-s-templates-cs/_static/image10.png)
 
 **Figure 4**: La sortie de FormView fluide ([cliquez pour afficher l’image en taille réelle](using-the-formview-s-templates-cs/_static/image12.png))
 

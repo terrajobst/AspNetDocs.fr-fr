@@ -8,15 +8,15 @@ ms.date: 03/14/2014
 ms.assetid: 58b583cd-c4ab-47a3-8527-8c92c298c91f
 msc.legacyurl: /whitepapers/aspnet-web-deployment-content-map
 msc.type: content
-ms.openlocfilehash: 6df0c9d2f38ad1d39abd62787c600ef80da8e8e0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3f36f0c504678e1e8b40aef99db81ab99101568b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040536"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383906"
 ---
-<a name="aspnet-web-deployment---recommended-resources"></a>Déploiement web ASP.NET - Ressources recommandées
-====================
+# <a name="aspnet-web-deployment---recommended-resources"></a>Déploiement web ASP.NET - Ressources recommandées
+
 > Cette rubrique fournit des liens vers la documentation de ressources sur le déploiement (publier) ASP.NET web applications vers IIS à l’aide de Visual Studio 2010, Visual Web Developer 2010 et versions ultérieures.
 > 
 > Si vous connaissez un excellent blog valider, [stackoverflow](http://stackoverflow.com) thread ou un autre lien qui serait utile, [nous envoyer un e-mail](mailto:aspnetue@microsoft.com?subject=Deployment%20Content%20Map) avec le lien.
@@ -46,7 +46,7 @@ Cette rubrique contient les sections suivantes :
 - [Configuration de serveurs pour un fournisseur d’hébergement](#hostingprovider)
 - [Résolution des problèmes de déploiement](#troubleshooting)
 - [Obtention d’aide avec une question de déploiement spécifique](#gettinghelp)
-- [Ressources supplémentaires pour MSBuild](#additional)
+- [Ressources supplémentaires](#additional)
 
 
 <a id="understanding"></a>

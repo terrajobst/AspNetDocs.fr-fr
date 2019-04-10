@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: 004703cd-e0e9-4ba7-9974-1b0475c71222
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part5
 msc.type: authoredcontent
-ms.openlocfilehash: 76dc324134dc93c9552741fea9f1136abdc9184a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e0b540c030bf600def9b9efad4c73f055a343851
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036656"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402828"
 ---
-<a name="accessing-your-models-data-from-a-controller"></a>Accès aux données de votre modèle à partir d’un contrôleur
-====================
+# <a name="accessing-your-models-data-from-a-controller"></a>Accès aux données de votre modèle à partir d’un contrôleur
+
 par [Scott Hanselman](https://github.com/shanselman)
 
 > Il s’agit d’un didacticiel de débutant qui présente les principes de base d’ASP.NET MVC. Vous allez créer une application web simple qui lit et écrit à partir d’une base de données. Visitez le [centre d’apprentissage ASP.NET MVC](../../../index.md) pour rechercher d’autres ASP.NET MVC didacticiels et exemples.
@@ -26,7 +26,7 @@ Dans cette section, nous allons créer une nouvelle classe MoviesController, et 
 
 Cliquez avec le bouton droit sur le dossier Controllers et effectuer une nouvelle MoviesController.
 
-[![Ajouter un contrôleur](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
+[![Ajj contrôleur](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
 
 Cela créera un nouveau fichier « MoviesController.cs » en dessous de notre dossier \Controllers au sein de notre projet. Nous allons mettre à jour le MovieController pour récupérer la liste de films à partir de notre base de données nouvellement rempli.
 
@@ -42,11 +42,11 @@ N’oubliez pas, lorsque vous avez créé une nouvelle classe, vous aurez besoin
 
 Cliquez sur Ajouter et le système génère automatiquement le code pour nous qui affiche notre liste de films pour une vue. Il s’agit d’un bon moment pour modifier le &lt;h2&gt; titre à quelque chose comme « My Movie List » comme nous l’avons fait précédemment avec la vue de Hello World.
 
-[![Films - Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part5/_static/image5.png)](getting-started-with-mvc-part5/_static/image4.png)
+[![Movies - Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part5/_static/image5.png)](getting-started-with-mvc-part5/_static/image4.png)
 
 Exécutez votre application et visitez /Movies dans la barre d’adresses. Maintenant, nous avons récupéré des données à partir de la base de données à l’aide d’une requête de base à l’intérieur du contrôleur et renvoyé les données à une vue qui connaît les films. Cette vue puis tourne via la liste de films et crée une table de données pour nous.
 
-[![Liste de films - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image7.png)](getting-started-with-mvc-part5/_static/image6.png)
+[![Movie liste - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image7.png)](getting-started-with-mvc-part5/_static/image6.png)
 
 Nous n’implémentation modifier, détails et supprimer des fonctionnalités avec cette application -, ce qui nous évite les liens par défaut que le modèle de structure créé pour nous. Ouvrez le fichier /Movies/Index.aspx et les supprimer.
 
@@ -56,7 +56,7 @@ Voici le code source pour ce que notre modèle de vue mis à jour doit ressemble
 
 Il consiste à créer des liens que nous ne devons, donc nous allons les supprimer pour cet exemple. Nous conserverons notre créer un nouveau lien, car il s’agit suivant ! Voici à quoi ressemble notre application avec cette colonne supprimée.
 
-[![Liste de films - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image9.png)](getting-started-with-mvc-part5/_static/image8.png)
+[![Movie liste - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image9.png)](getting-started-with-mvc-part5/_static/image8.png)
 
 Nous disposons désormais d’une simple liste de nos données de film. Toutefois, si nous cliquons sur le lien « Créer nouveau », nous obtenons une erreur car il n’est pas connecté ! Nous allons implémenter une méthode d’Action de créer et activer un utilisateur à entrer de nouveaux films dans notre base de données.
 

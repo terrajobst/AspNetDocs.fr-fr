@@ -8,15 +8,15 @@ ms.date: 08/15/2012
 ms.assetid: c7e4e1ab-4932-4614-9f53-aaf7c706d498
 msc.legacyurl: /mvc/overview/views/using-page-inspector-in-aspnet-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: abb1ef355bd7614daaab8c205d9d53065856cd23
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ef0ae42e1c6114849a311164eac242db6dab2b1d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424363"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385795"
 ---
-<a name="using-page-inspector-in-aspnet-mvc"></a>Utilisation de l'Inspecteur de page dans ASP.NET MVC
-====================
+# <a name="using-page-inspector-in-aspnet-mvc"></a>Utilisation de l'Inspecteur de page dans ASP.NET MVC
+
 par Tim Ammann
 
 > L’inspecteur de page dans Visual Studio 2012 est un outil de développement web avec un navigateur intégré. Sélectionnez n’importe quel élément dans le navigateur intégré et l’inspecteur de Page instantanément met en surbrillance l’élément source et CSS. Vous pouvez parcourir n’importe quelle vue MVC, rapidement rechercher les sources de balisage rendu et utiliser les outils de navigateur directement dans l’environnement Visual Studio.
@@ -27,14 +27,14 @@ par Tim Ammann
 > 
 > Le didacticiel comporte les sections suivantes :
 > 
-> - [Composants requis](#_1_prerequisites)
+> - [Prérequis](#_1_prerequisites)
 > - [Créer une Application Web](#_2_creating_a)
 > - [Utiliser l’inspecteur de Page pour accéder à une vue](#_3_using_page)
 > - [Activer le Mode d’Inspection](#_4_inspection_mode)
 > - [Utiliser l’inspecteur de Page pour apporter des modifications au balisage](#_5_using_page)
 > - [Mode d’inspection et de la fenêtre HTML](#_6_inspection_mode)
 > - [Aperçu des modifications dans la fenêtre Styles CSS](#_7_previewing_css)
-> - [CSS Auto Sync](#css_auto_sync)
+> - [Synchronisation automatique CSS](#css_auto_sync)
 > - [À l’aide du sélecteur de couleurs CSS](#css_color_picker)
 > - [Mappage d’éléments de Page dynamique pour JavaScript](#map_dynamic_elements)
 

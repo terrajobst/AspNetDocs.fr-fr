@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: c85ec591-f8d7-4882-b763-de6ab9f3df7a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/layouts
 msc.type: authoredcontent
-ms.openlocfilehash: a6a007678d58547e9987ebda46bd08ae8aea66f7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 58f3ec28914a604aa911cc3cb73733f0d58fd49f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046176"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390413"
 ---
-<a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Présentation des Pages Web ASP.NET - création d’une disposition cohérente
-====================
+# <a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Présentation des Pages Web ASP.NET - création d’une disposition cohérente
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Ce didacticiel vous montre comment utiliser *dispositions* pour créer une apparence cohérente pour les pages sur un site qui utilise ASP.NET Web Pages. Il part du principe que vous avez terminé la série via [suppression de la base de données dans ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=251584).
@@ -146,7 +146,7 @@ Ouvrez le *Movies.cshtml* page à nouveau. Dans le code en haut, ajoutez la lign
 
 Le `Page` objet n’est disponible sur tous les *.cshtml* pages et est à cet effet, à savoir pour partager des informations entre une page et de sa disposition.
 
-Ouvrez le<em>\_Layout.cshtml</em> page. Modifier le `<title>` élément afin qu’elle ressemble à ce balisage :
+Ouvrez le  *\_Layout.cshtml* page. Modifier le `<title>` élément afin qu’elle ressemble à ce balisage :
 
 [!code-html[Main](layouts/samples/sample9.html)]
 

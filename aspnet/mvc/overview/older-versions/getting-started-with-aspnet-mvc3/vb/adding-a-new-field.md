@@ -8,15 +8,15 @@ ms.date: 01/12/2011
 ms.assetid: 28970e1b-1845-4015-86ef-121e52a6c397
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: 8fb0fb5c1db24f1961bba08f7b1c2182caca39ca
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 387c0ab407df2badfd8ff848b6a13c68769fbba7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063536"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379857"
 ---
-<a name="adding-a-new-field-to-the-movie-model-and-database-table-vb"></a>Ajout d’un nouveau champ à la table et au modèle Movie (VB)
-====================
+# <a name="adding-a-new-field-to-the-movie-model-and-database-table-vb"></a>Ajout d’un nouveau champ à la table et au modèle Movie (VB)
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Ce didacticiel vous apprend les notions de base de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express Service Pack 1, qui est une version gratuite de Microsoft Visual Studio. Avant de commencer, assurez-vous que vous avez installé les composants requis listés ci-dessous. Vous pouvez installer tous les en cliquant sur le lien suivant : [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Vous pouvez également installer individuellement les conditions préalables à l’aide des liens suivants :
@@ -27,7 +27,7 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Si vous utilisez Visual Studio 2010 au lieu de Visual Web Developer 2010, installez les composants requis en cliquant sur le lien suivant : [Visual Studio 2010 prerequisites](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Un projet de Visual Web Developer avec le code source VB.NET est disponible pour accompagner cette rubrique. [Téléchargez la version VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez C#, basculez vers le [C# version](../cs/adding-a-new-field.md) de ce didacticiel.
+> Un projet de Visual Web Developer avec le code source VB.NET est disponible pour accompagner cette rubrique. [Téléchargez la version VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez c#, basculez vers le [c# version](../cs/adding-a-new-field.md) de ce didacticiel.
 
 
 Dans cette section, vous allez apporter des modifications pour les classes de modèle et apprendre comment vous pouvez mettre à jour le schéma de base de données pour refléter les modifications de modèle.

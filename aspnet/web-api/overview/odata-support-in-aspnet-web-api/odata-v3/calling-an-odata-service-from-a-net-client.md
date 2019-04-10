@@ -1,33 +1,33 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-v3/calling-an-odata-service-from-a-net-client
-title: Appel d’un Service OData à partir d’un Client .NET (C#) | Microsoft Docs
+title: Appel d’un Service OData à partir d’un Client .NET (c#) | Microsoft Docs
 author: MikeWasson
-description: Ce didacticiel montre comment appeler un service OData à partir d’une application cliente en C#. Versions des logiciels utilisées dans le didacticiel de Visual Studio 2013 (fonctionne avec Visual S...
+description: Ce didacticiel montre comment appeler un service OData à partir d’une application cliente en c#. Versions des logiciels utilisées dans le didacticiel de Visual Studio 2013 (fonctionne avec Visual S...
 ms.author: riande
 ms.date: 02/26/2014
 ms.assetid: 6f448917-ad23-4dcc-9789-897fad74051b
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/calling-an-odata-service-from-a-net-client
 msc.type: authoredcontent
-ms.openlocfilehash: 75f8e3eab7bd5667bbdcccbb5ae8a8e5b1f5fdba
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d35c0057f5c29e399e45d0a58467de7f106d9994
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389971"
 ---
-<a name="calling-an-odata-service-from-a-net-client-c"></a>Appel à un service OData à partir d’un client .NET (C#)
-====================
+# <a name="calling-an-odata-service-from-a-net-client-c"></a>Appel à un service OData à partir d’un client .NET (C#)
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 [Télécharger le projet terminé](http://code.msdn.microsoft.com/ASPNET-Web-API-OData-cecdb524)
 
-> Ce didacticiel montre comment appeler un service OData à partir d’une application cliente en C#.
+> Ce didacticiel montre comment appeler un service OData à partir d’une application cliente en c#.
 >
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versions des logiciels utilisées dans le didacticiel
 >
 >
 > - [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013) (fonctionne avec Visual Studio 2012)
-> - [Bibliothèque cliente WCF Data Services](https://msdn.microsoft.com/library/cc668772.aspx)
+> - [Bibliothèque client services de données WCF](https://msdn.microsoft.com/library/cc668772.aspx)
 > - API Web 2. (L’exemple de service OData est généré à l’aide de Web API 2, mais l’application cliente ne dépend pas d’API Web).
 
 
@@ -43,7 +43,7 @@ Les articles suivants décrivent comment implémenter le service OData dans l’
 
 - [Création d’un point de terminaison OData dans Web API 2](creating-an-odata-endpoint.md)
 - [Relations d’entité OData dans Web API 2](working-with-entity-relations.md)
-- [Actions OData dans Web API 2](odata-actions.md)
+- [Actions OData dans Web API 2](odata-actions.md)
 
 ## <a name="generate-the-service-proxy"></a>Générer le Proxy de Service
 

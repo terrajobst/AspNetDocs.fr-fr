@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/numericupdown/creating-a-numeric-up-down-control-with-a-web-service-backend-cs
-title: Création d’un numérique haut/bas contrôle avec un Backend de Service Web (C#) | Microsoft Docs
+title: Création d’un numérique haut/bas contrôle avec un Backend de Service Web (c#) | Microsoft Docs
 author: wenz
 description: Au lieu de laisser un utilisateur de taper une valeur dans une case à cocher, contrôle (qui existe sur Windows et d’autres systèmes d’exploitation) haut/bas numérique peut s’avérer plus que c...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: c99bbc72-d4de-41ed-92a4-9a4632368363
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/numericupdown/creating-a-numeric-up-down-control-with-a-web-service-backend-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ffefed61e259994990315d17a545ef74074092a6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b8160c6f5ac090e120e86f4273749b756857967e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385707"
 ---
-<a name="creating-a-numeric-updown-control-with-a-web-service-backend-c"></a>Création d’un contrôle Haut/bas numérique avec un backend de service web (C#)
-====================
+# <a name="creating-a-numeric-updown-control-with-a-web-service-backend-c"></a>Création d’un contrôle Haut/bas numérique avec un backend de service web (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/numericupdown1.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/numericupdown1CS.pdf)
@@ -54,9 +54,9 @@ Voici le balisage complet pour la page :
 Si vous exécutez la page, notez la façon dont la valeur dans la zone de texte double toujours lorsque vous cliquez sur le bouton du haut, êtes réduit de moitié lorsque vous cliquez sur le bouton du bas.
 
 
-[![Seuls des chiffres qui sont une puissance de 2 apparaissent](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image2.png)](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image1.png)
+[![Onuméros d’eules une puissance de 2 apparaissent](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image2.png)](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image1.png)
 
 Seuls des chiffres qui sont une puissance de 2 apparaissent ([cliquez pour afficher l’image en taille réelle](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Next](creating-a-numeric-up-down-control-with-a-web-service-backend-vb.md)
+> [Suivant](creating-a-numeric-up-down-control-with-a-web-service-backend-vb.md)

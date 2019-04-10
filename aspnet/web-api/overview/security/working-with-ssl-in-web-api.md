@@ -8,15 +8,15 @@ ms.date: 02/22/2019
 ms.assetid: 97f6164f-59cf-45c0-b820-e4aa29b45396
 msc.legacyurl: /web-api/overview/security/working-with-ssl-in-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 69c0d217f605096d968435c062ee9931f8dff75f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 31589b3713b1f1a9b98d12906bfef81f8bf5e3f9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386150"
 ---
-<a name="working-with-ssl-in-web-api"></a>Utilisation de SSL dans l’API Web
-====================
+# <a name="working-with-ssl-in-web-api"></a>Utilisation de SSL dans l’API Web
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 Plusieurs schémas d’authentification ne sont pas sécurisés sur le HTTP standard. En particulier, l’authentification de base et l’authentification par formulaire envoient les informations d’identification non chiffrées. Pour être sécurisés, ces schémas d’authentification *doit* utiliser SSL. En outre, les certificats clients SSL peuvent être utilisés pour authentifier les clients.

@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 344bb38e-4965-4c47-bda1-f6d29ae5b83a
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-vb
 msc.type: authoredcontent
-ms.openlocfilehash: ecce8e4f0a901ce8c185d2b085f4d706bd57fa1f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fc819494ef58824d485144396e3a995d906c8b42
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398707"
 ---
-<a name="validating-with-a-service-layer-vb"></a>Validation avec une couche de service (VB)
-====================
+# <a name="validating-with-a-service-layer-vb"></a>Validation avec une couche de service (VB)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Découvrez comment déplacer votre logique de validation en dehors de vos actions de contrôleur et dans une couche de service distinct. Dans ce didacticiel, Stephen Walther explique comment vous pouvez conserver une sharp séparation des préoccupations en isolant votre couche de service à partir de votre couche de contrôleur.
@@ -80,7 +80,7 @@ L’interface IValidationDictionary est définie dans la liste 6. Cette interfac
 
 La classe dans la liste 7, nommé la classe ModelStateWrapper, implémente l’interface IValidationDictionary. Vous pouvez instancier la classe ModelStateWrapper en passant un dictionnaire d’états de modèle au constructeur.
 
-**Liste 7 - Models\ModelStateWrapper.vb**
+**Listing 7 - Models\ModelStateWrapper.vb**
 
 [!code-vb[Main](validating-with-a-service-layer-vb/samples/sample7.vb)]
 

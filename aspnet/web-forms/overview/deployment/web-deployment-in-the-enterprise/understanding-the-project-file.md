@@ -8,18 +8,18 @@ ms.date: 05/04/2012
 ms.assetid: 07978d9d-341c-4524-bcba-62976f390f77
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file
 msc.type: authoredcontent
-ms.openlocfilehash: 114dd21002ef41627f3a101c0197a85fd5208887
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d774a8e13e108d1be4c39e1e909d3d9683968a0d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053966"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404921"
 ---
-<a name="understanding-the-project-file"></a>Présentation du fichier projet
-====================
+# <a name="understanding-the-project-file"></a>Présentation du fichier projet
+
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Fichiers de projet Microsoft Build Engine (MSBuild) se trouvent au cœur du processus de génération et de déploiement. Cette rubrique commence par une vue d’ensemble conceptuelle de MSBuild et le fichier projet. Il décrit les composants clés que vous allez rencontrer lorsque vous travaillez avec des fichiers projet, et il passe à travers un exemple de comment vous pouvez utiliser des fichiers projet pour déployer des applications du monde réel.
 > 
@@ -33,7 +33,7 @@ par [Jason Lee](https://github.com/jrjlee)
 
 ## <a name="msbuild-and-the-project-file"></a>MSBuild et le fichier de projet
 
-Lorsque vous créez et créez des solutions dans Visual Studio, Visual Studio utilise MSBuild pour générer chaque projet dans votre solution. Chaque projet Visual Studio inclut un fichier de projet MSBuild, avec une extension de fichier qui reflète le type de projet&#x2014;par exemple, un projet C# (.csproj), un projet Visual Basic.NET (.vbproj) ou un projet de base de données (.dbproj). Pour pouvoir générer un projet, MSBuild doit traiter le fichier projet associé au projet. Le fichier projet est un document XML qui contient toutes les informations et instructions que MSBuild a besoin pour générer votre projet, telles que le contenu à inclure, exigences de plates-formes, informations de versioning, serveur web ou paramètres du serveur de base de données et le tâches qui doivent être réalisées.
+Lorsque vous créez et créez des solutions dans Visual Studio, Visual Studio utilise MSBuild pour générer chaque projet dans votre solution. Chaque projet Visual Studio inclut un fichier de projet MSBuild, avec une extension de fichier qui reflète le type de projet&#x2014;par exemple, un projet c# (.csproj), un projet Visual Basic.NET (.vbproj) ou un projet de base de données (.dbproj). Pour pouvoir générer un projet, MSBuild doit traiter le fichier projet associé au projet. Le fichier projet est un document XML qui contient toutes les informations et instructions que MSBuild a besoin pour générer votre projet, telles que le contenu à inclure, exigences de plates-formes, informations de versioning, serveur web ou paramètres du serveur de base de données et le tâches qui doivent être réalisées.
 
 Fichiers projet MSBuild sont basées sur le [schéma XML MSBuild](https://msdn.microsoft.com/library/5dy88c2e.aspx), et ainsi le processus de génération est entièrement ouverte et transparente. En outre, vous n’avez pas besoin d’installer Visual Studio pour pouvoir utiliser le moteur MSBuild&#x2014;l’exécutable de MSBuild.exe fait partie du .NET Framework, et vous pouvez l’exécuter à partir d’une invite de commandes. En tant que développeur, vous pouvez créer vos propres fichiers de projet MSBuild, à l’aide du schéma XML MSBuild, d’imposer un contrôle sophistiqué et précis sur la façon dont vos projets sont générés et déployés. Ces fichiers de projet personnalisés fonctionnent dans la même façon que les fichiers de projet Visual Studio génère automatiquement.
 
@@ -90,7 +90,7 @@ Un fichier de projet doit généralement fournir un grand nombre d’éléments 
 [!code-xml[Main](understanding-the-project-file/samples/sample2.xml)]
 
 
-Pour récupérer une valeur de propriété, vous utilisez le format <strong>$(</strong><em>PropertyName</em><strong>)</strong><em>.</em> Par exemple, pour récupérer la valeur de la <strong>nom_serveur</strong> propriété, vous devez taper :
+Pour récupérer une valeur de propriété, vous utilisez le format **$(***PropertyName***) ***.* Par exemple, pour récupérer la valeur de la **nom_serveur** propriété, vous devez taper :
 
 
 [!code-powershell[Main](understanding-the-project-file/samples/sample3.ps1)]
@@ -155,7 +155,7 @@ Vous pouvez créer **ItemGroup** éléments dans le niveau racine **projet** él
 Dans le schéma MSBuild, un [tâche](https://msdn.microsoft.com/library/77f2hx1s.aspx) élément représente une instruction build individuel (ou une tâche). MSBuild inclut une multitude de tâches prédéfinies. Exemple :
 
 - Le **copie** tâche copie des fichiers vers un nouvel emplacement.
-- Le **Csc** tâche appelle le compilateur Visual C#.
+- Le **Csc** tâche appelle le compilateur Visual c#.
 - Le **Vbc** tâche appelle le compilateur Visual Basic.
 - Le **Exec** tâche exécute un programme spécifié.
 - Le **Message** tâche écrit un message dans un enregistreur d’événements.
@@ -192,8 +192,8 @@ Cibles et tâches peuvent inclure **Condition** attributs. Par conséquent, vous
 
 En règle générale, lorsque vous créez des tâches utiles et cibles, vous devez faire référence aux propriétés et aux éléments que vous avez défini ailleurs dans le fichier projet :
 
-- Pour utiliser une valeur de propriété, tapez <strong>$(</strong><em>PropertyName</em><strong>)</strong>, où <em>PropertyName</em> est le nom de la <strong>propriété</strong> élément ou le nom du paramètre.
-- Pour utiliser un élément, tapez <strong>@(</strong><em>ItemName</em><strong>)</strong>, où <em>ItemName</em> est le nom de la <strong>élément</strong> élément.
+- Pour utiliser une valeur de propriété, tapez **$(***PropertyName***)**, où *PropertyName* est le nom de la **propriété** élément ou le nom de la paramètre.
+- Pour utiliser un élément, tapez **@(***ItemName***)**, où *ItemName* est le nom de la **élément** élément.
 
 > [!NOTE]
 > N’oubliez pas que si vous créez plusieurs éléments portant le même nom, vous créez une liste. En revanche, si vous créez plusieurs propriétés portant le même nom, la dernière valeur de propriété que vous fournissez remplacera toutes les propriétés précédentes portant le même nom&#x2014;une propriété peut contenir uniquement une valeur unique.

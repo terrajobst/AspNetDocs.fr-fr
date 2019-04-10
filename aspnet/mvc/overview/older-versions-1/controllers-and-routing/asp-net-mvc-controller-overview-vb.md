@@ -8,15 +8,15 @@ ms.date: 02/16/2008
 ms.assetid: 94c3e5d9-a904-445e-a34e-d92fd1ca108a
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-controller-overview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 604bf4af2a46e56d9445de141fae1a1651acf47f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 33544825403db67fc3b8f0e9eae5d7671b8d2e67
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064486"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402184"
 ---
-<a name="aspnet-mvc-controller-overview-vb"></a>Vue d’ensemble du contrôleur ASP.NET MVC (VB)
-====================
+# <a name="aspnet-mvc-controller-overview-vb"></a>Vue d’ensemble du contrôleur ASP.NET MVC (VB)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Dans ce didacticiel, Stephen Walther vous présente les contrôleurs ASP.NET MVC. Vous allez apprendre à créer de nouveaux contrôleurs et de retourner différents types de résultats d’action.
@@ -38,7 +38,7 @@ Listing 1 contient un simple contrôleur nommé ProductController.
 
 [!code-vb[Main](asp-net-mvc-controller-overview-vb/samples/sample1.vb)]
 
-Comme vous pouvez le voir à partir de la liste 1, un contrôleur est simplement une classe (une classe Visual Basic .NET ou C#). Un contrôleur est une classe qui dérive de la classe de base System.Web.Mvc.Controller. Un contrôleur hérite de cette classe de base, un contrôleur hérite de plusieurs méthodes utiles gratuitement (nous y reviendrons ces méthodes dans un instant).
+Comme vous pouvez le voir à partir de la liste 1, un contrôleur est simplement une classe (une classe Visual Basic .NET ou c#). Un contrôleur est une classe qui dérive de la classe de base System.Web.Mvc.Controller. Un contrôleur hérite de cette classe de base, un contrôleur hérite de plusieurs méthodes utiles gratuitement (nous y reviendrons ces méthodes dans un instant).
 
 ## <a name="understanding-controller-actions"></a>Présentation des Actions de contrôleur
 

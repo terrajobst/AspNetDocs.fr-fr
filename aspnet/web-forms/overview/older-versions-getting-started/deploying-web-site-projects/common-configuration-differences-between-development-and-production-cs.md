@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-cs
-title: Les différences de Configuration courantes entre le développement et de Production (C#) | Microsoft Docs
+title: Les différences de Configuration courantes entre le développement et de Production (c#) | Microsoft Docs
 author: rick-anderson
 description: Dans les didacticiels précédents, nous avons déployé notre site Web en copiant tous les fichiers pertinentes à partir de l’environnement de développement dans l’environnement de production. Toutefois, j’ai...
 ms.author: riande
@@ -8,18 +8,18 @@ ms.date: 04/01/2009
 ms.assetid: 721a5c37-7e21-48e0-832e-535c6351dcae
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 47060b45cad0e2f15a3c314d608b88c7c1d30809
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b9d4ed08ea1e8429c1895d0631e1acac9c7eaba9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037316"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391453"
 ---
-<a name="common-configuration-differences-between-development-and-production-c"></a>Différences de configuration courantes entre le développement et la production (C#)
-====================
+# <a name="common-configuration-differences-between-development-and-production-c"></a>Différences de configuration courantes entre le développement et la production (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial05_ConfigDifferences_cs.pdf)
+[Télécharger le PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial05_ConfigDifferences_cs.pdf)
 
 > Dans les didacticiels précédents, nous avons déployé notre site Web en copiant tous les fichiers pertinentes à partir de l’environnement de développement dans l’environnement de production. Toutefois, il n’est pas rare pour permettre les différences de configuration entre environnements, ce qui nécessite que chaque environnement ont un unique fichier Web.config. Ce didacticiel examine les différences de configuration classique et examine les stratégies pour gérer les informations de configuration distinct.
 

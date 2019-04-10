@@ -8,15 +8,15 @@ ms.date: 03/10/2014
 ms.assetid: d7bd001b-6db2-4422-9b78-f3d08b743b00
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/3-creating-a-consistent-look
 msc.type: authoredcontent
-ms.openlocfilehash: 83aef41c0baaeca6a25e09b4ea797ce9ee963a85
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7ed2f5da62f4521b42db737100230fac5ea71d67
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051236"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385968"
 ---
-<a name="creating-a-consistent-layout-in-aspnet-web-pages-razor-sites"></a>Création d’une disposition cohérente dans les Sites ASP.NET Web Pages (Razor)
-====================
+# <a name="creating-a-consistent-layout-in-aspnet-web-pages-razor-sites"></a>Création d’une disposition cohérente dans les Sites ASP.NET Web Pages (Razor)
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Cet article explique comment vous pouvez utiliser des pages de disposition dans un site Web ASP.NET Web Pages (Razor) pour créer des blocs réutilisables de contenu (par exemple, les en-têtes et pieds de page) et pour créer une apparence cohérente pour toutes les pages du site.

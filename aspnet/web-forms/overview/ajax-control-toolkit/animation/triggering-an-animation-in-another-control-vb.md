@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 25ebaf1f-5a9f-423d-98c7-1d694e93664f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b390ebfaec695a1c2565a91acaa38dbcc10a8959
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c74e829c85ae3b57d54a62aeb79388f1131e7184
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425793"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398200"
 ---
-<a name="triggering-an-animation-in-another-control-vb"></a>Déclenchement d’une animation dans un autre contrôle (VB)
-====================
+# <a name="triggering-an-animation-in-another-control-vb"></a>Déclenchement d’une animation dans un autre contrôle (VB)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation8.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation8VB.pdf)
@@ -57,7 +57,7 @@ Dans le `<Animations>` nœud, les animations sur place comme d’habitude. Afin 
 Notez l’ordre spécial dans lequel apparaissent les animations individuelles. Tout d’abord, le bouton est désactivé une fois que l’animation s’exécute. Dans la mesure où il existe aucune `AnimationTarget` d’attribut dans le `<EnableAction>` élément, cette animation est appliquée pour le contrôle d’origine : le bouton. Les étapes de le deux animation sont effectués en parallèle (`<Parallel>` élément). Les deux ont leur `AnimationTarget` les attributs définis pour `"Panel1"`, animer ainsi le panneau de configuration, et pas sur le bouton.
 
 
-[![Un clic de souris sur le bouton démarre l’animation de panneau](triggering-an-animation-in-another-control-vb/_static/image2.png)](triggering-an-animation-in-another-control-vb/_static/image1.png)
+[![A clic de souris sur le bouton démarre l’animation du Panneau de configuration](triggering-an-animation-in-another-control-vb/_static/image2.png)](triggering-an-animation-in-another-control-vb/_static/image1.png)
 
 Un clic de souris sur le bouton démarre l’animation du Panneau de configuration ([cliquez pour afficher l’image en taille réelle](triggering-an-animation-in-another-control-vb/_static/image3.png))
 

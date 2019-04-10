@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-cs
-title: Test de la force de mot de passe (C#) | Microsoft Docs
+title: Test de la force de mot de passe (c#) | Microsoft Docs
 author: wenz
 description: Presque n’importe où, les mots de passe sont requis afin que les utilisateurs différés ont tendance à choisir des mots de passe simples qui sont faciles à arrêter. Le contrôle PasswordStrength dans ASP. N....
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: cb4afbae-9b8f-483d-9729-476d4b9f85fc
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b71744df46f8b8d20efafa333a10370397c37d2f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d8ac50874d0325ed9583a16e1b4e19b3becabb99
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048406"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391512"
 ---
-<a name="testing-the-strength-of-a-password-c"></a>Test de la force d’un mot de passe (C#)
-====================
+# <a name="testing-the-strength-of-a-password-c"></a>Test de la force d’un mot de passe (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PasswordStrength0.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/passwordstrength0CS.pdf)
@@ -44,9 +44,9 @@ Le `StrengthIndicatorType` fournit les informations comment présenter la force 
 Exécutez la page et tapez suite : Uniquement une fois que vous avez entré des lettres minuscules, lettres majuscules, chiffres et symboles, le mot de passe est jugé comme unbreakable.
 
 
-[![Le mot de passe est maintenant () bien](testing-the-strength-of-a-password-cs/_static/image2.png)](testing-the-strength-of-a-password-cs/_static/image1.png)
+[![NComment puis-je le mot de passe est bonne (assez)](testing-the-strength-of-a-password-cs/_static/image2.png)](testing-the-strength-of-a-password-cs/_static/image1.png)
 
 Maintenant le mot de passe (assez) convient ([cliquez pour afficher l’image en taille réelle](testing-the-strength-of-a-password-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Next](testing-the-strength-of-a-password-vb.md)
+> [Suivant](testing-the-strength-of-a-password-vb.md)

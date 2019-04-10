@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-the-production-web-application-to-use-the-production-database-cs
-title: Configuration de l’Application Web de Production à utiliser la base de données de Production (C#) | Microsoft Docs
+title: Configuration de l’Application Web de Production à utiliser la base de données de Production (c#) | Microsoft Docs
 author: rick-anderson
 description: Comme indiqué dans les didacticiels précédents, il n’est pas rare que les informations de configuration diffèrent entre les environnements de développement et de production. Il s’agit d’es...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 04/23/2009
 ms.assetid: 0177dabd-d888-449f-91b2-24190cf5e842
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-the-production-web-application-to-use-the-production-database-cs
 msc.type: authoredcontent
-ms.openlocfilehash: e2560ae7a845c27f7fa5f420eaf1d89618397c60
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fa05645db9d43a836cc75b399153dd2e2c288f7c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056736"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388759"
 ---
-<a name="configuring-the-production-web-application-to-use-the-production-database-c"></a>Configuration de l’application web de production pour l’utilisation de la base de données de production (C#)
-====================
+# <a name="configuring-the-production-web-application-to-use-the-production-database-c"></a>Configuration de l’application web de production pour l’utilisation de la base de données de production (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_08_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial08_DBConfig_cs.pdf)
@@ -53,7 +53,7 @@ Vous pouvez générer la chaîne de connexion de base de données manuellement �
 Ouvrez Visual Studio, puis accédez à la fenêtre Explorateur de serveurs (dans Visual Web Developer, cette fenêtre est appelée l’Explorateur de base de données). Avec le bouton droit sur l’option des connexions de données et choisissez l’option Ajouter une connexion dans le menu contextuel. Ceci fait apparaître l’Assistant illustré à la Figure 1. Choisissez la source de données approprié, puis cliquez sur Continuer.
 
 
-[![Choisissez d’ajouter une nouvelle base de données à l’Explorateur de serveurs](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image2.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image1.jpg) 
+[![Choisissez pour ajouter une nouvelle base de données à l’Explorateur de serveurs](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image2.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image1.jpg) 
 
 **Figure 1**: Choisissez d’ajouter une nouvelle base de données à l’Explorateur de serveurs ([cliquez pour afficher l’image en taille réelle](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image3.jpg))
 
@@ -61,7 +61,7 @@ Ouvrez Visual Studio, puis accédez à la fenêtre Explorateur de serveurs (dans
 Ensuite, spécifiez les informations de connexion de la base de données (voir Figure 2). Lorsque vous avez souscrit avec votre entreprise d’hébergement web ils doivent avoir fourni des informations sur la façon de se connecter à la base de données - le nom du serveur de base de données, le nom de la base de données, le nom d’utilisateur et le mot de passe à utiliser pour se connecter à la base de données et ainsi de suite. Après avoir entré ces informations, cliquez sur OK pour terminer cet Assistant et ajouter la base de données à l’Explorateur de serveurs.
 
 
-[![Spécifiez les informations de connexion de base de données](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image5.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image4.jpg) 
+[![Spécifier les informations de connexion de base de données](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image5.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image4.jpg) 
 
 **Figure 2**: Spécifiez les informations de connexion de base de données ([cliquez pour afficher l’image en taille réelle](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image6.jpg))
 
@@ -91,7 +91,7 @@ Sauf si vous avez un workflow de déploiement plus formel, soit modifier manuell
 Une fois que le site a été déployé en production, visitez le site de production via votre navigateur. Vous devez voir et profitez de la même expérience utilisateur en tant que lors de l’exécution de l’application orientée données localement. Bien sûr lorsque vous visitez le site Web de production le site est alimenté par le serveur de base de données de production, tandis que sur le site Web dans l’environnement de développement utilise la base de données dans le développement. La figure 3 illustre le *enseigner vous-même ASP.NET 3.5 des dernières 24 heures* passez en revue la page depuis le site Web dans l’environnement de production (Notez l’URL dans la barre d’adresse de navigateur s).
 
 
-[![L’Application piloté par les données est maintenant disponible sur Production !](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image8.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image7.jpg) 
+[![TIl a piloté par les données Application est maintenant disponible sur Production !](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image8.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image7.jpg) 
 
 **Figure 3**: L’Application piloté par les données est maintenant disponible sur Production ! ([Cliquez pour afficher l’image en taille réelle](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image9.jpg))
 

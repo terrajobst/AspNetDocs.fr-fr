@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: 64116e56-1c9a-4f07-8097-bb36cbb6e57f
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-controllers-and-views-to-implement-a-listingdetails-ui
 msc.type: authoredcontent
-ms.openlocfilehash: 203a12473f79f38f7162d360d2179ca7c4a30303
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: abff97e5cc2663465fdf61f41ff69d17104fe8b6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063666"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379467"
 ---
-<a name="use-controllers-and-views-to-implement-a-listingdetails-ui"></a>Utiliser des contrôleurs et des vues pour implémenter une interface utilisateur liste/détails
-====================
+# <a name="use-controllers-and-views-to-implement-a-listingdetails-ui"></a>Utiliser des contrôleurs et des vues pour implémenter une interface utilisateur liste/détails
+
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Télécharger le PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Il s’agit d’étape 4 a gratuit [« « l’application NerdDinner](introducing-the-nerddinner-tutorial.md) qui présente en détail comment créer un petit mais terminé, l’application web à l’aide d’ASP.NET MVC 1.
 > 
@@ -56,10 +56,10 @@ Il ouvre également la nouvelle classe DinnersController dans l’éditeur de co
 
 Nous souhaitons activer les visiteurs à l’aide de notre application pour parcourir une liste de dîners à venir et leur permettre de cliquer sur n’importe quel dîner dans la liste pour afficher les détails spécifiques. Pour cela, nous allons les URL suivantes à partir de notre application de publication :
 
-| **URL** | **Fonction** |
+| **URL** | **Objectif** |
 | --- | --- |
 | */Dinners/* | Afficher une liste HTML de dîners à venir |
-| */Dinners/Details/[id]* | Afficher des détails sur un dîner spécifique indiqué par un paramètre « id » incorporé dans l’URL qui correspond à la DinnerID du dîner dans la base de données. Par exemple : /Dinners/Details/2 afficherait une page HTML avec des détails sur le dîner DinnerID dont la valeur est 2. |
+| */Dinners/détails / [id]* | Afficher des détails sur un dîner spécifique indiqué par un paramètre « id » incorporé dans l’URL qui correspond à la DinnerID du dîner dans la base de données. Par exemple : /Dinners/Details/2 afficherait une page HTML avec des détails sur le dîner DinnerID dont la valeur est 2. |
 
 Nous publierons des implémentations initiales de ces URL en ajoutant deux public « méthodes d’action » à notre classe DinnersController comme ci-dessous :
 
@@ -93,11 +93,11 @@ Voici une table qui montre comment une variété d’URL sont mappés à l’aid
 
 | **URL** | **Classe de contrôleur** | **Méthode d’action** | **Paramètres passés** |
 | --- | --- | --- | --- |
-| */Dinners/Details/2* | DinnersController | Details(ID) | id=2 |
-| */Dinners/Edit/5* | DinnersController | Edit(id) | id=5 |
-| */Dinners/Create* | DinnersController | Create() | N/A |
+| */ Dîners/détails/2* | DinnersController | Details(ID) | id=2 |
+| */ Dîners/Edit/5* | DinnersController | Edit(id) | id=5 |
+| */ Dîners/création* | DinnersController | Create() | N/A |
 | */ Dîners* | DinnersController | Index() | N/A |
-| */Home* | HomeController | Index() | N/A |
+| */ Édition familiale* | HomeController | Index() | N/A |
 | */* | HomeController | Index() | N/A |
 
 Les trois dernières lignes indiquent les valeurs par défaut (contrôleur = Home, Action = Index, Id = « ») qui est utilisé. Étant donné que la méthode « Index » est enregistrée en tant que le nom d’action par défaut si aucun n’est pas spécifié, le « / dîners » et « / Home » URL cause la méthode d’action Index() à appeler sur leurs classes de contrôleur. Étant donné que le contrôleur « Home » est inscrit en tant que le contrôleur par défaut s’il n’est pas spécifié, l’URL « / » entraîne le HomeController doit être créé et la méthode d’action Index() dessus à appeler.
@@ -236,7 +236,7 @@ La solution de la table ci-dessus nous donne une mise en page de grille de nos d
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample10.aspx)]
 
-Nous utilisons le mot clé « var » au sein de l’instruction foreach ci-dessus comme nous une boucle sur chaque dîner dans notre modèle. Ceux êtes pas familiarisé avec C# 3.0 peuvent penser qu’à l’aide de « var » signifie que l’objet dîner est à liaison tardive. Cela signifie plutôt que le compilateur utilise l’inférence de type par rapport à la propriété fortement typée « Model » (qui est de type « IEnumerable&lt;dîner&gt;») et la compilation de la variable locale « dîner » en tant que Dinner type – ce qui signifie que nous obtenons complètes IntelliSense et le moment de la compilation vérifiant dans les blocs de code :
+Nous utilisons le mot clé « var » au sein de l’instruction foreach ci-dessus comme nous une boucle sur chaque dîner dans notre modèle. Ceux êtes pas familiarisé avec c# 3.0 peuvent penser qu’à l’aide de « var » signifie que l’objet dîner est à liaison tardive. Cela signifie plutôt que le compilateur utilise l’inférence de type par rapport à la propriété fortement typée « Model » (qui est de type « IEnumerable&lt;dîner&gt;») et la compilation de la variable locale « dîner » en tant que Dinner type – ce qui signifie que nous obtenons complètes IntelliSense et le moment de la compilation vérifiant dans les blocs de code :
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image21.png)
 

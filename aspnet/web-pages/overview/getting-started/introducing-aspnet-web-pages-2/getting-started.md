@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: a36d3bdf-ef1b-47a4-b932-3a0cf4cad716
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/getting-started
 msc.type: authoredcontent
-ms.openlocfilehash: 79f76410e091b137e2792127b0a42524270761e8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 796e0c5e605d1103a4b9937b4e698c5c9412c013
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062616"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402295"
 ---
-<a name="getting-started"></a>Prise en main
-====================
+# <a name="getting-started"></a>Prise en main
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE[](~/includes/rp.md)]
@@ -63,7 +63,7 @@ Nous partons du principe que vous êtes familiarisé avec :
 - **Feuilles de style en cascade (CSS)**. Identique au code HTML.
 - **Idées de base de données**. Si vous avez utilisé une feuille de calcul pour les données et trié et filtré les données, ce qui sont le niveau d’expertise nous partons généralement pour cet ensemble de didacticiels.
 
-Nous supposons également que vous êtes intéressé par apprentissage de la programmation de base. Pages Web ASP.NET utilisent un langage de programmation appelé C#. Vous n’êtes pas obligé d’avoir n’importe quel arrière-plan en programmation, juste un intérêt qu’il contient. Si vous avez déjà rédigé un JavaScript dans une page web avant, vous avez beaucoup d’arrière-plan.
+Nous supposons également que vous êtes intéressé par apprentissage de la programmation de base. Pages Web ASP.NET utilisent un langage de programmation appelé c#. Vous n’êtes pas obligé d’avoir n’importe quel arrière-plan en programmation, juste un intérêt qu’il contient. Si vous avez déjà rédigé un JavaScript dans une page web avant, vous avez beaucoup d’arrière-plan.
 
 Notez que si vous êtes familiarisé avec la programmation, vous constaterez peut-être que ce didacticiel défini initialement déplace lentement pendant que nous présentons les programmeurs débutants rapidement. À mesure que nous au-delà de la première peu de didacticiels, cependant, il y aura moins de base de programmation pour expliquer et avance le long de choses à un élément plus rapide.
 
@@ -289,4 +289,4 @@ Dans le didacticiel suivant de cette série, vous explorez un peu plus de progra
 [Créer un site Web ASP.NET à partir de zéro](https://www.microsoft.com/web/post/create-an-aspnet-website-from-scratch). Il s’agit d’un didacticiel qui est spécifiquement sur l’utilisation de WebMatrix (pas les Pages Web ASP.NET). Il prendra un peu plus en détail certaines des fonctionnalités supplémentaires de WebMatrix nous n’aborderons pas dans cet ensemble de didacticiels.
 
 > [!div class="step-by-step"]
-> [Next](intro-to-web-pages-programming.md)
+> [Suivant](intro-to-web-pages-programming.md)

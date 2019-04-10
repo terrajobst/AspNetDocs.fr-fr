@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-cs
-title: Principes élémentaires de sécurité et la prise en charge ASP.NET (C#) | Microsoft Docs
+title: Principes élémentaires de sécurité et la prise en charge ASP.NET (c#) | Microsoft Docs
 author: rick-anderson
 description: Ceci est le premier didacticiel dans une série de didacticiels présentant des techniques pour l’authentification des visiteurs via un formulaire web, autoriser l’accès à partic...
 ms.author: riande
@@ -8,18 +8,18 @@ ms.date: 01/13/2008
 ms.assetid: 07e15538-2f29-40c6-b2e7-e6115075ac83
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 817a823ab5b09ea8bf2620a142779e79f53d957d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8f6fb4348e6ff703d329331b908e41763f24bb1f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026506"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402945"
 ---
-<a name="security-basics-and-aspnet-support-c"></a>Concepts de base et prise en charge de la sécurité par ASP.NET (C#)
-====================
+# <a name="security-basics-and-aspnet-support-c"></a>Concepts de base et prise en charge de la sécurité par ASP.NET (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_cs.pdf)
+[Télécharger le PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_cs.pdf)
 
 > Il s’agit du premier didacticiel d’une série de didacticiels présentant des techniques pour l’authentification des visiteurs via un formulaire web, autoriser l’accès à certaines pages et fonctionnalités et la gestion des comptes d’utilisateur dans une application ASP.NET.
 
@@ -39,7 +39,7 @@ Il s’agit du premier didacticiel d’une série de didacticiels présentant de
 - Limiter l’accès à une page web, directory ou des fonctionnalités spécifiques en fonction du rôle de l’utilisateur connecté
 - Personnaliser et étendre ASP. Contrôles Web de sécurité du NET
 
-Ces didacticiels sont conçues pour être concis et fournissent des instructions pas à pas avec de nombreuses captures d’écran pour vous guident tout au long du processus visuellement. Chaque didacticiel est disponible dans les versions de Visual Basic et C# et inclut un téléchargement de l’intégralité du code utilisé. (Ce premier didacticiel se concentre sur les concepts de sécurité à partir d’un point de vue de haut niveau et par conséquent ne contient-elle pas de code associé).
+Ces didacticiels sont conçues pour être concis et fournissent des instructions pas à pas avec de nombreuses captures d’écran pour vous guident tout au long du processus visuellement. Chaque didacticiel est disponible dans les versions de Visual Basic et c# et inclut un téléchargement de l’intégralité du code utilisé. (Ce premier didacticiel se concentre sur les concepts de sécurité à partir d’un point de vue de haut niveau et par conséquent ne contient-elle pas de code associé).
 
 Dans ce didacticiel, nous aborderons les concepts de sécurité importantes et quelles fonctionnalités sont disponibles dans ASP.NET pour vous aider à implémenter l’authentification par formulaire, l’autorisation, comptes d’utilisateurs et rôles. C’est parti !
 
@@ -140,7 +140,7 @@ Microsoft fournit deux classes de fournisseur d’appartenance dans le .NET Fram
 Cette série de didacticiels consacrée exclusivement SqlMembershipProvider.
 
 
-[![Le modèle permet à différentes implémentations du fournisseur en toute transparence sur secteur dans l’infrastructure&lt;/ fort&gt;](security-basics-and-asp-net-support-cs/_static/image4.png)](security-basics-and-asp-net-support-cs/_static/image3.png)
+[![THE modèle permet à différentes implémentations du fournisseur en toute transparence sur secteur dans l’infrastructure&lt;/ fort&gt;](security-basics-and-asp-net-support-cs/_static/image4.png)](security-basics-and-asp-net-support-cs/_static/image3.png)
 
 **Figure 03**: Le modèle permet à différentes implémentations du fournisseur en toute transparence sur secteur dans l’infrastructure ([cliquez pour afficher l’image en taille réelle](security-basics-and-asp-net-support-cs/_static/image5.png))
 
@@ -192,4 +192,4 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Entraîner un réviseur pour ce didacticiel a été de ce didacticiel série a été révisée par plusieurs réviseurs utiles. Les réviseurs tête pour ce didacticiel incluent Alicja Maziarz, John Suru et Teresa Murphy. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Next](an-overview-of-forms-authentication-cs.md)
+> [Suivant](an-overview-of-forms-authentication-cs.md)

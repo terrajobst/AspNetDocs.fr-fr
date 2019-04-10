@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-an-ftp-client-cs
-title: Déploiement de votre Site à l’aide d’un Client FTP (C#) | Microsoft Docs
+title: Déploiement de votre Site à l’aide d’un Client FTP (c#) | Microsoft Docs
 author: rick-anderson
 description: Pour déployer une application ASP.NET, le plus simple consiste à copier manuellement les fichiers nécessaires à partir de l’environnement de développement à l’environnement de production. THI...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 04/01/2009
 ms.assetid: a3599cf7-8474-4006-954a-3bc693736b66
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-an-ftp-client-cs
 msc.type: authoredcontent
-ms.openlocfilehash: cdecc85c056fc5153763d938c665b473117df9ba
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1ef796dc61cc65b6ca5205a5f8baf4dcc4ba05ae
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031646"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389165"
 ---
-<a name="deploying-your-site-using-an-ftp-client-c"></a>Déploiement de votre site avec un client FTP (C#)
-====================
+# <a name="deploying-your-site-using-an-ftp-client-c"></a>Déploiement de votre site avec un client FTP (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_03_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial03_DeployingViaFTP_cs.pdf)
@@ -69,7 +69,7 @@ La figure 1 montre FileZilla après avoir copié les fichiers nécessaires. File
 > Il n’existe aucun risque à avoir les fichiers de code source sur le serveur de production, car ils sont ignorés. ASP.NET refuse les requêtes HTTP aux fichiers de code source par défaut afin que même si les fichiers de code source sont présents sur le serveur de production, ils sont inaccessibles aux visiteurs de votre site Web. (Autrement dit, si un utilisateur tente de visiter `http://www.yoursite.com/Default.aspx.cs` qu’ils obtiendront une page d’erreur qui explique que ces types de fichiers - `.cs` fichiers - sont interdites.)
 
 
-[![Utiliser un Client FTP pour copier les fichiers nécessaires à partir de votre ordinateur de bureau au serveur Web sur le fournisseur d’hébergement Web](deploying-your-site-using-an-ftp-client-cs/_static/image2.png)](deploying-your-site-using-an-ftp-client-cs/_static/image1.png)
+[![Use un FTP Client pour copier les fichiers nécessaires à partir de votre bureau sur le serveur Web au niveau du fournisseur d’hôte Web](deploying-your-site-using-an-ftp-client-cs/_static/image2.png)](deploying-your-site-using-an-ftp-client-cs/_static/image1.png)
 
 **Figure 1**: Utiliser un FTP Client pour copier les fichiers nécessaires à partir de votre bureau sur le serveur Web au fournisseur de serveur Web ([cliquez pour afficher l’image en taille réelle](deploying-your-site-using-an-ftp-client-cs/_static/image3.png))
 
@@ -82,7 +82,7 @@ Figure 2 montre le site déployé critiques de livres. Notez que je suis l’aff
 > Si vous obtenez une erreur lors de l’affichage de votre application de prendre un moment pour vous assurer que vous avez déployé le bon jeu de fichiers. Ensuite, vérifiez le message d’erreur pour voir si elle révèle les indices concernant le problème. Ensuite, vous pouvez activer au support technique de votre entreprise d’hôte web ou publiez votre question sur le forum approprié à la [Forums ASP.NET](https://forums.asp.net/).
 
 
-[![Le Site de révisions de livre est désormais Accessible à toute personne disposant d’une connexion Internet](deploying-your-site-using-an-ftp-client-cs/_static/image5.png)](deploying-your-site-using-an-ftp-client-cs/_static/image4.png)
+[![TIl livre révisions Site est maintenant Accessible à toute personne disposant d’une connexion Internet](deploying-your-site-using-an-ftp-client-cs/_static/image5.png)](deploying-your-site-using-an-ftp-client-cs/_static/image4.png)
 
 **Figure 2**: Le Site de révisions de livre est désormais Accessible à toute personne disposant d’une connexion Internet ([cliquez pour afficher l’image en taille réelle](deploying-your-site-using-an-ftp-client-cs/_static/image6.png))
 
@@ -124,7 +124,7 @@ Une fois que vous avez créé avec succès le projet, utilisez votre client FTP 
 La figure 3 illustre FileZilla après avoir copié les fichiers nécessaires. Comme vous pouvez le voir, ASP.NET source des fichiers de code, par exemple `About.aspx.cs`, sont présents sur l’ordinateur local (l’environnement de développement) et le fournisseur de serveur web (l’environnement de production), car les fichiers de code doivent être déployées lors de l’utilisation automatique compilation.
 
 
-[![Utiliser un Client FTP pour copier les fichiers nécessaires à partir de votre ordinateur de bureau au serveur Web sur le fournisseur d’hébergement Web](deploying-your-site-using-an-ftp-client-cs/_static/image8.png)](deploying-your-site-using-an-ftp-client-cs/_static/image7.png)
+[![Use un FTP Client pour copier les fichiers nécessaires à partir de votre bureau sur le serveur Web au niveau du fournisseur d’hôte Web](deploying-your-site-using-an-ftp-client-cs/_static/image8.png)](deploying-your-site-using-an-ftp-client-cs/_static/image7.png)
 
 **Figure 3**: Utiliser un FTP Client pour copier les fichiers nécessaires à partir de votre bureau sur le serveur Web au fournisseur de serveur Web ([cliquez pour afficher l’image en taille réelle](deploying-your-site-using-an-ftp-client-cs/_static/image9.png))
 

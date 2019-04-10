@@ -8,20 +8,20 @@ ms.date: 09/08/2014
 ms.assetid: 664ec95e-b0c9-4f43-a39f-798d0f2a7e08
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal
 msc.type: authoredcontent
-ms.openlocfilehash: b59a395e255823a732aef1b899612063e09b2424
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a0895c2246bc08f50645a865ce2dfffecfbb56a6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034626"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391154"
 ---
-<a name="checkout-and-payment-with-paypal"></a>Commande et paiement avec PayPal
-====================
+# <a name="checkout-and-payment-with-paypal"></a>Commande et paiement avec PayPal
+
 par [Erik Reitan](https://github.com/Erikre)
 
-[Télécharger le projet de Wingtip Toys exemple (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Télécharger le projet de Wingtip Toys exemple (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
+> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
 
 
 Ce didacticiel décrit comment modifier l’exemple d’application Wingtip Toys à inclure l’autorisation de l’utilisateur, inscription et paiement à l’aide de PayPal. Uniquement les utilisateurs qui sont connectés dans aura l’autorisation d’acheter des produits. Fonctionnalités de l’inscription utilisateur intégrés du modèle de projet Web Forms ASP.NET 4.5 incluent déjà une grande partie de ce dont vous avez besoin. Vous allez ajouter la fonctionnalité de validation d’Express PayPal. Dans ce didacticiel vous utiliser le développeur de PayPal environnement, de test et aucun fonds réels ne seront transférées. À la fin du didacticiel, vous allez tester l’application en sélectionnant les produits à ajouter au panier d’achat, en cliquant sur le bouton de validation et transfert de données vers le site web de test PayPal. Sur le site web de test PayPal, vous confirmez vos informations d’expédition et de paiement et puis revenez à l’exemple d’application Wingtip Toys local pour confirmer et terminer l’achat.
@@ -124,7 +124,7 @@ Il est important de noter que configuration ASP.NET suit une hiérarchie, où ch
 2. Modification **SSL activé** à `true`.
 3. Copie le **URL SSL** afin de pouvoir l’utiliser ultérieurement.   
  L’URL SSL sera `https://localhost:44300/` sauf si vous avez déjà créé des Sites Web SSL (comme indiqué ci-dessous).   
-    ![Propriétés de projet](checkout-and-payment-with-paypal/_static/image4.png)
+    ![Propriétés du projet](checkout-and-payment-with-paypal/_static/image4.png)
 4. Dans **l’Explorateur de solutions**, avec le bouton droit cliquez sur le **WingtipToys** projet puis cliquez sur **propriétés**.
 5. Dans l’onglet gauche, cliquez sur **Web**.
 6. Modifier le **Url du projet** à utiliser le **URL SSL** que vous avez enregistré précédemment.   
@@ -250,7 +250,7 @@ Si vous suivez ce didacticiel en utilisant le **prédéfinis** Wingtip Toys exem
 
 PayPal est une plateforme de facturation basée sur le web qui accepte les paiements effectués par les commerçants en ligne. Ce didacticiel explique ensuite comment intégrer la fonctionnalité de validation Express de PayPal dans votre application. Extraction expresse permet à vos clients à utiliser PayPal pour payer les éléments qu’ils ont ajoutés à leur panier d’achat.
 
-### <a name="create-paylpal-test-accounts"></a>Créer des comptes de Test de PaylPal
+### <a name="create-paypal-test-accounts"></a>Créer des comptes de Test de PayPal
 
 Pour utiliser l’environnement de test de PayPal, vous devez créer et vérifier un compte de test de développeur. Vous allez utiliser le compte de test de développeur pour créer un acheteur potentiel de compte de test et un compte de test de vendeur. Les informations d’identification du compte de test développeur permettent également l’exemple d’application Wingtip Toys pour accéder à l’environnement de test PayPal.
 
@@ -277,7 +277,7 @@ Pour utiliser l’environnement de test de PayPal, vous devez créer et vérifie
 7. Créer le compte de test de l’acheteur en cliquant sur le **créer un compte** bouton.  
  Le **comptes de bac à sable Test** page s’affiche. 
 
-    ![Commande et paiement avec PayPal - PaylPal comptes](checkout-and-payment-with-paypal/_static/image17.png)
+    ![Commande et paiement avec PayPal - compte PayPal](checkout-and-payment-with-paypal/_static/image17.png)
 8. Sur le **les comptes de test de bac à sable** , cliquez sur le **l’animateur** compte de messagerie.  
     **Profil** et **Notification** options s’affichent.
 9. Sélectionnez le **profil** option, puis cliquez sur **informations d’identification de l’API** pour afficher vos informations d’identification de l’API pour le compte de marchand de test.
@@ -304,14 +304,14 @@ Vous devez placer la majorité du code PayPal en une seule classe. Cette classe 
 
 > [!NOTE] 
 > 
-> Dans cet exemple d’application vous ajoutez simplement informations d’identification dans un fichier C# (.cs). Toutefois, dans une solution implémentée, vous devez envisager de chiffrer vos informations d’identification dans un fichier de configuration.
+> Dans cet exemple d’application vous ajoutez simplement informations d’identification dans un fichier c# (.cs). Toutefois, dans une solution implémentée, vous devez envisager de chiffrer vos informations d’identification dans un fichier de configuration.
 
 
 La classe NVPAPICaller contient la majorité des fonctionnalités de PayPal. Le code dans la classe fournit les méthodes nécessaires pour effectuer un test d’achat à partir de l’environnement de test de PayPal. Les fonctions de PayPal trois suivantes sont utilisées pour effectuer des achats :
 
-- `SetExpressCheckout` (Fonction)
-- `GetExpressCheckoutDetails` (Fonction)
-- `DoExpressCheckoutPayment` (Fonction)
+- `SetExpressCheckout` function
+- `GetExpressCheckoutDetails` function
+- `DoExpressCheckoutPayment` function
 
 Le `ShortcutExpressCheckout` méthode collecte les détails de produit et les informations de fournisseur test à partir du panier d’achat et les appels le `SetExpressCheckout` PayPal (fonction). Le `GetCheckoutDetails` méthode confirme les détails de l’achat et appelle le `GetExpressCheckoutDetails` PayPal (fonction) avant d’effectuer l’achat de test. Le `DoCheckoutPayment` méthode termine à l’achat de test à partir de l’environnement de test en appelant le `DoExpressCheckoutPayment` PayPal (fonction). Le code restant prend en charge les méthodes de PayPal et les processus, tels que l’encodage des chaînes, décodage des chaînes, tableaux de traitement et déterminer les informations d’identification.
 
@@ -386,7 +386,7 @@ Le **DetailsView** contrôle est utilisé pour afficher les détails des command
 
 > [!NOTE] 
 > 
-> **Info-bulle**
+> **Conseil**
 > 
 > Dans le balisage de la *CheckoutReview.aspx* page, notez que le `<ItemStyle>` balise est utilisée pour modifier le style des éléments dans le **DetailsView** contrôle près du bas de la page. En affichant la page dans **mode Design** (en sélectionnant **conception** dans l’angle inférieur gauche de Visual Studio), puis en sélectionnant le **DetailsView** contrôler, puis en sélectionnant le  **Balise active** (l’icône de flèche en haut à droite du contrôle), vous serez en mesure de voir les **Tâches DetailsView**.
 > 

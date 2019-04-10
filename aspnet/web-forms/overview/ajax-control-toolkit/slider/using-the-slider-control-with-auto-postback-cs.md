@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-cs
-title: À l’aide du contrôle Slider avec publication automatique (C#) | Microsoft Docs
+title: À l’aide du contrôle Slider avec publication automatique (c#) | Microsoft Docs
 author: wenz
 description: Le contrôle Slider dans AJAX Control Toolkit fournit un contrôle slider graphique qui peut être contrôlé à l’aide de la souris. Il est possible de rendre la comptabilisation de curseur automatique...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 4d85e9fb-91e6-41f2-9c13-754549b19c27
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4f776d609099c398b4937710487ba51a5efb1876
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a5b858a05470caa244902afbb404adbb2e4761b7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033636"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402724"
 ---
-<a name="using-the-slider-control-with-auto-postback-c"></a>À l’aide du contrôle Slider avec publication automatique (C#)
-====================
+# <a name="using-the-slider-control-with-auto-postback-c"></a>À l’aide du contrôle Slider avec publication automatique (c#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/Slider1.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/slider1CS.pdf)
@@ -51,14 +51,14 @@ Maintenant le curseur est publication ; sur le côté serveur, cet événement 
 [!code-aspx[Main](using-the-slider-control-with-auto-postback-cs/samples/sample5.aspx)]
 
 
-[![En déplaçant le curseur déclenche une publication (postback)](using-the-slider-control-with-auto-postback-cs/_static/image2.png)](using-the-slider-control-with-auto-postback-cs/_static/image1.png)
+[![Moving le curseur déclenche une publication (postback)](using-the-slider-control-with-auto-postback-cs/_static/image2.png)](using-the-slider-control-with-auto-postback-cs/_static/image1.png)
 
 En déplaçant le curseur déclenche une publication (postback) ([cliquez pour afficher l’image en taille réelle](using-the-slider-control-with-auto-postback-cs/_static/image3.png))
 
 
-[![Par la suite, la date de cette modification est écrite dans l’étiquette](using-the-slider-control-with-auto-postback-cs/_static/image5.png)](using-the-slider-control-with-auto-postback-cs/_static/image4.png)
+[![Afterwards, la date de cette modification est écrite dans l’étiquette](using-the-slider-control-with-auto-postback-cs/_static/image5.png)](using-the-slider-control-with-auto-postback-cs/_static/image4.png)
 
 Par la suite, la date de cette modification est écrite dans l’étiquette ([cliquez pour afficher l’image en taille réelle](using-the-slider-control-with-auto-postback-cs/_static/image6.png))
 
 > [!div class="step-by-step"]
-> [Next](databinding-the-slider-control-cs.md)
+> [Suivant](databinding-the-slider-control-cs.md)

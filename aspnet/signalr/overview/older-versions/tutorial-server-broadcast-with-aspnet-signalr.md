@@ -8,15 +8,15 @@ ms.date: 04/10/2013
 ms.assetid: ab7b2554-956a-4f6d-b2a0-4ae0c62e8580
 msc.legacyurl: /signalr/overview/older-versions/tutorial-server-broadcast-with-aspnet-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 258a55bf72c4b3425d001f478620fa9651952b3f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a63bca69f137a4d4765db6a4925ff027c9d8bf7d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403582"
 ---
-<a name="tutorial-server-broadcast-with-aspnet-signalr-1x"></a>Tutoriel : Diffusion par le serveur avec ASP.NET SignalR 1.x
-====================
+# <a name="tutorial-server-broadcast-with-aspnet-signalr-1x"></a>Tutoriel : Diffusion par le serveur avec ASP.NET SignalR 1.x
+
 par [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://github.com/tdykstra)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -42,7 +42,7 @@ Régulièrement le serveur de façon aléatoire met à jour de bourse et envoie 
 
 Ce didacticiel contient les sections suivantes :
 
-- [Composants requis](#prerequisites)
+- [Prérequis](#prerequisites)
 - [Créer le projet](#createproject)
 - [Ajoutez les packages NuGet de SignalR](#nugetpackages)
 - [Configurer le code de serveur](#server)
@@ -69,7 +69,7 @@ Si vous avez Visual Studio 2010, assurez-vous que [NuGet](https://visualstudioga
 ## <a name="create-the-project"></a>Créer le projet
 
 1. À partir de la **fichier** menu, cliquez sur **nouveau projet**.
-2. Dans le **nouveau projet** boîte de dialogue, développez **C#** sous **modèles** et sélectionnez **Web**.
+2. Dans le **nouveau projet** boîte de dialogue, développez **c#** sous **modèles** et sélectionnez **Web**.
 3. Sélectionnez le **Application Web ASP.NET vide** modèle, nommez le projet *SignalR.StockTicker*, puis cliquez sur **OK**.
 
     ![Boîte de dialogue Nouveau projet de test](tutorial-server-broadcast-with-aspnet-signalr/_static/image2.png)
@@ -412,7 +412,7 @@ Pour des didacticiels qui montrent des scénarios de communication d’égal à 
 
 Pour en savoir plus les concepts de développement plus avancés SignalR, visitez les sites suivants pour le code source de SignalR et de ressources :
 
-- [ASP.NET SignalR](https://asp.net/signalr/)
+- [SignalR ASP.NET](https://asp.net/signalr/)
 - [Projet de SignalR](http://signalr.net/)
 - [SignalR Github et exemples](https://github.com/SignalR/SignalR)
 - [Wiki de SignalR](https://github.com/SignalR/SignalR/wiki)

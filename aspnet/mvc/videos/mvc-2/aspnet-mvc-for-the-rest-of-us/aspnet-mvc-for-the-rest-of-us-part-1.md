@@ -8,15 +8,15 @@ ms.date: 04/22/2010
 ms.assetid: c56355c3-821f-43e2-9058-9499a1d63f80
 msc.legacyurl: /mvc/videos/mvc-2/aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-1
 msc.type: video
-ms.openlocfilehash: 3e7d874c322e6461dcc030814de455318c9dd902
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ac872869f97aab679384c7cda9f6c8399cd966a3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042846"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384688"
 ---
-<a name="aspnet-mvc-for-the-rest-of-us-part-1"></a>ASP.NET MVC - Fonctionnalité Nous contacter : Partie 1
-====================
+# <a name="aspnet-mvc-for-the-rest-of-us-part-1"></a>ASP.NET MVC - Fonctionnalité Nous contacter : Partie 1
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Dans cette vidéo Microsoft Joe Stagner génère une fonctionnalité « Contactez-nous » pour une application ASP.NET MVC en ajoutant une vue logique du contrôleur et un modèle personnalisé à l’Application ASP.NET par défaut. Vous verrez certaines des différences fondamentales entre l’utilisation avec ASP.NET MVC et Web Forms ASP.NET.
@@ -24,4 +24,4 @@ Dans cette vidéo Microsoft Joe Stagner génère une fonctionnalité « Contact
 [&#9654;Regardez la vidéo (36 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-for-the-rest-of-us-part-1)
 
 > [!div class="step-by-step"]
-> [Next](aspnet-mvc-for-the-rest-of-us-part-2.md)
+> [Suivant](aspnet-mvc-for-the-rest-of-us-part-2.md)

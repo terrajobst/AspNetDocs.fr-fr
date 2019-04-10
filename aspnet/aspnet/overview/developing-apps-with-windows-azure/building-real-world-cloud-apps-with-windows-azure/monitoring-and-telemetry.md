@@ -8,15 +8,15 @@ ms.date: 07/09/2015
 ms.assetid: 7e986ab5-6615-4638-add7-4614ce7b51db
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
 msc.type: authoredcontent
-ms.openlocfilehash: f4dae827627103e5cfb9981b6c3b9342cdc34c13
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 48a66eea839f7f48899040ad20bbfee95b9a1902
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043216"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403907"
 ---
-<a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Surveillance et télémétrie (génération d’applications Cloud réalistes avec Azure)
-====================
+# <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Surveillance et télémétrie (génération d’applications Cloud réalistes avec Azure)
+
 par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -36,7 +36,7 @@ L’une des choses qui est génial sur l’environnement de cloud est qu’il es
 
 - [New Relic](http://newrelic.com/)
 - [AppDynamics](http://www.appdynamics.com/)
-- [Dynatrace](https://datamarket.azure.com/application/b4011de2-1212-4375-9211-e882766121ff)
+- [DynaTrace](https://datamarket.azure.com/application/b4011de2-1212-4375-9211-e882766121ff)
 
 [Microsoft System Center](http://www.petri.co.il/microsoft-system-center-introduction.htm#) inclut également des fonctionnalités d’analyse.
 
@@ -72,7 +72,7 @@ Déployer l’application sur Azure et l’utiliser. Créez quelques tâches Fix
 
 Puis revenez à la **New Relic** page dans le **modules complémentaires** onglet du portail et cliquez sur **gérer**. Le portail vous envoie au portail de gestion de New Relic, à l’aide de l’authentification unique pour l’authentification afin que vous n’êtes pas obligé de retaper vos informations d’identification. La page Vue d’ensemble présente une série de statistiques de performances. (Cliquez sur l’image pour afficher la taille complète de la page Vue d’ensemble.)
 
-[![Nouvel onglet de surveillance Relic](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
+[![Nonglet de surveillance Relic Nouv](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
 
 Voici quelques-unes des statistiques, que vous pouvez voir :
 
@@ -139,7 +139,7 @@ S’il est donc utile de disposer d’une session toujours en production, une au
 
 Applications Web dans Azure App Service ont une prise en charge intégrée pour l’écriture `System.Diagnostics` journaux vers le système de fichiers, le stockage de Table ou le stockage d’objets Blob. Vous pouvez sélectionner différents niveaux de journalisation pour chaque destination de stockage, et vous pouvez modifier le niveau de journalisation à la volée sans avoir à redémarrer votre application. La prise en charge du stockage Blob rend plus facile d’exécuter [HDInsight](https://docs.microsoft.com/azure/hdinsight/) travaux d’analyse sur les journaux des applications, car HDInsight sait comment travailler directement avec le stockage d’objets Blob.
 
-### <a name="log-exceptions"></a>Enregistrer des Exceptions
+### <a name="log-exceptions"></a>journaliser des exceptions
 
 Ne placez pas simplement *exception. ToString()* dans votre code de journalisation. Cela laisse des informations contextuelles. Dans le cas d’erreurs SQL, il omet le numéro d’erreur SQL. Pour toutes les exceptions, inclure des informations de contexte, l’exception lui-même et les exceptions internes pour vous assurer que vous fournissez tous les éléments qui seront nécessaires pour le dépannage. Par exemple, les informations de contexte peuvent inclure le nom du serveur, un identificateur de transaction et un nom d’utilisateur (mais pas le mot de passe ou les clés secrètes !).
 
@@ -272,7 +272,7 @@ Documentation principalement sur la journalisation :
 - [Création de journaux structurées et explicites avec journalisation sémantique](https://channel9.msdn.com/Events/Build/2013/3-336). (Vidéo) Julian Dominguez présente le cas pour la journalisation sémantique avec prépare.
 - [EF6 Enregistrement SQL – partie 1 : Journalisation simple](http://blog.oneunicorn.com/2013/05/08/ef6-sql-logging-part-1-simple-logging/). Arthur Vickers montre comment enregistrer des requêtes exécutées par Entity Framework dans EF 6.
 - [Résilience des connexions et Interception des commandes avec Entity Framework dans une Application ASP.NET MVC](../../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md). Quatrième dans une série de didacticiels neuf parties, montre comment utiliser la fonctionnalité de l’interception de commande EF 6 pour enregistrer les commandes SQL envoyées à la base de données par Entity Framework.
-- [Améliorer la journalisation à l’aide des attributs d’informations appelant 5.0 C#](http://www.dotnetcurry.com/showarticle.aspx?ID=972). Comment se connecter facilement le nom de la méthode d’appel sans coder en dur dans les littéraux ou à l’aide de la réflexion pour obtenir de manuellement.
+- [Améliorer la journalisation à l’aide des attributs d’informations appelant 5.0 c#](http://www.dotnetcurry.com/showarticle.aspx?ID=972). Comment se connecter facilement le nom de la méthode d’appel sans coder en dur dans les littéraux ou à l’aide de la réflexion pour obtenir de manuellement.
 
 Documentation principalement sur la résolution des problèmes :
 

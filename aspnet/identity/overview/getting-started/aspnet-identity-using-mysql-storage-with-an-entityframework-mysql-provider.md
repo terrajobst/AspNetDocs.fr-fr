@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider
-title: 'ASP.NET Identity : Utilisation du stockage MySQL avec un fournisseur de MySQL EntityFramework (C#) | Microsoft Docs'
+title: 'ASP.NET Identity : Utilisation du stockage MySQL avec un fournisseur de MySQL EntityFramework (C#)-ASP.NET 4.x'
 author: maumar
 description: Ce didacticiel vous montre comment remplacer le mécanisme de stockage de données par défaut pour ASP.NET Identity avec Entity Framework (fournisseur SQL client) avec un être accrus ou MySQL...
 ms.author: riande
 ms.date: 12/10/2013
 ms.assetid: 15253312-a92c-43ba-908e-b5dacd3d08b8
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider
 msc.type: authoredcontent
-ms.openlocfilehash: f510c9bcaf83c6a68e835a7d82555653459df856
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6a73efb7d577cc70ca5ebaa69e8fdd03f3735ae4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379662"
 ---
-<a name="aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider-c"></a>ASP.NET Identity : Utilisation du stockage MySQL avec un fournisseur MySQL Entity Framework (C#)
-====================
+# <a name="aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider-c"></a>ASP.NET Identity : Utilisation du stockage MySQL avec un fournisseur MySQL Entity Framework (C#)
+
 par [Maurycy Markowski](https://github.com/maumar), [Raquel Soares De Almeida](https://github.com/raquelsa), [Robert McMurray](https://github.com/rmcmurray)
 
 > Ce didacticiel vous montre comment remplacer le mécanisme de stockage de données par défaut pour [ **ASP.NET Identity** ](introduction-to-aspnet-identity.md) avec Entity Framework (fournisseur SQL client) avec un fournisseur de MySQL.

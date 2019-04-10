@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory
-title: Développement d’applications ASP.NET avec Azure Active Directory | Microsoft Docs
+title: Développement d’applications ASP.NET avec Azure Active Directory - ASP.NET 4.x
 author: Rick-Anderson
 description: Outils Microsoft ASP.NET pour Azure Active Directory permet de facilement activer l’authentification pour les applications web hébergées sur Azure. Vous pouvez utiliser Azure authentifier...
 ms.author: riande
 ms.date: 08/14/2014
 ms.assetid: 457d7eaf-ee76-4ceb-9082-c7c1721435ad
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory
 msc.type: authoredcontent
-ms.openlocfilehash: 7f0e569458c9a294cc281b86e731c2fda48768be
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6f8b926c78097b68e6a159f2fdd30e7b8a6477a0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027846"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395171"
 ---
-<a name="developing-aspnet-apps-with-azure-active-directory"></a>Développement d’applications ASP.NET avec Azure Active Directory
-====================
+# <a name="developing-aspnet-apps-with-azure-active-directory"></a>Développement d’applications ASP.NET avec Azure Active Directory
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 Outils de Microsoft ASP.NET pour Azure Active Directory simplifie l’activation de l’authentification pour les applications web hébergées sur [Azure](https://www.windowsazure.com/home/features/web-sites/). Vous pouvez utiliser l’authentification Azure pour authentifier les utilisateurs d’Office 365 à partir de votre organisation, les comptes d’entreprise synchronisés à partir de votre annuaire local Active Directory ou les utilisateurs créés dans votre propre domaine Azure Active Directory personnalisé. Activation de l’authentification de Windows Azure configure votre application pour authentifier les utilisateurs à l’aide d’un seul [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/) locataire.
@@ -54,7 +55,7 @@ Ce didacticiel vous explique comment créer une application ASP.NET qui est conf
 
 Les étapes suivantes utilisent [Visual Studio Express 2013 pour le Web](https://www.microsoft.com/download/details.aspx?id=40747)et nécessite [Visual Studio 2013 Update 3](https://www.microsoft.com/download/details.aspx?id=43721).
 
-1. Dans Visual Studio, cliquez sur **fichier** , puis **nouveau projet**. Sur le **nouveau projet** boîte de dialogue, sélectionnez le Web Visual C# de projet dans le menu de gauche, cliquez sur **OK**. Vous pouvez également décocher le **ajouter Application Insights au projet** si vous ne souhaitez pas la fonctionnalité pour votre application.
+1. Dans Visual Studio, cliquez sur **fichier** , puis **nouveau projet**. Sur le **nouveau projet** boîte de dialogue, sélectionnez le Web Visual c# de projet dans le menu de gauche, cliquez sur **OK**. Vous pouvez également décocher le **ajouter Application Insights au projet** si vous ne souhaitez pas la fonctionnalité pour votre application.
 2. Dans le **nouveau projet ASP.NET** boîte de dialogue, sélectionnez **MVC**, puis cliquez sur **modifier l’authentification**.
 
     ![](developing-aspnet-apps-with-windows-azure-active-directory/_static/image6.png)
@@ -141,7 +142,7 @@ Un excellent didacticiel à suivre est de Rick Rainey [présentation approfondie
 
 ## <a name="more-information"></a>Informations complémentaires
 
-- [Immersion : Sites Web et l’authentification d’organisation à l’aide d’Azure AD Azure](http://rickrainey.com/2014/08/19/deep-dive-azure-websites-and-organizational-authentication-using-azure-ad/)
+- [Présentation approfondie : Sites Web et l’authentification d’organisation à l’aide d’Azure AD Azure](http://rickrainey.com/2014/08/19/deep-dive-azure-websites-and-organizational-authentication-using-azure-ad/)
 - [Présentation de l’API Graph Azure AD](https://msdn.microsoft.com/library/azure/hh974476.aspx)
 - [Scénarios d’authentification dans Azure AD](https://msdn.microsoft.com/library/azure/dn499820.aspx)
 - [Exemples de Code d’Azure AD sur GitHub](https://github.com/AzureADSamples)

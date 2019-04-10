@@ -8,15 +8,15 @@ ms.date: 02/18/2013
 ms.assetid: 0a1f88bd-97da-4ed1-86f1-605199dc75a4
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45
 msc.type: authoredcontent
-ms.openlocfilehash: 78cb6dec71e6b4974fdea4f205d1a36ebdfc3104
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 52f6ec17fb21019e93ebf2795e95d5b27e4edbe6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424442"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401736"
 ---
-<a name="whats-new-in-web-forms-in-aspnet-45"></a>Nouveautés de Web Forms dans ASP.NET 4.5
-====================
+# <a name="whats-new-in-web-forms-in-aspnet-45"></a>Nouveautés de Web Forms dans ASP.NET 4.5
+
 par [Web Camps Team](https://twitter.com/webcamps)
 
 > La nouvelle version de Web Forms ASP.NET introduit plusieurs améliorations axées sur l’amélioration de l’expérience utilisateur lorsque vous travaillez avec des données.
@@ -77,7 +77,7 @@ Si vous n’êtes pas familiarisé avec les extraits de Code Visual Studio et qu
 Ce laboratoire pratique inclut les exercices suivants :
 
 1. [Exercice 1 : Liaison de modèle dans ASP.NET Web Forms](#Exercise1)
-2. [Exercice 2 : Validation des données](#Exercise2)
+2. [Exercice 2 : Validation de données](#Exercise2)
 3. [Exercice 3 : Page asynchrone dans ASP.NET Web Forms](#Exercise3)
 
 > [!NOTE]
@@ -396,11 +396,11 @@ ASP.NET 4.5 introduit la validation des Web Forms annotations de données. Au li
     [!code-csharp[Main](whats-new-in-web-forms-in-aspnet-45/samples/sample23.cs)]
 
     > [!NOTE]
-    > .NET framework 4.5 a étendu la collection d’annotations de données existant. Voici quelques-unes des annotations de données que vous pouvez utiliser : [CreditCard], [Phone], [EmailAddress], [plage], [comparer], [Url], [FileExtensions], [Required], [Key], [RegularExpression].
+    > .NET framework 4.5 a étendu la collection d’annotations de données existant. Voici quelques-unes des annotations de données que vous pouvez utiliser : [CreditCard], [Phone], [EmailAddress], [plage], [comparer], [Url], [FileExtensions], [Required], [clé], [RegularExpression].
     > 
     > Quelques exemples d’utilisation :
     > 
-    > [Key]: Specifies that an attribute is the unique identifier
+    > [Touche]: Specifies that an attribute is the unique identifier
     > 
     > [Range(0.4, 0.5, ErrorMessage=&quot;{Write an error message}&quot;]: Double range
     > 
@@ -612,7 +612,7 @@ Opérations de longue durée sur votre site web sont d’excellents candidats po
 > En outre, vous pouvez déployer cette application à Azure suit [annexe b : Publication d’une Application ASP.NET MVC 4, à l’aide de Web Deploy](#AppendixB).
 
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Récapitulatif
@@ -650,7 +650,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](whats-new-in-web-forms-in-aspnet-45/_static/image27.png)
 
-    *Progression de l’installation*
+    *Progression de l'installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](whats-new-in-web-forms-in-aspnet-45/_static/image28.png)
@@ -814,7 +814,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *À l’aide d’extraits de code Visual Studio pour insérer du code dans votre projet*
 
-***Pour ajouter un extrait de code à l’aide du clavier (C# uniquement)***
+***Pour ajouter un extrait de code à l’aide du clavier (c# uniquement)***
 
 1. Placez le curseur où vous souhaitez insérer le code.
 2. Commencez à taper le nom de l’extrait de code (sans espaces ou des traits d’union).
@@ -834,7 +834,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 
 *Appuyez sur Tab à nouveau et l’extrait de code seront développe.*
 
-***Pour ajouter un extrait de code à l’aide de la souris (C#, Visual Basic et XML)*** 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
+***Pour ajouter un extrait de code à l’aide de la souris (c#, Visual Basic et XML)*** 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
 
 1. Sélectionnez **insérer un extrait** suivie **mes extraits de Code**.
 2. Choisissez l’extrait de code approprié dans la liste, en cliquant dessus.

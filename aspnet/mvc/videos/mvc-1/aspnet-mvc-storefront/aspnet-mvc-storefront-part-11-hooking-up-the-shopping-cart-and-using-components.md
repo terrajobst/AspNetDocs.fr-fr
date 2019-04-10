@@ -8,15 +8,15 @@ ms.date: 06/19/2008
 ms.assetid: 25cc35b4-601e-448b-abf1-bc253b30d232
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-11-hooking-up-the-shopping-cart-and-using-components
 msc.type: video
-ms.openlocfilehash: 6346362aa885f4da667ad329993b0d816c71120a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: dbf2a5966227466ba4ddd2e5a07383066054ce60
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056306"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395301"
 ---
-<a name="aspnet-mvc-storefront-part-11-hooking-up-the-shopping-cart-and-using-components"></a>Application Storefront ASP.NET MVC, partie 11 : Raccorder le panier d’achat et utilisation de composants
-====================
+# <a name="aspnet-mvc-storefront-part-11-hooking-up-the-shopping-cart-and-using-components"></a>Application Storefront ASP.NET MVC, partie 11 : Raccorder le panier d’achat et utilisation de composants
+
 par [Rob Conery](https://github.com/robconery)
 
 Dans cet épisode, j’ai raccorder le site jusqu'à le panier d’achat et exécuter des tests sur Mes contrôleurs. Je crée également un composant avec une fonctionnalité peu connue de MVC, le System.Web.MVC.ComponentController.

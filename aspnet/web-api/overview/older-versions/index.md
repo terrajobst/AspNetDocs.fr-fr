@@ -1,27 +1,28 @@
 ---
 uid: web-api/overview/older-versions/index
-title: Documentation sur les Versions antérieures de l’API Web | Microsoft Docs
+title: Documentation sur les Versions antérieures de l’API Web - ASP.NET 4.x
 author: rick-anderson
-description: Documentation sur les versions antérieures de l’API Web.
+description: Documentation sur les versions antérieures de l’API Web pour ASP.NET 4.x.
 ms.author: riande
 ms.date: 10/23/2014
+ms.custom: seoapril2019
 ms.assetid: f5bc7426-27c6-492c-914f-b9d2eb49753d
 msc.legacyurl: /web-api/overview/older-versions
 msc.type: chapter
-ms.openlocfilehash: ac59f28d61cf2dceb030ee782069679ee7e1fab0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1e5fecca826a74fd8ff60ecd415f39c4f51917a2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018646"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391355"
 ---
-<a name="documentation-on-older-versions-of-web-api"></a>Documentation sur les Versions antérieures de l’API Web
-====================
-> Documentation sur les versions antérieures de l’API Web.
+# <a name="documentation-on-older-versions-of-web-api"></a>Documentation sur les Versions antérieures de l’API Web
+
+> Documentation sur les versions antérieures de l’API Web pour ASP.NET 4.x.
 
 
-- [Activation des opérations CRUD dans Web API 1](creating-a-web-api-that-supports-crud-operations.md)
-- [Utilisation d’ASP.NET Web API 1 avec Entity Framework 5](using-web-api-1-with-entity-framework-5/index.md)
+- [Activation des opérations CRUD dans Web API 1](creating-a-web-api-that-supports-crud-operations.md)
+- [Utilisation d’ASP.NET Web API 1 avec Entity Framework 5](using-web-api-1-with-entity-framework-5/index.md)
 
     - [Vue d’ensemble et création du projet](using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-1.md)
     - [Création des modèles de domaine](using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-2.md)
@@ -30,5 +31,5 @@ ms.locfileid: "57018646"
     - [Création d’une interface utilisateur dynamique avec Knockout.js](using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-5.md)
     - [Création des contrôleurs de produit et de commande](using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-6.md)
     - [Création de la page principale](using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7.md)
-- [Auto-hébergement de Web API 1 (C#)](self-host-a-web-api.md)
+- [Auto-hébergement de Web API 1 (C#)](self-host-a-web-api.md)
 - [Créer des API RESTful ASP.NET Web API](build-restful-apis-with-aspnet-web-api.md)

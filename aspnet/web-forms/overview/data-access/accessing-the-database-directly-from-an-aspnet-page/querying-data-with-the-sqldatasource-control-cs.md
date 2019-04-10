@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs
-title: Interrogation des données avec le contrôle SqlDataSource (C#) | Microsoft Docs
+title: Interrogation des données avec le contrôle SqlDataSource (c#) | Microsoft Docs
 author: rick-anderson
 description: Dans les didacticiels précédents, nous avons utilisé le contrôle ObjectDataSource pour séparer complètement la couche de présentation à partir de la couche d’accès aux données. À compter de cette terminologique...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/20/2007
 ms.assetid: 60512d6a-b572-4b7a-beb3-3e44b4d2020c
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0d15e09c2b790c4d1e6b278c4ea35bab7f66b861
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f6aa0e4535f88a04419695114d07ea2cf6ac7036
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040596"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381157"
 ---
-<a name="querying-data-with-the-sqldatasource-control-c"></a>Interrogation des données avec le contrôle SqlDataSource (C#)
-====================
+# <a name="querying-data-with-the-sqldatasource-control-c"></a>Interrogation des données avec le contrôle SqlDataSource (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_47_CS.exe) ou [télécharger le PDF](querying-data-with-the-sqldatasource-control-cs/_static/datatutorial47cs1.pdf)
@@ -79,7 +79,7 @@ Avant de commencer la manière de travailler directement avec les données de ba
 Comme dans les autres dossiers, `Default.aspx` dans le `SqlDataSource` dossier répertorie les didacticiels dans sa section. N’oubliez pas que le `SectionLevelTutorialListing.ascx` contrôle utilisateur fournit cette fonctionnalité. Par conséquent, ajoutez ce contrôle utilisateur à `Default.aspx` en le faisant glisser à partir de l’Explorateur de solutions sur la page s en mode Création.
 
 
-[![Ajouter le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx](querying-data-with-the-sqldatasource-control-cs/_static/image5.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image4.gif)
+[![AJJ le contrôle utilisateur SectionLevelTutorialListing.ascx à Default.aspx](querying-data-with-the-sqldatasource-control-cs/_static/image5.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image4.gif)
 
 **Figure 4**: Ajouter le `SectionLevelTutorialListing.ascx` contrôle utilisateur à `Default.aspx` ([cliquez pour afficher l’image en taille réelle](querying-data-with-the-sqldatasource-control-cs/_static/image6.gif))
 
@@ -155,7 +155,7 @@ Le `SelectCommand` propriété spécifie l’instruction de SQL ad hoc ou procé
 Une fois que SqlDataSource a été configuré, il peut être lié à un contrôle Web, tel qu’un GridView ou d’un contrôle DetailsView de données. Pour ce didacticiel, permettent d’afficher les données dans un GridView s. Dans la boîte à outils, faites glisser un GridView sur la page, puis liez-le à le `ProductsDataSource` SqlDataSource en choisissant la source de données à partir de la liste déroulante dans la balise active de s GridView.
 
 
-[![Ajouter un GridView et le lier au contrôle SqlDataSource](querying-data-with-the-sqldatasource-control-cs/_static/image13.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image12.gif)
+[![Ajj un GridView et le lier au contrôle SqlDataSource](querying-data-with-the-sqldatasource-control-cs/_static/image13.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image12.gif)
 
 **Figure 10**: Ajouter un GridView et le lier au contrôle SqlDataSource ([cliquez pour afficher l’image en taille réelle](querying-data-with-the-sqldatasource-control-cs/_static/image14.gif))
 
@@ -170,7 +170,7 @@ Prenez un moment pour configurer les trois opérations de mappage GridView Bound
 Visitez cette page via un navigateur. Comme le montre la Figure 11, le contrôle GridView répertorie chaque produit s `ProductID`, `ProductName`, et `UnitPrice` valeurs.
 
 
-[![Le contrôle GridView affiche chaque produit s ProductID, ProductName et UnitPrice valeurs](querying-data-with-the-sqldatasource-control-cs/_static/image16.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image15.gif)
+[![TIl GridView affiche chaque produit s ProductID, ProductName et UnitPrice valeurs](querying-data-with-the-sqldatasource-control-cs/_static/image16.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image15.gif)
 
 **Figure 11**: Les opérations de mappage GridView affiche chaque produit `ProductID`, `ProductName`, et `UnitPrice` valeurs ([cliquez pour afficher l’image en taille réelle](querying-data-with-the-sqldatasource-control-cs/_static/image17.gif))
 
@@ -228,7 +228,7 @@ Après avoir spécifié la requête, cliquez sur Suivant pour passer à l’écr
 [!code-aspx[Main](querying-data-with-the-sqldatasource-control-cs/samples/sample5.aspx)]
 
 
-[![Le contrôle GridView affiche chaque ID de produit s, le nom de la catégorie de nom et associé](querying-data-with-the-sqldatasource-control-cs/_static/image22.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image21.gif)
+[![TIl GridView montre chaque ID produit s, le nom et le nom de catégorie associés](querying-data-with-the-sqldatasource-control-cs/_static/image22.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image21.gif)
 
 **Figure 15**: Le GridView affiche chaque s Id_produit, le nom et le nom de catégorie associés ([cliquez pour afficher l’image en taille réelle](querying-data-with-the-sqldatasource-control-cs/_static/image23.gif))
 
@@ -260,4 +260,4 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Les réviseurs tête pour ce didacticiel ont été Susan Connery Bernadette Leigh et David Suru. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Next](using-parameterized-queries-with-the-sqldatasource-cs.md)
+> [Suivant](using-parameterized-queries-with-the-sqldatasource-cs.md)

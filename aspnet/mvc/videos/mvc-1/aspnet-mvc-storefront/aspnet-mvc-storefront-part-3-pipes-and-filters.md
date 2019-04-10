@@ -8,15 +8,15 @@ ms.date: 05/27/2008
 ms.assetid: 69de22ba-0129-4bb9-b32a-e99319ee8021
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-3-pipes-and-filters
 msc.type: video
-ms.openlocfilehash: 2bb241aa2235827ed63bbfb7ee4ab08f263a49a0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fb9ee14d0bc06ba0a0b994a3eaeb08ddb6ed8c36
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042836"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403249"
 ---
-<a name="aspnet-mvc-storefront-part-3-pipes-and-filters"></a>Application Storefront ASP.NET MVC, partie 3 : Canaux et filtres
-====================
+# <a name="aspnet-mvc-storefront-part-3-pipes-and-filters"></a>Application Storefront ASP.NET MVC, partie 3 : Canaux et filtres
+
 par [Rob Conery](https://github.com/robconery)
 
 Rob Conery traite les commentaires des parties 1 et 2 et puis Explorez l’implémentation de canaux et filtres sur le référentiel IQueryable.

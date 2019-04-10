@@ -8,15 +8,15 @@ ms.date: 02/16/2009
 ms.assetid: 6ac5758b-6199-42af-adcb-21954b864951
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-custom-routes-vb
 msc.type: authoredcontent
-ms.openlocfilehash: cd7ad46161b3f44d915bc4b2fa201606b00d194a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a7b8b85ba1cf5c18e605eb8114a305272baf41a6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035276"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404869"
 ---
-<a name="creating-custom-routes-vb"></a>Création de routes personnalisées (VB)
-====================
+# <a name="creating-custom-routes-vb"></a>Création de routes personnalisées (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Découvrez comment ajouter des itinéraires personnalisés à une application ASP.NET MVC. Dans ce didacticiel, vous allez apprendre à modifier la table d’itinéraires par défaut dans le fichier Global.asax.
@@ -61,7 +61,7 @@ Notez que la méthode Entry() dans le Listing 2 accepte un paramètre de type Da
 **Figure 1 : erreur de conversion de paramètre**
 
 
-[![La boîte de dialogue Nouveau projet](creating-custom-routes-vb/_static/image1.jpg)](creating-custom-routes-vb/_static/image1.png)
+[![Tboîte de dialogue Nouveau projet he](creating-custom-routes-vb/_static/image1.jpg)](creating-custom-routes-vb/_static/image1.png)
 
 **Figure 01**: Erreur de conversion de paramètre ([cliquez pour afficher l’image en taille réelle](creating-custom-routes-vb/_static/image2.png))
 

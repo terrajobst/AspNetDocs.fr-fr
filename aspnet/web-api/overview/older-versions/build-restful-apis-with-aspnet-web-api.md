@@ -1,25 +1,30 @@
 ---
 uid: web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
-title: Générer des API RESTful avec les API Web ASP.NET | Microsoft Docs
+title: Générer des API RESTful avec les API Web ASP.NET - ASP.NET 4.x
 author: rick-anderson
-description: Ces dernières années, il est clair que HTTP n’est pas simplement pour servir des pages HTML. Il est également une plateforme puissante pour la création d’API Web, à l’aide d’un certain nombre de o...
+description: 'Atelier pratique : Utiliser l’API Web dans ASP.NET 4.x pour générer une API REST simple pour une application de gestionnaire de contacts.'
 ms.author: riande
 ms.date: 02/18/2013
+ms.custom: seoapril2019
 ms.assetid: 87daa99f-3810-407e-b969-dd28a192959d
 msc.legacyurl: /web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: f1f5ebbf5170f205be331b6402951fb429196046
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3ba7f2d186e6f0837a32f69f964cec19fe625953
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423713"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391479"
 ---
-<a name="build-restful-apis-with-aspnet-web-api"></a>Générer des API RESTful avec les API Web ASP.NET
-====================
+# <a name="build-restful-apis-with-aspnet-web-api"></a>Générer des API RESTful avec les API Web ASP.NET
+
 par [Web Camps Team](https://twitter.com/webcamps)
 
-> Ces dernières années, il est clair que HTTP n’est pas simplement pour servir des pages HTML. Il est également une plateforme puissante pour la création d’API Web, à l’aide d’un petit nombre de verbes (GET, POST et ainsi de suite) ainsi que de quelques concepts simples comme *URI* et *en-têtes*. API Web ASP.NET est un ensemble de composants qui simplifient la programmation de HTTP. Car il est basé sur le runtime ASP.NET MVC, API Web gère automatiquement les détails de bas niveau transport HTTP. En même temps, les API Web expose naturellement le modèle de programmation HTTP. En fait, l’un des objectifs de l’API Web consiste à *pas* clarifient la réalité de HTTP. Par conséquent, les API Web est flexible et facile à étendre. Dans cet atelier, vous allez utiliser les API Web pour générer une API REST simple pour une application de gestionnaire de contacts. Vous allez également générer un client pour utiliser l’API. Le style architectural REST s’est avérée pour être un moyen efficace pour tirer parti de HTTP - même s’il n’est certainement pas l’approche valide uniquement pour HTTP. Le Gestionnaire de contacts exposera le RESTful pour répertorier, l’ajout et suppression de contacts, entre autres. Cet atelier nécessite une connaissance élémentaire de HTTP, REST et suppose que vous avez une connaissance de base du code HTML, JavaScript et jQuery.
+> Atelier pratique : Utiliser l’API Web dans ASP.NET 4.x pour générer une API REST simple pour une application de gestionnaire de contacts. Vous allez également générer un client pour utiliser l’API.
+
+Ces dernières années, il est clair que HTTP n’est pas simplement pour servir des pages HTML. Il est également une plateforme puissante pour la création d’API Web, à l’aide d’un petit nombre de verbes (GET, POST et ainsi de suite) ainsi que de quelques concepts simples comme *URI* et *en-têtes*. API Web ASP.NET est un ensemble de composants qui simplifient la programmation de HTTP. Car il est basé sur le runtime ASP.NET MVC, API Web gère automatiquement les détails de bas niveau transport HTTP. En même temps, les API Web expose naturellement le modèle de programmation HTTP. En fait, l’un des objectifs de l’API Web consiste à *pas* clarifient la réalité de HTTP. Par conséquent, les API Web est flexible et facile à étendre.  Le style architectural REST s’est avérée pour être un moyen efficace pour tirer parti de HTTP - même s’il n’est certainement pas l’approche valide uniquement pour HTTP. Le Gestionnaire de contacts exposera le RESTful pour répertorier, l’ajout et suppression de contacts, entre autres. 
+
+Cet atelier nécessite une connaissance élémentaire de HTTP, REST et suppose que vous avez une connaissance de base du code HTML, JavaScript et jQuery.
 > 
 > > [!NOTE]
 > > Le site Web ASP.NET a une zone dédiée à l’infrastructure d’API Web ASP.NET à [ https://asp.net/web-api ](https://asp.net/web-api). Ce site continuera de fournir aux dernières informations, des exemples et des informations sur les API Web, par conséquent, archivez-le fréquemment si vous souhaitez en savoir plus sur l’art de créer des API Web personnalisées disponibles pour n’importe quel framework de l’appareil ou de développement.
@@ -417,7 +422,7 @@ Dans cette tâche, vous continuerez à modifier la vue de l’Index de l’appli
 > En outre, vous pouvez déployer cette application à Azure suit [annexe c : Publication d’une Application ASP.NET MVC 4, à l’aide de Web Deploy](#AppendixC).
 
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Récapitulatif
@@ -440,7 +445,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 <a id="CodeSnippetUsingKeyBoard"></a>
 
 <a id="To_add_a_code_snippet_using_the_keyboard_C_only"></a>
-### <a name="to-add-a-code-snippet-using-the-keyboard-c-only"></a>Pour ajouter un extrait de code à l’aide du clavier (C# uniquement)
+### <a name="to-add-a-code-snippet-using-the-keyboard-c-only"></a>Pour ajouter un extrait de code à l’aide du clavier (c# uniquement)
 
 1. Placez le curseur où vous souhaitez insérer le code.
 2. Commencez à taper le nom de l’extrait de code (sans espaces ou des traits d’union).
@@ -463,7 +468,7 @@ Avec des extraits de code, vous avez tout le code que vous avez besoin à porté
 <a id="CodeSnippetUsingMouse"></a>
 
 <a id="To_add_a_code_snippet_using_the_mouse_C_Visual_Basic_and_XML"></a>
-### <a name="to-add-a-code-snippet-using-the-mouse-c-visual-basic-and-xml"></a>Pour ajouter un extrait de code à l’aide de la souris (C#, Visual Basic et XML)
+### <a name="to-add-a-code-snippet-using-the-mouse-c-visual-basic-and-xml"></a>Pour ajouter un extrait de code à l’aide de la souris (c#, Visual Basic et XML)
 
 1. Avec le bouton droit dans laquelle vous souhaitez insérer l’extrait de code.
 2. Sélectionnez **insérer un extrait** suivie **mes extraits de Code**.
@@ -500,7 +505,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](build-restful-apis-with-aspnet-web-api/_static/image36.png)
 
-    *Progression de l’installation*
+    *Progression de l'installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](build-restful-apis-with-aspnet-web-api/_static/image37.png)

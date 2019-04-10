@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: ae4def81-fa37-4883-a13e-d9896cbf6c36
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/preparing-databases
 msc.type: authoredcontent
-ms.openlocfilehash: 67f44d9f23a2fe83c48e68328b1dee739056e32f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 786be61d48f26e5765eac0c8d6fad7551897f711
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387683"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Préparation au déploiement de base de données
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Préparation au déploiement de base de données
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet de démarrage](http://go.microsoft.com/fwlink/p/?LinkId=282627)
@@ -63,7 +63,7 @@ Lorsque vous déployez une base de données d’application, en général, vous 
 
 Pour simuler ce scénario courant, vous allez configurer un Code First Migrations `Seed` méthode qui insère dans la base de données uniquement les données que vous souhaitez être il en production. Cela `Seed` méthode ne doit pas insérer des données de test, car il s’exécutera en production une fois que le Code First crée la base de données en production.
 
-Dans les versions antérieures de Code First avant la parution de Migrations, il était courant pour `Seed` méthodes pour insérer des données de test en outre, étant donné qu’à chaque modification de modèle au cours du développement la base de données a dû être complètement supprimé et recréé à partir de zéro. Avec les Migrations Code First, test, les données sont conservées après les modifications de la base de données, par conséquent, y compris les données de test dans le `Seed` méthode n’est pas nécessaire. Le projet que vous avez téléchargé utilise la méthode d’inclusion de toutes les données dans le `Seed` méthode d’une classe d’initialiseur. Dans ce didacticiel, vous allez désactiver cette classe d’initialiseur et `enable Migrations. Then you'll update the `valeur initiale » de la méthode dans la configuration de Migrations classe afin qu’il insère uniquement les données que vous souhaitez insérer dans la production.
+Dans les versions antérieures de Code First avant la parution de Migrations, il était courant pour `Seed` méthodes pour insérer des données de test en outre, étant donné qu’à chaque modification de modèle au cours du développement la base de données a dû être complètement supprimé et recréé à partir de zéro. Avec les Migrations Code First, test, les données sont conservées après les modifications de la base de données, par conséquent, y compris les données de test dans le `Seed` méthode n’est pas nécessaire. Le projet que vous avez téléchargé utilise la méthode d’inclusion de toutes les données dans le `Seed` méthode d’une classe d’initialiseur. Dans ce didacticiel, vous allez désactiver cette classe d’initialiseur et permettre des Migrations. Vous allez mettre à jour le `Seed` de la méthode dans la configuration de Migrations classe afin qu’il insère uniquement les données que vous souhaitez insérer dans la production.
 
 Le diagramme suivant illustre le schéma de la base de données d’application :
 
@@ -130,7 +130,7 @@ Le projet est maintenant prêt à déployer le *ContosoUniversity* base de donn�
 > [!NOTE]
 > Dans SSMS `Seed`Explorateur d’objets, avec le bouton droit bases de données et cliquez sur attacher. Une alternative consiste à ajouter du code aux méthodes `Up` et `Down` de chaque classe de migration. Les méthodes `Up` et `Down` contiennent du code qui implémente les modifications de base de données. Vous en trouverez des exemples dans le didacticiel [Déploiement d'une base de données Update](deploying-a-database-update.md).
 > 
-> Vous pouvez également écrire du code qui exécute des instructions SQL à l'aide de la méthode `Sql`. Par exemple, si vous ajoutez une colonne Budget à la table Department et souhaitez initialiser tous les budgets de département à 1 000,00 $ dans le cadre d'une migration, vous pouvez ajouter la ligne de code suivante à la méthode `Up` pour cette migration:
+> Vous pouvez également écrire du code qui exécute des instructions SQL à l'aide de la méthode `Sql`. Par exemple, si vous ajoutiez une colonne de Budget pour la table Department et que vous voulez initialiser tous les budgets de département à 1 000,00 $ dans le cadre d’une migration, vous pouvez ajouter la ligne suivante de code pour le `Up` méthode pour que la migration :
 > 
 > `Sql("UPDATE Department SET Budget = 1000");`
 

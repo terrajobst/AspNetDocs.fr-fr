@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3
-title: Introduction à ASP.NET MVC 3 (C#) | Microsoft Docs
+title: Introduction à ASP.NET MVC 3 (c#) | Microsoft Docs
 author: Rick-Anderson
 description: Ce didacticiel vous apprend les bases de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express Service Pack 1, qui est en cours...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 01/12/2011
 ms.assetid: 86a80b35-88bd-4b7c-bd58-f6e7997197d4
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3
 msc.type: authoredcontent
-ms.openlocfilehash: 53306318ab1a782d3605876aac53ec903d053269
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5cdef14ec55e2e66c31219c8ccc95c8e361547d5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049326"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396356"
 ---
-<a name="intro-to-aspnet-mvc-3-c"></a>Introduction à ASP.NET MVC 3 (C#)
-====================
+# <a name="intro-to-aspnet-mvc-3-c"></a>Introduction à ASP.NET MVC 3 (C#)
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
@@ -31,7 +31,7 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Si vous utilisez Visual Studio 2010 au lieu de Visual Web Developer 2010, installez les composants requis en cliquant sur le lien suivant : [Visual Studio 2010 prerequisites](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Un projet de Visual Web Developer avec code source C# est disponible pour accompagner cette rubrique. [Téléchargez la version C#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez Visual Basic, basculez vers le [version Visual Basic](../vb/intro-to-aspnet-mvc-3.md) de ce didacticiel.
+> Un projet de Visual Web Developer avec code source c# est disponible pour accompagner cette rubrique. [Téléchargez la version c#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez Visual Basic, basculez vers le [version Visual Basic](../vb/intro-to-aspnet-mvc-3.md) de ce didacticiel.
 
 
 ## <a name="what-youll-build"></a>Ce que vous allez générer
@@ -64,7 +64,7 @@ Visual Web Developer est un environnement de développement intégré ou IDE. To
 
 ## <a name="creating-your-first-application"></a>Créer votre première Application
 
-Vous pouvez créer des applications à l’aide de Visual Basic ou Visual C# comme langage de programmation. Sélectionnez Visual C# sur la gauche, puis sélectionnez **Application Web de ASP.NET MVC 3**. Nommez votre projet « MvcMovie », puis **OK**. (Si vous préférez Visual Basic, basculez vers le [version Visual Basic](../vb/intro-to-aspnet-mvc-3.md) de ce didacticiel.)
+Vous pouvez créer des applications à l’aide de Visual Basic ou Visual c# comme langage de programmation. Sélectionnez Visual c# sur la gauche, puis sélectionnez **Application Web de ASP.NET MVC 3**. Nommez votre projet « MvcMovie », puis **OK**. (Si vous préférez Visual Basic, basculez vers le [version Visual Basic](../vb/intro-to-aspnet-mvc-3.md) de ce didacticiel.)
 
 ![](intro-to-aspnet-mvc-3/_static/image5.png)
 
@@ -89,4 +89,4 @@ F5 provoque Visual Web Developer démarrer un serveur web de développement et d
 Dès ce modèle par défaut vous donne deux pages à visiter et une page de connexion de base. L’étape suivante consiste à modifier le fonctionnement de cette application et en savoir un peu sur ASP.NET MVC dans le processus. Fermez votre navigateur et nous allons modifier du code.
 
 > [!div class="step-by-step"]
-> [Next](adding-a-controller.md)
+> [Suivant](adding-a-controller.md)

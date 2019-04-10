@@ -8,15 +8,15 @@ ms.date: 03/31/2014
 ms.assetid: 6d497001-fa80-4765-b4cc-181fe90b894e
 msc.legacyurl: /web-forms/overview/advanced/aspnet-web-forms-connection-resiliency-and-command-interception
 msc.type: authoredcontent
-ms.openlocfilehash: 067542e8b8aa9909bbb2147f8e11e34604986d87
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 2b8cae61347f00712aba18fe6a2e91bc207cb9f3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424025"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380039"
 ---
-<a name="aspnet-web-forms-connection-resiliency-and-command-interception"></a>Résilience des connexions et interception des commandes Web Forms ASP.NET
-====================
+# <a name="aspnet-web-forms-connection-resiliency-and-command-interception"></a>Résilience des connexions et interception des commandes Web Forms ASP.NET
+
 par [Erik Reitan](https://github.com/Erikre)
 
 Dans ce didacticiel, vous allez modifier l’exemple d’application Wingtip Toys pour prendre en charge la résilience des connexions et interception des commandes. En activant la résilience des connexions, l’exemple d’application Wingtip Toys retente automatiquement les appels de données lorsque des erreurs temporaires typiques d’un environnement de cloud se produisent. En outre, en implémentant l’interception des commandes, l’exemple d’application Wingtip Toys intercepte toutes les requêtes SQL envoyées à la base de données afin de se connecter ou les modifier.
@@ -39,7 +39,7 @@ Avant de commencer, assurez-vous que vous avez installé sur votre ordinateur le
 - [Microsoft Visual Studio 2013](https://www.microsoft.com/visualstudio/11/downloads#vs) ou [Microsoft Visual Studio Express 2013 pour le Web](https://www.microsoft.com/visualstudio/11/downloads#express-web). Le .NET Framework est installé automatiquement.
 - Le Wingtip Toys exemple de projet, afin que vous pouvez implémenter les fonctionnalités mentionnées dans ce didacticiel dans le projet de Wingtip Toys. Le lien suivant fournit des détails du téléchargement :
 
-    - [Mise en route avec ASP.NET 4.5.1 Web Forms - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&amp;clcid=0x409) (C#)
+    - [Mise en route avec ASP.NET 4.5.1 Web Forms - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&amp;clcid=0x409) (c#)
 - Avant la fin de ce didacticiel, pour passer en revue la série de didacticiels associée, [bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2013](../getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview.md). La série de didacticiels vous aideront à vous familiariser avec la **WingtipToys** projet et code.
 
 ## <a name="connection-resiliency"></a>Résilience de la connexion
@@ -160,7 +160,7 @@ Vous avez écrit le code de simulation d’erreur temporaire d’une manière qu
 6. Arrêtez le projet et examinez le Visual Studio **sortie** fenêtre pour afficher la sortie de traçage. Vous pouvez trouver la **sortie** en sélectionnant **déboguer**  - &gt; **Windows**  - &gt;  **Sortie**. Vous devrez peut-être défiler plusieurs autres journaux écrits par votre journal.  
   
    Notez que vous pouvez voir les requêtes SQL réelles envoyées à la base de données. Vous consultez quelques requêtes initiales et les commandes que Entity Framework pour commencer, la vérification de la table d’historique de version et la migration de base de données.   
-    ![Sortie (fenêtre)](aspnet-web-forms-connection-resiliency-and-command-interception/_static/image1.png)   
+    ![Fenêtre Sortie](aspnet-web-forms-connection-resiliency-and-command-interception/_static/image1.png)   
    Notez que vous ne pouvez pas répéter ce test, sauf si vous arrêtez l’application et redémarrez. Si vous souhaitez être en mesure de tester la résilience des connexions à plusieurs fois en une seule exécution de l’application, vous pouvez écrire du code pour réinitialiser le compteur d’erreurs dans `InterceptorTransientErrors` .
 7. Pour voir la différence la stratégie d’exécution (stratégie de nouvelle tentative) rend, commentaire le `SetExecutionStrategy` de ligne dans *WingtipToysConfiguration.cs* de fichiers dans le *logique* dossier, exécutez le **Admin**  page à nouveau en mode débogage et ajouter le produit nommé &quot;lever&quot; à nouveau.  
   

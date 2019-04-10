@@ -8,15 +8,15 @@ ms.date: 07/03/2012
 ms.assetid: 94421d86-68c4-4471-bf5f-82d654a17252
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 0e4021402e8deccd2395f23b6b512679b5e9d281
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d5a72dbfe1530e457ec16df5c7d50b03b5f63502
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050526"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384212"
 ---
-<a name="part-1-overview-and-creating-the-project"></a>Partie 1 : Vue d’ensemble et création du projet
-====================
+# <a name="part-1-overview-and-creating-the-project"></a>Partie 1 : Vue d’ensemble et création du projet
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 [Télécharger le projet terminé](http://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)
@@ -54,7 +54,7 @@ Une certaine connaissance [ASP.NET MVC](../../../../mvc/index.md) s’avère ég
 
 - ASP.NET MVC génère des pages HTML pour le client.
 - API Web ASP.NET expose les opérations CRUD sur les données (products et orders).
-- Entity Framework traduit les modèles C# utilisés par l’API Web en entités de base de données.
+- Entity Framework traduit les modèles c# utilisés par l’API Web en entités de base de données.
 
 ![](using-web-api-with-entity-framework-part-1/_static/image3.png)
 
@@ -92,4 +92,4 @@ Dans l’Explorateur de solutions, développez le dossier de contenu et d’ouvr
 [!code-css[Main](using-web-api-with-entity-framework-part-1/samples/sample1.css)]
 
 > [!div class="step-by-step"]
-> [Next](using-web-api-with-entity-framework-part-2.md)
+> [Suivant](using-web-api-with-entity-framework-part-2.md)

@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 9c0cce4d-efd9-4c14-b0e8-a1a140abb3f4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/master-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 644beb37bf893a590be03dd0929c5870af6fbe87
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 348e28778e0e7d96230534df1d61386ed39f8f11
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425767"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381144"
 ---
-<a name="master-pages"></a>Pages maîtres
-====================
+# <a name="master-pages"></a>Pages maîtres
+
 by [Microsoft](https://github.com/microsoft)
 
 > Un des composants clés pour un site Web a réussi est un aspect cohérent. Dans ASP.NET 1.x, les développeurs des contrôles utilisateur utilisé pour répliquer les éléments de page communs sur une application Web. Alors que c’est certainement une solution possible, à l’aide de contrôles utilisateur également quelques inconvénients. Par exemple, une modification de la position d’un contrôle utilisateur nécessite une modification de plusieurs pages sur un site. Contrôles utilisateur ne sont pas également restituées en mode Création après avoir inséré sur une page.
@@ -71,7 +71,7 @@ Pour créer une nouvelle page maître :
 **Figure 2**: Création d’une Page maître
 
 
-Notez que l’extension de fichier pour une page maître est <em>.master</em>. Il s’agit d’une des manières qui diffère d’une page maître à partir d’une page ordinaire. La principale différence est que dans procédural à la place d’un @Page directive, la page maître contient un @Master directive. Basculer en mode Source pour le masque de page que vous venez de créer et d’examiner le code.
+Notez que l’extension de fichier pour une page maître est *.master*. Il s’agit d’une des manières qui diffère d’une page maître à partir d’une page ordinaire. La principale différence est que dans procédural à la place d’un @Page directive, la page maître contient un @Master directive. Basculer en mode Source pour le masque de page que vous venez de créer et d’examiner le code.
 
 Une page maître aura un contrôle ContentPlaceHolder par défaut. Dans la plupart des cas, il est plus judicieux d’abord créer les éléments de page communs et puis insérer des contrôles ContentPlaceHolder là où le contenu personnalisé est souhaité. Dans ce cas, les développeurs souhaitez supprimer le contrôle ContentPlaceHolder par défaut et insérer de nouveaux au cours du développement de la page. Contrôles ContentPlaceHolder ne sont pas redimensionnables en dépit du fait qu’ils affichent les poignées de redimensionnement. Les tailles de contrôle ContentPlaceHolder automatiquement en fonction du contenu qu’il contient avec une exception ; Si vous placez un contrôle ContentPlaceHolder à l’intérieur d’un élément de bloc comme une cellule de tableau, il se redimensionne en fonction de la taille de l’élément.
 
@@ -154,7 +154,7 @@ En définissant la propriété MasterPageFile dans le code, vous pouvez applique
 
 ## <a name="using-the-ltpagesgt-element"></a>À l’aide de la &lt;pages&gt; élément
 
-Vous pouvez configurer une page maître pour vos pages en définissant l’attribut masterPageFile dans le &lt;pages&gt; élément du fichier web.config. Lorsque vous utilisez cette méthode, n’oubliez pas que les fichiers web.config plus bas dans la structure de l’application peuvent remplacer ce paramètre. N’importe quel attribut MasterPageFile défini dans un @Page directive sera également remplacer ce paramètre. À l’aide de la &lt;pages&gt; élément permet de facilement créer un <em>master</em> page maître qui peut être substituée si nécessaire dans des dossiers ou fichiers.
+Vous pouvez configurer une page maître pour vos pages en définissant l’attribut masterPageFile dans le &lt;pages&gt; élément du fichier web.config. Lorsque vous utilisez cette méthode, n’oubliez pas que les fichiers web.config plus bas dans la structure de l’application peuvent remplacer ce paramètre. N’importe quel attribut MasterPageFile défini dans un @Page directive sera également remplacer ce paramètre. À l’aide de la &lt;pages&gt; élément permet de facilement créer un *master* page maître qui peut être substituée si nécessaire dans des dossiers ou fichiers.
 
 ## <a name="properties-in-master-pages"></a>Propriétés dans les Pages maîtres
 

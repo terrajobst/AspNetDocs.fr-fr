@@ -8,15 +8,15 @@ ms.date: 01/12/2011
 ms.assetid: a1b3d789-93b4-487f-b90d-80c9c9b4f8fa
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/intro-to-aspnet-mvc-3
 msc.type: authoredcontent
-ms.openlocfilehash: f596dbfb534a64169767fb77fb15ecc867466c74
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 47c9d69b9fee4a9e126ef2e889c91fe0bdd479f6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055856"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385928"
 ---
-<a name="intro-to-aspnet-mvc-3-vb"></a>Introduction à ASP.NET MVC 3 (VB)
-====================
+# <a name="intro-to-aspnet-mvc-3-vb"></a>Introduction à ASP.NET MVC 3 (VB)
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Ce didacticiel vous apprend les notions de base de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express Service Pack 1, qui est une version gratuite de Microsoft Visual Studio. Avant de commencer, assurez-vous que vous avez installé les composants requis listés ci-dessous. Vous pouvez installer tous les en cliquant sur le lien suivant : [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Vous pouvez également installer individuellement les conditions préalables à l’aide des liens suivants :
@@ -27,7 +27,7 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Si vous utilisez Visual Studio 2010 au lieu de Visual Web Developer 2010, installez les composants requis en cliquant sur le lien suivant : [Visual Studio 2010 prerequisites](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Un projet de Visual Web Developer avec le code source VB.NET est disponible pour accompagner cette rubrique. [Téléchargez la version VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez C#, basculez vers le [C# version](../cs/intro-to-aspnet-mvc-3.md) de ce didacticiel.
+> Un projet de Visual Web Developer avec le code source VB.NET est disponible pour accompagner cette rubrique. [Téléchargez la version VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez c#, basculez vers le [c# version](../cs/intro-to-aspnet-mvc-3.md) de ce didacticiel.
 
 
 Ce didacticiel vous apprend les notions de base de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express Service Pack 1, qui est une version gratuite de Microsoft Visual Studio. Avant de commencer, assurez-vous que vous avez installé les composants requis listés ci-dessous. Vous pouvez installer tous les en cliquant sur le lien suivant : [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Vous pouvez également installer individuellement les conditions préalables à l’aide des liens suivants :
@@ -70,7 +70,7 @@ Visual Web Developer est un environnement de développement intégré ou IDE. To
 
 ## <a name="creating-your-first-application"></a>Créer votre première Application
 
-Vous pouvez créer des applications à l’aide de votre choix de Visual Basic ou Visual C# comme langage de programmation. Pour ce didacticiel, sélectionnez Visual Basic sur la gauche, puis **Application Web de ASP.NET MVC 3**. Nommez votre projet « MvcMovie », puis **OK**.
+Vous pouvez créer des applications à l’aide de votre choix de Visual Basic ou Visual c# comme langage de programmation. Pour ce didacticiel, sélectionnez Visual Basic sur la gauche, puis **Application Web de ASP.NET MVC 3**. Nommez votre projet « MvcMovie », puis **OK**.
 
 ![1NewMVCproj_sm](intro-to-aspnet-mvc-3/_static/image7.png)
 
@@ -95,4 +95,4 @@ F5 provoque Visual Web Developer démarrer un serveur web de développement et d
 Prêt à l’emploi ce modèle par défaut donne vous deux pages à visiter et une page de connexion de base. Nous allons modifier le fonctionnement de cette application et en savoir un peu sur ASP.NET MVC dans le processus. Fermez votre navigateur et nous allons modifier du code.
 
 > [!div class="step-by-step"]
-> [Next](adding-a-controller.md)
+> [Suivant](adding-a-controller.md)

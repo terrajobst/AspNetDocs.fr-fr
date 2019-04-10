@@ -8,15 +8,15 @@ ms.date: 06/05/2013
 ms.assetid: 347210ba-c452-4feb-886f-b51d89f58971
 msc.legacyurl: /signalr/overview/older-versions/troubleshooting
 msc.type: authoredcontent
-ms.openlocfilehash: 798c41ee36372d12f03d07bbd7af3a26c161d33f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 5f7ebf7cc6d6a65216021911fe77036357369980
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423323"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389269"
 ---
-<a name="signalr-troubleshooting-signalr-1x"></a>Résolution des problèmes de SignalR (SignalR 1.x)
-====================
+# <a name="signalr-troubleshooting-signalr-1x"></a>Résolution des problèmes de SignalR (SignalR 1.x)
+
 par [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -65,7 +65,7 @@ SignalR utilise deux modèles de communication : Hubs et PersistentConnections.
 
 [!code-javascript[Main](troubleshooting/samples/sample2.js)]
 
-**Code de serveur C# qui mappe un itinéraire à une PersistentConnection**
+**Code de serveur c# qui mappe un itinéraire à une PersistentConnection**
 
 [!code-csharp[Main](troubleshooting/samples/sample3.cs)]
 
@@ -127,7 +127,7 @@ Si une connexion entre domaines (une connexion pour lequel l’URL de SignalR n�
 
 Une connexion dans une application cliente .NET qui utilise la sécurité de domaine peut échouer si la connexion n’est pas configurée correctement. Pour utiliser SignalR dans un environnement de domaine, définissez la propriété de connexion requis comme suit :
 
-**Code de client C# qui implémente les informations d’identification de connexion**
+**Code de client c# qui implémente les informations d’identification de connexion**
 
 [!code-csharp[Main](troubleshooting/samples/sample9.cs)]
 

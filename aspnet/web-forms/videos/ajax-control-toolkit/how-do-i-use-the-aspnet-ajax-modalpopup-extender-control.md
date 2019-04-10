@@ -8,15 +8,15 @@ ms.date: 01/26/2007
 ms.assetid: 37c50e6c-e34d-4fd0-b272-01950ada7667
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-use-the-aspnet-ajax-modalpopup-extender-control
 msc.type: video
-ms.openlocfilehash: 6d36938f94dd31f845229325900b0ae63c153bf1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2c5c54e9ba4ff2190080611f8aab8f0a607f9a71
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060976"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396575"
 ---
-<a name="how-do-i-use-the-aspnet-ajax-modalpopup-extender-control"></a>[Comment faire] Utiliser le contrôle d’extendeur ModalPopup d’ASP.NET AJAX ?
-====================
+# <a name="how-do-i-use-the-aspnet-ajax-modalpopup-extender-control"></a>[Comment faire] Utiliser le contrôle d’extendeur ModalPopup d’ASP.NET AJAX ?
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Découvrez comment utiliser le contrôle d’extendeur ModalPopup d’AJAX ASP.NET est fourni avec ASP.NET AJAX Control Toolkit. Dans cette vidéo, l’extendeur ModalPopup permet de s’ouvrir un panneau de configuration ASP.NET standard contrôler en tant que boîte de dialogue modale.

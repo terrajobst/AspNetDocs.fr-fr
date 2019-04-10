@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: a19ff2ce-3f7e-4358-9a51-a1403da9c63e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/enable-automated-unit-testing
 msc.type: authoredcontent
-ms.openlocfilehash: 74abf391bb4aab3ff0d5079e0a24ba20287e18fb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b0c9cd7ab36a8414e0d7d50a68b05bb09a5f24f1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049456"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387904"
 ---
-<a name="enable-automated-unit-testing"></a>Activer les tests unitaires automatisés
-====================
+# <a name="enable-automated-unit-testing"></a>Activer les tests unitaires automatisés
+
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Télécharger le PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Il s’agit d’étape 12 a gratuit [« « l’application NerdDinner](introducing-the-nerddinner-tutorial.md) qui présente en détail comment créer un petit mais terminé, l’application web à l’aide d’ASP.NET MVC 1.
 > 
@@ -98,7 +98,7 @@ Nous allons notre curseur est placé dans la classe DinnerTest et tapez « Ctrl
 
 *Remarque : La fenêtre de résultats des tests de Visual Studio n’affiche pas la colonne nom de la classe par défaut. Vous pouvez ajouter cela en effectuant un clic droit dans la fenêtre Résultats des tests et à l’aide de la commande de menu Ajouter/supprimer des colonnes.*
 
-Nos deux tests prenaient uniquement une fraction de seconde pour exécuter – et que vous pouvez voir les deux passés. Nous pouvons maintenant aller et augmenter leur nombre en créant des tests supplémentaires pour vérifier les validations de règle spécifique, ainsient que couvrent les deux méthodes d’assistance - IsUserHost() et IsUserRegisterd() – que nous avons ajouté à la classe dîner. Avoir tous ces tests en place pour la classe dîner rend beaucoup plus facile et plus sûr d’ajouter des règles d’entreprise validations à celui-ci et à l’avenir. Nous pouvons ajouter notre nouvelle logique de règle à dîner, puis vérifiez qu’il n’a pas rompu toute notre fonctionnalité logique précédente en quelques secondes.
+Nos deux tests prenaient uniquement une fraction de seconde pour exécuter – et que vous pouvez voir les deux passés. Nous pouvons maintenant aller et augmenter leur nombre en créant des tests supplémentaires pour vérifier les validations de règle spécifique, ainsient que couvrent les deux méthodes d’assistance - IsUserHost() et IsUserRegistered() – que nous avons ajouté à la classe dîner. Avoir tous ces tests en place pour la classe dîner rend beaucoup plus facile et plus sûr d’ajouter des règles d’entreprise validations à celui-ci et à l’avenir. Nous pouvons ajouter notre nouvelle logique de règle à dîner, puis vérifiez qu’il n’a pas rompu toute notre fonctionnalité logique précédente en quelques secondes.
 
 Notez comment à l’aide d’un nom descriptif test rend facile à comprendre rapidement ce que chaque test consiste à vérifier. Je recommande d’utiliser le **Tools -&gt;Options** commande de menu, ouvrir les outils de Test -&gt;écran de configuration de l’exécution du Test, et la vérification du » en double-cliquant sur un résultat de test unitaire Échec ou non concluant affiche case à cocher au point de défaillance dans le test ». Cela vous permettra de double-cliquer sur un échec dans la fenêtre Résultats des tests et passer immédiatement à l’échec d’assert.
 
@@ -211,7 +211,7 @@ De plus, elles nécessitent uniquement une fraction de seconde à exécuter et n
 
 | **Rubrique de côté : Infrastructures d’Injection de dépendance** |
 | --- |
-| Exécution de l’injection de dépendances manuelle (par exemple, nous sommes ci-dessus) fonctionne correctement, mais est plus difficile à gérer en tant que le nombre de dépendances et les composants dans une application augmente. Plusieurs infrastructures d’injection de dépendance existent pour .NET, qui peuvent aider à offrir davantage de souplesse gestion dépendance. Ces infrastructures, également appelés conteneurs « Inversion de contrôle » (IoC), fournissent des mécanismes qui permettent à un niveau supplémentaire de prise en charge de configuration pour spécifier et en passant des dépendances à des objets lors de l’exécution (plus souvent à l’aide de l’injection de constructeur ). Parmi les plus populaires OSS l’Injection de dépendances / structures IOC dans .NET incluent : AutoFac, Ninject, Spring.NET, StructureMap et Windsor. ASP.NET MVC expose des API qui permettent aux développeurs de participer à la résolution et l’instanciation de contrôleurs, et ce qui permet l’Injection de dépendances d’extensibilité / structures IoC à intégrer correctement au sein de ce processus. À l’aide d’une infrastructure d’injection de dépendances/inversion de contrôle serait également nous permettent de supprimer le constructeur par défaut à partir de notre DinnersController – supprimer complètement le couplage entre elle et la DinnerRepositorys. Nous ne l’utiliserons une injection de dépendances / framework IOC avec notre application NerdDinner. Mais c’est quelque chose que nous pourrions considérer pour l’avenir, si la base de code de NerdDinner et fonctionnalités a augmenté. |
+| Exécution de l’injection de dépendances manuelle (par exemple, nous sommes ci-dessus) fonctionne correctement, mais est plus difficile à gérer en tant que le nombre de dépendances et les composants dans une application augmente. Plusieurs infrastructures d’injection de dépendance existent pour .NET, qui peuvent aider à offrir davantage de souplesse gestion dépendance. Ces infrastructures, également appelés conteneurs « Inversion de contrôle » (IoC), fournissent des mécanismes qui permettent à un niveau supplémentaire de prise en charge de configuration pour spécifier et en passant des dépendances à des objets lors de l’exécution (plus souvent à l’aide de l’injection de constructeur ). Parmi les plus populaires OSS l’Injection de dépendances / structures IOC dans .NET incluent : AutoFac, Ninject, Spring.NET, StructureMap et Windsor. ASP.NET MVC expose des API qui permettent aux développeurs de participer à la résolution et l’instanciation de contrôleurs, et ce qui permet l’Injection de dépendances d’extensibilité / structures IoC à intégrer correctement au sein de ce processus. À l’aide d’une infrastructure d’injection de dépendances/inversion de contrôle serait également nous permettent de supprimer le constructeur par défaut à partir de notre DinnersController – supprimer complètement le couplage entre elle et la DinnerRepository. Nous ne l’utiliserons une injection de dépendances / framework IOC avec notre application NerdDinner. Mais c’est quelque chose que nous pourrions considérer pour l’avenir, si la base de code de NerdDinner et fonctionnalités a augmenté. |
 
 ### <a name="creating-edit-action-unit-tests"></a>Création de Tests unitaires de Action modifier
 

@@ -8,15 +8,15 @@ ms.date: 07/21/2010
 ms.assetid: 50223ee9-11b9-4cf3-bca2-e2f10bf471f3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: cada8d9aee649e4f2a5afc1ca2b46863ea458207
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 646aeb4ad99ba9b0ee114c6be4aa528e62ef4775
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056516"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389945"
 ---
-<a name="part-7-adding-features"></a>Partie 7 : Ajout de fonctionnalités
-====================
+# <a name="part-7-adding-features"></a>Partie 7 : Ajout de fonctionnalités
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 > Tailspin Spyworks montre comment extrêmement simple est de créer des applications puissantes et évolutives pour la plate-forme .NET. Il montre comment utiliser les nouvelles fonctionnalités dans ASP.NET 4 pour créer un magasin en ligne, y compris les achats, extraction et administration.
@@ -41,11 +41,11 @@ Bien que les utilisateurs peuvent parcourir notre catalogue, placer des élémen
 
 Dans le dossier « Compte », créez deux pages .aspx un OrderList.aspx nommés et les autres OrderDetails.aspx nommé
 
-OrderList.aspx s’appuieront sur les contrôles GridView et EntityDataSoure autant que nous avons précédemment.
+OrderList.aspx s’appuieront sur les contrôles GridView et EntityDataSource autant que nous avons précédemment.
 
 [!code-aspx[Main](tailspin-spyworks-part-7/samples/sample1.aspx)]
 
-Le EntityDataSoure sélectionne les enregistrements de la table Orders filtrée sur le nom d’utilisateur (voir la WhereParameter) qui nous défini dans une variable de session lorsque le journal utilisateur 's.
+Contrôle EntityDataSource sélectionne les enregistrements de la table Orders filtrée sur le nom d’utilisateur (voir la WhereParameter) qui nous défini dans une variable de session lorsque le journal utilisateur 's.
 
 Notez également ces paramètres dans le HyperlinkField du contrôle GridView :
 
@@ -143,7 +143,7 @@ Notez également cette ligne importante en haut du balisage de notre contrôle.
 
 Dans la mesure où les articles les plus populaires ne modifiera pas les minutes à toutes les minutes, nous pouvons ajouter une directive aching pour améliorer les performances de notre application. Cette directive amène le code de contrôles être exécutée uniquement lorsque la sortie mise en cache du contrôle arrive à expiration. Sinon, la version mise en cache de sortie du contrôle servira.
 
-Il nous suffit est maintenant inclure notre nouveau contrôle dans notre page Default.aspc.
+Il nous suffit est maintenant inclure notre nouveau contrôle dans notre page Default.aspx.
 
 Utilisation et faites-la glisser pour placer une instance du contrôle dans la colonne ouvre notre formulaire par défaut.
 

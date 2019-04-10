@@ -8,15 +8,15 @@ ms.date: 11/13/2006
 ms.assetid: 1afdb14d-6e49-4e1f-aead-2934730d472e
 msc.legacyurl: /web-forms/overview/data-access/custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c88c3c01dc641d5076ac99f4e1cf2b2fb1681ffd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1e1b6407dfff4513416869404a9565ed225b5e14
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027226"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392246"
 ---
-<a name="custom-buttons-in-the-datalist-and-repeater-vb"></a>Boutons personnalisés dans les contrôles DataList et Repeater (VB)
-====================
+# <a name="custom-buttons-in-the-datalist-and-repeater-vb"></a>Boutons personnalisés dans les contrôles DataList et Repeater (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_46_VB.exe) ou [télécharger le PDF](custom-buttons-in-the-datalist-and-repeater-vb/_static/datatutorial46vb1.pdf)
@@ -31,7 +31,7 @@ Dans les derniers didacticiels dix-sept contrôles DataList et Repeater, nous ve
 En outre pour modifier et supprimer des boutons, les contrôles DataList et Repeater peuvent également inclure boutons LinkButton et/ou ImageButtons qui, lorsque vous cliquez dessus, effectuer une logique côté serveur personnalisée. Dans ce didacticiel, nous allons créer une interface qui utilise un répéteur pour répertorier les catégories dans le système. Pour chaque catégorie, le Repeater inclut un bouton pour afficher la catégorie de produits s associés à l’aide d’un contrôle BulletedList (voir Figure 1).
 
 
-[![En cliquant sur le lien se produits Show affiche les produits de s catégorie dans une liste à puces](custom-buttons-in-the-datalist-and-repeater-vb/_static/image2.png)](custom-buttons-in-the-datalist-and-repeater-vb/_static/image1.png)
+[![Ccliquant sur les affichages de lien Afficher les produits de la catégorie s produits dans une liste à puces](custom-buttons-in-the-datalist-and-repeater-vb/_static/image2.png)](custom-buttons-in-the-datalist-and-repeater-vb/_static/image1.png)
 
 **Figure 1**: En cliquant sur les affichages de lien Afficher les produits de la catégorie s produits dans une liste à puces ([cliquez pour afficher l’image en taille réelle](custom-buttons-in-the-datalist-and-repeater-vb/_static/image3.png))
 
@@ -52,7 +52,7 @@ Avant d’examiner comment ajouter un bouton personnalisé, permettent de s tout
 Comme dans les autres dossiers, `Default.aspx` dans le `CustomButtonsDataListRepeater` dossier répertorie les didacticiels dans sa section. N’oubliez pas que le `SectionLevelTutorialListing.ascx` contrôle utilisateur fournit cette fonctionnalité. Ajoutez ce contrôle utilisateur à `Default.aspx` en le faisant glisser à partir de l’Explorateur de solutions sur la page s en mode Création.
 
 
-[![Ajouter le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx](custom-buttons-in-the-datalist-and-repeater-vb/_static/image6.png)](custom-buttons-in-the-datalist-and-repeater-vb/_static/image5.png)
+[![AJJ le contrôle utilisateur SectionLevelTutorialListing.ascx à Default.aspx](custom-buttons-in-the-datalist-and-repeater-vb/_static/image6.png)](custom-buttons-in-the-datalist-and-repeater-vb/_static/image5.png)
 
 **Figure 3**: Ajouter le `SectionLevelTutorialListing.ascx` contrôle utilisateur à `Default.aspx` ([cliquez pour afficher l’image en taille réelle](custom-buttons-in-the-datalist-and-repeater-vb/_static/image7.png))
 
@@ -75,7 +75,7 @@ Après la mise à jour `Web.sitemap`, prenez un moment pour afficher le site Web
 Pour ce didacticiel, nous avons besoin créer un répéteur qui répertorie toutes les catégories, ainsi que d’afficher les produits LinkButton qui, lorsque vous cliquez dessus, affiche les produits de la catégorie associée s dans une liste à puces. Permettent de s tout d’abord créer un répéteur simple qui répertorie les catégories dans le système. Commencez par ouvrir le `CustomButtons.aspx` page dans le `CustomButtonsDataListRepeater` dossier. Faites glisser un répéteur à partir de la boîte à outils vers le concepteur et le jeu de son `ID` propriété `Categories`. Ensuite, créez un nouveau contrôle de source de données à partir de la balise active de s Repeater. En particulier, créer un nouveau contrôle ObjectDataSource nommé `CategoriesDataSource` qui sélectionne ses données à partir de la `CategoriesBLL` classe s `GetCategories()` (méthode).
 
 
-[![Configurer pour utiliser la méthode de GetCategories() CategoriesBLL classe s ObjectDataSource](custom-buttons-in-the-datalist-and-repeater-vb/_static/image10.png)](custom-buttons-in-the-datalist-and-repeater-vb/_static/image9.png)
+[![Cconfiguration de l’ObjectDataSource d’utiliser la classe CategoriesBLL s GetCategories() méthode](custom-buttons-in-the-datalist-and-repeater-vb/_static/image10.png)](custom-buttons-in-the-datalist-and-repeater-vb/_static/image9.png)
 
 **Figure 5**: Configurer l’ObjectDataSource à utiliser le `CategoriesBLL` classe s `GetCategories()` (méthode) ([cliquez pour afficher l’image en taille réelle](custom-buttons-in-the-datalist-and-repeater-vb/_static/image11.png))
 
@@ -90,7 +90,7 @@ Cliquez sur l’onglet Source dans le coin inférieur gauche et ajoutez un `Item
 Figure 6 montre la page lorsqu’ils sont affichés via un navigateur. Chaque nom de catégorie et la description sont répertorié. Le bouton Afficher les produits, d’un clic, entraîne une publication, mais n’effectue pas encore aucune action.
 
 
-[![Chaque nom de catégorie et la Description s’affiche, ainsi que d’afficher les produits LinkButton](custom-buttons-in-the-datalist-and-repeater-vb/_static/image13.png)](custom-buttons-in-the-datalist-and-repeater-vb/_static/image12.png)
+[![ECCA catégorie s nom et Description s’affiche, ainsi que d’afficher les produits LinkButton](custom-buttons-in-the-datalist-and-repeater-vb/_static/image13.png)](custom-buttons-in-the-datalist-and-repeater-vb/_static/image12.png)
 
 **Figure 6**: Chaque nom de catégorie et la Description s’affiche, ainsi que d’afficher les produits LinkButton ([cliquez pour afficher l’image en taille réelle](custom-buttons-in-the-datalist-and-repeater-vb/_static/image14.png))
 
@@ -146,7 +146,7 @@ Après avoir effectué la `ItemCommand` Gestionnaire d’événements, prenez un
 > Si vous souhaitez modifier le comportement de ce rapport, telles que les produits qu’une seule catégorie s sont répertoriés à la fois, il suffit de définir le contrôle BulletedList s `EnableViewState` propriété `False`.
 
 
-[![Un BulletedList est utilisé pour afficher les produits de la catégorie sélectionnée](custom-buttons-in-the-datalist-and-repeater-vb/_static/image16.png)](custom-buttons-in-the-datalist-and-repeater-vb/_static/image15.png)
+[![A BulletedList est utilisé pour afficher les produits de la catégorie sélectionnée](custom-buttons-in-the-datalist-and-repeater-vb/_static/image16.png)](custom-buttons-in-the-datalist-and-repeater-vb/_static/image15.png)
 
 **Figure 7**: Un BulletedList est utilisé pour afficher les produits de la catégorie sélectionnée ([cliquez pour afficher l’image en taille réelle](custom-buttons-in-the-datalist-and-repeater-vb/_static/image17.png))
 

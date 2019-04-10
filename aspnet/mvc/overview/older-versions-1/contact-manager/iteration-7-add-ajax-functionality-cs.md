@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-7-add-ajax-functionality-cs
-title: 'Itération #7 : ajouter des fonctionnalités Ajax (C#) | Microsoft Docs'
+title: 'Itération #7 : ajouter des fonctionnalités Ajax (c#) | Microsoft Docs'
 author: microsoft
 description: Dans l’itération septième, nous améliorer la réactivité et les performances de notre application en ajoutant la prise en charge d’Ajax.
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: f1b0809e-8909-444e-b6bb-a5cd1dea3f72
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-7-add-ajax-functionality-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a51713e57872ccfc3a76cf91fec728fdb6fa1eac
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 34fce0bef5163ba0423ea00cf4b7507947c45c68
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060596"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398070"
 ---
-<a name="iteration-7--add-ajax-functionality-c"></a>Itération #7 : ajouter des fonctionnalités Ajax (C#)
-====================
+# <a name="iteration-7--add-ajax-functionality-c"></a>Itération #7 : ajouter des fonctionnalités Ajax (c#)
+
 by [Microsoft](https://github.com/microsoft)
 
 [Télécharger le Code](iteration-7-add-ajax-functionality-cs/_static/contactmanager_7_cs1.zip)
@@ -24,7 +24,7 @@ by [Microsoft](https://github.com/microsoft)
 > Dans l’itération septième, nous améliorer la réactivité et les performances de notre application en ajoutant la prise en charge d’Ajax.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (C#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (c#)
 
 Dans cette série de didacticiels, nous créer une application de gestion des contacts entière à partir du début à la fin. L’application Gestionnaire de Contact permet vous permettent de stocker les informations de contact (noms, numéros de téléphone et adresses de messagerie) pour obtenir la liste de personnes.
 
@@ -93,7 +93,7 @@ Ajoutez le code JavaScript suivant inclut à l’intérieur de la &lt;head&gt; b
 Laissez s commencez par modifier notre vue Index afin qu’en cliquant sur un groupe de contacts met à jour uniquement pour la région de la vue qui affiche les contacts. La zone rouge dans la Figure 1 contient la région que nous souhaitons mettre à jour.
 
 
-[![La mise à jour uniquement les contacts](iteration-7-add-ajax-functionality-cs/_static/image1.jpg)](iteration-7-add-ajax-functionality-cs/_static/image1.png)
+[![USeuls les contacts jour](iteration-7-add-ajax-functionality-cs/_static/image1.jpg)](iteration-7-add-ajax-functionality-cs/_static/image1.png)
 
 **Figure 01**: La mise à jour uniquement les contacts ([cliquez pour afficher l’image en taille réelle](iteration-7-add-ajax-functionality-cs/_static/image2.png))
 
@@ -193,7 +193,7 @@ Lorsqu’un utilisateur atteint le précédent du navigateur ou le bouton suivan
 Actuellement, pour supprimer un contact, vous devez cliquer sur le lien Supprimer et puis cliquez sur le bouton de suppression affiché dans la page de confirmation de suppression (voir Figure 2). Cela semble être un grand nombre de demandes de pages de faire quelque chose de simple comme la suppression d’un enregistrement de base de données.
 
 
-[![La page de confirmation de suppression](iteration-7-add-ajax-functionality-cs/_static/image2.jpg)](iteration-7-add-ajax-functionality-cs/_static/image3.png)
+[![TIl page Confirmer la suppression](iteration-7-add-ajax-functionality-cs/_static/image2.jpg)](iteration-7-add-ajax-functionality-cs/_static/image3.png)
 
 **Figure 02**: La page de confirmation de suppression ([cliquez pour afficher l’image en taille réelle](iteration-7-add-ajax-functionality-cs/_static/image4.png))
 
@@ -219,7 +219,7 @@ Le paramètre AjaxOptions a deux propriétés. Tout d’abord, la propriété co
 
 Liste 7 contient une nouvelle action AjaxDelete() qui a été ajoutée au contrôleur de Contact.
 
-**Listing 7 - Controllers\ContactController.cs (AjaxDelete)**
+**Liste 7 - Controllers\ContactController.cs (AjaxDelete)**
 
 [!code-csharp[Main](iteration-7-add-ajax-functionality-cs/samples/sample12.cs)]
 

@@ -8,15 +8,15 @@ ms.date: 02/17/2014
 ms.assetid: 46bff772-01e0-40f0-9ae6-9e18c5442ee6
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site
 msc.type: authoredcontent
-ms.openlocfilehash: 3b54ba8a35a354eb0562a47866cd8b5dcb66bc86
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 28cb3af081f68c20dd9cd9e0b2578f5656d2d652
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389438"
 ---
-<a name="creating-and-using-a-helper-in-an-aspnet-web-pages-razor-site"></a>Création et utilisation d’une application auxiliaire dans un Site ASP.NET Web Pages (Razor)
-====================
+# <a name="creating-and-using-a-helper-in-an-aspnet-web-pages-razor-site"></a>Création et utilisation d’une application auxiliaire dans un Site ASP.NET Web Pages (Razor)
+
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Cet article décrit comment créer une application auxiliaire dans un site Web ASP.NET Web Pages (Razor). Un *helper* est un composant réutilisable qui inclut le code et le balisage pour effectuer une tâche qui peut être fastidieux ou complexes.

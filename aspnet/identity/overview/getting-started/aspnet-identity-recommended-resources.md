@@ -1,19 +1,20 @@
 ---
 uid: identity/overview/getting-started/aspnet-identity-recommended-resources
-title: Ressources recommandées pour ASP.NET Identity | Microsoft Docs
+title: ASP.NET Identity ressources recommandées - ASP.NET 4.x
 author: Rick-Anderson
 description: Cette rubrique fournit des liens vers des ressources de documentation sur l’utilisation d’ASP.NET Identity. Si vous connaissez un excellent billet de blog, thread Stack Overflow ou n’importe quel autre lin...
 ms.author: riande
 ms.date: 04/09/2015
 ms.assetid: 0f78aec2-f509-46fa-b20f-d5208425d8ec
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/aspnet-identity-recommended-resources
 msc.type: authoredcontent
-ms.openlocfilehash: 14a8ec16fe741d87a23bfa45046386a2c08d2f27
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8e476f8a4172ebbe55819cda1ceb5458426243bd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424337"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381898"
 ---
 # <a name="aspnet-identity-recommended-resources"></a>Ressources recommandées pour ASP.NET Identity
 
@@ -41,7 +42,7 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [Déployer une application ASP.NET MVC sécurisée avec appartenance, OAuth et base de données SQL dans un Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data). Ce tutoriel ajoute le déploiement Azure, la sécurisation de votre application avec des rôles, l’utilisation de l’API d’appartenance pour ajouter des utilisateurs et des rôles, et des fonctionnalités de sécurité supplémentaires.
 - [Introduction à ASP.NET Identity](introduction-to-aspnet-identity.md)
 - [Créer une application web de ASP.NET MVC 5 sécurisée avec connexion, réinitialisation de confirmation et le mot de passe de messagerie](../../../mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md)
-- [Application ASP.NET MVC 5 avec authentification à deux facteurs par SMS et e-mail](../../../mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md)
+- [Application ASP.NET MVC 5 avec authentification à deux facteurs par SMS et e-mail](../../../mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md)
 
 <a id="feat"></a>
 

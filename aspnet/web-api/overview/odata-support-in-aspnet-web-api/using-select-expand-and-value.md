@@ -1,25 +1,26 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/using-select-expand-and-value
-title: À l’aide de $select, $expand et $value dans ASP.NET Web API 2 OData | Microsoft Docs
+title: À l’aide de $select, $expand et $value dans ASP.NET Web API 2 OData - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Exemples de code et de la vue d’ensemble pour le $expand, $select, et les options de $value dans les API Web OData 2 d’ASP.NET 4.x.
 ms.author: riande
 ms.date: 10/11/2013
+ms.custom: seoapril2019
 ms.assetid: 43279a80-a96c-4564-b6ea-ad992a2d6828
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/using-select-expand-and-value
 msc.type: authoredcontent
-ms.openlocfilehash: d198ecf40155cba36204bc0810f4735aae6b100b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8b5d3e87c679a31f1908aa648219ae5c6b701a1f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033926"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400696"
 ---
-<a name="using-select-expand-and-value-in-aspnet-web-api-2-odata"></a>À l’aide de $select, $expand et $value dans ASP.NET Web API 2 OData
-====================
+# <a name="using-select-expand-and-value-in-aspnet-web-api-2-odata"></a>À l’aide de $select, $expand et $value dans ASP.NET Web API 2 OData
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
-API Web 2 ajoute la prise en charge pour le $expand, $select et options $value dans OData. Ces options permettent à un client contrôler la représentation, il récupère à partir du serveur.
+Exemples de code et de la vue d’ensemble pour le $expand, $select, et les options de $value dans les API Web OData 2 d’ASP.NET 4.x. Ces options permettent à un client contrôler la représentation, il récupère à partir du serveur.
 
 - **$expand** provoque des entités connexes doivent être incluses inline dans la réponse.
 - **$select** sélectionne un sous-ensemble de propriétés à inclure dans la réponse.
@@ -31,7 +32,7 @@ Pour cet article, je vais utiliser un service OData qui définit trois entités�
 
 ![](using-select-expand-and-value/_static/image1.png)
 
-Voici les classes C# qui définissent les modèles d’entité :
+Voici les classes c# qui définissent les modèles d’entité :
 
 [!code-csharp[Main](using-select-expand-and-value/samples/sample1.cs)]
 

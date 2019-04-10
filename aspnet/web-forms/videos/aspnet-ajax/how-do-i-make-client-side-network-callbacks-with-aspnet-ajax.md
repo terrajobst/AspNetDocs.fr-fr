@@ -8,15 +8,15 @@ ms.date: 01/26/2007
 ms.assetid: ea4211be-faf9-40a0-8a7b-63427218b947
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-make-client-side-network-callbacks-with-aspnet-ajax
 msc.type: video
-ms.openlocfilehash: 73face950ec7d0e798f8c3a64612503105c6e7d0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e8b36a829f90380a6b077df9790a6ea081b3fe51
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392155"
 ---
-<a name="how-do-i-make-client-side-network-callbacks-with-aspnet-ajax"></a>[Comment faire] Effectuer des rappels réseau côté Client avec ASP.NET AJAX ?
-====================
+# <a name="how-do-i-make-client-side-network-callbacks-with-aspnet-ajax"></a>[Comment faire] Effectuer des rappels réseau côté Client avec ASP.NET AJAX ?
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Dans cette vidéo, nous expliquons comment Microsoft ASP.NET AJAX permet aux développeurs web à effectuer des rappels réseau directement à partir de code de script côté client. Nous voyons également comment un service web compatible ASP.NET AJAX génère le code JavaScript nécessaire pour appeler le service web.

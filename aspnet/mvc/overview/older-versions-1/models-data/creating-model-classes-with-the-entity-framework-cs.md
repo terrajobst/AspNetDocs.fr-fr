@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs
-title: Création de Classes de modèle avec Entity Framework (C#) | Microsoft Docs
+title: Création de Classes de modèle avec Entity Framework (c#) | Microsoft Docs
 author: microsoft
 description: Dans ce didacticiel, vous allez apprendre à utiliser ASP.NET MVC avec Entity Framework de Microsoft. Vous allez apprendre à utiliser l’Assistant pour créer un Da d’entité ADO.NET...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 61644169-e8b1-45dd-bf96-9c2301b69879
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d1cf97a7f1dc9bae2774518cdfc13da48fc7ada2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 29f7dded2f6fc2e8ce588dab2949b59ddb6f1fc4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043076"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388905"
 ---
-<a name="creating-model-classes-with-the-entity-framework-c"></a>Création de classes de modèle avec Entity Framework (C#)
-====================
+# <a name="creating-model-classes-with-the-entity-framework-c"></a>Création de classes de modèle avec Entity Framework (C#)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Dans ce didacticiel, vous allez apprendre à utiliser ASP.NET MVC avec Entity Framework de Microsoft. Vous allez apprendre à utiliser l’Assistant pour créer un ADO.NET Entity Data Model. Au cours de ce didacticiel, nous créons une application web qui montre comment sélectionner, insérer, mettre à jour et supprimer des données de base de données à l’aide d’Entity Framework.
@@ -106,7 +106,7 @@ Si vous souhaitez renommer une classe d’entité, vous pouvez double-cliquer su
 
 ![clip_image012](creating-model-classes-with-the-entity-framework-cs/_static/image6.jpg)
 
-Pensez à enregistrer votre Entity Data Model après avoir apporté une modification en cliquant sur le bouton Enregistrer (l’icône de la disquette). Dans les coulisses, le Concepteur d’entités génère un ensemble de classes C#. Vous pouvez afficher ces classes en ouvrant le fichier MoviesDBModel.Designer.cs à partir de la fenêtre de l’Explorateur de solutions.
+Pensez à enregistrer votre Entity Data Model après avoir apporté une modification en cliquant sur le bouton Enregistrer (l’icône de la disquette). Dans les coulisses, le Concepteur d’entités génère un ensemble de classes c#. Vous pouvez afficher ces classes en ouvrant le fichier MoviesDBModel.Designer.cs à partir de la fenêtre de l’Explorateur de solutions.
 
 
 Ne modifiez pas le code dans le fichier Designer.cs dans la mesure où vos modifications seront remplacées la prochaine fois que vous utiliserez le Concepteur d’entités. Si vous souhaitez étendre les fonctionnalités des classes d’entité défini dans le fichier Designer.cs, vous pouvez créer *des classes partielles* dans des fichiers distincts.
@@ -219,4 +219,4 @@ L’objectif de ce didacticiel a été pour illustrer comment vous pouvez créer
 Tout d’abord, nous avons abordé la façon dont vous pouvez utiliser l’Assistant Entity Data Model pour générer un Entity Data Model à partir de Visual Studio. Ensuite, vous allez apprendre à utiliser LINQ to Entities pour récupérer un jeu d’enregistrements de base de données à partir d’une table de base de données. Enfin, nous avons utilisé l’Entity Framework pour insérer, mettre à jour et supprimer des enregistrements de base de données.
 
 > [!div class="step-by-step"]
-> [Next](creating-model-classes-with-linq-to-sql-cs.md)
+> [Suivant](creating-model-classes-with-linq-to-sql-cs.md)

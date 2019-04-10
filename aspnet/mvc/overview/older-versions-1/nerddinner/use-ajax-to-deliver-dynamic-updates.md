@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: 18700815-8e6c-4489-91af-7ea9dab6529e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-ajax-to-deliver-dynamic-updates
 msc.type: authoredcontent
-ms.openlocfilehash: 71e566523d658eb8198453f354a12e63a4c38495
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 56ebc40aa500b62811bac0a5041fa9aa4f91f4ae
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421035"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391050"
 ---
-<a name="use-ajax-to-deliver-dynamic-updates"></a>Utiliser AJAX pour fournir des mises à jour dynamiques
-====================
+# <a name="use-ajax-to-deliver-dynamic-updates"></a>Utiliser AJAX pour fournir des mises à jour dynamiques
+
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Télécharger le PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Il s’agit d’étape 10 a gratuit [« « l’application NerdDinner](introducing-the-nerddinner-tutorial.md) qui présente en détail comment créer un petit mais terminé, l’application web à l’aide d’ASP.NET MVC 1.
 > 
@@ -114,7 +114,7 @@ Pour utiliser jQuery, nous allons tout d’abord ajouter une référence de scri
 
 *Conseil : Vérifiez que vous avez installé le correctif de logiciel JavaScript intellisense pour Visual Studio 2008 SP1 qui permet une prise en charge intellisense pour les fichiers JavaScript (y compris jQuery). Vous pouvez le télécharger à partir de : http://tinyurl.com/vs2008javascripthotfix*
 
-Le code écrit à l’aide de JQuery souvent utilise un « $() » global méthode JavaScript qui Récupère un ou plusieurs éléments HTML à l’aide d’un sélecteur CSS. Par exemple, <em>$("#rsvpmsg")</em> sélectionne tout élément HTML avec l’id de rsvpmsg, tandis que <em>$(".something")</em> sélectionneriez tous les éléments avec le « quelque chose » CSS nom de la classe. Vous pouvez également écrire des requêtes plus avancées telles que « retourner tous les boutons radio activé » à l’aide d’une requête de sélecteur comme : <em>$(« entrée [@type= radio] [@checked] »)</em>.
+Le code écrit à l’aide de JQuery souvent utilise un « $() » global méthode JavaScript qui Récupère un ou plusieurs éléments HTML à l’aide d’un sélecteur CSS. Par exemple, *$("#rsvpmsg")* sélectionne tout élément HTML avec l’id de rsvpmsg, tandis que *$(".something")* sélectionneriez tous les éléments avec le « quelque chose » CSS nom de la classe. Vous pouvez également écrire des requêtes plus avancées telles que « retourner tous les boutons radio activé » à l’aide d’une requête de sélecteur comme : *$(« entrée [@type= radio] [@checked] »)*.
 
 Une fois que vous avez sélectionné des éléments, vous pouvez appeler des méthodes sur ces derniers entrent en action, comme les masquer : *$(#rsvpmsg").hide() » ;*
 

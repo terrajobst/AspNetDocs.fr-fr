@@ -8,15 +8,15 @@ ms.date: 03/30/2007
 ms.assetid: bee087cc-7fed-4dce-8b52-19987f2d38a6
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-configure-the-aspnet-ajax-calendar-control
 msc.type: video
-ms.openlocfilehash: c5ed82a0c02a3f88e2da3067ca73e66e87bbc7e9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2d3a4b64f747a4cb57dfc7c66c964af9c56c368f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055316"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396653"
 ---
-<a name="how-do-i-configure-the-aspnet-ajax-calendar-control"></a>[Comment faire] Configurer le contrôle Calendar d’ASP.NET AJAX ?
-====================
+# <a name="how-do-i-configure-the-aspnet-ajax-calendar-control"></a>[Comment faire] Configurer le contrôle Calendar d’ASP.NET AJAX ?
+
 par [Joe Stagner](https://github.com/JoeStagner)
 
 Dans cette vidéo, nous voir une démonstration de la diversité des options disponibles pour configurer l’apparence et le comportement du contrôle d’extendeur Calendar à partir d’ASP.NET AJAX Control Toolkit.

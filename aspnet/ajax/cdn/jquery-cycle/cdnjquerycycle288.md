@@ -8,15 +8,15 @@ ms.date: 07/23/2014
 ms.assetid: afb99e9a-fcc2-49e4-b26c-cff412074f4a
 msc.legacyurl: /ajax/cdn/jquery-cycle/cdnjquerycycle288
 msc.type: content
-ms.openlocfilehash: 220c76d1dad92e82af39711ddde8fc01f6061c56
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1f38d92daf1b7eb4b7067ed4e9da00167386eccc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026056"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405064"
 ---
-<a name="jquery-cycle-288"></a>jQuery Cycle 2.88
-====================
+# <a name="jquery-cycle-288"></a>jQuery Cycle 2.88
+
 Les fichiers de Cycle de jQuery suivants sont hébergés sur ce CDN :
 
 - [https://ajax.aspnetcdn.com/ajax/jquery.cycle/2.88/jquery.cycle.all.js](https://ajax.aspnetcdn.com/ajax/jquery.cycle/2.88/jquery.cycle.all.js) &mdash; La version complète du plug-in du Cycle de jQuery. Inclut tout le plusieurs effets spéciaux de deux douzaines et toutes les options.

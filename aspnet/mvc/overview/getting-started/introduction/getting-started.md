@@ -7,15 +7,15 @@ ms.date: 10/04/2018
 ms.assetid: f3d8adbe-55e7-4fd4-84a8-7155bc45c676
 msc.legacyurl: /mvc/overview/getting-started/introduction/getting-started
 msc.type: authoredcontent
-ms.openlocfilehash: 4d8483d46bc79459db36d9006fef5ab71dddcfde
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c2f7ca2e7fb8d7831f21e3ba2f4713211657e1b3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424727"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402230"
 ---
-<a name="getting-started-with-aspnet-mvc-5"></a>Mise en route avec ASP.NET MVC 5
-====================
+# <a name="getting-started-with-aspnet-mvc-5"></a>Mise en route avec ASP.NET MVC 5
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 [!INCLUDE [consider RP](../../../../includes/razor.md)]
@@ -75,4 +75,4 @@ Vous avez besoin d’un compte Azure pour déployer cette solution sur Azure. Si
 - [Activer les avantages d’abonnement Visual Studio](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers) -votre abonnement Visual Studio vous donne des crédits chaque mois que vous pouvez utiliser pour les services Azure payants.
 
 > [!div class="step-by-step"]
-> [Next](adding-a-controller.md)
+> [Suivant](adding-a-controller.md)

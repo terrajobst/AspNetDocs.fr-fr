@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-cs
-title: Débogage des procédures stockées (C#) | Microsoft Docs
+title: Débogage des procédures stockées (c#) | Microsoft Docs
 author: rick-anderson
 description: Les éditions Visual Studio Professional et Team System permettent de définir des points d’arrêt et de participer à des procédures stockées dans SQL Server, ainsi tout débogage stockées...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 08/03/2007
 ms.assetid: c655c324-2ffa-4c21-8265-a254d79a693d
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4558a309248c89483d198f47f731eee2a266695f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 9ac206edee58542ced24ce89adc3393d7a3c1c37
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421464"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392168"
 ---
-<a name="debugging-stored-procedures-c"></a>Débogage des procédures stockées (C#)
-====================
+# <a name="debugging-stored-procedures-c"></a>Débogage des procédures stockées (C#)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_74_CS.zip) ou [télécharger le PDF](debugging-stored-procedures-cs/_static/datatutorial74cs1.pdf)
@@ -36,7 +36,7 @@ Dans ce didacticiel, nous allons examiner pas à pas détaillé dans les procéd
 
 ## <a name="sql-server-debugging-concepts"></a>Concepts de débogage SQL Server
 
-Microsoft SQL Server 2005 a été conçu pour offrir une intégration avec le [Common Language Runtime (CLR)](https://msdn.microsoft.com/netframework/aa497266.aspx), qui est le runtime utilisé par tous les assemblys .NET. Par conséquent, SQL Server 2005 prend en charge les objets de base de données managés. Autrement dit, vous pouvez créer des objets de base de données tels que des procédures stockées et fonctions définies par l’utilisateur (UDF) en tant que méthodes dans une classe C#. Ainsi, ces procédures stockées et des UDF pour exploiter les fonctionnalités dans le .NET Framework et à partir de vos propres classes personnalisées. Bien entendu, SQL Server 2005 prend également en charge pour les objets de base de données de T-SQL.
+Microsoft SQL Server 2005 a été conçu pour offrir une intégration avec le [Common Language Runtime (CLR)](https://msdn.microsoft.com/netframework/aa497266.aspx), qui est le runtime utilisé par tous les assemblys .NET. Par conséquent, SQL Server 2005 prend en charge les objets de base de données managés. Autrement dit, vous pouvez créer des objets de base de données tels que des procédures stockées et fonctions définies par l’utilisateur (UDF) en tant que méthodes dans une classe c#. Ainsi, ces procédures stockées et des UDF pour exploiter les fonctionnalités dans le .NET Framework et à partir de vos propres classes personnalisées. Bien entendu, SQL Server 2005 prend également en charge pour les objets de base de données de T-SQL.
 
 SQL Server 2005 offre la prise en charge du débogage pour T-SQL et les objets de base de données managés. Toutefois, ces objets peuvent uniquement être débogués via les éditions de Visual Studio 2005 Professional et les systèmes de l’équipe. Dans ce didacticiel, nous allons examiner les objets de base de données débogage T-SQL. Le didacticiel suivant ressemble au débogage des objets de base de données managés.
 
@@ -67,7 +67,7 @@ Dans la mesure où le `Products_SelectByCategoryID` procédure stockée attend u
 Après avoir fourni la valeur pour le `@CategoryID` paramètre, la procédure stockée est exécutée. Au lieu d’exécuter jusqu'à la fin, cependant, le débogueur interrompt l’exécution à la première instruction. Notez la flèche jaune dans la marge, indiquant l’emplacement actuel dans la procédure stockée. Vous pouvez afficher et modifier les valeurs de paramètre via la fenêtre Espion ou en pointant sur le nom du paramètre dans la procédure stockée.
 
 
-[![Le débogueur a interrompu sur la première instruction de la procédure stockée](debugging-stored-procedures-cs/_static/image3.png)](debugging-stored-procedures-cs/_static/image2.png)
+[![TIl débogueur s’est arrêté à la première instruction de la procédure stockée](debugging-stored-procedures-cs/_static/image3.png)](debugging-stored-procedures-cs/_static/image2.png)
 
 **Figure 2**: Le débogueur a interrompu sur la première instruction de la procédure stockée ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-cs/_static/image4.png))
 
@@ -85,7 +85,7 @@ Pendant le débogage d’une procédure stockée directement à partir de l’Ex
 Avant que nous pouvons commencer le débogage des procédures stockées appelées à partir de l’application, nous devons indiquer à l’application web ASP.NET à intégrer avec le débogueur SQL Server. Démarrer en cliquant sur le nom du site Web dans l’Explorateur de solutions (`ASPNET_Data_Tutorial_74_CS`). Choisissez l’option de Pages de propriétés dans le menu contextuel, sélectionnez l’élément Options de démarrage sur la gauche et cochez la case de SQL Server dans la section débogueurs (voir Figure 3).
 
 
-[![Cochez la case à cocher du serveur SQL dans les Pages de propriétés d’Application s](debugging-stored-procedures-cs/_static/image6.png)](debugging-stored-procedures-cs/_static/image5.png)
+[![Ccocher la case à cocher du serveur SQL dans les Pages de propriétés de seconde Application](debugging-stored-procedures-cs/_static/image6.png)](debugging-stored-procedures-cs/_static/image5.png)
 
 **Figure 3**: Cochez la case à cocher du serveur SQL dans les Pages de propriétés de seconde Application ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-cs/_static/image7.png))
 
@@ -108,7 +108,7 @@ Pour le regroupement de connexion désactivée, mise à jour le `NORTHWNDConnect
 Ouvrez le `Products_SelectByCategoryID` procédure stockée et définissez un point d’arrêt au début de la `SELECT` instruction en cliquant dans la marge à l’emplacement approprié ou en plaçant votre curseur au début de la `SELECT` instruction et en appuyant sur F9. Comme l’illustre la Figure 4, le point d’arrêt apparaît sous la forme d’un cercle rouge dans la marge.
 
 
-[![Définir un point d’arrêt dans le Products_SelectByCategoryID procédure stockée](debugging-stored-procedures-cs/_static/image9.png)](debugging-stored-procedures-cs/_static/image8.png)
+[![Set un point d’arrêt dans le Products_SelectByCategoryID de procédure stockée](debugging-stored-procedures-cs/_static/image9.png)](debugging-stored-procedures-cs/_static/image8.png)
 
 **Figure 4**: Définir un point d’arrêt dans le `Products_SelectByCategoryID` la procédure stockée ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-cs/_static/image10.png))
 
@@ -126,12 +126,12 @@ Le jeu de point d’arrêt et l’option de débogage de l’Application est act
 Le `Products_SelectByCategoryID` procédure stockée a été créée dans le [à l’aide des procédures stockées existantes pour s DataSet typée TableAdapters](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) didacticiel. La page web correspondante (`~/AdvancedDAL/ExistingSprocs.aspx`) contient un GridView qui affiche les résultats retournés par cette procédure stockée. Visitez cette page via le navigateur. Lorsque vous atteignez la page, le point d’arrêt dans le `Products_SelectByCategoryID` procédure stockée est atteint et que le contrôle retourné à Visual Studio. Comme à l’étape 1, vous pouvez parcourir les instructions de procédure stockée s et la vue et modifier les valeurs de paramètre.
 
 
-[![La Page ExistingSprocs.aspx affiche initialement les boissons](debugging-stored-procedures-cs/_static/image13.png)](debugging-stored-procedures-cs/_static/image12.png)
+[![TIl ExistingSprocs.aspx Page affiche initialement les boissons](debugging-stored-procedures-cs/_static/image13.png)](debugging-stored-procedures-cs/_static/image12.png)
 
 **Figure 6**: Le `ExistingSprocs.aspx` Page affiche initialement les boissons ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-cs/_static/image14.png))
 
 
-[![La procédure stockée s point d’arrêt a été atteint.](debugging-stored-procedures-cs/_static/image16.png)](debugging-stored-procedures-cs/_static/image15.png)
+[![TIl s de la procédure stockée point d’arrêt a été atteinte](debugging-stored-procedures-cs/_static/image16.png)](debugging-stored-procedures-cs/_static/image15.png)
 
 **Figure 7**: Le s de la procédure stockée point d’arrêt a été atteint ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-cs/_static/image17.png))
 
@@ -144,7 +144,7 @@ En tant que la fenêtre Espion dans la Figure 7 montre, la valeur de la `@Catego
 **Figure 8**: Choisissez une catégorie différente dans la liste déroulante ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-cs/_static/image20.png))
 
 
-[![Le @CategoryID paramètre reflète la catégorie sélectionnée à partir de la Page Web](debugging-stored-procedures-cs/_static/image22.png)](debugging-stored-procedures-cs/_static/image21.png)
+[![Til @CategoryID paramètre reflète la catégorie sélectionnée dans la Page Web](debugging-stored-procedures-cs/_static/image22.png)](debugging-stored-procedures-cs/_static/image21.png)
 
 **Figure 9**: Le `@CategoryID` paramètre reflète la catégorie sélectionnée dans la Page Web ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-cs/_static/image23.png))
 

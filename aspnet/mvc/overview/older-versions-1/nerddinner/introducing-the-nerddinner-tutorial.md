@@ -8,18 +8,18 @@ ms.date: 07/27/2010
 ms.assetid: 397522d5-0402-4b94-b810-a2fb564f869d
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/introducing-the-nerddinner-tutorial
 msc.type: authoredcontent
-ms.openlocfilehash: d5efab525841b5c526aa3b656f27b1c42cc74648
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ebd49295ea165ba4ef1a25398cff7dddcfa54f11
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053246"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392194"
 ---
-<a name="introducing-the-nerddinner-tutorial"></a>Introduction au didacticiel NerdDinner
-====================
+# <a name="introducing-the-nerddinner-tutorial"></a>Introduction au didacticiel NerdDinner
+
 par [Scott Hanselman](https://github.com/shanselman)
 
-[Télécharger PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Télécharger le PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > La meilleure façon d’apprendre une nouvelle infrastructure consiste à créer quelque chose avec lui. Ce didacticiel vous montre comment créer un petit mais terminé, l’application à l’aide d’ASP.NET MVC 1 et présente certains des principaux concepts derrière lui.
 > 
@@ -60,18 +60,18 @@ Ils peuvent puis cliquez sur un lien RSVP basée sur AJAX pour assister à l’�
 
 Nous allons commencer notre application NerdDinner en utilisant le fichier -&gt;commande Nouveau projet dans Visual Studio pour créer un tout nouveau projet ASP.NET MVC. Nous allons ajouter puis par incréments de fonctionnalités. Tout au long du processus, nous aborderons :
 
-1. [Comment créer un nouveau projet ASP.NET MVC](# "créer un nouveau projet ASP.NET MVC")
-2. [Comment créer une base de données](# "créer une base de données")
-3. [Comment créer un modèle avec des validations de règles métier](# "créer un modèle avec des Validations de règles d’entreprise")
-4. [Comment utiliser des contrôleurs et des vues pour implémenter une interface utilisateur liste/détails](# "utiliser les contrôleurs et les vues pour implémenter une interface utilisateur liste/détails")
-5. [Comment fournir CRUD (créer, lire, mettre à jour, supprimer) les formulaires de données prise en charge de l’entrée](# "fournir CRUD (Create, Read, Update, Delete) données formulaire entrée prend en charge")
-6. [Comment utiliser ViewData et implémenter des classes ViewModel](# "utiliser un ViewData et implémenter des Classes ViewModel")
-7. [Comment réutiliser l’interface utilisateur à l’aide de pages maîtres et des vues partielles](# "réutiliser d’interface utilisateur à l’aide des Pages maîtres et des vues partielles")
-8. [Comment implémenter la pagination des données efficace](# "implémenter de données efficace la pagination")
-9. [Comment sécuriser des applications à l’aide de l’authentification et l’autorisation](# "sécurisé Applications à l’aide de l’authentification et autorisation")
-10. [Comment utiliser AJAX pour fournir des mises à jour dynamiques](# "utiliser AJAX pour fournir des mises à jour dynamiques")
-11. [Comment utiliser AJAX pour implémenter des scénarios de mappage](# "utiliser AJAX pour implémenter les scénarios de mappage")
-12. [Comment activer les tests d’unités automatisés](# "activer le test unitaire automatisé")
+1. [Comment créer un nouveau projet ASP.NET MVC](create-a-new-aspnet-mvc-project.md)
+2. [Comment créer une base de données](create-a-database.md)
+3. [Comment créer un modèle avec des validations de règles d’entreprise](build-a-model-with-business-rule-validations.md)
+4. [Comment utiliser des contrôleurs et des vues pour implémenter une interface utilisateur liste/détails](use-controllers-and-views-to-implement-a-listingdetails-ui.md)
+5. [Comment fournir CRUD (créer, lire, mettre à jour, supprimer) les formulaires de données prise en charge de l’entrée](provide-crud-create-read-update-delete-data-form-entry-support.md)
+6. [Comment utiliser ViewData et implémenter des classes ViewModel](use-viewdata-and-implement-viewmodel-classes.md)
+7. [Comment réutiliser l’interface utilisateur à l’aide de vues partielles et des pages maîtres](re-use-ui-using-master-pages-and-partials.md)
+8. [Comment implémenter la pagination des données efficace](implement-efficient-data-paging.md)
+9. [Comment sécuriser des applications à l’aide de l’authentification et autorisation](secure-applications-using-authentication-and-authorization.md)
+10. [Comment utiliser AJAX pour fournir des mises à jour dynamiques](use-ajax-to-deliver-dynamic-updates.md)
+11. [Comment utiliser AJAX pour implémenter des scénarios de mappage](use-ajax-to-implement-mapping-scenarios.md)
+12. [Comment activer les tests d’unités automatisés](enable-automated-unit-testing.md)
 
 Vous pouvez créer votre propre copie de NerdDinner à partir de zéro à la fin de chaque étape nous procédure pas à pas dans ce chapitre. Vous pouvez également télécharger une version complète du code source ici : [NerdDinner sur GitHub](https://github.com/AspNetMVPSamples/NerdDinner). Vous pouvez également éventuellement également [télécharger une version PDF de ce didacticiel](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf) si vous souhaitez lire le didacticiel en mode hors connexion.
 
@@ -86,4 +86,4 @@ Maintenant que nous avons couvert NerdDinner What ' s, nous allons notre manches
 Nous allons commencer à l’aide de fichier -&gt;nouveau projet dans Visual Studio pour créer l’application NerdDinner.
 
 > [!div class="step-by-step"]
-> [Next](create-a-new-aspnet-mvc-project.md)
+> [Suivant](create-a-new-aspnet-mvc-project.md)

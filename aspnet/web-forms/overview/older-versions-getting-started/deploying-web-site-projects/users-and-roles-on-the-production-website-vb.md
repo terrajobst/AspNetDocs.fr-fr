@@ -8,18 +8,18 @@ ms.date: 06/09/2009
 ms.assetid: 491ed5ae-9be1-4191-87be-65e4e1c57690
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f63d64532543da681fdf88399d7dd365804674c4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e97b66aed789cf6f2b2b503ae86e773ac03d74e0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053736"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392935"
 ---
-<a name="users-and-roles-on-the-production-website-vb"></a>Utilisateurs et rôles sur le site Web de Production (VB)
-====================
+# <a name="users-and-roles-on-the-production-website-vb"></a>Utilisateurs et rôles sur le site Web de Production (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial16_CustomAWAT_vb.pdf)
+[Télécharger le PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial16_CustomAWAT_vb.pdf)
 
 > L’outil d’Administration de Microsoft ASP.NET du site Web (WSAT) fournit une interface utilisateur web pour la configuration des paramètres d’appartenance et de rôles et de création, la modification et la suppression des utilisateurs et rôles. Malheureusement, le WSAT fonctionne uniquement quand consultées à partir de localhost, ce qui signifie que vous ne pouvez pas atteindre l’outil d’Administration du site Web de la production via votre navigateur. La bonne nouvelle est qu’il existe des solutions de contournement qui permettent de gérer les utilisateurs et rôles de production. Ce didacticiel aborde ces solutions de contournement et d’autres.
 
@@ -97,7 +97,7 @@ Dans le [ *configuration d’un site Web qu’utilise les Services d’Applicati
 
 Pour une étude plus détaillée de création de pages d’administration utilisateur et le rôle, ainsi que des instructions détaillées sur l’utilisation de la `Membership` et `Roles` classes et les contrôles Web de ASP.NET associées à la connexion, veillez à lire mon [sécurité des sites Web Didacticiels](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md). Vous y trouverez des conseils sur la façon de créer des pages web pour la création de nouveaux comptes, la création et la gestion des rôles, affectation d’utilisateurs aux rôles et d’autres tâches d’administration courantes.
 
-Pour implémenter des fonctionnalités comme le WSAT sur le site Web de production, vous pouvez toujours créer votre propre série de pages web qui implémentent les fonctionnalités de la WSAT. Pour aider à commencer, consultez le code source WSAT, qui se trouve dans le dossier `%WINDIR%\Microsoft.NET\Framework\v2.0.50727\ASP.NETWebAdminFiles`. Une autre option consiste à utiliser l’alternative WSAT de Dan Clem, lequel il partage dans son article, [propagée votre propre Site Web Administration outil](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx). Dan guide les lecteurs via le processus de création d’un outil personnalisé de type WSAT inclut le code de source de son application au téléchargement (dans C#) et donne des instructions détaillées pour l’ajout de son WSAT personnalisé à un site Web hébergé.
+Pour implémenter des fonctionnalités comme le WSAT sur le site Web de production, vous pouvez toujours créer votre propre série de pages web qui implémentent les fonctionnalités de la WSAT. Pour aider à commencer, consultez le code source WSAT, qui se trouve dans le dossier `%WINDIR%\Microsoft.NET\Framework\v2.0.50727\ASP.NETWebAdminFiles`. Une autre option consiste à utiliser l’alternative WSAT de Dan Clem, lequel il partage dans son article, [propagée votre propre Site Web Administration outil](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx). Dan guide les lecteurs via le processus de création d’un outil personnalisé de type WSAT inclut le code de source de son application au téléchargement (dans c#) et donne des instructions détaillées pour l’ajout de son WSAT personnalisé à un site Web hébergé.
 
 ## <a name="summary"></a>Récapitulatif
 

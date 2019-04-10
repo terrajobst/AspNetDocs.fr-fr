@@ -8,15 +8,15 @@ ms.date: 12/03/2010
 ms.assetid: aaadd9bb-5508-448c-ad57-5497dff90e13
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8
 msc.type: authoredcontent
-ms.openlocfilehash: 249677c9e0eca248710bf730e57a7aeca5a9b5ce
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0fd943eba4c6d80bba5ca6c4d69cbd3a8927513d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027906"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391505"
 ---
-<a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-8"></a>Bien démarrer avec Entity Framework 4.0 Database First et 4 les Web Forms ASP.NET - partie 8
-====================
+# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-8"></a>Bien démarrer avec Entity Framework 4.0 Database First et 4 les Web Forms ASP.NET - partie 8
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 > L’exemple d’application web Contoso University montre comment créer des applications Web Forms ASP.NET à l’aide de l’Entity Framework 4.0 et Visual Studio 2010. Pour plus d’informations sur la série de didacticiels, consultez [le premier didacticiel de la série](the-entity-framework-and-aspnet-getting-started-part-1.md)
@@ -120,7 +120,7 @@ Maintenant que vous avez configuré ces règles de mise en forme et validation d
 
 Ceci conclut cette série de didacticiels sur la mise en route avec Entity Framework. Pour plus de ressources pour vous aider à apprendre à utiliser Entity Framework, poursuivez [le premier didacticiel de la prochaine série de didacticiels Entity Framework](../continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md) ou visitez les sites suivants :
 
-- [Entity Framework Forum aux questions](http://www.ef-faq.org/introduction.html)
+- [Forum aux questions sur Entity Framework](http://www.ef-faq.org/introduction.html)
 - [Blog de l’équipe Entity Framework](https://blogs.msdn.com/b/adonet/)
 - [Entity Framework dans MSDN Library](https://msdn.microsoft.com/library/bb399572.aspx)
 - [Entity Framework dans le centre de développement de données MSDN](https://msdn.microsoft.com/data/ef.aspx)

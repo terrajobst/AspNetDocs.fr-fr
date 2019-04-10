@@ -8,15 +8,15 @@ ms.date: 01/18/2008
 ms.assetid: ee4b924e-8002-4dc3-819f-695fca1ff867
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/storing-additional-user-information-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 33e686cc3b977c6c740dfaf1057e1e399d5a298b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7dad99f2ae7e71cb697426bc97414fd4e4873aa5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052976"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400488"
 ---
-<a name="storing-additional-user-information-vb"></a>Stockage d’informations supplémentaires sur l’utilisateur (VB)
-====================
+# <a name="storing-additional-user-information-vb"></a>Stockage d’informations supplémentaires sur l’utilisateur (VB)
+
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le Code](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/ASPNET_Security_Tutorial_08_VB.zip) ou [télécharger le PDF](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/aspnet_tutorial08_ExtraUserInfo_vb.pdf)
@@ -45,7 +45,7 @@ Pour capturer les commentaires du livre d’or, nous devons créer une table de 
 Pour ajouter cette table à notre base de données, accédez à l’Explorateur de base de données dans Visual Studio et explorez le `SecurityTutorials` base de données. Avec le bouton droit sur le dossier Tables et choisissez Ajouter une nouvelle Table. Ceci fait apparaître une interface qui nous permet de définir les colonnes de la nouvelle table.
 
 
-[![Ajouter une nouvelle Table à la base de données SecurityTutorials](storing-additional-user-information-vb/_static/image2.png)](storing-additional-user-information-vb/_static/image1.png)
+[![Ajj une nouvelle Table à la base de données SecurityTutorials](storing-additional-user-information-vb/_static/image2.png)](storing-additional-user-information-vb/_static/image1.png)
 
 **Figure 1**: Ajouter une nouvelle Table à la `SecurityTutorials` base de données ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image3.png))
 
@@ -53,7 +53,7 @@ Pour ajouter cette table à notre base de données, accédez à l’Explorateur 
 Ensuite, définissez le `GuestbookComments`de colonnes. Commencez par ajouter une colonne nommée `CommentId` de type `uniqueidentifier`. Cette colonne s’identifier de façon unique chaque commentaire dans le livre d’or, donc interdire `NULL` s et marquez-la en tant que clé primaire de la table. Au lieu de fournir une valeur pour le `CommentId` chaque champ `INSERT`, nous pouvons indiquer qu’un nouveau `uniqueidentifier` valeur doit être générée automatiquement pour ce champ sur `INSERT` en définissant la valeur par défaut de la colonne `NEWID()`. Après avoir ajouté ce premier champ, en marquant comme clé primaire, les paramètres de sa valeur par défaut, votre écran doit ressembler à l’écran présenté en Figure 2.
 
 
-[![Ajouter une colonne principale nommée CommentId](storing-additional-user-information-vb/_static/image5.png)](storing-additional-user-information-vb/_static/image4.png)
+[![Ajj un CommentId principal nommé de colonne](storing-additional-user-information-vb/_static/image5.png)](storing-additional-user-information-vb/_static/image4.png)
 
 **Figure 2**: Ajouter une colonne nommée principal `CommentId` ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image6.png))
 
@@ -73,7 +73,7 @@ Nous avons un dernier problème assister à avec le `GuestbookComments` table :
 Cliquez sur le bouton Ajouter dans le coin inférieur gauche de la boîte de dialogue relations de clé étrangère. Cette opération ajoute une nouvelle contrainte de clé étrangère, bien que nous devons encore définir les tables impliquées dans la relation.
 
 
-[![Utilisez la boîte de dialogue relations de clé étrangère pour gérer les contraintes de clé étrangère d’une Table](storing-additional-user-information-vb/_static/image8.png)](storing-additional-user-information-vb/_static/image7.png)
+[![Ula boîte de dialogue relations de clé étrangère pour gérer les contraintes de clé étrangère d’une Table de se](storing-additional-user-information-vb/_static/image8.png)](storing-additional-user-information-vb/_static/image7.png)
 
 **Figure 3**: Utilisez la boîte de dialogue relations de clé étrangère pour gérer les contraintes de clé étrangère d’une Table ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image9.png))
 
@@ -81,7 +81,7 @@ Cliquez sur le bouton Ajouter dans le coin inférieur gauche de la boîte de dia
 Ensuite, cliquez sur l’icône de points de suspension dans la ligne « Table et colonnes Specifications » sur la droite. Cette action lance la boîte de dialogue Tables et colonnes à partir de laquelle nous pouvons spécifier la table de clé primaire et de colonne et de la colonne de clé étrangère à partir de la `GuestbookComments` table. En particulier, sélectionnez `aspnet_Users` et `UserId` en tant que la table de clé primaire et la colonne, et `UserId` à partir de la `GuestbookComments` table en tant que la colonne clé étrangère (voir Figure 4). Après avoir défini les tables de clés primaires et étrangères et les colonnes, cliquez sur OK pour revenir à la boîte de dialogue relations de clé étrangère.
 
 
-[![Établir un étrangère clé contrainte entre l’aspnet_Users et GuesbookComments Tables](storing-additional-user-information-vb/_static/image11.png)](storing-additional-user-information-vb/_static/image10.png)
+[![Establish un étrangère clé contrainte entre l’aspnet_Users et GuesbookComments Tables](storing-additional-user-information-vb/_static/image11.png)](storing-additional-user-information-vb/_static/image10.png)
 
 **Figure 4**: Établir une Foreign Key contrainte entre le `aspnet_Users` et `GuesbookComments` Tables ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image12.png))
 
@@ -91,7 +91,7 @@ Ensuite, cliquez sur l’icône de points de suspension dans la ligne « Table 
 Contraintes de clé étrangère peuvent être configurées pour supprimer automatiquement les enregistrements enfants associées lorsqu’un enregistrement parent est supprimé. En d’autres termes, nous pouvons configurer cette contrainte de clé étrangère afin que les entrées du livre d’or d’un utilisateur sont automatiquement supprimées lorsque son compte d’utilisateur est supprimé. Pour ce faire, développez la section « Spécification d’insérer et de mise à jour » et la valeur de la propriété « Supprimer la règle » Cascade.
 
 
-[![Configurer la contrainte de clé étrangère à des suppressions en Cascade](storing-additional-user-information-vb/_static/image14.png)](storing-additional-user-information-vb/_static/image13.png)
+[![Cconfiguration de la contrainte de clé étrangère pour la suppression en Cascade](storing-additional-user-information-vb/_static/image14.png)](storing-additional-user-information-vb/_static/image13.png)
 
 **Figure 5**: Configurer la contrainte de clé étrangère pour la suppression en Cascade ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image15.png))
 
@@ -115,7 +115,7 @@ Nous devons maintenant associer trois colonnes de chaque compte d’utilisateur 
 Nous allons créer une nouvelle table appelée `UserProfiles` pour enregistrer la ville natale, la page d’accueil et la signature pour chaque utilisateur. Avec le bouton droit sur le dossier Tables dans la fenêtre Explorateur de base de données et choisir de créer une nouvelle table. Nom de la première colonne `UserId` et définissez son type sur `uniqueidentifier`. Interdire `NULL` valeurs et marquer la colonne comme clé primaire. Ensuite, ajoutez les colonnes nommées : `HomeTown` de type `nvarchar(50)`; `HomepageUrl` de type `nvarchar(100)`; et la Signature de type `nvarchar(500)`. Chacune de ces trois colonnes peut accepter un `NULL` valeur.
 
 
-[![Créer la Table UserProfiles](storing-additional-user-information-vb/_static/image17.png)](storing-additional-user-information-vb/_static/image16.png)
+[![Ccréer la UserProfiles Table](storing-additional-user-information-vb/_static/image17.png)](storing-additional-user-information-vb/_static/image16.png)
 
 **Figure 6**: Créer le `UserProfiles` Table ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image18.png))
 
@@ -133,7 +133,7 @@ Il existe de différentes façons pour autoriser l’utilisateur actuellement co
 Ouvrez le `AdditionalUserInfo.aspx` page dans le `Membership` dossier et ajouter un contrôle DetailsView à la page, en affectant à sa propriété ID `UserProfile` et éliminant son `Width` et `Height` propriétés. Développez la balise active de DetailsView et choisissez de le lier à un nouveau contrôle de source de données. Cette action lance l’Assistant Configuration de source de données (voir la Figure 7). La première étape vous invite à spécifier le type de source de données. Étant donné que nous allons connecter directement à la `SecurityTutorials` de base de données, cliquez sur l’icône de la base de données, en spécifiant le `ID` comme `UserProfileDataSource`.
 
 
-[![Ajouter un nouveau contrôle SqlDataSource nommé UserProfileDataSource](storing-additional-user-information-vb/_static/image20.png)](storing-additional-user-information-vb/_static/image19.png)
+[![Ajj un UserProfileDataSource nouveau SqlDataSource contrôle nommé](storing-additional-user-information-vb/_static/image20.png)](storing-additional-user-information-vb/_static/image19.png)
 
 **Figure 7**: Ajouter un nouveau contrôle SqlDataSource nommé `UserProfileDataSource` ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image21.png))
 
@@ -149,7 +149,7 @@ L’écran suivant vous invite à entrer pour la base de données à utiliser. N
 L’écran suivant nous demande de spécifier la table et les colonnes à la requête. Choisissez le `UserProfiles` de table dans la liste déroulante et vérifiez toutes les colonnes.
 
 
-[![Afficher toutes les colonnes automatiquement à partir de la Table UserProfiles](storing-additional-user-information-vb/_static/image26.png)](storing-additional-user-information-vb/_static/image25.png)
+[![Banneau de nouveau toutes les colonnes de la UserProfiles Table](storing-additional-user-information-vb/_static/image26.png)](storing-additional-user-information-vb/_static/image25.png)
 
 **Figure 9**: Mettre à nouveau toutes les colonnes de la `UserProfiles` Table ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image27.png))
 
@@ -159,7 +159,7 @@ La requête actuelle dans la Figure 9 retourne *tous les* des enregistrements de
 Malheureusement, il n’a aucune source de paramètres intégré pour renvoyer l’utilisateur actuellement connecté `UserId` valeur. Nous devons récupérer cette valeur par programmation. Par conséquent, définissez la liste déroulante Source « None, « cliquez sur Ajouter bouton pour ajouter le paramètre, puis cliquez sur OK.
 
 
-[![Ajouter un paramètre de filtre sur la colonne UserId](storing-additional-user-information-vb/_static/image29.png)](storing-additional-user-information-vb/_static/image28.png)
+[![Ajj un paramètre de filtre sur la colonne UserId](storing-additional-user-information-vb/_static/image29.png)](storing-additional-user-information-vb/_static/image28.png)
 
 **Figure 10**: Ajouter un paramètre de filtre sur le `UserId` colonne ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image30.png))
 
@@ -187,7 +187,7 @@ Si vous visitez le `AdditionalUserInfo.aspx` page via un navigateur s’affiche 
 Accédez à l’Explorateur de base de données dans Visual Studio et développez le dossier Tables. Avec le bouton droit sur le `aspnet_Users` table et choisissez « Afficher les données de Table » pour afficher les enregistrements dans la table ; faire la même chose le `UserProfiles` table. Figure 11 illustre ces résultats lorsque disposées en mosaïque verticalement. Dans ma base de données est actuellement `aspnet_Users` enregistrements Bruce Fred et Tito, mais aucun enregistrement dans le `UserProfiles` table.
 
 
-[![Le contenu de l’aspnet_Users et UserProfiles Tables sont affichées.](storing-additional-user-information-vb/_static/image32.png)](storing-additional-user-information-vb/_static/image31.png)
+[![TContenu he l’aspnet_Users et UserProfiles Tables sont affichées](storing-additional-user-information-vb/_static/image32.png)](storing-additional-user-information-vb/_static/image31.png)
 
 **Figure 11**: Le contenu de la `aspnet_Users` et `UserProfiles` Tables sont affichées ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image33.png))
 
@@ -195,7 +195,7 @@ Accédez à l’Explorateur de base de données dans Visual Studio et développe
 Ajouter un nouvel enregistrement à la `UserProfiles` table en tapant manuellement des valeurs pour le `HomeTown`, `HomepageUrl`, et `Signature` champs. Le moyen le plus simple pour obtenir une liste valide `UserId` valeur dans le nouveau `UserProfiles` enregistrement consiste à sélectionner le `UserId` champ à partir d’un compte d’utilisateur particulier dans le `aspnet_Users` table et copier et coller dans le `UserId` champ `UserProfiles`. La figure 12 illustre le `UserProfiles` après l’ajout d’un nouvel enregistrement de Bruce de table.
 
 
-[![Un enregistrement a été ajouté à UserProfiles pour Bruce](storing-additional-user-information-vb/_static/image35.png)](storing-additional-user-information-vb/_static/image34.png)
+[![A Enregistrement a été ajouté à UserProfiles pour Bruce](storing-additional-user-information-vb/_static/image35.png)](storing-additional-user-information-vb/_static/image34.png)
 
 **Figure 12**: Un enregistrement a été ajouté à `UserProfiles` de Bruce ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image36.png))
 
@@ -203,7 +203,7 @@ Ajouter un nouvel enregistrement à la `UserProfiles` table en tapant manuelleme
 Retour à la `AdditionalUserInfo.aspx page`, connecté en tant que Bruce. Comme le montre la Figure 13, les paramètres de Bruce sont affichés.
 
 
-[![L’utilisateur visite actuellement est indiqué les paramètres de His](storing-additional-user-information-vb/_static/image38.png)](storing-additional-user-information-vb/_static/image37.png)
+[![Til actuellement les utilisateur visitant est indiqué de His paramètres](storing-additional-user-information-vb/_static/image38.png)](storing-additional-user-information-vb/_static/image37.png)
 
 **Figure 13**: L’utilisateur visite actuellement est indiqué les paramètres de His ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image39.png))
 
@@ -223,7 +223,7 @@ La première chose que nous devons faire est ajouter un `UpdateCommand` pour Sql
 Ensuite, cliquez sur le bouton « Actualiser les paramètres », qui crée un paramètre dans le contrôle SqlDataSource `UpdateParameters` collection pour chacun des paramètres dans le `UPDATE` instruction. Conserver la source pour l’ensemble de l’ensemble de paramètres none et cliquez sur le bouton OK pour fermer la boîte de dialogue.
 
 
-[![Spécifiez le SqlDataSource UpdateCommand et UpdateParameters](storing-additional-user-information-vb/_static/image41.png)](storing-additional-user-information-vb/_static/image40.png)
+[![Spécifier le SqlDataSource UpdateCommand et UpdateParameters](storing-additional-user-information-vb/_static/image41.png)](storing-additional-user-information-vb/_static/image40.png)
 
 **Figure 14**: Spécifiez le SqlDataSource `UpdateCommand` et `UpdateParameters` ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image42.png))
 
@@ -239,7 +239,7 @@ Notez l’ajout de la CommandField et `DefaultMode` propriété.
 Continuons et tester cette page via un navigateur. Lors de la visite avec un utilisateur qui dispose d’un enregistrement correspondant dans `UserProfiles`, les paramètres de l’utilisateur sont affichés dans une interface modifiable.
 
 
-[![Le contrôle DetailsView restitue une Interface modifiable](storing-additional-user-information-vb/_static/image44.png)](storing-additional-user-information-vb/_static/image43.png)
+[![TIl DetailsView restitue une Interface modifiable](storing-additional-user-information-vb/_static/image44.png)](storing-additional-user-information-vb/_static/image43.png)
 
 **Figure 15**: Le contrôle DetailsView restitue une Interface modifiable ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image45.png))
 
@@ -257,7 +257,7 @@ Nous avons besoin afficher le `SettingsUpdatedMessage` étiqueter chaque fois qu
 Retour à la `AdditionalUserInfo.aspx` page via un navigateur et de mettre à jour les données. Cette fois, un message d’état utiles s’affiche.
 
 
-[![Un bref Message est affiché lorsque les paramètres sont mis à jour](storing-additional-user-information-vb/_static/image47.png)](storing-additional-user-information-vb/_static/image46.png)
+[![A Court Message est affiché lorsque les paramètres sont mis à jour](storing-additional-user-information-vb/_static/image47.png)](storing-additional-user-information-vb/_static/image46.png)
 
 **Figure 16**: Un bref Message s’affiche lorsque les paramètres sont mis à jour ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image48.png))
 
@@ -309,7 +309,7 @@ Après avoir cliqué sur le `PostCommentButton` bouton il n’est pas de signal 
 Figure 17 illustre le contenu de la `GuestbookComments` après deux commentaires ont été laissés de table.
 
 
-[![Vous pouvez voir les commentaires du livre d’or dans la Table GuestbookComments](storing-additional-user-information-vb/_static/image50.png)](storing-additional-user-information-vb/_static/image49.png)
+[![Yunité d’organisation peut voir les commentaires de livre d’or dans la GuestbookComments Table](storing-additional-user-information-vb/_static/image50.png)](storing-additional-user-information-vb/_static/image49.png)
 
 **Figure 17**: Vous pouvez voir les commentaires du livre d’or dans le `GuestbookComments` Table ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image51.png))
 
@@ -335,7 +335,7 @@ Cela fera apparaître l’écran « Définir des instructions ou procédures st
 Tout ce qui reste consiste à spécifier les colonnes à retourner. À partir de la `GuestbookComments` select de la table le `Subject`, `Body`, et `CommentDate` colonnes ; retour le `HomeTown`, `HomepageUrl`, et `Signature` colonnes à partir de la `UserProfiles` table ; et retourner `UserName` à partir de `aspnet_Users`. En outre, ajoutez «`ORDER BY CommentDate DESC`» à la fin de la `SELECT` interroger afin que les articles les plus récents sont retournées en premier. Une fois ces sélections effectuées, votre interface de générateur de requêtes doit ressembler à la capture d’écran de la Figure 18.
 
 
-[![La requête construits joint le GuestbookComments, UserProfiles et aspnet_Users Tables](storing-additional-user-information-vb/_static/image53.png)](storing-additional-user-information-vb/_static/image52.png)
+[![TIl construits requête joint la GuestbookComments, UserProfiles et les Tables aspnet_Users](storing-additional-user-information-vb/_static/image53.png)](storing-additional-user-information-vb/_static/image52.png)
 
 **Figure 18**: La requête construit `JOIN` s le `GuestbookComments`, `UserProfiles`, et `aspnet_Users` Tables ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image54.png))
 
@@ -355,7 +355,7 @@ Mon `ItemTemplate` affiche le sujet du commentaire de chaque livre d’or dans u
 Prenez un moment pour afficher la page via un navigateur. Vous devez voir les commentaires que vous avez ajouté pour le livre d’or à l’étape 5 affichés ici.
 
 
-[![Les commentaires du livre d’or affiche à présent de GuestBook.aspx](storing-additional-user-information-vb/_static/image56.png)](storing-additional-user-information-vb/_static/image55.png)
+[![Guestbook.aspx affiche maintenant les commentaires du livre d’or](storing-additional-user-information-vb/_static/image56.png)](storing-additional-user-information-vb/_static/image55.png)
 
 **Figure 19**: `Guestbook.aspx` Affiche maintenant les commentaires du livre d’or ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image57.png))
 
@@ -402,7 +402,7 @@ Ensuite, la chaîne de connexion est récupérée à partir de `Web.config` et `
 Visitez le `EnhancedCreateUserWizard.aspx` page via un navigateur et créer un nouveau compte d’utilisateur. Après cela, retournez dans Visual Studio et examinez le contenu de la `aspnet_Users` et `UserProfiles` tables (par exemple, nous l’avons fait dans la Figure 12). Vous devez voir le nouveau compte d’utilisateur dans `aspnet_Users` et correspondante `UserProfiles` ligne (avec `NULL` valeurs pour `HomeTown`, `HomepageUrl`, et `Signature`).
 
 
-[![Un nouveau compte d’utilisateur et un enregistrement de UserProfiles ont été ajoutés.](storing-additional-user-information-vb/_static/image59.png)](storing-additional-user-information-vb/_static/image58.png)
+[![A Nouveau compte d’utilisateur et un enregistrement de UserProfiles ont été ajoutées](storing-additional-user-information-vb/_static/image59.png)](storing-additional-user-information-vb/_static/image58.png)
 
 **Figure 20**: Un nouveau compte d’utilisateur et `UserProfiles` enregistrement ont été ajoutés ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image60.png))
 
@@ -438,7 +438,7 @@ Lorsque vous ajoutez un personnalisé `WizardStep` au contrôle CreateUserWizard
 La figure 21 illustre le flux de travail lors de l’ajout `WizardStep` précède le `CreateUserWizardStep`. Étant donné que les informations utilisateur supplémentaires ont été collectées par le temps le `CreatedUser` événement est déclenché, il nous suffit est mise à jour le `CreatedUser` Gestionnaire d’événements à récupérer ces entrées et utilisez-les pour le `INSERT` les valeurs de paramètre de l’instruction (au lieu de `DBNull.Value`).
 
 
-[![Le flux de travail CreateUserWizard quand un WizardStep supplémentaire précède le CreateUserWizardStep](storing-additional-user-information-vb/_static/image62.png)](storing-additional-user-information-vb/_static/image61.png)
+[![TIl CreateUserWizard Workflow lorsqu’un WizardStep supplémentaire précède le CreateUserWizardStep](storing-additional-user-information-vb/_static/image62.png)](storing-additional-user-information-vb/_static/image61.png)
 
 **Figure 21**: CreateUserWizard Workflow lorsqu’un supplémentaires `WizardStep` Precedes le `CreateUserWizardStep` ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image63.png))
 
@@ -446,7 +446,7 @@ La figure 21 illustre le flux de travail lors de l’ajout `WizardStep` précèd
 Si personnalisé `WizardStep` est placé *après* le `CreateUserWizardStep`, toutefois, le processus de compte d’utilisateur créer se produit avant que l’utilisateur a eu l’occasion d’entrer son ville natale, la page d’accueil ou la signature. Dans ce cas, ces informations supplémentaires doivent être insérées dans la base de données une fois que le compte d’utilisateur a été créé, comme l’illustre la Figure 22.
 
 
-[![Le flux de travail CreateUserWizard quand un WizardStep supplémentaire vient après le CreateUserWizardStep](storing-additional-user-information-vb/_static/image65.png)](storing-additional-user-information-vb/_static/image64.png)
+[![TIl CreateUserWizard Workflow lorsqu’un supplémentaires WizardStep est fourni après le CreateUserWizardStep](storing-additional-user-information-vb/_static/image65.png)](storing-additional-user-information-vb/_static/image64.png)
 
 **Figure 22**: CreateUserWizard Workflow lorsqu’un supplémentaires `WizardStep` est fourni après le `CreateUserWizardStep` ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image66.png))
 
@@ -458,7 +458,7 @@ Pour ce didacticiel nous allons créer un `WizardStep` qui se produit après la 
 À partir de la balise active du contrôle CreateUserWizard, sélectionnez le « Ajout/suppression `WizardStep` s », qui fait apparaître le `WizardStep` boîte de dialogue Éditeur de Collection. Ajouter un nouveau `WizardStep`, ce qui affecte ses `ID` à `UserSettings`, ses `Title` à « Paramètres de votre » et ses `StepType` à `Step`. Puis de les positionner afin qu’il vient après le `CreateUserWizardStep` (« s’abonner pour votre nouveau compte ») et avant le `CompleteWizardStep` (« Complete »), comme illustré dans la Figure 23.
 
 
-[![Ajouter un nouveau WizardStep au contrôle CreateUserWizard](storing-additional-user-information-vb/_static/image68.png)](storing-additional-user-information-vb/_static/image67.png)
+[![Ajj un nouveau WizardStep au contrôle CreateUserWizard](storing-additional-user-information-vb/_static/image68.png)](storing-additional-user-information-vb/_static/image67.png)
 
 **Figure 23**: Ajout d’un nouveau `WizardStep` au contrôle CreateUserWizard ([cliquez pour afficher l’image en taille réelle](storing-additional-user-information-vb/_static/image69.png))
 

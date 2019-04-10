@@ -8,15 +8,15 @@ ms.date: 06/27/2014
 ms.assetid: 0e6fb03c-b16d-4bb0-ab0b-552bd2b6ece1
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-actions-and-functions
 msc.type: authoredcontent
-ms.openlocfilehash: 45b84ec4ee76e83ece99bf6841c28e13c3ab7728
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6b0388c0e60f4a81ddb52a13fe2d05c2c7d27313
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063226"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380858"
 ---
-<a name="actions-and-functions-in-odata-v4-using-aspnet-web-api-22"></a>Actions et fonctions dans OData v4 à l’aide d’ASP.NET Web API 2.2
-====================
+# <a name="actions-and-functions-in-odata-v4-using-aspnet-web-api-22"></a>Actions et fonctions dans OData v4 à l’aide d’ASP.NET Web API 2.2
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 > Dans OData, les fonctions et les actions sont un moyen pour ajouter des comportements côté serveur qui ne sont pas facilement définies en tant qu’opérations CRUD sur les entités. Ce didacticiel montre comment ajouter des fonctions et les actions à un point de terminaison de v4 OData, à l’aide de Web API 2.2. Le didacticiel s’appuie sur le didacticiel [créer une Using ASP.NET Web API 2 OData v4 point de terminaison](create-an-odata-v4-endpoint.md)

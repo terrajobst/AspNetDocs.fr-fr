@@ -8,15 +8,15 @@ ms.date: 01/12/2012
 ms.assetid: 8921d7f2-21f0-427a-8b27-2df7251174b0
 msc.legacyurl: /mvc/overview/older-versions/working-with-the-dropdownlist-box-and-jquery/examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper
 msc.type: authoredcontent
-ms.openlocfilehash: ef83ef22e17ab7bda035d0f11ab936fe56d58800
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 20de66ab773a9172fd8ae8ea713c361c289b944c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423024"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398538"
 ---
-<a name="examining--how--aspnet-mvc-scaffolds-the-dropdownlist-helper"></a>Examen de la façon dont ASP.NET MVC génère un modèle automatique du helper DropDownList
-====================
+# <a name="examining--how--aspnet-mvc-scaffolds-the-dropdownlist-helper"></a>Examen de la façon dont ASP.NET MVC génère un modèle automatique du helper DropDownList
+
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 Dans **l’Explorateur de solutions**, cliquez sur le *contrôleurs* dossier, puis sélectionnez **ajouter un contrôleur**. Nommez le contrôleur **StoreManagerController**. Définir les options de la **ajouter un contrôleur** boîte de dialogue comme illustré dans l’image ci-dessous.

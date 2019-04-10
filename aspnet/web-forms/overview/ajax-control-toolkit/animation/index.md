@@ -8,15 +8,15 @@ ms.date: 11/11/2011
 ms.assetid: 90b3a37e-2694-41c4-8b10-d6893b53a9d4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation
 msc.type: chapter
-ms.openlocfilehash: b835d4e24b938a8ed192f21709cbde771af9c896
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 728d56583fb4192d87d01febf512668068256150
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023386"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398044"
 ---
-<a name="animation"></a>Animation
-====================
+# <a name="animation"></a>Animation
+
 > Ce didacticiel montre comment créer des animations à l’aide de l’infrastructure de l’animation et le contrôle d’Animation.
 
 
@@ -28,7 +28,7 @@ ms.locfileid: "57023386"
 - [Animation en réponse à une interaction utilisateur (C#)](animating-in-response-to-user-interaction-cs.md)
 - [Désactivation d’actions pendant une animation (C#)](disabling-actions-during-animation-cs.md)
 - [Déclenchement d’une animation dans un autre contrôle (C#)](triggering-an-animation-in-another-control-cs.md)
-- [Modification d’animations depuis le côté serveur (C#)](modifying-animations-from-the-server-side-cs.md)
+- [Modification d’animations à partir du côté serveur (C#)](modifying-animations-from-the-server-side-cs.md)
 - [Exécution d’animations avec du code côté client (C#)](executing-animations-using-client-side-code-cs.md)
 - [Changement d’une animation avec du code côté client (C#)](changing-an-animation-using-client-side-code-cs.md)
 - [Animation d’un contrôle UpdatePanel (C#)](animating-an-updatepanel-control-cs.md)
@@ -41,7 +41,7 @@ ms.locfileid: "57023386"
 - [Animation en réponse à une interaction utilisateur (VB)](animating-in-response-to-user-interaction-vb.md)
 - [Désactivation d’actions pendant une animation (VB)](disabling-actions-during-animation-vb.md)
 - [Déclenchement d’une animation dans un autre contrôle (VB)](triggering-an-animation-in-another-control-vb.md)
-- [Modification d’animations depuis le côté serveur (VB)](modifying-animations-from-the-server-side-vb.md)
+- [Modification d’animations à partir du côté serveur (VB)](modifying-animations-from-the-server-side-vb.md)
 - [Exécution d’animations avec du code côté client (VB)](executing-animations-using-client-side-code-vb.md)
 - [Changement d’une animation avec du code côté client (VB)](changing-an-animation-using-client-side-code-vb.md)
 - [Animation d’un contrôle UpdatePanel (VB)](animating-an-updatepanel-control-vb.md)

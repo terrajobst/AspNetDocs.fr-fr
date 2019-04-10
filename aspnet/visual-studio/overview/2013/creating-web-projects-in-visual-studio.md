@@ -8,15 +8,15 @@ ms.date: 12/01/2014
 ms.assetid: 61941e64-0c0d-4996-9270-cb8ccfd0cabc
 msc.legacyurl: /visual-studio/overview/2013/creating-web-projects-in-visual-studio
 msc.type: authoredcontent
-ms.openlocfilehash: 3d96d796d22c3511fedc45c024274300143b119b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a62c821159cd097507019d5efb29e01958ec9fba
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398097"
 ---
-<a name="creating-aspnet-web-projects-in-visual-studio-2013"></a>Création de projets web ASP.NET dans Visual Studio 2013
-====================
+# <a name="creating-aspnet-web-projects-in-visual-studio-2013"></a>Création de projets web ASP.NET dans Visual Studio 2013
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette rubrique explique les options de création de projets web ASP.NET dans Visual Studio 2013 avec Update 3
@@ -81,7 +81,7 @@ Visual Studio inclut des fonctionnalités qui facilitent l’utilisation des ser
 - Créer et gérer des applications web ou des machines virtuelles qui rendent votre application disponible sur Internet.
 - Afficher les journaux créés par l’application en cours d’exécution dans le cloud.
 - Exécuter en mode débogage à distance alors que l’application s’exécute dans le cloud.
-- Viiew et gérer d’autres services tels que des bases de données SQL Azure.
+- Affichez et gérez les autres services tels que des bases de données SQL Azure.
 
 Vous pouvez [créer un compte Azure](https://www.windowsazure.com/pricing/free-trial/) qui inclut des services de base telles que les applications web gratuitement, et si vous êtes abonné à MSDN, vous pouvez [activer les avantages](https://azure.microsoft.com/pricing/member-offers/visual-studio-subscriptions/) qui fournissent des crédits mensuels vers Azure supplémentaires Services. 
 

@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: c8d93e11-ef78-4a30-afbc-f30419000a60
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 070dd4c9d68327eec52fe385000b9ca3907eaa9f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5f8eeeaa9bd77c0259f680198e57ade8d49cd06b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051936"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382615"
 ---
-<a name="creating-an-action-vb"></a>Création d’une action (VB)
-====================
+# <a name="creating-an-action-vb"></a>Création d’une action (VB)
+
 by [Microsoft](https://github.com/microsoft)
 
 > Découvrez comment ajouter une nouvelle action à un contrôleur ASP.NET MVC. En savoir plus sur la configuration requise pour une méthode devant subir une action.
@@ -57,7 +57,7 @@ Si vous devez créer une méthode publique dans une classe de contrôleur et vou
 Si vous tentez d’appeler l’action du contrôleur CompanySecrets() en tapant /Work/CompanySecrets dans la barre d’adresses de votre navigateur vous allez obtenir le message d’erreur dans la Figure 1.
 
 
-[![Appel d’une méthode NonAction](creating-an-action-vb/_static/image1.jpg)](creating-an-action-vb/_static/image1.png)
+[![Invoking une méthode NonAction](creating-an-action-vb/_static/image1.jpg)](creating-an-action-vb/_static/image1.png)
 
 **Figure 01**: Appel d’une méthode NonAction ([cliquez pour afficher l’image en taille réelle](creating-an-action-vb/_static/image2.png))
 

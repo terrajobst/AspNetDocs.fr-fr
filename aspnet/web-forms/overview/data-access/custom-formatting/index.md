@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 320b7d26-837f-4fa7-a242-1ab82f8bdbe9
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting
 msc.type: chapter
-ms.openlocfilehash: 72a9b91b6d646d5c7d9d3105b4c36eec38a98236
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 180059218bdbff4cb25249b0848fb2752fbbb75c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402919"
 ---
-<a name="custom-formatting"></a>Mise en forme personnalisée
-====================
+# <a name="custom-formatting"></a>Mise en forme personnalisée
+
 > Ces didacticiels examiner comment personnaliser l’affichage des données lors de la liaison de données à l’aide de gestionnaires d’événements dans les contrôles GridView, DetailsView et FormView.
 
 

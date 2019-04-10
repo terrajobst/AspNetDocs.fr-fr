@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 21ece509-79cc-4d9d-892d-7b6e9c4d3502
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-after-each-other-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 89412c078bbe40f06d31327d0a17bf3ea8bc8314
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 53984f03cf01caab859f44fdc018b1598ed62def
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052576"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383042"
 ---
-<a name="executing-several-animations-after-each-other-vb"></a>Exécution de plusieurs animations l’une après l’autre (VB)
-====================
+# <a name="executing-several-animations-after-each-other-vb"></a>Exécution de plusieurs animations l’une après l’autre (VB)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation3.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation3VB.pdf)
@@ -53,12 +53,12 @@ Dans le `<Animations>` nœud, utilisez `<OnLoad>` pour exécuter les animations,
 Lorsque vous exécutez ce script, le panneau première obtient ensuite petite et plus large.
 
 
-[![Tout d’abord la largeur est augmentée.](executing-several-animations-after-each-other-vb/_static/image2.png)](executing-several-animations-after-each-other-vb/_static/image1.png)
+[![Fla largeur est augmentée d’Ier](executing-several-animations-after-each-other-vb/_static/image2.png)](executing-several-animations-after-each-other-vb/_static/image1.png)
 
 Tout d’abord la largeur est augmentée ([cliquez pour afficher l’image en taille réelle](executing-several-animations-after-each-other-vb/_static/image3.png))
 
 
-[![Puis diminue la hauteur](executing-several-animations-after-each-other-vb/_static/image5.png)](executing-several-animations-after-each-other-vb/_static/image4.png)
+[![Tla hauteur est diminuée de poule](executing-several-animations-after-each-other-vb/_static/image5.png)](executing-several-animations-after-each-other-vb/_static/image4.png)
 
 Puis diminue la hauteur ([cliquez pour afficher l’image en taille réelle](executing-several-animations-after-each-other-vb/_static/image6.png))
 

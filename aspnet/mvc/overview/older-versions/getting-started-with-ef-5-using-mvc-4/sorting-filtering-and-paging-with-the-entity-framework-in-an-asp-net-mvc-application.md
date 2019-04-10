@@ -8,15 +8,15 @@ ms.date: 07/30/2013
 ms.assetid: 8af630e0-fffa-4110-9eca-c96e201b2724
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: afd1551d72fa3a5b925d7499c86731db4b6f0b61
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 4220327388703b773011921bb206976b04b07e34
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422010"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397901"
 ---
-<a name="sorting-filtering-and-paging-with-the-entity-framework-in-an-aspnet-mvc-application-3-of-10"></a>Tri, filtrage et pagination avec Entity Framework dans une Application ASP.NET MVC (3 sur 10)
-====================
+# <a name="sorting-filtering-and-paging-with-the-entity-framework-in-an-aspnet-mvc-application-3-of-10"></a>Tri, filtrage et pagination avec Entity Framework dans une Application ASP.NET MVC (3 sur 10)
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet terminé](http://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
@@ -310,11 +310,11 @@ Base de données SQL Windows Azure est un service de base de données relationne
     ![Importer les paramètres de publication](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image19.png)
 3. Si vous n’avez pas précédemment ajouté votre abonnement Windows Azure dans Visual Studio, procédez comme suit. Dans ces étapes, vous ajoutez votre abonnement afin que la liste déroulante figurant sous **importer à partir d’un site web Windows Azure** inclura votre site web.
 
-    a. Dans le **importer un profil de publication** boîte de dialogue, cliquez sur **importer à partir d’un site web Windows Azure**, puis cliquez sur **abonnement ajouter Windows Azure**.
+    A. Dans le **importer un profil de publication** boîte de dialogue, cliquez sur **importer à partir d’un site web Windows Azure**, puis cliquez sur **abonnement ajouter Windows Azure**.
 
     ![ajouter l’abonnement Windows Azure](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image20.png)
 
-    b. Dans le **importer les abonnements Windows Azure** boîte de dialogue, cliquez sur **télécharger le fichier abonnement**.
+    B. Dans le **importer les abonnements Windows Azure** boîte de dialogue, cliquez sur **télécharger le fichier abonnement**.
 
     ![Téléchargez le fichier d’abonnement](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image21.png)
 

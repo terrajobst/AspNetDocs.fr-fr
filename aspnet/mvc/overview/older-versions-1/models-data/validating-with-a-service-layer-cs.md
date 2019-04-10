@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-cs
-title: Validation avec une couche de Service (C#) | Microsoft Docs
+title: Validation avec une couche de Service (c#) | Microsoft Docs
 author: StephenWalther
 description: Découvrez comment déplacer votre logique de validation en dehors de vos actions de contrôleur et dans une couche de service distinct. Dans ce didacticiel, Stephen Walther explique comment vous...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 4eabc535-b8a1-43f5-bb99-cfeb86db0fca
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 69ff78949589017d12a791231e38b400b49f2917
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9b2a7e00b3c50a946ad0f2518880892f103a5c1b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051836"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387111"
 ---
-<a name="validating-with-a-service-layer-c"></a>Validation avec une couche de service (C#)
-====================
+# <a name="validating-with-a-service-layer-c"></a>Validation avec une couche de service (C#)
+
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Découvrez comment déplacer votre logique de validation en dehors de vos actions de contrôleur et dans une couche de service distinct. Dans ce didacticiel, Stephen Walther explique comment vous pouvez conserver une sharp séparation des préoccupations en isolant votre couche de service à partir de votre couche de contrôleur.

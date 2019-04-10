@@ -8,15 +8,15 @@ ms.date: 01/10/2008
 ms.assetid: b1abfcaa-3b7d-42b9-be11-38904910ece0
 msc.legacyurl: /web-forms/videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures
 msc.type: video
-ms.openlocfilehash: d5acda503cbdaa6f4e05fddc374745f26a9fb5a6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cbfa28aa6814df404337a8a5d739e2b3c15d31a5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051626"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385005"
 ---
-<a name="how-do-i-linq-to-sql-using-stored-procedures"></a>[Comment faire] LINQ to SQL : Utilisation des procédures stockées
-====================
+# <a name="how-do-i-linq-to-sql-using-stored-procedures"></a>[Comment faire] LINQ to SQL : Utilisation des procédures stockées
+
 par [Scott Stanfield](https://github.com/scottstanfield)
 
 À l’aide des fonctions et des procédures stockées existantes est facile avec LINQ. Nous simplement glisser les procédures stockées de la surface de mappage O/R et les appeler à partir de l’objet de contexte de données généré.

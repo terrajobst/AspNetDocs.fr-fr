@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-cs
-title: Exécution d’Animations avec Code côté Client (C#) | Microsoft Docs
+title: Exécution d’Animations avec Code côté Client (c#) | Microsoft Docs
 author: wenz
 description: Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. L’exécution de l’animation...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 0270e0df-6fde-4a8f-a2cb-2cacc55143f2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a8812b3b9f9a34b34a579d6f5595b9ffc175caa4
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 45a3d42d9e58469c789acfdc8cdaaf88b7920892
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58420984"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387088"
 ---
-<a name="executing-animations-using-client-side-code-c"></a>Exécution d’animations avec du code côté client (C#)
-====================
+# <a name="executing-animations-using-client-side-code-c"></a>Exécution d’animations avec du code côté client (C#)
+
 par [Christian Wenz](https://github.com/wenz)
 
 [Télécharger le Code](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation10.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation10CS.pdf)
@@ -63,7 +63,7 @@ Voici le code JavaScript côté client complet qui émule le, cliquez sur le pan
 [!code-html[Main](executing-animations-using-client-side-code-cs/samples/sample8.html)]
 
 
-[![L’animation s’exécute immédiatement, sans un clic de souris](executing-animations-using-client-side-code-cs/_static/image2.png)](executing-animations-using-client-side-code-cs/_static/image1.png)
+[![Tanimation de he s’exécute immédiatement, sans un clic de souris](executing-animations-using-client-side-code-cs/_static/image2.png)](executing-animations-using-client-side-code-cs/_static/image1.png)
 
 L’animation s’exécute immédiatement, sans un clic de souris ([cliquez pour afficher l’image en taille réelle](executing-animations-using-client-side-code-cs/_static/image3.png))
 

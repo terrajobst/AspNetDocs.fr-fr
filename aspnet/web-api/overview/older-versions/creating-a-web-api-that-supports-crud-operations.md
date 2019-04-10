@@ -1,27 +1,28 @@
 ---
 uid: web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
-title: Activation des opérations CRUD dans ASP.NET Web API 1 | Microsoft Docs
+title: Activation des opérations CRUD dans ASP.NET Web API 1 - ASP.NET 4.x
 author: MikeWasson
-description: Ce didacticiel montre comment prendre en charge des opérations CRUD dans un service HTTP à l’aide d’API Web ASP.NET. Versions des logiciels utilisées dans le didacticiel Visual Studio 2012 Web point d’accès...
+description: Didacticiel montre comment prendre en charge des opérations CRUD dans un service HTTP à l’aide des API Web ASP.NET pour ASP.NET 4.x.
 ms.author: riande
 ms.date: 01/28/2012
+ms.custom: seoapril2019
 ms.assetid: c125ca47-606a-4d6f-a1fc-1fc62928af93
 msc.legacyurl: /web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
 msc.type: authoredcontent
-ms.openlocfilehash: f3cb0004075ef7687ca1096bd407c342b4d0b7be
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 855c3fa35d82173c87d13adb51e10fd13698ade5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423744"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381352"
 ---
-<a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Activation des opérations CRUD dans ASP.NET Web API 1
-====================
+# <a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Activation des opérations CRUD dans ASP.NET Web API 1
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 [Télécharger le projet terminé](http://code.msdn.microsoft.com/ASP-NET-Web-API-Tutorial-c4761894)
 
-> Ce didacticiel montre comment prendre en charge des opérations CRUD dans un service HTTP à l’aide d’API Web ASP.NET.
+> Ce didacticiel montre comment prendre en charge des opérations CRUD dans un service HTTP à l’aide des API Web ASP.NET pour ASP.NET 4.x.
 > 
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versions des logiciels utilisées dans le didacticiel
 > 
@@ -101,7 +102,7 @@ Dans l’Explorateur de solutions, cliquez sur le **modèles** dossier. Sélecti
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image4.png)
 
-Dans le **modèles** volet, sélectionnez **modèles installés** et développez le nœud C#. Dans C#, sélectionnez **Code**. Dans la liste des modèles de code, sélectionnez **Interface**. Nom de l’interface &quot;IProductRepository&quot;.
+Dans le **modèles** volet, sélectionnez **modèles installés** et développez le nœud c#. Dans c#, sélectionnez **Code**. Dans la liste des modèles de code, sélectionnez **Interface**. Nom de l’interface &quot;IProductRepository&quot;.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image5.png)
 

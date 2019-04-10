@@ -8,15 +8,15 @@ ms.date: 10/04/2013
 ms.assetid: 46cbfe20-b4dc-449b-9016-80657dd44fbe
 msc.legacyurl: /visual-studio/overview/2013/using-browser-link
 msc.type: authoredcontent
-ms.openlocfilehash: f470aa7e425d16aec3f67d2a0ebb664a3e7eac41
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 723a38de4569b0bb58817c70aabb84fef8e19591
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055036"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395093"
 ---
-<a name="using-browser-link-in-visual-studio-2013"></a>À l’aide du lien du navigateur dans Visual Studio 2013
-====================
+# <a name="using-browser-link-in-visual-studio-2013"></a>À l’aide du lien du navigateur dans Visual Studio 2013
+
 par [Mike Wasson](https://github.com/MikeWasson)
 
 Lien du navigateur est une nouvelle fonctionnalité dans Visual Studio 2013 qui crée un canal de communication entre l’environnement de développement et un ou plusieurs navigateurs web. Vous pouvez utiliser le lien du navigateur pour actualiser votre application web dans plusieurs navigateurs à la fois, ce qui est utile pour les tests dans plusieurs navigateurs.
