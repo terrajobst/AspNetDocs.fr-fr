@@ -8,17 +8,17 @@ ms.date: 04/20/2009
 ms.assetid: 8ccbfcee-a2e4-496d-aded-5a7119c54244
 msc.legacyurl: /web-forms/videos/building-35-applications/submit-and-postback
 msc.type: video
-ms.openlocfilehash: 7057bcff86c07897eea0353549835becc4a2bfe4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f2d27c6d624ceafbdc3f880ffc2a91cae0fddddf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060766"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392896"
 ---
-<a name="submit-and-postback"></a><span data-ttu-id="d322a-103">Envoi et publication (postback)</span><span class="sxs-lookup"><span data-stu-id="d322a-103">Submit and Postback</span></span>
-====================
-<span data-ttu-id="d322a-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="d322a-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+# <a name="submit-and-postback"></a><span data-ttu-id="8e9b3-103">Envoi et publication (postback)</span><span class="sxs-lookup"><span data-stu-id="8e9b3-103">Submit and Postback</span></span>
 
-<span data-ttu-id="d322a-105">Cette vidéo explique ce qui se passe &quot;en coulisse&quot; lorsque navigateur et le serveur de votre application ASP.NET interagissent.</span><span class="sxs-lookup"><span data-stu-id="d322a-105">This video explains what goes on &quot;under the covers&quot; when your ASP.NET application's browser and server interact.</span></span>
+<span data-ttu-id="8e9b3-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="8e9b3-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-[<span data-ttu-id="d322a-106">&#9654;Regardez la vidéo (19 minutes)</span><span class="sxs-lookup"><span data-stu-id="d322a-106">&#9654; Watch video (19 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/submit-and-postback)
+<span data-ttu-id="8e9b3-105">Cette vidéo explique ce qui se passe &quot;en coulisse&quot; lorsque navigateur et le serveur de votre application ASP.NET interagissent.</span><span class="sxs-lookup"><span data-stu-id="8e9b3-105">This video explains what goes on &quot;under the covers&quot; when your ASP.NET application's browser and server interact.</span></span>
+
+[<span data-ttu-id="8e9b3-106">&#9654;Regardez la vidéo (19 minutes)</span><span class="sxs-lookup"><span data-stu-id="8e9b3-106">&#9654; Watch video (19 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/submit-and-postback)

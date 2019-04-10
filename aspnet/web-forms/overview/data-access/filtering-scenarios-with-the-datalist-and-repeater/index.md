@@ -8,21 +8,21 @@ ms.date: 10/05/2011
 ms.assetid: 80b17464-8395-4b82-8f11-5d8ee1351d53
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater
 msc.type: chapter
-ms.openlocfilehash: 12d8faeb9c1087cbb67812eba5b2cca7854205be
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 94c467aabb53298299584b80626f9b2234dbebfe
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020646"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404063"
 ---
-<a name="filtering-scenarios-with-the-datalist-and-repeater"></a><span data-ttu-id="058ea-103">Scénarios de filtrage avec les contrôles DataList et Repeater</span><span class="sxs-lookup"><span data-stu-id="058ea-103">Filtering Scenarios with the DataList and Repeater</span></span>
-====================
-> <span data-ttu-id="058ea-104">Dans ces didacticiels, vous allez apprendre à afficher les rapports maître/détail à l’aide des listes déroulantes pour les enregistrements maîtres et un contrôle DataList pour plus d’informations.</span><span class="sxs-lookup"><span data-stu-id="058ea-104">In these tutorials you see how to display master/detail reports using drop-down lists for the master records and a DataList control for the details.</span></span>
+# <a name="filtering-scenarios-with-the-datalist-and-repeater"></a><span data-ttu-id="b92da-103">Scénarios de filtrage avec les contrôles DataList et Repeater</span><span class="sxs-lookup"><span data-stu-id="b92da-103">Filtering Scenarios with the DataList and Repeater</span></span>
+
+> <span data-ttu-id="b92da-104">Dans ces didacticiels, vous allez apprendre à afficher les rapports maître/détail à l’aide des listes déroulantes pour les enregistrements maîtres et un contrôle DataList pour plus d’informations.</span><span class="sxs-lookup"><span data-stu-id="b92da-104">In these tutorials you see how to display master/detail reports using drop-down lists for the master records and a DataList control for the details.</span></span>
 
 
-- [<span data-ttu-id="058ea-105">Filtrage maître/détail avec une DropDownList (C#)</span><span class="sxs-lookup"><span data-stu-id="058ea-105">Master/Detail Filtering With a DropDownList (C#)</span></span>](master-detail-filtering-with-a-dropdownlist-datalist-cs.md)
-- [<span data-ttu-id="058ea-106">Filtrage maître/détail sur deux pages (C#)</span><span class="sxs-lookup"><span data-stu-id="058ea-106">Master/Detail Filtering Across Two Pages (C#)</span></span>](master-detail-filtering-acess-two-pages-datalist-cs.md)
-- [<span data-ttu-id="058ea-107">Représentation maître/détail avec une liste à puces des enregistrements maîtres avec une DataList des détails (C#)</span><span class="sxs-lookup"><span data-stu-id="058ea-107">Master/Detail Using a Bulleted List of Master Records with a Details DataList (C#)</span></span>](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs.md)
-- [<span data-ttu-id="058ea-108">Filtrage maître/détail avec une DropDownList (VB)</span><span class="sxs-lookup"><span data-stu-id="058ea-108">Master/Detail Filtering With a DropDownList (VB)</span></span>](master-detail-filtering-with-a-dropdownlist-datalist-vb.md)
-- [<span data-ttu-id="058ea-109">Filtrage maître/détail sur deux pages (VB)</span><span class="sxs-lookup"><span data-stu-id="058ea-109">Master/Detail Filtering Across Two Pages (VB)</span></span>](master-detail-filtering-acess-two-pages-datalist-vb.md)
-- [<span data-ttu-id="058ea-110">Représentation maître/détail avec une liste à puces des enregistrements maîtres avec une DataList des détails (VB)</span><span class="sxs-lookup"><span data-stu-id="058ea-110">Master/Detail Using a Bulleted List of Master Records with a Details DataList (VB)</span></span>](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb.md)
+- [<span data-ttu-id="b92da-105">Filtrage maître/détail avec une DropDownList (C#)</span><span class="sxs-lookup"><span data-stu-id="b92da-105">Master/Detail Filtering With a DropDownList (C#)</span></span>](master-detail-filtering-with-a-dropdownlist-datalist-cs.md)
+- [<span data-ttu-id="b92da-106">Filtrage maître/détail sur deux pages (C#)</span><span class="sxs-lookup"><span data-stu-id="b92da-106">Master/Detail Filtering Across Two Pages (C#)</span></span>](master-detail-filtering-acess-two-pages-datalist-cs.md)
+- [<span data-ttu-id="b92da-107">Représentation maître/détail avec une liste à puces des enregistrements maîtres avec une DataList des détails (C#)</span><span class="sxs-lookup"><span data-stu-id="b92da-107">Master/Detail Using a Bulleted List of Master Records with a Details DataList (C#)</span></span>](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs.md)
+- [<span data-ttu-id="b92da-108">Filtrage maître/détail avec une DropDownList (VB)</span><span class="sxs-lookup"><span data-stu-id="b92da-108">Master/Detail Filtering With a DropDownList (VB)</span></span>](master-detail-filtering-with-a-dropdownlist-datalist-vb.md)
+- [<span data-ttu-id="b92da-109">Filtrage maître/détail sur deux pages (VB)</span><span class="sxs-lookup"><span data-stu-id="b92da-109">Master/Detail Filtering Across Two Pages (VB)</span></span>](master-detail-filtering-acess-two-pages-datalist-vb.md)
+- [<span data-ttu-id="b92da-110">Représentation maître/détail avec une liste à puces des enregistrements maîtres avec une DataList des détails (VB)</span><span class="sxs-lookup"><span data-stu-id="b92da-110">Master/Detail Using a Bulleted List of Master Records with a Details DataList (VB)</span></span>](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb.md)

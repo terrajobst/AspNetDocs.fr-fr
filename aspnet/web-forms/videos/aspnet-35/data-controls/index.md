@@ -8,17 +8,17 @@ ms.date: 11/14/2011
 ms.assetid: 62fc223f-9c29-4af9-bdb7-902103d5cff1
 msc.legacyurl: /web-forms/videos/aspnet-35/data-controls
 msc.type: chapter
-ms.openlocfilehash: 4425c5f2ebeb327e251db1309f397a1b54438833
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 17ec29cb24d0cd6943a821190d5cbabee69a58d2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020506"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397381"
 ---
-<a name="data-controls"></a><span data-ttu-id="91350-103">Contrôles de données</span><span class="sxs-lookup"><span data-stu-id="91350-103">Data Controls</span></span>
-====================
-> <span data-ttu-id="91350-104">Cette série de vidéos explique en détail comment utiliser les nouvelles fonctionnalités de contrôle de données avec ASP.NET 3.5</span><span class="sxs-lookup"><span data-stu-id="91350-104">This set of videos explores how to use new data control features with ASP.NET 3.5</span></span>
+# <a name="data-controls"></a><span data-ttu-id="8dfb9-103">Contrôles de données</span><span class="sxs-lookup"><span data-stu-id="8dfb9-103">Data Controls</span></span>
+
+> <span data-ttu-id="8dfb9-104">Cette série de vidéos explique en détail comment utiliser les nouvelles fonctionnalités de contrôle de données avec ASP.NET 3.5</span><span class="sxs-lookup"><span data-stu-id="8dfb9-104">This set of videos explores how to use new data control features with ASP.NET 3.5</span></span>
 
 
-- [<span data-ttu-id="91350-105">Contrôle ListView</span><span class="sxs-lookup"><span data-stu-id="91350-105">ListView Control</span></span>](the-listview-control.md)
-- [<span data-ttu-id="91350-106">Contrôle DataPager</span><span class="sxs-lookup"><span data-stu-id="91350-106">DataPager Control</span></span>](the-datapager-control.md)
+- [<span data-ttu-id="8dfb9-105">Contrôle ListView</span><span class="sxs-lookup"><span data-stu-id="8dfb9-105">ListView Control</span></span>](the-listview-control.md)
+- [<span data-ttu-id="8dfb9-106">Contrôle DataPager</span><span class="sxs-lookup"><span data-stu-id="8dfb9-106">DataPager Control</span></span>](the-datapager-control.md)

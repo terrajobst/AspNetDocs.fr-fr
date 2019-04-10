@@ -8,20 +8,20 @@ ms.date: 05/12/2012
 ms.assetid: 31f2a034-e4d0-401b-be29-209a274a192e
 msc.legacyurl: /web-api/overview/testing-and-debugging
 msc.type: chapter
-ms.openlocfilehash: 1d9e55d5ccd21d730b24b503017697b46c653722
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8b1241294f28441c19a34ef5471883db9d50a529
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398057"
 ---
-<a name="testing-and-debugging-aspnet-web-api"></a><span data-ttu-id="e426c-103">Test et débogage des API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="e426c-103">Testing and Debugging ASP.NET Web API</span></span>
-====================
-> <span data-ttu-id="e426c-104">Test et débogage des API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="e426c-104">Testing and debugging ASP.NET Web API</span></span>
+# <a name="testing-and-debugging-aspnet-web-api"></a><span data-ttu-id="4f62b-103">Test et débogage des API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="4f62b-103">Testing and Debugging ASP.NET Web API</span></span>
+
+> <span data-ttu-id="4f62b-104">Test et débogage des API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="4f62b-104">Testing and debugging ASP.NET Web API</span></span>
 
 
-- [<span data-ttu-id="e426c-105">Traçage dans Web API 2</span><span class="sxs-lookup"><span data-stu-id="e426c-105">Tracing in Web API 2</span></span>](tracing-in-aspnet-web-api.md)
-- [<span data-ttu-id="e426c-106">Tests unitaires dans Web API 2</span><span class="sxs-lookup"><span data-stu-id="e426c-106">Unit Testing Web API 2</span></span>](unit-testing-with-aspnet-web-api.md)
-- [<span data-ttu-id="e426c-107">Tests unitaires des contrôleurs dans ASP.NET Web API 2</span><span class="sxs-lookup"><span data-stu-id="e426c-107">Unit Testing Controllers in ASP.NET Web API 2</span></span>](unit-testing-controllers-in-web-api.md)
-- [<span data-ttu-id="e426c-108">Simulation d’Entity Framework lors des tests unitaires de Web API 2</span><span class="sxs-lookup"><span data-stu-id="e426c-108">Mocking Entity Framework when Unit Testing Web API 2</span></span>](mocking-entity-framework-when-unit-testing-aspnet-web-api-2.md)
-- [<span data-ttu-id="e426c-109">Résolution des problèmes des erreurs HTTP 405 après la publication d’applications Web API 2</span><span class="sxs-lookup"><span data-stu-id="e426c-109">Troubleshooting HTTP 405 Errors after Publishing Web API 2 Applications</span></span>](troubleshooting-http-405-errors-after-publishing-web-api-applications.md)
+- [<span data-ttu-id="4f62b-105">Traçage dans Web API 2</span><span class="sxs-lookup"><span data-stu-id="4f62b-105">Tracing in Web API 2</span></span>](tracing-in-aspnet-web-api.md)
+- [<span data-ttu-id="4f62b-106">Tests unitaires dans Web API 2</span><span class="sxs-lookup"><span data-stu-id="4f62b-106">Unit Testing Web API 2</span></span>](unit-testing-with-aspnet-web-api.md)
+- [<span data-ttu-id="4f62b-107">Tests unitaires des contrôleurs dans ASP.NET Web API 2</span><span class="sxs-lookup"><span data-stu-id="4f62b-107">Unit Testing Controllers in ASP.NET Web API 2</span></span>](unit-testing-controllers-in-web-api.md)
+- [<span data-ttu-id="4f62b-108">Simulation d’Entity Framework lors des tests unitaires de Web API 2</span><span class="sxs-lookup"><span data-stu-id="4f62b-108">Mocking Entity Framework when Unit Testing Web API 2</span></span>](mocking-entity-framework-when-unit-testing-aspnet-web-api-2.md)
+- [<span data-ttu-id="4f62b-109">Résolution des problèmes des erreurs HTTP 405 après la publication d’applications Web API 2</span><span class="sxs-lookup"><span data-stu-id="4f62b-109">Troubleshooting HTTP 405 Errors after Publishing Web API 2 Applications</span></span>](troubleshooting-http-405-errors-after-publishing-web-api-applications.md)

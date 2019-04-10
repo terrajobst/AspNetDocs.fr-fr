@@ -8,19 +8,19 @@ ms.date: 11/11/2011
 ms.assetid: afd41278-b4c5-43ee-9845-2b665932dcff
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/accordion
 msc.type: chapter
-ms.openlocfilehash: 86e1e368165d40b8d0fc1e2c24dde862c1691822
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fc382829334b9b55a86cd4556f43575c36874a92
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59378368"
 ---
-<a name="accordion"></a><span data-ttu-id="785aa-103">Accordion</span><span class="sxs-lookup"><span data-stu-id="785aa-103">Accordion</span></span>
-====================
-> <span data-ttu-id="785aa-104">Ce didacticiel montre comment utiliser le contrôle Accordion, qui contient plusieurs volets et permet aux utilisateurs d’afficher un d’eux à la fois.</span><span class="sxs-lookup"><span data-stu-id="785aa-104">This tutorial shows how to use the Accordion control, which contains multiple panes and lets users display one of them at a time.</span></span>
+# <a name="accordion"></a><span data-ttu-id="77e21-103">Accordion</span><span class="sxs-lookup"><span data-stu-id="77e21-103">Accordion</span></span>
+
+> <span data-ttu-id="77e21-104">Ce didacticiel montre comment utiliser le contrôle Accordion, qui contient plusieurs volets et permet aux utilisateurs d’afficher un d’eux à la fois.</span><span class="sxs-lookup"><span data-stu-id="77e21-104">This tutorial shows how to use the Accordion control, which contains multiple panes and lets users display one of them at a time.</span></span>
 
 
-- [<span data-ttu-id="785aa-105">Liaison de données à un Accordion (C#)</span><span class="sxs-lookup"><span data-stu-id="785aa-105">Databinding to an Accordion (C#)</span></span>](databinding-to-an-accordion-cs.md)
-- [<span data-ttu-id="785aa-106">Ajout dynamique du volet Accordion (C#)</span><span class="sxs-lookup"><span data-stu-id="785aa-106">Dynamically Adding Accordion Pane (C#)</span></span>](dynamically-adding-an-accordion-pane-cs.md)
-- [<span data-ttu-id="785aa-107">Liaison de données à un Accordion (VB)</span><span class="sxs-lookup"><span data-stu-id="785aa-107">Databinding to an Accordion (VB)</span></span>](databinding-to-an-accordion-vb.md)
-- [<span data-ttu-id="785aa-108">Ajout dynamique du volet Accordion (VB)</span><span class="sxs-lookup"><span data-stu-id="785aa-108">Dynamically Adding Accordion Pane (VB)</span></span>](dynamically-adding-an-accordion-pane-vb.md)
+- [<span data-ttu-id="77e21-105">Liaison de données à un Accordion (C#)</span><span class="sxs-lookup"><span data-stu-id="77e21-105">Databinding to an Accordion (C#)</span></span>](databinding-to-an-accordion-cs.md)
+- [<span data-ttu-id="77e21-106">Ajout dynamique du volet Accordion (C#)</span><span class="sxs-lookup"><span data-stu-id="77e21-106">Dynamically Adding Accordion Pane (C#)</span></span>](dynamically-adding-an-accordion-pane-cs.md)
+- [<span data-ttu-id="77e21-107">Liaison de données à un Accordion (VB)</span><span class="sxs-lookup"><span data-stu-id="77e21-107">Databinding to an Accordion (VB)</span></span>](databinding-to-an-accordion-vb.md)
+- [<span data-ttu-id="77e21-108">Ajout dynamique du volet Accordion (VB)</span><span class="sxs-lookup"><span data-stu-id="77e21-108">Dynamically Adding Accordion Pane (VB)</span></span>](dynamically-adding-an-accordion-pane-vb.md)
