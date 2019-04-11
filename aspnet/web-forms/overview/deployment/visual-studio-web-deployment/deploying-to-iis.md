@@ -8,15 +8,15 @@ ms.date: 01/16/2019
 ms.assetid: 8bf2c4fb-4ee5-4841-bfc2-03462c1f7a7a
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
 msc.type: authoredcontent
-ms.openlocfilehash: d49dfad368ca4b81bb865103a99ec223a1cc66df
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 39502e03196d2ba51e826d248ff0ff1e84258131
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059576"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420196"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Déploiement à des fins de test
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Déploiement à des fins de test
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels vous montre comment déployer (publier) un ASP.NET web application dans Azure App Service Web Apps ou à un fournisseur d’hébergement tiers à l’aide de Visual Studio 2017. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
@@ -203,7 +203,7 @@ Avant la publication, assurez-vous que vous exécutez Visual Studio en mode admi
 
 2. Sélectionnez **nouveau profil**. Le **choisir une cible de publication** boîte de dialogue s’affiche.
 
-3. Sélectionnez **IIS, FTP, etc**. Sélectionnez **Créer un profil**. Le **publier** Assistant s’affiche.
+3. Sélectionnez **IIS, FTP, etc.**. Sélectionnez **Créer un profil**. Le **publier** Assistant s’affiche.
 
    ![Publication : onglet Web Assistant profil](deploying-to-iis/_static/image26.png)
 
