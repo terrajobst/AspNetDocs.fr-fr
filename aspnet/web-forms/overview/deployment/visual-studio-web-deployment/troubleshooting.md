@@ -8,15 +8,15 @@ ms.date: 06/01/2015
 ms.assetid: c0090595-ab3b-4b9b-9e16-7a1891e8cb2f
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/troubleshooting
 msc.type: authoredcontent
-ms.openlocfilehash: 65cd5cd9f7d1f9c5fdaea9b0d16bdfd84259efdd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b59cd34036c733579e678eab78097d3393f3e671
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042336"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421080"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-troubleshooting"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Résolution des problèmes
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-troubleshooting"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Résolution des problèmes
+
 par [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet de démarrage](http://go.microsoft.com/fwlink/p/?LinkId=282627)
@@ -28,9 +28,9 @@ Cette page décrit certains problèmes courants qui peuvent survenir lorsque vou
 
 Les scénarios indiqués s’appliquent à Azure et fournisseurs d’hébergement tiers. Pour plus d’informations sur la résolution des applications web dans Azure App Service, consultez les ressources suivantes :
 
-- [Résoudre les problèmes d’une application web dans Azure App Service avec Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
+- [Dépanner une application web dans Azure App Service à l’aide de Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
 - [Surveillance des applications Web dans Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-monitor//)
-- [Annonce de la version de Windows Azure SDK 2.0 pour .NET](http:// https://weblogs.asp.net/scottgu/announcing-the-release-of-windows-azure-sdk-2-0-for-net) (blog de ScottGu, montre comment obtenir des journaux de diagnostic dans Visual Studio)
+- [Annonce de la version de Windows Azure SDK 2.0 pour .NET](http://https://weblogs.asp.net/scottgu/announcing-the-release-of-windows-azure-sdk-2-0-for-net) (blog de ScottGu, montre comment obtenir des journaux de diagnostic dans Visual Studio)
 
 ## <a name="server-error-in--application---current-custom-error-settings-prevent-details-of-the-error-from-being-viewed-remotely"></a>Erreur de serveur dans l’Application - '/' paramètres d’erreur personnalisés actuels empêchent les détails de l’erreur de s’afficher à distance
 
@@ -46,7 +46,7 @@ Par défaut, ASP.NET affiche des informations d’erreur détaillées uniquement
 
 Pour activer l’application afficher les messages d’erreur détaillés quand il s’exécute sur l’hôte distant, modifiez le fichier Web.config pour définir la propriété customErrors mode off, redéployez l’application et réexécuter l’application :
 
-1. Si le fichier Web.config de l’application comporte l’élément d’acustomErrors dans thesystem.web élément, modifiez l’attribut themode « désactivé ». Sinon complément acustomErrors élément thesystem.web élément avec l’attribut themode défini sur « désactivé », comme indiqué dans l’exemple suivant : 
+1. Si le fichier Web.config de l’application a un élément de customErrors dans l’élément system.web, modifiez l’attribut de mode « désactivé ». Sinon, ajoutez un élément de customErrors dans l’élément system.web avec l’attribut mode défini sur « désactivé », comme indiqué dans l’exemple suivant : 
 
     [!code-xml[Main](troubleshooting/samples/sample2.xml)]
 2. Déployez l’application.
@@ -129,7 +129,7 @@ Format de la chaîne d’initialisation n’est pas conforme à la spécificatio
 
 ### <a name="possible-cause-and-solution"></a>Cause possible et solution
 
-Ouvrez le *Web.config* fichier dans le site déployé et vérifiez si les valeurs de chaîne de connexion commencent par $(ReplacableToken\_, comme dans l’exemple suivant :
+Ouvrez le *Web.config* fichier dans le site déployé et vérifiez si les valeurs de chaîne de connexion commencent par `$(ReplaceableToken_`, comme dans l’exemple suivant :
 
 [!code-xml[Main](troubleshooting/samples/sample5.xml)]
 
@@ -306,7 +306,7 @@ Publication échoue avec une erreur indiquant que vous n’avez pas autorité po
 
 ### <a name="possible-cause-and-solution"></a>Cause possible et solution
 
-Par défaut, Visual Studio définit les autorisations sur le dossier racine du site autorisations lecture et écriture sur l’application\_dossier de données. Si vous savez que les autorisations par défaut sur les dossiers de site sont correctes et qu’il est inutile d’être définie, vous désactiver ce comportement en ajoutant **&lt;IncludeSetACLProviderOn Destination&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt;** au fichier de profil de publication (pour affecter un profil unique) ou au fichier.WPP cible (à affectent tous les profils). Pour plus d’informations sur la façon de modifier ces fichiers, consultez [Comment : Modifier les paramètres de déploiement dans les fichiers de profil (.pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
+Par défaut, Visual Studio définit les autorisations sur le dossier racine du site autorisations lecture et écriture sur l’application\_dossier de données. Si vous savez que les autorisations par défaut sur les dossiers de site sont correctes et qu’il est inutile d’être définie, vous désactiver ce comportement en ajoutant ** &lt;IncludeSetACLProviderOn Destination&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt; ** au fichier de profil de publication (pour affecter un profil unique) ou au fichier.WPP cible (à affectent tous les profils). Pour plus d’informations sur la façon de modifier ces fichiers, consultez [Comment : Modifier les paramètres de déploiement dans les fichiers de profil (.pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
 
 ## <a name="access-denied-errors-when-the-application-tries-to-write-to-an-application-folder"></a>Erreurs d’accès refusé lors de l’Application tente d’écrire dans un dossier d’Application
 
@@ -316,7 +316,7 @@ Erreurs de votre application quand elle tente de créer ou modifier un fichier d
 
 ### <a name="possible-cause-and-solution"></a>Cause possible et solution
 
-Par défaut, Visual Studio définit les autorisations sur le dossier racine du site autorisations lecture et écriture sur l’application\_dossier de données. Si votre application a besoin d’accès en écriture vers un sous-dossier, vous pouvez définir des autorisations pour ce dossier comme indiqué dans la définition des autorisations de dossier et le déploiement vers les didacticiels de l’environnement de Production de cette série. Si votre application a besoin d’accès en écriture au dossier racine du site, vous devez empêcher son affectez à l’accès en lecture seule sur le dossier racine en ajoutant **&lt;IncludeSetACLProviderOn Destination&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt;** au fichier de profil de publication (pour affecter un profil unique) ou au fichier.WPP cible (à affectent tous les profils). Pour plus d’informations sur la façon de modifier ces fichiers, consultez [Comment : Modifier les paramètres de déploiement dans les fichiers de profil (.pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
+Par défaut, Visual Studio définit les autorisations sur le dossier racine du site autorisations lecture et écriture sur l’application\_dossier de données. Si votre application a besoin d’accès en écriture vers un sous-dossier, vous pouvez définir des autorisations pour ce dossier comme indiqué dans la définition des autorisations de dossier et le déploiement vers les didacticiels de l’environnement de Production de cette série. Si votre application a besoin d’accès en écriture au dossier racine du site, vous devez empêcher son affectez à l’accès en lecture seule sur le dossier racine en ajoutant ** &lt;IncludeSetACLProviderOn Destination&gt;False&lt;/ IncludeSetACLProviderOnDestination&gt; ** au fichier de profil de publication (pour affecter un profil unique) ou au fichier.WPP cible (à affectent tous les profils). Pour plus d’informations sur la façon de modifier ces fichiers, consultez [Comment : Modifier les paramètres de déploiement dans les fichiers de profil (.pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
 
 <a id="aspnet45error"></a>
 
