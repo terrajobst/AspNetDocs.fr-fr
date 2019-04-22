@@ -12,14 +12,14 @@ ms.openlocfilehash: 1f2dc0fea9eeca64b9389881470353c5cca473e0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396315"
 ---
 # <a name="web-deployment-in-the-enterprise"></a>Déploiement web dans l’entreprise
 
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Ce didacticiel décrit la façon de répondre à un grand nombre des défis que vous rencontrerez lorsque vous gérez le déploiement d’applications web de l’échelle de l’entreprise aux environnements de développement, test, intermédiaire et de production. Le didacticiel comprend une solution de référence avec un mélange de contenu conceptuel et de tâches pour vous guider à travers les différentes tâches courantes et les procédures.
 > 
@@ -102,4 +102,4 @@ Cela fait partie d’une série de cinq didacticiels sur le déploiement de web-
 - [Avancées de déploiement Web d’entreprise](../advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md). Ce didacticiel explique comment effectuer diverses tâches de déploiement plus avancées, telles que la personnalisation des déploiements de base de données pour plusieurs environnements, à l’exclusion de fichiers et dossiers de déploiement et en prenant des applications web en mode hors connexion pendant le processus de déploiement .
 
 > [!div class="step-by-step"]
-> [Suivant](the-contact-manager-solution.md)
+> [Next](the-contact-manager-solution.md)

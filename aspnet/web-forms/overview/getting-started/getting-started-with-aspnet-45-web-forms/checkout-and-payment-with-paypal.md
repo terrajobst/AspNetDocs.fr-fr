@@ -12,7 +12,7 @@ ms.openlocfilehash: a0895c2246bc08f50645a865ce2dfffecfbb56a6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391154"
 ---
 # <a name="checkout-and-payment-with-paypal"></a>Commande et paiement avec PayPal
@@ -124,7 +124,7 @@ Il est important de noter que configuration ASP.NET suit une hiérarchie, où ch
 2. Modification **SSL activé** à `true`.
 3. Copie le **URL SSL** afin de pouvoir l’utiliser ultérieurement.   
  L’URL SSL sera `https://localhost:44300/` sauf si vous avez déjà créé des Sites Web SSL (comme indiqué ci-dessous).   
-    ![Propriétés du projet](checkout-and-payment-with-paypal/_static/image4.png)
+    ![Propriétés de projet](checkout-and-payment-with-paypal/_static/image4.png)
 4. Dans **l’Explorateur de solutions**, avec le bouton droit cliquez sur le **WingtipToys** projet puis cliquez sur **propriétés**.
 5. Dans l’onglet gauche, cliquez sur **Web**.
 6. Modifier le **Url du projet** à utiliser le **URL SSL** que vous avez enregistré précédemment.   
@@ -309,9 +309,9 @@ Vous devez placer la majorité du code PayPal en une seule classe. Cette classe 
 
 La classe NVPAPICaller contient la majorité des fonctionnalités de PayPal. Le code dans la classe fournit les méthodes nécessaires pour effectuer un test d’achat à partir de l’environnement de test de PayPal. Les fonctions de PayPal trois suivantes sont utilisées pour effectuer des achats :
 
-- `SetExpressCheckout` function
-- `GetExpressCheckoutDetails` function
-- `DoExpressCheckoutPayment` function
+- `SetExpressCheckout` (Fonction)
+- `GetExpressCheckoutDetails` (Fonction)
+- `DoExpressCheckoutPayment` (Fonction)
 
 Le `ShortcutExpressCheckout` méthode collecte les détails de produit et les informations de fournisseur test à partir du panier d’achat et les appels le `SetExpressCheckout` PayPal (fonction). Le `GetCheckoutDetails` méthode confirme les détails de l’achat et appelle le `GetExpressCheckoutDetails` PayPal (fonction) avant d’effectuer l’achat de test. Le `DoCheckoutPayment` méthode termine à l’achat de test à partir de l’environnement de test en appelant le `DoExpressCheckoutPayment` PayPal (fonction). Le code restant prend en charge les méthodes de PayPal et les processus, tels que l’encodage des chaînes, décodage des chaînes, tableaux de traitement et déterminer les informations d’identification.
 
@@ -386,7 +386,7 @@ Le **DetailsView** contrôle est utilisé pour afficher les détails des command
 
 > [!NOTE] 
 > 
-> **Conseil**
+> **Info-bulle**
 > 
 > Dans le balisage de la *CheckoutReview.aspx* page, notez que le `<ItemStyle>` balise est utilisée pour modifier le style des éléments dans le **DetailsView** contrôle près du bas de la page. En affichant la page dans **mode Design** (en sélectionnant **conception** dans l’angle inférieur gauche de Visual Studio), puis en sélectionnant le **DetailsView** contrôler, puis en sélectionnant le  **Balise active** (l’icône de flèche en haut à droite du contrôle), vous serez en mesure de voir les **Tâches DetailsView**.
 > 

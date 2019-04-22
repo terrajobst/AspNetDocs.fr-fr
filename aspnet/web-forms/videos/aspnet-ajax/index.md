@@ -12,7 +12,7 @@ ms.openlocfilehash: 5fc85b5ac4771d6784e9afa41e09d74474a605ba
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381300"
 ---
 # <a name="aspnet-ajax"></a>AJAX ASP.NET
@@ -40,7 +40,7 @@ ms.locfileid: "59381300"
 - [Choisir parmi les méthodes de mise à jour de page d’AJAX](how-do-i-choose-between-methods-of-ajax-page-updates.md)
 - [Utiliser d’autres bibliothèques d’interface utilisateur JavaScript avec ASP.NET AJAX](how-do-i-use-other-javascript-user-interface-libraries-with-aspnet-ajax.md)
 - [Utiliser les services de profil d’ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-profile-services.md)
-- [Déboguer les applications ASP.NET AJAX avec Visual Studio 2005](how-do-i-debug-aspnet-ajax-applications-using-visual-studio-2005.md)
+- [Déboguer les applications ASP.NET AJAX avec Visual Studio 2005](how-do-i-debug-aspnet-ajax-applications-using-visual-studio-2005.md)
 - [Créer un contrôle serveur ASP.NET AJAX personnalisé](how-do-i-build-a-custom-aspnet-ajax-server-control.md)
 - [Utiliser JavaScript pour actualiser un contrôle UpdatePanel d’ASP.NET AJAX](how-do-i-use-javascript-to-refresh-an-aspnet-ajax-updatepanel.md)
 - [Déterminer si une publication (postback) asynchrone s’est produite](how-do-i-determine-whether-an-asynchronous-postback-has-occurred.md)
@@ -59,7 +59,7 @@ ms.locfileid: "59381300"
 - [Authentification de base ASP.NET dans une application activée pour AJAX](basic-aspnet-authentication-in-an-ajax-enabled-application.md)
 - [Modifier dynamiquement le contrôle UpdatePanel d’ASP.NET AJAX CSS](how-to-dynamically-change-css-using-the-aspnet-ajax-updatepanel.md)
 - [Ajouter dynamiquement des contrôles à une page web](how-to-dynamically-add-controls-to-a-web-page.md)
-- [Configurer votre environnement de développement pour ASP.NET 3.5](set-up-your-development-environment-for-aspnet-35.md)
-- [Configurer votre environnement de développement pour ASP.NET 2.0](set-up-your-development-environment-for-aspnet-20.md)
+- [Configurer votre environnement de développement pour ASP.NET 3.5](set-up-your-development-environment-for-aspnet-35.md)
+- [Configurer votre environnement de développement pour ASP.NET 2.0](set-up-your-development-environment-for-aspnet-20.md)
 - [Personnaliser la gestion des erreurs pour le contrôle UpdatePanel d’ASP.NET AJAX](how-do-i-customize-error-handling-for-the-aspnet-ajax-updatepanel.md)
 - [Utiliser des modèles clients ASP.NET AJAX](how-do-i-use-aspnet-ajax-client-templates.md)

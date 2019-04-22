@@ -12,7 +12,7 @@ ms.openlocfilehash: ef40d71828237a3d086c7c1bb05de56e0770f588
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391271"
 ---
 # <a name="using-cascadingdropdown-with-a-database-c"></a>Utilisation de CascadingDropDown avec une base de données (C#)
@@ -86,12 +86,12 @@ Le reste de la méthode est relativement simple, puis. CODE du fournisseur est u
 Chargement de la page ASP.NET, et après quelques instants, la liste des fournisseurs est remplie avec les entrées de 25. Choisir une seule entrée et notez la façon dont la deuxième liste déroulante est remplie avec des données.
 
 
-[![Tpremière liste de he est automatiquement](using-cascadingdropdown-with-a-database-cs/_static/image2.png)](using-cascadingdropdown-with-a-database-cs/_static/image1.png)
+[![La première liste est automatiquement](using-cascadingdropdown-with-a-database-cs/_static/image2.png)](using-cascadingdropdown-with-a-database-cs/_static/image1.png)
 
 La première liste est automatiquement ([cliquez pour afficher l’image en taille réelle](using-cascadingdropdown-with-a-database-cs/_static/image3.png))
 
 
-[![Tliste de deuxième he est remplie selon votre sélection dans la première liste](using-cascadingdropdown-with-a-database-cs/_static/image5.png)](using-cascadingdropdown-with-a-database-cs/_static/image4.png)
+[![La deuxième liste est remplie selon votre sélection dans la première liste](using-cascadingdropdown-with-a-database-cs/_static/image5.png)](using-cascadingdropdown-with-a-database-cs/_static/image4.png)
 
 La deuxième liste est remplie selon votre sélection dans la première liste ([cliquez pour afficher l’image en taille réelle](using-cascadingdropdown-with-a-database-cs/_static/image6.png))
 

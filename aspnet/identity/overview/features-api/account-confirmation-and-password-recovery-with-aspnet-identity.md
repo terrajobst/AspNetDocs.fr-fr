@@ -13,7 +13,7 @@ ms.openlocfilehash: 2e4cd21d66e69590fb1642d7974e4b7f82cba0cb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396419"
 ---
 # <a name="account-confirmation-and-password-recovery-with-aspnet-identity-c"></a>Compte de récupération de confirmation et le mot de passe avec ASP.NET Identity (C#)

@@ -13,7 +13,7 @@ ms.openlocfilehash: 3ba7f2d186e6f0837a32f69f964cec19fe625953
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391479"
 ---
 # <a name="build-restful-apis-with-aspnet-web-api"></a>Générer des API RESTful avec les API Web ASP.NET
@@ -505,7 +505,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](build-restful-apis-with-aspnet-web-api/_static/image36.png)
 
-    *Progression de l'installation*
+    *Progression de l’installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](build-restful-apis-with-aspnet-web-api/_static/image37.png)

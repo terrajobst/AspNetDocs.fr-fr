@@ -12,7 +12,7 @@ ms.openlocfilehash: aa9bf9e98258fe5219ad87d5828d9d7d93410da9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391596"
 ---
 # <a name="hovermenu"></a>HoverMenu

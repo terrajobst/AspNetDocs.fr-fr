@@ -12,7 +12,7 @@ ms.openlocfilehash: d4003dba8530d2e72c514c572ffc28ef942fd437
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379363"
 ---
 # <a name="improving-the-details-and-delete-methods-c"></a>Examen des méthodes Details et Delete (C#)
@@ -74,7 +74,7 @@ Ce didacticiel de base a été de vous lancer dans la création de contrôleurs,
 
 Si vous souhaitez déployer votre application, il est utile pour le premier test de l’application sur votre serveur IIS 7 local. Vous pouvez utiliser cette [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=ASPNET;) lien pour activer le paramètre IIS pour les applications ASP.NET. Consultez les liens de déploiement suivants :
 
-- [Organigramme des informations relatives au déploiement ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx)
+- [Organigramme de déploiement ASP.NET](https://msdn.microsoft.com/library/dd394698.aspx)
 - [L’activation d’IIS 7.x](https://blogs.msdn.com/b/rickandy/archive/2011/03/14/enabling-iis-7-x-on-windows-7-vista-sp1-windows-2008-windows-2008-r2.aspx)
 - [Déploiement de projets d’Application Web](https://msdn.microsoft.com/library/dd394698.aspx)
 

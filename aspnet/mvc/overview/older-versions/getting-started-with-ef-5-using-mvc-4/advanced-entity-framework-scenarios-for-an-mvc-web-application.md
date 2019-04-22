@@ -12,7 +12,7 @@ ms.openlocfilehash: a1218b1fb5a8ee28ea6ee3d3c5af979e86821ed7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391193"
 ---
 # <a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>Scénarios Entity Framework avancés pour une Application Web MVC (10 sur 10)
@@ -316,8 +316,7 @@ Une des causes de ce problème sont d’erreurs de validation lorsque la `Seed` 
 
 Message d’erreur :
 
-*HTTP Erreur 500.19 - Erreur de serveur interne  
-La page demandée est inaccessible, car les données de configuration de la page ne sont pas valides.*
+*Erreur HTTP 500.19 - erreur interne du serveur la page demandée est inaccessible, car les données de configuration de la page ne sont pas valides.*
 
 Solution :
 
@@ -327,7 +326,7 @@ Vous pouvez obtenir cette erreur consiste à partir de plusieurs copies de la so
 
 Message d’erreur :
 
-*Une erreur liée au réseau ou spécifique à l’instance s’est produite lors de l’établissement d’une connexion à SQL Server. Le serveur est introuvable ou n’est pas accessible. Vérifiez que le nom de l’instance est correct et que SQL Server est configuré pour autoriser les connexions distantes. (fournisseur : Interfaces réseau SQL, erreur : 26 - Erreur lors de la localisation du serveur/de l’instance spécifiés)*
+*Une erreur liée au réseau ou spécifique à l’instance s’est produite lors de l’établissement d’une connexion à SQL Server. Le serveur est introuvable ou n’est pas accessible. Vérifiez que le nom d’instance est correct et que SQL Server est configuré pour autoriser les connexions à distance. (fournisseur : Interfaces réseau SQL, erreur : 26 - erreur de localisation de Server/Instance spécifié)*
 
 Solution :
 

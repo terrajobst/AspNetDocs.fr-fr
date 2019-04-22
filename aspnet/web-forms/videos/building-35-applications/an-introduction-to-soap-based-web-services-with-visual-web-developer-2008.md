@@ -12,7 +12,7 @@ ms.openlocfilehash: e499292c6dedcec0718d0823e7c324a7da9e00b8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396380"
 ---
 # <a name="an-introduction-to-soap-based-web-services-with-visual-web-developer-2008"></a>Introduction à SOAP en fonction des Services Web avec Visual Web Developer 2008

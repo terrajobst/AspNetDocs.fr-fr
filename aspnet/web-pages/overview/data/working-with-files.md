@@ -12,7 +12,7 @@ ms.openlocfilehash: 4a62cce3af57b507882744f948ce208becdb03ac
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382301"
 ---
 # <a name="working-with-files-in-an-aspnet-web-pages-razor-site"></a>Utilisation des fichiers dans un Site ASP.NET Web Pages (Razor)

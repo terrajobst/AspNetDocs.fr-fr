@@ -12,7 +12,7 @@ ms.openlocfilehash: adbaa5cbda4a60a8b222ba49bb148b28b2e214cc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389204"
 ---
 # <a name="aspnet-web-pages-razor-troubleshooting-guide"></a>ASP.NET Web Pages (Razor) - Guide de résolution des problèmes
@@ -36,7 +36,7 @@ Cette rubrique contient les sections suivantes :
 - [Problèmes avec le Code Razor](#IssuesWithRazorCode)
 - [Problèmes de sécurité et d’appartenance](#membership)
 - [Problèmes liés à l’envoi de courrier électronique](#email)
-- [Ressources supplémentaires](#AdditionalResources)
+- [Ressources supplémentaires pour MSBuild](#AdditionalResources)
 
 Pour les questions générales, consultez [ASP.NET Web Pages (Razor) FAQ](https://go.microsoft.com/fwlink/?LinkId=253000).
 
@@ -155,6 +155,6 @@ Remplacez les valeurs appropriées pour `your-SMTP-server-name`, et ainsi de sui
 <a id="AdditionalResources"></a>
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-[ASP.NET Web Pages - Questions fréquentes (FAQ) (Razor)](https://go.microsoft.com/fwlink/?LinkId=253000)
+[Pages web ASP.NET - Questions fréquentes (FAQ) (Razor)](https://go.microsoft.com/fwlink/?LinkId=253000)
 
 [WebMatrix et ASP.NET Web Pages](https://forums.asp.net/1224.aspx/1?WebMatrix) forum sur le site Web ASP.NET

@@ -13,7 +13,7 @@ ms.openlocfilehash: 2cec6138ffcd6019eae23c82abda2b96d7b0b625
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383458"
 ---
 # <a name="advanced-topics-for-aspnet-web-api"></a>Rubriques avancées pour l’API Web ASP.NET
@@ -22,10 +22,10 @@ ms.locfileid: "59383458"
 
 
 - [Configuration de Web API 2](configuring-aspnet-web-api.md)
-- [Injection de dépendances dans Web API 2](dependency-injection.md)
+- [Injection de dépendances dans Web API 2](dependency-injection.md)
 - [Appeler une API web à partir d’un client .NET (C#)](calling-a-web-api-from-a-net-client.md)
 - [Gestionnaires de messages HTTP dans l’API web](http-message-handlers.md)
 - [Gestionnaires de messages HttpClient dans l’API web](httpclient-message-handlers.md)
-- [Envoi de données de formulaire HTML dans l’API web : données de formulaire encodées dans l’URL](sending-html-form-data-part-1.md)
-- [Envoi de données de formulaire HTML dans l’API web : chargement de fichier et MIME Multipart](sending-html-form-data-part-2.md)
+- [Envoi de données de formulaire HTML dans l’API Web : Données de Form-UrlEncode](sending-html-form-data-part-1.md)
+- [Envoi de données de formulaire HTML dans l’API Web : Chargement du fichier et MIME à parties multiples](sending-html-form-data-part-2.md)
 - [Cookies HTTP dans l’API web ASP.NET](http-cookies.md)

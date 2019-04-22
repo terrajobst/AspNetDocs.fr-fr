@@ -12,7 +12,7 @@ ms.openlocfilehash: 655481043d0637a563b9a24ff0694668854ba364
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395912"
 ---
 # <a name="visual-studio-2013-web-editor-features---html5"></a>Fonctionnalités de l’éditeur web de Visual Studio 2013 - HTML 5

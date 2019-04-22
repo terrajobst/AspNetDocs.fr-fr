@@ -12,14 +12,14 @@ ms.openlocfilehash: 48af71fc5ff4dad3371687726660a5d914236df5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379376"
 ---
 # <a name="common-configuration-differences-between-development-and-production-vb"></a>Différences de configuration courantes entre le développement et la production (VB)
 
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger le PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial05_ConfigDifferences_vb.pdf)
+[Télécharger PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial05_ConfigDifferences_vb.pdf)
 
 > Dans les didacticiels précédents, nous avons déployé notre site Web en copiant tous les fichiers pertinentes à partir de l’environnement de développement dans l’environnement de production. Toutefois, il n’est pas rare pour permettre les différences de configuration entre environnements, ce qui nécessite que chaque environnement ont un unique fichier Web.config. Ce didacticiel examine les différences de configuration classique et examine les stratégies pour gérer les informations de configuration distinct.
 

@@ -12,14 +12,14 @@ ms.openlocfilehash: e97b66aed789cf6f2b2b503ae86e773ac03d74e0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392935"
 ---
 # <a name="users-and-roles-on-the-production-website-vb"></a>Utilisateurs et rôles sur le site Web de Production (VB)
 
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger le PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial16_CustomAWAT_vb.pdf)
+[Télécharger PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial16_CustomAWAT_vb.pdf)
 
 > L’outil d’Administration de Microsoft ASP.NET du site Web (WSAT) fournit une interface utilisateur web pour la configuration des paramètres d’appartenance et de rôles et de création, la modification et la suppression des utilisateurs et rôles. Malheureusement, le WSAT fonctionne uniquement quand consultées à partir de localhost, ce qui signifie que vous ne pouvez pas atteindre l’outil d’Administration du site Web de la production via votre navigateur. La bonne nouvelle est qu’il existe des solutions de contournement qui permettent de gérer les utilisateurs et rôles de production. Ce didacticiel aborde ces solutions de contournement et d’autres.
 

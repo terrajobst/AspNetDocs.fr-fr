@@ -12,7 +12,7 @@ ms.openlocfilehash: 1cc66d91e19ccfb3ae3582c7df544553e877517f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392233"
 ---
 # <a name="how-to-use-attribute-validation-in-aspnet-dynamic-data-applications"></a>Comment utiliser la Validation des attributs dans les Applications ASP.NET Dynamic Data

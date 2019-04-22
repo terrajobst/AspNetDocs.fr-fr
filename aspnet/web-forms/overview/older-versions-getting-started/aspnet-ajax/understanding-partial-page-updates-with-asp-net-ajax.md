@@ -12,14 +12,14 @@ ms.openlocfilehash: d2d7982a4e0175824ffede965dc8206219485df2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396471"
 ---
 # <a name="understanding-partial-page-updates-with-aspnet-ajax"></a>Présentation des mises à jour de page partielles avec ASP.NET AJAX
 
 par [Scott Cate](https://github.com/scottcate)
 
-[Télécharger le PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial01_Partial_Page_Updates_cs.pdf)
+[Télécharger PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial01_Partial_Page_Updates_cs.pdf)
 
 > La fonctionnalité la plus visible des Extensions ASP.NET AJAX est peut-être la possibilité d’effectuer des mises à jour une page partielle ou incrémentielle sans effectuer une publication automatique complète sur le serveur, sans modifications de code et les changements de balise minimal. Les avantages sont étendues : l’état de vos éléments multimédias (par exemple, Adobe Flash ou un support de Windows) est inchangé, coûts de bande passante sont réduits, et le client ne connaît pas le scintillement généralement associé à une publication (postback).
 
@@ -142,7 +142,7 @@ Méthodes de Code public :
 
 Descendants de balisage :
 
-| **Balise** | **Description** |
+| **Tag** | **Description** |
 | --- | --- |
 | &lt;AuthenticationService&gt; | Fournit des détails sur le proxy au service d’authentification ASP.NET. |
 | &lt;ProfileService&gt; | Fournit des détails sur le serveur proxy pour le service de profilage de ASP.NET. |
@@ -208,7 +208,7 @@ Méthodes de Code public :
 
 Descendants de balisage :
 
-| **Balise** | **Description** |
+| **Tag** | **Description** |
 | --- | --- |
 | &lt;ContentTemplate&gt; | Spécifie le balisage à utiliser pour restituer le résultat de rendu partiel. Enfant de &lt;asp : UpdatePanel&gt;. |
 | &lt;Déclencheurs&gt; | Spécifie une collection de *n* contrôles associés à la mise à jour cet UpdatePanel. Enfant de &lt;asp : UpdatePanel&gt;. |
@@ -288,7 +288,7 @@ Propriétés du balisage activé :
 
 Descendants de balisage :
 
-| **Balise** | **Description** |
+| **Tag** | **Description** |
 | --- | --- |
 | &lt;ProgressTemplate&gt; | Contient le modèle de contrôle pour le contenu qui s’affichera avec ce contrôle. |
 
@@ -315,4 +315,4 @@ Ensemble, ces outils vous aider à la création d’une expérience utilisateur 
 Scott Cate travaille avec les technologies Web Microsoft depuis 1997 et est le président de myKB.com ([www.myKB.com](http://www.myKB.com)) où il est spécialisé dans l’écriture d’ASP.NET en fonction des applications axées sur les solutions logicielles de la Base de connaissances. Scott peut être contacté par courrier électronique en [ scott.cate@myKB.com ](mailto:scott.cate@myKB.com) ou son blog à l’adresse [ScottCate.com](http://ScottCate.com)
 
 > [!div class="step-by-step"]
-> [Suivant](understanding-asp-net-ajax-updatepanel-triggers.md)
+> [Next](understanding-asp-net-ajax-updatepanel-triggers.md)

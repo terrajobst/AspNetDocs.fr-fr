@@ -12,7 +12,7 @@ ms.openlocfilehash: 15bdaa588792c3cf4a8e6eee651e0675f959f942
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382229"
 ---
 # <a name="creating-a-more-complex-data-model-for-an-aspnet-mvc-application-4-of-10"></a>Création d’un modèle de données plus complexe pour une Application ASP.NET MVC (4 sur 10)
@@ -48,7 +48,7 @@ Dans *Models\Student.cs*, ajouter un `using` instruction pour la `System.Compone
 
 Le [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) attribut est utilisé pour spécifier un type de données qui est plus spécifique que le type intrinsèque de la base de données. Dans le cas présent, nous voulons uniquement effectuer le suivi de la date, pas de la date et de l’heure. Le [énumération DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) fournit de nombreux types de données, tel que *Date, heure, PhoneNumber, Currency, EmailAddress* et bien plus encore. L’attribut `DataType` peut également permettre à l’application de fournir automatiquement des fonctionnalités propres au type. Par exemple, un `mailto:` lien peut être créé pour [DataType.EmailAddress](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx), et un sélecteur de date peut être fourni pour [DataType.Date](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) dans les navigateurs qui prennent en charge [HTML5](http://html5.org/). Le [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) émet des attributs HTML 5 [data -](http://ejohn.org/blog/html-5-data-attributes/) (prononcé *data tiret*) attributs navigateurs HTML 5. Le [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) attributs ne fournissent pas de toute opération de validation.
 
-`DataType.Date` ne spécifie pas le format de date qui s’affiche. Par défaut, le champ de données est affiché conformément aux formats par défaut basés sur le serveur [CultureInfo](https://msdn.microsoft.com/library/vstudio/system.globalization.cultureinfo(v=vs.110).aspx).
+`DataType.Date` ne spécifie pas le format de la date qui s’affiche. Par défaut, le champ de données est affiché conformément aux formats par défaut basés sur le serveur [CultureInfo](https://msdn.microsoft.com/library/vstudio/system.globalization.cultureinfo(v=vs.110).aspx).
 
 L’attribut `DisplayFormat` est utilisé pour spécifier explicitement le format de date :
 
@@ -152,7 +152,7 @@ Vous pouvez placer plusieurs attributs sur une seule ligne, donc vous pouvez ég
 
 ### <a name="the-fullname-calculated-property"></a>La propriété FullName calculée
 
-`FullName` est une propriété calculée qui retourne une valeur qui est créée en concaténant les deux autres propriétés. Par conséquent, il a uniquement un `get` accesseur et aucune `FullName` colonne dans la base de données va être générée.
+`FullName` est une propriété calculée qui retourne une valeur créée par concaténation de deux autres propriétés. Par conséquent, il a uniquement un `get` accesseur et aucune `FullName` colonne dans la base de données va être générée.
 
 [!code-csharp[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample11.cs)]
 
@@ -358,7 +358,7 @@ Lorsque vous créez un `Course` de l’objet, vous initialisez le `Instructors` 
 
 Si vous essayez de mettre à jour la base de données à ce stade, vous obtiendrez l’erreur suivante :
 
-*L’instruction ALTER TABLE est en conflit avec la contrainte de clé étrangère « FK\_dbo. Cours\_dbo. Département\_DepartmentID ». Le conflit s’est produit dans la base de données « ContosoUniversity », table « dbo.Department », colonne « DepartmentID ».*
+*L’instruction ALTER TABLE est en conflit avec la contrainte de clé étrangère « FK\_dbo. Cours\_dbo. Département\_DepartmentID ». Le conflit s’est produite dans la base de données « ContosoUniversity », table « dbo. Department », colonne « DepartmentID ».*
 
 Modifier le &lt; *timestamp&gt;\_Chap4.cs* de fichiers et apportez les modifications de code suivantes (vous allez ajouter une instruction SQL et modifier un `AddColumn` instruction) :
 

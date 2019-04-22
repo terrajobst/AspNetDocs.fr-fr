@@ -12,7 +12,7 @@ ms.openlocfilehash: fc5c99ce6c5da7d004b95462a3338aefbed31b36
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388710"
 ---
 # <a name="adding-client-side-confirmation-when-deleting-vb"></a>Ajout d’une confirmation côté client lors de la suppression (VB)
@@ -65,7 +65,7 @@ Dans la mesure où il a été lié à un contrôle ObjectDataSource qui prend un
 Avec ces modifications, nous avons une page web entièrement fonctionnelle qui permet à un utilisateur de basculer entre les produits celui à la fois, avec la possibilité de supprimer un produit en cliquant simplement sur le bouton Supprimer. Figure 2 illustre une capture d’écran de notre progression jusqu'à présent lorsqu’ils sont affichés via un navigateur.
 
 
-[![TIl FormView affiche des informations sur un seul produit](adding-client-side-confirmation-when-deleting-vb/_static/image3.png)](adding-client-side-confirmation-when-deleting-vb/_static/image2.png)
+[![Le contrôle FormView affiche des informations sur un produit unique](adding-client-side-confirmation-when-deleting-vb/_static/image3.png)](adding-client-side-confirmation-when-deleting-vb/_static/image2.png)
 
 **Figure 2**: Les FormView montre plus d’informations sur un produit unique ([cliquez pour afficher l’image en taille réelle](adding-client-side-confirmation-when-deleting-vb/_static/image4.png))
 
@@ -85,7 +85,7 @@ S résume-t-elle est ! Figure 3 illustre une capture d’écran de cette confir
 > La chaîne passée dans le `confirm(string)` fonction JavaScript est délimitée par des apostrophes (au lieu des guillemets). Dans JavaScript, les chaînes peuvent être délimités à l’aide de type caractère. Nous utilisons des apostrophes ici afin que les séparateurs pour la chaîne passée dans `confirm(string)` n’introduisent pas une ambiguïté avec séparateurs utilisés pour le `OnClientClick` valeur de propriété.
 
 
-[![A La confirmation est maintenant affichée lorsque en cliquant sur le bouton Supprimer](adding-client-side-confirmation-when-deleting-vb/_static/image6.png)](adding-client-side-confirmation-when-deleting-vb/_static/image5.png)
+[![Une Confirmation est maintenant affichée lorsque en cliquant sur le bouton Supprimer](adding-client-side-confirmation-when-deleting-vb/_static/image6.png)](adding-client-side-confirmation-when-deleting-vb/_static/image5.png)
 
 **Figure 3**: Une Confirmation est maintenant affichée lorsque en cliquant sur le bouton Supprimer ([cliquez pour afficher l’image en taille réelle](adding-client-side-confirmation-when-deleting-vb/_static/image7.png))
 
@@ -127,7 +127,7 @@ Avec ces modifications terminées, cliquez sur un bouton Supprimer affiche dans 
 > Cette technique peut également être utilisée pour accéder par programme le bouton Supprimer dans le CommandField dans un contrôle DetailsView. Pour le contrôle DetailsView, toutefois, vous d créer un gestionnaire d’événements pour le `DataBound` événement, dans la mesure où le contrôle DetailsView n’a pas un `RowDataBound` événement.
 
 
-[![Ccliquant sur le s GridView affiche de bouton Supprimer une boîte de dialogue de Confirmation personnalisé](adding-client-side-confirmation-when-deleting-vb/_static/image9.png)](adding-client-side-confirmation-when-deleting-vb/_static/image8.png)
+[![En cliquant sur le bouton de suppression de s GridView affiche une boîte de dialogue de Confirmation personnalisé](adding-client-side-confirmation-when-deleting-vb/_static/image9.png)](adding-client-side-confirmation-when-deleting-vb/_static/image8.png)
 
 **Figure 4**: En cliquant sur le bouton Supprimer de s GridView affiche une boîte de dialogue de Confirmation personnalisé ([cliquez pour afficher l’image en taille réelle](adding-client-side-confirmation-when-deleting-vb/_static/image10.png))
 

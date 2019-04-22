@@ -12,7 +12,7 @@ ms.openlocfilehash: d5a72dbfe1530e457ec16df5c7d50b03b5f63502
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384212"
 ---
 # <a name="part-1-overview-and-creating-the-project"></a>Partie 1 : Vue d’ensemble et création du projet
@@ -92,4 +92,4 @@ Dans l’Explorateur de solutions, développez le dossier de contenu et d’ouvr
 [!code-css[Main](using-web-api-with-entity-framework-part-1/samples/sample1.css)]
 
 > [!div class="step-by-step"]
-> [Suivant](using-web-api-with-entity-framework-part-2.md)
+> [Next](using-web-api-with-entity-framework-part-2.md)

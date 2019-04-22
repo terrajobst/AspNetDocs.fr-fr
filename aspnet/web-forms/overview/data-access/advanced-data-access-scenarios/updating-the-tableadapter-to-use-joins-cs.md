@@ -12,7 +12,7 @@ ms.openlocfilehash: 297496e590caf9c8ded83cb16b5fef1dfc542dc7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381385"
 ---
 # <a name="updating-the-tableadapter-to-use-joins-c"></a>Mise à jour du TableAdapter pour l’utilisation de jointures (C#)
@@ -64,7 +64,7 @@ Pour Explorer cet inconvénient, créez un DataSet typé temporaire dans le `~/A
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample3.sql)]
 
 
-[![Equi contient des jointures de requête ntrez une Main](updating-the-tableadapter-to-use-joins-cs/_static/image2.png)](updating-the-tableadapter-to-use-joins-cs/_static/image1.png)
+[![Entrez une requête principale qui contient des jointures](updating-the-tableadapter-to-use-joins-cs/_static/image2.png)](updating-the-tableadapter-to-use-joins-cs/_static/image1.png)
 
 **Figure 1**: Entrez une requête principale qui contient `JOIN` s ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image3.png))
 
@@ -88,7 +88,7 @@ Cliquez sur Terminer pour terminer l’Assistant. À ce stade, votre Concepteur 
 Alors que la table de données a les colonnes appropriées, le TableAdapter ne dispose pas des valeurs pour ses `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés. Pour vérifier cela, cliquez sur le TableAdapter dans le concepteur et passez à la fenêtre Propriétés. Il vous verrez que le `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés sont définies à (None).
 
 
-[![TIl InsertCommand, UpdateCommand et DeleteCommand propriétés sont définies à (None)](updating-the-tableadapter-to-use-joins-cs/_static/image7.png)](updating-the-tableadapter-to-use-joins-cs/_static/image6.png)
+[![La propriété InsertCommand, UpdateCommand et DeleteCommand propriétés sont définies à (None)](updating-the-tableadapter-to-use-joins-cs/_static/image7.png)](updating-the-tableadapter-to-use-joins-cs/_static/image6.png)
 
 **Figure 4**: Le `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés sont définies à (None) ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image8.png))
 
@@ -108,7 +108,7 @@ Pour ce didacticiel, nous allons ajouter un TableAdapter et la table de données
 Commencez par ouvrir le `NorthwindWithSprocs` jeu de données dans le `~/App_Code/DAL` dossier. Avec le bouton droit sur le concepteur, sélectionnez l’option Ajouter dans le menu contextuel et choisissez l’élément de menu du TableAdapter. Cette action lance l’Assistant Configuration de TableAdapter. Comme la Figure 5 illustre, laisser l’Assistant créer des procédures stockées et cliquez sur Suivant. Pour un rappel sur la création de nouvelles procédures stockées à partir l’Assistant TableAdapter s, consultez le [création de nouvelles procédures stockées pour s DataSet typée TableAdapters](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) didacticiel.
 
 
-[![Schoisir les créer nouvelles procédures stockées Option](updating-the-tableadapter-to-use-joins-cs/_static/image10.png)](updating-the-tableadapter-to-use-joins-cs/_static/image9.png)
+[![Sélectionnez les créer nouvelles procédures stockées Option](updating-the-tableadapter-to-use-joins-cs/_static/image10.png)](updating-the-tableadapter-to-use-joins-cs/_static/image9.png)
 
 **Figure 5**: Sélectionnez la créer nouveau des procédures stockées Option ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image11.png))
 
@@ -123,7 +123,7 @@ Utilisez la commande suivante `SELECT` instruction pour la requête principale d
 L’étape suivante nous permet de nommer les procédures stockées de TableAdapter. Utilisez les noms `Employees_Select`, `Employees_Insert`, `Employees_Update`, et `Employees_Delete`, comme illustré dans la Figure 6.
 
 
-[![NProcédures stockées d’om le TableAdapter s](updating-the-tableadapter-to-use-joins-cs/_static/image13.png)](updating-the-tableadapter-to-use-joins-cs/_static/image12.png)
+[![Nommez les procédures stockées de TableAdapter](updating-the-tableadapter-to-use-joins-cs/_static/image13.png)](updating-the-tableadapter-to-use-joins-cs/_static/image12.png)
 
 **Figure 6**: Nommez les procédures stockées de TableAdapter s ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image14.png))
 
@@ -131,7 +131,7 @@ L’étape suivante nous permet de nommer les procédures stockées de TableAdap
 L’étape finale nous invite à nommer les méthodes de s TableAdapter. Utilisez `Fill` et `GetEmployees` en tant que les noms de méthode. Veillez également à laisser les créer des méthodes pour envoyer des mises à jour directement à la case à cocher de la base de données (GenerateDBDirectMethods) activée.
 
 
-[![Nom le TableAdapter s méthodes Fill et GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image16.png)](updating-the-tableadapter-to-use-joins-cs/_static/image15.png)
+[![Nom du remplissage de méthodes TableAdapter s et GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image16.png)](updating-the-tableadapter-to-use-joins-cs/_static/image15.png)
 
 **Figure 7**: Nommez les méthodes du TableAdapter s `Fill` et `GetEmployees` ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image17.png))
 
@@ -139,7 +139,7 @@ L’étape finale nous invite à nommer les méthodes de s TableAdapter. Utilise
 À l’issue de l’Assistant, prenez un moment pour examiner les procédures stockées dans la base de données. Vous devez voir quatre nouveaux : `Employees_Select`, `Employees_Insert`, `Employees_Update`, et `Employees_Delete`. Ensuite, inspecter la `EmployeesDataTable` et `EmployeesTableAdapter` venez de créer. La table de données contient une colonne pour chaque champ renvoyé par la requête principale. Cliquez sur le TableAdapter et passez à la fenêtre Propriétés. Il vous verrez que le `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés sont correctement configurées pour appeler les procédures stockées correspondantes.
 
 
-[![TIl TableAdapter inclut insertion, mise à jour et supprimer des fonctionnalités](updating-the-tableadapter-to-use-joins-cs/_static/image19.png)](updating-the-tableadapter-to-use-joins-cs/_static/image18.png)
+[![Le TableAdapter inclut Insert, Update et supprimer des fonctionnalités](updating-the-tableadapter-to-use-joins-cs/_static/image19.png)](updating-the-tableadapter-to-use-joins-cs/_static/image18.png)
 
 **Figure 8**: Le TableAdapter inclut insérer mise à jour et supprimer des fonctionnalités ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image20.png))
 
@@ -156,7 +156,7 @@ Commencez par passer à l’Explorateur de serveurs, la descente dans le dossier
 Après la mise à jour le `SELECT` instruction, enregistrez les modifications apportées en accédant au menu fichier et en choisissant Enregistrer `Employees_Select`. Vous pouvez également, cliquez sur l’icône Enregistrer dans la barre d’outils ou appuyez sur Ctrl + S. Après avoir enregistré vos modifications, cliquez sur le `Employees_Select` procédure stockée dans l’Explorateur de serveurs et cliquez sur Exécuter. Cela sera exécuter la procédure stockée et afficher ses résultats dans la fenêtre de sortie (voir la Figure 9).
 
 
-[![TRésultats des procédures stockées he sont affichés dans la fenêtre Sortie](updating-the-tableadapter-to-use-joins-cs/_static/image22.png)](updating-the-tableadapter-to-use-joins-cs/_static/image21.png)
+[![Les résultats de procédures stockées sont affichés dans la fenêtre Sortie](updating-the-tableadapter-to-use-joins-cs/_static/image22.png)](updating-the-tableadapter-to-use-joins-cs/_static/image21.png)
 
 **Figure 9**: Les résultats de procédures stockées sont affichés dans la fenêtre Sortie ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image23.png))
 
@@ -173,7 +173,7 @@ Nous avons déjà exploré manuellement ajouter des colonnes de table de donnée
 Démarrer en cliquant sur le `EmployeesTableAdapter` et en sélectionnant configurer dans le menu contextuel. Ceci fait apparaître l’Assistant Configuration de TableAdapter, qui répertorie les procédures stockées utilisées pour la sélection, insertion, mise à jour et suppression, ainsi que leurs valeurs de retour et les paramètres (le cas échéant). La figure 10 illustre cet Assistant. Ici, nous pouvons voir que le `Employees_Select` procédure stockée maintenant renvoie le `ManagerFirstName` et `ManagerLastName` champs.
 
 
-[![Til Assistant montre la liste des colonnes mises à jour pour la procédure stockée Employees_Select](updating-the-tableadapter-to-use-joins-cs/_static/image25.png)](updating-the-tableadapter-to-use-joins-cs/_static/image24.png)
+[![Le montre l’Assistant la liste des colonnes mises à jour pour le Employees_Select de procédure stockée](updating-the-tableadapter-to-use-joins-cs/_static/image25.png)](updating-the-tableadapter-to-use-joins-cs/_static/image24.png)
 
 **Figure 10**: L’Assistant affiche la liste des colonnes mises à jour pour le `Employees_Select` la procédure stockée ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image26.png))
 
@@ -181,7 +181,7 @@ Démarrer en cliquant sur le `EmployeesTableAdapter` et en sélectionnant config
 Terminez l’Assistant en cliquant sur Terminer. Une fois de retour vers le Concepteur de DataSet, la `EmployeesDataTable` inclut deux colonnes supplémentaires : `ManagerFirstName` et `ManagerLastName`.
 
 
-[![TIl EmployeesDataTable contient deux nouvelles colonnes](updating-the-tableadapter-to-use-joins-cs/_static/image28.png)](updating-the-tableadapter-to-use-joins-cs/_static/image27.png)
+[![Le EmployeesDataTable contient deux nouvelles colonnes](updating-the-tableadapter-to-use-joins-cs/_static/image28.png)](updating-the-tableadapter-to-use-joins-cs/_static/image27.png)
 
 **Figure 11**: Le `EmployeesDataTable` contient deux nouvelles colonnes ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image29.png))
 
@@ -204,12 +204,12 @@ Avec la `EmployeesBLLWithSprocs` classe terminée, nous vous êtes prêt à trav
 Configurer l’ObjectDataSource à utiliser le `EmployeesBLLWithSprocs` classe et, dans les onglets SELECT et DELETE, vérifiez que le `GetEmployees` et `DeleteEmployee` méthodes sont sélectionnés dans la liste déroulante. Cliquez sur Terminer pour terminer la configuration de s ObjectDataSource.
 
 
-[![Cconfiguration de l’ObjectDataSource d’utiliser la classe EmployeesBLLWithSprocs](updating-the-tableadapter-to-use-joins-cs/_static/image31.png)](updating-the-tableadapter-to-use-joins-cs/_static/image30.png)
+[![Configurer pour utiliser la classe EmployeesBLLWithSprocs ObjectDataSource](updating-the-tableadapter-to-use-joins-cs/_static/image31.png)](updating-the-tableadapter-to-use-joins-cs/_static/image30.png)
 
 **Figure 12**: Configurer l’ObjectDataSource à utiliser le `EmployeesBLLWithSprocs` classe ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image32.png))
 
 
-[![Have ObjectDataSource utiliser les méthodes de DeleteEmployee GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image34.png)](updating-the-tableadapter-to-use-joins-cs/_static/image33.png)
+[![Avoir l’utilisation de l’ObjectDataSource les GetEmployees et les méthodes de DeleteEmployee](updating-the-tableadapter-to-use-joins-cs/_static/image34.png)](updating-the-tableadapter-to-use-joins-cs/_static/image33.png)
 
 **Figure 13**: Avoir l’utilisation de l’ObjectDataSource le `GetEmployees` et `DeleteEmployee` méthodes ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image35.png))
 
@@ -224,7 +224,7 @@ Pour permettre aux utilisateurs de supprimer des employés à partir de cette pa
 Tester la page en accédant à via un navigateur. Comme le montre la Figure 14, la page répertorie chaque employé et son gestionnaire s nom (en supposant qu’il en a une).
 
 
-[![TIl jointure dans la procédure stockée Employees_Select retourne le Gestionnaire de s nom](updating-the-tableadapter-to-use-joins-cs/_static/image37.png)](updating-the-tableadapter-to-use-joins-cs/_static/image36.png)
+[![La jointure dans la Employees_Select procédure stockée renvoie le nom de s Manager](updating-the-tableadapter-to-use-joins-cs/_static/image37.png)](updating-the-tableadapter-to-use-joins-cs/_static/image36.png)
 
 **Figure 14**: Le `JOIN` dans le `Employees_Select` procédure stockée retourne le nom de gestionnaire ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image38.png))
 
@@ -232,7 +232,7 @@ Tester la page en accédant à via un navigateur. Comme le montre la Figure 14, 
 En cliquant sur le bouton Supprimer démarre le workflow de suppression, ce qui se termine par l’exécution de la `Employees_Delete` procédure stockée. Toutefois, la tentative `DELETE` instruction dans la procédure stockée échoue en raison d’une violation de contrainte de clé étrangère (voir Figure 15). Plus précisément, chaque employé possède un ou plusieurs enregistrements la `Orders` table, à l’origine de la suppression échoue.
 
 
-[![Deleting un employé qui a des résultats de commandes correspondantes dans une Violation de contrainte de clé étrangère](updating-the-tableadapter-to-use-joins-cs/_static/image40.png)](updating-the-tableadapter-to-use-joins-cs/_static/image39.png)
+[![Suppression d’un employé qui a des résultats de commandes correspondantes dans une Violation de contrainte de clé étrangère](updating-the-tableadapter-to-use-joins-cs/_static/image40.png)](updating-the-tableadapter-to-use-joins-cs/_static/image39.png)
 
 **Figure 15**: Suppression d’un employé qui a des résultats de commandes correspondantes dans une Violation de contrainte de clé étrangère ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image41.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 5cdef14ec55e2e66c31219c8ccc95c8e361547d5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396356"
 ---
 # <a name="intro-to-aspnet-mvc-3-c"></a>Introduction à ASP.NET MVC 3 (C#)
@@ -89,4 +89,4 @@ F5 provoque Visual Web Developer démarrer un serveur web de développement et d
 Dès ce modèle par défaut vous donne deux pages à visiter et une page de connexion de base. L’étape suivante consiste à modifier le fonctionnement de cette application et en savoir un peu sur ASP.NET MVC dans le processus. Fermez votre navigateur et nous allons modifier du code.
 
 > [!div class="step-by-step"]
-> [Suivant](adding-a-controller.md)
+> [Next](adding-a-controller.md)

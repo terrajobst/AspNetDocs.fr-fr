@@ -12,7 +12,7 @@ ms.openlocfilehash: cab185ccb048a374a08f4b5d978b30675c30a60d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383957"
 ---
 # <a name="signalr-scaleout-with-azure-service-bus-signalr-1x"></a>Scale-out de SignalR avec Azure Service Bus (SignalR 1.x)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 70a21646031d135339fd0582f3b9436eb769faa5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388580"
 ---
 # <a name="intro-to-aspnet-web-forms"></a>Introduction à ASP.NET Web Forms

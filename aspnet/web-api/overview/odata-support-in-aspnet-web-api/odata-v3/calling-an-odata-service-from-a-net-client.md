@@ -12,7 +12,7 @@ ms.openlocfilehash: d35c0057f5c29e399e45d0a58467de7f106d9994
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389971"
 ---
 # <a name="calling-an-odata-service-from-a-net-client-c"></a>Appel à un service OData à partir d’un client .NET (C#)
@@ -27,7 +27,7 @@ par [Mike Wasson](https://github.com/MikeWasson)
 >
 >
 > - [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013) (fonctionne avec Visual Studio 2012)
-> - [Bibliothèque client services de données WCF](https://msdn.microsoft.com/library/cc668772.aspx)
+> - [Bibliothèque cliente WCF Data Services](https://msdn.microsoft.com/library/cc668772.aspx)
 > - API Web 2. (L’exemple de service OData est généré à l’aide de Web API 2, mais l’application cliente ne dépend pas d’API Web).
 
 
@@ -43,7 +43,7 @@ Les articles suivants décrivent comment implémenter le service OData dans l’
 
 - [Création d’un point de terminaison OData dans Web API 2](creating-an-odata-endpoint.md)
 - [Relations d’entité OData dans Web API 2](working-with-entity-relations.md)
-- [Actions OData dans Web API 2](odata-actions.md)
+- [Actions OData dans Web API 2](odata-actions.md)
 
 ## <a name="generate-the-service-proxy"></a>Générer le Proxy de Service
 

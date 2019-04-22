@@ -12,7 +12,7 @@ ms.openlocfilehash: ba70db591c373fd9514fdb7079af83a511067162
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380832"
 ---
 # <a name="recovering-and-changing-passwords-vb"></a>Récupération et changement des mots de passe (VB)
@@ -63,7 +63,7 @@ Une fois que l’utilisateur a fourni son nom d’utilisateur - ou une réponse 
 La figure 1 illustre comment le PasswordRecovery interface et le comportement est influencée par la configuration de l’appartenance.
 
 
-[![TIl RequiresQuestionAndAnswer EnablePasswordRetrieval et EnablePasswordReset influencent le PasswordRecovery apparence du contrôle et le comportement](recovering-and-changing-passwords-vb/_static/image2.png)](recovering-and-changing-passwords-vb/_static/image1.png)
+[![Le RequiresQuestionAndAnswer, EnablePasswordRetrieval et EnablePasswordReset influencent l’apparence et le comportement du contrôle PasswordRecovery](recovering-and-changing-passwords-vb/_static/image2.png)](recovering-and-changing-passwords-vb/_static/image1.png)
 
 **Figure 1**: Le `RequiresQuestionAndAnswer`, `EnablePasswordRetrieval`, et `EnablePasswordReset` influencer l’apparence et le comportement du contrôle PasswordRecovery ([cliquez pour afficher l’image en taille réelle](recovering-and-changing-passwords-vb/_static/image3.png))
 
@@ -93,7 +93,7 @@ En plus d’utiliser un serveur SMTP sur le réseau, vous pouvez également spé
 Une fois que vous avez configuré les paramètres SMTP, visitez le `RecoverPassword.aspx` page via un navigateur. Essayez tout d’abord entrer un nom d’utilisateur qui n’existe pas dans le magasin d’utilisateurs. Comme le montre la Figure 2, le contrôle PasswordRecovery affiche un message indiquant que les informations de l’utilisateur ne sont pas accessible. Le texte du message peut être personnalisé par le biais du contrôle [ `UserNameFailureText` propriété](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.usernamefailuretext.aspx).
 
 
-[![An Message d’erreur s’affiche si un nom d’utilisateur non valide est entré](recovering-and-changing-passwords-vb/_static/image5.png)](recovering-and-changing-passwords-vb/_static/image4.png)
+[![Un Message d’erreur s’affiche si un nom d’utilisateur non valide est entré.](recovering-and-changing-passwords-vb/_static/image5.png)](recovering-and-changing-passwords-vb/_static/image4.png)
 
 **Figure 2**: Un Message d’erreur s’affiche si un nom d’utilisateur non valide est entré ([cliquez pour afficher l’image en taille réelle](recovering-and-changing-passwords-vb/_static/image6.png))
 
@@ -101,7 +101,7 @@ Une fois que vous avez configuré les paramètres SMTP, visitez le `RecoverPassw
 À présent entrer un nom d’utilisateur. Utilisez le nom d’utilisateur d’un compte dans le système avec une adresse de messagerie que vous pouvez accéder à et dont la sécurité répondre que vous connaissez. Après avoir saisi le nom d’utilisateur et clique sur Envoyer, le contrôle PasswordRecovery affiche sa vue de la Question. Comme avec la vue du nom d’utilisateur, si vous entrez un incorrect répondre à ce contrôle de PasswordRecovery affiche un message d’erreur (voir Figure 3). Utilisez le [ `QuestionFailureText` propriété](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.questionfailuretext.aspx) pour personnaliser ce message d’erreur.
 
 
-[![An Message d’erreur s’affiche si l’utilisateur entre une réponse non valide de la sécurité](recovering-and-changing-passwords-vb/_static/image8.png)](recovering-and-changing-passwords-vb/_static/image7.png)
+[![Un Message d’erreur s’affiche si l’utilisateur entre une réponse de sécurité non valide](recovering-and-changing-passwords-vb/_static/image8.png)](recovering-and-changing-passwords-vb/_static/image7.png)
 
 **Figure 3**: Un Message d’erreur s’affiche si l’utilisateur entre une réponse de sécurité non valide ([cliquez pour afficher l’image en taille réelle](recovering-and-changing-passwords-vb/_static/image9.png))
 
@@ -109,7 +109,7 @@ Une fois que vous avez configuré les paramètres SMTP, visitez le `RecoverPassw
 Enfin, entrez la réponse de sécurité appropriées et cliquez sur Envoyer. Dans les coulisses, le contrôle PasswordRecovery génère un mot de passe aléatoire, il attribue au compte d’utilisateur, envoie un message électronique pour informer l’utilisateur de son nouveau mot de passe (voir Figure 4), puis affiche la vue Opération réussie.
 
 
-[![TIl utilisateur reçoit un E-mail avec son nouveau mot de passe](recovering-and-changing-passwords-vb/_static/image11.png)](recovering-and-changing-passwords-vb/_static/image10.png)
+[![L’utilisateur reçoit un E-mail avec son nouveau mot de passe](recovering-and-changing-passwords-vb/_static/image11.png)](recovering-and-changing-passwords-vb/_static/image10.png)
 
 **Figure 4**: L’utilisateur reçoit un E-mail avec son nouveau mot de passe ([cliquez pour afficher l’image en taille réelle](recovering-and-changing-passwords-vb/_static/image12.png))
 
@@ -145,7 +145,7 @@ Enfin, pointez le `MailDefinition`de [ `BodyFileName` propriété](https://msdn.
 Une fois ces modifications revisiter le `RecoverPassword.aspx` page et entrez votre nom d’utilisateur et de sécurité la réponse. Vous recevez doit un e-mail qui ressemble à celui de la Figure 5. Notez que `webmaster@example.com` a été CC serait et que l’objet et le corps ont été mis à jour.
 
 
-[![Til sujet, corps et CC liste ont été mis à jour](recovering-and-changing-passwords-vb/_static/image14.png)](recovering-and-changing-passwords-vb/_static/image13.png)
+[![L’objet, le corps et la liste CC ont été mis à jour](recovering-and-changing-passwords-vb/_static/image14.png)](recovering-and-changing-passwords-vb/_static/image13.png)
 
 **Figure 5**: L’objet, le corps et le CC liste ont été mis à jour ([cliquez pour afficher l’image en taille réelle](recovering-and-changing-passwords-vb/_static/image15.png))
 
@@ -197,7 +197,7 @@ Utilisez le contrôle ChangePassword pour créer une interface pour un utilisate
 Ouvrez le `ChangePassword.aspx` page et ajoutez un contrôle ChangePassword à la page, en nommant `ChangePwd`. À ce stade, la vue de conception doit afficher la modification de mot de passe permet d’afficher (voir Figure 6). Comme avec le contrôle PasswordRecovery, vous pouvez basculer entre les vues par le biais de balises actives du contrôle. En outre, les apparences de ces volets sont personnalisables via les propriétés de style assorties ou en les convertissant en un modèle.
 
 
-[![Ajj un contrôle ChangePassword à la Page](recovering-and-changing-passwords-vb/_static/image17.png)](recovering-and-changing-passwords-vb/_static/image16.png)
+[![Ajouter un contrôle ChangePassword à la Page](recovering-and-changing-passwords-vb/_static/image17.png)](recovering-and-changing-passwords-vb/_static/image16.png)
 
 **Figure 6**: Ajouter un contrôle ChangePassword à la Page ([cliquez pour afficher l’image en taille réelle](recovering-and-changing-passwords-vb/_static/image18.png))
 
@@ -215,7 +215,7 @@ Paramètre `DisplayUserName` à la valeur True est utile si vous souhaitez perme
 Visitez le `ChangePassword.aspx` page via un navigateur et de modifier votre mot de passe. Notez qu’un message d’erreur s’affiche si vous entrez un nouveau mot de passe qui ne parvient pas à répondre à la longueur de mot de passe en matière de caractère non alphanumérique spécifié dans la configuration de l’appartenance (voir la Figure 7).
 
 
-[![Ajj un contrôle ChangePassword à la Page](recovering-and-changing-passwords-vb/_static/image20.png)](recovering-and-changing-passwords-vb/_static/image19.png)
+[![Ajouter un contrôle ChangePassword à la Page](recovering-and-changing-passwords-vb/_static/image20.png)](recovering-and-changing-passwords-vb/_static/image19.png)
 
 **Figure 7**: Ajouter un contrôle ChangePassword à la Page ([cliquez pour afficher l’image en taille réelle](recovering-and-changing-passwords-vb/_static/image21.png))
 
@@ -235,7 +235,7 @@ Ensuite, définissez le contrôle ChangePassword `MailDefinition` la propriété
 Après avoir apporté ces modifications, visitez la page et modifier votre mot de passe à nouveau. Cette fois-ci, le contrôle ChangePassword envoie un e-mail personnalisé, au format HTML à l’adresse de messagerie de l’utilisateur sur le fichier (voir Figure 8).
 
 
-[![AE-mail n Message informe que l’utilisateur que leur mot de passe a été modifié.](recovering-and-changing-passwords-vb/_static/image23.png)](recovering-and-changing-passwords-vb/_static/image22.png)
+[![Un Message de courrier électronique informe que leur mot de passe utilisateur a changé.](recovering-and-changing-passwords-vb/_static/image23.png)](recovering-and-changing-passwords-vb/_static/image22.png)
 
 **Figure 8**: Un Message de courrier électronique informe que leur mot de passe utilisateur a changé ([cliquez pour afficher l’image en taille réelle](recovering-and-changing-passwords-vb/_static/image24.png))
 
@@ -273,7 +273,7 @@ Le code a des bits peu attrayant et est assez long. Par conséquent, je ne veux 
 Après avoir entrer le nouveau mot de passe, confirmer dans la deuxième zone de texte et en cliquant sur le bouton utilisateur de mise à jour, s’ensuit une publication (postback) et le `aspnet_Membership_SetPassword` procédure stockée est appelée, la mise à jour le mot de passe. J’encourage les lecteurs intéressés par cette fonctionnalité pour vous familiariser avec le code et réessayez d’étendre les fonctionnalités pour inclure l’envoi d’un e-mail à l’utilisateur dont mot de passe a été modifié.
 
 
-[![AAdministrateur n peut modifier un mot de passe utilisateur](recovering-and-changing-passwords-vb/_static/image26.png)](recovering-and-changing-passwords-vb/_static/image25.png)
+[![Un administrateur peut modifier un mot de passe utilisateur](recovering-and-changing-passwords-vb/_static/image26.png)](recovering-and-changing-passwords-vb/_static/image25.png)
 
 **Figure 9**: Un administrateur peut modifier le mot de passe d’un utilisateur ([cliquez pour afficher l’image en taille réelle](recovering-and-changing-passwords-vb/_static/image27.png))
 
@@ -297,7 +297,7 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 - [Démarrages rapides de contrôle ChangePassword](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/ctrlref/login/changepassword.aspx)
 - [Démarrages rapides de contrôle PasswordRecovery](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/ctrlref/login/passwordrecovery.aspx)
 - [Envoi d’E-mails dans ASP.NET](http://aspnet.4guysfromrolla.com/articles/072606-1.aspx)
-- [`System.Net.Mail` FAQ](http://www.systemnetmail.com/)
+- [`System.Net.Mail` Forum aux questions sur](http://www.systemnetmail.com/)
 
 ### <a name="about-the-author"></a>À propos de l’auteur
 

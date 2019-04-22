@@ -12,7 +12,7 @@ ms.openlocfilehash: e8b36a829f90380a6b077df9790a6ea081b3fe51
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392155"
 ---
 # <a name="how-do-i-make-client-side-network-callbacks-with-aspnet-ajax"></a>[Comment faire] Effectuer des rappels réseau côté Client avec ASP.NET AJAX ?

@@ -12,7 +12,7 @@ ms.openlocfilehash: 055142be60257f0917eb22bc08471c0bec54ca2e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387176"
 ---
 # <a name="getting-started-with-aspnet-mvc-5"></a>Bien démarrer avec ASP.NET MVC 5
@@ -24,7 +24,7 @@ ms.locfileid: "59387176"
 Cette série de didacticiels suivante couvre ASP.NET MVC : Source se trouve sur [GitHub](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
 
 - [Prise en main](getting-started.md)
-- [Ajour d’un contrôleur](adding-a-controller.md)
+- [Ajout d’un contrôleur](adding-a-controller.md)
 - [Ajout d’une vue](adding-a-view.md)
 - [Ajout d’un modèle](adding-a-model.md)
 - [Création d’une chaîne de connexion et utilisation de SQL Server LocalDB](creating-a-connection-string.md)

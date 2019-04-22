@@ -12,7 +12,7 @@ ms.openlocfilehash: a3df375425c4c79f1274f466a6669997a1e3676f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390605"
 ---
 # <a name="aspnet-mvc-storefront-part-1-architectural-discussion-and-overview"></a>Application Storefront ASP.NET MVC, partie 1 : Vue d’ensemble et considérations sur l’architecture
@@ -24,4 +24,4 @@ Rob Conery couvre l’architecture initiale ici, dans la partie 1, où il aborde
 [&#9654;Regardez la vidéo (10 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-1-architectural-discussion-and-overview)
 
 > [!div class="step-by-step"]
-> [Suivant](aspnet-mvc-storefront-part-2-the-repository-pattern.md)
+> [Next](aspnet-mvc-storefront-part-2-the-repository-pattern.md)

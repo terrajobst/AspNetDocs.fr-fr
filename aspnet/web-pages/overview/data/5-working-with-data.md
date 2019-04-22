@@ -12,7 +12,7 @@ ms.openlocfilehash: 0fc828e39cfcce22d4cc226954cf7d1731b04e42
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379779"
 ---
 # <a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introduction à l’utilisation avec une base de données dans ASP.NET Web Pages (Razor) Sites
@@ -51,7 +51,7 @@ Imaginez un carnet d’adresses classiques. Pour chaque entrée dans le carnet d
 
 Un moyen classique aux données d’image comme cela est comme une table avec des lignes et colonnes. En termes de base de données, chaque ligne est souvent appelé un enregistrement. Chaque colonne (parfois appelée champs) contient une valeur pour chaque type de données : prénom, nom du dernier et ainsi de suite.
 
-| **Id** | **FirstName** | **LastName** | **Adresse** | **Messagerie** | **Phone** |
+| **ID** | **FirstName** | **LastName** | **Adresse** | **E-mail** | **Phone** |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Jim | Abrus | 210 100th St SE Orcas WA 98031 | jim@contoso.com | 555 0100 |
 | 2 | Terry | Adams | 1234 Main St. Seattle WA 99011 | terry@cohowinery.com | 555 0101 |
@@ -107,7 +107,7 @@ Vous pouvez maintenant ajouter des exemples de données à votre base de donnée
 2. Avec le bouton droit de la table Product, puis **données**.
 3. Dans le volet d’édition, entrez les enregistrements suivants :
 
-    | **Nom** | **Description** | **Prix** |
+    | **Name** | **Description** | **Prix** |
     | --- | --- | --- |
     | Pain | Nouvelle cuite tous les jours. | 2.99 |
     | Strawberry Shortcake | Effectué avec fraises organiques à partir de notre domaine privé. | 9.99 |
@@ -151,7 +151,7 @@ Une fois que vous avez une base de données avec des données qu’il contient, 
 
 > [!TIP] 
 > 
-> **SQL (Structured Query Language)**
+> **Structured Query Language (SQL)**
 > 
 > SQL est un langage qui est utilisé dans la plupart des bases de données relationnelles pour la gestion des données dans une base de données. Il inclut des commandes qui permettent de récupérer des données et mettre à jour, et qui vous permettent de créer, modifier et gérer des tables de base de données. SQL est différent de celui d’un langage de programmation (comme celui que vous utilisez dans WebMatrix), car avec SQL, l’idée est que vous indiquer la base de données à ce que vous voulez, et travail de la base de données consiste à déterminer comment obtenir les données ou d’effectuer la tâche. Voici des exemples de certaines commandes SQL et ce qu’ils font :
 > 

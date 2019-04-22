@@ -12,7 +12,7 @@ ms.openlocfilehash: 96f6ebb47af38c77cba11a92c883700730324226
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389230"
 ---
 # <a name="specifying-the-master-page-programmatically-vb"></a>Spécification de la page maître par programmation (VB)
@@ -42,7 +42,7 @@ Chaque fois qu’une demande arrive au niveau du serveur web d’une page ASP.NE
 La figure 1 illustre cette fusion. Étape 1 dans la Figure 1 montre le contenu initial et les hiérarchies de contrôle de page maître. À la fin de la phase PreInit le contenu des contrôles dans la page sont ajoutés aux ContentPlaceHolders correspondantes dans la page maître (étape 2). Après cette fusion, la page maître sert à la racine de la hiérarchie des contrôles de multiplication. Cela fusionnés contrôle hiérarchie est ensuite ajoutée à la page pour générer la hiérarchie des contrôles finalisé (étape 3). Le résultat net est que la hiérarchie des contrôles de la page inclut la hiérarchie des contrôles de multiplication.
 
 
-[![TIl Page maître et les hiérarchies de contrôle de la Page de contenu sont fusionnés ensemble pendant la phase PreInit](specifying-the-master-page-programmatically-vb/_static/image2.png)](specifying-the-master-page-programmatically-vb/_static/image1.png)
+[![La Page maître et les hiérarchies de contrôle de la Page de contenu sont fusionnés ensemble pendant la phase PreInit](specifying-the-master-page-programmatically-vb/_static/image2.png)](specifying-the-master-page-programmatically-vb/_static/image1.png)
 
 **Figure 01**: La Page maître et les hiérarchies de contrôle de la Page de contenu sont fusionnés ensemble pendant la phase PreInit ([cliquez pour afficher l’image en taille réelle](specifying-the-master-page-programmatically-vb/_static/image3.png))
 
@@ -97,7 +97,7 @@ Commençons par examiner comment charger dynamiquement une page maître lors de 
 Créer une nouvelle page maître dans le dossier racine nommé `Alternate.master`. Également ajouter une nouvelle feuille de style pour le site Web nommé `AlternateStyles.css`.
 
 
-[![Ajj une autre Page maître et fichier CSS au site Web](specifying-the-master-page-programmatically-vb/_static/image8.png)](specifying-the-master-page-programmatically-vb/_static/image7.png)
+[![Ajoutez une autre Page maître et CSS de fichiers vers le site Web](specifying-the-master-page-programmatically-vb/_static/image8.png)](specifying-the-master-page-programmatically-vb/_static/image7.png)
 
 **Figure 03**: Ajouter une autre Page maître et fichier CSS pour le site Web ([cliquez pour afficher l’image en taille réelle](specifying-the-master-page-programmatically-vb/_static/image9.png))
 
@@ -108,7 +108,7 @@ J’ai conçu le `Alternate.master` page maître pour que le titre affiché en h
 > ASP.NET inclut la possibilité de définir *thèmes*. Un thème est une collection d’images, fichiers CSS et associées au style Web contrôle paramètres de propriété qui peuvent être appliqués à une page lors de l’exécution. Les thèmes sont la meilleure option si les dispositions de votre site diffèrent uniquement dans les images affichées et par les règles CSS. Si les dispositions de différences plus fondamentales, telles que l’utilisation de contrôles Web différents, ou avoir une disposition radicalement différente, puis vous devrez utiliser des pages maîtres distincts. Consultez la section obtenir des informations supplémentaires à la fin de ce didacticiel pour plus d’informations sur les thèmes.
 
 
-[![Ovos Pages de contenu peuvent désormais utiliser une nouvelle apparence](specifying-the-master-page-programmatically-vb/_static/image11.png)](specifying-the-master-page-programmatically-vb/_static/image10.png)
+[![Nos Pages de contenu peuvent désormais utiliser une nouvelle apparence](specifying-the-master-page-programmatically-vb/_static/image11.png)](specifying-the-master-page-programmatically-vb/_static/image10.png)
 
 **Figure 04**: Nos Pages de contenu peuvent désormais utiliser une nouvelle apparence ([cliquez pour afficher l’image en taille réelle](specifying-the-master-page-programmatically-vb/_static/image12.png))
 
@@ -206,7 +206,7 @@ Nous allons créer une page web qui permet à l’utilisateur à choisir la page
 > Étant donné que `Site.master` et `Alternate.master` ont le même ensemble de contrôles ContentPlaceHolder peu importe quelle page maître, vous choisissez lors de la création de la nouvelle page de contenu. Par souci de cohérence, je vous conseille à l’aide de `Site.master`.
 
 
-[![Aune nouvelle Page de contenu au site Web de jj](specifying-the-master-page-programmatically-vb/_static/image14.png)](specifying-the-master-page-programmatically-vb/_static/image13.png)
+[![Ajoutez une nouvelle Page de contenu au site Web](specifying-the-master-page-programmatically-vb/_static/image14.png)](specifying-the-master-page-programmatically-vb/_static/image13.png)
 
 **Figure 05**: Ajoutez une nouvelle Page de contenu vers le site Web ([cliquez pour afficher l’image en taille réelle](specifying-the-master-page-programmatically-vb/_static/image15.png))
 
@@ -251,12 +251,12 @@ Avec le `ChooseMasterPage.aspx` page terminée, la dernière tâche consiste à 
 Avec ce code en place, visitez le `ChooseMasterPage.aspx` page. Initialement, le `Site.master` page maître est sélectionné (voir Figure 6), mais l’utilisateur peut sélectionner une autre page maître dans la liste déroulante.
 
 
-[![Cles Pages du contenu sont affichés à l’aide de la Page Site.master maître](specifying-the-master-page-programmatically-vb/_static/image17.png)](specifying-the-master-page-programmatically-vb/_static/image16.png)
+[![Pages de contenu sont affichés à l’aide de la Page Site.master maître](specifying-the-master-page-programmatically-vb/_static/image17.png)](specifying-the-master-page-programmatically-vb/_static/image16.png)
 
 **Figure 06**: Contenu de Pages sont affichées à l’aide de la `Site.master` Page maître ([cliquez pour afficher l’image en taille réelle](specifying-the-master-page-programmatically-vb/_static/image18.png))
 
 
-[![Cles Pages du contenu sont maintenant affichés à l’aide de la Page maître de Alternate.master](specifying-the-master-page-programmatically-vb/_static/image20.png)](specifying-the-master-page-programmatically-vb/_static/image19.png)
+[![Pages de contenu sont maintenant affichés à l’aide de la Page maître de Alternate.master](specifying-the-master-page-programmatically-vb/_static/image20.png)](specifying-the-master-page-programmatically-vb/_static/image19.png)
 
 **Figure 07**: Contenu de Pages sont maintenant affichées à l’aide de la `Alternate.master` Page maître ([cliquez pour afficher l’image en taille réelle](specifying-the-master-page-programmatically-vb/_static/image21.png))
 

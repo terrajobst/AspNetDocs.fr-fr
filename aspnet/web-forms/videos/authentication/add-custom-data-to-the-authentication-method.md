@@ -12,7 +12,7 @@ ms.openlocfilehash: 29326c8d6831456b15ba9485be40f8beb441b125
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381508"
 ---
 # <a name="add-custom-data-to-the-authentication-method"></a>Ajouter des données personnalisées à la méthode d’authentification

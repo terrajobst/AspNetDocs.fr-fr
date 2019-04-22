@@ -12,7 +12,7 @@ ms.openlocfilehash: a47d428830fa6c43bcb9ce797d65b73891b44618
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381885"
 ---
 # <a name="using-asynchronous-methods-in-aspnet-45"></a>Utilisation de méthodes asynchrones dans ASP.NET 4.5
@@ -192,7 +192,7 @@ Pour profiter des avantages d’une application web asynchrones, vous devrez peu
 
     - Ouvrez le Gestionnaire des services Internet et accédez au volet de Pools d’applications.
     - Cliquez avec le bouton droit sur le pool d’applications cible et sélectionnez **paramètres avancés**.  
-        ![paramètres avancés](using-asynchronous-methods-in-aspnet-45/_static/image4.png)
+        ![advanced](using-asynchronous-methods-in-aspnet-45/_static/image4.png)
     - Dans le **paramètres avancés** boîte de dialogue, choisissez *longueur de file d’attente* à partir de 1 000 à 5 000.  
         ![Longueur de file d’attente](using-asynchronous-methods-in-aspnet-45/_static/image5.png)  
   
@@ -200,7 +200,7 @@ Pour profiter des avantages d’une application web asynchrones, vous devrez peu
 
 - [Le contrôle de version .NET et multi-ciblage - .NET 4.5 est une mise à niveau sur place vers le .NET 4.0](http://www.hanselman.com/blog/NETVersioningAndMultiTargetingNET45IsAnInplaceUpgradeToNET40.aspx)
 - [Comment définir une Application IIS ou le pool d’applications à utiliser ASP.NET 3.5 au lieu de 2.0](http://www.hanselman.com/blog/HowToSetAnIISApplicationOrAppPoolToUseASPNET35RatherThan20.aspx)
-- [Versions et dépendances du .NET Framework](https://msdn.microsoft.com/library/bb822049(VS.110).aspx)
+- [Versions et dépendances de .NET Framework](https://msdn.microsoft.com/library/bb822049(VS.110).aspx)
 
 - Si votre application est à l’aide des services web ou de noms System.NET pour communiquer avec un serveur principal via HTTP vous devrez peut-être augmenter le [connectionManagement/maxconnection](https://msdn.microsoft.com/library/fb6y0fyc(VS.110).aspx) élément. Pour les applications ASP.NET, il est limité par la fonctionnalité de configuration automatique à 12 fois le nombre d’unités centrales. Cela signifie que sur une procédure quadruple, vous pouvez avoir au maximum 12 \* 4 = 48 connexions simultanées à un point de terminaison IP. Étant donné que cela est lié à [autoConfig](https://msdn.microsoft.com/library/7w2sway1(VS.110).aspx), le moyen le plus simple d’augmenter `maxconnection` dans ASP.NET application consiste à définir [System.Net.ServicePointManager.DefaultConnectionLimit](https://msdn.microsoft.com/library/system.net.servicepointmanager.defaultconnectionlimit(VS.110).aspx) par programmation dans l’à partir de `Application_Start` méthode dans le *global.asax* fichier. Consultez l’exemple à télécharger pour obtenir un exemple.
 - Dans .NET 4.5, la valeur par défaut de 5000 pour [MaxConcurrentRequestsPerCPU](https://blogs.msdn.com/tmarq/archive/2007/07/21/asp-net-thread-usage-on-iis-7-0-and-6-0.aspx) devraient être appropriées.

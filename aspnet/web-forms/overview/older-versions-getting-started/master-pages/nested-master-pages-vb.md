@@ -12,7 +12,7 @@ ms.openlocfilehash: e8ba4bc5dc7ae2478413049ebb2943cbbe52e11e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396783"
 ---
 # <a name="nested-master-pages-vb"></a>Pages maîtres imbriquées (VB)
@@ -84,7 +84,7 @@ Ensuite, ajoutez le balisage suivant dans le formulaire Web de `Simple.master`:
 Ce balisage affiche un lien intitulé « Pages maîtres imbriquées (Simple) » en haut de la page dans une grande taille de police blanche sur fond bleu foncé. Sous qui est le `MainContent` ContentPlaceHolder. La figure 1 illustre le `Simple.master` page maître lors du chargement dans le concepteur Visual Studio.
 
 
-[![TIl Nested Master définit contenu spécifiques à la Page pour les Pages dans la Section Administration](nested-master-pages-vb/_static/image2.png)](nested-master-pages-vb/_static/image1.png)
+[![La Page maître imbriquée définit le contenu spécifique aux Pages dans la Section Administration](nested-master-pages-vb/_static/image2.png)](nested-master-pages-vb/_static/image1.png)
 
 **Figure 01**: L’imbriqués Master Page définit contenu spécifique aux Pages dans la Section Administration ([cliquez pour afficher l’image en taille réelle](nested-master-pages-vb/_static/image3.png))
 
@@ -101,12 +101,12 @@ Ensuite, cliquez sur le bouton Ajouter. Ceci affichera le même, sélectionnez u
 > Si vous avez créé votre site Web ASP.NET à l’aide du modèle de projet d’Application Web au lieu du modèle de projet de Site Web, vous ne verrez pas la case à cocher « Sélectionner la page maître » dans la boîte de dialogue Ajouter un nouvel élément indiquée dans la Figure 2. Pour créer une page maître imbriquée lorsque vous utilisez le modèle de projet d’Application Web, vous devez choisir le modèle de Page maître imbriquée (au lieu du modèle de Page maître). Après avoir sélectionné le modèle de Page maître imbriquée et en cliquant sur Ajouter, le même sélectionner une Page maître boîte de dialogue illustrée dans la Figure 3 s’affiche.
 
 
-[![Cvérifier le &quot;sélectionner la page maître&quot; case à cocher pour ajouter une Page maître imbriquée](nested-master-pages-vb/_static/image5.png)](nested-master-pages-vb/_static/image4.png)
+[![Vérifier le &quot;sélectionner la page maître&quot; case à cocher pour ajouter une Page maître imbriquée](nested-master-pages-vb/_static/image5.png)](nested-master-pages-vb/_static/image4.png)
 
 **Figure 02**: Cochez la case « Sélectionner la page maître » pour ajouter une Page maître imbriquée ([cliquez pour afficher l’image en taille réelle](nested-master-pages-vb/_static/image6.png))
 
 
-[![Bind la Page maître imbriquée à la Page maître de Simple.master](nested-master-pages-vb/_static/image8.png)](nested-master-pages-vb/_static/image7.png)
+[![Lier la Page maître imbriquée à la Page maître de Simple.master](nested-master-pages-vb/_static/image8.png)](nested-master-pages-vb/_static/image7.png)
 
 **Figure 03**: Lier la Page maître imbriquée à la `Simple.master` Page maître ([cliquez pour afficher l’image en taille réelle](nested-master-pages-vb/_static/image9.png))
 
@@ -126,7 +126,7 @@ Mettre à jour cette page maître imbriquée afin qu’il affiche le texte « H
 Après avoir apporté cet ajout, enregistrez la page maître imbriquée et puis ajoutez une nouvelle page de contenu pour le `NestedMasterPages` dossier nommé `Default.aspx`, puis liez-le à le `SimpleNested.master` page maître. Lors de l’ajout de cette page, vous pouvez être surpris de voir qu’elle contient sans contrôles de contenu (voir Figure 4) ! Une page de contenu peut accéder uniquement à son *parent* maître ContentPlaceHolders de la page. `SimpleNested.master` ne contient pas tous les contrôles ContentPlaceHolder ; Par conséquent, n’importe quelle page de contenu liée à cette page maître ne peut pas contenir les contrôles de contenu.
 
 
-[![TIl nouvelle Page contient aucun contenu contrôles de contenu](nested-master-pages-vb/_static/image11.png)](nested-master-pages-vb/_static/image10.png)
+[![La nouvelle Page de contenu ne contient aucun contrôle de contenu](nested-master-pages-vb/_static/image11.png)](nested-master-pages-vb/_static/image10.png)
 
 **Figure 04**: La nouvelle Page contient aucun contenu contrôles de contenu ([cliquez pour afficher l’image en taille réelle](nested-master-pages-vb/_static/image12.png))
 
@@ -149,7 +149,7 @@ Supprimer le `Default.aspx` page que nous venons de créer de contenu, puis ajou
 La figure 5 illustre les trois entités impliquées dans ce cas - `Simple.master`, `SimpleNested.master`, et `Default.aspx` - et leurs relations avec les uns des autres. Comme le montre le diagramme, la page maître imbriquée implémente des contrôles de contenu pour ContentPlaceHolder de son parent. Si ces régions doivent être accessibles à la page de contenu, la page maître imbriquée doit ajouter son propre ContentPlaceHolders aux contrôles de contenu.
 
 
-[![TIl a des Pages maîtres imbriquées et de niveau supérieur dicter le mise contenu en Page](nested-master-pages-vb/_static/image14.png)](nested-master-pages-vb/_static/image13.png)
+[![Les Pages maîtres de niveau supérieur et imbriqués dictent le contenu mise en Page](nested-master-pages-vb/_static/image14.png)](nested-master-pages-vb/_static/image13.png)
 
 **Figure 05**: Les Pages maîtres imbriquées et de niveau supérieur dictent le mise contenu en Page ([cliquez pour afficher l’image en taille réelle](nested-master-pages-vb/_static/image15.png))
 
@@ -157,7 +157,7 @@ La figure 5 illustre les trois entités impliquées dans ce cas - `Simple.master
 Ce comportement illustre comment une page de contenu ou la page maître est uniquement informé de sa page maître parente. Ce comportement est également indiqué par le concepteur Visual Studio. La figure 6 illustre le concepteur pour `Default.aspx`. Bien que le concepteur affiche clairement quelles régions sont modifiables à partir de la page de contenu et les parties ne sont pas, il ne lever l’ambiguïté quelles sont les zones non modifiables de la page maître imbriquée et quelles sont les régions à partir de la page maître de niveau supérieur.
 
 
-[![TIl contenu Page maintenant inclut des contrôles de contenu pour ContentPlaceHolders de la Page maître imbriquée](nested-master-pages-vb/_static/image17.png)](nested-master-pages-vb/_static/image16.png)
+[![Le contenu maintenant de Page inclut des contrôles de contenu pour ContentPlaceHolders la Page maître imbriquée](nested-master-pages-vb/_static/image17.png)](nested-master-pages-vb/_static/image16.png)
 
 **Figure 06**: Le contenu Page maintenant inclut des contrôles de contenu pour ContentPlaceHolders de la Page maître imbriquée ([cliquez pour afficher l’image en taille réelle](nested-master-pages-vb/_static/image18.png))
 
@@ -189,7 +189,7 @@ Pour illustrer la facilité avec laquelle nous pouvons modifier la disposition d
 Cela ajoute deux liens en haut de chaque page qui lie à `Simple.master`, `SimpleNested.master`, ou `SimpleNestedAlternate.master`; ces modifications s’appliquent immédiatement à des pages maîtres imbriqués et leurs pages de contenu. La figure 8 illustre `Alternate.aspx` lorsqu’ils sont affichés via un navigateur. Notez l’ajout des liens en haut de la page (par rapport à la Figure 7).
 
 
-[![Csuspendre à la Page maître de niveau supérieur sont immédiatement répercutées dans son imbriqués des Pages maîtres et de leurs Pages de contenu](nested-master-pages-vb/_static/image23.png)](nested-master-pages-vb/_static/image22.png)
+[![Passé à la Page maître de niveau supérieur sont immédiatement répercutées dans son imbriqués des Pages maîtres et de leurs Pages de contenu](nested-master-pages-vb/_static/image23.png)](nested-master-pages-vb/_static/image22.png)
 
 **Figure 08**: Passé à la Page maître de niveau supérieur sont immédiatement répercutées dans son imbriqués des Pages maîtres et de leurs Pages de contenu ([cliquez pour afficher l’image en taille réelle](nested-master-pages-vb/_static/image24.png))
 
@@ -219,7 +219,7 @@ Comment nous configurer notre page maître imbriquée afin qu’il utilise la pa
 Nous allons utiliser la deuxième option. Créer un fichier page maître imbriquée unique dans le `~/Admin` dossier nommé `AdminNested.master`. Étant donné que les deux `Site.master` et `Alternate.master` ont le même ensemble de contrôles ContentPlaceHolder, peu importe quelle page maître vous liez à, bien que je vous encourage à lier à `Site.master` pour des raisons de sécurité de la cohérence.
 
 
-[![Ajj une Page maître imbriquée pour le dossier ~/Admin.](nested-master-pages-vb/_static/image26.png)](nested-master-pages-vb/_static/image25.png)
+[![Ajouter une Page maître imbriquée dans le dossier ~/Admin.](nested-master-pages-vb/_static/image26.png)](nested-master-pages-vb/_static/image25.png)
 
 **Figure 09**: Ajouter une Page maître imbriquée à la `~/Admin` dossier. ([Cliquez pour afficher l’image en taille réelle](nested-master-pages-vb/_static/image27.png))
 
@@ -246,7 +246,7 @@ Notez que chaque contrôle de contenu a un contrôle ContentPlaceHolder et que l
 La figure 10 illustre le `AdminNested.master` page maître imbriquée lorsqu’ils sont affichés via le Concepteur de Visual Studio. Vous pouvez voir les instructions dans la zone jaune en haut de la `MainContent` contrôle de contenu.
 
 
-[![TIl a la Page maître imbriquée étend la Page maître de niveau supérieur pour inclure des Instructions pour l’administrateur.](nested-master-pages-vb/_static/image29.png)](nested-master-pages-vb/_static/image28.png)
+[![La Page maître imbriquée s’étend à la Page maître de niveau supérieur pour inclure des Instructions pour l’administrateur.](nested-master-pages-vb/_static/image29.png)](nested-master-pages-vb/_static/image28.png)
 
 **Figure 10**: La Page maître imbriquée s’étend à la Page maître de niveau supérieur pour inclure des Instructions pour l’administrateur. ([Cliquez pour afficher l’image en taille réelle](nested-master-pages-vb/_static/image30.png))
 
@@ -275,7 +275,7 @@ Nous devons maintenant avoir les pages de contenu existants dans la section dér
 Figure 11 illustre comment la page maître de niveau supérieur (`Site.master` ou `Alternate.master`), la page maître imbriquée (`AdminNested.master`), et les pages de contenu de la section Administration sont liés entre eux.
 
 
-[![TIl Nested Master définit contenu spécifiques à la Page pour les Pages dans la Section Administration](nested-master-pages-vb/_static/image32.png)](nested-master-pages-vb/_static/image31.png)
+[![La Page maître imbriquée définit le contenu spécifique aux Pages dans la Section Administration](nested-master-pages-vb/_static/image32.png)](nested-master-pages-vb/_static/image31.png)
 
 **Figure 11**: L’imbriqués Master Page définit contenu spécifique aux Pages dans la Section Administration ([cliquez pour afficher l’image en taille réelle](nested-master-pages-vb/_static/image33.png))
 
@@ -313,7 +313,7 @@ N’oubliez pas que le `@MasterType` directive ajoute une propriété fortement 
 Avec ce code en place, vous pourrez consultez et utilisez les pages de contenu dans la section Administration. La figure 12 illustre le `~/Admin/Products.aspx` page lorsqu’ils sont affichés via un navigateur. Comme vous pouvez le voir, cette page inclut la zone des Instructions d’Administration, qui est définie dans la page maître imbriquée.
 
 
-[![TIl a des Pages de contenu dans l’Administration Section incluent des Instructions sur le haut de chaque Page](nested-master-pages-vb/_static/image35.png)](nested-master-pages-vb/_static/image34.png)
+[![Les Pages de contenu dans la Section Administration incluent des Instructions en haut de chaque Page](nested-master-pages-vb/_static/image35.png)](nested-master-pages-vb/_static/image34.png)
 
 **Figure 12**: Les Pages de contenu dans l’Administration Section incluent des Instructions sur le haut de chaque Page ([cliquez pour afficher l’image en taille réelle](nested-master-pages-vb/_static/image36.png))
 
@@ -334,7 +334,7 @@ Le `GetMasterPageFileFromSession` (méthode), ce qui nous avons ajouté à la `B
 Avec cette modification en place, sélection de page maître de l’utilisateur s’appliquent à la section Administration. La figure 13 montre la même page, comme la Figure 12, mais une fois que l’utilisateur a changé sa sélection de page maître pour `Alternate.master`.
 
 
-[![TIl Nested Page d’Administration utilise la Page de principale de niveau supérieur sélectionné par l’utilisateur](nested-master-pages-vb/_static/image38.png)](nested-master-pages-vb/_static/image37.png)
+[![La Page d’Administration imbriquée utilise la Page principale de niveau supérieur sélectionné par l’utilisateur](nested-master-pages-vb/_static/image38.png)](nested-master-pages-vb/_static/image37.png)
 
 **Figure 13**: La Page d’Administration Nested utilise la Page de principale de niveau supérieur sélectionné par l’utilisateur ([cliquez pour afficher l’image en taille réelle](nested-master-pages-vb/_static/image39.png))
 

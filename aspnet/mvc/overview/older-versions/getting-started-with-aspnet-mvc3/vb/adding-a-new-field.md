@@ -12,7 +12,7 @@ ms.openlocfilehash: 387c0ab407df2badfd8ff848b6a13c68769fbba7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379857"
 ---
 # <a name="adding-a-new-field-to-the-movie-model-and-database-table-vb"></a>Ajout d’un nouveau champ à la table et au modèle Movie (VB)

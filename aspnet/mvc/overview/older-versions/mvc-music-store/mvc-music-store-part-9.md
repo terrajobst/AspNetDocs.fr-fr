@@ -12,7 +12,7 @@ ms.openlocfilehash: c7151351b087439f17457b254cd9e373af21cae3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380897"
 ---
 # <a name="part-9-registration-and-checkout"></a>Partie Inscription et validation

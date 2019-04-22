@@ -12,7 +12,7 @@ ms.openlocfilehash: e677707018375debd0f1542037a43e525498b247
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389308"
 ---
 # <a name="your-first-scaffold-and-what-is-dynamic-data"></a>Votre premier modèle automatique et présentation Dynamic Data ?
@@ -24,4 +24,4 @@ Dans cette courte présentation, vous créez une application en quelques minutes
 [&#9654;Regardez la vidéo (6 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/your-first-scaffold-and-what-is-dynamic-data)
 
 > [!div class="step-by-step"]
-> [Suivant](how-do-i-enable-inline-gridview-editing.md)
+> [Next](how-do-i-enable-inline-gridview-editing.md)

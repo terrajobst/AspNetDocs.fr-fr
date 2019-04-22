@@ -12,14 +12,14 @@ ms.openlocfilehash: 18056c917b32680678c536229e8e26d5cc7db161
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395132"
 ---
 # <a name="understanding-aspnet-ajax-authentication-and-profile-application-services"></a>Présentation de l’authentification et des services d’application de profil d’ASP.NET AJAX
 
 par [Scott Cate](https://github.com/scottcate)
 
-[Télécharger le PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial03_MSAjax_ASP.NET_Services_cs.pdf)
+[Télécharger PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial03_MSAjax_ASP.NET_Services_cs.pdf)
 
 > Le service d’authentification permet aux utilisateurs de fournir des informations d’identification afin de recevoir un cookie d’authentification, et est le service de passerelle pour autoriser les profils d’utilisateur personnalisée fourni par ASP.NET. Utilisation du service d’authentification ASP.NET AJAX est compatible avec l’authentification des formulaires ASP.NET standard pour les applications actuellement à l’aide de l’authentification par formulaire (par exemple, avec la connexion contrôler) ne seront pas interrompues par la mise à niveau vers le service d’authentification AJAX.
 
@@ -32,7 +32,7 @@ Ce livre blanc examine l’implémentation et l’utilisation du profilage ASP.N
 
 Ce livre blanc est basé sur la version bêta 2 de Visual Studio 2008 et .NET Framework 3.5. Ce livre blanc suppose également que vous allez travailler avec Visual Studio 2008 Bêta 2, pas Visual Web Developer Express et fournissez des procédures pas à pas en fonction de l’interface utilisateur de Visual Studio. Des exemples de code peuvent utiliser des modèles de projet non disponibles dans Visual Web Developer Express.
 
-## *<a name="profiles-and-authentication"></a>Profils et l’authentification*
+## <a name="profiles-and-authentication"></a>*Profils et l’authentification*
 
 Les profils ASP.NET de Microsoft et les services d’authentification sont fournies par le système d’authentification par formulaire ASP.NET et sont des composants standard d’ASP.NET. Les Extensions ASP.NET AJAX fournissent l’accès à ces services par le biais de proxys de script, via un modèle relativement simple sous Sys.Services espace de noms de la bibliothèque cliente AJAX de script.
 
@@ -42,7 +42,7 @@ Le service de profil permet l’intégration automatique et le stockage des donn
 
 L’incorporation de l’authentification ASP.NET et des services de profilage eux-mêmes dans une application est en dehors de la portée de ce livre blanc. Pour plus d’informations sur le sujet, consultez MSDN Library font référence à l’article Gestion des utilisateurs à l’aide de l’adhésion à [ https://msdn.microsoft.com/library/tw292whz.aspx ](https://msdn.microsoft.com/library/tw292whz.aspx). ASP.NET inclut également un utilitaire permettant de configurer automatiquement l’appartenance à un serveur SQL, qui est le fournisseur de service d’authentification par défaut pour l’appartenance ASP.NET. Pour plus d’informations, consultez l’article ASP.NET SQL Server Registration Tool (Aspnet\_regsql.exe) à [ https://msdn.microsoft.com/library/ms229862(vs.80).aspx ](https://msdn.microsoft.com/library/ms229862(vs.80).aspx).
 
-## *<a name="using-the-aspnet-ajax-authentication-service"></a>À l’aide du Service d’authentification ASP.NET AJAX*
+## <a name="using-the-aspnet-ajax-authentication-service"></a>*À l’aide du Service d’authentification ASP.NET AJAX*
 
 Le service de l’authentification ASP.NET AJAX doit être activé dans le fichier web.config :
 
@@ -58,9 +58,9 @@ Une fois que le service d’authentification AJAX est activé et configuré, scr
 
 La méthode login() commence une demande pour authentifier les informations d’identification de l’utilisateur. Cette méthode est asynchrone et ne bloque pas l’exécution.
 
-*Paramètres :*
+*Paramètres :*
 
-| **nom du paramètre** | **Signification** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | userName | Obligatoire. Le nom d’utilisateur à authentifier. |
 | mot de passe | Facultatif (par défaut, null). Mot de passe de l'utilisateur. |
@@ -83,9 +83,9 @@ Cette fonction n’inclut pas une valeur de retour. Toutefois, un nombre de comp
 
 La méthode logout() supprime le cookie d’informations d’identification et se déconnecte l’utilisateur actuel à partir de l’application web.
 
-*Paramètres :*
+*Paramètres :*
 
-| **nom du paramètre** | **Signification** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | redirectUrl | Facultatif (par défaut, null). L’URL vers laquelle rediriger le navigateur après une authentification réussie. Si ce paramètre est null ou une chaîne vide, aucune redirection se produit. |
 | logoutCompletedCallback | Facultatif (par défaut, null). La fonction à appeler lors de la déconnexion terminée avec succès. Si spécifié, ce paramètre remplace la propriété defaultLogoutCompleted. |
@@ -108,9 +108,9 @@ La référence de la fonction spécifiée par cette propriété doit avoir la si
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample2.js)]
 
-*Paramètres :*
+*Paramètres :*
 
-| **nom du paramètre** | **Signification** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | error | Spécifie les informations d’erreur. |
 | userContext | Spécifie les informations de contexte d’utilisateur fournies lors de la fonction de connexion ou déconnexion a été appelée. |
@@ -124,9 +124,9 @@ La référence de la fonction spécifiée par cette propriété doit avoir la si
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample3.js)]
 
-*Paramètres :*
+*Paramètres :*
 
-| **nom du paramètre** | **Signification** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | validCredentials | Spécifie si l’utilisateur a fourni les informations d’identification valides. `true` Si l’utilisateur connecté avec succès ; sinon `false`. |
 | userContext | Spécifie les informations de contexte d’utilisateur fournies quand la fonction de connexion a été appelée. |
@@ -140,9 +140,9 @@ La référence de la fonction spécifiée par cette propriété doit avoir la si
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample4.js)]
 
-*Paramètres :*
+*Paramètres :*
 
-| **nom du paramètre** | **Signification** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | result | Ce paramètre sera toujours `null`; elle est réservée pour une utilisation ultérieure. |
 | userContext | Spécifie les informations de contexte d’utilisateur fournies quand la fonction de connexion a été appelée. |
@@ -204,9 +204,9 @@ Le champ des propriétés expose toutes les données de profil configuré en tan
 
 Charge une liste sélectionnée ou toutes les propriétés à partir du serveur.
 
-*Paramètres :*
+*Paramètres :*
 
-| **nom du paramètre** | **Signification** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | propertyNames | Facultatif (par défaut, null). Les propriétés à charger à partir du serveur. |
 | loadCompletedCallback | Facultatif (par défaut, null). La fonction à appeler lors du chargement est terminée. |
@@ -221,9 +221,9 @@ Si le `propertyNames` paramètre n’est pas fourni, toutes les propriétés en 
 
 La méthode save() enregistre la liste de propriétés spécifié (ou toutes les propriétés) dans le profil d’utilisateur ASP.NET.
 
-*Paramètres :*
+*Paramètres :*
 
-| **nom du paramètre** | **Signification** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | propertyNames | Facultatif (par défaut, null). Les propriétés à enregistrer dans le serveur. |
 | saveCompletedCallback | Facultatif (par défaut, null). La fonction à appeler lors de l’enregistrement est terminée. |
@@ -242,9 +242,9 @@ La référence de la fonction spécifiée par cette propriété doit avoir la si
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample9.js)]
 
-*Paramètres :*
+*Paramètres :*
 
-| **nom du paramètre** | **Signification** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | Error | Spécifie les informations d’erreur. |
 | userContext | Spécifie les informations de contexte d’utilisateur fournies lorsque la charge ou de la fonction d’enregistrement a été appelée. |
@@ -258,9 +258,9 @@ La référence de la fonction spécifiée par cette propriété doit avoir la si
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample10.js)]
 
-*Paramètres :*
+*Paramètres :*
 
-| **nom du paramètre** | **Signification** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | numPropsSaved | Spécifie le nombre de propriétés qui ont été enregistrés. |
 | userContext | Spécifie les informations de contexte d’utilisateur fournies lorsque la charge ou de la fonction d’enregistrement a été appelée. |
@@ -274,9 +274,9 @@ La référence de la fonction spécifiée par cette propriété doit avoir la si
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample11.js)]
 
-*Paramètres :*
+*Paramètres :*
 
-| **nom du paramètre** | **Signification** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | numPropsLoaded | Spécifie le nombre de propriétés chargées. |
 | userContext | Spécifie les informations de contexte d’utilisateur fournies lorsque la charge ou de la fonction d’enregistrement a été appelée. |
@@ -304,7 +304,7 @@ Le code suivant vérifie si un utilisateur est authentifié et si tel est le cas
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample12.js)]
 
-## *<a name="using-a-custom-authentication-service-provider"></a>À l’aide d’un fournisseur de Service d’authentification personnalisé*
+## <a name="using-a-custom-authentication-service-provider"></a>*À l’aide d’un fournisseur de Service d’authentification personnalisé*
 
 Les Extensions ASP.NET AJAX vous autorise à créer un fournisseur de services de l’authentification de script personnalisé en exposant vos fonctionnalités via un service web personnalisé. Pour pouvoir être utilisé, votre service web doit exposer deux méthodes, `Login` et `Logout`; et ces méthodes doivent être spécifiés avec les signatures de méthode de même que le service web de l’authentification ASP.NET AJAX par défaut.
 
@@ -338,7 +338,7 @@ Pour définir le chemin d’accès par programme dans le script, vous devez util
 
 En outre, en créant des implémentations de service web simplifiée avec des signatures de méthode équivalente, les développeurs peuvent créer des fournisseurs de script personnalisé pour ces services ASP.NET intrinsèques. Prise en charge de ces techniques simplifie le développement d’applications clientes riches, tout en offrant aux développeurs un large éventail de flexibilité pour répondre aux besoins spécifiques.
 
-## *<a name="bio"></a>Bio*
+## <a name="bio"></a>*Bio*
 
 Scott Cate travaille avec les technologies Web Microsoft depuis 1997 et est le président de myKB.com ([www.myKB.com](http://www.myKB.com)) où il est spécialisé dans l’écriture d’ASP.NET en fonction des applications axées sur les solutions logicielles de la Base de connaissances. Scott peut être contacté par courrier électronique en [ scott.cate@myKB.com ](mailto:scott.cate@myKB.com) ou son blog à l’adresse [ScottCate.com](http://ScottCate.com)
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 7f846e807309f3123db52b3053b9aa8d6aca81e6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394833"
 ---
 # <a name="whats-new-in-aspnet-mvc-2"></a>Nouveautés d’ASP.NET MVC 2
@@ -24,7 +24,7 @@ ms.locfileid: "59394833"
 [La mise à niveau d’un projet ASP.NET MVC 1.0 vers ASP.NET MVC 2](#_TOC2)   
 [Nouvelles fonctionnalités](#_TOC3)   
 [Programmes d’assistance basés sur des modèles](#_TOC3_1)   
-[Zones (Areas)](#_TOC3_2)   
+[Zones](#_TOC3_2)   
 [Prise en charge pour les contrôleurs asynchrones](#_TOC3_3)   
 [Prise en charge de DefaultValueAttribute dans les paramètres de méthode d’Action](#_TOC3_4)   
 [Prise en charge pour la liaison de données binaires de classeurs de modèles](#_TOC3_5)   

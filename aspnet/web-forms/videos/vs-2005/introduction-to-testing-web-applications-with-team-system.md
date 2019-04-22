@@ -12,7 +12,7 @@ ms.openlocfilehash: 6dac810a2bcef49807d2c9eb605e50a15f742449
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394472"
 ---
 # <a name="introduction-to-testing-web-applications-with-team-system"></a>Introduction au test des Applications Web avec Team System

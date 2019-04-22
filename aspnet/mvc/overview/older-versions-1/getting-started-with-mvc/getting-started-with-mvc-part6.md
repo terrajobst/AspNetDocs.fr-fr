@@ -12,7 +12,7 @@ ms.openlocfilehash: f648e0cb53dd410105adc22401f19a5a15f9e8c1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380806"
 ---
 # <a name="adding-a-create-method-and-create-view"></a>Ajout d’une méthode de création et d’une vue de création
@@ -38,7 +38,7 @@ Nous allons maintenant implémenter le modèle Create View que nous allons utili
 
 Nous allons sélectionner nous fera passer le modèle de vue une « séquence » en tant que classe de données d’affichage, et indiquer que nous voulons « structurer » un modèle « Créer ».
 
-[![Ajj affichage](getting-started-with-mvc-part6/_static/image2.png)](getting-started-with-mvc-part6/_static/image1.png)
+[![Ajouter une vue](getting-started-with-mvc-part6/_static/image2.png)](getting-started-with-mvc-part6/_static/image1.png)
 
 Après avoir cliqué sur le bouton Ajouter, modèle de vue \Movies\Create.aspx sera créé pour vous. Étant donné que nous avons sélectionné « Créer » dans la liste déroulante « Afficher le contenu », la boîte de dialogue Ajouter une vue « été généré automatiquement » du contenu par défaut pour nous. La génération de modèles automatique créé HTML &lt;formulaire&gt;, un emplacement pour l’erreur de validation des messages pour accéder et dans la mesure où la structure connaît des films, il créé étiquette et les champs pour chaque propriété de la classe.
 
@@ -48,7 +48,7 @@ Après avoir cliqué sur le bouton Ajouter, modèle de vue \Movies\Create.aspx s
 
 Nous allons maintenant créer un nouveau film et l’ajouter à la base de données. Nous allons faire en exécutant à nouveau l’application et visitez le « / Movies » URL et cliquez sur la « créer » lien pour ajouter un nouveau film.
 
-[![CWindows Internet Explorer - reate](getting-started-with-mvc-part6/_static/image4.png)](getting-started-with-mvc-part6/_static/image3.png)
+[![Créer - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image4.png)](getting-started-with-mvc-part6/_static/image3.png)
 
 Lorsque nous cliquons sur le bouton Créer, nous allons y publier (par HTTP POST) les données sur ce formulaire à la méthode /Movies/Create que nous venons de créer. Comme lorsque le système a pris le paramètre « numTimes » et « name » en dehors de l’URL et automatiquement les mappés à des paramètres sur une méthode précédemment, le système sera automatiquement prendre les champs de formulaire à partir d’une publication et les mapper à un objet. Dans ce cas, les valeurs des champs au format HTML tels que « ReleaseDate » et « Title » seront automatiquement placées dans les propriétés appropriées d’une nouvelle instance d’un film.
 
@@ -58,7 +58,7 @@ Nous allons examiner la deuxième méthode de création de notre MoviesControlle
 
 Cet objet de film a été ensuite transmis vers la version de [HttpPost] de notre méthode d’action de création, et nous avons enregistré dans la base de données et puis l’utilisateur est redirigé vers la méthode d’action Index() qui affiche le résultat enregistré dans la liste de films :
 
-[![Movie liste - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image6.png)](getting-started-with-mvc-part6/_static/image5.png)
+[![Liste de films - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image6.png)](getting-started-with-mvc-part6/_static/image5.png)
 
 Nous ne la vérification si notre films sont corrects, cependant, ainsi que la base de données ne nous permettre d’enregistrer un film avec aucun titre. Il serait intéressant que nous pourrions l’utilisateur qui a généré une erreur avant de la base de données. Nous allons faire ce qui suit en ajoutant la prise en charge de la validation à notre application.
 

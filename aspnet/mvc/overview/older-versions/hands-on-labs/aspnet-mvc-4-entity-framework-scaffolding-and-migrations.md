@@ -12,7 +12,7 @@ ms.openlocfilehash: ca47f6fe6d55153354d38fcf1ba5e844215279b2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389035"
 ---
 # <a name="aspnet-mvc-4-entity-framework-scaffolding-and-migrations"></a>Génération de modèles automatique et migrations d’ASP.NET MVC 4 Entity Framework
@@ -110,7 +110,7 @@ Dans cet exercice, vous allez apprendre à utiliser la structure ASP.NET MVC 4 a
 
     ![Génération de l’application](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image3.png "génération de l’application")
 
-    *Génération de l'application*
+    *Génération de l’application*
 7. Dans l’Explorateur de solutions, cliquez sur le dossier contrôleurs, puis sélectionnez **ajouter | Contrôleur**.
 8. Nommez le contrôleur *PersonController* et terminez le **les options de génération de modèles automatique** avec les valeurs suivantes.
 
@@ -231,7 +231,7 @@ Dans cette tâche, vous mettrez à jour la base de données à l’aide des Migr
 
     ![La mise à jour de la base de données](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image17.png "mise à jour de la base de données")
 
-    *Mise à jour de la base de données*
+    *La mise à jour de la base de données*
 
     Cela ajoutera le **MiddleName** colonne dans le **personnes** table pour correspondre à la définition actuelle de la **personne** classe.
 9. Une fois que la base de données est mis à jour, cliquez sur le dossier Controller et sélectionnez **ajouter | Contrôleur** pour ajouter le contrôleur de personne (complète avec les mêmes valeurs). Cela met à jour les méthodes existantes et les vues Ajout du nouvel attribut.
@@ -292,7 +292,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image24.png)
 
-    *Progression de l'installation*
+    *Progression de l’installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image25.png)

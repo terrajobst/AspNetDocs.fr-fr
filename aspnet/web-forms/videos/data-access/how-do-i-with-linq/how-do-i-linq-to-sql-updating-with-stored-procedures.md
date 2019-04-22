@@ -12,7 +12,7 @@ ms.openlocfilehash: b91234b1e0c163a2f6350e93e775864e32218cc0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390322"
 ---
 # <a name="how-do-i-linq-to-sql-updating-with-stored-procedures"></a>Comment faire LINQ to SQL : mettre à jour avec des procédures stockées

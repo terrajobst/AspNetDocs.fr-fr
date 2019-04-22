@@ -12,7 +12,7 @@ ms.openlocfilehash: be792b0511e91b65cf3dd56458630b4e8ec3b5af
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384226"
 ---
 # <a name="declarative-parameters-vb"></a>Paramètres déclaratifs (VB)
@@ -37,7 +37,7 @@ Pour ce didacticiel, nous allons commencer par illustrant l’utilisation d’un
 Pour le premier exemple, commencez par ajouter un contrôle DetailsView pour le `DeclarativeParams.aspx` page dans le `BasicReporting` dossier. À partir de la balise active de DetailsView, sélectionnez &lt;nouvelle source de données&gt; à partir de la liste déroulante liste et choisissez d’ajouter un ObjectDataSource.
 
 
-[![Ajj ObjectDataSource à la Page](declarative-parameters-vb/_static/image2.png)](declarative-parameters-vb/_static/image1.png)
+[![Ajouter un ObjectDataSource à la Page](declarative-parameters-vb/_static/image2.png)](declarative-parameters-vb/_static/image1.png)
 
 **Figure 1**: Ajouter un ObjectDataSource à la Page ([cliquez pour afficher l’image en taille réelle](declarative-parameters-vb/_static/image3.png))
 
@@ -45,7 +45,7 @@ Pour le premier exemple, commencez par ajouter un contrôle DetailsView pour le 
 Ceci démarrera automatiquement Assistant de choisir la Source de données du contrôle ObjectDataSource. Sélectionnez le `ProductsBLL` classe dans le premier écran de l’Assistant.
 
 
-[![Schoisir la classe ProductsBLL](declarative-parameters-vb/_static/image5.png)](declarative-parameters-vb/_static/image4.png)
+[![Sélectionnez la classe ProductsBLL](declarative-parameters-vb/_static/image5.png)](declarative-parameters-vb/_static/image4.png)
 
 **Figure 2**: Sélectionnez le `ProductsBLL` classe ([cliquez pour afficher l’image en taille réelle](declarative-parameters-vb/_static/image6.png))
 
@@ -61,7 +61,7 @@ Ceci démarrera automatiquement Assistant de choisir la Source de données du co
 Étant donné que la méthode que nous avons sélectionné inclut un paramètre, il est un écran plus pour l’Assistant, où nous avons invités à définir la valeur à utiliser pour le paramètre. La liste sur la gauche affiche tous les paramètres de la méthode sélectionnée. Pour `GetProductByProductID(productID)` seul `productID`. Sur la droite, nous pouvons spécifier la valeur pour le paramètre sélectionné. La liste de liste déroulante de paramètre source énumère les différentes sources possibles pour la valeur du paramètre. Dans la mesure où nous voulons spécifier une valeur codée en dur de 5 pour le `productID` paramètre, laissez le paramètre source en tant que None et entrer 5 dans la zone de texte DefaultValue.
 
 
-[![A Codé en dur paramètre valeur de 5 sera utilisée pour le paramètre productID](declarative-parameters-vb/_static/image11.png)](declarative-parameters-vb/_static/image10.png)
+[![Un Hard-Coded paramètre valeur de 5 sera utilisée pour le paramètre productID](declarative-parameters-vb/_static/image11.png)](declarative-parameters-vb/_static/image10.png)
 
 **Figure 4**: Un Hard-Coded paramètre valeur de 5 sera utilisée pour le `productID` paramètre ([cliquez pour afficher l’image en taille réelle](declarative-parameters-vb/_static/image12.png))
 
@@ -77,7 +77,7 @@ Ceci démarrera automatiquement Assistant de choisir la Source de données du co
 Lorsque vous visitez cette page, les données de contrôle Web appellera l’ObjectDataSource `Select` (méthode), qui appellera le `ProductsBLL` la classe `GetProductByProductID(productID)` méthode à l’aide de la valeur codée en dur de 5 pour le `productID` paramètre d’entrée. La méthode retourne un fortement typée `ProductDataTable` objet qui contient une seule ligne avec les informations à propos Gumbo Mix du Chef Anton (le produit avec `ProductID` 5).
 
 
-[![IPour plus d’informations sur Chef Anton Gumbo Mix sont affichées](declarative-parameters-vb/_static/image14.png)](declarative-parameters-vb/_static/image13.png)
+[![Affiche des Gumbo Mix d’informations sur Chef Anton](declarative-parameters-vb/_static/image14.png)](declarative-parameters-vb/_static/image13.png)
 
 **Figure 5**: Affiche des Gumbo Mix d’informations sur Chef Anton ([cliquez pour afficher l’image en taille réelle](declarative-parameters-vb/_static/image15.png))
 
@@ -87,7 +87,7 @@ Lorsque vous visitez cette page, les données de contrôle Web appellera l’Obj
 Paramètre de l’ObjectDataSource valeurs peuvent également être définies selon la valeur d’un contrôle Web dans la page. Pour illustrer cela, nous allons avoir un GridView qui répertorie tous les fournisseurs qui sont trouvent dans un pays spécifié par l’utilisateur. Pour accomplir ce guide de démarrage en ajoutant une zone de texte à la page dans laquelle l’utilisateur peut entrer un nom de pays. Définir ce contrôle de zone de texte `ID` propriété `CountryName`. Ajoutez également un contrôle bouton Web.
 
 
-[![Ajj une zone de texte à la Page avec l’ID CountryName](declarative-parameters-vb/_static/image17.png)](declarative-parameters-vb/_static/image16.png)
+[![Ajouter une zone de texte à la Page avec l’ID CountryName](declarative-parameters-vb/_static/image17.png)](declarative-parameters-vb/_static/image16.png)
 
 **Figure 6**: Ajouter une zone de texte à la Page avec `ID` `CountryName` ([cliquez pour afficher l’image en taille réelle](declarative-parameters-vb/_static/image18.png))
 
@@ -103,7 +103,7 @@ Ensuite, ajoutez un GridView à la page et, à partir de la balise active, chois
 Dans la mesure où le `GetSuppliersByCountry(country)` méthode a un paramètre d’entrée, l’Assistant inclut une fois encore un écran final pour le choix de la valeur du paramètre. Cette fois, définissez la source de paramètre au contrôle. Cela remplira la liste déroulante ControlID avec les noms des contrôles sur la page. Sélectionnez le `CountryName` contrôle dans la liste. Lorsque la page est visitée en premier le `CountryName` zone de texte sera vide, aucun résultat n’est renvoyés et rien ne s’affiche. Si vous souhaitez afficher des résultats par défaut, définissez la zone de texte DefaultValue en conséquence.
 
 
-[![Set la valeur du paramètre à la valeur de contrôle de CountryName](declarative-parameters-vb/_static/image23.png)](declarative-parameters-vb/_static/image22.png)
+[![Définissez la valeur de paramètre à la valeur de contrôle de CountryName](declarative-parameters-vb/_static/image23.png)](declarative-parameters-vb/_static/image22.png)
 
 **Figure 8**: Définissez la valeur de paramètre sur le `CountryName` valeur de contrôle ([cliquez pour afficher l’image en taille réelle](declarative-parameters-vb/_static/image24.png))
 
@@ -117,7 +117,7 @@ Lorsque vous visitez la page pour la première fois le `CountryName` zone de tex
 Une fois que le visiteur entre dans un pays, toutefois et qu’il clique sur le bouton Afficher les fournisseurs pour provoquer une publication (postback), ObjectDataSource `Select` méthode est à nouveau interrogée, en passant le contrôle de zone de texte `Text` valeur en tant que le `country` paramètre.
 
 
-[![Ttuyau fournisseurs du Canada est affichés](declarative-parameters-vb/_static/image26.png)](declarative-parameters-vb/_static/image25.png)
+[![Ces fournisseurs du Canada sont affichés.](declarative-parameters-vb/_static/image26.png)](declarative-parameters-vb/_static/image25.png)
 
 **Figure 9**: Ces fournisseurs du Canada sont affichés ([cliquez pour afficher l’image en taille réelle](declarative-parameters-vb/_static/image27.png))
 
@@ -139,7 +139,7 @@ Modifier le `GetSuppliersByCountry(country)` méthode dans la `SuppliersBLL` cla
 Avec cette modification le `DeclarativeParams.aspx` page affiche tous les fournisseurs lors de la première visite (ou chaque fois que le `CountryName` zone de texte est vide).
 
 
-[![All fournisseurs sont maintenant affichés par défaut](declarative-parameters-vb/_static/image29.png)](declarative-parameters-vb/_static/image28.png)
+[![Tous les fournisseurs sont maintenant affichés par défaut](declarative-parameters-vb/_static/image29.png)](declarative-parameters-vb/_static/image28.png)
 
 **Figure 10**: Tous les fournisseurs sont maintenant affichés par défaut ([cliquez pour afficher l’image en taille réelle](declarative-parameters-vb/_static/image30.png))
 

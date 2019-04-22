@@ -12,7 +12,7 @@ ms.openlocfilehash: 2a4d991205351531129480bee221651021483967
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396250"
 ---
 # <a name="using-the-dropdownlist-helper-with-aspnet-mvc"></a>Utilisation du helper DropDownList avec ASP.NET MVC
@@ -190,7 +190,7 @@ Ouvrez le *Views\Home\MultiSelectCountry.cshtml* fichier, puis ajoutez un `htmlA
 
 [!code-cshtml[Main](using-the-dropdownlist-helper-with-aspnet-mvc/samples/sample12.cshtml)]
 
-Dans le code ci-dessus, nous avons ajouté l’attribut HTML et la valeur d’attribut `class = "chzn-select"`. Le \@ caractère classe précédente n’a rien à voir avec le moteur d’affichage Razor. `class` est un [ C# mot clé](https://msdn.microsoft.com/library/x53a06bb.aspx). Mots clés c# ne peuvent pas être utilisés comme identificateurs, sauf s’ils incluent \@ comme préfixe. Dans l’exemple ci-dessus, `@class` est un identificateur valide mais **classe** n’est pas car **classe** est un mot clé.
+Dans le code ci-dessus, nous avons ajouté l’attribut HTML et la valeur d’attribut `class = "chzn-select"`. Le \@ caractère classe précédente n’a rien à voir avec le moteur d’affichage Razor. `class` est un [mot clé c#](https://msdn.microsoft.com/library/x53a06bb.aspx). Mots clés c# ne peuvent pas être utilisés comme identificateurs, sauf s’ils incluent \@ comme préfixe. Dans l’exemple ci-dessus, `@class` est un identificateur valide mais **classe** n’est pas car **classe** est un mot clé.
 
 Ajoutez des références à la *Chosen/chosen.jquery.js* et *Chosen/chosen.css* fichiers. Le *Chosen/chosen.jquery.js* et implémente le fonctionnellement du plug-in sélectionné. Le *Chosen/chosen.css* fichier fournit le style. Ajoutez ces références au bas de la *Views\Home\MultiSelectCountry.cshtml* fichier. Le code suivant montre comment référencer le plug-in sélectionné.
 
@@ -215,4 +215,4 @@ Exécutez l’application et accédez à la `MultiSelectCountry` vue. Essayez d�
 Dans la section suivante, vous verrez comment le mécanisme de génération de modèles automatique ASP.NET MVC fonctionne avec le **DropDownList** helper.
 
 > [!div class="step-by-step"]
-> [Suivant](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)
+> [Next](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)

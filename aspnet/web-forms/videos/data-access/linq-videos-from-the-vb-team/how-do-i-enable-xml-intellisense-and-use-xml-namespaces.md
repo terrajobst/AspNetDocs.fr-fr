@@ -12,7 +12,7 @@ ms.openlocfilehash: d58385ae1e88346fe6e408030eefcfb23cab7977
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390582"
 ---
 # <a name="how-do-i-enable-xml-intellisense-and-use-xml-namespaces"></a>[Comment faire] Activer XML IntelliSense et utiliser des espaces de noms XML ?

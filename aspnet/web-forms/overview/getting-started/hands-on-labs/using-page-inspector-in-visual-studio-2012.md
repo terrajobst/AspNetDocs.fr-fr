@@ -12,7 +12,7 @@ ms.openlocfilehash: d85fab0aeec86013761fc07ada1789b7719b24d9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396555"
 ---
 # <a name="using-page-inspector-in-visual-studio-2012"></a>Utilisation de l’Inspecteur de page dans Visual Studio 2012
@@ -489,7 +489,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](using-page-inspector-in-visual-studio-2012/_static/image49.png)
 
-    *Progression de l'installation*
+    *Progression de l’installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](using-page-inspector-in-visual-studio-2012/_static/image50.png)

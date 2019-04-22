@@ -12,14 +12,14 @@ ms.openlocfilehash: ebd49295ea165ba4ef1a25398cff7dddcfa54f11
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392194"
 ---
 # <a name="introducing-the-nerddinner-tutorial"></a>Introduction au didacticiel NerdDinner
 
 par [Scott Hanselman](https://github.com/shanselman)
 
-[Télécharger le PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Télécharger PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > La meilleure façon d’apprendre une nouvelle infrastructure consiste à créer quelque chose avec lui. Ce didacticiel vous montre comment créer un petit mais terminé, l’application à l’aide d’ASP.NET MVC 1 et présente certains des principaux concepts derrière lui.
 > 
@@ -86,4 +86,4 @@ Maintenant que nous avons couvert NerdDinner What ' s, nous allons notre manches
 Nous allons commencer à l’aide de fichier -&gt;nouveau projet dans Visual Studio pour créer l’application NerdDinner.
 
 > [!div class="step-by-step"]
-> [Suivant](create-a-new-aspnet-mvc-project.md)
+> [Next](create-a-new-aspnet-mvc-project.md)

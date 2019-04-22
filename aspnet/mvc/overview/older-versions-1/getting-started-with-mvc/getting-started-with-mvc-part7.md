@@ -12,7 +12,7 @@ ms.openlocfilehash: 3db6947f36eb51b41d929f8c7d8835a95db8ea75
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392350"
 ---
 # <a name="adding-validation-to-the-model"></a>Ajout de la validation au modèle
@@ -61,11 +61,11 @@ En outre, ajoutez la ligne unique ci-dessus le Html.BeginForm :
 
 Voici le code indiqué dans l’IDE.
 
-[![Movies - Microsoft Visual Web Developer 2010 Express (10)](getting-started-with-mvc-part7/_static/image4.png)](getting-started-with-mvc-part7/_static/image3.png)
+[![Films - Microsoft Visual Web Developer 2010 Express (10)](getting-started-with-mvc-part7/_static/image4.png)](getting-started-with-mvc-part7/_static/image3.png)
 
 Exécutez votre application et consultez à nouveau /Movies/Create et cliquez sur créer sans entrer de données. Les messages d’erreur apparaissent immédiatement sans la page flash que nous associons à l’envoi des données jusqu’au serveur. C’est parce que ASP.NET MVC est désormais la validation l’entrée à la fois sur le client (à l’aide de JavaScript) et sur le serveur.
 
-[![CWindows Internet Explorer - reate](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
+[![Créer - Windows Internet Explorer](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
 
 Cela est en ordre. Nous allons maintenant ajouter une colonne supplémentaire à la base de données.
 

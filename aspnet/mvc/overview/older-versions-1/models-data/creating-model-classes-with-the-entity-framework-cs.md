@@ -12,7 +12,7 @@ ms.openlocfilehash: 29f7dded2f6fc2e8ce588dab2949b59ddb6f1fc4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388905"
 ---
 # <a name="creating-model-classes-with-the-entity-framework-c"></a>Création de classes de modèle avec Entity Framework (C#)
@@ -219,4 +219,4 @@ L’objectif de ce didacticiel a été pour illustrer comment vous pouvez créer
 Tout d’abord, nous avons abordé la façon dont vous pouvez utiliser l’Assistant Entity Data Model pour générer un Entity Data Model à partir de Visual Studio. Ensuite, vous allez apprendre à utiliser LINQ to Entities pour récupérer un jeu d’enregistrements de base de données à partir d’une table de base de données. Enfin, nous avons utilisé l’Entity Framework pour insérer, mettre à jour et supprimer des enregistrements de base de données.
 
 > [!div class="step-by-step"]
-> [Suivant](creating-model-classes-with-linq-to-sql-cs.md)
+> [Next](creating-model-classes-with-linq-to-sql-cs.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: ecc0733c2850bc157c7ee5b251787152393481fc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385247"
 ---
 # <a name="intro-to-aspnet-mvc-4"></a>Introduction à ASP.NET MVC
@@ -86,4 +86,4 @@ F5 provoque Visual Studio pour démarrer IIS Express et exécuter votre applicat
 Dès ce modèle par défaut vous donne les pages Accueil, Contact et sur. Il prend en charge pour vous inscrire et connecter et vous lie à Facebook et Twitter. L’étape suivante consiste à modifier le fonctionnement de cette application et en savoir un peu sur ASP.NET MVC. Fermez votre navigateur et nous allons modifier du code.
 
 > [!div class="step-by-step"]
-> [Suivant](adding-a-controller.md)
+> [Next](adding-a-controller.md)
