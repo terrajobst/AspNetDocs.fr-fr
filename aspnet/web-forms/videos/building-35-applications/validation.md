@@ -12,13 +12,13 @@ ms.openlocfilehash: d8592a65252421752f7201cd2b2d3278d79e272a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386045"
 ---
-# <a name="validation"></a><span data-ttu-id="b12be-103">Validation</span><span class="sxs-lookup"><span data-stu-id="b12be-103">Validation</span></span>
+# <a name="validation"></a><span data-ttu-id="e9e05-103">Validation</span><span class="sxs-lookup"><span data-stu-id="e9e05-103">Validation</span></span>
 
-<span data-ttu-id="b12be-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="b12be-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="e9e05-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="e9e05-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="b12be-105">Dans cet vidéo Joe va vous montrer l’utilisation des contrôles FormValidation dans ASP.NET à l’aide de Microsoft Visual Web Developer.</span><span class="sxs-lookup"><span data-stu-id="b12be-105">In this video Joe will demonstrate the use of the FormValidation controls in ASP.NET Using Microsoft Visual Web Developer.</span></span>
+<span data-ttu-id="e9e05-105">Dans cet vidéo Joe va vous montrer l’utilisation des contrôles FormValidation dans ASP.NET à l’aide de Microsoft Visual Web Developer.</span><span class="sxs-lookup"><span data-stu-id="e9e05-105">In this video Joe will demonstrate the use of the FormValidation controls in ASP.NET Using Microsoft Visual Web Developer.</span></span>
 
-[<span data-ttu-id="b12be-106">&#9654;Regardez la vidéo (16 minutes)</span><span class="sxs-lookup"><span data-stu-id="b12be-106">&#9654; Watch video (16 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/validation)
+[<span data-ttu-id="e9e05-106">&#9654;Regardez la vidéo (16 minutes)</span><span class="sxs-lookup"><span data-stu-id="e9e05-106">&#9654; Watch video (16 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/validation)

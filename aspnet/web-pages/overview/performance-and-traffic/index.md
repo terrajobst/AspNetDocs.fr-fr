@@ -12,14 +12,14 @@ ms.openlocfilehash: 36cfc3435a832eaf8a6aeb24ff91fa03b99f2e39
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385603"
 ---
-# <a name="performance"></a><span data-ttu-id="5a1c7-103">Performances</span><span class="sxs-lookup"><span data-stu-id="5a1c7-103">Performance</span></span>
+# <a name="performance"></a><span data-ttu-id="88bf6-103">Performances</span><span class="sxs-lookup"><span data-stu-id="88bf6-103">Performance</span></span>
 
-> <span data-ttu-id="5a1c7-104">Comment mettre en cache le contenu pour accélérer les performances et comment mesurer le trafic du site.</span><span class="sxs-lookup"><span data-stu-id="5a1c7-104">How to cache content for faster performance and how to measure site traffic.</span></span>
+> <span data-ttu-id="88bf6-104">Comment mettre en cache le contenu pour accélérer les performances et comment mesurer le trafic du site.</span><span class="sxs-lookup"><span data-stu-id="88bf6-104">How to cache content for faster performance and how to measure site traffic.</span></span>
 
 
-- [<span data-ttu-id="5a1c7-105">Mise en cache pour améliorer les performances de votre site web</span><span class="sxs-lookup"><span data-stu-id="5a1c7-105">Caching to Improve the Performance of Your Website</span></span>](15-caching-to-improve-the-performance-of-your-website.md)
-- [<span data-ttu-id="5a1c7-106">Analyse du trafic</span><span class="sxs-lookup"><span data-stu-id="5a1c7-106">Analyzing Traffic</span></span>](14-analyzing-traffic.md)
-- [<span data-ttu-id="5a1c7-107">Bundles et minimisation des ressources dans un site ASP.NET Web Pages (Razor)</span><span class="sxs-lookup"><span data-stu-id="5a1c7-107">Bundling and Minifying Assets in an ASP.NET Web Pages (Razor) Site</span></span>](bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)
+- [<span data-ttu-id="88bf6-105">Mise en cache pour améliorer les performances de votre site web</span><span class="sxs-lookup"><span data-stu-id="88bf6-105">Caching to Improve the Performance of Your Website</span></span>](15-caching-to-improve-the-performance-of-your-website.md)
+- [<span data-ttu-id="88bf6-106">Analyse du trafic</span><span class="sxs-lookup"><span data-stu-id="88bf6-106">Analyzing Traffic</span></span>](14-analyzing-traffic.md)
+- [<span data-ttu-id="88bf6-107">Bundles et minimisation des ressources dans un site ASP.NET Web Pages (Razor)</span><span class="sxs-lookup"><span data-stu-id="88bf6-107">Bundling and Minifying Assets in an ASP.NET Web Pages (Razor) Site</span></span>](bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)

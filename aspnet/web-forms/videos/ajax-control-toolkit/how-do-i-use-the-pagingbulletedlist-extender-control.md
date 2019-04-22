@@ -12,18 +12,18 @@ ms.openlocfilehash: 4b6326fcf3c62dda8519b2d86236f2be7caef825
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386838"
 ---
-# <a name="how-do-i-use-the-pagingbulletedlist-extender-control"></a><span data-ttu-id="fb55f-105">[Comment faire] Utiliser l’extendeur Pagingbulletedlist ?</span><span class="sxs-lookup"><span data-stu-id="fb55f-105">[How Do I:] Use the PagingBulletedList Extender Control?</span></span>
+# <a name="how-do-i-use-the-pagingbulletedlist-extender-control"></a><span data-ttu-id="5c808-105">[Comment faire] Utiliser l’extendeur Pagingbulletedlist ?</span><span class="sxs-lookup"><span data-stu-id="5c808-105">[How Do I:] Use the PagingBulletedList Extender Control?</span></span>
 
-<span data-ttu-id="fb55f-106">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="fb55f-106">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="5c808-106">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="5c808-106">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="fb55f-107">Cette vidéo illustre l’utilisation de l’extendeur pagingbulletedlist à partir d’ASP.NET AJAX Control Toolkit.</span><span class="sxs-lookup"><span data-stu-id="fb55f-107">This video demonstrates the use of the PagingBulletedList extender control from the ASP.NET AJAX Control Toolkit.</span></span> <span data-ttu-id="fb55f-108">Nous apprenons comment l’extendeur PagingBulletedList ajoute côté client pagination et tri vers le contrôle ASP.NET BulletedList standard, ce qui améliore considérablement l’expérience utilisateur lors de la présentation d’une liste complète des éléments.</span><span class="sxs-lookup"><span data-stu-id="fb55f-108">We learn how the PagingBulletedList extender adds client-side paging and sorting to the standard ASP.NET BulletedList control, which greatly improves the user experience when presenting an extensive list of items.</span></span> <span data-ttu-id="fb55f-109">Nous voyons également comment nous pouvons définir le code JavaScript personnalisé et l’expérience de CSS pour gérer intégralement l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="fb55f-109">We also see how we can define custom JavaScript and CSS to fully manage the user experience.</span></span>
+<span data-ttu-id="5c808-107">Cette vidéo illustre l’utilisation de l’extendeur pagingbulletedlist à partir d’ASP.NET AJAX Control Toolkit.</span><span class="sxs-lookup"><span data-stu-id="5c808-107">This video demonstrates the use of the PagingBulletedList extender control from the ASP.NET AJAX Control Toolkit.</span></span> <span data-ttu-id="5c808-108">Nous apprenons comment l’extendeur PagingBulletedList ajoute côté client pagination et tri vers le contrôle ASP.NET BulletedList standard, ce qui améliore considérablement l’expérience utilisateur lors de la présentation d’une liste complète des éléments.</span><span class="sxs-lookup"><span data-stu-id="5c808-108">We learn how the PagingBulletedList extender adds client-side paging and sorting to the standard ASP.NET BulletedList control, which greatly improves the user experience when presenting an extensive list of items.</span></span> <span data-ttu-id="5c808-109">Nous voyons également comment nous pouvons définir le code JavaScript personnalisé et l’expérience de CSS pour gérer intégralement l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="5c808-109">We also see how we can define custom JavaScript and CSS to fully manage the user experience.</span></span>
 
-[<span data-ttu-id="fb55f-110">&#9654;Regardez la vidéo (25 minutes)</span><span class="sxs-lookup"><span data-stu-id="fb55f-110">&#9654; Watch video (25 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-pagingbulletedlist-extender-control)
+[<span data-ttu-id="5c808-110">&#9654;Regardez la vidéo (25 minutes)</span><span class="sxs-lookup"><span data-stu-id="5c808-110">&#9654; Watch video (25 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-pagingbulletedlist-extender-control)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="fb55f-111">[Précédent](how-do-i-use-the-aspnet-ajax-listsearch-extender.md)
-> [Suivant](how-do-i-use-the-numericupdown-extender-control.md)</span><span class="sxs-lookup"><span data-stu-id="fb55f-111">[Previous](how-do-i-use-the-aspnet-ajax-listsearch-extender.md)
+> <span data-ttu-id="5c808-111">[Précédent](how-do-i-use-the-aspnet-ajax-listsearch-extender.md)
+> [Suivant](how-do-i-use-the-numericupdown-extender-control.md)</span><span class="sxs-lookup"><span data-stu-id="5c808-111">[Previous](how-do-i-use-the-aspnet-ajax-listsearch-extender.md)
 [Next](how-do-i-use-the-numericupdown-extender-control.md)</span></span>

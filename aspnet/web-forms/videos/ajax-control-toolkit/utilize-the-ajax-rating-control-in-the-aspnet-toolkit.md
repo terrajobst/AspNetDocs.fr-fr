@@ -12,18 +12,18 @@ ms.openlocfilehash: 4e4ae06ab6a6208c20d5206e171e5c906ac55708
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388788"
 ---
-# <a name="utilize-the-ajax-rating-control-in-the-aspnet-toolkit"></a><span data-ttu-id="8b543-103">Utiliser le contrôle Rating AJAX du kit de ressources ASP.NET</span><span class="sxs-lookup"><span data-stu-id="8b543-103">Utilize the AJAX Rating Control in the ASP.NET Toolkit</span></span>
+# <a name="utilize-the-ajax-rating-control-in-the-aspnet-toolkit"></a><span data-ttu-id="8e115-103">Utiliser le contrôle Rating AJAX du kit de ressources ASP.NET</span><span class="sxs-lookup"><span data-stu-id="8e115-103">Utilize the AJAX Rating Control in the ASP.NET Toolkit</span></span>
 
-<span data-ttu-id="8b543-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="8b543-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="8e115-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="8e115-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="8b543-105">Joe Stagner montre comment utiliser l’outil d’évaluation qui est fourni avec le Kit de ressources ASP.NET AJAX.</span><span class="sxs-lookup"><span data-stu-id="8b543-105">Joe Stagner demonstrates how to use the Rating Tool that ships with ASP.NET AJAX Toolkit.</span></span>
+<span data-ttu-id="8e115-105">Joe Stagner montre comment utiliser l’outil d’évaluation qui est fourni avec le Kit de ressources ASP.NET AJAX.</span><span class="sxs-lookup"><span data-stu-id="8e115-105">Joe Stagner demonstrates how to use the Rating Tool that ships with ASP.NET AJAX Toolkit.</span></span>
 
-[<span data-ttu-id="8b543-106">&#9654;Regardez la vidéo (20 minutes)</span><span class="sxs-lookup"><span data-stu-id="8b543-106">&#9654; Watch video (20 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/utilize-the-ajax-rating-control-in-the-aspnet-toolkit)
+[<span data-ttu-id="8e115-106">&#9654;Regardez la vidéo (20 minutes)</span><span class="sxs-lookup"><span data-stu-id="8e115-106">&#9654; Watch video (20 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/utilize-the-ajax-rating-control-in-the-aspnet-toolkit)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="8b543-107">[Précédent](how-do-i-the-ajax-toolkit-reorder-control.md)
-> [Suivant](control-extenders.md)</span><span class="sxs-lookup"><span data-stu-id="8b543-107">[Previous](how-do-i-the-ajax-toolkit-reorder-control.md)
+> <span data-ttu-id="8e115-107">[Précédent](how-do-i-the-ajax-toolkit-reorder-control.md)
+> [Suivant](control-extenders.md)</span><span class="sxs-lookup"><span data-stu-id="8e115-107">[Previous](how-do-i-the-ajax-toolkit-reorder-control.md)
 [Next](control-extenders.md)</span></span>

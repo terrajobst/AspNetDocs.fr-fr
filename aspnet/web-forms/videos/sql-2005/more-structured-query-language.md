@@ -12,18 +12,18 @@ ms.openlocfilehash: e43f125c5232c3edbe3e5f4bf651eff8fac2724f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381027"
 ---
-# <a name="more-structured-query-language"></a><span data-ttu-id="84bd2-103">En savoir plus sur le langage SQL (Structured Query Language)</span><span class="sxs-lookup"><span data-stu-id="84bd2-103">More Structured Query Language</span></span>
+# <a name="more-structured-query-language"></a><span data-ttu-id="59b05-103">En savoir plus sur le langage SQL (Structured Query Language)</span><span class="sxs-lookup"><span data-stu-id="59b05-103">More Structured Query Language</span></span>
 
-<span data-ttu-id="84bd2-104">by [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="84bd2-104">by [Microsoft](https://github.com/microsoft)</span></span>
+<span data-ttu-id="59b05-104">by [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="59b05-104">by [Microsoft](https://github.com/microsoft)</span></span>
 
-<span data-ttu-id="84bd2-105">Les débutants SQL Server découvre davantage d’instructions SQL telles que select secondaire et découvrez les procédures stockées et leurs équivalents dans les méthodes c# et VB.</span><span class="sxs-lookup"><span data-stu-id="84bd2-105">SQL Server beginners will discover more SQL statements like sub-select and learn stored procedures and their counterparts in C# and VB methods.</span></span>
+<span data-ttu-id="59b05-105">Les débutants SQL Server découvre davantage d’instructions SQL telles que select secondaire et découvrez les procédures stockées et leurs équivalents dans les méthodes c# et VB.</span><span class="sxs-lookup"><span data-stu-id="59b05-105">SQL Server beginners will discover more SQL statements like sub-select and learn stored procedures and their counterparts in C# and VB methods.</span></span>
 
-[<span data-ttu-id="84bd2-106">&#9654;Regardez la vidéo (23 minutes)</span><span class="sxs-lookup"><span data-stu-id="84bd2-106">&#9654; Watch video (23 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/more-structured-query-language)
+[<span data-ttu-id="59b05-106">&#9654;Regardez la vidéo (23 minutes)</span><span class="sxs-lookup"><span data-stu-id="59b05-106">&#9654; Watch video (23 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/more-structured-query-language)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="84bd2-107">[Précédent](manipulating-database-data.md)
-> [Suivant](understanding-security-and-network-connectivity.md)</span><span class="sxs-lookup"><span data-stu-id="84bd2-107">[Previous](manipulating-database-data.md)
+> <span data-ttu-id="59b05-107">[Précédent](manipulating-database-data.md)
+> [Suivant](understanding-security-and-network-connectivity.md)</span><span class="sxs-lookup"><span data-stu-id="59b05-107">[Previous](manipulating-database-data.md)
 [Next](understanding-security-and-network-connectivity.md)</span></span>

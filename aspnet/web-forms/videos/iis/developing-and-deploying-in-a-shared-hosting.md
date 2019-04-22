@@ -12,16 +12,16 @@ ms.openlocfilehash: 27139782772aa00ffc556f89908449a87f1a1ea5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386708"
 ---
-# <a name="developing-and-deploying-in-a-shared-hosting"></a><span data-ttu-id="6ec56-103">Développement et déploiement dans un hébergement partagé</span><span class="sxs-lookup"><span data-stu-id="6ec56-103">Developing and Deploying In a Shared Hosting</span></span>
+# <a name="developing-and-deploying-in-a-shared-hosting"></a><span data-ttu-id="3939b-103">Développement et déploiement dans un hébergement partagé</span><span class="sxs-lookup"><span data-stu-id="3939b-103">Developing and Deploying In a Shared Hosting</span></span>
 
-<span data-ttu-id="6ec56-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="6ec56-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="3939b-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="3939b-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="6ec56-105">Cette vidéo présente le développement d’applications ASP.NET dans un environnement d’hébergement partagé en démontrant les fonctionnalités « Live modification » et « À distance publications » dans Visual Web Developer 2008.</span><span class="sxs-lookup"><span data-stu-id="6ec56-105">This video introduces developing ASP.NET applications in a shared hosting environment by demonstrating "Live Editing" and "Remote Publication" features in Visual Web Developer 2008.</span></span>
+<span data-ttu-id="3939b-105">Cette vidéo présente le développement d’applications ASP.NET dans un environnement d’hébergement partagé en démontrant les fonctionnalités « Live modification » et « À distance publications » dans Visual Web Developer 2008.</span><span class="sxs-lookup"><span data-stu-id="3939b-105">This video introduces developing ASP.NET applications in a shared hosting environment by demonstrating "Live Editing" and "Remote Publication" features in Visual Web Developer 2008.</span></span>
 
-[<span data-ttu-id="6ec56-106">&#9654;Regardez la vidéo (46 minutes)</span><span class="sxs-lookup"><span data-stu-id="6ec56-106">&#9654; Watch video (46 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/developing-and-deploying-in-a-shared-hosting)
+[<span data-ttu-id="3939b-106">&#9654;Regardez la vidéo (46 minutes)</span><span class="sxs-lookup"><span data-stu-id="3939b-106">&#9654; Watch video (46 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/developing-and-deploying-in-a-shared-hosting)
 
 > [!div class="step-by-step"]
-> [<span data-ttu-id="6ec56-107">Suivant</span><span class="sxs-lookup"><span data-stu-id="6ec56-107">Next</span></span>](working-with-iis7-deligated-admin.md)
+> [<span data-ttu-id="3939b-107">Next</span><span class="sxs-lookup"><span data-stu-id="3939b-107">Next</span></span>](working-with-iis7-deligated-admin.md)

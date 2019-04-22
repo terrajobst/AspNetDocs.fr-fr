@@ -12,13 +12,13 @@ ms.openlocfilehash: 81a708b5badecbb5bd134078d079a0fe3a63bb5f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380676"
 ---
-# <a name="introduction-to-aspnet-single-page-application"></a><span data-ttu-id="ebfcd-103">Introduction à ASP.NET Single Page Application</span><span class="sxs-lookup"><span data-stu-id="ebfcd-103">Introduction to ASP.NET Single Page Application</span></span>
+# <a name="introduction-to-aspnet-single-page-application"></a><span data-ttu-id="deb62-103">Introduction à ASP.NET Single Page Application</span><span class="sxs-lookup"><span data-stu-id="deb62-103">Introduction to ASP.NET Single Page Application</span></span>
 
-> <span data-ttu-id="ebfcd-104">Contenu à l’aide du nouveau modèle SPA et Knockoutjs.</span><span class="sxs-lookup"><span data-stu-id="ebfcd-104">Content for using the new SPA template and Knockoutjs.</span></span>
+> <span data-ttu-id="deb62-104">Contenu à l’aide du nouveau modèle SPA et Knockoutjs.</span><span class="sxs-lookup"><span data-stu-id="deb62-104">Content for using the new SPA template and Knockoutjs.</span></span>
 
 
-- [<span data-ttu-id="ebfcd-105">Application à une seule page : modèle KnockoutJS</span><span class="sxs-lookup"><span data-stu-id="ebfcd-105">Single Page Application: KnockoutJS template</span></span>](knockoutjs-template.md)
-- [<span data-ttu-id="ebfcd-106">Bibliothèques autres que Knockout</span><span class="sxs-lookup"><span data-stu-id="ebfcd-106">Know a library other than Knockout?</span></span>](other-libraries.md)
+- [<span data-ttu-id="deb62-105">Application à Page unique : Modèle KnockoutJS</span><span class="sxs-lookup"><span data-stu-id="deb62-105">Single Page Application: KnockoutJS template</span></span>](knockoutjs-template.md)
+- [<span data-ttu-id="deb62-106">Bibliothèques autres que Knockout</span><span class="sxs-lookup"><span data-stu-id="deb62-106">Know a library other than Knockout?</span></span>](other-libraries.md)

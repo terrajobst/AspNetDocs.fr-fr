@@ -12,18 +12,18 @@ ms.openlocfilehash: ee02ebda2261727f9a477c29eb76fa303ce2b033
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381833"
 ---
-# <a name="displaying-data-in-a-chart-part-2"></a><span data-ttu-id="9a416-103">Affichage de données dans un graphique (Partie 2)</span><span class="sxs-lookup"><span data-stu-id="9a416-103">Displaying Data in a Chart (Part 2)</span></span>
+# <a name="displaying-data-in-a-chart-part-2"></a><span data-ttu-id="9207e-103">Affichage de données dans un graphique (Partie 2)</span><span class="sxs-lookup"><span data-stu-id="9207e-103">Displaying Data in a Chart (Part 2)</span></span>
 
-<span data-ttu-id="9a416-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="9a416-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="9207e-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="9207e-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="9a416-105">Accompagnement de vidéo à l’affichage des données dans un didacticiel graphique (partie 2)</span><span class="sxs-lookup"><span data-stu-id="9a416-105">Video accompaniment to the Displaying Data in a Chart (Part 2) tutorial</span></span>
+<span data-ttu-id="9207e-105">Accompagnement de vidéo à l’affichage des données dans un didacticiel graphique (partie 2)</span><span class="sxs-lookup"><span data-stu-id="9207e-105">Video accompaniment to the Displaying Data in a Chart (Part 2) tutorial</span></span>
 
-[<span data-ttu-id="9a416-106">&#9654;Regardez la vidéo (9 minutes)</span><span class="sxs-lookup"><span data-stu-id="9a416-106">&#9654; Watch video (9 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/displaying-data-in-a-chart-part-2)
+[<span data-ttu-id="9207e-106">&#9654;Regardez la vidéo (9 minutes)</span><span class="sxs-lookup"><span data-stu-id="9207e-106">&#9654; Watch video (9 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/displaying-data-in-a-chart-part-2)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="9a416-107">[Précédent](displaying-data-in-a-chart-part-1.md)
-> [Suivant](working-with-files.md)</span><span class="sxs-lookup"><span data-stu-id="9a416-107">[Previous](displaying-data-in-a-chart-part-1.md)
+> <span data-ttu-id="9207e-107">[Précédent](displaying-data-in-a-chart-part-1.md)
+> [Suivant](working-with-files.md)</span><span class="sxs-lookup"><span data-stu-id="9207e-107">[Previous](displaying-data-in-a-chart-part-1.md)
 [Next](working-with-files.md)</span></span>

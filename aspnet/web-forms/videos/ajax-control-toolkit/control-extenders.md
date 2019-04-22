@@ -12,18 +12,18 @@ ms.openlocfilehash: c3c5da75f0fb68693716a7e1de5736ee6fcb13f0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383978"
 ---
-# <a name="control-extenders"></a><span data-ttu-id="d92e8-103">Extendeurs de contrôle</span><span class="sxs-lookup"><span data-stu-id="d92e8-103">Control Extenders</span></span>
+# <a name="control-extenders"></a><span data-ttu-id="7f345-103">Extendeurs de contrôle</span><span class="sxs-lookup"><span data-stu-id="7f345-103">Control Extenders</span></span>
 
-<span data-ttu-id="d92e8-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="d92e8-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="7f345-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="7f345-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="d92e8-105">Regardez cette vidéo pour comprendre la différence entre les contrôles et les extendeurs de contrôle AJAX et comment utiliser ces extendeurs dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="d92e8-105">Watch this video to understand the difference between Controls and AJAX Control Extenders and how to use those extenders in your applications.</span></span>
+<span data-ttu-id="7f345-105">Regardez cette vidéo pour comprendre la différence entre les contrôles et les extendeurs de contrôle AJAX et comment utiliser ces extendeurs dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="7f345-105">Watch this video to understand the difference between Controls and AJAX Control Extenders and how to use those extenders in your applications.</span></span>
 
-[<span data-ttu-id="d92e8-106">&#9654;Regardez la vidéo (3 minutes)</span><span class="sxs-lookup"><span data-stu-id="d92e8-106">&#9654; Watch video (3 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/control-extenders)
+[<span data-ttu-id="7f345-106">&#9654;Regardez la vidéo (3 minutes)</span><span class="sxs-lookup"><span data-stu-id="7f345-106">&#9654; Watch video (3 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/control-extenders)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="d92e8-107">[Précédent](utilize-the-ajax-rating-control-in-the-aspnet-toolkit.md)
-> [Suivant](color-picker.md)</span><span class="sxs-lookup"><span data-stu-id="d92e8-107">[Previous](utilize-the-ajax-rating-control-in-the-aspnet-toolkit.md)
+> <span data-ttu-id="7f345-107">[Précédent](utilize-the-ajax-rating-control-in-the-aspnet-toolkit.md)
+> [Suivant](color-picker.md)</span><span class="sxs-lookup"><span data-stu-id="7f345-107">[Previous](utilize-the-ajax-rating-control-in-the-aspnet-toolkit.md)
 [Next](color-picker.md)</span></span>
