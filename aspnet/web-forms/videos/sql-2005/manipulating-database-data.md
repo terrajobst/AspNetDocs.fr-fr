@@ -12,18 +12,18 @@ ms.openlocfilehash: 10f9379a27f96ac4acb77af1a6062a42aaecc14f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391674"
 ---
-# <a name="manipulating-database-data"></a><span data-ttu-id="86bcf-104">Manipulation des données d’une base de données</span><span class="sxs-lookup"><span data-stu-id="86bcf-104">Manipulating Database Data</span></span>
+# <a name="manipulating-database-data"></a><span data-ttu-id="daa07-104">Manipulation des données d’une base de données</span><span class="sxs-lookup"><span data-stu-id="daa07-104">Manipulating Database Data</span></span>
 
-<span data-ttu-id="86bcf-105">by [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="86bcf-105">by [Microsoft](https://github.com/microsoft)</span></span>
+<span data-ttu-id="daa07-105">by [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="daa07-105">by [Microsoft](https://github.com/microsoft)</span></span>
 
-<span data-ttu-id="86bcf-106">Les débutants SQL Server seront en savoir plus sur les objets ADO.NET et l’exécution d’instruction SQL à partir d’ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="86bcf-106">SQL Server beginners will learn about ADO.NET objects and execution of SQL statement from ADO.NET.</span></span> <span data-ttu-id="86bcf-107">Explorer SQL et en savoir plus sur les instructions delete, insert et mise à jour.</span><span class="sxs-lookup"><span data-stu-id="86bcf-107">Explore SQL and learn about insert, update, and delete statements.</span></span>
+<span data-ttu-id="daa07-106">Les débutants SQL Server seront en savoir plus sur les objets ADO.NET et l’exécution d’instruction SQL à partir d’ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="daa07-106">SQL Server beginners will learn about ADO.NET objects and execution of SQL statement from ADO.NET.</span></span> <span data-ttu-id="daa07-107">Explorer SQL et en savoir plus sur les instructions delete, insert et mise à jour.</span><span class="sxs-lookup"><span data-stu-id="daa07-107">Explore SQL and learn about insert, update, and delete statements.</span></span>
 
-[<span data-ttu-id="86bcf-108">&#9654;Regardez la vidéo (40 minutes)</span><span class="sxs-lookup"><span data-stu-id="86bcf-108">&#9654; Watch video (40 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/manipulating-database-data)
+[<span data-ttu-id="daa07-108">&#9654;Regardez la vidéo (40 minutes)</span><span class="sxs-lookup"><span data-stu-id="daa07-108">&#9654; Watch video (40 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/manipulating-database-data)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="86bcf-109">[Précédent](designing-relational-database-tables.md)
-> [Suivant](more-structured-query-language.md)</span><span class="sxs-lookup"><span data-stu-id="86bcf-109">[Previous](designing-relational-database-tables.md)
+> <span data-ttu-id="daa07-109">[Précédent](designing-relational-database-tables.md)
+> [Suivant](more-structured-query-language.md)</span><span class="sxs-lookup"><span data-stu-id="daa07-109">[Previous](designing-relational-database-tables.md)
 [Next](more-structured-query-language.md)</span></span>

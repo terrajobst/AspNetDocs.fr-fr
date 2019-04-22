@@ -12,16 +12,16 @@ ms.openlocfilehash: 689606291575ef0a324ab64f4f34758fff0fde5a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388489"
 ---
-# <a name="aspnet-and-web-tools-20122"></a><span data-ttu-id="74e65-105">ASP.NET et Web Tools 2012.2</span><span class="sxs-lookup"><span data-stu-id="74e65-105">ASP.NET and Web Tools 2012.2</span></span>
+# <a name="aspnet-and-web-tools-20122"></a><span data-ttu-id="909d7-105">ASP.NET et Web Tools 2012.2</span><span class="sxs-lookup"><span data-stu-id="909d7-105">ASP.NET and Web Tools 2012.2</span></span>
 
-<span data-ttu-id="74e65-106">par [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="74e65-106">by [Jon Galloway](https://github.com/jongalloway)</span></span>
+<span data-ttu-id="909d7-106">par [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="909d7-106">by [Jon Galloway](https://github.com/jongalloway)</span></span>
 
-<span data-ttu-id="74e65-107">Répondre à la nouvelle version d’ASP.NET et Web Tools 2012.2 !</span><span class="sxs-lookup"><span data-stu-id="74e65-107">Meet the new ASP.NET and Web Tools 2012.2 release!</span></span> <span data-ttu-id="74e65-108">Cette version inclut une pile de nouvelles fonctionnalités, y compris les modèles de projet, les outils web et bien plus encore.</span><span class="sxs-lookup"><span data-stu-id="74e65-108">This release includes a pile of great new features, including project templates, web tooling, and more.</span></span> <span data-ttu-id="74e65-109">Rejoignez Jon Galloway il montre toutes les principales nouvelles fonctionnalités dans sous une une demi-heure !</span><span class="sxs-lookup"><span data-stu-id="74e65-109">Join Jon Galloway as he shows off all the top new features in under a half an hour!</span></span>
+<span data-ttu-id="909d7-107">Répondre à la nouvelle version d’ASP.NET et Web Tools 2012.2 !</span><span class="sxs-lookup"><span data-stu-id="909d7-107">Meet the new ASP.NET and Web Tools 2012.2 release!</span></span> <span data-ttu-id="909d7-108">Cette version inclut une pile de nouvelles fonctionnalités, y compris les modèles de projet, les outils web et bien plus encore.</span><span class="sxs-lookup"><span data-stu-id="909d7-108">This release includes a pile of great new features, including project templates, web tooling, and more.</span></span> <span data-ttu-id="909d7-109">Rejoignez Jon Galloway il montre toutes les principales nouvelles fonctionnalités dans sous une une demi-heure !</span><span class="sxs-lookup"><span data-stu-id="909d7-109">Join Jon Galloway as he shows off all the top new features in under a half an hour!</span></span>
 
-[<span data-ttu-id="74e65-110">&#9654;Regardez la vidéo (26 minutes)</span><span class="sxs-lookup"><span data-stu-id="74e65-110">&#9654; Watch video (26 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-and-web-tools-20122)
+[<span data-ttu-id="909d7-110">&#9654;Regardez la vidéo (26 minutes)</span><span class="sxs-lookup"><span data-stu-id="909d7-110">&#9654; Watch video (26 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-and-web-tools-20122)
 
 > [!div class="step-by-step"]
-> [<span data-ttu-id="74e65-111">Précédent</span><span class="sxs-lookup"><span data-stu-id="74e65-111">Previous</span></span>](getting-started-with-the-next-version-of-aspnet.md)
+> [<span data-ttu-id="909d7-111">Précédent</span><span class="sxs-lookup"><span data-stu-id="909d7-111">Previous</span></span>](getting-started-with-the-next-version-of-aspnet.md)

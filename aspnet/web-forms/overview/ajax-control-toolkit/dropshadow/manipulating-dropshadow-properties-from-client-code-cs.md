@@ -12,54 +12,54 @@ ms.openlocfilehash: 3bf4b8fe85780135c821fbb7fcceefd326dce656
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381339"
 ---
-# <a name="manipulating-dropshadow-properties-from-client-code-c"></a><span data-ttu-id="cec5a-103">Manipulation des propriétés de DropShadow à partir de code client (C#)</span><span class="sxs-lookup"><span data-stu-id="cec5a-103">Manipulating DropShadow Properties from Client Code (C#)</span></span>
+# <a name="manipulating-dropshadow-properties-from-client-code-c"></a><span data-ttu-id="59d9c-103">Manipulation des propriétés de DropShadow à partir de code client (C#)</span><span class="sxs-lookup"><span data-stu-id="59d9c-103">Manipulating DropShadow Properties from Client Code (C#)</span></span>
 
-<span data-ttu-id="cec5a-104">par [Christian Wenz](https://github.com/wenz)</span><span class="sxs-lookup"><span data-stu-id="cec5a-104">by [Christian Wenz](https://github.com/wenz)</span></span>
+<span data-ttu-id="59d9c-104">par [Christian Wenz](https://github.com/wenz)</span><span class="sxs-lookup"><span data-stu-id="59d9c-104">by [Christian Wenz](https://github.com/wenz)</span></span>
 
-<span data-ttu-id="cec5a-105">[Télécharger le Code](http://download.microsoft.com/download/5/1/6/51652a81-500b-4f6b-88d3-617103e7941e/DropShadow2.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dropshadow2CS.pdf)</span><span class="sxs-lookup"><span data-stu-id="cec5a-105">[Download Code](http://download.microsoft.com/download/5/1/6/51652a81-500b-4f6b-88d3-617103e7941e/DropShadow2.cs.zip) or [Download PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dropshadow2CS.pdf)</span></span>
+<span data-ttu-id="59d9c-105">[Télécharger le Code](http://download.microsoft.com/download/5/1/6/51652a81-500b-4f6b-88d3-617103e7941e/DropShadow2.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dropshadow2CS.pdf)</span><span class="sxs-lookup"><span data-stu-id="59d9c-105">[Download Code](http://download.microsoft.com/download/5/1/6/51652a81-500b-4f6b-88d3-617103e7941e/DropShadow2.cs.zip) or [Download PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dropshadow2CS.pdf)</span></span>
 
-> <span data-ttu-id="cec5a-106">Le contrôle DropShadow dans AJAX Control Toolkit étend un panneau avec une ombre portée.</span><span class="sxs-lookup"><span data-stu-id="cec5a-106">The DropShadow control in the AJAX Control Toolkit extends a panel with a drop shadow.</span></span> <span data-ttu-id="cec5a-107">Propriétés de cet extendeur peuvent également être modifiées à l’aide de code JavaScript client.</span><span class="sxs-lookup"><span data-stu-id="cec5a-107">Properties of this extender can also be changed using client JavaScript code.</span></span>
+> <span data-ttu-id="59d9c-106">Le contrôle DropShadow dans AJAX Control Toolkit étend un panneau avec une ombre portée.</span><span class="sxs-lookup"><span data-stu-id="59d9c-106">The DropShadow control in the AJAX Control Toolkit extends a panel with a drop shadow.</span></span> <span data-ttu-id="59d9c-107">Propriétés de cet extendeur peuvent également être modifiées à l’aide de code JavaScript client.</span><span class="sxs-lookup"><span data-stu-id="59d9c-107">Properties of this extender can also be changed using client JavaScript code.</span></span>
 
 
-## <a name="overview"></a><span data-ttu-id="cec5a-108">Vue d'ensemble</span><span class="sxs-lookup"><span data-stu-id="cec5a-108">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="59d9c-108">Vue d'ensemble</span><span class="sxs-lookup"><span data-stu-id="59d9c-108">Overview</span></span>
 
-<span data-ttu-id="cec5a-109">Le contrôle DropShadow dans AJAX Control Toolkit étend un panneau avec une ombre portée.</span><span class="sxs-lookup"><span data-stu-id="cec5a-109">The DropShadow control in the AJAX Control Toolkit extends a panel with a drop shadow.</span></span> <span data-ttu-id="cec5a-110">Propriétés de cet extendeur peuvent également être modifiées à l’aide de code JavaScript client.</span><span class="sxs-lookup"><span data-stu-id="cec5a-110">Properties of this extender can also be changed using client JavaScript code.</span></span>
+<span data-ttu-id="59d9c-109">Le contrôle DropShadow dans AJAX Control Toolkit étend un panneau avec une ombre portée.</span><span class="sxs-lookup"><span data-stu-id="59d9c-109">The DropShadow control in the AJAX Control Toolkit extends a panel with a drop shadow.</span></span> <span data-ttu-id="59d9c-110">Propriétés de cet extendeur peuvent également être modifiées à l’aide de code JavaScript client.</span><span class="sxs-lookup"><span data-stu-id="59d9c-110">Properties of this extender can also be changed using client JavaScript code.</span></span>
 
-## <a name="steps"></a><span data-ttu-id="cec5a-111">Étapes</span><span class="sxs-lookup"><span data-stu-id="cec5a-111">Steps</span></span>
+## <a name="steps"></a><span data-ttu-id="59d9c-111">Étapes</span><span class="sxs-lookup"><span data-stu-id="59d9c-111">Steps</span></span>
 
-<span data-ttu-id="cec5a-112">Le code commence par un panneau contenant des lignes de texte :</span><span class="sxs-lookup"><span data-stu-id="cec5a-112">The code starts with a panel containing some lines of text:</span></span>
+<span data-ttu-id="59d9c-112">Le code commence par un panneau contenant des lignes de texte :</span><span class="sxs-lookup"><span data-stu-id="59d9c-112">The code starts with a panel containing some lines of text:</span></span>
 
 [!code-aspx[Main](manipulating-dropshadow-properties-from-client-code-cs/samples/sample1.aspx)]
 
-<span data-ttu-id="cec5a-113">La classe CSS associée donne le volet d’une couleur d’arrière-plan intéressante :</span><span class="sxs-lookup"><span data-stu-id="cec5a-113">The associated CSS class gives the panel a nice background color:</span></span>
+<span data-ttu-id="59d9c-113">La classe CSS associée donne le volet d’une couleur d’arrière-plan intéressante :</span><span class="sxs-lookup"><span data-stu-id="59d9c-113">The associated CSS class gives the panel a nice background color:</span></span>
 
 [!code-css[Main](manipulating-dropshadow-properties-from-client-code-cs/samples/sample2.css)]
 
-<span data-ttu-id="cec5a-114">Le `DropShadowExtender` est ajouté pour étendre le panneau avec un opacité définie sur 50 %, effet d’ombre portée :</span><span class="sxs-lookup"><span data-stu-id="cec5a-114">The `DropShadowExtender` is added to extend the panel with a drop shadow effect, opacity set to 50%:</span></span>
+<span data-ttu-id="59d9c-114">Le `DropShadowExtender` est ajouté pour étendre le panneau avec un opacité définie sur 50 %, effet d’ombre portée :</span><span class="sxs-lookup"><span data-stu-id="59d9c-114">The `DropShadowExtender` is added to extend the panel with a drop shadow effect, opacity set to 50%:</span></span>
 
 [!code-aspx[Main](manipulating-dropshadow-properties-from-client-code-cs/samples/sample3.aspx)]
 
-<span data-ttu-id="cec5a-115">Ensuite, ASP.NET AJAX `ScriptManager` contrôle permet de la boîte à outils de contrôle fonctionne :</span><span class="sxs-lookup"><span data-stu-id="cec5a-115">Then, the ASP.NET AJAX `ScriptManager` control enables the Control Toolkit to work:</span></span>
+<span data-ttu-id="59d9c-115">Ensuite, ASP.NET AJAX `ScriptManager` contrôle permet de la boîte à outils de contrôle fonctionne :</span><span class="sxs-lookup"><span data-stu-id="59d9c-115">Then, the ASP.NET AJAX `ScriptManager` control enables the Control Toolkit to work:</span></span>
 
 [!code-aspx[Main](manipulating-dropshadow-properties-from-client-code-cs/samples/sample4.aspx)]
 
-<span data-ttu-id="cec5a-116">Un autre panneau contient deux liens de JavaScript pour définir l’opacité de l’ombre : le lien moins diminue l’opacité de l’ombre, le lien plus (+) pour l’augmenter.</span><span class="sxs-lookup"><span data-stu-id="cec5a-116">Another panel contains two JavaScript links for setting the opacity of the drop shadow: the minus link decreases the shadow's opacity, the plus link increases it.</span></span>
+<span data-ttu-id="59d9c-116">Un autre panneau contient deux liens de JavaScript pour définir l’opacité de l’ombre : le lien moins diminue l’opacité de l’ombre, le lien plus (+) pour l’augmenter.</span><span class="sxs-lookup"><span data-stu-id="59d9c-116">Another panel contains two JavaScript links for setting the opacity of the drop shadow: the minus link decreases the shadow's opacity, the plus link increases it.</span></span>
 
 [!code-aspx[Main](manipulating-dropshadow-properties-from-client-code-cs/samples/sample5.aspx)]
 
-<span data-ttu-id="cec5a-117">La fonction JavaScript `changeOpacity()` doit ensuite d’abord trouver le `DropShadowExtender` contrôle sur la page.</span><span class="sxs-lookup"><span data-stu-id="cec5a-117">The JavaScript function `changeOpacity()` must then first find the `DropShadowExtender` control on the page.</span></span> <span data-ttu-id="cec5a-118">ASP.NET AJAX définit le `$find()` méthode pour exactement cette tâche.</span><span class="sxs-lookup"><span data-stu-id="cec5a-118">ASP.NET AJAX defines the `$find()` method for exactly that task.</span></span> <span data-ttu-id="cec5a-119">Ensuite, le `get_Opacity()` méthode récupère l’opacité en cours, le `set_Opacity()` méthode il définit.</span><span class="sxs-lookup"><span data-stu-id="cec5a-119">Then, the `get_Opacity()` method retrieves the current opacity, the `set_Opacity()` method sets it.</span></span> <span data-ttu-id="cec5a-120">Le code JavaScript puis place la valeur d’opacité actuelle dans le `<label>` élément :</span><span class="sxs-lookup"><span data-stu-id="cec5a-120">The JavaScript code then puts the current opacity value in the `<label>` element:</span></span>
+<span data-ttu-id="59d9c-117">La fonction JavaScript `changeOpacity()` doit ensuite d’abord trouver le `DropShadowExtender` contrôle sur la page.</span><span class="sxs-lookup"><span data-stu-id="59d9c-117">The JavaScript function `changeOpacity()` must then first find the `DropShadowExtender` control on the page.</span></span> <span data-ttu-id="59d9c-118">ASP.NET AJAX définit le `$find()` méthode pour exactement cette tâche.</span><span class="sxs-lookup"><span data-stu-id="59d9c-118">ASP.NET AJAX defines the `$find()` method for exactly that task.</span></span> <span data-ttu-id="59d9c-119">Ensuite, le `get_Opacity()` méthode récupère l’opacité en cours, le `set_Opacity()` méthode il définit.</span><span class="sxs-lookup"><span data-stu-id="59d9c-119">Then, the `get_Opacity()` method retrieves the current opacity, the `set_Opacity()` method sets it.</span></span> <span data-ttu-id="59d9c-120">Le code JavaScript puis place la valeur d’opacité actuelle dans le `<label>` élément :</span><span class="sxs-lookup"><span data-stu-id="59d9c-120">The JavaScript code then puts the current opacity value in the `<label>` element:</span></span>
 
 [!code-html[Main](manipulating-dropshadow-properties-from-client-code-cs/samples/sample6.html)]
 
 
-[![T<span data-ttu-id="cec5a-121">opacité de he est modifiée du côté client]</span><span class="sxs-lookup"><span data-stu-id="cec5a-121">he opacity is changed on the client side]</span></span>(manipulating-dropshadow-properties-from-client-code-cs/_static/image2.png)](manipulating-dropshadow-properties-from-client-code-cs/_static/image1.png)
+<span data-ttu-id="59d9c-121">[![L’opacité est modifiée du côté client](manipulating-dropshadow-properties-from-client-code-cs/_static/image2.png)](manipulating-dropshadow-properties-from-client-code-cs/_static/image1.png)</span><span class="sxs-lookup"><span data-stu-id="59d9c-121">[![The opacity is changed on the client side](manipulating-dropshadow-properties-from-client-code-cs/_static/image2.png)](manipulating-dropshadow-properties-from-client-code-cs/_static/image1.png)</span></span>
 
-<span data-ttu-id="cec5a-122">L’opacité est modifiée du côté client ([cliquez pour afficher l’image en taille réelle](manipulating-dropshadow-properties-from-client-code-cs/_static/image3.png))</span><span class="sxs-lookup"><span data-stu-id="cec5a-122">The opacity is changed on the client side ([Click to view full-size image](manipulating-dropshadow-properties-from-client-code-cs/_static/image3.png))</span></span>
+<span data-ttu-id="59d9c-122">L’opacité est modifiée du côté client ([cliquez pour afficher l’image en taille réelle](manipulating-dropshadow-properties-from-client-code-cs/_static/image3.png))</span><span class="sxs-lookup"><span data-stu-id="59d9c-122">The opacity is changed on the client side ([Click to view full-size image](manipulating-dropshadow-properties-from-client-code-cs/_static/image3.png))</span></span>
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="cec5a-123">[Précédent](adjusting-the-z-index-of-a-dropshadow-cs.md)
-> [Suivant](adjusting-the-z-index-of-a-dropshadow-vb.md)</span><span class="sxs-lookup"><span data-stu-id="cec5a-123">[Previous](adjusting-the-z-index-of-a-dropshadow-cs.md)
+> <span data-ttu-id="59d9c-123">[Précédent](adjusting-the-z-index-of-a-dropshadow-cs.md)
+> [Suivant](adjusting-the-z-index-of-a-dropshadow-vb.md)</span><span class="sxs-lookup"><span data-stu-id="59d9c-123">[Previous](adjusting-the-z-index-of-a-dropshadow-cs.md)
 [Next](adjusting-the-z-index-of-a-dropshadow-vb.md)</span></span>

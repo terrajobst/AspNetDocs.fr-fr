@@ -12,13 +12,13 @@ ms.openlocfilehash: 78108edae6736242d497b88f376ac7d6766d530b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389334"
 ---
-# <a name="how-do-i-make-greater-use-of-caching"></a><span data-ttu-id="39b1f-104">[Comment faire] Tirer le meilleur parti de la mise en cache ?</span><span class="sxs-lookup"><span data-stu-id="39b1f-104">[How Do I:] Make Greater use of Caching?</span></span>
+# <a name="how-do-i-make-greater-use-of-caching"></a><span data-ttu-id="c59dc-104">[Comment faire] Tirer le meilleur parti de la mise en cache ?</span><span class="sxs-lookup"><span data-stu-id="c59dc-104">[How Do I:] Make Greater use of Caching?</span></span>
 
-<span data-ttu-id="39b1f-105">by [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="39b1f-105">by [Microsoft](https://github.com/microsoft)</span></span>
+<span data-ttu-id="c59dc-105">by [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="c59dc-105">by [Microsoft](https://github.com/microsoft)</span></span>
 
-<span data-ttu-id="39b1f-106">Visionner une démonstration de la mise en cache de sortie de Page partielle, suivie d’une vue d’ensemble de l’API de Cache qui montre comment lier efficacement un contrôle de présentation des données dans un fichier XML.</span><span class="sxs-lookup"><span data-stu-id="39b1f-106">Watch a demonstration of Partial-Page Output Caching, followed by an overview of the Cache API that demonstrates how to efficiently bind a data presentation control to an XML file.</span></span>
+<span data-ttu-id="c59dc-106">Visionner une démonstration de la mise en cache de sortie de Page partielle, suivie d’une vue d’ensemble de l’API de Cache qui montre comment lier efficacement un contrôle de présentation des données dans un fichier XML.</span><span class="sxs-lookup"><span data-stu-id="c59dc-106">Watch a demonstration of Partial-Page Output Caching, followed by an overview of the Cache API that demonstrates how to efficiently bind a data presentation control to an XML file.</span></span>
 
-[<span data-ttu-id="39b1f-107">&#9654;Regardez la vidéo (15 minutes)</span><span class="sxs-lookup"><span data-stu-id="39b1f-107">&#9654; Watch video (15 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-make-greater-use-of-caching)
+[<span data-ttu-id="c59dc-107">&#9654;Regardez la vidéo (15 minutes)</span><span class="sxs-lookup"><span data-stu-id="c59dc-107">&#9654; Watch video (15 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-make-greater-use-of-caching)
