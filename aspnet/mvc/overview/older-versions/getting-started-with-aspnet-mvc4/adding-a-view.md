@@ -12,7 +12,7 @@ ms.openlocfilehash: 1ab1ea8b277b48b3b72edb9dd45aa4cc2937ffa8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418051"
 ---
 # <a name="adding-a-view"></a>Ajout d’une vue
@@ -75,7 +75,7 @@ Tout d’abord, vous souhaitez modifier le &quot;votre logo ici.&quot; titre en 
 
 ![_LayoutCshtml](adding-a-view/_static/image7.png)
 
-Modèles de disposition permettent de spécifier la disposition du conteneur HTML de votre site au même endroit et de l’appliquer sur plusieurs pages de votre site. Recherchez la ligne `@RenderBody()`. `RenderBody` est un espace réservé où tous les affichage spécifique au pages que vous créez s’affichent, &quot;encapsulé&quot; dans la page de disposition. Par exemple, si vous sélectionnez le lien About, le *Views\Home\About.cshtml* vue est restituée à l’intérieur de la `RenderBody` (méthode).
+Modèles de disposition permettent de spécifier la disposition du conteneur HTML de votre site au même endroit et de l’appliquer sur plusieurs pages de votre site. Recherchez la ligne `@RenderBody()`. `RenderBody` est un espace réservé dans lequel toutes les pages spécifiques aux vues que vous créez s’affichent, &quot;encapsulées&quot; dans la page de disposition. Par exemple, si vous sélectionnez le lien About, le *Views\Home\About.cshtml* vue est restituée à l’intérieur de la `RenderBody` (méthode).
 
 Modifiez le titre du titre du site dans le modèle de disposition &quot;votre logo ici&quot; à &quot;MVC Movie&quot;.
 

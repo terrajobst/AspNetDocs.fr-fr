@@ -12,7 +12,7 @@ ms.openlocfilehash: f03d94669d4d9b0089c8106b01812fe9722b6944
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379207"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-nobot-control"></a>[Comment faire] Utiliser le contrôle de nobot d’ASP.NET AJAX ?

@@ -12,7 +12,7 @@ ms.openlocfilehash: 268403a7b832596421120a24c64580f63eb987c3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383878"
 ---
 # <a name="using-the-formviews-templates-vb"></a>À l’aide de modèles de FormView (VB)
@@ -40,7 +40,7 @@ Contrairement à DetailsView, FormView n’est pas composé de champs. Impossibl
 Dans ce didacticiel, nous allons examiner utilisant le contrôle FormView pour présenter un affichage moins rigid de produits. Au lieu d’avoir des champs pour le nom, catégorie, fournisseur et d’ainsi de suite, le contrôle FormView `ItemTemplate` affiche ces valeurs à l’aide d’une combinaison d’un élément d’en-tête et un `<table>` (voir Figure 1).
 
 
-[![THE FormView découpe de la mise en page Grid-Like vu dans le contrôle DetailsView](using-the-formview-s-templates-vb/_static/image2.png)](using-the-formview-s-templates-vb/_static/image1.png)
+[![Le contrôle FormView découpe de la disposition de grille illustrée dans le contrôle DetailsView](using-the-formview-s-templates-vb/_static/image2.png)](using-the-formview-s-templates-vb/_static/image1.png)
 
 **Figure 1**: Le contrôle FormView quitte la disposition Grid-Like vu dans le contrôle DetailsView ([cliquez pour afficher l’image en taille réelle](using-the-formview-s-templates-vb/_static/image3.png))
 
@@ -50,7 +50,7 @@ Dans ce didacticiel, nous allons examiner utilisant le contrôle FormView pour p
 Ouvrez le `FormView.aspx` page et faites glisser un FormView à partir de la boîte à outils vers le concepteur. Lorsque vous ajoutez le contrôle FormView il apparaît comme une zone grise, en nous demandant qu’un `ItemTemplate` est nécessaire.
 
 
-[![TIl FormView ne peut pas être restitué dans le concepteur jusqu'à ce qu’un modèle ItemTemplate est fourni](using-the-formview-s-templates-vb/_static/image5.png)](using-the-formview-s-templates-vb/_static/image4.png)
+[![Le contrôle FormView ne peut pas être restitué dans le concepteur jusqu'à ce qu’un modèle ItemTemplate est fourni](using-the-formview-s-templates-vb/_static/image5.png)](using-the-formview-s-templates-vb/_static/image4.png)
 
 **Figure 2**: Les FormView ne peut pas être restitué dans le concepteur jusqu'à ce qu’un `ItemTemplate` est fourni ([cliquez pour afficher l’image en taille réelle](using-the-formview-s-templates-vb/_static/image6.png))
 
@@ -88,12 +88,12 @@ Dans la mesure où aucun CheckBoxFields ne sont disponibles avec le contrôle Fo
 Avec la `ItemTemplate` terminée, les informations de produit s’affichent de manière beaucoup plus fluide. Comparez la sortie de DetailsView à partir du dernier didacticiel (Figure 3) avec la sortie générée par le contrôle FormView dans ce didacticiel (Figure 4).
 
 
-[![TIl rigide DetailsView sortie](using-the-formview-s-templates-vb/_static/image8.png)](using-the-formview-s-templates-vb/_static/image7.png)
+[![La sortie de DetailsView rigides](using-the-formview-s-templates-vb/_static/image8.png)](using-the-formview-s-templates-vb/_static/image7.png)
 
 **Figure 3**: La sortie de DetailsView rigide ([cliquez pour afficher l’image en taille réelle](using-the-formview-s-templates-vb/_static/image9.png))
 
 
-[![TIl FLUIDE FormView sortie](using-the-formview-s-templates-vb/_static/image11.png)](using-the-formview-s-templates-vb/_static/image10.png)
+[![La sortie de FormView FLUIDE](using-the-formview-s-templates-vb/_static/image11.png)](using-the-formview-s-templates-vb/_static/image10.png)
 
 **Figure 4**: La sortie de FormView fluide ([cliquez pour afficher l’image en taille réelle](using-the-formview-s-templates-vb/_static/image12.png))
 

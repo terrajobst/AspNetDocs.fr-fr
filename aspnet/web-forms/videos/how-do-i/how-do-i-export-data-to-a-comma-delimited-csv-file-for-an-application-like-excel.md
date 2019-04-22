@@ -12,7 +12,7 @@ ms.openlocfilehash: f27873eee345fe5347023b154de2b3833c9b6138
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383029"
 ---
 # <a name="how-do-i-export-data-to-a-comma-delimited-csv-file-for-an-application-like-excel"></a>[Comment faire] Exporter les données vers un fichier délimité (CSV) de virgules pour une Application comme Excel.

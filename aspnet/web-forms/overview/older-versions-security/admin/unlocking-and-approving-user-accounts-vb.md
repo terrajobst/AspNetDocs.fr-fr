@@ -12,7 +12,7 @@ ms.openlocfilehash: 1f6ade517bda60ac0f44811853ee9b9d06070091
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384173"
 ---
 # <a name="unlocking-and-approving-user-accounts-vb"></a>Déblocage et approbation des comptes d’utilisateur (VB)
@@ -49,7 +49,7 @@ Ouvrez le `ManageUsers.aspx` page et ajoutez un HyperLinkField à la `UserAccoun
 Après avoir ajouté le HyperLinkField GridView, prenez un moment pour afficher la `ManageUsers.aspx` page via un navigateur. Comme le montre la Figure 1, chaque ligne GridView inclut désormais un lien « Gérer ». Le lien « Gérer » de Bruce pointe vers `UserInformation.aspx?user=Bruce`, tandis que le lien « Gérer » de Dave pointe vers `UserInformation.aspx?user=Dave`.
 
 
-[![THE HyperLinkField ajoute un](unlocking-and-approving-user-accounts-vb/_static/image2.png)](unlocking-and-approving-user-accounts-vb/_static/image1.png)
+[![Ajoute le HyperLinkField un](unlocking-and-approving-user-accounts-vb/_static/image2.png)](unlocking-and-approving-user-accounts-vb/_static/image1.png)
 
 **Figure 1**: Le HyperLinkField ajoute un lien « Gérer » pour chaque compte d’utilisateur ([cliquez pour afficher l’image en taille réelle](unlocking-and-approving-user-accounts-vb/_static/image3.png))
 
@@ -72,7 +72,7 @@ Nous sommes maintenant prêts à implémenter l’interface utilisateur dans `Us
 Après avoir ajouté ces contrôles, la vue de conception dans Visual Studio doit ressembler à la capture d’écran de la Figure 2.
 
 
-[![Ccréer un à l’Interface utilisateur pour UserInformation.aspx](unlocking-and-approving-user-accounts-vb/_static/image5.png)](unlocking-and-approving-user-accounts-vb/_static/image4.png)
+[![Créer l’Interface utilisateur pour UserInformation.aspx](unlocking-and-approving-user-accounts-vb/_static/image5.png)](unlocking-and-approving-user-accounts-vb/_static/image4.png)
 
 **Figure 2**: Créer l’Interface utilisateur pour `UserInformation.aspx` ([cliquez pour afficher l’image en taille réelle](unlocking-and-approving-user-accounts-vb/_static/image6.png))
 
@@ -98,7 +98,7 @@ Revenez à Visual Studio et créer des gestionnaires d’événements pour le `I
 Ces gestionnaires d’événements en place, visitez la page et non approuvées un utilisateur. Comme le montre la Figure 3, vous devez voir un bref message sur la page indiquant que l’utilisateur `IsApproved` propriété a été correctement modifiée.
 
 
-[![Cressources humaines a été approuvé](unlocking-and-approving-user-accounts-vb/_static/image8.png)](unlocking-and-approving-user-accounts-vb/_static/image7.png)
+[![Chris a été non approuvé](unlocking-and-approving-user-accounts-vb/_static/image8.png)](unlocking-and-approving-user-accounts-vb/_static/image7.png)
 
 **Figure 3**: Chris a été non approuvé ([cliquez pour afficher l’image en taille réelle](unlocking-and-approving-user-accounts-vb/_static/image9.png))
 
@@ -106,7 +106,7 @@ Ces gestionnaires d’événements en place, visitez la page et non approuvées 
 Ensuite, déconnexion et essayez de vous connecter en tant que l’utilisateur dont le compte a été simplement non approuvées. Étant donné que l’utilisateur n’est pas approuvé, ils ne peuvent pas se connecter. Par défaut, le contrôle de connexion affiche le message même si l’utilisateur ne peut pas ouvrir une session, quelle que soit la raison. Mais, dans le <a id="Tutorial6"> </a> [ *validation utilisateur informations d’identification par rapport à l’appartenance utilisateur Store* ](../membership/validating-user-credentials-against-the-membership-user-store-vb.md) didacticiel, nous avons recherché à améliorer le contrôle de connexion pour afficher un message plus approprié. Comme le montre la Figure 4, Chris voit un message expliquant qu’il ne peut pas se connecter, car son compte n’est pas encore approuvé.
 
 
-[![Cressources humaines ne peut pas se connecter car son compte est non approuvé](unlocking-and-approving-user-accounts-vb/_static/image11.png)](unlocking-and-approving-user-accounts-vb/_static/image10.png)
+[![Chris impossible, car son compte de connexion est non approuvé](unlocking-and-approving-user-accounts-vb/_static/image11.png)](unlocking-and-approving-user-accounts-vb/_static/image10.png)
 
 **Figure 4**: Chris impossible, car son compte de connexion est non approuvé ([cliquez pour afficher l’image en taille réelle](unlocking-and-approving-user-accounts-vb/_static/image12.png))
 
@@ -166,7 +166,7 @@ Le `SendingMail` événement est déclenché après le `CreatedUser` événement
 L’effet net est que les nouveaux utilisateurs sont non approuvés, ce qui signifie qu’ils ne peuvent pas se connecter au site. En outre, ils sont envoyés automatiquement un e-mail contenant un lien vers l’URL de vérification (voir Figure 6).
 
 
-[![TJohn nouvel utilisateur reçoit un E-mail contenant un lien vers l’URL de vérification](unlocking-and-approving-user-accounts-vb/_static/image17.png)](unlocking-and-approving-user-accounts-vb/_static/image16.png)
+[![Le nouvel utilisateur reçoit un E-mail contenant un lien vers l’URL de vérification](unlocking-and-approving-user-accounts-vb/_static/image17.png)](unlocking-and-approving-user-accounts-vb/_static/image16.png)
 
 **Figure 6**: Le nouvel utilisateur reçoit un E-mail contenant un lien vers l’URL de vérification ([cliquez pour afficher l’image en taille réelle](unlocking-and-approving-user-accounts-vb/_static/image18.png))
 
@@ -188,7 +188,7 @@ La majeure partie du code ci-dessus vérifie que le nom d’utilisateur fourni p
 La figure 7 illustre le `Verification.aspx` page quand consultées via un navigateur.
 
 
-[![THE compte nouveau d’utilisateur est maintenant approuvées](unlocking-and-approving-user-accounts-vb/_static/image20.png)](unlocking-and-approving-user-accounts-vb/_static/image19.png)
+[![Le nouveau compte d’utilisateur est maintenant approuvées](unlocking-and-approving-user-accounts-vb/_static/image20.png)](unlocking-and-approving-user-accounts-vb/_static/image19.png)
 
 **Figure 7**: Le nouveau compte d’utilisateur est maintenant approuvées ([cliquez pour afficher l’image en taille réelle](unlocking-and-approving-user-accounts-vb/_static/image21.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 4a4daf851f3b8f69a70409d00ef7cd624437f57a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383865"
 ---
 # <a name="the-listview-control"></a>Le contrôle ListView
@@ -24,4 +24,4 @@ En créant un nouveau site Web, je vais vous montrer le nouveau contrôle ListVi
 [&#9654;Regardez la vidéo (10 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/the-listview-control)
 
 > [!div class="step-by-step"]
-> [Suivant](the-datapager-control.md)
+> [Next](the-datapager-control.md)

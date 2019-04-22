@@ -12,7 +12,7 @@ ms.openlocfilehash: ced8c1cdab4839068dab7608a1a9746d5302af07
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379103"
 ---
 # <a name="part-6-creating-product-and-order-controllers"></a>Partie 6 : Création des contrôleurs de produit et de commande

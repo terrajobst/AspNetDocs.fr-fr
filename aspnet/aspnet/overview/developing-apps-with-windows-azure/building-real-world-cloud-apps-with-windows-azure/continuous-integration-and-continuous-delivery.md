@@ -12,7 +12,7 @@ ms.openlocfilehash: 0fb0a331a2a6e2af5c5097db8b57942525d24ffc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384303"
 ---
 # <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Intégration continue et livraison continues (génération d’applications Cloud réalistes avec Azure)
@@ -34,7 +34,7 @@ En général nous vous recommandons d’effectuer la livraison continue pour le 
 
 Le diagramme suivant tiré [un Microsoft Patterns and Practices e-book sur la livraison continue](https://aka.ms/ReleasePipeline) illustre un flux de travail classique. Cliquez sur l’image pour l’afficher à taille réelle dans son contexte d’origine.
 
-[![Cworkflow de remise ontinuous](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
+[![Flux de travail de diffusion en continu](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
 
 ## <a name="how-the-cloud-enables-cost-effective-ci-and-cd"></a>Comment le cloud permet économique CI et CD
 

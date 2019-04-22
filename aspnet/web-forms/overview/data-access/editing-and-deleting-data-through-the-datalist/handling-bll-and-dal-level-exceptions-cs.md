@@ -12,7 +12,7 @@ ms.openlocfilehash: 5714b118a5894731820d8e9775c8f5c8a375856c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390127"
 ---
 # <a name="handling-bll--and-dal-level-exceptions-c"></a>Gestion des exceptions de niveau BLL et DAL (C#)
@@ -60,7 +60,7 @@ Après ces modifications, votre balisage déclaratif s de page doit ressembler �
 Prenez un moment pour consulter notre progression via un navigateur (voir Figure 2).
 
 
-[![ECCA produit inclut un bouton Modifier](handling-bll-and-dal-level-exceptions-cs/_static/image5.png)](handling-bll-and-dal-level-exceptions-cs/_static/image4.png)
+[![Chaque produit inclut un bouton Modifier](handling-bll-and-dal-level-exceptions-cs/_static/image5.png)](handling-bll-and-dal-level-exceptions-cs/_static/image4.png)
 
 **Figure 2**: Chaque produit inclut un bouton Modifier ([cliquez pour afficher l’image en taille réelle](handling-bll-and-dal-level-exceptions-cs/_static/image6.png))
 
@@ -115,12 +115,12 @@ Pour suivre ce didacticiel, appelez simplement la `DisplayExceptionDetails` mét
 Avec le `Try ... Catch` bloquer en place, les utilisateurs sont présentées avec un message d’erreur plus explicite, comme les Figures 4 et 5 show. Notez que, face à une exception, le contrôle DataList, reste dans le mode édition. Il s’agit, car une fois l’exception se produit, le flux de contrôle est immédiatement redirigé vers le `Catch` bloc, en ignorant le code qui retourne le contrôle DataList à son état avant modification.
 
 
-[![An Message d’erreur s’affiche si un utilisateur omet un champ requis](handling-bll-and-dal-level-exceptions-cs/_static/image9.png)](handling-bll-and-dal-level-exceptions-cs/_static/image8.png)
+[![Un Message d’erreur s’affiche si un utilisateur omet un champ requis](handling-bll-and-dal-level-exceptions-cs/_static/image9.png)](handling-bll-and-dal-level-exceptions-cs/_static/image8.png)
 
 **Figure 4**: Un Message d’erreur s’affiche si un utilisateur omet un champ requis ([cliquez pour afficher l’image en taille réelle](handling-bll-and-dal-level-exceptions-cs/_static/image10.png))
 
 
-[![An Message d’erreur est affiché lorsque vous entrez vous un prix négatif](handling-bll-and-dal-level-exceptions-cs/_static/image12.png)](handling-bll-and-dal-level-exceptions-cs/_static/image11.png)
+[![Un Message d’erreur est affiché lorsque vous entrez vous un prix négatif](handling-bll-and-dal-level-exceptions-cs/_static/image12.png)](handling-bll-and-dal-level-exceptions-cs/_static/image11.png)
 
 **Figure 5**: Un Message d’erreur est affiché lorsque vous entrez vous un prix négatif ([cliquez pour afficher l’image en taille réelle](handling-bll-and-dal-level-exceptions-cs/_static/image13.png))
 

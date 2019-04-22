@@ -13,7 +13,7 @@ ms.openlocfilehash: 6f8b926c78097b68e6a159f2fdd30e7b8a6477a0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395171"
 ---
 # <a name="developing-aspnet-apps-with-azure-active-directory"></a>Développement d’applications ASP.NET avec Azure Active Directory
@@ -142,7 +142,7 @@ Un excellent didacticiel à suivre est de Rick Rainey [présentation approfondie
 
 ## <a name="more-information"></a>Informations complémentaires
 
-- [Présentation approfondie : Sites Web et l’authentification d’organisation à l’aide d’Azure AD Azure](http://rickrainey.com/2014/08/19/deep-dive-azure-websites-and-organizational-authentication-using-azure-ad/)
+- [Immersion : Sites Web et l’authentification d’organisation à l’aide d’Azure AD Azure](http://rickrainey.com/2014/08/19/deep-dive-azure-websites-and-organizational-authentication-using-azure-ad/)
 - [Présentation de l’API Graph Azure AD](https://msdn.microsoft.com/library/azure/hh974476.aspx)
 - [Scénarios d’authentification dans Azure AD](https://msdn.microsoft.com/library/azure/dn499820.aspx)
 - [Exemples de Code d’Azure AD sur GitHub](https://github.com/AzureADSamples)

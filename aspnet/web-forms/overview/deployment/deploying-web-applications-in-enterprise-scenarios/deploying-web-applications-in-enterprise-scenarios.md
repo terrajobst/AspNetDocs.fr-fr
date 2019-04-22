@@ -12,14 +12,14 @@ ms.openlocfilehash: f8d55cb98e6943ef2a7c7eb05f7f771b5f5e63ef
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420404"
 ---
 # <a name="deploying-web-applications-in-enterprise-scenarios-using-visual-studio-2010"></a>Déployer des applications web dans des scénarios d’entreprise avec Visual Studio 2010
 
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette série de didacticiels décrit les outils et techniques que vous pouvez utiliser pour déployer des applications web dans différents scénarios d’entreprise. Il explique comment rendre la meilleure façon d’utiliser des technologies telles que Visual Studio 2010, Microsoft Build Engine (MSBuild), Internet Information Services (IIS) 7.5, l’outil de déploiement Web IIS (Web Deploy), le Web Farm Framework (WFF) et utilitaires comme VSDBCMD.exe à Simplifiez et gérer le processus de déploiement. Il inclut des présentations de concepts et tâches des conseils qui vous aideront à :
 > 
@@ -78,4 +78,4 @@ Cette série inclut quatre jeux de didacticiel. Chacun se concentre sur les diff
 Cette série de didacticiels utilise un exemple de solution avec un niveau réaliste de complexité, ainsi que d’un scénario de déploiement d’une entreprise fictive, pour fournir une implémentation de référence et pour donner les tâches et les procédures pas à pas un contexte commun. La rubrique suivante, [déploiement Web d’entreprise : Vue d’ensemble du scénario](enterprise-web-deployment-scenario-overview.md), présente le scénario et l’exemple de solution. À partir de là, vous pouvez travailler via les didacticiels et les rubriques qui correspondent le mieux à vos besoins.
 
 > [!div class="step-by-step"]
-> [Suivant](enterprise-web-deployment-scenario-overview.md)
+> [Next](enterprise-web-deployment-scenario-overview.md)

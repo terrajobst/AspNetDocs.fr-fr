@@ -12,7 +12,7 @@ ms.openlocfilehash: 63efa46410e821947c6b0ee4ecd0c790fbf793e3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380091"
 ---
 # <a name="creating-a-business-logic-layer-vb"></a>Création d’une couche de logique métier (VB)
@@ -129,7 +129,7 @@ Pour utiliser la couche BLL de nouvelles classes, tout cela doit être modifiée
 Les classes de la couche BLL sont également accessible déclarative (comme vous pouvez le DataSet typé) à l’aide de l’ObjectDataSource. Nous allons aborder l’ObjectDataSource plus en détail dans les didacticiels suivants.
 
 
-[![TIl liste de produits s’affiche dans un GridView](creating-a-business-logic-layer-vb/_static/image4.png)](creating-a-business-logic-layer-vb/_static/image3.png)
+[![La liste de produits s’affiche dans un GridView](creating-a-business-logic-layer-vb/_static/image4.png)](creating-a-business-logic-layer-vb/_static/image3.png)
 
 **Figure 3**: La liste de produits s’affiche dans un GridView ([cliquez pour afficher l’image en taille réelle](creating-a-business-logic-layer-vb/_static/image5.png))
 
@@ -148,7 +148,7 @@ Ces règles peuvent et doivent être exprimés au niveau de la base de données.
 En plus en appliquant ces règles à la base de données qu’ils doivent également être appliquées au niveau du jeu de données. En fait, la longueur de champ et si une valeur est obligatoire ou facultatif sont déjà capturés pour l’ensemble de chaque DataTable de DataColumns. Pour afficher la validation au niveau du champ existante fournie automatiquement, accédez au Concepteur de DataSet, sélectionnez un champ à partir d’une des tables et puis accédez à la fenêtre Propriétés. Comme le montre la Figure 4, le `QuantityPerUnit` DataColumn dans le `ProductsDataTable` a une longueur maximale de 20 caractères et autorise `NULL` valeurs. Si vous tentez de définir la `ProductsDataRow`de `QuantityPerUnit` propriété une valeur de chaîne plue de 20 caractères un `ArgumentException` sera levée.
 
 
-[![TIl DataColumn fournit au niveau du champ Validation de base](creating-a-business-logic-layer-vb/_static/image7.png)](creating-a-business-logic-layer-vb/_static/image6.png)
+[![Le DataColumn fournit une Validation au niveau du champ de base](creating-a-business-logic-layer-vb/_static/image7.png)](creating-a-business-logic-layer-vb/_static/image6.png)
 
 **Figure 4**: Le DataColumn fournit au niveau du champ Validation de base ([cliquez pour afficher l’image en taille réelle](creating-a-business-logic-layer-vb/_static/image8.png))
 
@@ -156,7 +156,7 @@ En plus en appliquant ces règles à la base de données qu’ils doivent égale
 Malheureusement, nous ne pouvons pas spécifier les vérifications des limites, telles que la `UnitPrice` valeur doit être supérieure ou égale à zéro, via la fenêtre Propriétés. Pour fournir ce type de validation au niveau du champ que nous avons besoin créer un gestionnaire d’événements pour le DataTable [ColumnChanging](https://msdn.microsoft.com/library/system.data.datatable.columnchanging%28VS.80%29.aspx) événement. Comme mentionné dans le [didacticiel précédent](creating-a-data-access-layer-vb.md), les objets DataSet, DataTables et DataRow créés par le DataSet typé peuvent être étendus via l’utilisation des classes partielles. À l’aide de cette technique, nous pouvons créer un `ColumnChanging` Gestionnaire d’événements pour le `ProductsDataTable` classe. Commencez par créer une classe dans le `App_Code` dossier nommé `ProductsDataTable.ColumnChanging.vb`.
 
 
-[![Aune nouvelle classe dans le dossier App_Code de jj](creating-a-business-logic-layer-vb/_static/image10.png)](creating-a-business-logic-layer-vb/_static/image9.png)
+[![Ajoutez une nouvelle classe dans le dossier App_Code](creating-a-business-logic-layer-vb/_static/image10.png)](creating-a-business-logic-layer-vb/_static/image9.png)
 
 **Figure 5**: Ajoutez une nouvelle classe à la `App_Code` dossier ([cliquez pour afficher l’image en taille réelle](creating-a-business-logic-layer-vb/_static/image11.png))
 

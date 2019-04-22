@@ -12,14 +12,14 @@ ms.openlocfilehash: abff97e5cc2663465fdf61f41ff69d17104fe8b6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379467"
 ---
 # <a name="use-controllers-and-views-to-implement-a-listingdetails-ui"></a>Utiliser des contrôleurs et des vues pour implémenter une interface utilisateur liste/détails
 
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger le PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Télécharger PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Il s’agit d’étape 4 a gratuit [« « l’application NerdDinner](introducing-the-nerddinner-tutorial.md) qui présente en détail comment créer un petit mais terminé, l’application web à l’aide d’ASP.NET MVC 1.
 > 
@@ -56,10 +56,10 @@ Il ouvre également la nouvelle classe DinnersController dans l’éditeur de co
 
 Nous souhaitons activer les visiteurs à l’aide de notre application pour parcourir une liste de dîners à venir et leur permettre de cliquer sur n’importe quel dîner dans la liste pour afficher les détails spécifiques. Pour cela, nous allons les URL suivantes à partir de notre application de publication :
 
-| **URL** | **Objectif** |
+| **URL** | **Fonction** |
 | --- | --- |
 | */Dinners/* | Afficher une liste HTML de dîners à venir |
-| */Dinners/détails / [id]* | Afficher des détails sur un dîner spécifique indiqué par un paramètre « id » incorporé dans l’URL qui correspond à la DinnerID du dîner dans la base de données. Par exemple : /Dinners/Details/2 afficherait une page HTML avec des détails sur le dîner DinnerID dont la valeur est 2. |
+| */Dinners/Details/[id]* | Afficher des détails sur un dîner spécifique indiqué par un paramètre « id » incorporé dans l’URL qui correspond à la DinnerID du dîner dans la base de données. Par exemple : /Dinners/Details/2 afficherait une page HTML avec des détails sur le dîner DinnerID dont la valeur est 2. |
 
 Nous publierons des implémentations initiales de ces URL en ajoutant deux public « méthodes d’action » à notre classe DinnersController comme ci-dessous :
 
@@ -93,11 +93,11 @@ Voici une table qui montre comment une variété d’URL sont mappés à l’aid
 
 | **URL** | **Classe de contrôleur** | **Méthode d’action** | **Paramètres passés** |
 | --- | --- | --- | --- |
-| */ Dîners/détails/2* | DinnersController | Details(ID) | id=2 |
-| */ Dîners/Edit/5* | DinnersController | Edit(id) | id=5 |
-| */ Dîners/création* | DinnersController | Create() | N/A |
+| */Dinners/Details/2* | DinnersController | Details(ID) | id=2 |
+| */Dinners/Edit/5* | DinnersController | Edit(id) | id=5 |
+| */Dinners/Create* | DinnersController | Create() | N/A |
 | */ Dîners* | DinnersController | Index() | N/A |
-| */ Édition familiale* | HomeController | Index() | N/A |
+| */Home* | HomeController | Index() | N/A |
 | */* | HomeController | Index() | N/A |
 
 Les trois dernières lignes indiquent les valeurs par défaut (contrôleur = Home, Action = Index, Id = « ») qui est utilisé. Étant donné que la méthode « Index » est enregistrée en tant que le nom d’action par défaut si aucun n’est pas spécifié, le « / dîners » et « / Home » URL cause la méthode d’action Index() à appeler sur leurs classes de contrôleur. Étant donné que le contrôleur « Home » est inscrit en tant que le contrôleur par défaut s’il n’est pas spécifié, l’URL « / » entraîne le HomeController doit être créé et la méthode d’action Index() dessus à appeler.

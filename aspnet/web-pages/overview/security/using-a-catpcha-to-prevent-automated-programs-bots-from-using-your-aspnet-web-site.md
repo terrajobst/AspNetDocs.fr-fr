@@ -12,7 +12,7 @@ ms.openlocfilehash: e7baafda8c5b6de4ab0de46948f969a6f0cc21ad
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390907"
 ---
 # <a name="using-a-captcha-to-prevent-bots-from-using-your-aspnet-web-razor-site"></a>Site à l’aide d’un test CAPTCHA pour empêcher des robots d’utiliser votre Razor Web ASP.NET)
@@ -73,4 +73,4 @@ Dans les pages ASP.NET, vous pouvez utiliser la `ReCaptcha` helper pour restitue
 
 
 - [Personnalisation du comportement de l’échelle du Site pour les Sites ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202906)
-- [Site de ReCaptcha](https://www.google.com/recaptcha)
+- [ReCaptcha site](https://www.google.com/recaptcha)

@@ -12,7 +12,7 @@ ms.openlocfilehash: c55bbeb383b15f4dc9cb95d25905cade1e8c5c29
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418896"
 ---
 # <a name="adding-animation-to-a-control-vb"></a>Ajout d’une animation à un contrôle (VB)
@@ -72,7 +72,7 @@ Dans cet exemple, le panneau est disparition en fondu. L’animation prend 1,5 s
 Lorsque vous exécutez ce script, le panneau s’affiche et fondu en quelques secondes et un demi.
 
 
-[![TPanneau de configuration he est fondu](adding-animation-to-a-control-vb/_static/image2.png)](adding-animation-to-a-control-vb/_static/image1.png)
+[![Le panneau est fondu](adding-animation-to-a-control-vb/_static/image2.png)](adding-animation-to-a-control-vb/_static/image1.png)
 
 Le panneau est fondu ([cliquez pour afficher l’image en taille réelle](adding-animation-to-a-control-vb/_static/image3.png))
 

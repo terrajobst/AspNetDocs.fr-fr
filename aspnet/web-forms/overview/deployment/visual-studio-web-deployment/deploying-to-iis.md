@@ -12,7 +12,7 @@ ms.openlocfilehash: 39502e03196d2ba51e826d248ff0ff1e84258131
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420196"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Déploiement à des fins de test

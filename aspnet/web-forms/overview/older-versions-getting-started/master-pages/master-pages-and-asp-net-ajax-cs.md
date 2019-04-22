@@ -12,7 +12,7 @@ ms.openlocfilehash: b8bc435e4b2b1eeedaab424695715e5ec51e116d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381859"
 ---
 # <a name="master-pages-and-aspnet-ajax-c"></a>Pages maîtres et ASP.NET AJAX (C#)
@@ -71,7 +71,7 @@ Ouvrez le `Site.master` page maître et ajoutez un contrôle ScriptManager à la
 Après avoir ajouté le ScriptManager à la page, modifier son `ID` de `ScriptManager1` à `MyManager`.
 
 
-[![AJJ le ScriptManager à la Page maître](master-pages-and-asp-net-ajax-cs/_static/image2.png)](master-pages-and-asp-net-ajax-cs/_static/image1.png)
+[![Ajouter le ScriptManager à la Page maître](master-pages-and-asp-net-ajax-cs/_static/image2.png)](master-pages-and-asp-net-ajax-cs/_static/image1.png)
 
 **Figure 01**: Ajouter le ScriptManager à la Page maître ([cliquez pour afficher l’image en taille réelle](master-pages-and-asp-net-ajax-cs/_static/image3.png))
 
@@ -83,7 +83,7 @@ Avec le contrôle ScriptManager ajouté à la page maître, nous pouvons mainten
 Commencez par créer une nouvelle page dans le répertoire racine nommé `ShowRandomProduct.aspx`. N’oubliez pas de lier cette nouvelle page à la `Site.master` page maître.
 
 
-[![Aune nouvelle Page ASP.NET pour le site Web de jj](master-pages-and-asp-net-ajax-cs/_static/image5.png)](master-pages-and-asp-net-ajax-cs/_static/image4.png)
+[![Ajouter une nouvelle Page ASP.NET pour le site Web](master-pages-and-asp-net-ajax-cs/_static/image5.png)](master-pages-and-asp-net-ajax-cs/_static/image4.png)
 
 **Figure 02**: Ajouter une nouvelle Page ASP.NET pour le site Web ([cliquez pour afficher l’image en taille réelle](master-pages-and-asp-net-ajax-cs/_static/image6.png))
 
@@ -104,7 +104,7 @@ Retour à `ShowRandomProduct.aspx`. Dans le concepteur, faites glisser un contr�
 Notre première tâche consiste à afficher des informations sur un produit sélectionné de façon aléatoire dans le contrôle UpdatePanel. Nous allons faire glisser un contrôle DetailsView dans le contrôle UpdatePanel. Définir le contrôle DetailsView `ID` propriété `ProductInfo` et d’effacer les sa `Height` et `Width` propriétés. Développez la balise active de DetailsView et, dans la liste déroulante Choisir la Source de données, choisissez de lier le contrôle DetailsView à un nouveau contrôle SqlDataSource nommé `RandomProductDataSource`.
 
 
-[![Bchercher le contrôle DetailsView à un nouveau contrôle SqlDataSource](master-pages-and-asp-net-ajax-cs/_static/image8.png)](master-pages-and-asp-net-ajax-cs/_static/image7.png)
+[![Lier le contrôle DetailsView à un nouveau contrôle SqlDataSource](master-pages-and-asp-net-ajax-cs/_static/image8.png)](master-pages-and-asp-net-ajax-cs/_static/image7.png)
 
 **Figure 03**: Lier le contrôle DetailsView à un nouveau contrôle SqlDataSource ([cliquez pour afficher l’image en taille réelle](master-pages-and-asp-net-ajax-cs/_static/image9.png))
 
@@ -117,7 +117,7 @@ Configurer le contrôle SqlDataSource pour se connecter à la base de données N
 Le `TOP 1` mot clé dans le `SELECT` clause retourne uniquement le premier enregistrement retourné par la requête. Le [ `NEWID()` fonction](https://msdn.microsoft.com/library/ms190348.aspx) génère une nouvelle [valeur d’identificateur global unique (GUID)](http://en.wikipedia.org/wiki/Globally_Unique_Identifier) et peut être utilisé dans un `ORDER BY` clause pour retourner les enregistrements de la table dans un ordre aléatoire.
 
 
-[![Configurer SqlDataSource pour retourner une seule, sélectionné aléatoirement les enregistrement](master-pages-and-asp-net-ajax-cs/_static/image11.png)](master-pages-and-asp-net-ajax-cs/_static/image10.png)
+[![Configurer SqlDataSource pour retourner un enregistrement unique, sélectionné de façon aléatoire](master-pages-and-asp-net-ajax-cs/_static/image11.png)](master-pages-and-asp-net-ajax-cs/_static/image10.png)
 
 **Figure 04**: Configurer SqlDataSource pour retourner un seul enregistrement du sélectionné au hasard ([cliquez pour afficher l’image en taille réelle](master-pages-and-asp-net-ajax-cs/_static/image12.png))
 
@@ -130,7 +130,7 @@ Le `TOP 1` mot clé dans le `SELECT` clause retourne uniquement le premier enreg
 La figure 5 illustre le `ShowRandomProduct.aspx` page lorsqu’ils sont affichés via un navigateur. Cliquez sur le bouton d’actualisation de votre navigateur pour recharger la page ; Vous devez voir le `ProductName` et `UnitPrice` valeurs pour un nouvel enregistrement sélectionné de façon aléatoire.
 
 
-[![A Nom et le prix du produit aléatoire est affiché](master-pages-and-asp-net-ajax-cs/_static/image14.png)](master-pages-and-asp-net-ajax-cs/_static/image13.png)
+[![Nom et le prix d’un produit aléatoire est affiché.](master-pages-and-asp-net-ajax-cs/_static/image14.png)](master-pages-and-asp-net-ajax-cs/_static/image13.png)
 
 **Figure 05**: Nom et le prix d’un produit aléatoire est affiché ([cliquez pour afficher l’image en taille réelle](master-pages-and-asp-net-ajax-cs/_static/image15.png))
 
@@ -159,12 +159,12 @@ Pour mieux voir ce qui se passe ici, nous allons ajouter un contrôle d’étiqu
 Avec cette modification terminée, la page comprend le temps que le produit actuellement affiché a été chargé. Figure 6 montre la page lors de la première visite. Figure 7 illustre les 15 secondes plus tard de la page une fois que le contrôle Timer a « cochée » et le contrôle UpdatePanel a été actualisé pour afficher des informations sur un nouveau produit.
 
 
-[![A Au hasard le produit sélectionné s’affiche lors du chargement de Page](master-pages-and-asp-net-ajax-cs/_static/image17.png)](master-pages-and-asp-net-ajax-cs/_static/image16.png)
+[![Un produit sélectionné au hasard s’affiche lors du chargement de Page](master-pages-and-asp-net-ajax-cs/_static/image17.png)](master-pages-and-asp-net-ajax-cs/_static/image16.png)
 
 **Figure 06**: Un produit sélectionné au hasard s’affiche lors du chargement de Page ([cliquez pour afficher l’image en taille réelle](master-pages-and-asp-net-ajax-cs/_static/image18.png))
 
 
-[![E15 secondes tout qu'un nouveau aléatoirement sélectionné produit s’affiche.](master-pages-and-asp-net-ajax-cs/_static/image20.png)](master-pages-and-asp-net-ajax-cs/_static/image19.png)
+[![Toutes les 15 secondes une nouvelle façon aléatoire sélectionné produit s’affiche.](master-pages-and-asp-net-ajax-cs/_static/image20.png)](master-pages-and-asp-net-ajax-cs/_static/image19.png)
 
 **Figure 07**: Toutes les 15 secondes une nouvelle façon aléatoire sélectionné produit s’affiche ([cliquez pour afficher l’image en taille réelle](master-pages-and-asp-net-ajax-cs/_static/image21.png))
 
@@ -190,12 +190,12 @@ Nous allons créer un fichier JavaScript avec une variable nommée `timerEnabled
 Commencez par créer un nouveau dossier dans le site Web nommé `Scripts`. Ensuite, ajoutez un nouveau fichier au dossier Scripts nommé `TimerScript.js` de type fichier JScript.
 
 
-[![Ajj un nouveau fichier JavaScript dans le dossier Scripts](master-pages-and-asp-net-ajax-cs/_static/image23.png)](master-pages-and-asp-net-ajax-cs/_static/image22.png)
+[![Ajouter un nouveau fichier JavaScript dans le dossier Scripts](master-pages-and-asp-net-ajax-cs/_static/image23.png)](master-pages-and-asp-net-ajax-cs/_static/image22.png)
 
 **Figure 08**: Ajouter un nouveau fichier JavaScript à la `Scripts` dossier ([cliquez pour afficher l’image en taille réelle](master-pages-and-asp-net-ajax-cs/_static/image24.png))
 
 
-[![A Nouveau fichier JavaScript a été ajoutée au site Web](master-pages-and-asp-net-ajax-cs/_static/image26.png)](master-pages-and-asp-net-ajax-cs/_static/image25.png)
+[![Un nouveau fichier JavaScript a été ajouté au site Web](master-pages-and-asp-net-ajax-cs/_static/image26.png)](master-pages-and-asp-net-ajax-cs/_static/image25.png)
 
 **Figure 09**: Un nouveau fichier JavaScript a été ajouté au site Web ([cliquez pour afficher l’image en taille réelle](master-pages-and-asp-net-ajax-cs/_static/image27.png))
 
@@ -208,7 +208,7 @@ Ensuite, ajoutez le script suivant au fichier TimerScript.js :
 Nous devons maintenant enregistrer ce fichier JavaScript personnalisé dans `ShowRandomProduct.aspx`. Retour à `ShowRandomProduct.aspx` et ajoutez un contrôle ScriptManagerProxy à la page ; définir son `ID` à `MyManagerProxy`. Pour inscrire un code JavaScript personnalisé fichier sélectionner le contrôle ScriptManagerProxy dans le concepteur et passez à la fenêtre Propriétés. Une des propriétés est intitulée Scripts. Si cette propriété est sélectionnée, l’éditeur de collections ScriptReference illustré Figure 10. Cliquez sur le bouton Ajouter pour incluent une nouvelle référence de script, puis entrez le chemin d’accès au fichier de script dans la propriété de chemin d’accès : `~/Scripts/TimerScript.js`.
 
 
-[![Ajj une référence de Script pour le contrôle ScriptManagerProxy](master-pages-and-asp-net-ajax-cs/_static/image29.png)](master-pages-and-asp-net-ajax-cs/_static/image28.png)
+[![Ajouter une référence de Script pour le contrôle ScriptManagerProxy](master-pages-and-asp-net-ajax-cs/_static/image29.png)](master-pages-and-asp-net-ajax-cs/_static/image28.png)
 
 **Figure 10**: Ajouter une référence de Script pour le contrôle ScriptManagerProxy ([cliquez pour afficher l’image en taille réelle](master-pages-and-asp-net-ajax-cs/_static/image30.png))
 
@@ -230,12 +230,12 @@ Cela affiche un bouton avec le texte « Pause ». Chaque fois que vous cliquez
 Figure 11 illustre cette page lors de la première visite via un navigateur. La minuterie est en cours d’exécution et met à jour les informations de produit affiché toutes les 15 secondes. Figure 12 illustre l’écran une fois que le bouton Pause a été cliqué. En cliquant sur le bouton Pause arrête le minuteur et met à jour le texte du bouton pour « Reprendre ». Les informations de produit seront Actualiser (et continuer à actualiser toutes les 15 secondes) une fois que l’utilisateur clique sur Reprendre.
 
 
-[![CCliquez sur le bouton Pause pour arrêter le contrôle Timer](master-pages-and-asp-net-ajax-cs/_static/image32.png)](master-pages-and-asp-net-ajax-cs/_static/image31.png)
+[![Cliquez sur le bouton Pause pour arrêter le contrôle Timer](master-pages-and-asp-net-ajax-cs/_static/image32.png)](master-pages-and-asp-net-ajax-cs/_static/image31.png)
 
 **Figure 11**: Cliquez sur le bouton Pause pour arrêter le contrôle Timer ([cliquez pour afficher l’image en taille réelle](master-pages-and-asp-net-ajax-cs/_static/image33.png))
 
 
-[![CCliquez sur le bouton de reprise pour redémarrer la minuterie](master-pages-and-asp-net-ajax-cs/_static/image35.png)](master-pages-and-asp-net-ajax-cs/_static/image34.png)
+[![Cliquez sur le bouton de reprise pour redémarrer la minuterie](master-pages-and-asp-net-ajax-cs/_static/image35.png)](master-pages-and-asp-net-ajax-cs/_static/image34.png)
 
 **Figure 12**: Cliquez sur le bouton de reprise pour redémarrer la minuterie ([cliquez pour afficher l’image en taille réelle](master-pages-and-asp-net-ajax-cs/_static/image36.png))
 

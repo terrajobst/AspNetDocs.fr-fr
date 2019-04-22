@@ -12,14 +12,14 @@ ms.openlocfilehash: 7de5a1545ee59e671058f09789ce69d5062d3655
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380975"
 ---
 # <a name="passing-data-to-view-master-pages-vb"></a>Passage de données à des pages maîtres de vue (VB)
 
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger le PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_13_VB.pdf)
+[Télécharger PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_13_VB.pdf)
 
 > L’objectif de ce didacticiel est d’expliquer comment vous pouvez passer des données à partir d’un contrôleur à une page maître de vue. Nous allons examiner deux stratégies pour passer des données à une page maître de vue. Tout d’abord, nous abordons une solution facile qui résulte dans une application qui est difficile à gérer. Ensuite, nous examinons une bien meilleure solution qui nécessite un peu plus de travail initiale, mais les résultats dans une application beaucoup plus facile à gérer.
 
@@ -33,7 +33,7 @@ L’objectif de ce didacticiel est d’expliquer comment vous pouvez passer des 
 Imaginez que vous générez une application de base de données de films et que vous souhaitez afficher la liste des catégories de films sur chaque page dans votre application (voir Figure 1). En outre, imaginez que la liste des catégories de films est stockée dans une table de base de données. Dans ce cas, il serait judicieux pour récupérer les catégories à partir de la base de données et de restituer la liste des catégories de films dans une page maître de vue.
 
 
-[![Dl’affichage des catégories de films dans une page maître de vue](passing-data-to-view-master-pages-vb/_static/image2.png)](passing-data-to-view-master-pages-vb/_static/image1.png)
+[![Affichage des catégories de films dans une page maître de vue](passing-data-to-view-master-pages-vb/_static/image2.png)](passing-data-to-view-master-pages-vb/_static/image1.png)
 
 **Figure 01**: Affichage des catégories de films dans une page maître de vue ([cliquez pour afficher l’image en taille réelle](passing-data-to-view-master-pages-vb/_static/image3.png))
 
@@ -59,7 +59,7 @@ Notez que les deux le `Index()` et le `Details()` actions ajoutent deux élémen
 Le `Details()` action ajoute également deux clés nommée catégories et des films. La clé de catégories, représente une fois encore, la liste des catégories de film affiché par la page maître de vue. La clé de films représente la liste de films dans une catégorie particulière, affiché par la page de vue de détails (voir Figure 2).
 
 
-[![Tvue de détails he](passing-data-to-view-master-pages-vb/_static/image5.png)](passing-data-to-view-master-pages-vb/_static/image4.png)
+[![La vue Détails](passing-data-to-view-master-pages-vb/_static/image5.png)](passing-data-to-view-master-pages-vb/_static/image4.png)
 
 **Figure 02**: La vue Détails ([cliquez pour afficher l’image en taille réelle](passing-data-to-view-master-pages-vb/_static/image6.png))
 

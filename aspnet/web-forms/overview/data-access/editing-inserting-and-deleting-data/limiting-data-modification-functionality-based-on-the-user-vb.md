@@ -12,7 +12,7 @@ ms.openlocfilehash: f0ba98d4049cd7ad10d5e1238d4580b3f767924b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420573"
 ---
 # <a name="limiting-data-modification-functionality-based-on-the-user-vb"></a>Limitation des fonctionnalités de modification des données en fonction de l’utilisateur (VB)
@@ -31,12 +31,12 @@ Un nombre d’applications web prennent en charge les comptes d’utilisateur et
 Dans ce didacticiel, nous allons examiner comment ajuster dynamiquement les fonctionnalités de modification de données basées sur l’utilisateur visite. En particulier, nous allons créer une page qui affiche les informations de fournisseurs dans un contrôle DetailsView modifiable, ainsi que d’un GridView qui répertorie les produits fournis par le fournisseur. Si l’utilisateur accédant à la page est de notre entreprise, ils peuvent : afficher des informations de fournisseur s ; modifier leur adresse ; et modifier les informations pour tous les produits fournis par le fournisseur. Si, toutefois, l’utilisateur provient d’une entreprise particulière, ils peuvent uniquement afficher et modifier leurs propres informations d’adresse et ne peuvent modifier leurs produits qui n’ont pas été marquées comme supprimées.
 
 
-[![A Utilisateur à partir de notre entreprise peut modifier un fournisseur des informations s](limiting-data-modification-functionality-based-on-the-user-vb/_static/image2.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image1.png)
+[![Un utilisateur à partir de notre entreprise peut modifier un fournisseur des informations s](limiting-data-modification-functionality-based-on-the-user-vb/_static/image2.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image1.png)
 
 **Figure 1**: Un utilisateur à partir de notre entreprise peut modifier n’importe quel fournisseur s informations ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image3.png))
 
 
-[![A Utilisateur à partir d’un fournisseur particulier peuvent uniquement afficher et le modifiez leurs informations](limiting-data-modification-functionality-based-on-the-user-vb/_static/image5.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image4.png)
+[![Un utilisateur à partir d’un fournisseur particulier peuvent uniquement afficher et le modifiez leurs informations](limiting-data-modification-functionality-based-on-the-user-vb/_static/image5.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image4.png)
 
 **Figure 2**: Un utilisateur à partir d’un particulier fournisseur peut uniquement afficher et modifier leurs informations ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image6.png))
 
@@ -56,7 +56,7 @@ Dans une application web du monde réel, les informations de compte d’utilisat
 Notre première étape dans ce didacticiel, est ensuite, pour créer cette DropDownList et la remplir avec les fournisseurs dans le système. Ouvrez le `UserLevelAccess.aspx` page dans le `EditInsertDelete` dossier, ajouter un contrôle DropDownList dont `ID` propriété est définie sur `Suppliers`et lier cette DropDownList à un nouveau ObjectDataSource nommé `AllSuppliersDataSource`.
 
 
-[![Ccréer un nouveau AllSuppliersDataSource de nommé ObjectDataSource](limiting-data-modification-functionality-based-on-the-user-vb/_static/image8.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image7.png)
+[![Créer un nouveau ObjectDataSource nommé AllSuppliersDataSource](limiting-data-modification-functionality-based-on-the-user-vb/_static/image8.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image7.png)
 
 **Figure 3**: Créer une nouvelle nommée de ObjectDataSource `AllSuppliersDataSource` ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image9.png))
 
@@ -66,7 +66,7 @@ Notre première étape dans ce didacticiel, est ensuite, pour créer cette DropD
 À l’issue de l’Assistant ObjectDataSource, effectuez les étapes en configurant le `Suppliers` DropDownList telle qu’elle affiche le `CompanyName` champ de données et utilise le `SupplierID` champ de données comme valeur pour chaque `ListItem`.
 
 
-[![Cconfiguration de la liste de fournisseurs DropDownList pour utiliser les champs de données SupplierID CompanyName](limiting-data-modification-functionality-based-on-the-user-vb/_static/image11.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image10.png)
+[![Configurer la liste de fournisseurs DropDownList pour utiliser le CompanyName et les champs de données de SupplierID](limiting-data-modification-functionality-based-on-the-user-vb/_static/image11.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image10.png)
 
 **Figure 4**: Configurer le `Suppliers` DropDownList à utiliser le `CompanyName` et `SupplierID` des champs de données ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image12.png))
 
@@ -85,7 +85,7 @@ Après le `AppendDataBoundItems` propriété a été définie et la `ListItem` a
 La figure 5 illustre une capture d’écran de notre progression en cours, lorsqu’ils sont affichés via un navigateur.
 
 
-[![TIl fournisseurs DropDownList contient un afficher tous les ListItem, Plus un pour chaque fournisseur](limiting-data-modification-functionality-based-on-the-user-vb/_static/image14.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image13.png)
+[![La liste de fournisseurs DropDownList contient un diaporama tous les ListItem, Plus un pour chaque fournisseur](limiting-data-modification-functionality-based-on-the-user-vb/_static/image14.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image13.png)
 
 **Figure 5**: Le `Suppliers` DropDownList contient afficher tout `ListItem`, Plus un pour chaque fournisseur ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image15.png))
 
@@ -112,7 +112,7 @@ Après avoir configuré le `SupplierDetails` DetailsView et `AllSuppliersDataSou
 À ce stade, le contrôle DetailsView peut être contacté via et les informations d’adresse fournisseur sélectionné s peuvent être mis à jour, quelle que soit la sélection effectuée dans le `Suppliers` DropDownList (voir Figure 6).
 
 
-[![APeut afficher les informations des fournisseurs de New York, et la mise à jour de son adresse](limiting-data-modification-functionality-based-on-the-user-vb/_static/image17.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image16.png)
+[![Les fournisseurs d’informations peuvent être affichées et mis à jour de son adresse](limiting-data-modification-functionality-based-on-the-user-vb/_static/image17.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image16.png)
 
 **Figure 6**: Les fournisseurs d’informations peuvent être affichés et son adresse mise à jour ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image18.png))
 
@@ -124,7 +124,7 @@ Notre page affiche les informations pour tous les fournisseurs indépendamment d
 Ajouter un nouveau ObjectDataSource à la page, nommez-le `SingleSupplierDataSource`. À partir de sa balise active, cliquez sur le lien configurer la Source de données et de sorte qu’il utilise le `SuppliersBLL` classe s `GetSupplierBySupplierID(supplierID)` (méthode). Comme avec la `AllSuppliersDataSource` ObjectDataSource, ont le `SingleSupplierDataSource` ObjectDataSource s `Update()` méthode mappée à la `SuppliersBLL` classe s `UpdateSupplierAddress` (méthode).
 
 
-[![Cconfiguration de le SingleSupplierDataSource ObjectDataSource d’utiliser la méthode GetSupplierBySupplierID(supplierID)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image20.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image19.png)
+[![Configurer pour utiliser la méthode GetSupplierBySupplierID(supplierID) SingleSupplierDataSource ObjectDataSource](limiting-data-modification-functionality-based-on-the-user-vb/_static/image20.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image19.png)
 
 **Figure 7**: Configurer le `SingleSupplierDataSource` ObjectDataSource à utiliser le `GetSupplierBySupplierID(supplierID)` (méthode) ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image21.png))
 
@@ -132,7 +132,7 @@ Ajouter un nouveau ObjectDataSource à la page, nommez-le `SingleSupplierDataSou
 Ensuite, nous re invité à spécifier la source de paramètre pour le `GetSupplierBySupplierID(supplierID)` méthode s `supplierID` paramètre d’entrée. Étant donné que nous voulons afficher les informations pour le fournisseur sélectionné dans la liste DropDownList, utilisez le `Suppliers` DropDownList s `SelectedValue` propriété en tant que le paramètre source.
 
 
-[![Use DropDownList fournisseurs en tant que Source du paramètre supplierID](limiting-data-modification-functionality-based-on-the-user-vb/_static/image23.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image22.png)
+[![Utiliser la liste de fournisseurs DropDownList en tant que Source du paramètre supplierID](limiting-data-modification-functionality-based-on-the-user-vb/_static/image23.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image22.png)
 
 **Figure 8**: Utilisez le `Suppliers` DropDownList en tant que le `supplierID` Source du paramètre ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image24.png))
 
@@ -147,12 +147,12 @@ Le Gestionnaire d’événements commence par déterminer si l’option « Affi
 Avec ce gestionnaire d’événements en place, le contrôle DetailsView affiche maintenant le fournisseur sélectionné, sauf si l’option « Afficher/modifier tous les fournisseurs » a été sélectionnée, auquel cas tous les fournisseurs peuvent être affichés via l’interface de pagination. La figure 9 illustre la page avec l’option « Afficher/modifier tous les fournisseurs » sélectionnée ; Notez que l’interface de pagination est présent, permettant à l’utilisateur à consulter et mettre à jour de n’importe quel fournisseur. Figure 10 montre la page avec le fournisseur de Ma Maison sélectionné. Seules les informations de s Ma Maison sont affichable et modifiable dans ce cas.
 
 
-[![All les informations des fournisseurs permettre être affichée et modifiée](limiting-data-modification-functionality-based-on-the-user-vb/_static/image26.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image25.png)
+[![Toutes les informations de fournisseurs peuvent être affichées et modifiées](limiting-data-modification-functionality-based-on-the-user-vb/_static/image26.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image25.png)
 
 **Figure 9**: Tous les fournisseurs les informations peuvent être consultées et modifiées ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image27.png))
 
 
-[![Oeules les s fournisseur sélectionné informations peut être affichage et modifiée](limiting-data-modification-functionality-based-on-the-user-vb/_static/image29.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image28.png)
+[![Uniquement les informations du fournisseur sélectionné s peuvent être affichées et modifiées](limiting-data-modification-functionality-based-on-the-user-vb/_static/image29.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image28.png)
 
 **Figure 10**: Seules les opérations de mappage sélectionné un fournisseur d’informations peuvent être affichage et modifiée ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image30.png))
 
@@ -171,7 +171,7 @@ Avec le contrôle DetailsView terminé, notre étape suivante consiste à inclur
 Avec cette surcharge créée, nous vous êtes prêt à ajouter le contrôle GridView et son ObjectDataSource associé. Ajouter un nouveau GridView à la page, définissez son `ID` propriété `ProductsBySupplier`et configurez-le pour utiliser un nouveau ObjectDataSource nommé `ProductsBySupplierDataSource`. Étant donné que nous voulons ce GridView pour répertorier les produits par le fournisseur sélectionné, utilisez le `ProductsBLL` classe s `GetProductsBySupplierID(supplierID)` (méthode). Également mapper la `Update()` méthode vers le nouveau `UpdateProduct` surcharge que nous venons de créer.
 
 
-[![Cconfiguration de l’ObjectDataSource à utiliser le UpdateProduct surcharger venez](limiting-data-modification-functionality-based-on-the-user-vb/_static/image32.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image31.png)
+[![Configurer l’ObjectDataSource pour utiliser la surcharge UpdateProduct venez de créer](limiting-data-modification-functionality-based-on-the-user-vb/_static/image32.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image31.png)
 
 **Figure 11**: Configurer l’ObjectDataSource à utiliser le `UpdateProduct` surcharger venez de créer ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image33.png))
 
@@ -179,7 +179,7 @@ Avec cette surcharge créée, nous vous êtes prêt à ajouter le contrôle Grid
 Nous re vous y êtes invité à sélectionner la source de paramètre pour le `GetProductsBySupplierID(supplierID)` méthode s `supplierID` paramètre d’entrée. Étant donné que nous voulons afficher les produits pour le fournisseur sélectionné dans le contrôle DetailsView, utilisez le `SuppliersDetails` contrôle DetailsView s `SelectedValue` propriété en tant que le paramètre source.
 
 
-[![Use la propriété SelectedValue comme Source du paramètre de s SuppliersDetails DetailsView](limiting-data-modification-functionality-based-on-the-user-vb/_static/image35.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image34.png)
+[![Utilisez la propriété SelectedValue de s SuppliersDetails DetailsView comme Source de paramètre](limiting-data-modification-functionality-based-on-the-user-vb/_static/image35.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image34.png)
 
 **Figure 12**: Utilisez le `SuppliersDetails` DetailsView s `SelectedValue` propriété en tant que la Source de paramètre ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image36.png))
 
@@ -194,7 +194,7 @@ Comme avec notre ObjectDataSources précédente, cette un s `OldValuesParameterF
 Avec cette configuration terminée, notre page répertorie maintenant les produits fournis par le fournisseur sélectionné dans le contrôle GridView (voir Figure 13). Actuellement *n’importe quel* nom de produit s ou de la quantité par unité peut être mis à jour. Toutefois, nous devons mettre à jour notre logique de page afin que cette fonctionnalité est interdite pour les produits interrompus pour les utilisateurs associés à un fournisseur particulier. Nous aborderons ce dernier à l’étape 5.
 
 
-[![TIl produits fournis par le fournisseur sélectionné sont affichées](limiting-data-modification-functionality-based-on-the-user-vb/_static/image38.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image37.png)
+[![Les produits fournis par le fournisseur sélectionné sont affichés.](limiting-data-modification-functionality-based-on-the-user-vb/_static/image38.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image37.png)
 
 **Figure 13**: Les produits fournis par le fournisseur sélectionné sont affichés ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image39.png))
 
@@ -217,12 +217,12 @@ Créer un gestionnaire d’événements pour les opérations de mappage GridView
 Avec cet événement gestionnaire en place, lors de la visite de cette page en tant qu’utilisateur à partir d’un fournisseur particulier ces produits sont supprimés ne sont pas modifiables, comme le bouton Modifier est masqué pour ces produits. Par exemple, Chef Anton s Gumbo Mix est un produit supprimée pour le fournisseur de la Nouvelle-Orléans Cajun divertissement. Lorsque vous visitez la page pour ce fournisseur particulier, le bouton Modifier pour ce produit est masqué (voir Figure 14). Toutefois, lors de la visite à l’aide de « Afficher/modifier tous les fournisseurs », le bouton Modifier est disponible (voir Figure 15).
 
 
-[![Fou utilisateurs spécifiques du fournisseur le bouton Modifier pour Chef Anton s Gumbo Mix est masqué](limiting-data-modification-functionality-based-on-the-user-vb/_static/image41.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image40.png)
+[![Pour les utilisateurs de fournisseur spécifique, le bouton Modifier pour Chef Anton s Gumbo Mix est masqué](limiting-data-modification-functionality-based-on-the-user-vb/_static/image41.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image40.png)
 
 **Figure 14**: Pour les utilisateurs de fournisseur spécifique, le bouton Modifier pour Chef Anton s Gumbo Mix est masqué ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image42.png))
 
 
-[![Fou bien afficher/modifier tous les utilisateurs de fournisseurs, le bouton Modifier pour Chef Anton s Gumbo Mix s’affiche.](limiting-data-modification-functionality-based-on-the-user-vb/_static/image44.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image43.png)
+[![Pour afficher ou modifier tous les utilisateurs de fournisseurs, le bouton Modifier pour Chef Anton s Gumbo Mix est affiché](limiting-data-modification-functionality-based-on-the-user-vb/_static/image44.png)](limiting-data-modification-functionality-based-on-the-user-vb/_static/image43.png)
 
 **Figure 15**: Pour afficher ou modifier tous les utilisateurs de fournisseurs, le bouton Modifier pour Chef Anton s Gumbo Mix est affiché ([cliquez pour afficher l’image en taille réelle](limiting-data-modification-functionality-based-on-the-user-vb/_static/image45.png))
 

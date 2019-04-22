@@ -12,14 +12,14 @@ ms.openlocfilehash: 82134b8da7ab5ca49fef8e769128db9010fd231f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396328"
 ---
 # <a name="building-and-packaging-web-application-projects"></a>Génération et empaquetage des projets d’application web
 
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Lorsque vous souhaitez déployer un projet d’application web dans un environnement de serveur distant, votre première tâche consiste à générer le projet et générer un package de déploiement web. Cette rubrique décrit comment le processus de génération fonctionne pour les projets d’application web. En particulier, elle explique :
 > 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 36e2b7d503c0377b3b32b1776df4e0f5ee4c0090
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418675"
 ---
 # <a name="mvc-3---razor-helpers"></a>MVC 3 - Helpers Razor

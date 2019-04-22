@@ -12,7 +12,7 @@ ms.openlocfilehash: c0f11019c7410b756d592066a7fe33b3e26fd383
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407196"
 ---
 # <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-1-getting-started"></a>À l’aide d’Entity Framework 4.0 et que le contrôle ObjectDataSource, partie 1 : Prise en main
@@ -322,4 +322,4 @@ Modifier une valeur de champ ou sélectionnez un autre administrateur, cliquez s
 Ceci termine l’introduction à l’utilisation de la `ObjectDataSource` contrôle pour CRUD de base (créer, lire, mettre à jour, supprimer) des opérations avec Entity Framework. Vous avez créé une application à n niveaux simple, mais la couche de logique métier est toujours étroitement liée à la couche d’accès aux données, ce qui complique les tests d’unités automatisés. Dans ce didacticiel, vous verrez comment implémenter le modèle de référentiel pour faciliter les tests unitaires.
 
 > [!div class="step-by-step"]
-> [Suivant](using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+> [Next](using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 54b82c52f0bd58a0184824a861b5f31754652ace
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420313"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-profile-services"></a>[Comment faire] Utiliser les Services de profil ASP.NET AJAX ?

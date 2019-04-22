@@ -12,7 +12,7 @@ ms.openlocfilehash: de0e9cc168b9f18fd2bd83329106df45d7551b1a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386553"
 ---
 # <a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prévention de XSRF/CSRF dans ASP.NET MVC et les pages web
@@ -160,7 +160,7 @@ Le *GetTokens* méthode prend comme entrée un XSRF demande vérification sessio
 
 Le développeur peut configurer le système anti-XSRF à partir de l’Application\_Démarrer. La configuration est par programmation. Les propriétés de la méthode statique *AntiForgeryConfig* type sont décrits ci-dessous. Vous devez définir la propriété UniqueClaimTypeIdentifier la plupart des utilisateurs à l’aide de revendications.
 
-| **Propriété** | **Description** |
+| **Property** | **Description** |
 | --- | --- |
 | **AdditionalDataProvider** | Un [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) qui fournit des données supplémentaires pendant la génération de jetons et consomme des données supplémentaires pendant la validation du jeton. La valeur par défaut est *null*. Pour plus d’informations, consultez le [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) section. |
 | **CookieName** | Chaîne qui fournit le nom du cookie HTTP qui est utilisé pour stocker le jeton de session anti-XSRF. Si cette valeur n’est pas définie, un nom est automatiquement généré en fonction de chemin d’accès virtuel de l’application déployée. La valeur par défaut est *null*. |

@@ -12,7 +12,7 @@ ms.openlocfilehash: 029234cf9a28a80c487504e4e0980c214e45f53a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381963"
 ---
 # <a name="adding-a-column-to-the-model"></a>Ajout d’une colonne au modèle
@@ -28,11 +28,11 @@ Nous allons ajouter une colonne « Évaluation » à la table Movie. Revenez �
 
 Ajouter une colonne « Rating » comme indiqué ci-dessous. Étant donné que nous n’avons pas n’importe quel contrôle d’accès maintenant, la colonne peut accepter les valeurs NULL. Cliquez sur Enregistrer.
 
-[![Eodification de films Table](getting-started-with-mvc-part8/_static/image2.png)](getting-started-with-mvc-part8/_static/image1.png)
+[![Modification de Table de films](getting-started-with-mvc-part8/_static/image2.png)](getting-started-with-mvc-part8/_static/image1.png)
 
 Ensuite, revenez à l’Explorateur de solutions et ouvrez le fichier Movies.edmx (qui se trouve dans le dossier \Models). Cliquez avec le bouton droit sur l’aire de conception (la zone blanche) et sélectionnez le modèle de mise à jour à partir de la base de données.
 
-[![Movies - Microsoft Visual Web Developer 2010 Express (11)](getting-started-with-mvc-part8/_static/image4.png)](getting-started-with-mvc-part8/_static/image3.png)
+[![Films - Microsoft Visual Web Developer 2010 Express (11)](getting-started-with-mvc-part8/_static/image4.png)](getting-started-with-mvc-part8/_static/image3.png)
 
 Cette action lance l’Assistant de mise à jour « ». Cliquez sur l’onglet de l’actualisation dans celui-ci et cliquez sur Terminer. Notre classe de modèle de film sera ensuite être mis à jour avec la nouvelle colonne.
 
@@ -40,7 +40,7 @@ Cette action lance l’Assistant de mise à jour « ». Cliquez sur l’onglet 
 
 Après avoir cliqué sur Terminer, vous pouvez voir que la nouvelle colonne de classement a été ajoutée à l’entité de film dans notre modèle.
 
-[![Movie entité](getting-started-with-mvc-part8/_static/image7.png)](getting-started-with-mvc-part8/_static/image6.png)
+[![Entité de film](getting-started-with-mvc-part8/_static/image7.png)](getting-started-with-mvc-part8/_static/image6.png)
 
 Nous avons ajouté une colonne dans le modèle de base de données, mais ne conscient pas les vues à son sujet.
 
@@ -70,7 +70,7 @@ Exécutez votre application et que vous avez maintenant un nouveau champ dans la
 
 Après avoir cliqué sur Créer, vous êtes envoyé à la page d’Index où vous nouveau film est répertorié avec la nouvelle colonne de classement dans la base de données
 
-[![Movie liste - Windows Internet Explorer (12)](getting-started-with-mvc-part8/_static/image11.png)](getting-started-with-mvc-part8/_static/image10.png)
+[![Liste de films - Windows Internet Explorer (12)](getting-started-with-mvc-part8/_static/image11.png)](getting-started-with-mvc-part8/_static/image10.png)
 
 Ce didacticiel de base a été de vous lancer dans la création de contrôleurs, leur association avec des vues et la transmission autour des données codées en dur. Puis nous avons créé et conçu une base de données et insérer des données dans. Nous avons extrait les données de la base de données et il affiché dans un tableau HTML. Ensuite, nous avons ajouté un formulaire de création qui permettent à l’utilisateur d’ajouter des données à la base de données eux-mêmes à partir de l’Application Web. Nous avons ajouté la validation, puis apportées à la validation d’utiliser JavaScript côté client. Enfin, nous modifié la base de données pour inclure une nouvelle colonne de données, puis mis à jour de nos deux pages pour créer et afficher ces nouvelles données.
 

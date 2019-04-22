@@ -12,7 +12,7 @@ ms.openlocfilehash: 28e001059cb1853d21175da2a2b1af2c75364485
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380357"
 ---
 # <a name="databinding-to-an-accordion-c"></a>Liaison de données à un Accordion (C#)
@@ -59,9 +59,9 @@ Pour conclure cet exemple, vous devez définir les deux classes CSS qui sont ré
 [!code-css[Main](databinding-to-an-accordion-cs/samples/sample6.css)]
 
 
-[![Tles données dans l’accordéon est directement à partir de la source de données](databinding-to-an-accordion-cs/_static/image2.png)](databinding-to-an-accordion-cs/_static/image1.png)
+[![Les données de l’accordéon proviennent directement à partir de la source de données](databinding-to-an-accordion-cs/_static/image2.png)](databinding-to-an-accordion-cs/_static/image1.png)
 
 Les données de l’accordéon proviennent directement à partir de la source de données ([cliquez pour afficher l’image en taille réelle](databinding-to-an-accordion-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](dynamically-adding-an-accordion-pane-cs.md)
+> [Next](dynamically-adding-an-accordion-pane-cs.md)

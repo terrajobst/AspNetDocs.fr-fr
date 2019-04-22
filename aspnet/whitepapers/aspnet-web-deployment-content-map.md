@@ -12,7 +12,7 @@ ms.openlocfilehash: 3f36f0c504678e1e8b40aef99db81ab99101568b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383906"
 ---
 # <a name="aspnet-web-deployment---recommended-resources"></a>Déploiement web ASP.NET - Ressources recommandées
@@ -46,7 +46,7 @@ Cette rubrique contient les sections suivantes :
 - [Configuration de serveurs pour un fournisseur d’hébergement](#hostingprovider)
 - [Résolution des problèmes de déploiement](#troubleshooting)
 - [Obtention d’aide avec une question de déploiement spécifique](#gettinghelp)
-- [Ressources supplémentaires](#additional)
+- [Ressources supplémentaires pour MSBuild](#additional)
 
 
 <a id="understanding"></a>

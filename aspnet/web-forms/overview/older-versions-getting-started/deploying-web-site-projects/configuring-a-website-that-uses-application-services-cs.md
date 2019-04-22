@@ -12,7 +12,7 @@ ms.openlocfilehash: fe6097c32e4584fd4c577fb8d2afee9b3483c22f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418415"
 ---
 # <a name="configuring-a-website-that-uses-application-services-c"></a>Configuration d’un site web qui utilise les services d’application (C#)
@@ -106,7 +106,7 @@ S permettent de voir comment ajouter les objets de base de données à la base d
 L’outil démarre en affichant un écran de démarrage qui explique son objectif. Cliquez sur Suivant pour passer à l’écran « Sélectionnez une Option de configuration », qui est indiqué dans la Figure 1. À partir de là, vous pouvez choisir d’ajouter les services d’application les objets de base de données ou les supprimer à partir d’une base de données. Étant donné que nous souhaitons ajouter ces objets à la base de données de production, sélectionnez l’option « Configurer SQL Server pour les services d’application » et cliquez sur Suivant.
 
 
-[![Choisissez pour configurer SQL Server pour les Services d’Application](configuring-a-website-that-uses-application-services-cs/_static/image2.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image1.jpg)
+[![Choisissez de configurer SQL Server pour les Services d’Application](configuring-a-website-that-uses-application-services-cs/_static/image2.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image1.jpg)
 
 **Figure 1**: Choisir de configurer SQL Server pour les Services d’Application ([cliquez pour afficher l’image en taille réelle](configuring-a-website-that-uses-application-services-cs/_static/image3.jpg))
 
@@ -117,7 +117,7 @@ L’outil démarre en affichant un écran de démarrage qui explique son objecti
 > Après avoir entré votre serveur de base de données et les informations d’identification, vous pouvez obtenir une erreur lors du développement de la liste déroulante de base de données. Le `aspnet_regsql.exe` outil requêtes le `sysdatabases` (table système) pour récupérer une liste de bases de données sur le serveur, mais certains web hébergeant les verrouiller de sociétés de leurs serveurs de base de données afin que ces informations ne sont pas disponibles publiquement. Si vous obtenez cette erreur, vous pouvez taper le nom de la base de données directement dans la liste déroulante.
 
 
-[![Supply le s outil avec votre base de données des informations de connexion](configuring-a-website-that-uses-application-services-cs/_static/image5.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image4.jpg)
+[![Fournir l’outil avec vos informations de connexion de base de données s](configuring-a-website-that-uses-application-services-cs/_static/image5.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image4.jpg)
 
 **Figure 2**: Fournir les informations de connexion de s avec votre base de l’outil ([cliquez pour afficher l’image en taille réelle](configuring-a-website-that-uses-application-services-cs/_static/image6.jpg))
 
@@ -125,7 +125,7 @@ L’outil démarre en affichant un écran de démarrage qui explique son objecti
 L’écran suivant récapitule les actions qui doivent avoir lieu, à savoir ce qui les objets de base de données d’application services vont être ajoutés à la base de données spécifié. Cliquez sur Suivant pour terminer cette action. Après quelques instants, le dernier écran s’affiche, en notant que les objets de base de données ont été ajoutés (voir Figure 3).
 
 
-[![Success ! Les objets de base de données d’Application Services ont été ajoutés à la base de données de Production](configuring-a-website-that-uses-application-services-cs/_static/image8.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image7.jpg)
+[![Succès ! Les objets de base de données d’Application Services ont été ajoutés à la base de données de Production](configuring-a-website-that-uses-application-services-cs/_static/image8.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image7.jpg)
 
 **Figure 3**: Opération réussie L’Application Services base de données objets ont été ajoutés à la base de données de Production ([cliquez pour afficher l’image en taille réelle](configuring-a-website-that-uses-application-services-cs/_static/image9.jpg))
 
@@ -133,7 +133,7 @@ L’écran suivant récapitule les actions qui doivent avoir lieu, à savoir ce 
 Pour vérifier que les objets de base de données d’application services ont été ajoutés à la base de données de production, ouvrez SQL Server Management Studio et connectez-vous à votre base de données de production. Comme le montre la Figure 4, vous devez maintenant voir les tables de base de données d’application services dans votre base de données, `aspnet_Applications`, `aspnet_Membership`, `aspnet_Users`, et ainsi de suite.
 
 
-[![Confirmer que les objets de base de données ont été ajoutés à la base de données de Production](configuring-a-website-that-uses-application-services-cs/_static/image11.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image10.jpg)
+[![Vérifier que les objets de base de données ont été ajoutés à la base de données de Production](configuring-a-website-that-uses-application-services-cs/_static/image11.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image10.jpg)
 
 **Figure 4**: Vérifier que les objets de base de données ont été ajoutés à la base de données de Production ([cliquez pour afficher l’image en taille réelle](configuring-a-website-that-uses-application-services-cs/_static/image12.jpg))
 
@@ -172,7 +172,7 @@ Rappelez-vous qu’un tutoriel précédent mis à jour l’application web de cr
 > Pour plus d’informations sur l’utilisation de l’appartenance et l’API de rôles, ainsi que les contrôles Web de ASP.NET associées à la connexion, veillez à lire mon [ *didacticiels de sécurité de site Web*](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md). Pour plus d’informations sur la personnalisation du contrôle CreateUserWizard, consultez le [ *création de comptes utilisateur* ](../../older-versions-security/membership/creating-user-accounts-cs.md) et [ *stockant des informations utilisateur supplémentaires* ](../../older-versions-security/membership/storing-additional-user-information-cs.md) didacticiels ou extraction [ *Erich Peterson* ](http://www.erichpeterson.com/) article s, [ *personnalisation du contrôle CreateUserWizard* ](http://aspnet.4guysfromrolla.com/articles/070506-1.aspx).
 
 
-[![Aadministrateurs peuvent créer des comptes d’utilisateur](configuring-a-website-that-uses-application-services-cs/_static/image14.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image13.jpg)
+[![Les administrateurs peuvent créer de nouveaux comptes d’utilisateur](configuring-a-website-that-uses-application-services-cs/_static/image14.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image13.jpg)
 
 **Figure 5**: Les administrateurs peuvent créer des comptes d’utilisateur ([cliquez pour afficher l’image en taille réelle](configuring-a-website-that-uses-application-services-cs/_static/image15.jpg))
 

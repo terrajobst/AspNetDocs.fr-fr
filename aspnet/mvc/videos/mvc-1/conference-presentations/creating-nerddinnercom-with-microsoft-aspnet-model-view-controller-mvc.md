@@ -12,7 +12,7 @@ ms.openlocfilehash: 238061172fafeb59a46349b6f82c2ea11afb0919
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404492"
 ---
 # <a name="creating-nerddinnercom-with-microsoft-aspnet-model-view-controller-mvc"></a>Création de NerdDinner.com avec Microsoft ASP.NET MVC (Modèle Vue Contrôleur)

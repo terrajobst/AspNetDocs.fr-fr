@@ -12,7 +12,7 @@ ms.openlocfilehash: 4a7db29869ceb08faaaa132da7ff8eed1a1336f4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418857"
 ---
 # <a name="visual-studio-2013-web-editor-features---publishing"></a>Fonctionnalités de l’éditeur web de Visual Studio 2013 - Publication

@@ -12,7 +12,7 @@ ms.openlocfilehash: a93835e685716b3be59023b9f84a006e38f48e89
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380447"
 ---
 # <a name="logging-in-using-external-sites-in-an-aspnet-web-pages-razor-site"></a>Connexion à l’aide de Sites externes dans un Site ASP.NET Web Pages (Razor)

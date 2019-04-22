@@ -12,7 +12,7 @@ ms.openlocfilehash: f1875ae95d79ec2a6762a547aabfbd03e0930b2c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386500"
 ---
 # <a name="using-modalpopup-with-a-repeater-control-vb"></a>Utilisation de ModalPopup avec un contrôle Repeater (VB)
@@ -49,7 +49,7 @@ Afin d’optimiser la fenêtre contextuelle du Repeater le `ModalPopupExtender` 
 Ensuite, chaque élément dans la source de données s’affiche avec un bouton en regard de celui-ci qui déclenche la fenêtre contextuelle modale.
 
 
-[![Tfenêtre contextuelle modale he peut être déclenchée pour chaque entrée de source de données](using-modalpopup-with-a-repeater-control-vb/_static/image2.png)](using-modalpopup-with-a-repeater-control-vb/_static/image1.png)
+[![La fenêtre contextuelle modale peut être déclenchée pour chaque entrée de source de données](using-modalpopup-with-a-repeater-control-vb/_static/image2.png)](using-modalpopup-with-a-repeater-control-vb/_static/image1.png)
 
 La fenêtre contextuelle modale peut être déclenchée pour chaque entrée de source de données ([cliquez pour afficher l’image en taille réelle](using-modalpopup-with-a-repeater-control-vb/_static/image3.png))
 

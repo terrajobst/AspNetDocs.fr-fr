@@ -12,7 +12,7 @@ ms.openlocfilehash: b7722d5c282f07b35dd18d08911fa562dae6afc2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387930"
 ---
 # <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
@@ -25,12 +25,12 @@ ms.locfileid: "59387930"
 
 - [Notes d’installation](#_Toc303253802)
 - [Documentation](#_Toc303253803)
-- [Assistance](#_Toc303253804)
-- [Configuration logicielle](#_Toc303253805)
+- [Prise en charge](#_Toc303253804)
+- [Configuration logicielle requise](#_Toc303253805)
 - [La mise à niveau d’un projet ASP.NET MVC 3 vers ASP.NET MVC 4](#_Toc303253806)
 - [Nouvelles fonctionnalités dans la version bêta d’ASP.NET MVC 4](#_Toc303253807)
 
-    - [API web ASP.NET](#_Toc317096197)
+    - [API Web ASP.NET](#_Toc317096197)
     - [Application de Page ASP.NET unique](#_Toc317096198)
     - [Améliorations apportées aux modèles de projet par défaut](#_Toc303253808)
     - [Modèle de projet mobile](#_Toc303253809)
@@ -300,7 +300,7 @@ Version bêta d’ASP.NET MVC 4 prend en charge la version 1.5 de septembre 2011
 - **Exécution d’un projet d’API Web par défaut affiche les instructions qui incorrectement diriger l’utilisateur d’ajouter des itinéraires à l’aide de la méthode RegisterApis, qui n’existe pas.** Itinéraires doivent être ajoutés à la méthode RegisterRoutes à l’aide de la table de routage ASP.NET.
 - **Installer la version bêta d’ASP.NET MVC 4, les applications ASP.NET MVC 3 RTM s’arrête.** Les applications ASP.NET MVC 3 qui ont été créées avec la version RTM (pas dont la version ASP.NET MVC 3 Tools Update) nécessitent les modifications suivantes afin de fonctionner côte à côte avec la version bêta d’ASP.NET MVC 4. Génération du projet sans apporter de ces résultats des mises à jour dans les erreurs de compilation. 
 
-    **Mises à jour nécessaires**
+    **Mises à jour requises**
 
   1. Dans le fichier racine Web.config, ajoutez un nouveau *&lt;appSettings&gt;* entrée avec la clé *webPages:Version* et la valeur *1.0.0.0*.
 

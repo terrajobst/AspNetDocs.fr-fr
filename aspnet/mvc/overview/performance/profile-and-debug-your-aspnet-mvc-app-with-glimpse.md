@@ -12,7 +12,7 @@ ms.openlocfilehash: 078382191595d1f65b5ebe9d0de8d41cd70e376d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419884"
 ---
 # <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Profiler et déboguer votre application ASP.NET MVC avec Glimpse
@@ -25,10 +25,10 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [L’installation d’aperçu](#ig)
 - [Activer l’aperçu pour localhost](#eg)
 - [L’onglet de la chronologie](#Time)
-- [Liaison de modèle](#mb)
-- [Routes](#route)
+- [Liaison de données](#mb)
+- [Itinéraires](#route)
 - [À l’aide de Glimpse sur Azure](#da)
-- [Ressources supplémentaires](#addRes)
+- [Ressources supplémentaires pour MSBuild](#addRes)
 
 <a id="ig"></a>
 ## <a name="installing-glimpse"></a>L’installation d’aperçu

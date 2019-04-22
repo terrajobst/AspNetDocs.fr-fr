@@ -13,7 +13,7 @@ ms.openlocfilehash: 224fa56a455affcbbdf76eceee5422850415037e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420768"
 ---
 # <a name="implementing-a-custom-mysql-aspnet-identity-storage-provider"></a>Implémentation d’un fournisseur de stockage ASP.NET Identity MySQL personnalisé

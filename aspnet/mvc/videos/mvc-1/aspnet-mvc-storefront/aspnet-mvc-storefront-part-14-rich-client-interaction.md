@@ -12,7 +12,7 @@ ms.openlocfilehash: bae7aa149ad507e5a5ca3b01ff140440e3309548
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419611"
 ---
 # <a name="aspnet-mvc-storefront-part-14-rich-client-interaction"></a>Application Storefront ASP.NET MVC, partie 14 : Interaction enrichie avec le client

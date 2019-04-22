@@ -12,7 +12,7 @@ ms.openlocfilehash: 45e2d1b10665a8ca1965f0761bfa6bfd13444c8e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419507"
 ---
 # <a name="aspnet-and-web-tools-20122-release-notes"></a>ASP.NET et Web Tools 2012.2 - Notes de publication
@@ -22,16 +22,16 @@ ms.locfileid: "59419507"
 
 - [Notes d’installation](#_Installation)
 - [Documentation](#_Documentation)
-- [Assistance](#_Support)
-- [Configuration logicielle](#_Software_Requirements)
+- [Prise en charge](#_Support)
+- [Configuration logicielle requise](#_Software_Requirements)
 - [Nouvelles fonctionnalités dans ASP.NET et Web Tools 2012.2](#_New_Features_in)
 
     - [Outillage](#_Tooling)
     - [Publication Web](#_Web_Publishing)
     - [Modèles ASP.NET MVC](#_Templates)
-    - [API web ASP.NET](#_ASP.NET_Web_API)
+    - [API Web ASP.NET](#_ASP.NET_Web_API)
 
-    - [SignalR ASP.NET](#_ASP.NET_SignalR)
+    - [ASP.NET SignalR](#_ASP.NET_SignalR)
     - [URL conviviales ASP.NET](#_ASP.NET_Friendly_URLs)
 - [Problèmes connus et les modifications avec rupture](#_Known_Issues_and)
 

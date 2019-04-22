@@ -12,7 +12,7 @@ ms.openlocfilehash: be8cc54920a7c74b162aac8a809d8eaf8f2be08e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418103"
 ---
 # <a name="use-aspnet-ajax-cascading-drop-down-control-to-access-a-database"></a>Utiliser un contrôle de liste déroulante en cascade ASP.NET AJAX pour accéder à une base de données

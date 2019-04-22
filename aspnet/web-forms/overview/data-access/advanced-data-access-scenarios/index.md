@@ -12,7 +12,7 @@ ms.openlocfilehash: 735832675b48427d866612817ce7c8ef0290374b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421301"
 ---
 # <a name="advanced-data-access-scenarios"></a>Scénarios avancés d’accès aux données

@@ -12,7 +12,7 @@ ms.openlocfilehash: f86212c1cb559c164342997fb0e4208339b5e3cc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421119"
 ---
 # <a name="reading-related-data-with-the-entity-framework-in-an-aspnet-mvc-application-5-of-10"></a>Lecture de données associées avec Entity Framework dans une Application ASP.NET MVC (5 sur 10)
@@ -148,7 +148,7 @@ La méthode accepte des données de route facultatives (`id`) et un paramètre d
 
 > [!TIP]
 > 
-> **Données de route**
+> **Données d’itinéraire**
 > 
 > Données d’itinéraire sont données qui le binder de modèle se trouvée dans un segment d’URL spécifié dans la table de routage. Par exemple, l’itinéraire par défaut spécifie `controller`, `action`, et `id` segments :
 > 

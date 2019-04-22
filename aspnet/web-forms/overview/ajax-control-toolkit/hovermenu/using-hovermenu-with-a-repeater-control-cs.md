@@ -12,7 +12,7 @@ ms.openlocfilehash: 7f64e90eb2f8f87e2f382cb7897793e7071d305d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384498"
 ---
 # <a name="using-hovermenu-with-a-repeater-control-c"></a>Utilisation de HoverMenu avec un contrôle Repeater (C#)
@@ -53,9 +53,9 @@ Ensuite, ajoutez un panneau qui sert de la fenêtre contextuelle modale :
 Maintenant chaque élément dans la source de données affiche une fenêtre contextuelle à droite (`PopupPosition` attribut) après un délai de 50 millisecondes (`PopDelay` attribut).
 
 
-[![Tmenu de pointage he s’affiche en regard de chaque élément dans le répéteur](using-hovermenu-with-a-repeater-control-cs/_static/image2.png)](using-hovermenu-with-a-repeater-control-cs/_static/image1.png)
+[![Le menu sensitif qui s’affiche en regard de chaque élément dans le répéteur](using-hovermenu-with-a-repeater-control-cs/_static/image2.png)](using-hovermenu-with-a-repeater-control-cs/_static/image1.png)
 
 Le menu sensitif qui s’affiche en regard de chaque élément dans le répéteur ([cliquez pour afficher l’image en taille réelle](using-hovermenu-with-a-repeater-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](using-hovermenu-with-a-repeater-control-vb.md)
+> [Next](using-hovermenu-with-a-repeater-control-vb.md)

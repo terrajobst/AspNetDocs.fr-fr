@@ -12,7 +12,7 @@ ms.openlocfilehash: 531aba3753bf97b8bf1763a22615fb811b375286
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379142"
 ---
 # <a name="using-signalr-with-web-apps-in-azure-app-service"></a>Utilisation de SignalR avec Web Apps dans Azure App Service
@@ -56,7 +56,7 @@ ASP.NET SignalR peut servir à récupérer un nouveau niveau d’interactivité 
 
 SignalR n’ajoute pas les complications particuliers pour déployer une application dans Azure et un déploiement à un serveur local. Une application qui utilise SignalR peut être hébergée dans Azure sans modification de configuration ou d’autres paramètres (Cependant, pour la prise en charge du protocole WebSocket, consultez [l’activation du protocole WebSocket sur Azure App Service](#websocket) ci-dessous.) Pour ce didacticiel, vous allez déployer l’application créée dans le [Getting Started Tutorial](../getting-started/tutorial-getting-started-with-signalr.md) vers Azure.
 
-**Prérequis**
+**Composants requis**
 
 - Visual Studio 2013. Si vous n’avez pas Visual Studio, Visual Studio 2013 Express pour le Web est inclus dans l’installation du SDK Azure.
 - [Azure SDK 2.3 pour Visual Studio 2013](https://go.microsoft.com/fwlink/?linkid=324322&clcid=0x409) ou [Azure SDK 2.3 pour Visual Studio 2012](https://go.microsoft.com/fwlink/p/?linkid=323511).

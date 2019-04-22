@@ -12,7 +12,7 @@ ms.openlocfilehash: fa118b4d733d7848b838f80e9918d62ae60033af
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378973"
 ---
 # <a name="creating-a-rating-control-c"></a>Création d’un contrôle Rating (C#)
@@ -66,9 +66,9 @@ Dans le code côté serveur, accéder au contrôle d’évaluation par le biais 
 Enregistrez la page et chargez-le dans votre navigateur. Lorsque vous pointez sur les éléments de contrôle d’accès (initialement vide), un effet de JavaScript se produit : Les modifications de contrôle d’accès. Lorsque vous cliquez sur l’ensemble des étoiles, l’évaluation actuelle est conservée. Enfin, lorsque vous envoyez le formulaire, le code côté serveur génère le classement sélectionné.
 
 
-[![Création au système d’évaluation avec un minimum de code](creating-a-rating-control-cs/_static/image2.png)](creating-a-rating-control-cs/_static/image1.png)
+[![Création d’un système d’évaluation avec un minimum de code](creating-a-rating-control-cs/_static/image2.png)](creating-a-rating-control-cs/_static/image1.png)
 
 Création d’un système d’évaluation avec un minimum de code ([cliquez pour afficher l’image en taille réelle](creating-a-rating-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](creating-a-rating-control-vb.md)
+> [Next](creating-a-rating-control-vb.md)

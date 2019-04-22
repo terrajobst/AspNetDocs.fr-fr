@@ -12,7 +12,7 @@ ms.openlocfilehash: c8146b949d4cd3c9be54bc236a962cf121198709
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392324"
 ---
 # <a name="an-introduction-to-url-routing"></a>Introduction au routage d’URL

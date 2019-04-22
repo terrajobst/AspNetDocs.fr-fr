@@ -12,7 +12,7 @@ ms.openlocfilehash: 571e34a8c87bf54b8dd71c912f16ebcdab3c87a7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383445"
 ---
 # <a name="creating-a-customized-sorting-user-interface-vb"></a>Création d’une interface utilisateur de tri personnalisée (VB)
@@ -31,7 +31,7 @@ Affichage d’une longue liste de lorsque les données triées contenant uniquem
 Pour aider à mettre en surbrillance les limites entre les groupes triés, de nombreux sites Web utilisent une interface utilisateur qui ajoute un séparateur entre ces groupes. Séparateurs comme celles indiquées dans la Figure 1 permet à un utilisateur de plus rapidement trouver un groupe particulier et identifier ses limites, ainsi que déterminer quels groupes distincts existent dans les données.
 
 
-[![ECCA groupe de catégories est clairement identifié](creating-a-customized-sorting-user-interface-vb/_static/image2.png)](creating-a-customized-sorting-user-interface-vb/_static/image1.png)
+[![Chaque groupe de catégories est clairement identifié](creating-a-customized-sorting-user-interface-vb/_static/image2.png)](creating-a-customized-sorting-user-interface-vb/_static/image1.png)
 
 **Figure 1**: Chaque groupe de catégories est clairement identifié ([cliquez pour afficher l’image en taille réelle](creating-a-customized-sorting-user-interface-vb/_static/image3.png))
 
@@ -50,7 +50,7 @@ Ensuite, configurez le contrôle GridView tel qu’il contient uniquement le `Pr
 Prenez un moment pour consulter notre progression jusqu'à présent dans un navigateur. Figure 2 montre le contrôle GridView sortable lorsque ses données sont triées par catégorie dans l’ordre alphabétique.
 
 
-[![TIl s GridView Sortable données est triée par catégorie](creating-a-customized-sorting-user-interface-vb/_static/image5.png)](creating-a-customized-sorting-user-interface-vb/_static/image4.png)
+[![Les opérations de mappage GridView pouvant être trié les données sont triées par catégorie](creating-a-customized-sorting-user-interface-vb/_static/image5.png)](creating-a-customized-sorting-user-interface-vb/_static/image4.png)
 
 **Figure 2**: Les opérations de mappage pouvant être trié GridView données sont triées par catégorie ([cliquez pour afficher l’image en taille réelle](creating-a-customized-sorting-user-interface-vb/_static/image6.png))
 
@@ -100,7 +100,7 @@ Plutôt que les données de messagerie avant de le lier au contrôle GridView, n
 Pour ajouter des lignes du séparateur entre chaque groupe de tri, nous pouvons manipuler directement cette hiérarchie de contrôle une fois qu’il a été créé. Nous pouvons être certain que la hiérarchie des contrôles GridView s a été créée pour la dernière fois au moment que du rendu de la page. Par conséquent, cette approche remplace le `Page` classe s `Render` méthode, à quel point la hiérarchie des contrôles finale s GridView est mis à jour pour inclure les lignes du séparateur nécessaires. Figure 4 illustre ce processus.
 
 
-[![AAutre Technique n manipule la hiérarchie des contrôles GridView s](creating-a-customized-sorting-user-interface-vb/_static/image9.png)](creating-a-customized-sorting-user-interface-vb/_static/image8.png)
+[![Une autre Technique manipule la hiérarchie des contrôles GridView s](creating-a-customized-sorting-user-interface-vb/_static/image9.png)](creating-a-customized-sorting-user-interface-vb/_static/image8.png)
 
 **Figure 4**: Une autre Technique manipule la hiérarchie des contrôles de s GridView ([cliquez pour afficher l’image en taille réelle](creating-a-customized-sorting-user-interface-vb/_static/image10.png))
 
@@ -156,12 +156,12 @@ La classe CSS utilisée pour mettre en forme la ligne d’en-tête de groupe tri
 Avec le code actuel, l’interface de tri ajoute des en-têtes de groupe de tri lors du tri par n’importe quel BoundField (voir Figure 5, qui montre une capture d’écran lors du tri par fournisseur). Toutefois, lors du tri par n’importe quel autre type de champ (par exemple, un CheckBoxField ou d’un TemplateField), les en-têtes de groupe de tri sont nulle part à rechercher (voir Figure 6).
 
 
-[![TIl tri Interface inclut tri en-têtes de groupe lors du tri par BoundFields](creating-a-customized-sorting-user-interface-vb/_static/image12.png)](creating-a-customized-sorting-user-interface-vb/_static/image11.png)
+[![L’Interface de tri inclut les en-têtes de groupe de tri lors du tri par BoundFields](creating-a-customized-sorting-user-interface-vb/_static/image12.png)](creating-a-customized-sorting-user-interface-vb/_static/image11.png)
 
 **Figure 5**: Le tri Interface inclut tri en-têtes lors de tri des groupes par BoundFields ([cliquez pour afficher l’image en taille réelle](creating-a-customized-sorting-user-interface-vb/_static/image13.png))
 
 
-[![TEn-têtes de groupe de tri he sont manquants lors de tri une CheckBoxField](creating-a-customized-sorting-user-interface-vb/_static/image15.png)](creating-a-customized-sorting-user-interface-vb/_static/image14.png)
+[![Les en-têtes de groupe de tri sont manquants lors de tri une CheckBoxField](creating-a-customized-sorting-user-interface-vb/_static/image15.png)](creating-a-customized-sorting-user-interface-vb/_static/image14.png)
 
 **Figure 6**: Les en-têtes de groupe de tri sont manquants lors de tri une CheckBoxField ([cliquez pour afficher l’image en taille réelle](creating-a-customized-sorting-user-interface-vb/_static/image16.png))
 
@@ -178,7 +178,7 @@ Ce code examine la colonne triée `TableCell` pour la ligne actuelle pour déter
 Avec l’ajout de code ci-dessus, les en-têtes de groupe de tri sont désormais présentes lors du tri par le CheckBoxField abandonné (voir la Figure 7).
 
 
-[![TEn-têtes de groupe de tri he sont désormais présentes lorsque tri un CheckBoxField](creating-a-customized-sorting-user-interface-vb/_static/image18.png)](creating-a-customized-sorting-user-interface-vb/_static/image17.png)
+[![Les en-têtes de groupe de tri sont désormais présentes lorsque tri un CheckBoxField](creating-a-customized-sorting-user-interface-vb/_static/image18.png)](creating-a-customized-sorting-user-interface-vb/_static/image17.png)
 
 **Figure 7**: Les en-têtes de groupe de tri sont désormais présentes lorsque tri un CheckBoxField ([cliquez pour afficher l’image en taille réelle](creating-a-customized-sorting-user-interface-vb/_static/image19.png))
 

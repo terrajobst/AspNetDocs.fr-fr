@@ -12,7 +12,7 @@ ms.openlocfilehash: faad1530a499fd3f46a6a6c6e7c194ba6c55fa6c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386292"
 ---
 # <a name="fix-for-server-application-unavailable-error-after-applying-security-update-for-ie"></a>Correctif pour l’erreur « Application serveur non disponible » après application de la mise à jour de sécurité pour Internet Explorer

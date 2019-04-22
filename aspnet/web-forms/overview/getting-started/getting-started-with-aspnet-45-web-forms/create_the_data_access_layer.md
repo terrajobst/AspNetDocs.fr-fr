@@ -12,7 +12,7 @@ ms.openlocfilehash: bc91eba17938de15f03ecc1e745aac57c7eac7a1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419494"
 ---
 # <a name="create-the-data-access-layer"></a>Créer la couche d’accès aux données
@@ -178,7 +178,7 @@ Dans le didacticiel suivant, vous allez mettre à jour de l’interface utilisat
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-[Vue d’ensemble d’Entity Framework](https://msdn.microsoft.com/library/bb399567.aspx)   
+[Présentation d’Entity Framework](https://msdn.microsoft.com/library/bb399567.aspx)   
 [Guide du débutant pour ADO.NET Entity Framework](https://msdn.microsoft.com/data/ee712907)   
 [Code premier développement avec Entity Framework](http://www.msteched.com/2010/Europe/DEV212) (vidéo)   
 [API Fluent Code First relations](https://msdn.microsoft.com/data/hh134698)   

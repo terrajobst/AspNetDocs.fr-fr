@@ -12,7 +12,7 @@ ms.openlocfilehash: 017f550e2caffe1b20823e9b1880cbb4e968005a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379935"
 ---
 # <a name="hot-towel-template"></a>Modèle Hot Towel

@@ -12,7 +12,7 @@ ms.openlocfilehash: d76f607f1d5e779d43ee15d8f2d697e7b0f147ae
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380117"
 ---
 # <a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Présentation des Pages Web ASP.NET - saisie de données de base de données à l’aide de formulaires
@@ -253,7 +253,7 @@ Dans le didacticiel suivant, vous allez apprendre à permettre aux utilisateurs 
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- [Présentation de la programmation Web ASP.NET à l'aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Instruction SQL INSERT INTO](http://www.w3schools.com/sql/sql_insert.asp) sur le site W3Schools
 - [Validation des entrées d’utilisateur dans ASP.NET Web Pages des Sites](https://go.microsoft.com/fwlink/?LinkId=253002). Plus d’informations sur l’utilisation de la `Validation` helper.
 

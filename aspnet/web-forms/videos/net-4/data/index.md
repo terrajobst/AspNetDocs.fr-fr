@@ -12,7 +12,7 @@ ms.openlocfilehash: ccd558f7777b1398bf1615ebbe7f18a82bc65985
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408327"
 ---
 # <a name="data"></a>Données

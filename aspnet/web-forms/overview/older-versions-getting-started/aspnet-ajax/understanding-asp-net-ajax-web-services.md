@@ -12,14 +12,14 @@ ms.openlocfilehash: e576e11d63f940f1683ed26d217ff255a31b007c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388411"
 ---
 # <a name="understanding-aspnet-ajax-web-services"></a>Présentation des services web ASP.NET AJAX
 
 par [Scott Cate](https://github.com/scottcate)
 
-[Télécharger le PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial05_Web_Services_with_MS_Ajax_cs.pdf)
+[Télécharger PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial05_Web_Services_with_MS_Ajax_cs.pdf)
 
 > Services Web font partie intégrante du .NET framework qui fournissent une solution multiplateforme pour échanger des données entre les systèmes distribués. Bien que les Services Web sont normalement utilisés pour autoriser différents systèmes d’exploitation, les modèles d’objet et les langages de programmation pour envoyer et recevoir des données, elles peuvent également servir pour injecter des données dans une page ASP.NET AJAX ou envoyer des données à partir d’une page à un système back-end de manière dynamique. Tout cela est possible sans avoir recours pour les opérations de publication (postback).
 
@@ -48,8 +48,7 @@ Ce remplacement HttpHandler est effectué afin de permettre les appels JavaScrip
 
 [!code-json[Main](understanding-asp-net-ajax-web-services/samples/sample2.json)]
 
-> *> [!NOTE]
-> le nom de l’opération est défini dans le cadre de l’URL pour le service web. en outre, les messages de demande ne sont pas toujours soumis par le biais de JSON. Services Web peuvent utiliser l’attribut ScriptMethod avec le paramètre UseHttpGet défini sur true, ce qui entraîne des paramètres à passer un les paramètres de chaîne de requête.*
+> *> [!NOTE] le nom de l’opération est défini dans le cadre de l’URL pour le service web. en outre, les messages de demande ne sont pas toujours soumis par le biais de JSON. Services Web peuvent utiliser l’attribut ScriptMethod avec le paramètre UseHttpGet défini sur true, ce qui entraîne des paramètres à passer un les paramètres de chaîne de requête.*
 
 
 **Liste 3. Message de réponse de Service Web sérialisé vers JSON**
@@ -158,8 +157,7 @@ Ajout d’une référence à la CustomersService.asmx via le contrôle ScriptMan
 
 [!code-html[Main](understanding-asp-net-ajax-web-services/samples/sample14.html)]
 
-> *> [!NOTE]
-> Si vous aimeriez voir le code proxy JavaScript qui est généré vous pouvez tapez l’URL de Service Web .NET souhaité dans la zone d’adresse d’Internet Explorer et ajouter/js à la fin de celle-ci.*
+> *> [!NOTE] Si vous aimeriez voir le code proxy JavaScript qui est généré vous pouvez tapez l’URL de Service Web .NET souhaité dans la zone d’adresse d’Internet Explorer et ajouter/js à la fin de celle-ci.*
 
 
 Si le débogage est activé dans le fichier web.config qu'une version debug du proxy JavaScript est incorporée dans la page, comme indiqué ci-après :
@@ -183,7 +181,7 @@ Un exemple d’utilisation d’un proxy JavaScript pour appeler une méthode Web
 Cet appel fait référence à l’espace de noms InterfaceTraining, CustomersService classe et méthode de Web GetCustomersByCountry définis dans le service. Il transmet une valeur de pays obtenue à partir d’une zone de texte ainsi que d’une fonction de rappel nommée OnWSRequestComplete qui doit être appelé lors de l’appel de Service Web asynchrone retourne. OnWSRequestComplete gère le tableau d’objets de client renvoyé par le service et les convertit en une table qui s’affiche dans la page. La sortie générée à partir de l’appel est illustrée dans la Figure 1.
 
 
-[![Biaison données obtenues en effectuant un appel AJAX asynchrone à un Service Web.](understanding-asp-net-ajax-web-services/_static/image2.png)](understanding-asp-net-ajax-web-services/_static/image1.png)
+[![Liaison de données obtenues en effectuant un appel AJAX asynchrone à un Service Web.](understanding-asp-net-ajax-web-services/_static/image2.png)](understanding-asp-net-ajax-web-services/_static/image1.png)
 
 **Figure 1**: Liaison de données obtenues en effectuant un appel AJAX asynchrone à un Service Web.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-web-services/_static/image3.png))
 
@@ -201,7 +199,7 @@ Les rappels asynchrones aux Services Web peuvent rencontrer des différents type
 Les erreurs qui surviennent lorsque le Service Web est appelé déclenchera la fonction de rappel OnWSRequestFailed() pour être appelé qui accepte un objet représentant l’erreur en tant que paramètre. L’objet d’erreur expose plusieurs fonctions pour déterminer la cause de l’erreur également ou non l’appel a expiré. Liste 14 montre un exemple de l’utilisation des fonctions d’erreur différent et la Figure 2 montre un exemple de la sortie générée par les fonctions.
 
 
-[![OAffi généré en appelant des fonctions d’erreur ASP.NET AJAX.](understanding-asp-net-ajax-web-services/_static/image5.png)](understanding-asp-net-ajax-web-services/_static/image4.png)
+[![Sortie générée par l’appel de fonctions d’erreur ASP.NET AJAX.](understanding-asp-net-ajax-web-services/_static/image5.png)](understanding-asp-net-ajax-web-services/_static/image4.png)
 
 **Figure 2**: Sortie générée par l’appel de fonctions d’erreur ASP.NET AJAX.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-web-services/_static/image6.png))
 
@@ -227,7 +225,7 @@ Les types complexes accepté ou retournées par un Service Web sont automatiquem
 Pour répondre à cette question, supposons qu’une page ASP.NET AJAX affiche les données client et permet aux utilisateurs finaux mettre à jour l’adresse d’un client. Si le Service Web spécifie que le type d’adresse (un type complexe défini dans une classe CustomerDetails) peut être envoyé au client, puis le processus de mise à jour peuvent être divisé en séparer les fonctions afin de mieux réutiliser le code.
 
 
-[![OAffi création à partir de l’appel d’un Service Web qui retourne des données RSS.](understanding-asp-net-ajax-web-services/_static/image8.png)](understanding-asp-net-ajax-web-services/_static/image7.png)
+[![Sortie de création à partir de l’appel d’un Service Web qui retourne des données RSS.](understanding-asp-net-ajax-web-services/_static/image8.png)](understanding-asp-net-ajax-web-services/_static/image7.png)
 
 **Figure 3**: Sortie de création à partir de l’appel d’un Service Web qui retourne des données RSS.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-web-services/_static/image9.png))
 
@@ -275,7 +273,7 @@ Dans les cas où vous devez uniquement utiliser le contrôle dans une page spéc
 [!code-aspx[Main](understanding-asp-net-ajax-web-services/samples/sample25.aspx)]
 
 
-[![Uà l’aide du contrôle AutoCompleteExtender.](understanding-asp-net-ajax-web-services/_static/image11.png)](understanding-asp-net-ajax-web-services/_static/image10.png)
+[![Utilisation du contrôle AutoCompleteExtender.](understanding-asp-net-ajax-web-services/_static/image11.png)](understanding-asp-net-ajax-web-services/_static/image10.png)
 
 **Figure 4**: Utilisation du contrôle AutoCompleteExtender.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-web-services/_static/image12.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 4bc86e3c6726bdf67030a72c2d23a2516169fcb3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385629"
 ---
 # <a name="5-minute-introduction-to-aspnet-web-pages"></a>Présentation de 5 minutes pour les Pages Web ASP.NET

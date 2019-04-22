@@ -12,7 +12,7 @@ ms.openlocfilehash: d6e638a9a0028961045b3230927e6e3e95378317
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385863"
 ---
 # <a name="how-do-i-use-the-ftpwebrequest-class-to-create-an-ftp-connection-to-a-ftp-server"></a>[Comment faire] Utilisez la classe FtpWebRequest pour créer une connexion FTP à un serveur FTP

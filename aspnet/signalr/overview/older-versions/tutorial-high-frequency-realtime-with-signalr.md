@@ -12,7 +12,7 @@ ms.openlocfilehash: 179f6dd3a60f8c49770ee34af93d54defad0adc4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379407"
 ---
 # <a name="high-frequency-realtime-with-signalr-1x"></a>Temps réel haute fréquence avec SignalR 1.x
@@ -44,7 +44,7 @@ Bien que l’application fonctionne à l’aide de cette méthode, cela n’est 
 
 Ce didacticiel contient les sections suivantes :
 
-- [Prérequis](#prerequisites)
+- [Composants requis](#prerequisites)
 - [Créer le projet](#createtheproject)
 - [Ajoutez les packages ASP.NET SignalR et JQuery.UI NuGet](#nugetpackages)
 - [Créer l’application de base](#baseapp)

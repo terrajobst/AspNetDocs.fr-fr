@@ -12,7 +12,7 @@ ms.openlocfilehash: 38aea3b3480dde6ec6182a45c4f61f44eea8e05e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380221"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Concepts de base d’ASP.NET MVC 4
@@ -989,7 +989,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](aspnet-mvc-4-fundamentals/_static/image45.png)
 
-    *Progression de l'installation*
+    *Progression de l’installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](aspnet-mvc-4-fundamentals/_static/image46.png)

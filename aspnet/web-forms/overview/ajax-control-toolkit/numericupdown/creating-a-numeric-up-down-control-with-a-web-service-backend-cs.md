@@ -12,7 +12,7 @@ ms.openlocfilehash: b8160c6f5ac090e120e86f4273749b756857967e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385707"
 ---
 # <a name="creating-a-numeric-updown-control-with-a-web-service-backend-c"></a>Création d’un contrôle Haut/bas numérique avec un backend de service web (C#)
@@ -54,9 +54,9 @@ Voici le balisage complet pour la page :
 Si vous exécutez la page, notez la façon dont la valeur dans la zone de texte double toujours lorsque vous cliquez sur le bouton du haut, êtes réduit de moitié lorsque vous cliquez sur le bouton du bas.
 
 
-[![Onuméros d’eules une puissance de 2 apparaissent](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image2.png)](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image1.png)
+[![Seuls des chiffres qui sont une puissance de 2 apparaissent](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image2.png)](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image1.png)
 
 Seuls des chiffres qui sont une puissance de 2 apparaissent ([cliquez pour afficher l’image en taille réelle](creating-a-numeric-up-down-control-with-a-web-service-backend-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](creating-a-numeric-up-down-control-with-a-web-service-backend-vb.md)
+> [Next](creating-a-numeric-up-down-control-with-a-web-service-backend-vb.md)

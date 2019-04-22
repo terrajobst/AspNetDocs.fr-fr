@@ -12,7 +12,7 @@ ms.openlocfilehash: 3dddc1fd38a5384e40f9fa109da9d8c1424ef01a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387254"
 ---
 # <a name="mocking-entity-framework-when-unit-testing-aspnet-web-api-2"></a>Simulation d’Entity Framework lors de l’API Web ASP.NET 2 de tests unitaires
@@ -36,7 +36,7 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 
 Cette rubrique contient les sections suivantes :
 
-- [Prérequis](#prereqs)
+- [Composants requis](#prereqs)
 - [Télécharger le code](#download)
 - [Créer des applications avec le projet de test unitaire](#appwithunittest)
 - [Créer la classe de modèle](#modelclass)
@@ -45,7 +45,7 @@ Cette rubrique contient les sections suivantes :
 - [Installer les packages NuGet dans le projet de test](#testpackages)
 - [Créer le contexte de test](#testcontext)
 - [Créer des tests](#tests)
-- [Exécuter les tests](#runtests)
+- [Exécuter des tests](#runtests)
 
 Si vous avez déjà effectué les étapes décrites dans [Unit Testing avec ASP.NET Web API 2](unit-testing-with-aspnet-web-api.md), vous pouvez passer à la section [ajouter le contrôleur de](#controller).
 

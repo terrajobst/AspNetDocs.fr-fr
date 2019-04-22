@@ -12,7 +12,7 @@ ms.openlocfilehash: 8ac51219a3734d3d2c8657bcfac159e28faa7d7c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417284"
 ---
 # <a name="how-do-i-use-cascading-style-sheets-for-web-page-layout"></a>[Comment faire] Utiliser les feuilles de Style en cascade pour la mise en Page Web ?

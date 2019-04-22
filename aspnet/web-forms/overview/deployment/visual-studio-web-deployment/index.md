@@ -12,7 +12,7 @@ ms.openlocfilehash: 3d8a6a102788cb6b5612e9bc537e1c13e7798c54
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378934"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio"></a>Déploiement web ASP.NET avec Visual Studio
@@ -23,7 +23,7 @@ ms.locfileid: "59378934"
 - [Introduction](introduction.md)
 - [Préparation au déploiement de base de données](preparing-databases.md)
 - [Transformations du fichier Web.config](web-config-transformations.md)
-- [Propriétés du projet](project-properties.md)
+- [Propriétés de projet](project-properties.md)
 - [Déploiement à des fins de test](deploying-to-iis.md)
 - [Définition des autorisations des dossiers](setting-folder-permissions.md)
 - [Déploiement à des fins de production](deploying-to-production.md)

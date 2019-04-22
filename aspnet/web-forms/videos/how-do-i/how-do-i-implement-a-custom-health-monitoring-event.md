@@ -12,7 +12,7 @@ ms.openlocfilehash: 48e0449d09ff0dfee4820820fefc89113ff98e84
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383094"
 ---
 # <a name="how-do-i-implement-a-custom-health-monitoring-event"></a>[Comment faire] Implémenter un événement de contrôle d’état personnalisé

@@ -12,7 +12,7 @@ ms.openlocfilehash: 9c5ac1aeff427c78030f789fcb67736020ce3367
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391796"
 ---
 # <a name="caching-data-in-the-architecture-vb"></a>Mise en cache de données dans l’architecture (VB)
@@ -159,7 +159,7 @@ Avec cette modification à `AddCacheItem(key, value)`, invaliding le cache est a
 La mise en cache de couche s classes et des méthodes peuvent servir à manipuler les données en utilisant les techniques nous ve examiné tout au long de ces didacticiels. Pour illustrer l’utilisation des données mises en cache, enregistrer vos modifications dans le `ProductsCL` classe, puis ouvrez le `FromTheArchitecture.aspx` page dans le `Caching` dossier et ajoutez un GridView. À partir de la balise active de s GridView, créez un nouveau ObjectDataSource. Dans l’étape de première Assistant s vous devriez voir le `ProductsCL` classe en tant qu’une des options dans la liste déroulante.
 
 
-[![TIl ProductsCL classe est inclus dans la liste déroulante d’objets Business](caching-data-in-the-architecture-vb/_static/image5.png)](caching-data-in-the-architecture-vb/_static/image4.png)
+[![La classe ProductsCL est incluse dans la liste déroulante d’objets Business](caching-data-in-the-architecture-vb/_static/image5.png)](caching-data-in-the-architecture-vb/_static/image4.png)
 
 **Figure 4**: Le `ProductsCL` classe est incluse dans la liste déroulante d’objets Business ([cliquez pour afficher l’image en taille réelle](caching-data-in-the-architecture-vb/_static/image6.png))
 
@@ -167,7 +167,7 @@ La mise en cache de couche s classes et des méthodes peuvent servir à manipule
 Après avoir sélectionné `ProductsCL`, cliquez sur Suivant. La liste déroulante dans l’onglet sélection a deux éléments - `GetProducts()` et `GetProductsByCategoryID(categoryID)` et l’onglet de mise à jour a l’unique `UpdateProduct` de surcharge. Choisissez le `GetProducts()` méthode à partir de l’onglet Sélection et la `UpdateProducts` méthode à partir de l’onglet de mise à jour et cliquez sur Terminer.
 
 
-[![Til que productscl classe s méthodes sont répertoriées dans la liste déroulante répertorie](caching-data-in-the-architecture-vb/_static/image8.png)](caching-data-in-the-architecture-vb/_static/image7.png)
+[![Les méthodes de classe ProductsCL s sont répertoriés dans la liste déroulante répertorie](caching-data-in-the-architecture-vb/_static/image8.png)](caching-data-in-the-architecture-vb/_static/image7.png)
 
 **Figure 5**: Le `ProductsCL` les méthodes de classe s sont répertoriées dans la liste déroulante répertorie ([cliquez pour afficher l’image en taille réelle](caching-data-in-the-architecture-vb/_static/image9.png))
 

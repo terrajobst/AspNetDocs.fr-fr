@@ -12,7 +12,7 @@ ms.openlocfilehash: ac872869f97aab679384c7cda9f6c8399cd966a3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384688"
 ---
 # <a name="aspnet-mvc-for-the-rest-of-us-part-1"></a>ASP.NET MVC - Fonctionnalité Nous contacter : Partie 1
@@ -24,4 +24,4 @@ Dans cette vidéo Microsoft Joe Stagner génère une fonctionnalité « Contact
 [&#9654;Regardez la vidéo (36 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-for-the-rest-of-us-part-1)
 
 > [!div class="step-by-step"]
-> [Suivant](aspnet-mvc-for-the-rest-of-us-part-2.md)
+> [Next](aspnet-mvc-for-the-rest-of-us-part-2.md)

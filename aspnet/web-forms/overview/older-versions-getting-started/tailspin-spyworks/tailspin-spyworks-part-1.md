@@ -12,7 +12,7 @@ ms.openlocfilehash: 70d2efb789d694a0aaecc046615c7b3622079dc1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385356"
 ---
 # <a name="part-1-file--new-project"></a>Partie 1 : Fichier -> Nouveau projet
@@ -103,4 +103,4 @@ Nous allons également déplacer la Page maître dans le répertoire de Styles. 
 Une fois cela que nous devons modifier la page maître références dans tous les fichiers .aspx générés par la valeur par défaut des pages Web Forms ASP.NET.
 
 > [!div class="step-by-step"]
-> [Suivant](tailspin-spyworks-part-2.md)
+> [Next](tailspin-spyworks-part-2.md)

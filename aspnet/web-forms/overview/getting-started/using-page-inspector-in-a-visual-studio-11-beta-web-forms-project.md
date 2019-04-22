@@ -12,7 +12,7 @@ ms.openlocfilehash: c39e1cf42fde382a9e74d7f865f0dac1aa62ddc8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384231"
 ---
 # <a name="using-page-inspector-for-visual-studio-2012-in-aspnet-web-forms"></a>Utilisation de l’Inspecteur de page pour Visual Studio 2012 dans Web Forms ASP.NET
@@ -25,7 +25,7 @@ par Tim Ammann
 > 
 > Le didacticiel comporte les sections suivantes :
 > 
-> [Prérequis](#_1_prerequisites)
+> [Composants requis](#_1_prerequisites)
 > 
 > [Créer une Application Web](#_2_creating_a)
 > 
@@ -39,7 +39,7 @@ par Tim Ammann
 > 
 > [Aperçu des modifications dans la fenêtre Styles CSS](#_7_previewing_css)
 > 
-> [Synchronisation automatique CSS](#css_auto_sync)
+> [CSS Auto Sync](#css_auto_sync)
 > 
 > [À l’aide du sélecteur de couleurs CSS](#css_color_picker)
 

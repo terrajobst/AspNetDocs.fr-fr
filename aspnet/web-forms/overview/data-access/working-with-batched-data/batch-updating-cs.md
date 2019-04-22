@@ -12,7 +12,7 @@ ms.openlocfilehash: 952dbbc7759e5a8a654ab561bc54011dfb7f8d90
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380078"
 ---
 # <a name="batch-updating-c"></a>Mise à jour par lots (C#)
@@ -31,7 +31,7 @@ Dans le [didacticiel précédent](wrapping-database-modifications-within-a-trans
 Dans ce didacticiel, nous allons créer un GridView où chaque ligne est modifiable (voir Figure 1). Dans la mesure où chaque ligne n’est rendue dans son interface de modification, cet emplacement s aucun nécessaire pour une colonne de la modifier, mettre à jour et les boutons d’annulation. Au lieu de cela, il existe deux boutons de mettre à jour des produits sur la page qui, lorsque vous cliquez dessus, énumérer les lignes de GridView et mettre à jour de la base de données.
 
 
-[![ECCA effectué ligne dans le contrôle GridView est modifiable](batch-updating-cs/_static/image1.gif)](batch-updating-cs/_static/image1.png)
+[![Chaque ligne dans le contrôle GridView est modifiable](batch-updating-cs/_static/image1.gif)](batch-updating-cs/_static/image1.png)
 
 **Figure 1**: Chaque ligne dans le contrôle GridView est modifiable ([cliquez pour afficher l’image en taille réelle](batch-updating-cs/_static/image2.png))
 
@@ -57,12 +57,12 @@ Le prochain plusieurs étapes nous créerons un GridView complètement modifiabl
 Avant de nous soucier de la création d’un GridView où des lignes sont modifiables, permettent de s commencent par simplement afficher les informations de produit. Ouvrez le `BatchUpdate.aspx` page dans le `BatchData` dossier et faites glisser un GridView à partir de la boîte à outils vers le concepteur. Définir les opérations de mappage GridView `ID` à `ProductsGrid` et, à partir de sa balise active, choisir de lier à un nouveau ObjectDataSource nommé `ProductsDataSource`. Configurer l’ObjectDataSource pour récupérer ses données à partir de la `ProductsBLL` classe s `GetProducts` (méthode).
 
 
-[![Cconfiguration de l’ObjectDataSource d’utiliser la classe ProductsBLL](batch-updating-cs/_static/image2.gif)](batch-updating-cs/_static/image3.png)
+[![Configurer pour utiliser la classe ProductsBLL ObjectDataSource](batch-updating-cs/_static/image2.gif)](batch-updating-cs/_static/image3.png)
 
 **Figure 2**: Configurer l’ObjectDataSource à utiliser le `ProductsBLL` classe ([cliquez pour afficher l’image en taille réelle](batch-updating-cs/_static/image4.png))
 
 
-[![Rles données de produit à l’aide de la méthode GetProducts de récup](batch-updating-cs/_static/image3.gif)](batch-updating-cs/_static/image5.png)
+[![Récupérer les données de produit à l’aide de la méthode GetProducts](batch-updating-cs/_static/image3.gif)](batch-updating-cs/_static/image5.png)
 
 **Figure 3**: Récupérer les données de produit à l’aide de la `GetProducts` (méthode) ([cliquez pour afficher l’image en taille réelle](batch-updating-cs/_static/image6.png))
 
@@ -70,7 +70,7 @@ Avant de nous soucier de la création d’un GridView où des lignes sont modifi
 Comme le contrôle GridView, les fonctionnalités de modification ObjectDataSource s sont conçues pour fonctionner sur une ligne par ligne. Pour mettre à jour un jeu d’enregistrements, nous allons devoir écrire un peu de code dans la classe code-behind de pages ASP.NET qui regroupe les données et la transmet à la couche BLL. Par conséquent, définir les listes déroulantes dans le s ObjectDataSource onglets UPDATE, INSERT et DELETE (None). Cliquez sur Terminer pour terminer l’Assistant.
 
 
-[![Set les listes déroulantes dans la mise à jour, insertion et suppression des onglets à (None)](batch-updating-cs/_static/image4.gif)](batch-updating-cs/_static/image7.png)
+[![Définir les listes déroulantes dans la mise à jour, insertion et supprimer des onglets à (None)](batch-updating-cs/_static/image4.gif)](batch-updating-cs/_static/image7.png)
 
 **Figure 4**: La valeur est la liste déroulante répertorie dans la mise à jour, insertion et supprimer des onglets (aucun) ([cliquez pour afficher l’image en taille réelle](batch-updating-cs/_static/image8.png))
 
@@ -107,7 +107,7 @@ S permettent de démarrer avec le `ProductName` TemplateField. Cliquez sur le li
 Ensuite, ajoutez un contrôle RequiredFieldValidator à la `ItemTemplate` pour vous assurer que l’utilisateur fournit une valeur pour chaque nom de produit s. Définir le `ControlToValidate` propriété ProductName, le `ErrorMessage` propriété, vous devez fournir le nom du produit. et le `Text` propriété \*. Après avoir apporté ces ajouts à la `ItemTemplate`, votre écran doit ressembler à la Figure 6.
 
 
-[![TIl ProductName TemplateField inclut désormais une zone de texte et un contrôle RequiredFieldValidator](batch-updating-cs/_static/image6.gif)](batch-updating-cs/_static/image9.png)
+[![Le présent TemplateField ProductName inclut une zone de texte et un contrôle RequiredFieldValidator](batch-updating-cs/_static/image6.gif)](batch-updating-cs/_static/image9.png)
 
 **Figure 6**: Le `ProductName` TemplateField inclut désormais une zone de texte et un contrôle RequiredFieldValidator ([cliquez pour afficher l’image en taille réelle](batch-updating-cs/_static/image10.png))
 
@@ -117,7 +117,7 @@ Pour le `UnitPrice` modification d’interface, commencez par copie de la zone d
 Ajoutez également un CompareValidator pour les `UnitPrice` s `ItemTemplate` pour vous assurer que la valeur entrée par l’utilisateur est une valeur de devise valide supérieure ou égale à 0,00 $. Définir les opérations de mappage du programme de validation `ControlToValidate` propriété UnitPrice, son `ErrorMessage` propriété, vous devez entrer une valeur de devise valide. Veuillez omettre les symboles de devise., son `Text` propriété \*, ses `Type` propriété `Currency`, ses `Operator` propriété `GreaterThanEqual`et son `ValueToCompare` 0 à la propriété.
 
 
-[![Ajj un CompareValidator pour garantir le prix entré est une valeur de devise Non négative](batch-updating-cs/_static/image7.gif)](batch-updating-cs/_static/image11.png)
+[![Ajouter un CompareValidator pour garantir le prix entré est une valeur de devise Non négative](batch-updating-cs/_static/image7.gif)](batch-updating-cs/_static/image11.png)
 
 **Figure 7**: Ajouter un CompareValidator pour garantir le prix entré est une valeur de devise Non négative ([cliquez pour afficher l’image en taille réelle](batch-updating-cs/_static/image12.png))
 
@@ -135,12 +135,12 @@ L’interface de modification dans le `CategoryName` TemplateField s `EditItemTe
 Faites glisser un contrôle DropDownList à partir de la boîte à outils vers le `CategoryName` TemplateField s `ItemTemplate`, ce qui affecte ses `ID` à `Categories`. À ce stade nous généralement définirait la source de données s DropDownList via sa balise active, création d’un nouveau ObjectDataSource. Toutefois, cela ajoutera ObjectDataSource dans le `ItemTemplate`, ce qui entraînera une instance de l’ObjectDataSource créée pour chaque ligne GridView. Au lieu de cela, permettre de s ObjectDataSource en dehors de la s GridView TemplateField. Fin de la modification de modèle et faites glisser un ObjectDataSource à partir de la boîte à outils vers le concepteur sous la `ProductsDataSource` ObjectDataSource. Nommez le nouveau ObjectDataSource `CategoriesDataSource` et configurez-le pour utiliser le `CategoriesBLL` classe s `GetCategories` (méthode).
 
 
-[![Cconfiguration de l’ObjectDataSource d’utiliser la classe CategoriesBLL](batch-updating-cs/_static/image8.gif)](batch-updating-cs/_static/image13.png)
+[![Configurer pour utiliser la classe CategoriesBLL ObjectDataSource](batch-updating-cs/_static/image8.gif)](batch-updating-cs/_static/image13.png)
 
 **Figure 8**: Configurer l’ObjectDataSource à utiliser le `CategoriesBLL` classe ([cliquez pour afficher l’image en taille réelle](batch-updating-cs/_static/image14.png))
 
 
-[![Rles données de catégorie à l’aide de la méthode GetCategories de récup](batch-updating-cs/_static/image9.gif)](batch-updating-cs/_static/image15.png)
+[![Récupérer les données de catégorie à l’aide de la méthode GetCategories](batch-updating-cs/_static/image9.gif)](batch-updating-cs/_static/image15.png)
 
 **Figure 9**: Récupérer les données de catégorie à l’aide de la `GetCategories` (méthode) ([cliquez pour afficher l’image en taille réelle](batch-updating-cs/_static/image16.png))
 
@@ -148,7 +148,7 @@ Faites glisser un contrôle DropDownList à partir de la boîte à outils vers l
 Dans la mesure où cette ObjectDataSource est utilisé simplement pour récupérer des données, définissez les listes déroulantes dans les onglets UPDATE et DELETE (None). Cliquez sur Terminer pour terminer l’Assistant.
 
 
-[![Set les listes déroulantes dans la mise à jour et supprimer les tabulations à (None)](batch-updating-cs/_static/image10.gif)](batch-updating-cs/_static/image17.png)
+[![Définir les listes déroulantes dans la mise à jour et supprimer les tabulations à (None)](batch-updating-cs/_static/image10.gif)](batch-updating-cs/_static/image17.png)
 
 **Figure 10**: La valeur est la liste déroulante répertorie dans la mise à jour et supprimer des onglets (aucun) ([cliquez pour afficher l’image en taille réelle](batch-updating-cs/_static/image18.png))
 
@@ -161,7 +161,7 @@ Après la fin de l’Assistant, le `CategoriesDataSource` balisage déclaratif s
 Avec le `CategoriesDataSource` créé et configuré, revenir à la `CategoryName` TemplateField s `ItemTemplate` et, à partir de la balise active de s DropDownList, cliquez sur le lien de choisir la Source de données. Dans l’Assistant Configuration de Source de données, sélectionnez le `CategoriesDataSource` option dans la première liste déroulante et choisissez les `CategoryName` utilisé pour l’affichage et `CategoryID` comme valeur.
 
 
-[![Bind DropDownList pour la CategoriesDataSource](batch-updating-cs/_static/image11.gif)](batch-updating-cs/_static/image19.png)
+[![Lier l’objet DropDownList pour la CategoriesDataSource](batch-updating-cs/_static/image11.gif)](batch-updating-cs/_static/image19.png)
 
 **Figure 11**: Lier l’objet DropDownList pour la `CategoriesDataSource` ([cliquez pour afficher l’image en taille réelle](batch-updating-cs/_static/image20.png))
 
@@ -190,7 +190,7 @@ Notez comment la `<asp:ListItem Value="">` --sélectionner 1--présente ses `Val
 Nous sauter quelques modifications apportées aux modèles s GridView sans marquer de pause pour afficher notre progression. Prenez un moment pour consulter notre progression via un navigateur. Comme le montre la Figure 13, chaque ligne est restitué à l’aide de son `ItemTemplate`, qui contient le s cellule modification d’interface.
 
 
-[![ECCA effectué ligne GridView est modifiable](batch-updating-cs/_static/image13.gif)](batch-updating-cs/_static/image21.png)
+[![Chaque ligne GridView est modifiable](batch-updating-cs/_static/image13.gif)](batch-updating-cs/_static/image21.png)
 
 **Figure 13**: Chaque ligne GridView est modifiable ([cliquez pour afficher l’image en taille réelle](batch-updating-cs/_static/image22.png))
 
@@ -223,7 +223,7 @@ Une fois que ce qui précède mentionné modifications de mise en forme, ajouter
 Figure 16 illustre cette page lorsqu’ils sont affichés via un navigateur une fois que les contrôles bouton Web ont été ajoutées et les modifications de mise en forme.
 
 
-[![Til désormais inclut deux mises à jour produits boutons de Page](batch-updating-cs/_static/image16.gif)](batch-updating-cs/_static/image23.png)
+[![La Page maintenant inclut deux boutons de produits de mise à jour](batch-updating-cs/_static/image16.gif)](batch-updating-cs/_static/image23.png)
 
 **Figure 16**: La Page maintenant inclut deux mises à jour produits boutons ([cliquez pour afficher l’image en taille réelle](batch-updating-cs/_static/image24.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 8e4fa3f87f09d8872dd4ccc1797c05c229768224
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388281"
 ---
 # <a name="security-authentication-and-authorization-in-aspnet-web-api"></a>Sécurité, authentification et autorisation dans l’API Web ASP.NET
@@ -21,11 +21,11 @@ ms.locfileid: "59388281"
 
 
 - [Authentification et autorisation dans Web API](authentication-and-authorization-in-aspnet-web-api.md)
-- [Sécuriser une API web avec des comptes individuels dans Web API 2.2](individual-accounts-in-web-api.md)
+- [Sécuriser une API web avec des comptes individuels dans Web API 2.2](individual-accounts-in-web-api.md)
 - [Services d’authentification externe avec l’API web (C#)](external-authentication-services.md)
 - [Prévention des attaques par falsification de requête intersites dans l’API web](preventing-cross-site-request-forgery-csrf-attacks.md)
-- [Activation des requêtes cross-origin dans Web API 2](enabling-cross-origin-requests-in-web-api.md)
-- [Filtres d’authentification dans Web API 2](authentication-filters.md)
+- [Activation des requêtes cross-origin dans Web API 2](enabling-cross-origin-requests-in-web-api.md)
+- [Filtres d’authentification dans Web API 2](authentication-filters.md)
 - [Authentification de base dans l’API web](basic-authentication.md)
 - [Authentification par formulaire dans l’API web](forms-authentication.md)
 - [Authentification Windows intégrée](integrated-windows-authentication.md)

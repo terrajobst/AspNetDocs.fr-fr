@@ -12,14 +12,14 @@ ms.openlocfilehash: 8264b48388ee4a6b51515aa2b897ece3b2f3972a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380871"
 ---
 # <a name="understanding-action-filters-c"></a>Présentation des filtres d’actions (C#)
 
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger le PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_14_CS.pdf)
+[Télécharger PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_14_CS.pdf)
 
 > L’objectif de ce didacticiel est d’expliquer les filtres d’action. Un filtre d’action est un attribut que vous pouvez appliquer à une action de contrôleur--ou un ensemble du contrôleur--qui modifie la façon dont dans lequel l’action est exécutée.
 
@@ -49,7 +49,7 @@ Par exemple, le contrôleur de données dans la liste 1 expose une action nommé
 Si vous appelez plusieurs fois le `Index()` action en entrant l’URL/Data/Index dans la barre d’adresses de votre navigateur et en appuyant sur l’actualisation bouton plusieurs fois, vous verrez le même temps pendant 10 secondes. La sortie de la `Index()` action est mise en cache pendant 10 secondes (voir Figure 1).
 
 
-[![Ctemps résultant](understanding-action-filters-cs/_static/image2.png)](understanding-action-filters-cs/_static/image1.png)
+[![Temps en cache](understanding-action-filters-cs/_static/image2.png)](understanding-action-filters-cs/_static/image1.png)
 
 **Figure 01**: Heure de mise en cache ([cliquez pour afficher l’image en taille réelle](understanding-action-filters-cs/_static/image3.png))
 
@@ -107,7 +107,7 @@ Afin d’illustrer comment vous pouvez créer un filtre d’action personnalisé
 Dans la liste 2, le `OnActionExecuting()`, `OnActionExecuted()`, `OnResultExecuting()`, et `OnResultExecuted()` toutes les méthodes appellent le `Log()` (méthode). Le nom de la méthode et les données d’itinéraire actuel est passé à la `Log()` (méthode). Le `Log()` méthode écrit un message dans la fenêtre Sortie de Visual Studio (voir Figure 2).
 
 
-[![Writing à la fenêtre Sortie de Visual Studio](understanding-action-filters-cs/_static/image5.png)](understanding-action-filters-cs/_static/image4.png)
+[![Écriture dans la fenêtre Sortie de Visual Studio](understanding-action-filters-cs/_static/image5.png)](understanding-action-filters-cs/_static/image4.png)
 
 **Figure 02**: Écriture dans la fenêtre Sortie de Visual Studio ([cliquez pour afficher l’image en taille réelle](understanding-action-filters-cs/_static/image6.png))
 

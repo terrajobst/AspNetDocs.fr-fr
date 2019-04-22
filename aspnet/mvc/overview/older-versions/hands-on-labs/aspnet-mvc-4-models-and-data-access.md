@@ -12,7 +12,7 @@ ms.openlocfilehash: 53ca3bc4e550f488f3ae4c41f02a636e747107cb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384888"
 ---
 # <a name="aspnet-mvc-4-models-and-data-access"></a>Modèles ASP.NET MVC 4 et accès aux données
@@ -181,7 +181,7 @@ Dans cette tâche, vous allez créer un modèle de données pour interagir avec 
 
     ![Diagramme de l’entité](aspnet-mvc-4-models-and-data-access/_static/image12.png "diagramme de l’entité")
 
-    *Diagramme des entités*
+    *Diagramme de l’entité*
 
     > [!NOTE]
     > Les modèles T4 (.tt) exécuter du code pour générer les classes d’entités et remplaceront les classes existantes portant le même nom. Dans cet exemple, les classes &quot;Album&quot;, &quot;Genre&quot; et &quot;artiste&quot; ont été remplacés par le code généré.
@@ -552,7 +552,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](aspnet-mvc-4-models-and-data-access/_static/image28.png)
 
-    *Progression de l'installation*
+    *Progression de l’installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](aspnet-mvc-4-models-and-data-access/_static/image29.png)

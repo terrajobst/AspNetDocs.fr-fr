@@ -12,7 +12,7 @@ ms.openlocfilehash: 4fd6ce813a87caf1b3ecd67c5fa59bc536db0f2e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401294"
 ---
 # <a name="aspnet-data-access-technologies-an-introduction-to-linq"></a>Technologies d’accès aux données ASP.NET, une Introduction à LINQ

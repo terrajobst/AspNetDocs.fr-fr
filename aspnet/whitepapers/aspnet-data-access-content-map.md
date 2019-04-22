@@ -12,7 +12,7 @@ ms.openlocfilehash: d120c184f6cf7dd0db075bbfac17214d7467664a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383718"
 ---
 # <a name="aspnet-data-access---recommended-resources"></a>Accès aux données ASP.NET - Ressources recommandées
@@ -55,7 +55,7 @@ La rubrique contient les sections suivantes :
 - [Optimisation des performances accès aux données](#optimizingdataaccess)
 - [Déploiement d’une base de données](#deploying)
 - [L’accès aux données via un Service Web](#webservice)
-- [Ressources supplémentaires](#additional)
+- [Ressources supplémentaires pour MSBuild](#additional)
 
 <a id="gettingstarted"></a>
 

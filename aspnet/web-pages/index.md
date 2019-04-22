@@ -12,7 +12,7 @@ ms.openlocfilehash: 832f89dfdecb71f2664431a4880978f7355246f4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420222"
 ---
 # <a name="aspnet-web-pages"></a>Pages web ASP.NET
@@ -21,28 +21,28 @@ ms.locfileid: "59420222"
 > [!NOTE] 
 > WebMatrix n’est plus recommandé comme un environnement de développement intégré pour ASP.NET Web Pages. Utilisez [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou [Visual Studio Code](https://code.visualstudio.com/).
 
-- [Conseils](overview/index.md)
+- [Aide](overview/index.md)
 
     - [Prise en main](overview/getting-started/index.md)
 
         - [Programmer ASP.NET Web Pages dans Visual Studio](overview/getting-started/program-asp-net-web-pages-in-visual-studio.md)
         - [Introduction à la syntaxe Razor de la programmation web ASP.NET](overview/getting-started/introducing-razor-syntax-c.md)
         - [ASP.NET Web Pages - Visual Basic](overview/getting-started/introducing-razor-syntax-vb.md)
-        - [ASP.NET Web Pages - Questions fréquentes (FAQ) (Razor)](overview/getting-started/aspnet-web-pages-razor-faq.md)
-        - [Envoi d’e-mails à partir de votre site](overview/getting-started/11-adding-email-to-your-web-site.md)
+        - [Pages web ASP.NET - Questions fréquentes (FAQ) (Razor)](overview/getting-started/aspnet-web-pages-razor-faq.md)
+        - [Envoi d’e-mails depuis votre site](overview/getting-started/11-adding-email-to-your-web-site.md)
         - [Ajout de fonctionnalités de réseaux sociaux à votre site web](overview/getting-started/13-adding-social-networking-to-your-web-site.md)
         - [Introduction à ASP.NET Web Pages](overview/getting-started/introducing-aspnet-web-pages-2/index.md)
 
             - [Prise en main](overview/getting-started/introducing-aspnet-web-pages-2/getting-started.md)
             - [Principes de base de la programmation](overview/getting-started/introducing-aspnet-web-pages-2/intro-to-web-pages-programming.md)
-            - [Affichage de données](overview/getting-started/introducing-aspnet-web-pages-2/displaying-data.md)
+            - [Affichage des données](overview/getting-started/introducing-aspnet-web-pages-2/displaying-data.md)
             - [Principes de base des formulaires HTML](overview/getting-started/introducing-aspnet-web-pages-2/form-basics.md)
             - [Saisie de données de la base de données avec des formulaires](overview/getting-started/introducing-aspnet-web-pages-2/entering-data.md)
             - [Mise à jour de données de la base de données](overview/getting-started/introducing-aspnet-web-pages-2/updating-data.md)
             - [Suppression de données de la base de données](overview/getting-started/introducing-aspnet-web-pages-2/deleting-data.md)
             - [Création d’une disposition cohérente](overview/getting-started/introducing-aspnet-web-pages-2/layouts.md)
             - [Publication d’un site avec WebMatrix](overview/getting-started/introducing-aspnet-web-pages-2/publishing.md)
-    - [Routage](overview/routing/index.md)
+    - [Le routage](overview/routing/index.md)
 
         - [Création d’URL lisibles dans les sites ASP.NET Web Pages](overview/routing/creating-readable-urls-in-aspnet-web-pages-sites.md)
     - [Interface utilisateur, dispositions et thèmes](overview/ui-layouts-and-themes/index.md)
@@ -60,9 +60,9 @@ ms.locfileid: "59420222"
     - [Mobile](overview/mobile/index.md)
 
         - [Rendu des sites ASP.NET Web Pages pour les appareils mobiles](overview/mobile/rendering-aspnet-web-pages-sites-for-mobile-devices.md)
-    - [Utilisation de données](overview/data/index.md)
+    - [Utilisation des données](overview/data/index.md)
 
-        - [Utilisation de données](overview/data/5-working-with-data.md)
+        - [Utilisation des données](overview/data/5-working-with-data.md)
         - [Affichage de données dans un graphique](overview/data/7-displaying-data-in-a-chart.md)
         - [Utilisation de fichiers](overview/data/working-with-files.md)
     - [Test et débogage](overview/testing-and-debugging/index.md)
@@ -84,10 +84,10 @@ ms.locfileid: "59420222"
         - [Aide-mémoire de l’API ASP.NET](overview/api-reference/asp-net-web-pages-api-reference.md)
     - [Versions](overview/releases/index.md)
 
-        - [Nouveautés d’ASP.NET Web Pages 3.2](overview/releases/whats-new-in-aspnet-web-pages-32.md)
-        - [Nouveautés d’ASP.NET Web Pages 3.1](overview/releases/whats-new-aspnet-web-pages-31.md)
-        - [Fonctionnalités principales d’ASP.NET Web Pages 2](overview/releases/top-features-in-web-pages-2.md)
-        - [Fichier Lisez-moi d’ASP.NET Web Pages 2 Developer Preview](overview/releases/aspnet-web-pages-2-developer-preview-readme.md)
+        - [Nouveautés d’ASP.NET Web Pages 3.2](overview/releases/whats-new-in-aspnet-web-pages-32.md)
+        - [Nouveautés d’ASP.NET Web Pages 3.1](overview/releases/whats-new-aspnet-web-pages-31.md)
+        - [Fonctionnalités principales d’ASP.NET Web Pages 2](overview/releases/top-features-in-web-pages-2.md)
+        - [Fichier Lisez-moi d’ASP.NET Web Pages 2 Developer Preview](overview/releases/aspnet-web-pages-2-developer-preview-readme.md)
         - [Exécution côte à côte de différentes versions d’ASP.NET Web Pages](overview/releases/running-v1-and-v2-sites-side-by-side.md)
 - [Vidéos](videos/index.md)
 

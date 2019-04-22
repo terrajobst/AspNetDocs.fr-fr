@@ -12,7 +12,7 @@ ms.openlocfilehash: 41ee7309a1cacbb4d1a83378e141b4004dcd8ad7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414645"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-autocomplete-control"></a>[Comment faire] Utiliser le contrôle de saisie semi-automatique d’ASP.NET AJAX

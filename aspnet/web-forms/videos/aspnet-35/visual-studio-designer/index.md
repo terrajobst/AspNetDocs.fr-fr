@@ -12,7 +12,7 @@ ms.openlocfilehash: d1c99b0362d2ff8f00f28af20e4324698b66681c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381079"
 ---
 # <a name="visual-studio-designer"></a>Visual Studio Designer
@@ -20,4 +20,4 @@ ms.locfileid: "59381079"
 > Cette vidéo illustre les fonctionnalités améliorées dans Visual Studio 2008 pour l’utilisation des pages maîtres.
 
 
-- [Visual Studio 2008 et les pages maîtres imbriquées](visual-studio-2008-and-nested-masterpages.md)
+- [Visual Studio 2008 et les pages maîtres imbriquées](visual-studio-2008-and-nested-masterpages.md)

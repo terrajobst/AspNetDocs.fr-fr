@@ -12,7 +12,7 @@ ms.openlocfilehash: fe82cbd43cf374439675ad811586282a1a79f488
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409484"
 ---
 # <a name="supporting-odata-v3-in-aspnet-web-api"></a>Prise en charge d’OData v3 dans l’API Web ASP.NET
@@ -22,5 +22,5 @@ ms.locfileid: "59409484"
 
 - [Création d’un point de terminaison OData v3](creating-an-odata-endpoint.md)
 - [Prise en charge des relations d’entité dans OData v3](working-with-entity-relations.md)
-- [Actions OData dans Web API 2](odata-actions.md)
+- [Actions OData dans Web API 2](odata-actions.md)
 - [Appel à un service OData à partir d’un client .NET (C#)](calling-an-odata-service-from-a-net-client.md)

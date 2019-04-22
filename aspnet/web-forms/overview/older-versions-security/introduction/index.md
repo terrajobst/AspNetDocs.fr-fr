@@ -12,7 +12,7 @@ ms.openlocfilehash: cf64b3c939245d196be3c73309b9ed621581043e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385668"
 ---
 # <a name="aspnet-35---introduction-to-security"></a>ASP.NET 3.5 - Introduction à la sécurité

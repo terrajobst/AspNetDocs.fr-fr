@@ -12,7 +12,7 @@ ms.openlocfilehash: 938d7f696e12496fc4ae79c51e9446d71a898e3e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382886"
 ---
 # <a name="ajax-control-toolkit"></a>Ajax Control Toolkit
@@ -56,7 +56,7 @@ ms.locfileid: "59382886"
 - [Utiliser le contrôle Rating AJAX du kit de ressources ASP.NET](utilize-the-ajax-rating-control-in-the-aspnet-toolkit.md)
 - [Extendeurs de contrôle](control-extenders.md)
 - [Sélecteur de couleurs](color-picker.md)
-- [Combo Box](combo-box.md)
+- [Zone de liste déroulante](combo-box.md)
 - [Contrôle Editor](editor-control.md)
 - [Contrôle Editor personnalisé](editor-control-custom.md)
 - [Créer un extendeur personnalisé](create-a-new-custom-extender.md)

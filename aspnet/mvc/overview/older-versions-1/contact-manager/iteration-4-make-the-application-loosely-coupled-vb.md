@@ -12,7 +12,7 @@ ms.openlocfilehash: 256536150a585a4bb0304f23c3524b18d0f552f0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392376"
 ---
 # <a name="iteration-4--make-the-application-loosely-coupled-vb"></a>Itération #4 : rendre l’application faiblement couplée (VB)
@@ -137,7 +137,7 @@ Pour résoudre ce problème, nous pouvons créer un distinct [couche de service]
 
 Le ContactManagerService est contenue dans la liste 4. Il contient la logique de validation à partir de la classe de contrôleur de Contact.
 
-**Listing 4 - Models\ContactManagerService.vb**
+**Liste 4 - Models\ContactManagerService.vb**
 
 [!code-vb[Main](iteration-4-make-the-application-loosely-coupled-vb/samples/sample4.vb)]
 

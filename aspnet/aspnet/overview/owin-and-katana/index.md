@@ -12,7 +12,7 @@ ms.openlocfilehash: a8ba1ca6b54ae58c23e51981cedebc636fba679e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385590"
 ---
 # <a name="owin-and-katana"></a>OWIN et Katana
@@ -26,5 +26,5 @@ ms.locfileid: "59385590"
 - [Détection de classe de démarrage OWIN](owin-startup-class-detection.md)
 - [Activation de l’authentification Windows dans Katana](enabling-windows-authentication-in-katana.md)
 - [Middleware OWIN dans le pipeline intégré IIS](owin-middleware-in-the-iis-integrated-pipeline.md)
-- [Serveur d’autorisation OAuth 2.0 OWIN](owin-oauth-20-authorization-server.md)
+- [Serveur d’autorisation OAuth 2.0 OWIN](owin-oauth-20-authorization-server.md)
 - [Héberger OWIN dans un rôle worker Azure](host-owin-in-an-azure-worker-role.md)

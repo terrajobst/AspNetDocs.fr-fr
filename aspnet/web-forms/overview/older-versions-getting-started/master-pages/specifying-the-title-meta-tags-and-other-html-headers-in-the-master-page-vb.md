@@ -12,7 +12,7 @@ ms.openlocfilehash: 6e86626c2949543c0a36a210d52ee8297156a017
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382164"
 ---
 # <a name="specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb"></a>Spécification du titre, des balises META et d’autres en-têtes HTML dans la page maître (VB)
@@ -169,7 +169,7 @@ Après cela, visitez le site via un navigateur. Si vous visitez une page dont le
 La figure 5 illustre le `MultipleContentPlaceHolders.aspx` page lorsqu’ils sont affichés via un navigateur. Notez que le titre est précisément de la page Nom du fichier (moins l’extension), « MultipleContentPlaceHolders ».
 
 
-[![If un titre est pas explicitement spécifié, nom de fichier de la Page est automatiquement utilisé](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image6.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image5.png)
+[![Si un titre n’est pas explicitement spécifié, le nom de fichier de la Page est automatiquement utilisé](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image6.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image5.png)
 
 **Figure 05**: Si un titre n’est pas explicitement spécifié, le nom de fichier de la Page est automatiquement utilisé ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image7.png))
 
@@ -191,7 +191,7 @@ Le système de mappage de site est construit sur le [modèle de fournisseur](htt
 Commencez par créer un fichier de mappage de site dans le dossier de racine du site Web nommé `Web.sitemap`. Pour ce faire, avec le bouton droit sur le nom de site Web dans l’Explorateur de solutions, choisissez Ajouter un nouvel élément, sélectionnez le modèle de plan de Site. Assurez-vous que le fichier est nommé `Web.sitemap` et cliquez sur Ajouter.
 
 
-[![Ajj un Web.sitemap nommé du fichier au dossier de racine du site Web](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image9.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image8.png)
+[![Ajoutez un fichier nommé Web.sitemap au dossier de racine du site Web](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image9.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image8.png)
 
 **Figure 06**: Ajouter un fichier nommé `Web.sitemap` au dossier racine du site Web de ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image10.png))
 
@@ -224,7 +224,7 @@ Démarrez en supprimant le balisage existant de la liste non triée de la sectio
 À partir de l’Assistant de Configuration de Source de données choisir de lier le ListView à un nouveau contrôle SiteMapDataSource nommé `LessonsDataSource`. Le contrôle SiteMapDataSource retourne la structure hiérarchique du système de site map.
 
 
-[![Bchercher un contrôle SiteMapDataSource pour le contrôle ListView de LessonsList](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image13.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image12.png)
+[![Lier un contrôle SiteMapDataSource au contrôle ListView de LessonsList](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image13.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image12.png)
 
 **Figure 08**: Lier un contrôle SiteMapDataSource au contrôle ListView LessonsList ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image14.png))
 
@@ -239,7 +239,7 @@ Le `LayoutTemplate` génère le balisage pour une liste non triée (`<ul>...</ul
 Après avoir configuré les modèles de la ListView, visitez le site Web. Comme le montre la Figure 9, la section de leçons contient un seul élément de liste à puces, accueil. Où se trouvent les propos et à l’aide de leçons de contrôles ContentPlaceHolder plusieurs ? SiteMapDataSource est conçue pour retourner un ensemble hiérarchique de données, mais le contrôle ListView peut uniquement afficher un seul niveau de la hiérarchie. Par conséquent, seul le premier niveau de nœuds retourné par SiteMapDataSource s’affiche.
 
 
-[![TIl leçons Section contient un seul élément de liste](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image16.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image15.png)
+[![La Section leçons contient un seul élément de liste](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image16.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image15.png)
 
 **Figure 09**: La Section leçons contient un seul élément de liste ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image17.png))
 
@@ -254,7 +254,7 @@ Avec cette modification, le ListView affiche les éléments de liste à puces po
 En configurant SiteMapDataSource pour omettre le nœud de démarrage et en ajoutant explicitement un élément de liste à puces d’accueil, la section leçons affiche désormais la sortie prévue.
 
 
-[![TIl leçons Section contient une liste à puces d’élément pour chaque nœud enfant et personnels](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image19.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image18.png)
+[![La Section leçons contient un élément de liste à puces pour chaque nœud enfant et personnels](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image19.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image18.png)
 
 **Figure 10**: La Section leçons contient un élément de liste à puces pour chaque nœud enfant et personnels ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image20.png))
 

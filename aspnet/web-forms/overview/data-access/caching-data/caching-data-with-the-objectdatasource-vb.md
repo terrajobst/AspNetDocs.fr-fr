@@ -12,7 +12,7 @@ ms.openlocfilehash: 6bde070dae3b295c8d7a04098b874d41fab54830
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380208"
 ---
 # <a name="caching-data-with-the-objectdatasource-vb"></a>Mise en cache de données avec ObjectDataSource (VB)
@@ -66,7 +66,7 @@ Avant de commencer notre exploration des fonctionnalités de mise en cache de s 
 Comme dans les autres dossiers, `Default.aspx` dans le `Caching` dossier répertorie les didacticiels dans sa section. N’oubliez pas que le `SectionLevelTutorialListing.ascx` contrôle utilisateur fournit cette fonctionnalité. Par conséquent, ajoutez ce contrôle utilisateur à `Default.aspx` en le faisant glisser à partir de l’Explorateur de solutions sur la page s en mode Création.
 
 
-[![Figure 2 : Ajoutez le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx](caching-data-with-the-objectdatasource-vb/_static/image3.png)](caching-data-with-the-objectdatasource-vb/_static/image2.png)
+[![Figure 2 : Ajouter le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx](caching-data-with-the-objectdatasource-vb/_static/image3.png)](caching-data-with-the-objectdatasource-vb/_static/image2.png)
 
 **Figure 2**: Figure 2 : Ajouter le `SectionLevelTutorialListing.ascx` contrôle utilisateur à `Default.aspx` ([cliquez pour afficher l’image en taille réelle](caching-data-with-the-objectdatasource-vb/_static/image4.png))
 
@@ -91,7 +91,7 @@ Ce didacticiel explore l’utilisation de l’ObjectDataSource contrôle s mise 
 Commencez par ouvrir le `ObjectDataSource.aspx` page dans le `Caching` dossier. Faites glisser un GridView à partir de la boîte à outils vers le concepteur, définissez son `ID` propriété `Products`et, à partir de sa balise active, choisir de lier à un nouveau contrôle ObjectDataSource nommé `ProductsDataSource`. Configurer l’ObjectDataSource pour travailler avec la `ProductsBLL` classe.
 
 
-[![Cconfiguration de l’ObjectDataSource d’utiliser la classe ProductsBLL](caching-data-with-the-objectdatasource-vb/_static/image7.png)](caching-data-with-the-objectdatasource-vb/_static/image6.png)
+[![Configurer pour utiliser la classe ProductsBLL ObjectDataSource](caching-data-with-the-objectdatasource-vb/_static/image7.png)](caching-data-with-the-objectdatasource-vb/_static/image6.png)
 
 **Figure 4**: Configurer l’ObjectDataSource à utiliser le `ProductsBLL` classe ([cliquez pour afficher l’image en taille réelle](caching-data-with-the-objectdatasource-vb/_static/image8.png))
 
@@ -99,7 +99,7 @@ Commencez par ouvrir le `ObjectDataSource.aspx` page dans le `Caching` dossier. 
 Pour cette page, permettent de créer un GridView modifiable afin que nous pouvons examiner ce qui se passe lors de la modification de données mises en cache dans ObjectDataSource via l’interface de s GridView s. Laissez la liste déroulante dans l’onglet Sélection sa valeur par défaut, `GetProducts()`, mais modifier l’élément sélectionné dans l’onglet de mise à jour pour le `UpdateProduct` surcharge qui accepte `productName`, `unitPrice`, et `productID` comme paramètres d’entrée.
 
 
-[![Set la liste de déroulante onglet s mise à jour à la surcharge appropriée UpdateProduct](caching-data-with-the-objectdatasource-vb/_static/image10.png)](caching-data-with-the-objectdatasource-vb/_static/image9.png)
+[![La valeur de la liste déroulante de mise à jour onglet s la surcharge appropriée UpdateProduct](caching-data-with-the-objectdatasource-vb/_static/image10.png)](caching-data-with-the-objectdatasource-vb/_static/image9.png)
 
 **Figure 5**: La valeur de la liste déroulante de s onglet de mise à jour le convenant `UpdateProduct` de surcharge ([cliquez pour afficher l’image en taille réelle](caching-data-with-the-objectdatasource-vb/_static/image11.png))
 
@@ -114,7 +114,7 @@ Rendre le contrôle GridView modifiables en cochant la case Activer la modificat
 > Vous avez besoin d’une révision de la personnalisation de l’interface de modification s GridView ? Dans ce cas, vous référer à la [personnalisation de l’Interface de Modification de données](../editing-inserting-and-deleting-data/customizing-the-data-modification-interface-vb.md) didacticiel.
 
 
-[![EActiver la prise en charge de GridView pour modification, le tri et la pagination](caching-data-with-the-objectdatasource-vb/_static/image13.png)](caching-data-with-the-objectdatasource-vb/_static/image12.png)
+[![Activer la prise en charge de GridView pour modification, le tri et pagination](caching-data-with-the-objectdatasource-vb/_static/image13.png)](caching-data-with-the-objectdatasource-vb/_static/image12.png)
 
 **Figure 6**: Activer la prise en charge de GridView pour modification, le tri et la pagination ([cliquez pour afficher l’image en taille réelle](caching-data-with-the-objectdatasource-vb/_static/image14.png))
 
@@ -127,7 +127,7 @@ Après avoir apporté ces modifications de GridView, le balisage déclaratif s G
 Comme le montre la Figure 7, le contrôle GridView modifiable répertorie le nom, la catégorie et le prix de chacun des produits dans la base de données. Prenez un moment pour tester le tri de la fonctionnalité de page s les résultats, les, parcourir et modifier un enregistrement.
 
 
-[![ECCA produit s nom, catégorie et le prix est répertorié dans un triable, Pageable GridView modifiable](caching-data-with-the-objectdatasource-vb/_static/image16.png)](caching-data-with-the-objectdatasource-vb/_static/image15.png)
+[![Chaque nom de produit, la catégorie et le prix sont répertorié dans un triable, Pageable modifiable GridView](caching-data-with-the-objectdatasource-vb/_static/image16.png)](caching-data-with-the-objectdatasource-vb/_static/image15.png)
 
 **Figure 7**: Chaque nom de produit, la catégorie et le prix sont répertorié dans un triable, Pageable GridView modifiable ([cliquez pour afficher l’image en taille réelle](caching-data-with-the-objectdatasource-vb/_static/image17.png))
 
@@ -141,7 +141,7 @@ Cette séquence d’événements se produit chaque fois que le contrôle GridVie
 Pour apprécier entièrement la fréquence avec laquelle les données sont récupérées à partir de la base de données, permettent d’afficher un message indiquant que lorsque les données sont ré-récupérées de s. Ajouter un contrôle étiquette au-dessus de la GridView nommé `ODSEvents`. Effacez son `Text` propriété et définissez son `EnableViewState` propriété `False`. Sous l’étiquette, ajoutez un contrôle Web de bouton et définissez son `Text` propriété pour la publication (postback).
 
 
-[![Ajj une étiquette et un bouton à la Page ci-dessus GridView](caching-data-with-the-objectdatasource-vb/_static/image19.png)](caching-data-with-the-objectdatasource-vb/_static/image18.png)
+[![Ajouter une étiquette et un bouton à la Page au-dessus de la GridView](caching-data-with-the-objectdatasource-vb/_static/image19.png)](caching-data-with-the-objectdatasource-vb/_static/image18.png)
 
 **Figure 8**: Ajouter une étiquette et un bouton à la Page ci-dessus GridView ([cliquez pour afficher l’image en taille réelle](caching-data-with-the-objectdatasource-vb/_static/image20.png))
 
@@ -156,12 +156,12 @@ L’étiquette affiche chaque fois que ObjectDataSource effectue une demande à 
 Visitez cette page dans un navigateur. Lorsque la page est visitée en premier, l’événement de sélection de texte déclenché s’affiche. Cliquez sur le bouton de publication (postback) et notez que le texte disparaît (en supposant que les opérations de mappage GridView `EnableViewState` propriété est définie sur `True`, la valeur par défaut). Il s’agit, car, lors de la publication, le contrôle GridView est reconstruit à partir de son état d’affichage et par conséquent ne se tourner vers ObjectDataSource pour ses données. Tri, la pagination ou de modification de données, cependant, entraîne le contrôle GridView à relier à sa source de données, et par conséquent, l’événement de sélection de l’option déclenché s’affiche de nouveau texte.
 
 
-[![Whenever que le contrôle GridView est de nouveau lié à sa Source de données, le déclenchement d’événement sélection est affichée](caching-data-with-the-objectdatasource-vb/_static/image22.png)](caching-data-with-the-objectdatasource-vb/_static/image21.png)
+[![Chaque fois que le contrôle GridView est de nouveau lié à sa Source de données, sélection déclenché d’événement s’affiche.](caching-data-with-the-objectdatasource-vb/_static/image22.png)](caching-data-with-the-objectdatasource-vb/_static/image21.png)
 
 **Figure 9**: Chaque fois que le contrôle GridView est de nouveau lié à sa Source de données, le déclenchement d’événement sélection s’affiche ([cliquez pour afficher l’image en taille réelle](caching-data-with-the-objectdatasource-vb/_static/image23.png))
 
 
-[![Ccliquant sur le bouton provoque la publication (postback) le contrôle GridView à être reconstruites à partir de son état d’affichage](caching-data-with-the-objectdatasource-vb/_static/image25.png)](caching-data-with-the-objectdatasource-vb/_static/image24.png)
+[![Cliquant sur le bouton provoque la publication (postback) le contrôle GridView à être reconstruites à partir de son état d’affichage](caching-data-with-the-objectdatasource-vb/_static/image25.png)](caching-data-with-the-objectdatasource-vb/_static/image24.png)
 
 **Figure 10**: Sur le bouton de publication (postback), le contrôle GridView à être reconstruites à partir de son état d’affichage ([cliquez pour afficher l’image en taille réelle](caching-data-with-the-objectdatasource-vb/_static/image26.png))
 
@@ -180,7 +180,7 @@ En définissant simplement quelques propriétés, ObjectDataSource peut être co
 S permettent de configurer le `ProductsDataSource` ObjectDataSource pour mettre en cache ses données pendant 30 secondes sur une échelle absolue. Définir les opérations de mappage ObjectDataSource `EnableCaching` propriété `True` et son `CacheDuration` propriété à 30. Laissez le `CacheExpirationPolicy` sa valeur par défaut, la valeur de propriété `Absolute`.
 
 
-[![Cconfiguration de l’ObjectDataSource pour mettre en Cache ses données pendant 30 secondes](caching-data-with-the-objectdatasource-vb/_static/image28.png)](caching-data-with-the-objectdatasource-vb/_static/image27.png)
+[![Configurer l’ObjectDataSource pour mettre en Cache ses données pendant 30 secondes](caching-data-with-the-objectdatasource-vb/_static/image28.png)](caching-data-with-the-objectdatasource-vb/_static/image27.png)
 
 **Figure 11**: Configurer l’ObjectDataSource pour mettre en Cache ses données pendant 30 secondes ([cliquez pour afficher l’image en taille réelle](caching-data-with-the-objectdatasource-vb/_static/image29.png))
 

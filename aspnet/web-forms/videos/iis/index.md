@@ -12,7 +12,7 @@ ms.openlocfilehash: 883b5c3ad39922ddd51ea1d07b8d52d1c74d2153
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384290"
 ---
 # <a name="general-iis-tips"></a>Conseils généraux pour IIS

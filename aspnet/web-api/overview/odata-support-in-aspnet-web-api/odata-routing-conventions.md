@@ -13,7 +13,7 @@ ms.openlocfilehash: 8916f8b7a024636be1be055457081487f46a7936
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421626"
 ---
 # <a name="routing-conventions-in-aspnet-web-api-2-odata"></a>Conventions d’itinéraire dans ASP.NET Web API 2 Odata
@@ -101,7 +101,7 @@ Pour plus d’informations, consultez [utilisation des Relations d’entité](od
 
 Pour plus d’informations, consultez [utilisation des Relations d’entité](odata-v3/working-with-entity-relations.md).
 
-**Properties**
+**Propriétés**
 
 *Nécessite l’API Web 2*
 
