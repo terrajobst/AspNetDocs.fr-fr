@@ -13,14 +13,14 @@ ms.openlocfilehash: 5634a5d766cdceffc509962d80b0aaa8880d2f8b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397095"
 ---
-# <a name="aspnet-4x-identity-features--api"></a><span data-ttu-id="72fc3-103">API et des fonctionnalités d’identité ASP.NET 4.x</span><span class="sxs-lookup"><span data-stu-id="72fc3-103">ASP.NET 4.x Identity Features & API</span></span>
+# <a name="aspnet-4x-identity-features--api"></a><span data-ttu-id="47a68-103">API et des fonctionnalités d’identité ASP.NET 4.x</span><span class="sxs-lookup"><span data-stu-id="47a68-103">ASP.NET 4.x Identity Features & API</span></span>
 
-> <span data-ttu-id="72fc3-104">Fonctionnalités et API</span><span class="sxs-lookup"><span data-stu-id="72fc3-104">Features & API</span></span>
+> <span data-ttu-id="47a68-104">Fonctionnalités et API</span><span class="sxs-lookup"><span data-stu-id="47a68-104">Features & API</span></span>
 
 
-- [<span data-ttu-id="72fc3-105">Bonnes pratiques pour le déploiement des mots de passe et d’autres données sensibles sur ASP.NET et Azure App Service</span><span class="sxs-lookup"><span data-stu-id="72fc3-105">Best practices for deploying passwords and other sensitive data to ASP.NET and Azure App Service</span></span>](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)
-- [<span data-ttu-id="72fc3-106">Confirmation de compte et récupération de mot de passe avec ASP.NET Identity (C#)</span><span class="sxs-lookup"><span data-stu-id="72fc3-106">Account Confirmation and Password Recovery with ASP.NET Identity (C#)</span></span>](account-confirmation-and-password-recovery-with-aspnet-identity.md)
-- [<span data-ttu-id="72fc3-107">Authentification à deux facteurs par SMS et e-mail avec ASP.NET Identity</span><span class="sxs-lookup"><span data-stu-id="72fc3-107">Two-factor authentication using SMS and email with ASP.NET Identity</span></span>](two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
+- [<span data-ttu-id="47a68-105">Bonnes pratiques pour le déploiement des mots de passe et d’autres données sensibles sur ASP.NET et Azure App Service</span><span class="sxs-lookup"><span data-stu-id="47a68-105">Best practices for deploying passwords and other sensitive data to ASP.NET and Azure App Service</span></span>](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)
+- [<span data-ttu-id="47a68-106">Confirmation de compte et récupération de mot de passe avec ASP.NET Identity (C#)</span><span class="sxs-lookup"><span data-stu-id="47a68-106">Account Confirmation and Password Recovery with ASP.NET Identity (C#)</span></span>](account-confirmation-and-password-recovery-with-aspnet-identity.md)
+- [<span data-ttu-id="47a68-107">Authentification à deux facteurs par SMS et e-mail avec ASP.NET Identity</span><span class="sxs-lookup"><span data-stu-id="47a68-107">Two-factor authentication using SMS and email with ASP.NET Identity</span></span>](two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
