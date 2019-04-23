@@ -12,7 +12,7 @@ ms.openlocfilehash: f2d60b977475e048a3a74aabff4adc768ee22baf
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402646"
 ---
 # <a name="unit-testing-aspnet-web-api-2"></a>ASP.NET Web API 2 de tests unitaires
@@ -36,7 +36,7 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 
 Cette rubrique contient les sections suivantes :
 
-- [Prérequis](#prereqs)
+- [Composants requis](#prereqs)
 - [Télécharger le code](#download)
 - [Créer des applications avec le projet de test unitaire](#appwithunittest)
     - [Ajouter le projet de test unitaire lors de la création de l’application](#whencreate)
@@ -44,7 +44,7 @@ Cette rubrique contient les sections suivantes :
 - [Configuration de l’application Web API 2](#setupproject)
 - [Installer les packages NuGet dans le projet de test](#testpackages)
 - [Créer des tests](#tests)
-- [Exécuter les tests](#runtests)
+- [Exécuter des tests](#runtests)
 
 <a id="prereqs"></a>
 ## <a name="prerequisites"></a>Prérequis

@@ -12,7 +12,7 @@ ms.openlocfilehash: f5a2bfbf58bf0ac7baa32fc7ad8d7ff619e10dd0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399799"
 ---
 # <a name="how-to-remove-columns-from-your-dynamicdata-data-grids"></a>Comment supprimer des colonnes dans vos grilles de données DynamicData

@@ -12,7 +12,7 @@ ms.openlocfilehash: 1b955c43a0fc95bda87843fc4a5c9e56aef3dfc6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400995"
 ---
 # <a name="drag-and-drop-via-reorderlist-vb"></a>Glisser-déplacer via ReorderList (VB)
@@ -44,7 +44,7 @@ Dans cette base de données, créez une nouvelle table appelée `AJAX` avec les 
 - `position` (int, NULL)
 
 
-[![Tdisposition he de la table AJAX](drag-and-drop-via-reorderlist-vb/_static/image2.png)](drag-and-drop-via-reorderlist-vb/_static/image1.png)
+[![La disposition de la table d’AJAX](drag-and-drop-via-reorderlist-vb/_static/image2.png)](drag-and-drop-via-reorderlist-vb/_static/image1.png)
 
 La disposition de la table AJAX ([cliquez pour afficher l’image en taille réelle](drag-and-drop-via-reorderlist-vb/_static/image3.png))
 
@@ -52,7 +52,7 @@ La disposition de la table AJAX ([cliquez pour afficher l’image en taille rée
 Ensuite, remplissez la table avec deux valeurs. Notez que le `position` colonne contient l’ordre de tri des éléments.
 
 
-[![THE initiale des données dans la table AJAX](drag-and-drop-via-reorderlist-vb/_static/image5.png)](drag-and-drop-via-reorderlist-vb/_static/image4.png)
+[![Les données initiales dans la table d’AJAX](drag-and-drop-via-reorderlist-vb/_static/image5.png)](drag-and-drop-via-reorderlist-vb/_static/image4.png)
 
 Les données initiales dans la table AJAX ([cliquez pour afficher l’image en taille réelle](drag-and-drop-via-reorderlist-vb/_static/image6.png))
 
@@ -83,7 +83,7 @@ Enfin, un `ScriptManager` contrôle initialise ASP.NET AJAX pour la page :
 Exécuter cet exemple dans le navigateur et réorganiser les éléments de liste un peu. Ensuite, rechargez la page et/ou un coup de œil à la base de données. Les positions modifiées ont été maintenues et sont également appliquées par les valeurs de la `position` colonne dans la base de données et tout cela sans aucun code, juste à l’aide de balisage.
 
 
-[![Til les données dans les modifications de base de données en fonction de la nouvelle commande d’élément de liste](drag-and-drop-via-reorderlist-vb/_static/image8.png)](drag-and-drop-via-reorderlist-vb/_static/image7.png)
+[![Les données dans les modifications de base de données en fonction de la nouvelle commande d’élément de liste](drag-and-drop-via-reorderlist-vb/_static/image8.png)](drag-and-drop-via-reorderlist-vb/_static/image7.png)
 
 Élément de données dans les modifications de base de données en fonction de la nouvelle liste d’ordre ([cliquez pour afficher l’image en taille réelle](drag-and-drop-via-reorderlist-vb/_static/image9.png))
 

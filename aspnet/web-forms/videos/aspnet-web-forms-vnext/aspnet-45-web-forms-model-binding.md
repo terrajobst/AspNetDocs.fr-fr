@@ -12,7 +12,7 @@ ms.openlocfilehash: 9ef5f8768b21f8161d3d2a64bc962f7e021a1ee2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400644"
 ---
 # <a name="aspnet-45-web-forms-model-binding"></a>Liaison de modèle Web Forms ASP.NET 4.5

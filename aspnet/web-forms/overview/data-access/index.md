@@ -12,7 +12,7 @@ ms.openlocfilehash: d2f9d48618a102df7ea24a6d2a80b5c3026c7752
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405402"
 ---
 # <a name="older-versions---data-access"></a>Versions antérieures - Accès aux données
@@ -130,7 +130,7 @@ ms.locfileid: "59405402"
 
     - [Boutons personnalisés dans les contrôles DataList et Repeater (C#)](custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-cs.md)
     - [Boutons personnalisés dans les contrôles DataList et Repeater (VB)](custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-vb.md)
-- [Accès à la base de données directement à partir d’une page ASP.NET](accessing-the-database-directly-from-an-aspnet-page/index.md)
+- [Accès à la base de données directement depuis une page ASP.NET](accessing-the-database-directly-from-an-aspnet-page/index.md)
 
     - [Interrogation des données avec le contrôle SqlDataSource (C#)](accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs.md)
     - [Utilisation de requêtes paramétrables avec SqlDataSource (C#)](accessing-the-database-directly-from-an-aspnet-page/using-parameterized-queries-with-the-sqldatasource-cs.md)

@@ -12,16 +12,16 @@ ms.openlocfilehash: 74ebdc39a81d31fb3c1ef3e5bab1857915cdc247
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400934"
 ---
 # <a name="aspnet-single-page-application"></a>Application de Page ASP.NET unique
 
-- [Vue d'ensemble](overview/index.md)
+- [Vue d’ensemble](overview/index.md)
 
     - [Introduction](overview/introduction/index.md)
 
-        - [Application à une seule page : modèle KnockoutJS](overview/introduction/knockoutjs-template.md)
+        - [Application à Page unique : Modèle KnockoutJS](overview/introduction/knockoutjs-template.md)
         - [Bibliothèques autres que Knockout](overview/introduction/other-libraries.md)
     - [Modèles](overview/templates/index.md)
 

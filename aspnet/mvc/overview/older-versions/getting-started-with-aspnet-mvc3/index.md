@@ -12,7 +12,7 @@ ms.openlocfilehash: 20fdfd00826d1b033c2d5dd9500915cb784896e5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406455"
 ---
 # <a name="getting-started-with-aspnet-mvc3"></a>Bien démarrer avec ASP.NET MVC 3
@@ -20,9 +20,9 @@ ms.locfileid: "59406455"
 > Les principes fondamentaux de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express.
 
 
-- [Bien démarrer avec ASP.NET MVC 3 (C#)](cs/index.md)
+- [Bien démarrer avec ASP.NET MVC 3 (C#)](cs/index.md)
 
-    - [Introduction à ASP.NET MVC 3 (C#)](cs/intro-to-aspnet-mvc-3.md)
+    - [Introduction à ASP.NET MVC 3 (C#)](cs/intro-to-aspnet-mvc-3.md)
     - [Ajout d’un contrôleur (C#)](cs/adding-a-controller.md)
     - [Ajout d’une vue (C#)](cs/adding-a-view.md)
     - [Ajout d’un modèle (C#)](cs/adding-a-model.md)

@@ -9,7 +9,7 @@ ms.openlocfilehash: 42469611f94b374d6692a1c2017aced77a0a414c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403855"
 ---
 # <a name="adding-a-view"></a>Ajout d’une vue
@@ -68,7 +68,7 @@ Tout d’abord, vous souhaitez modifier le &quot;nom de l’Application&quot; li
 
 ![_LayoutCshtml](adding-a-view/_static/image7.png)
 
-Modèles de disposition permettent de spécifier la disposition du conteneur HTML de votre site au même endroit et de l’appliquer sur plusieurs pages de votre site. Recherchez la ligne `@RenderBody()`. `RenderBody` est un espace réservé où tous les affichage spécifique au pages que vous créez s’affichent, &quot;encapsulé&quot; dans la page de disposition. Par exemple, si vous sélectionnez le **sur** lien, le *Views\Home\About.cshtml* vue est restituée à l’intérieur de la `RenderBody` (méthode).
+Modèles de disposition permettent de spécifier la disposition du conteneur HTML de votre site au même endroit et de l’appliquer sur plusieurs pages de votre site. Recherchez la ligne `@RenderBody()`. `RenderBody` est un espace réservé dans lequel toutes les pages spécifiques aux vues que vous créez s’affichent, &quot;encapsulées&quot; dans la page de disposition. Par exemple, si vous sélectionnez le **sur** lien, le *Views\Home\About.cshtml* vue est restituée à l’intérieur de la `RenderBody` (méthode).
 
 Changez le contenu de l’élément title. Modifier le [ActionLink](https://msdn.microsoft.com/library/dd504972(v=vs.108).aspx) dans le modèle de disposition &quot;nom de l’Application&quot; à &quot;MVC Movie&quot; et le contrôleur `Home` à `Movies`. Le fichier de disposition complète est illustré ci-dessous :
 

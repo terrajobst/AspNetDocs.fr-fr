@@ -12,7 +12,7 @@ ms.openlocfilehash: d6b48d676c2dd90fc052b338f31a389e0fb809be
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402308"
 ---
 # <a name="authenticating-users-with-windows-authentication-vb"></a>Authentification des utilisateurs avec l’authentification Windows (VB)

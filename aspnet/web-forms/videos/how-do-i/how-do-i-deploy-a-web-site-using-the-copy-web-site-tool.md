@@ -12,7 +12,7 @@ ms.openlocfilehash: 359a17a04c45d2ff0f0b5c02f1233c3abfb12945
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403738"
 ---
 # <a name="how-do-i-deploy-a-web-site-using-the-copy-web-site-tool"></a>[Comment faire] Déployer un Site Web à l’aide de l’outil Copier le Site Web

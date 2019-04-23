@@ -12,7 +12,7 @@ ms.openlocfilehash: c681415920bb0bfb4bc1c012e42fb5a528db93ca
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406832"
 ---
 # <a name="using-web-api-2-with-entity-framework-6"></a>Utilisation de Web API 2 avec Entity Framework 6
@@ -101,4 +101,4 @@ Après avoir créé le projet, vous pouvez choisir de déployer dans Azure App S
 
 
 > [!div class="step-by-step"]
-> [Suivant](part-2.md)
+> [Next](part-2.md)

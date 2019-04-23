@@ -12,7 +12,7 @@ ms.openlocfilehash: 6b989e384612f2d663afd431e8daa3afd17f6e6b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399774"
 ---
 # <a name="adonet-data-services"></a>ADO.NET Data Services
@@ -22,4 +22,4 @@ ms.locfileid: "59399774"
 
 - [Couches d’accès aux données dans les applications ASP.NET](data-access-layers-in-aspnet-applications.md)
 - [Lier manuellement un dataset à un contrôle Datagrid](how-to-manually-bind-a-dataset-to-a-datagrid.md)
-- [Utiliser des datasets et des filtres à partir d’une application ASP](how-to-work-with-datasets-and-filters-from-an-asp-application.md)
+- [Utiliser des datasets et des filtres depuis une application ASP](how-to-work-with-datasets-and-filters-from-an-asp-application.md)

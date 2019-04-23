@@ -12,7 +12,7 @@ ms.openlocfilehash: 6a5c9746443813849c65c796ea434730df03d009
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405012"
 ---
 # <a name="aspnet-mvc-storefront-part-7-routing-and-ui-work"></a>Application Storefront ASP.NET MVC, partie 7 : Travail sur l’interface utilisateur et le routage

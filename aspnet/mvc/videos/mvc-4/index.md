@@ -12,7 +12,7 @@ ms.openlocfilehash: cddf4c754ab2c8e8ad2671819cf61d0a7f336bf0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407482"
 ---
 # <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
@@ -20,5 +20,5 @@ ms.locfileid: "59407482"
 > ASP.NET MVC 4
 
 
-- [Utilisation de l'Inspecteur de page dans ASP.NET MVC](using-page-inspector-in-aspnet-mvc.md)
+- [Utilisation de l’Inspecteur de page dans ASP.NET MVC](using-page-inspector-in-aspnet-mvc.md)
 - [ASP.NET MVC 4](aspnet-mvc-4.md)

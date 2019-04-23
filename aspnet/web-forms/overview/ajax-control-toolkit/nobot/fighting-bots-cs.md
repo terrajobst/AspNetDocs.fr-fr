@@ -12,7 +12,7 @@ ms.openlocfilehash: 178d839f67d70670b3b5acf470acb7ae8cf1c33f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405805"
 ---
 # <a name="fighting-bots-c"></a>Lutte contre les robots (C#)
@@ -65,9 +65,9 @@ Enfin, vous avez besoin d’un formulaire à envoyer et un élément d’étique
 Lorsque vous exécutez ce script et désactivez JavaScript ou envoyez le formulaire dans les deux premières secondes ou soumettez le formulaire sept fois au sein de trente secondes, vous obtiendrez un message d’erreur. Toutefois utiliser ce contrôle avec soin, puisque qu’environ 90 à 95 % des utilisateurs ont JavaScript activated, par conséquent 5-10 % des utilisateurs ne sera pas `NoBot`du test.
 
 
-[![Tmessage d’erreur peut être dû à un robot](fighting-bots-cs/_static/image2.png)](fighting-bots-cs/_static/image1.png)
+[![Ce message d’erreur peut être dû à un robot](fighting-bots-cs/_static/image2.png)](fighting-bots-cs/_static/image1.png)
 
 Ce message d’erreur peut être dû à un robot ([cliquez pour afficher l’image en taille réelle](fighting-bots-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](fighting-bots-vb.md)
+> [Next](fighting-bots-vb.md)

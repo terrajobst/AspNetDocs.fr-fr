@@ -12,7 +12,7 @@ ms.openlocfilehash: a63bca69f137a4d4765db6a4925ff027c9d8bf7d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403582"
 ---
 # <a name="tutorial-server-broadcast-with-aspnet-signalr-1x"></a>Tutoriel : Diffusion par le serveur avec ASP.NET SignalR 1.x
@@ -42,7 +42,7 @@ Régulièrement le serveur de façon aléatoire met à jour de bourse et envoie 
 
 Ce didacticiel contient les sections suivantes :
 
-- [Prérequis](#prerequisites)
+- [Composants requis](#prerequisites)
 - [Créer le projet](#createproject)
 - [Ajoutez les packages NuGet de SignalR](#nugetpackages)
 - [Configurer le code de serveur](#server)
@@ -412,7 +412,7 @@ Pour des didacticiels qui montrent des scénarios de communication d’égal à 
 
 Pour en savoir plus les concepts de développement plus avancés SignalR, visitez les sites suivants pour le code source de SignalR et de ressources :
 
-- [SignalR ASP.NET](https://asp.net/signalr/)
+- [ASP.NET SignalR](https://asp.net/signalr/)
 - [Projet de SignalR](http://signalr.net/)
 - [SignalR Github et exemples](https://github.com/SignalR/SignalR)
 - [Wiki de SignalR](https://github.com/SignalR/SignalR/wiki)

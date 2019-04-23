@@ -12,7 +12,7 @@ ms.openlocfilehash: 94885984ebad90523369dcf5771d0f77a753008f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405662"
 ---
 # <a name="iteration-6--use-test-driven-development-c"></a>Itération #6 : utiliser le développement piloté par test (c#)
@@ -113,7 +113,7 @@ Notre première récit utilisateur est qu’un utilisateur doit être en mesure 
 Créer un nouveau test unitaire en double-cliquant sur le dossier contrôleurs dans le projet ContactManager.Tests, en sélectionnant **ajouter, nouveau Test**et en sélectionnant le **de Test unitaire** modèle (voir Figure 1). Nom de la nouvelle unité GroupControllerTest.cs de test et cliquez sur le **OK** bouton.
 
 
-[![Ajout le test unitaire GroupControllerTest](iteration-6-use-test-driven-development-cs/_static/image1.jpg)](iteration-6-use-test-driven-development-cs/_static/image1.png)
+[![Ajout du test unitaire GroupControllerTest](iteration-6-use-test-driven-development-cs/_static/image1.jpg)](iteration-6-use-test-driven-development-cs/_static/image1.png)
 
 **Figure 01**: Ajout du test unitaire GroupControllerTest ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-cs/_static/image2.png))
 
@@ -141,7 +141,7 @@ La classe de contrôleur de groupe dans la liste 2 contient le strict minimum de
 Une fois que nous ajoutons les classes GroupController et groupe à notre projet, notre premier test unitaire se termine correctement (voir Figure 2). Nous avons effectué le travail minimal requis pour réussir le test. Il est temps de faire la fête.
 
 
-[![Success !](iteration-6-use-test-driven-development-cs/_static/image2.jpg)](iteration-6-use-test-driven-development-cs/_static/image3.png)
+[![Succès !](iteration-6-use-test-driven-development-cs/_static/image2.jpg)](iteration-6-use-test-driven-development-cs/_static/image3.png)
 
 **Figure 02**: Succès ! ([Cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-cs/_static/image4.png))
 
@@ -267,12 +267,12 @@ Ensuite, nous devons définir une relation entre la table de base de données de
 9. Cliquez sur le bouton Enregistrer pour enregistrer les modifications apportées à la table Contacts.
 
 
-[![Création à une relation de table de base de données](iteration-6-use-test-driven-development-cs/_static/image3.jpg)](iteration-6-use-test-driven-development-cs/_static/image5.png)
+[![Création d’une relation de table de base de données](iteration-6-use-test-driven-development-cs/_static/image3.jpg)](iteration-6-use-test-driven-development-cs/_static/image5.png)
 
 **Figure 03**: Création d’une relation de table de base de données ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-cs/_static/image6.png))
 
 
-[![Srelations entre les tables pecifying](iteration-6-use-test-driven-development-cs/_static/image4.jpg)](iteration-6-use-test-driven-development-cs/_static/image7.png)
+[![Spécification des relations de table](iteration-6-use-test-driven-development-cs/_static/image4.jpg)](iteration-6-use-test-driven-development-cs/_static/image7.png)
 
 **Figure 04**: Spécification des relations de table ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-cs/_static/image8.png))
 
@@ -288,7 +288,7 @@ Ensuite, nous devons mettre à jour de notre modèle de données pour représent
 5. Avec le bouton droit de la propriété de navigation de groupes qui s’affiche en bas de l’entité Contact. Modifier le nom de la *groupes* propriété de navigation *groupe* (singulier).
 
 
-[![Ujour d’un modèle Entity Framework à partir de la base de données](iteration-6-use-test-driven-development-cs/_static/image5.jpg)](iteration-6-use-test-driven-development-cs/_static/image9.png)
+[![La mise à jour un modèle Entity Framework à partir de la base de données](iteration-6-use-test-driven-development-cs/_static/image5.jpg)](iteration-6-use-test-driven-development-cs/_static/image9.png)
 
 **Figure 05**: La mise à jour un modèle Entity Framework à partir de la base de données ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-cs/_static/image10.png))
 
@@ -296,7 +296,7 @@ Ensuite, nous devons mettre à jour de notre modèle de données pour représent
 Après avoir effectué ces étapes, votre modèle de données représente les Contacts et les groupes de tables. Le Concepteur d’entités doit afficher les deux entités (voir Figure 6).
 
 
-[![Eaffichage de concepteur parallèlement groupe et Contact](iteration-6-use-test-driven-development-cs/_static/image6.jpg)](iteration-6-use-test-driven-development-cs/_static/image11.png)
+[![Concepteur d’entités affichant le groupe et Contact](iteration-6-use-test-driven-development-cs/_static/image6.jpg)](iteration-6-use-test-driven-development-cs/_static/image11.png)
 
 **Figure 06**: Concepteur d’entités affichant le groupe et Contact ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-cs/_static/image12.png))
 
@@ -329,7 +329,7 @@ Nous devons créer les suivants nouvelles vues de gestion des groupes de contact
 - Views\Group\Delete.aspx - écran de confirmation affiche pour la suppression d’un groupe de contact
 
 
-[![TIl vue Index de groupe](iteration-6-use-test-driven-development-cs/_static/image7.jpg)](iteration-6-use-test-driven-development-cs/_static/image13.png)
+[![La vue Index de groupe](iteration-6-use-test-driven-development-cs/_static/image7.jpg)](iteration-6-use-test-driven-development-cs/_static/image13.png)
 
 **Figure 07**: La vue Index de groupe ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-cs/_static/image14.png))
 
@@ -343,7 +343,7 @@ Nous avons besoin de modifier les vues suivantes existants afin qu’ils contien
 Vous pouvez voir les vues modifiés en examinant l’application de Visual Studio qui accompagne ce didacticiel. Par exemple, la Figure 8 illustre la vue Index de Contact.
 
 
-[![TIl vue Contact Index](iteration-6-use-test-driven-development-cs/_static/image8.jpg)](iteration-6-use-test-driven-development-cs/_static/image15.png)
+[![La vue Index des contacts](iteration-6-use-test-driven-development-cs/_static/image8.jpg)](iteration-6-use-test-driven-development-cs/_static/image15.png)
 
 **Figure 08**: La vue Index de Contact ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-cs/_static/image16.png))
 

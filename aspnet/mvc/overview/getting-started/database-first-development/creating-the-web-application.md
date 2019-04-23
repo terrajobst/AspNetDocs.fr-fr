@@ -13,7 +13,7 @@ ms.openlocfilehash: 30fd42be5677df6fa6ee0630914098c30d21385b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404518"
 ---
 # <a name="tutorial-create-the-web-application-and-data-models-for-ef-database-first-with-aspnet-mvc"></a>Tutoriel : Créer l’Application Web et les modèles de données pour EF Database First avec ASP.NET MVC
@@ -104,4 +104,4 @@ Dans ce didacticiel, vous avez effectué les actions suivantes :
 
 Passez au didacticiel suivant pour apprendre à créer génère du code basé sur les modèles de données.
 > [!div class="nextstepaction"]
-> [Génération d'affichages](generating-views.md)
+> [Génération de vues](generating-views.md)

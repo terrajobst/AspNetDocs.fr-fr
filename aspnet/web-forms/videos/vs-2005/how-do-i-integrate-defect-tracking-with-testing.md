@@ -12,7 +12,7 @@ ms.openlocfilehash: f46adbd1ef55061332e4eb3f62578654120c9ebd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398811"
 ---
 # <a name="how-do-i-integrate-defect-tracking-with-testing"></a>[Comment faire] Intégrer des défauts de suivi avec les tests ?

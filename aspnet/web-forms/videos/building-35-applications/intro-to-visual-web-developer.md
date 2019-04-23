@@ -12,7 +12,7 @@ ms.openlocfilehash: b6825a6984cf62dd60714e0f235abc2694c1978c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402672"
 ---
 # <a name="intro-to-visual-web-developer"></a>Introduction à Visual Web Developer

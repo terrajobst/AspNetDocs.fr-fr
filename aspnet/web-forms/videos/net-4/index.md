@@ -12,7 +12,7 @@ ms.openlocfilehash: ea11b464329a755d5625797327f5a0a3ccb0f426
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400580"
 ---
 # <a name="net-4"></a>.NET 4
@@ -29,8 +29,8 @@ ms.locfileid: "59400580"
 - [Graphique](chart/index.md)
 
     - [Chart Control](chart/aspnet-4-quick-hit-chart-control.md)
-    - [Présentation du nouveau contrôle Chart dans Visual Studio 2010](chart/aspnet-4-how-do-i-introducing-the-new-chart-control-in-visual-studio-2010.md)
-- [Principal](core/index.md)
+    - [Présentation du nouveau contrôle Chart dans Visual Studio 2010](chart/aspnet-4-how-do-i-introducing-the-new-chart-control-in-visual-studio-2010.md)
+- [Fonctionnalités de base](core/index.md)
 
     - [Démarrage automatique](core/aspnet-4-quick-hit-auto-start.md)
     - [Nettoyer les fichiers Web.Config](core/aspnet-4-quick-hit-clean-webconfig-files.md)
@@ -51,7 +51,7 @@ ms.locfileid: "59400580"
     - [État sélectif d’une vue](performance/aspnet-4-quick-hit-selective-view-state.md)
     - [Compression d’état facile](performance/aspnet-4-quick-hit-easy-state-compression.md)
     - [Utiliser la propriété ViewStateMode pour la gestion de ViewState](performance/how-do-i-use-the-viewstatemode-property-for-managing-viewstate.md)
-- [Routage](routing/index.md)
+- [Le routage](routing/index.md)
 
     - [Redirection permanente](routing/aspnet-4-quick-hit-permanent-redirect.md)
     - [Routage WebForms impératif](routing/aspnet-4-quick-hit-imperative-webforms-routing.md)

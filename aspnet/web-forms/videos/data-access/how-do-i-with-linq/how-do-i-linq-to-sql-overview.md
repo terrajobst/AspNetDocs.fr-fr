@@ -12,7 +12,7 @@ ms.openlocfilehash: 56dda72b8cadcef4449f3ff6e8e8e4e3315d0687
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402880"
 ---
 # <a name="how-do-i-linq-to-sql-overview"></a>[Comment faire] LINQ to SQL : Vue d'ensemble
@@ -24,4 +24,4 @@ Nouvelles fonctionnalités de langage pour c# et VB prend en charge l’accès a
 [&#9654;Regardez la vidéo (9 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-linq-to-sql-overview)
 
 > [!div class="step-by-step"]
-> [Suivant](how-do-i-linq-to-sql-data-model.md)
+> [Next](how-do-i-linq-to-sql-data-model.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 52f6ec17fb21019e93ebf2795e95d5b27e4edbe6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401736"
 ---
 # <a name="whats-new-in-web-forms-in-aspnet-45"></a>Nouveautés de Web Forms dans ASP.NET 4.5
@@ -77,7 +77,7 @@ Si vous n’êtes pas familiarisé avec les extraits de Code Visual Studio et qu
 Ce laboratoire pratique inclut les exercices suivants :
 
 1. [Exercice 1 : Liaison de modèle dans ASP.NET Web Forms](#Exercise1)
-2. [Exercice 2 : Validation de données](#Exercise2)
+2. [Exercice 2 : Validation des données](#Exercise2)
 3. [Exercice 3 : Page asynchrone dans ASP.NET Web Forms](#Exercise3)
 
 > [!NOTE]
@@ -396,11 +396,11 @@ ASP.NET 4.5 introduit la validation des Web Forms annotations de données. Au li
     [!code-csharp[Main](whats-new-in-web-forms-in-aspnet-45/samples/sample23.cs)]
 
     > [!NOTE]
-    > .NET framework 4.5 a étendu la collection d’annotations de données existant. Voici quelques-unes des annotations de données que vous pouvez utiliser : [CreditCard], [Phone], [EmailAddress], [plage], [comparer], [Url], [FileExtensions], [Required], [clé], [RegularExpression].
+    > .NET framework 4.5 a étendu la collection d’annotations de données existant. Voici quelques-unes des annotations de données que vous pouvez utiliser : [CreditCard], [Phone], [EmailAddress], [plage], [comparer], [Url], [FileExtensions], [Required], [Key], [RegularExpression].
     > 
     > Quelques exemples d’utilisation :
     > 
-    > [Touche]: Specifies that an attribute is the unique identifier
+    > [Key]: Specifies that an attribute is the unique identifier
     > 
     > [Range(0.4, 0.5, ErrorMessage=&quot;{Write an error message}&quot;]: Double range
     > 
@@ -650,7 +650,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](whats-new-in-web-forms-in-aspnet-45/_static/image27.png)
 
-    *Progression de l'installation*
+    *Progression de l’installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](whats-new-in-web-forms-in-aspnet-45/_static/image28.png)

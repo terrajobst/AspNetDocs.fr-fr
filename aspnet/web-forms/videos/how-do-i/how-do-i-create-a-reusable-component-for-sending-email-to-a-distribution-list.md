@@ -12,7 +12,7 @@ ms.openlocfilehash: 6a117d0bf029245c4929e903e0c0494f6ba2b072
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400397"
 ---
 # <a name="how-do-i-create-a-reusable-component-for-sending-email-to-a-distribution-list"></a>[Comment faire] Créer un composant réutilisable pour envoyer un E-mail à une liste de Distribution

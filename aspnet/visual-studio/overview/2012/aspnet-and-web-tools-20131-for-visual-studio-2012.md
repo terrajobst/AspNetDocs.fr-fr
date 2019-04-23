@@ -12,7 +12,7 @@ ms.openlocfilehash: 17315dbbbdc08412e4e928256783c221a8a2cb20
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406806"
 ---
 # <a name="release-notes-for-aspnet-and-web-tools-20131-for-visual-studio-2012"></a>ASP.NET et Web Tools 2013.1 pour Visual Studio 2012 - Notes de publication
@@ -25,16 +25,16 @@ by [Microsoft](https://github.com/microsoft)
 ## <a name="contents"></a>Sommaire
 
 - [Notes d’installation](#install)
-- [Configuration logicielle](#requirements)
+- [Configuration logicielle requise](#requirements)
 - Nouvelles fonctionnalités dans ASP.NET et Web Tools 2013.1 pour Visual Studio 2012
 
-    - [Programme d’amorçage](#bootstrap)
+    - [Bootstrap](#bootstrap)
     - [Modèles](#templates)
 
         - [Modèle ASP.NET MVC 5](#mvc5template)
         - [Modèle d’API Web 2 ASP.NET](#apitemplate)
         - [Modèles d’élément](#itemtemplate)
-    - [Entity Framework 6](#ef6)
+    - [Entity Framework 6](#ef6)
     - [Génération de modèles automatique ASP.NET](#scaffold)
     - [Razor-éditeur](#razor)
     - [NuGet 2.7](#nuget)

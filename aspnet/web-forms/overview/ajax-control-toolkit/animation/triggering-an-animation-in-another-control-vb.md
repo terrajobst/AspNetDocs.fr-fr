@@ -12,7 +12,7 @@ ms.openlocfilehash: c74e829c85ae3b57d54a62aeb79388f1131e7184
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398200"
 ---
 # <a name="triggering-an-animation-in-another-control-vb"></a>Déclenchement d’une animation dans un autre contrôle (VB)
@@ -57,7 +57,7 @@ Dans le `<Animations>` nœud, les animations sur place comme d’habitude. Afin 
 Notez l’ordre spécial dans lequel apparaissent les animations individuelles. Tout d’abord, le bouton est désactivé une fois que l’animation s’exécute. Dans la mesure où il existe aucune `AnimationTarget` d’attribut dans le `<EnableAction>` élément, cette animation est appliquée pour le contrôle d’origine : le bouton. Les étapes de le deux animation sont effectués en parallèle (`<Parallel>` élément). Les deux ont leur `AnimationTarget` les attributs définis pour `"Panel1"`, animer ainsi le panneau de configuration, et pas sur le bouton.
 
 
-[![A clic de souris sur le bouton démarre l’animation du Panneau de configuration](triggering-an-animation-in-another-control-vb/_static/image2.png)](triggering-an-animation-in-another-control-vb/_static/image1.png)
+[![Un clic de souris sur le bouton démarre l’animation de panneau](triggering-an-animation-in-another-control-vb/_static/image2.png)](triggering-an-animation-in-another-control-vb/_static/image1.png)
 
 Un clic de souris sur le bouton démarre l’animation du Panneau de configuration ([cliquez pour afficher l’image en taille réelle](triggering-an-animation-in-another-control-vb/_static/image3.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: cce8770eb0f60c4306d4560e9a4e72fa1a59f618
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406507"
 ---
 # <a name="creating-user-accounts-c"></a>Création de comptes d’utilisateurs (C#)
@@ -57,7 +57,7 @@ Commencez par créer un nouveau dossier dans le projet nommé `Membership`. Ensu
 À ce stade l’Explorateur de solutions de votre projet doit ressembler à l’écran illustré à la Figure 1.
 
 
-[![FNouvelles Pages ont été ajoutés dans le dossier de l’appartenance d’IVE](creating-user-accounts-cs/_static/image2.png)](creating-user-accounts-cs/_static/image1.png)
+[![Cinq nouvelles Pages ont été ajoutés dans le dossier de l’appartenance](creating-user-accounts-cs/_static/image2.png)](creating-user-accounts-cs/_static/image1.png)
 
 **Figure 1**: Cinq nouvelles Pages ont été ajoutées à la `Membership` dossier ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image3.png))
 
@@ -81,7 +81,7 @@ Comme les infrastructures d’appartenance et des rôles, l’infrastructure de 
 Le fournisseur de plan de Site par défaut attend un fichier XML correctement mis en forme nommé `Web.sitemap` existe le répertoire racine. Étant donné que nous utilisons ce fournisseur par défaut, nous devons ajouter ce type de fichier et de définir la structure de la carte site dans le format XML approprié. Pour ajouter le fichier, avec le bouton droit sur le nom du projet dans l’Explorateur de solutions et choisissez Ajouter un nouvel élément. À partir de la boîte de dialogue Choisir d’ajouter un fichier de type de plan de Site nommé `Web.sitemap`.
 
 
-[![Ajj un Web.sitemap nommé du fichier vers le répertoire du projet racine](creating-user-accounts-cs/_static/image5.png)](creating-user-accounts-cs/_static/image4.png)
+[![Ajoutez un fichier nommé Web.sitemap vers le répertoire du projet racine](creating-user-accounts-cs/_static/image5.png)](creating-user-accounts-cs/_static/image4.png)
 
 **Figure 2**: Ajouter un fichier nommé `Web.sitemap` vers le répertoire du projet racine ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image6.png))
 
@@ -95,7 +95,7 @@ Entrez le code XML suivant dans le `Web.sitemap` fichier :
 Le balisage de carte de site ci-dessus définit la hiérarchie affichée dans la Figure 3.
 
 
-[![TIl plan de Site représente une Structure de navigation hiérarchique](creating-user-accounts-cs/_static/image8.png)](creating-user-accounts-cs/_static/image7.png)
+[![Le plan de Site représente une Structure de navigation hiérarchique](creating-user-accounts-cs/_static/image8.png)](creating-user-accounts-cs/_static/image7.png)
 
 **Figure 3**: Le plan de Site représente une Structure de navigation hiérarchique ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image9.png))
 
@@ -117,7 +117,7 @@ Le balisage ci-dessus lie un contrôle Repeater nommé `menu` à un SiteMapDataS
 Figure 4 montre la sortie de rendu du balisage ci-dessus avec la structure de plan de site que nous avons créé à l’étape 2. Le Repeater restitue le balisage de la liste non triée vanille ; les règles de feuille de style en cascade définies dans `Styles.css` sont responsables de la mise en page esthétiques. Pour obtenir une description plus détaillée du fonctionne de la balise ci-dessus, reportez-vous à la [Pages maîtres et Navigation du Site](https://asp.net/learn/data-access/tutorial-03-cs.aspx) didacticiel.
 
 
-[![TIl Interface utilisateur de navigation est restitué à l’aide d’imbriqué non triée répertorie](creating-user-accounts-cs/_static/image11.png)](creating-user-accounts-cs/_static/image10.png)
+[![L’Interface utilisateur de navigation est restitué à l’aide d’imbriqué non triée de listes](creating-user-accounts-cs/_static/image11.png)](creating-user-accounts-cs/_static/image10.png)
 
 **Figure 4**: L’Interface utilisateur de navigation est restitué à l’aide d’imbriqué non triée de listes ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image12.png))
 
@@ -133,7 +133,7 @@ Plus précisément, ajouter un `<span>` élément à l’en-tête de la page ma�
 La figure 5 illustre la sortie de la SiteMapPath lors de la visite `~/Membership/CreatingUserAccounts.aspx`.
 
 
-[![TIl fil d’Ariane affiche la Page actuelle et ses ancêtres dans le plan du Site](creating-user-accounts-cs/_static/image14.png)](creating-user-accounts-cs/_static/image13.png)
+[![La barre de navigation affiche la Page actuelle et de mappent ses ancêtres du site](creating-user-accounts-cs/_static/image14.png)](creating-user-accounts-cs/_static/image13.png)
 
 **Figure 5**: La barre de navigation affiche la Page actuelle et ses ancêtres dans le plan de Site ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image15.png))
 
@@ -174,7 +174,7 @@ Pour illustrer l’utilisation de la `CreateUser` (méthode), nous allons créer
 À ce stade votre écran doit ressembler à l’écran illustré à la Figure 6.
 
 
-[![Ajj différents contrôles Web à la CreatingUserAccounts.aspx Page](creating-user-accounts-cs/_static/image17.png)](creating-user-accounts-cs/_static/image16.png)
+[![Ajouter les différents contrôles Web à la Page CreatingUserAccounts.aspx](creating-user-accounts-cs/_static/image17.png)](creating-user-accounts-cs/_static/image16.png)
 
 **Figure 6**: Ajoutez les contrôles Web différents pour le `CreatingUserAccounts.aspx` Page ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image18.png))
 
@@ -194,17 +194,17 @@ Le `Click` Gestionnaire d’événements démarre en définissant une variable n
 Après avoir appelé `CreateUser`, en passant dans `createStatus`, un `switch` instruction est utilisée pour générer un message approprié en fonction de la valeur affectée à `createStatus`. Figures 7 illustre la sortie lorsqu’un nouvel utilisateur a été correctement créé. Les figures 8 et 9 illustrent la sortie lorsque le compte d’utilisateur n’est pas créé. Dans la Figure 8, le visiteur entré un mot de passe de cinq lettres ne répond pas aux exigences de force de mot de passe en toutes lettres dans les paramètres de configuration du fournisseur d’appartenances. Dans la Figure 9, le visiteur tente de créer un compte d’utilisateur avec un nom d’utilisateur existant (celui créé dans la Figure 7).
 
 
-[![A Nouveau compte d’utilisateur est créé avec succès](creating-user-accounts-cs/_static/image20.png)](creating-user-accounts-cs/_static/image19.png)
+[![Un nouveau compte d’utilisateur est créé avec succès](creating-user-accounts-cs/_static/image20.png)](creating-user-accounts-cs/_static/image19.png)
 
 **Figure 7**: Un nouveau compte d’utilisateur est créé avec succès ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image21.png))
 
 
-[![TIl compte d’utilisateur n’est pas créé, car le mot de passe fourni est trop faible](creating-user-accounts-cs/_static/image23.png)](creating-user-accounts-cs/_static/image22.png)
+[![Le compte d’utilisateur n’est pas créé, car le mot de passe fourni est trop faible](creating-user-accounts-cs/_static/image23.png)](creating-user-accounts-cs/_static/image22.png)
 
 **Figure 8**: Le compte d’utilisateur n’est pas créé, car le mot de passe fourni est trop faible ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image24.png))
 
 
-[![TIl compte d’utilisateur n’est pas créé, car le nom d’utilisateur est déjà en cours d’utilisation](creating-user-accounts-cs/_static/image26.png)](creating-user-accounts-cs/_static/image25.png)
+[![Le compte utilisateur n’est que pas créé, car le nom d’utilisateur est déjà en cours d’utilisation](creating-user-accounts-cs/_static/image26.png)](creating-user-accounts-cs/_static/image25.png)
 
 **Figure 9**: Le compte utilisateur n’est pas créé, car le nom d’utilisateur est déjà en cours d’utilisation ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image27.png))
 
@@ -216,7 +216,7 @@ Après avoir appelé `CreateUser`, en passant dans `createStatus`, un `switch` i
 Après avoir créé quelques comptes d’utilisateur, vérifiez que les comptes ont été créés en répertoriant le contenu de la `aspnet_Users` et `aspnet_Membership` tables dans le `SecurityTutorials.mdf` base de données. Comme le montre la Figure 10, j’ai ajouté deux utilisateurs via la `CreatingUserAccounts.aspx` page : Tito et Bruce.
 
 
-[![TVoici deux utilisateurs dans le Store d’utilisateur d’appartenance : Tito et Bruce](creating-user-accounts-cs/_static/image29.png)](creating-user-accounts-cs/_static/image28.png)
+[![Il existe deux utilisateurs dans le Store d’utilisateur d’appartenance : Tito et Bruce](creating-user-accounts-cs/_static/image29.png)](creating-user-accounts-cs/_static/image28.png)
 
 **Figure 10**: Il existe deux utilisateurs dans le Store d’utilisateur d’appartenance : Tito et Bruce ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image30.png))
 
@@ -246,7 +246,7 @@ Commençons par examiner à l’aide d’interface par défaut et le comportemen
 Retour à la `CreatingUserAccounts.aspx` page dans le `Membership` dossier, basculez vers le mode Design ou fractionné et puis ajoutez un contrôle CreateUserWizard vers le haut de la page. Le contrôle CreateUserWizard est classé sous la section contrôles de connexion de la boîte à outils. Après avoir ajouté le contrôle, définissez son `ID` propriété `RegisterUser`. Comme la capture d’écran dans la Figure 11 montre, CreateUserWizard restitue une interface avec les zones de texte pour le nouvel utilisateur nom d’utilisateur, mot de passe, l’adresse de messagerie et question de sécurité et la réponse.
 
 
-[![TIl contrôle CreateUserWizard restitue une Interface utilisateur de créer générique](creating-user-accounts-cs/_static/image32.png)](creating-user-accounts-cs/_static/image31.png)
+[![Les convertisseurs de contrôle CreateUserWizard générique créer l’Interface utilisateur](creating-user-accounts-cs/_static/image32.png)](creating-user-accounts-cs/_static/image31.png)
 
 **Figure 11**: Le contrôle CreateUserWizard restitue une Interface utilisateur de créer générique ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image33.png))
 
@@ -267,7 +267,7 @@ Apparence et le comportement du CreateUserWizard sont modifiables en convertissa
 Nous allons voir le contrôle CreateUserWizard en action. Visitez le `CreatingUserAccounts.aspx` page via un navigateur. Commencez par entrer des valeurs non valides dans l’interface de CreateUserWizard. Essayez d’entrer un mot de passe qui ne sont pas conformes aux exigences de force de mot de passe ou textbox en laissant le « nom d’utilisateur » vide. CreateUserWizard affichera un message d’erreur approprié. La figure 12 illustre la sortie lorsque vous tentez de créer un utilisateur avec un mot de passe fort insuffisamment.
 
 
-[![TIl CreateUserWizard automatiquement injecte les contrôles de Validation](creating-user-accounts-cs/_static/image35.png)](creating-user-accounts-cs/_static/image34.png)
+[![CreateUserWizard injecte automatiquement les contrôles de Validation](creating-user-accounts-cs/_static/image35.png)](creating-user-accounts-cs/_static/image34.png)
 
 **Figure 12**: Le contrôle CreateUserWizard automatiquement injecte des contrôles de Validation ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image36.png))
 
@@ -275,7 +275,7 @@ Nous allons voir le contrôle CreateUserWizard en action. Visitez le `CreatingUs
 Ensuite, entrez les valeurs appropriées dans le contrôle CreateUserWizard et cliquez sur le bouton « Create User ». En supposant que les champs obligatoires ont été entrées et les force du mot de passe est suffisant, CreateUserWizard créer un nouveau compte d’utilisateur via l’infrastructure Membership et afficher le `CompleteWizardStep`de l’interface (voir la Figure 13). Dans les coulisses, CreateUserWizard appelle le `Membership.CreateUser` méthode, comme nous l’avons fait à l’étape 5.
 
 
-[![A Nouveau compte d’utilisateur a été correctement créée](creating-user-accounts-cs/_static/image38.png)](creating-user-accounts-cs/_static/image37.png)
+[![Un nouveau compte d’utilisateur a été correctement créée](creating-user-accounts-cs/_static/image38.png)](creating-user-accounts-cs/_static/image37.png)
 
 **Figure 13**: Un nouveau compte d’utilisateur a été correctement créée ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image39.png))
 
@@ -299,7 +299,7 @@ Outre les propriétés relatives à l’apparence, il existe un nombre de propri
 Nous allons mettre à jour le `RegisterUser` contrôle CreateUserWizard pour afficher un bouton Annuler et envoyer le visiteur à `Default.aspx` lorsque vous cliquez sur les boutons Annuler ou continuer. Pour ce faire, affectez la `DisplayCancelButton` propriété sur True et à la fois le `CancelDestinationPageUrl` et `ContinueDestinationPageUrl` propriétés à « ~ / Default.aspx ». Figure 14 illustre la mise à jour CreateUserWizard lorsqu’ils sont affichés via un navigateur.
 
 
-[![TIl CreateUserWizardStep inclut un bouton Annuler](creating-user-accounts-cs/_static/image41.png)](creating-user-accounts-cs/_static/image40.png)
+[![Le CreateUserWizardStep inclut un bouton Annuler](creating-user-accounts-cs/_static/image41.png)](creating-user-accounts-cs/_static/image40.png)
 
 **Figure 14**: Le `CreateUserWizardStep` inclut un bouton Annuler ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image42.png))
 
@@ -337,7 +337,7 @@ Notez que le nom d’utilisateur et le mot de passe entré dans le contrôle Cre
 La figure 15 illustre la capture d’écran `CreatingUserAccounts.aspx` lorsque l’utilisateur entre un nom d’utilisateur avec les espaces à gauche.
 
 
-[![Usernames avec tête ou des espaces de fin ne sont pas autorisées](creating-user-accounts-cs/_static/image44.png)](creating-user-accounts-cs/_static/image43.png)
+[![Noms d’utilisateur avec tête ou des espaces de fin ne sont pas autorisées](creating-user-accounts-cs/_static/image44.png)](creating-user-accounts-cs/_static/image43.png)
 
 **Figure 15**: Noms d’utilisateur avec tête ou des espaces de fin ne sont pas autorisées ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image45.png))
 

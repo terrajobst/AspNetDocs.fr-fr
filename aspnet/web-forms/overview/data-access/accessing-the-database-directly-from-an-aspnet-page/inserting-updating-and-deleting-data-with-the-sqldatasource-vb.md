@@ -12,7 +12,7 @@ ms.openlocfilehash: 5be1fd787c1ee001ce46384162eaebc89ec5c0a8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404778"
 ---
 # <a name="inserting-updating-and-deleting-data-with-the-sqldatasource-vb"></a>Insertion, mise à jour et suppression de données avec SqlDataSource (VB)
@@ -50,7 +50,7 @@ Une fois un `InsertCommand`, `UpdateCommand`, ou `DeleteCommand` valeur a été 
 Commencez par ouvrir le `InsertUpdateDelete.aspx` et `Querying.aspx` pages à partir de la `SqlDataSource` dossier. À partir du concepteur sur le `Querying.aspx` , sélectionnez le SqlDataSource et GridView du premier exemple (le `ProductsDataSource` et `GridView1` contrôles). Après avoir sélectionné les deux contrôles, accédez au menu Edition et choisissez Copier (ou simplement appuyer sur Ctrl + C). Ensuite, accédez au Concepteur de `InsertUpdateDelete.aspx` et collez dans les contrôles. Après avoir déplacé les deux contrôles à `InsertUpdateDelete.aspx`, testez la page dans un navigateur. Vous devez voir les valeurs de la `ProductID`, `ProductName`, et `UnitPrice` colonnes pour tous les enregistrements dans la `Products` table de base de données.
 
 
-[![All des produits sont répertoriés, classés par ProductID](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image1.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image1.png)
+[![Tous les produits sont répertoriés, classés par ProductID](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image1.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image1.png)
 
 **Figure 1**: Tous les produits sont répertoriés, classés par `ProductID` ([cliquez pour afficher l’image en taille réelle](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image2.png))
 
@@ -87,7 +87,7 @@ Cliquez sur le bouton de sélection dans la propriété DeleteQuery pour affiche
 Ensuite, cliquez sur le bouton Actualiser les paramètres pour ajouter le `@ProductID` paramètre à la liste des paramètres ci-dessous.
 
 
-[![Sà partir de la fenêtre Propriétés, choisissez la propriété DeleteQuery](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image3.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image3.png)
+[![Sélectionnez la propriété DeleteQuery à partir de la fenêtre Propriétés](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image3.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image3.png)
 
 **Figure 3**: Sélectionnez la propriété DeleteQuery à partir de la fenêtre Propriétés ([cliquez pour afficher l’image en taille réelle](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image4.png))
 
@@ -111,7 +111,7 @@ Notez l’ajout de la `DeleteCommand` propriété ainsi que le `<DeleteParameter
 Avec le `DeleteCommand` propriété ajoutée, la balise active de GridView s contient à présent l’option Activer la suppression. Continuons et activez cette case à cocher. Comme indiqué dans [une vue d’ensemble d’insertion, mise à jour et suppression](../editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-vb.md), cela entraîne le contrôle GridView à ajouter un CommandField avec son `ShowDeleteButton` propriété définie sur `True`. Comme la Figure 4 montre, lorsque la page est visitée via un navigateur, un bouton Supprimer est inclus. Testez cette page out en supprimant certains produits.
 
 
-[![ECCA effectué ligne GridView inclut désormais un bouton Supprimer](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image4.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image5.png)
+[![Chaque ligne GridView inclut désormais un bouton Supprimer](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image4.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image5.png)
 
 **Figure 4**: Chaque ligne GridView inclut désormais un bouton Supprimer ([cliquez pour afficher l’image en taille réelle](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image6.png))
 
@@ -137,7 +137,7 @@ En tant qu’étape 1 examinées, `INSERT`, `UPDATE`, et `DELETE` instructions S
 Permettent d’Explorer cette option de génération automatique de s. Ajouter un contrôle DetailsView au concepteur dans `InsertUpdateDelete.aspx` et définissez son `ID` propriété `ManageProducts`. Ensuite, à partir de la balise active de s DetailsView, choisissez Créer une nouvelle source de données et de créer un SqlDataSource nommé `ManageProductsDataSource`.
 
 
-[![Ccréer un nouveau ManageProductsDataSource de nommé SqlDataSource](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image6.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image7.png)
+[![Créer un nouveau SqlDataSource nommé ManageProductsDataSource](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image6.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image7.png)
 
 **Figure 6**: Créer une nouvelle nommée de SqlDataSource `ManageProductsDataSource` ([cliquez pour afficher l’image en taille réelle](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image8.png))
 
@@ -145,7 +145,7 @@ Permettent d’Explorer cette option de génération automatique de s. Ajouter u
 À partir de l’Assistant Configurer la Source de données, choisir d’utiliser le `NORTHWINDConnectionString` connexion chaîne et cliquez sur Suivant. À partir de la configuration de l’écran de l’instruction Select, laissez les spécifiez les colonnes à partir d’un bouton radio table ou vue sélectionné et choisir le `Products` table dans la liste déroulante. Sélectionnez le `ProductID`, `ProductName`, `UnitPrice`, et `Discontinued` colonnes dans la liste de case à cocher.
 
 
-[![Uconnexion de la Table Products, retourner le ProductID, ProductName, UnitPrice et colonnes supprimées](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image7.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image9.png)
+[![À l’aide de la Table Products, retourner le ProductID, ProductName, UnitPrice et les colonnes supprimées](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image7.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image9.png)
 
 **Figure 7**: À l’aide de la `Products` Table, retournez le `ProductID`, `ProductName`, `UnitPrice`, et `Discontinued` colonnes ([cliquez pour afficher l’image en taille réelle](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image10.png))
 
@@ -173,7 +173,7 @@ Pour activer les fonctionnalités de modification de données s DetailsView, vé
 Visitez la page dans un navigateur et notez la modification, les suppressions et les nouveaux boutons inclus dans le contrôle DetailsView. En cliquant sur le bouton modifier Active le contrôle DetailsView en mode édition, qui affiche chaque BoundField dont `ReadOnly` propriété est définie sur `False` (la valeur par défaut) comme une zone de texte et le CheckBoxField comme une case à cocher.
 
 
-[![TIl s DetailsView Interface de modification par défaut](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image9.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image11.png)
+[![Les opérations de mappage DetailsView par défaut d’Interface de modification](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image9.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image11.png)
 
 **Figure 9**: L’Interface de modification par défaut de s DetailsView ([cliquez pour afficher l’image en taille réelle](inserting-updating-and-deleting-data-with-the-sqldatasource-vb/_static/image12.png))
 

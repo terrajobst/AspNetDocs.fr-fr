@@ -12,7 +12,7 @@ ms.openlocfilehash: 6292ec084bbacdd41b5df63d9ac1017c43407b37
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402503"
 ---
 # <a name="signalr-performance"></a>Performances de SignalR
@@ -21,9 +21,9 @@ ms.locfileid: "59402503"
 
 
 - [Performances de SignalR](signalr-performance.md)
-- [Introduction au scale-out dans SignalR](scaleout-in-signalr.md)
-- [Scale-out de SignalR avec Azure Service Bus](scaleout-with-windows-azure-service-bus.md)
-- [Scale-out de SignalR avec Redis](scaleout-with-redis.md)
-- [Scale-out de SignalR avec SQL Server](scaleout-with-sql-server.md)
+- [Introduction à la montée en puissance parallèle dans SignalR](scaleout-in-signalr.md)
+- [Montée en puissance parallèle de SignalR avec Azure Service Bus](scaleout-with-windows-azure-service-bus.md)
+- [Montée en puissance parallèle de SignalR avec Redis](scaleout-with-redis.md)
+- [Montée en puissance parallèle de SignalR avec SQL Server](scaleout-with-sql-server.md)
 - [Test de la densité des connexions SignalR avec Crank](signalr-connection-density-testing-with-crank.md)
 - [Utilisation des compteurs de performance SignalR dans un rôle web Azure](using-signalr-performance-counters-in-an-azure-web-role.md)

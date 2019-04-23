@@ -12,7 +12,7 @@ ms.openlocfilehash: 18b84615d60deac2f06122d3d2b9689dc8efb09a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402854"
 ---
 # <a name="how-do-i--implement-health-monitoring-for-an-aspnet-application"></a>[Comment faire]  Implémenter le contrôle d’intégrité pour une Application ASP.NET ?

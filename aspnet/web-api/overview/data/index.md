@@ -13,7 +13,7 @@ ms.openlocfilehash: 9c5ef1e85f0b5ca7ead67dfe28a3a43f3e5c464a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400033"
 ---
 # <a name="working-with-data-in-aspnet-web-api"></a>Utilisation des données dans l’API Web ASP.NET
@@ -21,7 +21,7 @@ ms.locfileid: "59400033"
 > Comment le programme CRUD (créer, lire, mettre à jour, supprimer) les opérations dans l’API Web.
 
 
-- [Utilisation de Web API 2 avec Entity Framework 6](using-web-api-with-entity-framework/index.md)
+- [Utilisation de Web API 2 avec Entity Framework 6](using-web-api-with-entity-framework/index.md)
 
     - [Créer le projet](using-web-api-with-entity-framework/part-1.md)
     - [Ajouter des modèles et des contrôleurs](using-web-api-with-entity-framework/part-2.md)

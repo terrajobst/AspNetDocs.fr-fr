@@ -12,7 +12,7 @@ ms.openlocfilehash: 2374b70d1359c3a070d2b07c84e37c0a504e118c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400020"
 ---
 # <a name="two-simple-techniques-for-triggering-updates-to-update-panels"></a>Deux techniques simples pour déclencher des mises à jour de panneaux de mise à jour

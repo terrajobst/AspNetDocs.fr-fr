@@ -12,7 +12,7 @@ ms.openlocfilehash: 464146bc8af5cf978902a3e634398ed3f8d15404
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400046"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-project-properties"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Propriétés du projet

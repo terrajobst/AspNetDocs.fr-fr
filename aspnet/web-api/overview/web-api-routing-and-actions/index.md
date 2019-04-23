@@ -12,7 +12,7 @@ ms.openlocfilehash: 41ee7a14c26c10fb693eb3b5bf590f92a4caf3a3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405961"
 ---
 # <a name="web-api-routing"></a>Routage de l’API Web
@@ -22,5 +22,5 @@ ms.locfileid: "59405961"
 
 - [Routage dans l’API web](routing-in-aspnet-web-api.md)
 - [Routage et sélection des actions dans l’API web](routing-and-action-selection.md)
-- [Routage d’attributs dans Web API 2](attribute-routing-in-web-api-2.md)
-- [Créer une API REST avec le routage d’attributs dans Web API 2](create-a-rest-api-with-attribute-routing.md)
+- [Routage d’attributs dans Web API 2](attribute-routing-in-web-api-2.md)
+- [Créer une API REST avec le routage d’attributs dans Web API 2](create-a-rest-api-with-attribute-routing.md)

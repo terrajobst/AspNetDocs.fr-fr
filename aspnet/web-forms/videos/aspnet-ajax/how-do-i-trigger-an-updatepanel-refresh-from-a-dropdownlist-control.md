@@ -12,7 +12,7 @@ ms.openlocfilehash: d8b74b0fb2061477c1d2ff66e394d0bb1e22baf3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402048"
 ---
 # <a name="how-do-i-trigger-an-updatepanel-refresh-from-a-dropdownlist-control"></a>[Comment faire] Déclencher une actualisation de UpdatePanel à partir d’un contrôle DropDownList ?

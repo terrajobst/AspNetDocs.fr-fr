@@ -12,7 +12,7 @@ ms.openlocfilehash: 1e1751c6969f1a278ee438c3bee6171644aacdbf
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406182"
 ---
 # <a name="adding-additional-datatable-columns-c"></a>Ajout de colonnes de DataTable supplémentaires (C#)
@@ -49,7 +49,7 @@ Pour ce didacticiel, s permettent d’ajouter une méthode à la `ProductsTableA
 Ouvrez le `NorthwindWithSprocs` jeu de données et avec le bouton droit sur le `ProductsDataTable`. Cliquez sur Ajouter dans le menu contextuel, puis choisissez colonne.
 
 
-[![Ajj une nouvelle colonne à la ProductsDataTable](adding-additional-datatable-columns-cs/_static/image2.png)](adding-additional-datatable-columns-cs/_static/image1.png)
+[![Ajouter une nouvelle colonne à la ProductsDataTable](adding-additional-datatable-columns-cs/_static/image2.png)](adding-additional-datatable-columns-cs/_static/image1.png)
 
 **Figure 1**: Ajouter une nouvelle colonne à la `ProductsDataTable` ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image3.png))
 
@@ -57,7 +57,7 @@ Ouvrez le `NorthwindWithSprocs` jeu de données et avec le bouton droit sur le `
 Cela ajoutera une nouvelle colonne au DataTable nommé Column1 de type `System.String`. Nous devons mettre à jour de ce nom de colonne s à PriceQuartile et son type `System.Int32` , car il sera utilisé pour contenir un nombre compris entre 1 et 4. Sélectionnez la colonne nouvellement ajouté dans le `ProductsDataTable` et, à partir de la fenêtre Propriétés, définissez la `Name` propriété PriceQuartile et le `DataType` propriété `System.Int32`.
 
 
-[![Set le nouveau nom de colonne s et les propriétés de type de données](adding-additional-datatable-columns-cs/_static/image5.png)](adding-additional-datatable-columns-cs/_static/image4.png)
+[![Définir les propriétés de type de données et le nouveau nom de colonne s](adding-additional-datatable-columns-cs/_static/image5.png)](adding-additional-datatable-columns-cs/_static/image4.png)
 
 **Figure 2**: Définir la nouvelle colonne s `Name` et `DataType` propriétés ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image6.png))
 
@@ -69,7 +69,7 @@ Comme le montre la Figure 2, il existe des propriétés supplémentaires qui peu
 Maintenant que le `ProductsDataTable` a été mis à jour pour inclure le `PriceQuartile` colonne, nous sommes prêts à créer la `GetProductsWithPriceQuartile` (méthode). Démarrer en cliquant sur le TableAdapter et en choisissant Ajouter une requête dans le menu contextuel. Ceci fait apparaître l’Assistant Configuration de requêtes TableAdapter, qui demande tout d’abord nous si nous souhaitons utiliser les instructions SQL ad hoc ou une procédure stockée nouveau ou existante. Étant donné que nous ne pas mais une procédure stockée qui retourne les données de quartile prix, permettent de s autoriser le TableAdapter créer cette procédure stockée pour nous. Sélectionnez l’option de procédure stockée nouveau de créer et cliquez sur Suivant.
 
 
-[![Il’Assistant TableAdapter pour créer le stockées procédure pour nous de NStruct](adding-additional-datatable-columns-cs/_static/image8.png)](adding-additional-datatable-columns-cs/_static/image7.png)
+[![Demander à l’Assistant TableAdapter pour créer la procédure stockée pour nous](adding-additional-datatable-columns-cs/_static/image8.png)](adding-additional-datatable-columns-cs/_static/image7.png)
 
 **Figure 3**: Demander à l’Assistant TableAdapter pour créer le stockées procédure pour nous ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image9.png))
 
@@ -77,7 +77,7 @@ Maintenant que le `ProductsDataTable` a été mis à jour pour inclure le `Price
 Dans l’écran suivant, illustré Figure 4, l’Assistant nous demande quel type de requête à ajouter. Dans la mesure où le `GetProductsWithPriceQuartile` méthode retournera toutes les colonnes et les enregistrements à partir de la `Products` de table, sélectionnez l’instruction SELECT qui retourne des lignes, cliquez sur Suivant.
 
 
-[![Ovotre requête sera une instruction SELECT qui retourne plusieurs lignes](adding-additional-datatable-columns-cs/_static/image11.png)](adding-additional-datatable-columns-cs/_static/image10.png)
+[![Notre requête sera une instruction SELECT qui retourne plusieurs lignes](adding-additional-datatable-columns-cs/_static/image11.png)](adding-additional-datatable-columns-cs/_static/image10.png)
 
 **Figure 4**: Notre requête sera un `SELECT` instruction qui retourne plusieurs lignes ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image12.png))
 
@@ -98,7 +98,7 @@ Malheureusement, le Générateur de requêtes ne sait pas comment analyser le `O
 Après avoir entré la `SELECT` requête et en cliquant sur Suivant, l’Assistant nous invite à fournir un nom pour la procédure stockée est créé. Nommez la nouvelle procédure stockée `Products_SelectWithPriceQuartile` et cliquez sur Suivant.
 
 
-[![Nom le Products_SelectWithPriceQuartile de procédure stockée](adding-additional-datatable-columns-cs/_static/image14.png)](adding-additional-datatable-columns-cs/_static/image13.png)
+[![Nom de la procédure stockée Products_SelectWithPriceQuartile](adding-additional-datatable-columns-cs/_static/image14.png)](adding-additional-datatable-columns-cs/_static/image13.png)
 
 **Figure 5**: Nom de la procédure stockée `Products_SelectWithPriceQuartile` ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image15.png))
 
@@ -106,7 +106,7 @@ Après avoir entré la `SELECT` requête et en cliquant sur Suivant, l’Assista
 Enfin, nous allons vous y êtes invités à nommer les méthodes TableAdapter. Laissez les deux le remplissage un DataTable et retourner un DataTable les cases cochées et les méthodes `FillWithPriceQuartile` et `GetProductsWithPriceQuartile`.
 
 
-[![Nles méthodes om le TableAdapter s et cliquez sur Terminer](adding-additional-datatable-columns-cs/_static/image17.png)](adding-additional-datatable-columns-cs/_static/image16.png)
+[![Nom du TableAdapter s méthodes et cliquez sur Terminer](adding-additional-datatable-columns-cs/_static/image17.png)](adding-additional-datatable-columns-cs/_static/image16.png)
 
 **Figure 6**: Nommer le TableAdapter s méthodes et cliquez sur Terminer ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image18.png))
 
@@ -121,7 +121,7 @@ Avec le `SELECT` requête spécifiée et la procédure stockée et les méthodes
 **Figure 7**: Vérifiez qu’une nouvelle méthode a été ajoutée au TableAdapter
 
 
-[![EAssurez-vous que la base de données contient la procédure stockée Products_SelectWithPriceQuartile](adding-additional-datatable-columns-cs/_static/image21.png)](adding-additional-datatable-columns-cs/_static/image20.png)
+[![Assurez-vous que la base de données contienne le Products_SelectWithPriceQuartile procédure stockée](adding-additional-datatable-columns-cs/_static/image21.png)](adding-additional-datatable-columns-cs/_static/image20.png)
 
 **Figure 8**: Vérifiez que la base de données contient le `Products_SelectWithPriceQuartile` la procédure stockée ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image22.png))
 
@@ -150,12 +150,12 @@ Comme les autres méthodes de récupération de données dans `ProductsBLLWithSp
 Avec l’ajout de la couche BLL terminer nous re prêt à créer une page ASP.NET qui affiche le quartile prix pour chaque produit. Ouvrir le `AddingColumns.aspx` page dans le `AdvancedDAL` dossier et faites glisser un GridView à partir de la boîte à outils vers le concepteur, en définissant son `ID` propriété `Products`. À partir de la balise active de s GridView, liez-le à une nouvelle ObjectDataSource nommé `ProductsDataSource`. Configurer l’ObjectDataSource à utiliser le `ProductsBLLWithSprocs` classe s `GetProductsWithPriceQuartile` (méthode). Dans la mesure où il s’agit d’une grille en lecture seule, définissez les listes déroulantes dans la mise à jour, insertion et supprimer des onglets à (None).
 
 
-[![Cconfiguration de l’ObjectDataSource d’utiliser la classe ProductsBLLWithSprocs](adding-additional-datatable-columns-cs/_static/image24.png)](adding-additional-datatable-columns-cs/_static/image23.png)
+[![Configurer pour utiliser la classe ProductsBLLWithSprocs ObjectDataSource](adding-additional-datatable-columns-cs/_static/image24.png)](adding-additional-datatable-columns-cs/_static/image23.png)
 
 **Figure 9**: Configurer l’ObjectDataSource à utiliser le `ProductsBLLWithSprocs` classe ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image25.png))
 
 
-[![RRécup des produits à partir de la méthode GetProductsWithPriceQuartile](adding-additional-datatable-columns-cs/_static/image27.png)](adding-additional-datatable-columns-cs/_static/image26.png)
+[![Récupérer des informations sur les produits à partir de la méthode GetProductsWithPriceQuartile](adding-additional-datatable-columns-cs/_static/image27.png)](adding-additional-datatable-columns-cs/_static/image26.png)
 
 **Figure 10**: Récupérer des informations de produit à partir de la `GetProductsWithPriceQuartile` (méthode) ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image28.png))
 
@@ -172,12 +172,12 @@ Après ces modifications, le balisage déclaratif s GridView et ObjectDataSource
 Figure 11 illustre cette page quand consultées via un navigateur. Notez que, tout d’abord, les produits sont classés par leur prix dans l’ordre décroissant avec chaque produit est attribué approprié `PriceQuartile` valeur. Bien entendu ces données peuvent être triées par d’autres critères, avec la valeur de colonne de prix Quartile toujours refléter le classement de produit s en ce qui concerne les prix (voir Figure 12).
 
 
-[![THE produits sont classés par leurs prix](adding-additional-datatable-columns-cs/_static/image30.png)](adding-additional-datatable-columns-cs/_static/image29.png)
+[![Les produits sont triés par leurs prix](adding-additional-datatable-columns-cs/_static/image30.png)](adding-additional-datatable-columns-cs/_static/image29.png)
 
 **Figure 11**: Les produits sont triés par leurs prix ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image31.png))
 
 
-[![THE produits sont classés par leurs noms](adding-additional-datatable-columns-cs/_static/image33.png)](adding-additional-datatable-columns-cs/_static/image32.png)
+[![Les produits sont classés par nom](adding-additional-datatable-columns-cs/_static/image33.png)](adding-additional-datatable-columns-cs/_static/image32.png)
 
 **Figure 12**: Les produits sont triés par leur nom ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image34.png))
 

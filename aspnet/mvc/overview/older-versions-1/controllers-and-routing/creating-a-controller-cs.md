@@ -12,7 +12,7 @@ ms.openlocfilehash: c92d7cdeb7b2d31d5eca810628e9f563840f7494
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400604"
 ---
 # <a name="creating-a-controller-c"></a>Création d’un contrôleur (C#)
@@ -29,12 +29,12 @@ L’objectif de ce didacticiel est d’expliquer comment vous pouvez créer nouv
 Le moyen le plus simple pour créer un nouveau contrôleur consiste à cliquez sur le dossier contrôleurs dans la fenêtre Explorateur de solutions Visual Studio et sélectionnez le **ajouter, de contrôleur** option de menu (voir Figure 1). Cette option de menu ouvre le **ajouter un contrôleur** boîte de dialogue (voir Figure 2).
 
 
-[![Tboîte de dialogue Nouveau projet he](creating-a-controller-cs/_static/image1.jpg)](creating-a-controller-cs/_static/image1.png)
+[![La boîte de dialogue Nouveau projet](creating-a-controller-cs/_static/image1.jpg)](creating-a-controller-cs/_static/image1.png)
 
 **Figure 01**: Ajoutez un nouveau contrôleur ([cliquez pour afficher l’image en taille réelle](creating-a-controller-cs/_static/image2.png))
 
 
-[![Tboîte de dialogue Nouveau projet he](creating-a-controller-cs/_static/image2.jpg)](creating-a-controller-cs/_static/image3.png)
+[![La boîte de dialogue Nouveau projet](creating-a-controller-cs/_static/image2.jpg)](creating-a-controller-cs/_static/image3.png)
 
 **Figure 02**: La boîte de dialogue Ajouter un contrôleur ([cliquez pour afficher l’image en taille réelle](creating-a-controller-cs/_static/image4.png))
 
@@ -56,7 +56,7 @@ Vous devez toujours créer des contrôleurs dans le dossier contrôleurs. Sinon,
 Lorsque vous créez un contrôleur, vous avez l’option pour générer automatiquement les méthodes d’action Create, Update et Details (voir Figure 3). Si vous sélectionnez cette option dans la liste 2, la classe de contrôleur est générée.
 
 
-[![Cméthodes d’action réation au automatiquement](creating-a-controller-cs/_static/image3.jpg)](creating-a-controller-cs/_static/image5.png)
+[![Création automatique de méthodes d’action](creating-a-controller-cs/_static/image3.jpg)](creating-a-controller-cs/_static/image5.png)
 
 **Figure 03**: Création automatique de méthodes d’action ([cliquez pour afficher l’image en taille réelle](creating-a-controller-cs/_static/image6.png))
 
@@ -76,7 +76,7 @@ Le contrôleur ASP.NET MVC est simplement une classe. Si vous préférez, vous p
 3. Modifiez le fichier résultant de la classe afin que la classe hérite de la classe de base de System.Web.Mvc.Controller (voir Listing 3).
 
 
-[![Création à une nouvelle classe](creating-a-controller-cs/_static/image4.jpg)](creating-a-controller-cs/_static/image7.png)
+[![Création d’une nouvelle classe](creating-a-controller-cs/_static/image4.jpg)](creating-a-controller-cs/_static/image7.png)
 
 **Figure 04**: Création d’une nouvelle classe ([cliquez pour afficher l’image en taille réelle](creating-a-controller-cs/_static/image8.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 09f8389a04c5600ca9ee8365a9dc5a0d607c0a4d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403920"
 ---
 # <a name="the-aspnet-20-page-model"></a>Le modèle de Page 2.0 ASP.NET

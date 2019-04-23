@@ -12,14 +12,14 @@ ms.openlocfilehash: 8f6fb4348e6ff703d329331b908e41763f24bb1f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402945"
 ---
 # <a name="security-basics-and-aspnet-support-c"></a>Concepts de base et prise en charge de la sécurité par ASP.NET (C#)
 
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger le PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_cs.pdf)
+[Télécharger PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_cs.pdf)
 
 > Il s’agit du premier didacticiel d’une série de didacticiels présentant des techniques pour l’authentification des visiteurs via un formulaire web, autoriser l’accès à certaines pages et fonctionnalités et la gestion des comptes d’utilisateur dans une application ASP.NET.
 
@@ -140,7 +140,7 @@ Microsoft fournit deux classes de fournisseur d’appartenance dans le .NET Fram
 Cette série de didacticiels consacrée exclusivement SqlMembershipProvider.
 
 
-[![THE modèle permet à différentes implémentations du fournisseur en toute transparence sur secteur dans l’infrastructure&lt;/ fort&gt;](security-basics-and-asp-net-support-cs/_static/image4.png)](security-basics-and-asp-net-support-cs/_static/image3.png)
+[![Le modèle permet à différentes implémentations du fournisseur en toute transparence sur secteur dans l’infrastructure&lt;/ fort&gt;](security-basics-and-asp-net-support-cs/_static/image4.png)](security-basics-and-asp-net-support-cs/_static/image3.png)
 
 **Figure 03**: Le modèle permet à différentes implémentations du fournisseur en toute transparence sur secteur dans l’infrastructure ([cliquez pour afficher l’image en taille réelle](security-basics-and-asp-net-support-cs/_static/image5.png))
 
@@ -192,4 +192,4 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Entraîner un réviseur pour ce didacticiel a été de ce didacticiel série a été révisée par plusieurs réviseurs utiles. Les réviseurs tête pour ce didacticiel incluent Alicja Maziarz, John Suru et Teresa Murphy. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Suivant](an-overview-of-forms-authentication-cs.md)
+> [Next](an-overview-of-forms-authentication-cs.md)

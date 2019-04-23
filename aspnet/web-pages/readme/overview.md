@@ -12,7 +12,7 @@ ms.openlocfilehash: 7374b1afafa9ca63309f3c0369c5efd808f7f28a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401983"
 ---
 # <a name="webmatrix-readme"></a>Fichier Lisez-moi de WebMatrix
@@ -25,13 +25,13 @@ ms.locfileid: "59401983"
 > Ce fichier Lisez-moi s’applique à la 1.0 version de WebMatrix.
 
 
-- [Vue d'ensemble](#Overview)
+- [Vue d’ensemble](#Overview)
 - [Installation](#Installation_Notes)
 - [Comment publier des Applications](#InstructionsForPublishingApplications)
 - [Modifications et les problèmes](#ChangesAndIssues)
 
     - [WebMatrix 1.0 Installation](#Known_Issues_Installation)
-    - [Pages web ASP.NET](#Known_Issues_ASPNET)
+    - [Pages Web ASP.NET](#Known_Issues_ASPNET)
     - [WebMatrix](#Known_Issues_WebMatrix)
     - [IIS Express](#Known_Issues_IISExpress)
     - [SQL Server Compact](#Known_Issues_SQLServerCompact)
@@ -121,7 +121,7 @@ Cette section du document décrit les nouvelles fonctionnalités, des modificati
 
 - [Nouvelles fonctionnalités](#NewFeatures)
 - [Modifications](#Changes)
-- [Questions](#Issues)
+- [Problèmes](#Issues)
 
 #### <a id="NewFeatures"></a>  Nouvelles fonctionnalités
 

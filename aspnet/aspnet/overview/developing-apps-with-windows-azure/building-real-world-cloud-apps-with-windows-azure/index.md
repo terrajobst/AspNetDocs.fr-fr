@@ -12,7 +12,7 @@ ms.openlocfilehash: bb9ae940ba90620a6a4c2d373117635f80e14588
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397446"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Création d’applications cloud réelles avec Azure
@@ -30,9 +30,9 @@ ms.locfileid: "59397446"
 - [Stratégies de partitionnement des données](data-partitioning-strategies.md)
 - [Considérations diverses sur Stockage Blob](unstructured-blob-storage.md)
 - [Concevoir pour faire face aux défaillances](design-to-survive-failures.md)
-- [Supervision et télémétrie](monitoring-and-telemetry.md)
+- [Surveillance et télémétrie](monitoring-and-telemetry.md)
 - [Gestion des erreurs temporaires](transient-fault-handling.md)
 - [Mise en cache distribuée](distributed-caching.md)
 - [Modèle de fonctionnement centré sur la file d’attente](queue-centric-work-pattern.md)
 - [Autres modèles et conseils](more-patterns-and-guidance.md)
-- [Annexe : Exemple d’application Fix It](the-fix-it-sample-application.md)
+- [Annexe : La solution exemple d’Application](the-fix-it-sample-application.md)

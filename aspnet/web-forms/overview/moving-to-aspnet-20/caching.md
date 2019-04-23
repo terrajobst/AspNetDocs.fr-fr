@@ -12,7 +12,7 @@ ms.openlocfilehash: 5e16415df5bd4203995bec943ffa682f7da82357
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400202"
 ---
 # <a name="caching"></a>Mise en cache
@@ -72,7 +72,7 @@ La ligne de commande suivante enregistre la table Products dans la base de donn�
 
 Voici une explication des commutateurs de ligne de commande utilisé dans la commande ci-dessus :
 
-| **Commutateur de ligne de commande** | **Objectif** |
+| **Commutateur de ligne de commande** | **Fonction** |
 | --- | --- |
 | S - *server* | Spécifie le nom du serveur. |
 | -ed | Spécifie que la base de données doit être activée pour la dépendance de cache SQL. |

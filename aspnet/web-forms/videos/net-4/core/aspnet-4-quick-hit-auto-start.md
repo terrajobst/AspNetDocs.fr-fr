@@ -12,7 +12,7 @@ ms.openlocfilehash: c1e0a596cf9928ebf8447dc1aaa1dbeac85c8605
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404648"
 ---
 # <a name="aspnet-4-quick-hit---auto-start"></a>ASP.NET 4 « Accès rapide » - démarrage automatique
@@ -24,4 +24,4 @@ Dans cette vidéo, vous allez découvrir la nouvelle fonctionnalité d’extensi
 [&#9654;Regardez la vidéo (11 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-4-quick-hit-auto-start)
 
 > [!div class="step-by-step"]
-> [Suivant](aspnet-4-quick-hit-clean-webconfig-files.md)
+> [Next](aspnet-4-quick-hit-clean-webconfig-files.md)

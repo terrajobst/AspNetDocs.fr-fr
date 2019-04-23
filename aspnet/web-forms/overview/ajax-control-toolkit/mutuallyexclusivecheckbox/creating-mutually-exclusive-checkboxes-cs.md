@@ -12,7 +12,7 @@ ms.openlocfilehash: 01d6d2988278d3d371d93b23bbdf089d83900405
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397849"
 ---
 # <a name="creating-mutually-exclusive-checkboxes-c"></a>Création de cases à cocher mutuellement exclusives (C#)
@@ -47,9 +47,9 @@ Enfin, inclure ASP.NET AJAX `ScriptManager` qui est requis par tous les élémen
 Enregistrez et exécutez la page : Vous pouvez vérifier et décochez les deux cases à cocher, toutefois à aucun moment peut les deux cases à cocher être vérifiées.
 
 
-[![Oeules une case à cocher peut être vérifiée à la fois](creating-mutually-exclusive-checkboxes-cs/_static/image2.png)](creating-mutually-exclusive-checkboxes-cs/_static/image1.png)
+[![Case à cocher qu’une seule peut être vérifiée à la fois](creating-mutually-exclusive-checkboxes-cs/_static/image2.png)](creating-mutually-exclusive-checkboxes-cs/_static/image1.png)
 
 Case à cocher qu’une seule peut être vérifiée à la fois ([cliquez pour afficher l’image en taille réelle](creating-mutually-exclusive-checkboxes-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](creating-mutually-exclusive-checkboxes-vb.md)
+> [Next](creating-mutually-exclusive-checkboxes-vb.md)

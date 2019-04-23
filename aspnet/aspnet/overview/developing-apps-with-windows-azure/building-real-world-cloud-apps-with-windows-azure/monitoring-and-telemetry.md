@@ -12,7 +12,7 @@ ms.openlocfilehash: 48a66eea839f7f48899040ad20bbfee95b9a1902
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403907"
 ---
 # <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Surveillance et télémétrie (génération d’applications Cloud réalistes avec Azure)
@@ -36,7 +36,7 @@ L’une des choses qui est génial sur l’environnement de cloud est qu’il es
 
 - [New Relic](http://newrelic.com/)
 - [AppDynamics](http://www.appdynamics.com/)
-- [DynaTrace](https://datamarket.azure.com/application/b4011de2-1212-4375-9211-e882766121ff)
+- [Dynatrace](https://datamarket.azure.com/application/b4011de2-1212-4375-9211-e882766121ff)
 
 [Microsoft System Center](http://www.petri.co.il/microsoft-system-center-introduction.htm#) inclut également des fonctionnalités d’analyse.
 
@@ -72,7 +72,7 @@ Déployer l’application sur Azure et l’utiliser. Créez quelques tâches Fix
 
 Puis revenez à la **New Relic** page dans le **modules complémentaires** onglet du portail et cliquez sur **gérer**. Le portail vous envoie au portail de gestion de New Relic, à l’aide de l’authentification unique pour l’authentification afin que vous n’êtes pas obligé de retaper vos informations d’identification. La page Vue d’ensemble présente une série de statistiques de performances. (Cliquez sur l’image pour afficher la taille complète de la page Vue d’ensemble.)
 
-[![Nonglet de surveillance Relic Nouv](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
+[![Nouvel onglet de surveillance Relic](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
 
 Voici quelques-unes des statistiques, que vous pouvez voir :
 

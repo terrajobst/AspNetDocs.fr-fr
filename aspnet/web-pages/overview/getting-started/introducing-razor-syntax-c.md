@@ -12,7 +12,7 @@ ms.openlocfilehash: 8237dc6b925ccefc5b411aebc8e7c399dcdc6746
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407352"
 ---
 # <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-c"></a>Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor (c#)
@@ -443,7 +443,7 @@ Un opérateur est un mot clé ou un caractère qui indique à ASP.NET quel type 
 
 :::row:::
     :::column:::
-    <strong>Opérateur</strong>
+    <strong>Operator</strong>
     :::column-end:::
     :::column:::
     <strong>Description</strong>
@@ -852,4 +852,4 @@ Si votre code n’a pas gérer l’exception, vous voyez une page d’erreur com
 
 [ASP.NET](https://msdn.microsoft.com/library/ee532866.aspx)
 
-[Langage C#](https://msdn.microsoft.com/library/kx37x362.aspx)
+[Langage c#](https://msdn.microsoft.com/library/kx37x362.aspx)

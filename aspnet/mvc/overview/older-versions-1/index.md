@@ -12,7 +12,7 @@ ms.openlocfilehash: 5827542a951a4b65d1c9b02b0ad15ed988bf1456
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399630"
 ---
 # <a name="older-versions---mvc-1-and-2"></a>Versions antérieures - MVC 1 et 2
@@ -20,7 +20,7 @@ ms.locfileid: "59399630"
 > Ressources pour apprendre à programmer MVC 1 et 2.
 
 
-- [Vue d'ensemble](overview/index.md)
+- [Vue d’ensemble](overview/index.md)
 
     - [Vue d’ensemble d’ASP.NET MVC](overview/asp-net-mvc-overview.md)
     - [Présentation du processus d’exécution d’ASP.NET MVC](overview/understanding-the-asp-net-mvc-execution-process.md)
@@ -29,7 +29,7 @@ ms.locfileid: "59399630"
 - [Bien démarrer avec MVC](getting-started-with-mvc/index.md)
 
     - [Introduction à ASP.NET MVC](getting-started-with-mvc/getting-started-with-mvc-part1.md)
-    - [Ajour d’un contrôleur](getting-started-with-mvc/getting-started-with-mvc-part2.md)
+    - [Ajout d’un contrôleur](getting-started-with-mvc/getting-started-with-mvc-part2.md)
     - [Ajout d’une vue](getting-started-with-mvc/getting-started-with-mvc-part3.md)
     - [Création d’une base de données](getting-started-with-mvc/getting-started-with-mvc-part4.md)
     - [Accès aux données de votre modèle à partir d’un contrôleur](getting-started-with-mvc/getting-started-with-mvc-part5.md)
@@ -98,26 +98,26 @@ ms.locfileid: "59399630"
     - [Authentification des utilisateurs avec l’authentification par formulaire (VB)](security/authenticating-users-with-forms-authentication-vb.md)
     - [Authentification des utilisateurs avec l’authentification Windows (VB)](security/authenticating-users-with-windows-authentication-vb.md)
     - [Prévention des attaques par injection de code JavaScript (VB)](security/preventing-javascript-injection-attacks-vb.md)
-- [Test unitaire](unit-testing/index.md)
+- [Tests unitaires](unit-testing/index.md)
 
     - [Création de tests unitaires pour les applications ASP.NET MVC (C#)](unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs.md)
     - [Création de tests unitaires pour les applications ASP.NET MVC (VB)](unit-testing/creating-unit-tests-for-asp-net-mvc-applications-vb.md)
 - [Gestionnaire de contacts](contact-manager/index.md)
 
-    - [Itération #1 : créer l’Application (c#)](contact-manager/iteration-1-create-the-application-cs.md)
-    - [Itération #2 : donner l’application une apparence agréable (c#)](contact-manager/iteration-2-make-the-application-look-nice-cs.md)
-    - [Itération #3 : ajouter une validation de formulaire (c#)](contact-manager/iteration-3-add-form-validation-cs.md)
-    - [Itération #4 : rendre l’application faiblement couplée (c#)](contact-manager/iteration-4-make-the-application-loosely-coupled-cs.md)
-    - [Itération #5 : créer des tests unitaires (c#)](contact-manager/iteration-5-create-unit-tests-cs.md)
-    - [Itération #6 : utiliser le développement piloté par test (c#)](contact-manager/iteration-6-use-test-driven-development-cs.md)
-    - [Itération #7 : ajouter des fonctionnalités Ajax (c#)](contact-manager/iteration-7-add-ajax-functionality-cs.md)
-    - [Itération #1 : créer l’Application (VB)](contact-manager/iteration-1-create-the-application-vb.md)
-    - [Itération #2 : donner l’application une apparence agréable (VB)](contact-manager/iteration-2-make-the-application-look-nice-vb.md)
-    - [Itération #3 : ajouter une validation de formulaire (VB)](contact-manager/iteration-3-add-form-validation-vb.md)
-    - [Itération #4 : rendre l’application faiblement couplée (VB)](contact-manager/iteration-4-make-the-application-loosely-coupled-vb.md)
-    - [Itération #5 : créer des tests unitaires (VB)](contact-manager/iteration-5-create-unit-tests-vb.md)
-    - [Itération #6 : utiliser le développement piloté par test (VB)](contact-manager/iteration-6-use-test-driven-development-vb.md)
-    - [Itération #7 : ajouter des fonctionnalités Ajax (VB)](contact-manager/iteration-7-add-ajax-functionality-vb.md)
+    - [Itération #1 : Créer l’application (C#)](contact-manager/iteration-1-create-the-application-cs.md)
+    - [Itération #2 : Donner une belle apparence à l’application (C#)](contact-manager/iteration-2-make-the-application-look-nice-cs.md)
+    - [Itération #3 : Ajouter une validation de formulaire (C#)](contact-manager/iteration-3-add-form-validation-cs.md)
+    - [Itération #4 : Rendre l’application faiblement couplée (C#)](contact-manager/iteration-4-make-the-application-loosely-coupled-cs.md)
+    - [Itération #5 : Créer des tests unitaires (C#)](contact-manager/iteration-5-create-unit-tests-cs.md)
+    - [Itération #6 : Utiliser le développement piloté par les tests (C#)](contact-manager/iteration-6-use-test-driven-development-cs.md)
+    - [Itération #7 : Ajouter des fonctionnalités Ajax (C#)](contact-manager/iteration-7-add-ajax-functionality-cs.md)
+    - [Itération #1 : Créer l’application (VB)](contact-manager/iteration-1-create-the-application-vb.md)
+    - [Itération #2 : Donner une belle apparence à l’application (VB)](contact-manager/iteration-2-make-the-application-look-nice-vb.md)
+    - [Itération #3 : Ajouter une validation de formulaire (VB)](contact-manager/iteration-3-add-form-validation-vb.md)
+    - [Itération #4 : Rendre l’application faiblement couplée (VB)](contact-manager/iteration-4-make-the-application-loosely-coupled-vb.md)
+    - [Itération #5 : Créer des tests unitaires (VB)](contact-manager/iteration-5-create-unit-tests-vb.md)
+    - [Itération #6 : Utiliser le développement piloté par les tests (VB)](contact-manager/iteration-6-use-test-driven-development-vb.md)
+    - [Itération #7 : Ajouter des fonctionnalités Ajax (VB)](contact-manager/iteration-7-add-ajax-functionality-vb.md)
 - [NerdDinner](nerddinner/index.md)
 
     - [Introduction au didacticiel NerdDinner](nerddinner/introducing-the-nerddinner-tutorial.md)
@@ -136,5 +136,5 @@ ms.locfileid: "59399630"
     - [Conclusion du didacticiel NerdDinner](nerddinner/nerddinner-wrap-up.md)
 - [Base de données de films](movie-database/index.md)
 
-    - [Créer une application de base de données de films en 15 minutes avec ASP.NET MVC (C#)](movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs.md)
-    - [Créer une application de base de données de films en 15 minutes avec ASP.NET MVC (VB)](movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb.md)
+    - [Créer une application de base de données de films en 15 minutes avec ASP.NET MVC (C#)](movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs.md)
+    - [Créer une application de base de données de films en 15 minutes avec ASP.NET MVC (VB)](movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb.md)

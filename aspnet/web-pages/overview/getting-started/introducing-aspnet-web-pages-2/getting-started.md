@@ -12,7 +12,7 @@ ms.openlocfilehash: 796e0c5e605d1103a4b9937b4e698c5c9412c013
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402295"
 ---
 # <a name="getting-started"></a>Prise en main
@@ -289,4 +289,4 @@ Dans le didacticiel suivant de cette série, vous explorez un peu plus de progra
 [Créer un site Web ASP.NET à partir de zéro](https://www.microsoft.com/web/post/create-an-aspnet-website-from-scratch). Il s’agit d’un didacticiel qui est spécifiquement sur l’utilisation de WebMatrix (pas les Pages Web ASP.NET). Il prendra un peu plus en détail certaines des fonctionnalités supplémentaires de WebMatrix nous n’aborderons pas dans cet ensemble de didacticiels.
 
 > [!div class="step-by-step"]
-> [Suivant](intro-to-web-pages-programming.md)
+> [Next](intro-to-web-pages-programming.md)

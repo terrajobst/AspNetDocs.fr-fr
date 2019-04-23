@@ -12,7 +12,7 @@ ms.openlocfilehash: 7834b5c418de9d05ee870641cfd7c7f9956ab210
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402997"
 ---
 # <a name="ui-and-navigation"></a>Interface utilisateur et navigation
@@ -212,7 +212,7 @@ Ce code affiche toutes les catégories à partir de la base de données. Le **Li
 
 > [!NOTE] 
 > 
-> **Conseil**
+> **Info-bulle**
 > 
 > Lorsque vous ajoutez du code en tapant pendant le développement, vous pouvez être certain qu’un membre valide d’un objet est trouvé, car il est fortement typée des contrôles de données affichent les membres disponibles en fonction IntelliSense. IntelliSense offre des choix de code selon le contexte quand vous tapez du code, tels que les propriétés, méthodes et objets.
 

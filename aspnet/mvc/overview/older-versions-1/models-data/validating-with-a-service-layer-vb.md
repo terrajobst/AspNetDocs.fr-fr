@@ -12,7 +12,7 @@ ms.openlocfilehash: fc819494ef58824d485144396e3a995d906c8b42
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398707"
 ---
 # <a name="validating-with-a-service-layer-vb"></a>Validation avec une couche de service (VB)
@@ -80,7 +80,7 @@ L’interface IValidationDictionary est définie dans la liste 6. Cette interfac
 
 La classe dans la liste 7, nommé la classe ModelStateWrapper, implémente l’interface IValidationDictionary. Vous pouvez instancier la classe ModelStateWrapper en passant un dictionnaire d’états de modèle au constructeur.
 
-**Listing 7 - Models\ModelStateWrapper.vb**
+**Liste 7 - Models\ModelStateWrapper.vb**
 
 [!code-vb[Main](validating-with-a-service-layer-vb/samples/sample7.vb)]
 

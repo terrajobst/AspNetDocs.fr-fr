@@ -12,7 +12,7 @@ ms.openlocfilehash: 86781a1f46ce0c01a5d70b1f0cf8a81f3f96a032
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405922"
 ---
 # <a name="aspnet-mvc-4-dependency-injection"></a>Injection de dépendances d’ASP.NET MVC 4
@@ -524,7 +524,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](aspnet-mvc-4-dependency-injection/_static/image16.png)
 
-    *Progression de l'installation*
+    *Progression de l’installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](aspnet-mvc-4-dependency-injection/_static/image17.png)

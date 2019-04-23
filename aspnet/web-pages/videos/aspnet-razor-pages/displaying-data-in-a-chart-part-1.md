@@ -12,7 +12,7 @@ ms.openlocfilehash: ce044a9832803e24d9afbdc8efdf11ea0b15308d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398161"
 ---
 # <a name="displaying-data-in-a-chart-part-1"></a>Affichage de données dans un graphique (Partie 1)

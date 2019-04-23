@@ -12,7 +12,7 @@ ms.openlocfilehash: c3b2a46119873baf18e953a2d221d544feccbc26
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407300"
 ---
 # <a name="chart"></a>Graphique
@@ -21,4 +21,4 @@ ms.locfileid: "59407300"
 
 
 - [Chart Control](aspnet-4-quick-hit-chart-control.md)
-- [Présentation du nouveau contrôle Chart dans Visual Studio 2010](aspnet-4-how-do-i-introducing-the-new-chart-control-in-visual-studio-2010.md)
+- [Présentation du nouveau contrôle Chart dans Visual Studio 2010](aspnet-4-how-do-i-introducing-the-new-chart-control-in-visual-studio-2010.md)

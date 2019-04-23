@@ -12,7 +12,7 @@ ms.openlocfilehash: 922234529a9c8812962136f2d3e5b38dea615e31
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400670"
 ---
 # <a name="visual-studio-2012-page-inspector"></a>Inspecteur de page de Visual Studio 2012

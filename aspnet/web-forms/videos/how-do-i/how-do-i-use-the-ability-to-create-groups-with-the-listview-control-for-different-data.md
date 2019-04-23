@@ -12,7 +12,7 @@ ms.openlocfilehash: 4732a3c301c56602533b757434e239c48fe7a392
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403322"
 ---
 # <a name="how-do-i-use-the-ability-to-create-groups-with-the-listview-control-for-different-data"></a>[Comment faire] Utiliser la capacité à créer des groupes avec le contrôle ListView pour différentes données

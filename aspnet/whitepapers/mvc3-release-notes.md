@@ -12,16 +12,16 @@ ms.openlocfilehash: 36bc314c6709c34863d86158419257be99f4084f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407105"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC
 
-- [Vue d'ensemble](#overview)
+- [Vue d’ensemble](#overview)
 - [Notes d’installation](#installation-notes)
-- [Configuration logicielle](#software-requirements)
+- [Configuration logicielle requise](#software-requirements)
 - [Documentation](#documentation)
-- [Assistance](#support)
+- [Prise en charge](#support)
 - [La mise à niveau d’un projet ASP.NET MVC 2 vers ASP.NET MVC 3 mis à jour](#upgrading)
 - [ASP.NET MVC 3 Tools Update (12 avril 2011)](#tu-changes)
 
@@ -60,7 +60,7 @@ ms.locfileid: "59407105"
 - [ASP.NET MVC 3 Release Candidate (9 novembre 2010)](#TOC_ASP_NET_3_RC)
 
     - [Nouvelles fonctionnalités dans ASP.NET MVC 3 RC](#_Toc276711785)
-    - [NuGet Package Manager](#_Toc276711786)
+    - [Gestionnaire de Package NuGet](#_Toc276711786)
     - [Amélioration « Nouveau projet » boîte de dialogue](#_Toc276711787)
     - [Contrôleurs sessionless](#_Toc276711788)
     - [Nouveaux attributs de Validation](#_Toc276711789)
@@ -507,7 +507,7 @@ Prise en charge pour la modification de la liste de modèles et affichage de mot
 
 Les modèles par défaut sont les suivantes :
 
-Vide. Contient un ensemble minimal de fichiers pour un projet ASP.NET MVC, y compris la structure de répertoire par défaut pour les projets ASP.NET MVC, et un fichier Site.css qui contient la valeur par défaut que définit le style de ASP.NET MVC et un répertoire de Scripts qui contient les fichiers de JavaScript par défaut.
+Vide : Contient un ensemble minimal de fichiers pour un projet ASP.NET MVC, y compris la structure de répertoire par défaut pour les projets ASP.NET MVC, et un fichier Site.css qui contient la valeur par défaut que définit le style de ASP.NET MVC et un répertoire de Scripts qui contient les fichiers de JavaScript par défaut.
 
 Application Internet. Contient les fonctionnalités d’exemple qui montre comment utiliser le fournisseur d’appartenances avec ASP.NET MVC.
 
@@ -648,7 +648,7 @@ Prise en charge de la modification de la liste de modèles et affichage de moteu
 
 Les modèles par défaut sont les suivantes :
 
-Vide. Contient un ensemble minimal de fichiers pour un projet ASP.NET MVC, y compris la structure de répertoire par défaut pour les projets ASP.NET MVC, et un petit fichier Site.css qui contient la valeur par défaut que définit le style de ASP.NET MVC et un répertoire de Scripts qui contient les fichiers de JavaScript par défaut.
+Vide : Contient un ensemble minimal de fichiers pour un projet ASP.NET MVC, y compris la structure de répertoire par défaut pour les projets ASP.NET MVC, et un petit fichier Site.css qui contient la valeur par défaut que définit le style de ASP.NET MVC et un répertoire de Scripts qui contient les fichiers de JavaScript par défaut.
 
 Application Internet. Contient les fonctionnalités d’exemple qui montre comment utiliser le fournisseur d’appartenances dans ASP.NET MVC.
 

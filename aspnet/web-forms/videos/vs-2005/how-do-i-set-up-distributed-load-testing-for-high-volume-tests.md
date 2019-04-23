@@ -12,7 +12,7 @@ ms.openlocfilehash: 5916531603ed66c8e0a9448c168cb81f673e129c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397502"
 ---
 # <a name="how-do-i-set-up-distributed-load-testing-for-high-volume-tests"></a>[Comment faire] Configurer le test de charge distribué pour les Tests de Volume élevé ?

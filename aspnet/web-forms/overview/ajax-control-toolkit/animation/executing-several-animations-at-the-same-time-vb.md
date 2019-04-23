@@ -12,7 +12,7 @@ ms.openlocfilehash: f8bb91de9642814a79d0fddd642928c25c58ebfd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402841"
 ---
 # <a name="executing-several-animations-at-the-same-time-vb"></a>Exécution de plusieurs Animations en même temps (VB)
@@ -55,7 +55,7 @@ Voici l’un balisage possible pour le `AnimationExtender` contrôle, atténuant
 Et effectivement : lorsque vous exécutez ce script, le panneau s’affiche, puis redimensionne (plus de triple de sa largeur et sa hauteur de réduisant de moitié) et fondu en même temps.
 
 
-[![TPanneau de configuration he est fondu et redimensionnement (y compris son contenu, grâce à moteur de rendu du navigateur)](executing-several-animations-at-the-same-time-vb/_static/image2.png)](executing-several-animations-at-the-same-time-vb/_static/image1.png)
+[![Le panneau est fondu et redimensionnement (y compris son contenu, grâce à moteur de rendu du navigateur)](executing-several-animations-at-the-same-time-vb/_static/image2.png)](executing-several-animations-at-the-same-time-vb/_static/image1.png)
 
 Le panneau est fondu et redimensionnement (y compris son contenu, grâce à moteur de rendu du navigateur) ([cliquez pour afficher l’image en taille réelle](executing-several-animations-at-the-same-time-vb/_static/image3.png))
 

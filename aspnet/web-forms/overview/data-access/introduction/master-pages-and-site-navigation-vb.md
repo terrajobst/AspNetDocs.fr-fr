@@ -12,7 +12,7 @@ ms.openlocfilehash: 38bc21c1a7809c235a85638cbb40183f2d0b422d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398512"
 ---
 # <a name="master-pages-and-site-navigation-vb"></a>Pages maîtres et navigation dans un site (VB)
@@ -33,7 +33,7 @@ Le [système de navigation de site](http://aspnet.4guysfromrolla.com/articles/11
 Pour illustrer ces concepts et faciliter l’utilisation de notre site Web de didacticiels, nous allons passer cette leçon définition d’une mise en page de l’échelle du site, la mise en œuvre un plan de site et l’ajout de l’interface utilisateur de navigation. À la fin de ce didacticiel, nous aurons une conception soignées du site Web pour la création de nos pages web didacticiel.
 
 
-[![TIl résultat de fin de ce didacticiel](master-pages-and-site-navigation-vb/_static/image2.png)](master-pages-and-site-navigation-vb/_static/image1.png)
+[![Le résultat final de ce didacticiel](master-pages-and-site-navigation-vb/_static/image2.png)](master-pages-and-site-navigation-vb/_static/image1.png)
 
 **Figure 1**: Le résultat final de ce didacticiel ([cliquez pour afficher l’image en taille réelle](master-pages-and-site-navigation-vb/_static/image3.png))
 
@@ -51,7 +51,7 @@ La première étape consiste à créer la page maître du site. Actuellement, no
 Pour créer une page maître, avec le bouton droit sur le nom du projet dans l’Explorateur de solutions et choisissez Ajouter un nouvel élément. Sélectionnez le type de Page maître à partir de la liste des modèles, puis nommez-le `Site.master`.
 
 
-[![Aune nouvelle Page maître au site Web de jj](master-pages-and-site-navigation-vb/_static/image6.png)](master-pages-and-site-navigation-vb/_static/image5.png)
+[![Ajouter une nouvelle Page maître au site Web](master-pages-and-site-navigation-vb/_static/image6.png)](master-pages-and-site-navigation-vb/_static/image5.png)
 
 **Figure 3**: Ajouter une nouvelle Page maître au site Web ([cliquez pour afficher l’image en taille réelle](master-pages-and-site-navigation-vb/_static/image7.png))
 
@@ -68,7 +68,7 @@ Une page maître définit la disposition de page statiques et les régions qui p
 Avec le balisage ci-dessus, basculer vers la vue de conception montre mise en page de la page maître. Toutes les pages ASP.NET qui utilisent cette page maître aura cette mise en page uniforme, avec la possibilité de spécifier le balisage pour le `MainContent` région.
 
 
-[![TIl Page maître, lorsque affichés via le mode Design](master-pages-and-site-navigation-vb/_static/image9.png)](master-pages-and-site-navigation-vb/_static/image8.png)
+[![La Page maître, lorsqu’ils sont affichés via la vue de conception](master-pages-and-site-navigation-vb/_static/image9.png)](master-pages-and-site-navigation-vb/_static/image8.png)
 
 **Figure 4**: La Page maître, lorsque affichés via le mode création ([cliquez pour afficher l’image en taille réelle](master-pages-and-site-navigation-vb/_static/image10.png))
 
@@ -78,7 +78,7 @@ Avec le balisage ci-dessus, basculer vers la vue de conception montre mise en pa
 Avec la page maître définie, nous sommes prêts à ajouter les pages ASP.NET pour le site Web. Commençons par ajouter `Default.aspx`, page d’accueil de notre site Web. Avec le bouton droit sur le nom du projet dans l’Explorateur de solutions et choisissez Ajouter un nouvel élément. Choisissez l’option de formulaire Web à partir de la liste des modèles et le nom du fichier `Default.aspx`. En outre, la case « Sélectionner la page maître ».
 
 
-[![Aun nouveau formulaire Web, la vérification de la case à cocher Sélectionner la page maître de jj](master-pages-and-site-navigation-vb/_static/image12.png)](master-pages-and-site-navigation-vb/_static/image11.png)
+[![Ajoutez un nouveau formulaire Web, la vérification de la case à cocher Sélectionner la page maître](master-pages-and-site-navigation-vb/_static/image12.png)](master-pages-and-site-navigation-vb/_static/image11.png)
 
 **Figure 5**: Ajoutez un nouveau formulaire Web, la vérification de la case à cocher Sélectionner la page maître ([cliquez pour afficher l’image en taille réelle](master-pages-and-site-navigation-vb/_static/image13.png))
 
@@ -86,7 +86,7 @@ Avec la page maître définie, nous sommes prêts à ajouter les pages ASP.NET p
 Après avoir cliqué sur le bouton OK, nous allons invités à choisir quelle page maître cette nouvelle page ASP.NET doit utiliser. Bien que vous pouvez avoir plusieurs pages maîtres dans votre projet, nous n'avons qu’un seul.
 
 
-[![Choisissez la Page maître cette utilisation doit de Page ASP.NET](master-pages-and-site-navigation-vb/_static/image15.png)](master-pages-and-site-navigation-vb/_static/image14.png)
+[![Choisissez la Page maître que cette Page ASP.NET doit utiliser.](master-pages-and-site-navigation-vb/_static/image15.png)](master-pages-and-site-navigation-vb/_static/image14.png)
 
 **Figure 6**: Cliquez sur cette Page ASP.NET doit utilisent la Page maître ([cliquez pour afficher l’image en taille réelle](master-pages-and-site-navigation-vb/_static/image16.png))
 
@@ -110,7 +110,7 @@ Le `Title` d’attribut dans le `@Page` directive nous permet de définir le tit
 Basculer vers la vue de conception que nous pouvons voir l’aspect de notre page dans un navigateur. Notez que, dans la conception, afficher, de la page ASP.NET que seules les régions modifiables de contenu sont modifiables, le balisage non ContentPlaceHolder défini dans la page maître est grisée.
 
 
-[![TIl mode Design pour les régions de Non-modifiable et ASP.NET Page montre à la fois l’éditable](master-pages-and-site-navigation-vb/_static/image18.png)](master-pages-and-site-navigation-vb/_static/image17.png)
+[![Le mode de création de la Page ASP.NET montre les deux régions modifiables et Non modifiables](master-pages-and-site-navigation-vb/_static/image18.png)](master-pages-and-site-navigation-vb/_static/image17.png)
 
 **Figure 7**: Le mode Design pour l’ASP.NET Page montre à la fois le modifiable et Non-éditable régions ([cliquez pour afficher l’image en taille réelle](master-pages-and-site-navigation-vb/_static/image19.png))
 
@@ -142,7 +142,7 @@ Le système de navigation de site ASP.NET 2.0 fournit un moyen pour un développ
 Pour ce didacticiel, toutefois, utilisons le fournisseur de plan de site par défaut qui est fourni avec ASP.NET 2.0. Pour créer le plan de site, simplement avec le bouton droit sur le nom du projet dans l’Explorateur de solutions, choisissez Ajouter un nouvel élément, choisissez l’option de plan de Site. Conservez le nom `Web.sitemap` et cliquez sur le bouton Ajouter.
 
 
-[![Ajj un plan de Site à votre projet](master-pages-and-site-navigation-vb/_static/image22.png)](master-pages-and-site-navigation-vb/_static/image21.png)
+[![Ajouter un plan de Site à votre projet](master-pages-and-site-navigation-vb/_static/image22.png)](master-pages-and-site-navigation-vb/_static/image21.png)
 
 **Figure 9**: Ajouter un plan de Site à votre projet ([cliquez pour afficher l’image en taille réelle](master-pages-and-site-navigation-vb/_static/image23.png))
 
@@ -159,7 +159,7 @@ Web.sitemap
 Le plan de site définit la structure de navigation du site Web, qui est une hiérarchie qui décrit les différentes sections du site. Chaque `<siteMapNode>` élément `Web.sitemap` représente une section de la structure de navigation du site.
 
 
-[![TIl plan de Site représente une Structure de navigation hiérarchique](master-pages-and-site-navigation-vb/_static/image25.png)](master-pages-and-site-navigation-vb/_static/image24.png)
+[![Le plan de Site représente une Structure de navigation hiérarchique](master-pages-and-site-navigation-vb/_static/image25.png)](master-pages-and-site-navigation-vb/_static/image24.png)
 
 **Figure 10**: Le plan de Site représente une Structure de navigation hiérarchique ([cliquez pour afficher l’image en taille réelle](master-pages-and-site-navigation-vb/_static/image26.png))
 
@@ -252,7 +252,7 @@ Les didacticiels dans notre site sont décomposent en différentes catégories d
 Nous allons afficher une liste non triée à l’aide d’un répéteur, mais cette fois que nous affichons le titre et la description des didacticiels. Étant donné que le balisage et le code pour accomplir cela va doivent être répétées pour chaque `Default.aspx` page, nous pouvons encapsuler cette logique de l’interface utilisateur dans un [contrôle utilisateur](https://msdn.microsoft.com/library/y6wb1a0e.aspx). Créez un dossier dans le site Web appelé `UserControls` et ajoutez à cela un nouvel élément de type contrôle utilisateur Web nommé `SectionLevelTutorialListing.ascx`et ajoutez le balisage suivant :
 
 
-[![Ajj un nouveau contrôle utilisateur de Web dans le dossier UserControls](master-pages-and-site-navigation-vb/_static/image30.png)](master-pages-and-site-navigation-vb/_static/image29.png)
+[![Ajouter un nouveau contrôle utilisateur de Web dans le dossier UserControls](master-pages-and-site-navigation-vb/_static/image30.png)](master-pages-and-site-navigation-vb/_static/image29.png)
 
 **Figure 13**: Ajouter un nouveau contrôle utilisateur de Web pour le `UserControls` dossier ([cliquez pour afficher l’image en taille réelle](master-pages-and-site-navigation-vb/_static/image31.png))
 
@@ -272,12 +272,12 @@ Dans l’exemple précédent de répéteur nous lié le `SiteMap` données pour 
 Une fois ce Repeater a été créé, ouvrez le `Default.aspx` pages dans chacun des dossiers, accédez à la vue de conception et faites simplement glisser le contrôle utilisateur à partir de l’Explorateur de solutions vers l’aire de conception où vous souhaitez voir apparaître la liste de didacticiels.
 
 
-[![TIl contrôle utilisateur a été ajouté à Default.aspx](master-pages-and-site-navigation-vb/_static/image33.png)](master-pages-and-site-navigation-vb/_static/image32.png)
+[![Le contrôle de l’utilisateur a été ajouté à Default.aspx](master-pages-and-site-navigation-vb/_static/image33.png)](master-pages-and-site-navigation-vb/_static/image32.png)
 
 **Figure 14**: Le contrôle de l’utilisateur a été ajouté à `Default.aspx` ([cliquez pour afficher l’image en taille réelle](master-pages-and-site-navigation-vb/_static/image34.png))
 
 
-[![TDidacticiels de Reporting base he figurent](master-pages-and-site-navigation-vb/_static/image36.png)](master-pages-and-site-navigation-vb/_static/image35.png)
+[![Les didacticiels de Reporting base sont répertoriés.](master-pages-and-site-navigation-vb/_static/image36.png)](master-pages-and-site-navigation-vb/_static/image35.png)
 
 **Figure 15**: Les didacticiels de Reporting base sont répertoriés ([cliquez pour afficher l’image en taille réelle](master-pages-and-site-navigation-vb/_static/image37.png))
 
@@ -301,7 +301,7 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 - [Examen d’ASP.NET 2.0 de Navigation de Site](http://aspnet.4guysfromrolla.com/articles/111605-1.aspx)
 - [Fonctionnalités de Navigation de Site 2.0 ASP.NET](https://weblogs.asp.net/scottgu/archive/2005/11/20/431019.aspx)
 - [État d’affichage ASP.NET description](https://msdn.microsoft.com/library/default.asp?url=/library/dnaspp/html/viewstate.asp)
-- [Procédure : Activer le traçage d’une Page ASP.NET](https://msdn.microsoft.com/library/94c55d08%28VS.80%29.aspx)
+- [Guide pratique pour Activer le traçage d’une Page ASP.NET](https://msdn.microsoft.com/library/94c55d08%28VS.80%29.aspx)
 - [Contrôles utilisateur ASP.NET](https://msdn.microsoft.com/library/y6wb1a0e.aspx)
 
 ## <a name="about-the-author"></a>À propos de l’auteur

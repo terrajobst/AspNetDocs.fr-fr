@@ -12,12 +12,12 @@ ms.openlocfilehash: fa489c79e175753635d89913aaaa15a832aa16f7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407586"
 ---
 # <a name="signalr"></a>SignalR
 
-- [Conseils](overview/index.md)
+- [Aide](overview/index.md)
 
     - [Prise en main](overview/getting-started/index.md)
 
@@ -26,8 +26,8 @@ ms.locfileid: "59407586"
         - [Tutoriel : Bien démarrer avec SignalR 2](overview/getting-started/tutorial-getting-started-with-signalr.md)
         - [Tutoriel : Bien démarrer avec SignalR 2 et MVC 5](overview/getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
         - [Tutoriel : En temps réel haute fréquence avec SignalR 2](overview/getting-started/tutorial-high-frequency-realtime-with-signalr.md)
-        - [Tutoriel : Diffusion par le serveur avec SignalR 2](overview/getting-started/tutorial-server-broadcast-with-signalr.md)
-        - [Atelier pratique : Applications web temps réel avec SignalR](overview/getting-started/real-time-web-applications-with-signalr.md)
+        - [Tutoriel : Serveur de diffusion avec SignalR 2](overview/getting-started/tutorial-server-broadcast-with-signalr.md)
+        - [Atelier pratique : Applications Web en temps réel avec SignalR](overview/getting-started/real-time-web-applications-with-signalr.md)
     - [Guide de l’API](overview/guide-to-the-api/index.md)
 
         - [Guide de l’API Hubs - Serveur (C#)](overview/guide-to-the-api/hubs-api-guide-server.md)
@@ -49,10 +49,10 @@ ms.locfileid: "59407586"
     - [Performances](overview/performance/index.md)
 
         - [Performances de SignalR](overview/performance/signalr-performance.md)
-        - [Introduction au scale-out dans SignalR](overview/performance/scaleout-in-signalr.md)
-        - [Scale-out de SignalR avec Azure Service Bus](overview/performance/scaleout-with-windows-azure-service-bus.md)
-        - [Scale-out de SignalR avec Redis](overview/performance/scaleout-with-redis.md)
-        - [Scale-out de SignalR avec SQL Server](overview/performance/scaleout-with-sql-server.md)
+        - [Introduction à la montée en puissance parallèle dans SignalR](overview/performance/scaleout-in-signalr.md)
+        - [Montée en puissance parallèle de SignalR avec Azure Service Bus](overview/performance/scaleout-with-windows-azure-service-bus.md)
+        - [Montée en puissance parallèle de SignalR avec Redis](overview/performance/scaleout-with-redis.md)
+        - [Montée en puissance parallèle de SignalR avec SQL Server](overview/performance/scaleout-with-sql-server.md)
         - [Test de la densité des connexions SignalR avec Crank](overview/performance/signalr-connection-density-testing-with-crank.md)
         - [Utilisation des compteurs de performance SignalR dans un rôle web Azure](overview/performance/using-signalr-performance-counters-in-an-azure-web-role.md)
     - [Déploiement et hébergement](overview/deployment/index.md)
@@ -64,29 +64,29 @@ ms.locfileid: "59407586"
         - [Injection de dépendances dans SignalR](overview/advanced/dependency-injection.md)
     - [Versions](overview/releases/index.md)
 
-        - [Mise à niveau de projets SignalR 1.x vers la version 2](overview/releases/upgrading-signalr-1x-projects-to-20.md)
+        - [Mise à niveau de projets SignalR 1.x vers la version 2](overview/releases/upgrading-signalr-1x-projects-to-20.md)
     - [Versions antérieures](overview/older-versions/index.md)
 
-        - [Tutoriel : Bien démarrer avec SignalR 1.x](overview/older-versions/tutorial-getting-started-with-signalr.md)
-        - [Tutoriel : Bien démarrer avec SignalR 1.x et MVC 4](overview/older-versions/tutorial-getting-started-with-signalr-and-mvc-4.md)
-        - [Temps réel haute fréquence avec SignalR 1.x](overview/older-versions/tutorial-high-frequency-realtime-with-signalr.md)
-        - [Tutoriel : Diffusion par le serveur avec ASP.NET SignalR 1.x](overview/older-versions/tutorial-server-broadcast-with-aspnet-signalr.md)
+        - [Tutoriel : Bien démarrer avec SignalR 1.x](overview/older-versions/tutorial-getting-started-with-signalr.md)
+        - [Tutoriel : Bien démarrer avec SignalR 1.x et MVC 4](overview/older-versions/tutorial-getting-started-with-signalr-and-mvc-4.md)
+        - [Temps réel haute fréquence avec SignalR 1.x](overview/older-versions/tutorial-high-frequency-realtime-with-signalr.md)
+        - [Tutoriel : Serveur de diffusion avec ASP.NET SignalR 1.x](overview/older-versions/tutorial-server-broadcast-with-aspnet-signalr.md)
         - [Guide de l’API Hubs - Serveur](overview/older-versions/signalr-1x-hubs-api-guide-server.md)
-        - [Guide de l’API SignalR 1.x Hubs - Client JavaScript](overview/older-versions/signalr-1x-hubs-api-guide-javascript-client.md)
+        - [Guide de l’API SignalR 1.x Hubs - Client JavaScript](overview/older-versions/signalr-1x-hubs-api-guide-javascript-client.md)
         - [Guide de l’API Hubs - Client .NET](overview/older-versions/signalr-1x-hubs-api-guide-net-client.md)
         - [Présentation et gestion des événements de durée de vie des connexions dans SignalR](overview/older-versions/handling-connection-lifetime-events.md)
-        - [Utilisation des groupes dans SignalR 1.x](overview/older-versions/working-with-groups.md)
-        - [Mappage des utilisateurs SignalR aux connexions dans SignalR 1.x](overview/older-versions/mapping-users-to-connections.md)
-        - [Introduction à la sécurité de SignalR (SignalR 1.x)](overview/older-versions/introduction-to-security.md)
-        - [Authentification et autorisation pour SignalR Hubs (SignalR 1.x)](overview/older-versions/hub-authorization.md)
-        - [Authentification et autorisation pour les connexions persistantes SignalR (SignalR 1.x)](overview/older-versions/persistent-connection-authorization.md)
-        - [Performances de SignalR (SignalR 1.x)](overview/older-versions/signalr-performance.md)
-        - [Introduction au scale-out dans SignalR 1.x](overview/older-versions/scaleout-in-signalr.md)
-        - [Scale-out de SignalR avec Azure Service Bus (SignalR 1.x)](overview/older-versions/scaleout-with-windows-azure-service-bus.md)
-        - [Scale-out de SignalR avec Redis (SignalR 1.x)](overview/older-versions/scaleout-with-redis.md)
-        - [Scale-out de SignalR avec SQL Server (SignalR 1.x)](overview/older-versions/scaleout-with-sql-server.md)
-        - [Résolution des problèmes de SignalR (SignalR 1.x)](overview/older-versions/troubleshooting.md)
-        - [Injection de dépendances dans SignalR 1.x](overview/older-versions/dependency-injection.md)
+        - [Utilisation des groupes dans SignalR 1.x](overview/older-versions/working-with-groups.md)
+        - [Mappage des utilisateurs SignalR aux connexions dans SignalR 1.x](overview/older-versions/mapping-users-to-connections.md)
+        - [Introduction à la sécurité de SignalR (SignalR 1.x)](overview/older-versions/introduction-to-security.md)
+        - [Authentification et autorisation pour SignalR Hubs (SignalR 1.x)](overview/older-versions/hub-authorization.md)
+        - [Authentification et autorisation pour les connexions persistantes SignalR (SignalR 1.x)](overview/older-versions/persistent-connection-authorization.md)
+        - [Performances de SignalR (SignalR 1.x)](overview/older-versions/signalr-performance.md)
+        - [Introduction à la montée en puissance parallèle dans SignalR 1.x](overview/older-versions/scaleout-in-signalr.md)
+        - [Montée en puissance parallèle de SignalR avec Azure Service Bus (SignalR 1.x)](overview/older-versions/scaleout-with-windows-azure-service-bus.md)
+        - [Montée en puissance parallèle de SignalR avec Redis (SignalR 1.x)](overview/older-versions/scaleout-with-redis.md)
+        - [Montée en puissance parallèle de SignalR avec SQL Server (SignalR 1.x)](overview/older-versions/scaleout-with-sql-server.md)
+        - [Résolution des problèmes de SignalR (SignalR 1.x)](overview/older-versions/troubleshooting.md)
+        - [Injection de dépendances dans SignalR 1.x](overview/older-versions/dependency-injection.md)
 - [Vidéos](videos/index.md)
 
     - [Vidéos ASP.NET SignalR](videos/getting-started/index.md)

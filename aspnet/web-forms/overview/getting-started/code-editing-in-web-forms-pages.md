@@ -12,7 +12,7 @@ ms.openlocfilehash: 328dc6fb61ac562131b11b36b40f574ca5a53866
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397368"
 ---
 # <a name="code-editing-aspnet-web-forms-in-visual-studio-2013"></a>Édition du code Web Forms ASP.NET dans Visual Studio 2013
@@ -59,7 +59,7 @@ Dans cette partie de la procédure pas à pas, vous créez un projet d’applica
 3. Sélectionnez le **modèles**  - &gt; **Visual C#**  - &gt; **Web** groupe de modèles sur la gauche.
 4. Choisissez le **Application Web ASP.NET** modèle dans la colonne centrale.
 5. Nommez votre projet ***BasicWebApp*** et cliquez sur le **OK** bouton.   
-![Boîte de dialogue Nouveau projet de test](code-editing-in-web-forms-pages/_static/image2.png)
+![Boîte de dialogue Nouveau projet](code-editing-in-web-forms-pages/_static/image2.png)
 6. Ensuite, sélectionnez le **Web Forms** modèle et cliquez sur le **OK** bouton pour créer le projet.  
 ![Boîte de dialogue Nouveau projet ASP.NET](code-editing-in-web-forms-pages/_static/image3.png)  
 
@@ -77,7 +77,7 @@ Lorsque vous créez une nouvelle application Web Forms à l’aide du **Applicat
 1. Dans **l’Explorateur de solutions**, cliquez sur le nom d’application Web (dans ce didacticiel est le nom de l’application **BasicWebSite**), puis cliquez sur **ajouter**  - &gt; **Un nouvel élément**.   
 La boîte de dialogue **Ajouter un nouvel élément** s’affiche.
 2. Sélectionnez le **Visual C#**  - &gt; **Web** groupe de modèles sur la gauche. Ensuite, sélectionnez **Web Form** à partir du milieu de liste et nommez-le *PremièrePageWeb.aspx*.   
-    ![Boîte de dialogue Ajouter un nouvel élément](code-editing-in-web-forms-pages/_static/image4.png)
+    ![Ajouter un nouvel élément](code-editing-in-web-forms-pages/_static/image4.png)
 3. Cliquez sur **ajouter** pour ajouter la page Web Forms à votre projet.  
  Visual Studio crée la page et l’ouvre.
 4. Ensuite, définissez cette nouvelle page comme page de démarrage par défaut. Dans **l’Explorateur de solutions**, avec le bouton droit de la nouvelle page nommée *PremièrePageWeb.aspx* et sélectionnez **définir comme Page de démarrage**. La prochaine fois que vous exécutez cette application pour tester notre progression, vous verrez automatiquement cette nouvelle page dans le navigateur.

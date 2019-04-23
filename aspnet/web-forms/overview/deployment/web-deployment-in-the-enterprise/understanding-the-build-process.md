@@ -12,14 +12,14 @@ ms.openlocfilehash: 6f526b9842e02031b54b0a7519486ef8aa69021b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397394"
 ---
 # <a name="understanding-the-build-process"></a>Présentation du processus de génération
 
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique fournit une procédure pas à pas d’un processus de génération et de déploiement de l’échelle de l’entreprise. L’approche décrite dans cette rubrique utilise les fichiers de projet personnalisés Microsoft Build Engine (MSBuild) pour fournir un contrôle affiné sur tous les aspects du processus. Dans les fichiers projet, les cibles de MSBuild personnalisées sont utilisés pour exécuter des utilitaires de déploiement comme l’outil de déploiement Web Internet Information Services (IIS) (MSDeploy.exe) et l’utilitaire de déploiement de base de données VSDBCMD.exe.
 > 

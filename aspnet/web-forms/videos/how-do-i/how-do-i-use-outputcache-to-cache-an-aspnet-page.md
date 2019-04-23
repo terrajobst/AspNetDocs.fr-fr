@@ -12,7 +12,7 @@ ms.openlocfilehash: c2b3738524741a50d669ce1e5fa22ed1a88bf4df
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398252"
 ---
 # <a name="how-do-i-use-outputcache-to-cache-an-aspnet-page"></a>[Comment faire] Utiliser OutputCache pour mettre en Cache une Page ASP.NET

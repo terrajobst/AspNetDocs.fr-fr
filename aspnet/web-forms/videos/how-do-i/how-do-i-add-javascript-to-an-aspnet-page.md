@@ -12,7 +12,7 @@ ms.openlocfilehash: 23f1544e500424cbd3437deab15e9b9c1c68b21e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405337"
 ---
 # <a name="how-do-i-add-javascript-to-an-aspnet-page"></a>[Comment faire] Ajouter JavaScript à une Page ASP.NET

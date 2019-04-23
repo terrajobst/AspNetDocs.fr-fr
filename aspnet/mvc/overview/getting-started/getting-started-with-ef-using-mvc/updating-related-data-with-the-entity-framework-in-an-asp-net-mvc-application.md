@@ -13,7 +13,7 @@ ms.openlocfilehash: d90a327da40ffd6d7956c5fbe019cf9de30c706d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407508"
 ---
 # <a name="tutorial-update-related-data-with-ef-in-an-aspnet-mvc-app"></a>Tutoriel : Mettre à jour des données associées avec Entity Framework dans une application ASP.NET MVC

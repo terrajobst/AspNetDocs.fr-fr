@@ -13,7 +13,7 @@ ms.openlocfilehash: 08b3663c1f9a08b8b3600113c32aeffb36c0d990
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399318"
 ---
 # <a name="exception-handling-in-aspnet-web-api"></a>Gestion des exceptions dans l’API Web ASP.NET

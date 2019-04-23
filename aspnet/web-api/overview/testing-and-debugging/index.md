@@ -12,7 +12,7 @@ ms.openlocfilehash: 8b1241294f28441c19a34ef5471883db9d50a529
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398057"
 ---
 # <a name="testing-and-debugging-aspnet-web-api"></a>Test et débogage des API Web ASP.NET
@@ -20,8 +20,8 @@ ms.locfileid: "59398057"
 > Test et débogage des API Web ASP.NET
 
 
-- [Traçage dans Web API 2](tracing-in-aspnet-web-api.md)
-- [Tests unitaires dans Web API 2](unit-testing-with-aspnet-web-api.md)
-- [Tests unitaires des contrôleurs dans ASP.NET Web API 2](unit-testing-controllers-in-web-api.md)
-- [Simulation d’Entity Framework lors des tests unitaires de Web API 2](mocking-entity-framework-when-unit-testing-aspnet-web-api-2.md)
-- [Résolution des problèmes des erreurs HTTP 405 après la publication d’applications Web API 2](troubleshooting-http-405-errors-after-publishing-web-api-applications.md)
+- [Traçage dans Web API 2](tracing-in-aspnet-web-api.md)
+- [Tests unitaires dans Web API 2](unit-testing-with-aspnet-web-api.md)
+- [Tests unitaires des contrôleurs dans ASP.NET Web API 2](unit-testing-controllers-in-web-api.md)
+- [Simulation d’Entity Framework lors des tests unitaires de Web API 2](mocking-entity-framework-when-unit-testing-aspnet-web-api-2.md)
+- [Résolution des problèmes des erreurs HTTP 405 après la publication d’applications Web API 2](troubleshooting-http-405-errors-after-publishing-web-api-applications.md)

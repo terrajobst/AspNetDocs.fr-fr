@@ -12,7 +12,7 @@ ms.openlocfilehash: 9558d4131205b3d696f8ce70476ff575fbccf20e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407690"
 ---
 # <a name="accessing-the-database-directly-from-an-aspnet-page"></a>Accès à la base de données directement à partir d’une page ASP.NET

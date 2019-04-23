@@ -12,7 +12,7 @@ ms.openlocfilehash: 639a8e0e5fd9557221c95aee1bef0294df047ae8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406312"
 ---
 # <a name="aspnet-mvc-4-helpers-forms-and-validation"></a>Helpers, formulaires et validation d’ASP.NET MVC 4
@@ -796,7 +796,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](aspnet-mvc-4-helpers-forms-and-validation/_static/image24.png)
 
-    *Progression de l'installation*
+    *Progression de l’installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](aspnet-mvc-4-helpers-forms-and-validation/_static/image25.png)

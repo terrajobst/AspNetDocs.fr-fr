@@ -12,7 +12,7 @@ ms.openlocfilehash: 846f34ae104f4b69dce18f6dace4fd341365f7a5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397888"
 ---
 # <a name="combobox"></a>ComboBox

@@ -12,7 +12,7 @@ ms.openlocfilehash: b4c6d850062e1b65eacd97ffc4f34c80fedea503
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404310"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---javascript-client"></a>Guide de l’API ASP.NET SignalR Hubs - Client JavaScript

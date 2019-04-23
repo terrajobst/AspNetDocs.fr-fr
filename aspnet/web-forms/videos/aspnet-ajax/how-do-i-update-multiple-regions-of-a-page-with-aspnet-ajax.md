@@ -12,7 +12,7 @@ ms.openlocfilehash: a936829217aa62a5caff5c9b0b51cca8a994c10e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400306"
 ---
 # <a name="how-do-i-update-multiple-regions-of-a-page-with-aspnet-ajax"></a>[Comment faire] Mettre à jour plusieurs régions d’une Page avec ASP.NET AJAX ?
