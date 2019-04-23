@@ -12,19 +12,19 @@ ms.openlocfilehash: ba656ecc14204d833e9dc18b941a2c19ec5e06ef
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397726"
 ---
-# <a name="single-page-application-overview"></a><span data-ttu-id="211a1-104">Vue d’ensemble des applications de Page unique</span><span class="sxs-lookup"><span data-stu-id="211a1-104">Single Page Application Overview</span></span>
+# <a name="single-page-application-overview"></a><span data-ttu-id="31403-104">Vue d’ensemble des applications de Page unique</span><span class="sxs-lookup"><span data-stu-id="31403-104">Single Page Application Overview</span></span>
 
-- [<span data-ttu-id="211a1-105">Introduction</span><span class="sxs-lookup"><span data-stu-id="211a1-105">Introduction</span></span>](introduction/index.md)
+- [<span data-ttu-id="31403-105">Introduction</span><span class="sxs-lookup"><span data-stu-id="31403-105">Introduction</span></span>](introduction/index.md)
 
-    - [<span data-ttu-id="211a1-106">Application à une seule page : modèle KnockoutJS</span><span class="sxs-lookup"><span data-stu-id="211a1-106">Single Page Application: KnockoutJS template</span></span>](introduction/knockoutjs-template.md)
-    - [<span data-ttu-id="211a1-107">Bibliothèques autres que Knockout</span><span class="sxs-lookup"><span data-stu-id="211a1-107">Know a library other than Knockout?</span></span>](introduction/other-libraries.md)
-- [<span data-ttu-id="211a1-108">Modèles</span><span class="sxs-lookup"><span data-stu-id="211a1-108">Templates</span></span>](templates/index.md)
+    - [<span data-ttu-id="31403-106">Application à Page unique : Modèle KnockoutJS</span><span class="sxs-lookup"><span data-stu-id="31403-106">Single Page Application: KnockoutJS template</span></span>](introduction/knockoutjs-template.md)
+    - [<span data-ttu-id="31403-107">Bibliothèques autres que Knockout</span><span class="sxs-lookup"><span data-stu-id="31403-107">Know a library other than Knockout?</span></span>](introduction/other-libraries.md)
+- [<span data-ttu-id="31403-108">Modèles</span><span class="sxs-lookup"><span data-stu-id="31403-108">Templates</span></span>](templates/index.md)
 
-    - [<span data-ttu-id="211a1-109">Modèle Backbone</span><span class="sxs-lookup"><span data-stu-id="211a1-109">Backbone Template</span></span>](templates/backbonejs-template.md)
-    - [<span data-ttu-id="211a1-110">Modèle Breeze/Angular</span><span class="sxs-lookup"><span data-stu-id="211a1-110">Breeze/Angular template</span></span>](templates/breezeangular-template.md)
-    - [<span data-ttu-id="211a1-111">Modèle Breeze/Knockout</span><span class="sxs-lookup"><span data-stu-id="211a1-111">Breeze/Knockout template</span></span>](templates/breezeknockout-template.md)
-    - [<span data-ttu-id="211a1-112">Modèle EmberJS</span><span class="sxs-lookup"><span data-stu-id="211a1-112">EmberJS template</span></span>](templates/emberjs-template.md)
-    - [<span data-ttu-id="211a1-113">Modèle Hot Towel</span><span class="sxs-lookup"><span data-stu-id="211a1-113">Hot Towel template</span></span>](templates/hottowel-template.md)
+    - [<span data-ttu-id="31403-109">Modèle Backbone</span><span class="sxs-lookup"><span data-stu-id="31403-109">Backbone Template</span></span>](templates/backbonejs-template.md)
+    - [<span data-ttu-id="31403-110">Modèle Breeze/Angular</span><span class="sxs-lookup"><span data-stu-id="31403-110">Breeze/Angular template</span></span>](templates/breezeangular-template.md)
+    - [<span data-ttu-id="31403-111">Modèle Breeze/Knockout</span><span class="sxs-lookup"><span data-stu-id="31403-111">Breeze/Knockout template</span></span>](templates/breezeknockout-template.md)
+    - [<span data-ttu-id="31403-112">Modèle EmberJS</span><span class="sxs-lookup"><span data-stu-id="31403-112">EmberJS template</span></span>](templates/emberjs-template.md)
+    - [<span data-ttu-id="31403-113">Modèle Hot Towel</span><span class="sxs-lookup"><span data-stu-id="31403-113">Hot Towel template</span></span>](templates/hottowel-template.md)

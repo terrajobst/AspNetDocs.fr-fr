@@ -12,13 +12,13 @@ ms.openlocfilehash: 5620710239c282b126fadd2e0ca09e71bac8786f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407391"
 ---
-# <a name="colorpicker"></a><span data-ttu-id="f0afa-103">ColorPicker</span><span class="sxs-lookup"><span data-stu-id="f0afa-103">ColorPicker</span></span>
+# <a name="colorpicker"></a><span data-ttu-id="c538c-103">ColorPicker</span><span class="sxs-lookup"><span data-stu-id="c538c-103">ColorPicker</span></span>
 
-> <span data-ttu-id="f0afa-104">Ce didacticiel montre comment utiliser le contrôle ColorPicker, ce qui permet aux utilisateurs de sélectionner une couleur dans une fenêtre contextuelle.</span><span class="sxs-lookup"><span data-stu-id="f0afa-104">This tutorial shows how to use the ColorPicker control, which lets users select a color from a popup window.</span></span>
+> <span data-ttu-id="c538c-104">Ce didacticiel montre comment utiliser le contrôle ColorPicker, ce qui permet aux utilisateurs de sélectionner une couleur dans une fenêtre contextuelle.</span><span class="sxs-lookup"><span data-stu-id="c538c-104">This tutorial shows how to use the ColorPicker control, which lets users select a color from a popup window.</span></span>
 
 
-- [<span data-ttu-id="f0afa-105">Extendeur de contrôle ColorPicker (C#)</span><span class="sxs-lookup"><span data-stu-id="f0afa-105">ColorPicker Control Extender (C#)</span></span>](using-the-colorpicker-control-extender-cs.md)
-- [<span data-ttu-id="f0afa-106">Extendeur de contrôle ColorPicker (VB)</span><span class="sxs-lookup"><span data-stu-id="f0afa-106">ColorPicker Control Extender (VB)</span></span>](using-the-colorpicker-control-extender-vb.md)
+- [<span data-ttu-id="c538c-105">Extendeur de contrôle ColorPicker (C#)</span><span class="sxs-lookup"><span data-stu-id="c538c-105">ColorPicker Control Extender (C#)</span></span>](using-the-colorpicker-control-extender-cs.md)
+- [<span data-ttu-id="c538c-106">Extendeur de contrôle ColorPicker (VB)</span><span class="sxs-lookup"><span data-stu-id="c538c-106">ColorPicker Control Extender (VB)</span></span>](using-the-colorpicker-control-extender-vb.md)

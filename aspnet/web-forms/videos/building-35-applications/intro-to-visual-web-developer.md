@@ -12,13 +12,13 @@ ms.openlocfilehash: b6825a6984cf62dd60714e0f235abc2694c1978c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402672"
 ---
-# <a name="intro-to-visual-web-developer"></a><span data-ttu-id="3de5c-104">Introduction à Visual Web Developer</span><span class="sxs-lookup"><span data-stu-id="3de5c-104">Intro to Visual Web Developer</span></span>
+# <a name="intro-to-visual-web-developer"></a><span data-ttu-id="08424-104">Introduction à Visual Web Developer</span><span class="sxs-lookup"><span data-stu-id="08424-104">Intro to Visual Web Developer</span></span>
 
-<span data-ttu-id="3de5c-105">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="3de5c-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="08424-105">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="08424-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="3de5c-106">Microsoft Visual Web Developer est la version gratuite de Visual Studio pour développer des applications ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="3de5c-106">Microsoft Visual Web Developer is the FREE version of Visual Studio for developing ASP.NET applications.</span></span> <span data-ttu-id="3de5c-107">Cette vidéo va expliquer comment obtenir et installer et vous guident à travers une visite guidée générale de l’IDE et ses fonctionnalités.</span><span class="sxs-lookup"><span data-stu-id="3de5c-107">This video will show how to get and install it and take you through a general tour of the IDE and its features.</span></span>
+<span data-ttu-id="08424-106">Microsoft Visual Web Developer est la version gratuite de Visual Studio pour développer des applications ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="08424-106">Microsoft Visual Web Developer is the FREE version of Visual Studio for developing ASP.NET applications.</span></span> <span data-ttu-id="08424-107">Cette vidéo va expliquer comment obtenir et installer et vous guident à travers une visite guidée générale de l’IDE et ses fonctionnalités.</span><span class="sxs-lookup"><span data-stu-id="08424-107">This video will show how to get and install it and take you through a general tour of the IDE and its features.</span></span>
 
-[<span data-ttu-id="3de5c-108">&#9654;Regardez la vidéo (39 minutes)</span><span class="sxs-lookup"><span data-stu-id="3de5c-108">&#9654; Watch video (39 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/intro-to-visual-web-developer)
+[<span data-ttu-id="08424-108">&#9654;Regardez la vidéo (39 minutes)</span><span class="sxs-lookup"><span data-stu-id="08424-108">&#9654; Watch video (39 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/intro-to-visual-web-developer)

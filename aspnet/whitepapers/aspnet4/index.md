@@ -12,10 +12,10 @@ ms.openlocfilehash: 7a73b6657e6f074cac5e63c907924a8cae68e60e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397180"
 ---
-# <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a><span data-ttu-id="bc058-103">Vue d’ensemble du développement web ASP.NET 4 et Visual Studio 2010</span><span class="sxs-lookup"><span data-stu-id="bc058-103">ASP.NET 4 and Visual Studio 2010 Web Development Overview</span></span>
+# <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a><span data-ttu-id="231c2-103">Vue d’ensemble du développement web ASP.NET 4 et Visual Studio 2010</span><span class="sxs-lookup"><span data-stu-id="231c2-103">ASP.NET 4 and Visual Studio 2010 Web Development Overview</span></span>
 
-- [<span data-ttu-id="bc058-104">Vue d’ensemble du développement web ASP.NET 4 et Visual Studio 2010</span><span class="sxs-lookup"><span data-stu-id="bc058-104">ASP.NET 4 and Visual Studio 2010 Web Development Overview</span></span>](overview.md)
-- [<span data-ttu-id="bc058-105">Changements importants dans ASP.NET 4</span><span class="sxs-lookup"><span data-stu-id="bc058-105">ASP.NET 4 Breaking Changes</span></span>](breaking-changes.md)
+- [<span data-ttu-id="231c2-104">Vue d’ensemble du développement web ASP.NET 4 et Visual Studio 2010</span><span class="sxs-lookup"><span data-stu-id="231c2-104">ASP.NET 4 and Visual Studio 2010 Web Development Overview</span></span>](overview.md)
+- [<span data-ttu-id="231c2-105">Changements importants dans ASP.NET 4</span><span class="sxs-lookup"><span data-stu-id="231c2-105">ASP.NET 4 Breaking Changes</span></span>](breaking-changes.md)

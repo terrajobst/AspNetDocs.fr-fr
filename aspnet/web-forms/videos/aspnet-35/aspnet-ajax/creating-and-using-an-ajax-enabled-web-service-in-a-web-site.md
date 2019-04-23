@@ -12,18 +12,18 @@ ms.openlocfilehash: 27b99df882305d35704419777064dd1149c94e16
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398694"
 ---
-# <a name="creating-and-using-an-ajax-enabled-web-service-in-a-web-site"></a><span data-ttu-id="79f83-104">Création et utilisation d’un service Web activé pour AJAX dans un site web</span><span class="sxs-lookup"><span data-stu-id="79f83-104">Creating and Using an AJAX-enabled Web Service in a Web Site</span></span>
+# <a name="creating-and-using-an-ajax-enabled-web-service-in-a-web-site"></a><span data-ttu-id="fd31c-104">Création et utilisation d’un service Web activé pour AJAX dans un site web</span><span class="sxs-lookup"><span data-stu-id="fd31c-104">Creating and Using an AJAX-enabled Web Service in a Web Site</span></span>
 
-<span data-ttu-id="79f83-105">par [Rob Windsor](https://twitter.com/robwindsor)</span><span class="sxs-lookup"><span data-stu-id="79f83-105">by [Rob Windsor](https://twitter.com/robwindsor)</span></span>
+<span data-ttu-id="fd31c-105">par [Rob Windsor](https://twitter.com/robwindsor)</span><span class="sxs-lookup"><span data-stu-id="fd31c-105">by [Rob Windsor](https://twitter.com/robwindsor)</span></span>
 
-<span data-ttu-id="79f83-106">Visual Studio 2008 vous permet de créer des services Web personnalisés ASP.NET que vous pouvez accéder à partir de scripts clients.</span><span class="sxs-lookup"><span data-stu-id="79f83-106">Visual Studio 2008 lets you create ASP.NET custom Web services that you can access from client scripts.</span></span> <span data-ttu-id="79f83-107">Cette procédure pas à pas va vous montrer comment créer un service Web compatible AJAX et utiliser ses méthodes à partir du script client s’exécutant dans l’application Web distincte.</span><span class="sxs-lookup"><span data-stu-id="79f83-107">This walkthrough will demonstrate how to create an AJAX-enabled Web service and use its methods from client script running in separate Web application.</span></span>
+<span data-ttu-id="fd31c-106">Visual Studio 2008 vous permet de créer des services Web personnalisés ASP.NET que vous pouvez accéder à partir de scripts clients.</span><span class="sxs-lookup"><span data-stu-id="fd31c-106">Visual Studio 2008 lets you create ASP.NET custom Web services that you can access from client scripts.</span></span> <span data-ttu-id="fd31c-107">Cette procédure pas à pas va vous montrer comment créer un service Web compatible AJAX et utiliser ses méthodes à partir du script client s’exécutant dans l’application Web distincte.</span><span class="sxs-lookup"><span data-stu-id="fd31c-107">This walkthrough will demonstrate how to create an AJAX-enabled Web service and use its methods from client script running in separate Web application.</span></span>
 
-[<span data-ttu-id="79f83-108">&#9654;Regardez la vidéo (12 minutes)</span><span class="sxs-lookup"><span data-stu-id="79f83-108">&#9654; Watch video (12 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-and-using-an-ajax-enabled-web-service-in-a-web-site)
+[<span data-ttu-id="fd31c-108">&#9654;Regardez la vidéo (12 minutes)</span><span class="sxs-lookup"><span data-stu-id="fd31c-108">&#9654; Watch video (12 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-and-using-an-ajax-enabled-web-service-in-a-web-site)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="79f83-109">[Précédent](adding-ajax-functionality-to-an-existing-aspnet-page.md)
-> [Suivant](aspnet-ajax-a-demonstration-of-aspnet-ajax.md)</span><span class="sxs-lookup"><span data-stu-id="79f83-109">[Previous](adding-ajax-functionality-to-an-existing-aspnet-page.md)
+> <span data-ttu-id="fd31c-109">[Précédent](adding-ajax-functionality-to-an-existing-aspnet-page.md)
+> [Suivant](aspnet-ajax-a-demonstration-of-aspnet-ajax.md)</span><span class="sxs-lookup"><span data-stu-id="fd31c-109">[Previous](adding-ajax-functionality-to-an-existing-aspnet-page.md)
 [Next](aspnet-ajax-a-demonstration-of-aspnet-ajax.md)</span></span>

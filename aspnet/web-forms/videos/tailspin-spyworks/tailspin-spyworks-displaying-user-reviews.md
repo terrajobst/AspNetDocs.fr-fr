@@ -12,16 +12,16 @@ ms.openlocfilehash: c8c7864a6825db99db9c942102fc6afb41b0e655
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405194"
 ---
-# <a name="tailspin-spyworks---displaying-user-reviews"></a><span data-ttu-id="d35d0-103">Tailspin Spyworks - Affichage des évaluations des utilisateurs</span><span class="sxs-lookup"><span data-stu-id="d35d0-103">Tailspin Spyworks - Displaying User Reviews</span></span>
+# <a name="tailspin-spyworks---displaying-user-reviews"></a><span data-ttu-id="227e4-103">Tailspin Spyworks - Affichage des évaluations des utilisateurs</span><span class="sxs-lookup"><span data-stu-id="227e4-103">Tailspin Spyworks - Displaying User Reviews</span></span>
 
-<span data-ttu-id="d35d0-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="d35d0-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="227e4-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="227e4-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="d35d0-105">Joe Stagner affiche les révisions des clients dans l’application Web Forms Tailspin Spyworks.</span><span class="sxs-lookup"><span data-stu-id="d35d0-105">Joe Stagner displays reviews from customers in the Tailspin Spyworks sample Web Forms application.</span></span>
+<span data-ttu-id="227e4-105">Joe Stagner affiche les révisions des clients dans l’application Web Forms Tailspin Spyworks.</span><span class="sxs-lookup"><span data-stu-id="227e4-105">Joe Stagner displays reviews from customers in the Tailspin Spyworks sample Web Forms application.</span></span>
 
-[<span data-ttu-id="d35d0-106">&#9654;Regardez la vidéo (13 minutes)</span><span class="sxs-lookup"><span data-stu-id="d35d0-106">&#9654; Watch video (13 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/tailspin-spyworks-displaying-user-reviews)
+[<span data-ttu-id="227e4-106">&#9654;Regardez la vidéo (13 minutes)</span><span class="sxs-lookup"><span data-stu-id="227e4-106">&#9654; Watch video (13 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/tailspin-spyworks-displaying-user-reviews)
 
 > [!div class="step-by-step"]
-> [<span data-ttu-id="d35d0-107">Précédent</span><span class="sxs-lookup"><span data-stu-id="d35d0-107">Previous</span></span>](tailspin-spyworks-adding-user-product-reviews.md)
+> [<span data-ttu-id="227e4-107">Précédent</span><span class="sxs-lookup"><span data-stu-id="227e4-107">Previous</span></span>](tailspin-spyworks-adding-user-product-reviews.md)
