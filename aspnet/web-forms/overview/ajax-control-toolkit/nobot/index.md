@@ -12,13 +12,13 @@ ms.openlocfilehash: f223bb9ce2a3450b10b304f77c8f728b8bdeea69
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410940"
 ---
-# <a name="nobot"></a><span data-ttu-id="3907a-103">NoBot</span><span class="sxs-lookup"><span data-stu-id="3907a-103">NoBot</span></span>
+# <a name="nobot"></a><span data-ttu-id="31d64-103">NoBot</span><span class="sxs-lookup"><span data-stu-id="31d64-103">NoBot</span></span>
 
-> <span data-ttu-id="3907a-104">Ce didacticiel montre comment utiliser le contrôle nobot de, qui constitue un moyen automatisé pour empêcher les robots de validation à un site.</span><span class="sxs-lookup"><span data-stu-id="3907a-104">This tutorial shows how to use the NoBot control, which provides an automated way to prevent bots from posting to a site.</span></span>
+> <span data-ttu-id="31d64-104">Ce didacticiel montre comment utiliser le contrôle nobot de, qui constitue un moyen automatisé pour empêcher les robots de validation à un site.</span><span class="sxs-lookup"><span data-stu-id="31d64-104">This tutorial shows how to use the NoBot control, which provides an automated way to prevent bots from posting to a site.</span></span>
 
 
-- [<span data-ttu-id="3907a-105">Lutte contre les robots (C#)</span><span class="sxs-lookup"><span data-stu-id="3907a-105">Fighting Bots (C#)</span></span>](fighting-bots-cs.md)
-- [<span data-ttu-id="3907a-106">Lutte contre les robots (VB)</span><span class="sxs-lookup"><span data-stu-id="3907a-106">Fighting Bots (VB)</span></span>](fighting-bots-vb.md)
+- [<span data-ttu-id="31d64-105">Lutte contre les robots (C#)</span><span class="sxs-lookup"><span data-stu-id="31d64-105">Fighting Bots (C#)</span></span>](fighting-bots-cs.md)
+- [<span data-ttu-id="31d64-106">Lutte contre les robots (VB)</span><span class="sxs-lookup"><span data-stu-id="31d64-106">Fighting Bots (VB)</span></span>](fighting-bots-vb.md)

@@ -12,18 +12,18 @@ ms.openlocfilehash: b01b64e0a1b798f0ac7a487fc32b8430f82dae90
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414710"
 ---
-# <a name="how-do-i-use-the-aspnet-ajax-hovermenu-extender"></a><span data-ttu-id="7ea64-104">[Comment faire] Utiliser l’extendeur HoverMenu d’ASP.NET AJAX ?</span><span class="sxs-lookup"><span data-stu-id="7ea64-104">[How Do I:] Use the ASP.NET AJAX HoverMenu Extender?</span></span>
+# <a name="how-do-i-use-the-aspnet-ajax-hovermenu-extender"></a><span data-ttu-id="3dfdc-104">[Comment faire] Utiliser l’extendeur HoverMenu d’ASP.NET AJAX ?</span><span class="sxs-lookup"><span data-stu-id="3dfdc-104">[How Do I:] Use the ASP.NET AJAX HoverMenu Extender?</span></span>
 
-<span data-ttu-id="7ea64-105">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="7ea64-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="3dfdc-105">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="3dfdc-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="7ea64-106">Découvrez comment utiliser le contrôle d’extendeur HoverMenu pour créer un menu contextuel qui s’affiche chaque fois que l’utilisateur place la souris sur un élément d’une page web.</span><span class="sxs-lookup"><span data-stu-id="7ea64-106">Discover how to use the HoverMenu extender control to create a context-sensitive menu that appears whenever the user hovers the mouse over an element of a web page.</span></span>
+<span data-ttu-id="3dfdc-106">Découvrez comment utiliser le contrôle d’extendeur HoverMenu pour créer un menu contextuel qui s’affiche chaque fois que l’utilisateur place la souris sur un élément d’une page web.</span><span class="sxs-lookup"><span data-stu-id="3dfdc-106">Discover how to use the HoverMenu extender control to create a context-sensitive menu that appears whenever the user hovers the mouse over an element of a web page.</span></span>
 
-[<span data-ttu-id="7ea64-107">&#9654;Regardez la vidéo (7 minutes)</span><span class="sxs-lookup"><span data-stu-id="7ea64-107">&#9654; Watch video (7 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-hovermenu-extender)
+[<span data-ttu-id="3dfdc-107">&#9654;Regardez la vidéo (7 minutes)</span><span class="sxs-lookup"><span data-stu-id="3dfdc-107">&#9654; Watch video (7 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-hovermenu-extender)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="7ea64-108">[Précédent](how-do-i-use-the-aspnet-ajax-filteredtextbox-extender.md)
-> [Suivant](how-do-i-use-the-aspnet-ajax-togglebutton-extender.md)</span><span class="sxs-lookup"><span data-stu-id="7ea64-108">[Previous](how-do-i-use-the-aspnet-ajax-filteredtextbox-extender.md)
+> <span data-ttu-id="3dfdc-108">[Précédent](how-do-i-use-the-aspnet-ajax-filteredtextbox-extender.md)
+> [Suivant](how-do-i-use-the-aspnet-ajax-togglebutton-extender.md)</span><span class="sxs-lookup"><span data-stu-id="3dfdc-108">[Previous](how-do-i-use-the-aspnet-ajax-filteredtextbox-extender.md)
 [Next](how-do-i-use-the-aspnet-ajax-togglebutton-extender.md)</span></span>
