@@ -12,7 +12,7 @@ ms.openlocfilehash: a65fe60dc44eb40591733ba9371e409f690fea52
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409237"
 ---
 # <a name="sorting-custom-paged-data-c"></a>Tri personnalisé de données paginées (C#)
@@ -71,7 +71,7 @@ Prenez un moment pour tester cette procédure stockée avec des valeurs différe
 **Figure 1**: Essayez les différentes valeurs des procédure stockée s trois paramètres d’entrée
 
 
-[![Ts de la procédure stockée he les résultats sont affichés dans la fenêtre Sortie](sorting-custom-paged-data-cs/_static/image3.png)](sorting-custom-paged-data-cs/_static/image2.png)
+[![La procédure stockée s les résultats sont affichés dans la fenêtre Sortie](sorting-custom-paged-data-cs/_static/image3.png)](sorting-custom-paged-data-cs/_static/image2.png)
 
 **Figure 2**: La procédure stockée s les résultats sont affichés dans la fenêtre de sortie ([cliquez pour afficher l’image en taille réelle](sorting-custom-paged-data-cs/_static/image4.png))
 
@@ -145,7 +145,7 @@ Pour activer le tri dans le contrôle GridView, simplement cocher la case à coc
 La figure 7 illustre la première page de résultats triés par le `UnitPrice` dans l’ordre croissant.
 
 
-[![THE résultats sont triés par le prix unitaire](sorting-custom-paged-data-cs/_static/image10.png)](sorting-custom-paged-data-cs/_static/image9.png)
+[![Les résultats sont triés par le prix unitaire](sorting-custom-paged-data-cs/_static/image10.png)](sorting-custom-paged-data-cs/_static/image9.png)
 
 **Figure 7**: Les résultats sont triés par le prix unitaire ([cliquez pour afficher l’image en taille réelle](sorting-custom-paged-data-cs/_static/image11.png))
 
@@ -166,7 +166,7 @@ Cette exception se produit parce que le `SortExpression` des s GridView `Supplie
 **Figure 9**: Modifier l’élément SortExpression s de nom fournisseur BoundField CompanyName
 
 
-[![TIl résultats peuvent désormais être triées par fournisseur](sorting-custom-paged-data-cs/_static/image15.png)](sorting-custom-paged-data-cs/_static/image14.png)
+[![Les résultats peuvent désormais être triées par fournisseur](sorting-custom-paged-data-cs/_static/image15.png)](sorting-custom-paged-data-cs/_static/image14.png)
 
 **Figure 10**: Les résultats peuvent désormais être triées par fournisseur ([cliquez pour afficher l’image en taille réelle](sorting-custom-paged-data-cs/_static/image16.png))
 

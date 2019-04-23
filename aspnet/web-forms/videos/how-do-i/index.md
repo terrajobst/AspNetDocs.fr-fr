@@ -12,7 +12,7 @@ ms.openlocfilehash: 7d300a1f29c7712408d17c6629da6cefb67b3cdb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410316"
 ---
 # <a name="how-do-i"></a>Comment faire
@@ -42,17 +42,17 @@ ms.locfileid: "59410316"
 - [Implémenter la navigation de site dans ASP.NET](how-do-i-implement-site-navigation-in-aspnet.md)
 - [Utiliser des contrôles Validation dans ASP.NET](how-do-i-use-validation-controls-in-aspnet.md)
 - [Créer un contrôle utilisateur personnalisé dans ASP.NET](how-do-i-create-a-custom-user-control-in-aspnet.md)
-- [Implémenter la supervision de l’intégrité pour une application ASP.NET](how-do-i-implement-health-monitoring-for-an-aspnet-application.md)
+- [Implémenter la surveillance de l’intégrité pour une application ASP.NET](how-do-i-implement-health-monitoring-for-an-aspnet-application.md)
 - [Implémenter le traçage dans un site web ASP.NET](how-do-i-implement-tracing-in-an-aspnet-web-site.md)
 - [Gestionnaires d’événements dans les pages web et les contrôles ASP.NET](how-do-i-event-handlers-in-aspnet-web-pages-and-controls.md)
-- [Implémenter un événement personnalisé de supervision de l’intégrité](how-do-i-implement-a-custom-health-monitoring-event.md)
+- [Implémenter un événement personnalisé de surveillance de l’intégrité](how-do-i-implement-a-custom-health-monitoring-event.md)
 - [Utiliser l’état d’un contrôle pour conserver les informations d’un contrôle de serveur web personnalisé](how-do-i-use-control-state-to-persist-information-for-a-custom-web-server-control.md)
 - [Lire, écrire et supprimer des cookies dans ASP.NET](read-write-and-delete-cookies-in-aspnet.md)
 - [Enregistrer et charger les informations d’état d’une vue pour un contrôle de serveur web personnalisé](how-do-i-save-and-load-view-state-information-for-a-custom-web-server-control.md)
 - [Créer et utiliser des événements de niveau application dans ASP.NET](how-do-i-create-and-use-application-level-events-in-aspnet.md)
 - [Chargements de fichiers uniques dans ASP.NET](how-do-i-simple-file-uploads-in-aspnet.md)
-- [Chargements de plusieurs fichiers dans ASP.NET 2](how-do-i-multiple-file-uploads-in-aspnet-2.md)
-- [Chargements de plusieurs fichiers dans ASP.NET 1](how-do-i-multiple-file-uploads-in-aspnet-1.md)
+- [Chargements de plusieurs fichiers dans ASP.NET 2](how-do-i-multiple-file-uploads-in-aspnet-2.md)
+- [Chargements de plusieurs fichiers dans ASP.NET 1](how-do-i-multiple-file-uploads-in-aspnet-1.md)
 - [Chargements de fichiers avec une interface de style AJAX](how-do-i-file-uploads-with-an-ajax-style-interface.md)
 - [Utiliser des pages maîtres de façon déclarative et par programmation](how-do-i-work-with-master-pages-declaratively-and-programmatically.md)
 - [Gérer les événements dans les pages maîtres et les pages de contenu](how-do-i-handle-events-in-master-and-content-pages.md)
@@ -68,7 +68,7 @@ ms.locfileid: "59410316"
 - [Utiliser l’outil d’inscription IIS ASP.NET pour configurer ASP.NET](how-do-i-use-the-aspnet-iis-registration-tool-to-configure-aspnet.md)
 - [Étendre et personnaliser un contrôle serveur ASP.NET dans un but spécifique](how-do-i-extend-and-customize-an-aspnet-server-control-for-a-specific-purpose.md)
 - [Utiliser la capacité à créer des groupes avec le contrôle ListView pour différentes données](how-do-i-use-the-ability-to-create-groups-with-the-listview-control-for-different-data.md)
-- [Rendre des éléments HTML accessibles à partir du code côté serveur](how-do-i-make-html-elements-accessible-from-server-side-code.md)
+- [Rendre des éléments HTML accessibles depuis le code côté serveur](how-do-i-make-html-elements-accessible-from-server-side-code.md)
 - [Utiliser des rôles pour segmenter les fonctionnalités dans un site web ASP.NET](how-do-i-use-roles-to-segment-functionality-in-an-aspnet-web-site.md)
 - [Utiliser des pages maîtres imbriquées pour créer des dispositions de contenu standard](how-do-i-work-with-nested-master-pages-to-create-standard-content-layouts.md)
 - [Détecter les fonctionnalités du navigateur dans des pages web ASP.NET](how-do-i-detect-browser-capabilities-in-aspnet-web-pages.md)
@@ -83,14 +83,14 @@ ms.locfileid: "59410316"
 - [Utiliser des apparences avec CSS pour un site web ASP.NET flexible et facile à gérer](how-do-i-use-skins-with-css-for-a-flexible-and-maintainable-aspnet-web-site.md)
 - [Déterminer s’il faut utiliser un projet de site web ou un projet d’application web](how-do-i-determine-whether-to-use-a-web-site-or-a-web-application-project.md)
 - [Écrire des événements web dans un SqlWebEventProvider de base de données SQL Server](how-do-i-write-web-events-to-a-sql-server-database-using-the-sqlwebeventprovider.md)
-- [Utiliser ASP.NET pour envoyer un e-mail à partir d’un site web](how-do-i-use-aspnet-to-send-email-from-a-web-site.md)
-- [Configurer une notification par e-mail pour la supervision de l’intégrité sur un site web ASP.NET](how-do-i-configure-email-notification-for-health-monitoring-on-an-aspnet-web-site.md)
-- [Utiliser un projet de déploiement web Visual Studio 2008](how-do-i-use-a-visual-studio-2008-web-deployment-project.md)
-- [Envoyer des e-mails basés sur un modèle pour les événements de la supervision de l’intégrité dans ASP.NET](how-do-i-send-templated-emails-for-health-monitoring-events-in-aspnet.md)
+- [Utiliser ASP.NET pour envoyer un e-mail depuis un site web](how-do-i-use-aspnet-to-send-email-from-a-web-site.md)
+- [Configurer une notification par e-mail pour la surveillance de l’intégrité sur un site web ASP.NET](how-do-i-configure-email-notification-for-health-monitoring-on-an-aspnet-web-site.md)
+- [Utiliser un projet de déploiement web Visual Studio 2008](how-do-i-use-a-visual-studio-2008-web-deployment-project.md)
+- [Envoyer des e-mails basés sur un modèle pour les événements de la surveillance de l’intégrité dans ASP.NET](how-do-i-send-templated-emails-for-health-monitoring-events-in-aspnet.md)
 - [Envoyer un e-mail de façon asynchrone avec ASP.NET](how-do-i-send-email-asynchronously-with-aspnet.md)
 - [Incorporer une image dans un e-mail avec ASP.NET](how-do-i-embed-an-image-in-an-email-with-aspnet.md)
 - [Implémenter une gestion des erreurs lors de l’envoi d’e-mails avec ASP.NET](how-do-i-implement-error-handling-when-sending-email-with-aspnet.md)
-- [Créer un fournisseur personnalisé pour la journalisation des événements de supervision de l’intégrité](how-do-i-create-a-custom-provider-for-logging-health-monitoring-events.md)
+- [Créer un fournisseur personnalisé pour la journalisation des événements de surveillance de l’intégrité](how-do-i-create-a-custom-provider-for-logging-health-monitoring-events.md)
 - [Créer un composant réutilisable pour l’envoi d’e-mails à une liste de distribution](how-do-i-create-a-reusable-component-for-sending-email-to-a-distribution-list.md)
 - [Précompiler un site web ASP.NET](how-do-i-precompile-an-aspnet-website.md)
 - [Utiliser la classe FtpWebRequest pour créer une connexion FTP à un serveur FTP](how-do-i-use-the-ftpwebrequest-class-to-create-an-ftp-connection-to-a-ftp-server.md)

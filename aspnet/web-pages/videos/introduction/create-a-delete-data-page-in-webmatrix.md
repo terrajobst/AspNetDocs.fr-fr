@@ -12,7 +12,7 @@ ms.openlocfilehash: 2a39346bb09801a0cd3d18de34c9e033d2e5ac8b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410615"
 ---
 # <a name="create-a-delete-data-page-in-webmatrix"></a>Créer une page de suppression des données dans WebMatrix

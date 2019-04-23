@@ -12,7 +12,7 @@ ms.openlocfilehash: 79e09dddb39bd00019584da2ab199c03a42c67f8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412539"
 ---
 # <a name="deploying-web-site-projects-in-visual-studio-2008-and-earlier"></a>Déploiement de projets de site web dans Visual Studio 2008 et versions antérieures
@@ -32,7 +32,7 @@ ms.locfileid: "59412539"
 - [Stratégies pour le développement et le déploiement des bases de données (C#)](strategies-for-database-development-and-deployment-cs.md)
 - [Affichage d’une page d’erreur personnalisée (C#)](displaying-a-custom-error-page-cs.md)
 - [Traitement des exceptions non gérées (C#)](processing-unhandled-exceptions-cs.md)
-- [Journalisation des détails des erreurs avec la supervision de l’intégrité ASP.NET (C#)](logging-error-details-with-asp-net-health-monitoring-cs.md)
+- [Journalisation des détails des erreurs avec la surveillance de l’intégrité ASP.NET (C#)](logging-error-details-with-asp-net-health-monitoring-cs.md)
 - [Journalisation des détails des erreurs avec ELMAH (C#)](logging-error-details-with-elmah-cs.md)
 - [Précompilation de votre site web (C#)](precompiling-your-website-cs.md)
 - [Utilisateurs et rôles sur un site web de production (C#)](users-and-roles-on-the-production-website-cs.md)
@@ -48,7 +48,7 @@ ms.locfileid: "59412539"
 - [Stratégies pour le développement et le déploiement des bases de données (VB)](strategies-for-database-development-and-deployment-vb.md)
 - [Affichage d’une page d’erreur personnalisée (VB)](displaying-a-custom-error-page-vb.md)
 - [Traitement des exceptions non gérées (VB)](processing-unhandled-exceptions-vb.md)
-- [Journalisation des détails des erreurs avec la supervision de l’intégrité ASP.NET (VB)](logging-error-details-with-asp-net-health-monitoring-vb.md)
+- [Journalisation des détails des erreurs avec la surveillance de l’intégrité ASP.NET (VB)](logging-error-details-with-asp-net-health-monitoring-vb.md)
 - [Journalisation des détails des erreurs avec ELMAH (VB)](logging-error-details-with-elmah-vb.md)
 - [Précompilation de votre site web (VB)](precompiling-your-website-vb.md)
 - [Utilisateurs et rôles sur un site web de production (VB)](users-and-roles-on-the-production-website-vb.md)

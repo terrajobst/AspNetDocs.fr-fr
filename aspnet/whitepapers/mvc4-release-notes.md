@@ -12,7 +12,7 @@ ms.openlocfilehash: 0f9b4e2ba0514df4c017a192f3c2136a7eec60c7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413254"
 ---
 # <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
@@ -22,11 +22,11 @@ ms.locfileid: "59413254"
 
 - [Notes d’installation](#_Toc303253802)
 - [Documentation](#_Toc303253803)
-- [Assistance](#_Toc303253804)
-- [Configuration logicielle](#_Toc303253805)
+- [Prise en charge](#_Toc303253804)
+- [Configuration logicielle requise](#_Toc303253805)
 - [Nouvelles fonctionnalités dans ASP.NET MVC 4](#_Toc303253807)
 
-    - [API web ASP.NET](#_Toc317096197)
+    - [API Web ASP.NET](#_Toc317096197)
     - [Améliorations apportées aux modèles de projet par défaut](#_Toc303253808)
     - [Modèle de projet mobile](#_Toc303253809)
     - [Modes d’affichage](#_Toc303253810)
@@ -270,7 +270,7 @@ Les principales modifications apportées à partir d’ASP.NET MVC 4 Release Can
 - **Désinstallation d’ASP.NET MVC 4 échoue si les conditions préalables ont déjà été désinstallés.** Pour désinstaller correctement ASP.NET MVC 4Vous devez désinstaller ASP.NET MVC 4 avant de désinstaller Visual Studio.
 - **L’installation d’ASP.NET MVC 4, les applications ASP.NET MVC 3 RTM s’arrête.** Mise en production des applications ASP.NET MVC 3 qui ont été créées avec la version RTM (pas avec le [ASP.NET MVC 3 Tools Update](https://www.microsoft.com/download/details.aspx?id=1491) release) nécessitent les modifications suivantes afin de fonctionner côte à côte avec ASP.NET MVC 4. Génération du projet sans apporter de ces résultats des mises à jour dans les erreurs de compilation. 
 
-    **Mises à jour nécessaires**
+    **Mises à jour requises**
 
   1. Dans le fichier racine Web.config, ajoutez un nouveau *&lt;appSettings&gt;* entrée avec la clé *webPages:Version* et la valeur *1.0.0.0*. 
 

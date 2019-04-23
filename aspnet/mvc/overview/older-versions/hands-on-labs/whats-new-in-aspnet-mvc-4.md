@@ -12,7 +12,7 @@ ms.openlocfilehash: b9da2522cfaed324a23f43265d4e234ebb4950bd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411122"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Nouveautés d’ASP.NET MVC 4
@@ -547,7 +547,7 @@ Dans cette tâche, vous mettrez à jour le mode Poste de travail afin d’inclur
 
     ![Sur la page](whats-new-in-aspnet-mvc-4/_static/image33.png "sur la page")
 
-    *Page About*
+    *Sur la page*
 8. Enfin, ouvrez le site dans un navigateur Web de bureau. Notez qu’aucune des précédentes mises à jour a affecté l’affichage de bureau.
 
     ![Vue bureau PhotoGallery](whats-new-in-aspnet-mvc-4/_static/image34.png "vue bureau PhotoGallery")
@@ -780,7 +780,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](whats-new-in-aspnet-mvc-4/_static/image46.png)
 
-    *Progression de l'installation*
+    *Progression de l’installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](whats-new-in-aspnet-mvc-4/_static/image47.png)
@@ -821,7 +821,7 @@ Pour exécuter votre site dans un appareil simulé iPhone, vous pouvez utiliser 
 
     ![Progression de l’installation](whats-new-in-aspnet-mvc-4/_static/image51.png "progression de l’Installation")
 
-    *Progression de l'installation*
+    *Progression de l’installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![L’installation est terminée](whats-new-in-aspnet-mvc-4/_static/image52.png "l’Installation est terminée")
@@ -876,7 +876,7 @@ Pour exécuter votre site dans un appareil simulé iPhone, vous pouvez utiliser 
 4. Dans le &quot;ajouter un programme&quot; boîte de dialogue, utilisez les valeurs suivantes :
 
    - **Programme**: C:\Users\*{CurrentUser}*\AppData\Local\Microsoft\WebMatrix\Extensions\20\iPhoneSimulator\ElectricMobileSim\ElectricMobileSim.exe *(le chemin de mise à jour en conséquence)*
-   - **Arguments**: &quot;1&quot;
+   - **Arguments** : &quot;1&quot;
    - **Nom convivial**: iPhone simulateur
 
      ![Ajouter un programme](whats-new-in-aspnet-mvc-4/_static/image59.png "ajouter un programme")

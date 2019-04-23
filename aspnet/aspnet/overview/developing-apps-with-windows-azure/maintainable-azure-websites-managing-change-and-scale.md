@@ -12,7 +12,7 @@ ms.openlocfilehash: ec0058472f8bc1d8d58e7c78deeb8b6097532510
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409731"
 ---
 # <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Atelier pratique : Sites web Azure faciles à gérer : gestion des modifications et de la mise à l’échelle
@@ -131,7 +131,7 @@ Dans cette tâche, vous allez passer par les étapes d’activation **Migrations
 
     ![L’activation de Migrations](maintainable-azure-websites-managing-change-and-scale/_static/image1.png "autorisant la migration")
 
-    *Activation des migrations*
+    *L’activation des Migrations*
 
     > [!NOTE]
     > Cette commande ajoute un **Migrations** dossier au projet Geek questionnaire qui contient un fichier appelé **Configuration.cs**. Le **Configuration** classe vous permet de configurer le comportement de Migrations pour votre contexte.

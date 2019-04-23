@@ -12,7 +12,7 @@ ms.openlocfilehash: 0991ce5c866aa9e31ef23812e953d9ee10dda3d1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409718"
 ---
 # <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Vue d’ensemble du développement web ASP.NET 4 et Visual Studio 2010
@@ -24,7 +24,7 @@ ms.locfileid: "59409718"
 
 **Sommaire**
 
-**[Services principaux](#0.2__Toc253429238 "_Toc253429238")**  
+**[Core Services](#0.2__Toc253429238 "_Toc253429238")**  
 [Refactorisation du fichier Web.config](#0.2__Toc253429239 "_Toc253429239")  
 [La mise en cache de sortie extensible](#0.2__Toc253429240 "_Toc253429240")  
 [Démarrage automatique des Applications Web](#0.2__Toc253429241 "_Toc253429241")  
@@ -446,14 +446,14 @@ La liste suivante présente des fichiers de définition de nouveau navigateur :
 - *blackberry.browser*
 - *chrome.browser*
 - *Default.Browser*
-- *Firefox.Browser*
+- *firefox.browser*
 - *gateway.browser*
-- *Generic.browser situé*
+- *generic.browser*
 - *ie.browser*
 - *iemobile.browser*
-- *iPhone.Browser*
+- *iphone.browser*
 - *opera.browser*
-- *Safari.Browser*
+- *safari.browser*
 
 #### <a name="using-browser-capabilities-providers"></a>À l’aide de fournisseurs de fonctionnalités de navigateur
 
@@ -982,7 +982,7 @@ Vous pouvez ensuite définir une classe CSS qui s’applique uniquement à la *m
 Par défaut, les contrôles serveur Web ASP.NET suivants qui prennent en charge les modèles sont automatiquement encapsulées dans une table externe qui est utilisée pour appliquer des styles inline :
 
 - *FormView*
-- *Connexion *
+- *Connexion*
 - *PasswordRecovery*
 - *ChangePassword*
 - *Assistant*

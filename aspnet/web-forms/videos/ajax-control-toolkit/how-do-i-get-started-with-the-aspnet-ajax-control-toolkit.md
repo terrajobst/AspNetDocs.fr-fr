@@ -12,7 +12,7 @@ ms.openlocfilehash: a9c9de7347dd24046d081a5e9ebbcf91a10fe634
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408262"
 ---
 # <a name="how-do-i-get-started-with-the-aspnet-ajax-control-toolkit"></a>[Comment faire] Bien démarrer avec ASP.NET AJAX Control Toolkit ?
@@ -24,4 +24,4 @@ Découvrez comment étendre vos applications ASP.NET AJAX à l’aide d’ASP.NE
 [&#9654;Regardez la vidéo (11 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-get-started-with-the-aspnet-ajax-control-toolkit)
 
 > [!div class="step-by-step"]
-> [Suivant](how-do-i-use-the-aspnet-ajax-cascadingdropdown-control-extender.md)
+> [Next](how-do-i-use-the-aspnet-ajax-cascadingdropdown-control-extender.md)

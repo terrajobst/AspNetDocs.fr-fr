@@ -12,7 +12,7 @@ ms.openlocfilehash: 3eff3aceea302c51e6970bb13fbee3a8bf98a71d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411980"
 ---
 # <a name="adding-a-view"></a>Ajout d’une vue
@@ -38,7 +38,7 @@ Nous allons maintenant ajouter un modèle de vue à notre projet que nous pouvon
 
 Cela fera apparaître la boîte de dialogue « Ajouter une vue » nous fournit des options pour la façon dont nous voulons créer un modèle de vue peut être utilisé par notre méthode de l’Index. Pour l’instant, ne modifiez rien et cliquez simplement sur le bouton Ajouter.
 
-[![Aboîte de dialogue vue du jj](getting-started-with-mvc-part3/_static/image3.png)](getting-started-with-mvc-part3/_static/image2.png)
+[![Afficher la boîte de dialogue Ajouter](getting-started-with-mvc-part3/_static/image3.png)](getting-started-with-mvc-part3/_static/image2.png)
 
 Après avoir cliqué sur Ajouter, un nouveau dossier et un nouveau fichier apparaîtront dans le dossier de Solution, comme illustré ci-après. J’ai maintenant un dossier HelloWorld sous les vues et un fichier Index.aspx à l’intérieur de ce dossier.
 
@@ -80,7 +80,7 @@ Open /HelloWorld/Index.aspx. Il existe deux emplacements à modifier. Tout d’a
 
 Exécutez votre application et visitez /Movies. Notez que le titre du navigateur, l’en-tête principal et les en-têtes secondaires ont été modifiés. Il est facile d’effectuer des modifications importantes dans votre application avec des modifications mineures à votre vue.
 
-[![Movie liste - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image9.png)](getting-started-with-mvc-part3/_static/image8.png)
+[![Liste de films - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image9.png)](getting-started-with-mvc-part3/_static/image8.png)
 
 Nos quelques « données » (dans ce cas « Hello World ! » message) était difficile codé cependant. Nous avons V (vues) et nous avons C (contrôleurs), mais encore aucune M (modèle). Nous allons bientôt Guide pas à créer une base de données et récupérer des données de modèle à partir de celui-ci.
 
@@ -109,11 +109,11 @@ Ajoutez le code suivant sous le &lt;h2&gt; dans votre nouveau Welcome.aspx. Nous
 
 Notez également que lorsque vous tapez qui car nous dit à cette vue concernant le WelcomeViewModel (ils sont mariés, n’oubliez pas ?) que nous obtenons Intellisense utile chaque fois que nous faisons référence notre objet de modèle, comme illustré dans la capture d’écran ci-dessous :
 
-[![NumTime Code Source](getting-started-with-mvc-part3/_static/image12.png)](getting-started-with-mvc-part3/_static/image11.png)
+[![Code Source de NumTime](getting-started-with-mvc-part3/_static/image12.png)](getting-started-with-mvc-part3/_static/image11.png)
 
 Exécutez votre application et visitez `http://localhost:xx/HelloWorld/Welcome?name=Scott&numtimes=4` à nouveau. Maintenant nous redirigeons les données à partir de l’URL, il est passé automatiquement dans notre contrôleur, notre contrôleur empaquette les données dans un ViewModel et passe cet objet vers notre affichage. La vue qu’affiche les données au format HTML à l’utilisateur.
 
-[![WBienvenue - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image14.png)](getting-started-with-mvc-part3/_static/image13.png)
+[![Bienvenue - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image14.png)](getting-started-with-mvc-part3/_static/image13.png)
 
 C’était une sorte de « M » pour le modèle, mais pas le type de base de données. Voyons ce que nous avez appris et créer une base de données de films.
 

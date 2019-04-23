@@ -12,7 +12,7 @@ ms.openlocfilehash: ae53e23dda3ac63e26590edab692188bb44e9f65
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413202"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-introduction---1-of-12"></a>Déploiement d’une Application de Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio : Introduction - 1 sur 12
@@ -82,7 +82,7 @@ Commentaires sur les didacticiels sont les bienvenus, et lorsque le didacticiel 
 
 Avant de commencer, assurez-vous que vous avez Windows 7 ou version ultérieure et que l’un des produits suivants est installé sur votre ordinateur :
 
-- [Visual Studio 2010 SP1](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack)
+- [Visual Studio 2010 SP1](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack)
 - [Visual Web Developer Express 2010 SP1](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VWD2010SP1Pack)
 - [Visual Studio 2012 RC ou Visual Studio Express 2012 RC pour le Web](https://go.microsoft.com/fwlink/?LinkId=240162)
 
@@ -107,7 +107,7 @@ Pour préparer travailler avec les étapes du didacticiel, début de l’enregis
 
 Démarrez Visual Studio, ouvrez le projet, appuyez sur CTRL-F5 pour l’exécuter.
 
-[![Home_page](deployment-to-a-hosting-provider-introduction-1-of-12/_static/image2.png)](deployment-to-a-hosting-provider-introduction-1-of-12/_static/image1.png)
+[![Home_Page](deployment-to-a-hosting-provider-introduction-1-of-12/_static/image2.png)](deployment-to-a-hosting-provider-introduction-1-of-12/_static/image1.png)
 
 Les pages de site Web sont accessibles à partir de la barre de menus et vous permettent d’effectuer les fonctions suivantes :
 
@@ -140,4 +140,4 @@ Les fonctionnalités suivantes de l’application affectent le déploiement ou c
 Dans ce premier didacticiel de la série, vous avez téléchargé l’exemple de projet Visual Studio et passé en revue les fonctionnalités de site qui affectent la façon dont vous déployez l’application. Dans les didacticiels suivants, vous préparer pour le déploiement en définissant une partie de ces éléments à être gérées automatiquement. D’autres vous prendre soin de manuellement.
 
 > [!div class="step-by-step"]
-> [Suivant](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md)
+> [Next](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md)

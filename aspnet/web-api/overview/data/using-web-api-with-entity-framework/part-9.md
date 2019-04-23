@@ -12,7 +12,7 @@ ms.openlocfilehash: 692269a2c11e529af78f24feca74bba704b5b54b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415152"
 ---
 # <a name="add-a-new-item-to-the-database"></a>Ajouter un nouvel élément à la base de données

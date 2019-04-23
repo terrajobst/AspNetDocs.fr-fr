@@ -12,14 +12,14 @@ ms.openlocfilehash: 586508039b9a3d78492aa02a77a1f29c64668b5e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409692"
 ---
 # <a name="scenario-configuring-a-production-environment-for-web-deployment"></a>Scénario : configuration d’un environnement de production pour le déploiement web
 
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit un scénario de déploiement web typique pour un environnement de production et décrit les tâches que vous devez suivre pour configurer un environnement similaire.
 

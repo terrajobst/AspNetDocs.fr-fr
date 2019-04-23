@@ -12,7 +12,7 @@ ms.openlocfilehash: 7bccf52ccf0aacffa90d3c6db541cec5e20582e3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414229"
 ---
 # <a name="aspnet-4-quick-hit---chart-control"></a>ASP.NET 4 « Accès rapide » - graphique
@@ -24,4 +24,4 @@ Dans cette vidéo, vous apprendrez comment utiliser le contrôle de graphique AS
 [&#9654;Regardez la vidéo (2 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-4-quick-hit-chart-control)
 
 > [!div class="step-by-step"]
-> [Suivant](aspnet-4-how-do-i-introducing-the-new-chart-control-in-visual-studio-2010.md)
+> [Next](aspnet-4-how-do-i-introducing-the-new-chart-control-in-visual-studio-2010.md)

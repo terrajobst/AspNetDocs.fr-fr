@@ -12,7 +12,7 @@ ms.openlocfilehash: 028631f8855e4d94bebb0e965de75c4025e22859
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409263"
 ---
 # <a name="part-7-creating-the-main-page"></a>Partie 7 : Création de la page principale
@@ -91,7 +91,7 @@ Voici les liaisons pour le panier d’achat :
 
 Il effectue une itération sur le tableau de panier et affiche le nom, le prix et la quantité. Notez que le lien « Supprimer » et le bouton « Créer une commande » sont liés aux fonctions de modèle de vue.
 
-**Orders**
+**Commandes**
 
 Voici les liaisons pour obtenir la liste de commandes :
 
@@ -99,7 +99,7 @@ Voici les liaisons pour obtenir la liste de commandes :
 
 Il effectue une itération sur les commandes et qui affiche l’ID de commande. L’événement de clic sur le lien est lié à la `getDetails` (fonction).
 
-**Order Details**
+**Détails de la commande**
 
 Voici les liaisons pour les détails de commande :
 

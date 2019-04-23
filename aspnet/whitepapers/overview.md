@@ -12,7 +12,7 @@ ms.openlocfilehash: 4745e68053fae38019b6121295382a170fd2d858
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412929"
 ---
 # <a name="whitepapers"></a>Livres blancs

@@ -12,7 +12,7 @@ ms.openlocfilehash: a9dd4268ef20b58b674f8ec8313132398fc5f19d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413124"
 ---
 # <a name="logging-error-details-with-aspnet-health-monitoring-vb"></a>Journalisation des détails des erreurs avec la supervision de l’intégrité ASP.NET (VB)
@@ -147,8 +147,8 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 - [Vue d’ensemble de la surveillance d’état ASP.NET](https://msdn.microsoft.com/library/bb398933.aspx)
 - [Configuration et la personnalisation de l’intégrité de surveillance du système d’ASP.NET](http://dotnetslackers.com/articles/aspnet/ConfiguringAndCustomizingTheHealthMonitoringSystemOfASPNET.aspx)
 - [FAQ - contrôle d’intégrité de la surveillance dans ASP.NET 2.0](https://blogs.msdn.com/erikreitan/archive/2006/05/22/603586.aspx)
-- [Procédure : Envoyer un courrier électronique pour les Notifications de contrôle d’intégrité](https://msdn.microsoft.com/library/ms227553.aspx)
-- [Procédure : Utiliser le contrôle d’intégrité dans ASP.NET](https://msdn.microsoft.com/library/ms998306.aspx)
+- [Guide pratique pour Envoyer un courrier électronique pour les Notifications de contrôle d’intégrité](https://msdn.microsoft.com/library/ms227553.aspx)
+- [Guide pratique pour Utiliser le contrôle d’intégrité dans ASP.NET](https://msdn.microsoft.com/library/ms998306.aspx)
 - [Intégrité de la surveillance dans ASP.NET](http://aspnet.4guysfromrolla.com/articles/031407-1.aspx)
 
 > [!div class="step-by-step"]

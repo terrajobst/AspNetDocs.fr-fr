@@ -12,7 +12,7 @@ ms.openlocfilehash: 937451d8cfa5bb96ca6abebf440af86c2c2746ab
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411460"
 ---
 # <a name="aspnet-mvc-storefront-part-4-linq-to-sql-spike"></a>Application Storefront ASP.NET MVC, partie 4 : Pic LINQ to SQL

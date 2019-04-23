@@ -12,7 +12,7 @@ ms.openlocfilehash: 223fad7013a53212c0c822a87bd3e2fcc0a5f17f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408951"
 ---
 # <a name="dynamically-controlling-updatepanel-animations-vb"></a>Contrôle dynamique des animations UpdatePanel (VB)
@@ -58,7 +58,7 @@ Enfin, le `UpdatePanelAnimationExtender` doivent être configurés : Définir l
 Exécutez le fichier dans le navigateur. Chaque fois que vous cliquez sur le bouton, l’heure actuelle est indiqué dans le panneau de configuration, toujours fondu pour la durée d’une seconde.
 
 
-[![TIl heure actuelle est fondu](dynamically-controlling-updatepanel-animations-vb/_static/image2.png)](dynamically-controlling-updatepanel-animations-vb/_static/image1.png)
+[![L’heure actuelle est fondu](dynamically-controlling-updatepanel-animations-vb/_static/image2.png)](dynamically-controlling-updatepanel-animations-vb/_static/image1.png)
 
 L’heure actuelle est fondu ([cliquez pour afficher l’image en taille réelle](dynamically-controlling-updatepanel-animations-vb/_static/image3.png))
 

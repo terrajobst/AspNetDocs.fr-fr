@@ -12,7 +12,7 @@ ms.openlocfilehash: 97dac03e4b305b3775214801143cbc57b4221a40
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411486"
 ---
 # <a name="creating-a-tasklist-application-with-aspnet-mvc"></a>Création d’une application de liste de tâches avec ASP.NET MVC
@@ -24,4 +24,4 @@ Stephen Walther génère une application ASP.NET MVC entière à partir du débu
 [&#9654;Regardez la vidéo (38 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-a-tasklist-application-with-aspnet-mvc)
 
 > [!div class="step-by-step"]
-> [Suivant](creating-a-movie-database-application-in-15-minutes-with-aspnet-mvc.md)
+> [Next](creating-a-movie-database-application-in-15-minutes-with-aspnet-mvc.md)

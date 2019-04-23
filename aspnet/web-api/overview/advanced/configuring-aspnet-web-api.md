@@ -13,7 +13,7 @@ ms.openlocfilehash: 39629ba404e536b29318db00bce8c4443a782497
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411941"
 ---
 # <a name="configuring-aspnet-web-api-2"></a>Configuration d’ASP.NET Web API 2
@@ -36,14 +36,14 @@ Paramètres de configuration Web API sont définies dans le [HttpConfiguration](
 | Membre | Description |
 | --- | --- |
 | **DependencyResolver** | Permet l’injection de dépendances pour les contrôleurs. Consultez [à l’aide du résolveur de dépendance Web API](dependency-injection.md). |
-| **Filtres** | Filtres d’action. |
+| **Les filtres** | Filtres d’action. |
 | **Formateurs** | [Formateurs de type de média](../formats-and-model-binding/media-formatters.md). |
 | **IncludeErrorDetailPolicy** | Spécifie si le serveur doit inclure des détails de l’erreur, telles que les messages d’exception et des traces de pile dans les messages de réponse HTTP. Consultez [IncludeErrorDetailPolicy](https://msdn.microsoft.com/library/system.web.http.includeerrordetailpolicy(v=vs.108)). |
-| **Initialiseur** | Une fonction qui effectue l’initialisation finale de la **HttpConfiguration**. |
+| **Initializer** | Une fonction qui effectue l’initialisation finale de la **HttpConfiguration**. |
 | **MessageHandlers** | [Gestionnaires de messages HTTP](http-message-handlers.md). |
 | **ParameterBindingRules** | Une collection de règles pour la liaison de paramètres sur les actions de contrôleur. |
-| **Properties** | Un jeu de propriétés génériques. |
-| **Routes** | La collection d’itinéraires. Consultez [routage dans ASP.NET Web API](../web-api-routing-and-actions/routing-in-aspnet-web-api.md). |
+| **Propriétés** | Un jeu de propriétés génériques. |
+| **Itinéraires** | La collection d’itinéraires. Consultez [routage dans ASP.NET Web API](../web-api-routing-and-actions/routing-in-aspnet-web-api.md). |
 | **Services** | La collection de services. Consultez [Services](#services). |
 
 

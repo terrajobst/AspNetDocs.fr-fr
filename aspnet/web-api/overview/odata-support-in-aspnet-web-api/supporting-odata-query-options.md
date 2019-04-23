@@ -13,7 +13,7 @@ ms.openlocfilehash: 428e4942e42436585049c1e84cd7b07a4a79c0d1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411564"
 ---
 # <a name="supporting-odata-query-options-in-aspnet-web-api-2"></a>Prise en charge des Options de requête OData dans ASP.NET Web API 2

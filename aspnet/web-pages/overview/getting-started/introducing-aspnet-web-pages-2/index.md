@@ -12,7 +12,7 @@ ms.openlocfilehash: 324a9d7b8666cbd387ff6ea17e9d341fe2f38423
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409626"
 ---
 # <a name="introducing-aspnet-web-pages"></a>Introduction à ASP.NET Web Pages
@@ -22,7 +22,7 @@ ms.locfileid: "59409626"
 
 - [Prise en main](getting-started.md)
 - [Principes de base de la programmation](intro-to-web-pages-programming.md)
-- [Affichage de données](displaying-data.md)
+- [Affichage des données](displaying-data.md)
 - [Principes de base des formulaires HTML](form-basics.md)
 - [Saisie de données de la base de données avec des formulaires](entering-data.md)
 - [Mise à jour de données de la base de données](updating-data.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: c9ef2f961eece67ab98071de863d8e60bc307e03
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410875"
 ---
 # <a name="aspnet-web-api-part-1-your-first-web-api"></a>API Web ASP.NET, partie 1 : Votre première API Web

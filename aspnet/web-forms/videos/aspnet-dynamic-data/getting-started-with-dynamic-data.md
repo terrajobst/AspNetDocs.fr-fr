@@ -12,7 +12,7 @@ ms.openlocfilehash: 9f40088b40705976983096446e88225d5b434a2a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411317"
 ---
 # <a name="getting-started-with-dynamic-data"></a>Bien démarrer avec Dynamic Data

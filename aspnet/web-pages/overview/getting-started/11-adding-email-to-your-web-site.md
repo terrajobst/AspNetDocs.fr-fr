@@ -12,7 +12,7 @@ ms.openlocfilehash: 0263f736b96f8e8572536f3783d86c261d7c0512
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411226"
 ---
 # <a name="sending-email-from-an-aspnet-web-pages-razor-site"></a>Envoi d’E-mails à partir d’un Site ASP.NET Web Pages (Razor)
@@ -136,5 +136,5 @@ Vous pouvez également envoyer des fichiers qui sont joints aux messages électr
 
 
 - [ASP.NET Web Pages (Razor) - Guide de résolution des problèmes](https://go.microsoft.com/fwlink/?LinkId=253001)
-- [Protocole SMTP](https://msdn.microsoft.com/library/aa480435.aspx)
+- [Simple Mail Transfer Protocol](https://msdn.microsoft.com/library/aa480435.aspx)
 - [Personnalisation du comportement de l’échelle du Site pour ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202906)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 300fc9f7e82fe8201b083de9e740e1620f5d09b9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411811"
 ---
 # <a name="validation-with-the-data-annotation-validators-c"></a>Validation avec les validateurs d’annotation de données (C#)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 5415913626eb063a4cb1013ba03857c130487f42
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412175"
 ---
 # <a name="introducing-aspnet-web-pages---displaying-data"></a>Présentation des Pages Web ASP.NET - affichage des données
@@ -214,7 +214,7 @@ Enfin, la troisième ligne indique à ASP.NET que vous souhaitez utiliser une in
 
 > [!TIP] 
 > 
-> **SQL (Structured Query Language)**
+> **Structured Query Language (SQL)**
 > 
 > SQL est un langage qui est utilisé dans la plupart des bases de données relationnelles pour la gestion des données dans une base de données. Il inclut des commandes qui permettent de récupérer des données et mettre à jour, et qui vous permettent de créer, modifier et gérer des données dans les tables de base de données. SQL est différent de celui d’un langage de programmation (tel que c#). Avec SQL, vous indiquer la base de données à ce que vous voulez, et travail de la base de données consiste à déterminer comment obtenir les données ou d’effectuer la tâche. Voici des exemples de certaines commandes SQL et ce qu’ils font :
 > 
@@ -333,7 +333,7 @@ Dans le didacticiel suivant, vous allez apprendre à utiliser le code Razor et c
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- [Présentation de la programmation Web ASP.NET à l'aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introduction à la programmation Web ASP.NET à l’aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 
 > [!div class="step-by-step"]
 > [Précédent](intro-to-web-pages-programming.md)

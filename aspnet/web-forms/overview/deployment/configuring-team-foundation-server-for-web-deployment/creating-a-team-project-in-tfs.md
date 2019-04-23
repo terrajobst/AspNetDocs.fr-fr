@@ -12,14 +12,14 @@ ms.openlocfilehash: 1e727e8124e1f045f8ef25ab7a3d4efbafd4290a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411213"
 ---
 # <a name="creating-a-team-project-in-tfs"></a>Créer un projet d’équipe dans TFS
 
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit comment créer un nouveau projet d’équipe dans Team Foundation Server (TFS) 2010.
 
@@ -106,8 +106,7 @@ Ensuite, vous devez donner à l’utilisateur l’autorisation de créer de nouv
 
    > [!NOTE]
    > Vous pouvez recevoir un <strong>HTTP 404 Not Found</strong> erreur en raison d’un bogue de codage HTTP double. Si cela se produit, remplacez l’URL par ceci :   
-   > `[site_collection_URL]/_layouts/permsetup.aspx`
-   > Exemple :  
+   > `[site_collection_URL]/_layouts/permsetup.aspx` Par exemple :  
    > `http://tfs/sites/Fabrikam%20Web%20Projects/_layouts/permsetup.aspx` 
 8. Sur le **configurer les groupes pour ce Site** page, ajoutez l’utilisateur qui crée des projets d’équipe pour le **propriétaires** de groupe, puis cliquez sur **OK**.
 

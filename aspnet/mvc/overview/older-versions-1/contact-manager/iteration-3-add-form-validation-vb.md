@@ -12,7 +12,7 @@ ms.openlocfilehash: e031417f2ee22533e7b5a606fc40526d7d911efc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413332"
 ---
 # <a name="iteration-3--add-form-validation-vb"></a>Itération #3 : ajouter une validation de formulaire (VB)
@@ -51,7 +51,7 @@ Nous générer l’application sur de multiples itérations. Avec chaque itérat
 Dans ce deuxième itération de l’application Gestionnaire de contacts, nous ajouter la validation de formulaire de base. Nous empêcher des personnes de soumettre un contact sans entrer de valeurs pour les champs obligatoires. Nous avons également valider que les numéros de téléphone et adresses de messagerie (voir Figure 1).
 
 
-[![Tboîte de dialogue Nouveau projet he](iteration-3-add-form-validation-vb/_static/image1.jpg)](iteration-3-add-form-validation-vb/_static/image1.png)
+[![La boîte de dialogue Nouveau projet](iteration-3-add-form-validation-vb/_static/image1.jpg)](iteration-3-add-form-validation-vb/_static/image1.png)
 
 **Figure 01**: Un formulaire avec la validation ([cliquez pour afficher l’image en taille réelle](iteration-3-add-form-validation-vb/_static/image2.png))
 
@@ -66,7 +66,7 @@ Dans cette itération, pour simplifier les choses, nous écrire tout le code de 
 
 Permettent de commencer par ajouter la logique de validation à la vue Create s. Heureusement, étant donné que nous avons généré la vue de créer avec Visual Studio, la vue Create contient déjà toute la logique d’interface utilisateur nécessaires pour afficher les messages de validation. La vue de créer est contenue dans le Listing 1.
 
-**Liste 1 - \Views\Contact\Create.aspx**
+**Listing 1 - \Views\Contact\Create.aspx**
 
 [!code-aspx[Main](iteration-3-add-form-validation-vb/samples/sample1.aspx)]
 

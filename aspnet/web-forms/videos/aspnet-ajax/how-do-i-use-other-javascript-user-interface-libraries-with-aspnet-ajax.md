@@ -12,7 +12,7 @@ ms.openlocfilehash: 21c0a717c299cb72ca7379c9cb128ce5bb80edec
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409874"
 ---
 # <a name="how-do-i-use-other-javascript-user-interface-libraries-with-aspnet-ajax"></a>[Comment faire] Utiliser d’autres bibliothèques d’Interface utilisateur de JavaScript avec ASP.NET AJAX ?

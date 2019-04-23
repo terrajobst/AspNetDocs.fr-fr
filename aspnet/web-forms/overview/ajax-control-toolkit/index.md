@@ -12,7 +12,7 @@ ms.openlocfilehash: 795283c33d63272b29b91fd7037c3463bc71abad
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410745"
 ---
 # <a name="older-versions---ajax-control-toolkit"></a>Versions antérieures - Ajax Control Toolkit
@@ -47,7 +47,7 @@ ms.locfileid: "59410745"
     - [Animation en réponse à une interaction utilisateur (C#)](animation/animating-in-response-to-user-interaction-cs.md)
     - [Désactivation d’actions pendant une animation (C#)](animation/disabling-actions-during-animation-cs.md)
     - [Déclenchement d’une animation dans un autre contrôle (C#)](animation/triggering-an-animation-in-another-control-cs.md)
-    - [Modification d’animations à partir du côté serveur (C#)](animation/modifying-animations-from-the-server-side-cs.md)
+    - [Modification d’animations depuis le côté serveur (C#)](animation/modifying-animations-from-the-server-side-cs.md)
     - [Exécution d’animations avec du code côté client (C#)](animation/executing-animations-using-client-side-code-cs.md)
     - [Changement d’une animation avec du code côté client (C#)](animation/changing-an-animation-using-client-side-code-cs.md)
     - [Animation d’un contrôle UpdatePanel (C#)](animation/animating-an-updatepanel-control-cs.md)
@@ -60,7 +60,7 @@ ms.locfileid: "59410745"
     - [Animation en réponse à une interaction utilisateur (VB)](animation/animating-in-response-to-user-interaction-vb.md)
     - [Désactivation d’actions pendant une animation (VB)](animation/disabling-actions-during-animation-vb.md)
     - [Déclenchement d’une animation dans un autre contrôle (VB)](animation/triggering-an-animation-in-another-control-vb.md)
-    - [Modification d’animations à partir du côté serveur (VB)](animation/modifying-animations-from-the-server-side-vb.md)
+    - [Modification d’animations depuis le côté serveur (VB)](animation/modifying-animations-from-the-server-side-vb.md)
     - [Exécution d’animations avec du code côté client (VB)](animation/executing-animations-using-client-side-code-vb.md)
     - [Changement d’une animation avec du code côté client (VB)](animation/changing-an-animation-using-client-side-code-vb.md)
     - [Animation d’un contrôle UpdatePanel (VB)](animation/animating-an-updatepanel-control-vb.md)
@@ -94,9 +94,9 @@ ms.locfileid: "59410745"
 - [DropShadow](dropshadow/index.md)
 
     - [Ajustement de l’index-Z d’un DropShadow (C#)](dropshadow/adjusting-the-z-index-of-a-dropshadow-cs.md)
-    - [Manipulation des propriétés de DropShadow à partir de code client (C#)](dropshadow/manipulating-dropshadow-properties-from-client-code-cs.md)
+    - [Manipulation des propriétés de DropShadow depuis du code client (C#)](dropshadow/manipulating-dropshadow-properties-from-client-code-cs.md)
     - [Ajustement de l’index-Z d’un DropShadow (VB)](dropshadow/adjusting-the-z-index-of-a-dropshadow-vb.md)
-    - [Manipulation des propriétés de DropShadow à partir de code client (VB)](dropshadow/manipulating-dropshadow-properties-from-client-code-vb.md)
+    - [Manipulation des propriétés de DropShadow depuis du code client (VB)](dropshadow/manipulating-dropshadow-properties-from-client-code-vb.md)
 - [DynamicPopulate](dynamicpopulate/index.md)
 
     - [Remplissage dynamique d’un contrôle (C#)](dynamicpopulate/dynamically-populating-a-control-cs.md)
@@ -151,7 +151,7 @@ ms.locfileid: "59410745"
     - [Utilisation de plusieurs contrôles de fenêtre contextuelle (VB)](popup/using-multiple-popup-controls-vb.md)
     - [Gestion des publications (postback) à partir d’un contrôle de fenêtre contextuelle avec un UpdatePanel (VB)](popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-vb.md)
     - [Gestion des publications (postback) à partir d’un contrôle de fenêtre contextuelle sans un UpdatePanel (VB)](popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-vb.md)
-- [Classification](rating/index.md)
+- [Rating](rating/index.md)
 
     - [Création d’un contrôle Rating (C#)](rating/creating-a-rating-control-cs.md)
     - [Création d’un contrôle Rating (VB)](rating/creating-a-rating-control-vb.md)
@@ -161,7 +161,7 @@ ms.locfileid: "59410745"
     - [Glisser-déplacer via ReorderList (C#)](reorderlist/drag-and-drop-via-reorderlist-cs.md)
     - [Utilisation de publications (postback) avec ReorderList (VB)](reorderlist/using-postbacks-with-reorderlist-vb.md)
     - [Glisser-déplacer via ReorderList (VB)](reorderlist/drag-and-drop-via-reorderlist-vb.md)
-- [Curseur](slider/index.md)
+- [Slider](slider/index.md)
 
     - [Contrôle Slider avec publication (postback) automatique (C#)](slider/using-the-slider-control-with-auto-postback-cs.md)
     - [Liaison de données du contrôle Slider (C#)](slider/databinding-the-slider-control-cs.md)

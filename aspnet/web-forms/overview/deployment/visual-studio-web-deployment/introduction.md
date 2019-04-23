@@ -12,7 +12,7 @@ ms.openlocfilehash: 0edab77cd973af129e54c7867265f86b47c349a6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410134"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-introduction"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Introduction
@@ -200,4 +200,4 @@ Les fonctionnalités suivantes de l’application affectent le déploiement ou c
 Dans ce premier didacticiel de la série, vous avez téléchargé l’exemple de projet Visual Studio et passé en revue les fonctionnalités de site qui affectent la façon dont vous déployez l’application. Dans les didacticiels suivants, vous préparer pour le déploiement en définissant une partie de ces éléments à être gérées automatiquement. D’autres vous prendre soin de manuellement.
 
 > [!div class="step-by-step"]
-> [Suivant](preparing-databases.md)
+> [Next](preparing-databases.md)

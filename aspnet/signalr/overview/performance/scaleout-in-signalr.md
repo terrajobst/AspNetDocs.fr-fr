@@ -12,7 +12,7 @@ ms.openlocfilehash: 0d17308d1e97279c0870ea02933a42400ef338c9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411551"
 ---
 # <a name="introduction-to-scaleout-in-signalr"></a>Introduction au scale-out dans SignalR
@@ -62,9 +62,9 @@ Si vous déployez votre application sur Azure, envisagez d’utiliser le fond de
 
 Les rubriques suivantes contiennent des didacticiels pas à pas pour chaque fond de panier :
 
-- [Scale-out de SignalR avec Azure Service Bus](scaleout-with-windows-azure-service-bus.md)
-- [Scale-out de SignalR avec Redis](scaleout-with-redis.md)
-- [Scale-out de SignalR avec SQL Server](scaleout-with-sql-server.md)
+- [Montée en puissance parallèle de SignalR avec Azure Service Bus](scaleout-with-windows-azure-service-bus.md)
+- [Montée en puissance parallèle de SignalR avec Redis](scaleout-with-redis.md)
+- [Montée en puissance parallèle de SignalR avec SQL Server](scaleout-with-sql-server.md)
 
 ## <a name="implementation"></a>Implémentation
 

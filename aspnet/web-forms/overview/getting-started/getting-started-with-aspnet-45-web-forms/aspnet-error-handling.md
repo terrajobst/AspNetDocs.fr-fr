@@ -12,7 +12,7 @@ ms.openlocfilehash: e4b8f059974dec33d6305e7b84919550713bf4e4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409880"
 ---
 # <a name="aspnet-error-handling"></a>Gestion des erreurs ASP.NET
@@ -338,7 +338,7 @@ J’aimerais remercier les personnes suivantes qui a apporté d’importantes co
 - Apurva Joshi, Microsoft
 - [Bojan Vrhovnik, Slovénie](http://twitter.com/bvrhovnik)
 - [Bruno Sonnino, Brésil](http://msmvps.com/blogs/bsonnino) (twitter : [ @bsonnino ](http://twitter.com/bsonnino))
-- [Carlos dos Santos, Brazil](http://www.carloscds.net/)
+- [Dos de Carlos Santos, Brésil](http://www.carloscds.net/)
 - [Dave Campbell, USA](http://www.wynapse.com/) (twitter : [ @windowsdevnews ](http://twitter.com/windowsdevnews))
 - [Jon Galloway, Microsoft](https://weblogs.asp.net/jgalloway) (twitter : [ @jongalloway ](http://twitter.com/jongalloway))
 - [Michael dièses, USA](http://www.930solutions.com/) (twitter : [ @mrsharps ](http://twitter.com/mrsharps))

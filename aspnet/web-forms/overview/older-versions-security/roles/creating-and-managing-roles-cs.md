@@ -12,7 +12,7 @@ ms.openlocfilehash: 3ee858cba449b0a8c8e693970a10ce0182e8c3da
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412396"
 ---
 # <a name="creating-and-managing-roles-c"></a>Création et gestion de rôles (C#)
@@ -48,7 +48,7 @@ Commencez par créer un nouveau dossier dans le projet nommé `Roles`. Ensuite, 
 À ce stade l’Explorateur de solutions de votre projet doit ressembler à l’écran illustré à la Figure 1.
 
 
-[![Fnos nouvelles Pages ont été ajoutés dans le dossier rôles](creating-and-managing-roles-cs/_static/image2.png)](creating-and-managing-roles-cs/_static/image1.png)
+[![Quatre nouvelles Pages ont été ajoutés dans le dossier rôles](creating-and-managing-roles-cs/_static/image2.png)](creating-and-managing-roles-cs/_static/image1.png)
 
 **Figure 1**: Quatre nouvelles Pages ont été ajoutées à la `Roles` dossier ([cliquez pour afficher l’image en taille réelle](creating-and-managing-roles-cs/_static/image3.png))
 
@@ -68,7 +68,7 @@ Enfin, mettons à jour le plan du site (`Web.sitemap`) à inclure ces nouvelles 
 Avec le plan de site mis à jour, visitez le site via un navigateur. Comme le montre la Figure 2, le volet de navigation de gauche maintenant inclut des éléments pour les didacticiels de rôles.
 
 
-[![Fnos nouvelles Pages ont été ajoutés dans le dossier rôles](creating-and-managing-roles-cs/_static/image5.png)](creating-and-managing-roles-cs/_static/image4.png)
+[![Quatre nouvelles Pages ont été ajoutés dans le dossier rôles](creating-and-managing-roles-cs/_static/image5.png)](creating-and-managing-roles-cs/_static/image4.png)
 
 **Figure 2**: Quatre nouvelles Pages ont été ajoutées à la `Roles` dossier ([cliquez pour afficher l’image en taille réelle](creating-and-managing-roles-cs/_static/image6.png))
 
@@ -149,7 +149,7 @@ Le code ci-dessus commence, affectez le nom de rôle rognées entré dans le `Ro
 Nous allons créer un rôle nommé administrateurs. Visitez le `ManageRoles.aspx` page via un navigateur, tapez les administrateurs dans la zone de texte (voir Figure 3), puis cliquez sur le bouton Créer un rôle.
 
 
-[![Ccréer un rôle d’administrateurs](creating-and-managing-roles-cs/_static/image8.png)](creating-and-managing-roles-cs/_static/image7.png)
+[![Créer un rôle d’administrateurs](creating-and-managing-roles-cs/_static/image8.png)](creating-and-managing-roles-cs/_static/image7.png)
 
 **Figure 3**: Créer un rôle d’administrateurs ([cliquez pour afficher l’image en taille réelle](creating-and-managing-roles-cs/_static/image9.png))
 
@@ -157,7 +157,7 @@ Nous allons créer un rôle nommé administrateurs. Visitez le `ManageRoles.aspx
 Que se passe-t-il ? Une publication (postback) se produit, mais il n’existe aucun indice visuel le rôle a bien été ajouté au système. Nous mettrons à jour cette page à l’étape 5 pour inclure des commentaires visuels. Pour l’instant, toutefois, vous pouvez vérifier que le rôle a été créé en accédant à la `SecurityTutorials.mdf` base de données et afficher les données à partir de la `aspnet_Roles` table. Comme le montre la Figure 4, le `aspnet_Roles` table contient un enregistrement pour les rôles d’administrateurs juste-ajouté.
 
 
-[![TIl aspnet_Roles Table possède une ligne pour les administrateurs](creating-and-managing-roles-cs/_static/image11.png)](creating-and-managing-roles-cs/_static/image10.png)
+[![La Table aspnet_Roles comporte une ligne pour les administrateurs](creating-and-managing-roles-cs/_static/image11.png)](creating-and-managing-roles-cs/_static/image10.png)
 
 **Figure 4**: Le `aspnet_Roles` Table contient une ligne pour les administrateurs ([cliquez pour afficher l’image en taille réelle](creating-and-managing-roles-cs/_static/image12.png))
 
@@ -175,7 +175,7 @@ Le `Roles` la classe `GetAllRoles` méthode retourne tous les rôles du système
 Avec ce code en place, visitez la page via un navigateur. Comme le montre la Figure 5, vous devez voir une grille avec une seule colonne intitulée élément. La grille inclut une ligne pour le rôle d’administrateurs que nous avons ajouté à l’étape 4.
 
 
-[![TIl GridView affiche les rôles dans une seule colonne](creating-and-managing-roles-cs/_static/image14.png)](creating-and-managing-roles-cs/_static/image13.png)
+[![Le contrôle GridView affiche les rôles dans une seule colonne](creating-and-managing-roles-cs/_static/image14.png)](creating-and-managing-roles-cs/_static/image13.png)
 
 **Figure 5**: Le contrôle GridView affiche les rôles dans une seule colonne ([cliquez pour afficher l’image en taille réelle](creating-and-managing-roles-cs/_static/image15.png))
 
@@ -203,7 +203,7 @@ Actuellement, le `RoleList` GridView est uniquement lié à la liste des rôles 
 Maintenant lorsque l’utilisateur ajoute un nouveau rôle le `RoleList` GridView affiche le rôle ajouté juste sur la publication (postback), fournissant une rétroaction visuelle que le rôle a été créé avec succès. Pour illustrer ceci, visitez le `ManageRoles.aspx` page via un navigateur et ajoutez un rôle nommé superviseurs. Lorsque vous cliquez sur le bouton Créer un rôle, résulte d’une publication (postback) et la grille mettra à jour pour inclure les administrateurs, ainsi que le nouveau rôle, les superviseurs.
 
 
-[![TIl superviseurs rôle a été ajouté](creating-and-managing-roles-cs/_static/image17.png)](creating-and-managing-roles-cs/_static/image16.png)
+[![Le rôle superviseurs a été ajouté](creating-and-managing-roles-cs/_static/image17.png)](creating-and-managing-roles-cs/_static/image16.png)
 
 **Figure 6**: Le rôle superviseurs a été ajouté ([cliquez pour afficher l’image en taille réelle](creating-and-managing-roles-cs/_static/image18.png))
 
@@ -220,7 +220,7 @@ Le `DeleteRole` méthode lève également une exception si *roleName* est `null`
 Nous allons augmenter le contrôle GridView dans `ManageRoles.aspx` pour inclure un bouton Supprimer qui, lorsque vous cliquez dessus, supprime le rôle sélectionné. Commencez par ajouter un bouton Supprimer pour le contrôle GridView en accédant à la boîte de dialogue champs et ajout d’un bouton de suppression, ce qui se trouve sous l’option CommandField. Rendre la suppression de bouton de la colonne la plus à gauche et définissez son `DeleteText` propriété à supprimer un rôle.
 
 
-[![Ajj un bouton Supprimer pour le RoleList GridView](creating-and-managing-roles-cs/_static/image20.png)](creating-and-managing-roles-cs/_static/image19.png)
+[![Ajouter un bouton Supprimer pour le contrôle RoleList GridView](creating-and-managing-roles-cs/_static/image20.png)](creating-and-managing-roles-cs/_static/image19.png)
 
 **Figure 7**: Ajouter un bouton Supprimer pour le `RoleList` GridView ([cliquez pour afficher l’image en taille réelle](creating-and-managing-roles-cs/_static/image21.png))
 
@@ -252,7 +252,7 @@ Bonne programmation !
 Pour plus d’informations sur les sujets abordés dans ce didacticiel, consultez les ressources suivantes :
 
 - [Examen d’ASP.NET de 2.0 l’appartenance, rôles et profil](http://aspnet.4guysfromrolla.com/articles/120705-1.aspx)
-- [Procédure : Utiliser le Gestionnaire de rôles dans ASP.NET 2.0](https://msdn.microsoft.com/library/ms998314.aspx)
+- [Guide pratique pour Utiliser le Gestionnaire de rôles dans ASP.NET 2.0](https://msdn.microsoft.com/library/ms998314.aspx)
 - [Fournisseurs de rôles](https://msdn.microsoft.com/library/aa478950.aspx)
 - [Déploiement de votre propre outil d’Administration de site Web](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx)
 - [Documentation technique pour le `<roleManager>` élément](https://msdn.microsoft.com/library/ms164660.aspx)
@@ -267,4 +267,4 @@ Scott Mitchell, auteur de plusieurs livres sur ASP/ASP.NET et fondateur de 4Guys
 Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Les réviseurs tête pour ce didacticiel incluent Alicja Maziarz, Suchi Banerjee et Teresa Murphy. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Suivant](assigning-roles-to-users-cs.md)
+> [Next](assigning-roles-to-users-cs.md)

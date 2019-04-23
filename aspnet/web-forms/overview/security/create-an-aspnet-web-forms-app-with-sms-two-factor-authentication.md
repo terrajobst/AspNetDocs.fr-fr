@@ -12,7 +12,7 @@ ms.openlocfilehash: 2010de510cf44bba1b95d29dbdb573ab78f452f7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411356"
 ---
 # <a name="create-an-aspnet-web-forms-app-with-sms-two-factor-authentication-c"></a>Créer une application Web Forms ASP.NET avec authentification à deux facteurs par SMS (C#)
@@ -33,7 +33,7 @@ Ce didacticiel vous guide à travers les étapes requises pour créer une applic
 - [Créer une application Web Forms ASP.NET](#createWebForms)
 - [Le programme d’installation de SMS et authentification à deux facteurs](#SMS)
 - [Activer l’authentification à deux facteurs pour l’utilisateur inscrit](#use2FA)
-- [Ressources supplémentaires](#addRes)
+- [Ressources supplémentaires pour MSBuild](#addRes)
 
 <a id="createWebForms"></a>
 ## <a name="create-an-aspnet-web-forms-app"></a>Créer une application Web Forms ASP.NET
@@ -109,9 +109,9 @@ Ce didacticiel utilise Twilio, mais vous pouvez utiliser n’importe quel fourni
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 - [Authentification à deux facteurs par SMS et e-mail avec ASP.NET Identity](../../../identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
-- [Ressources recommandées pour des liens vers ASP.NET Identity](../../../identity/overview/getting-started/aspnet-identity-recommended-resources.md)
+- [Des liens vers les ressources recommandées sur ASP.NET Identity](../../../identity/overview/getting-started/aspnet-identity-recommended-resources.md)
 - [Déployer une application de formulaires Web ASP.NET sécurisée avec appartenance, OAuth et base de données SQL sur un site Web Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/)
 - [Série de didacticiels ASP.NET Web Forms - ajouter le fournisseur OAuth 2.0](../getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md#OAuthWebForms)
 - [Série de didacticiels Web Forms ASP.NET - activer SSL pour le projet](../getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md#SSLWebForms)
 - [Confirmation de compte et de récupération de mot de passe avec ASP.NET Identity](../../../identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
-- [Création de l’application dans Facebook et la connexion de l’application au projet](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md#fb)
+- [Création de l’application dans Facebook et connexion de l’application au projet](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md#fb)

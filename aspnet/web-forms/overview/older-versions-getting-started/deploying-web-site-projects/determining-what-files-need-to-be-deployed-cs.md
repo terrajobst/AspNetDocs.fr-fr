@@ -12,7 +12,7 @@ ms.openlocfilehash: c17e3afaf4406489a14d0537a33fef384d6c5a19
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408964"
 ---
 # <a name="determining-what-files-need-to-be-deployed-c"></a>Détermination des fichiers qui doivent être déployés (C#)
@@ -93,7 +93,7 @@ Le téléchargement de ce didacticiel inclut une application ASP.NET appelée cr
 Figure 1 illustre une capture d’écran du site Web de critiques de livres lorsqu’ils sont affichés via un navigateur. Ici, vous voyez la page ~ /`Tech/TYASP35.aspx`, qui passe en revue le livre *enseigner vous-même ASP.NET 3.5 des dernières 24 heures*. La barre de navigation qui s’étend sur la partie supérieure de la page et le menu dans la colonne de gauche sont basées sur la structure de plan de site définie dans `Web.sitemap`. L’image dans l’angle supérieur droit est un de la couverture de livre images se trouvent dans le `Images` dossier. Apparence du site Web sont définies via en cascade décrits par les fichiers CSS dans le dossier Styles, la mise en page principale est définie dans la page maître, de règles de feuille de style `Site.master`.
 
 
-[![TIl livre passe en revue le site Web présente des révisions sur un large éventail de titres](determining-what-files-need-to-be-deployed-cs/_static/image2.png)](determining-what-files-need-to-be-deployed-cs/_static/image1.png)
+[![Le site Web du livre examine offre des révisions sur un large éventail de titres](determining-what-files-need-to-be-deployed-cs/_static/image2.png)](determining-what-files-need-to-be-deployed-cs/_static/image1.png)
 
 **Figure 1 :** Le site Web du livre examine offre des révisions sur un large éventail de titres ([cliquez pour afficher l’image en taille réelle](determining-what-files-need-to-be-deployed-cs/_static/image3.png))
 
@@ -116,7 +116,7 @@ Le modèle de projet d’Application Web utilise la compilation explicite, le co
 Figure 2 montre les fichiers qui composent le projet d’Application Web livre révisions.
 
 
-[![Til l’Explorateur de solutions répertorie les fichiers qui composent le projet d’Application Web](determining-what-files-need-to-be-deployed-cs/_static/image5.png)](determining-what-files-need-to-be-deployed-cs/_static/image4.png)
+[![L’Explorateur de solutions répertorie les fichiers qui composent le projet d’Application Web](determining-what-files-need-to-be-deployed-cs/_static/image5.png)](determining-what-files-need-to-be-deployed-cs/_static/image4.png)
 
 **Figure 2**: L’Explorateur de solutions répertorie les fichiers qui composent le projet d’Application Web
 
@@ -143,7 +143,7 @@ L’option de menu de génération dans Visual Studio est présente dans les pro
 Figure 3 montre les fichiers qui composent le projet de Site Web de révisions de livre.
 
 
- [![Til l’Explorateur de solutions répertorie les fichiers qui composent le projet de Site Web](determining-what-files-need-to-be-deployed-cs/_static/image7.png)](determining-what-files-need-to-be-deployed-cs/_static/image6.png) 
+ [![L’Explorateur de solutions répertorie les fichiers qui composent le projet de Site Web](determining-what-files-need-to-be-deployed-cs/_static/image7.png)](determining-what-files-need-to-be-deployed-cs/_static/image6.png) 
 
 **Figure 3**: L’Explorateur de solutions répertorie les fichiers qui composent le projet de Site Web
 

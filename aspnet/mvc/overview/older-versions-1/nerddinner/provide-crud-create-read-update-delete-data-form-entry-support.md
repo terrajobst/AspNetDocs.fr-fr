@@ -12,14 +12,14 @@ ms.openlocfilehash: 242665b3ba2e2ad2157abbe2c44ae207f15e72ce
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410862"
 ---
 # <a name="provide-crud-create-read-update-delete-data-form-entry-support"></a>Fournir une prise en charge des entrées dans les formulaires de données CRUD (créer, lire, mettre à jour, supprimer)
 
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger le PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Télécharger PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Il s’agit d’étape 5 a gratuit [« « l’application NerdDinner](introducing-the-nerddinner-tutorial.md) qui présente en détail comment créer un petit mais terminé, l’application web à l’aide d’ASP.NET MVC 1.
 > 
@@ -36,20 +36,20 @@ Nous avons introduit des contrôleurs et des vues et vu comment les utiliser pou
 
 Nous avons ajouté précédemment des méthodes d’action à DinnersController qui a implémenté la prise en charge des deux URL : */Dinners* et */Dinners/détails / [id]*.
 
-| **URL** | **VERB** | **Objectif** |
+| **URL** | **VERB** | **Fonction** |
 | --- | --- | --- |
 | */Dinners/* | GET | Afficher une liste HTML de dîners à venir. |
-| */Dinners/détails / [id]* | GET | Afficher des détails sur un dîner spécifique. |
+| */Dinners/Details/[id]* | GET | Afficher des détails sur un dîner spécifique. |
 
 Nous allons maintenant ajouter des méthodes d’action pour implémenter les trois URL supplémentaires : */Dinners/modification / [id]*, */dîners/créer*, et */Dinners/Delete / [id]*. Ces URL permettra la prise en charge pour l’éditions dîners existants, création de nouveau dîners et la suppression des dîners.
 
 Nous prendrons en charge les interactions de verbe HTTP GET et HTTP POST à la fois avec ces nouvelles URL. Les requêtes HTTP GET à ces URL affiche la vue HTML initiale des données (un formulaire rempli avec les données dîner dans le cas de « modifier », un formulaire vide dans le cas de « créer » et un écran de confirmation de suppression dans le cas de « delete »). Les requêtes HTTP POST à ces URL seront enregistrement ou de suppression/mise à jour les données dîner dans notre DinnerRepository (et à partir de là à la base de données).
 
-| **URL** | **VERB** | **Objectif** |
+| **URL** | **VERB** | **Fonction** |
 | --- | --- | --- |
 | */Dinners/Edit/[id]* | GET | Afficher un formulaire HTML modifiable rempli avec les données de dîner. |
 | PUBLIER | Enregistrez les modifications de formulaire pour un dîner particulier à la base de données. |
-| */ Dîners/création* | GET | Afficher un formulaire HTML vide qui permet aux utilisateurs de définir de nouvelles dîners. |
+| */Dinners/Create* | GET | Afficher un formulaire HTML vide qui permet aux utilisateurs de définir de nouvelles dîners. |
 | PUBLIER | Créer un nouveau dîner et l’enregistrer dans la base de données. |
 | */Dinners/Delete/[id]* | GET | Affichage supprimer l’écran de confirmation. |
 | PUBLIER | Supprime le dîner spécifié à partir de la base de données. |

@@ -12,7 +12,7 @@ ms.openlocfilehash: 11933315fabc619f0ee23546b0fa08134f0aec57
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414255"
 ---
 # <a name="how-do-i-determine-whether-to-use-a-web-site-or-a-web-application-project"></a>[Comment faire] Déterminer s’il faut utiliser un Site Web ou un projet d’Application Web

@@ -12,7 +12,7 @@ ms.openlocfilehash: b01913b3ad3291d90bdf9455c3d35bb7b36b3f28
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415243"
 ---
 # <a name="adjusting-the-z-index-of-a-dropshadow-vb"></a>Ajustement de l’index-Z d’un DropShadow (VB)
@@ -56,12 +56,12 @@ Lorsque vous exécutez ce script, les entrées de menu apparaissent sous le pann
 Ensuite, le `DropShadowExtender` contrôle n’est pas en conflit plus avec le contrôle de Menu.
 
 
-[![Bxécuter : L’entrée de menu n’est pas visible](adjusting-the-z-index-of-a-dropshadow-vb/_static/image2.png)](adjusting-the-z-index-of-a-dropshadow-vb/_static/image1.png)
+[![Avant : L’entrée de menu n’est pas visible](adjusting-the-z-index-of-a-dropshadow-vb/_static/image2.png)](adjusting-the-z-index-of-a-dropshadow-vb/_static/image1.png)
 
 Avant : L’entrée de menu n’est pas visible ([cliquez pour afficher l’image en taille réelle](adjusting-the-z-index-of-a-dropshadow-vb/_static/image3.png))
 
 
-[![Arès : L’entrée de menu apparaît](adjusting-the-z-index-of-a-dropshadow-vb/_static/image5.png)](adjusting-the-z-index-of-a-dropshadow-vb/_static/image4.png)
+[![Après : L’entrée de menu s’affiche](adjusting-the-z-index-of-a-dropshadow-vb/_static/image5.png)](adjusting-the-z-index-of-a-dropshadow-vb/_static/image4.png)
 
 Après : L’entrée de menu s’affiche ([cliquez pour afficher l’image en taille réelle](adjusting-the-z-index-of-a-dropshadow-vb/_static/image6.png))
 

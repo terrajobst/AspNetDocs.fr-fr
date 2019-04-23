@@ -12,7 +12,7 @@ ms.openlocfilehash: 3b1543812fc246f4641434732ebd7c35f5d08ede
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410472"
 ---
 # <a name="how-do-i-implement-an-httpmodule"></a>[Comment faire] Implémenter un HttpModule ?

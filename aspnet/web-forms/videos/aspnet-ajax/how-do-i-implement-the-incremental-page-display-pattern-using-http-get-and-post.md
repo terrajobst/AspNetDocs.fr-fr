@@ -12,7 +12,7 @@ ms.openlocfilehash: e4766f6d20c17cf99c11fc634cf15743ef839716
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413709"
 ---
 # <a name="how-do-i-implement-the-incremental-page-display-pattern-using-http-get-and-post"></a>[Comment faire] Implémenter le modèle d’affichage de Page incrémentiel à l’aide de HTTP GET et POST ?

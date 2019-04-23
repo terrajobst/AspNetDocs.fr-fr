@@ -12,7 +12,7 @@ ms.openlocfilehash: 08be9368049e97baecf9ae81e496950b1349d18f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414905"
 ---
 # <a name="getting-started-with-mvc"></a>Bien démarrer avec MVC
@@ -21,7 +21,7 @@ ms.locfileid: "59414905"
 
 
 - [Introduction à ASP.NET MVC](getting-started-with-mvc-part1.md)
-- [Ajour d’un contrôleur](getting-started-with-mvc-part2.md)
+- [Ajout d’un contrôleur](getting-started-with-mvc-part2.md)
 - [Ajout d’une vue](getting-started-with-mvc-part3.md)
 - [Création d’une base de données](getting-started-with-mvc-part4.md)
 - [Accès aux données de votre modèle à partir d’un contrôleur](getting-started-with-mvc-part5.md)

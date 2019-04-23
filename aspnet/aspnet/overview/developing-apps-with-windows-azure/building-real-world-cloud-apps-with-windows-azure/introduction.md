@@ -12,7 +12,7 @@ ms.openlocfilehash: bf9cf1f5be22a5b97ec964277c11ae21066676f0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412409"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Création d’applications Cloud réalistes avec Azure
@@ -100,7 +100,7 @@ Ce livre électronique explique treize recommandé de modèles pour le développ
     - Activer la haute disponibilité et améliorer l’évolutivité en coupler faiblement des niveaux web et worker.
     - Démonstration : Files d’attente de stockage Azure dans l’application Fix It.
 - [Plus de modèles d’application et les conseils cloud](more-patterns-and-guidance.md).
-- [Annexe : Exemple d’application Fix It](the-fix-it-sample-application.md)
+- [Annexe : La solution exemple d’Application](the-fix-it-sample-application.md)
 
     - Problèmes connus
     - Meilleures pratiques
@@ -175,4 +175,4 @@ Vidéos :
 - [Éléments internes de Sites Web Azure avec Nir Mashkowski](https://channel9.msdn.com/Shows/Web+Camps+TV/Windows-Azure-Web-Sites-Internals-with-Nir-Mashkowski).
 
 > [!div class="step-by-step"]
-> [Suivant](automate-everything.md)
+> [Next](automate-everything.md)

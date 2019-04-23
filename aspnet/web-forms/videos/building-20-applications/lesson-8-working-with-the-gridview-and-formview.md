@@ -12,7 +12,7 @@ ms.openlocfilehash: 58b4f131e6e39a1eac42d2897ff774146b90961f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408730"
 ---
 # <a name="lesson-8-working-with-the-gridview-and-formview"></a>[Leçon 8 :] Utilisation des contrôles GridView et FormView

@@ -12,7 +12,7 @@ ms.openlocfilehash: b2a183bb14389b7558697ac684ef2a09e689596b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414073"
 ---
 # <a name="how-do-i-use-javascript-to-refresh-an-aspnet-ajax-updatepanel"></a>[Comment faire] Utiliser JavaScript pour actualiser un contrôle UpdatePanel d’ASP.NET AJAX ?

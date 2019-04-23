@@ -12,7 +12,7 @@ ms.openlocfilehash: 1bcad8a023500f4738edf09f4ef0635588cd5323
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412708"
 ---
 # <a name="mvc-music-store-part-1-intro-tools-and-project-structure"></a>Magasin de musique MVC, partie 1 : Introduction, outils et structure du projet
@@ -24,4 +24,4 @@ Jon Galloway commence le didacticiel Store de musique MVC avec une présentation
 [&#9654;Regardez la vidéo (6 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc-music-store-part-1-intro-tools-and-project-structure)
 
 > [!div class="step-by-step"]
-> [Suivant](mvc-music-store-part-2-controllers.md)
+> [Next](mvc-music-store-part-2-controllers.md)

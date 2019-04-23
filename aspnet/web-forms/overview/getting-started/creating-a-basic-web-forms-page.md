@@ -12,7 +12,7 @@ ms.openlocfilehash: bf3336c2467553ba3714bbd4fbb41a35a0490768
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410602"
 ---
 # <a name="using-visual-studio-2013-to-create-a-basic-aspnet-45-web-forms-page"></a>À l’aide de Visual Studio 2013 pour créer une Page ASP.NET 4.5 Web Forms base
@@ -62,7 +62,7 @@ Dans cette partie de la procédure pas à pas, vous créez un projet d’applica
 3. Sélectionnez le **modèles**  - &gt; **Visual C#**  - &gt; **Web** groupe de modèles sur la gauche.
 4. Choisissez le **Application Web ASP.NET** modèle dans la colonne centrale.
 5. Nommez votre projet ***BasicWebApp*** et cliquez sur le **OK** bouton.   
-![Boîte de dialogue Nouveau projet de test](creating-a-basic-web-forms-page/_static/image2.png)
+![Boîte de dialogue Nouveau projet](creating-a-basic-web-forms-page/_static/image2.png)
 6. Ensuite, sélectionnez le **Web Forms** modèle et cliquez sur le **OK** bouton pour créer le projet.  
 ![Boîte de dialogue Nouveau projet ASP.NET](creating-a-basic-web-forms-page/_static/image3.png)  
 
@@ -109,7 +109,7 @@ Lorsque vous créez une nouvelle application Web Forms à l’aide du **Applicat
 2. Dans **l’Explorateur de solutions**, cliquez sur le nom d’application Web (dans ce didacticiel est le nom de l’application **BasicWebSite**), puis cliquez sur **ajouter**  - &gt; **Un nouvel élément**.   
 La boîte de dialogue **Ajouter un nouvel élément** s’affiche.
 3. Sélectionnez le **Visual C#**  - &gt; **Web** groupe de modèles sur la gauche. Ensuite, sélectionnez **Web Form** à partir du milieu de liste et nommez-le *PremièrePageWeb.aspx*.   
-    ![Boîte de dialogue Ajouter un nouvel élément](creating-a-basic-web-forms-page/_static/image6.png)
+    ![Ajouter un nouvel élément](creating-a-basic-web-forms-page/_static/image6.png)
 4. Cliquez sur **ajouter** pour ajouter la page web à votre projet.  
 Visual Studio crée la page et l’ouvre.
 

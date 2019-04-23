@@ -12,7 +12,7 @@ ms.openlocfilehash: adfd540562ec54938860740ab280c770e24f492e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411408"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---server-c"></a>Guide de l’API ASP.NET SignalR Hubs - serveur (c#)
@@ -270,7 +270,7 @@ L’exemple suivant montre la même méthode codée pour exécuter de façon syn
 
 [!code-csharp[Main](hubs-api-guide-server/samples/sample19.cs)]
 
-**Asynchronous**
+**Asynchrone**
 
 [!code-csharp[Main](hubs-api-guide-server/samples/sample20.cs?highlight=1,7-8)]
 
