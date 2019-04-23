@@ -12,7 +12,7 @@ ms.openlocfilehash: c6b78e6ff68509c5e16a0c7934b1332810cf58b3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422627"
 ---
 # <a name="how-do-i-tune-web-application-performance-with-profiling"></a>[Comment faire] Régler les performances des applications Web avec le profilage ?

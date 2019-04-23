@@ -12,14 +12,14 @@ ms.openlocfilehash: 175e78d7ccc669c29c63dcb53af7aad1608c7d15
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422354"
 ---
 # <a name="creating-page-layouts-with-view-master-pages-vb"></a>Création de dispositions de page avec des pages maîtres de vue (VB)
 
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger le PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_12_VB.pdf)
+[Télécharger PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_12_VB.pdf)
 
 > Dans ce didacticiel, vous allez apprendre à créer une disposition commune pour plusieurs pages dans votre application en tirant parti de la vue de pages maîtres. Vous pouvez utiliser une page maître de vue, par exemple, pour définir une mise en page de deux colonnes et utiliser la disposition de deux colonnes pour toutes les pages de votre application web.
 
@@ -37,7 +37,7 @@ Dans ce didacticiel, vous allez apprendre à créer une nouvelle page maître de
 Nous allons commencer en créant une page maître de vue qui définit une disposition à deux colonnes. Vous ajoutez une nouvelle page maître de vue à un projet MVC en double-cliquant sur le dossier Views\Shared, en sélectionnant l’option de menu **ajouter, nouvel élément**et en sélectionnant le modèle de Page maître de vue MVC (voir Figure 1).
 
 
-[![Ajout une page maître de vue](creating-page-layouts-with-view-master-pages-vb/_static/image2.png)](creating-page-layouts-with-view-master-pages-vb/_static/image1.png)
+[![Ajout d’une page maître de vue](creating-page-layouts-with-view-master-pages-vb/_static/image2.png)](creating-page-layouts-with-view-master-pages-vb/_static/image1.png)
 
 **Figure 01**: Ajout d’une page maître de vue ([cliquez pour afficher l’image en taille réelle](creating-page-layouts-with-view-master-pages-vb/_static/image3.png))
 
@@ -55,7 +55,7 @@ Par exemple, la page maître de la vue dans la liste 1 définit une disposition 
 Le corps de la vue de page maître dans le Listing 1 contient deux `<div>` balises qui correspondent aux deux colonnes. La classe de colonne de feuille de Style en cascade est appliquée aux deux `<div>` balises. Cette classe est définie dans la feuille de style déclarée en haut de la page maître. Vous pouvez prévisualiser l’affichage de la page maître en mode par passer en mode Design. Cliquez sur l’onglet conception en bas à gauche de l’éditeur de code source (voir Figure 2).
 
 
-[![Prévision d’une page maître dans le concepteur](creating-page-layouts-with-view-master-pages-vb/_static/image5.png)](creating-page-layouts-with-view-master-pages-vb/_static/image4.png)
+[![Afficher un aperçu d’une page maître dans le Concepteur](creating-page-layouts-with-view-master-pages-vb/_static/image5.png)](creating-page-layouts-with-view-master-pages-vb/_static/image4.png)
 
 **Figure 02**: Afficher un aperçu d’une page maître dans le concepteur ([cliquez pour afficher l’image en taille réelle](creating-page-layouts-with-view-master-pages-vb/_static/image6.png))
 
@@ -65,7 +65,7 @@ Le corps de la vue de page maître dans le Listing 1 contient deux `<div>` balis
 Après avoir créé une page maître de vue, vous pouvez créer les pages de contenu basés sur la page maître en mode affichage d’un ou plusieurs. Par exemple, vous pouvez créer une page de contenu de vue Index pour le contrôleur Home en double-cliquant sur le dossier Views\Home, en sélectionnant **ajouter, nouvel élément**, en sélectionnant le **Page de contenu de vue MVC** modèle, entrant le nom Index.aspx et en cliquant sur l’ajout du bouton (voir Figure 3).
 
 
-[![Ajout une page de contenu de vue](creating-page-layouts-with-view-master-pages-vb/_static/image8.png)](creating-page-layouts-with-view-master-pages-vb/_static/image7.png)
+[![Ajout d’une page de contenu de vue](creating-page-layouts-with-view-master-pages-vb/_static/image8.png)](creating-page-layouts-with-view-master-pages-vb/_static/image7.png)
 
 **Figure 03**: Ajout d’une page de contenu de vue ([cliquez pour afficher l’image en taille réelle](creating-page-layouts-with-view-master-pages-vb/_static/image9.png))
 
@@ -101,7 +101,7 @@ Par exemple, la vue Index modifiée dans le Listing 3 contient uniquement deux `
 Lorsque la vue dans la liste 3 est demandée, il restitue la page à la Figure 5. Notez que la vue restitue une page avec deux colonnes. En outre, notez que le contenu à partir de la page de vue de contenu est fusionné avec le contenu à partir de la page maître de vue.
 
 
-[![THE contenu page d’affichage Index](creating-page-layouts-with-view-master-pages-vb/_static/image14.png)](creating-page-layouts-with-view-master-pages-vb/_static/image13.png)
+[![La page de contenu de la vue Index](creating-page-layouts-with-view-master-pages-vb/_static/image14.png)](creating-page-layouts-with-view-master-pages-vb/_static/image13.png)
 
 **Figure 05**: La page de contenu de la vue Index ([cliquez pour afficher l’image en taille réelle](creating-page-layouts-with-view-master-pages-vb/_static/image15.png))
 
@@ -117,7 +117,7 @@ Il existe deux méthodes que vous pouvez modifier le titre affiché par une page
 Lorsque la vue Index est restituée dans le navigateur, le titre de votre choix apparaît dans la barre de titre du navigateur :
 
 
-[![Bbarre de titre vrir](creating-page-layouts-with-view-master-pages-vb/_static/image17.png)](creating-page-layouts-with-view-master-pages-vb/_static/image16.png)
+[![Barre de titre de navigateur](creating-page-layouts-with-view-master-pages-vb/_static/image17.png)](creating-page-layouts-with-view-master-pages-vb/_static/image16.png)
 
 
 Il existe un besoin important une page de vue maître doit satisfaire afin que l’attribut de titre travailler. La page maître de vue doit contenir un `<head runat="server">` balise au lieu d’un élément normal `<head>` balise pour son en-tête. Si le `<head>` balise n’inclut pas le runat = attribut de « serveur », puis le titre ne s’affiche. La vue par défaut page maître inclut requis `<head runat="server">` balise.

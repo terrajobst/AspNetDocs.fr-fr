@@ -12,7 +12,7 @@ ms.openlocfilehash: 5f883c4ab42e71fc76df221c2b282e124a3d97bd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59423017"
 ---
 # <a name="how-do-i-implement-view--models-to-manage-data-for-aspnet-mvc-views"></a>Comment faire Implémenter des modèles de vue pour gérer les données des vues ASP.NET MVC ?

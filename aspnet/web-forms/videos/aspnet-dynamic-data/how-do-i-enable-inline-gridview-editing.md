@@ -12,7 +12,7 @@ ms.openlocfilehash: 18070636b96683efdf96f8c3e8eb7d2fd12cc067
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422107"
 ---
 # <a name="how-do-i-enable-inline-gridview-editing"></a>Comment activer un contrôle GridView incorporé modification ?

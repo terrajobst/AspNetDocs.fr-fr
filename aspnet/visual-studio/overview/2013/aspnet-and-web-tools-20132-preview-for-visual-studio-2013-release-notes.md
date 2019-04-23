@@ -12,7 +12,7 @@ ms.openlocfilehash: 22d4d4afd6963f23d6cfef1745a859c20b69d599
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422991"
 ---
 # <a name="aspnet-and-web-tools-20132--for-visual-studio-2013-release-notes"></a>ASP.NET et Web Tools 2013.2 pour Visual Studio 2013 - Notes de publication
@@ -43,8 +43,8 @@ Les sections suivantes décrivent les fonctionnalités qui ont été introduites
 - [Créer des ressources Azure à distance lors de la création d’un nouveau projet Web](#AzureResources)
 - [Améliorations de la publication sur le Web](#webpublish)
 - [Génération de modèles automatique ASP.NET](#scaffolding)
-- [NuGet 2.8.1](#nuget)
-- [ASP.NET Web Forms](#webforms)
+- [NuGet 2.8.1](#nuget)
+- [ASP.NET Web Forms](#webforms)
 - [ASP.NET MVC 5.1.2](#mvc)
 - [2.1.2 l’API Web ASP.NET](#webapi)
 - [3.1.2 les Pages Web ASP.NET](#webpages)

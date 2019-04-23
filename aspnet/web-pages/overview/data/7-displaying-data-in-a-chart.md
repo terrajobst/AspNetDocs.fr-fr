@@ -12,7 +12,7 @@ ms.openlocfilehash: f97f214abeaeb88634dd10aaebacc0d58e91ab84
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422458"
 ---
 # <a name="displaying-data-in-a-chart-with-aspnet-web-pages-razor"></a>Affichage des données dans un graphique avec les Pages Web ASP.NET (Razor)
@@ -42,7 +42,7 @@ Lorsque vous souhaitez afficher vos données sous forme graphique, vous pouvez u
 
 | **Graphique en aires** ![Description : Image du type de graphique en aires](7-displaying-data-in-a-chart/_static/image1.jpg) | **Graphique à barres** ![Description : Image du type de graphique à barres](7-displaying-data-in-a-chart/_static/image2.jpg) |
 | --- | --- |
-| **Histogramme** ![Description : Image du type d'histogramme](7-displaying-data-in-a-chart/_static/image3.jpg) | **Graphique en courbes** ![Description : Image du type de graphique en courbes](7-displaying-data-in-a-chart/_static/image4.jpg) |
+| **Histogramme** ![Description : Image de la colonne du type de graphique](7-displaying-data-in-a-chart/_static/image3.jpg) | **Graphique en courbes** ![Description : Image de la ligne du type de graphique](7-displaying-data-in-a-chart/_static/image4.jpg) |
 | **Graphique à secteurs** ![Description : Image du type de graphique à secteurs](7-displaying-data-in-a-chart/_static/image5.jpg) | **Graphique boursier** ![Description : Image du type de graphique boursier](7-displaying-data-in-a-chart/_static/image6.jpg) |
 
 ### <a name="chart-elements"></a>Éléments de graphique

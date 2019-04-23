@@ -12,7 +12,7 @@ ms.openlocfilehash: 70290141f08da51a76d578efcdf63d7d1375936a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422705"
 ---
 # <a name="how-do-i-save-and-load-view-state-information-for-a-custom-web-server-control"></a>[Comment faire] Enregistrer et les informations d’état d’affichage de charge pour un contrôle serveur Web personnalisé

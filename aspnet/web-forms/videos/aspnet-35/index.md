@@ -12,7 +12,7 @@ ms.openlocfilehash: b858dfc24a14e182319122320d8bb6af3b8fcb3c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422692"
 ---
 # <a name="aspnet-35"></a>ASP.NET 3.5
@@ -24,18 +24,18 @@ ms.locfileid: "59422692"
 
     - [Créer une page maître dans Visual Studio 2008](how-do-i/how-do-i-create-a-master-page-in-visual-studio-2008.md)
     - [Créer une page maître imbriquée dans Visual Studio 2008](how-do-i/how-do-i-create-nested-master-page-in-visual-studio-2008.md)
-    - [Feuilles de style en cascade dans Visual Studio 2008](how-do-i/how-do-i-cascading-style-sheets-in-visual-studio-2008.md)
-    - [Utilisation de Visual Studio 2008 .NET Framework](how-do-i/how-do-i-working-with-visual-studio-2008-net-framework.md)
+    - [Feuilles de style en cascade dans Visual Studio 2008](how-do-i/how-do-i-cascading-style-sheets-in-visual-studio-2008.md)
+    - [Utilisation de Visual Studio 2008 .NET Framework](how-do-i/how-do-i-working-with-visual-studio-2008-net-framework.md)
     - [Ajout d’éléments à un fichier CSS et création d’une feuille de style en cascade à la volée](how-do-i/how-do-i-adding-elements-to-a-css-file-and-create-new-css-on-the-fly.md)
     - [Fonctionnalités avancées et gestion des feuilles de style en cascade](how-do-i/how-do-i-advance-cascading-style-sheet-features-and-management.md)
-    - [Conversion d’une application Windows Forms .NET 2.0 vers .NET 3.5](how-do-i/how-do-i-converting-a-net-20-windows-forms-application-to-net-35.md)
+    - [Conversion d’une application Windows Forms .NET 2.0 vers .NET 3.5](how-do-i/how-do-i-converting-a-net-20-windows-forms-application-to-net-35.md)
     - [Bien démarrer avec Entity Framework](how-do-i/how-do-i-get-started-with-the-entity-framework.md)
     - [Utiliser la nouvelle source de données Entity](how-do-i/how-do-i-use-the-new-entity-data-source.md)
     - [Sérialiser un graphe avec Entity Framework](how-do-i/how-do-i-serialize-a-graph-with-the-entity-framework.md)
     - [Utiliser MSBuild pour automatiser le compilateur et les utilitaires de fusion ASP.NET](how-do-i/how-do-i-use-msbuild-to-automate-the-aspnet-compiler-and-merge-utilities.md)
 - [ASP.NET Ajax](aspnet-ajax/index.md)
 
-    - [Prise en charge d’ASP.NET AJAX dans Visual Studio 2008](aspnet-ajax/aspnet-ajax-support-in-visual-studio-2008.md)
+    - [Prise en charge d’ASP.NET AJAX dans Visual Studio 2008](aspnet-ajax/aspnet-ajax-support-in-visual-studio-2008.md)
     - [Ajout de la fonctionnalité AJAX à une page ASP.NET existante](aspnet-ajax/adding-ajax-functionality-to-an-existing-aspnet-page.md)
     - [Création et utilisation d’un service Web activé pour AJAX dans un site web](aspnet-ajax/creating-and-using-an-ajax-enabled-web-service-in-a-web-site.md)
     - [ASP.NET AJAX : Une démonstration d’ASP.NET AJAX](aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
@@ -46,15 +46,15 @@ ms.locfileid: "59422692"
 
     - [Contrôle ListView](data-controls/the-listview-control.md)
     - [Contrôle DataPager](data-controls/the-datapager-control.md)
-- [Visual Studio Designer](visual-studio-designer/index.md)
+- [Concepteur Visual Studio](visual-studio-designer/index.md)
 
-    - [Visual Studio 2008 et les pages maîtres imbriquées](visual-studio-designer/visual-studio-2008-and-nested-masterpages.md)
+    - [Visual Studio 2008 et les pages maîtres imbriquées](visual-studio-designer/visual-studio-2008-and-nested-masterpages.md)
 - [Éditeur Visual Studio](visual-studio-editor/index.md)
 
-    - [Prise en charge d’un nouveau concepteur dans Visual Studio 2008](visual-studio-editor/new-designer-support-in-visual-studio-2008.md)
-    - [Prise en charge de JavaScript IntelliSense dans Visual Studio 2008](visual-studio-editor/javascript-intellisense-support-in-visual-studio-2008.md)
-    - [Débogage de JavaScript dans Visual Studio 2008](visual-studio-editor/javascript-debugging-in-visual-studio-2008.md)
-    - [Prise en charge du multiciblage dans Visual Studio 2008](visual-studio-editor/multi-targeting-support-in-visual-studio-2008.md)
+    - [Prise en charge d’un nouveau concepteur dans Visual Studio 2008](visual-studio-editor/new-designer-support-in-visual-studio-2008.md)
+    - [Prise en charge de JavaScript IntelliSense dans Visual Studio 2008](visual-studio-editor/javascript-intellisense-support-in-visual-studio-2008.md)
+    - [Débogage de JavaScript dans Visual Studio 2008](visual-studio-editor/javascript-debugging-in-visual-studio-2008.md)
+    - [Prise en charge du multiciblage dans Visual Studio 2008](visual-studio-editor/multi-targeting-support-in-visual-studio-2008.md)
     - [IntelliSense pour Jscript et ASP.NET AJAX](visual-studio-editor/intellisense-for-jscript-and-aspnet-ajax.md)
-    - [Présentation rapide de l’environnement de développement intégré Visual Studio 2008](visual-studio-editor/quick-tour-of-the-visual-studio-2008-integrated-development-environment.md)
+    - [Présentation rapide de l’environnement de développement intégré Visual Studio 2008](visual-studio-editor/quick-tour-of-the-visual-studio-2008-integrated-development-environment.md)
     - [Création et modification d’un fichier CSS](visual-studio-editor/creating-and-modifying-a-css-file.md)

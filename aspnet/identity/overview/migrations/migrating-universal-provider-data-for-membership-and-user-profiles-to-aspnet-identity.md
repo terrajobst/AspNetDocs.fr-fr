@@ -13,7 +13,7 @@ ms.openlocfilehash: 1043dce4cdd62f94ae9d2344a9301c1b03426f3d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422263"
 ---
 # <a name="migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity-c"></a>Migration des données du fournisseur universel pour l’appartenance et les profils utilisateur vers ASP.NET Identity (C#)

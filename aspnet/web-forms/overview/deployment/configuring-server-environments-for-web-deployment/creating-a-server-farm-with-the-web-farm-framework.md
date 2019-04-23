@@ -12,14 +12,14 @@ ms.openlocfilehash: 19c061e83257e118aee74c9373a627b8c56defe3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421236"
 ---
 # <a name="creating-a-server-farm-with-the-web-farm-framework"></a>Création d’une batterie de serveurs avec le framework de batterie de serveurs web
 
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit l’utilisation de Web Farm Framework (WFF) 2.0 pour créer et configurer une batterie de serveurs web à partir d’une collection de serveurs.
 

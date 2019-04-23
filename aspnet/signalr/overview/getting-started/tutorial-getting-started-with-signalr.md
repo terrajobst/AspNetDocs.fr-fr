@@ -9,12 +9,12 @@ ms.assetid: a8b3b778-f009-4369-85c7-e90f9878d8b4
 msc.legacyurl: /signalr/overview/getting-started/tutorial-getting-started-with-signalr
 msc.type: authoredcontent
 ms.topic: tutorial
-ms.openlocfilehash: b1e8b6b1b300665f6cd2466766e9adcff52733da
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ecc235454d4b95ce660a4373387f44720826b076
+ms.sourcegitcommit: 2d53ed9e4c8b19d3526cbc689bfa8394c9449cec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59422913"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59905642"
 ---
 # <a name="tutorial-real-time-chat-with-signalr-2"></a>Tutoriel : Conversation en temps réel avec SignalR 2
 
@@ -60,6 +60,10 @@ Cette section montre comment utiliser Visual Studio 2017 et SignalR 2 pour crée
 1. Dans **ajouter un nouvel élément - SignalRChat** sélectionnez **installé** > **Visual C#**   >  **Web** , puis Sélectionnez **classe de démarrage OWIN**.
 
 1. Nommez la classe *démarrage* et ajoutez-le au projet.
+
+1. Remplacez le code par défaut dans *démarrage* classe avec ce code :
+
+    [!code-csharp[Main](tutorial-getting-started-with-signalr/samples/sample2.cs)]
 
 1. Dans **l’Explorateur de solutions**, cliquez sur le projet et sélectionnez **ajouter** > **HTML Page**.
 
