@@ -12,16 +12,16 @@ ms.openlocfilehash: 4fa306d25868ace7d713f968efe083438655f8bf
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416153"
 ---
-# <a name="intro-to-aspnet-20-aspnet-20-fundamentals"></a><span data-ttu-id="56427-103">[Introduction à ASP.NET 2.0 :] concepts de base d’ASP.NET 2.0</span><span class="sxs-lookup"><span data-stu-id="56427-103">[Intro to ASP.NET 2.0:] ASP.NET 2.0 Fundamentals</span></span>
+# <a name="intro-to-aspnet-20-aspnet-20-fundamentals"></a><span data-ttu-id="023f0-103">[Introduction à ASP.NET 2.0 :] concepts de base d’ASP.NET 2.0</span><span class="sxs-lookup"><span data-stu-id="023f0-103">[Intro to ASP.NET 2.0:] ASP.NET 2.0 Fundamentals</span></span>
 
-<span data-ttu-id="56427-104">by [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="56427-104">by [Microsoft](https://github.com/microsoft)</span></span>
+<span data-ttu-id="023f0-104">by [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="023f0-104">by [Microsoft](https://github.com/microsoft)</span></span>
 
-<span data-ttu-id="56427-105">Les développeurs à ASP.NET souhaiterez assister à cette présentation technique en ligne conçu pour vous familiariser avec ses fonctionnalités essentielles.</span><span class="sxs-lookup"><span data-stu-id="56427-105">Developers new to ASP.NET will want to attend this webcast designed to familiarize you with its essential features.</span></span>
+<span data-ttu-id="023f0-105">Les développeurs à ASP.NET souhaiterez assister à cette présentation technique en ligne conçu pour vous familiariser avec ses fonctionnalités essentielles.</span><span class="sxs-lookup"><span data-stu-id="023f0-105">Developers new to ASP.NET will want to attend this webcast designed to familiarize you with its essential features.</span></span>
 
-[<span data-ttu-id="56427-106">&#9654;Regardez la vidéo (70 minutes)</span><span class="sxs-lookup"><span data-stu-id="56427-106">&#9654; Watch video (70 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/intro-to-aspnet-20-aspnet-20-fundamentals)
+[<span data-ttu-id="023f0-106">&#9654;Regardez la vidéo (70 minutes)</span><span class="sxs-lookup"><span data-stu-id="023f0-106">&#9654; Watch video (70 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/intro-to-aspnet-20-aspnet-20-fundamentals)
 
 > [!div class="step-by-step"]
-> [<span data-ttu-id="56427-107">Suivant</span><span class="sxs-lookup"><span data-stu-id="56427-107">Next</span></span>](intro-to-aspnet-20-user-interface-elements.md)
+> [<span data-ttu-id="023f0-107">Next</span><span class="sxs-lookup"><span data-stu-id="023f0-107">Next</span></span>](intro-to-aspnet-20-user-interface-elements.md)

@@ -12,17 +12,17 @@ ms.openlocfilehash: e70ff8af352c4d9ae76147741f3ce6dce2a32deb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415438"
 ---
-# <a name="security"></a><span data-ttu-id="0b52f-103">Sécurité</span><span class="sxs-lookup"><span data-stu-id="0b52f-103">Security</span></span>
+# <a name="security"></a><span data-ttu-id="dcdc5-103">Sécurité</span><span class="sxs-lookup"><span data-stu-id="dcdc5-103">Security</span></span>
 
-> <span data-ttu-id="0b52f-104">Ce didacticiel définie couvre protection certaines pages dans votre application ASP.NET MVC et comment créer et gérer les utilisateurs et rôles par mot de passe.</span><span class="sxs-lookup"><span data-stu-id="0b52f-104">This tutorial set covers how to password protect some pages in your ASP.NET MVC application and how to create and manage users and roles.</span></span>
+> <span data-ttu-id="dcdc5-104">Ce didacticiel définie couvre protection certaines pages dans votre application ASP.NET MVC et comment créer et gérer les utilisateurs et rôles par mot de passe.</span><span class="sxs-lookup"><span data-stu-id="dcdc5-104">This tutorial set covers how to password protect some pages in your ASP.NET MVC application and how to create and manage users and roles.</span></span>
 
 
-- [<span data-ttu-id="0b52f-105">Authentification des utilisateurs avec l’authentification par formulaire (C#)</span><span class="sxs-lookup"><span data-stu-id="0b52f-105">Authenticating Users with Forms Authentication (C#)</span></span>](authenticating-users-with-forms-authentication-cs.md)
-- [<span data-ttu-id="0b52f-106">Authentification des utilisateurs avec l’authentification Windows (C#)</span><span class="sxs-lookup"><span data-stu-id="0b52f-106">Authenticating Users with Windows Authentication (C#)</span></span>](authenticating-users-with-windows-authentication-cs.md)
-- [<span data-ttu-id="0b52f-107">Prévention des attaques par injection de code JavaScript (C#)</span><span class="sxs-lookup"><span data-stu-id="0b52f-107">Preventing JavaScript Injection Attacks (C#)</span></span>](preventing-javascript-injection-attacks-cs.md)
-- [<span data-ttu-id="0b52f-108">Authentification des utilisateurs avec l’authentification par formulaire (VB)</span><span class="sxs-lookup"><span data-stu-id="0b52f-108">Authenticating Users with Forms Authentication (VB)</span></span>](authenticating-users-with-forms-authentication-vb.md)
-- [<span data-ttu-id="0b52f-109">Authentification des utilisateurs avec l’authentification Windows (VB)</span><span class="sxs-lookup"><span data-stu-id="0b52f-109">Authenticating Users with Windows Authentication (VB)</span></span>](authenticating-users-with-windows-authentication-vb.md)
-- [<span data-ttu-id="0b52f-110">Prévention des attaques par injection de code JavaScript (VB)</span><span class="sxs-lookup"><span data-stu-id="0b52f-110">Preventing JavaScript Injection Attacks (VB)</span></span>](preventing-javascript-injection-attacks-vb.md)
+- [<span data-ttu-id="dcdc5-105">Authentification des utilisateurs avec l’authentification par formulaire (C#)</span><span class="sxs-lookup"><span data-stu-id="dcdc5-105">Authenticating Users with Forms Authentication (C#)</span></span>](authenticating-users-with-forms-authentication-cs.md)
+- [<span data-ttu-id="dcdc5-106">Authentification des utilisateurs avec l’authentification Windows (C#)</span><span class="sxs-lookup"><span data-stu-id="dcdc5-106">Authenticating Users with Windows Authentication (C#)</span></span>](authenticating-users-with-windows-authentication-cs.md)
+- [<span data-ttu-id="dcdc5-107">Prévention des attaques par injection de code JavaScript (C#)</span><span class="sxs-lookup"><span data-stu-id="dcdc5-107">Preventing JavaScript Injection Attacks (C#)</span></span>](preventing-javascript-injection-attacks-cs.md)
+- [<span data-ttu-id="dcdc5-108">Authentification des utilisateurs avec l’authentification par formulaire (VB)</span><span class="sxs-lookup"><span data-stu-id="dcdc5-108">Authenticating Users with Forms Authentication (VB)</span></span>](authenticating-users-with-forms-authentication-vb.md)
+- [<span data-ttu-id="dcdc5-109">Authentification des utilisateurs avec l’authentification Windows (VB)</span><span class="sxs-lookup"><span data-stu-id="dcdc5-109">Authenticating Users with Windows Authentication (VB)</span></span>](authenticating-users-with-windows-authentication-vb.md)
+- [<span data-ttu-id="dcdc5-110">Prévention des attaques par injection de code JavaScript (VB)</span><span class="sxs-lookup"><span data-stu-id="dcdc5-110">Preventing JavaScript Injection Attacks (VB)</span></span>](preventing-javascript-injection-attacks-vb.md)
