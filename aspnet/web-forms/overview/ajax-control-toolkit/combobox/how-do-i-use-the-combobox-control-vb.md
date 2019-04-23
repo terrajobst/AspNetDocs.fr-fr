@@ -12,7 +12,7 @@ ms.openlocfilehash: 2e33c7cfae7eed3c0b38b66dad779ce7dcd77b54
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399682"
 ---
 # <a name="how-do-i-use-the-combobox-control-vb"></a>Comment utiliser le contrôle de zone de liste déroulante ? (VB)
@@ -37,7 +37,7 @@ Si vous souhaitez utiliser le contrôle de zone de liste déroulante dans la pag
 Ensuite, faites glisser le contrôle de zone de liste déroulante sur la page. Vous trouverez le contrôle de zone de liste déroulante dans la boîte à outils avec les autres contrôles AJAX Control Toolkit et extendeurs de contrôle (voir figure 1).
 
 
-[![Sformulaire de mise en œuvre pour la création d’une carte de visite](how-do-i-use-the-combobox-control-vb/_static/image1.jpg)](how-do-i-use-the-combobox-control-vb/_static/image1.png)
+[![Formulaire simple pour la création d’une carte de visite](how-do-i-use-the-combobox-control-vb/_static/image1.jpg)](how-do-i-use-the-combobox-control-vb/_static/image1.png)
 
 **Figure 01**: Sélection du contrôle de zone de liste déroulante à partir de la boîte à outils ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-vb/_static/image2.png))
 
@@ -53,7 +53,7 @@ Nous ll utiliser le contrôle de zone de liste déroulante pour afficher une lis
 Il existe deux façons que vous pouvez ajouter ces choix pour le contrôle de zone de liste déroulante. Tout d’abord, vous sélectionnez l’option de tâche de modifier les Options lorsque vous pointez votre souris sur le contrôle en mode Design et que vous ouvrez l’éditeur d’élément (voir Figure 3).
 
 
-[![Eéléments de zone de liste déroulante odification](how-do-i-use-the-combobox-control-vb/_static/image3.jpg)](how-do-i-use-the-combobox-control-vb/_static/image5.png)
+[![Modification d’éléments de la zone de liste déroulante](how-do-i-use-the-combobox-control-vb/_static/image3.jpg)](how-do-i-use-the-combobox-control-vb/_static/image5.png)
 
 **Figure 03**: Modification d’éléments de la zone de liste déroulante ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-vb/_static/image6.png))
 
@@ -71,7 +71,7 @@ Toutefois, vous avez également la possibilité d’entrer un nouveau choix (par
 Indépendamment de si vous choisissez un préexistants élément ou que vous entrez un élément personnalisé, lorsque vous envoyez le formulaire, votre choix s’affiche dans le contrôle d’étiquette. Lorsque vous envoyez le formulaire, le niveau de btnSubmit\_cliquez sur Gestionnaire s’exécute et met à jour de l’étiquette (voir Figure 4).
 
 
-[![Dl’élément sélectionné de l’affichage](how-do-i-use-the-combobox-control-vb/_static/image4.jpg)](how-do-i-use-the-combobox-control-vb/_static/image7.png)
+[![Affichage de l’élément sélectionné](how-do-i-use-the-combobox-control-vb/_static/image4.jpg)](how-do-i-use-the-combobox-control-vb/_static/image7.png)
 
 **Figure 04**: Affichage de l’élément sélectionné ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-vb/_static/image8.png))
 
@@ -104,12 +104,12 @@ Imaginez que vous souhaitez afficher une liste de films dans une zone de liste d
 12. Cliquez sur le bouton OK pour fermer l’Assistant.
 
 
-[![Choosing une source de données](how-do-i-use-the-combobox-control-vb/_static/image5.jpg)](how-do-i-use-the-combobox-control-vb/_static/image9.png)
+[![Choix d’une source de données](how-do-i-use-the-combobox-control-vb/_static/image5.jpg)](how-do-i-use-the-combobox-control-vb/_static/image9.png)
 
 **Figure 05**: Choix d’une source de données ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-vb/_static/image10.png))
 
 
-[![Choosing le texte des données et les champs de valeur](how-do-i-use-the-combobox-control-vb/_static/image6.jpg)](how-do-i-use-the-combobox-control-vb/_static/image11.png)
+[![Choisir les champs de texte et la valeur de données](how-do-i-use-the-combobox-control-vb/_static/image6.jpg)](how-do-i-use-the-combobox-control-vb/_static/image11.png)
 
 **Figure 06**: Choisir les champs de texte et la valeur de données ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-vb/_static/image12.png))
 
@@ -123,7 +123,7 @@ Après avoir terminé les étapes ci-dessus, la zone de liste déroulante est li
 Notez que le contrôle de zone de liste déroulante a une propriété DataSourceID qui pointe vers le contrôle SqlDataSource. Lorsque vous ouvrez la page dans un navigateur, la liste de films à partir de la base de données s’affiche (voir la Figure 7). Vous pouvez un choix un film à partir de la liste ou entrez un nouveau film en tapant le film dans la zone de liste déroulante.
 
 
-[![Daffichage d’une liste de films](how-do-i-use-the-combobox-control-vb/_static/image7.jpg)](how-do-i-use-the-combobox-control-vb/_static/image13.png)
+[![Affiche une liste de films](how-do-i-use-the-combobox-control-vb/_static/image7.jpg)](how-do-i-use-the-combobox-control-vb/_static/image13.png)
 
 **Figure 07**: Affiche une liste de films ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-vb/_static/image14.png))
 
@@ -150,17 +150,17 @@ La propriété ComboBox AutoCompleteMode vous permet de spécifier que se passe-
 - À la fois SuggestAppend - la zone de liste déroulante affiche la liste et ajoute l’élément correspondant dans la liste sur ce que vous avez tapé (voir Figure 10).
 
 
-[![Tzone de liste déroulante à qu’il leur apporte une suggestion](how-do-i-use-the-combobox-control-vb/_static/image8.jpg)](how-do-i-use-the-combobox-control-vb/_static/image15.png)
+[![La zone de liste déroulante affiche une suggestion](how-do-i-use-the-combobox-control-vb/_static/image8.jpg)](how-do-i-use-the-combobox-control-vb/_static/image15.png)
 
 **Figure 08**: La zone de liste déroulante affiche une suggestion ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-vb/_static/image16.png))
 
 
-[![ComboBox ajoute du texte correspondant](how-do-i-use-the-combobox-control-vb/_static/image9.jpg)](how-do-i-use-the-combobox-control-vb/_static/image17.png)
+[![Zone de liste déroulante ajoute du texte correspondant](how-do-i-use-the-combobox-control-vb/_static/image9.jpg)](how-do-i-use-the-combobox-control-vb/_static/image17.png)
 
 **Figure 09**: Zone de liste déroulante ajoute du texte correspondant ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-vb/_static/image18.png))
 
 
-[![TIl contrôle ComboBox suggère et ajoute](how-do-i-use-the-combobox-control-vb/_static/image10.jpg)](how-do-i-use-the-combobox-control-vb/_static/image19.png)
+[![La zone de liste déroulante suggère et ajoute](how-do-i-use-the-combobox-control-vb/_static/image10.jpg)](how-do-i-use-the-combobox-control-vb/_static/image19.png)
 
 **Figure 10**: La zone de liste déroulante suggère et ajoute ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-vb/_static/image20.png))
 

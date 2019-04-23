@@ -12,7 +12,7 @@ ms.openlocfilehash: 20ea33efbd1db657a03b20a665a041ecf3a6d248
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399552"
 ---
 # <a name="efficiently-paging-through-large-amounts-of-data-vb"></a>Pagination efficace dans de grandes quantités de données (VB)
@@ -191,7 +191,7 @@ Après avoir créé la procédure stockée, prenez un moment pour faire des test
 Une fois ces choix des valeurs de paramètres d’entrée, la fenêtre Sortie affiche les résultats. La figure 8 illustre les résultats lors du passage de 10 à la fois pour le `@startRowIndex` et `@maximumRows` paramètres.
 
 
-[![TIl enregistre que s’affiche dans la deuxième Page de données sont retournées](efficiently-paging-through-large-amounts-of-data-vb/_static/image9.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image8.png)
+[![Les enregistrements que s’affiche dans la deuxième Page de données sont retournées.](efficiently-paging-through-large-amounts-of-data-vb/_static/image9.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image8.png)
 
 **Figure 8**: Les enregistrements que s’affiche dans la deuxième Page de données sont retournés ([cliquez pour afficher l’image en taille réelle](efficiently-paging-through-large-amounts-of-data-vb/_static/image10.png))
 
@@ -293,7 +293,7 @@ Notez que le `EnablePaging` et `SelectCountMethod` propriétés ont été défin
 Après avoir apporté ces modifications, visitez cette page via un navigateur. Vous devriez voir 10 produits répertoriés, classés par ordre alphabétique. Prenez un moment pour parcourir les données d’une page à la fois. Il n’existe aucune différence visuelle à partir de la perspective de s utilisateur final entre la pagination par défaut et la pagination personnalisée, plus efficacement la pagination personnalisée pages dans de grandes quantités de données, car elle récupère uniquement les enregistrements qui doivent être affichés pour une page donnée.
 
 
-[![THE données, classés par le nom de produit, est notifié par radiomessagerie à l’aide personnalisée la pagination](efficiently-paging-through-large-amounts-of-data-vb/_static/image20.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image19.png)
+[![Les données, trié par le produit s nom, est notifié par radiomessagerie à l’aide personnalisée la pagination](efficiently-paging-through-large-amounts-of-data-vb/_static/image20.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image19.png)
 
 **Figure 17**: Les données, trié par le produit s nom, est personnalisé paginée à l’aide de pagination ([cliquez pour afficher l’image en taille réelle](efficiently-paging-through-large-amounts-of-data-vb/_static/image21.png))
 
@@ -309,7 +309,7 @@ En cliquant sur le dernier lien de page provoque une publication (postback) et i
 Notre implémentation de la pagination personnalisée actuelle nécessite que l’ordre selon lequel les données sont paginées via être spécifié de manière statique lorsque vous créez le `GetProductsPaged` procédure stockée. Toutefois, vous avez peut-être noté que la balise active de GridView s contient une case à cocher Activer le tri en plus de l’option Activer la pagination. Malheureusement, ajout de prise en charge de tri pour le contrôle GridView avec notre implémentation de la pagination personnalisée en cours ne concerne que les enregistrements sur la page actuellement affichée de données. Par exemple, si vous configurez le contrôle GridView pour prennent également en charge la pagination et, lors de l’affichage de la première page de données, trier par nom de produit par ordre décroissant, il sera inverser l’ordre des produits sur la page 1. Comme le montre la Figure 18, par exemple montre crevettes tigres en tant que le premier produit lors du tri par ordre alphabétique inverse, qui ignore les 71 autres produits qui suivent crevettes tigres, par ordre alphabétique ; Seuls les enregistrements sur la première page sont prises en compte dans le tri.
 
 
-[![Oeules les données affichées sur la Page actuelle est triée](efficiently-paging-through-large-amounts-of-data-vb/_static/image23.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image22.png)
+[![Uniquement les données affichées sur la Page actuelle est triée.](efficiently-paging-through-large-amounts-of-data-vb/_static/image23.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image22.png)
 
 **Figure 18**: Uniquement les données affichées sur la Page actuelle est triée ([cliquez pour afficher l’image en taille réelle](efficiently-paging-through-large-amounts-of-data-vb/_static/image24.png))
 

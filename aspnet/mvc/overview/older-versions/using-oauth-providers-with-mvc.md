@@ -12,7 +12,7 @@ ms.openlocfilehash: c2fe74c3d7b1aa0d230f1893f6ba7dcaa7a88419
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396979"
 ---
 # <a name="using-oauth-providers-with-mvc-4"></a>Utilisation de fournisseurs OAuth avec MVC 4

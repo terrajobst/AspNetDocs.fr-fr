@@ -12,7 +12,7 @@ ms.openlocfilehash: 84af745d338e38ece438fa58d51d0929c7b92967
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408457"
 ---
 # <a name="aspnet-mvc-views-overview-vb"></a>Vue d’ensemble des vues ASP.NET MVC (VB)
@@ -99,12 +99,12 @@ Pour le rendre plus facile d’ajouter du contenu à une vue, vous pouvez tirer 
 
 Par exemple, la vue dans la liste 4 tire parti de trois programmes d’assistance HTML--les programmes d’assistance BeginForm(), TextBox() et Password()--pour générer un compte de connexion forment (voir Figure 1).
 
-**Liste 4--\Views\Home\Login.aspx**
+**Listing 4 -- \Views\Home\Login.aspx**
 
 [!code-aspx[Main](asp-net-mvc-views-overview-vb/samples/sample4.aspx)]
 
 
-[![Tboîte de dialogue Nouveau projet he](asp-net-mvc-views-overview-vb/_static/image1.jpg)](asp-net-mvc-views-overview-vb/_static/image1.png)
+[![La boîte de dialogue Nouveau projet](asp-net-mvc-views-overview-vb/_static/image1.jpg)](asp-net-mvc-views-overview-vb/_static/image1.png)
 
 **Figure 01**: Un formulaire de connexion standard ([cliquez pour afficher l’image en taille réelle](asp-net-mvc-views-overview-vb/_static/image2.png))
 

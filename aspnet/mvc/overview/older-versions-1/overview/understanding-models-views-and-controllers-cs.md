@@ -12,7 +12,7 @@ ms.openlocfilehash: 8c57345c510ad0afccaabf377fda35afbfc05e17
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383406"
 ---
 # <a name="understanding-models-views-and-controllers-c"></a>Présentation des modèles, des vues et des contrôleurs (C#)
@@ -33,7 +33,7 @@ Le modèle de Visual Studio par défaut pour la création d’Applications Web A
 Vous créez une application ASP.NET MVC avec le modèle MVC en lançant Visual Studio 2008 et en sélectionnant l’option de menu fichier, nouveau projet (voir Figure 1). Dans la boîte de dialogue Nouveau projet, sélectionnez votre langage de programmation préféré sous Types de projets (Visual Basic ou c#), puis sélectionnez **Application Web ASP.NET MVC** sous modèles. Cliquez sur le bouton OK.
 
 
-[![Nboîte de dialogue Nouveau projet](understanding-models-views-and-controllers-cs/_static/image1.jpg)](understanding-models-views-and-controllers-cs/_static/image1.png)
+[![Boîte de dialogue Nouveau projet](understanding-models-views-and-controllers-cs/_static/image1.jpg)](understanding-models-views-and-controllers-cs/_static/image1.png)
 
 **Figure 01**: Boîte de dialogue Nouveau projet ([cliquez pour afficher l’image en taille réelle](understanding-models-views-and-controllers-cs/_static/image2.png))
 
@@ -41,7 +41,7 @@ Vous créez une application ASP.NET MVC avec le modèle MVC en lançant Visual S
 Lorsque vous créez une application ASP.NET MVC, le **créer un projet de Test unitaire** boîte de dialogue s’affiche (voir Figure 2). Cette boîte de dialogue vous permet de créer un projet distinct dans votre solution pour tester votre application ASP.NET MVC. Sélectionnez l’option **non, ne pas créer de projet de test unitaire** et cliquez sur le **OK** bouton.
 
 
-[![Ccréer un dialogue de Test unitaire](understanding-models-views-and-controllers-cs/_static/image2.jpg)](understanding-models-views-and-controllers-cs/_static/image3.png)
+[![Créer la boîte de dialogue de Test unitaire](understanding-models-views-and-controllers-cs/_static/image2.jpg)](understanding-models-views-and-controllers-cs/_static/image3.png)
 
 **Figure 02**: Créer la boîte de dialogue de Test unitaire ([cliquez pour afficher l’image en taille réelle](understanding-models-views-and-controllers-cs/_static/image4.png))
 
@@ -51,7 +51,7 @@ Après le MVC ASP.NET nouvelle application est créée. Vous verrez plusieurs do
 Si vous développez le dossier contrôleurs, vous devez voir un fichier nommé AccountController.cs et un fichier nommé HomeController.cs. Si vous développez le dossier Views, vous devez voir trois sous-dossiers nommés Account, Home et Shared. Si vous développez le dossier de base, vous verrez deux fichiers supplémentaires nommés About.aspx et Index.aspx (voir Figure 3). Ces fichiers constituent l’exemple d’application inclus avec le modèle ASP.NET MVC par défaut.
 
 
-[![TIl fenêtre Explorateur de solutions](understanding-models-views-and-controllers-cs/_static/image3.jpg)](understanding-models-views-and-controllers-cs/_static/image5.png)
+[![La fenêtre Explorateur de solutions](understanding-models-views-and-controllers-cs/_static/image3.jpg)](understanding-models-views-and-controllers-cs/_static/image5.png)
 
 **Figure 03**: La fenêtre Explorateur de solutions ([cliquez pour afficher l’image en taille réelle](understanding-models-views-and-controllers-cs/_static/image6.png))
 
@@ -61,7 +61,7 @@ Vous pouvez exécuter l’exemple d’application en sélectionnant l’option d
 Lorsque vous exécutez tout d’abord une application ASP.NET, dans la Figure 4, la boîte de dialogue s’affiche qui recommande l’activation du mode débogage. Cliquez sur le bouton OK et l’application s’exécutera.
 
 
-[![Ddialogue de pas activée débo](understanding-models-views-and-controllers-cs/_static/image4.jpg)](understanding-models-views-and-controllers-cs/_static/image7.png)
+[![Boîte de dialogue débogage non activé](understanding-models-views-and-controllers-cs/_static/image4.jpg)](understanding-models-views-and-controllers-cs/_static/image7.png)
 
 **Figure 04**: Boîte de dialogue pas activé le débogage ([cliquez pour afficher l’image en taille réelle](understanding-models-views-and-controllers-cs/_static/image8.png))
 
@@ -69,7 +69,7 @@ Lorsque vous exécutez tout d’abord une application ASP.NET, dans la Figure 4,
 Lorsque vous exécutez une application ASP.NET MVC, Visual Studio lance l’application dans votre navigateur web. L’exemple d’application se compose de deux pages : la page d’Index et de la page About. Lorsque l’application démarre tout d’abord, la page d’Index s’affiche (voir Figure 5). Vous pouvez accéder à la page About en cliquant sur le lien du menu en haut à droite de l’application.
 
 
-[![TIl Page d’Index](understanding-models-views-and-controllers-cs/_static/image10.png)](understanding-models-views-and-controllers-cs/_static/image9.png)
+[![La Page d’Index](understanding-models-views-and-controllers-cs/_static/image10.png)](understanding-models-views-and-controllers-cs/_static/image9.png)
 
 **Figure 05**: La Page d’Index ([cliquez pour afficher l’image en taille réelle](understanding-models-views-and-controllers-cs/_static/image11.png))
 

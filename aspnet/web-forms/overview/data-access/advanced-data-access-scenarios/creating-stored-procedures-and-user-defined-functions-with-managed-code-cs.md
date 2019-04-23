@@ -12,7 +12,7 @@ ms.openlocfilehash: a6d6dc7b45d2891d3124794bf7b10f3a7d065130
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392441"
 ---
 # <a name="creating-stored-procedures-and-user-defined-functions-with-managed-code-c"></a>Création de procédures stockées et de fonctions définies par l’utilisateur avec du code managé (C#)
@@ -59,7 +59,7 @@ Une fois que vous avez déjà connecté, la fenêtre Explorateur d’objets affi
 Nous avons besoin d’attacher la base de données Northwind dans la `DataFiles` dossier (ou, là où vous avez déplacé il) à l’instance de base de données SQL Server 2005 Express Edition. Avec le bouton droit sur le dossier bases de données et choisissez l’option d’attachement dans le menu contextuel. Cela fera apparaître la boîte de dialogue Attacher les bases de données. Cliquez sur le bouton Ajouter, descendre dans approprié `NORTHWND.MDF` fichier, puis cliquez sur OK. À ce stade votre écran doit ressembler à la Figure 2.
 
 
-[![Connecter à l’Instance appropriée de la base de données](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image3.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image2.png)
+[![Connectez-vous à l’Instance de base de données appropriée](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image3.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image2.png)
 
 **Figure 2**: Se connecter à l’Instance de base de données appropriée ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image4.png))
 
@@ -87,7 +87,7 @@ Pour créer des procédures stockées managées ou UDF dans SQL Server 2005, nou
 Commencez par ouvrir Visual Studio. Dans le menu fichier, choisissez Nouveau projet pour afficher la boîte de dialogue Nouveau projet zone (voir Figure 4). Explorer le type de projet de base de données et, à partir de modèles répertoriés sur la droite, puis créer un nouveau projet SQL Server. J’ai choisi de nommer ce projet `ManagedDatabaseConstructs` et placé dans une Solution nommée `Tutorial75`.
 
 
-[![Ccréer un nouveau projet SQL Server](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image7.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image6.png)
+[![Créer un nouveau projet SQL Server](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image7.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image6.png)
 
 **Figure 4**: Créer un nouveau projet SQL Server ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image8.png))
 
@@ -136,7 +136,7 @@ Pour ajouter une procédure stockée managée à la base de données Northwind, 
 Laisser s démarrer en ajoutant une procédure stockée qui retourne simplement tous les produits qui ont été abandonnées. Nommez le nouveau fichier de la procédure stockée `GetDiscontinuedProducts.cs`.
 
 
-[![Ajj un nouveau stockées procédure nommé GetDiscontinuedProducts.cs](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image13.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image12.png)
+[![Ajouter une nouvelle procédure stockée nommée GetDiscontinuedProducts.cs](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image13.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image12.png)
 
 **Figure 8**: Ajouter un nouveau stockées procédure nommée `GetDiscontinuedProducts.cs` ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image14.png))
 
@@ -173,7 +173,7 @@ Pour mettre à jour le niveau de compatibilité de base de données s, ouvrez un
 Cliquez sur l’icône exécuter dans la barre d’outils pour exécuter la requête ci-dessus.
 
 
-[![Umettre à jour la base de données Northwind s au niveau de compatibilité](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image16.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image15.png)
+[![Mettre à jour le niveau de compatibilité de base de données Northwind s](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image16.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image15.png)
 
 **Figure 9**: Mettre à jour de la base de données Northwind s au niveau de compatibilité ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image17.png))
 
@@ -201,7 +201,7 @@ Il existe toujours une entrave supplémentaire, nous avons à surmonter avant qu
 Pour examiner les informations de configuration de base de données Northwind, entrez et exécutez la commande `exec sp_configure` dans la fenêtre de requête. Cela indique que le clr est activé en définissant est actuellement défini sur 0.
 
 
-[![Tclr he activé paramètre est actuellement défini sur 0](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image21.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image20.png)
+[![Le clr activé paramètre est actuellement défini sur 0](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image21.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image20.png)
 
 **Figure 12**: Le clr activé paramètre est actuellement défini sur 0 ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image22.png))
 
@@ -216,7 +216,7 @@ Si vous exécutez de nouveau le `exec sp_configure` vous verrez que l’instruct
 La configuration de clr activé terminée, nous sommes prêts à exécuter managé `GetDiscontinuedProducts` procédure stockée. Dans la fenêtre de requête, entrez et exécutez la commande `exec` `GetDiscontinuedProducts`. Le code managé correspondant dans l’appel à la procédure stockée entraîne le `GetDiscontinuedProducts` méthode à exécuter. Ce code émet une `SELECT` requête pour retourner tous les produits qui sont abandonnés et retourne ces données à l’application appelante, qui est SQL Server Management Studio dans cette instance. Management Studio reçoit ces résultats et les affiche dans la fenêtre des résultats.
 
 
-[![TIl GetDiscontinuedProducts stockées procédure retourne tous les abandonné produits](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image24.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image23.png)
+[![Le GetDiscontinuedProducts procédure stockée retourne tous les produits interrompus](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image24.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image23.png)
 
 **Figure 13**: Le `GetDiscontinuedProducts` stockées procédure retourne tous les abandonné produits ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image25.png))
 
@@ -239,7 +239,7 @@ Le `GetProductsWithPriceLessThan` définition de méthode s et le code ressemble
 Après avoir ajouté ce code, redéployer le projet SQL Server. Ensuite, revenez à SQL Server Management Studio et actualiser le dossier Stored Procedures. Vous devez voir une nouvelle entrée `GetProductsWithPriceLessThan`. À partir d’une fenêtre de requête, entrez et exécutez la commande `exec GetProductsWithPriceLessThan 25`, qui sera liste tous les produits inférieur à 25 $, comme le montre la Figure 14.
 
 
-[![PAffiche d’abord sous 25 $](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image27.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image26.png)
+[![Produits sous 25 $ sont affichés.](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image27.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image26.png)
 
 **Figure 14**: Produits sous 25 $ sont affichés ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image28.png))
 
@@ -257,7 +257,7 @@ Ouvrez le `NorthwindWithSprocs` DataSet typée dans Visual Studio, puis en ajout
 Ajout d’une nouvelle méthode lance l’Assistant Configuration de requêtes TableAdapter, ce qui nous avons utilisé plusieurs fois dans les didacticiels passées. La première étape nous demande pour spécifier comment le TableAdapter doit-il accéder à la base de données : via une instruction de SQL ad hoc ou une procédure stockée nouveau ou existante. Étant donné que nous avons déjà créé et inscrit le `GetDiscontinuedProducts` une procédure stockée managée avec la base de données, choisissez l’utiliser l’existant stocké l’option de procédure et appuyez sur Suivant.
 
 
-[![Choisissez l’utiliser l’existant stocké procédure Option](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image30.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image29.png)
+[![Choisissez l’utilisation existante d’Option de procédure stockée](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image30.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image29.png)
 
 **Figure 15**: Choisissez utilisation existantes stockées procédure Option ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image31.png))
 
@@ -265,7 +265,7 @@ Ajout d’une nouvelle méthode lance l’Assistant Configuration de requêtes T
 L’écran suivant nous demande la procédure stockée qu'appelle la méthode. Choisissez le `GetDiscontinuedProducts` procédure stockée managée à partir de la liste déroulante et appuyez sur Suivant.
 
 
-[![Schoisir la procédure stockée GetDiscontinuedProducts gérés](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image33.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image32.png)
+[![Sélectionnez le GetDiscontinuedProducts de procédure stockée managée](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image33.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image32.png)
 
 **Figure 16**: Sélectionnez le `GetDiscontinuedProducts` géré la procédure stockée ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image34.png))
 
@@ -273,7 +273,7 @@ L’écran suivant nous demande la procédure stockée qu'appelle la méthode. C
 Nous allons ensuite invités à spécifier si la procédure stockée retourne des lignes, une seule valeur ou rien. Dans la mesure où `GetDiscontinuedProducts` retourne l’ensemble de lignes supprimées de produit, choisissez la première option (données tabulaires), puis cliquez sur Suivant.
 
 
-[![Schoisir l’Option de données tabulaire](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image36.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image35.png)
+[![Sélectionnez l’Option de données tabulaires](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image36.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image35.png)
 
 **Figure 17**: Sélectionnez l’Option de données tabulaires ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image37.png))
 
@@ -281,7 +281,7 @@ Nous allons ensuite invités à spécifier si la procédure stockée retourne de
 L’écran finale de l’Assistant permet de spécifier les modèles d’accès aux données utilisées et les noms des méthodes qui en résulte. Laissez les cases à cocher activée et nom les méthodes `FillByDiscontinued` et `GetDiscontinuedProducts`. Cliquez sur Terminer pour terminer l’Assistant.
 
 
-[![Nom les méthodes FillByDiscontinued et GetDiscontinuedProducts](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image39.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image38.png)
+[![Nom de la FillByDiscontinued de méthodes et GetDiscontinuedProducts](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image39.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image38.png)
 
 **Figure 18**: Nommez les méthodes `FillByDiscontinued` et `GetDiscontinuedProducts` ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image40.png))
 
@@ -291,7 +291,7 @@ Répétez ces étapes pour créer des méthodes nommées `FillByPriceLessThan` e
 Figure 19 montre une capture d’écran du Concepteur de DataSet après avoir ajouté les méthodes à la `ProductsTableAdapter` pour le `GetDiscontinuedProducts` et `GetProductsWithPriceLessThan` gérés des procédures stockées.
 
 
-[![TIl ProductsTableAdapter inclut les méthodes ajoutées dans cette étape](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image42.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image41.png)
+[![Le ProductsTableAdapter inclut les nouvelles méthodes ajoutées à cette étape](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image42.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image41.png)
 
 **Figure 19**: Le `ProductsTableAdapter` inclut les méthodes ajoutées dans cette étape ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image43.png))
 
@@ -312,12 +312,12 @@ Avec la logique métier et les couches d’accès aux données augmenté pour in
 Ouvrez le `ManagedFunctionsAndSprocs.aspx` page dans le `AdvancedDAL` dossier et, dans la boîte à outils, faites glisser un GridView sur le concepteur. Définir les opérations de mappage GridView `ID` propriété `DiscontinuedProducts` et, à partir de sa balise active, liez-le à une nouvelle ObjectDataSource nommé `DiscontinuedProductsDataSource`. Configurer l’ObjectDataSource afin d’extraire ses données à partir de la `ProductsBLLWithSprocs` classe s `GetDiscontinuedProducts` (méthode).
 
 
-[![Cconfiguration de l’ObjectDataSource d’utiliser la classe ProductsBLLWithSprocs](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image45.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image44.png)
+[![Configurer pour utiliser la classe ProductsBLLWithSprocs ObjectDataSource](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image45.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image44.png)
 
 **Figure 20**: Configurer l’ObjectDataSource à utiliser le `ProductsBLLWithSprocs` classe ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image46.png))
 
 
-[![Choisissez la méthode GetDiscontinuedProducts dans la liste déroulante dans l’onglet sélectionnez](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image48.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image47.png)
+[![Choisissez la méthode GetDiscontinuedProducts dans la liste déroulante dans l’onglet Sélection](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image48.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image47.png)
 
 **Figure 21**: Choisissez le `GetDiscontinuedProducts` méthode dans la liste déroulante dans l’onglet à sélectionner ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image49.png))
 
@@ -334,7 +334,7 @@ Prenez un moment pour afficher cette page via un navigateur. Lorsque la page est
 Les résultats retournés par la procédure stockée managée sont regroupés dans un `ProductsDataTable` par la couche DAL et retournées à la couche BLL, qui puis les retourne à la couche de présentation, où elles sont liées au GridView et affichées. Comme prévu, la grille répertorie les produits qui ont été abandonnées.
 
 
-[![THE abandonné produits répertoriés](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image51.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image50.png)
+[![Les produits supprimées sont répertoriées.](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image51.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image50.png)
 
 **Figure 22**: Les produits supprimées sont répertoriés ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image52.png))
 
@@ -358,7 +358,7 @@ Une fois cette UDF a été ajoutée à la base de données, il est accessible vi
 J’ai ajouté le `udf_ComputeInventoryValue` UDF à la base de données Northwind ; Figure 23 montre la sortie de la méthode ci-dessus `SELECT` interroger lorsqu’ils sont affichés via Management Studio. Notez également que la fonction UDF est répertoriée sous le dossier de fonctions de valeur scalaire dans l’Explorateur d’objets.
 
 
-[![ECCA s valeurs de stock de produit est répertorié](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image54.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image53.png)
+[![Chaque produit s valeurs de l’inventaire est répertorié.](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image54.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image53.png)
 
 **Figure 23**: Chaque produit s valeurs de l’inventaire est répertorié ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image55.png))
 
@@ -376,7 +376,7 @@ Le `udf_GetProductsByCategoryID` UDF accepte un `@CategoryID` paramètre d’ent
 J’ai ajouté le `udf_GetProductsByCategoryID` UDF à la base de données Northwind ; Figure 24 montre la sortie de la méthode ci-dessus `SELECT` interroger lorsqu’ils sont affichés via Management Studio. Vous trouverez des UDF qui retourne des données tabulaires dans le dossier de fonctions de valeur de la Table s Explorateur d’objets.
 
 
-[![TIl ProductID, ProductName et CategoryID sont répertoriés pour chaque boisson](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image57.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image56.png)
+[![Le ProductID, ProductName et CategoryID sont répertoriés pour chaque boissons](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image57.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image56.png)
 
 **Figure 24**: Le `ProductID`, `ProductName`, et `CategoryID` sont répertoriés pour chaque boisson ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image58.png))
 
@@ -392,7 +392,7 @@ Le `udf_ComputeInventoryValue` et `udf_GetProductsByCategoryID` UDF créées dan
 Pour ajouter un code UDF géré pour le `ManagedDatabaseConstructs` de projet, avec le bouton droit sur le nom du projet dans l’Explorateur de solutions et choisissez d’ajouter un nouvel élément. Sélectionnez le modèle défini par l’utilisateur à partir de la boîte de dialogue Ajouter un nouvel élément et nommez le nouveau fichier UDF `udf_ComputeInventoryValue_Managed.cs`.
 
 
-[![Ajj un UDF géré nouvelle au projet ManagedDatabaseConstructs](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image60.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image59.png)
+[![Ajouter un nouveau code UDF géré pour le projet ManagedDatabaseConstructs](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image60.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image59.png)
 
 **Figure 25**: Ajouter un nouveau UDF géré pour le `ManagedDatabaseConstructs` projet ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image61.png))
 
@@ -444,7 +444,7 @@ Dans le [le débogage des procédures stockées](debugging-stored-procedures-cs.
 Supposons que nous voulons déboguer le `GetProductsWithPriceLessThan` procédure stockée managée. Nous commencerions en définissant un point d’arrêt dans le code de la `GetProductsWithPriceLessThan` (méthode).
 
 
-[![Set un point d’arrêt dans la méthode GetProductsWithPriceLessThan](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image64.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image63.png)
+[![Définir un point d’arrêt dans la méthode GetProductsWithPriceLessThan](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image64.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image63.png)
 
 **Figure 27**: Définir un point d’arrêt dans le `GetProductsWithPriceLessThan` (méthode) ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image65.png))
 
@@ -459,7 +459,7 @@ Lorsque le `ManagedDatabaseConstructs` projet est lancé à partir du débogueur
 Une fois que vous avez déjà entré le script ci-dessus dans `Test.sql`, démarrez le débogage en accédant au menu Déboguer et en choisissant de démarrer le débogage ou en appuyant sur F5 ou icône de lecture vert dans la barre d’outils. Cela sera générer les projets dans la Solution, déployer les objets de base de données managé pour la base de données Northwind, puis exécutez le `Test.sql` script. À ce stade, le point d’arrêt est atteint et que nous pouvons examiner la `GetProductsWithPriceLessThan` méthode, examinez les valeurs des paramètres d’entrée et ainsi de suite.
 
 
-[![TIl point d’arrêt dans la méthode GetProductsWithPriceLessThan a été atteinte](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image67.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image66.png)
+[![Le point d’arrêt dans la méthode GetProductsWithPriceLessThan a été atteint.](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image67.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image66.png)
 
 **Figure 28**: Le point d’arrêt dans le `GetProductsWithPriceLessThan` méthode a été atteint ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image68.png))
 
@@ -495,7 +495,7 @@ Si le dossier contenant `csc.exe` dans pas dans le système s `PATH`, vous devre
 [!code-console[Main](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/samples/sample19.cmd)]
 
 
-[![Compile GetProductsWithPriceGreaterThan.cs dans un Assembly](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image70.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image69.png)
+[![Compiler GetProductsWithPriceGreaterThan.cs dans un Assembly](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image70.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image69.png)
 
 **Figure 29**: Compiler `GetProductsWithPriceGreaterThan.cs` dans un Assembly ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image71.png))
 
@@ -511,7 +511,7 @@ Le code compilé dans un assembly, nous sommes prêts à inscrire l’assembly d
 À partir de Management Studio, développez le dossier programmabilité dans la base de données Northwind. Un de ses sous-dossier est assemblys. Pour ajouter manuellement un nouvel Assembly à la base de données, avec le bouton droit sur le dossier Assemblies et choisissez nouvel Assembly dans le menu contextuel. Cette affiche la boîte de dialogue Assembly nouvelle zone (voir la Figure 30). Cliquez sur le bouton Parcourir, sélectionnez le `ManuallyCreatedDBObjects.dll` assembly nous vient de compiler, puis cliquez sur OK pour ajouter l’Assembly à la base de données. Vous ne verrez pas le `ManuallyCreatedDBObjects.dll` assembly dans l’Explorateur d’objets.
 
 
-[![Ajj le ManuallyCreatedDBObjects.dll Assembly à la base de données](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image73.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image72.png)
+[![Ajouter l’Assembly ManuallyCreatedDBObjects.dll à la base de données](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image73.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image72.png)
 
 **Figure 30**: Ajouter le `ManuallyCreatedDBObjects.dll` Assembly à la base de données ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image74.png))
 
@@ -536,7 +536,7 @@ Après avoir exécuté le script ci-dessus, actualisez le dossier de procédures
 Comme le montre la Figure 32, la commande ci-dessus affiche des informations pour les produits avec une `UnitPrice` supérieur 24,95.
 
 
-[![TIl ManuallyCreatedDBObjects.dll est répertorié dans l’Explorateur d’objets](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image77.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image76.png)
+[![Le ManuallyCreatedDBObjects.dll est répertorié dans l’Explorateur d’objets](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image77.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image76.png)
 
 **Figure 32**: Le `ManuallyCreatedDBObjects.dll` est répertorié dans l’Explorateur d’objets ([cliquez pour afficher l’image en taille réelle](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image78.png))
 
@@ -556,9 +556,9 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 - [Avantages et inconvénients des fonctions définies par l’utilisateur](http://www.samspublishing.com/articles/article.asp?p=31724&amp;rl=1)
 - [Création d’objets SQL Server 2005 dans le Code managé](https://channel9.msdn.com/Showpost.aspx?postid=142413)
 - [Création de déclencheurs à l’aide de Code managé dans SQL Server 2005](http://www.15seconds.com/issue/041006.htm)
-- [Procédure : Créer et exécuter un CLR SQL Server de procédure stockée](https://msdn.microsoft.com/library/5czye81z(VS.80).aspx)
-- [Procédure : Créer et exécuter une fonction définie par l’utilisateur de CLR SQL Server](https://msdn.microsoft.com/library/w2kae45k(VS.80).aspx)
-- [Procédure : Modifier le `Test.sql` Script à exécuter des objets SQL](https://msdn.microsoft.com/library/ms233682(VS.80).aspx)
+- [Guide pratique pour Créer et exécuter un CLR SQL Server de procédure stockée](https://msdn.microsoft.com/library/5czye81z(VS.80).aspx)
+- [Guide pratique pour Créer et exécuter une fonction définie par l’utilisateur de CLR SQL Server](https://msdn.microsoft.com/library/w2kae45k(VS.80).aspx)
+- [Guide pratique pour Modifier le `Test.sql` Script à exécuter des objets SQL](https://msdn.microsoft.com/library/ms233682(VS.80).aspx)
 - [Fonctions définies par l’introduction à l’utilisateur](http://www.sqlteam.com/item.asp?ItemID=1955)
 - [Le Code managé et SQL Server 2005 (vidéo)](https://channel9.msdn.com/Showpost.aspx?postid=142413)
 - [Référence Transact-SQL](https://msdn.microsoft.com/library/aa299742(SQL.80).aspx)
