@@ -12,13 +12,13 @@ ms.openlocfilehash: 8ecfe3a282fd1cf2adfe07cbf899464e5ffa9c42
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422471"
 ---
-# <a name="how-do-i-utilize-web-parts-and-personalization"></a><span data-ttu-id="c7e4b-104">[Comment faire] Utiliser des composants WebPart et les personnalisations ?</span><span class="sxs-lookup"><span data-stu-id="c7e4b-104">[How Do I:] Utilize Web Parts and Personalization?</span></span>
+# <a name="how-do-i-utilize-web-parts-and-personalization"></a><span data-ttu-id="a9a91-104">[Comment faire] Utiliser des composants WebPart et les personnalisations ?</span><span class="sxs-lookup"><span data-stu-id="a9a91-104">[How Do I:] Utilize Web Parts and Personalization?</span></span>
 
-<span data-ttu-id="c7e4b-105">by [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="c7e4b-105">by [Microsoft](https://github.com/microsoft)</span></span>
+<span data-ttu-id="a9a91-105">by [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="a9a91-105">by [Microsoft](https://github.com/microsoft)</span></span>
 
-<span data-ttu-id="c7e4b-106">Découvrez comment utiliser les nouvelles fonctionnalités WebPart et personnalisations ASP.NET pour créer des pages web personnalisables dont le contenu et la mise en page peut être modifié par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="c7e4b-106">Learn how to use the new Web Parts and Personalization features to build customizable web pages whose content and layout can be modified by the user.</span></span>
+<span data-ttu-id="a9a91-106">Découvrez comment utiliser les nouvelles fonctionnalités WebPart et personnalisations ASP.NET pour créer des pages web personnalisables dont le contenu et la mise en page peut être modifié par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="a9a91-106">Learn how to use the new Web Parts and Personalization features to build customizable web pages whose content and layout can be modified by the user.</span></span>
 
-[<span data-ttu-id="c7e4b-107">&#9654;Regardez la vidéo (13 minutes)</span><span class="sxs-lookup"><span data-stu-id="c7e4b-107">&#9654; Watch video (13 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-utilize-web-parts-and-personalization)
+[<span data-ttu-id="a9a91-107">&#9654;Regardez la vidéo (13 minutes)</span><span class="sxs-lookup"><span data-stu-id="a9a91-107">&#9654; Watch video (13 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-utilize-web-parts-and-personalization)
