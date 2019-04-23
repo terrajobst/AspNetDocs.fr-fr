@@ -12,7 +12,7 @@ ms.openlocfilehash: 3ad5276dc8e4beea2cc423cf28c313a6041c680b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420053"
 ---
 # <a name="how-do-i-use-an-aspnet-ajax-scriptmanagerproxy"></a>[Comment faire] Utiliser un contrôle ScriptManagerProxy d’ASP.NET AJAX ?

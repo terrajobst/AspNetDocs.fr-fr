@@ -12,7 +12,7 @@ ms.openlocfilehash: be4edd63e7f4a19a1101ad5cabd9bf810df47e5e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417908"
 ---
 # <a name="aspnet-mvc-storefront-part-23-getting-started-with-domain-driven-design"></a>Application Storefront ASP.NET MVC, partie 23 : Bien démarrer avec la conception pilotée par domaine

@@ -12,7 +12,7 @@ ms.openlocfilehash: cc52592bbb377e9f04e56f6cc1f02d16a271d158
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416998"
 ---
 # <a name="how-do-i-pass-information-from-one-page-to-another-using-a-query-string"></a>[Comment faire] Transmettre des informations à partir d’une Page à un autre à l’aide d’une chaîne de requête

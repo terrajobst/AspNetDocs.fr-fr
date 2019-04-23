@@ -13,7 +13,7 @@ ms.openlocfilehash: 2620d9e2eaf3c7719d9a289e42bb91270708ae79
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419442"
 ---
 # <a name="best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure-app-service"></a>Bonnes pratiques pour le déploiement des mots de passe et d’autres données sensibles sur ASP.NET et Azure App Service
@@ -32,7 +32,7 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [Applications de console de WebJobs](#wj)
 - [Déploiement de secrets dans Azure](#da)
 - [Notes pour sur site et PHP](#not)
-- [Ressources supplémentaires](#addRes)
+- [Ressources supplémentaires pour MSBuild](#addRes)
 
 <a id="pwd"></a>
 ## <a name="working-with-passwords-in-the-development-environment"></a>Utilisation de mots de passe dans l’environnement de développement

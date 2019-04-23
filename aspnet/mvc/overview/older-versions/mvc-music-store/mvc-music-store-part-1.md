@@ -12,7 +12,7 @@ ms.openlocfilehash: 63d85ec5f1f2fbadd92fd0210e67332df30aab5a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419598"
 ---
 # <a name="part-1-overview-and-file-new-project"></a>Partie 1 : Vue d’ensemble et Fichier->Nouveau projet
@@ -112,10 +112,10 @@ Le modèle vide MVC 3 n’est pas complètement vide, il ajoute une structure de
 
 ASP.NET MVC utilise certaines conventions d’affectation de noms de base pour les noms de dossier :
 
-| **Dossier** | **Objectif** |
+| **Dossier** | **Fonction** |
 | --- | --- |
 | **/ Contrôleurs** | Contrôleurs de répondent à d’entrée à partir du navigateur, de décider quoi faire avec elle et retourner une réponse à l’utilisateur. |
-| **/ Vues** | Vues de contiennent nos modèles d’interface utilisateur |
+| **/Views** | Vues de contiennent nos modèles d’interface utilisateur |
 | **/ Modèles** | Les modèles contiennent et manipulent des données |
 | **/ Contenu** | Ce dossier conserve nos images, CSS et tout autre contenu statique |
 | **/Scripts** | Ce dossier conserve les fichiers JavaScript |
@@ -123,4 +123,4 @@ ASP.NET MVC utilise certaines conventions d’affectation de noms de base pour l
 Ces dossiers sont inclus même dans une application ASP.NET MVC vide, car l’infrastructure ASP.NET MVC par défaut utilise une approche « convention sur configuration » et émet des hypothèses par défaut selon les conventions d’affectation de noms de dossier. Par exemple, contrôleurs recherchent les vues dans le dossier vues par défaut sans avoir à spécifier explicitement ceci dans votre code. Continue à utiliser les conventions par défaut réduit la quantité de code que vous avez besoin pour écrire, et peut également faciliter à d’autres développeurs à comprendre votre projet. Nous expliquerons ces conventions plus que nous construisons notre application.
 
 > [!div class="step-by-step"]
-> [Suivant](mvc-music-store-part-2.md)
+> [Next](mvc-music-store-part-2.md)

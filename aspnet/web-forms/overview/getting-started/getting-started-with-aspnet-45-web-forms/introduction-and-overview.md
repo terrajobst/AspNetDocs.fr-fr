@@ -12,7 +12,7 @@ ms.openlocfilehash: 3a39e8d1979a743101d728eb3430e9aa0efb1252
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415633"
 ---
 # <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2017"></a>Bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2017
@@ -39,7 +39,7 @@ Vous devez avoir des connaissances dans les domaines suivants :
 
 Pour passer en revue ces zones, envisagez d’étudier le contenu suivant :
 
-- [Mise en route de Visual C#](https://msdn.microsoft.com/library/a72418yk.aspx)
+- [Mise en route avec Visual c#](https://msdn.microsoft.com/library/a72418yk.aspx)
 - [Web Development](https://msdn.microsoft.com/beginner/bb308760.aspx), [HTML, CSS, JavaScript, SQL, PHP, JQuery](http://w3schools.com/)
 - [Base de données relationnelle](http://en.wikipedia.org/wiki/Relational_database)
 - [Architecture à plusieurs niveaux](http://en.wikipedia.org/wiki/Multitier_architecture)
@@ -93,7 +93,7 @@ Le fournies dans cette série de didacticiels ASP.NET 4.5 inclut les fonctionnal
 - Une interface utilisateur simple pour créer des projets qui offre [prise en charge de nombreuses infrastructures ASP.NET](../../../../visual-studio/overview/2013/creating-web-projects-in-visual-studio.md#add) (Web Forms, MVC et API Web).
 - [Bootstrap](../../../../visual-studio/overview/2013/creating-web-projects-in-visual-studio.md#bootstrap), une disposition, thèmes et framework de conception réactive.
 - [ASP.NET Identity](../../../../identity/index.md), un nouveau système d’appartenance ASP.NET qui fonctionne de la même dans toutes les infrastructures ASP.NET et fonctionne avec des logiciels autres que IIS d’hébergement web.
-- [Entity Framework 6](https://msdn.microsoft.com/data/ef.aspx)
+- [Entity Framework 6](https://msdn.microsoft.com/data/ef.aspx)
 
   Une mise à jour vers Entity Framework, ce qui vous permet :
   - Récupérer et manipuler des données en tant qu’objets fortement typés
@@ -193,4 +193,4 @@ Commentaires sur cette série de didacticiels sont les bienvenus. Lorsque la mis
 Si une erreur se produit, les messages d’erreur correspondante peut entraîner une confus, sans aucune bonne explication sur la façon de résoudre le problème. Pour une aide, vous pouvez vérifier le [forums ASP.NET](https://forums.asp.net/). Une autre bonne source est la section de questions-réponses dans le [bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2013 - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) (C#) exemple de page. 
 
 > [!div class="step-by-step"]
-> [Suivant](create-the-project.md)
+> [Next](create-the-project.md)

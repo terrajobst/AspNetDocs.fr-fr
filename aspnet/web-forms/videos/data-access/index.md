@@ -12,7 +12,7 @@ ms.openlocfilehash: b41843143dfbd957ef242c67e67101af79d9efba
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419403"
 ---
 # <a name="data-access"></a>Accès aux données
@@ -24,18 +24,18 @@ ms.locfileid: "59419403"
 
     - [Couches d’accès aux données dans les applications ASP.NET](adonet-data-services/data-access-layers-in-aspnet-applications.md)
     - [Lier manuellement un dataset à un contrôle Datagrid](adonet-data-services/how-to-manually-bind-a-dataset-to-a-datagrid.md)
-    - [Utiliser des datasets et des filtres à partir d’une application ASP](adonet-data-services/how-to-work-with-datasets-and-filters-from-an-asp-application.md)
+    - [Utiliser des datasets et des filtres depuis une application ASP](adonet-data-services/how-to-work-with-datasets-and-filters-from-an-asp-application.md)
 - [Utilisation de LINQ](how-do-i-with-linq/index.md)
 
-    - [LINQ to SQL : Vue d'ensemble](how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
+    - [LINQ to SQL : vue d’ensemble](how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
     - [LINQ to SQL : Modèle de données](how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
     - [LINQ to SQL : Interrogation de la base de données](how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
-    - [LINQ to SQL : Mise à jour de la base de données](how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
+    - [LINQ to SQL : La mise à jour de la base de données](how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
     - [LINQ to SQL : LinqDataSource](how-do-i-with-linq/how-do-i-linq-to-sql-linqdatasource.md)
     - [LINQ to SQL : LinqDataSource personnalisée](how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
-    - [LINQ to SQL : Utilisation des procédures stockées](how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
-    - [LINQ to SQL : mettre à jour avec des procédures stockées](how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
-    - [LINQ to SQL : exécution de SQL arbitraire](how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
+    - [LINQ to SQL : À l’aide de procédures stockées](how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
+    - [LINQ to SQL : La mise à jour avec des procédures stockées](how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
+    - [LINQ to SQL : Exécution de SQL arbitraire](how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
 - [Vidéos sur LINQ de l’équipe VB](linq-videos-from-the-vb-team/index.md)
 
     - [Bien démarrer avec LINQ](linq-videos-from-the-vb-team/how-do-i-get-started-with-linq.md)

@@ -13,7 +13,7 @@ ms.openlocfilehash: fb0309af11910125943737ebb721b356b7bd08bc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418298"
 ---
 # <a name="sending-html-form-data-in-aspnet-web-api-form-urlencoded-data"></a>Envoi de données de formulaire HTML dans l’API Web ASP.NET : données de formulaire encodées dans l’URL
@@ -134,4 +134,4 @@ Vous pouvez utiliser la même approche pour envoyer un tableau de types simples�
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-[Partie 2 : chargement de fichier et MIME Multipart](sending-html-form-data-part-2.md)
+[Partie 2 : Chargement du fichier et MIME à parties multiples](sending-html-form-data-part-2.md)

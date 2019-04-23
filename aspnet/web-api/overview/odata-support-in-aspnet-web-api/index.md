@@ -13,7 +13,7 @@ ms.openlocfilehash: 08870e703c88afccd57232cc259e928a08e7a7a6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417882"
 ---
 # <a name="odata-in-aspnet-web-api"></a>OData dans l’API Web ASP.NET
@@ -35,9 +35,9 @@ ms.locfileid: "59417882"
 
     - [Création d’un point de terminaison OData v3](odata-v3/creating-an-odata-endpoint.md)
     - [Prise en charge des relations d’entité dans OData v3](odata-v3/working-with-entity-relations.md)
-    - [Actions OData dans Web API 2](odata-v3/odata-actions.md)
+    - [Actions OData dans Web API 2](odata-v3/odata-actions.md)
     - [Appel à un service OData à partir d’un client .NET (C#)](odata-v3/calling-an-odata-service-from-a-net-client.md)
-- [Prise en charge des options de requête OData dans Web API 2](supporting-odata-query-options.md)
-- [Utilisation de $select, $expand et $value dans Web API 2 OData](using-select-expand-and-value.md)
-- [Conventions de routage dans Web API 2 OData](odata-routing-conventions.md)
-- [Aide sur la sécurité pour Web API 2 OData](odata-security-guidance.md)
+- [Prise en charge des options de requête OData dans Web API 2](supporting-odata-query-options.md)
+- [Utilisation de $select, $expand et $value dans Web API 2 OData](using-select-expand-and-value.md)
+- [Conventions de routage dans Web API 2 OData](odata-routing-conventions.md)
+- [Aide sur la sécurité pour Web API 2 OData](odata-security-guidance.md)

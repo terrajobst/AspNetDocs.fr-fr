@@ -12,7 +12,7 @@ ms.openlocfilehash: c126270304178d178f4b8f9739fa5c51e5dd0551
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415360"
 ---
 # <a name="adding-dynamic-content-to-a-cached-page-c"></a>Ajout de contenu dynamique à une page mise en cache (C#)

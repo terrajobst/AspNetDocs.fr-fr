@@ -12,14 +12,14 @@ ms.openlocfilehash: c85db4289698988ead44afd452da17054bab9f07
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417206"
 ---
 # <a name="create-a-new-aspnet-mvc-project"></a>Créer un projet ASP.NET MVC
 
 by [Microsoft](https://github.com/microsoft)
 
-[Télécharger le PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
+[Télécharger PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
 > Il s’agit d’étape 1 a gratuit [« « l’application NerdDinner](introducing-the-nerddinner-tutorial.md) qui présente en détail comment créer un petit mais terminé, l’application web à l’aide d’ASP.NET MVC 1.
 > 
@@ -60,11 +60,11 @@ Lorsque vous créez une application ASP.NET MVC avec Visual Studio, il ajoute au
 
 Les projets ASP.NET MVC par défaut ont six répertoires de niveau supérieur :
 
-| **Répertoire** | **Objectif** |
+| **Répertoire** | **Fonction** |
 | --- | --- |
 | **/ Contrôleurs** | Emplacement où vous placez les classes de contrôleur qui gèrent les demandes d’URL |
 | **/ Modèles** | Emplacement où vous placez des classes qui représentent et manipulent des données |
-| **/ Vues** | Emplacement où vous placez les fichiers de modèle de l’interface utilisateur qui sont responsables de la sortie de rendu |
+| **/Views** | Emplacement où vous placez les fichiers de modèle de l’interface utilisateur qui sont responsables de la sortie de rendu |
 | **/Scripts** | Emplacement où vous placez les fichiers de bibliothèque JavaScript et les scripts (.js) |
 | **/ Contenu** | Emplacement où vous placez le code CSS et les fichiers image et les autres contenus non-dynamique/non-JavaScript |
 | **/ Application\_données** | Lorsque vous stockez des fichiers de données voulez-vous en lecture/écriture. |

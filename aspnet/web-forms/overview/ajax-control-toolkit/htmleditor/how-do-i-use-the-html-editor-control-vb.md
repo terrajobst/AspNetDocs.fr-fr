@@ -12,7 +12,7 @@ ms.openlocfilehash: 5fa19ef52c4538f0db427eaa9a79b074c85001ac
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415867"
 ---
 # <a name="how-do-i-use-the-html-editor-control-vb"></a>Comment utiliser le contrôle de l’éditeur HTML ? (VB)
@@ -25,7 +25,7 @@ by [Microsoft](https://github.com/microsoft)
 L’objectif de ce didacticiel est de vous fournir une vue d’ensemble du contrôle d’éditeur HTML accompagnant les outils de contrôle AJAX. L’éditeur HTML inclut des options pour la modification de la taille de police, en sélectionnant une police, modifier la couleur d’arrière-plan, la modification de la couleur de premier plan, l’ajout de liens, ajout d’images, modification de l’alignement de texte et effectuer les opérations couper, copier et coller des opérations (voir Figure 1).
 
 
-[![TIl éditeur HTML](how-do-i-use-the-html-editor-control-vb/_static/image1.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image1.png)
+[![L’éditeur HTML](how-do-i-use-the-html-editor-control-vb/_static/image1.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image1.png)
 
 **Figure 01**: L’éditeur HTML ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-html-editor-control-vb/_static/image2.png))
 
@@ -33,7 +33,7 @@ L’objectif de ce didacticiel est de vous fournir une vue d’ensemble du contr
 L’éditeur HTML vous permet d’entrer le contenu à l’aide d’un mode de conception, ou vous pouvez entrer directement HTML. Vous avez également fourni avec l’option pour afficher un aperçu de votre contenu HTML (voir Figure 2).
 
 
-[![DCréation, HTML et afficher un aperçu des boutons](how-do-i-use-the-html-editor-control-vb/_static/image2.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image3.png)
+[![Conception, HTML et l’aperçu boutons](how-do-i-use-the-html-editor-control-vb/_static/image2.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image3.png)
 
 **Figure 02**: Conception, HTML et l’aperçu boutons ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-html-editor-control-vb/_static/image4.png))
 
@@ -49,7 +49,7 @@ Vous devez placer le contrôle ScriptManager en haut de la page avant les autres
 Le contrôle de l’éditeur HTML se trouve dans la boîte à outils avec le reste des contrôles AJAX Control Toolkit. Elle se nomme le contrôle de l’éditeur (voir Figure 3).
 
 
-[![TIl contrôle d’éditeur HTML](how-do-i-use-the-html-editor-control-vb/_static/image3.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image5.png)
+[![Le contrôle de l’éditeur HTML](how-do-i-use-the-html-editor-control-vb/_static/image3.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image5.png)
 
 **Figure 03**: Le contrôle de l’éditeur HTML ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-html-editor-control-vb/_static/image6.png))
 
@@ -63,7 +63,7 @@ Une fois que vous faites glisser l’éditeur HTML sur une page, vous pouvez dé
 La page dans le Listing 1 contient un contrôle de l’éditeur HTML, un contrôle de bouton et un contrôle littéral. Lorsque vous cliquez sur le bouton, le contenu de l’éditeur HTML s’affiche dans le contrôle Literal (voir Figure 4).
 
 
-[![Senvoi d’un formulaire avec un éditeur HTML](how-do-i-use-the-html-editor-control-vb/_static/image4.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image7.png)
+[![Envoi d’un formulaire avec un éditeur HTML](how-do-i-use-the-html-editor-control-vb/_static/image4.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image7.png)
 
 **Figure 04**: Envoi d’un formulaire avec un éditeur HTML ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-html-editor-control-vb/_static/image8.png))
 
@@ -75,7 +75,7 @@ La propriété de contenu de l’éditeur HTML est utilisée pour récupérer le
 Vous pouvez personnaliser exactement les boutons s’affichent dans l’éditeur. Par exemple, vous souhaiterez peut-être supprimer l’onglet HTML pour empêcher les utilisateurs de basculer l’éditeur HTML en mode HTML. Ou, vous souhaiterez peut-être supprimer la liste de déroulante de taille de police pour empêcher les utilisateurs de la création de texte trop important dans un forum de message post (voir Figure 5).
 
 
-[![A Éditeur HTML personnalisé](how-do-i-use-the-html-editor-control-vb/_static/image5.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image9.png)
+[![Un éditeur HTML personnalisé](how-do-i-use-the-html-editor-control-vb/_static/image5.jpg)](how-do-i-use-the-html-editor-control-vb/_static/image9.png)
 
 **Figure 05**: A personnalisé éditeur HTML ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-html-editor-control-vb/_static/image10.png))
 

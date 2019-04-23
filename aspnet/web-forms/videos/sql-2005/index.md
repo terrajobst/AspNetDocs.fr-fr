@@ -12,7 +12,7 @@ ms.openlocfilehash: c07bfaeb29e20b042861ab59e6cd8f7d12744205
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416179"
 ---
 # <a name="sql-2005"></a>SQL 2005
@@ -27,7 +27,7 @@ ms.locfileid: "59416179"
 - [Manipulation des données d’une base de données](manipulating-database-data.md)
 - [En savoir plus sur le langage SQL (Structured Query Language)](more-structured-query-language.md)
 - [Présentation de la sécurité et de la connectivité réseau](understanding-security-and-network-connectivity.md)
-- [Connexion de votre application web à SQL Server 2005 Express Edition](connecting-your-web-application-to-sql-server-2005-express-edition.md)
+- [Connexion de votre application web à SQL Server 2005 Express Edition](connecting-your-web-application-to-sql-server-2005-express-edition.md)
 - [Utilisation de SQL Server Management Studio](using-sql-server-management-studio.md)
 - [Bien démarrer avec Reporting Services](getting-started-with-reporting-services.md)
 - [Création et personnalisation des rapports dans Business Intelligence Development Studio](building-and-customizing-reports-in-business-intelligence-development-studio.md)

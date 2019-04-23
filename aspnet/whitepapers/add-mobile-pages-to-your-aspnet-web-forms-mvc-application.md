@@ -12,17 +12,17 @@ ms.openlocfilehash: db8f336f3fd9a88dfb32f99510fc53cd7b4a5178
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415984"
 ---
 # <a name="how-to-add-mobile-pages-to-your-aspnet-web-forms--mvc-application"></a>Procédure : Ajouter des pages mobiles à votre application ASP.NET Web Forms / MVC
 
-> **S'applique à**
+> **S’applique à**
 > 
 > - Version de Web Forms ASP.NET 4.0
 > - ASP.NET MVC version 3.0
 > 
-> **Récapitulatif**
+> **Résumé**
 > 
 > Cette procédure décrit différentes façons de servir des pages optimisées pour les appareils mobiles à partir de vos pages Web Forms ASP.NET / application MVC et suggère architecturales et les problèmes à prendre en compte lorsque vous ciblez une large gamme de périphériques de conception. Ce document explique également pourquoi ASP.NET Mobile Controls à partir d’ASP.NET 2.0 à 3.5 sont désormais obsolètes et présente des alternatives modernes.
 

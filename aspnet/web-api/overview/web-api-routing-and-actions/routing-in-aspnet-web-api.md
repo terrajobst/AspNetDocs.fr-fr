@@ -12,7 +12,7 @@ ms.openlocfilehash: 85862c094cc54365267b1f21e68d235a15519cda
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419234"
 ---
 # <a name="routing-in-aspnet-web-api"></a>Routage dans l’API Web ASP.NET
@@ -69,7 +69,7 @@ Voici certaines demandes HTTP possibles, ainsi que l’action qui est appelé po
 
 | Verbe HTTP | Chemin d’accès de l’URI | Action | Paramètre |
 | --- | --- | --- | --- |
-| GET | API/produits | GetAllProducts | *(aucun)* |
+| GET | API/produits | GetAllProducts | *(none)* |
 | GET | produits/API/4 | GetProductById | 4 |
 | SUPPR | produits/API/4 | DeleteProduct | 4 |
 | PUBLIER | API/produits | *(aucune correspondance trouvée)* |  |

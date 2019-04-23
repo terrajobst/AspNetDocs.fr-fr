@@ -12,7 +12,7 @@ ms.openlocfilehash: f2af665465995e64701a32970b4fb5f3d5eb7eb7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419273"
 ---
 # <a name="how-do-i-understand-and-defend-against-script-injection-attacks-in-aspnet"></a>Comment comprendre et se défendre contre l’Injection de Script des attaques par dans ASP.NET

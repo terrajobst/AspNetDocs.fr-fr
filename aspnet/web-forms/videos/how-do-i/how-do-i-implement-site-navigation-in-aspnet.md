@@ -12,7 +12,7 @@ ms.openlocfilehash: 527d928b46ac5bfedc841d5ffacb4e5baa74eb54
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416452"
 ---
 # <a name="how-do-i-implement-site-navigation-in-aspnet"></a>[Comment faire] Implémentez Navigation de Site dans ASP.NET ?

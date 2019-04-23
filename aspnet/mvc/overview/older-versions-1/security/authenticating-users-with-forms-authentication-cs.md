@@ -12,7 +12,7 @@ ms.openlocfilehash: b52abab12503918603419c9ccfabefcffdfd7e06
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418272"
 ---
 # <a name="authenticating-users-with-forms-authentication-c"></a>Authentification des utilisateurs avec l’authentification par formulaire (C#)
@@ -150,4 +150,4 @@ Après avoir créé la connexion requise, vous devez mapper la connexion à un u
 Dans ce didacticiel, vous avez appris à utiliser l’authentification par formulaire lors de la création d’une application ASP.NET MVC. Tout d’abord, vous avez appris à créer de nouveaux utilisateurs et rôles en tirant parti de l’outil d’Administration de Site Web. Ensuite, vous avez appris à utiliser l’attribut [Authorize] pour empêcher les utilisateurs non autorisés d’appeler des actions de contrôleur. Enfin, vous avez appris à configurer votre application MVC pour stocker les informations d’utilisateur et rôle dans une base de données de production.
 
 > [!div class="step-by-step"]
-> [Suivant](authenticating-users-with-windows-authentication-cs.md)
+> [Next](authenticating-users-with-windows-authentication-cs.md)

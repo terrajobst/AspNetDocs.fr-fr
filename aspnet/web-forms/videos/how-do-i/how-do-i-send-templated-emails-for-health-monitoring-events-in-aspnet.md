@@ -12,7 +12,7 @@ ms.openlocfilehash: e7b929c6e186e59b43180e8f26cf0f8b4608328f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417986"
 ---
 # <a name="how-do-i-send-templated-emails-for-health-monitoring-events-in-aspnet"></a>[Comment faire] Envoyer des courriers électroniques basé sur un modèle d’intégrité de la surveillance des événements dans ASP.NET

@@ -12,7 +12,7 @@ ms.openlocfilehash: 3833e3f3c6c49ff2b317ad04aff33c9119cb1f41
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420209"
 ---
 # <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Nouveautés du développement ASP.NET et web dans Visual Studio 2012
@@ -63,7 +63,7 @@ Ce laboratoire pratique sur comprend les exercices suivants :
 1. [Exercice 1 : Quelles sont les nouveautés dans l’éditeur CSS](#Exercise1)
 2. [Exercice 2 : Quelles sont les nouveautés dans l’éditeur HTML](#Exercise2)
 3. [Exercice 3 : Quelles sont les nouveautés dans l’éditeur JavaScript](#Exercise3)
-4. [Exercice 4 : Bundles et minimisation](#Exercise4)
+4. [Exercice 4 : Regroupement et minimisation](#Exercise4)
 
 Durée estimée pour effectuer ce laboratoire : **60 minutes**.
 
@@ -707,7 +707,7 @@ Vous pouvez installer **Microsoft Visual Studio Express 2012 pour Web** ou un au
 
     ![Progression de l'installation](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image61.png)
 
-    *Progression de l'installation*
+    *Progression de l’installation*
 6. Une fois l’installation terminée, cliquez sur **Terminer**.
 
     ![Installation est terminée](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image62.png)

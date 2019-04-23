@@ -12,7 +12,7 @@ ms.openlocfilehash: ac54ab7aea1608ebba1f5d89e9a63b0a3f795937
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415685"
 ---
 # <a name="how-do-i-use-the-aspnet-iis-registration-tool-to-configure-aspnet"></a>Utilisation de l’outil ASP.NET IIS Registration pour configurer ASP.NET

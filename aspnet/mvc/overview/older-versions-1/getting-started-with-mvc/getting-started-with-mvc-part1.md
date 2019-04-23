@@ -12,7 +12,7 @@ ms.openlocfilehash: dcc2e703829cfa0b77575870feff451fd0738f56
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416491"
 ---
 # <a name="intro-to-aspnet-mvc"></a>Introduction à ASP.NET MVC
@@ -32,7 +32,7 @@ Assurons-nous que notre première Application Web ASP.NET MVC à l’aide [Visua
 
 Voici deux captures d’écran de l’application que vous allez générer. Vous aurez une table simple de films avec diverses colonnes.
 
-[![Movie liste - Windows Internet Explorer (12)](getting-started-with-mvc-part1/_static/image2.png)](getting-started-with-mvc-part1/_static/image1.png)
+[![Liste de films - Windows Internet Explorer (12)](getting-started-with-mvc-part1/_static/image2.png)](getting-started-with-mvc-part1/_static/image1.png)
 
 Et vous aurez un formulaire de création afin de pouvoir ajouter à la liste de films.
 
@@ -77,9 +77,9 @@ Il s’agit d’une flèche verte pointant vers la droite qui compilera votre pr
 
 Ainsi, Visual Web Developer démarrer un serveur web de développement et d’exécuter notre application web (il n’existe aucune configuration ou les étapes manuelles requises pour activer cette option). Puis il lance un navigateur et configurez-le pour parcourir la page d’accueil de l’application. Ci-dessous, notez que la barre d’adresses du navigateur indique « localhost » et pas quelque chose comme example.com. C’est parce que localhost pointe toujours vers votre propre ordinateur local - qui dans ce cas s’exécute l’application que nous venez de créer.
 
-[![Home Page](getting-started-with-mvc-part1/_static/image13.png)](getting-started-with-mvc-part1/_static/image12.png)
+[![Page d’accueil](getting-started-with-mvc-part1/_static/image13.png)](getting-started-with-mvc-part1/_static/image12.png)
 
 Prêt à l’emploi ce modèle par défaut donne vous deux pages à visiter et une page de connexion de base. Nous allons modifier le fonctionnement de cette application et en savoir un peu sur ASP.NET MVC dans le processus. Fermez votre navigateur et vous permet de modifier du code.
 
 > [!div class="step-by-step"]
-> [Suivant](getting-started-with-mvc-part2.md)
+> [Next](getting-started-with-mvc-part2.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 3562e9c4ec994f04b312476c1357d810f4b5e28a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420157"
 ---
 # <a name="how-do-i-extend-and-customize-an-aspnet-server-control-for-a-specific-purpose"></a>[Comment faire] Étendre et personnaliser un contrôle serveur ASP.NET dans un but spécifique
