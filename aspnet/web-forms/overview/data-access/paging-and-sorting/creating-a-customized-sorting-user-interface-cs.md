@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: 6f81b633-9d01-4e52-ae4a-2ea6bc109475
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 34a182278cfa57369643ab151492532bc92bd623
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: af4f91ffed7b8884a7441b5ccf4f390aba867fed
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393494"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121906"
 ---
 # <a name="creating-a-customized-sorting-user-interface-c"></a>Création d’une interface utilisateur de tri personnalisée (C#)
 
@@ -23,18 +23,15 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Lors de l’affichage d’une longue liste des données triées, il peut être très utile de regrouper les données associées en introduisant des lignes du séparateur. Dans ce didacticiel, nous allons voir comment créer une interface utilisateur tri.
 
-
 ## <a name="introduction"></a>Introduction
 
 Affichage d’une longue liste de lorsque les données triées contenant uniquement un certain nombre de valeurs différentes dans la colonne triée, un utilisateur final peut s’avérer difficile de discerner où, exactement, les limites de différence se produisent. Par exemple, il existe des 81 produits dans la base de données, mais les choix de catégorie différente seulement neuf (huit catégories uniques ainsi que les `NULL` option). Prenons le cas d’un utilisateur souhaitant en examinant les produits qui relèvent de la catégorie de la mer. À partir d’une page qui répertorie *tous les* des produits dans un GridView unique, l’utilisateur peut décider de son meilleur résultat consiste à trier les résultats par catégorie, qui regroupe tous les produits Seafood ensemble. Après le tri par catégorie, l’utilisateur doit ensuite de recherche dans la liste, recherchez où les produits regroupés en mer commencer et se terminer. Dans la mesure où les résultats sont triés par ordre alphabétique par nom de la catégorie recherche les produits de la mer n’est pas difficile, mais elle nécessite toujours étroitement analyse la liste des éléments dans la grille.
 
 Pour aider à mettre en surbrillance les limites entre les groupes triés, de nombreux sites Web utilisent une interface utilisateur qui ajoute un séparateur entre ces groupes. Séparateurs comme celles indiquées dans la Figure 1 permet à un utilisateur de plus rapidement trouver un groupe particulier et identifier ses limites, ainsi que déterminer quels groupes distincts existent dans les données.
 
-
 [![Chaque groupe de catégories est clairement identifié](creating-a-customized-sorting-user-interface-cs/_static/image2.png)](creating-a-customized-sorting-user-interface-cs/_static/image1.png)
 
 **Figure 1**: Chaque groupe de catégories est clairement identifié ([cliquez pour afficher l’image en taille réelle](creating-a-customized-sorting-user-interface-cs/_static/image3.png))
-
 
 Dans ce didacticiel, nous allons voir comment créer une interface utilisateur tri.
 
@@ -44,16 +41,13 @@ Avant de nous explorons comment augmenter le contrôle GridView pour fournir l�
 
 Ensuite, configurez le contrôle GridView tel qu’il contient uniquement le `ProductName`, `CategoryName`, `SupplierName`, et `UnitPrice` BoundFields et le CheckBoxField abandonné. Enfin, configurez le contrôle GridView pour prendre en charge le tri en cochant la case à cocher Activer le tri dans la balise active de GridView s (ou en définissant son `AllowSorting` propriété `true`). Après avoir apporté ces ajouts à la `CustomSortingUI.aspx` page, le balisage déclaratif doit ressembler à ce qui suit :
 
-
 [!code-aspx[Main](creating-a-customized-sorting-user-interface-cs/samples/sample1.aspx)]
 
 Prenez un moment pour consulter notre progression jusqu'à présent dans un navigateur. Figure 2 montre le contrôle GridView sortable lorsque ses données sont triées par catégorie dans l’ordre alphabétique.
 
-
 [![Les opérations de mappage GridView pouvant être trié les données sont triées par catégorie](creating-a-customized-sorting-user-interface-cs/_static/image5.png)](creating-a-customized-sorting-user-interface-cs/_static/image4.png)
 
 **Figure 2**: Les opérations de mappage pouvant être trié GridView données sont triées par catégorie ([cliquez pour afficher l’image en taille réelle](creating-a-customized-sorting-user-interface-cs/_static/image6.png))
-
 
 ## <a name="step-2-exploring-techniques-for-adding-the-separator-rows"></a>Étape 2 : Exploration des Techniques permettant d’ajouter les lignes du séparateur
 
@@ -73,11 +67,9 @@ Les deux autres options d’ajout d’une ligne séparateur pour les données r�
 
 Lorsque le contrôle GridView est lié à une source de données, il crée un `GridViewRow` pour chaque enregistrement retourné par la source de données. Par conséquent, nous pouvons injecter les lignes du séparateur nécessaires en ajoutant des enregistrements de séparateur à la source de données avant de le lier au contrôle GridView. La figure 3 illustre ce concept.
 
-
 ![Une Technique consiste à ajouter des lignes de séparateur à la Source de données](creating-a-customized-sorting-user-interface-cs/_static/image7.png)
 
 **Figure 3**: Une Technique consiste à ajouter des lignes de séparateur à la Source de données
-
 
 Utiliser les enregistrements de séparateur à terme entre guillemets, car il n’existe aucun enregistrement de séparation particulière ; au lieu de cela, nous devons d’une certaine manière indicateur servant à un enregistrement particulier dans la source de données comme un séparateur au lieu d’une ligne de données normale. Pour nos exemples, nous re liaison un `ProductsDataTable` instance au GridView, qui se compose de `ProductRows`. Nous pouvons également marquer un enregistrement en tant que ligne de séparateur en définissant son `CategoryID` propriété `-1` (dans la mesure où une telle valeur n’a pas pu existe normalement).
 
@@ -99,22 +91,18 @@ Plutôt que les données de messagerie avant de le lier au contrôle GridView, n
 
 Pour ajouter des lignes du séparateur entre chaque groupe de tri, nous pouvons manipuler directement cette hiérarchie de contrôle une fois qu’il a été créé. Nous pouvons être certain que la hiérarchie des contrôles GridView s a été créée pour la dernière fois au moment que du rendu de la page. Par conséquent, cette approche remplace le `Page` classe s `Render` méthode, à quel point la hiérarchie des contrôles finale s GridView est mis à jour pour inclure les lignes du séparateur nécessaires. Figure 4 illustre ce processus.
 
-
 [![Une autre Technique manipule la hiérarchie des contrôles GridView s](creating-a-customized-sorting-user-interface-cs/_static/image9.png)](creating-a-customized-sorting-user-interface-cs/_static/image8.png)
 
 **Figure 4**: Une autre Technique manipule la hiérarchie des contrôles de s GridView ([cliquez pour afficher l’image en taille réelle](creating-a-customized-sorting-user-interface-cs/_static/image10.png))
-
 
 Pour ce didacticiel, nous allons utiliser cette dernière approche pour personnaliser l’expérience utilisateur de tri.
 
 > [!NOTE]
 > Le code je m présenter dans ce didacticiel est basé sur l’exemple fourni dans [Teemu Keiski](http://aspadvice.com/blogs/joteke/default.aspx) entrée de blog de s, [lecture un peu avec le regroupement de tri GridView](http://aspadvice.com/blogs/joteke/archive/2006/02/11/15130.aspx).
 
-
 ## <a name="step-3-adding-the-separator-rows-to-the-gridview-s-control-hierarchy"></a>Étape 3 : Ajoutant les lignes de séparateur à la hiérarchie des contrôles GridView s
 
 Étant donné que nous ne souhaitons pas ajouter les lignes de séparateur à la hiérarchie des contrôles GridView s après que sa hiérarchie de contrôle a été créé et créé pour la dernière fois sur cette page, visitez, nous souhaitons effectuer cet ajout à la fin du cycle de vie de page, mais avant le c GridView réelle ontrôle hiérarchie a été rendu en HTML. Le dernier point possible auquel nous pouvons effectuer cette opération est la `Page` classe s `Render` événement que nous pouvons remplacer dans notre classe code-behind à l’aide de la signature de méthode suivante :
-
 
 [!code-csharp[Main](creating-a-customized-sorting-user-interface-cs/samples/sample2.cs)]
 
@@ -125,16 +113,13 @@ Pour injecter des en-têtes de groupe de tri, nous devons tout d’abord vous as
 > [!NOTE]
 > Si vous souhaitez que le contrôle GridView à trier par une colonne particulière lors du premier chargement de la page, appelez les opérations de mappage GridView `Sort` méthode sur la première visite de page (mais pas sur les publications ultérieures). Pour ce faire, ajoutez cet appel dans le `Page_Load` Gestionnaire d’événements au sein d’un `if (!Page.IsPostBack)` conditionnel. Faire référence à la [la pagination et tri des données de rapport](paging-and-sorting-report-data-cs.md) informations didacticiels pour en savoir plus sur la `Sort` (méthode).
 
-
 En supposant que les données ont été triées, la tâche suivante consiste à déterminer quelle colonne données a été triées par et puis pour analyser les lignes de différences dans la colonne s vous recherchez des valeurs. Le code suivant permet de s’assurer que les données ont été triées et recherche la colonne par laquelle les données ont été triées :
-
 
 [!code-csharp[Main](creating-a-customized-sorting-user-interface-cs/samples/sample3.cs)]
 
 Si le contrôle GridView présente encore être triées, le s GridView `SortExpression` propriété n’est pas été définie. Par conséquent, nous voulons uniquement ajouter les lignes de séparateur si cette propriété a une valeur. Le cas échéant, nous devons ensuite déterminer l’index de la colonne par laquelle les données a été triées. Cela s’effectue en parcourant le s GridView `Columns` collection, la recherche de la colonne dont la propriété `SortExpression` propriété est égale à la s GridView `SortExpression` propriété. En plus de l’index de colonne s, nous extrayons également le `HeaderText` propriété, qui est utilisée pour afficher les lignes du séparateur.
 
 Avec l’index de la colonne par laquelle les données sont triées, l’étape finale consiste pour énumérer les lignes du contrôle GridView. Pour chaque ligne, nous devons déterminer si la valeur de s colonne triée diffère de la valeur de s ligne s triées colonne précédente. Si, par conséquent, nous devons injecter un nouveau `GridViewRow` instance dans la hiérarchie des contrôles. Cela s’effectue par le code suivant :
-
 
 [!code-csharp[Main](creating-a-customized-sorting-user-interface-cs/samples/sample4.cs)]
 
@@ -143,33 +128,27 @@ Ce code commence par référencer par programme le `Table` de l’objet trouvé 
 > [!NOTE]
 > Pour déterminer la valeur de la colonne triée ligne particulière, j’utilise la cellule s `Text` propriété. Cela fonctionne bien pour BoundFields, mais ne sera pas fonctionnent comme vous le souhaitez pour TemplateField, CheckBoxFields et ainsi de suite. Nous allons examiner comment faire pour prendre en compte pour les autres champs de GridView, peu de temps.
 
-
 Le `currentValue` et `lastValue` variables sont ensuite comparés. S’ils sont différents, nous devons ajouter une nouvelle ligne de séparateur à la hiérarchie des contrôles. Pour ce faire, vous devez déterminer l’index de la `GridViewRow` dans le `Table` objet s `Rows` collection, création de nouveaux `GridViewRow` et `TableCell` instances, puis en ajoutant le `TableCell` et `GridViewRow` à la hiérarchie des contrôles.
 
 Remarque que le séparateur de lignes s Solitaire `TableCell` est mis en forme tel qu’il s’étend sur toute la largeur du contrôle GridView, est mis en forme à l’aide de la `SortHeaderRowStyle` classe CSS et a son `Text` tel qu’il affiche à la fois le groupe de tri nom de propriété (par exemple, la catégorie) et la valeur de s groupe (par exemple, boissons). Enfin, `lastValue` est mis à jour à la valeur de `currentValue`.
 
 La classe CSS utilisée pour mettre en forme la ligne d’en-tête de groupe tri `SortHeaderRowStyle` doit être spécifié dans le `Styles.css` fichier. N’hésitez pas à utiliser les paramètres de style vous séduire ; J’ai utilisé les éléments suivants :
 
-
 [!code-css[Main](creating-a-customized-sorting-user-interface-cs/samples/sample5.css)]
 
 Avec le code actuel, l’interface de tri ajoute des en-têtes de groupe de tri lors du tri par n’importe quel BoundField (voir Figure 5, qui montre une capture d’écran lors du tri par fournisseur). Toutefois, lors du tri par n’importe quel autre type de champ (par exemple, un CheckBoxField ou d’un TemplateField), les en-têtes de groupe de tri sont nulle part à rechercher (voir Figure 6).
-
 
 [![L’Interface de tri inclut les en-têtes de groupe de tri lors du tri par BoundFields](creating-a-customized-sorting-user-interface-cs/_static/image12.png)](creating-a-customized-sorting-user-interface-cs/_static/image11.png)
 
 **Figure 5**: Le tri Interface inclut tri en-têtes lors de tri des groupes par BoundFields ([cliquez pour afficher l’image en taille réelle](creating-a-customized-sorting-user-interface-cs/_static/image13.png))
 
-
 [![Les en-têtes de groupe de tri sont manquants lors de tri une CheckBoxField](creating-a-customized-sorting-user-interface-cs/_static/image15.png)](creating-a-customized-sorting-user-interface-cs/_static/image14.png)
 
 **Figure 6**: Les en-têtes de groupe de tri sont manquants lors de tri une CheckBoxField ([cliquez pour afficher l’image en taille réelle](creating-a-customized-sorting-user-interface-cs/_static/image16.png))
 
-
 Les en-têtes de groupe de tri sont manquants lors du tri par un CheckBoxField est parce que le code utilise actuellement uniquement la `TableCell` s `Text` propriété afin de déterminer la valeur de la colonne triée pour chaque ligne. Pour CheckBoxFields, le `TableCell` s `Text` propriété est une chaîne vide ; au lieu de cela, la valeur est disponible via un contrôle de case à cocher Web qui se trouve dans le `TableCell` s `Controls` collection.
 
 Pour gérer les types de champs autres que BoundFields, nous avons besoin compléter le code où le `currentValue` variable est assignée pour vérifier l’existence d’une case à cocher dans la `TableCell` s `Controls` collection. Au lieu d’utiliser `currentValue = gvr.Cells[sortColumnIndex].Text`, remplacez ce code par le suivant :
-
 
 [!code-csharp[Main](creating-a-customized-sorting-user-interface-cs/samples/sample6.cs)]
 
@@ -177,15 +156,12 @@ Ce code examine la colonne triée `TableCell` pour la ligne actuelle pour déter
 
 Avec l’ajout de code ci-dessus, les en-têtes de groupe de tri sont désormais présentes lors du tri par le CheckBoxField abandonné (voir la Figure 7).
 
-
 [![Les en-têtes de groupe de tri sont désormais présentes lorsque tri un CheckBoxField](creating-a-customized-sorting-user-interface-cs/_static/image18.png)](creating-a-customized-sorting-user-interface-cs/_static/image17.png)
 
 **Figure 7**: Les en-têtes de groupe de tri sont désormais présentes lorsque tri un CheckBoxField ([cliquez pour afficher l’image en taille réelle](creating-a-customized-sorting-user-interface-cs/_static/image19.png))
 
-
 > [!NOTE]
 > Si vous disposez de produits avec `NULL` de base de données des valeurs pour le `CategoryID`, `SupplierID`, ou `UnitPrice` champs, ces valeurs seront affichent comme des chaînes vides dans le contrôle GridView par défaut, ce qui signifie le texte de ligne s séparateur pour les produits avec `NULL`valeurs seront lues comme catégorie : (autrement dit, il s aucun nom de catégorie : comme avec la catégorie : Boissons). Si vous souhaitez une valeur affichée ici vous pouvez définir le BoundFields [ `NullDisplayText` propriété](https://msdn.microsoft.com/library/system.web.ui.webcontrols.boundfield.nulldisplaytext.aspx) au texte que vous souhaitez afficher, ou vous pouvez ajouter une instruction conditionnelle dans la méthode Render quand vous assignez le `currentValue` pour le séparateur ligne s `Text` propriété.
-
 
 ## <a name="summary"></a>Récapitulatif
 

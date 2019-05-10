@@ -9,12 +9,12 @@ ms.date: 03/26/2015
 ms.assetid: d4911cb3-1afb-4805-b860-10818c4b1280
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: 165343fd20b92becee1956c7a19870219323e073
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ebdae3f4d1261407feecd50ec81b3f329b2a3c0c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409393"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117129"
 ---
 # <a name="create-a-secure-aspnet-mvc-5-web-app-with-log-in-email-confirmation-and-password-reset-c"></a>Créer une application web ASP.NET MVC 5 sécurisée avec connexion, confirmation par courrier électronique et réinitialisation de mot de passe (C#)
 
@@ -25,7 +25,6 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Ce didacticiel a été écrit par [Rick Anderson](https://blogs.msdn.com/rickAndy) (Twitter : [ @RickAndMSFT ](https://twitter.com/RickAndMSFT) ).
 
-
 <a id="createMvc"></a>
 ## <a name="create-an-aspnet-mvc-app"></a>Créer une application ASP.NET MVC
 
@@ -33,7 +32,6 @@ Démarrez en installant et en cours d’exécution [Visual Studio Express 2013 p
 
 > [!NOTE]
 > Avertissement : Vous devez installer [Visual Studio 2013 Update 3](https://go.microsoft.com/fwlink/?LinkId=390465) ou une version ultérieure pour suivre ce didacticiel.
-
 
 1. Créez un projet Web ASP.NET et sélectionnez le modèle MVC. Web Forms prend également en charge ASP.NET Identity : vous pouvez donc suivre des étapes similaires dans une application Web Forms.  
     ![](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset/_static/image1.png)
@@ -81,7 +79,6 @@ Pour simplifier cet exemple, nous allons stocker les paramètres d’application
 
 > [!WARNING]
 > Sécurité - Ne jamais stocker de données sensibles dans votre code source. Le compte et les informations d’identification sont stockés dans l’appSetting.  Sur Azure, vous pouvez stocker en toute sécurité ces valeurs sur l'onglet **[Configurer](https://blogs.msdn.com/b/webdev/archive/2014/06/04/queuebackgroundworkitem-to-reliably-schedule-and-run-long-background-process-in-asp-net.aspx)** dans le portail Azure. Consultez [les meilleures pratiques pour le déploiement des mots de passe et autres données sensibles sur ASP.NET et Azure](../../../identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md).
-
 
 ### <a name="enable-email-confirmation-in-the-account-controller"></a>Activer la confirmation par courrier électronique dans le contrôleur de compte
 

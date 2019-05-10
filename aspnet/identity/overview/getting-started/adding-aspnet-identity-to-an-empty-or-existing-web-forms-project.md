@@ -9,15 +9,14 @@ ms.assetid: 1cbc0ed2-5bd6-4b62-8d34-4c193dcd8b25
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project
 msc.type: authoredcontent
-ms.openlocfilehash: 8f66cdb46e4cd02509092ea3bdcb7af9c292eb8f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8e82951d57f0b8052ee3f6530a7470be7d030206
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394313"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121438"
 ---
 # <a name="adding-aspnet-identity-to-an-empty-or-existing-web-forms-project"></a>Ajout d’ASP.NET Identity à un projet Web Forms vide ou existant
-
 
 > Ce didacticiel vous montre comment ajouter [ASP.NET Identity](introduction-to-aspnet-identity.md) (le nouveau système d’appartenance pour ASP.NET) à une application ASP.NET.
 > 

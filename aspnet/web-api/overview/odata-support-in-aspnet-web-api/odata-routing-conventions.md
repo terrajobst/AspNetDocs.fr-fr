@@ -9,19 +9,18 @@ ms.custom: seoapril2019
 ms.assetid: adbc175a-14eb-4ab2-a441-d056ffa8266f
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-routing-conventions
 msc.type: authoredcontent
-ms.openlocfilehash: 8916f8b7a024636be1be055457081487f46a7936
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 63df4a82cd8df92631485b2544117844cfd0ca56
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421626"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130469"
 ---
 # <a name="routing-conventions-in-aspnet-web-api-2-odata"></a>Conventions d’itinéraire dans ASP.NET Web API 2 Odata
 
 par [Mike Wasson](https://github.com/MikeWasson)
 
 > Cet article décrit les conventions de routage de cette API Web 2 dans ASP.NET 4.x utilise des points de terminaison OData.
-
 
 Lors de l’API Web Obtient une requête OData, il mappe la demande à un nom de contrôleur et un nom d’action. Le mappage est basé sur la méthode HTTP et l’URI. Par exemple, `GET /odata/Products(1)` mappe à `ProductsController.GetProduct`.
 
@@ -53,7 +52,6 @@ Par conséquent, ce chemin d’accès sélectionne le fournisseur du produit 1.
 
 > [!NOTE]
 > Segments de chemin d’accès OData ne correspondent pas toujours aux segments d’URI. Par exemple, « 1 » est considéré comme un segment de chemin d’accès.
-
 
 **Noms de contrôleur.** Le nom du contrôleur est toujours dérivé de l’entité à la racine du chemin d’accès de ressource. Par exemple, si le chemin d’accès de ressource est `/Products(1)/Supplier`, Web API recherche d’un contrôleur nommé `ProductsController`.
 

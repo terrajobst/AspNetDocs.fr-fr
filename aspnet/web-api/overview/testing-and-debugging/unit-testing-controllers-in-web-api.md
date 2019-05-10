@@ -8,12 +8,12 @@ ms.date: 06/11/2014
 ms.assetid: 43a6cce7-a3ef-42aa-ad06-90d36d49f098
 msc.legacyurl: /web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 9fa71bec14a2ba4d14f01661ad2bf41975f4f55e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cdb1700537021e276669de1a9e0330a62659746c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413800"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121995"
 ---
 # <a name="unit-testing-controllers-in-aspnet-web-api-2"></a>Tests unitaires des contrôleurs dans ASP.NET Web API 2
 
@@ -72,7 +72,6 @@ Réécrivons le test à l’aide de la [Moq](https://github.com/Moq) framework. 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample4.cs)]
 
 Dans cette version, vous n’avez pas besoin configurer les données d’itinéraire, étant donné que le simulacre **UrlHelper** retourne une chaîne constante.
-
 
 ## <a name="testing-actions-that-return-ihttpactionresult"></a>Test des Actions qui retournent IHttpActionResult
 

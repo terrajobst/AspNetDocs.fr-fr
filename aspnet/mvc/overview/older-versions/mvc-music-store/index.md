@@ -8,17 +8,16 @@ ms.date: 09/28/2011
 ms.assetid: f016a6b4-2a38-4e83-8c34-f6d7f2b49ba2
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store
 msc.type: chapter
-ms.openlocfilehash: 65f4c90ed0038c56479995153ea0ad787b7b7e11
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2ad62c230984ac92f6377764c172643bf2cec9db
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417388"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129707"
 ---
 # <a name="aspnet-mvc-3-music-store"></a>ASP.NET MVC 3 Music Store
 
 > Guide pratique créer l’application de Store de musique MVC, un exemple d’application qui vend des albums de musique en ligne, et qui implémente l’administration du site, connexion de l’utilisateur et les fonctionnalités de panier d’achat.
-
 
 - [Partie 1 : Vue d’ensemble et fichier -> Nouveau projet](mvc-music-store-part-1.md)
 - [Partie 2 : Contrôleurs](mvc-music-store-part-2.md)

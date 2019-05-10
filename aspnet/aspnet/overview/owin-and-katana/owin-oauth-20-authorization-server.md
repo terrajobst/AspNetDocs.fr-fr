@@ -8,12 +8,12 @@ ms.date: 01/28/2019
 ms.assetid: 20acee16-c70c-41e9-b38f-92bfcf9a4c1c
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-oauth-20-authorization-server
 msc.type: authoredcontent
-ms.openlocfilehash: d5c8262d48c79616ca3069c37077ba99ffafb650
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 6523d09e41fe10475d1bcb7fca06b2e0e2d3182c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426044"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118199"
 ---
 # <a name="owin-oauth-20-authorization-server"></a>Serveur d’autorisation OAuth 2.0 OWIN
 
@@ -34,7 +34,6 @@ ms.locfileid: "58426044"
 > ## <a name="questions-and-comments"></a>Questions et commentaires
 >
 > Si vous avez des questions qui ne sont pas directement liées à ce didacticiel, vous pouvez les publier à [projet Katana sur GitHub](https://github.com/aspnet/AspNetKatana/). Pour les questions et commentaires concernant ce didacticiel, consultez la section des commentaires en bas de la page.
-
 
 Le [OAuth 2.0 framework](http://tools.ietf.org/html/rfc6749) permet à une application tierce obtenir un accès limité à un service HTTP. Au lieu d’utiliser les informations d’identification du propriétaire des ressources pour accéder à une ressource protégée, le client obtient un jeton d’accès (qui est une chaîne qui dénote une étendue spécifique, de durée de vie et d’autres attributs d’accès). Jetons d’accès sont émis pour les clients tiers par un serveur d’autorisation avec l’approbation du propriétaire de la ressource.
 
@@ -175,7 +174,6 @@ Voici l’exemple d’implémentation pour `Provider.GrantResourceOwnerCredentia
 > [!NOTE]
 > Le code ci-dessus a vocation d’expliquer cette section du didacticiel et ne doit pas être utilisé dans sécurisée ou les applications de production. Il ne vérifie pas les informations d’identification des propriétaires de ressources. Il part du principe que chaque information d’identification n’est valide et crée une nouvelle identité pour celle-ci. La nouvelle identité sera utilisée pour générer le jeton d’accès et le jeton d’actualisation. Remplacez le code avec votre propre code de gestion de compte sécurisé.
 
-
 ### <a name="client-credentials-grant"></a>Octroi des informations d’identification client
 
 Reportez-vous à OAuth 2 l’IETF [octroi des informations d’identification du Client](http://tools.ietf.org/html/rfc6749#section-4.4) section maintenant.
@@ -195,7 +193,6 @@ Voici l’exemple d’implémentation pour `Provider.GrantClientCredentials`:
 
 > [!NOTE]
 > Le code ci-dessus a vocation d’expliquer cette section du didacticiel et ne doit pas être utilisé dans sécurisée ou les applications de production. Remplacez le code avec votre propre code de gestion de client sécurisé.
-
 
 ### <a name="refresh-token"></a>Jeton d’actualisation
 
@@ -274,7 +271,6 @@ Voici l’exemple de code de la `HomeController` du client.
 > [!WARNING]
 > Sécurité - jamais désactiver SSL dans une application de production. Vos informations d’identification de connexion sont désormais envoyées en texte clair sur le réseau. Le code ci-dessus est uniquement pour le débogage local exemple et l’exploration.
 
-
 ### <a name="implicit-grant-client"></a>Client d’octroi implicite
 
 Ce client utilise JavaScript pour :
@@ -296,7 +292,6 @@ Voici le code dans de gestion de rappel *SignIn.cshtml* fichier :
 
 > [!NOTE]
 > Une bonne pratique consiste à déplacer le code JavaScript dans un fichier externe et pas l’incorporer avec le balisage Razor. Pour simplifier cet exemple, ils ont été combinés.
-
 
 ### <a name="resource-owner-password-credentials-grant-client"></a>Mot de passe de propriétaire de la ressource Client de l’octroi des informations d’identification
 
