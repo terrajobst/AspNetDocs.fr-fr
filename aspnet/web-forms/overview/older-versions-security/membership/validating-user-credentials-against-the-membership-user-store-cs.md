@@ -8,12 +8,12 @@ ms.date: 01/18/2008
 ms.assetid: 61aa4e08-aa81-4aeb-8ebe-19ba7a65e04c
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d962036213d779f73e5d837af1de42a01f08a329
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 469fc9c52bd3d1e5dd69b80399b250ba46f72405
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389217"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131826"
 ---
 # <a name="validating-user-credentials-against-the-membership-user-store-c"></a>Validation des informations d’identification de l’utilisateur par rapport au magasin d’utilisateurs d’appartenance (C#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger le Code](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/ASPNET_Security_Tutorial_06_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/aspnet_tutorial06_LoggingIn_cs.pdf)
 
 > Dans ce didacticiel, nous allons examiner comment valider les informations d’identification d’un utilisateur par rapport au magasin d’utilisateur d’appartenance à l’aide de moyens de programmation et le contrôle de connexion. Nous examinerons également comment personnaliser l’apparence et le comportement du contrôle de connexion.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -42,11 +41,9 @@ Le `SqlMembershipProvider` valide les informations d’identification fournies e
 
 Nous allons mettre à jour notre page de connexion (~ /`Login.aspx`) afin qu’il valide les informations d’identification fournies sur le magasin d’utilisateur d’appartenance framework. Nous avons créé cette page de connexion dans le <a id="Tutorial02"> </a> [ *une vue d’ensemble de l’authentification par formulaire* ](../introduction/an-overview-of-forms-authentication-cs.md) didacticiel, la création d’une interface avec deux zones de texte pour le nom d’utilisateur et le mot de passe, un Mémoriser mes informations de case à cocher et un bouton de connexion (voir Figure 1). Le code valide les informations d’identification entrées par rapport à une liste codée en dur de paires nom d’utilisateur et mot de passe (Scott/mot de passe, Jisun/mot de passe et Sam/mot de passe). Dans le <a id="Tutorial03"> </a> [ *Configuration de l’authentification de formulaires et des sujets avancés* ](../introduction/forms-authentication-configuration-and-advanced-topics-cs.md) didacticiel nous mis à jour le code de la page de connexion pour stocker des informations supplémentaires dans les formulaires ticket d’authentification `UserData` propriété.
 
-
 [![Interface de la Page connexion inclut deux zones de texte, CheckBoxList et un bouton](validating-user-credentials-against-the-membership-user-store-cs/_static/image2.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image1.png)
 
 **Figure 1**: Interface inclut deux zones de texte de la Page de connexion, CheckBoxList et un bouton ([cliquez pour afficher l’image en taille réelle](validating-user-credentials-against-the-membership-user-store-cs/_static/image3.png))
-
 
 Interface utilisateur de la page de connexion peut rester inchangée, mais nous devons remplacer le bouton de connexion `Click` Gestionnaire d’événements avec le code qui valide l’utilisateur sur le magasin d’utilisateur d’appartenance framework. Mettre à jour le Gestionnaire d’événements afin que son code apparaît comme suit :
 
@@ -60,7 +57,6 @@ Pour tester que la page de connexion fonctionne comme prévu, tentative de conne
 
 > [!NOTE]
 > Lorsque l’utilisateur entre ses informations d’identification et soumet le formulaire de la page de connexion, les informations d’identification, y compris son mot de passe sont transmises via Internet au serveur web dans *texte brut*. Cela signifie que tout pirate d’analyser le trafic réseau peut voir le nom d’utilisateur et le mot de passe. Pour éviter ce problème, il est essentiel pour chiffrer le trafic réseau à l’aide de [couches SSL (Secure Socket)](http://en.wikipedia.org/wiki/Secure_Sockets_Layer). Cela garantit que les informations d’identification (comme balisage HTML de la page entière) est chiffré dès le moment où qu'ils quittent le navigateur jusqu'à ce qu’ils sont reçus par le serveur web.
-
 
 ### <a name="how-the-membership-framework-handles-invalid-login-attempts"></a>Comment l’infrastructure de l’appartenance gère les tentatives de connexion non valide
 
@@ -78,30 +74,24 @@ Malheureusement, il n’existe aucun outil intégré pour le déverrouillage d�
 > [!NOTE]
 > L’inconvénient de la `ValidateUser` méthode est que lorsque les informations d’identification fournies ne sont pas valides, il ne fournit pas d’explications quant à pourquoi. Les informations d’identification peuvent être non valides, car il n’existe aucune paire nom d’utilisateur/mot de passe correspondant dans le magasin de l’utilisateur, ou parce que l’utilisateur n’a pas encore été approuvée, soit parce que l’utilisateur a été verrouillé. À l’étape 4, nous verrons comment afficher un message plus détaillé à l’utilisateur lors de leur tentative de connexion échoue.
 
-
 ## <a name="step-2-collecting-credentials-through-the-login-web-control"></a>Étape 2 : Collecte des informations d’identification via le contrôle Web de connexion
 
 Le [contrôle Web de connexion](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.aspx) restitue une interface d’utilisateur par défaut très semblable à celle que nous avons créé dans le <a id="SKM5"> </a> [ *une vue d’ensemble de l’authentification par formulaire* ](../introduction/an-overview-of-forms-authentication-cs.md) didacticiel. L’utilisation du contrôle de connexion évite le travail de devoir créer l’interface pour collecter les informations d’identification de visiteur s. En outre, le contrôle de connexion se connecte automatiquement l’utilisateur (en supposant que les informations d’identification soumises sont valides), ainsi l’enregistrement nous évite de devoir écrire du code.
 
 Nous allons mettre à jour `Login.aspx`, en remplaçant l’interface créée manuellement et de code avec un contrôle de connexion. Commencez par supprimer le balisage existant et le code dans `Login.aspx`. Vous pouvez supprimer directement ce dernier, ou simplement mettre en commentaire. Pour commenter le balisage déclaratif, encadrez-le avec le `<%--` et `--%>` délimiteurs. Vous pouvez entrer manuellement ces délimiteurs, ou, comme le montre la Figure 2, vous pouvez sélectionner le texte à placer en commentaire, puis cliquez sur le commentaire de l’icône de lignes sélectionnées dans la barre d’outils. De même, vous pouvez utiliser le commentaire de l’icône de lignes sélectionnées en commentaire le code sélectionné dans la classe code-behind.
 
-
 [![Commentez l’existant de balisage déclaratif et le Code Source dans Login.aspx](validating-user-credentials-against-the-membership-user-store-cs/_static/image5.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image4.png)
 
 **Figure 2**: Commentaire Out the existant balisage déclaratif et le Code Source dans `Login.aspx` ([cliquez pour afficher l’image en taille réelle](validating-user-credentials-against-the-membership-user-store-cs/_static/image6.png))
 
-
 > [!NOTE]
 > Le commentaire de l’icône de lignes sélectionnées n’est pas disponible lorsque vous affichez le balisage déclaratif dans Visual Studio 2005. Si vous n’utilisez pas Visual Studio 2008, vous devez ajouter manuellement le `<%--` et `--%>` délimiteurs.
 
-
 Ensuite, faites glisser un contrôle de connexion à partir de la boîte à outils sur la page et définissez son `ID` propriété `myLogin`. À ce stade votre écran doit ressembler à la Figure 3. Notez que l’interface du contrôle de connexion par défaut inclut les contrôles de zone de texte pour le nom d’utilisateur et mot de passe, un mémoriser case à cocher et un bouton dans le journal. Il existe également `RequiredFieldValidator` contrôles pour les deux zones de texte.
-
 
 [![Ajouter un contrôle de connexion à la Page](validating-user-credentials-against-the-membership-user-store-cs/_static/image8.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image7.png)
 
 **Figure 3**: Ajouter un contrôle de connexion à la Page ([cliquez pour afficher l’image en taille réelle](validating-user-credentials-against-the-membership-user-store-cs/_static/image9.png))
-
 
 Et nous avons terminé ! Clic sur bouton de connexion du contrôle de connexion, une publication (postback) se produit et le contrôle Login appellera le `Membership.ValidateUser` méthode, en passant le nom d’utilisateur entré et le mot de passe. Si les informations d’identification ne sont pas valides, le contrôle de connexion affiche un message. Si, toutefois, les informations d’identification sont valides, le contrôle Login crée les formulaires ticket d’authentification et redirige l’utilisateur vers la page appropriée.
 
@@ -114,11 +104,9 @@ Le contrôle de connexion utilise quatre facteurs pour déterminer la page appro
 
 Figure 4 illustre la façon dont le contrôle de connexion utilise ces quatre paramètres pour arriver à sa décision de la page appropriée.
 
-
 [![Ajouter un contrôle de connexion à la Page](validating-user-credentials-against-the-membership-user-store-cs/_static/image11.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image10.png)
 
 **Figure 4**: Ajouter un contrôle de connexion à la Page ([cliquez pour afficher l’image en taille réelle](validating-user-credentials-against-the-membership-user-store-cs/_static/image12.png))
-
 
 Prenez un moment pour tester le contrôle de connexion en visitant le site via un navigateur et de connexion en tant qu’un utilisateur existant dans le cadre de l’appartenance.
 
@@ -139,16 +127,13 @@ Le contrôle de connexion offre deux propriétés pour ajuster la disposition de
 > [!NOTE]
 > Dans la section suivante, la configuration de mise en page du contrôle de connexion, nous allons examiner des modèles pour définir la disposition précise des éléments d’interface utilisateur du contrôle de disposition.
 
-
 Encapsuler les paramètres de propriété du contrôle de connexion en définissant le [ `CreateUserText` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.createusertext.aspx) et [ `CreateUserUrl` propriétés](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.createuserurl.aspx) à ne pas encore inscrit ? Créer un compte ! et `~/Membership/CreatingUserAccounts.aspx`, respectivement. Cela ajoute un lien hypertexte à l’interface du contrôle de connexion pointant vers la page Nous avons créé dans le <a id="SKM6"> </a> [didacticiel précédent](creating-user-accounts-cs.md). Le contrôle Login [ `HelpPageText` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.helppagetext.aspx) et [ `HelpPageUrl` propriétés](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.helppageurl.aspx) et [ `PasswordRecoveryText` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.passwordrecoverytext.aspx) et [ `PasswordRecoveryUrl` propriétés](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.passwordrecoveryurl.aspx) fonctionnent de la même manière, des liens vers une page d’aide et une page de récupération du mot de passe de rendu.
 
 Après avoir apporté ces modifications de propriété, balisage déclaratif et l’apparence de votre contrôle de connexion doivent ressembler à celle illustrée à la Figure 5.
 
-
 [![Valeurs des propriétés du contrôle de la connexion déterminent son apparence](validating-user-credentials-against-the-membership-user-store-cs/_static/image14.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image13.png)
 
 **Figure 5**: Valeurs de dicter son apparence propriétés du contrôle de connexion ([cliquez pour afficher l’image en taille réelle](validating-user-credentials-against-the-membership-user-store-cs/_static/image15.png))
-
 
 ### <a name="configuring-the-login-controls-layout"></a>Configuration de mise en page du contrôle de connexion
 
@@ -163,23 +148,18 @@ Pour atteindre la première tâche, nous devons convertir le contrôle de connex
 
 Nous allons mettre à jour le contrôle de connexion afin qu’il demande aux utilisateurs pour leur nom d’utilisateur, le mot de passe et l’adresse de messagerie et uniquement s’authentifie l’utilisateur si l’adresse de messagerie fournie correspond à leur adresse de messagerie sur fichier. Nous devons d’abord convertir l’interface de contrôle de la connexion à un modèle. À partir de la balise active du contrôle de connexion, choisissez l’option Convertir en modèle.
 
-
 [![Convertir le contrôle de connexion à un modèle](validating-user-credentials-against-the-membership-user-store-cs/_static/image17.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image16.png)
 
 **Figure 6**: Convertir le contrôle de connexion à un modèle ([cliquez pour afficher l’image en taille réelle](validating-user-credentials-against-the-membership-user-store-cs/_static/image18.png))
 
-
 > [!NOTE]
 > Pour rétablir le contrôle de la connexion à sa version préalable template, cliquez sur le lien de réinitialisation à partir de la balise active du contrôle.
 
-
 Conversion du contrôle de connexion à un modèle ajoute un `LayoutTemplate` pour le balisage du contrôle déclaratif avec des éléments HTML et des contrôles Web de définition de l’interface utilisateur. Comme le montre la Figure 7, conversion le contrôle d’un modèle supprime un nombre de propriétés à partir de la fenêtre Propriétés, telles que `TitleText`, `CreateUserUrl`, et ainsi de suite, dans la mesure où ces valeurs de propriété sont ignorées lors de l’utilisation d’un modèle.
-
 
 [![Moins de propriétés sont que disponibles lorsque le contrôle de connexion est converti en un modèle](validating-user-credentials-against-the-membership-user-store-cs/_static/image20.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image19.png)
 
 **Figure 7**: Moins de propriétés sont disponibles lorsque le contrôle de connexion est converti en un modèle ([cliquez pour afficher l’image en taille réelle](validating-user-credentials-against-the-membership-user-store-cs/_static/image21.png))
-
 
 Le balisage HTML dans le `LayoutTemplate` peut être modifié en fonction des besoins. De même, n’hésitez pas à ajouter de nouveaux contrôles Web au modèle. Toutefois, il est important que les contrôles Web de ce contrôle de connexion core restent dans le modèle et conserver qui leur est affectée `ID` valeurs. En particulier, ne supprimez pas ni renommer le `UserName` ou `Password` zones de texte, le `RememberMe` case à cocher, le `LoginButton` bouton, le `FailureText` étiquette, ou le `RequiredFieldValidator` contrôles.
 
@@ -189,11 +169,9 @@ Pour collecter l’adresse de messagerie du visiteur, nous devons ajouter une zo
 
 Après avoir ajouté le `Email` zone de texte, visitez la page via un navigateur. Comme le montre la Figure 8, interface utilisateur du contrôle de connexion inclut désormais une troisième zone de texte.
 
-
 [![Le contrôle de connexion inclut à présent une zone de texte pour l’adresse de messagerie de l’utilisateur](validating-user-credentials-against-the-membership-user-store-cs/_static/image23.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image22.png)
 
 **Figure 8**: Le contrôle de connexion inclut à présent une zone de texte pour l’adresse de messagerie de l’utilisateur ([cliquez pour afficher l’image en taille réelle](validating-user-credentials-against-the-membership-user-store-cs/_static/image24.png))
-
 
 À ce stade, le contrôle de connexion est toujours à l’aide de la `Membership.ValidateUser` méthode pour valider les informations d’identification fournies. En conséquence, la valeur entrée dans le `Email` zone de texte n’a aucune incidence sur indique si l’utilisateur peut se connecter. À l’étape 3, nous allons examiner comment remplacer la connexion logique du contrôle d’authentification afin que les informations d’identification sont considéré comme valides si le nom d’utilisateur et le mot de passe sont valides et fait correspondre l’adresse électronique fournie avec l’adresse de messagerie sur fichier.
 
@@ -207,15 +185,12 @@ Si les informations d’identification fournies sont valides, le ticket d’auth
 
 Figure 9 offre un organigramme du flux de travail de l’authentification.
 
-
 [![Flux de travail du contrôle de la connexion d’authentification](validating-user-credentials-against-the-membership-user-store-cs/_static/image26.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image25.png)
 
 **Figure 9**: Flux de travail du contrôle de la connexion d’authentification ([cliquez pour afficher l’image en taille réelle](validating-user-credentials-against-the-membership-user-store-cs/_static/image27.png))
 
-
 > [!NOTE]
 > Si vous vous demandez quand vous utiliseriez le `FailureAction`de `RedirectToLogin` option page, considérez le scénario suivant. Dès maintenant notre `Site.master` page maître a actuellement le texte Hello, stranger affiché dans la colonne de gauche quand consultées par un utilisateur anonyme, mais imaginez que nous souhaitons remplacer ce texte avec un contrôle de connexion. Cela permettrait à un utilisateur anonyme pour vous connecter à partir de n’importe quelle page sur le site, au lieu de demander à consulter la page de connexion directement. Toutefois, si un utilisateur n’a pas pu se connecter via le contrôle de connexion affiché par la page maître, il peut être utile pour les rediriger vers la page de connexion (`Login.aspx`), car cette page probable comprend des instructions supplémentaires, les liens et les autres aide - tels que des liens pour créer un nouveau compte ou récupérer un mot de passe perdu - qui n’ont pas été ajoutés à la page maître.
-
 
 ### <a name="creating-theauthenticateevent-handler"></a>Création de la`Authenticate`Gestionnaire d’événements
 
@@ -246,15 +221,12 @@ Le code suivant implémente ces deux contrôles. Si les deux réussissent, puis 
 
 Avec ce code en place, tentent de se connecter en tant qu’un utilisateur valide, en entrant le nom d’utilisateur correct, le mot de passe et l’adresse de messagerie. Essayez de nouveau, mais cette fois utiliser délibérément une adresse e-mail incorrecte (voir Figure 10). Enfin, essayez une troisième fois à l’aide d’un nom d’utilisateur inexistantes. Dans le premier cas vous devez être connecté avec succès vers le site, mais dans les deux derniers cas vous devez voir le message d’informations d’identification non valide du contrôle de la connexion.
 
-
 [![Tito ne peut pas se connecter lorsque vous fournissez une adresse E-mail incorrecte](validating-user-credentials-against-the-membership-user-store-cs/_static/image29.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image28.png)
 
 **Figure 10**: Tito ne peut pas Log dans lorsque en fournissant une adresse E-mail incorrecte ([cliquez pour afficher l’image en taille réelle](validating-user-credentials-against-the-membership-user-store-cs/_static/image30.png))
 
-
 > [!NOTE]
 > Comme indiqué dans la section de la façon dont l’appartenance Framework gère non valide tentatives de connexion à l’étape 1, lorsque le `Membership.ValidateUser` méthode est appelée et reçoit des informations d’identification non valides, il effectue le suivi de la tentative de connexion non valide et verrouille l’utilisateur si elles dépassent un certain seuil de tentatives non valides dans une fenêtre de temps spécifié. Depuis notre logique d’authentification personnalisée appelle le `ValidateUser` (méthode), un mot de passe incorrect pour un nom d’utilisateur valide incrémente le compteur de tentatives de connexion non valide, mais ce compteur n’est pas incrémenté dans le cas où le nom d’utilisateur et le mot de passe sont valides, mais le adresse de messagerie est incorrecte. Il est probable que sont, ce comportement est approprié, dans la mesure où il est peu probable qu’un pirate doit connaître le nom d’utilisateur et le mot de passe, mais devez utiliser des techniques de force brute pour déterminer l’adresse de messagerie de l’utilisateur.
-
 
 ## <a name="step-4-improving-the-login-controls-invalid-credentials-message"></a>Étape 4 : Amélioration de Message d’informations d’identification non valide du contrôle de connexion
 
@@ -279,11 +251,9 @@ Le code ci-dessus commence en définissant le contrôle Login `FailureText` prop
 
 Pour tester ce code, volontairement tentative connectez-vous en tant qu’un utilisateur existant, mais utiliser un mot de passe incorrect. Effectuez cette opération cinq fois dans une ligne dans un délai de 10 minutes et le compte est verrouillé. Comme la Figure 11 montre, la suite d’une connexion tentatives seront toujours (même avec le mot de passe), mais ne maintenant affiche plus descriptif votre compte a été verrouillé en raison de trop de tentatives de connexion non valide. Veuillez contacter l’administrateur pour que votre message de déverrouillage de compte.
 
-
 [![Tito effectué trop de tentatives de connexion non valide et a été verrouillé](validating-user-credentials-against-the-membership-user-store-cs/_static/image32.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image31.png)
 
 **Figure 11**: Tito effectué trop nombreuses tentatives non valides connexion et a été verrouillé ([cliquez pour afficher l’image en taille réelle](validating-user-credentials-against-the-membership-user-store-cs/_static/image33.png))
-
 
 ## <a name="summary"></a>Récapitulatif
 

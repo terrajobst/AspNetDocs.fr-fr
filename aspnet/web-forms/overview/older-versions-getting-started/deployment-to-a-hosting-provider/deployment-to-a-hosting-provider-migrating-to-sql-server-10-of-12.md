@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: a89d6f32-b71b-4036-8ff7-5f8ac2a6eca8
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 98e521f348cdf1c2bd563f96badbaea6b23f4bcf
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cc4db5b1fcedca675a18f1b78e28f65e51b6cf09
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398954"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132751"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-migrating-to-sql-server---10-of-12"></a>Déploiement d’une Application de Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : Migration vers SQL Server - 10 12
 
@@ -24,7 +24,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > Cette série de didacticiels vous montre comment déployer une ASP.NET (publier) projet d’application web qui inclut une base de données SQL Server Compact à l’aide de Visual Studio 2012 RC ou Visual Studio Express 2012 RC pour le Web. Vous pouvez également utiliser Visual Studio 2010 si vous installez la mise à jour de publication Web. Pour une introduction à la série, consultez [le premier didacticiel de la série](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Pour obtenir un didacticiel qui montre les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions de SQL Server autre que SQL Server Compact et montre comment déployer dans Azure App Service Web Apps, consultez [déploiement Web ASP.NET à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -89,11 +88,9 @@ Dans la solution *SolutionFiles* dossier que vous avez créé dans le [déploiem
 > [!NOTE]
 > Ce script est conçu pour fonctionner avec SQL Server 2008 et les paramètres IIS dans Windows 7 comme ils sont spécifiés dans ce didacticiel. Si vous utilisez une version différente de SQL Server ou de Windows, ou si vous configurez IIS sur votre ordinateur différemment, les modifications apportées à ce script peuvent être nécessaire. Pour plus d’informations sur les scripts SQL Server, consultez [la documentation en ligne de SQL Server](https://go.microsoft.com/fwlink/?LinkId=132511).
 
-
 > [!NOTE] 
 > 
 > **Note de sécurité** ce script donne db\_autorisations de propriétaire sur l’utilisateur qui accède à la base de données au moment de l’exécution, ce qui est ce que vous aurez dans l’environnement de production. Dans certains scénarios, vous souhaiterez spécifier un utilisateur qui a le schéma de base de données complète mettre à jour des autorisations uniquement pour le déploiement, et spécifier pour le moment de l’exécution d’un autre utilisateur qui dispose des autorisations uniquement pour lire et écrire des données. Pour plus d’informations, consultez **vérifié les modifications de Web.config automatique pour les Migrations Code First** dans [déploiement vers IIS comme environnement de Test](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md).
-
 
 ## <a name="configuring-database-deployment-for-the-test-environment"></a>Configuration du déploiement de base de données pour l’environnement de Test
 

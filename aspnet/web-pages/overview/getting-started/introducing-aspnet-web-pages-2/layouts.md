@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: c85ec591-f8d7-4882-b763-de6ab9f3df7a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/layouts
 msc.type: authoredcontent
-ms.openlocfilehash: 58f3ec28914a604aa911cc3cb73733f0d58fd49f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 678eb7089e95e3d221d6b2d82034a62aefa75757
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390413"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131833"
 ---
 # <a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Présentation des Pages Web ASP.NET - création d’une disposition cohérente
 
@@ -26,7 +26,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > - Quelles une page de disposition est.
 > - Guide pratique pour combiner des pages de disposition avec un contenu dynamique.
 > - Comment passer des valeurs à une page de disposition.
-
 
 ## <a name="about-layouts"></a>À propos des dispositions
 
@@ -167,7 +166,6 @@ Si vous le souhaitez, affichez la source de la page dans le navigateur. Vous pou
 > Vous pouvez passer n’importe quel nombre de valeurs à l’aide de la `Page` objet. Si vous souhaitez passer des informations sur les films à la page de disposition, vous pouvez transmettre des valeurs à l’aide de quelque chose comme `Page.MovieTitle` et `Page.Genre` et `Page.MovieYear`. (Ou d’autres noms qui vous a inventé pour stocker les informations.) La seule exigence, qui est probablement évident, est que vous devez utiliser les mêmes noms dans la page de contenu et de la page de disposition.
 > 
 > Les informations que vous passez à l’aide de la `Page` objet n’est pas limité à seulement du texte à afficher sur la page de disposition. Vous pouvez passer une valeur à la page de disposition et de code dans la page de disposition permet ensuite la valeur de décider s’il faut afficher une section de la page, ce qui *.css* pour et ainsi de suite. Les valeurs que vous passez le `Page` objet sont comme les autres valeurs que vous utilisez dans le code. Il est simplement que les valeurs proviennent de la page de contenu et sont passés à la page de disposition.
-
 
 Ouvrez le *AddMovie.cshtml* page et ajoutez une ligne au début du code qui fournit un titre pour le *AddMovie.cshtml* page :
 

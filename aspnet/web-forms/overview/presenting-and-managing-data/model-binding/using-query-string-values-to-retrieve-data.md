@@ -8,12 +8,12 @@ ms.date: 02/27/2014
 ms.assetid: b90978bd-795d-4871-9ade-1671caff5730
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/using-query-string-values-to-retrieve-data
 msc.type: authoredcontent
-ms.openlocfilehash: 7ba95f24085c403c669bc5d6df4dee7c87fbd90a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 143ddcb40b576a3129e659b90bfc8321c061a547
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59414242"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130235"
 ---
 # <a name="using-query-string-values-to-filter-data-with-model-binding-and-web-forms"></a>À l’aide des valeurs de chaîne de requête pour filtrer les données avec la liaison de modèle et les web forms
 
@@ -26,7 +26,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > Ce didacticiel s’appuie sur le projet créé dans le [antérieures](retrieving-data.md) parties de la série.
 > 
 > Vous pouvez [télécharger](https://go.microsoft.com/fwlink/?LinkId=286116) le projet complet en c# ou VB. Le code téléchargeable fonctionne avec Visual Studio 2012 ou Visual Studio 2013. Elle utilise le modèle Visual Studio 2012, qui est légèrement différent de celle du modèle de Visual Studio 2013 présentée dans ce didacticiel.
-
 
 ## <a name="what-youll-build"></a>Vous allez générer
 

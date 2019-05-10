@@ -9,17 +9,16 @@ ms.custom: seoapril2019
 ms.assetid: a36e178f-de46-46d9-b150-61fb3ba1b4d3
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api
 msc.type: chapter
-ms.openlocfilehash: f5b7c080cdd6331e41751e8a4741f724153ec360
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 97a4fc6010a7b0e4febc2e2bb53b9cb69d6e8af0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403010"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125296"
 ---
 # <a name="getting-started-with-aspnet-web-api"></a>Prise en main l’API Web ASP.NET
 
 > Les principes fondamentaux de la création d’un service HTTP à l’aide d’API Web ASP.NET
-
 
 - [Bien démarrer avec Web API 2 (C#)](tutorial-your-first-web-api.md)
 - [Résultats des actions dans l’API Web 2](action-results.md)

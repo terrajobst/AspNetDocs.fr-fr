@@ -8,17 +8,16 @@ ms.date: 11/14/2011
 ms.assetid: 5752873e-07b4-4450-9bf8-6cff8b3b5f50
 msc.legacyurl: /web-forms/videos/net-4/performance
 msc.type: chapter
-ms.openlocfilehash: c2dc613713747cef5ada2e44e2077fc36e7a2086
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 130efa6cb657813a936f1ff3a94acf8719dc26a0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399779"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133024"
 ---
 # <a name="performance"></a>Performances
 
 > Cette série de vidéos couvre les nouvelles façons d’optimiser les pages Web Forms dans ASP.NET 4.
-
 
 - [État sélectif d’une vue](aspnet-4-quick-hit-selective-view-state.md)
 - [Compression d’état facile](aspnet-4-quick-hit-easy-state-compression.md)

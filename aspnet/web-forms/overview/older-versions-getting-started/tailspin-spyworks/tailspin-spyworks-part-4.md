@@ -8,12 +8,12 @@ ms.date: 07/21/2010
 ms.assetid: 4fab47d5-a6ec-4fdc-91f0-651a093a24b9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4
 msc.type: authoredcontent
-ms.openlocfilehash: 63afd25e2ccf22d3c7ae5c5048c80a8cf060d4cf
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7af1b8afa2ecc8df9846f2edd2091b26b93a811c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59382821"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131016"
 ---
 # <a name="part-4-listing-products"></a>Partie 4 : Liste des produits
 
@@ -22,7 +22,6 @@ par [Joe Stagner](https://github.com/JoeStagner)
 > Tailspin Spyworks montre comment extrêmement simple est de créer des applications puissantes et évolutives pour la plate-forme .NET. Il montre comment utiliser les nouvelles fonctionnalités dans ASP.NET 4 pour créer un magasin en ligne, y compris les achats, extraction et administration.
 > 
 > Cette série de didacticiels décrit en détail les étapes prises pour générer l’exemple d’application Tailspin Spyworks. Partie 4 couvre la liste des produits avec le contrôle GridView.
-
 
 ## <a id="_Toc260221670"></a>  Liste des produits avec le contrôle GridView
 

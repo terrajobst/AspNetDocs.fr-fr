@@ -8,15 +8,14 @@ ms.date: 02/27/2014
 ms.assetid: 9f24fb82-c7ac-48da-b8e2-51b3da17e365
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data
 msc.type: authoredcontent
-ms.openlocfilehash: 29baaf2917e47ac46a78a252721be725b4e9b58f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 08cb65f9ef8f5c36070454e011f41554d81f333f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398473"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131541"
 ---
 # <a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Récupération et affichage des données avec la liaison de modèle et les web forms
-
 
 > Cette série de didacticiels montre les aspects de base de l’utilisation de la liaison de modèle avec un projet Web Forms ASP.NET. Liaison de modèle rend interaction des données plus simple que vous traitez des données des objets de source (tels que ObjectDataSource ou SqlDataSource). Cette série commence par une partie introductive et progresse vers des concepts plus avancés dans les didacticiels suivants.
 > 
@@ -34,7 +33,6 @@ ms.locfileid: "59398473"
 > - Microsoft Visual Studio 2017 ou Microsoft Visual Studio Community 2017
 >   
 > Ce didacticiel fonctionne également avec Visual Studio 2012 et Visual Studio 2013, mais il existe des différences dans le modèle de projet et d’interface utilisateur.
-
 
 ## <a name="what-youll-build"></a>Vous allez générer
 
@@ -96,7 +94,6 @@ Dans ce didacticiel, vous allez :
    4. Pour la page maître du formulaire web, sélectionnez **Site.Master**.
    
    5. Sélectionnez **OK**.
-   
 
 ## <a name="add-the-data-model"></a>Ajouter le modèle de données
 

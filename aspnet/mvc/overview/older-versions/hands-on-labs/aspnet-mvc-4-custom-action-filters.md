@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 969ab824-1b98-4552-81fe-b60ef5fc6887
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-custom-action-filters
 msc.type: authoredcontent
-ms.openlocfilehash: 32587c7b0fd3075cd46678922b40bda2019f3a26
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: eaeb32180f79fabf557cbc38ff067eb26b47fea7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381131"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129752"
 ---
 # <a name="aspnet-mvc-4-custom-action-filters"></a>Filtres d’actions personnalisés d’ASP.NET MVC 4
 
@@ -76,11 +76,10 @@ Durée estimée pour effectuer ce laboratoire : **30 minutes**.
 > [!NOTE]
 > Chaque exercice est accompagné par un **fin** dossier contenant la solution obtenue, vous devez obtenir après avoir effectué les exercices. Si vous avez besoin d’aide supplémentaire sur l’utilisation via les exercices, vous pouvez utiliser cette solution comme guide.
 
-
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Logging_Actions"></a>
-### <a name="exercise-1-logging-actions"></a>Exercice 1 : Enregistrement des Actions
+### <a name="exercise-1-logging-actions"></a>Exercice 1 : Enregistrement des Actions
 
 Dans cet exercice, vous allez apprendre à créer un filtre de journal d’action personnalisé à l’aide de fournisseurs de filtres ASP.NET MVC 4. Pour ce faire, vous appliquerez un filtre de journalisation sur le site du Store musique qui enregistre toutes les activités dans les contrôleurs sélectionnés.
 
@@ -95,7 +94,6 @@ Le filtre étendra **ActionFilterAttributeClass** et remplacer **OnActionExecuti
 > - **Exception** filtre, qui s’exécute si une exception non gérée levée dans une méthode d’action, en commençant par les filtres d’autorisation et se terminant par l’exécution du résultat. Filtres d’exception peuvent être utilisés pour des tâches telles que la journalisation ou l’affichage d’une page d’erreur.
 > 
 > Pour plus d’informations sur les fournisseurs de filtres, visitez ce lien MSDN : ([https://msdn.microsoft.com/library/dd410209.aspx](https://msdn.microsoft.com/library/dd410209.aspx)).
-
 
 <a id="AboutLoggingFeature"></a>
 
@@ -132,7 +130,6 @@ Dans cette tâche, vous allez créer une classe d’attributs de filtre personna
 > - **OnResultExecuted**(filterContext ResultExecutedContext) : Une fois l’exécution du résultat (une fois que la vue est restituée).
 > 
 > En substituant une de ces méthodes dans une classe dérivée, vous pouvez exécuter votre propre code de filtrage.
-
 
 1. Ouvrez le **commencer** solution situé dans **\Source\Ex01-LoggingActions\Begin** dossier.
 
@@ -219,7 +216,7 @@ Dans cette tâche, vous allez tester que le filtre de journalisation fonctionne.
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Managing_Multiple_Action_Filters"></a>
-### <a name="exercise-2-managing-multiple-action-filters"></a>Exercice 2 : La gestion de plusieurs filtres d’Action
+### <a name="exercise-2-managing-multiple-action-filters"></a>Exercice 2 : La gestion de plusieurs filtres d’Action
 
 Dans cet exercice, vous ajoutez un deuxième filtre d’Action personnalisé à la classe StoreController et définir l’ordre spécifique dans lequel les deux filtres seront exécutés. Ensuite, vous mettrez à jour le code pour enregistrer le filtre dans le monde entier.
 
@@ -352,7 +349,6 @@ Dans cette tâche, vous mettrez à jour la solution pour inscrire le nouveau fil
 
 > [!NOTE]
 > En outre, vous pouvez déployer cette application à Sites Web Windows Azure suit [annexe b : Publication d’une Application ASP.NET MVC 4, à l’aide de Web Deploy](#AppendixB).
-
 
 ---
 

@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: 7e85c70e-1a88-4408-8b3d-29611c7713ed
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/publishing
 msc.type: authoredcontent
-ms.openlocfilehash: ece436d44908497d6cf10017ba1ee285bfb4a5b2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 49a841dbda183bf1d59153b83f694c9f517e0b94
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382097"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127750"
 ---
 # <a name="introducing-aspnet-web-pages---publishing-a-site-by-using-webmatrix"></a>Présentation des Pages Web ASP.NET - publication d’un Site à l’aide de WebMatrix
 
@@ -26,7 +26,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > - Microsoft Azure
 > - Société d’hébergement Web
 
-
 ## <a name="about-publishing-your-site"></a>Sur la publication de votre Site
 
 Jusqu'à présent, vous avez fait tout votre travail sur un ordinateur local, notamment le test de vos pages. Pour exécuter votre<em>.cshtml</em> pages, vous avez utilisé le serveur web qui est intégré à WebMatrix, à savoir IIS Express. Mais bien sûr, aucune autre peut voir le site que vous avez créé à l’exception de vous. Pour d’autres permettent de travailler avec votre site, vous devez le publier sur Internet.
@@ -35,7 +34,6 @@ Sauf si vous avez déjà accès à un serveur web public, publication signifie q
 
 > [!NOTE]
 > Vous aurez peut-être accès à un serveur web publique via le fournisseur de services internet (ISP) qui vous permet d’obtenir le service internet à la maison. Toutefois, votre fournisseur d’hébergement doit prendre en charge les Pages Web ASP.NET. De nombreux ISP ne, mais il est toujours intéressant de vérification.
-
 
 Dans ce didacticiel, nous allons vous donner une vue d’ensemble de la publication. Il n’est pas pratique fournir des détails précis pour tout, étant donné que le processus diffère légèrement pour chaque fournisseur d’hébergement. Mais, vous obtiendrez une bonne idée du fonctionnement du processus.
 
@@ -142,7 +140,6 @@ Choisissez une qui vous convient. Pour ce didacticiel, nous avons sélectionné 
 > [!NOTE]
 > Notre choix d’un fournisseur d’hébergement pour ce didacticiel ne doit pas être interprété comme une approbation de cette société plutôt que les autres. Mais nous avons dû choisir un à titre d’illustration et DiscountASP.NET est une des nombreuses sociétés qui prend en charge des Pages Web ASP.NET et le protocole Web Deploy pour la publication.
 
-
 En règle générale, une fois que vous avez inscrit avec le fournisseur d’hébergement, la société vous envoie un e-mail contenant un nom d’utilisateur et le mot de passe, l’URL du serveur de web et ainsi de suite. Si la société d’hébergement prend en charge le protocole Web Deploy, ils peuvent envoyer vous un fichier qui contient les paramètres de publication, ou vous permettent de télécharger un. Un fichier de paramètres de publication simplifie le processus pour vous.
 
 Lorsque vous êtes inscrit et que vous êtes prêt à publier, cliquez sur le **publier** bouton dans le ruban de WebMatrix. Le **paramètres de publication** boîte de dialogue s’affiche.
@@ -196,7 +193,6 @@ Cliquez sur le **publier** bouton du ruban. WebMatrix détermine ce qui est modi
 > 
 > Par défaut, WebMatrix publie votre base de données (*.sdf* fichier) uniquement la première fois que vous publierez le site. Une fois votre site est publié et les personnes interagissent avec le site Web, la base de données sur le site a en général, les données du site réel. Vous devez être très attention à ne pas remplacer la base de données en direct avec le *.sdf* fichier qui se trouve sur votre ordinateur, qui contient généralement des données de test uniquement. C’est pourquoi vous voyez l’avertissement **publication remplacera les bases de données distantes**, et pourquoi la case à cocher *WebPagesMovies.sdf* est désactivée par défaut.
 
-
 Cliquez sur **Continuer**. WebMatrix publie les fichiers modifiés et affiche un message de réussite, semblable à celle de la première fois que vous avez publié.
 
 Accédez au site en direct (vous pouvez cliquer sur le lien dans le message de réussite si elle n’est toujours affichée) et vérifiez que votre modification a été publiée.
@@ -210,7 +206,6 @@ Accédez au site en direct (vous pouvez cliquer sur le lien dans le message de r
 > Modifier à distance est un moyen simple pour apporter des modifications à votre site dynamique. Toutefois, les modifications de cette façon ne sont pas synchronisées avec les fichiers dans votre site local. Pour synchroniser les fichiers locaux avec le site distant, vous pouvez télécharger les fichiers à distance. Ce processus fonctionne comme la publication, à l’exception dans l’ordre inverse.
 > 
 > Nous ne décrirons plus sur les mode de modification à distance et à distance-téléchargement installations de WebMatrix ici. Elles sont particulièrement utiles si plusieurs personnes de travailler sur le même site sur des ordinateurs différents. Pour plus d’informations, consultez [publier et modifier un Site distant avec la version bêta 2 de WebMatrix](https://go.microsoft.com/fwlink/?LinkId=251591).
-
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 

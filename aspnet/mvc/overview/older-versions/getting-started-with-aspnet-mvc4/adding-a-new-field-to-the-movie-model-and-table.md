@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 9ef2c4f1-a305-4e0a-9fb8-bfbd9ef331d9
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-new-field-to-the-movie-model-and-table
 msc.type: authoredcontent
-ms.openlocfilehash: 307719f30c9efc8001f63f3ab068e50f82e1c5c0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b0a66cf62c34a59ca5c89c2f380093165e765100
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59399617"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129903"
 ---
 # <a name="adding-a-new-field-to-the-movie-model-and-table"></a>Ajout d’un nouveau champ à la table et au modèle Movie
 
@@ -21,7 +21,6 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
 > > Une version mise à jour de ce didacticiel est disponible [ici](../../getting-started/introduction/getting-started.md) qui utilise ASP.NET MVC 5 et Visual Studio 2013. Il est plus sécurisé, beaucoup plus simple à suivre et illustre plusieurs fonctionnalités.
-
 
 Dans cette section, vous utiliserez des Migrations Entity Framework Code First pour migrer certaines modifications vers les classes de modèle pour la modification est appliquée à la base de données.
 
@@ -68,7 +67,6 @@ Cela ajoute le code suivant à l’aide d’instruction :
 > [!NOTE] 
 > 
 > Code First Migrations appelle la `Seed` méthode après chaque migration (autrement dit, l’appel **mise à jour la base de données** dans la Console du Gestionnaire de Package), cette méthode met à jour les lignes qui ont déjà été insérés, ou les insère si elles n’existent pas encore.
-
 
 **Appuyez sur CTRL-MAJ-B pour générer le projet.** (Les étapes suivantes échoue si votre ne créez pas à ce stade.)
 
@@ -122,13 +120,11 @@ Vous avez maintenant mis à jour le code d’application pour prendre en charge 
 
 Vous voyez cette erreur parce que la mise à jour `Movie` modèle classe dans l’application est maintenant différent de celui du schéma de la `Movie` table de base de données existante. (Il n’existe pas de colonne `Rating` dans la table de base de données.)
 
-
 Plusieurs approches sont possibles pour résoudre l’erreur :
 
 1. Laissez Entity Framework supprimer et recréer automatiquement la base de données sur la base du nouveau schéma de classe de modèle. Cette approche est très pratique lorsque vous effectuez un développement actif sur une base de données de test ; Il vous permet de faire évoluer rapidement le schéma de modèle et de la base de données ensemble. L’inconvénient, cependant, est que le que vous perdez les données existantes dans la base de données, donc vous *ne* à utiliser cette approche sur une base de données de production ! À l’aide d’un initialiseur pour amorcer automatiquement une base de données avec des données de test est souvent un moyen efficace pour développer une application. Pour plus d’informations sur les initialiseurs de base de données Entity Framework, consultez de Tom Dykstra [didacticiel d’ASP.NET MVC/Entity Framework](../../getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
 2. Modifier explicitement le schéma de la base de données existante pour le faire correspondre aux classes du modèle. L’avantage de cette approche est que vous conservez vos données. Vous pouvez apporter cette modification manuellement ou en créant un script de modification de la base de données.
 3. Utilisez Migrations Code First pour mettre à jour le schéma de base de données.
-
 
 Pour ce didacticiel, nous allons utiliser les migrations Code First.
 

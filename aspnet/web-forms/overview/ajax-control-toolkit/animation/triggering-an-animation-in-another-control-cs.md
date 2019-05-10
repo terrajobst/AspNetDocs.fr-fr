@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: e5d99c2b-d8ee-413c-80d5-c120cffb0a4c
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ca383b7a82b754c7556dcea3bcdb8e28e5c7a45d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1db5468d3c1d35b25aea0d5ff331a742ce421191
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384849"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132911"
 ---
 # <a name="triggering-an-animation-in-another-control-c"></a>Déclenchement d’une animation dans un autre contrôle (C#)
 
@@ -22,7 +22,6 @@ par [Christian Wenz](https://github.com/wenz)
 [Télécharger le Code](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation8.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation8CS.pdf)
 
 > Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. En règle générale, le lancement d’une animation est déclenchée par l’interaction utilisateur avec le même contrôle. Il est cependant également possible d’interagir avec un contrôle, puis d’animation à un autre contrôle.
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -55,7 +54,6 @@ Dans le `<Animations>` nœud, les animations sur place comme d’habitude. Afin 
 [!code-aspx[Main](triggering-an-animation-in-another-control-cs/samples/sample6.aspx)]
 
 Notez l’ordre spécial dans lequel apparaissent les animations individuelles. Tout d’abord, le bouton est désactivé une fois que l’animation s’exécute. Dans la mesure où il existe aucune `AnimationTarget` d’attribut dans le `<EnableAction>` élément, cette animation est appliquée pour le contrôle d’origine : le bouton. Les étapes de le deux animation sont effectués en parallèle (`<Parallel>` élément). Les deux ont leur `AnimationTarget` les attributs définis pour `"Panel1"`, animer ainsi le panneau de configuration, et pas sur le bouton.
-
 
 [![Un clic de souris sur le bouton démarre l’animation de panneau](triggering-an-animation-in-another-control-cs/_static/image2.png)](triggering-an-animation-in-another-control-cs/_static/image1.png)
 

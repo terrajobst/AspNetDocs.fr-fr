@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 0c8e74f1-b3ba-4ca9-a1c5-f5c4831a359a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/using-modalpopup-with-a-repeater-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f1875ae95d79ec2a6762a547aabfbd03e0930b2c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4da3a08feae4c5fd43e9176f34e929b450c76674
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386500"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132614"
 ---
 # <a name="using-modalpopup-with-a-repeater-control-vb"></a>Utilisation de ModalPopup avec un contrôle Repeater (VB)
 
@@ -22,7 +22,6 @@ par [Christian Wenz](https://github.com/wenz)
 [Télécharger le Code](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup2.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup2VB.pdf)
 
 > Le contrôle ModalPopup dans AJAX Control Toolkit offre un moyen simple de créer une contextuelle modale à l’aide de moyens de côté client. Il est également possible d’utiliser ce contrôle dans un répéteur.
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -47,7 +46,6 @@ Afin d’optimiser la fenêtre contextuelle du Repeater le `ModalPopupExtender` 
 [!code-aspx[Main](using-modalpopup-with-a-repeater-control-vb/samples/sample4.aspx)]
 
 Ensuite, chaque élément dans la source de données s’affiche avec un bouton en regard de celui-ci qui déclenche la fenêtre contextuelle modale.
-
 
 [![La fenêtre contextuelle modale peut être déclenchée pour chaque entrée de source de données](using-modalpopup-with-a-repeater-control-vb/_static/image2.png)](using-modalpopup-with-a-repeater-control-vb/_static/image1.png)
 

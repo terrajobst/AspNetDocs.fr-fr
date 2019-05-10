@@ -8,12 +8,12 @@ ms.date: 11/28/2017
 ms.custom: seoapril2019
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 5e3c049ba4349301c3c2d173d4311b3d0883bf68
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3e35c2bc0e46dfdb4544b772775eddd533f27be3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401745"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125224"
 ---
 # <a name="get-started-with-aspnet-web-api-2-c"></a>Bien démarrer avec ASP.NET Web API 2 (c#)
 
@@ -52,7 +52,6 @@ Dans le **nouveau projet ASP.NET** boîte de dialogue, sélectionnez le **vide**
 
 > [!NOTE]
 > Vous pouvez également créer un projet d’API Web en utilisant le &quot;API Web&quot; modèle. Le modèle API Web utilise ASP.NET MVC pour fournir des pages d’aide API. J’utilise le modèle vide pour ce didacticiel, car je veux vous montrer les API Web sans MVC. En règle générale, vous n’avez pas besoin de savoir ASP.NET MVC pour utiliser l’API Web.
-
 
 ## <a name="adding-a-model"></a>Ajout d’un modèle
 
@@ -93,7 +92,6 @@ La génération de modèles automatique crée un fichier nommé ProductsControll
 
 > [!NOTE]
 > Vous n’avez pas besoin de placer vos contrôleurs dans un dossier nommé contrôleurs. Le nom du dossier est simplement un moyen pratique d’organiser vos fichiers sources.
-
 
 Si ce fichier n’est pas déjà ouvert, double-cliquez sur le fichier pour l’ouvrir. Remplacez le code dans ce fichier avec les éléments suivants :
 

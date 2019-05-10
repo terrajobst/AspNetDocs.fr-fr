@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 4ba029b6-ee7c-4e45-a0e7-b703c37e5d9a
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: eeed594e785b99146140dcd2833a95bf6e467823
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: abb59f16759a7d32c6900baf96fe3a1299170922
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390439"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129791"
 ---
 # <a name="creating-an-entity-framework-data-model-for-an-aspnet-mvc-application-1-of-10"></a>Création d’un modèle de données Entity Framework pour une Application ASP.NET MVC (1 sur 10)
 
@@ -58,7 +58,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > 
 > La version d’origine de ce didacticiel est disponible dans le [EF 4.1 / MVC 3 e-book](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#GettingStartedwiththeEntityFramework4.1usingASP.NETMVC).
 
-
 ## <a name="the-contoso-university-web-application"></a>L’Application Web Contoso University
 
 L’application que vous allez générer dans ces didacticiels est un site web simple d’université.
@@ -97,7 +96,7 @@ Cliquez sur **OK**.
 
 Quelques changements simples configureront le menu, la disposition et la page d’accueil du site.
 
-Ouvrez *Views\Shared\\_Layout.cshtml*et remplacez le contenu du fichier par le code suivant. Les modifications sont mises en surbrillance.
+Ouvrez *Views\Shared\\_Layout.cshtml*et remplacez le contenu du fichier par le code suivant. Les modifications apparaissent en surbrillance.
 
 [!code-cshtml[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample1.cshtml?highlight=5,15,25-28,43)]
 
@@ -131,7 +130,6 @@ Dans les sections suivantes, vous allez créer une classe pour chacune de ces en
 > [!NOTE]
 > Si vous essayez de compiler le projet avant d’avoir créé toutes ces classes d’entité, vous obtiendrez des erreurs de compilateur.
 
-
 ### <a name="the-student-entity"></a>L’entité Student
 
 ![Student_entity](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image7.png)
@@ -158,7 +156,7 @@ Dans le dossier *Models*, créez *Enrollment.cs* et remplacez le code existant p
 
 La propriété de niveau est un [enum](https://msdn.microsoft.com/data/hh859576.aspx). Le point d’interrogation après la `Grade` déclaration de type indique que le `Grade` propriété est [nullable](https://msdn.microsoft.com/library/2cf62fcy.aspx). Un niveau qui a la valeur null est différent à partir d’une note égale à zéro, cela signifie qu’une note n’est pas connue ou n’a pas encore été affectée.
 
-La propriété `StudentID` est une clé étrangère, et la propriété de navigation correspondante est `Student`. Une entité `Enrollment` est associée à une entité `Student`, donc la propriété peut contenir uniquement une entité `Student` unique (contrairement à la propriété de navigation `Student.Enrollments` que vous avez vue précédemment, qui peut contenir plusieurs entités `Enrollment`).
+La propriété `StudentID` est une clé étrangère et la propriété de navigation correspondante est `Student`. Une entité `Enrollment` est associée à une entité `Student`, donc la propriété peut contenir uniquement une entité `Student` unique (contrairement à la propriété de navigation `Student.Enrollments` que vous avez vue précédemment, qui peut contenir plusieurs entités `Enrollment`).
 
 La propriété `CourseID` est une clé étrangère et la propriété de navigation correspondante est `Course`. Une entité `Enrollment` est associée à une entité `Course`.
 

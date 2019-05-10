@@ -8,12 +8,12 @@ ms.date: 11/01/2010
 ms.assetid: 658b149b-d770-46bf-8b4b-4e47cca242f3
 msc.legacyurl: /mvc/overview/older-versions/creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript
 msc.type: authoredcontent
-ms.openlocfilehash: 91c96cc413e63ad2fc160ffbb473c4f3e1ada3e4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fb63493ff22c9261fc5746a998a32f2511141f87
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401060"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130388"
 ---
 # <a name="creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript"></a>Création d’une application MVC 3 Application avec Razor et JavaScript non obstrusif
 
@@ -22,7 +22,6 @@ by [Microsoft](https://github.com/microsoft)
 > L’exemple d’application web liste utilisateur montre combien il est simple de créer des applications ASP.NET MVC 3 à l’aide du moteur de vue Razor. L’exemple d’application montre comment utiliser le nouveau moteur d’affichage Razor avec ASP.NET MVC version 3 et Visual Studio 2010 pour créer un site Web liste utilisateur fictif qui inclut des fonctionnalités telles que la création, affichage, modification et suppression d’utilisateurs.
 > 
 > Ce didacticiel décrit les étapes qui ont été prises pour générer la liste des utilisateurs exemple ASP.NET MVC 3 d’application. Un projet Visual Studio avec C# et code source Visual Basic est disponible pour accompagner cette rubrique : [Télécharger](https://code.msdn.microsoft.com/aspnetmvcsamples/Release/ProjectReleases.aspx?ReleaseId=5114). Si vous avez des questions à propos de ce didacticiel, veuillez les valider pour le [forum MVC](https://forums.asp.net/1146.aspx).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -185,7 +184,6 @@ Pour plus d’informations sur la validation client non obstructive, consultez l
 
 > [!NOTE]
 > Dans la version bêta d’ASP.NET MVC 3, vous avez parfois besoin envoyer le formulaire afin de démarrer la validation côté client. Cela peut être modifié pour la version finale.
-
 
 ## <a name="creating-the-create-view"></a>Création de la vue Create
 

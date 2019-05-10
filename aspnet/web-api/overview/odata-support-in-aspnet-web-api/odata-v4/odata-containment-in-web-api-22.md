@@ -8,19 +8,18 @@ ms.date: 06/27/2014
 ms.assetid: 5fbfefad-a17a-4c46-8646-f1ccd154cd56
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-containment-in-web-api-22
 msc.type: authoredcontent
-ms.openlocfilehash: fed55a4bf01e82af5167018f03e28a6274fcda78
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 50050e40c4c42bf6d769d077c27864ee6417d4db
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382197"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131638"
 ---
 # <a name="containment-in-odata-v4-using-web-api-22"></a>Relation contenant-contenu dans OData v4 à l’aide de Web API 2.2
 
 by Jinfu Tan
 
 > En règle générale, une entité est uniquement accessible si elle a été encapsulée dans un jeu d’entités. Mais OData v4 fournit deux options supplémentaires, Singleton et relation contenant-contenu, les deux API Web 2.2 prend en charge.
-
 
 Cette rubrique montre comment définir une relation contenant-contenu dans un point de terminaison OData dans API Web 2.2. Pour plus d’informations sur la relation contenant-contenu, consultez [relation contenant-contenu sera disponible avec OData v4](https://blogs.msdn.com/b/odatateam/archive/2014/03/13/containment-is-coming-with-odata-v4.aspx). Pour créer un point de terminaison OData V4 dans l’API Web, consultez [créer une Using ASP.NET Web API 2.2 OData v4 point de terminaison](create-an-odata-v4-endpoint.md).
 

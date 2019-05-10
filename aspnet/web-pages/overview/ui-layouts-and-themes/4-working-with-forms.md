@@ -8,12 +8,12 @@ ms.date: 02/10/2014
 ms.assetid: f3f4b8c8-e8f6-4474-ad94-69228a6c01ee
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/4-working-with-forms
 msc.type: authoredcontent
-ms.openlocfilehash: 680739cbcf54bc9ca7a3bd8167d043ff537eaad5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ec5ad784978b2d5191d59398fc4b5ed25ae516fb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417531"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128404"
 ---
 # <a name="working-with-html-forms-in-aspnet-web-pages-razor-sites"></a>Utilisation des formulaires HTML dans les Sites ASP.NET Web Pages (Razor)
 
@@ -42,7 +42,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Ce didacticiel fonctionne également avec ASP.NET Web Pages 2.
-
 
 ## <a name="creating-a-simple-html-form"></a>Création d’un formulaire HTML Simple
 
@@ -89,7 +88,6 @@ Pour traiter le formulaire, vous ajoutez le code qui lit les valeurs de champ so
 > Il est judicieux d’utiliser n’importe quel moment vous affichez les chaînes de codage HTML (entrée) que vous avez obtenu à partir d’un utilisateur. Si vous n’est pas le cas, un utilisateur peut essayer d’obtenir votre page web pour exécuter un script malveillant ou de faire autre chose qui peut compromettre la sécurité de votre site ou qui n’est pas seulement à vos attentes. (Cela est particulièrement important si d’entrée d’utilisateur, de les stocker un endroit et de les afficher ultérieurement &#8212; comme par exemple, un commentaire de blog, de révision de l’utilisateur ou quelque chose de similaire à celle.)
 > 
 > Pour aider à éviter ces problèmes, ASP.NET Web Pages automatiquement au format HTML n’importe quel texte de contenu que vous avez la sortie à partir de votre code. Par exemple, lorsque vous affichez le contenu d’une variable ou une expression à l’aide de code tel que `@MyVar`, ASP.NET Web Pages encode automatiquement la sortie.
-
 
 ## <a name="validating-user-input"></a>Validation des entrées utilisateur
 

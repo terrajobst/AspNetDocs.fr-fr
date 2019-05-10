@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 44761193-04ba-4990-9f90-145d3c10a716
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 71ff3c269c5d1ed43a67d19442eda8e9d4728295
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d0d6c9dd5234c8085b5c1dea5552854486314010
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405701"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129784"
 ---
 # <a name="implementing-the-repository-and-unit-of-work-patterns-in-an-aspnet-mvc-application-9-of-10"></a>Implémentation du référentiel et une unité de modèles de travail dans une Application ASP.NET MVC (partie 9 sur 10)
 
@@ -26,7 +26,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Si vous rencontrez un problème que vous ne pouvez pas résoudre, [télécharger le chapitre terminé](building-the-ef5-mvc4-chapter-downloads.md) et essayez de reproduire votre problème. Vous trouverez généralement la solution au problème en comparant votre code pour le code complet. Pour certaines erreurs courantes et comment les résoudre, consultez [erreurs et des solutions de contournement.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 Dans le didacticiel précédent, vous avez utilisé l’héritage pour réduire le code redondant dans le `Student` et `Instructor` classes d’entité. Dans ce didacticiel, vous verrez des façons d’utiliser le référentiel et une unité de travail des modèles pour les opérations CRUD. Comme dans le didacticiel précédent, dans celle-ci, vous allez modifier la façon dont votre code fonctionne avec des pages vous déjà créée plutôt que de créer de nouvelles pages.
 
@@ -52,7 +51,6 @@ Vous ne créez des tests unitaires dans cette série de didacticiels. Pour une i
 > [!NOTE]
 > Il existe de nombreuses façons d’implémenter le référentiel et une unité de travail des modèles. Vous pouvez utiliser les classes du référentiel avec ou sans une classe d’unité de travail. Vous pouvez implémenter un référentiel unique pour tous les types d’entités, ou pour chaque type. Si vous implémentez un pour chaque type, vous pouvez utiliser des classes séparées, une classe de base générique et les classes dérivées, ou une classe de base abstraite et classes dérivées. Vous pouvez inclure la logique métier dans votre référentiel ou le limiter à la logique d’accès aux données. Vous pouvez également créer une couche d’abstraction dans votre classe de contexte de base de données à l’aide de [IDbSet](https://msdn.microsoft.com/library/gg679233(v=vs.103).aspx) interfaces il au lieu de [DbSet](https://msdn.microsoft.com/library/system.data.entity.dbset(v=vs.103).aspx) types pour vos jeux d’entités. L’approche à l’implémentation d’une couche d’abstraction dans ce didacticiel est une option à prendre en compte, pas une recommandation pour tous les scénarios et environnements.
 
-
 ## <a name="creating-the-student-repository-class"></a>Création de la classe de référentiel étudiant
 
 Dans le *DAL* dossier, créez un fichier de classe nommé *IStudentRepository.cs* et remplacez le code existant par le code suivant :
@@ -75,7 +73,7 @@ Implémente le référentiel [IDisposable](https://msdn.microsoft.com/library/sy
 
 ## <a name="change-the-student-controller-to-use-the-repository"></a>Modifier le contrôleur de l’étudiant pour utiliser le référentiel
 
-Dans *StudentController.cs*, remplacez le code actuellement dans la classe par le code suivant. Les modifications sont mises en surbrillance.
+Dans *StudentController.cs*, remplacez le code actuellement dans la classe par le code suivant. Les modifications apparaissent en surbrillance.
 
 [!code-csharp[Main](implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application/samples/sample4.cs?highlight=13-18,44,75,77,102-103,120,137-138,159,172-174,186)]
 
@@ -142,7 +140,6 @@ Dans la version d’origine du code, `students` est typé comme un `IQueryable` 
 > [!code-sql[Main](implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application/samples/sample16.sql)]
 > 
 > (Ce didacticiel explique comment examiner les requêtes envoyées à SQL Server.)
-
 
 La section suivante montre comment implémenter des méthodes de référentiel qui vous permettent de spécifier que ce travail doit être effectué par la base de données.
 

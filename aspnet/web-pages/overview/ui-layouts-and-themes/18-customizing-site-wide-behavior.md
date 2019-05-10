@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: e158bed7-226f-4275-b02e-7553bd58c669
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/18-customizing-site-wide-behavior
 msc.type: authoredcontent
-ms.openlocfilehash: 2763cae0f8124cfcaccfd737622cb17b6dd947e1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f05e05f725d9209bce283ce18659ae5efe4de2ee
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413293"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131854"
 ---
 # <a name="customizing-site-wide-behavior-for-aspnet-web-pages-razor-sites"></a>Personnalisation du comportement de l’échelle du Site pour les Sites ASP.NET Web Pages (Razor)
 
@@ -39,7 +39,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Ce didacticiel fonctionne également avec 3 des Pages Web ASP.NET et Visual Studio 2013 (ou Visual Studio Express 2013 pour le Web), sauf que vous ne pouvez pas utiliser la bibliothèque de programmes d’assistance de Web ASP.NET.
-
 
 <a id="Adding_Website_Startup_Code"></a>
 ## <a name="adding-website-startup-code-for-aspnet-web-pages"></a>Ajout de Code de démarrage du site Web pour ASP.NET Web Pages

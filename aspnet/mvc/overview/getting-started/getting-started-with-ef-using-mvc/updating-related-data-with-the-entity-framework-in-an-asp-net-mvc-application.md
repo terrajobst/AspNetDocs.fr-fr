@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 7ba88418-5d0a-437d-b6dc-7c3816d4ec07
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: d90a327da40ffd6d7956c5fbe019cf9de30c706d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4d5f6447fdccefdcdf9497a9e94f23243302a0e1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407508"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120900"
 ---
 # <a name="tutorial-update-related-data-with-ef-in-an-aspnet-mvc-app"></a>Tutoriel : Mettre à jour des données associées avec Entity Framework dans une application ASP.NET MVC
 
@@ -126,7 +126,6 @@ Remplacez le `HttpPost` `Edit` méthode avec le code suivant. qui gère les mise
 
 La référence à `RetryLimitExceededException` nécessite un `using` instruction ; Ajoutez-le : pointez votre souris sur `RetryLimitExceededException`. Le message suivant apparaît : ![ Message d’exception de nouvelle tentative](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image13.png)
 
-
 Sélectionnez **afficher les corrections éventuelles**, puis **à l’aide de System.Data.Entity.Infrastructure**
 
 ![Résoudre l’exception de nouvelle tentative](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image14.png)
@@ -161,7 +160,7 @@ Pour fournir des données à la vue pour la liste de cases à cocher, vous utili
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample15.cs)]
 
-Dans *InstructorController.cs*, remplacez le `HttpGet` `Edit` méthode avec le code suivant. Les modifications sont mises en surbrillance.
+Dans *InstructorController.cs*, remplacez le `HttpGet` `Edit` méthode avec le code suivant. Les modifications apparaissent en surbrillance.
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample16.cs?highlight=9,12,20-35)]
 
@@ -169,7 +168,7 @@ Le code ajoute un chargement hâtif pour la propriété de navigation `Courses` 
 
 Le code dans le `PopulateAssignedCourseData` méthode lit toutes les `Course` entités pour charger une liste de cours à l’aide de la vue de classe de modèle. Pour chaque cours, le code vérifie s’il existe dans la propriété de navigation `Courses` du formateur. Pour créer une recherche efficace lors de la vérification si un cours est affecté au formateur, les cours affectés au formateur sont placés dans un [HashSet](https://msdn.microsoft.com/library/bb359438.aspx) collection. Le `Assigned` propriété est définie sur `true` pour les cours le formateur est affecté. La vue utilise cette propriété pour déterminer quelles cases doivent être affichées cochées. Enfin, la liste est passée à la vue dans un `ViewBag` propriété.
 
-Ensuite, ajoutez le code qui est exécuté quand l’utilisateur clique sur **Save**. Remplacez le `EditPost` méthode avec le code suivant, qui appelle une méthode qui met à jour le `Courses` propriété de navigation de la `Instructor` entité. Les modifications sont mises en surbrillance.
+Ensuite, ajoutez le code qui est exécuté quand l’utilisateur clique sur **Save**. Remplacez le `EditPost` méthode avec le code suivant, qui appelle une méthode qui met à jour le `Courses` propriété de navigation de la `Instructor` entité. Les modifications apparaissent en surbrillance.
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample17.cs?highlight=3,11,25,37,40-68)]
 
@@ -234,7 +233,6 @@ Ce code ne gère pas le scénario d’un formateur affecté en tant qu’adminis
 ## <a name="add-office-location-and-courses-to-the-create-page"></a>Ajouter des emplacements de bureau et des cours à la page Create
 
 Dans *InstructorController.cs*, supprimez le `HttpGet` et `HttpPost` `Create` méthodes, puis ajoutez le code suivant à leur place :
-
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample25.cs)]
 

@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 21ebbaee-7ed8-45ae-b6c1-c27c88342e48
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/configuration-and-instrumentation
 msc.type: authoredcontent
-ms.openlocfilehash: b06f105b16087f97788e0ab360af41f538d2c1ac
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cd5bedce5459e8cf8e72df8de69ebd82f2d97789
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400800"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131719"
 ---
 # <a name="configuration-and-instrumentation"></a>Configuration et instrumentation
 
 by [Microsoft](https://github.com/microsoft)
 
 > Voici les principales modifications de configuration et l’instrumentation dans ASP.NET 2.0. La nouvelle API de configuration ASP.NET permet des modifications de configuration être apportée par programmation. En outre, existent de nombreux nouveaux paramètres de configuration permettant de nouvelles configurations et l’instrumentation.
-
 
 Voici les principales modifications de configuration et l’instrumentation dans ASP.NET 2.0. La nouvelle API de configuration ASP.NET permet des modifications de configuration être apportée par programmation. En outre, existent de nombreux nouveaux paramètres de configuration permettant de nouvelles configurations et l’instrumentation.
 
@@ -40,7 +39,6 @@ L’API de configuration ASP.NET comprend un ensemble d’objets de gestion ASP.
 > [!NOTE]
 > L’API de configuration ne prend pas en charge la création d’applications IIS.
 
-
 ## <a name="working-with-local-and-remote-configuration-settings"></a>Utilisation des paramètres de Configuration locaux et distants
 
 Un objet de Configuration représente l’affichage fusionné des paramètres de configuration qui s’appliquent à une entité physique spécifique, tel qu’un ordinateur, ou à une entité logique, telle qu’une application ou un site Web. L’entité logique spécifiée peut exister sur l’ordinateur local ou sur un serveur distant. Lorsqu’il n’existe aucun fichier de configuration pour une entité spécifiée, l’objet de Configuration représente les paramètres de configuration par défaut, comme défini par le fichier Machine.config.
@@ -58,7 +56,6 @@ Vous utilisez la méthode GetSection ou GetSectionGroup pour lire les informatio
 
 > [!NOTE]
 > Si vous utilisez une méthode GetSection statique qui accepte un paramètre de chemin d’accès, le paramètre path doit faire référence à l’application dans laquelle le code est en cours d’exécution. Sinon, le paramètre est ignoré et les informations de configuration pour l’application en cours d’exécution sont retournées.
-
 
 ### <a name="writing"></a>Écriture
 
@@ -97,7 +94,6 @@ La Configuration d’objet représente ne représente pas un fichier de configur
 
 > [!NOTE]
 > Notez que si le chemin d’accès /ProductInfo n’existe pas, le code ci-dessus retournera la configuration par défaut comme spécifié dans le fichier machine.config.
-
 
 Une fois que vous avez l’objet de Configuration, vous pouvez ensuite utiliser la méthode GetSection ou GetSectionGroup pour Explorer les paramètres de configuration. L’exemple suivant obtient une référence aux paramètres d’emprunt d’identité pour l’application ProductInfo ci-dessus :
 
@@ -199,7 +195,6 @@ Vous pouvez également transférer les événements à la messagerie électroniq
 
 > [!NOTE]
 > Aucune de ces fournisseurs de messagerie n’est configuré pour vous. Vous devez les ajouter à votre fichier Web.config.
-
 
 La principale différence entre ces fournisseurs de deux messagerie est que SimpleMailWebEventProvider envoie des messages électroniques dans un modèle générique ne peut pas être modifié. L’exemple de fichier Web.config ajoute ce fournisseur de messagerie à la liste des fournisseurs configurés à l’aide de la règle suivante :
 
@@ -313,7 +308,6 @@ Vous pouvez également recompiler une application sur place après avoir ajouté
 > [!NOTE]
 > Compilation d’une application qui contient une application imbriquée ne compile pas l’application imbriquée. L’application imbriquée doit être compilée séparément.
 
-
 ### <a name="compiling-an-application-for-deploymenthttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[Compilation d’une Application pour le déploiement](https://msdn.microsoft.com/library/ms229863.aspx)
 
 Vous compilez une application pour le déploiement (compilation vers un emplacement cible) en spécifiant le paramètre targetDir. Le targetDir peut être le dernier emplacement pour l’application Web, ou l’application compilée peut être encore déployée. À l’aide de la **-u** option compile l’application de sorte que vous pouvez apporter des modifications à certains fichiers dans l’application compilée sans la recompiler. ASPNET\_compiler.exe établit une distinction entre les types de fichiers statiques et dynamiques et les traite différemment lors de la création de l’application résultante.
@@ -371,7 +365,6 @@ Chacune des pratiques suivantes s’appuie sur les laboratoires précédentes. V
 2. Ajouter un nouveau fichier de Configuration Web au site.
 3. Ajoutez le code suivant au fichier web.config :
 
-
 [!code-xml[Main](configuration-and-instrumentation/samples/sample14.xml)]
 
 Cela garantit que vous êtes autorisé à enregistrer les modifications au fichier web.config.
@@ -381,22 +374,18 @@ Cela garantit que vous êtes autorisé à enregistrer les modifications au fichi
 3. Modifier l’ID du contrôle de bouton à **btnToggleDebug** et le texte à **basculer l’état de débogage**.
 4. Ouvrez le mode Code pour le fichier code-behind de Default.aspx et ajoutez un **à l’aide de** instruction pour **System.Web.Configuration** comme suit :
 
-
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample15.cs)]
 
 1. Ajoutez deux variables privées à la classe et une Page\_méthode Init comme indiqué ci-dessous :
-
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample16.cs)]
 
 1. Ajoutez le code suivant à la Page\_charge :
 
-
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample17.cs)]
 
 1. Enregistrez et parcourir default.aspx. Notez que le contrôle d’étiquette affiche l’état de débogage actuel.
 2. Double-cliquez sur le contrôle de bouton dans le concepteur et ajoutez le code suivant à l’événement Click du contrôle Button :
-
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample18.cs)]
 
@@ -413,16 +402,13 @@ Dans cet atelier, vous allez créer le code qui vous permet d’activer/désacti
 4. Ajouter une nouvelle étiquette à default.aspx. Modifier l’ID à **lblLogAppEvents**.
 5. Afficher le code-behind de default.aspx et ajoutez une nouvelle déclaration d’une variable de type HealthMonitoringSection comme indiqué ci-dessous :
 
-
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample19.cs)]
 
 1. Ajoutez le code suivant pour le code existant dans la Page\_Init :
 
-
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample20.cs)]
 
 1. Double-cliquez sur l’objet DropDownList et ajoutez le code suivant à l’événement SelectedIndexChanged :
-
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample21.cs)]
 

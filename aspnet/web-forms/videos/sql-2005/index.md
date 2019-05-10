@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: cf0b487c-f387-46dd-b3bc-6b3c4af17c9c
 msc.legacyurl: /web-forms/videos/sql-2005
 msc.type: chapter
-ms.openlocfilehash: c07bfaeb29e20b042861ab59e6cd8f7d12744205
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: de0e83d09d0610a72915173479c9ef0541093890
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416179"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132940"
 ---
 # <a name="sql-2005"></a>SQL 2005
 
 > Comment travailler avec SQL Server Express pour ajouter des fonctionnalités de base de données à vos applications ASP.NET.
-
 
 - [Présentation des bases de données](what-is-a-database.md)
 - [Fonctionnement des tables et des enregistrements de base de données](understanding-database-tables-and-records.md)

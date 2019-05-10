@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: b3a006a0-3ea2-4d45-b833-e20e3a3c0a1a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/displaying-data
 msc.type: authoredcontent
-ms.openlocfilehash: 5415913626eb063a4cb1013ba03857c130487f42
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9e665ca8dd064c23a8b8bd3593014969d0c3da48
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412175"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128515"
 ---
 # <a name="introducing-aspnet-web-pages---displaying-data"></a>Présentation des Pages Web ASP.NET - affichage des données
 
@@ -34,7 +34,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - Outils de base de données de WebMatrix.
 > - `WebGrid` programme d’assistance.
-
 
 ## <a name="what-youll-build"></a>Ce que vous allez générer
 
@@ -96,7 +95,6 @@ TAB pour accéder à la **Type de données** liste et choisissez **int**. Cette 
 
 > [!NOTE]
 > Nous ne l’appelons les plus ici (beaucoup), mais vous pouvez utiliser des gestes de clavier Windows standards pour naviguer dans cette grille. Par exemple, utilisez la touche tab entre les champs, vous pouvez simplement commencez à taper afin de sélectionner un élément dans une liste et ainsi de suite.
-
 
 Onglet au-delà de la **la valeur par défaut** boîte (autrement dit, laissez ce champ vide). TAB pour accéder à la **est la clé primaire** case à cocher et sélectionnez-le. Cette option indique à la base de données qui le *ID* colonne contiendra les données qui identifie les lignes individuelles. (Autrement dit, chaque ligne aura une valeur unique dans la colonne d’ID que vous pouvez utiliser pour rechercher cette ligne.)
 
@@ -177,7 +175,6 @@ Pour exécuter la grille, vous devrez écrire quelques lignes de code. Ces quelq
 > [!NOTE]
 > Vous disposez effectivement de nombreuses options pour afficher les données sur une page ; le `WebGrid` n’est qu’un programme d’assistance. A été choisi pour ce didacticiel, car c’est le moyen le plus simple pour afficher des données et où il est relativement flexible. Dans le didacticiel suivantes, vous verrez comment utiliser une méthode plus « manual » pour travailler avec des données dans la page, ce qui vous donne un contrôle plus direct sur comment afficher les données.
 
-
 Dans le volet gauche de WebMatrix, cliquez sur le **fichiers** espace de travail.
 
 La nouvelle base de données que vous avez créé est dans le *application\_données* dossier. Si le dossier n’existe déjà, WebMatrix créée pour votre nouvelle base de données. (Le dossier ont pu exister si vous aviez précédemment installé des programmes d’assistance.)
@@ -241,7 +238,6 @@ Enfin, la troisième ligne indique à ASP.NET que vous souhaitez utiliser une in
 > Pour certaines de ces opérations (par exemple, insertion et suppression d’enregistrements), le processus qui demande l’opération doit disposer des autorisations appropriées dans la base de données. C’est pourquoi des bases de données de production vous avez généralement à fournir un nom d’utilisateur et le mot de passe lorsque vous vous connectez à la base de données.
 > 
 > Il existe des douzaines de commandes SQL, mais elles suivent un modèle, comme les commandes que vous voyez ici. Vous pouvez utiliser des commandes SQL pour créer des tables de base de données, compter le nombre d’enregistrements dans une table, calculer les prix et effectuer de nombreuses opérations plus.
-
 
 ### <a name="adding-markup-to-display-the-data"></a>Ajout de balisage pour afficher les données
 

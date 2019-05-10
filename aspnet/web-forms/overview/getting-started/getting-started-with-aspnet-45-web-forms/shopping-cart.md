@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 6898c601-6c31-432f-8388-e6843f8a17cb
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
 msc.type: authoredcontent
-ms.openlocfilehash: e079318b37563b1b7afe0f842f5b463541de0a81
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1c54449e778eac96133cccdc90d86cbbaf05a70f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405428"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132110"
 ---
 # <a name="shopping-cart"></a>Panier d’achat
 
@@ -22,7 +22,6 @@ par [Erik Reitan](https://github.com/Erikre)
 [Télécharger le projet de Wingtip Toys exemple (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
-
 
 Ce didacticiel décrit la logique métier nécessaire pour ajouter un panier d’achat à l’application de Web Forms ASP.NET exemple Wingtip Toys. Ce didacticiel s’appuie sur le didacticiel précédent, « Affichage données et les détails des éléments » et fait partie de la série de didacticiels Wingtip Toys Store. Lorsque vous avez terminé ce didacticiel, les utilisateurs de votre exemple d’application sera en mesure d’ajouter, supprimer et modifier les produits dans leur panier d’achat.
 
@@ -49,7 +48,6 @@ Plus haut dans cette série de didacticiels, vous avez ajouté les pages et le c
 > [!NOTE] 
 > 
 > L’état de Session ASP.NET est un emplacement pratique pour stocker des informations spécifiques à l’utilisateur qui va expirer après que l’utilisateur a quitté le site. Utilisation incorrecte de l’état de session peut avoir des implications en matière de performances sur les sites plus grands, compatibles utilisation de session état fonctionne bien à des fins de démonstration. L’exemple de projet de Wingtip Toys montre comment utiliser l’état de session sans un fournisseur externe, où l’état de session est stockée in-process sur le serveur web hébergeant le site. Sites de grande envergure qui fournissent plusieurs instances d’une application ou des sites qui exécutent plusieurs instances d’une application sur différents serveurs, envisagez d’utiliser **Windows Azure Cache Service**. Ce Service fournit un service de mise en cache distribué qui est externe au site web et résout le problème de l’état de session in-process. Pour plus d’informations, consultez [comment utiliser l’état de Session ASP.NET avec les Sites Web Windows Azure](https://docs.microsoft.com/azure/redis-cache/cache-aspnet-session-state-provider).
-
 
 ### <a name="add-cartitem-as-a-model-class"></a>Ajouter CartItem comme une classe de modèle
 
@@ -128,7 +126,6 @@ Comme mentionné précédemment, vous allez créer une page de traitement nommé
 > [!NOTE] 
 > 
 > Vous allez modifier le code-behind (*AddToCart.aspx.cs*) de cette page, pas la page de l’interface utilisateur (*AddToCart.aspx*).
-
 
 #### <a name="to-create-the-add-to-cart-functionality"></a>Pour créer l’ajouter au panier fonctionnalités :
 
@@ -215,7 +212,6 @@ Tout d’abord, le `GetTotal` méthode obtient l’ID de panier d’achat pour l
 > [!NOTE] 
 > 
 > Le code ci-dessus utilise le type nullable «`int?`». Types Nullable peuvent représenter toutes les valeurs d’un type sous-jacent et également comme une valeur null. Pour plus d’informations, consultez [à l’aide des Types Nullable](https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx).
-
 
 ### <a name="modify-the-shopping-cart-display"></a>Modifier l’affichage de panier d’achat
 

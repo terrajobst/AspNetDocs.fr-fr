@@ -8,17 +8,16 @@ ms.date: 05/30/2013
 ms.assetid: 37e005e9-2f1c-4039-b6ef-15612e0fdbc9
 msc.legacyurl: /aspnet/overview/owin-and-katana
 msc.type: chapter
-ms.openlocfilehash: a8ba1ca6b54ae58c23e51981cedebc636fba679e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 24891736a9fee3cb6c14540cd0b1efe41aa7a841
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385590"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118182"
 ---
 # <a name="owin-and-katana"></a>OWIN et Katana
 
 > Katana est un ensemble flexible de composants pour la création et hébergement Open Web Interface pour les applications web basées sur .NET OWIN.
-
 
 - [Vue d’ensemble du projet Katana](an-overview-of-project-katana.md)
 - [Bien démarrer avec OWIN et Katana](getting-started-with-owin-and-katana.md)

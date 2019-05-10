@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: d1608db3-660d-4079-8c15-f452ff01f1db
 msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-the-asp-net-mvc-execution-process
 msc.type: authoredcontent
-ms.openlocfilehash: 4a47f51b08b66dfe9636b3992786df19d0ad72ad
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 28940947253e0af43886cf1231f8aaf4615526cc
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59414931"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125483"
 ---
 # <a name="understanding-the-aspnet-mvc-execution-process"></a>Présentation du processus d’exécution d’ASP.NET MVC
 
@@ -21,14 +21,12 @@ by [Microsoft](https://github.com/microsoft)
 
 > Découvrez comment l’infrastructure ASP.NET MVC traite une demande de navigateur pas à pas.
 
-
 Demandes à une application Web basée sur ASP.NET MVC traversent d’abord le **UrlRoutingModule** objet, qui est un module HTTP. Ce module analyse la demande et effectue une sélection de l’itinéraire. Le **UrlRoutingModule** objet sélectionne le premier objet d’itinéraire qui correspond à la requête actuelle. (Un objet d’itinéraire est une classe qui implémente **RouteBase**, et est généralement une instance de la **itinéraire** classe.) Si aucun itinéraire ne correspond, le **UrlRoutingModule** objet ne fait rien et la demande vous permet de revenir à la demande ASP.NET ou IIS normal traitement.
 
 À partir de l’élément sélectionné **itinéraire** objet, le **UrlRoutingModule** Obtient le **IRouteHandler** objet auquel est associé le **itinéraire**objet. En règle générale, dans une application MVC, ce sera une instance de **MvcRouteHandler**. Le **IRouteHandler** instance crée un **IHttpHandler** objet et lui passe la **IHttpContext** objet. Par défaut, le **IHttpHandler** d’instance pour MVC est la **MvcHandler** objet. Le **MvcHandler** objet sélectionne ensuite le contrôleur qui gérera finalement la demande.
 
 > [!NOTE]
 > Quand une application Web ASP.NET MVC s’exécute dans IIS 7.0, aucune extension de nom de fichier n’est requise pour les projets MVC. Toutefois, dans IIS 6.0, le gestionnaire requiert que vous mapper l’extension de nom de fichier .mvc à la DLL ISAPI ASP.NET.
-
 
 Le module et le gestionnaire sont les points d’entrée à l’infrastructure ASP.NET MVC. Ils effectuent les actions suivantes :
 

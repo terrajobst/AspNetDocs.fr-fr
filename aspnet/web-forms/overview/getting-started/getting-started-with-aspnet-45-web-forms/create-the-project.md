@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 2ce36f78-8ecb-4ab1-b748-6d0ab633ea3f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
 msc.type: authoredcontent
-ms.openlocfilehash: 9e2cd1beca03b81140b9d58c5e43dbf7c6b8808b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1819704a4cfd3e6b82de1d8db916e729459d244f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393052"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130909"
 ---
 # <a name="create-the-project"></a>Créer le projet
 
@@ -22,7 +22,6 @@ par [Erik Reitan](https://github.com/Erikre)
 [Télécharger le projet de Wingtip Toys exemple (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
-
 
 Dans ce didacticiel vous créez, passez en revue et exécuter le projet par défaut dans Visual Studio, qui vous permettra de vous familiariser avec les fonctionnalités d’ASP.NET. En outre, vous allez examiner l’environnement Visual Studio.
 
@@ -83,7 +82,6 @@ Vous pouvez basculer entre **conception** vue et **Source** vue en sélectionnan
 > 
 > - [API Web ASP.NET](../../../../web-api/index.md) -une infrastructure pour générer des services HTTP qui atteignent une large gamme de clients, y compris les navigateurs et appareils mobiles.
 > - [ASP.NET SignalR](../../../../signalr/index.md) -une bibliothèque qui facilite le développement des fonctionnalités web en temps réel.
-
 
 ### <a name="reviewing-the-project"></a>Examen du projet
 

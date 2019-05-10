@@ -8,17 +8,16 @@ ms.date: 09/19/2014
 ms.assetid: 2acff246-c74c-4277-b539-35bc42988c6f
 msc.legacyurl: /signalr/overview/getting-started
 msc.type: chapter
-ms.openlocfilehash: 3e720dd895c609d5b35848dbc4d4a6989028ff7d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 33dedc368388ba2163dee5faef498f6272aa790d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418753"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128161"
 ---
 # <a name="signalr-getting-started"></a>Prise en main de SignalR
 
 > SignalR nouveautés, il s’exécute, et de plateformes et la prise en main.
-
 
 - [Introduction à SignalR](introduction-to-signalr.md)
 - [Plateformes prises en charge](supported-platforms.md)

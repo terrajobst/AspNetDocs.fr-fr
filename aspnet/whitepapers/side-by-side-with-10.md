@@ -8,19 +8,18 @@ ms.date: 02/10/2010
 ms.assetid: bdea2003-e964-4db5-9092-d56cc7560616
 msc.legacyurl: /whitepapers/side-by-side-with-10
 msc.type: content
-ms.openlocfilehash: c4a371958d8de72628c037b3568551aaa91e0153
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d03919e8465c28cf00bf057193452396523cb1af
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380702"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125624"
 ---
 # <a name="aspnet-side-by-side-execution-of-net-framework-10-and-11"></a>ASP.NET - Exécution côte à côte de .NET Framework 1.0 et 1.1
 
 > Ce livre blanc décrit comment installer .NET 1.0 et 1.1 de .NET sur votre ordinateur, ce qui permet une application Web ASP.NET pour s’exécuter sur des versions du framework.
 > 
 > S’applique à ASP.NET 1.0 et ASP.NET 1.1.
-
 
 Dans ASP.NET, on dit des applications pour être en cours d’exécution côte à côte lorsqu’ils sont installés sur le même ordinateur, mais ils utilisent des versions différentes du .NET Framework. La rubrique suivante décrit comment configurer les applications ASP.NET pour l’exécution côte à côte et fournit des instructions détaillées sur :
 

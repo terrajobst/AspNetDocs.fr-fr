@@ -8,19 +8,18 @@ ms.date: 08/23/2012
 ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
-ms.openlocfilehash: 9e4a2a9fc56393ac816f25a1039b233aa8961608
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 79d6b38c6464a749db9cd6d35e1f277b0adf2a02
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383835"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129433"
 ---
 # <a name="bundling-and-minification"></a>Bundles et minimisation
 
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Regroupement et minimisation sont deux techniques vous pouvez utiliser dans ASP.NET 4.5 pour améliorer les temps de chargement de demande. Regroupement et minimisation améliore les temps de chargement en réduisant le nombre de demandes au serveur et en réduisant la taille des ressources demandées (par exemple, CSS et JavaScript).
-
 
 La plupart des principaux navigateurs actuels limite le nombre de [connexions simultanées](http://www.browserscope.org/?category=network) par chaque nom d’hôte à six. Cela signifie que pendant le traitement des demandes de six, des demandes supplémentaires de ressources sur un ordinateur hôte seront mises en attente par le navigateur. Dans l’image ci-dessous, les onglets de réseau d’outils de développeur Internet Explorer F12 présente la temporisation pour les ressources requises par la vue About d’un exemple d’application.
 
@@ -96,7 +95,6 @@ Pour activer le regroupement et minimisation, définissez la `debug` valeur « 
 
 > [!NOTE]
 > Sauf si `EnableOptimizations` est `true` ou l’attribut de débogage dans le [compilation élément](https://msdn.microsoft.com/library/s10awwz0.aspx) dans le *Web.config* fichier est défini sur `false`, fichiers ne seront pas fournis ou minimisés. En outre, la version .min des fichiers ne sera pas utilisée, les versions de débogage complète seront sélectionnées. `EnableOptimizations` remplace l’attribut de débogage dans le [compilation élément](https://msdn.microsoft.com/library/s10awwz0.aspx) dans le *Web.config* fichier
-
 
 ## <a name="using-bundling-and-minification-with-aspnet-web-forms-and-web-pages"></a>À l’aide de regroupement et minimisation avec ASP.NET Web Forms et les Pages Web
 

@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: a2d7f33b-8c4a-4b48-9fb1-9139cf9b9878
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-introduction-1-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: ae53e23dda3ac63e26590edab692188bb44e9f65
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 838ee5b3620c50ca5f29ff8cb2c2ac876d3041d8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413202"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133308"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-introduction---1-of-12"></a>Déploiement d’une Application de Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio : Introduction - 1 sur 12
 
@@ -30,7 +30,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > Les didacticiels supposent que vous savez comment travailler avec ASP.NET dans Visual Studio. Si vous n’est pas le cas, un bon point de départ est un [base ASP.NET Web Forms didacticiel](../tailspin-spyworks/tailspin-spyworks-part-1.md) ou un [base didacticiel ASP.NET MVC](../../../../mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md).
 > 
 > Si vous avez des questions qui ne sont pas directement liées à ce didacticiel, vous pouvez les publier à le [forum de déploiement ASP.NET](https://forums.asp.net/26.aspx/1?Configuration+and+Deployment).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 

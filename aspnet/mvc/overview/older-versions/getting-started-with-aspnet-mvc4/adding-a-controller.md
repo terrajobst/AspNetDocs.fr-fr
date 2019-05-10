@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 0267d31c-892f-49a1-9e7a-3ae8cc12b2ca
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: d1cd01e924dc8e13b22b736ada490a3507e730f5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: aacfd1e057d694568f1a15dd2554c1104718b168
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59405831"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129931"
 ---
 # <a name="adding-a-controller"></a>Ajour d’un contrôleur
 
@@ -21,7 +21,6 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
 > > Une version mise à jour de ce didacticiel est disponible [ici](../../getting-started/introduction/getting-started.md) qui utilise ASP.NET MVC 5 et Visual Studio 2013. Il est plus sécurisé, beaucoup plus simple à suivre et illustre plusieurs fonctionnalités.
-
 
 MVC est l’acronyme *model-view-controller*. MVC est un modèle de développement d’applications sont bien conçue, testable et facile à gérer. Applications basées sur MVC contiennent :
 

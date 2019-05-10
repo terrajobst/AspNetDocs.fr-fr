@@ -8,17 +8,16 @@ ms.date: 09/28/2011
 ms.assetid: 67bdeec1-5301-4756-8615-cd9e8c5749e0
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3
 msc.type: chapter
-ms.openlocfilehash: 20fdfd00826d1b033c2d5dd9500915cb784896e5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9bfda277d1ea7a3d99d310c371871879c825299c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406455"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130084"
 ---
 # <a name="getting-started-with-aspnet-mvc3"></a>Bien démarrer avec ASP.NET MVC 3
 
 > Les principes fondamentaux de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express.
-
 
 - [Bien démarrer avec ASP.NET MVC 3 (C#)](cs/index.md)
 

@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: e42c8388-04ed-4341-9fdb-41b1b4c06320
 msc.legacyurl: /web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: f121f12ce689a079412bbd5392fde4fea863ff1f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: da0b9e12fcbe5cd2bfb5478162b7453d34931edf
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401970"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127520"
 ---
 # <a name="parameter-binding-in-aspnet-web-api"></a>Liaison de paramètre dans l’API Web ASP.NET
 
@@ -173,7 +173,6 @@ Le **ExecuteBindingAsync** méthode effectue la liaison. Dans cette méthode, aj
 
 > [!NOTE]
 > Si votre **ExecuteBindingAsync** méthode lit le corps du message de demande, remplacez le **WillReadBody** propriété pour retourner true. Le corps de la demande peut être un flux non tamponné peut être lu uniquement une seule fois, afin de l’API Web applique une règle qu’au maximum une liaison peut lire le corps du message.
-
 
 Pour appliquer un personnalisé **HttpParameterBinding**, vous pouvez définir un attribut qui dérive de **ParameterBindingAttribute**. Pour `ETagParameterBinding`, nous allons définir deux attributs, un pour `if-match` en-têtes et l’autre pour `if-none-match` en-têtes. Les deux dérivent de la classe de base abstraite.
 

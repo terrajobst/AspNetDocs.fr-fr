@@ -8,12 +8,12 @@ ms.date: 07/21/2010
 ms.assetid: f70a310c-9557-4743-82cb-655265676d39
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-6
 msc.type: authoredcontent
-ms.openlocfilehash: 34c8776636478e8c40064bb29ae0311ee4fdc8d8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b0caa89dc9ffb5bb7451fa2d9d346c7db2bf1466
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59409783"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130870"
 ---
 # <a name="part-6-aspnet-membership"></a>Partie 6 : Appartenance ASP.NET
 
@@ -22,7 +22,6 @@ par [Joe Stagner](https://github.com/JoeStagner)
 > Tailspin Spyworks montre comment extrêmement simple est de créer des applications puissantes et évolutives pour la plate-forme .NET. Il montre comment utiliser les nouvelles fonctionnalités dans ASP.NET 4 pour créer un magasin en ligne, y compris les achats, extraction et administration.
 > 
 > Cette série de didacticiels décrit en détail les étapes prises pour générer l’exemple d’application Tailspin Spyworks. Partie 6 ajoute l’appartenance ASP.NET.
-
 
 ## <a id="_Toc260221672"></a>  Utilisation de l’appartenance ASP.NET
 
@@ -99,7 +98,6 @@ SubmitOrder sera :
 - Prendre tous les éléments de ligne dans le panier d’achat et les utiliser pour créer un nouvel enregistrement de commande et les enregistrements de OrderDetails associés.
 - Calculer la Date d’expédition.
 - Désactivez le panier d’achat.
-
 
 [!code-csharp[Main](tailspin-spyworks-part-6/samples/sample10.cs)]
 

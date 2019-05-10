@@ -8,12 +8,12 @@ ms.date: 11/13/2006
 ms.assetid: f52c302a-1b7c-46fe-8a13-8412c95cbf6d
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d45e5cb1efd5f67acc94f4118d96c62ea08dc617
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e3512758dbfdf43d788eca643fe48ca918c142fe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387150"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128065"
 ---
 # <a name="sorting-data-in-a-datalist-or-repeater-control-c"></a>Tri des données dans un contrôle DataList ou Repeater (C#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_45_CS.exe) ou [télécharger le PDF](sorting-data-in-a-datalist-or-repeater-control-cs/_static/datatutorial45cs1.pdf)
 
 > Dans ce didacticiel, nous allons examiner comment inclure la prise en charge dans les contrôles DataList et Repeater de tri, ainsi que comment construire DataList ou Repeater dont les données peuvent être triées et la pagination.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -50,31 +49,25 @@ Nous les aborderons ces trois tâches dans les étapes 3 et 4. Ensuite, nous all
 
 Avant de nous soucier d’implémenter les fonctionnalités associées au tri, permettent de s commencez par répertorier les produits dans un contrôle Repeater. Commencez par ouvrir le `Sorting.aspx` page dans le `PagingSortingDataListRepeater` dossier. Ajouter un contrôle Repeater à la page web, en définissant son `ID` propriété `SortableProducts`. À partir de la balise active Repeater s, créer un nouveau ObjectDataSource nommé `ProductsDataSource` et configurez-le pour récupérer des données à partir de la `ProductsBLL` classe s `GetProducts()` (méthode). Sélectionnez (aucun) option dans la liste déroulante dans les onglets INSERT, UPDATE et DELETE.
 
-
 [![Créer un ObjectDataSource et configurez-le pour utiliser la méthode GetProductsAsPagedDataSource()](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image2.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image1.png)
 
 **Figure 1**: Créer un ObjectDataSource et configurez-le pour utiliser le `GetProductsAsPagedDataSource()` (méthode) ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image3.png))
-
 
 [![Définir les listes de liste déroulante dans la mise à jour, insertion et supprimer des onglets à (None)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image5.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image4.png)
 
 **Figure 2**: Définir les listes de liste déroulante dans la mise à jour, insertion et supprimer des onglets à (None) ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image6.png))
 
-
 À la différence avec le contrôle DataList, Visual Studio ne crée pas automatiquement un `ItemTemplate` pour le contrôle Repeater après sa liaison à une source de données. En outre, nous devons ajouter cela `ItemTemplate` de façon déclarative, comme la balise active du contrôle s Repeater ne dispose pas de l’option Modifier les modèles trouvée dans le contrôle DataList s. Let s utilisent le même `ItemTemplate` du didacticiel précédent, qui affiche le nom de produit s, le fournisseur et la catégorie.
 
 Après avoir ajouté le `ItemTemplate`, le balisage déclaratif s Repeater et ObjectDataSource doit ressembler à ce qui suit :
-
 
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample1.aspx)]
 
 Figure 3 illustre cette page lorsqu’ils sont affichés via un navigateur.
 
-
 [![Chaque produit s, nom de fournisseur et la catégorie s’affiche.](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image8.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image7.png)
 
 **Figure 3**: Chaque nom de produit, le fournisseur et la catégorie s’affiche ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image9.png))
-
 
 ## <a name="step-3-instructing-the-objectdatasource-to-sort-the-data"></a>Étape 3 : Demandant l’ObjectDataSource pour trier les données
 
@@ -82,18 +75,15 @@ Pour trier les données affichées dans le répéteur, nous devons informer Obje
 
 Pour transmettre les informations de tri à partir de la page ASP.NET à ObjectDataSource, créez un gestionnaire d’événements pour le `Selecting` événement et utilisez le code suivant :
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample2.cs)]
 
 Le *sortExpression* valeur doit être attribuée le nom du champ de données pour trier des données (par exemple, ProductName). Aucune propriété liés à la direction de tri est, par conséquent, si vous souhaitez trier les données dans l’ordre décroissant, ajoutez la chaîne DESC à le *sortExpression* valeur (par exemple, ProductName DESC).
 
 Continuez et essayez d’autres valeurs codées en dur pour *sortExpression* et les résultats des tests dans un navigateur. Comme illustré dans la Figure 4, lorsque vous utilisez DESC ProductName comme le *sortExpression*, les produits sont triés par leur nom dans l’ordre alphabétique inverse.
 
-
 [![Les produits sont triés par leur nom dans l’ordre alphabétique inverse](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image11.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image10.png)
 
 **Figure 4**: Les produits sont triés par leur nom dans l’ordre alphabétique inverse ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image12.png))
-
 
 ## <a name="step-4-creating-the-sorting-interface-and-remembering-the-sort-expression-and-direction"></a>Étape 4 : Création de l’Interface de tri et la mémorisation de l’Expression de tri et la Direction
 
@@ -103,40 +93,32 @@ Ajouter un contrôle DropDownList Web ci-dessus le `SortableProducts` Repeater e
 
 Le `ListItem` `Text` propriétés peuvent être définies à n’importe quelle valeur (par exemple, nom), mais la `Value` propriétés doivent être définies sur le nom du champ de données (par exemple, ProductName). Pour trier les résultats dans l’ordre décroissant, ajoutez la chaîne DESC pour le nom de champ de données, comme ProductName DESC.
 
-
 ![Ajouter un élément ListItem pour chacun des champs de données pouvant être trié](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image13.png)
 
 **Figure 5**: Ajouter un `ListItem` pour chacun des champs de données pouvant être trié
-
 
 Enfin, ajoutez un contrôle Web de bouton à droite de la liste DropDownList. Définissez ses `ID` à `RefreshRepeater` et son `Text` propriété pour l’actualisation.
 
 Après avoir créé le `ListItem` s et en ajoutant le bouton d’actualisation, la syntaxe déclarative des s DropDownList et bouton doit ressembler à ce qui suit :
 
-
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample3.aspx)]
 
 Avec l’objet DropDownList de tri est terminée, nous devons ensuite mettre à jour de l’ObjectDataSource s `Selecting` afin qu’il utilise le Gestionnaire d’événements `SortBy``ListItem` s `Value` propriété par opposition à une expression de tri codées en dur.
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample4.cs)]
 
 À ce stade, lors de la visite de tout d’abord la page, les produits sont initialement triés par le `ProductName` champ de données, tel qu’il s le `SortBy` `ListItem` sélectionné par défaut (voir Figure 6). En sélectionnant une autre option comme catégorie de tri et en cliquant sur Actualiser pour provoquer une publication (postback) et retrier les données par le nom de catégorie, comme le montre la Figure 7.
 
-
 [![Les produits sont initialement triés par leur nom](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image15.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image14.png)
 
 **Figure 6**: Les produits sont initialement triés par leur nom ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image16.png))
-
 
 [![Les produits sont maintenant triés par catégorie](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image18.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image17.png)
 
 **Figure 7**: Les produits sont maintenant triés par catégorie ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image19.png))
 
-
 > [!NOTE]
 > En cliquant sur le bouton d’actualisation génère les données automatiquement retriée car l’état d’affichage s Repeater a été désactivé, ce qui provoque le Repeater relier à sa source de données sur chaque publication (postback). Si vous avez déjà quitté l’état d’affichage Repeater s activée, modifier le tri déroulante liste n’a aucun effet sur l’ordre de tri. Pour résoudre ce problème, créez un gestionnaire d’événements pour le bouton Actualiser s `Click` rebind le répéteur à sa source de données et événements (en appelant le Repeater s `DataBind()` méthode).
-
 
 ## <a name="remembering-the-sort-expression-and-direction"></a>Mémorisation de l’Expression de tri et la Direction
 
@@ -150,11 +132,9 @@ Exemples de futures de ce didacticiel Explorez comment conserver les détails de
 
 Dans le [didacticiel précédent](paging-report-data-in-a-datalist-or-repeater-control-cs.md) nous avons examiné comment implémenter la pagination par défaut avec une DataList. Permettent d’étendre cet exemple précédent afin d’inclure la possibilité de trier les données paginées s. Commencez par ouvrir le `SortingWithDefaultPaging.aspx` et `Paging.aspx` des pages dans le `PagingSortingDataListRepeater` dossier. À partir de la `Paging.aspx` page, cliquez sur le bouton de la Source pour afficher le balisage déclaratif page s. Copiez le texte sélectionné (voir Figure 8) et collez-le dans le balisage déclaratif de `SortingWithDefaultPaging.aspx` entre le `<asp:Content>` balises.
 
-
 [![Répliquer le balisage déclaratif dans le &lt;asp : Content&gt; balises de Paging.aspx à SortingWithDefaultPaging.aspx](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image21.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image20.png)
 
 **Figure 8**: Répliquer le balisage déclaratif dans le `<asp:Content>` balises à partir de `Paging.aspx` à `SortingWithDefaultPaging.aspx` ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image22.png))
-
 
 Après avoir copié le balisage déclaratif, copiez les méthodes et propriétés dans le `Paging.aspx` page classe code-behind de s à la classe code-behind pour `SortingWithDefaultPaging.aspx`. Ensuite, prenez un moment pour afficher la `SortingWithDefaultPaging.aspx` page dans un navigateur. Il doit présenter les mêmes fonctionnalités et la même apparence que `Paging.aspx`.
 
@@ -165,7 +145,6 @@ Dans le didacticiel précédent, nous avons créé un `GetProductsAsPagedDataSou
 Précédemment dans ce didacticiel, nous avons ajouté une prise en charge tri en spécifiant l’expression de tri à partir de l’ObjectDataSource s `Selecting` Gestionnaire d’événements. Cela fonctionne bien quand ObjectDataSource est retourné à un objet pouvant être triées, comme le `ProductsDataTable` retourné par le `GetProducts()` (méthode). Toutefois, le `PagedDataSource` objet retourné par la `GetProductsAsPagedDataSource` méthode ne prend pas en charge le tri de sa source de données interne. Au lieu de cela, nous avons besoin de trier les résultats retournés par la `GetProducts()` méthode *avant* nous l’expliquons la `PagedDataSource`.
 
 Pour ce faire, créez une nouvelle méthode dans le `ProductsBLL` (classe), `GetProductsSortedAsPagedDataSource(sortExpression, pageIndex, pageSize)`. Pour trier les `ProductsDataTable` retourné par la `GetProducts()` (méthode), spécifiez la `Sort` propriété de sa valeur par défaut `DataTableView`:
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample5.cs)]
 
@@ -179,16 +158,13 @@ Mettre à jour de l’ObjectDataSource s `SelectMethod` propriété afin qu’el
 
 Après ces modifications, le balisage déclaratif de s ObjectDataSource doit ressembler à :
 
-
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample6.aspx)]
 
 À ce stade, le `SortingWithDefaultPaging.aspx` page triera ses résultats par ordre alphabétique par nom de produit (voir Figure 9). C’est pourquoi, par défaut, une valeur de ProductName est passée en tant que le `GetProductsSortedAsPagedDataSource` méthode s *sortExpression* paramètre.
 
-
 [![Par défaut, les résultats sont triés par nom de produit](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image24.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image23.png)
 
 **Figure 9**: Par défaut, les résultats sont triés par `ProductName` ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image25.png))
-
 
 Si vous ajoutez manuellement un `sortExpression` champ querystring comme `SortingWithDefaultPaging.aspx?sortExpression=CategoryName` les résultats sont triés par spécifié `sortExpression`. Toutefois, cela `sortExpression` paramètre n’est pas inclus dans la chaîne de requête lors du déplacement vers une autre page de données. En fait, en cliquant sur la page suivante ou dernière boutons nous revenez dans `Paging.aspx`! En outre, s’il y a actuellement aucun tri de l’interface. Un utilisateur peut modifier l’ordre de tri des données paginées impérativement en manipulant directement de la chaîne de requête.
 
@@ -198,31 +174,25 @@ Nous devons tout d’abord mettre à jour le `RedirectUser` méthode pour envoye
 
 Actuellement le `RedirectUser` méthode accepte uniquement un paramètre d’entrée unique l’index de la page à afficher. Toutefois, il peut arriver que vous souhaitiez rediriger l’utilisateur vers une page de données à l’aide d’une expression de tri autre que Nouveautés spécifiée dans la chaîne de requête spécifique. Dans un instant, nous allons créer l’interface de tri pour cette page, ce qui inclut une série de contrôles Web de bouton pour trier les données par une colonne spécifiée. Lorsqu’un de ces boutons est activé, nous voulons rediriger l’utilisateur en passant la valeur d’expression de tri approprié. Pour fournir cette fonctionnalité, créez deux versions de la `RedirectUser` (méthode). La première condition doit accepter simplement l’index de page à afficher, tandis que l’autre accepte l’expression de tri et les index de page.
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample7.cs)]
 
 Dans le premier exemple dans ce didacticiel, nous avons créé une interface de tri à l’aide d’un contrôle DropDownList. Pour cet exemple, s permettent d’utiliser les trois contrôles de bouton Web positionnées au-dessus du contrôle DataList, un pour le tri par `ProductName`, un pour `CategoryName`et l’autre pour `SupplierName`. Ajoutez les trois contrôles de bouton Web, en définissant leurs `ID` et `Text` propriétés en conséquence :
-
 
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample8.aspx)]
 
 Ensuite, créez un `Click` pour chaque gestionnaire d’événements. Les gestionnaires d’événements doivent appeler la `RedirectUser` méthode, en retournant l’utilisateur à la première page à l’aide de l’expression de tri approprié.
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample9.cs)]
 
 Lors de la première visite la page, les données sont triées par ordre alphabétique par nom de produit (voir la Figure 9). Cliquez sur le bouton suivant pour passer à la deuxième page de données, puis cliquez sur le tri par un bouton de la catégorie. Cela nous ramène à la première page de données, triées par nom de catégorie (voir Figure 10). De même, en cliquant sur le tri par un bouton de fournisseur trie les données par le fournisseur à partir de la première page de données. Le choix de tri est mémorisé comme les données sont paginées par le biais. Figure 11 illustre la page après le tri par catégorie et ensuite passer à la page treizième de données.
-
 
 [![Les produits sont triées par catégorie](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image27.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image26.png)
 
 **Figure 10**: Les produits sont triées par catégorie ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image28.png))
 
-
 [![L’Expression de tri est mémorisée lorsque la pagination via le données](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image30.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image29.png)
 
 **Figure 11**: L’Expression de tri est mémorisée lorsque la pagination via le données ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image31.png))
-
 
 ## <a name="step-6-custom-paging-through-records-in-a-repeater"></a>Étape 6 : Pagination personnalisée dans les enregistrements dans un répéteur
 
@@ -236,53 +206,41 @@ Ces méthodes peuvent être utilisées pour page efficacement et de tri des donn
 
 Ouvrir le `SortingWithCustomPaging.aspx` page dans le `PagingSortingDataListRepeater` dossier et ajoutez un répéteur à la page, le paramètre son `ID` propriété `Products`. À partir de la balise active Repeater s, créer un nouveau ObjectDataSource nommé `ProductsDataSource`. Configurez-le pour sélectionner ses données à partir de la `ProductsBLL` classe s `GetProductsPaged` (méthode).
 
-
 [![Configurer pour utiliser la méthode de GetProductsPaged ProductsBLL classe s ObjectDataSource](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image33.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image32.png)
 
 **Figure 12**: Configurer l’ObjectDataSource à utiliser le `ProductsBLL` classe s `GetProductsPaged` (méthode) ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image34.png))
 
-
 Définir les listes déroulantes dans la mise à jour, insertion et supprimer des onglets à (None) et puis cliquez sur le bouton suivant. L’Assistant Configurer la Source de données invite désormais l’utilisateur pour les sources de la `GetProductsPaged` méthode s *startRowIndex* et *maximumRows* paramètres d’entrée. En réalité, ces paramètres d’entrée sont ignorées. Au lieu de cela, le *startRowIndex* et *maximumRows* valeurs sont transmises dans les `Arguments` propriété dans le s ObjectDataSource `Selecting` Gestionnaire d’événements, tout comme la façon dont nous avons spécifié le *sortExpression* dans cette démonstration premier didacticiel s. Par conséquent, laissez le paramètre source listes déroulantes dans l’Assistant définie sur None.
-
 
 [![Conservez le paramètre Sources None](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image36.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image35.png)
 
 **Figure 13**: Laissez le paramètre Sources défini sur None ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image37.png))
 
-
 > [!NOTE]
 > Faire *pas* définir le s ObjectDataSource `EnablePaging` propriété `true`. Cela entraîne l’ObjectDataSource inclure automatiquement son propre *startRowIndex* et *maximumRows* paramètres pour le `SelectMethod` liste de paramètres existant s. Le `EnablePaging` propriété est utile lors de la liaison personnalisée, car ces contrôles attendent un comportement particulier à partir de l’ObjectDataSource s de données à un contrôle GridView, DetailsView ou FormView paginées uniquement disponible quand `EnablePaging` propriété est `true`. Dans la mesure où nous devons ajouter manuellement la prise en charge la pagination pour les contrôles DataList et Repeater, laissez cette propriété la valeur `false` (la valeur par défaut), comme nous allons intégrer dans les fonctionnalités nécessaires directement au sein de notre page ASP.NET.
 
-
 Enfin, définissez le Repeater s `ItemTemplate` afin que le nom de produit s, la catégorie et le fournisseur sont affichés. Après ces modifications, la syntaxe déclarative des s Repeater et ObjectDataSource doit ressembler à ce qui suit :
-
 
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample10.aspx)]
 
 Prenez un moment pour visiter la page via un navigateur et notez qu’aucun enregistrement n’est retournés. Il s’agit, car nous ve encore pour spécifier le *startRowIndex* et *maximumRows* les valeurs de paramètre ; par conséquent, les valeurs de 0 sont passées dans les deux. Pour spécifier ces valeurs, créez un gestionnaire d’événements pour les opérations de mappage ObjectDataSource `Selecting` événements et définir ces paramètres de valeurs par programmation aux codées en dur les valeurs de 0 et 5, respectivement :
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample11.cs)]
 
 Avec cette modification, la page, lorsqu’ils sont affichés via un navigateur, affiche les cinq premiers produits.
-
 
 [![Les cinq premiers enregistrements sont affichés.](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image39.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image38.png)
 
 **Figure 14**: Les cinq premiers enregistrements sont affichés ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image40.png))
 
-
 > [!NOTE]
 > Les produits répertoriés dans la Figure 14 se produisent à trier par nom de produit, car le `GetProductsPaged` procédure stockée qui effectue la requête de la pagination personnalisée efficace trie les résultats par `ProductName`.
 
-
 Pour autoriser l’utilisateur à parcourir les pages, que nous devons effectuer le suivi de l’index de ligne de début et le nombre maximal de lignes et n’oubliez pas ces valeurs entre les postbacks. Dans l’exemple de la pagination par défaut, nous avons utilisé les champs de chaîne de requête pour conserver ces valeurs ; pour cette démonstration, permettent de conserver ces informations dans l’état d’affichage de page s s. Créez les deux propriétés suivantes :
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample12.cs)]
 
 Ensuite, mettez à jour le code dans le Gestionnaire d’événements de sélection afin qu’il utilise le `StartRowIndex` et `MaximumRows` propriétés au lieu des valeurs codées en dur de 0 à 5 :
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample13.cs)]
 
@@ -292,41 +250,33 @@ Ensuite, mettez à jour le code dans le Gestionnaire d’événements de sélect
 
 Let s utiliser le même premier, précédent, en regard, dernière la pagination de l’interface utilisée dans l’exemple de la pagination par défaut, notamment le Web de l’étiquette de contrôle qui affiche la page de données est en cours de visualisation et le nombre total de pages existent. Ajoutez les quatre contrôles bouton Web et étiquette en dessous de répéteur.
 
-
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample14.aspx)]
 
 Ensuite, créez `Click` gestionnaires d’événements pour les quatre boutons. Lorsqu’un de ces boutons est activé, nous devons mettre à jour le `StartRowIndex` et relier les données pour le contrôle Repeater. Le code des première, boutons Précédent et suivant est assez simple, mais pour le dernier bouton comment nous déterminer l’index de ligne de début de la dernière page de données ? Pour cet index, ainsi que la capacité à déterminer que si les boutons suivant et dernier doivent être activés. nous devons savoir combien d’enregistrements au total est en cours de pagination par le biais de calcul. Nous pouvons le déterminer en appelant le `ProductsBLL` classe s `TotalNumberOfProducts()` (méthode). S permettent de créer une propriété en lecture seule, au niveau de la page nommée `TotalRowCount` qui retourne les résultats de la `TotalNumberOfProducts()` méthode :
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample15.cs)]
 
 Avec cette propriété, nous pouvons maintenant déterminer le dernier index de ligne de début page s. Plus précisément, il s le résultat entier de la `TotalRowCount` moins 1 divisée par `MaximumRows`, multipliée par `MaximumRows`. Nous pouvons maintenant écrire le `Click` gestionnaires d’événements pour les quatre boutons d’interface de pagination :
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample16.cs)]
 
 Enfin, nous devons désactiver les boutons de premier et précédent dans l’interface de pagination lors de l’affichage de la première page de données et les boutons suivant et dernier lors de l’affichage de la dernière page. Pour ce faire, ajoutez le code suivant pour les opérations de mappage ObjectDataSource `Selecting` Gestionnaire d’événements :
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample17.cs)]
 
 Après avoir ajouté ces `Click` gestionnaires d’événements et le code pour activer ou désactiver les éléments d’interface de pagination en fonction de l’index de ligne de début actuelle, la page de test dans un navigateur. Lorsque la Figure 15 illustre, lors de la première visite la page de la première et les boutons précédent sont désactivées. Clic sur suivant montre la deuxième page de données, tandis qu’en cliquant sur la dernière affiche la dernière page (voir les Figures 16 et 17). Lors de l’affichage de la dernière page de données, le suivant et le dernier boutons sont désactivés.
 
-
 [![Les boutons Précédent et dernière sont désactivées lors de l’affichage de la première Page de produits](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image42.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image41.png)
 
 **Figure 15**: Les boutons Précédent et dernière sont désactivées lors de l’affichage de la première Page de produits ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image43.png))
-
 
 [![La deuxième Page de produits sont affichés.](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image45.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image44.png)
 
 **Figure 16**: La deuxième Page de produits sont affichés ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image46.png))
 
-
 [![En cliquant sur la dernière affiche la dernière Page de données](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image48.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image47.png)
 
 **Figure 17**: En cliquant sur la dernière affiche la Page de données finale ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image49.png))
-
 
 ## <a name="step-7-including-sorting-support-with-the-custom-paged-repeater"></a>Étape 7 : Y compris le tri de la prise en charge avec personnalisé paginée Repeater
 
@@ -340,40 +290,32 @@ Maintenant que la pagination personnalisée a été implémentée, nous re prêt
 
 Commencez par la mise à jour de l’ObjectDataSource s `SelectMethod` propriété et en ajoutant un *sortExpression* `Parameter`. Assurez-vous que le *sortExpression* `Parameter` s `Type` propriété est définie sur `String`. À l’issue de ces deux premières tâches, le balisage déclaratif de s ObjectDataSource doit ressembler à ce qui suit :
 
-
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample18.aspx)]
 
 Ensuite, nous avons besoin d’un niveau de la page `SortExpression` propriété dont la valeur est sérialisée en état d’affichage. Si aucune valeur d’expression de tri a été définie, utilisez ProductName comme la valeur par défaut :
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample19.cs)]
 
 Avant de l’ObjectDataSource appelle le `GetProductsPagedAndSorted` méthode nous devons définir la *sortExpression* `Parameter` à la valeur de la `SortExpression` propriété. Dans le `Selecting` Gestionnaire d’événements, ajoutez la ligne de code suivante :
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample20.cs)]
 
 Ne reste qu’à implémenter l’interface de tri. Comme nous l’avons fait dans le dernier exemple, autorise les s à disposer de l’interface de tri implémenté à l’aide de trois contrôles de bouton Web permettant aux utilisateurs de trier les résultats par nom de produit, catégorie ou le fournisseur.
-
 
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample21.aspx)]
 
 Créer `Click` gestionnaires d’événements pour ces trois contrôles de bouton. Réinitialisation de l’événement de gestionnaire, la `StartRowIndex` à 0, définissez la `SortExpression` à la valeur appropriée et les données pour le contrôle Repeater la reliaison :
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample22.cs)]
 
 S résume-t-elle est ! Pendant que vous rencontrez un nombre d’étapes de la pagination personnalisée et le tri implémenté, les étapes ont été très similaires à celles nécessaires pour la pagination par défaut. Figure 18 montre les produits lors de l’affichage de la dernière page de données triés par catégorie.
-
 
 [![La dernière Page de données, trié par catégorie, s’affiche.](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image51.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image50.png)
 
 **Figure 18**: La dernière Page de données, trié par catégorie, s’affiche ([cliquez pour afficher l’image en taille réelle](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image52.png))
 
-
 > [!NOTE]
 > Dans les exemples précédents, lors du tri par le fournisseur de que nom fournisseur a été utilisé en tant que l’expression de tri. Toutefois, pour l’implémentation de la pagination personnalisée, nous devons utiliser CompanyName. Il s’agit, car la procédure stockée chargée d’implémenter la pagination personnalisée `GetProductsPagedAndSorted` transmet l’expression de tri dans le `ROW_NUMBER()` mot clé, le `ROW_NUMBER()` mot clé nécessite le nom de colonne réel plutôt qu’un alias. Par conséquent, nous devons utiliser `CompanyName` (le nom de la colonne dans la `Suppliers` table) au lieu de l’alias utilisé dans le `SELECT` requête (`SupplierName`) pour l’expression de tri.
-
 
 ## <a name="summary"></a>Récapitulatif
 

@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 2d08658a-16c4-4877-9f43-c6503adda7bf
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files
 msc.type: chapter
-ms.openlocfilehash: 2382e37a0ce02d318840cf29266075bbb30cae4d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 35ef53b66f4c21b5cf486d791ae40bc1ca953998
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391167"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131121"
 ---
 # <a name="working-with-binary-files"></a>Utilisation de fichiers binaires
 
 > Ces didacticiels montrent comment permettre aux utilisateurs de télécharger des fichiers binaires (telles que des documents Word ou PDF) sur le serveur, où qu’elles puissent être stockées dans des dossiers ou dans la base de données.
-
 
 - [Chargement de fichiers (C#)](uploading-files-cs.md)
 - [Affichage de données binaires dans les contrôles web de données (C#)](displaying-binary-data-in-the-data-web-controls-cs.md)

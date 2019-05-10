@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: d65c5c2b-a039-463f-ad29-25cf9fb7a1ba
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-9
 msc.type: authoredcontent
-ms.openlocfilehash: c7151351b087439f17457b254cd9e373af21cae3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 040bc0ccef889fb9a7c3d9b5ce88c75b7b754248
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380897"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129621"
 ---
 # <a name="part-9-registration-and-checkout"></a>Partie Inscription et validation
 
@@ -24,7 +24,6 @@ par [Jon Galloway](https://github.com/jongalloway)
 > Le Store de musique MVC est une implémentation de magasin d’exemple léger qui vend des albums de musique en ligne et implémente l’administration de site de base, connexion de l’utilisateur et les fonctionnalités de panier d’achat.  
 >   
 > Cette série de didacticiels décrit en détail les étapes prises pour générer l’exemple d’application ASP.NET MVC Music Store. Partie 9 couvre l’inscription et l’extraction.
-
 
 Dans cette section, nous allons créer un CheckoutController qui recueillera les adresses du client et les informations de paiement. Nous oblige les utilisateurs à inscrire auprès de notre site avant la récupération, donc ce contrôleur nécessite une autorisation.
 
@@ -158,7 +157,6 @@ Le modèle par défaut inclut une vue de l’erreur dans le dossier de vues Shar
 Dans la mesure où il s’agit d’une page d’erreur générique, le contenu est très simple. Nous allons inclure un message et un lien pour accéder à la page précédente dans l’historique si l’utilisateur souhaite réessayer leur action.
 
 [!code-cshtml[Main](mvc-music-store-part-9/samples/sample13.cshtml)]
-
 
 > [!div class="step-by-step"]
 > [Précédent](mvc-music-store-part-8.md)

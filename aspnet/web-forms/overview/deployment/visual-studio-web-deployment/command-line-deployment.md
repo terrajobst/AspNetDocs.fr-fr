@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 82b8dea0-f062-4ee4-8784-3ffa30fbb1ca
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/command-line-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: c9aadec642837953dde4cf3e89ec9a7d484b380e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e6fc995ca812a461247989204caff580d06e2343
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401333"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134266"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-command-line-deployment"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Déploiement via la ligne de commande
 
@@ -22,7 +22,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 [Télécharger le projet de démarrage](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Cette série de didacticiels vous montre comment déployer (publier) un ASP.NET web application dans Azure App Service Web Apps ou à un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 

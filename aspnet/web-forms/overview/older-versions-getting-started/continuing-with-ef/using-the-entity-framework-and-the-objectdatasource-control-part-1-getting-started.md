@@ -8,12 +8,12 @@ ms.date: 01/26/2011
 ms.assetid: 244278c1-fec8-4255-8a8a-13bde491c4f5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started
 msc.type: authoredcontent
-ms.openlocfilehash: c0f11019c7410b756d592066a7fe33b3e26fd383
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2f14707eb058d438495dd2bc4c17b976c471fc97
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407196"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131340"
 ---
 # <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-1-getting-started"></a>À l’aide d’Entity Framework 4.0 et que le contrôle ObjectDataSource, partie 1 : Prise en main
 
@@ -45,7 +45,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > ## <a name="questions"></a>Questions
 > 
 > Si vous avez des questions qui ne sont pas directement liées à ce didacticiel, vous pouvez les publier à le [forum ASP.NET Entity Framework](https://forums.asp.net/1227.aspx), le [Entity Framework et LINQ au forum d’entités](https://social.msdn.microsoft.com/forums/adodotnetentityframework/threads/), ou [ StackOverflow.com](http://stackoverflow.com/).
-
 
 Le `EntityDataSource` contrôle vous permet de créer une application très rapidement, mais il nécessite en général vous permet de conserver une quantité significative de logique métier et logique d’accès aux données dans votre *.aspx* pages. Si vous pensez que votre application à croître en complexité et requièrent une maintenance, vous pouvez investir plus de temps de développement afin de créer un *multiniveau* ou *en couches* structure de l’application C’est plus facile à gérer. Pour implémenter cette architecture, vous séparez la couche de présentation à partir de la couche de logique métier (BLL) et la couche d’accès aux données (DAL). Une manière d’implémenter cette structure consiste à utiliser le `ObjectDataSource` contrôler au lieu du `EntityDataSource` contrôle. Lorsque vous utilisez le `ObjectDataSource` contrôle, vous implémentez votre propre code d’accès aux données, puis l’appeler dans *.aspx* pages à l’aide d’un contrôle comportant de nombreux du même fonctionnalités que les autres contrôles de source de données. Cela vous permet de combiner les avantages d’une approche à n niveaux avec les avantages de l’utilisation d’un contrôle Web Forms pour accéder aux données.
 
@@ -102,7 +101,6 @@ Cliquez sur **OK** dans le **Tables et colonnes** , cliquez sur **fermer** dans 
 > 
 > Une fois que vous enregistrez la modification, vous ne pourrez pas supprimer une ligne à partir de la `Person` si cette personne est un administrateur de service de table. Dans une application de production, vous fourniriez un message d’erreur spécifique lorsqu’une contrainte de base de données empêche une suppression, ou vous devez spécifier une suppression en cascade. Pour obtenir un exemple montrant comment spécifier une suppression en cascade, consultez [Entity Framework et ASP.NET – mise en route partie 2](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md).
 
-
 ### <a name="adding-a-view-to-the-database"></a>Ajout d’une vue à la base de données
 
 Dans le nouveau *Departments.aspx* page que vous allez créer, que vous souhaitez fournir une liste déroulante des formateurs, avec des noms au format « nom, prénom » afin que les utilisateurs peuvent sélectionner des administrateurs de service. Pour simplifier les opérations pour ce faire, vous allez créer une vue dans la base de données. La vue se compose de simplement les données nécessaires à la liste déroulante : le nom complet (correct) et la clé d’enregistrement.
@@ -136,7 +134,6 @@ Dans le concepteur, vous voyez que l’outil créé une `vInstructorName` entit�
 > [!NOTE]
 > Dans le **sortie** et **liste d’erreurs** windows, vous pouvez voir un message d’avertissement vous informant que l’outil créé automatiquement un principal de clé pour le nouveau `vInstructorName` vue. Ce comportement est normal.
 
-
 Lorsque vous faites référence au nouveau `vInstructorName` entité dans le code, que vous souhaitez utiliser la convention de base de données d’en ajoutant le préfixe « v » en minuscules à celui-ci. Par conséquent, vous allez renommer l’entité et un jeu d’entités dans le modèle.
 
 Ouvrez le **navigateur de modèle**. Vous voyez `vInstructorName` répertorié comme un type d’entité et une vue.
@@ -159,7 +156,6 @@ Ce code fournit un seul `GetDepartments` méthode qui retourne toutes les entit�
 
 > [!NOTE]
 > Une pratique courante consiste à créer une classe de référentiel pour chaque type d’entité. Dans ce didacticiel, une classe de référentiel pour plusieurs types d’entité est utilisée. Pour plus d’informations sur le modèle de référentiel, consultez les billets dans [blog de l’équipe Entity Framework](https://blogs.msdn.com/b/adonet/archive/2009/06/16/using-repository-and-unit-of-work-patterns-with-entity-framework-4-0.aspx) et [blog de Julie](http://thedatafarm.com/blog/data-access/agile-ef4-repository-part-3-fine-tuning-the-repository/).
-
 
 Le `GetDepartments` méthode retourne un `IEnumerable` objet plutôt qu’un `IQueryable` objet afin de garantir que la collection retournée est utilisable, même après la suppression de l’objet de référentiel lui-même. Un `IQueryable` objet peut entraîner la base de données chaque fois qu’il est accessible, mais l’objet de référentiel peut être supprimé au moment où un contrôle lié aux données tente d’afficher les données. Vous pouvez retourner un autre type de collection, comme un `IList` au lieu de l’objet une `IEnumerable` objet. Toutefois, en retournant un `IEnumerable` objet permet de s’assurer que vous pouvez effectuer les tâches de traitement typique liste en lecture seule comme `foreach` boucles et les requêtes LINQ, mais vous ne pouvez pas ajouter ou supprimer des éléments dans la collection, ce qui implique que ces modifications serait rendues persistantes dans la base de données.
 
@@ -309,7 +305,6 @@ Utilisez le *DepartmentsAdd.aspx* page pour ajouter un nouveau service, puis ex�
 
 > [!NOTE]
 > Vous ne pourrez pas modifier les lignes que vous n’avez pas ajouté (autrement dit, qui étaient déjà présents dans la base de données), en raison de données non valides dans la base de données ; les administrateurs pour les lignes qui ont été créés avec la base de données sont les étudiants. Si vous essayez de modifier un d’eux, vous obtiendrez une page d’erreur qui signale une erreur telle que `'InstructorsDropDownList' has a SelectedValue which is invalid because it does not exist in the list of items.`
-
 
 [![Image10](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image36.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image35.png)
 

@@ -8,12 +8,12 @@ ms.date: 04/01/2009
 ms.assetid: 89a1d2bc-fdfd-4c5c-a3b0-49a08baaf63a
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 90285eac8e45d542c4ccca3e3db00493546aac57
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0ec92a3b719116d8ef457156788ac451a300dbfc
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398447"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130665"
 ---
 # <a name="aspnet-hosting-options-c"></a>Options d’hébergement ASP.NET (C#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial01_Basics_cs.pdf)
 
 > Les applications web ASP.NET sont généralement conçues, créées et testées dans un environnement de développement local et un doivent être déployées dans un environnement de production dès qu’elle sera prête à être publiée. Ce didacticiel fournit une vue d’ensemble du processus de déploiement et sert d’introduction à cette série de didacticiels.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -57,7 +56,6 @@ Les informations de configuration pour une application web se trouve généralem
 
 En plus des modifications de configuration d’application web, étape 1 peut également impliquer le configuration pour le serveur web et de la base de données. Par exemple, si une page ASP.NET crée ou supprime des fichiers d’un répertoire sur le serveur web du serveur web doit être configuré pour autoriser ces modifications du système de fichiers. De même, il peut exister des paramètres d’autorisation ou d’authentification qui doivent être apportées à la base de données.
 
-
 Étape 2 implique la synchronisation de l’ensemble d’essential ASP.NET pages et les fichiers de prise en charge entre les environnements de développement et de production. L’ensemble de ASP. NET-fichiers qui doivent être synchronisées entre les deux environnements varie selon le type de projet créé dans Visual Studio et est la discussion dans le didacticiel suivant, [ *déterminer quels fichiers doivent être déployés*](determining-what-files-need-to-be-deployed-cs.md). Les didacticiels troisième et quatrième - [ *déploiement de votre Site à l’aide de FTP* ](deploying-your-site-using-an-ftp-client-cs.md) et [ *déploiement de votre Site à l’aide de Visual Studio* ](deploying-your-site-using-visual-studio-cs.md) -examiner différents outils et techniques pour la synchronisation de ces fichiers.
 
 Lors de la création d’applications orientées données, il existe généralement deux bases de données utilisés : un pour le développement et l’autre sur la production. Pendant le développement, schéma de la base de données développement peut être modifié pour inclure les nouvelles tables, colonnes, procédures stockées et déclencheurs, ou peut être modifié pour supprimer ou renommer des objets de base de données existante. Entre le moment où ces modifications sont apportées et l’heure de que l’application est déployée en production, les bases de données de développement et de production ne sont pas synchronisés. Ce comportement asynchrone doit être fixe pendant le processus de déploiement. Ces défis seront examinées dans les didacticiels futures.
@@ -69,7 +67,6 @@ Les applications ASP.NET peuvent être déployées vers un serveur web qui a le 
 > [!NOTE]
 > [IIS](https://www.iis.net/) est le serveur web de qualité professionnelle de Microsoft. Il est livré avec les éditions de non-accueil de Windows, tels que Windows Server 2008 et certaines éditions de Windows Vista. Vous n’avez pas besoin d’installer IIS pour servir des applications ASP.NET dans un environnement de développement, car Visual Studio inclut le serveur Web de développement ASP.NET. Toutefois, le serveur Web de développement ASP.NET accepte uniquement les connexions locales et ne peut donc pas être utilisé dans un environnement de production.
 
-
 Avant de pouvoir déployer votre site à un fournisseur d’hébergement web vous devez d’abord déterminer quelle société commerciale. Il existe un nombre incalculable web hébergeant des entreprises dans la place de marché ; une recherche « société d’hébergement web » renvoie les résultats de plus de cinq millions. Comment trouver celle qui vous convient ? Votre moteur de recherche est un bon point de départ, comme les sites Web tels que [TopHosts](http://www.tophosts.com/) et [HostCritique](http://www.hostcritique.net/), qui de comparer différents services d’hébergement. Je vous conseille également de poser vos collègues et vos collègues pour les recommandations ; Vous pouvez également demander de recommandations à le [hébergement Open Forum](https://forums.asp.net/158.aspx) ici à la [Forums ASP.NET](https://forums.asp.net/).
 
 En général, sociétés d’hébergement Web offrent des plans d’hébergement partagés et dédié de plans d’hébergement. Avec partagé qui héberge un hôte de serveur web unique des dizaines si ce n’est pas des centaines de différents sites Web. Avec un hébergement dédié vous louez un ordinateur à partir de l’entreprise qui sert votre site et votre site autonome. Un plan d’hébergement partagé peut inclure la prise en charge pour les pages ASP.NET, la possibilité de travailler avec les bases de données Microsoft Access, 5 Go d’espace disque et le trafic de la bande passante mensuel de 100 Go pour 9,95 USD par mois. Un autre plan d’hébergement partagé peut inclure la prise en charge pour les pages ASP.NET, l’accès au serveur de base de données Microsoft SQL Server 2008, 10 Go d’espace disque et 250 Go du trafic de la bande passante mensuel pour 19,95 $ par mois. Dédié de plans d’hébergement sont généralement beaucoup plus onéreuse, d’évaluation des coûts plusieurs dollars par mois, mais offre de meilleures performances et davantage de contrôle que partagé options d’hébergement. Quel plan que vous choisissez dépend de votre budget, la quantité de trafic votre site Web reçoit et les fonctionnalités que vous pensez que vous avez besoin.
@@ -78,7 +75,6 @@ Deux considérations importantes lors du choix d’un fournisseur d’hébergeme
 
 > [!NOTE]
 > Certaines entreprises d’hébergement web concentrent leurs activités sur une pile de technologie particulière, telles que .NET ou [LAMP](http://en.wikipedia.org/wiki/LAMP_stack) (**L** inux :, **A** pache, **M** ysql :, et **P** HP), par conséquent, assurez-vous que la société que vous sélectionnez héberge les applications ASP.NET. Vérifiez également qu’ils prennent en charge la version d’ASP.NET que vous utilisez pour générer votre application. Et si vous générez une application orientée données, assurez-vous que l’hôte web offre le même serveur de base de données et la même version que vous utilisez.
-
 
 ## <a name="summary"></a>Récapitulatif
 

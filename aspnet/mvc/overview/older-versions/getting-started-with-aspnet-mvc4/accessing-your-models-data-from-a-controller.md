@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 61e0206d-7f32-4018-992d-0a51b48b37dc
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 45683fc2b40f58a6344ec8670e6a93df89b587fe
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b40bb8b06ae7c89a33ae2aead9578cf507503531
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59402906"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129948"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Accès aux données de votre modèle à partir d’un contrôleur
 
@@ -21,7 +21,6 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
 > > Une version mise à jour de ce didacticiel est disponible [ici](../../getting-started/introduction/getting-started.md) qui utilise ASP.NET MVC 5 et Visual Studio 2013. Il est plus sécurisé, beaucoup plus simple à suivre et illustre plusieurs fonctionnalités.
-
 
 Dans cette section, vous allez créer un nouveau `MoviesController` classe et d’écrire du code qui Récupère les données de film et l’affiche dans le navigateur à l’aide d’un modèle de vue.
 
@@ -120,7 +119,6 @@ Double-cliquez sur *Movies.mdf* pour ouvrir **DATABASE EXPLORER**, puis dévelop
 > [!NOTE]
 > Si l’Explorateur de base de données n’apparaît pas, à partir de la **outils** menu, sélectionnez **se connecter à la base de données**, puis annuler le **choisir la Source de données** boîte de dialogue. Cela forcera ouvrir l’Explorateur de base de données.
 
-
 > [!NOTE]
 > Si vous utilisez VWD ou Visual Studio 2010 et que vous obtenez une erreur similaire à une des opérations suivantes :
 > 
@@ -128,7 +126,6 @@ Double-cliquez sur *Movies.mdf* pour ouvrir **DATABASE EXPLORER**, puis dévelop
 > - &quot;Exception InvalidOperation a pas été gérée par le code utilisateur&quot; le SqlConnection fourni ne spécifie pas un catalogue initial.
 > 
 > Vous devez installer le [SQL Server Data Tools](https://blogs.msdn.com/b/rickandy/archive/2012/08/02/installing-and-using-sql-server-data-tools-ssdt-on-visual-studio-2010-and-vwd.aspx) et [LocalDB](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLLocalDBOnly_11_0). Vérifiez le `MovieDBContext` chaîne de connexion spécifiée dans la page précédente.
-
 
 Avec le bouton droit le `Movies` de table et sélectionnez **afficher les données de Table** pour afficher les données que vous avez créé.
 

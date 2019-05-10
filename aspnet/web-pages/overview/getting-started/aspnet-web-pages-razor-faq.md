@@ -8,12 +8,12 @@ ms.date: 02/07/2014
 ms.assetid: b137bd04-25e1-47cb-9d96-ef2e179ecf1f
 msc.legacyurl: /web-pages/overview/getting-started/aspnet-web-pages-razor-faq
 msc.type: authoredcontent
-ms.openlocfilehash: b0e51b2fb73370164af1a38af5e5e15e24608843
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6fa1b668e915af856a693e79eafb7180ed504dc2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418649"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133203"
 ---
 # <a name="aspnet-web-pages-razor-faq"></a>ASP.NET Web Pages - Questions fréquentes (FAQ) (Razor)
 
@@ -33,7 +33,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Ce didacticiel fonctionne également avec ASP.NET Web Pages 2, WebMatrix 2 et Visual Studio 2012.
-
 
 - [Quelle est la différence entre les Pages Web ASP.NET, ASP.NET Web Forms et ASP.NET MVC ?](#Whats_the_difference_between_ASP.NET_Web_Pages,_ASP.NET_Web_Forms,_and_ASP.NET_MVC)
 - [Ai-je besoin WebMatrix pour travailler avec des Pages Web ?](#Do_I_need_WebMatrix_in_order_to_work_with_Web_Pages)
@@ -130,7 +129,6 @@ Voici des billets de blog qui illustrent diverses manières d’utiliser jQuery 
 
 <a id="AdditionalResources"></a>
 ## <a name="additional-resources"></a>Ressources supplémentaires
-
 
 [ASP.NET Web Pages (Razor) - Guide de résolution des problèmes](https://go.microsoft.com/fwlink/?LinkId=253001)
 

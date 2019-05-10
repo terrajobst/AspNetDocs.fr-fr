@@ -8,12 +8,12 @@ ms.date: 06/05/2013
 ms.assetid: e608e263-264d-448b-b0eb-6eeb77713b22
 msc.legacyurl: /signalr/overview/older-versions/handling-connection-lifetime-events
 msc.type: authoredcontent
-ms.openlocfilehash: a8121a2d7c4ed14e296dc72c72ca7c25939a2b50
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2fb671e730a1d41c07b350bf1d64ac1d0b1be55c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414008"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128793"
 ---
 # <a name="understanding-and-handling-connection-lifetime-events-in-signalr-1x"></a>Compréhension et gestion des événements de durée de vie de connexion dans SignalR 1.x
 
@@ -28,7 +28,6 @@ par [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://gith
 > - [Comment gérer les événements de durée de vie de connexion dans la classe de concentrateur](index.md)
 > - [Comment gérer les événements de durée de vie de connexion dans les clients JavaScript](index.md)
 > - [Comment gérer les événements de durée de vie de connexion dans les clients .NET](index.md)
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -132,7 +131,6 @@ Certains environnements réseau délibérément fermer les connexions inactives,
 > 
 > [!IMPORTANT]
 > La séquence d’événements décrites ici n’est pas garantie. SignalR effectue chaque tentative pour déclencher des événements de durée de vie de connexion de manière prévisible en fonction de ce schéma, mais il existe de nombreuses variations des événements de réseau et dans lequel les infrastructures de communications sous-jacentes telles que les API de transport les gérer de nombreuses façons. Par exemple, le `Reconnected` événement ne peut pas être déclenché lorsque le client se reconnecte, ou le `OnConnected` gestionnaire sur le serveur peut s’exécuter lorsque la tentative pour établir une connexion échoue. Cette rubrique décrit uniquement les effets qui seraient normalement produits par certains des circonstances normales.
-
 
 <a id="clientdisconnect"></a>
 

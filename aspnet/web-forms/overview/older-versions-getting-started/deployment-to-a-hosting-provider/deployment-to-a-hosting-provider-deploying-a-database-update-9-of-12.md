@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: a8d776af-4735-4612-87f6-9f326587f2d3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 3bae4d72c8b653a5cda500b05dde50c6a7201589
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3a5600aff3ba63cb7046e42d0bfd587c4181d99e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413111"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130270"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-database-update---9-of-12"></a>Déploiement d’une Application de Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : Déploiement d’une mise à jour de base de données - 9 de 12
 
@@ -24,7 +24,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > Cette série de didacticiels vous montre comment déployer une ASP.NET (publier) projet d’application web qui inclut une base de données SQL Server Compact à l’aide de Visual Studio 2012 RC ou Visual Studio Express 2012 RC pour le Web. Vous pouvez également utiliser Visual Studio 2010 si vous installez la mise à jour de publication Web. Pour une introduction à la série, consultez [le premier didacticiel de la série](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Pour obtenir un didacticiel qui montre les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions de SQL Server autre que SQL Server Compact et montre comment déployer dans Azure App Service Web Apps, consultez [déploiement Web ASP.NET à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -88,7 +87,6 @@ Vous pouvez désormais déployer en production. La seule différence est que vou
 
 > [!NOTE]
 > Pendant que votre application est en cours d’utilisation dans l’environnement de production vous être devez implémenter un plan de sauvegarde. Autrement dit, vous devez régulièrement copier le *School-Prod.sdf* et *aspnet-Prod.sdf* fichiers à partir de la production de site vers un emplacement de stockage sécurisé et vous devez conserver plusieurs générations de telles sauvegardes. Lorsque vous mettez à jour la base de données, vous devez effectuer une copie de sauvegarde à partir d’immédiatement avant la modification. Ensuite, si vous commettez une erreur et ne détecter qu’une fois que vous l’avez déployée en production, vous serez toujours en mesure de récupérer la base de données à l’état qu'où il se trouvait avant qu’il a été endommagé.
-
 
 Lorsque Visual Studio ouvre l’URL de la page d’accueil dans le navigateur, le *application\_offline.htm* page s’affiche. Après avoir supprimé le *application\_offline.htm* fichier, que vous pouvez accéder à votre page d’accueil à nouveau pour vérifier que la mise à jour a été déployé avec succès.
 

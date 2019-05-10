@@ -8,12 +8,12 @@ ms.date: 04/01/2009
 ms.assetid: f8d78a88-cc91-40d8-bce3-3d7954f6033b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c17e3afaf4406489a14d0537a33fef384d6c5a19
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c4848f230ee0af5ee9d381e7df9cb1456870eb25
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408964"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132355"
 ---
 # <a name="determining-what-files-need-to-be-deployed-c"></a>Détermination des fichiers qui doivent être déployés (C#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger le Code](http://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_02_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial02_FilesToDeploy_cs.pdf)
 
 > Fichiers qui doivent être déployées à partir de l’environnement de développement à l’environnement de production dépend en partie indique si l’application ASP.NET a été créée à l’aide du modèle de Site Web ou d’un modèle d’Application Web. En savoir plus sur ces deux modèles de projet et comment le modèle de projet affecte le déploiement.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -92,20 +91,16 @@ Le téléchargement de ce didacticiel inclut une application ASP.NET appelée cr
 
 Figure 1 illustre une capture d’écran du site Web de critiques de livres lorsqu’ils sont affichés via un navigateur. Ici, vous voyez la page ~ /`Tech/TYASP35.aspx`, qui passe en revue le livre *enseigner vous-même ASP.NET 3.5 des dernières 24 heures*. La barre de navigation qui s’étend sur la partie supérieure de la page et le menu dans la colonne de gauche sont basées sur la structure de plan de site définie dans `Web.sitemap`. L’image dans l’angle supérieur droit est un de la couverture de livre images se trouvent dans le `Images` dossier. Apparence du site Web sont définies via en cascade décrits par les fichiers CSS dans le dossier Styles, la mise en page principale est définie dans la page maître, de règles de feuille de style `Site.master`.
 
-
 [![Le site Web du livre examine offre des révisions sur un large éventail de titres](determining-what-files-need-to-be-deployed-cs/_static/image2.png)](determining-what-files-need-to-be-deployed-cs/_static/image1.png)
 
 **Figure 1 :** Le site Web du livre examine offre des révisions sur un large éventail de titres ([cliquez pour afficher l’image en taille réelle](determining-what-files-need-to-be-deployed-cs/_static/image3.png))
-
 
 Cette application n’utilise pas une base de données ; chaque révision est implémentée comme une page web distincte dans l’application. Ce didacticiel (et les didacticiels plusieurs suivants) guident de déploiement d’une application web qui n’a pas d’une base de données. Toutefois, dans un futur didacticiel nous améliorer cette application pour stocker les révisions, les commentaires des lecteurs et les autres informations dans une base de données et Explorer les étapes qui doivent être effectuée pour déployer correctement une application web pilotée par les données.
 
 > [!NOTE]
 > Ces didacticiels vous concentrer sur l’hébergement d’applications ASP.NET avec un fournisseur d’hébergement web et ne pas Explorer des rubriques auxiliaires tels que ASP. Système de mappage de site ou à l’aide d’une base de NET `Page` classe. Pour plus d’informations sur ces technologies et pour plus d’informations sur les autres sujets abordés tout au long du didacticiel, consultez la section obtenir des informations supplémentaires à la fin de chaque didacticiel.
 
-
 Téléchargement de ce didacticiel a deux copies de l’application web, chacun implémenté en tant qu’un autre type de projet Visual Studio : BookReviewsWAP, un projet d’Application Web et BookReviewsWSP, un projet de Site Web. Les deux projets ont été créés avec Visual Web Developer 2008 SP1 et utilisent ASP.NET 3.5 SP1. Pour fonctionner avec ces projets commencent par le contenu sur votre bureau lors de la décompression. Pour ouvrir le projet d’Application Web (BookReviewsWAP), accédez au dossier BookReviewsWAP et double-cliquez sur le fichier Solution `BookReviewsWAP.sln`. Pour ouvrir le projet de Site Web (BookReviewsWSP), lancez Visual Studio, puis, dans le menu fichier, choisissez l’option Ouvrir le Site Web, accédez à la `BookReviewsWSP` dossier sur votre bureau, puis cliquez sur OK.
-
 
 Les deux sections restantes dans ce didacticiel examiner quels fichiers vous devez copier vers l’environnement de production lors du déploiement de l’application. Les deux didacticiels - *[déploiement de votre Site à l’aide de FTP](deploying-your-site-using-an-ftp-client-cs.md)* et *[déploiement de votre Site à l’aide de Visual Studio](deploying-your-site-using-visual-studio-cs.md)* -montrent différentes façons à Copiez ces fichiers à un fournisseur d’hébergement web.
 
@@ -115,11 +110,9 @@ Le modèle de projet d’Application Web utilise la compilation explicite, le co
 
 Figure 2 montre les fichiers qui composent le projet d’Application Web livre révisions.
 
-
 [![L’Explorateur de solutions répertorie les fichiers qui composent le projet d’Application Web](determining-what-files-need-to-be-deployed-cs/_static/image5.png)](determining-what-files-need-to-be-deployed-cs/_static/image4.png)
 
 **Figure 2**: L’Explorateur de solutions répertorie les fichiers qui composent le projet d’Application Web
-
 
 Pour déployer une application ASP.NET développées à l’aide de début du modèle de projet d’Application Web en créant l’application afin de compiler explicitement le code source le plus récent dans un assembly. Ensuite, copiez les fichiers suivants à l’environnement de production :
 
@@ -131,7 +124,6 @@ Vous n’avez pas besoin copier des fichiers de code source les pages ASP.NET da
 > [!NOTE]
 > Comme le montre la Figure 2, le `BasePage` classe est implémentée comme un fichier de classe dans le projet, placé dans un dossier nommé `HelperClasses`. Lorsque le projet est compilé le code dans le `BasePage.cs` fichier est compilé en même temps que les classes de code-behind des pages ASP.NET dans l’assembly unique, `BookReviewsWAP.dll.` ASP.NET a un dossier spécial nommé `App_Code` qui est conçu pour contenir les fichiers de classe pour le Web Projets de site. Le code dans le `App_Code` dossier est automatiquement compilé et ne doit donc pas être utilisé avec les projets d’Application Web. Au lieu de cela, vous devez placer les fichiers de classe de votre application dans un dossier normal nommé `HelperClasses`, ou `Classes`, ou quelque chose de similaire. Vous pouvez également placer les fichiers de classe dans un projet de bibliothèque de classes distinct.
 
-
 En plus de copier les fichiers de balisage liées à ASP.NET et de l’assembly dans le `Bin` dossier, vous devez également copier les fichiers de prise en charge côté client - les images et les fichiers CSS - ainsi que les autres fichiers de prise en charge côté serveur, `Web.config` et `Web.sitemap`. Ce client et côté serveur prend en charge la nécessité de fichiers à copier sur l’environnement de production que vous utilisiez compilation explicite ou automatique.
 
 ## <a name="determining-the-files-to-deploy-for-the-web-site-project-files"></a>Déterminer les fichiers à déployer pour les fichiers de projet de Site Web
@@ -142,11 +134,9 @@ L’option de menu de génération dans Visual Studio est présente dans les pro
 
 Figure 3 montre les fichiers qui composent le projet de Site Web de révisions de livre.
 
-
  [![L’Explorateur de solutions répertorie les fichiers qui composent le projet de Site Web](determining-what-files-need-to-be-deployed-cs/_static/image7.png)](determining-what-files-need-to-be-deployed-cs/_static/image6.png) 
 
 **Figure 3**: L’Explorateur de solutions répertorie les fichiers qui composent le projet de Site Web
-
 
 Déploiement d’un projet de Site Web implique la copie de tous les fichiers ASP.NET à l’environnement de production - qui inclut les pages de balisage pour les pages ASP.NET, les pages maîtres et les contrôles utilisateur, ainsi que leurs fichiers de code. Vous devez également copier les fichiers de classe, tels que BasePage.cs. Notez que le `BasePage.cs` fichier se trouve dans le `App_Code` dossier, qui est un dossier spécial de ASP.NET utilisé dans les projets de Site Web pour les fichiers de classe. Le dossier spécial doit être créé sur la production, aussi, que les fichiers de classe dans le `App_Code` dossier sur l’environnement de développement doit être copié sur le `App_Code` dossier de production.
 
@@ -154,7 +144,6 @@ En plus de copier les fichiers de code source et le balisage ASP.NET, vous devez
 
 > [!NOTE]
 > Projets de Site Web peut également utiliser compilation explicite. Un futur didacticiel examine comment compiler explicitement un projet de Site Web.
-
 
 ## <a name="summary"></a>Récapitulatif
 

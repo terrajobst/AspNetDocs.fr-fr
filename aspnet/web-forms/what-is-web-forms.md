@@ -8,12 +8,12 @@ ms.date: 02/21/2014
 ms.assetid: 5fa1daf9-1161-4cfa-bd4c-658f48b2c229
 msc.legacyurl: /web-forms/what-is-web-forms
 msc.type: content
-ms.openlocfilehash: cb7a4ff9dbf746c0729129445042e53e506df5d2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 19be419c499759713971a6c77674c924867d1bbc
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385733"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133234"
 ---
 # <a name="what-is-web-forms"></a>Nouveautés de Web Forms
 
@@ -26,7 +26,6 @@ Web Forms sont des pages qui demandent de vos utilisateurs à l’aide de leur n
 > [!NOTE] 
 > 
 > Documentation d’ASP.NET et Visual Studio s’étend sur plusieurs versions. Les rubriques qui présentent les fonctionnalités des versions précédentes peuvent être utiles pour vos tâches en cours et les scénarios à l’aide des versions les plus récentes.
-
 
 **ASP.NET Web Forms sont :** 
 

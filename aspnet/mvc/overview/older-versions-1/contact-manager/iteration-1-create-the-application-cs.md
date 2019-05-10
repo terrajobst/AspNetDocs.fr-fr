@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: db0f160b-901c-46d3-865e-7ab6cd4ed68d
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-1-create-the-application-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5b3883d8a73d50039dfe6f11f757a0f1cb7ece3a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d3a940308f21a4f87bf80249bd465e8812794f68
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400969"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123942"
 ---
 # <a name="iteration-1--create-the-application-c"></a>Itération #1 : créer l’Application (c#)
 
@@ -22,7 +22,6 @@ by [Microsoft](https://github.com/microsoft)
 [Télécharger le Code](iteration-1-create-the-application-cs/_static/contactmanager_1_cs1.zip)
 
 > Dans la première itération, nous créons le Gestionnaire de Contact de la façon la plus simple possible. Nous ajoutons la prise en charge pour les opérations de base de données : Créer, lire, mettre à jour et supprimer (CRUD).
-
 
 ## <a name="building-a-contact-management-aspnet-mvc-application-vb"></a>Création d’une Application ASP.NET MVC de gestion des contacts (VB)
 
@@ -70,7 +69,6 @@ Dans les applications ASP.NET MVC, vous devez disposer de Visual Studio 2008 ou 
 > 
 > Pour les applications ASP.NET MVC avec Visual Web Developer, vous devez disposer de Visual Web Developer Service Pack 1 installé. Sans Service Pack 1, Impossible de créer des projets d’Application Web.
 
-
 Infrastructure ASP.NET MVC. Vous pouvez télécharger l’infrastructure ASP.NET MVC à partir de l’adresse suivante :
 
 [https://www.asp.net/mvc](../../../index.md)
@@ -87,14 +85,11 @@ Comme alternative à l’exécution de chacune de ces téléchargements un par u
 
 Projet d’Application Web ASP.NET MVC. Lancez Visual Studio et sélectionnez l’option de menu **fichier, nouveau projet**. Le **nouveau projet** boîte de dialogue s’affiche (voir Figure 1). Sélectionnez le **Web** type de projet et le **Application Web ASP.NET MVC** modèle. Nommez votre nouveau projet *ContactManager* et cliquez sur le bouton OK.
 
-
 Assurez-vous que vous disposez de .NET Framework 3.5 est sélectionné dans la liste déroulante en haut à droite de la **nouveau projet** boîte de dialogue. Sinon, le modèle d’Application Web ASP.NET MVC ne s’affiche.
-
 
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image1.jpg)](iteration-1-create-the-application-cs/_static/image1.png)
 
 **Figure 01**: La boîte de dialogue Nouveau projet ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image2.png))
-
 
 Application ASP.NET MVC, le **créer un projet de Test unitaire** boîte de dialogue apparaît. Vous pouvez utiliser cette boîte de dialogue pour indiquer que vous souhaitez créer et ajouter un projet de test unitaire à votre solution lorsque vous créez votre application ASP.NET MVC. Bien que nous ne générer les tests unitaires dans cette itération, vous devez sélectionner l’option **Oui, créer un projet de test unitaire** , car nous prévoyons d’ajouter des tests unitaires dans une itération ultérieure. Ajout d’un projet de Test lorsque vous créez un nouveau projet ASP.NET MVC est beaucoup plus facile que l’ajout d’un projet de Test après avoir créé le projet ASP.NET MVC.
 
@@ -102,19 +97,15 @@ Application ASP.NET MVC, le **créer un projet de Test unitaire** boîte de dial
 > 
 > Étant donné que Visual Web Developer ne prend pas en charge les projets de Test, vous n’obtenez pas la boîte de dialogue Créer un projet de Test unitaire lors de l’utilisation de Visual Web Developer.
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image2.jpg)](iteration-1-create-the-application-cs/_static/image3.png)
 
 **Figure 02**: La boîte de dialogue Créer un projet de Test unitaire ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image4.png))
 
-
 Application ASP.NET MVC s’affiche dans la fenêtre Explorateur de solutions Visual Studio (voir Figure 3). Si vous ne pas voir la fenêtre de l’Explorateur de solutions, puis vous pouvez ouvrir cette fenêtre en sélectionnant l’option de menu **afficher, Explorateur de solutions**. Notez que la solution contient deux projets : le projet ASP.NET MVC et le projet de Test. Le projet ASP.NET MVC est nommé ContactManager et le projet de Test nommé ContactManager.Tests.
-
 
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image3.jpg)](iteration-1-create-the-application-cs/_static/image5.png)
 
 **Figure 03**: La fenêtre Explorateur de solutions ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image6.png))
-
 
 ## <a name="deleting-the-project-sample-files"></a>Supprimer les fichiers d’exemple de projet
 
@@ -140,11 +131,9 @@ L’infrastructure ASP.NET MVC avec une base de données moderne, y compris les 
 
 Créer une base de données en double-cliquant sur l’application\_dossier de données dans la fenêtre Explorateur de solutions et en sélectionnant l’option de menu **ajouter, nouvel élément**. Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez le **données** catégorie et le **base de données SQL Server** modèle (voir Figure 4). Nommez la nouvelle base de données ContactManagerDB.mdf et cliquez sur le bouton OK.
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image4.jpg)](iteration-1-create-the-application-cs/_static/image7.png)
 
 **Figure 04**: Création d’une nouvelle base de données Microsoft SQL Server Express ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image8.png))
-
 
 Après avoir créé la nouvelle base de données, la base de données s’affiche dans l’application\_dossier de données dans la fenêtre de l’Explorateur de solutions. Double-cliquez sur le fichier ContactManager.mdf pour ouvrir la fenêtre Explorateur de serveurs et de se connecter à la base de données.
 
@@ -152,28 +141,23 @@ Après avoir créé la nouvelle base de données, la base de données s’affich
 > 
 > La fenêtre Explorateur de serveurs est appelée la fenêtre Explorateur de base de données dans le cas de Microsoft Visual Web Developer.
 
-
 Vous pouvez utiliser la fenêtre Explorateur de serveurs pour créer des objets de base de données tels que les tables de base de données, des vues, des déclencheurs et des procédures stockées. Cliquez sur le dossier Tables et sélectionnez l’option de menu **ajouter une nouvelle Table**. Le Concepteur de tables de base de données s’affiche (voir Figure 5).
-
 
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image5.jpg)](iteration-1-create-the-application-cs/_static/image9.png)
 
 **Figure 05**: Le Concepteur de tables de base de données ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image10.png))
 
-
 Nous devons créer une table qui contient les colonnes suivantes :
 
 <a id="0.1_table01"></a>
-
 
 | **Nom de la colonne** | **Type de données** | **Null autorisé** |
 | --- | --- | --- |
 | Id | int | False |
 | FirstName | nvarchar(50) | False |
 | LastName | nvarchar(50) | False |
-| Phone | nvarchar(50) | False |
+| Téléphone | nvarchar(50) | False |
 | Messagerie | nvarchar(255) | False |
-
 
 La première colonne, la colonne Id, est spéciale. Vous devez marquer la colonne Id comme une colonne d’identité et une colonne de clé primaire. Vous indiquez qu’une colonne est une colonne d’identité en développant les propriétés des colonnes (coup de œil au bas de la Figure 6) et en faisant défiler jusqu'à la propriété de la spécification d’identité. Définir le **(est d’identité)** valeur à la propriété **Oui**.
 
@@ -193,7 +177,6 @@ Dans ce didacticiel, nous utilisons Microsoft Entity Framework pour générer un
 > 
 > L’infrastructure ASP.NET MVC n’est pas lié à Microsoft Entity Framework en aucune façon. Vous pouvez utiliser ASP.NET MVC avec les technologies d’accès de base de données alternative notamment NHibernate, LINQ to SQL ou ADO.NET.
 
-
 Suivez ces étapes pour créer les classes de modèle de données :
 
 1. Cliquez sur le dossier de modèles dans la fenêtre Explorateur de solutions et sélectionnez **ajouter, nouvel élément**. Le **ajouter un nouvel élément** boîte de dialogue s’affiche (voir Figure 6).
@@ -202,36 +185,29 @@ Suivez ces étapes pour créer les classes de modèle de données :
 4. Dans le **choisir votre connexion de données** étape, sélectionnez la base de données ContactManagerDB.mdf et entrez le nom *ContactManagerDBEntities* pour les paramètres de connexion d’entité (voir Figure 8).
 5. Dans le **choisir vos objets de base de données** étape, activez la case à cocher Tables (voir la Figure 9). Le modèle de données inclura toutes les tables contenues dans votre base de données (il y a qu’un, la table de Contacts). Entrez l’espace de noms *modèles*. Cliquez sur le bouton Terminer pour terminer l’Assistant.
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image6.jpg)](iteration-1-create-the-application-cs/_static/image11.png)
 
 **Figure 06**: La boîte de dialogue Ajouter un nouvel élément ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image12.png))
-
 
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image7.jpg)](iteration-1-create-the-application-cs/_static/image13.png)
 
 **Figure 07**: Choisir le contenu du modèle ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image14.png))
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image8.jpg)](iteration-1-create-the-application-cs/_static/image15.png)
 
 **Figure 08**: Choisir votre connexion de données ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image16.png))
-
 
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image9.jpg)](iteration-1-create-the-application-cs/_static/image17.png)
 
 **Figure 09**: Choisir vos objets de base de données ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image18.png))
 
-
 Après avoir terminé l’Assistant Entity Data Model, Entity Data Model Designer s’affiche. Le concepteur affiche une classe qui correspond à chaque table en cours de modélisation. Vous devez voir une classe nommée Contacts.
 
 L’Assistant Entity Data Model génère des noms de classe en fonction des noms de table de base de données. Vous devez presque toujours modifier le nom de la classe générée par l’Assistant. Avec le bouton droit de la classe de Contacts dans le concepteur et sélectionnez l’option de menu **renommer**. Modifier le nom de la classe à partir des Contacts (plurielles) contact (singulier). Une fois que vous modifiez le nom de classe, la classe doit apparaître comme la Figure 10.
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image10.jpg)](iteration-1-create-the-application-cs/_static/image19.png)
 
 **Figure 10**: La classe Contact ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image20.png))
-
 
 À ce stade, nous avons créé notre modèle de base de données. Nous pouvons utiliser la classe Contact pour représenter un enregistrement de contact particulière dans notre base de données.
 
@@ -241,11 +217,9 @@ L’étape suivante consiste à créer notre contrôleur Home. Le contrôleur Ho
 
 Créer la classe de contrôleur d’accueil en double-cliquant sur le dossier contrôleurs dans la fenêtre Explorateur de solutions et en sélectionnant l’option de menu **ajouter, de contrôleur** (voir Figure 11). Notez que la case à cocher **ajouter des méthodes d’action pour les scénarios Create, Update et Details**. Assurez-vous que cette case à cocher est cochée avant de cliquer sur le **ajouter** bouton.
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image11.jpg)](iteration-1-create-the-application-cs/_static/image21.png)
 
 **Figure 11**: Ajout du contrôleur d’accueil ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image22.png))
-
 
 Lorsque vous créez le contrôleur Home, vous obtenez la classe dans le Listing 1.
 
@@ -271,19 +245,15 @@ Maintenant que nous avons ve créé le contrôleur de l’Index, nous devons ens
 
 Vous créez la vue Index en double-cliquant sur la méthode Index() et en sélectionnant l’option de menu **ajouter une vue** (voir Figure 12). Cette option de menu ouvre le **ajouter une vue** boîte de dialogue (voir Figure 13).
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image12.jpg)](iteration-1-create-the-application-cs/_static/image23.png)
 
 **Figure 12**: Ajout de la vue Index ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image24.png))
 
-
 Dans le **ajouter une vue** boîte de dialogue, cochez la case intitulée **créer une vue fortement typée**. Sélectionnez la classe de données d’affichage ContactManager.Models.Contact et la liste de contenu de vue. Sélection de ces options génère une vue qui affiche une liste d’enregistrements de Contact.
-
 
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image13.jpg)](iteration-1-create-the-application-cs/_static/image25.png)
 
 **Figure 13**: La boîte de dialogue Ajouter une vue ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image26.png))
-
 
 Lorsque vous cliquez sur le **ajouter** bouton, la vue Index dans la liste 3 est généré. Notez que le &lt;% @ Page %&gt; directive qui apparaît en haut du fichier. La vue Index hérite le ViewPage&lt;IEnumerable&lt;ContactManager.Models.Contact&gt; &gt; classe. En d’autres termes, la classe de modèle dans la vue représente une liste d’entités de Contact.
 
@@ -299,19 +269,15 @@ Nous devons apporter une modification à la vue Index. Étant donné que nous n�
 
 Après avoir modifié la vue Index, vous pouvez exécuter l’application Gestionnaire de contacts. Sélectionnez l’option de menu Débogage, démarrer le débogage, ou appuyez simplement sur F5. La première fois que vous exécutez l’application, vous obtenez la boîte de dialogue dans la Figure 14. Sélectionnez l’option **modifier le fichier Web.config pour activer le débogage** et cliquez sur le bouton OK.
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image14.jpg)](iteration-1-create-the-application-cs/_static/image27.png)
 
 **Figure 14**: Activation du débogage ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image28.png))
 
-
 La vue de l’Index est retournée par défaut. Cette vue répertorie toutes les données à partir de la table de base de données de Contacts (voir Figure 15).
-
 
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image15.jpg)](iteration-1-create-the-application-cs/_static/image29.png)
 
 **Figure 15**: La vue Index ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image30.png))
-
 
 Notez que la vue Index inclut un lien intitulé créer un nouveau en bas de la vue. Dans la section suivante, vous allez apprendre à créer des contacts.
 
@@ -335,19 +301,15 @@ Dans le corps de la méthode Create(), Entity Framework est utilisé pour insér
 
 Vous pouvez générer un formulaire HTML pour la création de nouveaux Contacts en double-cliquant sur une des deux méthodes Create() et en sélectionnant l’option de menu **ajouter une vue** (voir Figure 16).
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image16.jpg)](iteration-1-create-the-application-cs/_static/image31.png)
 
 **Figure 16**: Ajout de la vue Create ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image32.png))
 
-
 Dans le **ajouter une vue** boîte de dialogue, sélectionnez le **ContactManager.Models.Contact** classe et le **créer** option pour afficher le contenu (voir Figure 17). Lorsque vous cliquez sur le **ajouter** bouton, une création de vue est générée automatiquement.
-
 
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image17.jpg)](iteration-1-create-the-application-cs/_static/image33.png)
 
 **Figure 17**: Voir une page explode ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image34.png))
-
 
 La vue Create contient des champs de formulaire pour chacune des propriétés de la classe Contact. Le code de la vue Create est inclus dans la liste 5.
 
@@ -357,11 +319,9 @@ La vue Create contient des champs de formulaire pour chacune des propriétés de
 
 Une fois que vous modifiez les méthodes Create() et ajoutez la vue Create, vous pouvez exécuter l’application Gestionnaire de contacts et créer de nouveaux contacts. Cliquez sur le **créer un nouveau** lien qui apparaît dans la vue Index pour accéder à la vue de créer. Vous devez voir la vue dans la Figure 18.
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image18.jpg)](iteration-1-create-the-application-cs/_static/image35.png)
 
 **Figure 18**: Create View ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image36.png))
-
 
 ## <a name="editing-contacts"></a>Modification de Contacts
 
@@ -379,11 +339,9 @@ Entity Framework est utilisé pour enregistrer le Contact modifié dans la base 
 
 Vous pouvez générer la vue qui contient le formulaire de modification en double-cliquant sur la méthode Edit() et en sélectionnant l’option de menu Vue d’ajouter. Dans la boîte de dialogue Ajouter une vue, sélectionnez le **ContactManager.Models.Contact** classe et le **modifier** afficher le contenu (voir Figure 19).
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image19.jpg)](iteration-1-create-the-application-cs/_static/image37.png)
 
 **Figure 19**: Ajout d’une vue Modifier ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image38.png))
-
 
 Lorsque vous cliquez sur le bouton Ajouter, une nouvelle vue de modification est générée automatiquement. Le formulaire HTML généré contient des champs qui correspondent à chacune des propriétés de la classe Contact (voir la liste 7).
 
@@ -399,7 +357,6 @@ Si vous souhaitez supprimer des contacts, vous devez ajouter deux actions Delete
 > 
 > Plus tard, dans l’itération #7, nous modifions le Gestionnaire de contacts afin qu’il prend en charge une étape supprimer Ajax.
 
-
 Les deux nouvelles méthodes Delete() sont contenus dans la liste 8.
 
 **Liste 8 - Controllers\HomeController.cs (méthodes de suppression)**
@@ -408,31 +365,25 @@ Les deux nouvelles méthodes Delete() sont contenus dans la liste 8.
 
 La première méthode Delete() retourne un écran de confirmation de suppression d’un enregistrement de contact à partir de la base de données (voir Figure20). La deuxième méthode Delete() effectue l’opération de suppression réelle par rapport à la base de données. Une fois que le contact d’origine a été récupéré à partir de la base de données, les méthodes Entity Framework DeleteObject() et SaveChanges() sont appelées pour effectuer la suppression de la base de données.
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image20.jpg)](iteration-1-create-the-application-cs/_static/image39.png)
 
 **Figure 20**: La vue de confirmation de suppression ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image40.png))
-
 
 Nous devons modifier la vue Index afin qu’il contienne un lien pour la suppression des enregistrements de contact (voir Figure 21). Vous devez ajouter le code suivant à la même cellule du tableau qui contient le lien d’édition :
 
 Html.ActionLink( { id=item.Id }) %&gt;
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image21.jpg)](iteration-1-create-the-application-cs/_static/image41.png)
 
 **Figure 21**: Index de vue avec un lien d’édition ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image42.png))
-
 
 Ensuite, nous devons créer la vue de confirmation de suppression. Avec le bouton droit de la méthode Delete() dans la classe de contrôleur d’accueil et sélectionnez l’option de menu vue de l’ajouter. La boîte de dialogue Ajouter une vue s’affiche (voir Figure 22).
 
 Contrairement à dans le cas des liste, créer et modifier des vues, la boîte de dialogue Ajouter une vue ne contient pas une option pour créer une vue de la suppression. Au lieu de cela, sélectionnez le **ContactManager.Models.Contact** classe de données et la **vide** afficher le contenu. En sélectionnant la vue vide option contenue va nécessiter la créer la vue nous-mêmes.
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image22.jpg)](iteration-1-create-the-application-cs/_static/image43.png)
 
 **Figure 22**: Ajout de la vue de confirmation de suppression ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image44.png))
-
 
 Le contenu de la vue Delete est contenu dans la liste 9. Cette vue contient un formulaire qui confirme ou non un contact particulier doit être supprimé (voir Figure 21).
 
@@ -446,26 +397,21 @@ Il peut vous dérange pas que le nom de notre classe de contrôleur pour l’uti
 
 Ce problème est assez facile à résoudre. Tout d’abord, nous devons refactoriser le nom du contrôleur Home. Ouvrez la classe HomeController dans l’éditeur de Code Visual Studio, cliquez avec le bouton droit sur le nom de la classe et sélectionnez l’option de menu **refactoriser, changement de nom**. Cette option de menu ouvre la boîte de dialogue de changement de nom.
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image23.jpg)](iteration-1-create-the-application-cs/_static/image45.png)
 
 **Figure 23**: Refactorisation d’un nom de contrôleur ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image46.png))
-
 
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image24.jpg)](iteration-1-create-the-application-cs/_static/image47.png)
 
 **Figure 24**: À l’aide de la boîte de dialogue Renommer ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image48.png))
 
-
 Si vous renommez votre classe de contrôleur, Visual Studio met à jour le nom du dossier dans le dossier des vues. Visual Studio renomme le dossier \Views\Home dans le dossier \Views\Contact.
 
 Après avoir apporté cette modification, votre application n’a plus un contrôleur Home. Lorsque vous exécutez votre application, vous obtiendrez la page d’erreur dans la Figure 25.
 
-
 [![La boîte de dialogue Nouveau projet](iteration-1-create-the-application-cs/_static/image25.jpg)](iteration-1-create-the-application-cs/_static/image49.png)
 
 **Figure 25**: Aucun contrôleur par défaut ([cliquez pour afficher l’image en taille réelle](iteration-1-create-the-application-cs/_static/image50.png))
-
 
 Nous devons mettre à jour de l’itinéraire par défaut dans le fichier Global.asax pour utiliser le contrôleur de Contact au lieu du contrôleur Home. Ouvrez le fichier Global.asax et modifier le contrôleur par défaut utilisé par l’itinéraire par défaut (voir la liste 10).
 

@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: 81ed82bf-b940-44f1-b94a-555d0cb7cc98
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/form-basics
 msc.type: authoredcontent
-ms.openlocfilehash: f88f7a31551abda029bee0ec16aa35ce2ef5d2f0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f57661077ec3bb13f3d4ec41b130bda4d2fb9070
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385954"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132957"
 ---
 # <a name="introducing-aspnet-web-pages---html-form-basics"></a>Présentation des Pages Web ASP.NET - principes de base de formulaire HTML
 
@@ -33,7 +33,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - Objet `Request`.
 > - Le code SQL `Where` clause.
-
 
 ## <a name="what-youll-build"></a>Ce que vous allez générer
 
@@ -82,7 +81,6 @@ Le `<form>` élément englobe des éléments HTML à être envoyées. (Une erreu
 > 
 > (Pour en savoir plus sur les verbes HTTP, consultez le [définitions de méthode](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) article sur le site du W3C.)
 
-
 La plupart des éléments d’entrée utilisateur sont HTML `<input>` éléments. Ils ressemblent `<input type="type" name="name">,` où *type* indique le type de contrôle d’entrée d’utilisateur souhaité. Ces éléments sont les plus courants :
 
 - Zone de texte : `<input type="text">`
@@ -104,7 +102,6 @@ La partie intéressante est ce que vous, le développeur de pages, faire avec l�
 > Comme vous le savez peut-être, HTML est en transition et la dernière version (HTML5) inclut la prise en charge de manière plus intuitive pour les utilisateurs à entrer des informations. Par exemple, en HTML5, vous (le développeur de pages) pouvez indiquer la page que vous souhaitez que l’utilisateur à entrer une date. Le navigateur peut afficher automatiquement puis d’un calendrier au lieu d’obliger l’utilisateur à entrer une date manuellement. Toutefois, HTML5 est nouveau et ne prend pas en charge tous les navigateurs encore.
 > 
 > Les Pages Web ASP.NET prend en charge HTML5 d’entrée dans la mesure où le navigateur de l’utilisateur est. Pour avoir une idée des nouveaux attributs pour le `<input>` élément en HTML5, consultez [HTML &lt;d’entrée&gt; attribut type](http://www.w3schools.com/html/html_form_input_types.asp) sur le site W3Schools.
-
 
 ## <a name="creating-the-form"></a>Création du formulaire
 
@@ -176,7 +173,6 @@ Ce bloc définit l’étape de création d’une requête qui utilise le terme d
 > 
 > Il est conseillé d’être précis et utiliser le sous-ensemble de `Request` qui vous intéresse, comme `Request.Form` ou `Request.QueryString`. Pour les pages simples que vous créez dans ce didacticiel, il probablement ne vraiment faire la différence. Toutefois, lorsque vous créez des pages plus complexes, à l’aide de la version explicite `Request.Form` ou `Request.QueryString` peut vous aider à éviter les problèmes qui peuvent survenir lors de la page contient un formulaire (ou plusieurs formulaires), les cookies, les valeurs de chaîne de requête et ainsi de suite.
 
-
 ## <a name="creating-a-query-by-using-a-search-term"></a>Création d’une requête à l’aide d’un terme de recherche
 
 Maintenant que vous savez comment obtenir le terme de recherche entré par l’utilisateur, vous pouvez créer une requête qui l’utilise. N’oubliez pas que pour obtenir tous les éléments film de la base de données, vous utilisez une requête SQL qui ressemble à cette instruction :
@@ -218,7 +214,6 @@ Si vous placez tous ces éléments ensemble, vous obtenez le code suivant :
 > **Important !** À l’aide des espaces réservés (tels que `@0`) pour transmettre des valeurs à une commande SQL est *extrêmement important* pour la sécurité. La même façon qu’ici, avec des espaces réservés pour les données de variable, est la seule façon, vous devez construire des commandes SQL.
 > 
 > Jamais construire une instruction SQL en rassemblant des texte littéral (concaténer) et les valeurs que vous obtenez à partir de l’utilisateur. Concaténation de l’entrée utilisateur dans une instruction SQL s’ouvre votre site vers un *attaque par injection SQL* où un utilisateur malveillant soumet les valeurs à votre page de pirater votre base de données. (Vous trouverez plus d’informations dans l’article [Injection SQL](https://msdn.microsoft.com/library/ms161953.aspx) le site Web MSDN.)
-
 
 ## <a name="updating-the-movies-page-with-search-code"></a>Mise à jour de la Page de films avec rechercher du Code
 
@@ -280,7 +275,6 @@ Dans cette page, vous pouvez aussi définir également la `value` attribut le `s
 
 > [!NOTE]
 > Vous ne pouvez pas de « mémoriser » la valeur d’une zone de texte qui est utilisée pour les mots de passe. Il serait une faille de sécurité pour permettre aux utilisateurs de remplir un champ de mot de passe à l’aide de code.
-
 
 Réexécutez la page, entrez un genre, puis cliquez sur **recherche Genre**. Cette fois mais non seulement voir les résultats de la recherche, mais souvient de la zone de texte que vous avez entré la dernière fois :
 

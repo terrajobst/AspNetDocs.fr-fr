@@ -8,12 +8,12 @@ ms.date: 07/11/2008
 ms.assetid: 32d54638-71b2-491d-81f4-f7417a13a62f
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 986c4b109fc0e809867853da728bcd12654a80ec
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 52f3563a59647c3bc48c5c4d7e40ce8941d18268
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394677"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132307"
 ---
 # <a name="interacting-with-the-master-page-from-the-content-page-c"></a>Interaction avec la page de contenu à partir de la page maître (C#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger le Code](http://download.microsoft.com/download/1/8/4/184e24fa-fcc8-47fa-ac99-4b6a52d41e97/ASPNET_MasterPages_Tutorial_06_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/e/b/4/eb4abb10-c416-4ba4-9899-32577715b1bd/ASPNET_MasterPages_Tutorial_06_CS.pdf)
 
 > Examine la manière d’appeler des méthodes, définissez des propriétés, etc. de la Page maître à partir du code dans la Page de contenu.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -45,7 +44,6 @@ Lorsqu’un utilisateur visite la page pour ajouter un nouvel enregistrement, il
 > [!NOTE]
 > Même si vous désactivez l’état d’affichage du contrôle GridView afin qu’il relie à sa source de données sous-jacente à chaque publication, il toujours n’indiquent pas l’enregistrement ajouté juste car les données sont liées au GridView plus tôt dans le cycle de vie de page que lorsque le nouvel enregistrement est ajouté à la datab ASE.
 
-
 Pour résoudre ce problème afin que l’enregistrement juste-ajouté s’affiche dans la page maître du GridView sur la publication (postback), nous devons indiquer le contrôle GridView à relier à sa source de données *après* le nouvel enregistrement a été ajouté à la base de données. Cela requiert une interaction entre le contenu et les pages maîtres, car l’interface pour ajouter que le nouvel enregistrement (et ses gestionnaires d’événements) se trouvent dans la page de contenu, mais le contrôle GridView qui doit être actualisé est dans la page maître.
 
 Étant donné que l’actualisation d’affichage de la page maître à partir d’un gestionnaire d’événements dans la page de contenu fait partie des besoins plus courants pour le contenu et l’interaction de la page maître, nous allons Explorer ce sujet plus en détail. Le téléchargement de ce didacticiel inclut une base de données Microsoft SQL Server 2005 Express Edition nommé `NORTHWIND.MDF` dans du site Web `App_Data` dossier. La base de données Northwind stocke produit, employé et informations sur les ventes d’une société fictive, Northwind Traders.
@@ -55,24 +53,19 @@ Pour résoudre ce problème afin que l’enregistrement juste-ajouté s’affich
 > [!NOTE]
 > Ce didacticiel n’aborde pas des spécificités de l’utilisation des données dans ASP.NET. Les étapes de configuration de la page maître afficher des données et la page de contenu pour l’insertion de données sont terminées, encore breezy. Pour obtenir une présentation plus approfondie à l’affichage et insertion de données et l’utilisation des contrôles SqlDataSource et GridView, consultez les ressources dans la section relevés supplémentaire à la fin de ce didacticiel.
 
-
 ## <a name="step-1-displaying-the-five-most-recently-added-products-in-the-master-page"></a>Étape 1 : Afficher les cinq plus récemment ajouté les produits dans la Page maître
 
 Ouvrez le `Site.master` page maître et ajoutez une étiquette et un contrôle GridView à la `leftContent` `<div>`. Désactivez out l’étiquette `Text` propriété, la valeur son `EnableViewState` propriété sur false et son `ID` propriété `GridMessage`; définir le GridView `ID` propriété `RecentProducts`. Ensuite, à partir du concepteur, développez la balise active le contrôle GridView et choisissez de le lier à une source de données. Cette opération lance l’Assistant Configuration de Source de données. Étant donné que la base de données Northwind dans la `App_Data` dossier est une base de données Microsoft SQL Server, choisissez de créer un SqlDataSource en sélectionnant (voir Figure 1) ; nommez SqlDataSource `RecentProductsDataSource`.
-
 
 [![Lier le contrôle GridView à un contrôle SqlDataSource nommé RecentProductsDataSource](interacting-with-the-master-page-from-the-content-page-cs/_static/image2.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image1.png)
 
 **Figure 01**: Lier le contrôle GridView à un contrôle SqlDataSource nommé `RecentProductsDataSource` ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image3.png))
 
-
 L’étape suivante nous demande de spécifier ce que la base de données pour se connecter à. Choisissez le `NORTHWIND.MDF` de base de données de fichier à partir de la liste déroulante et cliquez sur Suivant. Comme il s’agit de la première fois que nous avons utilisé cette base de données, l’Assistant propose stocker la chaîne de connexion dans `Web.config`. Il a à stocker la chaîne de connexion en utilisant le nom `NorthwindConnectionString`.
-
 
 [![Se connecter à la base de données Northwind](interacting-with-the-master-page-from-the-content-page-cs/_static/image5.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image4.png)
 
 **Figure 02**: Se connecter à la base de données Northwind ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image6.png))
-
 
 L’Assistant Configurer la Source de données fournit deux moyens par lequel nous pouvons spécifier la requête utilisée pour récupérer des données :
 
@@ -81,19 +74,15 @@ L’Assistant Configurer la Source de données fournit deux moyens par lequel no
 
 Étant donné que nous voulons renvoyer que simplement cinq récemment ajoutées des produits, nous devons spécifier une instruction SQL personnalisée. Utilisez la requête SELECT suivante :
 
-
 [!code-sql[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample1.sql)]
 
 Le `TOP 5` mot clé retourne uniquement les cinq premiers enregistrements de la requête. Le `Products` clé primaire de la table, `ProductID`, est un `IDENTITY` colonne, ce qui nous permet de garantir que chaque produit de nouveau ajouté à la table a une valeur supérieure à l’entrée précédente. Par conséquent, trier les résultats par `ProductID` dans l’ordre décroissant renvoie les produits compter le plus récemment créées.
-
 
 [![Retourner les cinq produits les plus récentes](interacting-with-the-master-page-from-the-content-page-cs/_static/image8.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image7.png)
 
 **Figure 03**: Retourner les cinq plus récemment ajouté produits ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image9.png))
 
-
 À l’issue de l’Assistant, Visual Studio génère deux BoundFields pour le contrôle GridView afficher le `ProductName` et `UnitPrice` champs renvoyés à partir de la base de données. À ce stade le balisage déclaratif de votre page maître doit inclure balisage similaire à ce qui suit :
-
 
 [!code-aspx[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample2.aspx)]
 
@@ -101,30 +90,24 @@ Comme vous pouvez le voir, le balisage contient : le contrôle Web Label (`Grid
 
 Avec ce GridView créé et son contrôle SqlDataSource configuré, visitez le site Web via un navigateur. Comme le montre la Figure 4, vous verrez une grille dans l’angle inférieur gauche qui répertorie les cinq plus récemment ajouté des produits.
 
-
 [![Le contrôle GridView affiche cinq produits les plus récentes](interacting-with-the-master-page-from-the-content-page-cs/_static/image11.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image10.png)
 
 **Figure 04**: Le contrôle GridView affiche les cinq plus récemment ajouté produits ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image12.png))
 
-
 > [!NOTE]
 > N’hésitez pas à nettoyer l’apparence du contrôle GridView. Quelques suggestions incluent la mise en forme affichés `UnitPrice` valeur comme une devise et à l’aide de couleurs d’arrière-plan et polices pour améliorer l’apparence de la grille.
-
 
 ## <a name="step-2-creating-a-content-page-to-add-new-products"></a>Étape 2 : Création d’une Page de contenu pour ajouter de nouveaux produits
 
 La tâche suivante consiste à créer une page de contenu à partir de laquelle un utilisateur peut ajouter un nouveau produit à la `Products` table. Ajoutez une nouvelle page de contenu pour le `Admin` dossier nommé `AddProduct.aspx`, veillez à lier à la `Site.master` page maître. La figure 5 illustre l’Explorateur de solutions, une fois que cette page a été ajoutée au site Web.
 
-
 [![Ajouter une nouvelle Page ASP.NET dans le dossier Admin](interacting-with-the-master-page-from-the-content-page-cs/_static/image14.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image13.png)
 
 **Figure 05**: Ajoutez une nouvelle Page ASP.NET pour le `Admin` dossier ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image15.png))
 
-
 N’oubliez pas que dans le [ *spécifiant le titre, les balises Meta et les autres en-têtes HTML dans la Page maître* ](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md) didacticiel, nous avons créé une classe de page de base personnalisée nommée `BasePage` qui a généré le titre de la page s’il s’agissait pas explicitement défini. Accédez à la `AddProduct.aspx` code-behind de la page de classe et de la dériver de `BasePage` (au lieu d’à partir de `System.Web.UI.Page`).
 
 Enfin, mettez à jour le `Web.sitemap` fichier à inclure une entrée pour cette leçon. Ajoutez le balisage suivant sous le `<siteMapNode>` pour la leçon les problèmes de nommage ID de contrôle :
-
 
 [!code-xml[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample3.xml)]
 
@@ -132,11 +115,9 @@ Comme indiqué dans la Figure 6, l’ajout de ce `<siteMapNode>` élément appar
 
 Retour à `AddProduct.aspx`. Dans le contrôle de contenu pour le `MainContent` ContentPlaceHolder, ajoutez un contrôle DetailsView et nommez-le `NewProduct`. Lier le contrôle DetailsView à un nouveau contrôle SqlDataSource nommé `NewProductDataSource`. Comme avec SqlDataSource à l’étape 1, configurer l’Assistant afin qu’il utilise la base de données Northwind et choisir de spécifier une instruction SQL personnalisée. Étant donné que le contrôle DetailsView doit être utilisé pour ajouter des éléments à la base de données, nous devons spécifier à la fois un `SELECT` instruction et un `INSERT` instruction. Utilisez la commande suivante `SELECT` requête :
 
-
 [!code-sql[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample4.sql)]
 
 Ensuite, ajoutez le code suivant à partir de l’onglet Insérer, `INSERT` instruction :
-
 
 [!code-sql[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample5.sql)]
 
@@ -144,17 +125,14 @@ Après la fin de l’Assistant accédez à la balise active de DetailsView et co
 
 C’est aussi simple que cela ! Nous allons tester cette page. Visitez `AddProduct.aspx` via un navigateur, entrez un nom et le prix (voir Figure 6).
 
-
 [![Ajouter un nouveau produit à la base de données](interacting-with-the-master-page-from-the-content-page-cs/_static/image17.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image16.png)
 
 **Figure 06**: Ajouter un nouveau produit à la base de données ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image18.png))
-
 
 Après avoir tapé le nom et le prix de votre nouveau produit, cliquez sur le bouton d’insertion. Ainsi, le formulaire à la publication (postback). Lors de la de publication, le contrôle SqlDataSource `INSERT` instruction est exécutée ; ses deux paramètres sont remplis avec les valeurs entrées par l’utilisateur dans deux contrôles de zone de texte de DetailsView. Malheureusement, il n’existe aucun retour visuel une insertion a eu lieu. Il serait intéressant d’avoir un message affiché, confirmant qu’un nouvel enregistrement a été ajouté. Je laisse cela en guise d’exercice pour le lecteur. En outre, après avoir ajouté un nouvel enregistrement dans le contrôle DetailsView le contrôle GridView dans la page maître affiche toujours les cinq mêmes enregistrements qu’avant ; Il n’inclut pas l’enregistrement juste-ajouté. Nous allons examiner comment résoudre ce problème dans les étapes à venir.
 
 > [!NOTE]
 > Outre l’ajout d’une forme d’une rétroaction visuelle qui l’insertion a réussi, je vous encourage également mettre à jour d’interface d’insertion de DetailsView pour inclure la validation. Actuellement, il n’existe aucune validation. Si un utilisateur entre une valeur non valide pour le `UnitPrice` champ, tels que « trop coûteux, « une exception sera levée lors de la publication lorsque le système tente de convertir cette chaîne en un nombre décimal. Pour plus d’informations sur la personnalisation de l’insertion de l’interface, reportez-vous à la [ *personnalisation de l’Interface de Modification de données* didacticiel](../../data-access/editing-inserting-and-deleting-data/customizing-the-data-modification-interface-cs.md) à partir de mon [utilisation de la série de didacticiels données](../../data-access/index.md).
-
 
 ## <a name="step-3-creating-public-properties-and-methods-in-the-master-page"></a>Étape 3 : Création de propriétés et méthodes publiques dans la Page maître
 
@@ -162,11 +140,9 @@ Après avoir tapé le nom et le prix de votre nouveau produit, cliquez sur le bo
 
 Étant donné que le contrôle d’étiquette est implémenté comme une variable membre protégée au sein de la page maître que n’est pas accessible directement à partir de pages de contenu. Pour pouvoir fonctionner avec l’étiquette au sein d’une page maître à partir de la page de contenu (ou, d’ailleurs, n’importe quel contrôle Web dans la page maître) nous devons créer une propriété publique dans la page maître qui expose le contrôle Web ou sert de proxy par lequel une de ses propriétés peut être  accessible. Ajoutez la syntaxe suivante à la classe de code-behind de la page maître pour exposer l’étiquette `Text` propriété :
 
-
 [!code-csharp[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample6.cs)]
 
 Lorsqu’un nouvel enregistrement est ajouté à la `Products` table à partir d’une page de contenu le `RecentProducts` GridView dans la page maître a besoin relier à sa source de données sous-jacente. Pour relier l’appel de GridView son `DataBind` (méthode). Étant donné que le contrôle GridView dans la page maître n’est pas accessible par programme pour les pages de contenu, nous devez créer une méthode publique dans la page maître, lorsqu’elle est appelée, relie les données au GridView. Ajoutez la méthode suivante à la classe de code-behind de la page maître :
-
 
 [!code-csharp[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample7.cs)]
 
@@ -174,7 +150,6 @@ Avec le `GridMessageText` propriété et `RefreshRecentProductsGrid` méthode en
 
 > [!NOTE]
 > N’oubliez pas de marquer des propriétés et des méthodes en tant que la page maître `public`. Si vous ne désignez pas des explicitement ces propriétés et méthodes en tant que `public`, ils ne seront plus accessibles à partir de la page de contenu.
-
 
 ## <a name="step-4-calling-the-master-pages-public-members-from-a-content-page"></a>Étape 4 : Appel des membres publics de la Page maître à partir d’une Page de contenu
 
@@ -193,20 +168,16 @@ Toutes les pages de web ASP.NET doit dériver de la `Page` (classe), qui se trou
 
 Le `Master` propriété retourne un objet de type [ `MasterPage` ](https://msdn.microsoft.com/library/system.web.ui.masterpage.aspx) (également située dans le `System.Web.UI` espace de noms) qui est le type de base dont dérivent toutes les pages maîtres à partir de. Par conséquent, à l’utilisation des propriétés publiques ou les méthodes définies dans la page maître de notre site Web nous devons effectuer un cast du `MasterPage` objet retourné par la `Master` propriété vers le type approprié. Étant donné que nous avons nommé notre fichier de page maître `Site.master`, la classe code-behind s’appelait `Site`. Par conséquent, le code suivant convertit le `Page.Master` propriété à une instance de la classe de Site.
 
-
 [!code-csharp[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample8.cs)]
 
 Maintenant que nous avons converti la faiblement typé `Page.Master` propriété à la `Site` type, nous pouvons référencer les propriétés et méthodes spécifiques au Site. Comme le montre la Figure 7, la propriété publique `GridMessageText` apparaît dans la liste déroulante IntelliSense.
-
 
 [![IntelliSense affiche notre Page principale propriétés et méthodes publiques](interacting-with-the-master-page-from-the-content-page-cs/_static/image20.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image19.png)
 
 **Figure 07**: IntelliSense affiche notre Page principale propriétés et méthodes publiques ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image21.png))
 
-
 > [!NOTE]
 > Si vous avez nommé votre fichier de page maître `MasterPage.master` , nom de la classe code-behind de la page maître est `MasterPage`. Cela peut entraîner des code ambiguë lors de la conversion du type `System.Web.UI.MasterPage` à votre `MasterPage` classe. En bref, vous devez qualifier complètement le type que vous effectuez un cast, ce qui peut être un peu difficile lorsque vous utilisez le modèle de projet de Site Web. Je vous suggère consisterait à faire en sorte que lorsque vous créez votre page maître vous il donnez un nom autre que `MasterPage.master` ou, mieux encore, créez une référence fortement typée à la page maître.
-
 
 ### <a name="creating-a-strongly-typed-reference-with-themastertypedirective"></a>Création d’une référence fortement typée avec la`@MasterType`(Directive)
 
@@ -216,7 +187,6 @@ La génération de code automatique qui se produit chaque fois qu’une page ASP
 
 Utilisez le [ `@MasterType` directive](https://msdn.microsoft.com/library/ms228274.aspx) pour informer le moteur ASP.NET de type de page maître de la page de contenu. Le `@MasterType` directive peut accepter le nom de type de la page maître ou son chemin d’accès de fichier. Pour spécifier que le `AddProduct.aspx` page utilise `Site.master` comme sa page maître, ajoutez la directive suivante en haut du `AddProduct.aspx`:
 
-
 [!code-aspx[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample9.aspx)]
 
 Cette directive indique au moteur d’ASP.NET pour ajouter une référence fortement typée à la page maître via une propriété nommée `Master`. Avec le `@MasterType` directive en place, nous pouvons appeler le `Site.master` maître de la page Propriétés et méthodes publiques directement via le `Master` propriété sans toutes les conversions.
@@ -224,11 +194,9 @@ Cette directive indique au moteur d’ASP.NET pour ajouter une référence forte
 > [!NOTE]
 > Si vous omettez le `@MasterType` directive, la syntaxe `Page.Master` et `Master` retournent la même chose : un objet faiblement typé à la page maître de la page. Si vous incluez le `@MasterType` directive puis `Master` retourne une référence fortement typée à la page maître spécifiée. `Page.Master`, cependant, retourne toujours une référence faiblement typée. Pour examiner plus poussée pourquoi c’est le cas et comment la `Master` propriété est construite lors de la `@MasterType` directive est incluse, consultez [K. Scott Allen](http://odetocode.com/blogs/scott/default.aspx)d’entrée de blog [ `@MasterType` dans ASP.NET 2.0](http://odetocode.com/Blogs/scott/archive/2005/07/16/1944.aspx).
 
-
 ### <a name="updating-the-master-page-after-adding-a-new-product"></a>La mise à jour de la Page maître après l’ajout d’un nouveau produit
 
 Maintenant que nous savons comment appeler des propriétés publiques et les méthodes à partir d’une page de contenu d’une page maître, nous sommes prêts à mettre à jour le `AddProduct.aspx` page afin que la page maître soit actualisée après avoir ajouté un nouveau produit. Au début de l’étape 4, nous avons créé un gestionnaire d’événements pour le contrôle DetailsView `ItemInserting` événement, qui s’exécute immédiatement après que le nouveau produit a été ajouté à la base de données. Ajoutez le code suivant à ce gestionnaire d’événements :
-
 
 [!code-csharp[Main](interacting-with-the-master-page-from-the-content-page-cs/samples/sample10.cs)]
 
@@ -236,11 +204,9 @@ Le code ci-dessus utilise les deux le faiblement typé `Page.Master` propriété
 
 La figure 8 illustre la `AddProduct.aspx` page immédiatement après un nouveau produit - de Scott Soda - a été ajoutée à la base de données. Notez que le nom du produit juste-ajouté est indiqué dans l’étiquette de la page maître et que le contrôle GridView a été actualisé pour inclure le produit et son prix.
 
-
 [![Affichent le produit ajouté juste de l’étiquette et GridView de la Page maître](interacting-with-the-master-page-from-the-content-page-cs/_static/image23.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image22.png)
 
 **Figure 08**: Affichent le produit Just-Added de l’étiquette et GridView de la Page maître ([cliquez pour afficher l’image en taille réelle](interacting-with-the-master-page-from-the-content-page-cs/_static/image24.png))
-
 
 ## <a name="summary"></a>Récapitulatif
 

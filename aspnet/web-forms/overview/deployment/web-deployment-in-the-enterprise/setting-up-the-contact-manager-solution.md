@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 200b973c-776b-4a9b-9e82-39fda6120a52
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/setting-up-the-contact-manager-solution
 msc.type: authoredcontent
-ms.openlocfilehash: d0a7c29a590fcde504e5f5227806df62454f6add
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d9774ee01cb0515d7e733b24baa661f2648bd7c4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410485"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131039"
 ---
 # <a name="setting-up-the-contact-manager-solution"></a>Configuration de la solution Gestionnaire de contacts
 
@@ -22,7 +22,6 @@ par [Jason Lee](https://github.com/jrjlee)
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit comment télécharger et configurer la solution de Contact Manager pour exécuter localement sur une station de travail de développeur.
-
 
 ## <a name="system-requirements"></a>Configuration système requise
 
@@ -70,7 +69,6 @@ Le reste de cette section fournit plus d’informations sur comment effectuer ch
 > [!NOTE]
 > Pour plus d’informations sur le compte aspnet\_regsql utilitaire, consultez [ASP.NET SQL Server Registration Tool (Aspnet\_regsql.exe)](https://msdn.microsoft.com/library/ms229862(v=vs.100).aspx).
 
-
 L’étape suivante consiste à vous assurer que les chaînes de connexion dans la solution Gestionnaire de contacts pointent vers votre instance locale de SQL Server Express.
 
 **Pour mettre à jour les chaînes de connexion**
@@ -97,7 +95,6 @@ Vous devez maintenant être prêt à exécuter la solution de gestionnaire de co
 
 > [!NOTE]
 > Si vous suivez ces étapes sans d’abord créer une base de données de services d’application, ASP.NET crée la base de données la première fois que vous essayez de créer un utilisateur. Toutefois, création manuelle de la base de données vous donne un contrôle plus important sur l’ensemble de fonctionnalités de services application que vous souhaitez prendre en charge.
-
 
 **Pour exécuter la solution de gestionnaire de contacts**
 

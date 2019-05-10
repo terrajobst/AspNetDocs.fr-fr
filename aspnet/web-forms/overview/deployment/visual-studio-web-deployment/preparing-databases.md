@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: ae4def81-fa37-4883-a13e-d9896cbf6c36
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/preparing-databases
 msc.type: authoredcontent
-ms.openlocfilehash: 786be61d48f26e5765eac0c8d6fad7551897f711
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 72d69c0690c52c41f899e6cbe7cc656e537fe112
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387683"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131100"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Préparation au déploiement de base de données
 
@@ -22,7 +22,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 [Télécharger le projet de démarrage](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Cette série de didacticiels vous montre comment déployer (publier) un ASP.NET web application dans Azure App Service Web Apps ou à un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -134,7 +133,6 @@ Le projet est maintenant prêt à déployer le *ContosoUniversity* base de donn�
 > 
 > `Sql("UPDATE Department SET Budget = 1000");`
 
-
 ## <a name="create-scripts-for-membership-database-deployment"></a>Créer des scripts pour le déploiement de base de données d’appartenance
 
 L’application Contoso University utilise l’authentification de formulaires et de système de l’appartenance ASP.NET pour authentifier et autoriser les utilisateurs. Le **mise à jour crédits** page est accessible uniquement aux utilisateurs qui se trouvent dans le rôle d’administrateur.
@@ -160,14 +158,12 @@ Cette base de données n’est pas géré par Entity Framework Code First, vous 
 > [!NOTE]
 > Un nouveau système d’appartenance ASP.NET (maintenant appelé ASP.NET Identity) a été introduit avec Visual Studio 2013. Le nouveau système vous permet de conserver les applications et les tables d’appartenances dans la même base de données, et vous pouvez utiliser les Migrations Code First pour déployer les deux. L’exemple d’application utilise le système d’appartenance ASP.NET antérieures, ce qui ne peut pas être déployé à l’aide des Migrations Code First. Les procédures de déploiement de cette base de données d’appartenance s’appliquent également à tout autre scénario dans lequel votre application a besoin déployer une base de données SQL Server qui n’est pas créé par Entity Framework Code First.
 
-
 Ici aussi, vous préfèrent généralement les mêmes données en production que vous avez dans le développement. Lorsque vous déployez un site pour la première fois, il est courant d’exclure la plupart ou tous les comptes d’utilisateur que vous créez pour le test. Par conséquent, le projet téléchargé a deux bases de données d’appartenance : *aspnet-ContosoUniversity.mdf* avec les utilisateurs de développement et *aspnet-ContosoUniversity-Prod.mdf* avec les utilisateurs en production. Pour ce didacticiel, les noms d’utilisateur sont les mêmes dans les deux bases de données : *administrateur* et *nonadmin*. Les deux utilisateurs ont le mot de passe *devpwd* dans la base de données de développement et *prodpwd* dans la base de données de production.
 
 Vous allez déployer les utilisateurs de développement vers l’environnement de test et les utilisateurs de production à intermédiaire et de production. Pour ce faire vous allez créer deux scripts SQL dans ce didacticiel, un pour le développement et un pour la production, et dans les didacticiels suivants, vous allez configurer le processus de publication pour les exécuter.
 
 > [!NOTE]
 > La base de données d’appartenances stocke un hachage des mots de passe de compte. Pour déployer des comptes à partir d’un ordinateur à un autre, il se peut que vous devez vous assurer que les routines de hachage ne pas générer de hachages différents sur le serveur de destination qu’ils l’ordinateur source. Ils génèrent les hachages mêmes lorsque vous utilisez les fournisseurs universels ASP.NET, tant que vous ne modifiez pas l’algorithme par défaut. L’algorithme par défaut est HMACSHA256 et qu’il est spécifié dans le **validation** attribut de la **[machineKey](https://msdn.microsoft.com/library/system.web.configuration.machinekeysection.aspx)** élément dans le fichier Web.config.
-
 
 Vous pouvez créer des scripts de déploiement de données manuellement, à l’aide de SQL Server Management Studio (SSMS), ou à l’aide d’un outil tiers. Cette suite de ce didacticiel vous montrera comment le faire dans SSMS, mais si vous ne souhaitez pas installer et utiliser SSMS vous pouvez obtenir les scripts à partir de la version complète du projet et passer à la section où les stocker dans le dossier de solution.
 

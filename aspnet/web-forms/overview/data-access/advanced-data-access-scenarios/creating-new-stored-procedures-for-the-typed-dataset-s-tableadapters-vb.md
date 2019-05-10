@@ -8,12 +8,12 @@ ms.date: 07/18/2007
 ms.assetid: a5a4a9ba-d18d-489a-a6b0-a3c26d6b0274
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1d8387f782ace50f16d44ba8df4df8014d563674
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 19e9800eb3862ad1f78a6cd2616b28deee997876
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396458"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132418"
 ---
 # <a name="creating-new-stored-procedures-for-the-typed-datasets-tableadapters-vb"></a>Création de procédures stockées pour les TableAdapters de dataset typé (VB)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger le Code](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_67_VB.zip) ou [télécharger le PDF](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/datatutorial67vb1.pdf)
 
 > Dans les didacticiels précédents, nous avons créé des instructions SQL dans notre code et passé les instructions à la base de données doit être exécuté. Une autre approche consiste à utiliser des procédures stockées, où les instructions SQL sont prédéfinies dans la base de données. Dans ce didacticiel, nous apprendre pour que l’Assistant TableAdapter à générer de nouvelles procédures stockées pour nous.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -35,7 +34,6 @@ Lorsque la définition d’un TableAdapter ou d’ajouter de nouvelles méthodes
 > [!NOTE]
 > Consultez l’entrée de blog de Rob Howard [Don utilisez encore les procédures stockées t ?](http://grokable.com/2003/11/dont-use-stored-procedures-yet-must-be-suffering-from-nihs-not-invented-here-syndrome/) et [Frans Bouma](https://weblogs.asp.net/fbouma/) entrée de blog de s [de procédures stockées sont défectueux, M Kay ?](https://weblogs.asp.net/fbouma/archive/2003/11/18/38178.aspx) pour un débat animé sur les avantages et inconvénients de procédures stockées et ad-hoc SQL.
 
-
 ## <a name="stored-procedure-basics"></a>Présentation des procédures stockées
 
 Les fonctions sont une construction commune à tous les langages de programmation. Une fonction est une collection d’instructions qui sont exécutées lorsque la fonction est appelée. Fonctions peuvent accepter des paramètres d’entrée et peuvent éventuellement retourner une valeur. *[Procédures stockées](http://en.wikipedia.org/wiki/Stored_procedure)*  sont des constructions de base de données qui partagent de nombreuses similitudes avec les fonctions de langages de programmation. Une procédure stockée est constituée d’un ensemble d’instructions T-SQL qui sont exécutées lorsque la procédure stockée est appelée. Une procédure stockée peut accepter de zéro et de paramètres d’entrée et peut retourner des valeurs scalaires, des paramètres de sortie, ou, plus couramment, jeux de résultats à partir de `SELECT` requêtes.
@@ -43,20 +41,16 @@ Les fonctions sont une construction commune à tous les langages de programmatio
 > [!NOTE]
 > Les procédures stockées sont souvent appelées sprocs ou SPs.
 
-
 Procédures stockées sont créées à l’aide de la [ `CREATE PROCEDURE` ](https://msdn.microsoft.com/library/aa258259(SQL.80).aspx) instruction T-SQL. Par exemple, le script T-SQL suivant crée une procédure stockée nommée `GetProductsByCategoryID` qui prend un paramètre unique nommé `@CategoryID` et retourne le `ProductID`, `ProductName`, `UnitPrice`, et `Discontinued` champs de ces colonnes dans le `Products` table qui a une correspondance `CategoryID` valeur :
-
 
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample1.sql)]
 
 Une fois cette procédure stockée a été créée, elle peut être appelée à l’aide de la syntaxe suivante :
 
-
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample2.sql)]
 
 > [!NOTE]
 > Dans le didacticiel suivant, nous allons examiner de création de procédures stockées via l’IDE Visual Studio. Pour ce didacticiel, toutefois, nous allons laisser l’Assistant TableAdapter générer automatiquement les procédures stockées pour nous.
-
 
 En plus de retourner simplement les données, procédures stockées sont souvent utilisées pour exécuter plusieurs commandes de base de données dans l’étendue d’une transaction unique. Une procédure stockée nommée `DeleteCategory`, par exemple, peut prendre un `@CategoryID` paramètre et effectuer deux `DELETE` instructions : Premièrement, l’une pour supprimer les produits connexes et une seconde lors de la suppression de la catégorie spécifiée. Plusieurs instructions dans une procédure stockée sont *pas* automatiquement encapsulée dans une transaction. Les commandes T-SQL supplémentaires doivent être émis pour vous assurer de la procédure stockée s que plusieurs commandes sont traitées comme une opération atomique. Nous verrons comment encapsuler des commandes une procédure stockée dans l’étendue d’une transaction dans le didacticiel suivant.
 
@@ -77,32 +71,25 @@ Avant de commencer notre discussion sur la création d’une DAL à l’aide de 
 - `EncryptingConfigSections.aspx`
 - `ManagedFunctionsAndSprocs.aspx`
 
-
 ![Ajouter les Pages ASP.NET pour les didacticiels de scénarios de couche données avancés accès](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image1.png)
 
 **Figure 1**: Ajouter les Pages ASP.NET pour les didacticiels de scénarios de couche données avancés accès
 
-
 Comme dans les autres dossiers, `Default.aspx` dans le `AdvancedDAL` dossier répertorie les didacticiels dans sa section. N’oubliez pas que le `SectionLevelTutorialListing.ascx` contrôle utilisateur fournit cette fonctionnalité. Par conséquent, ajoutez ce contrôle utilisateur à `Default.aspx` en le faisant glisser à partir de l’Explorateur de solutions sur la page s en mode Création.
-
 
 [![Ajouter le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image3.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image2.png)
 
 **Figure 2**: Ajouter le `SectionLevelTutorialListing.ascx` contrôle utilisateur à `Default.aspx` ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image4.png))
 
-
 Enfin, ajoutez ces pages en tant qu’entrées pour le `Web.sitemap` fichier. Plus précisément, ajoutez le balisage suivant après l’utilisation de données traités par lot `<siteMapNode>`:
-
 
 [!code-xml[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample3.xml)]
 
 Après la mise à jour `Web.sitemap`, prenez un moment pour afficher le site Web de didacticiels via un navigateur. Le menu de gauche inclut désormais les éléments pour les didacticiels de scénarios de couche DAL avancées.
 
-
 ![Le plan de Site inclut maintenant des entrées pour les didacticiels de scénarios de couche DAL avancées](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image5.png)
 
 **Figure 3**: Le plan de Site inclut maintenant des entrées pour les didacticiels de scénarios de couche DAL avancées
-
 
 ## <a name="step-2-configuring-a-tableadapter-to-create-new-stored-procedures"></a>Étape 2 : Configuration d’un TableAdapter pour créer de nouvelles procédures stockées
 
@@ -110,109 +97,84 @@ Pour illustrer la création d’une couche d’accès aux données qui utilise d
 
 Ajouter un nouveau DataSet au projet en cliquant sur le `DAL` dossier, en choisissant Ajouter un nouvel élément, puis en sélectionnant le modèle de jeu de données comme indiqué dans la Figure 4.
 
-
 [![Ajouter un nouveau jeu de données typé au projet nommé NorthwindWithSprocs.xsd](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image7.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image6.png)
 
 **Figure 4**: Ajouter un nouveau DataSet typé pour le projet nommé `NorthwindWithSprocs.xsd` ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image8.png))
-
 
 Cela sera créer le nouveau DataSet typé, ouvrez son concepteur, créez un TableAdapter et lancer l’Assistant Configuration de TableAdapter. L’étape de première s Assistant Configuration de TableAdapter nous invite à sélectionner la base de données pour travailler avec. La chaîne de connexion à la base de données Northwind doit être répertoriée dans la liste déroulante. Sélectionnez cette option et cliquez sur Suivant.
 
 À partir de cet écran suivant, nous pouvons choisir comment le TableAdapter doit-il accéder à la base de données. Dans les didacticiels précédents, nous avons sélectionné la première option, utiliser des instructions SQL. Pour ce didacticiel, sélectionnez la deuxième option, créer des procédures stockées et cliquez sur Suivant.
 
-
 [![Indiquer le TableAdapter à créer des procédures stockées](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image10.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image9.png)
 
 **Figure 5**: Indiquer le TableAdapter à créer de nouvelles procédures stockées ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image11.png))
-
 
 Tout comme avec à l’aide des instructions SQL ad hoc, à l’étape suivante on nous demande de fournir la `SELECT` instruction pour la requête principale de TableAdapter s. Mais au lieu d’utiliser le `SELECT` instruction entrée ici pour effectuer une requête ad hoc directement, l’Assistant TableAdapter s créera une procédure stockée qui contient ce `SELECT` requête.
 
 Utilisez la commande suivante `SELECT` requête pour ce TableAdapter :
 
-
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample4.sql)]
-
 
 [![Entrez la requête SELECT](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image13.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image12.png)
 
 **Figure 6**: Entrez le `SELECT` requête ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image14.png))
 
-
 > [!NOTE]
 > La requête ci-dessus diffère légèrement de la requête principale de la `ProductsTableAdapter` dans le `Northwind` DataSet typée. N’oubliez pas que le `ProductsTableAdapter` dans le `Northwind` DataSet typée inclut deux sous-requêtes en corrélation afin de rétablir le nom de la catégorie et le nom de société pour chaque catégorie de produit s et le fournisseur. Dans le prochain [mise à jour du TableAdapter pour l’utilisation de jointures](updating-the-tableadapter-to-use-joins-vb.md) didacticiel, nous allons examiner cela Ajout des données liées à ce TableAdapter.
-
 
 Prenez un moment cliquer sur le bouton Options avancées. À partir de là, nous pouvons spécifier si l’Assistant doit générer également insert, update et delete instructions pour le TableAdapter, s’il faut utiliser l’accès concurrentiel optimiste et indique si la table de données doit être actualisée après les insertions et mises à jour. L’option d’instructions générer Insert, Update et Delete est activée par défaut. Laissez-la activée. Pour ce didacticiel, laissez les options de l’accès concurrentiel optimiste utilisation désactivée.
 
 Lorsque having les procédures stockées créées automatiquement par l’Assistant TableAdapter, il apparaît que l’actualisation de l’option de table de données est ignorée. Indépendamment de si cette case à cocher est activée, qui en résulte insertion et mise à jour des procédures stockées récupérer l’enregistrement inséré juste ou mis à jour juste, comme nous le verrons à l’étape 3.
 
-
 ![Laissez les instructions générer Insert, Update et Delete, Option activée](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image15.png)
 
 **Figure 7**: Laissez les instructions générer Insert, Update et Delete, Option activée
 
-
 > [!NOTE]
 > Si l’option de l’accès concurrentiel optimiste utiliser est activée, l’Assistant ajoutera des conditions supplémentaires pour le `WHERE` clause qui empêchent les données à partir de la mise à jour si des modifications ont été dans d’autres champs. Faire référence à la [implémentation de l’accès concurrentiel optimiste](../editing-inserting-and-deleting-data/implementing-optimistic-concurrency-vb.md) didacticiel pour plus d’informations sur l’utilisation de la fonctionnalité de contrôle d’accès concurrentiel optimiste intégrés s TableAdapter.
 
-
 Après avoir entré la `SELECT` interroger et confirmé que l’option d’instructions générer Insert, Update et Delete est cochée, cliquez sur Suivant. Cet écran suivant, illustré à la Figure 8, invite à entrer les noms des procédures stockées, que l’Assistant va créer pour la sélection, insertion, la mise à jour et suppression de données. Modifier ces noms de procédures à de stockage `Products_Select`, `Products_Insert`, `Products_Update`, et `Products_Delete`.
-
 
 [![Renommer les procédures stockées](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image17.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image16.png)
 
 **Figure 8**: Renommer les procédures stockées ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image18.png))
 
-
 Pour afficher le code T-SQL, l’Assistant TableAdapter utilisera pour créer les quatre procédures stockées, cliquez sur le bouton Aperçu le Script SQL. À partir de la boîte de dialogue de Script SQL de version préliminaire, vous pouvez enregistrer le script dans un fichier ou copiez-le dans le Presse-papiers.
-
 
 ![Afficher un aperçu du Script SQL utilisé pour générer les procédures stockées](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image19.png)
 
 **Figure 9**: Afficher un aperçu du Script SQL utilisé pour générer les procédures stockées
 
-
 Après la désignation des procédures stockées, cliquez sur Suivant pour les méthodes correspondantes nom le TableAdapter s. Comme lors de l’utilisation des instructions SQL ad hoc, nous pouvons créer des méthodes pour remplir un DataTable existant ou retournent un nouveau. Nous pouvons également spécifier si le TableAdapter doit inclure le modèle de Direct à la base de données pour insérer, mettre à jour et suppression d’enregistrements. Laissez toutes les cases à trois cocher vérifiées, mais renommer le retour à une méthode de DataTable à `GetProducts` (comme indiqué dans la Figure 10).
-
 
 [![Nommez les méthodes Fill et GetProducts](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image21.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image20.png)
 
 **Figure 10**: Nommez les méthodes `Fill` et `GetProducts` ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image22.png))
 
-
 Cliquez sur Suivant pour afficher un résumé des étapes de que l’Assistant va effectuer. Terminez l’Assistant en cliquant sur le bouton Terminer. Une fois l’Assistant terminé, vous serez renvoyé au jeu de données s concepteur, qui doit inclure désormais le `ProductsDataTable`.
-
 
 [![Le Concepteur de s DataSet montre le ProductsDataTable nouvellement ajoutée](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image24.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image23.png)
 
 **Figure 11**: Le Concepteur de DataSet s montre nouvellement ajouté `ProductsDataTable` ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image25.png))
 
-
 ## <a name="step-3-examining-the-newly-created-stored-procedures"></a>Étape 3 : Examiner les procédures stockées qui vient d’être créés
 
 L’Assistant TableAdapter utilisé automatiquement à l’étape 2 a créé les procédures stockées pour la sélection, insertion, la mise à jour et suppression de données. Ces procédures stockées peuvent être visualisées ou modifiées via Visual Studio en accédant à l’Explorateur de serveurs et de descente dans le dossier de procédures stockées de base de données s. Comme le montre la Figure 12, la base de données Northwind contient quatre nouvelles procédures stockées : `Products_Delete`, `Products_Insert`, `Products_Select`, et `Products_Update`.
-
 
 ![Vous trouverez les quatre procédures stockées créées à l’étape 2 dans le dossier de procédures stockées de base de données s](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image26.png)
 
 **Figure 12**: Vous trouverez les quatre procédures stockées créées à l’étape 2 dans le dossier de procédures stockées de base de données s
 
-
 > [!NOTE]
 > Si vous ne voyez pas l’Explorateur de serveurs, accédez au menu Affichage et choisissez l’option de l’Explorateur de serveurs. Si vous ne voyez pas les procédures stockées de produit ajoutés à l’étape 2, essayez de clic droit sur le dossier de procédures stockées et en choisissant actualise.
 
-
 Pour afficher ou modifier une procédure stockée, double-cliquez sur son nom dans l’Explorateur de serveurs ou bien, vous pouvez également, avec le bouton droit sur la procédure stockée et choisissez Ouvrir. La figure 13 montre la `Products_Delete` procédure stockée, l’ouverture.
-
 
 [![Les procédures stockées peuvent être ouvert et modifiés dans Visual Studio](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image28.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image27.png)
 
 **Figure 13**: Stockées procédures peuvent être ouverts et modifiés à partir de Visual Studio ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image29.png))
 
-
 Le contenu des deux le `Products_Delete` et `Products_Select` les procédures stockées sont relativement simples. Le `Products_Insert` et `Products_Update` des procédures stockées, justifient quant à eux, un examen approfondi pendant qu’ils les deux effectuent un `SELECT` instruction après leur `INSERT` et `UPDATE` instructions. Par exemple, le code SQL suivant constitue le `Products_Insert` procédure stockée :
-
 
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample5.sql)]
 
@@ -220,11 +182,9 @@ La procédure stockée accepte comme paramètres d’entrée le `Products` colon
 
 Le code suivant illustre cette fonctionnalité. Il contient un `ProductsTableAdapter` et `ProductsDataTable` créé pour le `NorthwindWithSprocs` DataSet typée. Un nouveau produit est ajouté à la base de données en créant un `ProductsRow` instance, qui fournit ses valeurs et en appelant le TableAdapter s `Update` méthode, en passant le `ProductsDataTable`. En interne, le TableAdapter s `Update` méthode énumère la `ProductsRow` instances dans le DataTable dans le passé (dans cet exemple il existe un seul - celui que nous venons d’ajouter) et effectue approprié insert, update ou supprimer la commande. Dans ce cas, le `Products_Insert` procédure stockée est exécutée, qui ajoute un nouvel enregistrement à la `Products` de table et retourne les détails de l’enregistrement qui vient d’être ajouté. Le `ProductsRow` instance s `ProductID` la mise à jour puis de valeur. Après le `Update` méthode est terminée, nous pouvons accéder à l’enregistrement qui vient d’être ajouté s `ProductID` valeur via la `ProductsRow` s `ProductID` propriété.
 
-
 [!code-vb[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample6.vb)]
 
 Le `Products_Update` procédure stockée inclut même un `SELECT` instruction après son `UPDATE` instruction.
-
 
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample7.sql)]
 
@@ -234,26 +194,21 @@ Notez que cette procédure stockée comprend deux paramètres d’entrée pour `
 
 Dans la mesure où le `@Original_ProductID` paramètre est superflu, s permettent de supprimer de la `Products_Update` procédure stockée complètement. Ouvrir le `Products_Update` procédure stockée, supprimer le `@Original_ProductID` paramètre et, dans le `WHERE` clause de la `UPDATE` instruction, modifiez le nom de paramètre utilisé à partir de `@Original_ProductID` à `@ProductID`. Après avoir apporté ces modifications, le code T-SQL dans la procédure stockée doit se présenter comme suit :
 
-
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample8.sql)]
 
 Pour enregistrer ces modifications dans la base de données, cliquez sur l’icône Enregistrer dans la barre d’outils ou appuyez sur Ctrl + S. À ce stade, le `Products_Update` n’attend pas de procédure stockée une `@Original_ProductID` paramètre d’entrée, mais le TableAdapter est configuré pour passer un paramètre de ce type. Vous pouvez voir les paramètres TableAdapter enverra à la `Products_Update` procédure stockée en sélectionnant le TableAdapter dans le Concepteur de DataSet, accédant à la fenêtre Propriétés et en cliquant sur le bouton de sélection dans le `UpdateCommand` s `Parameters` collection. Ceci fait apparaître la boîte de dialogue Éditeur de collections Parameters indiquée dans la Figure 14.
-
 
 ![Les listes d’éditeur de collections de paramètres les paramètres utilisés passé à la Products_Update procédure stockée](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image30.png)
 
 **Figure 14**: Les listes d’éditeur de collections de paramètres les paramètres utilisés passé à la `Products_Update` procédure stockée
 
-
 Vous pouvez supprimer ce paramètre à partir d’ici en sélectionnant simplement le `@Original_ProductID` paramètre dans la liste des membres et en cliquant sur le bouton Supprimer.
 
 Ou bien, vous pouvez actualiser les paramètres utilisés pour toutes les méthodes en effectuant un clic droit sur le TableAdapter dans le concepteur et en choisissant de configurer. Cela fera apparaître l’Assistant Configuration de TableAdapter, répertoriant les procédures stockées utilisées pour la sélection, insertion, mise à jour, et la suppression, ainsi que les paramètres des procédures stockées s’attendre à recevoir. Si vous cliquez sur la liste déroulante de mise à jour, vous pouvez voir le `Products_Update` des procédures stockées attendu de paramètres d’entrée, qui inclut maintenant n’est plus `@Original_ProductID` (voir Figure 15). Cliquez simplement sur Terminer pour automatiquement mettre à jour la collection de paramètres utilisée par le TableAdapter.
 
-
 [![Vous pouvez également utiliser l’Assistant de Configuration de TableAdapter s pour actualiser ses Collections de paramètres de méthodes](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image32.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image31.png)
 
 **Figure 15**: Vous pouvez également utiliser l’Assistant de Configuration pour actualiser une ses Collections de paramètres de méthodes du TableAdapter s ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image33.png))
-
 
 ## <a name="step-5-adding-additional-tableadapter-methods"></a>Étape 5 : Ajout de méthodes du TableAdapter supplémentaires
 
@@ -261,59 +216,45 @@ En tant qu’étape 2 illustré, lors de la création d’un nouveau TableAdapte
 
 Démarrer en cliquant sur le TableAdapter et en choisissant Ajouter une requête dans le menu contextuel.
 
-
 ![Ajouter une nouvelle requête au TableAdapter](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image34.png)
 
 **Figure 16**: Ajouter une nouvelle requête au TableAdapter
 
-
 Ceci démarrera l’Assistant Configuration de requêtes TableAdapter, qui demande tout d’abord comment le TableAdapter doit-il accéder à la base de données. Pour qu’une nouvelle procédure stockée créée, sélectionnez Créer une nouvelle option de procédure stockée et cliquez sur Suivant.
-
 
 [![Choisissez de créer une nouvelle Option de procédure stockée](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image36.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image35.png)
 
 **Figure 17**: Choisissez de créer une nouvelle Option de procédure stockée ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image37.png))
 
-
 L’écran suivant nous demande pour identifier le type de requête à exécuter, si elle sera retourner un ensemble de lignes ou une valeur scalaire unique, ou effectuer une `UPDATE`, `INSERT`, ou `DELETE` instruction. Dans la mesure où le `GetProductByProductID(productID)` méthode sera retourner une ligne, laissez l’instruction SELECT qui retourne l’option de la ligne sélectionnée et appuyez sur Suivant.
-
 
 [![Choisissez l’instruction SELECT qui retourne l’Option de ligne](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image39.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image38.png)
 
 **Figure 18**: Choisissez l’instruction SELECT qui retourne l’Option de ligne ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image40.png))
 
-
 L’écran suivant affiche la requête principale s du TableAdapter, qui répertorie simplement le nom de la procédure stockée (`dbo.Products_Select`). Remplacez le nom de la procédure stockée par le code suivant `SELECT` instruction, qui retourne tous les champs de produit pour un produit donné :
 
-
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample9.sql)]
-
 
 [![Remplacez le nom de la procédure stockée par une requête SELECT](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image42.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image41.png)
 
 **Figure 19**: Remplacez le nom de la procédure stockée avec un `SELECT` requête ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image43.png))
 
-
 L’écran suivant vous invite à nommer la procédure stockée qui sera créée. Entrez le nom `Products_SelectByProductID` et cliquez sur Suivant.
-
 
 [![Nom de la nouvelle Products_SelectByProductID de procédure stockée](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image45.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image44.png)
 
 **Figure 20**: Nommez la nouvelle procédure stockée `Products_SelectByProductID` ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image46.png))
 
-
 L’étape finale de l’Assistant permet de modifier la méthode de noms générant ainsi que pour indiquent s’il faut utiliser le remplissage un modèle de DataTable, retourner un DataTable de modèle, ou les deux. Pour cette méthode, laissez les deux options activées, mais les méthodes à le renommer `FillByProductID` et `GetProductByProductID`. Cliquez sur Suivant pour afficher un résumé des étapes de l’Assistant va effectuer et puis cliquez sur Terminer pour terminer l’Assistant.
-
 
 [![Renommez les méthodes de s TableAdapter FillByProductID et GetProductByProductID](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image48.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image47.png)
 
 **Figure 21**: Renommez les méthodes de s TableAdapter à `FillByProductID` et `GetProductByProductID` ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image49.png))
 
-
 À l’issue de l’Assistant, le TableAdapter ne dispose d’une nouvelle méthode disponible, `GetProductByProductID(productID)` qui, lorsqu’elle est appelée, exécutera le `Products_SelectByProductID` procédure stockée qui vient d’être créé. Prenez un moment pour afficher cette nouvelle procédure stockée à partir de l’Explorateur de serveurs en extraction vers le dossier de procédures stockées et en ouvrant `Products_SelectByProductID` (si vous ne le voyez pas, avec le bouton droit sur le dossier Stored Procedures, cliquez sur Actualiser).
 
 Notez que le `SelectByProductID` procédure stockée accepte `@ProductID` comme paramètre d’entrée et exécute la `SELECT` instruction que nous avions saisie dans l’Assistant.
-
 
 [!code-sql[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample10.sql)]
 
@@ -322,7 +263,6 @@ Notez que le `SelectByProductID` procédure stockée accepte `@ProductID` comme 
 Tout au long de la série de didacticiels, nous avons cherché à mettre à jour d’une architecture en couches dans lequel la couche de présentation mis tous ses appels à la couche BLL (Business Logic). Afin de respecter cette décision de conception, nous devons d’abord créer une classe de la couche de logique métier pour le nouveau DataSet typé avant que nous pouvons accéder à des données de produit à partir de la couche de présentation.
 
 Créer un nouveau fichier de classe nommé `ProductsBLLWithSprocs.vb` dans le `~/App_Code/BLL` dossier et lui ajouter le code suivant :
-
 
 [!code-vb[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample11.vb)]
 
@@ -334,26 +274,21 @@ Reproduit cette classe le `ProductsBLL` classe sémantique à partir des didacti
 
 Ouvrez le `NewSprocs.aspx` page dans le `AdvancedDAL` dossier et faites glisser un GridView à partir de la boîte à outils vers le concepteur, nommez-le `Products`. Dans le contrôle GridView balise active s choisissez de le lier à un nouveau ObjectDataSource nommé `ProductsDataSource`. Configurer l’ObjectDataSource à utiliser le `ProductsBLLWithSprocs` classe, comme indiqué dans la Figure 22.
 
-
 [![Configurer pour utiliser la classe ProductsBLLWithSprocs ObjectDataSource](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image51.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image50.png)
 
 **Figure 22**: Configurer l’ObjectDataSource à utiliser le `ProductsBLLWithSprocs` classe ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image52.png))
-
 
 La liste déroulante dans l’onglet Sélection propose deux options, `GetProducts` et `GetProductByProductID`. Étant donné que nous souhaitons afficher tous les produits dans le contrôle GridView, choisir le `GetProducts` (méthode). Les listes déroulantes dans les onglets UPDATE, INSERT et DELETE ont uniquement une méthode. Assurez-vous que chacune de ces listes déroulantes dispose de sa méthode approprié sélectionné, puis sur Terminer.
 
 Une fois l’Assistant ObjectDataSource terminée, Visual Studio ajoute BoundFields et un CheckBoxField au GridView pour les champs de données de produit. Activer les fonctionnalités de suppression et de modification intégrés de GridView s en vérifiant les options Activer la suppression qui sont présentes dans la balise active et activer la modification.
 
-
 [![La Page contient un GridView avec la modification et suppression prenant en charge](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image54.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image53.png)
 
 **Figure 23**: La Page contient un GridView avec la modification et suppression de la prise en charge activée ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image55.png))
 
-
 Comme nous ve abordés dans les didacticiels précédents, à l’issue de l’Assistant de s ObjectDataSource, jeux de Visual Studio le `OldValuesParameterFormatString` propriété original\_{0}. Cette opération doit être rétablie à sa valeur par défaut {0} afin que les fonctionnalités de modification de données fonctionne correctement, étant donné les paramètres attendus par les méthodes dans notre BLL. Par conséquent, veillez à définir le `OldValuesParameterFormatString` propriété {0} ou supprimer complètement de la propriété à partir de la syntaxe déclarative.
 
 Après la fin de l’Assistant Configurer la Source de données, modification et suppression de prise en charge dans le contrôle GridView et retourner le s ObjectDataSource sous tension `OldValuesParameterFormatString` propriété à sa valeur par défaut, votre balisage déclaratif s de page doit ressembler à ce qui suit :
-
 
 [!code-aspx[Main](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/samples/sample12.aspx)]
 
@@ -361,11 +296,9 @@ Après la fin de l’Assistant Configurer la Source de données, modification et
 
 Quel que soit l’amélioration que le contrôle GridView ou non, testez les fonctionnalités principales de page s dans un navigateur. Comme le montre la Figure 24, la page répertorie les produits dans un GridView qui fournit par ligne modification et suppression de fonctionnalités.
 
-
 [![Les produits peuvent être affichés, modifiés et supprimés à partir de la GridView](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image57.png)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image56.png)
 
 **Figure 24**: Les produits peuvent être affichés modifié et supprimé de la GridView ([cliquez pour afficher l’image en taille réelle](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-vb/_static/image58.png))
-
 
 ## <a name="summary"></a>Récapitulatif
 

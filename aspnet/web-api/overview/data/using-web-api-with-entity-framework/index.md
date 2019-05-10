@@ -8,17 +8,16 @@ ms.date: 07/03/2012
 ms.assetid: 6c3c4f27-2fa3-49dc-bcaf-1ee3ef620f8e
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework
 msc.type: chapter
-ms.openlocfilehash: 77d34da5881f52593a76572561c3144cd2864a3a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a29a4450ededc8dce01711604ddc8eadc96c5ed8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406527"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126211"
 ---
 # <a name="using-web-api-2-with-entity-framework-6"></a>Utilisation de Web API 2 avec Entity Framework 6
 
 > Comment créer une application API Web qui utilise Entity Framework pour la persistance de la base de données.
-
 
 - [Créer le projet](part-1.md)
 - [Ajouter des modèles et des contrôleurs](part-2.md)

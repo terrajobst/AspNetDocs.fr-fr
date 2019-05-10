@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 87daa99f-3810-407e-b969-dd28a192959d
 msc.legacyurl: /web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 3ba7f2d186e6f0837a32f69f964cec19fe625953
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 35b115d6b4f84084e78e429bbb4842670e57bba4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391479"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132261"
 ---
 # <a name="build-restful-apis-with-aspnet-web-api"></a>Générer des API RESTful avec les API Web ASP.NET
 
@@ -33,7 +33,6 @@ Cet atelier nécessite une connaissance élémentaire de HTTP, REST et suppose q
 > 
 > 
 > Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409 ](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
-
 
 <a id="Objectives"></a>
 ### <a name="objectives"></a>Objectifs
@@ -71,13 +70,12 @@ Ce laboratoire pratique inclut l’exercice suivant :
 > [!NOTE]
 > Chaque exercice est accompagné par un **fin** dossier contenant la solution obtenue, vous devez obtenir après avoir effectué les exercices. Si vous avez besoin d’aide supplémentaire sur l’utilisation via les exercices, vous pouvez utiliser cette solution comme guide.
 
-
 Durée estimée pour effectuer ce laboratoire : **60 minutes**.
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Create_a_Read-Only_Web_API"></a>
-### <a name="exercise-1-create-a-read-only-web-api"></a>Exercice 1 : Créer une API Web en lecture seule
+### <a name="exercise-1-create-a-read-only-web-api"></a>Exercice 1 : Créer une API Web en lecture seule
 
 Dans cet exercice, vous implémenterez les méthodes GET en lecture seule pour le Gestionnaire de contacts.
 
@@ -272,7 +270,7 @@ Cette tâche va vous montrer comment extraire des fonctionnalités dans une couc
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Create_a_ReadWrite_Web_API"></a>
-### <a name="exercise-2-create-a-readwrite-web-api"></a>Exercice 2 : Créer une API du Web en lecture/écriture
+### <a name="exercise-2-create-a-readwrite-web-api"></a>Exercice 2 : Créer une API du Web en lecture/écriture
 
 Dans cet exercice, vous allez implémenter POST et PUT des méthodes pour le Gestionnaire de contact pour l’activer avec les fonctionnalités de modification de données.
 
@@ -420,7 +418,6 @@ Dans cette tâche, vous continuerez à modifier la vue de l’Index de l’appli
 
 > [!NOTE]
 > En outre, vous pouvez déployer cette application à Azure suit [annexe c : Publication d’une Application ASP.NET MVC 4, à l’aide de Web Deploy](#AppendixC).
-
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/security/external-authentication-services
-title: Service d’authentification externe avec l’API Web ASP.NET (C#) | Microsoft Docs
+title: Service d’authentification externe avec l’API Web ASP.NET (c#) | Microsoft Docs
 author: rmcmurray
 description: Décrit l’utilisation des Services d’authentification externe dans l’API Web ASP.NET.
 ms.author: riande
@@ -8,14 +8,14 @@ ms.date: 01/28/2019
 ms.assetid: 3bb8eb15-b518-44f5-a67d-a27e051aedc6
 msc.legacyurl: /web-api/overview/security/external-authentication-services
 msc.type: authoredcontent
-ms.openlocfilehash: de9b64e6c582059ec66ab352f60773f50af7b1ff
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b2571552a3f8040ff42bfa0a9fa48981f71a1e4b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064916"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133562"
 ---
-# <a name="external-authentication-services-with-aspnet-web-api-c"></a>Service d’authentification externe avec l’API Web ASP.NET (C#)
+# <a name="external-authentication-services-with-aspnet-web-api-c"></a>Service d’authentification externe avec l’API Web ASP.NET (c#)
 
 Visual Studio 2017 et ASP.NET 4.7.2 Développez les options de sécurité pour [Applications à Page unique](../../../single-page-application/index.md) (SPA) et [API Web](../../index.md) des services d’authentification externe, qui incluent plusieurs services OAuth/OpenID et des services d’authentification de médias sociaux : Comptes Microsoft, Twitter, Facebook et Google.  
 
@@ -72,7 +72,6 @@ Les exemples de cette procédure pas à pas va vous montrer comment configurer c
 
 > [!NOTE]
 > Si nécessaire, vous devrez peut-être ajouter votre nom de domaine complet pour les paramètres de votre service d’authentification externe. Cette exigence est basée sur les contraintes de sécurité pour certains services d’authentification externe qui nécessitent le nom de domaine complet dans vos paramètres d’application faire correspondre le nom de domaine complet qui est utilisée par vos clients. (Vous devez consulter la documentation pour chaque service d’authentification externe pour voir si cela est nécessaire et comment configurer ces paramètres ; pour ce faire varier considérablement pour chaque service d’authentification externe.) Si vous avez besoin configurer IIS Express pour utiliser un nom de domaine complet pour cet environnement de test, consultez le [configuration IIS Express pour utiliser un nom de domaine entièrement qualifié](#FQDN) section plus loin dans cette procédure pas à pas.
-
 
 <a id="SAMPLE"></a>
 ## <a name="create-a-sample-web-application"></a>Créer un exemple d’Application Web
@@ -139,7 +138,6 @@ Une fois que vous avez obtenu votre ID d’application et la clé secrète, proc
 ## <a name="enabling-google-authentication"></a>Activation de l’authentification Google
 
 À l’aide de Google, vous devez créer un compte de développeur Google et votre projet nécessite un ID d’application et la clé secrète à partir de Google pour pouvoir fonctionner. Pour plus d’informations sur la création d’un compte de développeur Google et obtenir votre ID d’application et la clé secrète, consultez [ https://developers.google.com ](https://developers.google.com).
-
 
 Pour activer l’authentification Google pour votre application web, utilisez les étapes suivantes :
 

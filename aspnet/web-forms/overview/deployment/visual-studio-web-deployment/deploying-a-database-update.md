@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 9cad0833-486a-4474-a7f3-7715542ec4ce
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-database-update
 msc.type: authoredcontent
-ms.openlocfilehash: 86dcac0b95f07a310bdaaa4e69db0a83f8734744
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 942cc3cbf472f76d2521247df97c856deb19b06b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416634"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131924"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-a-database-update"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Déploiement d’une mise à jour de la base de données
 
@@ -22,7 +22,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 [Télécharger le projet de démarrage](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Cette série de didacticiels vous montre comment déployer (publier) un ASP.NET web application dans Azure App Service Web Apps ou à un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -130,7 +129,7 @@ Pour déployer à l’aide du fournisseur dbDacFx, vous devez simplement sélect
 
 1. Ouvrez le **publier le site Web** Assistant en double-cliquant sur le projet ContosoUniversity en cliquant sur **publier**.
 2. Sélectionnez le **Test** profil.
-3. Cliquez sur le **paramètres** onglet.
+3. Cliquez sur l'onglet **Paramètres** .
 4. Sous **DefaultConnection**, sélectionnez **base de données de mise à jour**.
 5. Désactiver les scripts supplémentaires que vous avez configuré pour s’exécuter pour le déploiement initial :
 

@@ -8,12 +8,12 @@ ms.date: 02/18/2014
 ms.assetid: 673d502f-2c16-4a6f-bb63-dbfd9a77ef47
 msc.legacyurl: /web-pages/overview/data/5-working-with-data
 msc.type: authoredcontent
-ms.openlocfilehash: 0fc828e39cfcce22d4cc226954cf7d1731b04e42
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4ed2a2a1ee3cff7a50e67b6571b85f74d01efab7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379779"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133212"
 ---
 # <a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introduction à l’utilisation avec une base de données dans ASP.NET Web Pages (Razor) Sites
 
@@ -44,7 +44,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Ce didacticiel fonctionne également avec WebMatrix 3. Vous pouvez utiliser 3 des Pages Web ASP.NET et Visual Studio 2013 (ou Visual Studio Express 2013 pour le Web) ; Toutefois, l’interface utilisateur sera différente.
 
-
 ## <a name="introduction-to-databases"></a>Introduction aux bases de données
 
 Imaginez un carnet d’adresses classiques. Pour chaque entrée dans le carnet d’adresses (autrement dit, pour chaque personne) vous avez plusieurs éléments d’informations telles que le prénom, nom, adresse, adresse de messagerie et numéro de téléphone.
@@ -67,7 +66,6 @@ Avec cette compréhension élémentaire des bases de données, vous êtes prêt 
 > Vous pouvez stocker des données dans un grand nombre de façons, notamment les feuilles de calcul et des fichiers texte. Pour la plupart des utilisations professionnelles, cependant, les données sont stockées dans une base de données relationnelle.
 > 
 > Cet article n’accède pas très profondément dans les bases de données. Toutefois, vous pourrez s’avérer utile de comprendre un peu à leur sujet. Dans une base de données relationnelle, informations sont logiquement divisées en tables distinctes. Par exemple, une base de données pour une école peut contenir des tables distinctes pour les étudiants et des offres de la classe. Les base de données logiciels (tels que SQL Server) prend en charge des commandes puissantes qui vous permettent de manière dynamique établissent des relations entre les tables. Par exemple, vous pouvez utiliser la base de données relationnelle pour établir une relation logique entre les étudiants et les classes pour créer une planification. Stockage des données dans des tables distinctes réduit la complexité de la structure de table et réduit la nécessité de conserver les données redondantes dans les tables.
-
 
 ## <a name="creating-a-database"></a>Création d’une base de données
 
@@ -173,7 +171,6 @@ Une fois que vous avez une base de données avec des données qu’il contient, 
 > 
 > Il existe des douzaines de commandes SQL, mais elles suivent un modèle comme celui-ci. Vous pouvez utiliser des commandes SQL pour créer des tables de base de données, compter le nombre d’enregistrements dans une table, calculer les prix et effectuer de nombreuses opérations plus.
 
-
 ## <a name="inserting-data-in-a-database"></a>Insertion de données dans une base de données
 
 Cette section montre comment créer une page qui permet aux utilisateurs d’ajouter un nouveau produit à la *produit* table de base de données. Après l’insertion d’un nouvel enregistrement de produit, la page affiche la table mise à jour à l’aide de la *ListProducts.cshtml* page que vous avez créé dans la section précédente.
@@ -238,7 +235,6 @@ Une fois que les données ont été entrées dans une table, vous devrez peut-ê
 > [!NOTE] 
 > 
 > **Important** dans un site Web de production, vous généralement Limitez les personnes autorisées à apporter des modifications aux données. Pour plus d’informations sur comment configurer l’appartenance et sur les façons d’autoriser les utilisateurs à effectuer des tâches sur le site, consultez [Ajout de la sécurité et l’appartenance à un Site ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202904).
-
 
 1. Dans le site Web, créez un nouveau fichier CSHTML nommé *EditProducts.cshtml*.
 2. Remplacez le balisage existant dans le fichier avec les éléments suivants :
@@ -321,7 +317,6 @@ Cette section montre comment permettre aux utilisateurs de supprimer un produit 
 > 
 > **Important** dans un site Web de production, vous généralement Limitez les personnes autorisées à apporter des modifications aux données. Pour plus d’informations sur la façon de configurer l’appartenance et méthodes permettent d’autoriser l’utilisateur d’effectuer des tâches sur le site, consultez [Ajout de la sécurité et l’appartenance à un Site ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202904).
 
-
 1. Dans le site Web, créez un nouveau fichier CSHTML nommé *ListProductsForDelete.cshtml*.
 2. Remplacez le balisage existant par le code suivant :
 
@@ -384,7 +379,6 @@ Cette section montre comment permettre aux utilisateurs de supprimer un produit 
 > Comme indiqué, le `Database.Open` méthode vous permet de passer un nom de base de données ou une chaîne de connexion, et il pourrez déterminer lequel utiliser. Cela est très utile lorsque vous déployez (publier) votre site Web. Vous pouvez utiliser un *.sdf* de fichiers dans le *application\_données* dossier lorsque vous développez et testez votre site. Lorsque vous déplacez votre site vers un serveur de production, vous pouvez ensuite utiliser une chaîne de connexion dans le *Web.config* fichier ayant le même nom que votre *.sdf* fichier mais qui pointe vers le fournisseur d’hébergement de base de données &#8212;tout cela sans avoir à modifier votre code.
 > 
 > Enfin, si vous souhaitez travailler directement avec une chaîne de connexion, vous pouvez appeler la `Database.OpenConnectionString` méthode et passe il la connexion réelle de chaîne au lieu de simplement le nom d’un objet dans le *Web.config* fichier. Cela peut être utile dans les situations où pour une raison quelconque vous n’avez pas accès à la chaîne de connexion (ou les valeurs qu’il contient, telles que la *.sdf* nom de fichier) jusqu'à ce que la page est en cours d’exécution. Toutefois, la plupart des scénarios, vous pouvez utiliser `Database.Open` comme décrit dans cet article.
-
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 

@@ -8,12 +8,12 @@ ms.date: 01/13/2008
 ms.assetid: ab68a92b-fc81-40a4-a7dc-406625d2c5d4
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1b6675a933f04b3eb7f5111b2ccd16c44baab7ba
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 731c007fd162e541af5ba1f559ae5caedf80c948
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414346"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126808"
 ---
 # <a name="security-basics-and-aspnet-support-vb"></a>Concepts de base et prise en charge de la sécurité par ASP.NET (VB)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_vb.pdf)
 
 > Il s’agit du premier didacticiel d’une série de didacticiels présentant des techniques pour l’authentification des visiteurs via un formulaire web, autoriser l’accès à certaines pages et fonctionnalités et la gestion des comptes d’utilisateur dans une application ASP.NET.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -45,7 +44,6 @@ Dans ce didacticiel, nous aborderons les concepts de sécurité importantes et q
 
 > [!NOTE]
 > La sécurité est un aspect important de toute application qui s’étend sur physiques, technologiques et les décisions de stratégie et exige un degré élevé de connaissances de planification et de domaine. Cette série de didacticiels ne vise pas comme guide pour le développement d’applications web sécurisées. Au lieu de cela, il se concentre spécifiquement sur les rôles, l’autorisation, les comptes d’utilisateur et l’authentification par formulaire. Bien que certains concepts de sécurité tournant autour de ces problèmes sont décrits dans cette série, d’autres sont laissés non explorés.
-
 
 ## <a name="authentication-authorization-user-accounts-and-roles"></a>L’authentification, l’autorisation, comptes d’utilisateurs et rôles
 
@@ -75,11 +73,9 @@ Le flux de travail de l’authentification Windows utilise l’une des technique
 
 Ces trois techniques fonctionnent dans à peu près la même façon : quand un non autorisé, une demande anonyme arrive, le serveur web envoie une réponse HTTP qui indique que l’autorisation est nécessaire pour continuer. Ensuite, le navigateur affiche une boîte de dialogue modale qui invite l’utilisateur pour leur nom d’utilisateur et le mot de passe (voir Figure 1). Ces informations sont ensuite envoyées au serveur web via un en-tête HTTP.
 
-
 ![Une boîte de dialogue invite l’utilisateur ses informations d’authentification](security-basics-and-asp-net-support-vb/_static/image1.png)
 
 **Figure 1**: Une boîte de dialogue invite l’utilisateur ses informations d’authentification
-
 
 Les informations d’identification fournies sont validées via le Store d’utilisateur du serveur web Windows. Cela signifie que chaque utilisateur authentifié dans votre application web doit avoir un compte Windows dans votre organisation. Il s’agit de courants dans les scénarios intranet. En fait, lorsque vous utilisez l’authentification intégrée Windows dans un environnement intranet, le navigateur fournit automatiquement le serveur web avec les informations d’identification utilisées pour se connecter au réseau, en supprimant le boîte de dialogue illustrée dans la Figure 1. L’authentification Windows est idéale pour les applications intranet, il est généralement irréalisable pour applications Internet dans la mesure où vous ne souhaitez pas créer des comptes Windows pour chaque utilisateur qui s’inscrit sur votre site.
 
@@ -93,11 +89,9 @@ La figure 2 illustre le flux de travail de l’authentification de formulaires �
 
 Une fois que l’utilisateur s’est connecté, les demandes HTTP suivantes incluent le ticket d’authentification par formulaires. Le système d’authentification forms identifie simplement l’utilisateur, c’est le système d’autorisation qui détermine si l’utilisateur peut accéder à la ressource demandée.
 
-
 ![Le flux de travail de l’authentification de formulaires](security-basics-and-asp-net-support-vb/_static/image2.png)
 
 **Figure 2**: Le flux de travail de l’authentification de formulaires
-
 
 Aller dans l’authentification par formulaire beaucoup plus en détail dans les deux didacticiels,[une vue d’ensemble de l’authentification par formulaire](an-overview-of-forms-authentication-vb.md) et [Configuration de l’authentification de formulaires et des sujets avancés](forms-authentication-configuration-and-advanced-topics-vb.md). Pour plus d’informations sur ASP. Options d’authentification du NET, consultez [l’authentification ASP.NET](https://msdn.microsoft.com/library/eeyk640h.aspx).
 
@@ -138,11 +132,9 @@ Microsoft fournit deux classes de fournisseur d’appartenance dans le .NET Fram
 
 Cette série de didacticiels consacrée exclusivement SqlMembershipProvider.
 
-
 [![Le modèle permet à différentes implémentations du fournisseur en toute transparence sur secteur dans l’infrastructure](security-basics-and-asp-net-support-vb/_static/image4.png)](security-basics-and-asp-net-support-vb/_static/image3.png)
 
 **Figure 03**: Le modèle permet à différentes implémentations du fournisseur en toute transparence sur secteur dans l’infrastructure ([cliquez pour afficher l’image en taille réelle](security-basics-and-asp-net-support-vb/_static/image5.png))
-
 
 L’avantage du modèle de fournisseur est qu’autres implémentations peuvent être développées par Microsoft, des fournisseurs tiers ou les développeurs individuels et en toute transparence branchées sur l’infrastructure de l’appartenance. Par exemple, Microsoft a publié [un fournisseur d’appartenances pour les bases de données Microsoft Access](https://download.microsoft.com/download/5/5/b/55bc291f-4316-4fd7-9269-dbf9edbaada8/sampleaccessproviders.vsi). Pour plus d’informations sur les fournisseurs d’appartenances, reportez-vous à la [Provider Toolkit](https://msdn.microsoft.com/asp.net/aa336558.aspx), qui inclut une procédure pas à pas de fournisseurs d’appartenances, les exemples de fournisseurs personnalisés, plus de 100 pages de documentation sur le modèle de fournisseur et le Terminer le code source pour les fournisseurs d’appartenances intégrés (à savoir, ActiveDirectoryMembershipProvider et SqlMembershipProvider).
 

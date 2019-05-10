@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: c711b453-01ac-4e65-a48c-93d99bf22e58
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/performing-a-what-if-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: a222aa6bf52ee72e6a0f4ac5503b4b4f78d294fb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 73a0e038cc0d4ebae0ffc8ed3fd2de4c9dad673c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414320"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127074"
 ---
 # <a name="performing-a-what-if-deployment"></a>Exécution d’un déploiement « Scénario »
 
@@ -22,7 +22,6 @@ par [Jason Lee](https://github.com/jrjlee)
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique explique comment effectuer « what if » (ou simulés) déploiements à l’aide de l’outil de déploiement Web Internet Information Services (IIS) (Web Deploy) et VSDBCMD. Cela vous permet de déterminer l’impact de votre logique de déploiement sur un environnement cible particulier avant de déployer réellement votre application.
-
 
 Cette rubrique fait partie d’une série de didacticiels basées sur les exigences de déploiement d’entreprise de la société fictive Fabrikam, Inc. Cette série de didacticiels utilise un exemple de solution&#x2014;le [solution Gestionnaire de contacts](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;pour représenter une application web avec un niveau réaliste de complexité, y compris une application ASP.NET MVC 3, une Communication de Windows Foundation (WCF) service et un projet de base de données.
 
@@ -42,31 +41,23 @@ Comme décrit dans [déploiement des Packages Web](../web-deployment-in-the-ente
 
 Si vous utilisez MSDeploy.exe directement, vous pouvez exécuter un déploiement « what if » en ajoutant le **– whatif** indicateur à votre commande. Par exemple, pour évaluer ce qui se passerait si vous avez déployé le package ContactManager.Mvc.zip dans un environnement intermédiaire, la commande MSDeploy doit ressembler à ceci :
 
-
 [!code-console[Main](performing-a-what-if-deployment/samples/sample1.cmd)]
-
 
 Lorsque vous êtes satisfait des résultats de votre déploiement « que se passe-t-il si », vous pouvez supprimer le **– whatif** indicateur pour exécuter un déploiement en direct.
 
 > [!NOTE]
 > Pour plus d’informations sur les options de ligne de MSDeploy.exe, consultez [Web déployer des paramètres de fonctionnement](https://technet.microsoft.com/library/dd569089(WS.10).aspx).
 
-
 Si vous utilisez le *. deploy.cmd* fichier, vous pouvez exécuter un déploiement « what if » en incluant le **/t** drapeau (mode d’évaluation) au lieu du **/y** indicateur (« Oui », ou mode de mise à jour) dans votre commande. Par exemple, pour évaluer ce qui se passerait si vous avez déployé le package ContactManager.Mvc.zip en exécutant la *. deploy.cmd* fichier, votre commande doit ressembler à ceci :
-
 
 [!code-console[Main](performing-a-what-if-deployment/samples/sample2.cmd)]
 
-
 Lorsque vous êtes satisfait des résultats de votre déploiement de « mode d’évaluation », vous pouvez remplacer le **/t** indicateur avec un **/y** indicateur pour exécuter un déploiement en direct :
-
 
 [!code-console[Main](performing-a-what-if-deployment/samples/sample3.cmd)]
 
-
 > [!NOTE]
 > Pour plus d’informations sur les options de ligne de commande pour *. deploy.cmd* de fichiers, consultez [Comment : Installer un Package de déploiement à l’aide du fichier deploy.cmd](https://msdn.microsoft.com/library/ff356104.aspx). Si vous exécutez le *. deploy.cmd* fichier sans spécifier tous les indicateurs, l’invite de commandes affiche une liste des indicateurs disponibles.
-
 
 ## <a name="performing-a-what-if-deployment-for-databases"></a>Exécution d’un déploiement « Que se passe-t-il si » pour les bases de données
 
@@ -80,12 +71,9 @@ Lorsque vous utilisez VSDBCMD dans **déployer** mode, vous pouvez utiliser la *
 > [!NOTE]
 > Si vous déployez un fichier .deploymanifest plutôt que dans un fichier .dbschema, le comportement de la **/DD** commutateur est beaucoup plus compliqué. Essentiellement, VSDBCMD ignore la valeur de la **/DD** passer si le fichier .deploymanifest inclut un **DeployToDatabase** élément avec une valeur de **True**. [Déploiement de projets de base de données](../web-deployment-in-the-enterprise/deploying-database-projects.md) décrit ce comportement dans sa totalité.
 
-
 Par exemple, pour générer un script de déploiement pour le **ContactManager** base de données sans que le déploiement de la base de données, votre commande VSDBCMD doit ressembler à ceci :
 
-
 [!code-console[Main](performing-a-what-if-deployment/samples/sample4.cmd)]
-
 
 VSDBCMD est un outil de déploiement de base de données différentielle, et par conséquent le script de déploiement est généré dynamiquement pour contenir toutes les commandes SQL nécessaires pour mettre à jour la base de données actuel, s’il en existe, pour le schéma spécifié. Examiner le script de déploiement est un moyen utile pour déterminer l’impact de votre déploiement aura sur la base de données actuelle et les données qu’il contient. Par exemple, vous souhaiterez peut-être déterminer :
 
@@ -107,29 +95,21 @@ Lorsque vous intégrez le déploiement de plusieurs packages web et/ou bases de 
 
 Le *Publish.proj* fichier montre comment vous pouvez effectuer cela. Tout d’abord, vous devez créer une propriété pour stocker la valeur « que se passe-t-il si » :
 
-
 [!code-xml[Main](performing-a-what-if-deployment/samples/sample5.xml)]
-
 
 Dans ce cas, vous avez créé une propriété nommée **WhatIf** avec une valeur par défaut **false**. Les utilisateurs peuvent remplacer cette valeur en définissant la propriété sur **true** dans un paramètre de ligne de commande, comme vous le verrez bientôt.
 
 L’étape suivante consiste à paramétrer un Web Deploy et VSDBCMD des commandes afin que les indicateurs de reflètent la **WhatIf** valeur de propriété. Par exemple, la cible suivante (extraites de la *Publish.proj* de fichiers et simplifié) s’exécute le *. deploy.cmd* fichier pour déployer un package web. Par défaut, la commande inclut un **/Y** commutateur (« Oui » ou en mode de mise à jour). Si **WhatIf** a la valeur **true**, qui est remplacée par une **/T** commutateur (version d’évaluation ou mode « que se passe-t-il si »).
 
-
 [!code-xml[Main](performing-a-what-if-deployment/samples/sample6.xml)]
-
 
 De même, la cible suivante utilise l’utilitaire VSDBCMD pour déployer une base de données. Par défaut, un **/DD** commutateur n’est pas inclus. Cela signifie que VSDBCMD génère un script de déploiement, mais ne déploiera pas de la base de données&#x2014;en d’autres termes, un scénario « que se passe-t-il si ». Si le **WhatIf** propriété n’est pas définie sur **true**, un **/DD** commutateur est ajouté et VSDBCMD déploiera la base de données.
 
-
 [!code-xml[Main](performing-a-what-if-deployment/samples/sample7.xml)]
-
 
 Vous pouvez utiliser la même approche pour paramétrer toutes les commandes appropriées dans votre fichier projet. Lorsque vous souhaitez exécuter un déploiement « que se passe-t-il si », vous pouvez ensuite simplement fournir un **WhatIf** valeur de propriété à partir de la ligne de commande :
 
-
 [!code-console[Main](performing-a-what-if-deployment/samples/sample8.cmd)]
-
 
 De cette façon, vous pouvez exécuter un déploiement « que se passe-t-il si » pour tous les composants de votre projet en une seule étape.
 

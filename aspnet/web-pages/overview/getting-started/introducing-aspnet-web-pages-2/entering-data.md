@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: d37c93fc-25fd-4e94-8671-0d437beef206
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/entering-data
 msc.type: authoredcontent
-ms.openlocfilehash: d76f607f1d5e779d43ee15d8f2d697e7b0f147ae
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b9354a7b97a7df9020a681f709e16a92650cfcf0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380117"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132969"
 ---
 # <a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Présentation des Pages Web ASP.NET - saisie de données de base de données à l’aide de formulaires
 
@@ -36,7 +36,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > - Le code SQL `Insert Into` instruction
 > - Le `Validation` helper.
 > - Méthode `Response.Redirect`
-
 
 ## <a name="what-youll-build"></a>Ce que vous allez générer
 
@@ -155,7 +154,6 @@ Dans ce cas, la base de données n’a pas réellement augmenter (ou *lever*) un
 > Maintenant, puis il est important de comprendre exactement quand une valeur est null, et quand il est simplement une chaîne vide. Dans le code pour le *AddMovie* page, vous obtenez les valeurs des zones de texte à l’aide de `Request.Form["title"]` et ainsi de suite. Lorsque la page de première exécution (avant de cliquer sur le bouton), la valeur de `Request.Form["title"]` est null. Mais lorsque vous envoyez le formulaire, `Request.Form["title"]` Obtient la valeur de la `title` zone de texte. Il n’est pas évident, mais une zone de texte vide n’est pas null ; elle doit simplement une chaîne vide qu’il contient. Par conséquent, lorsque le code s’exécute en réponse au bouton Cliquez sur, `Request.Form["title"]` comporte une chaîne vide.
 > 
 > Pourquoi cette distinction est importante ? Lorsque vous avez créé le *films* table, vous avez explicitement déclaré qu’aucun des champs peut être null. Mais ici, vous avez un formulaire de saisie de nouveaux films et vous êtes laisser les champs vides. Vous serez raisonnablement s’attendre à la base de données pour lequel vous souhaitez lorsque vous avez essayé d’enregistrer de nouveaux films que n’avait pas de valeurs pour le genre ou année. Mais c’est le point de &mdash; même si vous ne renseignez pas ces zones de texte, les valeurs ne sont pas null ; elles sont des chaînes vides. Par conséquent, vous êtes en mesure d’enregistrer de nouveaux films à la base de données avec ces colonnes vides &mdash; mais pas null ! des valeurs &mdash;. Par conséquent, vous devez vous assurer que les utilisateurs n’envoient pas une chaîne vide, ce que vous pouvez faire en validant l’entrée utilisateur.
-
 
 ### <a name="the-validation-helper"></a>L’application auxiliaire de Validation
 

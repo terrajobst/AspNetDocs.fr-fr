@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 5b982451-547b-4a2f-a5dc-79bc64d84d40
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-build-process
 msc.type: authoredcontent
-ms.openlocfilehash: 6f526b9842e02031b54b0a7519486ef8aa69021b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 802d93f7ca987d018967275bae68b8c56d883a25
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59397394"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130933"
 ---
 # <a name="understanding-the-build-process"></a>Présentation du processus de génération
 
@@ -25,7 +25,6 @@ par [Jason Lee](https://github.com/jrjlee)
 > 
 > > [!NOTE]
 > > La rubrique précédente, [présentation du fichier de projet](understanding-the-project-file.md), décrit les principaux composants d’un fichier projet MSBuild et a introduit le concept de fractionnement des fichiers de projet pour prendre en charge le déploiement sur plusieurs environnements cibles. Si vous n’êtes pas déjà familiarisé avec ces concepts, vous devez examiner [présentation du fichier projet](understanding-the-project-file.md) avant d’utiliser cette rubrique.
-
 
 Cette rubrique fait partie d’une série de didacticiels basées sur les exigences de déploiement d’entreprise de la société fictive Fabrikam, Inc. Cette série de didacticiels utilise un exemple de solution&#x2014;le [solution Gestionnaire de contacts](the-contact-manager-solution.md)&#x2014;pour représenter une application web avec un niveau réaliste de complexité, y compris une application ASP.NET MVC 3, une Communication de Windows Foundation (WCF) service et un projet de base de données.
 
@@ -64,54 +63,40 @@ Vous pouvez utiliser l’exemple de solution pour effectuer le suivi de ce proce
 > [!NOTE]
 > Pour obtenir des conseils sur la façon de personnaliser les fichiers de projet spécifique à l’environnement pour vos propres environnements serveur, consultez [configurer les propriétés de déploiement pour un environnement cible](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
 
-
 ## <a name="invoking-the-build-and-deployment-process"></a>Appel de la génération et le processus de déploiement
 
 Pour déployer la solution de gestionnaire de contacts dans un environnement de test de développeur, le développeur exécute la *publier-Dev.cmd* fichier de commandes. Cela appelle MSBuild.exe, en spécifiant *Publish.proj* en tant que le fichier projet à exécuter et *Env-Dev.proj* comme valeur de paramètre.
 
-
 [!code-console[Main](understanding-the-build-process/samples/sample1.cmd)]
-
 
 > [!NOTE]
 > Le **/fl** basculer (abréviation de **/fileLogger**) consigne la sortie de génération dans un fichier nommé *msbuild.log* dans le répertoire actif. Pour plus d’informations, consultez le [référence de ligne de commande MSBuild](https://msdn.microsoft.com/library/ms164311.aspx).
 
-
 À ce stade, MSBuild commence à s’exécuter, charge le *Publish.proj* fichier et commence à traiter les instructions qu’il contient. La première instruction indique à MSBuild d’importer le projet de fichiers qui le **TargetEnvPropsFile** spécifie de paramètre.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample2.xml)]
-
 
 Le **TargetEnvPropsFile** paramètre spécifie le *Env-Dev.proj* de fichiers, donc MSBuild fusionne le contenu de la *Env-Dev.proj* de fichiers dans le  *Publish.proj* fichier.
 
 Les éléments suivants MSBuild rencontre dans le fichier projet fusionné sont des groupes de propriétés. Propriétés sont traitées dans l’ordre dans lequel ils apparaissent dans le fichier. MSBuild crée une paire clé-valeur pour chaque propriété, en fournissant que les conditions spécifiées sont remplies. Propriétés définies ultérieurement dans le fichier remplacera toutes les propriétés portant le même nom que celui défini précédemment dans le fichier. Par exemple, considérez le **OutputRoot** propriétés.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample3.xml)]
-
 
 Quand MSBuild traite le premier **OutputRoot** élément, en fournissant un paramètre portant le même nom n’a pas été fourni, il définit la valeur de la **OutputRoot** propriété **... \Publish\Out**. Lorsqu’il rencontre le second **OutputRoot** élément, si la condition prend la valeur **true**, elle remplace la valeur de la **OutputRoot** propriété avec la valeur de la **OutDir** paramètre.
 
 L’élément suivant qui rencontre de MSBuild est un groupe d’éléments unique, contenant un élément nommé **ProjectsToBuild**.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample4.xml)]
-
 
 MSBuild traite cette instruction en créant une liste d’éléments nommée **ProjectsToBuild**. Dans ce cas, la liste d’éléments contient une seule valeur&#x2014;le chemin d’accès et le nom du fichier solution.
 
 À ce stade, les éléments restants sont des cibles. Cibles sont traitées différemment des propriétés et des éléments&#x2014;pour l’essentiel, cibles ne sont pas traités, sauf si elles sont explicitement spécifiés par l’utilisateur ou appelées par une autre construction dans le fichier projet. N’oubliez pas que l’ouverture **projet** balise inclut un **DefaultTargets** attribut.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample5.xml)]
-
 
 Cela indique à MSBuild d’appeler le **FullPublish** cible, si les cibles ne sont pas spécifiées quand MSBuild.exe est appelée. Le **FullPublish** cible ne contient pas toutes les tâches ; au lieu de cela elle spécifie simplement une liste de dépendances.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample6.xml)]
-
 
 Cette dépendance indique à MSBuild que dans l’ordre pour exécuter le **FullPublish** cible, il doit appeler cette liste de cibles dans l’ordre indiqué :
 
@@ -125,16 +110,13 @@ Cette dépendance indique à MSBuild que dans l’ordre pour exécuter le **Full
 
 Le **Clean** cible supprime en fait le répertoire de sortie et tout son contenu, la préparation d’une nouvelle génération.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample7.xml)]
-
 
 Notez que la cible inclut un **ItemGroup** élément. Lorsque vous définissez les propriétés ou les éléments dans un **cible** élément, que vous créiez *dynamique* propriétés et des éléments. En d’autres termes, les propriétés ou les éléments ne sont pas traités tant que la cible est exécutée. Le répertoire de sortie ne peut pas existe ou contenir tous les fichiers jusqu'à ce que le processus de génération commence, afin que vous ne pouvez pas créer le  **\_FilesToDelete** liste comme un élément statique ; vous devez attendre jusqu'à ce que l’exécution est en cours d’exécution. Par conséquent, vous générez la liste comme un élément dynamique au sein de la cible.
 
 > [!NOTE]
 > Dans ce cas, étant donné que le **Clean** cible est le premier à être exécuté, il est inutile de réel à utiliser un groupe d’éléments dynamiques. Toutefois, il est recommandé d’utiliser des propriétés dynamiques et des éléments dans ce type de scénario, comme vous pouvez souhaiter exécuter des cibles dans un ordre différent à un moment donné.  
 > Vous devez également veiller à éviter de déclarer les éléments qui ne seront jamais utilisés. Si vous disposez des éléments qui seront uniquement utilisés par une cible spécifique, envisagez de les placer à l’intérieur de la cible à supprimer toute charge inutile sur le processus de génération.
-
 
 Dynamique des éléments mis à part, le **Clean** cible est assez simple et il utilise des intégrés **Message**, **supprimer**, et **RemoveDir**tâches pour :
 
@@ -147,9 +129,7 @@ Dynamique des éléments mis à part, le **Clean** cible est assez simple et il 
 
 Le **BuildProjects** cible génère en fait tous les projets dans l’exemple de solution.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample8.xml)]
-
 
 Cette cible a été décrit en détail dans la rubrique précédente, [présentation du fichier de projet](understanding-the-project-file.md), pour illustrer comment tâches et cibles référencent des propriétés et des éléments. À ce stade, vous êtes principalement intéressé la **MSBuild** tâche. Vous pouvez utiliser cette tâche pour générer plusieurs projets. La tâche ne crée pas une nouvelle instance de MSBuild.exe ; Il utilise l’instance actuelle en cours d’exécution pour générer chaque projet. Les points clés qui vous intéresse dans cet exemple sont les propriétés de déploiement :
 
@@ -159,14 +139,11 @@ Cette cible a été décrit en détail dans la rubrique précédente, [présenta
 > [!NOTE]
 > Le **Package** cible appelle Web Publishing Pipeline (WPP), qui fournit l’intégration entre MSBuild et Web Deploy. Si vous souhaitez examiner les cibles intégrées fournies par les fournisseurs de services, consultez le *Microsoft.Web.Publishing.targets* fichier dans le dossier de %\MSBuild\Microsoft\VisualStudio\v10.0\Web % PROGRAMFILES (x 86).
 
-
 ### <a name="the-gatherpackagesforpublishing-target"></a>La cible GatherPackagesForPublishing
 
 Si vous étudiez la **GatherPackagesForPublishing** cible, vous remarquerez qu’il ne contient en fait de toutes les tâches. Au lieu de cela, elle contient un groupe d’éléments unique qui définit les trois éléments dynamiques.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample9.xml)]
-
 
 Ces éléments font référence aux packages de déploiement qui ont été créées lorsque le **BuildProjects** cible a été exécutée. Vous n’a pas pu définir ces éléments statiquement dans le fichier projet, car les fichiers auquel font référence les éléments n’existent pas jusqu'à ce que le **BuildProjects** cible est exécutée. Au lieu de cela, les éléments doivent être définis dynamiquement dans une cible qui n’est pas appelée tant qu’après le **BuildProjects** cible est exécutée.
 
@@ -177,7 +154,6 @@ Le **DbPublishPackages** élément contient une valeur unique, le chemin d’acc
 > [!NOTE]
 > Un fichier .deploymanifest est généré lorsque vous générez un projet de base de données, et il utilise le même schéma comme un fichier projet MSBuild. Il contient toutes les informations requises pour déployer une base de données, y compris l’emplacement du schéma de base de données (.dbschema) et les détails de tout script de prédéploiement et de post-déploiement. Pour plus d’informations, consultez [une vue d’ensemble de base de données Build and Deployment](https://msdn.microsoft.com/library/aa833165.aspx).
 
-
 Vous en apprendrez davantage sur la façon dont les packages de déploiement et des manifestes de déploiement de base de données sont créées et utilisées dans [génération et empaquetage Web Application Projects](building-and-packaging-web-application-projects.md) et [déploiement de projets de base de données](deploying-database-projects.md).
 
 ### <a name="the-publishdbpackages-target"></a>La cible PublishDbPackages
@@ -186,9 +162,7 @@ Parler brièvement, le **PublishDbPackages** cible appelle l’utilitaire VSDBCM
 
 Tout d’abord, notez que la balise d’ouverture inclut un **sorties** attribut.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample10.xml)]
-
 
 Il s’agit d’un exemple de *cible par lots*. Dans les fichiers de projet MSBuild, le traitement par lots est une technique pour itérer sur des collections. La valeur de la **sorties** attribut, **« % (DbPublishPackages.Identity) »**, fait référence à la **identité** propriété de métadonnées de la **DbPublishPackages**  liste d’éléments. Cette notation, **Outputs=%***(ItemList.ItemMetadataName)*, est traduit par :
 
@@ -198,26 +172,20 @@ Il s’agit d’un exemple de *cible par lots*. Dans les fichiers de projet MSBu
 > [!NOTE]
 > **Identité** est un de la [les valeurs de métadonnées intégrées](https://msdn.microsoft.com/library/ms164313.aspx) qui est assigné à chaque élément lors de la création. Il fait référence à la valeur de la **Include** d’attribut dans le **élément** élément&#x2014;en d’autres termes, le chemin d’accès et le nom de l’élément.
 
-
 Dans ce cas, car il ne doit jamais y avoir plus d’un élément avec le même chemin d’accès et nom de fichier, nous travaillons essentiellement avec de l’une tailles de lot. La cible est exécutée une seule fois pour chaque package de base de données.
 
 Vous pouvez voir une notation similaire dans le  **\_Cmd** propriété, qui génère une commande VSDBCMD avec les commutateurs appropriés.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample11.xml)]
-
 
 Dans ce cas, **%(DbPublishPackages.DatabaseConnectionString)**, **%(DbPublishPackages.TargetDatabase)**, et **%(DbPublishPackages.FullPath)** toutes faire référence à les valeurs de métadonnées de la **DbPublishPackages** collection d’éléments. Le  **\_Cmd** propriété est utilisée par le **Exec** tâche, qui appelle la commande.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample12.xml)]
-
 
 À la suite de cette notation, le **Exec** tâche créera des lots en fonction des combinaisons uniques de la **DatabaseConnectionString**, **TargetDatabase**et **FullPath** valeurs de métadonnées et la tâche seront exécuté une fois pour chaque lot. Il s’agit d’un exemple de *tâche de traitement par lot*. Toutefois, étant donné que le traitement par lots du niveau de la cible a déjà divisé notre collection d’éléments en lots seul élément, le **Exec** tâche sera exécutée une seule fois et une seule fois pour chaque itération de la cible. En d’autres termes, cette tâche appelle l’utilitaire VSDBCMD une fois pour chaque package de base de données dans la solution.
 
 > [!NOTE]
 > Pour plus d’informations sur la cible et la tâche de traitement par lot, consultez MSBuild [le traitement par lot](https://msdn.microsoft.com/library/ms171473.aspx), [métadonnées d’éléments dans le traitement par lot cible](https://msdn.microsoft.com/library/ms228229.aspx), et [métadonnées d’éléments dans la tâche de traitement par lot](https://msdn.microsoft.com/library/ms171474.aspx).
-
 
 ### <a name="the-publishwebpackages-target"></a>La cible PublishWebPackages
 
@@ -228,15 +196,11 @@ Dans ce cas, **%(DbPublishPackages.DatabaseConnectionString)**, **%(DbPublishPac
 
 Tout comme le **PublishDbPackages** cible, le **PublishWebPackages** cible utilise le traitement par lot par cible pour vous assurer que la cible est exécutée une fois pour chaque package web.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample13.xml)]
-
 
 Dans la cible, le **Exec** tâche est utilisée pour exécuter le *deploy.cmd* fichier pour chaque package web.
 
-
 [!code-xml[Main](understanding-the-build-process/samples/sample14.xml)]
-
 
 Pour plus d’informations sur la configuration du déploiement de packages web, consultez [génération et empaquetage Web Application Projects](building-and-packaging-web-application-projects.md).
 

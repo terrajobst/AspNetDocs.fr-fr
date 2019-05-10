@@ -8,12 +8,12 @@ ms.date: 03/28/2008
 ms.assetid: 7f9380c6-19f7-4c82-a019-916ec6dffc9c
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-debugging-capabilities
 msc.type: authoredcontent
-ms.openlocfilehash: 1203825a1fb6b2034d9180fcf416aba7d0012fb7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d33c45c50d4f8edc899f3fe63ede11ad98d45823
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383212"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131901"
 ---
 # <a name="understanding-aspnet-ajax-debugging-capabilities"></a>Présentation des fonctionnalités de débogage d’ASP.NET AJAX
 
@@ -22,7 +22,6 @@ par [Scott Cate](https://github.com/scottcate)
 [Télécharger PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial06_Debugging_MS_Ajax_Applications_cs.pdf)
 
 > La possibilité de déboguer du code est une compétence tous les développeurs doivent être placés dans leur arsenal quelle que soit la technologie qu’ils utilisent. Bien que de nombreux développeurs sont habitués à l’aide de Visual Studio .NET ou Web Developer Express pour déboguer des applications ASP.NET qui utilisent du code VB.NET ou c#, certaines ne sont pas conscients qu’il est également très utile pour déboguer le code côté client, tels que JavaScript. Le même type de techniques utilisées pour déboguer des applications .NET peut également être appliqué aux applications activées par AJAX et plus spécifiquement les applications ASP.NET AJAX.
-
 
 ## <a name="debugging-aspnet-ajax-applications"></a>Débogage des Applications ASP.NET AJAX
 
@@ -47,11 +46,9 @@ Bien que non obligatoire, si vous tentez de déboguer une application que vous s
 
 Figure 1 montre quels Internet Explorer avancé de boîte de dialogue doit ressembler après que qu’il a été configuré correctement pour le débogage.
 
-
 [![Configuration d’Internet Explorer pour le débogage.](understanding-asp-net-ajax-debugging-capabilities/_static/image2.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image1.png)
 
 **Figure 1**: Configuration d’Internet Explorer pour le débogage.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-debugging-capabilities/_static/image3.png))
-
 
 Une fois que le débogage a été activé, vous verrez un nouvel élément de menu s’affichent dans le menu affichage nommé débogueur de Script. Il propose deux options disponibles, notamment les ouvrir et de saut à la prochaine instruction. Lors de l’ouverture est activée vous devrez faire pour déboguer la page dans Visual Studio 2008 (Notez que Visual Web Developer Express peut également être utilisée pour le débogage). Si Visual Studio .NET est en cours d’exécution, vous pouvez choisir d’utiliser cette instance ou pour créer une nouvelle instance. Lors de l’arrêt à l’instruction suivante est sélectionnée, vous allez invité pour déboguer la page lors de l’exécution de code JavaScript. Si le code JavaScript s’exécute dans l’événement onLoad de la page, vous pouvez actualiser la page pour déclencher une session de débogage. Si le code JavaScript est exécuté après qu’un clic est effectué le débogueur exécute immédiatement après un clic sur le bouton.
 
@@ -72,7 +69,6 @@ Le débogueur de Visual Studio 2008 traite JavaScript incorporé dans une page d
 
 Vous pouvez contourner ce problème en déplaçant le code dans un fichier .js externe et en référençant à l’aide de l’attribut src de le &lt;script&gt; balise :
 
-
 [!code-html[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample1.html)]
 
 Que se passe-t-il si vous déplacez le code dans un fichier externe n’est pas une option ou nécessite plus de travail qu’il ne vaut ? Tandis que vous ne pouvez pas définir un point d’arrêt à l’aide de l’éditeur, vous pouvez ajouter l’instruction du débogueur directement dans le code où vous souhaitez démarrer le débogage. Vous pouvez également utiliser la classe Sys.Debug disponible dans la bibliothèque ASP.NET AJAX pour forcer le démarrage du débogage. Vous en apprendrez davantage sur la classe Sys.Debug plus loin dans cet article.
@@ -80,7 +76,6 @@ Que se passe-t-il si vous déplacez le code dans un fichier externe n’est pas 
 Un exemple d’utilisation le `debugger` mot clé est indiqué dans le Listing 1. Cet exemple oblige le débogueur s’arrête droite avant un appel à une fonction de mise à jour est effectué.
 
 **Listing 1. À l’aide du mot clé de débogueur pour forcer l’arrêt du débogueur Visual Studio .NET.**
-
 
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample2.js)]
 
@@ -90,11 +85,9 @@ Une fois que l’instruction du débogueur est atteint, vous serez invité à d�
 
 Une fois qu’une session de débogage est démarrée et commencer à parcourir le code à l’aide de la touche F11 par défaut, vous pouvez rencontrer l’erreur boîte de dialogue de voir la Figure 2, sauf si tous les fichiers de script utilisés dans la page sont ouverts et disponibles pour le débogage.
 
-
 [![Boîte de dialogue erreur affiché lorsque aucun code source n’est disponible pour le débogage.](understanding-asp-net-ajax-debugging-capabilities/_static/image5.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image4.png)
 
 **Figure 2**: Boîte de dialogue erreur affiché lorsque aucun code source n’est disponible pour le débogage.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-debugging-capabilities/_static/image6.png))
-
 
 Cette boîte de dialogue est affichée, car Visual Studio .NET ne sait pas comment obtenir le code source de certains scripts référencés par la page. Bien que cela peut s’avérer très contrariant dans un premier temps, il existe un correctif simple. Une fois que vous avez démarré une session de débogage et atteindre un point d’arrêt, accédez à la fenêtre Explorateur de scripts Windows déboguer dans le menu de Visual Studio 2008 ou utilisez le raccourci clavier Ctrl + Alt + N.
 
@@ -103,11 +96,9 @@ Cette boîte de dialogue est affichée, car Visual Studio .NET ne sait pas comme
 
 L’Explorateur de scripts peut être utilisé pour afficher tous les scripts utilisés dans une page et de les ouvrir dans l’éditeur de code. Une fois que l’Explorateur de scripts est ouvert, double-cliquez sur la page .aspx en cours de débogage pour l’ouvrir dans la fenêtre d’éditeur de code. Effectuer la même action pour tous les autres scripts indiqués dans l’Explorateur de scripts. Une fois que tous les scripts sont ouverts dans la fenêtre de code que vous pouvez appuyez sur F11 (et utilisez les autres touches de raccourci de débogage) pour parcourir votre code. Figure 3 montre un exemple de l’Explorateur de scripts. Il répertorie le fichier actuel en cours de débogage (Demo.aspx), ainsi que deux scripts personnalisés et les deux scripts injectés de façon dynamique dans la page par ScriptManager ASP.NET AJAX.
 
-
 [![L’Explorateur de scripts fournit un accès facile aux scripts utilisés dans une page.](understanding-asp-net-ajax-debugging-capabilities/_static/image8.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image7.png)
 
 **Figure 3**. L’Explorateur de scripts fournit un accès facile aux scripts utilisés dans une page.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-debugging-capabilities/_static/image9.png))
-
 
 Plusieurs autres utilisateurs windows peuvent également être utilisés pour fournir des informations utiles à mesure que vous parcourez le code dans une page. Par exemple, vous pouvez utiliser la fenêtre variables locales pour afficher les valeurs des différentes variables utilisées dans la page, la fenêtre exécution pour évaluer des variables spécifiques ou des conditions et d’afficher la sortie. Vous pouvez également utiliser la fenêtre Sortie pour afficher les instructions de trace écrites à l’aide de la fonction Sys.Debug.trace (qui sera abordée plus loin dans cet article) ou Debug.writeln, fonction de Internet Explorer.
 
@@ -121,11 +112,9 @@ Bien que Visual Studio 2008 et Visual Web Developer Express 2008 sont très effi
 
 Assistant de développement Web peut être utilisé directement à l’intérieur d’Internet Explorer, ce qui le rend pratique à utiliser. Il est démarré en sélectionnant Outils Assistant de développement Web dans le menu d’Internet Explorer. L’outil s’ouvre dans la partie inférieure du navigateur qui est intéressant, car vous n’êtes pas obligé de laisser le navigateur pour effectuer plusieurs tâches telles que la journalisation de message de demande et de réponse HTTP. Figure 4 montre à quoi ressemble Assistant de développement Web en action.
 
-
 [![Assistant de développement Web](understanding-asp-net-ajax-debugging-capabilities/_static/image11.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image10.png)
 
 **Figure 4**: Web d’aide au développement ([cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-debugging-capabilities/_static/image12.png))
-
 
 Assistant de développement Web n’est pas un outil que vous allez utiliser pour parcourir le code ligne par ligne comme avec Visual Studio 2008. Toutefois, il peut être utilisé pour afficher la sortie de trace, facilement évaluer les variables dans un script ou Explorer les données sont à l’intérieur d’un objet JSON. Il est également très utile pour la consultation des données qui sont passées vers et depuis une page ASP.NET AJAX et un serveur.
 
@@ -137,13 +126,11 @@ La fenêtre exécution peut être utilisée pour exécuter des commandes de scri
 
 **Listing 2. Écriture d’un message de trace côté client à l’aide de la classe Debug.**
 
-
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample3.js)]
 
 Si la propriété LastName contient une valeur de Dupont, Assistant de développement Web affichera le message « nom de la personne : Doe » dans la fenêtre de commande de la console de script (en supposant que le débogage a été activé). Assistant de développement Web ajoute également un objet de niveau supérieur debugService dans des pages qui peuvent être utilisées pour écrire des informations de trace ou afficher le contenu d’objets JSON. Liste 3 montre un exemple d’utilisation de fonction de trace de la classe debugService.
 
 **Liste 3. À l’aide de classe debugService de l’Assistant de développement Web pour écrire un message de trace.**
-
 
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample4.js)]
 
@@ -153,7 +140,6 @@ La classe debugService permet également des données d’objet JSON à être af
 
 **Liste 4. À l’aide de la fonction debugService.inspect pour afficher les données d’objet JSON.**
 
-
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample5.js)]
 
 Dans la page ou via la fenêtre exécution, l’appel de la fonction GetPerson() entraîne dans la fenêtre de boîte de dialogue Inspecteur de l’objet s’affiche comme indiqué dans la Figure 5. Propriétés au sein de l’objet peuvent être modifiées dynamiquement en mettant en surbrillance, puis en cliquant sur le lien de mise à jour et modifier la valeur indiquée dans la zone de texte de valeur. À l’aide de l’inspecteur de l’objet facilite son afficher les données d’objet JSON et faire des essais avec différentes valeurs s’applique aux propriétés.
@@ -162,19 +148,15 @@ Dans la page ou via la fenêtre exécution, l’appel de la fonction GetPerson()
 
 En plus de permettre des données de trace et les objets JSON à afficher, d’aide au développement du Web peut également contribuer à déboguer les erreurs dans une page. Si une erreur s’est produite, vous devrez continuer à la ligne suivante du code ou de déboguer le script (voir Figure 6). La fenêtre de boîte de dialogue Erreur de Script affiche de pile des appels complète, ainsi que les numéros de ligne pour vous pouvez d’identifier facilement où sont des problèmes au sein d’un script.
 
-
 [![À l’aide de la fenêtre d’inspecteur de l’objet pour afficher un objet JSON.](understanding-asp-net-ajax-debugging-capabilities/_static/image14.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image13.png)
 
 **Figure 5**: À l’aide de la fenêtre d’inspecteur de l’objet pour afficher un objet JSON.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-debugging-capabilities/_static/image15.png))
 
-
 En sélectionnant l’option de débogage vous permet d’exécuter des instructions de script directement dans la fenêtre exécution de l’Assistant de développement Web pour afficher la valeur des variables, écrire des objets JSON, et plus encore. Si l’action qui a déclenché l’erreur est effectuée à nouveau et Visual Studio 2008 est disponible sur l’ordinateur, vous devrez démarrer une session de débogage afin que vous pouvez parcourir le code ligne par ligne, comme indiqué dans la section précédente.
-
 
 [![Boîte de dialogue Erreur d’aide au développement Script de Web](understanding-asp-net-ajax-debugging-capabilities/_static/image17.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image16.png)
 
 **Figure 6**: Boîte de dialogue Erreur d’aide au développement Script de Web ([cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-debugging-capabilities/_static/image18.png))
-
 
 *Inspection des Messages de demande et réponse*
 
@@ -184,19 +166,15 @@ Pour afficher les messages de demande et de réponse ASP.NET AJAX, l’enregistr
 
 Bien que l’affichage du texte brut envoyé dans chaque message de demande/réponse est certainement utile (et une option dans l’Assistant de développement Web), il est souvent plus facile à afficher les données de message dans un format plus graphique. Une fois que la journalisation HTTP a été activée et que des messages ont été consignés, les données de message peuvent être affichées en double-cliquant sur le message dans la visionneuse du journal HTTP. Cela vous permet d’afficher tous les en-têtes associés à un message, ainsi que le message réel contenu. Figure 7 montre un exemple d’un message de demande et le message de réponse affiché dans la fenêtre de la visionneuse du journal HTTP.
 
-
 [![À l’aide de la visionneuse du journal HTTP pour afficher les données de message de demande et de réponse.](understanding-asp-net-ajax-debugging-capabilities/_static/image20.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image19.png)
 
 **Figure 7**: À l’aide de la visionneuse du journal HTTP pour afficher les données de message de demande et de réponse.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-debugging-capabilities/_static/image21.png))
 
-
 La visionneuse du journal HTTP automatiquement analyse des objets JSON et les affiche à l’aide d’une arborescence rend rapide et facile afficher les données de propriété de l’objet. Lorsqu’un UpdatePanel est utilisé dans une page ASP.NET AJAX, la visionneuse s’arrête chaque partie du message dans les parties individuelles comme indiqué dans la Figure 8. Il s’agit d’une fonctionnalité intéressante qui rend beaucoup plus facile de voir et comprendre ce qui est dans le message par rapport à l’affichage des données de message brut.
-
 
 [![Un message de réponse UpdatePanel affiché à l’aide de la visionneuse du journal HTTP.](understanding-asp-net-ajax-debugging-capabilities/_static/image23.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image22.png)
 
 **Figure 8**: Un message de réponse UpdatePanel affiché à l’aide de la visionneuse du journal HTTP.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-debugging-capabilities/_static/image24.png))
-
 
 Il existe plusieurs autres outils qui peuvent être utilisées pour afficher les messages de demande et de réponse en plus de l’Assistant de développement Web. Une autre solution intéressante est Fiddler qui est disponible gratuitement à [ http://www.fiddlertool.com ](http://www.fiddlertool.com). Bien que Fiddler n’est pas abordé ici, il est également une bonne option lorsque vous devez soigneusement examiner les données et les en-têtes de message.
 
@@ -210,11 +188,9 @@ Une fois que Firebug est en cours d’exécution, les points d’arrêt peuvent 
 
 Une fois qu’un point d’arrêt a été défini dans le Firebug, vous pouvez effectuer l’action requise pour exécuter le script qui doit être déboguée comme en cliquant sur un bouton ou l’actualisation du navigateur pour déclencher l’événement onLoad. L’exécution s’arrête automatiquement sur la ligne contenant le point d’arrêt. Figure 9 illustre un exemple d’un point d’arrêt a été déclenché dans le Firebug.
 
-
 [![Gestion des points d’arrêt dans le Firebug.](understanding-asp-net-ajax-debugging-capabilities/_static/image26.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image25.png)
 
 **Figure 9**: Gestion des points d’arrêt dans le Firebug.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-debugging-capabilities/_static/image27.png))
-
 
 Une fois qu’un point d’arrêt est atteint pas à pas détaillé, pas à pas principal ou sortir le code en utilisant les boutons fléchés. À mesure que vous parcourez le code, les variables de script sont affichées dans la partie droite du débogueur, ce qui vous permet de voir les valeurs et l’exploration des objets. Firebug inclut également une liste déroulante de pile des appels pour afficher les étapes de l’exécution du script qui a conduit à la ligne actuelle en cours de débogage.
 
@@ -222,11 +198,9 @@ Firebug inclut également une fenêtre de console qui peut être utilisée pour 
 
 Figure 10 illustre un exemple d’utilisation de l’inspecteur de DOM pour localiser une zone de texte nommée txtCountry dans la page. L’inspecteur Firebug peut également servir à afficher les styles CSS utilisés dans une page, ainsi que les événements qui se produisent telles que le suivi des mouvements de souris, les clics de bouton, ainsi que bien plus encore.
 
-
 [![Utilisation de l’inspecteur de DOM de Firebug.](understanding-asp-net-ajax-debugging-capabilities/_static/image29.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image28.png)
 
 **Figure 10**: Utilisation de l’inspecteur de DOM de Firebug.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-debugging-capabilities/_static/image30.png))
-
 
 Firebug fournit un moyen léger pour déboguer rapidement une page directement dans Firefox, mais aussi un excellent outil pour l’inspection des différents éléments dans la page.
 
@@ -254,11 +228,9 @@ Le suivi côté client peut être utilisé dans la même façon que la fonctionn
 
 **Liste 5. À l’aide de la fonction Sys.Debug.trace.**
 
-
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample6.js)]
 
 Si vous exécutez le code indiqué dans la liste 5, vous ne voyez aucune sortie de trace dans la page. La seule façon de voir consiste à utiliser une fenêtre de console disponible dans Visual Studio .NET, Assistant de développement Web ou Firebug. Si vous ne souhaitez pas voir la sortie de trace dans la page puis vous devrez ajouter une balise TextArea et attribuez-lui un id de TraceConsole comme indiqué ci-après :
-
 
 [!code-html[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample7.html)]
 
@@ -268,7 +240,6 @@ Dans les cas où vous souhaitez afficher les données contenues dans un objet JS
 
 **Liste 6. À l’aide de la fonction Sys.Debug.traceDump.**
 
-
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample8.js)]
 
 Figure 11 illustre la sortie de l’appel de la fonction Sys.Debug.traceDump. Notez qu’en plus de l’écriture de données de l’objet personne, elle écrit également out adresse données de l’objet-sub.
@@ -277,14 +248,11 @@ Outre le suivi, la classe Sys.Debug peut également être utilisée pour effectu
 
 Liste 7 montre un exemple d’utilisation de la fonction Sys.Debug.assert pour tester une condition. Le code teste si l’objet d’adresse est null avant la mise à jour d’un objet Person ou non.
 
-
 [![Sortie de la fonction Sys.Debug.traceDump.](understanding-asp-net-ajax-debugging-capabilities/_static/image32.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image31.png)
 
 **Figure 11**: Sortie de la fonction Sys.Debug.traceDump.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-debugging-capabilities/_static/image33.png))
 
-
 **Liste 7. À l’aide de la fonction debug.assert.**
-
 
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample9.js)]
 
@@ -292,14 +260,11 @@ Trois paramètres sont passés, y compris la condition à évaluer, le message �
 
 La fonction finale pour couvrir est Sys.Debug.fail. Lorsque vous souhaitez forcer le code à échouer sur une ligne particulière dans un script, vous pouvez ajouter un appel Sys.Debug.fail plutôt que l’instruction du débogueur généralement utilisées dans les applications JavaScript. La fonction Sys.Debug.fail accepte un paramètre de chaîne unique qui représente la raison de l’échec, comme indiqué ci-après :
 
-
 [!code-css[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample10.css)]
-
 
 [![Un message d’échec Sys.Debug.assert.](understanding-asp-net-ajax-debugging-capabilities/_static/image35.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image34.png)
 
 **Figure 12**: Un message d’échec Sys.Debug.assert.  ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-debugging-capabilities/_static/image36.png))
-
 
 Lorsqu’une instruction Sys.Debug.fail est rencontrée pendant l’exécution d’un script, la valeur du paramètre de message s’affichera dans la console d’une application de débogage telles que Visual Studio 2008 et vous êtes invité à déboguer l’application. Un cas où cela peut être très utile est lorsque vous ne pouvez pas définir un point d’arrêt avec Visual Studio 2008 sur un script inline mais que vous souhaitez que le code d’arrêt sur une ligne particulière pour que vous puissiez vérifier la valeur des variables.
 
@@ -313,19 +278,16 @@ ScriptMode par défaut est la valeur Auto, ce qui signifie que le ScriptManager 
 
 **Liste 8. Chargement des scripts de débogage à l’aide de ScriptManager**.
 
-
 [!code-aspx[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample11.aspx)]
 
 Vous pouvez également charger des versions différentes (debug ou release) de vos propres scripts personnalisés à l’aide de la propriété de ScriptManager Scripts, ainsi que le composant de ScriptReference comme indiqué dans la liste 9.
 
 **Liste 9. Chargement des scripts personnalisés à l’aide de ScriptManager.**
 
-
 [!code-aspx[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample12.aspx)]
 
 > [!NOTE]
 > Si vous chargez des scripts personnalisés à l’aide du composant de ScriptReference, vous devez informer le ScriptManager lorsque le script a terminé le chargement en ajoutant le code suivant en bas du script :
-
 
 [!code-csharp[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample13.cs)]
 
@@ -334,7 +296,6 @@ Le code indiqué dans la liste 9 indique le ScriptManager pour rechercher une ve
 Dans le cas où vous souhaitez un débogage ou de version d’un script personnalisé à charger en fonction de la valeur de la propriété ScriptMode sur le contrôle ScriptManager, vous pouvez définir la ScriptReference propriété du contrôle ScriptMode hériter. Ainsi, la version correcte du script personnalisé à charger en fonction de la propriété de ScriptManager ScriptMode comme indiqué dans la liste des 10. Étant donné que la propriété ScriptMode du contrôle ScriptManager est définie sur Debug, le script Person.debug.js est chargé et utilisé dans la page.
 
 **Liste 10. Hériter le ScriptMode le ScriptManager pour les scripts personnalisés.**
-
 
 [!code-aspx[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample14.aspx)]
 

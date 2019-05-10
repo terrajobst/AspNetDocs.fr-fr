@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: ba92788f-9f03-44b1-b6b2-af8413e6a35d
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 66a784430de734c8b1387c950382472ce59d5ccc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 873eb9e350d5fadb017b20c4b6d2889e0df00091
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422133"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126052"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-offline-deployment"></a>Configuration d’un serveur web pour la publication Web Deploy (Déploiement hors connexion)
 
@@ -30,7 +30,6 @@ par [Jason Lee](https://github.com/jrjlee)
 > - Utilisez *déploiement hors connexion*. Cette approche nécessite une configuration minimale du serveur web, mais un administrateur de serveur doit manuellement copier le package web sur le serveur et importez-le via le Gestionnaire des services Internet.
 > 
 > Pour plus d’informations sur les fonctionnalités clés, les avantages et les inconvénients de ces approches, consultez [choix de l’approche de droite pour le déploiement Web](choosing-the-right-approach-to-web-deployment.md).
-
 
 Oui, si vos restrictions de sécurité ou d’infrastructure de réseau empêchent le déploiement à distance. Cela est probablement le cas dans les environnements de production sur Internet, où les serveurs web sont isolés&#x2014;soit physiquement ou par des pare-feu et des sous-réseaux&#x2014;du reste de votre infrastructure de serveur.
 
@@ -59,7 +58,6 @@ Cette rubrique sera vous montrent comment effectuer chacune de ces procédures. 
 > [!NOTE]
 > Pour plus d’informations sur la jonction des ordinateurs à un domaine, consultez [joindre des ordinateurs au domaine et journalisation](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Pour plus d’informations sur la configuration des adresses IP statiques, consultez [configurer une adresse IP statique](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx).
 
-
 ## <a name="install-products-and-components"></a>Installer les produits et composants
 
 Cette section va vous guider dans l’installation des produits requis et composants sur le serveur web. Avant de commencer, une bonne pratique consiste à exécuter des mises à jour de Windows pour vous assurer que votre serveur est à jour.
@@ -73,7 +71,6 @@ Dans ce cas, vous devez installer ces éléments :
 
 > [!NOTE]
 > Cette procédure pas à pas décrit l’utilisation de Web Platform Installer pour installer et configurer les différents composants. Bien que vous n’êtes pas obligé d’utiliser Web Platform Installer, il simplifie le processus d’installation en détectant les dépendances automatiquement et en garantissant que vous obtenez toujours les dernières versions de produit. Pour plus d’informations, consultez [Microsoft Web Platform Installer 3.0](https://go.microsoft.com/?linkid=9805118).
-
 
 **Pour installer les produits requis et les composants**
 
@@ -180,7 +177,6 @@ L’approche la plus courante consiste à attribuer des autorisations à l’ord
 > [!NOTE]
 > Pour plus d’informations sur les identités du pool d’applications dans IIS 7.5, consultez [identités du Pool d’applications](https://go.microsoft.com/?linkid=9805123).
 
-
 **Pour configurer les autorisations de dossier pour un site Web IIS**
 
 1. Dans l’Explorateur Windows, accédez à l’emplacement de votre dossier local.
@@ -199,7 +195,6 @@ Lorsque vous installez Web Deploy, le Service de l’Agent de déploiement Web e
 
 > [!NOTE]
 > Vous n’avez pas besoin d’arrêter le service de l’agent distant afin d’importer et déployer un package web manuellement. Toutefois, il est conseillé d’arrêter et désactiver le service si vous ne souhaitez pas l’utiliser.
-
 
 Vous pouvez arrêter et désactiver un service de plusieurs façons, à l’aide de différents utilitaires de ligne de commande ou les applets de commande Windows PowerShell. Cette procédure décrit une approche basée sur l’interface utilisateur simple.
 

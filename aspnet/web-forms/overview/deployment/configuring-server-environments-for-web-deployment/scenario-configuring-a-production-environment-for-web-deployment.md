@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 2e861511-450e-4752-a61e-4a01933f9b6e
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 586508039b9a3d78492aa02a77a1f29c64668b5e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2d76e715cdbf6ec484fa0ff98b3b3d1d8dfd3961
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409692"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125840"
 ---
 # <a name="scenario-configuring-a-production-environment-for-web-deployment"></a>Scénario : configuration d’un environnement de production pour le déploiement web
 
@@ -22,7 +22,6 @@ par [Jason Lee](https://github.com/jrjlee)
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit un scénario de déploiement web typique pour un environnement de production et décrit les tâches que vous devez suivre pour configurer un environnement similaire.
-
 
 L’environnement de production constitue la destination finale pour une application web ou un site Web. À ce stade, votre application a été testé, a été déployée dans un environnement intermédiaire et est prête à « go live ». Les caractéristiques d’un environnement de production peuvent varier considérablement en fonction de la nature et l’objectif de votre contenu web, la taille de votre organisation, votre public cible et bien d’autres facteurs. Dans un scénario de l’échelle de l’entreprise, l’environnement de production peut avoir ces caractéristiques :
 
@@ -33,7 +32,6 @@ L’environnement de production constitue la destination finale pour une applica
 
 > [!NOTE]
 > Montée en charge un déploiement de base de données sur plusieurs serveurs n’entre pas dans le cadre de ce didacticiel. Pour plus d’informations sur ce sujet, consultez [la documentation en ligne de SQL Server](https://technet.microsoft.com/library/ms130214.aspx).
-
 
 Par exemple, dans notre [scénario du didacticiel](../deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md), un serveur Team Build inclut les définitions de build qui permettent aux utilisateurs de générer la solution Gestionnaire de contacts et le déployer dans un environnement intermédiaire en une seule étape. Lorsque l’application est prête à être déployée en production, en raison de contraintes imposées par les exigences de sécurité et l’infrastructure réseau, l’administrateur d’environnement de production doit copier le package web sur un serveur web de production et importez manuellement Il via le Gestionnaire des Services Internet (IIS).
 

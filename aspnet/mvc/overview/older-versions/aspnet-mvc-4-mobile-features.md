@@ -8,19 +8,18 @@ ms.date: 08/15/2012
 ms.assetid: 27dc4fc8-1b51-43b0-933f-fc1b52476523
 msc.legacyurl: /mvc/overview/older-versions/aspnet-mvc-4-mobile-features
 msc.type: authoredcontent
-ms.openlocfilehash: de65e01b888d9ed15da3903f086b40c49b32b9fb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 62050f561440a2c0fbbe91ec49fb1f9e30885e9f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402412"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130346"
 ---
 # <a name="aspnet-mvc-4-mobile-features"></a>Fonctionnalités mobiles ASP.NET MVC 4
 
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Il existe désormais une version de MVC 5 de ce didacticiel avec des exemples de code à [déployer une Application Web de Mobile dans ASP.NET MVC 5 sur les Sites Web Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/).
-
 
 Ce didacticiel vous apprend les notions de base de l’utilisation des fonctionnalités mobiles dans une application Web ASP.NET MVC 4. Pour ce didacticiel, vous pouvez utiliser [Visual Studio Express 2012](https://www.microsoft.com/visualstudio/11/products/express) ou Visual Web Developer 2010 Express Service Pack 1 (&quot;Visual Web Developer ou VWD&quot;). Vous pouvez utiliser la version professionnelle de Visual Studio si vous l’avez déjà.
 
@@ -214,7 +213,6 @@ Le code suivant montre l’ensemble *Global.asax* fichier.
 > [!NOTE]
 > Si vous utilisez Internet Explorer 9 et vous ne voyez pas le `BundleMobileConfig` ligne ci-dessus dans la mise en surbrillance jaune, cliquez sur le [bouton Affichage de compatibilité](https://windows.microsoft.com/windows7/How-to-use-Compatibility-View-in-Internet-Explorer-9)![image du bouton Affichage de compatibilité (désactivé)](http://res2.windows.microsoft.com/resbox/en/Windows 7/main/f080e77f-9b66-4ac8-9af0-803c4f8a859c_15.jpg " Image du bouton Affichage de compatibilité (désactivé)") dans Internet Explorer pour modifier l’icône à partir d’un plan ![image du bouton Affichage de compatibilité (désactivé)](http://res2.windows.microsoft.com/resbox/en/Windows 7/main/f080e77f-9b66-4ac8-9af0-803c4f8a859c_15.jpg "image du bouton Affichage de compatibilité (désactivé) ") à une couleur unie ![image du bouton Affichage de compatibilité (on)](http://res1.windows.microsoft.com/resbox/en/Windows 7/main/156805ff-3130-481b-a12d-4d3a96470f36_14.jpg "image du bouton Affichage de compatibilité (on)"). Vous pouvez également afficher ce didacticiel dans FireFox ou Chrome.
 
-
 Ouvrez le *MvcMobile\Views\Shared\\_Layout.Mobile.cshtml* fichier, puis ajoutez le balisage suivant directement après le `Html.Partial` appeler :
 
 [!code-cshtml[Main](aspnet-mvc-4-mobile-features/samples/sample12.cshtml)]
@@ -229,7 +227,6 @@ Générez l’application et dans votre émulateur de navigateur mobile, accéde
 
 > [!NOTE]
 > Vous pouvez déboguer le code spécifique à mobile par [définissant la chaîne d’agent utilisateur](http://www.howtogeek.com/113439/how-to-change-your-browsers-user-agent-without-installing-any-extensions/) pour Internet Explorer ou Chrome pour iPhone, puis en utilisant les outils de développement F-12. Si votre navigateur mobile n’affiche pas le **accueil**, **haut-parleur**, **balise**, et **Date** liens sous forme de boutons, les références à jQuery Mobile scripts et des fichiers CSS ne sont probablement pas corrects.
-
 
 En plus des modifications de style, vous voyez **affichage mobile** et un lien qui permet de changer d’affichage mobile en mode bureau. Choisissez le **vue bureau** lien et l’affichage de bureau s’affiche.
 
@@ -251,7 +248,6 @@ Actualiser le *AllTags* affichage dans le navigateur mobile. Vous pouvez désorm
 > et en ajoutant l’en-tête suivant pour le *Views\Shared\\_Layout.cshtml* fichier.
 >
 > [!code-html[Main](aspnet-mvc-4-mobile-features/samples/sample16.html)]
-
 
 Accédez à la *AllTags* page dans un navigateur de bureau. Le widget sélecteur de vue ne figure pas dans un navigateur de bureau, car il est ajouté uniquement à la page de disposition mobile. Plus loin dans ce didacticiel, vous verrez comment vous pouvez ajouter le widget sélecteur de vue à l’affichage de bureau.
 

@@ -8,19 +8,18 @@ ms.date: 02/16/2009
 ms.assetid: 892edb27-1cc2-4eaf-8314-dbc2efc6228a
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-custom-route-constraint-vb
 msc.type: authoredcontent
-ms.openlocfilehash: febba98be86f0151724af6d6c00fb14760ce1b91
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2330708cf4a28180ce8a05f4696bf7a7a32092d6
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59378947"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123413"
 ---
 # <a name="creating-a-custom-route-constraint-vb"></a>Création d’une contrainte de route personnalisée (VB)
 
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther montre comment vous pouvez créer une contrainte d’itinéraire personnalisé. Nous implémentons une contrainte personnalisée simple qui empêche un itinéraire à partir de la mise en correspondance lors de l’exécution d’une demande de navigateur à partir d’un ordinateur distant.
-
 
 L’objectif de ce didacticiel consiste à montrer comment vous pouvez créer une contrainte d’itinéraire personnalisé. Une contrainte d’itinéraire personnalisé vous pouvez ainsi empêcher un itinéraire à partir de la mise en correspondance, sauf si une condition personnalisée est mis en correspondance.
 

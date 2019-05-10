@@ -8,12 +8,12 @@ ms.date: 08/19/2008
 ms.assetid: d0136da6-81a4-4815-b002-baa84744c09e
 msc.legacyurl: /mvc/overview/older-versions-1/security/preventing-javascript-injection-attacks-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2d954cbc001a62f021f942f1ff44522a2769f516
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e7294be63ac06dbf548df9d99c07503d4bfff55f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389574"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125504"
 ---
 # <a name="preventing-javascript-injection-attacks-c"></a>Prévention des attaques par injection de code JavaScript (C#)
 
@@ -23,7 +23,6 @@ par [Stephen Walther](https://github.com/StephenWalther)
 
 > Empêcher les attaques par Injection de JavaScript et attaques de script entre sites pour vous. Dans ce didacticiel, Stephen Walther explique comment vous pouvez facilement mettre en échec ces types d’attaques par codage votre contenu HTML.
 
-
 L’objectif de ce didacticiel est d’expliquer comment vous pouvez empêcher les attaques par injection de JavaScript dans vos applications ASP.NET MVC. Ce didacticiel aborde deux approches pour la défense de votre site Web par rapport à une attaque par injection de JavaScript. Vous allez apprendre à empêcher les attaques par injection de JavaScript en encodant les données que vous affichez. Vous allez également apprendre à empêcher les attaques par injection de JavaScript par les données que vous acceptez d’encodage.
 
 ## <a name="what-is-a-javascript-injection-attack"></a>Qu’est une attaque par Injection de JavaScript ?
@@ -32,11 +31,9 @@ Chaque fois que vous acceptez l’entrée d’utilisateur et réaffichez l’ent
 
 Imaginez que vous avez créé un site Web des commentaires de clients (voir Figure 1). Les clients peuvent visiter le site Web et entrer des commentaires sur leur expérience à l’aide de vos produits. Lorsqu’un client soumet leurs commentaires, les commentaires s’affiche de nouveau sur la page de commentaires.
 
-
 [![Site de commentaires client](preventing-javascript-injection-attacks-cs/_static/image2.png)](preventing-javascript-injection-attacks-cs/_static/image1.png)
 
 **Figure 01**: Site de commentaires client ([cliquez pour afficher l’image en taille réelle](preventing-javascript-injection-attacks-cs/_static/image3.png))
-
 
 Le site de commentaires client utilise le `controller` dans le Listing 1. Cela `controller` contient deux actions nommées `Index()` et `Create()`.
 
@@ -64,11 +61,9 @@ Imaginez que vous entrez le texte suivant dans le formulaire de commentaires cli
 
 Ce texte représente un script JavaScript qui affiche une boîte de message d’alerte. Une fois que quelqu'un envoie ce script dans les commentaires de formulaire, le message <em>Boo !</em> s’affiche chaque fois que tout le monde visite le site Web des commentaires des clients à l’avenir (voir Figure 2).
 
-
 [![Injection de code JavaScript](preventing-javascript-injection-attacks-cs/_static/image5.png)](preventing-javascript-injection-attacks-cs/_static/image4.png)
 
 **Figure 02**: L’injection de code JavaScript ([cliquez pour afficher l’image en taille réelle](preventing-javascript-injection-attacks-cs/_static/image6.png))
-
 
 À présent, votre réponse initiale à des attaques par injection de code JavaScript peut être indifférence. Vous pourriez penser que les attaques par injection de JavaScript sont simplement un type de *dégradation* attaque. Vous pensez qu’aucune autre faire quoi que ce soit réellement malveillant en validant une attaque par injection de JavaScript.
 
@@ -92,11 +87,9 @@ Notez que la valeur de `feedback.Message` est encodé en HTML avant la valeur es
 
 Quelles en moyenne au format HTML encoder une chaîne ? Lorsque vous HTML encoder une chaîne, dangereux caractères tels que `<` et `>` sont remplacés par des références d’entité HTML comme `&lt;` et `&gt;`. Par conséquent, lorsque la chaîne `<script>alert("Boo!")</script>` est au format HTML encodé, elles sont converties en `&lt;script&gt;alert(&quot;Boo!&quot;)&lt;/script&gt;`. La chaîne encodée ne s’exécute plus comme un script JavaScript lorsqu’il est interprété par un navigateur. Au lieu de cela, vous obtenez la page sans incidence dans la Figure 3.
 
-
 [![Vaincu attaque JavaScript](preventing-javascript-injection-attacks-cs/_static/image8.png)](preventing-javascript-injection-attacks-cs/_static/image7.png)
 
 **Figure 03**: Vaincu JavaScript attaque ([cliquez pour afficher l’image en taille réelle](preventing-javascript-injection-attacks-cs/_static/image9.png))
-
 
 Notez que dans le `Index` afficher dans la liste 3 uniquement la valeur de `feedback.Message` est encodé. La valeur de `feedback.EntryDate` n’est pas encodé. Vous devez uniquement encoder les données entrées par un utilisateur. Étant donné que la valeur de EntryDate a été générée dans le contrôleur, vous n’avez besoin au format HTML Encoder cette valeur.
 

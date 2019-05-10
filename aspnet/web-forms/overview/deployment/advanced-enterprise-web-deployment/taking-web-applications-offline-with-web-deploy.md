@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 3e9f6e7d-8967-4586-94d5-d3a122f12529
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/taking-web-applications-offline-with-web-deploy
 msc.type: authoredcontent
-ms.openlocfilehash: 017eceb8567859fdbe28bb87af844eee20dfa525
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ba54454bcb6f5e4ceb269b128a6b72a4b75f64be
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415477"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131409"
 ---
 # <a name="taking-web-applications-offline-with-web-deploy"></a>Passage d’applications web hors connexion avec Web Deploy
 
@@ -22,7 +22,6 @@ par [Jason Lee](https://github.com/jrjlee)
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit comment prendre une application web en mode hors connexion pendant la durée d’un déploiement automatisé à l’aide de l’outil de déploiement Web Internet Information Services (IIS) (Web Deploy). Les utilisateurs qui accèdent à l’application web sont redirigés vers un *application\_offline.htm* fichier jusqu'à ce que le déploiement est terminé.
-
 
 Cette rubrique fait partie d’une série de didacticiels basées sur les exigences de déploiement d’entreprise de la société fictive Fabrikam, Inc. Cette série de didacticiels utilise un exemple de solution&#x2014;le [solution Gestionnaire de contacts](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;pour représenter une application web avec un niveau réaliste de complexité, y compris une application ASP.NET MVC 3, une Communication de Windows Foundation (WCF) service et un projet de base de données.
 
@@ -70,18 +69,13 @@ L’étape suivante consiste à modifier votre logique de déploiement pour copi
 > [!NOTE]
 > La procédure suivante suppose que vous utilisez un fichier de projet MSBuild personnalisé pour contrôler votre processus de déploiement, comme décrit dans [présentation du fichier projet](../web-deployment-in-the-enterprise/understanding-the-project-file.md). Si vous effectuez un déploiement direct à partir de Visual Studio, vous devez utiliser une approche différente. Sayed Ibrahim Hashimi décrit une telle approche dans [comment prendre votre application en mode hors connexion au cours de publication sur le Web](http://sedodream.com/2012/01/08/HowToTakeYourWebAppOfflineDuringPublishing.aspx).
 
-
 Pour déployer un *application\_hors connexion* fichier vers un site Web IIS de destination, vous devez appeler à l’aide de MSDeploy.exe le [Web Deploy **contentPath** fournisseur](https://technet.microsoft.com/library/dd569034(WS.10).aspx). Le **contentPath** fournisseur prend en charge les chemins d’accès du répertoire physique et les chemins de site Web ou application IIS, ce qui rend le choix idéal pour la synchronisation d’un fichier entre un dossier de projet Visual Studio et une application web IIS. Pour déployer le fichier, votre commande MSDeploy doit ressembler à ceci :
-
 
 [!code-console[Main](taking-web-applications-offline-with-web-deploy/samples/sample1.cmd)]
 
-
 Pour supprimer le fichier à partir du site de destination à la fin du processus de déploiement, votre commande MSDeploy doit ressembler à ceci :
 
-
 [!code-console[Main](taking-web-applications-offline-with-web-deploy/samples/sample2.cmd)]
-
 
 Pour automatiser ces commandes en tant que partie d’un processus de génération et de déploiement, vous devez les intégrer dans votre fichier de projet MSBuild personnalisée. La procédure suivante décrit comment effectuer cette opération.
 
@@ -129,9 +123,7 @@ Web Publishing Pipeline (WPP) utilise une liste d’éléments nommée **FilesFo
 
 Le *..WPP cible* fichier doit ressembler à ceci :
 
-
 [!code-xml[Main](taking-web-applications-offline-with-web-deploy/samples/sample8.xml)]
-
 
 Voici les points clés de la Remarque Dans cet exemple :
 
@@ -160,7 +152,6 @@ La prochaine génération et package de votre projet d’application web, les fo
 
 > [!NOTE]
 > Si votre déploiement échoue, le *application\_offline.htm* fichier restent en place et de votre application reste hors connexion. C’est généralement le comportement souhaité. Pour remettre votre application en ligne, vous pouvez supprimer le *application\_offline.htm* fichier à partir de votre serveur web. Vous pouvez également, si vous corrigez les erreurs éventuelles et que vous exécutez un déploiement réussi, le *application\_offline.htm* fichier sera supprimé.
-
 
 ## <a name="conclusion"></a>Conclusion
 

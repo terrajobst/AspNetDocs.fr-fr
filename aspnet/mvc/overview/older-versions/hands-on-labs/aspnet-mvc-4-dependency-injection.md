@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 84c7baca-1c54-4c44-8f52-4282122d6acb
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 86781a1f46ce0c01a5d70b1f0cf8a81f3f96a032
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 15c9d4dcb9e2c6b9f6adf54d65d15737b32cca3b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405922"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129739"
 ---
 # <a name="aspnet-mvc-4-dependency-injection"></a>Injection de dépendances d’ASP.NET MVC 4
 
@@ -57,7 +57,6 @@ Les avantages de l’utilisation d’injection de dépendance et Inversion de co
 > [!NOTE]
 > L’Injection de dépendances est parfois comparée avec le modèle de Design Factory abstraite, mais il existe une légère différence entre les deux approches. L’injection de dépendances a une infrastructure fonctionne derrière pour résoudre les dépendances en appelant les fabriques et les services inscrits.
 
-
 Maintenant que vous comprenez le modèle d’Injection de dépendance, vous allez apprendre tout au long de ce laboratoire pour l’appliquer dans ASP.NET MVC 4. Vous commencerez à l’aide de l’Injection de dépendances dans le **contrôleurs** d’inclure un service d’accès de base de données. Ensuite, vous appliquerez l’Injection de dépendances pour le **vues** pour consommer un service et afficher des informations. Enfin, vous allez étendre l’injection de dépendances pour les filtres ASP.NET MVC 4, injecter un filtre d’action personnalisé dans la solution.
 
 Dans cet atelier pratique, vous allez apprendre comment :
@@ -69,7 +68,6 @@ Dans cet atelier pratique, vous allez apprendre comment :
 
 > [!NOTE]
 > Ce laboratoire est à l’aide de Unity.Mvc3 le NuGet Package pour la résolution des dépendances, mais il est possible de s’adapter à n’importe quel Framework de l’Injection de dépendance pour travailler avec ASP.NET MVC 4.
-
 
 <a id="Prerequisites"></a>
 
@@ -107,13 +105,12 @@ Ce laboratoire pratique est constitué par les exercices suivants :
 > [!NOTE]
 > Chaque exercice est accompagné par un **fin** dossier contenant la solution obtenue, vous devez obtenir après avoir effectué les exercices. Si vous avez besoin d’aide supplémentaire sur l’utilisation via les exercices, vous pouvez utiliser cette solution comme guide.
 
-
 Durée estimée pour effectuer ce laboratoire : **30 minutes**.
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Injecting_a_Controller"></a>
-### <a name="exercise-1-injecting-a-controller"></a>Exercice 1 : Injection d’un contrôleur
+### <a name="exercise-1-injecting-a-controller"></a>Exercice 1 : Injection d’un contrôleur
 
 Dans cet exercice, vous allez apprendre à utiliser l’Injection de dépendances dans ASP.NET MVC Controllers en intégrant Unity à l’aide d’un NuGet Package. Pour cette raison, vous inclurez des services dans vos contrôleurs MvcMusicStore à séparer la logique de l’accès aux données. Les services créera une nouvelle dépendance dans le constructeur de contrôleur, qui est résolu à l’aide de l’Injection de dépendances à l’aide de **Unity**.
 
@@ -137,12 +134,10 @@ Vous trouverez ci-dessous la **StoreController** implémentation a une dépendan
 > 
 > Pour résoudre la dépendance, le contrôleur doit être créée par une fabrique abstraite (une classe qui retourne un objet du type spécifié).
 
-
 [!code-csharp[Main](aspnet-mvc-4-dependency-injection/samples/sample2.cs)]
 
 > [!NOTE]
 > Vous obtiendrez une erreur lors de la classe tente de créer le StoreController sans envoyer l’objet de service, car il n’existe aucun constructeur sans paramètre déclaré.
-
 
 <a id="Ex1Task1"></a>
 
@@ -181,7 +176,6 @@ Dans cette tâche, vous inclurez **Unity.Mvc3** NuGet Package à la solution.
 > Unity.Mvc3 package a été conçu pour ASP.NET MVC 3, mais il est entièrement compatible avec ASP.NET MVC 4.
 > 
 > Unity est un conteneur d’injection de dépendance de légère et extensible avec prise en charge facultative par exemple et de types. Il est un conteneur à usage général pour une utilisation dans n’importe quel type d’application .NET. Il fournit toutes les fonctionnalités courantes trouvées dans les mécanismes de l’injection de dépendance, y compris : la création d’objets, l’abstraction des exigences par spécification de dépendances au démarrage et de flexibilité, en différant la configuration du composant au conteneur.
-
 
 1. Installer **Unity.Mvc3** NuGet Package dans le **MvcMusicStore** projet. Pour ce faire, ouvrez le **Console du Gestionnaire de Package** de **vue** | **Windows autres**.
 2. Exécutez la commande suivante.
@@ -247,7 +241,7 @@ Dans les exercices suivants, vous allez apprendre à étendre la portée de l’
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Injecting_a_View"></a>
-### <a name="exercise-2-injecting-a-view"></a>Exercice 2 : Injection d’une vue
+### <a name="exercise-2-injecting-a-view"></a>Exercice 2 : Injection d’une vue
 
 Dans cet exercice, vous allez apprendre à utiliser l’Injection de dépendances dans une vue avec les nouvelles fonctionnalités d’ASP.NET MVC 4 pour l’intégration de Unity. Pour ce faire, vous appelez un service personnalisé à l’intérieur de la vue de parcourir Store, qui affiche un message et une image ci-dessous.
 
@@ -310,7 +304,6 @@ Dans la tâche précédente, vous avez injecté une nouvelle dépendance à l’
 > 
 > 
 > [!code-csharp[Main](aspnet-mvc-4-dependency-injection/samples/sample11.cs)]
-
 
 1. Créer le /**fabriques** dossier dans le dossier du projet racine.
 2. Inclure **CustomViewPageActivator.cs** à votre solution à partir de **/Sources/ressources/** à **fabriques** dossier. Pour ce faire, cliquez sur le **/Factories** dossier, puis sélectionnez **ajouter | Un élément existant** , puis sélectionnez **CustomViewPageActivator.cs**. Cette classe implémente le **IViewPageActivator** interface pour contenir le conteneur Unity.

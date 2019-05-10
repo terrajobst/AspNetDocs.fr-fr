@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 5c76891d-e515-4885-b576-76bd2c494efe
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/ui_and_navigation
 msc.type: authoredcontent
-ms.openlocfilehash: 7834b5c418de9d05ee870641cfd7c7f9956ab210
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 06816f3555a806d41caf562b910a4ec4427b13bd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402997"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134234"
 ---
 # <a name="ui-and-navigation"></a>Interface utilisateur et navigation
 
@@ -22,7 +22,6 @@ par [Erik Reitan](https://github.com/Erikre)
 [Télécharger le projet de Wingtip Toys exemple (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
-
 
 Dans ce didacticiel, vous allez modifier l’interface utilisateur de l’application Web par défaut pour prendre en charge les fonctionnalités de l’application avant de banque de Wingtip Toys. En outre, vous allez ajouter simple et navigation lié aux données. Ce didacticiel s’appuie sur le didacticiel précédent, « Créer la couche d’accès aux données » et fait partie de la série de didacticiels Wingtip Toys.
 
@@ -75,7 +74,6 @@ Si vous n’incluez pas une `@Page` directive dans la page, ou si la directive n
 > [!NOTE] 
 > 
 > Le *Machine.config* fournit également des détails sur tous les paramètres de configuration possibles.
-
 
 ### <a name="web-server-controls"></a>Contrôles serveur Web
 
@@ -181,7 +179,6 @@ Dans ce didacticiel, vous allez modifier l’apparence de l’application Wingti
 > 
 > Le modèle d’Application Web ASP.NET utilise le *Bundle.config* fichier à la racine du projet pour stocker le chemin d’accès des fichiers CSS de démarrage.
 
-
 ### <a name="modifying-the-default-navigation"></a>Modification de la barre de Navigation par défaut
 
 Le volet de navigation par défaut pour chaque page dans l’application peut être modifié en changeant l’élément de liste non triée de navigation qui se trouve dans le *Site.Master* page.
@@ -196,7 +193,6 @@ Comme vous pouvez le voir dans le code HTML ci-dessus, vous avez modifié chaque
 > [!NOTE] 
 > 
 > Le tilde (`~`) caractère est utilisé pour spécifier que le `href` chemin d’accès commence à la racine du projet.
-
 
 ### <a name="adding-a-data-control-to-display-navigation-data"></a>Ajout d’un contrôle de données pour afficher des données de Navigation
 
@@ -215,7 +211,6 @@ Ce code affiche toutes les catégories à partir de la base de données. Le **Li
 > **Info-bulle**
 > 
 > Lorsque vous ajoutez du code en tapant pendant le développement, vous pouvez être certain qu’un membre valide d’un objet est trouvé, car il est fortement typée des contrôles de données affichent les membres disponibles en fonction IntelliSense. IntelliSense offre des choix de code selon le contexte quand vous tapez du code, tels que les propriétés, méthodes et objets.
-
 
 Dans l’étape suivante, vous allez implémenter le `GetCategories` méthode pour récupérer des données.
 
@@ -253,7 +248,6 @@ Ouvrez le *Web.config* fichier et examinez la section de chaîne de connexion. V
 > [!NOTE] 
 > 
 > Si le *application\_données* dossier n’est pas visible, ou si le dossier est vide, sélectionnez le **Actualiser** icône, puis le **afficher tous les fichiers** icône en haut de la **L’Explorateur de solutions** fenêtre. Développement de la largeur de la **l’Explorateur de solutions** windows peuvent être nécessaires pour afficher toutes les icônes disponibles.
-
 
 Maintenant vous pouvez inspecter les données contenues dans le *wingtiptoys.mdf* fichier de base de données à l’aide de la **Explorateur de serveurs** fenêtre.
 

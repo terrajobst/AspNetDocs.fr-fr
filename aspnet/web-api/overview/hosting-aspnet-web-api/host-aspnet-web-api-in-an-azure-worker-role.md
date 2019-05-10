@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 6980ee2e-d6b0-4a08-8fb6-ab96362dd0e3
 msc.legacyurl: /web-api/overview/hosting-aspnet-web-api/host-aspnet-web-api-in-an-azure-worker-role
 msc.type: authoredcontent
-ms.openlocfilehash: bfb23aafb814010e8651965dad91ca20a37fd786
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ec9904e0bff090be0f504036ae73977cfca0cb31
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404622"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130833"
 ---
 # <a name="host-aspnet-web-api-2-in-an-azure-worker-role"></a>Héberger des API Web ASP.NET 2 dans un rôle Worker Azure
 
@@ -32,7 +32,6 @@ par [Mike Wasson](https://github.com/MikeWasson)
 > - [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)
 > - Web API 2
 > - [Azure SDK pour .NET 2.3](https://azure.microsoft.com/downloads/)
-
 
 ## <a name="create-a-microsoft-azure-project"></a>Créer un projet Microsoft Azure
 
@@ -123,7 +122,6 @@ Générez la solution, puis appuyez sur F5 pour exécuter l’application locale
 
 > [!NOTE]
 > Si vous obtenez une exception semblable à ce qui suit, consultez [ce billet de blog](https://blogs.msdn.com/b/praburaj/archive/2013/11/20/fileloadexception-on-microsoft-owin-when-running-on-worker-role.aspx) pour une solution de contournement. « Impossible de charger le fichier ou l’assembly ' Microsoft.Owin, Version = 2.0.2.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35' ou une de ses dépendances. Définition du manifeste de l’assembly trouvée ne correspond pas à la référence d’assembly. (Exception de HRESULT : 0x80131040)"
-
 
 L’émulateur de calcul attribue une adresse IP locale au point de terminaison. Vous pouvez trouver l’adresse IP en affichant l’interface de l’émulateur de calcul. Cliquez sur l’icône de l’émulateur dans la zone de notification de la barre des tâches, puis sélectionnez **Show Compute Emulator UI**.
 

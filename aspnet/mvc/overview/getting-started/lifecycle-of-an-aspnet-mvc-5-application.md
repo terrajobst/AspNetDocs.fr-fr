@@ -8,12 +8,12 @@ ms.date: 02/28/2014
 ms.assetid: 9c1e3a75-b644-4480-8326-11300b1ec4b3
 msc.legacyurl: /mvc/overview/getting-started/lifecycle-of-an-aspnet-mvc-5-application
 msc.type: authoredcontent
-ms.openlocfilehash: 952d13fec206bdb8d398cead70d10335731f583d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f4a9b3fb61552b070db11fba617b5627fcd71cd5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402217"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124080"
 ---
 # <a name="lifecycle-of-an-aspnet-mvc-5-application"></a>Cycle de vie d’une application ASP.NET MVC 5
 
@@ -31,7 +31,6 @@ Ici, vous pouvez télécharger un document PDF qui soutiennent les graphiques du
 - Positionnement et l’objectif de toutes les méthodes substituables sur la [contrôleur](https://msdn.microsoft.com/library/system.web.mvc.controller.aspx) objet dans le pipeline de traitement de demande. Vous pouvez ou peut-être pas la nécessité de remplacer n’importe quelle un méthode, mais il est important de comprendre leur rôle dans le cycle de vie d’application afin que vous pouvez écrire du code à l’étape de cycle de vie approprié à l’effet que vous avez l’intention.
 - Diagrammes de haut soufflé montrant comment chacun des types de filtre (authentification, autorisation, action et résultats) est appelée.
 - Lier à un article utile ou un blog à partir de chaque point d’intérêt dans la vue détail.
-
 
 ## <a name="next-steps"></a>Étapes suivantes
 

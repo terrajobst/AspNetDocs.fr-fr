@@ -8,12 +8,12 @@ ms.date: 08/15/2012
 ms.assetid: c7e4e1ab-4932-4614-9f53-aaf7c706d498
 msc.legacyurl: /mvc/overview/views/using-page-inspector-in-aspnet-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: ef0ae42e1c6114849a311164eac242db6dab2b1d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5da3e142c52a770f59222c21d9f9a53cbbdbf498
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385795"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126353"
 ---
 # <a name="using-page-inspector-in-aspnet-mvc"></a>Utilisation de l'Inspecteur de page dans ASP.NET MVC
 
@@ -38,7 +38,6 @@ par Tim Ammann
 > - [À l’aide du sélecteur de couleurs CSS](#css_color_picker)
 > - [Mappage d’éléments de Page dynamique pour JavaScript](#map_dynamic_elements)
 
-
 <a id="_prerequisites"></a><a id="_1_prerequisites"></a>
 
 ## <a name="prerequisites"></a>Prérequis
@@ -47,7 +46,6 @@ par Tim Ammann
 
 > [!NOTE]
 > Pour obtenir la dernière version de l’inspecteur de Page, utilisez [Web Platform Installer](https://go.microsoft.com/fwlink/?LinkId=255386) pour installer le Kit de développement logiciel Windows Azure pour .NET 2.0.
-
 
 Inspecteur de page est fourni avec les outils de développement Web de Microsoft. La dernière version est 1.3. Pour vérifier quelle version vous avez, exécutez Visual Studio, puis sélectionnez **propos de Microsoft Visual Studio** à partir de la **aide** menu.
 
@@ -179,7 +177,6 @@ Le **Styles** rend fenêtre facilement tester et de prévisualiser les CSS qui c
 > [!NOTE]
 > Cette fonctionnalité nécessite la version 1.3 de l’inspecteur de Page.
 
-
 La fonctionnalité de synchronisation automatique CSS vous permet de modifier directement un fichier CSS et voir les modifications immédiatement dans le navigateur de l’inspecteur de Page.
 
 Cliquez sur **inspecter** à placer l’inspecteur de Page en Mode d’Inspection.
@@ -238,7 +235,6 @@ Avec la version 1.3, l’inspecteur de Page peut mapper maintenant les élément
 
 > [!NOTE]
 > Le modèle SPA nécessite le [ASP.NET et Web Tools 2012.2](https://go.microsoft.com/fwlink/?LinkId=282650) mettre à jour.
-
 
 Dans Visual Studio, choisissez **fichier** &gt; **nouveau projet**. Sur la gauche, développez **Visual C#**, sélectionnez **Web**, puis sélectionnez **ASP.NET MVC 4 Web Application**. Cliquez sur **OK**.
 

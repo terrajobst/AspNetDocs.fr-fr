@@ -8,19 +8,18 @@ ms.date: 03/02/2009
 ms.assetid: ec26f264-d0ea-4031-9943-825505a3ac4b
 msc.legacyurl: /mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 4fe34858aadb705ffb59e06ba805493d89aa4028
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3b0aa9816209cc326d3dea4b8dfb1b13cf697fcd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403205"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130359"
 ---
 # <a name="using-the-tagbuilder-class-to-build-html-helpers-vb"></a>À l’aide de la classe TagBuilder pour générer des Helpers HTML (VB)
 
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther vous présente une classe d’utilitaire utile dans l’infrastructure ASP.NET MVC nommé la classe TagBuilder. Vous pouvez utiliser la classe TagBuilder pour créer facilement des balises HTML.
-
 
 L’infrastructure ASP.NET MVC inclut une classe d’utilitaire utile nommée la classe TagBuilder que vous pouvez utiliser lors de la création de programmes d’assistance HTML. La classe TagBuilder, comme le suggère le nom de la classe, vous permet de créer facilement des balises HTML. Dans ce bref didacticiel, vous sont fournis avec une vue d’ensemble de la classe TagBuilder et vous allez apprendre à utiliser cette classe lors de la création d’un programme d’assistance HTML simple qui effectue le rendu HTML &lt;img&gt; balises.
 
@@ -33,7 +32,6 @@ La classe TagBuilder est contenue dans l’espace de noms System.Web.Mvc. Il a c
 - MergeAttribute() – permet d’ajouter des attributs à une balise. Il existe plusieurs surcharges de cette méthode.
 - SetInnerText() – vous permet de définir le texte interne de la balise. Le texte interne est automatiquement encoder en HTML.
 - ToString() – permet d’afficher la balise. Vous pouvez spécifier si vous souhaitez créer une balise normale, une balise de début, une balise de fin ou une balise de fermeture automatique.
-  
 
 La classe TagBuilder a quatre propriétés importantes :
 
@@ -64,11 +62,9 @@ Après avoir créé l’application d’assistance d’Image, vous pouvez utilis
 
 [!code-aspx[Main](using-the-tagbuilder-class-to-build-html-helpers-vb/samples/sample2.aspx)]
 
-
 [![La boîte de dialogue Nouveau projet](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.png)
 
 **Figure 01**: À l’aide du programme d’assistance d’Image ([cliquez pour afficher l’image en taille réelle](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image2.png))
-
 
 Notez que vous devez importer l’espace de noms associé à l’application d’assistance de l’Image en haut de la vue Index.aspx. Le programme d’assistance est importé avec la directive suivante :
 

@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: 64116e56-1c9a-4f07-8097-bb36cbb6e57f
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-controllers-and-views-to-implement-a-listingdetails-ui
 msc.type: authoredcontent
-ms.openlocfilehash: abff97e5cc2663465fdf61f41ff69d17104fe8b6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 74319fe5ea4c79b50140834349e2fdf86420cfbb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379467"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128205"
 ---
 # <a name="use-controllers-and-views-to-implement-a-listingdetails-ui"></a>Utiliser des contrôleurs et des vues pour implémenter une interface utilisateur liste/détails
 
@@ -26,7 +26,6 @@ by [Microsoft](https://github.com/microsoft)
 > Étape 4 montre comment ajouter un contrôleur à l’application qui tire parti de notre modèle pour fournir aux utilisateurs une expérience de navigation de la liste/détails de données pour dîners sur notre site NerdDinner.
 > 
 > Si vous utilisez ASP.NET MVC 3, nous vous recommandons de suivre le [mise en route avec MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) ou [Store de musique MVC](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) didacticiels.
-
 
 ## <a name="nerddinner-step-4-controllers-and-views"></a>NerdDinner étape 4 : Contrôleurs et des vues
 

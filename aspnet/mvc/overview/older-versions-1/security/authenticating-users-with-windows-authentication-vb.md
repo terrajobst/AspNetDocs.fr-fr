@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 532fa051-7d5c-4d6d-87f6-339ce4b84c44
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-windows-authentication-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d6b48d676c2dd90fc052b338f31a389e0fb809be
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: aa64b1f9ef6461a81611ca066310dca2d545baa3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402308"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126835"
 ---
 # <a name="authenticating-users-with-windows-authentication-vb"></a>Authentification des utilisateurs avec l’authentification Windows (VB)
 
 by [Microsoft](https://github.com/microsoft)
 
 > Découvrez comment utiliser l’authentification Windows dans le contexte d’une application MVC. Vous découvrez comment activer l’authentification Windows dans le fichier de configuration de votre application web et comment configurer l’authentification avec IIS. Enfin, vous allez apprendre à utiliser l’attribut [Authorize] pour restreindre l’accès aux actions de contrôleur pour les utilisateurs Windows particuliers ou des groupes.
-
 
 L’objectif de ce didacticiel est d’expliquer comment vous pouvez tirer parti de la sécurité, fonctionnalités intégrées à Internet Information Services pour le mot de passe protègent les vues dans vos applications MVC. Vous allez apprendre à autoriser des actions de contrôleur devant être appelé uniquement par les utilisateurs Windows particuliers ou les utilisateurs qui sont membres de groupes Windows spécifiques.
 
@@ -50,7 +49,6 @@ Pour une application web de production, la part, vous utilisez IIS comme votre s
 > 
 > Pour obtenir une présentation plus détaillée de ces différents types d’authentification, consultez [ https://msdn.microsoft.com/library/aa292114(VS.71).aspx ](https://msdn.microsoft.com/library/aa292114(VS.71).aspx).
 
-
 Vous pouvez utiliser le Gestionnaire des Services Internet pour activer un type particulier d’authentification. N’oubliez pas que tous les types d’authentification ne sont pas disponibles dans le cas de tous les systèmes d’exploitation. En outre, si vous utilisez IIS 7.0 avec Windows Vista, vous devez activer les différents types d’authentification de Windows avant qu’elles apparaissent dans le Gestionnaire des Services Internet. Ouvrez **le panneau de configuration, des programmes, des programmes et des fonctionnalités, ou désactiver des fonctionnalités Windows activer**, puis développez le nœud Internet Information Services (voir Figure 2).
 
 **Figure 2 – fonctionnalités d’activation Windows IIS**
@@ -75,7 +73,6 @@ Par exemple, le contrôleur Home dans le Listing 1 expose trois actions nommées
 
 > [!NOTE]
 > En raison de Windows compte contrôle utilisateur (UAC), lorsque vous travaillez avec Windows Vista ou Windows Server 2008, le groupe Administrateurs local se comporte différemment des autres groupes. Le &lt;Authorize&gt; attribut ne reconnaît correctement un membre du groupe Administrateurs local, sauf si vous modifiez les paramètres de compte d’utilisateur de votre ordinateur.
-
 
 Exactement ce qui se passe lorsque vous tentez d’appeler une action de contrôleur sans être les autorisations appropriées varie selon le type de l’authentification est activée. Par défaut, lorsque vous utilisez le serveur de développement ASP.NET, vous obtenez simplement une page vierge. La page est servie avec un **401 non autorisé** état de la réponse HTTP.
 

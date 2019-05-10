@@ -8,12 +8,12 @@ ms.date: 06/19/2013
 ms.assetid: 7a87f16f-0e19-4f15-a88a-094ae866c4a2
 msc.legacyurl: /mvc/overview/older-versions/using-oauth-providers-with-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: c2fe74c3d7b1aa0d230f1893f6ba7dcaa7a88419
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5dfd1305376a62f4987caea242ca0f6aac1018e9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396979"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129633"
 ---
 # <a name="using-oauth-providers-with-mvc-4"></a>Utilisation de fournisseurs OAuth avec MVC 4
 
@@ -24,7 +24,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > Pour utiliser les informations d’identification externes dans une application web ASP.NET MVC 5, consultez [créer une application ASP.NET MVC 5 avec Facebook et Google OAuth2 et OpenID Sign-on](../security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md).
 > 
 > L’activation de ces informations d’identification dans vos sites web de fournit un avantage significatif, car des millions d’utilisateurs disposent déjà de comptes avec ces fournisseurs externes. Ces utilisateurs peuvent être plus de chances de s’inscrire à votre site si elles n’ont pas à créer et à mémoriser un nouvel ensemble d’informations d’identification. En outre, une fois un utilisateur s’est connecté via un de ces fournisseurs, vous pouvez incorporer des opérations réseau sociales à partir du fournisseur.
-
 
 ## <a name="what-youll-build"></a>Vous allez générer
 
