@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 98c78dad-22bf-45cd-807e-c2f3f59011b9
 msc.legacyurl: /web-forms/videos/aspnet-web-forms-vnext
 msc.type: chapter
-ms.openlocfilehash: 3b3efb3d5356d6009b86b93405de2cd8d8cddd43
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e791cba586f71ffae251b007b14588e4c1e818f1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404232"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116147"
 ---
 # <a name="aspnet-45"></a>ASP.NET 4.5
 
 > À propos des nouvelles fonctionnalités de Web Forms introduites dans ASP.NET 4.5.
-
 
 - [Contrôles de données fortement typées](aspnet-vnext-videos-strongly-typed-data-controls.md)
 - [Liaison de modèle, partie 1 - Sélection des données](aspnet-vnext-videos-model-binding-part-1-selecting-data.md)

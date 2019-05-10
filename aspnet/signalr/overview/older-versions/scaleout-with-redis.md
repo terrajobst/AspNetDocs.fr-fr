@@ -8,12 +8,12 @@ ms.date: 05/01/2013
 ms.assetid: 6abecf80-8ffa-41ba-b0d9-1d9edbe7687b
 msc.legacyurl: /signalr/overview/older-versions/scaleout-with-redis
 msc.type: authoredcontent
-ms.openlocfilehash: b3c5d01bdfa6be954313fe2dde61635e07756f5a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5079cf3fa773faeac911eddc75dc66e94ad98bb0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384342"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117050"
 ---
 # <a name="signalr-scaleout-with-redis-signalr-1x"></a>Scale-out de SignalR avec Redis (SignalR 1.x)
 
@@ -39,7 +39,6 @@ Bien que ce didacticiel utilise l’implémentation de Redis officielle, il exis
 > [!NOTE] 
 > 
 > Montée en puissance parallèle de SignalR avec Redis ne prend pas en charge les clusters Redis.
-
 
 ## <a name="overview"></a>Vue d'ensemble
 

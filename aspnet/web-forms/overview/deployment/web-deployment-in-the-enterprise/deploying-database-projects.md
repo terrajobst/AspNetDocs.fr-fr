@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 832f226a-1aa3-4093-8c29-ce4196793259
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/deploying-database-projects
 msc.type: authoredcontent
-ms.openlocfilehash: f5b7cecdd1a8dbd9be1bd781cec31c53c9096546
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 221808758492aedb8e8329364e511df28fd11105
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383217"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119321"
 ---
 # <a name="deploying-database-projects"></a>Déploiement de projets de base de données
 
@@ -23,7 +23,6 @@ par [Jason Lee](https://github.com/jrjlee)
 
 > [!NOTE]
 > Dans un grand nombre de scénarios de déploiement d’entreprise, vous devez la possibilité de publier des mises à jour incrémentielles dans une base de données déployée. L’alternative consiste à recréer la base de données sur chaque déploiement, ce qui signifie que vous perdez toutes les données dans la base de données existante. Lorsque vous travaillez avec Visual Studio 2010, à l’aide de VSDBCMD est l’approche recommandée pour la publication de base de données incrémentielles. Toutefois, la prochaine version de Visual Studio et le Pipeline de publication Web (WPP) inclut des outils qui prend en charge directement la publication incrémentielle.
-
 
 Si vous ouvrez l’exemple de gestionnaire de contacts solution dans Visual Studio 2010, vous verrez que le projet de base de données inclut un dossier de propriétés qui contient quatre fichiers.
 
@@ -81,9 +80,7 @@ Le reste de cette rubrique décrit l’utilisation de VSDBCMD avec MSBuild pour 
 
 L’utilitaire VSDBCMD vous permet de déployer une base de données à l’aide du schéma de base de données (fichier .dbschema) ou le manifeste de déploiement (le fichier .deploymanifest). Dans la pratique, vous utiliserez presque toujours le manifeste de déploiement, comme le manifeste de déploiement vous permet de fournir des valeurs par défaut pour les différentes propriétés de déploiement et identifier tout vous souhaitez exécuter les scripts SQL prédéploiement ou de post-déploiement. Par exemple, cette commande VSDBCMD permet de déployer le **ContactManager** base de données à un serveur de base de données dans un environnement de test :
 
-
 [!code-console[Main](deploying-database-projects/samples/sample1.cmd)]
-
 
 Dans ce cas :
 
@@ -107,21 +104,17 @@ Le comportement de la **/DD** ou **/DeployToDatabase** commutateur varie selon q
 
 Si vous utilisez un fichier .deploymanifest, le comportement est beaucoup plus complexe. Il s’agit, car le fichier .deploymanifest contient un nom de propriété **DeployToDatabase** qui détermine également si la base de données est déployée.
 
-
 [!code-xml[Main](deploying-database-projects/samples/sample2.xml)]
-
 
 La valeur de cette propriété est définie en fonction des propriétés du projet de base de données. Si vous définissez la **action de déploiement** à **créer un script de déploiement (.sql)**, la valeur sera **False**. Si vous définissez la **action de déploiement** à **créer un script de déploiement (.sql) et déployer la base de données**, la valeur sera **True**.
 
 > [!NOTE]
 > Ces paramètres sont associés à une plateforme et la configuration de build spécifique. Par exemple, si vous configurez des paramètres pour le **déboguer** configuration, puis publier à l’aide de la **version** configuration, vos paramètres ne seront pas utilisées.
 
-
 ![](deploying-database-projects/_static/image3.png)
 
 > [!NOTE]
 > Dans ce scénario, le **action de déploiement** doit toujours être définie sur **créer un script de déploiement (.sql)**, car vous ne souhaitez pas Visual Studio 2010 pour déployer votre base de données. En d’autres termes, le **DeployToDatabase** propriété doit toujours être **False**.
-
 
 Quand un **DeployToDatabase** propriété est spécifiée, le **/DD** commutateur remplace uniquement la propriété si la valeur de propriété est **false**:
 

@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: a19ff2ce-3f7e-4358-9a51-a1403da9c63e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/enable-automated-unit-testing
 msc.type: authoredcontent
-ms.openlocfilehash: b0c9cd7ab36a8414e0d7d50a68b05bb09a5f24f1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 09a7aa186605a6cce48ee94028425ded957c00d3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387904"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117352"
 ---
 # <a name="enable-automated-unit-testing"></a>Activer les tests unitaires automatisés
 
@@ -26,7 +26,6 @@ by [Microsoft](https://github.com/microsoft)
 > Étape 12 montre comment développer une suite de tests d’unités automatisés qui vérifient les nos fonctionnalités de NerdDinner, et qui nous donnera la confiance nécessaire pour apporter des modifications et améliorations apportées à l’application à l’avenir.
 > 
 > Si vous utilisez ASP.NET MVC 3, nous vous recommandons de suivre le [mise en route avec MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) ou [Store de musique MVC](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) didacticiels.
-
 
 ## <a name="nerddinner-step-12-unit-testing"></a>NerdDinner étape 12 : Test unitaire
 
@@ -264,7 +263,6 @@ Le nouveau scénario test intéressant pour nous permettre de prendre en charge 
 Voici deux tests qui montre comment nous pouvons fournir formulaire publié des valeurs pour la méthode d’assistance UpdateModel() à utiliser. Nous allons faire cela en créant et en remplissant un objet FormCollection et puis l’affecter à la propriété « ValueProvider » sur le contrôleur.
 
 Le premier test vérifie qu’une sauvegarde réussie, le navigateur est redirigé à l’action de détails. Le second test vérifie que lors de la validation d’entrée non valide l’action réaffiche la vue edit à nouveau avec un message d’erreur.
-
 
 [!code-csharp[Main](enable-automated-unit-testing/samples/sample17.cs)]
 

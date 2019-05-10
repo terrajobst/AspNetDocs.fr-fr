@@ -8,19 +8,18 @@ ms.date: 08/30/2013
 ms.assetid: 0ee21741-c1bf-4025-a9b0-24580cae24bc
 msc.legacyurl: /aspnet/overview/owin-and-katana/an-overview-of-project-katana
 msc.type: authoredcontent
-ms.openlocfilehash: 72f70faa151007558ecbb270143ecd5b37c2134d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1f28db822930cdfd2ebf4cf9bb27d173f4aa4201
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392571"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118291"
 ---
 # <a name="an-overview-of-project-katana"></a>Vue d’ensemble du projet Katana
 
 par [Howard Dierking](https://github.com/howarddierking)
 
 > L’infrastructure ASP.NET existe depuis plus de dix ans, et la plateforme a activé le développement d’innombrables sites et services Web. Comme les stratégies de développement d’applications Web ont évolué, l’infrastructure a été capable d’évoluer à l’étape des technologies telles que ASP.NET MVC et API Web ASP.NET. Développement d’applications Web utilise son étape suivante dans le monde du cloud computing, projet [Katana](https://channel9.msdn.com/Shows/Web+Camps+TV/The-Katana-Project-OWIN-for-ASPNET) fournit le jeu sous-jacent de composants pour les applications ASP.NET, leur permettant d’être flexible et portable léger et offrent de meilleures performances : autrement dit, le projet [Katana](https://channel9.msdn.com/Shows/Web+Camps+TV/The-Katana-Project-OWIN-for-ASPNET) cloud permet d’optimiser vos applications ASP.NET.
-
 
 ## <a name="why-katana--why-now"></a>Pourquoi Katana – pourquoi maintenant ?
 
@@ -214,7 +213,6 @@ Katana 2.0, les composants d’intergiciel (middleware) sont principalement dest
 ## <a name="conclusion"></a>Conclusion
 
  À partir de son début, les objectifs du projet Katana n’a pas été de créer et de forcer ainsi aux développeurs pour en savoir encore une autre infrastructure Web. Au lieu de cela, l’objectif a été de créer une abstraction pour donner aux développeurs d’applications Web .NET plus de choix qu’il a précédemment été possible. En décomposant les couches logiques d’une pile d’applications Web typique dans un ensemble de composants remplaçables, le projet Katana permet aux composants dans toute la pile pour améliorer à quel que soit le taux de sens pour ces composants. En créant tous les composants de l’abstraction OWIN simple, Katana permet d’infrastructures et les applications reposant sur les soit portable sur une variété de différents serveurs et ordinateurs hôtes. En plaçant le développeur dans le contrôle de la pile, Katana permet de s’assurer que le développeur fait le choix ultimate sur comment léger ou comment riche sa pile Web doit correspondre.  
-  
 
 ## <a name="for-more-information-about-katana"></a>Pour plus d’informations sur Katana
 

@@ -8,17 +8,16 @@ ms.date: 09/19/2014
 ms.assetid: 607f4617-380f-41fa-bf46-147e82bb8124
 msc.legacyurl: /signalr/overview/older-versions
 msc.type: chapter
-ms.openlocfilehash: 67ca6b1dc68dc2dde4e24d4d6c6ddae04fc4bb6d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f992ea30d6d4c26da105a688f42e420af86a523a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383472"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117118"
 ---
 # <a name="signalr-older-versions"></a>Versions antérieures de SignalR
 
 > Documentation relative aux versions antérieures de SignalR.
-
 
 - [Tutoriel : Bien démarrer avec SignalR 1.x](tutorial-getting-started-with-signalr.md)
 - [Tutoriel : Bien démarrer avec SignalR 1.x et MVC 4](tutorial-getting-started-with-signalr-and-mvc-4.md)

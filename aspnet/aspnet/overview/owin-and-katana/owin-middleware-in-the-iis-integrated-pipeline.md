@@ -8,19 +8,18 @@ ms.date: 11/07/2013
 ms.assetid: d031c021-33c2-45a5-bf9f-98f8fa78c2ab
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-middleware-in-the-iis-integrated-pipeline
 msc.type: authoredcontent
-ms.openlocfilehash: 484c01f19014639cc30244ed4f4d014794594aa2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bb1211de0a3fe876f5640538034ab5a58b3a070c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59391700"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118223"
 ---
 # <a name="owin-middleware-in-the-iis-integrated-pipeline"></a>Intergiciel (middleware) OWIN dans le pipeline intégré IIS
 
 par [Praburaj Thiagarajan](https://github.com/Praburaj), [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Cet article explique comment exécuter les composants d’intergiciel (middleware) OWIN (OMCs) dans le pipeline intégré IIS, et comment définir l’événement de pipeline un OMC s’exécute sur. Vous devez examiner [une vue d’ensemble du projet Katana](an-overview-of-project-katana.md) et [détection de classe de démarrage OWIN](owin-startup-class-detection.md) avant la lecture de ce didacticiel. Ce didacticiel a été rédigé par Rick Anderson ( [ @RickAndMSFT ](https://twitter.com/#!/RickAndMSFT) ), Howard Dierking, Chris Ross et Praburaj Thiagarajan ( [ @howard \_dierking](https://twitter.com/howard_dierking) ).
-
 
 Bien que [OWIN](an-overview-of-project-katana.md) composants d’intergiciel (middleware) (OMCs) sont principalement conçus pour s’exécuter dans un pipeline indépendant du serveur, il est possible d’exécuter un OMC dans le pipeline intégré IIS ainsi (**en mode classique est *pas* pris en charge**). Un OMC possible de faire fonctionner dans le pipeline intégré IIS en installant le package suivant à partir du Package Manager de la console :
 

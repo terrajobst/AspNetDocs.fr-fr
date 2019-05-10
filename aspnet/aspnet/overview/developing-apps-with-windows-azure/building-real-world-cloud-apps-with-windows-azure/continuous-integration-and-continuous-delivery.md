@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: eaece9f5-f80c-428b-b771-5db66d275b7d
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery
 msc.type: authoredcontent
-ms.openlocfilehash: 0fb0a331a2a6e2af5c5097db8b57942525d24ffc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 25767303e3a8a3bfd9fc6c7c10cda32d73e9994d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384303"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118864"
 ---
 # <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Intégration continue et livraison continues (génération d’applications Cloud réalistes avec Azure)
 
@@ -22,7 +22,6 @@ par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > Le **Building Real World Cloud Apps with Azure** e-book est basé sur une présentation développée par Scott Guthrie. Il explique 13 modèles et pratiques qui peuvent vous aider à réussir le développement d’applications web pour le cloud. Pour plus d’informations sur l’e-book, consultez [le premier chapitre](introduction.md).
-
 
 Les deux premiers recommandé de modèles de processus de développement ont été [automatiser tout](automate-everything.md) et [contrôle de code Source](source-control.md), et le troisième modèle de processus de les combine. Intégration continue (CI) signifie que chaque fois qu’un développeur archive le code au référentiel source, une build est déclenchée automatiquement. Livraison continue (CD) prend une étape supplémentaire : après une build et tests d’unités automatisés sont réussies, vous déployez automatiquement l’application dans un environnement où vous pouvez effectuer un test plus approfondie.
 
@@ -50,7 +49,6 @@ Azure DevOps Services fournit un certain nombre de fonctionnalités pour vous ai
 - Il prend en charge le test de charge automatisée. Test de charge est essentiel pour une application cloud, mais est souvent négligé jusqu'à ce qu’il soit trop tard. Test de charge simule une utilisation intensive d’une application par des milliers d’utilisateurs, ce qui vous permet de trouver les goulots d’étranglement et améliorer le débit, avant de publier l’application en production.
 - Il prend en charge les collaborations de salle d’équipe, qui facilite la communication en temps réel et la collaboration pour les petites équipes agiles.
 - Il prend en charge la gestion de projet agile.
-
 
 Pour plus d’informations sur l’intégration continue et les fonctionnalités de livraison de Services de DevOps Azure, consultez [la documentation Azure DevOps](/azure/devops/index).
 

@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: c61560e9-9f6c-4985-834a-08a3eabf9c3c
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/creating-and-running-a-deployment-command-file
 msc.type: authoredcontent
-ms.openlocfilehash: cbad35c9ef83b41e9d3f9a48ff37672d22338e7e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f1477ff423e4898385066a35b42503f3c70dcc68
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395223"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119457"
 ---
 # <a name="creating-and-running-a-deployment-command-file"></a>Création et exécution d’un fichier de commandes de déploiement
 
@@ -22,7 +22,6 @@ par [Jason Lee](https://github.com/jrjlee)
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit comment créer un fichier de commandes qui vous permettent d’exécuter un déploiement à l’aide de fichiers de projet Microsoft Build Engine (MSBuild) comme un processus pas à pas et reproductible.
-
 
 Cette rubrique fait partie d’une série de didacticiels basées sur les exigences de déploiement d’entreprise de la société fictive Fabrikam, Inc. Cette série de didacticiels utilise un exemple de solution&#x2014;le [Contact Manager](the-contact-manager-solution.md) solution&#x2014;pour représenter une application web avec un niveau réaliste de complexité, y compris une application ASP.NET MVC 3, une Communication de Windows Foundation (WCF) service et un projet de base de données.
 
@@ -41,9 +40,7 @@ Comme décrit dans [comprendre le processus de génération](understanding-the-b
 
 Le *Publish.proj* fichier utilise un **importer** élément pour importer le fichier de projet spécifique à l’environnement.
 
-
 [!code-xml[Main](creating-and-running-a-deployment-command-file/samples/sample1.xml)]
-
 
 Par conséquent, lorsque vous utilisez MSBuild.exe pour générer et déployer la solution Gestionnaire de contacts, vous devez :
 
@@ -52,19 +49,14 @@ Par conséquent, lorsque vous utilisez MSBuild.exe pour générer et déployer l
 
 Pour ce faire, votre commande MSBuild doit ressembler à ceci :
 
-
 [!code-console[Main](creating-and-running-a-deployment-command-file/samples/sample2.cmd)]
-
 
 À ce stade, il est une étape simple pour déplacer vers un déploiement reproductible et à étape unique. Il vous suffit de faire consiste à ajouter votre commande de MSBuild dans un fichier .cmd. Dans la solution Gestionnaire de contacts, le dossier de publication inclut un fichier nommé *publier-Dev.cmd* qui effectue exactement cela.
 
-
 [!code-console[Main](creating-and-running-a-deployment-command-file/samples/sample3.cmd)]
-
 
 > [!NOTE]
 > Le **/fl** commutateur indique à MSBuild pour créer un fichier journal nommé *msbuild.log* dans le répertoire de travail dans lequel MSBuild.exe a été appelée.
-
 
 Pour déployer ou de redéployer la solution Gestionnaire de contacts, il vous suffit est exécuté le *publier-Dev.cmd* fichier. Lorsque vous exécutez le fichier, MSBuild va :
 
@@ -99,19 +91,14 @@ Lorsque vous avez créé un fichier de commandes pour votre environnement cible,
 
 Création d’un fichier de commandes qui contient vos instructions MSBuild vous offre un moyen rapide et facile de créer et déployer une solution à projets multiples dans un environnement de destination spécifique. Si vous avez besoin déployer votre solution de manière répétée dans plusieurs environnements de destination, vous pouvez créer plusieurs fichiers de commandes. Chaque fichier de commandes, la commande MSBuild génère le même fichier de projet d’application universelle, mais elle spécifie un fichier de projet spécifiques à l’environnement différent. Par exemple, un fichier de commandes pour publier sur un développeur ou l’environnement de test peut contenir cette commande MSBuild :
 
-
 [!code-console[Main](creating-and-running-a-deployment-command-file/samples/sample4.cmd)]
-
 
 Un fichier de commandes pour publier dans un environnement intermédiaire peut contenir cette commande MSBuild :
 
-
 [!code-console[Main](creating-and-running-a-deployment-command-file/samples/sample5.cmd)]
-
 
 > [!NOTE]
 > Pour obtenir des conseils sur la façon de personnaliser les fichiers de projet spécifique à l’environnement pour vos propres environnements serveur, consultez [configurer les propriétés de déploiement pour un environnement cible](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
-
 
 Vous pouvez également personnaliser le processus de génération pour chaque environnement en substituant les propriétés ou en définissant plusieurs autres commutateurs dans votre commande MSBuild. Pour plus d’informations, consultez [référence de ligne de commande MSBuild](https://msdn.microsoft.com/library/ms164311.aspx).
 

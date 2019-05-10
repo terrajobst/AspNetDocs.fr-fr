@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 187ee9cd-bc70-479b-bfed-f568b8da96eb
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-helpers-forms-and-validation
 msc.type: authoredcontent
-ms.openlocfilehash: 639a8e0e5fd9557221c95aee1bef0294df047ae8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0e2605a4188eaf814f6ab0ebfeaabed4457bcfa3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406312"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112505"
 ---
 # <a name="aspnet-mvc-4-helpers-forms-and-validation"></a>Helpers, formulaires et validation d’ASP.NET MVC 4
 
@@ -90,13 +90,12 @@ Les exercices suivants composent ce laboratoire pratique :
 > [!NOTE]
 > Chaque exercice est accompagné par un **fin** dossier contenant la solution obtenue, vous devez obtenir après avoir effectué les exercices. Si vous avez besoin d’aide supplémentaire sur l’utilisation via les exercices, vous pouvez utiliser cette solution comme guide.
 
-
 Durée estimée pour effectuer ce laboratoire : **60 minutes**
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Creating_the_Store_Manager_controller_and_its_Index_view"></a>
-### <a name="exercise-1-creating-the-store-manager-controller-and-its-index-view"></a>Exercice 1 : Création du contrôleur de Store Manager et sa vue Index
+### <a name="exercise-1-creating-the-store-manager-controller-and-its-index-view"></a>Exercice 1 : Création du contrôleur de Store Manager et sa vue Index
 
 Dans cet exercice, vous allez apprendre à créer un nouveau contrôleur de prendre en charge les opérations CRUD, personnaliser sa méthode d’action Index pour retourner une liste d’albums à partir de la base de données et enfin générer un modèle de vue de l’Index en tirant parti de la structure de ASP.NET MVC fonction pour afficher les propriétés des albums dans une table HTML.
 
@@ -177,7 +176,6 @@ Dans cette tâche, vous allez ajuster le modèle de vue simple créé avec la fo
 > [!NOTE]
 > Le **la structure** prise en charge dans ASP.NET MVC génère un simple modèle de vue qui répertorie tous les champs dans le modèle de l’Album. **Génération de modèles automatique** offre un moyen rapide pour commencer sur une vue fortement typée : plutôt que d’écrire le modèle de vue manuellement, la génération de modèles automatique rapidement génère un modèle par défaut et vous pouvez ensuite modifier le code généré.
 
-
 1. Passez en revue le code créé. La liste de champs générée fera partie des éléments suivants de table HTML qui **la structure** utilise pour afficher les données tabulaires.
 
     [!code-cshtml[Main](aspnet-mvc-4-helpers-forms-and-validation/samples/sample4.cshtml)]
@@ -205,7 +203,7 @@ Dans cette tâche, vous allez tester que le **StoreManager** **Index** modèle d
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Adding_an_HTML_Helper"></a>
-### <a name="exercise-2-adding-an-html-helper"></a>Exercice 2 : Ajout d’une application d’assistance HTML
+### <a name="exercise-2-adding-an-html-helper"></a>Exercice 2 : Ajout d’une application d’assistance HTML
 
 La page d’Index de StoreManager a un problème potentiel : Propriétés du titre et un nom d’artiste peuvent tous deux être suffisamment longue pour décaler la mise en forme de table. Dans cet exercice, vous allez apprendre à ajouter un programme d’assistance HTML personnalisée pour tronquer ce texte.
 
@@ -224,7 +222,6 @@ Dans cette tâche, vous allez ajouter une nouvelle méthode **Truncate** à la *
 
 > [!NOTE]
 > Pour en savoir plus sur **méthodes d’Extension**, consultez cet article de msdn. [https://msdn.microsoft.com/library/bb383977.aspx](https://msdn.microsoft.com/library/bb383977.aspx).
-
 
 1. Ouvrez le **commencer** solution situé dans **/Ex2-AddingAnHTMLHelper/début du fichierSource/** dossier. Sinon, vous pouvez continuer à utiliser le **fin** solution obtenu par le biais de l’exercice précédent.
 
@@ -404,7 +401,7 @@ Dans cette tâche, vous allez tester que le **StoreManager modifier** page de vu
 <a id="Exercise4"></a>
 
 <a id="Exercise_4_Adding_a_Create_View"></a>
-### <a name="exercise-4-adding-a-create-view"></a>Exercice 4 : Ajout d’une vue de créer
+### <a name="exercise-4-adding-a-create-view"></a>Exercice 4 : Ajout d’une vue de créer
 
 Maintenant que le **StoreManagerController** prend en charge la **modifier** capacité, dans cet exercice, vous allez apprendre à ajouter un modèle Create View pour permettent de stocker des gestionnaires Ajouter nouveau Albums à l’application.
 
@@ -505,7 +502,7 @@ Dans cette tâche, vous allez tester que le **StoreManager créer** page de vue 
 <a id="Exercise5"></a>
 
 <a id="Exercise_5_Handling_Deletion"></a>
-### <a name="exercise-5-handling-deletion"></a>Exercice 5 : Suppression de la gestion
+### <a name="exercise-5-handling-deletion"></a>Exercice 5 : Suppression de la gestion
 
 La possibilité de supprimer des albums n’est pas encore implémentée. Voici ce que cet exercice sera sur. Comme auparavant, vous allez implémenter le scénario de suppression à l’aide de deux méthodes distinctes au sein de la **StoreManagerController** classe :
 
@@ -665,7 +662,6 @@ Dans cet exercice, vous allez apprendre à activer MVC 4 Unobtrusive validation 
 
 > [!NOTE]
 > Le jQuery non obstructive utilise le préfixe de données-ajax JavaScript pour appeler des méthodes d’action sur le serveur et non intrusive émettant les scripts client.
-
 
 <a id="Ex7Task1"></a>
 

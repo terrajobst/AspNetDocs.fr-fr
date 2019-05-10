@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 669367cf-8e30-4eb6-821d-10a7d9bb906c
 msc.legacyurl: /mvc/overview/getting-started/database-first-development/generating-views
 msc.type: authoredcontent
-ms.openlocfilehash: 7a56c0f9197a99427bcde6103ebc69d245e8ce63
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e71e13e22d8a72e1699cfc70d4d93af603edba5b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025756"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121224"
 ---
 # <a name="tutorial-generate-views-for-ef-database-first-with-aspnet-mvc-app"></a>Tutoriel : Générer des vues pour EF Database First avec une application ASP.NET MVC
 
@@ -51,7 +51,6 @@ Cliquez sur **Ajouter**.
 Si vous recevez une erreur, il peut être, car vous n’avez pas généré le projet dans la section précédente. Dans ce cas, essayez de générer le projet et puis ajoutez de nouveau l’élément généré automatiquement.
 
 Une fois le processus de génération de code terminé, vous verrez un nouveau contrôleur et les vues dans votre projet **contrôleurs** et **vues** > **étudiants** dossiers .
-
 
 Effectuez de nouveau les mêmes étapes, mais ajouter une structure pour le **inscription** classe. Une fois terminé, vous avez un **EnrollmentsController.cs** fichier et un dossier sous **vues** nommé **les inscriptions** avec les vues Create, Delete, détails, Edit et Index.
 

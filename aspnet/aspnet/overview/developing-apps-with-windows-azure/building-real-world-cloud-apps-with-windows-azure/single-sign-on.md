@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 7d82d5e9-0619-4f22-9e03-32a6d52940a5
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
 msc.type: authoredcontent
-ms.openlocfilehash: da1136e085776c63886b6ac25533521fa1479d4f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8f6c23eb71ea323b6ab06943097f927f717a8099
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59406286"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118742"
 ---
 # <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Single Sign-On (génération d’applications Cloud réalistes avec Azure)
 
@@ -22,7 +22,6 @@ par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > Le **Building Real World Cloud Apps with Azure** e-book est basé sur une présentation développée par Scott Guthrie. Il explique 13 modèles et pratiques qui peuvent vous aider à réussir le développement d’applications web pour le cloud. Pour plus d’informations sur l’e-book, consultez [le premier chapitre](introduction.md).
-
 
 Pensez lorsque vous développez une application cloud de nombreux problèmes de sécurité, mais pour cette série nous allons nous concentrer sur un seul : authentification unique. Une question que les gens demandent souvent est la suivante : « Je suis principalement création d’applications pour les employés de ma société ; comment héberger ces applications dans le cloud et toujours leur permettre d’utiliser le même modèle de sécurité Mes employés connaître et à utilisent dans l’environnement local quand ils s’exécutent des applications qui sont hébergés au sein du pare-feu ? » Une des manières de que nous permettre ce scénario est appelée Azure Active Directory (Azure AD). Azure AD vous permet de proposer des enterprise line of business (LOB) applications via Internet, et il vous permet de proposer ces applications à des partenaires commerciaux.
 

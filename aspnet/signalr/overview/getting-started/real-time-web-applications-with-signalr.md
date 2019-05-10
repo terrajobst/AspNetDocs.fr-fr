@@ -8,15 +8,14 @@ ms.date: 07/16/2014
 ms.assetid: ba07958c-42e1-4da0-81db-ba6925ed6db0
 msc.legacyurl: /signalr/overview/getting-started/real-time-web-applications-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 9904582450d4386ef8b8656078f6d40dbd1e10be
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9e39fd3f2fc9d4e791002450085215096c222fcd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412006"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120006"
 ---
 # <a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Atelier pratique : Applications web temps réel avec SignalR
-
 
 par [Web Camps Team](https://twitter.com/webcamps)
 
@@ -66,7 +65,6 @@ Afin d’exécuter les exercices dans cet atelier, vous devez configurer votre e
 > [!NOTE]
 > Assurez-vous que vous avez activé toutes les dépendances pour ce laboratoire avant d’exécuter le programme d’installation.
 
-
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>À l’aide d’extraits de Code
 
@@ -74,7 +72,6 @@ Dans le document de laboratoire, vous serez invité à insérer des blocs de cod
 
 > [!NOTE]
 > Chaque exercice est accompagnée d’une solution de départ située dans le **commencer** dossier de l’exercice qui vous permet de suivre chaque exercice indépendamment des autres. N’oubliez pas que les extraits de code sont ajoutés au cours d’un exercice sont manquants à partir de ces solutions de démarrage et peut ne pas fonctionnent jusqu'à ce que vous avez terminé l’exercice. Dans le code source pour un exercice, vous y trouverez également un **fin** dossier qui contient une solution Visual Studio avec le code qui résulte d’effectuer les étapes dans l’exercice correspondant. Si vous avez besoin d’aide au cours de cet atelier, vous pouvez utiliser ces solutions en tant que guide.
-
 
 ---
 
@@ -91,9 +88,8 @@ Durée estimée pour effectuer ce laboratoire : **60 minutes**
 > [!NOTE]
 > Lorsque vous démarrez Visual Studio, vous devez sélectionner une des collections de paramètres prédéfinis. Chaque collection prédéfinie est conçue pour correspondre à un style de développement particulier et détermine les dispositions de fenêtres, le comportement de l’éditeur, extraits de code IntelliSense et les options de boîte de dialogue. Les procédures décrites dans ce laboratoire décrivent les actions nécessaires pour accomplir une tâche donnée dans Visual Studio lorsque vous utilisez le **paramètres de développement généraux** collection. Si vous choisissez une collection de paramètres différents pour votre environnement de développement, il peut y avoir des différences dans les étapes que vous devez prendre en compte.
 
-
 <a id="Exercise1"></a>
-### <a name="exercise-1-working-with-real-time-data-using-signalr"></a>Exercice 1 : Utilisation des données en temps réel à l’aide de SignalR
+### <a name="exercise-1-working-with-real-time-data-using-signalr"></a>Exercice 1 : Utilisation des données en temps réel à l’aide de SignalR
 
 Tandis que la conversation est souvent utilisée comme un exemple, vous pouvez effectuer un ensemble beaucoup plus avec des fonctionnalités Web en temps réel. N’importe quel moment qu'un utilisateur actualise une page web pour voir les nouvelles données ou l’implémente de page Ajax longue d’interrogation pour récupérer les nouvelles données, vous pouvez utiliser SignalR.
 
@@ -250,7 +246,7 @@ Dans cette tâche, vous allez exécuter la solution pour vérifier que l’affic
     *Page de statistiques actualisée après la réponse*
 
 <a id="Exercise2"></a>
-### <a name="exercise-2-scaling-out-using-sql-server"></a>Exercice 2 : Mise à l’échelle horizontale à l’aide de SQL Server
+### <a name="exercise-2-scaling-out-using-sql-server"></a>Exercice 2 : Mise à l’échelle horizontale à l’aide de SQL Server
 
 Lors de la mise à l’échelle une application web, vous pouvez généralement choisir entre *montée en puissance* et *la montée en puissance* options. *Monter en puissance* signifie l’utilisation d’un plus grand serveur, avec davantage de ressources (processeur, mémoire RAM, etc.) lors de la *monter en charge* revient à ajouter des serveurs pour gérer la charge. Le problème avec ce dernier est que les clients peuvent seront acheminés vers différents serveurs. Un client qui est connecté à un seul serveur ne recevra pas les messages envoyés à partir d’un autre serveur.
 
@@ -274,7 +270,6 @@ Pour plus d’informations sur le fond de panier SignalR fonctionne, lisez ce [a
 > - [Diffusion de serveur](tutorial-server-broadcast-with-signalr.md) (par exemple, les cotations boursières) : Fonds de panier fonctionnent bien pour ce scénario, étant donné que le serveur contrôle la fréquence à laquelle les messages sont envoyés.
 > - [Client à](tutorial-getting-started-with-signalr.md) (par exemple, chat) : Dans ce scénario, le fond de panier peut être un goulot d’étranglement si le nombre de messages évolue avec le nombre de clients ; Autrement dit, si le taux de messages augmente proportionnellement à sa plus de clients joindre.
 > - [En temps réel haute fréquence](tutorial-high-frequency-realtime-with-signalr.md) (par exemple, des jeux en temps réel) : Fond de panier n’est pas recommandée pour ce scénario.
-
 
 Dans cet exercice, vous allez utiliser **SQL Server** pour distribuer les messages entre le **Geek questionnaire** application. Vous allez exécuter ces tâches sur un ordinateur de test unique pour apprendre à définir la configuration, mais afin d’obtenir l’effet, vous devez déployer l’application de SignalR à deux ou plusieurs serveurs. Vous devez également installer SQL Server sur l’un des serveurs ou sur un serveur dédié distinct.
 

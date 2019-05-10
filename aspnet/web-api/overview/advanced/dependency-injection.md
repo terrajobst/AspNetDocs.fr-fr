@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: e3d3e7ba-87f0-4032-bdd3-31f3c1aa9d9c
 msc.legacyurl: /web-api/overview/advanced/dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 0ad0b3c63741803e05274df4da3fcbe5481d32a4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 138ccb5800e801d382c11e3989ec3e3c074a79fe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391925"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115702"
 ---
 # <a name="dependency-injection-in-aspnet-web-api-2"></a>Injection de dépendances dans ASP.NET Web API 2
 
@@ -30,7 +30,6 @@ par [Mike Wasson](https://github.com/MikeWasson)
 > - Web API 2
 > - [Unity Application Block](https://www.nuget.org/packages/Unity/)
 > - Entity Framework 6 (version 5 fonctionne également)
-
 
 ## <a name="what-is-dependency-injection"></a>Quelle est l’Injection de dépendances ?
 
@@ -88,7 +87,6 @@ Un conteneur IoC est un composant logiciel qui est responsable de la gestion des
 > [!NOTE]
 > « IoC » est l’acronyme « d’inversion de contrôle », qui est un modèle général où un framework appelle du code d’application. Un conteneur IoC construit vos objets, ce qui le flux habituel de contrôle « inverse ».
 
-
 Pour ce didacticiel, nous allons utiliser [Unity](https://msdn.microsoft.com/library/ff647202.aspx) à partir de Microsoft Patterns &amp; pratiques. (Incluent d’autres bibliothèques populaires [Castle Windsor](http://www.castleproject.org/), [Spring.Net](http://www.springframework.net/), [Autofac](https://code.google.com/p/autofac/), [Ninject](http://www.ninject.org/), et [StructureMap ](http://structuremap.github.io/documentation/).) Vous pouvez utiliser le Gestionnaire de Package NuGet pour installer Unity. À partir de la **outils** menu dans Visual Studio, sélectionnez **Gestionnaire de Package NuGet**, puis sélectionnez **Console du Gestionnaire de Package**. Dans la fenêtre de Console du Gestionnaire de Package, tapez la commande suivante :
 
 [!code-console[Main](dependency-injection/samples/sample7.cmd)]
@@ -99,7 +97,6 @@ Voici une implémentation de **IDependencyResolver** qui encapsule un conteneur 
 
 > [!NOTE]
 > Si le **GetService** méthode ne peut pas résoudre un type, elle doit retourner **null**. Si le **GetServices** méthode ne peut pas résoudre un type, elle doit retourner un objet de collection vide. Ne pas lever d’exceptions pour les types inconnus.
-
 
 ## <a name="configuring-the-dependency-resolver"></a>Configurer le résolveur de dépendance
 

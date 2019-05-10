@@ -8,12 +8,12 @@ ms.date: 01/06/2019
 ms.assetid: 9f35ca15-e216-4db6-9ebf-24380b0f31b4
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-validation
 msc.type: authoredcontent
-ms.openlocfilehash: 2b5d2a355a27bfe9a3aa8b2fa4a2de79c7f74314
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6894d01af7cd142a5579f73ae5209ca13756ca52
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387124"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120750"
 ---
 # <a name="adding-validation"></a>Ajout de la validation
 
@@ -84,7 +84,6 @@ Cliquez sur le **créer un nouveau** lien permettant d’ajouter un nouveau film
 > [!NOTE]
 > pour prendre en charge la validation jQuery pour les paramètres régionaux non anglais qui utilisent une virgule («, ») pour une décimale, vous devez inclure le package NuGet globaliser comme décrit précédemment dans ce didacticiel.
 
-
 Notez la façon dont le formulaire a utilisé automatiquement une couleur de bordure rouge pour mettre en évidence les zones de texte qui contiennent des données non valides et a émis un message d’erreur de validation approprié en regard de chacun d’eux. Les erreurs sont appliquées à la fois côté client (à l’aide de JavaScript et jQuery) et côté serveur (au cas où un utilisateur aurait désactivé JavaScript).
 
 Un réel avantage est que vous n’avez pas à modifier une seule ligne de code dans le `MoviesController` classe ou dans le *Create.cshtml* vue afin d’activer l’interface utilisateur de cette validation. Le contrôleur et les vues créées précédemment dans ce didacticiel ont détecté les règles de validation que vous avez spécifiées à l’aide des attributs de validation sur les propriétés de la classe de modèle `Movie`. Testez la validation à l’aide de la méthode d’action `Edit`. La même validation est appliquée.
@@ -135,9 +134,7 @@ Le [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannot
 
 L’attribut `DisplayFormat` est utilisé pour spécifier explicitement le format de date :
 
-
 [!code-csharp[Main](adding-validation/samples/sample8.cs)]
-
 
 Le `ApplyFormatInEditMode` paramètre spécifie que la mise en forme spécifiée doit également être appliquée quand la valeur est affichée dans une zone de texte pour la modification. (Ceci ne peut pas être souhaitable pour certains champs, par exemple, pour les valeurs monétaires, vous ne pouvez pas vouloir le symbole monétaire dans la zone de texte pour modification.)
 
@@ -155,7 +152,6 @@ Si vous utilisez le `DataType` attribut avec un champ de date, vous devez spéci
 > [!code-csharp[Main](adding-validation/samples/sample9.cs)]
 > 
 > Vous devez désactiver la validation de date jQuery pour utiliser le [plage](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.rangeattribute.aspx) attribut avec [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx). Il n’est généralement pas une bonne pratique de compiler des dates en dur dans vos modèles, à l’aide de la [plage](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.rangeattribute.aspx) attribut et [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx) est déconseillée.
-
 
 Le code suivant illustre la combinaison d’attributs sur une seule ligne :
 

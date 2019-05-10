@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 521c9117-81cd-4d8d-9d96-0256dc7bf50f
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5dd5b96d0365c55cbbfa2dfe0856beda41f915e1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 548c5bea2e9cf26e0574e72d2c0ea204dbd90f9c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384759"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123382"
 ---
 # <a name="improving-performance-with-output-caching-c"></a>Amélioration des performances avec la mise en cache de la sortie (C#)
 
 by [Microsoft](https://github.com/microsoft)
 
 > Dans ce didacticiel, vous découvrez comment vous pouvez améliorer considérablement les performances des applications web ASP.NET MVC en tirant parti de la mise en cache de sortie. Vous allez apprendre à mettre en cache le résultat retourné par une action de contrôleur afin que le même contenu n’ait pas besoin soit créée chaque fois qu'un nouvel utilisateur appelle l’action.
-
 
 L’objectif de ce didacticiel est d’expliquer comment vous pouvez améliorer considérablement les performances d’une application ASP.NET MVC en tirant parti du cache de sortie. Le cache de sortie vous permet de mettre en cache le contenu retourné par une action de contrôleur. De cette façon, le même contenu dispense doit être généré chaque fois que la même action de contrôleur est appelée.
 
@@ -78,7 +77,6 @@ Vous pouvez définir la propriété d’emplacement à l’une des valeurs suiva
 > 
 > · ServerAndClient
 
-
 Par défaut, la propriété d’emplacement a la valeur Any. Toutefois, il existe des situations dans lesquelles vous souhaiterez cache uniquement sur le navigateur ou uniquement sur le serveur. Par exemple, si vous mettez en cache d’informations personnalisé pour chaque utilisateur puis vous ne devez pas mettre en cache les informations sur le serveur. Si vous affichez des informations différentes à différents utilisateurs puis vous devez mettre en cache les informations uniquement sur le client.
 
 Par exemple, le contrôleur dans le Listing 3 expose une action nommée GetName() qui retourne le nom d’utilisateur actuel. Si Jack se connecte au site Web et appelle l’action GetName() l’action retourne la chaîne « Hi Jack ». Si, par la suite, Jill se connecte au site Web et appelle l’action GetName() puis elle également obtenez la chaîne « Hi Jack ». La chaîne est mis en cache sur le serveur web pour tous les utilisateurs après que Jack appelle initialement l’action du contrôleur.
@@ -134,7 +132,6 @@ Vous pouvez définir la propriété VaryByParam les valeurs suivantes :
 > None = jamais créer différentes versions de mise en cache
 > 
 > Liste de point-virgule de paramètres = créer différentes versions de mise en cache chaque fois que les paramètres de chaîne de formulaire ou d’une requête dans la liste varie
-
 
 ## <a name="creating-a-cache-profile"></a>Création d’un profil de Cache
 

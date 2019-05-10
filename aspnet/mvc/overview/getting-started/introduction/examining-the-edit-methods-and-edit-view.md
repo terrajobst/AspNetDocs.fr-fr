@@ -8,12 +8,12 @@ ms.date: 01/06/2019
 ms.assetid: 52a4d5fe-aa31-4471-b3cb-a064f82cb791
 msc.legacyurl: /mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view
 msc.type: authoredcontent
-ms.openlocfilehash: 4a4627bdce8b8f2085150aa08cdc4c1271e09e09
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c42ec77b5d5107f3ef70e13b779fc1bebef70a14
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422003"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120701"
 ---
 # <a name="examining-the-edit-methods-and-edit-view"></a>Examen des méthodes de modification et de la vue de modification
 
@@ -98,7 +98,6 @@ Tous les `HttpGet` méthodes suivent un modèle similaire. Ils obtiennent un obj
 ## <a name="jquery-validation-for-non-english-locales"></a>validation jQuery pour les paramètres régionaux non anglais
 
 Si vous utilisez un ordinateur de l’anglais des États-Unis, vous pouvez ignorer cette section et passer au didacticiel suivant. Vous pouvez télécharger la version Globalize de ce didacticiel [ici](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=16475). Pour obtenir un didacticiel de deux parties excellente sur l’internationalisation, consultez [ASP.NET MVC 5 internationalisation de Nadeem](http://afana.me/post/aspnet-mvc-internationalization.aspx).
-
 
 > [!NOTE]
 > pour prendre en charge la validation jQuery pour les paramètres régionaux non anglais qui utilisent une virgule (&quot;,&quot;) pour une virgule décimale et les formats de date non anglais des États-Unis, vous devez inclure *globalize.js* et votre propre  *cultures/globalize.cultures.js* fichier (à partir de [ https://github.com/jquery/globalize ](https://github.com/jquery/globalize) ) et JavaScript pour utiliser `Globalize.parseFloat`. Vous pouvez obtenir la validation non anglaises de jQuery à partir de NuGet. (N’installez pas Globalize si vous utilisez des paramètres régionaux anglais.)

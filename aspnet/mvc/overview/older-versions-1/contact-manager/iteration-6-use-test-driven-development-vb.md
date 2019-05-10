@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: e1fd226f-3f8e-4575-a179-5c75b240333d
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-6-use-test-driven-development-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 3fd252b94e55f02215a2733f218e68b26486691f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b166a1c6af29206d43558fa7de447c3f4da2ddfe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59397108"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123869"
 ---
 # <a name="iteration-6--use-test-driven-development-vb"></a>Itération #6 : utiliser le développement piloté par test (VB)
 
@@ -23,9 +23,7 @@ by [Microsoft](https://github.com/microsoft)
 
 > Dans cette itération sixième, nous ajoutons les nouvelles fonctionnalités à notre application en écrivant des tests unitaires tout d’abord et écrire du code pour les tests unitaires. Dans cette itération, nous ajouter des groupes de contacts.
 
-
 ## <a name="building-a-contact-management-aspnet-mvc-application-vb"></a>Création d’une Application ASP.NET MVC de gestion des contacts (VB)
-  
 
 Dans cette série de didacticiels, nous créer une application de gestion des contacts entière à partir du début à la fin. L’application Gestionnaire de Contact permet vous permettent de stocker les informations de contact (noms, numéros de téléphone et adresses de messagerie) pour obtenir la liste de personnes.
 
@@ -73,7 +71,6 @@ Enfin, développement piloté par test vous oblige à écrire des tests unitaire
 > 
 > Pour en savoir plus sur le développement piloté par test, je vous recommande de lire le livre de Michael Feathers **Working Effectively with Legacy Code**.
 
-
 Dans cette itération, nous ajoutons une nouvelle fonctionnalité à notre application de gestionnaire de contacts. Nous ajoutons la prise en charge pour les groupes de Contact. Vous pouvez utiliser des groupes de Contact pour organiser vos contacts en catégories telles que les entreprises et les groupes de Friend.
 
 Nous allons ajouter cette nouvelle fonctionnalité à notre application en suivant un processus de développement piloté par test. Nous allons écrire nos tests unitaires tout d’abord, et nous allons écrire tout notre code par rapport à ces tests.
@@ -112,11 +109,9 @@ Notre première récit utilisateur est qu’un utilisateur doit être en mesure 
 
 Créer un nouveau test unitaire en double-cliquant sur le dossier contrôleurs dans le projet ContactManager.Tests, en sélectionnant **ajouter, nouveau Test**et en sélectionnant le **de Test unitaire** modèle (voir Figure 1). Nom de la nouvelle unité GroupControllerTest.vb de test et cliquez sur le **OK** bouton.
 
-
 [![Ajout du test unitaire GroupControllerTest](iteration-6-use-test-driven-development-vb/_static/image1.jpg)](iteration-6-use-test-driven-development-vb/_static/image1.png)
 
 **Figure 01**: Ajout du test unitaire GroupControllerTest ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-vb/_static/image2.png))
-
 
 Notre premier test unitaire est contenue dans le Listing 1. Ce test vérifie que la méthode Index() du contrôleur de groupe renvoie un ensemble de groupes. Le test vérifie qu’une collection de groupes est retournée dans la vue données.
 
@@ -140,11 +135,9 @@ La classe de contrôleur de groupe dans la liste 2 contient le strict minimum de
 
 Une fois que nous ajoutons les classes GroupController et groupe à notre projet, notre premier test unitaire se termine correctement (voir Figure 2). Nous avons effectué le travail minimal requis pour réussir le test. Il est temps de faire la fête.
 
-
 [![Succès !](iteration-6-use-test-driven-development-vb/_static/image2.jpg)](iteration-6-use-test-driven-development-vb/_static/image3.png)
 
 **Figure 02**: Succès ! ([Cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-vb/_static/image4.png))
-
 
 ## <a name="creating-contact-groups"></a>Création de groupes de Contact
 
@@ -216,11 +209,9 @@ Liste 11 contient une nouvelle classe FakeContactManagerRepository qui implémen
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample11.vb)]
 
-
 Modifier le IContactManagerRepository interface requiert utiliser pour implémenter les méthodes CreateGroup() et ListGroups() dans la classe EntityContactManagerRepository. Le laziest et le plus rapide pour ce faire consiste à ajouter des méthodes stub ressemblent à ceci :
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample12.vb)]
-
 
 Enfin, ces modifications à la conception de notre application nous amener à apporter des modifications à nos tests unitaires. Nous devons maintenant utiliser le FakeContactManagerRepository lorsque vous effectuez les tests unitaires. La classe GroupControllerTest mis à jour est contenue dans la liste 12.
 
@@ -243,12 +234,10 @@ Nous devons créer une table de base de données de groupe. Procédez comme suit
 
 <a id="0.12_table01"></a>
 
-
 | **Nom de la colonne** | **Type de données** | **Null autorisé** |
 | --- | --- | --- |
 | Id | int | False |
-| Nom | nvarchar(50) | False |
-
+| Name | nvarchar(50) | False |
 
 Ensuite, nous devons supprimer toutes les données de la table de Contacts (dans le cas contraire, nous ne pourrons créer une relation entre les tables de Contacts et groupes). Procédez comme suit :
 
@@ -267,16 +256,13 @@ Ensuite, nous devons définir une relation entre la table de base de données de
 8. Cliquez sur le bouton Fermer pour fermer la boîte de dialogue relations de clé étrangère.
 9. Cliquez sur le bouton Enregistrer pour enregistrer les modifications apportées à la table Contacts.
 
-
 [![Création d’une relation de table de base de données](iteration-6-use-test-driven-development-vb/_static/image3.jpg)](iteration-6-use-test-driven-development-vb/_static/image5.png)
 
 **Figure 03**: Création d’une relation de table de base de données ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-vb/_static/image6.png))
 
-
 [![Spécification des relations de table](iteration-6-use-test-driven-development-vb/_static/image4.jpg)](iteration-6-use-test-driven-development-vb/_static/image7.png)
 
 **Figure 04**: Spécification des relations de table ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-vb/_static/image8.png))
-
 
 ### <a name="updating-our-data-model"></a>La mise à jour de notre modèle de données
 
@@ -288,19 +274,15 @@ Ensuite, nous devons mettre à jour de notre modèle de données pour représent
 4. Avec le bouton droit de l’entité de groupes et sélectionnez l’option de menu **renommer**. Modifier le nom de la *groupes* entité à *groupe* (singulier).
 5. Avec le bouton droit de la propriété de navigation de groupes qui s’affiche en bas de l’entité Contact. Modifier le nom de la *groupes* propriété de navigation *groupe* (singulier).
 
-
 [![La mise à jour un modèle Entity Framework à partir de la base de données](iteration-6-use-test-driven-development-vb/_static/image5.jpg)](iteration-6-use-test-driven-development-vb/_static/image9.png)
 
 **Figure 05**: La mise à jour un modèle Entity Framework à partir de la base de données ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-vb/_static/image10.png))
 
-
 Après avoir effectué ces étapes, votre modèle de données représente les Contacts et les groupes de tables. Le Concepteur d’entités doit afficher les deux entités (voir Figure 6).
-
 
 [![Concepteur d’entités affichant le groupe et Contact](iteration-6-use-test-driven-development-vb/_static/image6.jpg)](iteration-6-use-test-driven-development-vb/_static/image11.png)
 
 **Figure 06**: Concepteur d’entités affichant le groupe et Contact ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-vb/_static/image12.png))
-
 
 ### <a name="creating-our-repository-classes"></a>Création de Classes de notre référentiel
 
@@ -329,11 +311,9 @@ Nous devons créer les suivants nouvelles vues de gestion des groupes de contact
 - Views\Group\Index.aspx - affiche la liste des groupes de contacts
 - Views\Group\Delete.aspx - écran de confirmation affiche pour la suppression d’un groupe de contact
 
-
 [![La vue Index de groupe](iteration-6-use-test-driven-development-vb/_static/image7.jpg)](iteration-6-use-test-driven-development-vb/_static/image13.png)
 
 **Figure 07**: La vue Index de groupe ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-vb/_static/image14.png))
-
 
 Nous avons besoin de modifier les vues suivantes existants afin qu’ils contiennent des groupes de contacts :
 
@@ -343,11 +323,9 @@ Nous avons besoin de modifier les vues suivantes existants afin qu’ils contien
 
 Vous pouvez voir les vues modifiés en examinant l’application de Visual Studio qui accompagne ce didacticiel. Par exemple, la Figure 8 illustre la vue Index de Contact.
 
-
 [![La vue Index des contacts](iteration-6-use-test-driven-development-vb/_static/image8.jpg)](iteration-6-use-test-driven-development-vb/_static/image15.png)
 
 **Figure 08**: La vue Index de Contact ([cliquez pour afficher l’image en taille réelle](iteration-6-use-test-driven-development-vb/_static/image16.png))
-
 
 ## <a name="summary"></a>Récapitulatif
 

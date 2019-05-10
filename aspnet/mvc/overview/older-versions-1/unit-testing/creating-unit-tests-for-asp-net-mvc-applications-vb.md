@@ -8,12 +8,12 @@ ms.date: 08/19/2008
 ms.assetid: eb35710d-1d99-44ac-b61f-e50af8cb328a
 msc.legacyurl: /mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 47d42b8017837f15e0d56dfb3565257164c97bbe
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c97d202c702253f2ff79a70c1d6e43b11999ea14
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421028"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117260"
 ---
 # <a name="creating-unit-tests-for-aspnet-mvc-applications-vb"></a>Création de tests unitaires pour les applications ASP.NET MVC (VB)
 
@@ -22,7 +22,6 @@ par [Stephen Walther](https://github.com/StephenWalther)
 [Télécharger PDF](http://download.microsoft.com/download/8/4/8/84843d8d-1575-426c-bcb5-9d0c42e51416/ASPNET_MVC_Tutorial_07_VB.pdf)
 
 > Découvrez comment créer des tests unitaires pour les actions de contrôleur. Dans ce didacticiel, Stephen Walther montre comment tester si une action de contrôleur retourne une vue particulière, retourne un jeu de données particulier ou retourne un autre type de résultat d’action.
-
 
 L’objectif de ce didacticiel consiste à montrer comment vous pouvez écrire des tests unitaires pour les contrôleurs dans votre ASP.NET MVC applications. Explique comment créer trois différents types de tests unitaires. Vous découvrez comment tester la vue retournée par une action de contrôleur, comment afficher les données retournées par une action de contrôleur de test et comment tester si une action de contrôleur vous redirige vers une deuxième action de contrôleur.
 
@@ -58,16 +57,13 @@ Cette action de contrôleur retourne également une vue nommée `Details`. Toute
 
 Vous pouvez exécuter le test unitaire dans le Listing 2 soit en entrant la combinaison de touches **Ctrl + R, A** ou en cliquant sur le **exécuter tous les Tests de la Solution** bouton (voir Figure 1). Si le test réussit, vous verrez la fenêtre Résultats des tests dans la Figure 2.
 
-
 [![Exécuter tous les Tests dans la Solution](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image2.png)](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image1.png)
 
 **Figure 01**: Exécuter tous les Tests dans la Solution ([cliquez pour afficher l’image en taille réelle](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image3.png))
 
-
 [![Succès !](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image5.png)](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image4.png)
 
 **Figure 02**: Opération réussie ([Cliquez pour afficher l’image en taille réelle](creating-unit-tests-for-asp-net-mvc-applications-vb/_static/image6.png))
-
 
 ## <a name="testing-the-view-data-returned-by-a-controller"></a>La vue de données de test retourné par un contrôleur
 

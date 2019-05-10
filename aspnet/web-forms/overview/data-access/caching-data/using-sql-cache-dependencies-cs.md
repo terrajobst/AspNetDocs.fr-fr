@@ -8,12 +8,12 @@ ms.date: 05/30/2007
 ms.assetid: 0e91842c-7f10-4aed-8c23-4ee3e2774014
 msc.legacyurl: /web-forms/overview/data-access/caching-data/using-sql-cache-dependencies-cs
 msc.type: authoredcontent
-ms.openlocfilehash: e70a21e2752c7c8fc8be332a98e1cf7e40b01412
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b6bc905abbe3b875b0cbe839090e43dae8f491a7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417687"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116891"
 ---
 # <a name="using-sql-cache-dependencies-c"></a>Utilisation de dépendances de cache SQL (C#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger le Code](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_61_CS.zip) ou [télécharger le PDF](using-sql-cache-dependencies-cs/_static/datatutorial61cs1.pdf)
 
 > La stratégie de mise en cache la plus simple consiste à autoriser les données mises en cache expirent après une période spécifiée. Mais cette approche simple signifie que les données mises en cache ne conservent aucune association avec sa source de données sous-jacente, ce qui entraîne des données obsolètes qui sont maintenues trop longues ou actuel qui est arrivé à expiration trop tôt. Une meilleure approche consiste à utiliser la classe SqlCacheDependency afin que les données restent en mémoire cache jusqu'à ce que ses données sous-jacentes a été modifiées dans la base de données SQL. Ce didacticiel vous montre comment.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -48,25 +47,20 @@ Le runtime ASP.NET effectue le suivi des cours `changeId` pour une table lors de
 
 Avec l’approche d’interrogation de la base de données doit être configuré pour contenir l’infrastructure décrite ci-dessus : une table prédéfinie (`AspNet_SqlCacheTablesForChangeNotification`), un certain nombre de procédures stockées et des déclencheurs sur chacune des tables qui peuvent être utilisées dans les dépendances de cache SQL dans le site web application. Ces tables, les procédures stockées et les déclencheurs peuvent être créées via le programme de ligne de commande `aspnet_regsql.exe`, qui se trouve dans le `$WINDOWS$\Microsoft.NET\Framework\version` dossier. Pour créer le `AspNet_SqlCacheTablesForChangeNotification` table et des procédures stockées associées, exécutez la commande suivante à partir de la ligne de commande :
 
-
 [!code-console[Main](using-sql-cache-dependencies-cs/samples/sample1.cmd)]
 
 > [!NOTE]
 > Pour exécuter ces commandes de la connexion de base de données spécifiée doit être dans le [ `db_securityadmin` ](https://msdn.microsoft.com/library/ms188685.aspx) et [ `db_ddladmin` ](https://msdn.microsoft.com/library/ms190667.aspx) rôles. Pour examiner le T-SQL envoyé à la base de données par le `aspnet_regsql.exe` programme de ligne de commande, reportez-vous à [cette entrée de blog](http://scottonwriting.net/sowblog/posts/10709.aspx).
 
-
 Par exemple, pour ajouter l’infrastructure pour l’interrogation à une base de données Microsoft SQL Server nommé `pubs` sur un serveur de base de données nommé `ScottsServer` à l’aide de l’authentification Windows, accédez au répertoire approprié et, à partir de la ligne de commande, entrez :
-
 
 [!code-console[Main](using-sql-cache-dependencies-cs/samples/sample2.cmd)]
 
 Une fois que l’infrastructure de niveau de base de données a été ajoutée, nous devons ajouter les déclencheurs aux tables qui seront utilisées dans les dépendances de cache SQL. Utiliser le `aspnet_regsql.exe` ligne de commande du programme à nouveau, mais spécifiez le nom de table à l’aide de la `-t` basculer et au lieu d’utiliser le `-ed` basculer utilisation `-et`, comme suit :
 
-
 [!code-html[Main](using-sql-cache-dependencies-cs/samples/sample3.html)]
 
 Pour ajouter les déclencheurs à la `authors` et `titles` tables sur le `pubs` sur la base de données `ScottsServer`, utilisez :
-
 
 [!code-console[Main](using-sql-cache-dependencies-cs/samples/sample4.cmd)]
 
@@ -78,32 +72,25 @@ Le `aspnet_regsql.exe` programme de ligne de commande nécessite le nom du serve
 
 Commencez par fermer Visual Studio. Ensuite, ouvrez SQL Server Management Studio et choisissez se connecter à la `localhost\SQLExpress` serveur à l’aide de l’authentification Windows.
 
-
 ![Attacher à la localhost\SQLExpress Server](using-sql-cache-dependencies-cs/_static/image1.gif)
 
 **Figure 1**: Attacher à la `localhost\SQLExpress` Server
 
-
 Une fois connecté au serveur, Management Studio affiche le serveur et contenir des sous-dossiers pour les bases de données, sécurité et ainsi de suite. Avec le bouton droit sur le dossier bases de données et choisissez l’option d’attachement. Cela fera apparaître la boîte de dialogue Attacher les bases de données boîte (voir Figure 2). Cliquez sur le bouton Ajouter, puis sélectionnez le `NORTHWND.MDF` dossier de base de données dans votre s d’application web `App_Data` dossier.
-
 
 [![Attacher le fichier NORTHWND. Fichiers MDF de base de données à partir du dossier App_Data](using-sql-cache-dependencies-cs/_static/image2.gif)](using-sql-cache-dependencies-cs/_static/image1.png)
 
 **Figure 2**: Attacher le `NORTHWND.MDF` de base de données à partir de la `App_Data` dossier ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image2.png))
 
-
 Cette opération ajoute la base de données dans le dossier de bases de données. Le nom de la base de données peut être le chemin d’accès complet au fichier de base de données ou le chemin d’accès complet avec préfixe un [GUID](http://en.wikipedia.org/wiki/Globally_Unique_Identifier). Pour éviter d’avoir à taper ce nom long de la base de données lorsque vous utilisez le compte aspnet\_outil de ligne de commande regsql.exe, de renommer la base de données à un nom plus convivial en cliquant simplement sur la base de données attaché et en choisissant de renommer. Je ve renommé DataTutorials ma base de données.
-
 
 ![Renommer la base de données attachée à un nom plus convivial](using-sql-cache-dependencies-cs/_static/image3.gif)
 
 **Figure 3**: Renommer la base de données attachée à un nom plus convivial
 
-
 ## <a name="step-3-adding-the-polling-infrastructure-to-the-northwind-database"></a>Étape 3 : Ajout de l’Infrastructure d’interrogation à la base de données Northwind
 
 Maintenant que nous avons joint le `NORTHWND.MDF` de base de données à partir de la `App_Data` dossier, nous vous êtes prêt à ajouter l’infrastructure d’interrogation. En supposant que vous avez déjà renommé la base de données DataTutorials, exécutez les quatre commandes suivantes :
-
 
 [!code-console[Main](using-sql-cache-dependencies-cs/samples/sample5.cmd)]
 
@@ -111,16 +98,13 @@ Après avoir exécuté ces quatre commandes, avec le bouton droit sur le nom de 
 
 Une fois que Visual Studio a rouvert, explorez la base de données via l’Explorateur de serveurs. Notez la nouvelle table (`AspNet_SqlCacheTablesForChangeNotification`), les nouvelles procédures stockées et les déclencheurs sur la `Products`, `Categories`, et `Suppliers` tables.
 
-
 ![La base de données inclut désormais l’Infrastructure nécessaire d’interrogation](using-sql-cache-dependencies-cs/_static/image4.gif)
 
 **Figure 4**: La base de données inclut désormais l’Infrastructure nécessaire d’interrogation
 
-
 ## <a name="step-4-configuring-the-polling-service"></a>Étape 4 : Configuration du Service d’interrogation
 
 Après avoir créé les tables nécessaires, les déclencheurs et les procédures stockées dans la base de données, l’étape finale consiste à configurer le service d’interrogation, ce qui est effectué via `Web.config` en spécifiant les bases de données à utiliser et la fréquence d’interrogation en millisecondes. Le balisage suivant interroge la base de données Northwind qu’une seule fois chaque seconde.
-
 
 [!code-xml[Main](using-sql-cache-dependencies-cs/samples/sample6.xml)]
 
@@ -133,7 +117,6 @@ Le `pollTime` paramètre introduit un compromis entre performances et d’obsole
 > [!NOTE]
 > L’exemple ci-dessus fournit un seul `pollTime` valeur dans le `<sqlCacheDependency>` élément, mais vous pouvez éventuellement spécifier le `pollTime` valeur dans le `<add>` élément. Cela est utile si vous disposez de plusieurs bases de données spécifiés et que vous souhaitez personnaliser la fréquence d’interrogation par base de données.
 
-
 ## <a name="step-5-declaratively-working-with-sql-cache-dependencies"></a>Étape 5 : Utilisation de façon déclarative les dépendances de Cache SQL
 
 Dans les étapes 1 à 4, nous avons vu comment configurer l’infrastructure de base de données nécessaires et de configurer le système d’interrogation. Avec cette infrastructure en place, nous pouvons maintenant ajouter des éléments au cache de données avec une dépendance de cache SQL associée à l’aide de techniques de programmation ou déclaratives. Dans cette étape, nous allons examiner l’utilisation de façon déclarative des dépendances de cache SQL. À l’étape 6, nous allons examiner l’approche par programmation.
@@ -142,34 +125,27 @@ Le [la mise en cache des données avec ObjectDataSource](caching-data-with-the-o
 
 Pour illustrer l’utilisation déclarative de dépendances de cache SQL, ouvrez le `SqlCacheDependencies.aspx` page dans le `Caching` dossier et faites glisser un GridView à partir de la boîte à outils vers le concepteur. Définir les opérations de mappage GridView `ID` à `ProductsDeclarative` et, à partir de sa balise active, choisir de lier à un nouveau ObjectDataSource nommé `ProductsDataSourceDeclarative`.
 
-
 [![Créer un nouveau ObjectDataSource nommé ProductsDataSourceDeclarative](using-sql-cache-dependencies-cs/_static/image5.gif)](using-sql-cache-dependencies-cs/_static/image3.png)
 
 **Figure 5**: Créer une nouvelle nommée de ObjectDataSource `ProductsDataSourceDeclarative` ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image4.png))
 
-
 Configurer l’ObjectDataSource à utiliser le `ProductsBLL` classe et définissez la liste déroulante dans l’onglet Sélection à `GetProducts()`. Dans l’onglet mise à jour, choisissez le `UpdateProduct` surcharge avec trois paramètres d’entrée - `productName`, `unitPrice`, et `productID`. Définir les listes déroulantes (None) dans les onglets INSERT et DELETE.
-
 
 [![Utilisez la surcharge de UpdateProduct avec trois paramètres d’entrée](using-sql-cache-dependencies-cs/_static/image6.gif)](using-sql-cache-dependencies-cs/_static/image5.png)
 
 **Figure 6**: Utilisez la surcharge de UpdateProduct avec trois paramètres d’entrée ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image6.png))
 
-
 [![Définition de la liste déroulante (None) pour l’insertion et supprimer les tabulations](using-sql-cache-dependencies-cs/_static/image7.gif)](using-sql-cache-dependencies-cs/_static/image7.png)
 
 **Figure 7**: Définir la liste déroulante (None) pour l’insérer et supprimer des onglets ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image8.png))
-
 
 À l’issue de l’Assistant Configurer la Source de données, Visual Studio créera BoundFields et CheckBoxFields dans le contrôle GridView pour chacun des champs de données. Supprimer tous les champs mais `ProductName`, `CategoryName`, et `UnitPrice`et mettre en forme ces champs comme vous le souhaitez. Dans la balise active de s GridView, cochez les cases à cocher Activer la pagination, activer le tri et activer la modification. Visual Studio définira le s ObjectDataSource `OldValuesParameterFormatString` propriété `original_{0}`. Dans l’ordre pour la fonctionnalité de modification GridView s fonctionne correctement, supprimez cette propriété entièrement à partir de la syntaxe déclarative ou réaffectez-lui la valeur par défaut, `{0}`.
 
 Enfin, ajoutez un contrôle Web Label au-dessus de la GridView ensemble son `ID` propriété `ODSEvents` et son `EnableViewState` propriété `false`. Après avoir apporté ces modifications, votre balisage déclaratif s de page doit ressembler à ce qui suit. Notez que je ve apporté plusieurs personnalisations esthétiques aux champs GridView qui ne sont pas nécessaires pour illustrer la fonctionnalité de dépendance de cache SQL.
 
-
 [!code-aspx[Main](using-sql-cache-dependencies-cs/samples/sample7.aspx)]
 
 Ensuite, créez un gestionnaire d’événements pour les opérations de mappage ObjectDataSource `Selecting` événements et dans le code suivant :
-
 
 [!code-csharp[Main](using-sql-cache-dependencies-cs/samples/sample8.cs)]
 
@@ -177,14 +153,11 @@ N’oubliez pas que les opérations de mappage ObjectDataSource `Selecting` év�
 
 Maintenant, visitez cette page via un navigateur. Dans la mesure où ve encore à implémenter toute la mise en cache, chaque fois que vous page, triez ou modifiez la grille de la page doit afficher le texte, l’événement de sélection de l’option déclenché, comme le montre la Figure 8.
 
-
 [![Le s ObjectDataSource événement Selecting déclenche chaque fois que le contrôle GridView est par radiomessagerie, modifié, ou les trié](using-sql-cache-dependencies-cs/_static/image8.gif)](using-sql-cache-dependencies-cs/_static/image9.png)
 
 **Figure 8**: Les opérations de mappage ObjectDataSource `Selecting` événement se déclenche à chaque fois le contrôle GridView est paginé, modifiée ou Sorted ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image10.png))
 
-
 Comme nous l’avons vu dans la [la mise en cache des données avec ObjectDataSource](caching-data-with-the-objectdatasource-cs.md) (didacticiel), définissant le `EnableCaching` propriété `true` provoque l’ObjectDataSource pour mettre en cache ses données pour la durée spécifiée par son `CacheDuration` propriété. ObjectDataSource a également un [ `SqlCacheDependency` propriété](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.sqlcachedependency.aspx), qui ajoute une ou plusieurs dépendances de cache SQL pour les données mises en cache à l’aide du modèle :
-
 
 [!code-css[Main](using-sql-cache-dependencies-cs/samples/sample9.css)]
 
@@ -193,24 +166,19 @@ Où *databaseName* est le nom de la base de données comme spécifié dans le `n
 > [!NOTE]
 > Vous pouvez utiliser une dépendance de cache SQL *et* une expiration temporelle en définissant `EnableCaching` à `true`, `CacheDuration` à l’intervalle de temps, et `SqlCacheDependency` aux noms de base de données et de table. ObjectDataSource supprimez ses données lors de l’expiration temporelle est atteinte ou lorsque le système d’interrogation de commentaires que la base de données sous-jacente a changé, selon ce qui se produit en premier.
 
-
 Le contrôle GridView dans `SqlCacheDependencies.aspx` affiche les données des deux tables - `Products` et `Categories` (le produit s `CategoryName` champ est récupéré un `JOIN` sur `Categories`). Par conséquent, nous voulons spécifier deux dépendances de cache SQL : NorthwindDB:Products ; NorthwindDB:Categories.
-
 
 [![Configurer l’ObjectDataSource pour prendre en charge la mise en cache à l’aide de dépendances de Cache SQL sur les produits et les catégories](using-sql-cache-dependencies-cs/_static/image9.gif)](using-sql-cache-dependencies-cs/_static/image11.png)
 
 **Figure 9**: Configurer l’ObjectDataSource pour la prise en charge la mise en cache à l’aide de dépendances de Cache SQL `Products` et `Categories` ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image12.png))
 
-
 Après avoir configuré l’ObjectDataSource pour prendre en charge la mise en cache, visitez la page via un navigateur. Là encore, l’événement de sélection de texte déclenché doit apparaître sur la première visite de page, mais devrait disparaître lorsque la pagination, de tri ou en cliquant sur les boutons de modification ou sur Annuler. Il s’agit, car une fois que les données sont chargées dans le cache de s ObjectDataSource, elle y reste jusqu'à ce que le `Products` ou `Categories` les tables sont modifiées ou les données sont mis à jour via le contrôle GridView.
 
 Après le déclenchement de la pagination dans la grille et noter l’absence de l’événement de sélection de l’option texte, ouvrez une nouvelle fenêtre de navigateur et accédez au didacticiel principes de base dans l’édition, insertion et suppression de section (`~/EditInsertDelete/Basics.aspx`). Mettre à jour le nom ou le prix d’un produit. À partir de la première fenêtre de navigateur, affichez ensuite une autre page de données, trier la grille ou cliquez sur un bouton de modification de ligne s. Cette fois-ci, l’événement de sélection de l’option déclenché doit réapparaître, car la base de données sous-jacente données a été modifié (voir Figure 10). Si le texte n’apparaît pas, attendez quelques instants et réessayez. N’oubliez pas que le service d’interrogation vérifie les modifications apportées à la `Products` table chaque `pollTime` millisecondes, donc il existe un délai entre lorsque les données sous-jacentes sont mis à jour et lorsque les données mises en cache soit supprimées.
 
-
 [![Modification de la Table de produits d’exclure les données de produit mis en cache](using-sql-cache-dependencies-cs/_static/image10.gif)](using-sql-cache-dependencies-cs/_static/image13.png)
 
 **Figure 10**: Modification de la Table de produits d’exclure les données mises en cache de produit ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image14.png))
-
 
 ## <a name="step-6-programmatically-working-with-thesqlcachedependencyclass"></a>Étape 6 : Travaillez par programmation la`SqlCacheDependency`classe
 
@@ -218,48 +186,39 @@ Le [la mise en cache des données dans l’Architecture](caching-data-in-the-arc
 
 Avec le système d’interrogation, un `SqlCacheDependency` objet doit être associé à une paire de base de données et de table particulier. Le code suivant, par exemple, crée un `SqlCacheDependency` objet basé sur la base de données Northwind s `Products` table :
 
-
 [!code-csharp[Main](using-sql-cache-dependencies-cs/samples/sample10.cs)]
 
 Les deux paramètres d’entrée de la `SqlCacheDependency` constructeur de s sont les noms de base de données et de table, respectivement. Comme avec les opérations de mappage ObjectDataSource `SqlCacheDependency` propriété, le nom de base de données utilisé est identique à la valeur spécifiée dans le `name` attribut de la `<add>` élément `Web.config`. Le nom de table est le nom réel de la table de base de données.
 
 Pour associer un `SqlCacheDependency` avec un élément ajouté au cache de données, utilisez une de la `Insert` surcharges de méthode qui accepte une dépendance. Le code suivant ajoute *valeur* au cache de données pour une durée indéterminée, mais associe un `SqlCacheDependency` sur la `Products` table. En bref, *valeur* resteront dans le cache jusqu'à ce qu’il soit supprimé en raison des contraintes de mémoire ou parce que le système d’interrogation a détecté que le `Products` table a été modifiée dans la mesure où il a été mis en cache.
 
-
 [!code-csharp[Main](using-sql-cache-dependencies-cs/samples/sample11.cs)]
 
 La couche de mise en cache s `ProductsCL` classe met actuellement en cache les données à partir de la `Products` table à l’aide d’une expiration temporelle de 60 secondes. Permettent de mettre à jour de cette classe afin qu’il utilise à la place des dépendances de cache SQL s. Le `ProductsCL` classe s `AddCacheItem` (méthode), qui est chargé d’ajouter les données dans le cache, contient actuellement le code suivant :
-
 
 [!code-csharp[Main](using-sql-cache-dependencies-cs/samples/sample12.cs)]
 
 Mettre à jour de ce code pour utiliser un `SqlCacheDependency` de l’objet au lieu du `MasterCacheKeyArray` la dépendance de cache :
 
-
 [!code-csharp[Main](using-sql-cache-dependencies-cs/samples/sample13.cs)]
 
 Pour tester cette fonctionnalité, ajoutez un GridView à la page sous existant `ProductsDeclarative` GridView. Définir cette nouvelle s GridView `ID` à `ProductsProgrammatic` et via sa balise active, liez-le à une nouvelle ObjectDataSource nommé `ProductsDataSourceProgrammatic`. Configurer l’ObjectDataSource à utiliser le `ProductsCL` (classe), définissant les listes déroulantes dans l’instruction SELECT et les onglets de mise à jour à `GetProducts` et `UpdateProduct`, respectivement.
-
 
 [![Configurer pour utiliser la classe ProductsCL ObjectDataSource](using-sql-cache-dependencies-cs/_static/image11.gif)](using-sql-cache-dependencies-cs/_static/image15.png)
 
 **Figure 11**: Configurer l’ObjectDataSource à utiliser le `ProductsCL` classe ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image16.png))
 
-
 [![Sélectionnez la méthode GetProducts dans la liste déroulante de s onglet Sélection](using-sql-cache-dependencies-cs/_static/image12.gif)](using-sql-cache-dependencies-cs/_static/image17.png)
 
 **Figure 12**: Sélectionnez le `GetProducts` méthode à partir de la liste déroulante de s Sélectionnez un onglet ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image18.png))
-
 
 [![Choisissez la méthode UpdateProduct dans la liste déroulante de mise à jour onglet s](using-sql-cache-dependencies-cs/_static/image13.gif)](using-sql-cache-dependencies-cs/_static/image19.png)
 
 **Figure 13**: Choisissez la méthode UpdateProduct à partir de la liste déroulante de s onglet de mise à jour ([cliquez pour afficher l’image en taille réelle](using-sql-cache-dependencies-cs/_static/image20.png))
 
-
 À l’issue de l’Assistant Configurer la Source de données, Visual Studio créera BoundFields et CheckBoxFields dans le contrôle GridView pour chacun des champs de données. Comme avec la première GridView ajouté à cette page, supprimez tous les champs mais `ProductName`, `CategoryName`, et `UnitPrice`et mettre en forme ces champs comme vous le souhaitez. Dans la balise active de s GridView, cochez les cases à cocher Activer la pagination, activer le tri et activer la modification. Comme avec la `ProductsDataSourceDeclarative` ObjectDataSource, Visual Studio définira le `ProductsDataSourceProgrammatic` ObjectDataSource s `OldValuesParameterFormatString` propriété `original_{0}`. Dans l’ordre pour la fonctionnalité de modification GridView s fonctionne correctement, définissez cette propriété retour au `{0}` (ou supprimer complètement de l’assignation de propriété à partir de la syntaxe déclarative).
 
 Après avoir effectué ces tâches, le balisage déclaratif GridView et ObjectDataSource résultant doit ressembler à ce qui suit :
-
 
 [!code-aspx[Main](using-sql-cache-dependencies-cs/samples/sample14.aspx)]
 
@@ -272,7 +231,6 @@ Dans ce scénario vous verrez deux choses : le point d’arrêt est atteint, in
 > [!NOTE]
 > Ce délai est plus susceptible d’apparaître lors de la modification d’un de ces produits via le contrôle GridView dans `SqlCacheDependencies.aspx`. Dans le [la mise en cache des données dans l’Architecture](caching-data-in-the-architecture-cs.md) didacticiel, nous avons ajouté la `MasterCacheKeyArray` dépendance pour vous assurer que les données en cours de modification par le biais de cache la `ProductsCL` classe s `UpdateProduct` méthode a été supprimée du cache. Toutefois, nous avons remplacé cette dépendance de cache lorsque vous modifiez le `AddCacheItem` méthode plus haut dans cette étape et par conséquent le `ProductsCL` classe continue d’afficher les données mises en cache jusqu'à ce que le système de d’interrogation indique la modification apportée à la `Products` table. Nous verrons comment réintroduire le `MasterCacheKeyArray` la dépendance à l’étape 7 de cache.
 
-
 ## <a name="step-7-associating-multiple-dependencies-with-a-cached-item"></a>Étape 7 : Association de plusieurs dépendances à un élément mis en cache
 
 N’oubliez pas que le `MasterCacheKeyArray` dépendance de cache est utilisée pour vous assurer que *toutes les* données relatives au produit sont supprimées du cache lorsque la mise à jour de n’importe quel élément unique associé qu’il contient. Par exemple, le `GetProductsByCategoryID(categoryID)` méthode caches `ProductsDataTables` instances pour chaque unique *categoryID* valeur. Si un de ces objets est supprimé, le `MasterCacheKeyArray` dépendance de cache permet de s’assurer que les autres sont également supprimés. Sans cette dépendance de cache, quand les données mises en cache sont modifiées. il est possible que d’autres données de produit mis en cache est peut-être obsolètes. Par conséquent, il s important que nous gérons la `MasterCacheKeyArray` dépendance de cache lors de l’utilisation de dépendances de cache SQL. Toutefois, les données en cache s `Insert` méthode permet uniquement d’un objet de dépendance unique.
@@ -283,14 +241,12 @@ Le [ `AggregateCacheDependency` classe](https://msdn.microsoft.com/library/syste
 
 L’exemple suivant montre le code mis à jour pour le `ProductsCL` classe s `AddCacheItem` (méthode). La méthode crée le `MasterCacheKeyArray` cache dépendance avec `SqlCacheDependency` des objets pour le `Products`, `Categories`, et `Suppliers` tables. Ils sont combinés en une seule `AggregateCacheDependency` objet nommé `aggregateDependencies`, qui est ensuite passé à la `Insert` (méthode).
 
-
 [!code-csharp[Main](using-sql-cache-dependencies-cs/samples/sample15.cs)]
 
 Tester ce nouveau code out. Désormais le `Products`, `Categories`, ou `Suppliers` tables provoquent l’éviction de données mises en cache. En outre, le `ProductsCL` classe s `UpdateProduct` (méthode), qui est appelée lors de la modification d’un produit via le contrôle GridView, exclure les `MasterCacheKeyArray` la dépendance, ce qui entraîne la mise en cache de cache `ProductsDataTable` éviction et les données à récupérer de nouveau sur Suivant demande.
 
 > [!NOTE]
 > Dépendances de cache SQL peuvent également être utilisées avec [la mise en cache de sortie](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/caching/output.aspx). Pour une démonstration de cette fonctionnalité, consultez : [À l’aide d’ASP.NET de sortie mise en cache avec SQL Server](https://msdn.microsoft.com/library/e3w8402y(VS.80).aspx).
-
 
 ## <a name="summary"></a>Récapitulatif
 

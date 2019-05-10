@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 095abad4-3bfe-4f06-b092-ae6a735b7e49
 msc.legacyurl: /mvc/overview/getting-started/database-first-development/setting-up-database
 msc.type: authoredcontent
-ms.openlocfilehash: d99fdb5382037038d4428ff1946f39aee380fb75
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a760767839a834a9c7e9fe358a3fd806a833261f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055906"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121174"
 ---
 # <a name="tutorial-get-started-with-ef-database-first-using-mvc-5"></a>Tutoriel : Bien démarrer avec Entity Framework Database First avec MVC 5
 
@@ -35,14 +35,11 @@ Dans ce didacticiel, vous avez effectué les actions suivantes :
 
 [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
 
-
 ## <a name="set-up-the-database"></a>Configurer la base de données
 
 Pour reproduire l’environnement d’avoir une base de données existante, vous serez tout d’abord créer une base de données avec des données préremplies et puis créer votre application web qui se connecte à la base de données.
 
-
 Ce didacticiel a été développé à l’aide de la base de données locale avec Visual Studio 2017. Vous pouvez utiliser un serveur de base de données existant au lieu de la base de données locale, mais selon votre version de Visual Studio et votre type de base de données, tous les outils de données dans Visual Studio ne peuvent pas être pris en charge. Si les outils ne sont pas disponibles pour votre base de données, vous devrez peut-être effectuer certaines des étapes spécifiques à la base de données au sein de la suite de gestion pour votre base de données.
-
 
 Si vous avez un problème avec les outils de base de données dans votre version de Visual Studio, assurez-vous que vous avez installé la dernière version des outils de base de données. Pour plus d’informations sur la mise à jour ou installation des outils de base de données, consultez [Microsoft SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).
 

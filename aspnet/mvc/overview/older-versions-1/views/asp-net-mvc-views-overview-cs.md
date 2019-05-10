@@ -8,19 +8,18 @@ ms.date: 02/16/2008
 ms.assetid: 152ab1e5-aec2-4ea7-b8cc-27a24dd9acb8
 msc.legacyurl: /mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b4c35761f9cd44c866242cfe6f4f2d924e81d754
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b3f44aa9654a2a718381eaf9c856ca3e15ed1e27
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421327"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117314"
 ---
 # <a name="aspnet-mvc-views-overview-c"></a>Vue d’ensemble des vues ASP.NET MVC (C#)
 
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Qu’est une vue de MVC ASP.NET, et en quoi est-il différent d’une page HTML ? Dans ce didacticiel, Stephen Walther vous présente les vues et montre comment vous pouvez tirer parti des données d’affichage et de programmes d’assistance HTML dans une vue.
-
 
 L’objectif de ce didacticiel est de vous fournir une brève introduction aux vues ASP.NET MVC, afficher les données et les programmes d’assistance HTML. À la fin de ce didacticiel, vous devez comprendre comment créer des vues, passer des données à partir d’un contrôleur à une vue et utiliser des programmes d’assistance HTML pour générer le contenu dans une vue.
 
@@ -68,7 +67,6 @@ Lorsque cette ligne de code est exécutée, une vue est retournée à partir de 
 > 
 > Si vous envisagez de créer des tests unitaires pour votre application ASP.NET MVC puis il est judicieux d’être explicite sur les noms d’affichage. De cette façon, vous pouvez créer un test unitaire pour vérifier que la vue attendue a été retournée par une action de contrôleur.
 
-
 ## <a name="adding-content-to-a-view"></a>Ajout de contenu à une vue
 
 Une vue est une norme de (document HTML qui peut contenir des scripts X). Vous utilisez des scripts pour ajouter du contenu dynamique à une vue.
@@ -103,11 +101,9 @@ Par exemple, la vue dans la liste 4 tire parti de trois programmes d’assistanc
 
 [!code-aspx[Main](asp-net-mvc-views-overview-cs/samples/sample4.aspx)]
 
-
 [![La boîte de dialogue Nouveau projet](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
 
 **Figure 01**: Un formulaire de connexion standard ([cliquez pour afficher l’image en taille réelle](asp-net-mvc-views-overview-cs/_static/image2.png))
-
 
 Toutes les méthodes de programmes d’assistance HTML sont appelées sur la propriété Html de la vue. Par exemple, vous afficher une zone de texte en appelant la méthode Html.TextBox().
 

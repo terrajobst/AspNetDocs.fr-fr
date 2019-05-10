@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 6ecd08c1-e364-4cd7-ad4c-806521911585
 msc.legacyurl: /signalr/overview/performance/scaleout-with-redis
 msc.type: authoredcontent
-ms.openlocfilehash: 78efe409ab59df17ae71c26d4e280cc9971a64d2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 58a7affa1769523955adc76455a1c33be6f49751
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393247"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114315"
 ---
 # <a name="signalr-scaleout-with-redis"></a>Scale-out de SignalR avec Redis
 
@@ -38,7 +38,6 @@ par [Mike Wasson](https://github.com/MikeWasson)
 >
 > Veuillez laisser des commentaires sur la façon dont vous avez apprécié ce didacticiel et ce que nous pouvions améliorer dans les commentaires en bas de la page. Si vous avez des questions qui ne sont pas directement liées à ce didacticiel, vous pouvez les publier à le [ASP.NET SignalR forum](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
 
-
 Dans ce didacticiel, vous allez utiliser [Redis](http://redis.io/) pour distribuer les messages sur une application de SignalR est déployée sur deux instances distinctes d’IIS.
 
 Redis est un magasin de clé-valeur en mémoire. Il prend également en charge un système de messagerie avec un modèle de publication/abonnement. Le fond de panier SignalR Redis utilise la fonctionnalité de pub/sub pour transférer des messages vers d’autres serveurs.
@@ -57,7 +56,6 @@ Bien que ce didacticiel utilise l’implémentation de Redis officielle, il exis
 > [!NOTE]
 >
 > Montée en puissance parallèle de SignalR avec Redis ne prend pas en charge les clusters Redis.
-
 
 ## <a name="overview"></a>Vue d'ensemble
 

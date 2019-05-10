@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 364ce84e-5af8-4e08-afc9-75a512b01f84
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/design-to-survive-failures
 msc.type: authoredcontent
-ms.openlocfilehash: fbe618acfc70711933996f97657a4326d389b3dd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 54bfa40a7d853e29c42512ba375271587fb6f565
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59411239"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118832"
 ---
 # <a name="design-to-survive-failures-building-real-world-cloud-apps-with-azure"></a>Concevoir pour surmonter les défaillances (génération d’applications Cloud réalistes avec Azure)
 
@@ -22,7 +22,6 @@ par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > Le **Building Real World Cloud Apps with Azure** e-book est basé sur une présentation développée par Scott Guthrie. Il explique 13 modèles et pratiques qui peuvent vous aider à réussir le développement d’applications web pour le cloud. Pour plus d’informations sur l’e-book, consultez [le premier chapitre](introduction.md).
-
 
 L’une des choses que vous aurez plus à vous lorsque vous générez tout type d’application, mais en particulier une qui s’exécute dans le cloud où un grand nombre de personnes utiliseront, est la conception de l’application afin qu’il peut normalement gérer les défaillances et continuer à assurer la valeur de mesure possibles. Avec le temps, choses se tromper dans n’importe quel environnement ou n’importe quel système logiciel. Comment votre application gère ces situations détermine comment contrarie vos clients obtiendront et combien de temps passé à analyser et résoudre les problèmes.
 

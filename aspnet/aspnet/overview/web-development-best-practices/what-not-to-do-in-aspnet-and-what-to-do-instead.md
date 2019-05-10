@@ -8,17 +8,16 @@ ms.date: 01/28/2019
 ms.assetid: c39b9965-545c-4b04-8f55-21be7f28a9e5
 msc.legacyurl: /aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead
 msc.type: authoredcontent
-ms.openlocfilehash: a09169327d8eed45a83b232354af74a14aa89817
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 980d3544df70643043391e6573803ce21b3a824f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425039"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118165"
 ---
 # <a name="what-not-to-do-in-aspnet-and-what-to-do-instead"></a>Ce qu’il ne faut pas faire dans ASP.NET et ce qu’il faut faire à la place
 
 > Cette rubrique décrit les erreurs courantes plusieurs personnes effectué dans les projets web ASP.NET. Il fournit des recommandations pour la procédure à suivre pour éviter ces erreurs courantes. Il est basé sur un [présentation](http://vimeo.com/68390507) par **Damian Edwards** à couronne conférence de développeurs.
-
 
 ## <a name="disclaimer"></a>Exclusion de responsabilité
 
@@ -105,7 +104,7 @@ Dans les versions antérieures d’ASP.NET, les fonctionnalités prises en charg
 
 <a id="validation"></a>
 
-### <a name="request-validation"></a>Validation de la demande
+### <a name="request-validation"></a>Validation des demandes
 
 Recommandation : Valider l’entrée utilisateur et encoder une sortie à partir des utilisateurs.
 
