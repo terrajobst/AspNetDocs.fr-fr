@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 4d8c8d19-055b-4b70-9ee1-f748f0db3a01
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/the-contact-manager-solution
 msc.type: authoredcontent
-ms.openlocfilehash: 7998b5bb2983410479123514661a4ddb67afc8c6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 12ed7827f7392e559e04121386f7cd045de8462b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398369"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130934"
 ---
 # <a name="the-contact-manager-solution"></a>La solution Gestionnaire de contacts
 
@@ -24,7 +24,6 @@ par [Jason Lee](https://github.com/jrjlee)
 > Cela [série de didacticiels](web-deployment-in-the-enterprise.md) utilise un exemple de solution&#x2014;la solution Gestionnaire de contacts&#x2014;pour représenter une application d’entreprise avec un niveau réaliste de complexité. Cette rubrique présente la solution de gestionnaire de contacts, décrit les composants clés de la solution et identifie les problèmes liés au déploiement de ce type d’application sur différentes plateformes de destination dans un environnement d’entreprise.
 > 
 > Lorsque vous travaillez dans les rubriques dans ces didacticiels, vous pouvez utiliser la solution de gestionnaire de contacts en tant qu’une implémentation de référence qui montre comment vous pouvez répondre aux défis spécifiques dans les scénarios de déploiement d’entreprise. La rubrique suivante, [paramètre de la Solution Gestionnaire de contacts](setting-up-the-contact-manager-solution.md), décrit comment télécharger et exécuter la solution sur votre station de travail de développeur.
-
 
 ## <a name="solution-overview"></a>Présentation de la solution
 
@@ -45,7 +44,6 @@ La solution inclut également un dossier de solution nommé publier. Il contient
 
 > [!NOTE]
 > Bien que l’application web ASP.NET MVC 3 utilise le fournisseur d’appartenances ASP.NET, toutes les pages au sein de l’application web autorise l’accès anonyme. Cette configuration n’est clairement pas réaliste. Toutefois, la solution est configurée de cette façon pour le rendre plus facile à déployer et tester la solution sans configuration des rôles et des comptes d’utilisateur.
-
 
 ## <a name="deployment-challenges"></a>Défis du déploiement
 

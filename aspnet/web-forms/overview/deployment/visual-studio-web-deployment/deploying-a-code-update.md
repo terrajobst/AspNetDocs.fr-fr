@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: c76dbc35-a914-4ee3-919c-4f4d1fa05104
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update
 msc.type: authoredcontent
-ms.openlocfilehash: 6e66c03a4521f339f0ee9c7c0e7b8129f241113c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 36d1575808925de38b909d6816e46bb6cb69cf72
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379406"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134252"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-a-code-update"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Déploiement d’une mise à jour du code
 
@@ -22,7 +22,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 [Télécharger le projet de démarrage](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Cette série de didacticiels vous montre comment déployer (publier) un ASP.NET web application dans Azure App Service Web Apps ou à un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -54,7 +53,7 @@ Avant de pouvoir utiliser les profils de publication pour déployer sur le test,
 
 1. Ouvrez le **publier le site Web** Assistant en double-cliquant sur le projet ContosoUniversity en cliquant sur **publier**.
 2. Cliquez sur le **Test** Profiler dans le **profil** liste déroulante.
-3. Cliquez sur le **paramètres** onglet.
+3. Cliquez sur l'onglet **Paramètres** .
 4. Sous **DefaultConnection** dans le **bases de données** section, désactivez le **base de données de mise à jour** case à cocher.
 5. Cliquez sur le **profil** onglet, puis cliquez sur le **intermédiaire** Profiler dans le **profil** liste déroulante.
 6. Lorsque le système vous demande si vous souhaitez enregistrer les modifications apportées à la **Test** de profil, cliquez sur **Oui**.

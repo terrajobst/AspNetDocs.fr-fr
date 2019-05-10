@@ -8,12 +8,12 @@ ms.date: 10/16/2008
 ms.assetid: dff54fcb-68b1-4488-89a2-ca97532d6a4c
 msc.legacyurl: /mvc/overview/older-versions-1/views/creating-page-layouts-with-view-master-pages-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d09a38c2bea9e8beb91e322ed7e4a9d337fa0843
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 45349dd3c3063c1c6d0b5c78297df46b42fcf725
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412630"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126579"
 ---
 # <a name="creating-page-layouts-with-view-master-pages-c"></a>Création de dispositions de page avec des pages maîtres de vue (C#)
 
@@ -22,7 +22,6 @@ by [Microsoft](https://github.com/microsoft)
 [Télécharger PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_12_CS.pdf)
 
 > Dans ce didacticiel, vous allez apprendre à créer une disposition commune pour plusieurs pages dans votre application en tirant parti de la vue de pages maîtres. Vous pouvez utiliser une page maître de vue, par exemple, pour définir une mise en page de deux colonnes et utiliser la disposition de deux colonnes pour toutes les pages de votre application web.
-
 
 ## <a name="creating-page-layouts-with-view-master-pages"></a>Creating Page Layouts with View Master Pages
 
@@ -36,11 +35,9 @@ Dans ce didacticiel, vous allez apprendre à créer une nouvelle page maître de
 
 Nous allons commencer en créant une page maître de vue qui définit une disposition à deux colonnes. Vous ajoutez une nouvelle page maître de vue à un projet MVC en double-cliquant sur le dossier Views\Shared, en sélectionnant l’option de menu **ajouter, nouvel élément**et en sélectionnant le **Page maître de vue MVC** modèle (voir Figure 1).
 
-
 [![Ajout d’une page maître de vue](creating-page-layouts-with-view-master-pages-cs/_static/image2.png)](creating-page-layouts-with-view-master-pages-cs/_static/image1.png)
 
 **Figure 01**: Ajout d’une page maître de vue ([cliquez pour afficher l’image en taille réelle](creating-page-layouts-with-view-master-pages-cs/_static/image3.png))
-
 
 Vous pouvez créer plusieurs pages de vue maître dans une application. Chaque page maître de vue peut définir une mise en page différentes. Par exemple, vous souhaiterez peut-être certaines pages d’avoir une disposition à deux colonnes et d’autres pages pour avoir une disposition à trois colonnes.
 
@@ -54,29 +51,23 @@ Par exemple, la page maître de la vue dans la liste 1 définit une disposition 
 
 Le corps de la vue de page maître dans le Listing 1 contient deux `<div>` balises qui correspondent aux deux colonnes. La classe de colonne de feuille de Style en cascade est appliquée aux deux `<div>` balises. Cette classe est définie dans la feuille de style déclarée en haut de la page maître. Vous pouvez prévisualiser l’affichage de la page maître en mode par passer en mode Design. Cliquez sur l’onglet conception en bas à gauche de l’éditeur de code source (voir Figure 2).
 
-
 [![Afficher un aperçu d’une page maître dans le Concepteur](creating-page-layouts-with-view-master-pages-cs/_static/image5.png)](creating-page-layouts-with-view-master-pages-cs/_static/image4.png)
 
 **Figure 02**: Afficher un aperçu d’une page maître dans le concepteur ([cliquez pour afficher l’image en taille réelle](creating-page-layouts-with-view-master-pages-cs/_static/image6.png))
-
 
 ### <a name="creating-a-view-content-page"></a>Création d’une Page de contenu de vue
 
 Après avoir créé une page maître de vue, vous pouvez créer les pages de contenu basés sur la page maître en mode affichage d’un ou plusieurs. Par exemple, vous pouvez créer une page de contenu de vue Index pour le contrôleur Home en double-cliquant sur le dossier Views\Home, en sélectionnant **ajouter, nouvel élément**, en sélectionnant le **Page de contenu de vue MVC** modèle, entrant le nom Index.aspx, puis en cliquant sur le **ajouter** bouton (voir Figure 3).
 
-
 [![Ajout d’une page de contenu de vue](creating-page-layouts-with-view-master-pages-cs/_static/image8.png)](creating-page-layouts-with-view-master-pages-cs/_static/image7.png)
 
 **Figure 03**: Ajout d’une page de contenu de vue ([cliquez pour afficher l’image en taille réelle](creating-page-layouts-with-view-master-pages-cs/_static/image9.png))
 
-
 Après avoir cliqué sur le bouton Ajouter, une nouvelle boîte de dialogue s’affiche qui vous permet de sélectionner une page maître de la vue à associer à la page de contenu de vue (voir Figure 4). Vous pouvez accéder à la page maître de vue Site.master que nous avons créé dans la section précédente.
-
 
 [![Sélection d’une page maître](creating-page-layouts-with-view-master-pages-cs/_static/image11.png)](creating-page-layouts-with-view-master-pages-cs/_static/image10.png)
 
 **Figure 04**: Sélection d’une page maître ([cliquez pour afficher l’image en taille réelle](creating-page-layouts-with-view-master-pages-cs/_static/image12.png))
-
 
 Une fois que vous créez une nouvelle page de contenu de vue basée sur la page maître Site.master, vous obtenez le fichier dans le Listing 2.
 
@@ -100,11 +91,9 @@ Par exemple, la vue Index modifiée dans le Listing 3 contient uniquement deux `
 
 Lorsque la vue dans la liste 3 est demandée, il restitue la page à la Figure 5. Notez que la vue restitue une page avec deux colonnes. En outre, notez que le contenu à partir de la page de vue de contenu est fusionné avec le contenu à partir de la page maître de vue
 
-
 [![La page de contenu de la vue Index](creating-page-layouts-with-view-master-pages-cs/_static/image14.png)](creating-page-layouts-with-view-master-pages-cs/_static/image13.png)
 
 **Figure 05**: La page de contenu de la vue Index ([cliquez pour afficher l’image en taille réelle](creating-page-layouts-with-view-master-pages-cs/_static/image15.png))
-
 
 ### <a name="modifying-view-master-page-content"></a>Modification du contenu des pages maîtres de vue
 
@@ -116,9 +105,7 @@ Il existe deux méthodes que vous pouvez modifier le titre affiché par une page
 
 Lorsque la vue Index est restituée dans le navigateur, le titre de votre choix apparaît dans la barre de titre du navigateur :
 
-
 [![Barre de titre de navigateur](creating-page-layouts-with-view-master-pages-cs/_static/image17.png)](creating-page-layouts-with-view-master-pages-cs/_static/image16.png)
-
 
 Il existe un besoin important une page de vue maître doit satisfaire afin que l’attribut de titre travailler. La page maître de vue doit contenir un `<head runat="server">` balise au lieu d’un élément normal `<head>` balise pour son en-tête. Si le `<head>` balise n’inclut pas le runat = attribut de « serveur », puis le titre ne s’affiche. La vue par défaut page maître inclut requis `<head runat="server">` balise.
 

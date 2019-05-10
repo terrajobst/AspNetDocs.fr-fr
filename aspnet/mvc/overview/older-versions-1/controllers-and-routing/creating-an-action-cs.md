@@ -8,19 +8,18 @@ ms.date: 03/02/2009
 ms.assetid: cb33b28c-3025-4bd1-a1fa-eaa3af7bb56f
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c66e066bd3e241e667924dacc114f57151df822a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ebba935383819935ad85c95245666f4eaf6a0dca
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389555"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123466"
 ---
 # <a name="creating-an-action-c"></a>Création d’une action (C#)
 
 by [Microsoft](https://github.com/microsoft)
 
 > Découvrez comment ajouter une nouvelle action à un contrôleur ASP.NET MVC. En savoir plus sur la configuration requise pour une méthode devant subir une action.
-
 
 L’objectif de ce didacticiel est d’expliquer comment vous pouvez créer une nouvelle action de contrôleur. Vous en savoir plus sur la configuration requise d’une méthode d’action. Vous allez également apprendre à une méthode empêcher l’exposition en tant qu’action.
 
@@ -55,7 +54,6 @@ Si vous devez créer une méthode publique dans une classe de contrôleur et que
 [!code-csharp[Main](creating-an-action-cs/samples/sample2.cs)]
 
 Si vous tentez d’appeler l’action du contrôleur CompanySecrets() en tapant /Work/CompanySecrets dans la barre d’adresses de votre navigateur vous allez obtenir le message d’erreur dans la Figure 1.
-
 
 [![Appel d’une méthode NonAction](creating-an-action-cs/_static/image1.jpg)](creating-an-action-cs/_static/image1.png)
 

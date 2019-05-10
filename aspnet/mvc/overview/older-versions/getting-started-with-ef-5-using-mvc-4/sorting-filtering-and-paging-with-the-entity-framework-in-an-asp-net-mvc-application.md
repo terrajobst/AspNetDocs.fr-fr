@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 8af630e0-fffa-4110-9eca-c96e201b2724
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 4220327388703b773011921bb206976b04b07e34
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9510eb8094a55346bec2e0dab2a15ee79d211c88
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59397901"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126521"
 ---
 # <a name="sorting-filtering-and-paging-with-the-entity-framework-in-an-aspnet-mvc-application-3-of-10"></a>Tri, filtrage et pagination avec Entity Framework dans une Application ASP.NET MVC (3 sur 10)
 
@@ -26,7 +26,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Si vous rencontrez un problème que vous ne pouvez pas résoudre, [télécharger le chapitre terminé](building-the-ef5-mvc4-chapter-downloads.md) et essayez de reproduire votre problème. Vous trouverez généralement la solution au problème en comparant votre code pour le code complet. Pour certaines erreurs courantes et comment les résoudre, consultez [erreurs et des solutions de contournement.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 Dans le didacticiel précédent, vous avez implémenté un ensemble de pages web pour les opérations CRUD de base pour `Student` entités. Dans ce didacticiel vous allez ajouter le tri, filtrage et la fonctionnalité de pagination à la **étudiants** page d’Index. Vous allez également créer une page qui effectue un regroupement simple.
 
@@ -93,7 +92,6 @@ Vous avez ajouté un paramètre `searchString` à la méthode `Index`. Vous avez
 
 > [!NOTE]
 > Dans de nombreux cas, vous pouvez appeler la même méthode sur un jeu d’entités Entity Framework ou comme méthode d’extension sur une collection en mémoire. Les résultats sont normalement les mêmes, mais dans certains cas, peuvent être différents. Par exemple, l’implémentation de .NET Framework de la `Contains` méthode retourne toutes les lignes lorsque vous lui passez une chaîne vide, mais le fournisseur Entity Framework pour SQL Server Compact 4.0 retourne zéro ligne pour les chaînes vides. Par conséquent, le code dans l’exemple (placer les `Where` instruction à l’intérieur d’un `if` instruction) permet de s’assurer que vous obtenez les mêmes résultats pour toutes les versions de SQL Server. En outre, l’implémentation de .NET Framework de la `Contains` méthode effectue une comparaison respectant la casse par défaut, mais les fournisseurs Entity Framework SQL Server effectuent des comparaisons sans respecter la casse par défaut. Par conséquent, l’appel la `ToUpper` méthode le test doit être explicitement non-respect de la casse garantit que les résultats ne changent pas lorsque vous modifiez le code ultérieurement d’utiliser un référentiel, ce qui retournera un `IEnumerable` collection au lieu d’un `IQueryable` objet. (Lorsque vous appelez la méthode `Contains` sur une collection `IEnumerable`, vous obtenez l’implémentation du .NET Framework ; lorsque vous l’appelez sur un objet `IQueryable`, vous obtenez l’implémentation du fournisseur de base de données.)
-
 
 ### <a name="add-a-search-box-to-the-student-index-view"></a>Ajouter une zone de recherche à la vue de l’index des étudiants
 
@@ -378,7 +376,6 @@ Vous trouverez la version déployée du fichier Web.config sur votre ordinateur 
 
 > [!NOTE]
 > L’application web n’implémente pas la sécurité, toute personne trouvant l’URL permettant de changer les données. Pour obtenir des instructions sur la façon de sécuriser le site web, consultez [déployer une application ASP.NET MVC sécurisée avec appartenance, OAuth et base de données SQL à un Site Web Windows Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data). Vous pouvez empêcher d’autres personnes d’utiliser le site à l’aide du portail de gestion Windows Azure ou **Explorateur de serveurs** dans Visual Studio pour arrêter le site.
-
 
 ![](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image35.png)
 

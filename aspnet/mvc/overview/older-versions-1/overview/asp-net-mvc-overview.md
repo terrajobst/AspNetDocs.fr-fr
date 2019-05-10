@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: 2dcb44a4-5cbf-4d62-b363-718104082d86
 msc.legacyurl: /mvc/overview/older-versions-1/overview/asp-net-mvc-overview
 msc.type: authoredcontent
-ms.openlocfilehash: 149312e2ddf0a5023a4a12f5b05852f7da6b18f8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 73965c71f37de13e3813df089a253fde528ea7ee
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418168"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128225"
 ---
 # <a name="aspnet-mvc-overview"></a>Vue d’ensemble d’ASP.NET MVC
 
@@ -21,18 +21,15 @@ by [Microsoft](https://github.com/microsoft)
 
 > En savoir plus sur les différences entre l’application ASP.NET MVC et les applications Web Forms ASP.NET. Découvrez comment déterminer quand créer une application ASP.NET MVC.
 
-
 Le modèle d’architecture Model-View-Controller (MVC) sépare une application en trois composants principaux : le modèle, la vue et le contrôleur. L’infrastructure ASP.NET MVC fournit une alternative au modèle Web Forms ASP.NET pour la création d’applications Web basées sur MVC. L’infrastructure ASP.NET MVC est une infrastructure de présentation simple et facilement testable, qui (comme les applications basées sur des Web Forms) est intégré avec des fonctionnalités ASP.NET existantes, telles que les pages maîtres et l’authentification basée sur l’appartenance. L’infrastructure MVC est définie dans le **System.Web.Mvc** espace de noms, est une partie essentielle et pris en charge de la **System.Web** espace de noms.   
   
 MVC est un modèle de conception standard que de nombreux développeurs connaissent. Certains types d’applications Web bénéficieront de l’infrastructure MVC. D’autres continueront à utiliser le modèle d’application ASP.NET traditionnel qui est basé sur des Web Forms et les publications (postback). Autres types d’applications Web combine les deux approches ; aucune de ces approches exclut l’autre.   
   
 L’infrastructure MVC inclut les composants suivants :
 
-
 [![Appel d’une action de contrôleur qui attend une valeur de paramètre](asp-net-mvc-overview/_static/image1.jpg)](asp-net-mvc-overview/_static/image1.png)
 
 **Figure 01**: Appel d’une action de contrôleur qui attend une valeur de paramètre ([cliquez pour afficher l’image en taille réelle](asp-net-mvc-overview/_static/image2.png))
-
 
 - **Modèles**. Objets de modèle sont les parties de l’application qui implémentent la logique du domaine d’application s données. Souvent, les objets de modèle récupèrent et stockent l’état de modèle dans une base de données. Par exemple, un objet Product peut récupérer des informations à partir d’une base de données, exploiter, puis réécrire les informations mises à jour à une table Products dans SQL Server.
 

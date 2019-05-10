@@ -8,12 +8,12 @@ ms.date: 04/05/2010
 ms.assetid: 6227233a-6254-4b6b-9a89-947efef22330
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-data-access-layer-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e4715862d7bc89f37a74ef63ee09e69e6e2d2665
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6199aad8ebe15cefcd6c1b88212e37db87963b8d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396887"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133476"
 ---
 # <a name="creating-a-data-access-layer-vb"></a>Création d’une couche d’accès aux données (VB)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/5/d/7/5d7571fc-d0b7-4798-ad4a-c976c02363ce/ASPNET_Data_Tutorial_1_VB.exe) ou [télécharger le PDF](creating-a-data-access-layer-vb/_static/datatutorial01vb1.pdf)
 
 > Dans ce didacticiel, nous allons démarrer depuis le début et créer la couche DAL (Data Access), à l’aide de groupes de données typés, accéder aux informations dans une base de données.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -36,11 +35,9 @@ Dans ce didacticiel, nous allons démarrer depuis le début et créer la couche 
 
 Avant de nous pouvons créer notre couche d’accès aux données (DAL), nous devons d’abord créer un site web et le programme d’installation de notre base de données. Commencez par créer un nouveau fichier basé sur un système web site ASP.NET. Pour ce faire, accédez au menu fichier et choisissez Nouveau Site Web, en affichant la boîte de dialogue Nouveau Site Web. Choisissez le modèle de Site Web ASP.NET, la valeur de la liste déroulante emplacement du système de fichiers, choisissez un dossier pour placer le site web et définir la langue de Visual Basic.
 
-
 [![Créer un Site Web de système de nouveau fichier](creating-a-data-access-layer-vb/_static/image2.png)](creating-a-data-access-layer-vb/_static/image1.png)
 
 **Figure 1**: Créer un Site Web de New File System-Based ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image3.png))
-
 
 Cela créera un nouveau site web avec un `Default.aspx` page ASP.NET, un `App_Data` dossier et un `Web.config` fichier.
 
@@ -62,11 +59,9 @@ Ou bien, vous pouvez vous connecter à une base de données Northwind installé 
 
 Une fois que vous avez installé la base de données, accédez à l’Explorateur de serveurs dans Visual Studio, cliquez sur le nœud Connexions de données, puis choisissez Ajouter une connexion. Si vous ne voyez pas l’Explorateur de serveurs Accédez à la vue / Explorateur de serveurs, ou appuyez sur Ctrl + Alt + S. Cela fait apparaître la boîte de dialogue Ajouter une connexion, où vous pouvez spécifier le serveur pour vous connecter à, les informations d’authentification et le nom de la base de données. Une fois que vous avez correctement configuré les informations de connexion de base de données et cliqué sur le bouton OK, la base de données est ajouté en tant que nœud sous le nœud Connexions de données. Vous pouvez développer le nœud de base de données pour Explorer ses tables, vues, procédures stockées et ainsi de suite.
 
-
 ![Ajouter une connexion à la base de données de votre serveur de base de données Northwind](creating-a-data-access-layer-vb/_static/image4.png)
 
 **Figure 2**: Ajouter une connexion à la base de données de votre serveur de base de données Northwind
-
 
 ## <a name="step-2-creating-the-data-access-layer"></a>Étape 2 : Création de la couche d’accès aux données
 
@@ -88,24 +83,19 @@ Pour retourner des objets fortement typés, les développeurs peuvent créer leu
 > [!NOTE]
 > Pour plus d’informations sur les avantages et inconvénients de l’utilisation de DataSets typés et des objets métier personnalisés, reportez-vous à [composants de conception de la couche données et en passant par le biais des couches de données](https://msdn.microsoft.com/library/ms978496.aspx).
 
-
 Nous allons utiliser des jeux de données fortement typées pour l’architecture des ces didacticiels. La figure 3 illustre le flux de travail entre les différentes couches d’une application qui utilise des DataSet typés.
-
 
 [![Tout Code d’accès aux données est relégués à la couche DAL](creating-a-data-access-layer-vb/_static/image6.png)](creating-a-data-access-layer-vb/_static/image5.png)
 
 **Figure 3**: Tout Code d’accès aux données est relégués à la couche DAL ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image7.png))
 
-
 ## <a name="creating-a-typed-dataset-and-table-adapter"></a>Création d’un DataSet typé et un adaptateur de Table
 
 Pour commencer à créer notre DAL, nous commençons par ajouter un DataSet typé à notre projet. Pour ce faire, avec le bouton droit sur le nœud de projet dans l’Explorateur de solutions et choisissez Ajouter un nouvel élément. Sélectionnez l’option de jeu de données à partir de la liste des modèles et nommez-le `Northwind.xsd`.
 
-
 [![Choisissez d’ajouter un nouveau jeu de données à votre projet](creating-a-data-access-layer-vb/_static/image9.png)](creating-a-data-access-layer-vb/_static/image8.png)
 
 **Figure 4**: Choisissez d’ajouter un nouveau jeu de données à votre projet ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image10.png))
-
 
 Après avoir cliqué sur Ajouter, lorsque vous êtes invité à ajouter le jeu de données pour le `App_Code` dossier, cliquez sur Oui. Le concepteur pour le DataSet typé s’affiche, et l’Assistant Configuration de TableAdapter démarre, ce qui vous permet d’ajouter votre premier TableAdapter au DataSet typé.
 
@@ -115,53 +105,41 @@ N’oubliez pas que les tables de données fortement typées n’incluent pas to
 
 L’Assistant Configuration de TableAdapter commence par vous invitant à sélectionner la base de données à utiliser. La liste déroulante affiche ces bases de données dans l’Explorateur de serveurs. Si vous n’avez pas ajouté à la base de données Northwind à l’Explorateur de serveurs, vous pouvez cliquer sur le bouton Nouvelle connexion pour l’instant à le faire.
 
-
 [![Choisissez la base de données Northwind dans la liste déroulante](creating-a-data-access-layer-vb/_static/image12.png)](creating-a-data-access-layer-vb/_static/image11.png)
 
 **Figure 5**: Choisissez la base de données Northwind dans la liste déroulante ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image13.png))
 
-
 Après avoir sélectionné la base de données et en cliquant sur Suivant, vous demandera si vous souhaitez enregistrer la chaîne de connexion dans le `Web.config` fichier. En enregistrant la chaîne de connexion, vous éviterez en fait, il dur codé dans les classes TableAdapter, ce qui simplifie les choses si les informations de chaîne de connexion changent à l’avenir. Si vous optez pour enregistrer la chaîne de connexion dans le fichier de configuration, il est placé dans le `<connectionStrings>` section, ce qui peut être [éventuellement chiffré](http://aspnet.4guysfromrolla.com/articles/021506-1.aspx) pour l’amélioration de la sécurité ou modifiées ultérieurement via la Page de propriétés de 2.0 ASP.NET dans l’IIS Admin outil GUI, qui est plus idéale pour les administrateurs.
-
 
 [![Enregistrer la chaîne de connexion dans Web.config](creating-a-data-access-layer-vb/_static/image15.png)](creating-a-data-access-layer-vb/_static/image14.png)
 
 **Figure 6**: Enregistrer la chaîne de connexion à `Web.config` ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image16.png))
 
-
 Ensuite, nous devons définir le schéma pour le premier DataTable fortement typée et fournir la première méthode pour notre TableAdapter à utiliser lors du remplissage du DataSet fortement typée. Ces deux étapes sont réalisées simultanément en créant une requête qui retourne les colonnes de la table que nous voulons reflétées dans notre DataTable. À la fin de l’Assistant, nous allons donner un nom de méthode pour cette requête. Une fois que qui a été accompli, cette méthode peut être appelée à partir de notre couche de présentation. La méthode exécute la requête définie et remplir un DataTable fortement typée.
 
 Pour commencer la définition de la requête SQL, nous devons tout d’abord indiquer comment nous voulons le TableAdapter pour émettre la requête. Nous pouvons utiliser d’instruction SQL ad hoc, créez une nouvelle procédure stockée ou utiliser une procédure stockée existante. Pour ces didacticiels, nous utiliserons des instructions SQL ad hoc. Reportez-vous à [Brian Noyes](http://briannoyes.net/)de l’article, [créer une couche d’accès aux données avec le Concepteur de DataSet Visual Studio 2005](http://www.theserverside.net/articles/showarticle.tss?id=DataSetDesigner) pour obtenir un exemple d’utilisation de procédures stockées.
-
 
 [![Interroger les données à l’aide d’une instruction SQL de Ad-Hoc](creating-a-data-access-layer-vb/_static/image18.png)](creating-a-data-access-layer-vb/_static/image17.png)
 
 **Figure 7**: Interroger les données à l’aide d’une instruction SQL de Ad-Hoc ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image19.png))
 
-
 À ce stade nous pouvons saisir dans la requête SQL manuellement. Lors de la création de la première méthode du TableAdapter vous souhaitez généralement que la requête retourne les colonnes qui doivent être exprimés dans le DataTable. Nous pouvons le faire en créant une requête qui retourne toutes les colonnes et toutes les lignes de la `Products` table :
-
 
 [![Entrez la requête SQL dans la zone de texte](creating-a-data-access-layer-vb/_static/image21.png)](creating-a-data-access-layer-vb/_static/image20.png)
 
 **Figure 8**: Entrez la requête SQL dans le Textbox ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image22.png))
 
-
 Vous pouvez également utiliser le Générateur de requêtes et de construire graphiquement la requête, comme illustré à la Figure 9.
-
 
 [![Créer la requête sous forme de graphique, par le biais de l’éditeur de requête](creating-a-data-access-layer-vb/_static/image24.png)](creating-a-data-access-layer-vb/_static/image23.png)
 
 **Figure 9**: Créer la requête sous forme graphique, par le biais de l’éditeur de requête ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image25.png))
 
-
 Après avoir créé la requête, mais avant de passer à l’écran suivant, cliquez sur le bouton Options avancées. Dans les projets de Site Web, « générer, mise à jour, instructions Insert et Delete » est la seule option activée par défaut ; avancée Si vous exécutez cet Assistant à partir d’une bibliothèque de classes ou d’un projet Windows l’option « Utiliser l’accès concurrentiel optimiste » sera également être sélectionnée. Laissez l’option « Utiliser l’accès concurrentiel optimiste » désactivée pour l’instant. Nous allons examiner l’accès concurrentiel optimiste dans les didacticiels futures.
-
 
 [![Sélectionnez uniquement les instructions générer Insert, Update et Delete Option](creating-a-data-access-layer-vb/_static/image27.png)](creating-a-data-access-layer-vb/_static/image26.png)
 
 **Figure 10**: Sélectionnez uniquement les instructions générer Insert, Update et Delete Option ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image28.png))
-
 
 Après avoir vérifié les options avancées, cliquez sur Suivant pour passer à l’écran final. Ici nous avons invités à sélectionner les méthodes à ajouter au TableAdapter. Il existe deux modèles de remplissage des données :
 
@@ -172,19 +150,15 @@ Vous pouvez avoir le TableAdapter à implémenter une ou les deux de ces modèle
 
 Si elle est activée, la case à cocher finale, « GenerateDBDirectMethods, » crée `Insert()`, `Update()`, et `Delete()` méthodes du TableAdapter. Si vous laissez cette option désactivée, toutes les mises à jour doit être effectuée via la seule du TableAdapter `Update()` (méthode), qui accepte le jeu de données typé, un DataTable, un seul objet DataRow ou un tableau de DataRows. (Si vous avez désactivé les « générer Insert, Update et Delete instructions » option à partir des propriétés avancées dans la Figure 9, cette case à cocher paramètre n’a aucun effet.) Laissez cette case à cocher activée.
 
-
 [![Diffère de nom de la méthode GetData GetProducts](creating-a-data-access-layer-vb/_static/image30.png)](creating-a-data-access-layer-vb/_static/image29.png)
 
 **Figure 11**: Modifier le nom de la méthode à partir de `GetData` à `GetProducts` ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image31.png))
 
-
 Terminez l’Assistant en cliquant sur Terminer. Une fois que l’Assistant se ferme, nous revenons au Concepteur de DataSet qui affiche la table de données que nous venons de créer. Vous pouvez voir la liste des colonnes dans le `Products` DataTable (`ProductID`, `ProductName`, et ainsi de suite), ainsi que les méthodes de la `ProductsTableAdapter` (`Fill()` et `GetProducts()`).
-
 
 [![Le DataTable de produits et ProductsTableAdapter ont été ajoutés au DataSet typé](creating-a-data-access-layer-vb/_static/image33.png)](creating-a-data-access-layer-vb/_static/image32.png)
 
 **Figure 12**: Le `Products` DataTable et `ProductsTableAdapter` ont été ajoutés au DataSet typé ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image34.png))
-
 
 À ce stade, nous avons un DataSet typé avec un seul objet DataTable (`Northwind.Products`) et une classe fortement typée de DataAdapter (`NorthwindTableAdapters.ProductsTableAdapter`) avec un `GetProducts()` (méthode). Ces objets peuvent être utilisés pour accéder à une liste de tous les produits à partir de code tel que :
 
@@ -202,11 +176,9 @@ AllProducts.aspx.vb
 
 [!code-vb[Main](creating-a-data-access-layer-vb/samples/sample3.vb)]
 
-
 [![La liste de produits s’affiche dans un GridView](creating-a-data-access-layer-vb/_static/image36.png)](creating-a-data-access-layer-vb/_static/image35.png)
 
 **Figure 13**: La liste de produits s’affiche dans un GridView ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image37.png))
-
 
 Bien que cet exemple obligatoire que nous écrivons les trois lignes de code dans notre page ASP.NET `Page_Load` Gestionnaire d’événements, dans un avenir didacticiels, nous allons examiner l’utilisation de l’ObjectDataSource de façon déclarative récupérer les données à partir de la couche DAL. Avec ObjectDataSource, nous n’aurez pas à écrire du code et obtiendra également en charge la pagination et tri !
 
@@ -216,53 +188,41 @@ Bien que cet exemple obligatoire que nous écrivons les trois lignes de code dan
 
 Nous allons ajouter le `GetProductsByCategoryID(categoryID)` (méthode). Pour ajouter une nouvelle méthode à la couche DAL, retournez dans le Concepteur de DataSet, cliquez sur le `ProductsTableAdapter` section, puis choisissez Ajouter une requête.
 
-
 ![Avec le bouton droit sur le TableAdapter et choisissez Ajouter une requête](creating-a-data-access-layer-vb/_static/image38.png)
 
 **Figure 14**: Avec le bouton droit sur le TableAdapter et choisissez Ajouter une requête
 
-
 Nous allons tout d’abord invité à indiquer si nous souhaitons accéder à la base de données à l’aide d’une instruction de SQL ad hoc ou d’une procédure stockée nouveau ou existante. Nous allons choisir d’utiliser une instruction SQL ad-hoc. Ensuite, nous avons demandés quel type de requête SQL que nous souhaitons utiliser. Dans la mesure où nous voulons renvoyer tous les produits qui appartiennent à une catégorie spécifiée, nous souhaitons écrire un `SELECT` instruction qui retourne des lignes.
-
 
 [![Choisissez de créer une instruction SELECT qui retourne des lignes](creating-a-data-access-layer-vb/_static/image40.png)](creating-a-data-access-layer-vb/_static/image39.png)
 
 **Figure 15**: Choisissez de créer un `SELECT` instruction qui retourne les lignes ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image41.png))
 
-
 L’étape suivante consiste à définir la requête SQL utilisée pour accéder aux données. Dans la mesure où nous voulons renvoyer uniquement les produits qui appartiennent à une catégorie particulière, j’utilise le même `SELECT` instruction à partir de `GetProducts()`, mais ajoutez le code suivant `WHERE` clause : `WHERE CategoryID = @CategoryID`. Le `@CategoryID` paramètre indique à l’Assistant TableAdapter que la méthode que nous créons nécessite un paramètre d’entrée du type correspondant (à savoir, un entier nullable).
-
 
 [![Entrez une requête pour retourner uniquement les produits dans une catégorie spécifiée](creating-a-data-access-layer-vb/_static/image43.png)](creating-a-data-access-layer-vb/_static/image42.png)
 
 **Figure 16**: Entrez une requête pour retourner uniquement les produits dans une catégorie spécifiée ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image44.png))
 
-
 Dans la dernière étape que nous pouvons choisir les modèles à utiliser, ainsi que de personnaliser les noms des méthodes générées d’accès aux données. Pour le motif de remplissage, nous allons modifier le nom à `FillByCategoryID` et pour la valeur de retour un DataTable retourner le modèle (le `GetX` méthodes), nous allons utiliser `GetProductsByCategoryID`.
-
 
 [![Choisissez les noms pour les méthodes TableAdapter](creating-a-data-access-layer-vb/_static/image46.png)](creating-a-data-access-layer-vb/_static/image45.png)
 
 **Figure 17**: Choisissez les noms pour les méthodes TableAdapter ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image47.png))
 
-
 À l’issue de l’Assistant, le Concepteur de DataSet inclut les nouvelles méthodes TableAdapter.
-
 
 ![Les produits peuvent maintenant être interrogées par catégorie](creating-a-data-access-layer-vb/_static/image48.png)
 
 **Figure 18**: Les produits peuvent maintenant être interrogées par catégorie
 
-
 Prenez un moment pour ajouter un `GetProductByProductID(productID)` méthode à l’aide de la même technique.
 
 Ces requêtes paramétrables peuvent être testées directement depuis le Concepteur de DataSet. Avec le bouton droit sur la méthode du TableAdapter et choisissez Aperçu des données. Ensuite, entrez les valeurs à utiliser pour les paramètres et cliquez sur Aperçu.
 
-
 [![Ces appartenant produits à la catégorie boissons sont affichés.](creating-a-data-access-layer-vb/_static/image50.png)](creating-a-data-access-layer-vb/_static/image49.png)
 
 **Figure 19**: Ces appartenant produits à la catégorie boissons sont affichés ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image51.png))
-
 
 Avec la `GetProductsByCategoryID(categoryID)` méthode dans notre DAL, nous pouvons maintenant créer une page ASP.NET qui affiche uniquement les produits dans une catégorie spécifiée. L’exemple suivant affiche tous les produits qui se trouvent dans la catégorie des boissons, et qui ont un `CategoryID` de 1.
 
@@ -274,47 +234,37 @@ Beverages.aspx.vb
 
 [!code-vb[Main](creating-a-data-access-layer-vb/samples/sample5.vb)]
 
-
 [![Ces produits de la catégorie boissons sont affichés.](creating-a-data-access-layer-vb/_static/image53.png)](creating-a-data-access-layer-vb/_static/image52.png)
 
 **Figure 20**: Ces produits de la catégorie boissons sont affichés ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image54.png))
-
 
 ## <a name="step-4-inserting-updating-and-deleting-data"></a>Étape 4 : Insertion, mise à jour et suppression de données
 
 Il existe deux modèles couramment utilisés pour l’insertion, la mise à jour et suppression de données. Le premier modèle, que j’appellerai le modèle direct de base de données, implique la création de méthodes qui, lorsqu’elle est appelée, problème un `INSERT`, `UPDATE`, ou `DELETE` commande à la base de données qui fonctionne sur un enregistrement de base de données unique. Ces méthodes sont généralement transmis dans une série de valeurs scalaires (entiers, chaînes, valeurs booléennes, dates/heures et ainsi de suite) qui correspondent aux valeurs à insérer, mettre à jour ou supprimer. Par exemple, avec ce modèle pour le `Products` table, la méthode delete prendrait dans un paramètre de type entier indiquant le `ProductID` de l’enregistrement à supprimer, tandis que la méthode d’insertion prendrait dans une chaîne pour le `ProductName`, une valeur décimale pour la `UnitPrice`, un entier pour le `UnitsOnStock`, et ainsi de suite.
 
-
 [![Chaque insertion, mise à jour et supprimer la demande sont envoyée à la base de données immédiatement](creating-a-data-access-layer-vb/_static/image56.png)](creating-a-data-access-layer-vb/_static/image55.png)
 
 **Figure 21**: Chaque insertion, mise à jour et supprimer la demande sont envoyée à la base de données immédiatement ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image57.png))
 
-
 L’autre modèle, je me référerai à dans le lot de mises à jour de modèle, consiste à mettre à jour d’un DataSet, DataTable ou collection de DataRows dans un appel de méthode ensemble. Avec ce modèle un développeur supprime, insère et modifie les DataRows dans un DataTable, puis transmet ces objets DataRow ou un DataTable dans une méthode de mise à jour. Puis cette méthode énumère les DataRows transmis, détermine s’ils ont été modifiés, ajoutés ou supprimés (via le DataRow [propriété RowState](https://msdn.microsoft.com/library/system.data.datarow.rowstate.aspx) valeur) et émet la demande de base de données appropriée pour chaque enregistrement.
-
 
 [![Toutes les modifications sont synchronisées avec la base de données lorsque la méthode de mise à jour est appelée.](creating-a-data-access-layer-vb/_static/image59.png)](creating-a-data-access-layer-vb/_static/image58.png)
 
 **Figure 22**: Toutes les modifications sont synchronisées avec la base de données lorsque la méthode de mise à jour est appelée ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image60.png))
 
-
 Le TableAdapter utilise le modèle de mise à jour de lot par défaut, mais prend également en charge le modèle de base de données directe. Étant donné que nous avons sélectionné l’option « Générer, mise à jour, instructions Insert et Delete » à partir des propriétés avancées lors de la création de notre TableAdapter, le `ProductsTableAdapter` contient un `Update()` (méthode), qui implémente le modèle de mise à jour par lots. Plus précisément, le TableAdapter contient un `Update()` méthode qui peut être passée pour le jeu de données typé, un DataTable fortement typée ou DataRows un ou plusieurs. Si vous avez laissé la case à cocher « GenerateDBDirectMethods » cochée lorsque créant d’abord le TableAdapter le modèle direct de base de données sera également implémentée par le biais de `Insert()`, `Update()`, et `Delete()` méthodes.
 
 Les deux modèles de modification de données utilisent le TableAdapter `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés émettre leurs `INSERT`, `UPDATE`, et `DELETE` commandes pour la base de données. Vous pouvez inspecter et modifier le `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés en cliquant sur le TableAdapter dans le Concepteur de DataSet, puis en accédant à la fenêtre Propriétés. (Vérifiez que vous avez sélectionné le TableAdapter et qui le `ProductsTableAdapter` objet est celui sélectionné dans la liste déroulante dans la fenêtre Propriétés.)
-
 
 [![Le TableAdapter a InsertCommand, UpdateCommand et DeleteCommand propriétés](creating-a-data-access-layer-vb/_static/image62.png)](creating-a-data-access-layer-vb/_static/image61.png)
 
 **Figure 23**: Le TableAdapter a `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image63.png))
 
-
 Pour examiner ou modifier ces propriétés de commande de base de données, cliquez sur le `CommandText` sous-propriété, qui ouvre le Générateur de requêtes.
-
 
 [![Configurer le INSERT, UPDATE et instructions DELETE dans le Générateur de requêtes](creating-a-data-access-layer-vb/_static/image65.png)](creating-a-data-access-layer-vb/_static/image64.png)
 
 **Figure 24**: Configurer le `INSERT`, `UPDATE`, et `DELETE` instructions dans le Générateur de requêtes ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image66.png))
-
 
 L’exemple de code suivant montre comment utiliser le modèle de mise à jour par lots à doubler le prix de tous les produits qui ne sont pas supprimées et qui ont des 25 unités en stock ou moins :
 
@@ -330,37 +280,29 @@ Le `Insert()`, `Update()`, et `Delete()` méthodes créées par la méthode dire
 
 Pour créer une telle méthode personnalisée, revenez dans le Concepteur de DataSet. Avec le bouton droit sur le TableAdapter et choisissez Ajouter une requête, retour à l’Assistant TableAdapter. Sur le deuxième écran, nous pouvons indiquer le type de requête permettant de créer. Nous allons créer une méthode qui ajoute un nouveau produit, puis retourne la valeur de l’enregistrement qui vient d’être ajouté `ProductID`. Par conséquent, choisir de créer un `INSERT` requête.
 
-
 [![Créez une méthode pour ajouter une nouvelle ligne à la Table Products](creating-a-data-access-layer-vb/_static/image68.png)](creating-a-data-access-layer-vb/_static/image67.png)
 
 **Figure 25**: Créez une méthode pour ajouter une nouvelle ligne à la `Products` Table ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image69.png))
 
-
 Dans l’écran suivant le `InsertCommand`de `CommandText` s’affiche. Augmenter cette requête en ajoutant des `SELECT SCOPE_IDENTITY()` à la fin de la requête, qui retourne la dernière valeur identity insérée dans une `IDENTITY` colonne dans la même portée. (Consultez le [documentation technique](https://msdn.microsoft.com/library/ms190315.aspx) pour plus d’informations sur `SCOPE_IDENTITY()` et pourquoi vous souhaiterez probablement [utiliser étendue\_Identity() n’à la place de @@IDENTITY](http://weblogs.sqlteam.com/travisl/archive/2003/10/29/405.aspx).) Assurez-vous que vous obtenez le `INSERT` instruction par un point-virgule avant d’ajouter le `SELECT` instruction.
-
 
 [![Augmenter la requête pour retourner la valeur SCOPE_IDENTITY()](creating-a-data-access-layer-vb/_static/image71.png)](creating-a-data-access-layer-vb/_static/image70.png)
 
 **Figure 26**: Augmenter le retour de la requête la `SCOPE_IDENTITY()` valeur ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image72.png))
 
-
 Enfin, nommez la nouvelle méthode `InsertProduct`.
-
 
 [![Définir le nouveau nom de méthode à InsertProduct](creating-a-data-access-layer-vb/_static/image74.png)](creating-a-data-access-layer-vb/_static/image73.png)
 
 **Figure 27**: La valeur est le nouveau nom de méthode `InsertProduct` ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image75.png))
 
-
 Lorsque vous revenez sur le Concepteur de DataSet vous verrez que le `ProductsTableAdapter` contient une nouvelle méthode, `InsertProduct`. Si cette nouvelle méthode n’a pas un paramètre pour chaque colonne dans le `Products` table, il est probable qu’est vous avez oublié de mettre fin à la `INSERT` instruction par un point-virgule. Configurer le `InsertProduct` (méthode) et assurez-vous d’avoir un point-virgule qui entourent le `INSERT` et `SELECT` instructions.
 
 Par défaut, insérer les méthodes de requête non de méthodes problème, ce qui signifie qu’elles retournent le nombre de lignes affectées. Toutefois, nous voulons le `InsertProduct` méthode pour retourner la valeur retournée par la requête, et non le nombre de lignes affectées. Pour ce faire, vous devez ajuster le `InsertProduct` la méthode `ExecuteMode` propriété `Scalar`.
 
-
 [![Remplacez la propriété ExecuteMode scalaire](creating-a-data-access-layer-vb/_static/image77.png)](creating-a-data-access-layer-vb/_static/image76.png)
 
 **Figure 28**: Modifier le `ExecuteMode` propriété `Scalar` ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image78.png))
-
 
 Le code suivant illustre cette nouvelle `InsertProduct` méthode en action :
 
@@ -374,19 +316,15 @@ Cela peut poser un problème, cependant, comme les méthodes du TableAdapter pou
 
 [!code-sql[Main](creating-a-data-access-layer-vb/samples/sample9.sql)]
 
-
 [![Mettre à jour de l’instruction SELECT de la méthode GetProducts()](creating-a-data-access-layer-vb/_static/image80.png)](creating-a-data-access-layer-vb/_static/image79.png)
 
 **Figure 29**: Mise à jour le `SELECT` instruction pour la `GetProducts()` (méthode) ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image81.png))
 
-
 Après la mise à jour le `GetProducts()` méthode à utiliser cette nouvelle requête de la table de données inclut deux nouvelles colonnes : `CategoryName` et `SupplierName`.
-
 
 ![Le DataTable produits présente deux nouvelles colonnes](creating-a-data-access-layer-vb/_static/image82.png)
 
 **Figure 30**: Le `Products` DataTable présente deux nouvelles colonnes
-
 
 Prenez un moment pour mettre à jour le `SELECT` clause dans la `GetProductsByCategoryID(categoryID)` méthode également.
 
@@ -443,29 +381,23 @@ Prenez quelques minutes pour créer des TableAdapters et les requêtes suivantes
 
       [!code-sql[Main](creating-a-data-access-layer-vb/samples/sample21.sql)]
 
-
 [![Le Concepteur de DataSet une fois que les quatre TableAdapters ont été ajoutés.](creating-a-data-access-layer-vb/_static/image84.png)](creating-a-data-access-layer-vb/_static/image83.png)
 
 **Figure 31**: Le jeu de données concepteur après le quatre TableAdapters ont été ajoutés ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image85.png))
-
 
 ## <a name="adding-custom-code-to-the-dal"></a>Ajouter du Code personnalisé à la couche DAL
 
 Les TableAdapters et les DataTables ajouté au jeu de données typé sont exprimées en tant qu’un fichier de définition de schéma XML (`Northwind.xsd`). Vous pouvez afficher ces informations de schéma en cliquant sur le `Northwind.xsd` de fichiers dans l’Explorateur de solutions et en choisissant Afficher le Code.
 
-
 [![Le fichier XML Schema Definition (XSD) pour le Northwind de DataSet typé](creating-a-data-access-layer-vb/_static/image87.png)](creating-a-data-access-layer-vb/_static/image86.png)
 
 **Figure 32**: Le fichier de définition de schéma XML (XSD) pour le DataSet typé de Northwind ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image88.png))
 
-
 Ces informations de schéma sont traduites en code c# ou Visual Basic au moment du design lorsque compilé ou lors de l’exécution (si nécessaire), après quoi vous pouvez détaillé avec le débogueur. Pour afficher ce code généré automatiquement accédez à l’affichage de classes et l’extraction vers le bas pour les classes TableAdapter ou DataSet typée. Si vous ne voyez pas l’affichage de classes sur votre écran, accédez au menu Affichage et sélectionnez-la à partir de là ou appuyez sur Ctrl + Maj + C. À partir de l’affichage de classes, vous pouvez voir les propriétés, les méthodes et les événements des classes Typed DataSet et TableAdapter. Pour afficher le code pour une méthode particulière, double-cliquez sur le nom de méthode dans l’affichage de classes ou avec le bouton droit dessus et choisissez Atteindre la définition.
-
 
 ![Inspecter le Code généré automatiquement en sélectionnant Aller à la définition de l’affichage de classes](creating-a-data-access-layer-vb/_static/image89.png)
 
 **Figure 33**: Inspecter le Code généré automatiquement en sélectionnant Aller à la définition de l’affichage de classes
-
 
 Si le code généré automatiquement peut être économiser beaucoup de temps, le code est souvent très générique et doit être personnalisé pour répondre aux besoins uniques d’une application. Le risque d’étendre le code généré automatiquement, cependant, est que l’outil qui a généré le code peut décider, qu'il est temps de « régénérer » et d’écraser vos personnalisations. Avec le nouveau concept d’une classe partielle de .NET 2.0, il est facile fractionner une classe dans plusieurs fichiers. Cela permet d’ajouter nos propres méthodes, les propriétés et les événements pour les classes générées automatiquement sans avoir à vous soucier de remplacer notre personnalisations de Visual Studio.
 
@@ -475,11 +407,9 @@ Pour illustrer comment personnaliser la couche DAL, nous allons ajouter un `GetP
 
 Cette classe partielle indique au compilateur qu’au moment où créer le `Northwind.SuppliersRow` classe pour inclure la `GetProducts()` méthode que nous venons de définir. Si vous générez votre projet et puis revenez à l’affichage de classes que vous verrez `GetProducts()` maintenant répertorié en tant que méthode de `Northwind.SuppliersRow`.
 
-
 ![La méthode GetProducts() est désormais une partie de la classe Northwind.SuppliersRow](creating-a-data-access-layer-vb/_static/image90.png)
 
 **Figure 34**: Le `GetProducts()` méthode fait désormais partie de la `Northwind.SuppliersRow` classe
-
 
 Le `GetProducts()` méthode peut maintenant être utilisée pour énumérer l’ensemble des produits pour un fournisseur particulier, comme le montre le code suivant :
 
@@ -500,11 +430,9 @@ SuppliersAndProducts.aspx.vb
 
 [!code-vb[Main](creating-a-data-access-layer-vb/samples/sample25.vb)]
 
-
 [![Nom de la société du fournisseur est répertorié dans la colonne de gauche, leurs produits dans la droite](creating-a-data-access-layer-vb/_static/image92.png)](creating-a-data-access-layer-vb/_static/image91.png)
 
 **Figure 35**: Nom de la société du fournisseur est répertorié dans la colonne de gauche, leurs produits dans la droite ([cliquez pour afficher l’image en taille réelle](creating-a-data-access-layer-vb/_static/image93.png))
-
 
 ## <a name="summary"></a>Récapitulatif
 

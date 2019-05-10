@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 07b8905d-78ac-4252-97fb-8675b3fb0bbf
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-vb
 msc.type: authoredcontent
-ms.openlocfilehash: afd287836337d0f9411daac805c3e9bcbb2dbadb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 27a5ceda5f9b5227e26036c5405612dcbc15b48e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385070"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130252"
 ---
 # <a name="strategies-for-database-development-and-deployment-vb"></a>Stratégies pour le développement et le déploiement des bases de données (VB)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial10_DBDevel_vb.pdf)
 
 > Lorsque vous déployez une application orientée données pour la première fois que vous pouvez aveuglément copier la base de données dans l’environnement de développement à l’environnement de production. Mais effectuant un blind copie dans les déploiements suivants remplacera toutes les données entrées dans la base de données de production. Au lieu de cela, le déploiement d’une base de données implique appliquer les modifications apportées à la base de données de développement depuis le dernier déploiement sur la base de données de production. Ce didacticiel examine ces défis et propose des stratégies différentes pour vous aider à chronicling et appliquer les modifications apportées à la base de données depuis le dernier déploiement.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -54,13 +53,11 @@ Pour conserver un journal des modifications au modèle de données pendant la ph
 
 <a id="0.8_table01"></a>
 
-
 | **Date de modification** | **Modifier les détails** |
 | --- | --- |
 | 2009-02-03: | Ajout d’une colonne `DepartmentID` (`int`, non NULL) pour le `Employees` table. Ajouter une contrainte de clé étrangère à partir de `Departments.DepartmentID` à `Employees.DepartmentID`. |
 | 2009-02-05: | Colonne supprimé `TotalWeight` à partir de la `Orders` table. Données déjà capturées dans associés `OrderDetails` enregistrements. |
 | 2009-02-12: | Créé le `ProductCategories` table. Il y a trois colonnes : `ProductCategoryID` (`int`, `IDENTITY`, `NOT NULL`), `CategoryName` (`nvarchar(50)`, `NOT NULL`), et `Active` (`bit`, `NOT NULL`). Ajouter une contrainte de clé primaire à `ProductCategoryID`et une valeur par défaut de 1 à `Active`. |
-
 
 Il existe un certain nombre d’inconvénients à cette approche. Pour commencer, il est sans espoir pour l’automatisation. À tout moment ces modifications doivent être appliquées à une base de données - telles que lorsque l’application est déployée, un développeur doit implémenter manuellement chacune, une à la fois. En outre, si vous avez besoin pour reconstruire une version particulière de la base de données à partir de la ligne de base à l’aide du journal des modifications, cela donc prendra plus de temps que la taille du journal augmente. Un autre inconvénient à cette méthode est que la clarté et le niveau de détail de chaque entrée de journal est de gauche à la personne que l’enregistrement de la modification. Dans une équipe avec plusieurs développeurs certaines peuvent rendre plus détaillées, plus lisibles et plus précisément les entrées que d’autres. En outre, les fautes de frappe et autres erreurs de saisie de données liées aux humaines sont possibles.
 
@@ -70,7 +67,6 @@ Maintien de votre journal des modifications dans une prose est, certes, pas trè
 
 > [!NOTE]
 > Alors que les informations contenues dans le journal des modifications sont techniquement, nécessaire uniquement jusqu’au moment du déploiement, je vous recommande de conserver un historique des modifications. Mais au lieu de conserver un seul, toujours le fichier journal des modifications, envisagez de disposer d’un fichier journal de modification différente pour chaque version de base de données. En général, vous souhaitez version de la base de données chaque fois qu’elle est déployée. En conservant un journal des journaux des modifications n’importe quelle version de base de données en exécutant les scripts de journal de modification depuis la version 1 peut, à partir de la ligne de base, recréer et continuant jusqu'à ce que vous atteigniez la version que vous devrez recréer.
-
 
 ## <a name="recording-the-sql-change-statements"></a>Enregistrer les instructions de modification SQL
 
@@ -95,18 +91,14 @@ Il existe une variété d’outils de comparaison de base de données tierce pro
 > [!NOTE]
 > Au moment de la rédaction la version actuelle de SQL Compare était la version 7.1, avec l’Édition Standard d’évaluation des coûts à partir de 395 $. Vous pouvez suivre la procédure en téléchargeant une version d’évaluation gratuite de 14 jours.
 
-
 Démarrage de SQL Compare la boîte de dialogue de projets de comparaison s’ouvre, affichant les projets enregistrés SQL Compare. Créer un nouveau projet. Cette action lance l’Assistant Configuration de projet, qui vous invite à entrer pour plus d’informations sur les bases de données à comparer (voir Figure 1). Entrez les informations pour les bases de données d’environnement de développement et de production.
-
 
 [![Comparer le développement et les bases de données de Production](strategies-for-database-development-and-deployment-vb/_static/image2.jpg)](strategies-for-database-development-and-deployment-vb/_static/image1.jpg)
 
 **Figure 1**: Comparer le développement et les bases de données de Production ([cliquez pour afficher l’image en taille réelle](strategies-for-database-development-and-deployment-vb/_static/image3.jpg))
 
-
 > [!NOTE]
 > Si votre base de données des environnement de développement est un fichier de base de données SQL Express Edition dans la `App_Data` dossier de votre site Web que vous devez inscrire la base de données dans le serveur de base de données SQL Server Express afin de le sélectionner dans la boîte de dialogue illustrée dans la Figure 1. Le moyen le plus simple pour y parvenir consiste à ouvrir SQL Server Management Studio (SSMS), connectez-vous au serveur de base de données SQL Server Express et attacher la base de données. Si vous n’avez pas installé sur votre ordinateur SSMS vous pouvez télécharger et installer la version gratuite [ *base SQL Server 2008 Management Studio version*](https://www.microsoft.com/downloads/details.aspx?FamilyId=7522A683-4CB2-454E-B908-E805E9BD4E28&amp;displaylang=en).
-
 
 Après avoir sélectionné les bases de données à comparer, vous pouvez également spécifier divers paramètres de comparaison à partir de l’onglet Options. Une option, que vous pouvez souhaiter activer est « Ignorer contrainte et l’index noms. » Rappelez-vous que dans le didacticiel précédent nous avons ajouté que des objets de base de données aux bases de données de développement et de production de services de l’application. Si vous avez utilisé le `aspnet_regsql.exe` outil pour créer ces objets sur la base de données de production se trouve que la clé primaire et les noms de contrainte unique diffèrent entre les bases de données de développement et de production. Par conséquent, SQL Compare marquera toutes les tables de services d’application comme des différentes. Vous pouvez soit laisser les « ignorer contrainte et l’index noms » désactivée et synchroniser les noms de contrainte, ou demandez au SQL Compare pour ignorer ces différences.
 
@@ -115,11 +107,9 @@ Après avoir sélectionné les bases de données à comparer (et examiner les op
 > [!NOTE]
 > Les modifications de modèle de données effectuées dans ce didacticiel ont été résolues pour illustrer l’utilisation d’un outil de comparaison de base de données. Vous trouverez pas ces modifications dans la base de données dans les didacticiels futures.
 
-
 [![SQL Compare répertorie les différences entre le développement et les bases de données de Production](strategies-for-database-development-and-deployment-vb/_static/image5.jpg)](strategies-for-database-development-and-deployment-vb/_static/image4.jpg)
 
 **Figure 2**: SQL Compare répertorie les différences entre le développement et les bases de données de Production ([cliquez pour afficher l’image en taille réelle](strategies-for-database-development-and-deployment-vb/_static/image6.jpg))
-
 
 SQL Compare décompose les objets de base de données en groupes, rapidement vous montrant quels sont les objets existent dans les deux bases de données, mais sont différent, qui objets existent dans une base de données, mais pas dans l’autre, et quels objets sont identiques. Comme vous pouvez le voir, il existe deux objets qui existent dans les deux bases de données mais sont différents : le `Authors` table dont une colonne ajoutée, et le `Books` table, qui contenait un supprimé. Il existe un objet qui existe uniquement dans le développement de base de données, à savoir nouvellement créé `Ratings` table. Et il existe des 117 objets sont identiques dans les deux bases de données.
 
@@ -127,17 +117,14 @@ Sélection d’un objet de base de données affiche la fenêtre différences SQL
 
 Après avoir examiné les différences et en sélectionnant les objets que vous souhaitez synchroniser, l’étape suivante consiste à générer les commandes SQL nécessaires pour mettre à jour le schéma de s de base de données de production pour correspondre à la base de données de développement. Cela s’effectue via l’Assistant synchronisation. L’Assistant synchronisation confirme quels objets pour synchroniser et résume l’action planifier (voir Figure 3). Vous pouvez synchroniser les bases de données immédiatement ou générer un script avec les commandes SQL qui peut être exécuté à tout moment.
 
-
 [![Utilisez l’Assistant de synchronisation pour synchroniser vos schémas de bases de données](strategies-for-database-development-and-deployment-vb/_static/image8.jpg)](strategies-for-database-development-and-deployment-vb/_static/image7.jpg)
 
 **Figure 3**: Utilisez l’Assistant de synchronisation pour synchroniser vos schémas de bases de données ([cliquez pour afficher l’image en taille réelle](strategies-for-database-development-and-deployment-vb/_static/image9.jpg))
-
 
 Outils de comparaison de base de données telles que Red Gate Software s SQL Compare rendre l’application des modifications au schéma de base de données de développement pour la base de données de production aussi simple que de pointer et cliquez sur.
 
 > [!NOTE]
 > Comparer SQL Compare et synchronise deux bases de données *schémas*. Malheureusement, il ne comparer et synchroniser les données dans les tables de deux bases de données. Red Gate Software offre un produit nommé [ *comparaison de données SQL* ](http://www.red-gate.com/products/SQL_Data_Compare/) qui compare et synchronise les données entre deux bases de données, mais il est un produit distinct à partir de SQL Compare et les coûts d’un autre 395 $.
-
 
 ## <a name="taking-the-application-offline-during-deployment"></a>En prenant l’Application en mode hors connexion pendant le déploiement
 

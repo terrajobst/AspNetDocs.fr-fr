@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: fe47a018-f6d0-4979-80e7-5b1fa75a5865
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 97a60274d9306ea0ee332fcc1ab9e487355dbedb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e11c91a824446572aaf0b3bc6954b9b8ffb4eaff
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384936"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133956"
 ---
 # <a name="creating-a-build-definition-that-supports-deployment"></a>Création d’une définition de build qui prend en charge le déploiement
 
@@ -22,7 +22,6 @@ par [Jason Lee](https://github.com/jrjlee)
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Si vous souhaitez effectuer n’importe quel type de build dans Team Foundation Server (TFS) 2010, vous devez créer une définition de build dans votre projet d’équipe. Cette rubrique décrit comment créer une définition de build dans TFS et comment contrôler le déploiement web dans le cadre du processus de génération dans Team Build.
-
 
 Cette rubrique fait partie d’une série de didacticiels basées sur les exigences de déploiement d’entreprise de la société fictive Fabrikam, Inc. Cette série de didacticiels utilise un exemple de solution&#x2014;le [solution Gestionnaire de contacts](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;pour représenter une application web avec un niveau réaliste de complexité, y compris une application ASP.NET MVC 3, une Communication de Windows Foundation (WCF) service et un projet de base de données.
 
@@ -40,7 +39,6 @@ Une définition de build est le mécanisme qui contrôle comment et quand les bu
 
 > [!NOTE]
 > Pour plus d’informations sur les définitions de build, consultez [définir votre processus de génération](https://msdn.microsoft.com/library/ms181715.aspx).
-
 
 Cette rubrique sera vous montrent comment créer une définition de build qui utilise l’élément de configuration, afin qu’une build est déclenchée lorsqu’un développeur archive du nouveau contenu. Si la génération réussit, le service de build exécute un fichier de projet personnalisé pour déployer la solution dans un environnement de test.
 
@@ -60,7 +58,6 @@ La section suivante explique comment implémenter ce processus en créant une no
 
 > [!NOTE]
 > Cette procédure&#x2014;dans lequel automatisée par un seul processus génère, tests et déploie une solution&#x2014;est susceptible d’être plus adaptée au déploiement pour les environnements de test. Pour les environnements intermédiaire et de production, vous êtes beaucoup plus susceptible de vouloir déployer le contenu à partir d’une build précédente que vous avez déjà vérifié et validé dans un environnement de test. Cette approche est décrite dans la rubrique suivante, [déploiement d’une Build spécifique](deploying-a-specific-build.md).
-
 
 ### <a name="who-performs-this-procedure"></a>Qui exécute cette procédure ?
 
@@ -142,7 +139,6 @@ Vous pouvez utiliser ces informations pour résoudre les problèmes d’échec d
 
 > [!NOTE]
 > Les builds qui exécutent une logique de déploiement sont susceptibles d’échouer jusqu'à ce que vous avez accordé le serveur de builds toutes les autorisations requises dans l’environnement de destination. Pour plus d’informations, consultez [configuration des autorisations pour le déploiement de Build d’équipe](configuring-permissions-for-team-build-deployment.md).
-
 
 ## <a name="monitor-the-build-process"></a>Surveiller le processus de génération
 

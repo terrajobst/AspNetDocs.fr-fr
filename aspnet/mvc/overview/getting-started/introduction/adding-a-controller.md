@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: cc764f3b-6921-486a-8f44-c6ccd1249acd
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: ad5f32a08270ce318c03e1b29acd74d12bbb3d3b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: da914986ff020879dfe634967b39b32250cbf43b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394053"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120851"
 ---
 # <a name="adding-a-controller"></a>Ajour d’un contrôleur
 
@@ -34,13 +34,11 @@ Nous allons être couvrant tous ces concepts dans cette série de didacticiels e
 
 Nous allons commencer en créant une classe de contrôleur. Dans **l’Explorateur de solutions**, avec le bouton droit le *contrôleurs* dossier, puis cliquez sur **ajouter**, puis **contrôleur**.
 
-
 ![](adding-a-controller/_static/image1.png)
 
 Dans le **ajouter une structure** boîte de dialogue, cliquez sur **contrôleur MVC 5 - vide**, puis cliquez sur **ajouter**.
 
 ![](adding-a-controller/_static/image2.png)  
- 
 
 Nommez votre contrôleur « HelloWorldController » et cliquez sur **ajouter**.
 
@@ -80,7 +78,6 @@ Nous allons modifier légèrement l’exemple afin que vous pouvez passer des in
 
 > [!NOTE]
 > Remarque relative à la sécurité : Le code ci-dessus utilise [HttpUtility.HtmlEncode](https://msdn.microsoft.com/library/ee360286(v=vs.110).aspx) pour protéger l’application à partir des entrées malveillantes (à savoir JavaScript). Pour plus d'informations, consultez [Guide pratique pour Protéger contre les attaques de Script dans une Application Web en appliquant l’encodage HTML](https://msdn.microsoft.com/library/a2a4yykt(v=vs.100).aspx).
-
 
  Exécutez votre application et accédez à l’exemple d’URL (`http://localhost:xxxx/HelloWorld/Welcome?name=Scott&numtimes=4`). Vous pouvez essayer différentes valeurs pour `name` et `numtimes` dans l’URL. Le [système de liaison de modèle ASP.NET MVC](http://odetocode.com/Blogs/scott/archive/2009/04/27/6-tips-for-asp-net-mvc-model-binding.aspx) mappe automatiquement les paramètres nommés à partir de la chaîne de requête dans la barre d’adresses aux paramètres de votre méthode.
 

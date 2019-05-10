@@ -8,19 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: 4bc8d19a-80f1-44b4-adbf-95ed22d691ca
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c135bacd7f9f87fac87a3c8cf41bad359bb3c0a2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ed043d76b89ce31945cf3423b0c5afca9383cc21
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379181"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123649"
 ---
 # <a name="aspnet-mvc-routing-overview-vb"></a>Vue d’ensemble du routage ASP.NET MVC (VB)
 
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Dans ce didacticiel, Stephen Walther montre comment l’infrastructure ASP.NET MVC mappe les demandes du navigateur pour les actions de contrôleur.
-
 
 Dans ce didacticiel, vous découvrirez une fonctionnalité importante de toutes les applications ASP.NET MVC appelée *routage ASP.NET*. Le module de routage ASP.NET est chargé du mappage des demandes du navigateur entrantes à des actions de contrôleur MVC particuliers. À la fin de ce didacticiel, vous comprendrez comment la table de routage standard mappe les requêtes à actions du contrôleur.
 
@@ -94,11 +93,9 @@ Enfin, l’appel à la méthode Index() dans la liste des 5 avec la base de l’
 
 [!code-vb[Main](asp-net-mvc-routing-overview-vb/samples/sample5.vb)]
 
-
 [![Appel d’une action de contrôleur qui attend une valeur de paramètre](asp-net-mvc-routing-overview-vb/_static/image1.jpg)](asp-net-mvc-routing-overview-vb/_static/image1.png)
 
 **Figure 01**: Appel d’une action de contrôleur qui attend une valeur de paramètre ([cliquez pour afficher l’image en taille réelle](asp-net-mvc-routing-overview-vb/_static/image2.png))
-
 
 L’URL de base/Index/3, quant à eux, fonctionne parfaitement avec l’action de contrôleur d’Index dans la liste 5. La demande /Home/Index/3 indique à la méthode Index() à être appelée avec un paramètre d’Id qui a la valeur 3.
 

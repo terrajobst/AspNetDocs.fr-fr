@@ -9,12 +9,12 @@ ms.assetid: 053e23c4-13c9-40fa-87cb-3e9b0823b31e
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: c41fc06ad98665f7d48efde030c1341b06e49dd0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4ca9c141b0b48acf2c775a083398d3fb66b51cc2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395288"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121420"
 ---
 # <a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Authentification à deux facteurs à l’aide de SMS et e-mail avec ASP.NET Identity
 
@@ -23,7 +23,6 @@ par [arts martiaux Hao](https://github.com/HaoK), [Pranav Rastogi](https://githu
 > Ce didacticiel vous explique comment configurer l’authentification à deux facteurs (2FA) à l’aide de SMS et e-mail.
 > 
 > Cet article a été écrit par Rick Anderson ([@RickAndMSFT](https://twitter.com/#!/RickAndMSFT)), Pranav Rastogi ([@rustd](https://twitter.com/rustd)), arts martiaux Hao et Suhas Joshi. L’exemple de NuGet a été écrit principalement par arts martiaux Hao.
-
 
 Cette rubrique aborde les thèmes suivants :
 
@@ -43,7 +42,6 @@ Dans cette section, vous utiliserez NuGet pour télécharger un exemple que nous
 > [!NOTE]
 > Avertissement : Vous devez installer Visual Studio [2013 Update 2](https://go.microsoft.com/fwlink/?LinkId=390521) pour suivre ce didacticiel.
 
-
 1. Créer un nouveau ***vide*** projet Web ASP.NET.
 2. Dans la Console du Gestionnaire de Package, entrez ce qui suit les commandes suivantes :  
   
@@ -58,7 +56,6 @@ Dans cette section, vous utiliserez NuGet pour télécharger un exemple que nous
 
 > [!NOTE]
 > Avertissement : Si vous modifiez les paramètres de sécurité dans cet exemple, les applications de productions devez sont soumis à un audit de sécurité appelle explicitement les modifications apportées.
-
 
 <a id="SMS"></a>
 
@@ -212,7 +209,6 @@ Vous pouvez ajouter plus de fournisseurs à 2 facteurs tels que les générateur
 
 > [!NOTE]
 > Les codes à 2 facteurs sont générés à l’aide de [algorithme de mot de passe à usage unique temporels](http://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm) et codes sont valides pendant six minutes. Si vous prenez plus de six minutes à entrer le code, vous obtiendrez un message d’erreur de code non valide.
-
 
 <a id="combine"></a>
 

@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: d4243a4a-e91c-4116-9ae0-5c08e5285677
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/re-use-ui-using-master-pages-and-partials
 msc.type: authoredcontent
-ms.openlocfilehash: e50fb6edb175bd1651212ae6b3daf7b1bf605068
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0b17cb6ac14b7f187bf1f175097a37907689d46e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390140"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128353"
 ---
 # <a name="re-use-ui-using-master-pages-and-partials"></a>Réutiliser l’interface utilisateur avec des pages maîtres et des vues partielles
 
@@ -26,7 +26,6 @@ by [Microsoft](https://github.com/microsoft)
 > Étape 7 examine les façons que nous pouvons appliquer le « principe DRY » au sein de nos modèles de vue pour éliminer les doublons de code, à l’aide de pages maîtres et des modèles de vue partielle.
 > 
 > Si vous utilisez ASP.NET MVC 3, nous vous recommandons de suivre le [mise en route avec MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) ou [Store de musique MVC](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) didacticiels.
-
 
 ## <a name="nerddinner-step-7-partials-and-master-pages"></a>NerdDinner étape 7 : Vues partielles et des Pages maîtres
 

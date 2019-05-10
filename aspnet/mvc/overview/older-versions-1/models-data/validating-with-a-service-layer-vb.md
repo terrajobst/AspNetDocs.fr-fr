@@ -8,19 +8,18 @@ ms.date: 03/02/2009
 ms.assetid: 344bb38e-4965-4c47-bda1-f6d29ae5b83a
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-vb
 msc.type: authoredcontent
-ms.openlocfilehash: fc819494ef58824d485144396e3a995d906c8b42
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 704657ffe6f50eaf3eb0d91d0d334567003ab7f4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398707"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122346"
 ---
 # <a name="validating-with-a-service-layer-vb"></a>Validation avec une couche de service (VB)
 
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Découvrez comment déplacer votre logique de validation en dehors de vos actions de contrôleur et dans une couche de service distinct. Dans ce didacticiel, Stephen Walther explique comment vous pouvez conserver une sharp séparation des préoccupations en isolant votre couche de service à partir de votre couche de contrôleur.
-
 
 L’objectif de ce didacticiel est de décrire une méthode pour la validation dans une application ASP.NET MVC. Dans ce didacticiel, vous allez apprendre à déplacer votre logique de validation en dehors de vos contrôleurs et dans une couche de service distinct.
 

@@ -8,12 +8,12 @@ ms.date: 06/10/2008
 ms.assetid: 48b58a18-5ea4-468c-b326-f35331b3e1e9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/urls-in-master-pages-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a218dffb3d23ca95e9864fb7b272bc6a004386c4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2679429a6c32e53705905cc234ec92314c7de124
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421197"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132032"
 ---
 # <a name="urls-in-master-pages-c"></a>URL dans les pages maîtres (C#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger le Code](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_04_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_04_CS.pdf)
 
 > Adresses comment les URL dans la page maître peuvent fonctionner en raison du fichier de page maître en cours dans un autre répertoire relatif à la page de contenu. Examine l’URL par le biais de la relocalisation ~ dans la syntaxe déclarative et à l’aide de ResolveUrl et ResolveClientUrl par programmation. (Également examiner
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -36,13 +35,11 @@ Une URL sur une page web est dite un *URL relative* si l’emplacement de la res
 
 Par exemple, notre site Web a un `~/Images/` dossier avec un seul fichier image, `PoweredByASPNET.gif`. Le fichier de page maître `Site.master` a un `<img>` élément dans le `footerContent` région par le balisage suivant :
 
-
 [!code-html[Main](urls-in-master-pages-cs/samples/sample1.html)]
 
 Le `src` attribut la valeur dans le `<img>` élément est une URL relative, car il ne commence pas par `/` ou `http://`. En bref, le `src` valeur d’attribut indique au navigateur pour rechercher le `Images` sous-dossier pour un fichier nommé `PoweredByASPNET.gif`.
 
 Lorsque vous visitez une page de contenu, le balisage ci-dessus est envoyé directement au navigateur. Prenez un moment pour visiter `About.aspx` et afficher la source HTML envoyée au navigateur. Vous constaterez que le même balisage exact dans la page maître a été envoyé au navigateur.
-
 
 [!code-html[Main](urls-in-master-pages-cs/samples/sample2.html)]
 
@@ -51,17 +48,13 @@ Si la page de contenu se trouve dans le dossier racine (comme est `About.aspx`) 
 > [!NOTE]
 > Dans le [ *spécifiant le titre, les balises Meta et les autres en-têtes HTML dans la Page maître* ](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md) didacticiel, nous avons créé une classe de page de base personnalisée nommée `BasePage` qui définir automatiquement le contenu du titre de page (si elle a été pas explicitement affectée). N’oubliez pas d’avoir classe code-behind de la page nouvellement créé dérivent `BasePage` afin qu’il peut utiliser cette fonctionnalité.
 
-
 Une fois que vous avez créé cette page de contenu, l’Explorateur de solutions doit ressembler à la Figure 1.
-
 
 ![Un nouveau dossier et la Page ASP.NET ont été ajoutés au projet](urls-in-master-pages-cs/_static/image1.png)
 
 **Figure 01**: Un nouveau dossier et la Page ASP.NET ont été ajoutés au projet
 
-
 Ensuite, mettez à jour le `Web.sitemap` fichier à inclure un nouveau `<siteMapNode>` entrée dans le cadre de cette leçon. Le code XML suivant montre l’ensemble `Web.sitemap` balisage, qui inclut désormais l’ajout d’une troisième `<siteMapNode>` élément.
-
 
 [!code-xml[Main](urls-in-master-pages-cs/samples/sample3.xml)]
 
@@ -69,16 +62,13 @@ Nouvellement créé `Default.aspx` page doit avoir quatre contrôles de contenu 
 
 Le `~/Admin/Default.aspx` page de contenu est envoyé le même code HTML le `footerContent` région tel qu’il a été le `About.aspx` page :
 
-
 [!code-html[Main](urls-in-master-pages-cs/samples/sample4.html)]
 
 Étant donné que le `<img>` l’élément `src` attribut est une URL relative, le navigateur tente de rechercher un `Images` dossier par rapport à l’emplacement du dossier de la page web. En d’autres termes, le navigateur recherche le fichier image `Admin/Images/PoweredByASPNET.gif`.
 
-
 [![Impossible de trouver le fichier Image de PoweredByASPNET.gif](urls-in-master-pages-cs/_static/image3.png)](urls-in-master-pages-cs/_static/image2.png)
 
 **Figure 02**: Le `PoweredByASPNET.gif` Image fichier est introuvable ([cliquez pour afficher l’image en taille réelle](urls-in-master-pages-cs/_static/image4.png))
-
 
 ### <a name="replacing-relative-urls-with-absolute-urls"></a>En remplaçant les URL relatives avec une URL absolue
 
@@ -91,11 +81,9 @@ Pour remédier à l’image rompue indiqué dans la Figure 2, nous devons mettre
 
 Prenez un moment pour mettre à jour le `<img>` l’élément `src` attribut à une URL absolue à l’aide d’une des formes illustrés ci-dessus, puis visitez le `~/Admin/Default.aspx` page via un navigateur. Cette fois, le navigateur sera correctement rechercher et afficher le `PoweredByASPNET.gif` fichier image (voir Figure 3).
 
-
 [![Le PoweredByASPNET.gif Image est maintenant affichée](urls-in-master-pages-cs/_static/image6.png)](urls-in-master-pages-cs/_static/image5.png)
 
 **Figure 03**: Le `PoweredByASPNET.gif` Image est maintenant affichée ([cliquez pour afficher l’image en taille réelle](urls-in-master-pages-cs/_static/image7.png))
-
 
 Bien que coder en dur dans l’URL absolue fonctionne, il associe étroitement votre code HTML pour les serveurs du site Web et l’emplacement de dossier, qui peut changer. À l’aide d’une URL absolue du formulaire `http://localhost:3908/...` est fragile, car le numéro de port précédent `localhost` est sélectionné automatiquement à chaque démarrage d’un serveur Web de développement intégré ASP.NET de Visual Studio. De même, la `http://localhost` partie est valide uniquement lorsque vous testez localement. Une fois le code est déployé sur un serveur de production, la base de l’URL changera à toute autre chose, comme `http://www.yourserver.com`. L’URL absolue sous la forme `/ASPNET_MasterPages_Tutorial_04_CS/...` souffre également la fragilité de même, car souvent, ce chemin d’accès de l’application est différent entre les serveurs de développement et de production.
 
@@ -110,7 +98,6 @@ Le `Control` la classe [ `ResolveClientUrl` méthode](https://msdn.microsoft.com
 > [!NOTE]
 > Étant donné que tous les contrôles de serveur ASP.NET dérivent le `Control` (classe), tous les contrôles serveur ont accès à la `ResolveClientUrl` (méthode). Même si le `Page` classe dérive de la `Control` (classe), ce qui signifie que vous pouvez utiliser cette méthode directement à partir de classes de code-behind de vos pages ASP.NET.
 
-
 ### <a name="usingin-the-declarative-markup"></a>À l’aide de`~`dans le balisage déclaratif
 
 Plusieurs contrôles Web ASP.NET incluent les propriétés liées par l’URL : le contrôle de lien hypertexte a un `NavigateUrl` propriété ; l’Image de contrôle a une `ImageUrl` propriété ; et ainsi de suite. Lors du rendu, ces contrôles passent leur URL des valeurs de propriété à `ResolveClientUrl`. Par conséquent, si ces propriétés contiennent une `~` pour indiquer la racine de l’application web, l’URL est modifié conformément à une URL relative valide.
@@ -119,29 +106,24 @@ N’oubliez pas qu’uniquement des contrôles serveur ASP.NET transformer le `~
 
 Pour corriger le balisage de l’image dans `Site.master`, remplacez le `<img>` élément avec un contrôle ASP.NET Image Web. Définir le contrôle Image Web `ID` à `PoweredByImage`, ses `ImageUrl` propriété `~/Images/PoweredByASPNET.gif`et son `AlternateText` propriété à « Powered by ASP.NET ! »
 
-
 [!code-aspx[Main](urls-in-master-pages-cs/samples/sample5.aspx)]
 
 Après avoir apporté cette modification à la page maître, réexaminez la `~/Admin/Default.aspx` page à nouveau. Cette fois le `PoweredByASPNET.gif` fichier image s’affiche dans la page (voir Figure 3). Lorsque le Web de l’Image de contrôle est restitué il utilise le `ResolveClientUrl` méthode pour résoudre son `ImageUrl` valeur de propriété. Dans `~/Admin/Default.aspx` le `ImageUrl` est convertie en une URL relative appropriée, comme l’extrait de code HTML source montre suivant :
-
 
 [!code-html[Main](urls-in-master-pages-cs/samples/sample6.html)]
 
 > [!NOTE]
 > En plus des propriétés du contrôle Web basé sur l’URL, le `~` peut également être utilisé lors de l’appel le `Response.Redirect` et `Server.MapPath` méthodes, entre autres. En outre, le `ResolveClientUrl` méthode peut être appelée directement à partir d’un ASP.NET ou le balisage déclaratif de la page maître, si nécessaire ; consultez [Fritz Onion](https://www.pluralsight.com/blogs/fritz/)d’entrée de blog [Using `ResolveClientUrl` dans le balisage](https://www.pluralsight.com/blogs/fritz/archive/2006/02/06/18596.aspx).
 
-
 ## <a name="fixing-the-master-pages-remaining-relative-urls"></a>Correction de la Page maître restant des URL relatives
 
 Outre le `<img>` élément dans le `footerContent` que nous avons résolu simplement, la page maître contient une URL relative plus nécessitant notre attention. Le `topContent` région inclut le lien « Master Pages didacticiels, » qui pointe vers `Default.aspx`.
-
 
 [!code-html[Main](urls-in-master-pages-cs/samples/sample7.html)]
 
 Étant donné que cette URL est relative, il envoie l’utilisateur à la `Default.aspx` page dans le dossier de la page de contenu qu’ils visitent. Pour que ce lien pointent toujours vers `Default.aspx` dans le dossier racine, nous devons remplacer le `<a>` élément avec un site Web HyperLink contrôler afin que nous pouvons utiliser le `~` notation.
 
 Supprimer le `<a>` balisage d’élément et ajouter un contrôle de lien hypertexte à la place. Valeur du lien hypertexte `ID` à `lnkHome`, ses `NavigateUrl` propriété `~/Default.aspx`et son `Text` propriété à « Didacticiels de Pages maître ».
-
 
 [!code-aspx[Main](urls-in-master-pages-cs/samples/sample8.aspx)]
 
@@ -151,13 +133,11 @@ C’est tout ! À ce stade, toutes les URL dans notre page maître reposent corr
 
 Dans le [ *création d’une disposition de l’échelle du Site à l’aide des Pages maîtres* ](creating-a-site-wide-layout-using-master-pages-cs.md) didacticiel, nous avons ajouté un `<link>` à la `Styles.css` de fichiers dans le `<head>` région :
 
-
 [!code-aspx[Main](urls-in-master-pages-cs/samples/sample9.aspx)]
 
 Bien que le `<link>` l’élément `href` attribut est relatif, il est automatiquement converti en un chemin d’accès approprié lors de l’exécution. Comme expliqué dans la [ *spécifiant le titre, les balises Meta et les autres en-têtes HTML dans la Page maître* ](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md) didacticiel, le `<head>` région est en fait un contrôle côté serveur, ce qui lui permet de modifier le contenu de ses contrôles internes lorsqu’il est restitué.
 
 Pour vérifier ceci, réexaminez la `~/Admin/Default.aspx` page et afficher la source HTML envoyée au navigateur. Comme l’illustre l’extrait de code ci-dessous, le `<link>` l’élément `href` attribut a été modifié automatiquement vers une URL relative appropriée, `../Styles.css`.
-
 
 [!code-html[Main](urls-in-master-pages-cs/samples/sample10.html)]
 

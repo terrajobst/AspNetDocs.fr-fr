@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: be5ab1e2-4140-4275-ac59-ca82a1bac0c1
 msc.legacyurl: /web-api/overview/older-versions/self-host-a-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 7c73bf4734f8ed8a1bf93595c0847f611ad9cc15
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bae1737ba5b16bc67fa0ed0474ff04df0add1b3a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409601"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134760"
 ---
 # <a name="self-host-aspnet-web-api-1-c"></a>Self-Host ASP.NET Web API 1 (c#)
 
@@ -29,7 +29,6 @@ par [Mike Wasson](https://github.com/MikeWasson)
 > 
 > - Web API 1
 > - Visual Studio 2012
-
 
 ## <a name="create-the-console-application-project"></a>Créer le projet d’Application Console
 

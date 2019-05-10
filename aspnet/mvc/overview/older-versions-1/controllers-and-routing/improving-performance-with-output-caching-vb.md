@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 0e7b4d85-2c46-4eaf-b6a8-6cd566a67334
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0f824bd5e080d42a9df3525ca47b87bcef407f7a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b713b56e149f196794b3223ba88e3b41bf3e34c4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405623"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123372"
 ---
 # <a name="improving-performance-with-output-caching-vb"></a>Amélioration des performances avec la mise en cache de la sortie (VB)
 
 by [Microsoft](https://github.com/microsoft)
 
 > Dans ce didacticiel, vous découvrez comment vous pouvez améliorer considérablement les performances des applications web ASP.NET MVC en tirant parti de la mise en cache de sortie. Vous allez apprendre à mettre en cache le résultat retourné par une action de contrôleur afin que le même contenu n’ait pas besoin soit créée chaque fois qu'un nouvel utilisateur appelle l’action.
-
 
 L’objectif de ce didacticiel est d’expliquer comment vous pouvez améliorer considérablement les performances d’une application ASP.NET MVC en tirant parti du cache de sortie. Le cache de sortie vous permet de mettre en cache le contenu retourné par une action de contrôleur. De cette façon, le même contenu dispense doit être généré chaque fois que la même action de contrôleur est appelée.
 
@@ -36,9 +35,7 @@ Vous activez la mise en cache de sortie en ajoutant un &lt;OutputCache&gt; attri
 
 [!code-vb[Main](improving-performance-with-output-caching-vb/samples/sample1.vb)]
 
-
 Dans les versions bêta d’ASP.NET MVC, la mise en cache de sortie ne fonctionne pas pour une URL telle que [ http://www.MySite.com/ ](http://www.mysite.com/). Au lieu de cela, vous devez entrer une URL telle que [ http://www.MySite.com/Home/Index ](http://www.mysite.com/Home/Index).
-
 
 Dans la liste 1, la sortie de l’action Index() est mis en cache pendant 10 secondes. Si vous préférez, vous pouvez spécifier une durée de cache beaucoup plus de temps. Par exemple, si vous souhaitez mettre en cache la sortie d’une action de contrôleur pendant une journée vous pouvez spécifier une durée de cache de 86 400 secondes (60 secondes \* 60 minutes \* des dernières 24 heures).
 
@@ -79,7 +76,6 @@ Vous pouvez définir la propriété d’emplacement à l’une des valeurs suiva
 > · None
 > 
 > · ServerAndClient
-
 
 Par défaut, la propriété d’emplacement a la valeur Any. Toutefois, il existe des situations dans lesquelles vous souhaiterez cache uniquement sur le navigateur ou uniquement sur le serveur. Par exemple, si vous mettez en cache d’informations personnalisé pour chaque utilisateur puis vous ne devez pas mettre en cache les informations sur le serveur. Si vous affichez des informations différentes à différents utilisateurs puis vous devez mettre en cache les informations uniquement sur le client.
 
@@ -136,7 +132,6 @@ Vous pouvez définir la propriété VaryByParam les valeurs suivantes :
 > None = jamais créer différentes versions de mise en cache
 > 
 > Liste de point-virgule de paramètres = créer différentes versions de mise en cache chaque fois que les paramètres de chaîne de formulaire ou d’une requête dans la liste varie
-
 
 #### <a name="creating-a-cache-profile"></a>Création d’un profil de Cache
 

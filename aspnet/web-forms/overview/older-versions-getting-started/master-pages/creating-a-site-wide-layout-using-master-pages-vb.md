@@ -8,12 +8,12 @@ ms.date: 05/21/2008
 ms.assetid: 30945276-8ed9-4b27-8e50-4309244d3559
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 17ec6128d2da94630bfc6014b9eb17922c544dbc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 724663ef1efdbcdf40ed72f9f2ee44d4a4856959
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402815"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134166"
 ---
 # <a name="creating-a-site-wide-layout-using-master-pages-vb"></a>Création d’une disposition à l’échelle d’un site avec des pages maîtres (VB)
 
@@ -23,16 +23,13 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Ce didacticiel explique les principes de base de page maître. À savoir quelles sont les pages maîtres, comment un crée une page maître, quelles sont les espaces réservés de contenu, comment un crée une page ASP.NET qui utilise une page maître, comment modifier la page maître est automatiquement répercutée dans ses pages de contenu associées et ainsi de suite.
 
-
 ## <a name="introduction"></a>Introduction
 
 Un attribut d’un site Web bien conçu est une mise en page de l’échelle du site cohérent. Prenez le site Web www.asp.net, par exemple. Au moment de la rédaction, chaque page possède le même contenu en haut et bas de la page. Comme le montre la Figure 1, tout en haut de chaque page affiche une barre grise avec une liste de Microsoft Communities. Sous le logo de site, c'est-à-dire la liste des langues dans lequel le site a été traduit et les sections principales : Accueil, prise en main, apprentissage, téléchargements et ainsi de suite. De même, le bas de la page inclut des informations sur la publicité sur www.asp.net, une déclaration de copyright et un lien vers la déclaration de confidentialité.
 
-
 [![Le site Web www.asp.net emploie une apparence cohérente sur toutes les Pages](creating-a-site-wide-layout-using-master-pages-vb/_static/image2.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image1.png)
 
 <strong>Figure 01</strong>: Le site Web www.asp.net emploie un rechercher cohérent et l’impression sur toutes les Pages ([cliquez pour afficher l’image en taille réelle](creating-a-site-wide-layout-using-master-pages-vb/_static/image3.png))
-
 
 Un autre attribut d’un site bien conçu est la facilité avec laquelle l’apparence du site peut être modifiée. La figure 1 montre la page d’accueil www.asp.net à compter de mars 2008, mais entre maintenant et publication de ce didacticiel, l’apparence a peut-être changé. Par exemple les éléments de menu en haut seront développe pour inclure une nouvelle section pour l’infrastructure MVC. Ou peut-être une conception radicalement nouvelle avec différentes couleurs, polices et mise en page sera dévoilée. Appliquer ces modifications à l’ensemble du site doit être un processus rapide et simple qui ne nécessite pas de modification des milliers de pages web qui composent le site.
 
@@ -64,28 +61,22 @@ Les lacunes d’à l’aide de contrôles utilisateur ont été résolus dans AS
 > [!NOTE]
 > Les principaux concepts et les fonctionnalités des pages maîtres n’a pas changé depuis ASP.NET version 2.0. Toutefois, Visual Studio 2008 offre au moment du design prise en charge pour les pages maîtres imbriquées, une fonctionnalité qui était nécessaire dans Visual Studio 2005. Nous allons examiner à l’aide de pages maîtres imbriquées dans un futur didacticiel.
 
-
 Figure 2 montre à quoi peut ressembler la page maître pour www.asp.net. Notez que la page maître définit la disposition de l’échelle du site - le balisage en haut, bas et à droite de chaque page - courants, ainsi que d’un ContentPlaceHolder en milieu à gauche, où se trouve le contenu unique pour chaque page web.
-
 
 ![Une Page maître définit la disposition de l’échelle du Site et les régions modifiables sur une base de Page-par-contenu de la Page contenu](creating-a-site-wide-layout-using-master-pages-vb/_static/image4.png)
 
 **Figure 02**: Une Page maître définit la disposition de l’échelle du Site et les régions modifiables sur une base de Page-par-contenu de la Page contenu
 
-
 Une fois qu’une page maître a été définie, il peut être lié aux nouvelles pages ASP.NET via le cycle d’une case à cocher. Ces pages ASP.NET - appelées pages de contenu - incluent un contrôle de contenu pour chacun des contrôles ContentPlaceHolder de la page maître. Lorsque la page de contenu est visitée via un navigateur le moteur ASP.NET crée la hiérarchie des contrôles de la page maître et injecte la hiérarchie des contrôles de la page de contenu dans les emplacements appropriés. Cette hiérarchie de contrôle combinée est rendue et le code HTML résultant est renvoyé au navigateur de l’utilisateur final. Par conséquent, la page de contenu émet le balisage commun définies dans sa page maître en dehors des contrôles ContentPlaceHolder et le balisage spécifiques à la page définie dans ses propres contrôles de contenu. La figure 3 illustre ce concept.
-
 
 [![Fusion de balisage de la Page demandée dans la Page maître](creating-a-site-wide-layout-using-master-pages-vb/_static/image6.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image5.png)
 
 **Figure 03**: Fusion de balisage de la Page demandée dans la Page maître ([cliquez pour afficher l’image en taille réelle](creating-a-site-wide-layout-using-master-pages-vb/_static/image7.png))
 
-
 Maintenant que nous avons décrit le fonctionnement des pages maître, jetons un œil à la création d’une page maître et les pages de contenu associées à l’aide de Visual Web Developer.
 
 > [!NOTE]
 > Afin d’atteindre l’audience la plus large possible, le site Web ASP.NET que nous créons tout au long de cette série de didacticiels sera créé à l’aide d’ASP.NET 3.5 avec la version gratuite de Microsoft Visual Studio 2008, [Visual Web Developer 2008](https://www.microsoft.com/express/vwd/). Si vous n’avez pas encore mis à niveau vers ASP.NET 3.5, ne vous inquiétez pas : les concepts abordés dans ces didacticiels de travail est aussi bien avec ASP.NET 2.0 et Visual Studio 2005. Toutefois, certaines applications de démonstration peuvent utiliser les nouvelles fonctionnalités introduites dans le .NET Framework version 3.5 ; en cas d’utilisation de fonctionnalités spécifiques à 3.5, j’ai inclure une remarque qui explique comment implémenter des fonctionnalités similaires dans la version 2.0. Gardez à l’esprit que les applications de démonstration disponibles pour les téléchargement à partir de chaque didacticiel cible le .NET Framework version 3.5, ce qui entraîne un `Web.config` fichier qui inclut les éléments de configuration spécifiques à 3.5. En résumé, si vous devez encore installer .NET 3.5 sur votre ordinateur, l’application web téléchargeable ne fonctionnera pas sans supprimer au préalable le balisage spécifique 3.5 à partir de `Web.config`. Consultez [dissection ASP.NET Version 3.5 `Web.config` fichier](http://www.4guysfromrolla.com/articles/121207-1.aspx) pour plus d’informations sur cette rubrique.
-
 
 ## <a name="step-1-creating-a-master-page"></a>Étape 1 : Création d’une Page maître
 
@@ -94,19 +85,15 @@ Avant que nous pouvons Explorer la création et l’utilisation des pages maîtr
 > [!NOTE]
 > Visual Studio prend en charge deux modes de gestion de projet : Projets de Site Web et projets d’Application Web. Projets de Site Web n’ont pas un fichier projet, alors que les projets d’Application Web imiter l’architecture de projet dans Visual Studio .NET 2002/2003 : elles incluent un fichier projet et compiler le code du projet source dans un assembly unique, qui est placé dans le `/bin` dossier. Visual Studio 2005 initialement le seul Site Web pris en charge les projets, bien que le modèle de projet d’Application Web a été réintroduit avec Service Pack 1 ; Visual Studio 2008 offre les deux modèles de projet. Visual Web Developer 2005 et 2008 éditions, toutefois, uniquement prennent en charge les projets de Site Web. J’utilise le modèle de projet de Site Web pour mon démonstrations de cette série de didacticiels. Si vous utilisez une édition non-Express et que vous souhaitez utiliser le [modèle de projet d’Application Web](https://msdn.microsoft.com/library/aa730880(vs.80).aspx) au lieu de cela, n’hésitez pas à le faire, mais n’oubliez pas qu’il existe peut-être des différences entre ce que vous voyez sur votre écran et les étapes que vous devez prendre par rapport à la captures d’écran indiqués et les instructions fournies dans ces didacticiels.
 
-
 [![Créer un Site Web de système de nouveau fichier](creating-a-site-wide-layout-using-master-pages-vb/_static/image9.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image8.png)
 
 **Figure 04**: Créer un Site Web de New File System-Based ([cliquez pour afficher l’image en taille réelle](creating-a-site-wide-layout-using-master-pages-vb/_static/image10.png))
 
-
 Ensuite, ajoutez une page maître au site dans le répertoire racine en cliquant sur le nom du projet, en choisissant Ajouter un nouvel élément et en sélectionnant le modèle de Page maître. Notez que les pages maîtres se terminent par l’extension `.master`. Nommez cette nouvelle page maître `Site.master` et cliquez sur Ajouter.
-
 
 [![Ajouter une Page maître nommée Site.master au site Web](creating-a-site-wide-layout-using-master-pages-vb/_static/image12.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image11.png)
 
 **Figure 05**: Ajouter un nommé de la Page maître `Site.master` au site Web ([cliquez pour afficher l’image en taille réelle](creating-a-site-wide-layout-using-master-pages-vb/_static/image13.png))
-
 
 Ajout d’un nouveau fichier de page maître via Visual Web Developer crée une page maître par le balisage déclaratif suivant :
 
@@ -126,16 +113,13 @@ Ce balisage déclaratif de page maître par défaut sert de point de départ pou
 > [!NOTE]
 > Lors de la conception d’une page maître vous assurer que la page maître contient un formulaire Web et au moins un contrôle ContentPlaceHolder s’affiche dans ce Web Form.
 
-
 ### <a name="creating-a-simple-site-layout"></a>Création d’une disposition Simple Site
 
 Nous allons développer `Site.master`du balisage déclaratif par défaut pour créer une disposition de site où toutes les pages partagent : un en-tête commun, une colonne de gauche avec la navigation, actualités et autres contenus de l’échelle du site ; et un pied de page qui affiche l’icône « Alimentées par Microsoft ASP.NET ». Figure 6 illustre le résultat final de la page maître lorsqu’une de ses pages de contenu est affichée via un navigateur. La région entouré d’un cercle rouge dans la Figure 6 est spécifique à la page qui est visitée (`Default.aspx`) ; le reste du contenu est définie dans la page maître et par conséquent cohérente sur toutes les pages de contenu.
 
-
 [![La Page maître définit le balisage pour le haut, gauche et les parties de bas](creating-a-site-wide-layout-using-master-pages-vb/_static/image15.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image14.png)
 
 **Figure 06**: La définit de Page maître le balisage pour le haut, gauche et les parties de bas ([cliquez pour afficher l’image en taille réelle](creating-a-site-wide-layout-using-master-pages-vb/_static/image16.png))
-
 
 Pour obtenir la mise en page du site illustré à la Figure 6, commencez par la mise à jour le `Site.master` page maître pour qu’il contienne le balisage déclaratif suivant :
 
@@ -152,7 +136,6 @@ Si vous suivez sur votre ordinateur, vous devrez télécharger le code qui accom
 > [!NOTE]
 > Une description de CSS et de mise en forme de page web est abordée dans cet article. Pour plus d’informations sur CSS, consultez le [CSS didacticiels](http://www.w3schools.com/css/default.asp) à [W3Schools.com](http://www.w3schools.com/). J’ai également vous encourageons à télécharger le code qui accompagne cet article de ce didacticiel et s’amuser avec les paramètres de CSS dans `Styles.css` pour voir les effets de différentes règles de mise en forme.
 
-
 ### <a name="creating-a-master-page-using-an-existing-design-template"></a>Création d’une Page maître à l’aide d’un modèle de conception existant
 
 Au fil des années, j’ai créé un nombre d’applications web ASP.NET pour les petites à moyennes entreprises. Certains de mes clients avaient une disposition de site existante, qu'ils voulaient utiliser ; d’autres a embauché un concepteur graphique compétent. Quelques confiée me pour concevoir la disposition du site Web. Comme vous pouvez le voir par la Figure 6, multi-tâches un programmeur pour concevoir la mise en page d’un site Web est donc généralement comme recommandé comme ayant votre comptable effectuer open-heart surgery Contrairement à son médecin au vos impôts.
@@ -161,7 +144,6 @@ Heureusement, il existe des sites Web innumerous qui proposent des modèles de c
 
 > [!NOTE]
 > Microsoft propose également un nombre de [gratuitement des modèles de Kit de démarrage ASP.NET conception](https://msdn.microsoft.com/asp.net/aa336613.aspx) qui s’intègrent dans la boîte de dialogue Nouveau Site Web dans Visual Studio.
-
 
 ## <a name="step-2-creating-associated-content-pages"></a>Étape 2 : Création de Pages de contenu associées
 
@@ -172,16 +154,13 @@ Nous allons ajouter une nouvelle page ASP.NET au projet et le lier à la `Site.m
 > [!NOTE]
 > Si vous avez créé votre site Web ASP.NET à l’aide du modèle de projet d’Application Web au lieu du modèle de projet de Site Web, vous ne verrez pas la case à cocher « Sélectionner la page maître » dans la boîte de dialogue Ajouter un nouvel élément indiquée dans la Figure 7. Pour créer un contenu page lorsque le projet d’Application Web à l’aide de modèle que vous devez choisir le modèle de formulaire de contenu Web au lieu du modèle de formulaire Web. Après avoir sélectionné le modèle de formulaire de contenu Web et en cliquant sur Ajouter, le même sélectionner une Page maître boîte de dialogue illustrée à la Figure 8 s’affiche.
 
-
 [![Ajoutez une nouvelle Page de contenu](creating-a-site-wide-layout-using-master-pages-vb/_static/image18.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image17.png)
 
 **Figure 07**: Ajoutez une nouvelle Page de contenu ([cliquez pour afficher l’image en taille réelle](creating-a-site-wide-layout-using-master-pages-vb/_static/image19.png))
 
-
 [![Sélectionnez la Page Site.master maître](creating-a-site-wide-layout-using-master-pages-vb/_static/image21.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image20.png)
 
 **Figure 08**: Sélectionnez le `Site.master` Page maître ([cliquez pour afficher l’image en taille réelle](creating-a-site-wide-layout-using-master-pages-vb/_static/image22.png))
-
 
 Comme le montre le balisage déclaratif suivant, une nouvelle page de contenu contient un `@Page` directive que pointe en retour vers son maître page et un contrôle de contenu pour chacun des contrôles ContentPlaceHolder de la page maître.
 
@@ -190,28 +169,23 @@ Comme le montre le balisage déclaratif suivant, une nouvelle page de contenu co
 > [!NOTE]
 > Dans la section « Création d’un Simple Site disposition » à l’étape 1, j’ai renommé `ContentPlaceHolder1` à `MainContent`. Si vous n’avez pas renommé ce contrôle ContentPlaceHolder `ID` de la même façon, balisage déclaratif de votre page de contenu est légèrement différentes à partir du balisage indiqué ci-dessus. À savoir, le deuxième contrôle de contenu `ContentPlaceHolderID` reflète le `ID` de ContentPlaceHolder correspondant contrôler dans votre page maître.
 
-
 Lors du rendu d’une page de contenu, le moteur ASP.NET doit fuse de la page de contenu des contrôles avec des contrôles ContentPlaceHolder de sa page maître. Le moteur ASP.NET détermine le contenu de page maître à partir de la `@Page` de directive `MasterPageFile` attribut. Comme le montre le balisage ci-dessus, cette page de contenu est liée à `~/Site.master`.
 
 Étant donné que la page maître a deux contrôles ContentPlaceHolder - `head` et `MainContent` -Visual Web Developer généré deux contrôles de contenu. Chaque contrôle de contenu fait référence à un ContentPlaceHolder particulier par le biais de son `ContentPlaceHolderID` propriété.
 
 Où les pages maîtres brillent sur les techniques de site à l’échelle du modèle précédent est avec leur prise en charge au moment du design. La figure 9 illustre la `About.aspx` page de contenu lorsqu’ils sont affichés via la vue de conception de Visual Web Developer. Notez que bien que le contenu de la page maître est visible, il est grisé et ne peut pas être modifié. Les contrôles de contenu correspondant à ContentPlaceHolders la page maître existe, toutefois, modifiables. Et tout comme avec toute autre page ASP.NET, vous pouvez créer l’interface de la page de contenu en ajoutant des contrôles Web via les vues de Source ou de la conception.
 
-
 [![Mode de création de la Page contenu affiche à la fois le contenu de Page maître et spécifiques à la Page](creating-a-site-wide-layout-using-master-pages-vb/_static/image24.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image23.png)
 
 **Figure 09**: La Page de contenu conception vue affiche à la fois la Page spécifique et contenu de la Page maître ([cliquez pour afficher l’image en taille réelle](creating-a-site-wide-layout-using-master-pages-vb/_static/image25.png))
-
 
 ### <a name="adding-markup-and-web-controls-to-the-content-page"></a>Ajout de contrôles Web et balisage à la Page de contenu
 
 Prenez un moment pour créer du contenu pour le `About.aspx` page. Comme vous pouvez le voir dans la Figure 10, j’ai saisi un en-tête « À propos de l’auteur » et quelques paragraphes de texte, mais vous pouvez également ajouter des contrôles Web. Après avoir créé cette interface, visitez le `About.aspx` page via un navigateur.
 
-
 [![Visitez la Page About.aspx via un navigateur](creating-a-site-wide-layout-using-master-pages-vb/_static/image27.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image26.png)
 
 **Figure 10**: Visitez le `About.aspx` Page via un navigateur ([cliquez pour afficher l’image en taille réelle](creating-a-site-wide-layout-using-master-pages-vb/_static/image28.png))
-
 
 Il est important de comprendre que la page de contenu demandée et sa page maître associée sont fusionnés et rendus dans sa globalité entièrement sur le serveur web. Navigateur de l’utilisateur final est ensuite envoyé le code HTML résultant, de multiplication. Pour le vérifier, afficher le code HTML reçu par le navigateur en accédant au menu Affichage et en choisissant Source. Notez qu’il n’y a aucun frame ou toutes autres techniques spécialisées pour l’affichage de deux pages web différentes dans une fenêtre unique.
 
@@ -232,7 +206,6 @@ Comme il est beaucoup plus facile de créer des pages de contenu qu’il consist
 > [!NOTE]
 > Lorsque vous créez une application ASP.NET, Visual Web Developer ajoute un `Default.aspx` page qui n’est pas lié à une page maître. Si vous souhaitez vous exercer de la conversion d’une page ASP.NET existante dans une page de contenu, accédez à l’avance et le faire avec `Default.aspx`. Vous pouvez également supprimer `Default.aspx` et ajoutez de nouveau, mais cette fois la vérification de la case à cocher « Sélectionner la page maître ».
 
-
 ## <a name="step-3-updating-the-master-pages-markup"></a>Étape 3 : La mise à jour de balisage de la Page maître
 
 Un des principaux avantages des pages maîtres est qu’une seule page maître peut servir à définir la disposition générale pour nombreuses pages sur le site. Par conséquent, l’apparence du site de la mise à jour nécessite un seul fichier - la page maître de la mise à jour.
@@ -247,15 +220,12 @@ Ensuite, créez un `Page_Load` Gestionnaire d’événements pour le contrôleur
 
 Le code ci-dessus définit l’étiquette `Text` propriété à la date et heure actuelles sous la forme du jour de la semaine, le nom du mois et le jour à deux chiffres (voir Figure 11). Avec cette modification, revisiter une de vos pages de contenu. Comme le montre la Figure 11, le balisage qui en résulte est immédiatement mis à jour pour inclure la modification à la page maître.
 
-
 [![Les modifications apportées à la Page maître sont répercutées lors de l’affichage l’une Page de contenu](creating-a-site-wide-layout-using-master-pages-vb/_static/image30.png)](creating-a-site-wide-layout-using-master-pages-vb/_static/image29.png)
 
 **Figure 11**: Les modifications apportées à la Page maître sont répercutées lors de l’affichage l’une Page de contenu ([cliquez pour afficher l’image en taille réelle](creating-a-site-wide-layout-using-master-pages-vb/_static/image31.png))
 
-
 > [!NOTE]
 > Comme l’illustre cet exemple, les pages maîtres peuvent contenir des contrôles Web côté serveur, code et gestionnaires d’événements.
-
 
 ## <a name="summary"></a>Récapitulatif
 

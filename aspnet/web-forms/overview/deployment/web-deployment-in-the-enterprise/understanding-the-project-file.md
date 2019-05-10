@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 07978d9d-341c-4524-bcba-62976f390f77
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file
 msc.type: authoredcontent
-ms.openlocfilehash: d774a8e13e108d1be4c39e1e909d3d9683968a0d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f57d7597a1454a53f5e87b4d69eee8ec8972e37c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404921"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121929"
 ---
 # <a name="understanding-the-project-file"></a>Présentation du fichier projet
 
@@ -30,7 +30,6 @@ par [Jason Lee](https://github.com/jrjlee)
 > - Comment comprendre les composants clés d’un fichier projet.
 > - Comment vous pouvez utiliser des fichiers de projet pour créer et déployer des applications complexes.
 
-
 ## <a name="msbuild-and-the-project-file"></a>MSBuild et le fichier de projet
 
 Lorsque vous créez et créez des solutions dans Visual Studio, Visual Studio utilise MSBuild pour générer chaque projet dans votre solution. Chaque projet Visual Studio inclut un fichier de projet MSBuild, avec une extension de fichier qui reflète le type de projet&#x2014;par exemple, un projet c# (.csproj), un projet Visual Basic.NET (.vbproj) ou un projet de base de données (.dbproj). Pour pouvoir générer un projet, MSBuild doit traiter le fichier projet associé au projet. Le fichier projet est un document XML qui contient toutes les informations et instructions que MSBuild a besoin pour générer votre projet, telles que le contenu à inclure, exigences de plates-formes, informations de versioning, serveur web ou paramètres du serveur de base de données et le tâches qui doivent être réalisées.
@@ -39,7 +38,6 @@ Fichiers projet MSBuild sont basées sur le [schéma XML MSBuild](https://msdn.m
 
 > [!NOTE]
 > Vous pouvez également utiliser des fichiers projet MSBuild avec le service Team Build dans Team Foundation Server (TFS). Par exemple, vous pouvez utiliser des fichiers de projet dans les scénarios d’intégration continue (CI) pour automatiser le déploiement dans un environnement de test lorsque le nouveau code est archivé. Pour plus d’informations, consultez [configuration Team Foundation Server pour le déploiement de Web automatisée](../configuring-team-foundation-server-for-web-deployment/configuring-team-foundation-server-for-web-deployment.md).
-
 
 ### <a name="project-file-naming-conventions"></a>Conventions d’affectation de noms de fichier de projet
 
@@ -61,7 +59,6 @@ La bonne nouvelle est que vous pouvez tirer parti des points d’intégration fo
 > [!NOTE]
 > Pour plus d’informations sur comment fonctionne le processus de déploiement d’application web, consultez [vue d’ensemble du déploiement de projet d’Application ASP.NET Web](https://msdn.microsoft.com/library/dd394698.aspx).
 
-
 ## <a name="the-anatomy-of-a-project-file"></a>Anatomie d’un fichier de projet
 
 Avant d’examiner plus en détail le processus de génération, il est important de prendre quelques instants pour vous familiariser avec la structure de base d’un fichier projet MSBuild. Cette section fournit une vue d’ensemble des éléments plus communs que vous allez rencontrer lorsque vous passez en revue, modifiez ou créez un fichier projet. En particulier, vous apprendrez à :
@@ -78,45 +75,33 @@ Cet exemple montre la relation entre les éléments clés dans un fichier projet
 
 Le [projet](https://msdn.microsoft.com/library/bcxfsh87.aspx) élément est l’élément racine de chaque fichier de projet. En plus d’identifier le schéma XML pour le fichier projet, le **projet** élément peut inclure des attributs pour spécifier les points d’entrée pour le processus de génération. Par exemple, dans le [solution d’exemple de gestionnaire de contacts](the-contact-manager-solution.md), le *Publish.proj* fichier Spécifie que la build doit démarrer en appelant la cible nommée **FullPublish**.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample1.xml)]
-
 
 ### <a name="properties-and-conditions"></a>Propriétés et des Conditions
 
 Un fichier de projet doit généralement fournir un grand nombre d’éléments d’information afin de créer et déployer vos projets différents. Ces éléments d’information peut inclure des noms de serveur, les chaînes de connexion, informations d’identification, les configurations de build, chemins d’accès de fichier source et de destination et toute autre information que vous souhaitez inclure pour prendre en charge la personnalisation. Dans un fichier de projet, les propriétés doivent être définies dans un [PropertyGroup](https://msdn.microsoft.com/library/t4w159bs.aspx) élément. Propriétés MSBuild sont constitués de paires clé-valeur. Dans le **PropertyGroup** élément, le nom d’élément définit la clé de propriété et le contenu de l’élément définit la valeur de propriété. Par exemple, vous pouvez définir des propriétés nommées **nom_serveur** et **ConnectionString** pour stocker une chaîne de connexion et de nom de serveur statique.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample2.xml)]
-
 
 Pour récupérer une valeur de propriété, vous utilisez le format **$(***PropertyName***) ***.* Par exemple, pour récupérer la valeur de la **nom_serveur** propriété, vous devez taper :
 
-
 [!code-powershell[Main](understanding-the-project-file/samples/sample3.ps1)]
-
 
 > [!NOTE]
 > Vous verrez des exemples d’et quand utiliser les valeurs de propriété plus loin dans cette rubrique.
 
-
 Incorporation d’informations en tant que propriétés statiques dans un fichier projet n’est pas toujours l’approche idéale pour la gestion du processus de génération. Dans de nombreux scénarios, vous souhaitez obtenir les informations provenant d’autres sources, ou permettre à l’utilisateur à fournir les informations à partir de l’invite de commandes. MSBuild vous permet de spécifier n’importe quelle valeur de propriété comme un paramètre de ligne de commande. Par exemple, l’utilisateur peut fournir une valeur pour **nom_serveur** quand il ou elle exécute MSBuild.exe à partir de la ligne de commande.
-
 
 [!code-console[Main](understanding-the-project-file/samples/sample4.cmd)]
 
-
 > [!NOTE]
 > Pour plus d’informations sur les arguments et les commutateurs que vous pouvez utiliser avec MSBuild.exe, consultez [référence de ligne de commande MSBuild](https://msdn.microsoft.com/library/ms164311.aspx).
-
 
 Vous pouvez utiliser la même syntaxe de propriété pour obtenir les valeurs des variables d’environnement et des propriétés de projet intégrés. Un grand nombre de propriétés couramment utilisées est défini pour vous, et vous pouvez les utiliser dans vos fichiers projet en incluant le nom de paramètre concerné. Par exemple, pour récupérer la plateforme de projet actuelle&#x2014;, par exemple, **x86** ou **AnyCpu**&#x2014;vous pouvez inclure le **$(Platform)** référence de propriété dans votre fichier projet. Pour plus d’informations, consultez [Macros pour les commandes de génération et les propriétés](https://msdn.microsoft.com/library/c02as0cs.aspx), [propriétés communes des projets MSBuild](https://msdn.microsoft.com/library/bb629394.aspx), et [propriétés réservées](https://msdn.microsoft.com/library/ms164309.aspx).
 
 Propriétés sont souvent utilisées conjointement avec *conditions*. La plupart des éléments MSBuild prennent en charge la **Condition** attribut, qui vous permet de spécifier les critères sur lesquels MSBuild doit évaluer l’élément. Par exemple, considérez cette définition de propriété :
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample5.xml)]
-
 
 Quand MSBuild traite cette définition de propriété, il vérifie d’abord pour voir si un **$(OutputRoot)** valeur de propriété n’est disponible. Si la valeur de propriété est vide&#x2014;en d’autres termes, l’utilisateur n’a pas fourni une valeur pour cette propriété&#x2014;la condition prend la valeur **true** et la valeur de propriété est définie sur **... \Publish\Out**. Si l’utilisateur a fourni une valeur pour cette propriété, la condition prend la valeur **false** et la valeur de propriété statique n’est pas utilisée.
 
@@ -126,27 +111,20 @@ Pour plus d’informations sur les différentes façons dans lequel vous pouvez 
 
 Un des rôles importants du fichier projet consiste à définir les entrées dans le processus de génération. En règle générale, ces entrées sont des fichiers&#x2014;code des fichiers, les fichiers de configuration, les fichiers de commandes et tous les autres fichiers dont vous avez besoin pour traiter ou de copier en tant que partie du processus de génération. Dans le schéma de projet MSBuild, ces entrées sont représentées par [élément](https://msdn.microsoft.com/library/ms164283.aspx) éléments. Dans un fichier de projet, les éléments doivent être définies dans un [ItemGroup](https://msdn.microsoft.com/library/646dk05y.aspx) élément. Tout comme **propriété** éléments, vous pouvez nommer un **élément** élément comme vous le souhaitez. Toutefois, vous devez spécifier un **Include** attribut pour identifier le fichier ou le caractère générique qui représente l’élément.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample6.xml)]
-
 
 En spécifiant plusieurs **élément** éléments portant le même nom, que vous créez en fait une liste nommée des ressources. Un bon moyen de voir comment cela fonctionne consiste à jeter un coup de œil à l’intérieur d’un des fichiers du projet créé par Visual Studio. Par exemple, le *ContactManager.Mvc.csproj* le fichier dans l’exemple de solution inclut un grand nombre de groupes d’éléments, chacun avec plusieurs nom identique **élément** éléments.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample7.xml)]
-
 
 De cette façon, le fichier projet est Indiquez à MSBuild pour construire des listes de fichiers qui doivent être traitées de la même façon&#x2014;le **référence** liste inclut des assemblys qui doivent être en place pour une génération réussie, le  **Compiler** liste inclut les fichiers de code qui doivent être compilés, et le **contenu** liste contient des ressources qui doivent être copiés sans modification. Nous allons examiner comment le processus de génération fait référence et utilise ces éléments plus loin dans cette rubrique.
 
 Éléments item peuvent également inclure [ItemMetadata](https://msdn.microsoft.com/library/ms164284.aspx) éléments enfants. Celles-ci sont définies par l’utilisateur des paires clé-valeur et essentiellement représentent les propriétés qui sont spécifiques à cet élément. Par exemple, un grand nombre de la **compiler** incluent des éléments dans le fichier projet **DependentUpon** éléments enfants.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample8.xml)]
-
 
 > [!NOTE]
 > En plus des métadonnées de l’élément créée par l’utilisateur, tous les éléments sont affectés à différentes métadonnées communes lors de la création. Pour plus d’informations, consultez l’article [Well-known Item Metadata (Métadonnées d’élément connues MSBuild)](https://msdn.microsoft.com/library/ms164313.aspx).
-
 
 Vous pouvez créer **ItemGroup** éléments dans le niveau racine **projet** élément ou au sein de spécifiques **cible** éléments. **ItemGroup** éléments prennent également en charge **Condition** attributs, qui vous permet de personnaliser les entrées dans le processus de génération en fonction des conditions telles que la configuration de projet ou de la plateforme.
 
@@ -163,30 +141,21 @@ Dans le schéma MSBuild, un [tâche](https://msdn.microsoft.com/library/77f2hx1s
 > [!NOTE]
 > Pour obtenir des informations complètes sur les tâches qui sont disponibles prêtes à l’emploi, consultez [référence des tâches MSBuild](https://msdn.microsoft.com/library/7z253716.aspx). Pour plus d’informations sur les tâches, y compris comment créer vos propres tâches personnalisées, consultez [tâches MSBuild](https://msdn.microsoft.com/library/ms171466.aspx).
 
-
 Tâches doivent toujours être contenues dans [cible](https://msdn.microsoft.com/library/t50z2hka.aspx) éléments. Un **cible** élément est un ensemble d’une ou plusieurs tâches sont exécutées séquentiellement, et un fichier de projet peut contenir plusieurs cibles. Lorsque vous souhaitez exécuter une tâche ou un ensemble de tâches, vous appelez la cible qui les contient. Par exemple, supposons que vous disposez d’un fichier de projet simple qui enregistre un message.
-
 
 [!code-xml[Main](understanding-the-project-file/samples/sample9.xml)]
 
-
 Vous pouvez appeler la cible à partir de la ligne de commande à l’aide de la **/t** commutateur pour spécifier la cible.
-
 
 [!code-console[Main](understanding-the-project-file/samples/sample10.cmd)]
 
-
 Vous pouvez également ajouter un **DefaultTargets** attribut le **projet** élément, pour spécifier les cibles que vous souhaitez appeler.
-
 
 [!code-xml[Main](understanding-the-project-file/samples/sample11.xml)]
 
-
 Dans ce cas, vous n’avez pas besoin de spécifier la cible à partir de la ligne de commande. Vous pouvez spécifier simplement le fichier projet et MSBuild appellera le **FullPublish** cible pour vous.
 
-
 [!code-console[Main](understanding-the-project-file/samples/sample12.cmd)]
-
 
 Cibles et tâches peuvent inclure **Condition** attributs. Par conséquent, vous pouvez choisir d’omettre des cibles entières ou des tâches individuelles si certaines conditions sont remplies.
 
@@ -198,12 +167,9 @@ En règle générale, lorsque vous créez des tâches utiles et cibles, vous dev
 > [!NOTE]
 > N’oubliez pas que si vous créez plusieurs éléments portant le même nom, vous créez une liste. En revanche, si vous créez plusieurs propriétés portant le même nom, la dernière valeur de propriété que vous fournissez remplacera toutes les propriétés précédentes portant le même nom&#x2014;une propriété peut contenir uniquement une valeur unique.
 
-
 Par exemple, dans le *Publish.proj* de fichiers dans l’exemple de solution, jetez un coup de œil à la **BuildProjects** cible.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample13.xml)]
-
 
 Dans cet exemple, vous pouvez observer ces points clés :
 
@@ -221,7 +187,6 @@ Vous pouvez également voir que le **MSBuild** tâche appelle une cible nommée 
 > [!NOTE]
 > Pour plus d’informations sur les cibles, consultez [cibles MSBuild](https://msdn.microsoft.com/library/ms171462.aspx).
 
-
 ## <a name="splitting-project-files-to-support-multiple-environments"></a>Fractionner des fichiers de projet pour prendre en charge plusieurs environnements
 
 Supposons que vous souhaitez être en mesure de déployer une solution dans plusieurs environnements, tels que les serveurs de test, intermédiaires plateformes et les environnements de production. La configuration peut varier considérablement entre ces environnements&#x2014;non seulement en termes de noms de serveur, chaînes de connexion et ainsi de suite, mais aussi potentiellement en termes d’informations d’identification, paramètres de sécurité et bien d’autres facteurs. Si vous devez faire cela régulièrement, il n’est pas vraiment utile de modifier plusieurs propriétés de votre fichier projet chaque fois que vous changez l’environnement cible. Et n’est pas une solution idéale pour exiger une liste sans fin des valeurs de propriété doit être fourni pour le processus de génération.
@@ -233,15 +198,11 @@ Heureusement il existe une alternative. MSBuild vous permet de fractionner votre
 
 Maintenant Notez que le *Publish.proj* fichier inclut une [importation](https://msdn.microsoft.com/library/92x05xfs.aspx) élément, immédiatement sous l’accolade ouvrante **projet** balise.
 
-
 [!code-xml[Main](understanding-the-project-file/samples/sample16.xml)]
-
 
 Le **importer** élément est utilisé pour importer le contenu d’un autre fichier de projet MSBuild dans le fichier de projet MSBuild en cours. Dans ce cas, le **TargetEnvPropsFile** paramètre fournit le nom de fichier du fichier projet à importer. Vous pouvez fournir une valeur pour ce paramètre lorsque vous exécutez MSBuild.
 
-
 [!code-console[Main](understanding-the-project-file/samples/sample17.cmd)]
-
 
 Ce efficace fusionne le contenu des deux fichiers dans un seul fichier projet. À l’aide de cette approche, vous pouvez créer un fichier de projet qui contient votre configuration de build universelle et plusieurs fichiers de projet supplémentaires qui contient les propriétés spécifiques à l’environnement. Par conséquent, il vous suffit d’exécuter une commande avec une valeur de paramètre différente vous permet de déployer votre solution vers un autre environnement.
 
@@ -251,7 +212,6 @@ Fractionnement de vos fichiers de projet de cette façon est une bonne pratique 
 
 > [!NOTE]
 > Pour obtenir des conseils sur la façon de personnaliser les fichiers de projet spécifique à l’environnement pour vos propres environnements serveur, consultez [configuration des propriétés de déploiement pour un environnement cible](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
-
 
 ## <a name="conclusion"></a>Conclusion
 

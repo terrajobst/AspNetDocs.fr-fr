@@ -8,12 +8,12 @@ ms.date: 10/07/2008
 ms.assetid: e454c67d-a86e-4119-a858-eb04bbec2dff
 msc.legacyurl: /mvc/overview/older-versions-1/views/creating-custom-html-helpers-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 23741d7974713102e6ccb46ced5d62ec202505e8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 41306a7f09b830e0ee88135326a48beaadcfb28c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400852"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126647"
 ---
 # <a name="creating-custom-html-helpers-c"></a>Création de helpers HTML personnalisés (C#)
 
@@ -22,7 +22,6 @@ by [Microsoft](https://github.com/microsoft)
 [Télécharger PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_9_CS.pdf)
 
 > L’objectif de ce didacticiel consiste à montrer comment vous pouvez créer des programmes d’assistance HTML personnalisé que vous pouvez utiliser dans vos vues MVC. En tirant parti des programmes d’assistance HTML, vous pouvez réduire la quantité de frappe fastidieux de balises HTML que vous devez effectuer pour créer une page HTML standard.
-
 
 L’objectif de ce didacticiel consiste à montrer comment vous pouvez créer des programmes d’assistance HTML personnalisé que vous pouvez utiliser dans vos vues MVC. En tirant parti des programmes d’assistance HTML, vous pouvez réduire la quantité de frappe fastidieux de balises HTML que vous devez effectuer pour créer une page HTML standard.
 
@@ -48,11 +47,9 @@ L’infrastructure ASP.NET MVC inclut l’ensemble des programmes d’assistance
 
 Par exemple, considérez le formulaire dans le Listing 1. Ce formulaire est restitué à l’aide de deux des programmes d’assistance HTML standard (voir Figure 1). Ce formulaire utilise la `Html.BeginForm()` et `Html.TextBox()` les méthodes d’assistance pour restituer un formulaire HTML simple.
 
-
 [![Page rendue avec des programmes d’assistance HTML](creating-custom-html-helpers-cs/_static/image2.png)](creating-custom-html-helpers-cs/_static/image1.png)
 
 **Figure 01**: Page rendue avec des programmes d’assistance HTML ([cliquez pour afficher l’image en taille réelle](creating-custom-html-helpers-cs/_static/image3.png))
-
 
 **Liste 1 : `Views\Home\Index.aspx`**
 
@@ -103,11 +100,9 @@ En second lieu, notez que le premier paramètre de la `Label()` méthode est pr�
 
 Après avoir créé une méthode d’extension et que vous générez votre application avec succès, la méthode d’extension s’affiche dans Intellisense dans Visual Studio comme tous les autres méthodes d’une classe (voir Figure 2). La seule différence est qu’extension méthodes apparaissent avec un symbole spécial en regard (il s’agit d’une icône d’une flèche vers le bas).
 
-
 [![À l’aide de la méthode d’extension Html.Label()](creating-custom-html-helpers-cs/_static/image5.png)](creating-custom-html-helpers-cs/_static/image4.png)
 
 **Figure 02**: À l’aide de la méthode d’extension Html.Label() ([cliquez pour afficher l’image en taille réelle](creating-custom-html-helpers-cs/_static/image6.png))
-
 
 La vue Index modifiée sur la liste 4 utilise la méthode d’extension Html.Label() pour restituer tous ses `<label>` balises.
 

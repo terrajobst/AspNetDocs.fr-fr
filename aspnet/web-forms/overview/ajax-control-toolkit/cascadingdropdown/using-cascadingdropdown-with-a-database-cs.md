@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 684f0c28-a490-4e5b-b5e5-5dfb77464b49
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-cascadingdropdown-with-a-database-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ef40d71828237a3d086c7c1bb05de56e0770f588
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 706a099042a298f8870f36cb653f1e5d5d156f2a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391271"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125162"
 ---
 # <a name="using-cascadingdropdown-with-a-database-c"></a>Utilisation de CascadingDropDown avec une base de données (C#)
 
@@ -22,7 +22,6 @@ par [Christian Wenz](https://github.com/wenz)
 [Télécharger le Code](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown1.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown1CS.pdf)
 
 > Le contrôle CascadingDropDown dans AJAX Control Toolkit étend un contrôle DropDownList afin que les modifications dans un DropDownList charges associés à des valeurs dans un autre objet DropDownList. Pour que cela fonctionne, un service web spéciale doit être créé.
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -85,11 +84,9 @@ Le reste de la méthode est relativement simple, puis. CODE du fournisseur est u
 
 Chargement de la page ASP.NET, et après quelques instants, la liste des fournisseurs est remplie avec les entrées de 25. Choisir une seule entrée et notez la façon dont la deuxième liste déroulante est remplie avec des données.
 
-
 [![La première liste est automatiquement](using-cascadingdropdown-with-a-database-cs/_static/image2.png)](using-cascadingdropdown-with-a-database-cs/_static/image1.png)
 
 La première liste est automatiquement ([cliquez pour afficher l’image en taille réelle](using-cascadingdropdown-with-a-database-cs/_static/image3.png))
-
 
 [![La deuxième liste est remplie selon votre sélection dans la première liste](using-cascadingdropdown-with-a-database-cs/_static/image5.png)](using-cascadingdropdown-with-a-database-cs/_static/image4.png)
 

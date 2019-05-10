@@ -8,19 +8,18 @@ ms.date: 08/14/2010
 ms.assetid: e8f1515c-c277-47ff-a23e-224118f13f02
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part3
 msc.type: authoredcontent
-ms.openlocfilehash: 3eff3aceea302c51e6970bb13fbee3a8bf98a71d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 462b1210c45da67058899193afcea973f3daf122
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411980"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123052"
 ---
 # <a name="adding-a-view"></a>Ajout d’une vue
 
 par [Scott Hanselman](https://github.com/shanselman)
 
 > Il s’agit d’un didacticiel de débutant qui présente les principes de base d’ASP.NET MVC. Vous allez créer une application web simple qui lit et écrit à partir d’une base de données. Visitez le [centre d’apprentissage ASP.NET MVC](../../../index.md) pour rechercher d’autres ASP.NET MVC didacticiels et exemples.
-
 
 Dans cette section, nous allons examiner comment nous pouvons avoir notre classe HelloWorldController utiliser un fichier de modèle de vue pour encapsuler proprement génération réponses HTML à un client.
 
@@ -99,7 +98,6 @@ Même s’il est sur plusieurs lignes, notre méthode Bienvenue n’existe que d
 Nous devons à présent d’un modèle de vue Bienvenue ! Cliquez avec le bouton droit dans la méthode de bienvenue et sélectionnez Ajouter une vue. Cette fois-ci, nous allons vérifier « Créer une vue fortement typée » et sélectionnez notre classe WelcomeViewModel dans la liste déroulante. Cette nouvelle vue sera uniquement savoir sur WelcomeViewModels et aucun autre type d’objets.
 
 > *REMARQUE : Vous devez avoir compilé une fois après l’ajout de votre WelcomeViewModel pour s’affichent dans la liste déroulante.*
-
 
 Voici à quoi doit ressembler votre boîte de dialogue Ajouter une vue. Cliquez sur le bouton Ajouter. ![Ajouter la que vue encerclé](getting-started-with-mvc-part3/_static/image10.png)
 

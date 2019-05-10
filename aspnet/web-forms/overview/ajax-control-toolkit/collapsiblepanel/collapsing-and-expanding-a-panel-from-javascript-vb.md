@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 298789b4-2964-49f5-a0a8-d4dbeb9ff2c2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b41423cb1e587df121828b1e57045cabfede7cb5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f9e279e8700024f28cf589581f09a4bbd95118de
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390829"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133545"
 ---
 # <a name="collapsing-and-expanding-a-panel-from-javascript-vb"></a>Réduction et développement d’un panneau à partir de JavaScript (VB)
 
@@ -22,7 +22,6 @@ par [Christian Wenz](https://github.com/wenz)
 [Télécharger le Code](http://download.microsoft.com/download/8/a/a/8aab3c3e-de6f-463f-805c-5fda567eef6e/CollapsiblePanel1.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/collapsiblepanel1VB.pdf)
 
 > Le contrôle CollapsiblePanel dans ASP.NET AJAX Control Toolkit étend un panneau et lui fournit la fonctionnalité pour réduire son contenu et le développer à nouveau. Ces deux actions peuvent également être déclenchées à partir de code JavaScript personnalisé.
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -63,7 +62,6 @@ Pour une fermeture ou réduire le panneau de configuration, le `_doClose()` mét
 Le troisième bouton bascule l’état du panneau : à partir de réduits à développée et vice versa. Le `CollapsiblePanelExtender` expose le `toggle()` méthode qui est exactement ce que : inverse l’état du panneau. Toutefois, il est également une autre approche (qui est utilisé en interne par le `toggle()` (méthode)) : Le `get_Collapsed()` méthode de la `CollapsiblePanelExtender()` nous indique si le panneau est réduit ou non. Selon la valeur de retour de cette fonction, le panneau est ensuite soit développé (`_doOpen()` méthode) ou réduit (`_doClose()`) méthode :
 
 [!code-javascript[Main](collapsing-and-expanding-a-panel-from-javascript-vb/samples/sample8.js)]
-
 
 [![Le troisième bouton modifie l’état du panneau : à partir de réduits à développée et précédent](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image2.png)](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image1.png)
 

@@ -8,12 +8,12 @@ ms.date: 03/24/2008
 ms.assetid: 83b4f5a4-4f5a-4380-ba33-f0b5c5ac6a75
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/role-based-authorization-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 05b014538891e6c058c4d4bd4125de434f59d9fe
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2cccb05d3bd18562ccc03ce0047ccea9b514abc7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389685"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134623"
 ---
 # <a name="role-based-authorization-vb"></a>Autorisation basée sur le rôle (VB)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger le Code](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/VB.11.zip) ou [télécharger le PDF](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/aspnet_tutorial11_RoleAuth_vb.pdf)
 
 > Ce didacticiel commence par examiner comment le framework de rôles associe des rôles d’un utilisateur à son contexte de sécurité. Il examine ensuite comment appliquer des règles d’autorisation d’URL en fonction du rôle. Suivant, nous allons examiner à l’aide de moyens déclaratives et par programme pour modifier les données affichées et les fonctionnalités offertes par une page ASP.NET.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -46,11 +45,9 @@ Figure 1 illustre le flux de travail du pipeline ASP.NET lors de l’utilisation
 
 Si un utilisateur anonyme visite le site, ni le `FormsAuthenticationModule` ni le `RoleManagerModule` crée un objet principal.
 
-
 [![Les événements de Pipeline ASP.NET pour un utilisateur authentifié lors de l’utilisation de l’authentification par formulaire et l’infrastructure de rôles](role-based-authorization-vb/_static/image2.png)](role-based-authorization-vb/_static/image1.png)
 
 **Figure 1**: Les événements de Pipeline ASP.NET pour une authentification utilisateur lorsque à l’aide de l’authentification par formulaire et l’infrastructure de rôles ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image3.png))
-
 
 ### <a name="caching-role-information-in-a-cookie"></a>La mise en cache des informations de rôle dans un Cookie
 
@@ -58,17 +55,14 @@ Le `RolePrincipal` l’objet `IsInRole(roleName)` les appels de méthode `Roles`
 
 Si l’infrastructure de rôles est configurée pour mettre en cache des rôles de l’utilisateur dans un cookie, le `RoleManagerModule` crée le cookie pendant le pipeline ASP.NET [ `EndRequest` événement](https://msdn.microsoft.com/library/system.web.httpapplication.endrequest.aspx). Ce cookie est utilisé dans les demandes suivantes dans le `PostAuthenticateRequest`, c'est-à-dire lorsque la `RolePrincipal` objet est créé. Si le cookie est valide et n’a pas expiré, les données dans le cookie sont analysées et utilisées pour remplir les rôles de l’utilisateur, ce qui l’enregistrement le `RolePrincipal` d’avoir à effectuer un appel à la `Roles` classe pour déterminer les rôles de l’utilisateur. La figure 2 illustre ce flux de travail.
 
-
 [![Informations de rôle de l’utilisateur peuvent être stockées dans un Cookie pour améliorer les performances](role-based-authorization-vb/_static/image5.png)](role-based-authorization-vb/_static/image4.png)
 
 **Figure 2**: Rôle informations peuvent être stockées l’utilisateur dans un Cookie pour améliorer les performances ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image6.png))
-
 
 Par défaut, le mécanisme de cookie de rôle du cache est désactivé. Il peut être activé via le `<roleManager>`; balisage de configuration dans `Web.config`. Nous avons abordé à l’aide de la [ `<roleManager>` élément](https://msdn.microsoft.com/library/ms164660.aspx) pour spécifier des fournisseurs de rôles dans le <a id="_msoanchor_4"> </a> [ *création et gestion des rôles* ](creating-and-managing-roles-vb.md) (didacticiel), afin de vous disposez déjà cet élément de votre application `Web.config` fichier. Les paramètres de cookies de cache de rôle sont spécifiées en tant qu’attributs de la `<roleManager>`; élément et sont résumées dans le tableau 1.
 
 > [!NOTE]
 > Les paramètres de configuration répertoriées dans le tableau 1 spécifient les propriétés du cookie de cache de rôle qui en résulte. Pour plus d’informations sur les cookies, leur fonctionnement et leurs différentes propriétés, consultez [ce didacticiel de Cookies](http://www.quirksmode.org/js/cookies.html).
-
 
 | <strong>Property</strong> |                                                                                                                                                                                                                                                                                                                                                         <strong>Description</strong>                                                                                                                                                                                                                                                                                                                                                          |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -96,7 +90,6 @@ C’est aussi simple que cela ! Désormais, le framework de rôles met en cache 
 > [!NOTE]
 > Les modèles de Microsoft &amp; groupe de pratiques déconseille l’utilisation de cookies de cache de rôle persistant. Étant donné que la possession du cookie de cache de rôle est suffisante pour prouver l’appartenance au rôle, si un pirate informatique d’une certaine manière peuvent-ils accéder à des cookies d’un utilisateur valide qu’il peut emprunter l’identité de cet utilisateur. La probabilité de cette situation se produise augmente si le cookie est rendu persistant sur le navigateur de l’utilisateur. Pour plus d’informations sur cette recommandation de sécurité, ainsi que d’autres problèmes de sécurité, reportez-vous à la [liste de questions de sécurité pour ASP.NET 2.0](https://msdn.microsoft.com/library/ms998375.aspx).
 
-
 ## <a name="step-1-defining-role-based-url-authorization-rules"></a>Étape 1 : Définition de règles d’autorisation URL basée sur un rôle
 
 Comme indiqué dans le <a id="_msoanchor_6"> </a> [ *autorisation basée sur l’utilisateur* ](../membership/user-based-authorization-vb.md) (didacticiel), l’autorisation d’URL offre un moyen de restreindre l’accès à un ensemble de pages sur un utilisateur par l’utilisateur ou un rôle par rôle base. Les règles d’autorisation d’URL sont énoncés dans `Web.config` à l’aide de la [ `<authorization>` élément](https://msdn.microsoft.com/library/8d82143t.aspx) avec `<allow>` et `<deny>` éléments enfants. Outre les règles d’autorisation relatifs à l’utilisateur indiqués dans les didacticiels précédents, chaque `<allow>` et `<deny>` élément enfant peut également inclure :
@@ -114,11 +107,9 @@ Nous allons configurer notre application afin que le `ManageRoles.aspx`, `UsersA
 
 Pour ce faire, commencez par ajouter un `Web.config` de fichiers à la `Roles` dossier.
 
-
 [![Ajouter un fichier Web.config dans le répertoire de rôles](role-based-authorization-vb/_static/image8.png)](role-based-authorization-vb/_static/image7.png)
 
 **Figure 3**: Ajouter un `Web.config` de fichiers à la `Roles` répertoire ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image9.png))
-
 
 Ensuite, ajoutez le balisage de configuration suivant à `Web.config`:
 
@@ -128,23 +119,18 @@ Le `<authorization>` élément dans le `<system.web>` section indique que seuls 
 
 Après avoir enregistré vos modifications à `Web.config`, connectez-vous en tant qu’utilisateur qui n’est pas dans le rôle Administrateurs et puis essayez de visiter une des pages protégées. Le `UrlAuthorizationModule` détecte que vous n’êtes pas autorisé à consulter la ressource demandée ; par conséquent, le `FormsAuthenticationModule` vous redirigera vers la page de connexion. La page de connexion puis vous êtes redirigé vers le `UnauthorizedAccess.aspx` page (voir Figure 4). Cette redirection finale à partir de la page de connexion à `UnauthorizedAccess.aspx` se produit en raison du code que nous avons ajouté à la page de connexion à l’étape 2 de la <a id="_msoanchor_7"> </a> [ *autorisation basée sur l’utilisateur* ](../membership/user-based-authorization-vb.md) didacticiel. En particulier, la page de connexion redirige automatiquement aux utilisateurs authentifiés de `UnauthorizedAccess.aspx` si la chaîne de requête contienne un `ReturnUrl` paramètre, en tant que ce paramètre indique que l’utilisateur est arrivé à la page de connexion quand vous tentez d’afficher une page, il n’était pas autorisé à afficher.
 
-
 [![Seuls les utilisateurs dans le rôle Administrateurs peuvent afficher les Pages protégées](role-based-authorization-vb/_static/image11.png)](role-based-authorization-vb/_static/image10.png)
 
 **Figure 4**: Seules les utilisateurs du rôle Administrateurs peuvent voir les Pages protégées ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image12.png))
 
-
 Fermez la session et ensuite vous connecter en tant qu’utilisateur qui se trouve dans le rôle Administrateurs. Maintenant vous devez être en mesure d’afficher les trois pages protégées.
-
 
 [![Tito peuvent visiter le UsersAndRoles.aspx Page, car il est dans le rôle Administrateurs](role-based-authorization-vb/_static/image14.png)](role-based-authorization-vb/_static/image13.png)
 
 **Figure 5**: Tito peuvent visiter le `UsersAndRoles.aspx` Page, car il est dans le rôle Administrateurs ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image15.png))
 
-
 > [!NOTE]
 > Lorsque vous spécifiez des règles d’autorisation d’URL – pour les rôles ou les utilisateurs – il est important de garder à l’esprit que les règles sont analysée individuellement, à partir du haut vers le bas. Dès qu’une correspondance est trouvée, l’utilisateur est accordé ou refusé l’accès, selon que la correspondance a été trouvée dans un `<allow>` ou `<deny>` élément. **Si aucune correspondance n’est trouvée, l’utilisateur est autorisé à accéder.** Par conséquent, si vous souhaitez restreindre l’accès à un ou plusieurs comptes d’utilisateur, il est impératif d’utiliser un `<deny>` élément en tant que le dernier élément dans la configuration de l’autorisation d’URL. **Si vos règles d’autorisation d’URL n’incluent pas un**`<deny>`**élément, tous les utilisateurs auront accès.** Pour une discussion plus détaillée sur la façon dont les règles d’autorisation d’URL sont analysées, vous référer à la « observez comment la `UrlAuthorizationModule` utilise les règles d’autorisation pour accorder ou refuser l’accès « section de la <a id="_msoanchor_8"> </a> [  *Autorisation basée sur l’utilisateur* ](../membership/user-based-authorization-vb.md) didacticiel.
-
 
 ## <a name="step-2-limiting-functionality-based-on-the-currently-logged-in-users-roles"></a>Étape 2 : Limitation de fonctionnalités basées sur les rôles de l’utilisateur actuellement connecté
 
@@ -157,7 +143,6 @@ Nous allons créer une page qui répertorie tous les comptes d’utilisateur dan
 > [!NOTE]
 > La page ASP.NET que nous sommes sur le point de build utilise un contrôle GridView pour afficher les comptes d’utilisateur. Depuis ce didacticiel série se concentre sur l’authentification par formulaire, l’autorisation, comptes d’utilisateurs et rôles, je ne souhaite pas consacrer trop longtemps décrivant le fonctionnement interne du contrôle GridView. Alors que ce didacticiel fournit des instructions spécifiques pour la configuration de cette page, il ne pas étudier en détail pourquoi certains choix ont été apportées, ou qu’ont les propriétés particulières d’effet sur la sortie rendue. Pour un examen approfondi du contrôle GridView, regardez mon *[utilisation des données dans ASP.NET 2.0](../../data-access/index.md)* série de didacticiels.
 
-
 Commencez par ouvrir le `RoleBasedAuthorization.aspx` page dans le `Roles` dossier. Faites glisser un GridView à partir de la page sur le concepteur et le jeu de son `ID` à `UserGrid`. Dans un instant, nous allons écrire le code qui appelle le `Membership`.`GetAllUsers` méthode et lie le résultat `MembershipUserCollection` objet au GridView. Le `MembershipUserCollection` contient un `MembershipUser` objet pour chaque compte d’utilisateur dans le système ; `MembershipUser` objets ont des propriétés telles que `UserName`,`Email`,`LastLoginDate` et ainsi de suite.
 
 Avant d’écrire le code qui lie les comptes d’utilisateur à la grille, nous allons tout d’abord définir les champs du contrôle GridView. À partir de la balise active le contrôle GridView, cliquez sur le lien « Modifier les colonnes » pour lancer la boîte de dialogue champs zone (voir Figure 6). À ce stade, désactivez la case à cocher « Générer automatiquement des champs » dans l’angle inférieur gauche. Dans la mesure où nous voulons ce GridView pour inclure la modification et suppression de fonctionnalités, ajouter un CommandField et définir son `ShowEditButton` et `ShowDeleteButton` propriétés sur True. Ensuite, ajoutez quatre champs pour l’affichage de la `UserName`, `Email`, `LastLoginDate`, et `Comment` propriétés. Utiliser un BoundField pour les deux propriétés en lecture seule (`UserName` et `LastLoginDate`) et TemplateField pour les deux champs modifiables (`Email` et `Comment`).
@@ -166,11 +151,9 @@ Affiche de BoundField la première la `UserName` propriété ; ensemble son `He
 
 Définir le `HeaderText` propriétés de la deux TemplateField pour « Email » et « Commentaire ».
 
-
 [![Champs le contrôle GridView peuvent être configurées via la boîte de dialogue champs](role-based-authorization-vb/_static/image17.png)](role-based-authorization-vb/_static/image16.png)
 
 **Figure 6**: Champs peut être configuré via la boîte le contrôle GridView de dialogue champs ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image18.png))
-
 
 Nous devons maintenant définir le `ItemTemplate` et `EditItemTemplate` pour le « Email » et « Commentaire » TemplateField. Ajouter un contrôle Web Label à chacun de la `ItemTemplates` et lier leurs `Text` propriétés pour le `Email` et `Comment` propriétés, respectivement.
 
@@ -192,15 +175,12 @@ Nous avons terminé le balisage déclaratif de cette page. Notre tâche suivante
 
 Avec ce code en place, visitez la page via un navigateur. Comme le montre la Figure 7, vous devez voir un GridView répertoriant des informations sur chaque compte d’utilisateur dans le système.
 
-
 [![Le contrôle UserGrid GridView répertorie des informations sur chaque utilisateur dans le système](role-based-authorization-vb/_static/image20.png)](role-based-authorization-vb/_static/image19.png)
 
 **Figure 7**: Le `UserGrid` GridView répertorie des informations sur chaque utilisateur dans le système ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image21.png))
 
-
 > [!NOTE]
 > Le `UserGrid` GridView répertorie tous les utilisateurs dans une interface de réserve non paginée. Cette interface grille simple ne convient pas pour les scénarios où il existe plusieurs dizaines ou plusieurs utilisateurs. Une option consiste à configurer le contrôle GridView pour activer la pagination. Le `Membership.GetAllUsers` méthode a deux surcharges : une qui n’accepte aucun paramètre d’entrée et retourne tous les utilisateurs et l’autre qui prend les valeurs entières pour les index et la taille de la page et retourne uniquement le sous-ensemble spécifié d’utilisateurs. La deuxième surcharge peut être utilisé plus efficacement pour paginer à travers les utilisateurs dans la mesure où elle retourne uniquement le sous-ensemble précis des comptes d’utilisateur au lieu de *tous les* d'entre eux. Si vous avez des milliers de comptes d’utilisateur, vous souhaiterez une interface basée sur les filtres, qui affiche uniquement les utilisateurs dont nom d’utilisateur commence par un caractère sélectionné, par exemple. Le [ `Membership.FindUsersByName` méthode](https://msdn.microsoft.com/library/system.web.security.membership.findusersbyname.aspx) est idéal pour la création d’une interface utilisateur basée sur le filtre. Nous allons examiner la création d’une telle interface dans un futur didacticiel.
-
 
 Le contrôle GridView offre intégrée de modification et de suppression de prise en charge lorsque le contrôle est lié à un contrôle de source de données correctement configuré, tels que SqlDataSource ou de l’ObjectDataSource. Le `UserGrid` GridView, toutefois, a ses données lier par programmation ; par conséquent, nous devons écrire du code pour effectuer ces deux tâches. En particulier, nous devons créer des gestionnaires d’événements pour le contrôle GridView `RowEditing`, `RowCancelingEdit`, `RowUpdating`, et `RowDeleting` les événements qui sont déclenchés lorsqu’un visiteur clique le GridView modifier Annuler, mise à jour, ou supprimer des boutons.
 
@@ -221,7 +201,6 @@ Le Gestionnaire d’événements ci-dessus commence par s’emparer du `UserName
 > [!NOTE]
 > Le bouton Supprimer ne nécessite pas une forme quelconque de confirmation de l’utilisateur avant de supprimer le compte d’utilisateur. Je vous encourage à ajouter une forme de confirmation de l’utilisateur pour réduire le risque d’un compte en cours de suppression par inadvertance. Une des méthodes plus simples pour confirmer une action est via une boîte de dialogue de confirmation du côté client. Pour plus d’informations sur cette technique, consultez [Ajout côté Client Confirmation lors de la suppression](https://asp.net/learn/data-access/tutorial-42-vb.aspx).
 
-
 Vérifiez que cette page fonctionne comme prévu. Vous pourrez modifier l’adresse de messagerie d’un utilisateur et le commentaire, ainsi que supprimer n’importe quel compte d’utilisateur. Dans la mesure où le `RoleBasedAuthorization.aspx` page est accessible à tous les utilisateurs, tout utilisateur – les visiteurs anonymes même – visitez cette page et modifier et supprimer des comptes d’utilisateurs ! Nous allons mettre à jour cette page afin que seuls les utilisateurs dans les rôles superviseurs et les administrateurs peuvent modifier une adresse e-mail utilisateur et le commentaire, et seuls les administrateurs peuvent supprimer un compte d’utilisateur.
 
 La section « À l’aide du contrôle LoginView » examine à l’aide du contrôle LoginView pour afficher les instructions spécifiques au rôle de l’utilisateur. Si une personne dans le rôle Administrateurs visite cette page, nous allons montrer des instructions sur la façon de modifier et supprimer des utilisateurs. Si un utilisateur dans le rôle superviseurs atteint cette page, nous allons montrer des instructions sur la modification des utilisateurs. Et si le visiteur est anonyme ou n’est pas dans le rôle Administrateurs ou les superviseurs, nous affichera un message expliquant qu’ils ne peuvent pas modifier ou supprimer les informations de compte d’utilisateur. Dans la section « Limitation par programmation des fonctionnalités » nous allons écrire le code qui affiche ou masque les boutons Modifier et supprimer en fonction du rôle de l’utilisateur par programme.
@@ -238,11 +217,9 @@ Outre le `AnonymousTemplate` et `LoggedInTemplate`, le contrôle LoginView peut 
 
 Pour gérer les RoleGroups, cliquez sur le lien « Modifier les RoleGroups » à partir de balise du contrôle active pour afficher l’éditeur de collections RoleGroup. Ajoutez deux RoleGroups de nouveau. Définir le RoleGroup première `Roles` à la propriété « Administrateurs » et le second à « Superviseurs ».
 
-
 [![Gérer les modèles de rôle spécifique de la vue de connexion via l’éditeur de collections RoleGroup.](role-based-authorization-vb/_static/image23.png)](role-based-authorization-vb/_static/image22.png)
 
 **Figure 8**: Gestion spécifiques au rôle modèles via l’éditeur de la vue de connexion de collections RoleGroup ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image24.png))
-
 
 Cliquez sur OK pour fermer l’éditeur de collections RoleGroup ; Cela met à jour le balisage déclaratif de la vue de connexion pour inclure un `<RoleGroups>` section avec un `<asp:RoleGroup>` élément enfant pour chaque RoleGroup défini dans l’éditeur de collections RoleGroup. En outre, la liste déroulante « Vues » liste dans la fonction de balise active de la vue de connexion - listées initialement uniquement le `AnonymousTemplate` et `LoggedInTemplate` – inclut désormais les RoleGroups ajoutés également.
 
@@ -254,26 +231,21 @@ Après avoir apporté ces modifications, enregistrez la page, puis vous l’acc�
 
 Ensuite, connectez-vous en tant qu’utilisateur membre du rôle superviseurs. Cette fois, vous devez voir les superviseurs spécifiques au rôle de message (voir Figure 9). Et si vous vous connectez en tant qu’utilisateur dans les administrateurs de rôle, vous devez voir les administrateurs de rôle spécifiques du message (voir Figure 10).
 
-
 [![Bruce voit le Message de spécifiques au rôle superviseurs](role-based-authorization-vb/_static/image26.png)](role-based-authorization-vb/_static/image25.png)
 
 **Figure 9**: Bruce voit le Message de spécifiques au rôle superviseurs ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image27.png))
-
 
 [![Tito voit le Message de spécifiques au rôle Administrateurs](role-based-authorization-vb/_static/image29.png)](role-based-authorization-vb/_static/image28.png)
 
 **Figure 10**: Tito voit le Message de spécifiques au rôle Administrateurs ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image30.png))
 
-
 En tant que les captures d’écran dans les Figures 9 et 10 show, la vue de connexion seulement s’affiche un modèle, même si plusieurs modèles s’appliquent. Bruce et Tito sont à la fois les utilisateurs connectés, mais la vue de connexion affiche uniquement le correspondante RoleGroup et non le `LoggedInTemplate`. En outre, Tito appartient aux rôles les administrateurs et les superviseurs, mais le contrôle LoginView effectue le rendu du modèle de spécifiques au rôle d’administrateurs au lieu des superviseurs une.
 
 Figure 11 illustre le flux de travail utilisé par le contrôle LoginView pour déterminer quel modèle de rendu. Notez que si plusieurs RoleGroup spécifié, le modèle LoginView rend le *premier* RoleGroup qui correspond à. En d’autres termes, si nous avions placé le RoleGroup superviseurs en tant que la première RoleGroup et les administrateurs en tant que le second, puis lorsque Tito visité cette page il voyez le message superviseurs.
 
-
 [![Flux de travail du contrôle LoginView pour déterminer quel modèle de rendu](role-based-authorization-vb/_static/image32.png)](role-based-authorization-vb/_static/image31.png)
 
 **Figure 11**: Flux de travail du contrôle LoginView pour déterminer quel modèle rendu ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image33.png))
-
 
 ### <a name="programmatically-limiting-functionality"></a>Limitation par programmation des fonctionnalités
 
@@ -281,11 +253,9 @@ Tandis que le contrôle LoginView affiche des instructions différentes en fonct
 
 Le moyen le plus simple de référencer par programmation des contrôles dans un CommandField doit tout d’abord le convertir en modèle. Pour ce faire, cliquez sur le lien « Modifier les colonnes » à partir de la balise active le contrôle GridView, sélectionnez le CommandField dans la liste de champs en cours, cliquez sur le lien « Convertir ce champ en TemplateField ». Cela transforme le CommandField en TemplateField avec un `ItemTemplate` et `EditItemTemplate`. Le `ItemTemplate` contient le modifier et supprimer le LinkButton lors de la `EditItemTemplate` héberge la mise à jour et annuler le LinkButton.
 
-
 [![Convertir le CommandField en TemplateField](role-based-authorization-vb/_static/image35.png)](role-based-authorization-vb/_static/image34.png)
 
 **Figure 12**: Convertir le CommandField dans TemplateField de contenu ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image36.png))
-
 
 Mettre à jour le modifier et supprimer le LinkButton dans le `ItemTemplate`, ce qui affecte leur `ID` les valeurs de propriétés `EditButton` et `DeleteButton`, respectivement.
 
@@ -304,7 +274,6 @@ Si nous avons affaire à une ligne de données qui n’est pas en mode édition,
 > [!NOTE]
 > Nous pourrions avoir utilisé la classe rôles directement, en remplaçant l’appel à `User.IsInRole(roleName)` avec un appel à la [ `Roles.IsUserInRole(roleName)` méthode](https://msdn.microsoft.com/library/system.web.security.roles.isuserinrole.aspx). J’ai décidé d’utiliser l’objet principal `IsInRole(roleName)` méthode dans cet exemple, car il est plus efficace que l’utilisation de l’API de rôles directement. Précédemment dans ce didacticiel, nous avons configuré le Gestionnaire de rôles pour mettre en cache des rôles de l’utilisateur dans un cookie. Cette mise en cache des données de cookie est utilisé uniquement lorsque l’entité de sécurité `IsInRole(roleName)` méthode est appelée ; les appels directs à l’API de rôles impliquent toujours un voyage au magasin de rôles. Même si les rôles ne sont pas mises en cache dans un cookie, l’appel de l’objet principal `IsInRole(roleName)` méthode est généralement plus efficace, car lorsqu’elle est appelée pour la première fois lors d’une requête met en cache les résultats. L’API de rôles, en revanche, n’effectue aucune mise en cache. Étant donné que le `RowCreated` événement est déclenché une fois pour chaque ligne dans le contrôle GridView, à l’aide de `User.IsInRole(roleName)` implique qu’un seul aller-retour vers le magasin de rôles, tandis que `Roles.IsUserInRole(roleName)` requiert *N* courses, où *N* est le nombre de comptes d’utilisateur affiché dans la grille.
 
-
 Le bouton Modifier `Visible` propriété est définie sur `True` si l’utilisateur visite cette page est dans le rôle Administrateurs ou les superviseurs ; sinon, elle a la valeur `False`. Le bouton Supprimer `Visible` propriété est définie sur `True` uniquement si l’utilisateur est dans le rôle Administrateurs.
 
 Testez cette page via un navigateur. Si vous visitez la page sous la forme d’un visiteur anonyme ou un utilisateur qui n’est ni un superviseur, ni un administrateur, le CommandField est vide. Il en existe, mais comme un éclat mince sans le modifier ou supprimer des boutons.
@@ -312,27 +281,21 @@ Testez cette page via un navigateur. Si vous visitez la page sous la forme d’u
 > [!NOTE]
 > Il est possible de masquer le CommandField complètement quand un non-superviseur et un non-administrateur visite la page. Je laisse cela en guise d’exercice pour le lecteur.
 
-
 [![La modifier et supprimer des boutons sont masqués pour les Non-superviseurs et par les non-administrateurs](role-based-authorization-vb/_static/image38.png)](role-based-authorization-vb/_static/image37.png)
 
 **Figure 13**: La modifier et supprimer des boutons sont masqués pour les Non-superviseurs et les utilisateurs non-administrateurs ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image39.png))
 
-
 Si un utilisateur qui appartient au rôle superviseurs (mais pas au rôle Administrateurs) visite, il voit uniquement le bouton Modifier.
-
 
 [![Alors que le bouton Modifier est disponible pour les superviseurs, le bouton Supprimer est masqué.](role-based-authorization-vb/_static/image41.png)](role-based-authorization-vb/_static/image40.png)
 
 **Figure 14**: Alors que le bouton Modifier est disponible pour les superviseurs, le bouton Supprimer est masqué ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image42.png))
 
-
 Et si un administrateur visite, il a accès à ces deux boutons Modifier et supprimer.
-
 
 [![La modifier et supprimer des boutons sont disponibles uniquement pour les administrateurs](role-based-authorization-vb/_static/image44.png)](role-based-authorization-vb/_static/image43.png)
 
 **Figure 15**: La modifier et supprimer des boutons sont disponibles uniquement pour les administrateurs ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image45.png))
-
 
 ## <a name="step-3-applying-role-based-authorization-rules-to-classes-and-methods"></a>Étape 3 : Appliquer des règles d’autorisation basées sur le rôle aux Classes et méthodes
 
@@ -348,18 +311,14 @@ Nous allons illustrer l’utilisation de la `PrincipalPermission` attribut sur l
 
 L’attribut pour le `RowUpdating` Gestionnaire d’événements indique que seuls les utilisateurs aux rôles Administrateurs ou les superviseurs peuvent exécuter le Gestionnaire d’événements, alors que l’attribut sur le `RowDeleting` Gestionnaire d’événements limite l’exécution aux utilisateurs dans les administrateurs rôle.
 
-
 > [!NOTE]
 > Le `PrincipalPermission` attribut est représenté en tant que classe dans le `System.Security.Permissions` espace de noms. Veillez à ajouter un `Imports System.Security.Permissions` instruction en haut de votre fichier de classe code-behind pour importer cet espace de noms.
 
-
 Si, d’une certaine manière, un utilisateur non-administrateur tente d’exécuter le `RowDeleting` Gestionnaire d’événements ou si un tentatives non superviseur ou non administrateur pour exécuter le `RowUpdating` Gestionnaire d’événements, le runtime .NET déclenchera un `SecurityException`.
-
 
 [![Si le contexte de sécurité n’est pas autorisé à exécuter la méthode, une SecurityException est levée.](role-based-authorization-vb/_static/image47.png)](role-based-authorization-vb/_static/image46.png)
 
 **Figure 16**: Si le contexte de sécurité n’est pas autorisé à exécuter la méthode, un `SecurityException` est levée ([cliquez pour afficher l’image en taille réelle](role-based-authorization-vb/_static/image48.png))
-
 
 En plus de pages ASP.NET, de nombreuses applications ont également une architecture qui inclut les différentes couches, telles que la logique métier et couches d’accès aux données. Ces couches sont généralement implémentés en tant que bibliothèques de classes et offrent des classes et méthodes permettant d’exécuter la logique et les données relatives des fonctionnalités métier. Le `PrincipalPermission` attribut est utile pour appliquer des règles d’autorisation à ces couches également.
 

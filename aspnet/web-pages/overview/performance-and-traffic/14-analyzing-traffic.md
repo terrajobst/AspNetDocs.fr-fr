@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: 360bc6e1-84c5-4b8e-a84c-ea48ab807aa4
 msc.legacyurl: /web-pages/overview/performance-and-traffic/14-analyzing-traffic
 msc.type: authoredcontent
-ms.openlocfilehash: a99ed5cc8875ef9f39234e3f394b46b5782d0bc1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 095a5572c755446e0661c052ca9de82d636429fd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390218"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134596"
 ---
 # <a name="tracking-visitor-information-analytics-for-an-aspnet-web-pages-razor-site"></a>Informations de suivi visiteur (Analytique) pour un Site ASP.NET Web Pages (Razor)
 
@@ -35,7 +35,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - ASP.NET Web Pages (Razor) 2
 > - ASP.NET Web Helpers Library (package NuGet)
-
 
 Analytique est un terme général qui désigne la technologie qui mesure le trafic sur votre site Web pour vous pouvez de comprendre comment les personnes utilisent le site. De nombreux services d’analytique sont disponibles, y compris les services à partir de Google, Yahoo, StatCounter et autres.
 
@@ -60,7 +59,6 @@ Dans cette procédure, vous allez créer une page de disposition qui utilise le 
 
 > [!NOTE]
 > Lorsque vous créez un compte analytique, vous inscrivez l’URL du site que vous souhaitez suivre. Si vous testez tous les éléments sur votre ordinateur local, vous ne suivi trafic réelle (seul le trafic est à vous), donc vous ne pourrez pas à enregistrer et voir les statistiques de site. Mais cette procédure montre comment vous ajoutez une application d’assistance analytique à une page. Lorsque vous publiez votre site, le site actif enverra des informations à votre fournisseur d’analytique.
-
 
 1. Ajoutez la bibliothèque de programmes d’assistance de Web ASP.NET à votre site Web, comme décrit dans [l’installation des programmes d’assistance dans un Site ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=252372), si vous n’avez pas déjà ajouté.
 2. Créer un compte avec Google Analytique et enregistrez le nom du compte.

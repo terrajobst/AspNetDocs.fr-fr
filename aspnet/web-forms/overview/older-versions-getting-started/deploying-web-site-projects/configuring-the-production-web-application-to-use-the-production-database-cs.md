@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 0177dabd-d888-449f-91b2-24190cf5e842
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-the-production-web-application-to-use-the-production-database-cs
 msc.type: authoredcontent
-ms.openlocfilehash: fa05645db9d43a836cc75b399153dd2e2c288f7c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1e93a5314129b2a05ede603ae9c01cd57b574f88
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388759"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127061"
 ---
 # <a name="configuring-the-production-web-application-to-use-the-production-database-c"></a>Configuration de l’application web de production pour l’utilisation de la base de données de production (C#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger le Code](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_08_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial08_DBConfig_cs.pdf)
 
 > Comme indiqué dans les didacticiels précédents, il n’est pas rare que les informations de configuration diffèrent entre les environnements de développement et de production. Cela est particulièrement vrai pour les applications web orientées données, comme les chaînes de connexion de base de données diffèrent entre les environnements de développement et de production. Ce didacticiel explore plusieurs moyens pour configurer l’environnement de production afin d’inclure la chaîne de connexion appropriée plus en détail.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -44,7 +43,6 @@ La chaîne de connexion - Source de données =. \SQLEXPRESS ; AttachDbFilename 
 - `AttachDbFilename` -Spécifie l’emplacement du fichier de base de données. La valeur contient l’espace réservé `|DataDirectory|`, qui est résolu sur le chemin d’accès complet de l’application s `App_Data` dossier lors de l’exécution.
 - `Integrated Security` -une valeur booléenne qui indique s’il faut utiliser un nom d’utilisateur/mot de passe spécifié lors de la connexion à la base de données (false) ou le Windows actuel des informations d’identification de compte (true).
 - `User Instance` -une option de configuration spécifique pour les éditions SQL Server Express qui indique s’il faut autoriser les utilisateurs non administratifs sur l’ordinateur local, attachement et se connecter à une base de données SQL Server Express Edition. Consultez [SQL Server Express User Instances](https://msdn.microsoft.com/library/ms254504.aspx) pour plus d’informations sur ce paramètre.
-  
 
 Les options de chaîne de connexion autorisés dépendent de la base de données que vous êtes connecté et le fournisseur de base de données ADO.NET utilisé. Par exemple, la chaîne de connexion pour la connexion à Microsoft SQL Server diffère de la base de données utilisé pour se connecter à une base de données Oracle. De même, la connexion à une base de données Microsoft SQL Server via le fournisseur SqlClient utilise une chaîne de connexion différente que quand vous utilisez le fournisseur OLE DB.
 
@@ -52,19 +50,15 @@ Vous pouvez générer la chaîne de connexion de base de données manuellement �
 
 Ouvrez Visual Studio, puis accédez à la fenêtre Explorateur de serveurs (dans Visual Web Developer, cette fenêtre est appelée l’Explorateur de base de données). Avec le bouton droit sur l’option des connexions de données et choisissez l’option Ajouter une connexion dans le menu contextuel. Ceci fait apparaître l’Assistant illustré à la Figure 1. Choisissez la source de données approprié, puis cliquez sur Continuer.
 
-
 [![Choisissez d’ajouter une nouvelle base de données à l’Explorateur de serveurs](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image2.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image1.jpg) 
 
 **Figure 1**: Choisissez d’ajouter une nouvelle base de données à l’Explorateur de serveurs ([cliquez pour afficher l’image en taille réelle](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image3.jpg))
 
-
 Ensuite, spécifiez les informations de connexion de la base de données (voir Figure 2). Lorsque vous avez souscrit avec votre entreprise d’hébergement web ils doivent avoir fourni des informations sur la façon de se connecter à la base de données - le nom du serveur de base de données, le nom de la base de données, le nom d’utilisateur et le mot de passe à utiliser pour se connecter à la base de données et ainsi de suite. Après avoir entré ces informations, cliquez sur OK pour terminer cet Assistant et ajouter la base de données à l’Explorateur de serveurs.
-
 
 [![Spécifiez les informations de connexion de base de données](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image5.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image4.jpg) 
 
 **Figure 2**: Spécifiez les informations de connexion de base de données ([cliquez pour afficher l’image en taille réelle](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image6.jpg))
-
 
 La base de données des environnement de production doit figurer dans l’Explorateur de serveurs. Sélectionnez la base de données à partir de l’Explorateur de serveurs et accédez à la fenêtre Propriétés. Vous y trouverez une propriété de chaîne de connexion avec la chaîne de connexion de base de données s nommée. En supposant que vous utilisez une base de données Microsoft SQL Server sur la production et le fournisseur SqlClient votre chaîne de connexion doit ressembler à ce qui suit :
 
@@ -87,14 +81,11 @@ Sauf si vous avez un workflow de déploiement plus formel, soit modifier manuell
 > [!NOTE]
 > Si vous déployez accidentellement un `Web.config` fichier qui contient la chaîne de connexion de base de données de développement, puis il y aura une erreur lors de l’application de production tente de se connecter à la base de données. Cette erreur se manifeste comme un `SqlException` avec un message indiquant que le serveur est introuvable ou n’est pas accessible.
 
-
 Une fois que le site a été déployé en production, visitez le site de production via votre navigateur. Vous devez voir et profitez de la même expérience utilisateur en tant que lors de l’exécution de l’application orientée données localement. Bien sûr lorsque vous visitez le site Web de production le site est alimenté par le serveur de base de données de production, tandis que sur le site Web dans l’environnement de développement utilise la base de données dans le développement. La figure 3 illustre le *enseigner vous-même ASP.NET 3.5 des dernières 24 heures* passez en revue la page depuis le site Web dans l’environnement de production (Notez l’URL dans la barre d’adresse de navigateur s).
-
 
 [![L’Application piloté par les données est maintenant disponible sur Production !](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image8.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image7.jpg) 
 
 **Figure 3**: L’Application piloté par les données est maintenant disponible sur Production ! ([Cliquez pour afficher l’image en taille réelle](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image9.jpg))
-
 
 ### <a name="storing-connection-strings-in-a-separate-configuration-file"></a>Stockage de chaînes de connexion dans un fichier de Configuration distinct
 
@@ -113,14 +104,11 @@ Faites une copie du fichier databaseConnectionStrings.dev.config et nommez-le da
 > [!NOTE]
 > Vous pouvez nommer le fichier de configuration autre chose que databaseConnectionStrings.config, si d voulue, tel que `connectionStrings.config` ou `dbInfo.config`. Toutefois, veillez à nommer le fichier avec un `.config` extension comme `.config` fichiers sont, par défaut, pas pris en charge par le moteur ASP.NET. Si vous nommez le fichier quelque chose d’autre, tel que `connectionStrings.txt`, un utilisateur peut indiquer son navigateur pour [www.yoursite.com/ConfigSettings/connectionStrings.txt](http://www.yoursite.com/ConfigSettings/connectionStrings.txt) et afficher le contenu du fichier !
 
-
 À ce stade le `ConfigSections` dossier doit contenir trois fichiers (voir Figure 4). Les fichiers databaseConnectionStrings.dev.config et databaseConnectionStrings.production.config contiennent les chaînes de connexion pour les environnements de développement et de production, respectivement. Le fichier databaseConnectionStrings.config contient les informations de chaîne de connexion qui seront utilisées par l’application web lors de l’exécution. Par conséquent, le fichier databaseConnectionStrings.config doit être identique au fichier databaseConnectionStrings.dev.config dans l’environnement de développement, alors que sur la production, le fichier databaseConnectionStrings.config doit être identique à databaseConnectionStrings.production.config.
-
 
 [![ConfigSections](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image11.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image10.jpg) 
 
 **Figure 4**: ConfigSections ([cliquez pour afficher l’image en taille réelle](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image12.jpg))
-
 
 Nous devons maintenant demander à `Web.config` à utiliser le fichier databaseConnectionStrings.config pour son magasin de chaînes de connexion. Ouvrez `Web.config` et remplacez l’élément `<connectionStrings>` existant par l’élément suivant :
 
@@ -132,7 +120,6 @@ Avec cette modification, les environnements de développement et de production c
 
 > [!NOTE]
 > Vous pouvez spécifier les informations pour toute `Web.config` élément dans un fichier distinct et utiliser le `configSource` attribut pour référencer ce fichier depuis `Web.config`.
-
 
 ## <a name="summary"></a>Récapitulatif
 

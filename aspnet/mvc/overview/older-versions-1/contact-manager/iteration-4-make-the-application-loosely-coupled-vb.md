@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 92c70297-4430-4e4e-919a-9c2333a8d09a
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 256536150a585a4bb0304f23c3524b18d0f552f0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 422c75406d9c08279d0c2224ee4b6db3a71eb1b3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392376"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117728"
 ---
 # <a name="iteration-4--make-the-application-loosely-coupled-vb"></a>Itération #4 : rendre l’application faiblement couplée (VB)
 
@@ -22,7 +22,6 @@ by [Microsoft](https://github.com/microsoft)
 [Télécharger le Code](iteration-4-make-the-application-loosely-coupled-vb/_static/contactmanager_4_vb1.zip)
 
 > Dans ce quatrième itération, nous profitons de plusieurs modèles de conception de logiciels pour le rendre plus facile à gérer et modifier l’application Gestionnaire de contacts. Par exemple, nous refactoriser notre application pour utiliser le modèle dépôt et le modèle d’Injection de dépendance.
-
 
 ## <a name="building-a-contact-management-aspnet-mvc-application-vb"></a>Création d’une Application ASP.NET MVC de gestion des contacts (VB)
 
@@ -54,7 +53,6 @@ Actuellement, toute la logique d’accès et de validation de données utilisée
 > 
 > (SRP), une classe doit avoir jamais plus d’une raison de changer. Mélange de contrôleur, validation et une logique de base de données est une violation massive du principe de responsabilité unique.
 
-
 Il existe plusieurs raisons, vous devrez peut-être modifier votre application. Vous devrez peut-être ajouter une nouvelle fonctionnalité à votre application, vous devrez peut-être corriger un bogue dans votre application, ou vous devrez peut-être modifier la façon dont une fonctionnalité de votre application est implémentée. Les applications sont rarement statiques. Ils ont tendance à croître et muter au fil du temps.
 
 Par exemple, imaginez que vous décidez de modifier la façon dont vous implémentez votre couche d’accès aux données. Droite, l’application Gestionnaire de contacts utilise désormais Microsoft Entity Framework pour accéder à la base de données. Toutefois, vous pouvez décider de migrer vers une technologie d’accès aux données nouvelle ou sur un autre telles que ADO.NET Data Services ou NHibernate. Toutefois, étant donné que le code d’accès aux données n’est pas isolé à partir du code de validation et de contrôleur, il n’existe aucun moyen de modifier le code d’accès aux données dans votre application sans modifier d’autres codes qui n’est pas directement liée à l’accès aux données.
@@ -66,7 +64,6 @@ Dans cette itération, nous profitons de plusieurs modèles de conception de log
 > [!NOTE] 
 > 
 > Refactorisation est le processus de réécriture d’une application de sorte qu’il ne perd pas toutes les fonctionnalités existantes.
-
 
 ## <a name="using-the-repository-software-design-pattern"></a>À l’aide du modèle de conception de logiciel de référentiel
 
@@ -105,7 +102,6 @@ La programmation dans les interfaces (abstractions) au lieu de classes concrète
 > 
 > Vous pouvez rapidement créer une interface à partir d’une classe concrète dans Visual Studio en sélectionnant l’option de menu refactoriser, extraire l’Interface. Par exemple, vous pouvez créez d’abord la classe EntityContactManagerRepository et ensuite utiliser extraire l’Interface pour générer l’interface IContactManagerRepository automatiquement.
 
-
 ## <a name="using-the-dependency-injection-software-design-pattern"></a>À l’aide du modèle de conception de logiciels d’Injection dépendance
 
 Maintenant que nous avons migré notre code d’accès aux données à une classe distincte de référentiel, nous devons modifier notre contrôleur de Contact pour utiliser cette classe. Nous tirera parti d’un modèle de conception de logiciel appelé Injection de dépendance pour utiliser la classe de dépôt dans notre contrôleur.
@@ -127,7 +123,6 @@ L’injection de dépendances de constructeur permet également de la classe de 
 > [!NOTE] 
 > 
 > Si vous souhaitez complètement découpler la classe de contrôleur de Contact à partir d’une implémentation particulière de l’interface IContactManagerRepository vous pouvez tirer parti d’une infrastructure qui prend en charge l’Injection de dépendances telles que StructureMap ou Microsoft Entity Framework (MEF). En tirant parti d’une infrastructure d’Injection de dépendance, vous devez jamais faire référence à une classe concrète dans votre code.
-
 
 ## <a name="creating-a-service-layer"></a>Création d’une couche de Service
 

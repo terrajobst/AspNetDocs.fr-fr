@@ -8,15 +8,14 @@ ms.date: 01/15/2019
 ms.assetid: 03960de2-8d95-4444-9169-4426dcc64913
 msc.legacyurl: /signalr/overview/guide-to-the-api/handling-connection-lifetime-events
 msc.type: authoredcontent
-ms.openlocfilehash: 9e6b0b3b86839efa393659531d8b74770226f383
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5bdf20549fccab5d644e35fdf4ce351540c8620d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401463"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119883"
 ---
 # <a name="understanding-and-handling-connection-lifetime-events-in-signalr"></a>Présentation et gestion des événements de durée de vie des connexions dans SignalR
-
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
@@ -148,7 +147,6 @@ Certains environnements réseau délibérément fermer les connexions inactives,
 >
 > **Important** : La séquence d’événements décrites ici n’est pas garantie. SignalR effectue chaque tentative pour déclencher des événements de durée de vie de connexion de manière prévisible en fonction de ce schéma, mais il existe de nombreuses variations des événements de réseau et dans lequel les infrastructures de communications sous-jacentes telles que les API de transport les gérer de nombreuses façons. Par exemple, le `Reconnected` événement ne peut pas être déclenché lorsque le client se reconnecte, ou le `OnConnected` gestionnaire sur le serveur peut s’exécuter lorsque la tentative pour établir une connexion échoue. Cette rubrique décrit uniquement les effets qui seraient normalement produits par certains des circonstances normales.
 
-
 <a id="clientdisconnect"></a>
 
 ### <a name="client-disconnection-scenarios"></a>Scénarios de déconnexion de client
@@ -247,7 +245,6 @@ SignalR version 2 n’a pas d’un API de serveur intégré pour la déconnexion
 
 > [!WARNING]
 > Sécurité - ni cette méthode pour la déconnexion des clients ni l’API intégrée proposée répondront le scénario de piratés clients qui exécutent un code malveillant, dans la mesure où les clients Impossible de vous reconnecter ou le code piraté peut supprimer la `stopClient` méthode ou modification ce qu’il fait. L’emplacement approprié pour implémenter la protection par déni de service (DOS) avec état est pas dans l’infrastructure ou de la couche du serveur, mais plutôt dans infrastructure front-end.
-
 
 <a id="detectingreasonfordisconnection"></a>
 ## <a name="detecting-the-reason-for-a-disconnection"></a>Détection de la raison d’une déconnexion

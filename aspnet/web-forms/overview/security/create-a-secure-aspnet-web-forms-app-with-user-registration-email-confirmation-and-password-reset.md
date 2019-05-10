@@ -8,19 +8,18 @@ ms.date: 10/02/2014
 ms.assetid: 0a8d6044-5fab-4213-82d6-5618d5601358
 msc.legacyurl: /web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: 3df728891103de9c8e461ab9507237c9b14e8251
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: af3653bc164810126bc3bf8f1b1794d75642d807
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390686"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133800"
 ---
 # <a name="create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset-c"></a>Créer une application Web Forms ASP.NET sécurisée avec inscription de l’utilisateur, confirmation par e-mail et réinitialisation du mot de passe (C#)
 
 par [Erik Reitan](https://github.com/Erikre)
 
 > Ce didacticiel vous montre comment créer une application Web Forms ASP.NET avec inscription de l’utilisateur, confirmation par courrier électronique et mot de passe réinitialisé à l’aide du système d’appartenance ASP.NET Identity. Ce didacticiel a été basé sur de Rick Anderson [didacticiel MVC](../../../mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md).
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -43,7 +42,6 @@ Démarrez en installant et en cours d’exécution [Visual Studio Express 2013 p
 
 > [!NOTE]
 > Avertissement : Vous devez installer [Visual Studio 2013 Update 3](https://go.microsoft.com/fwlink/?LinkId=390465) ou une version ultérieure pour suivre ce didacticiel.
-
 
 1. Créez un projet (**fichier**  - &gt; **nouveau projet**) et sélectionnez le **Application Web ASP.NET** modèle et la plus récente du .NET Framework version à partir de la **nouveau projet** boîte de dialogue.
 2. À partir de la **nouveau projet ASP.NET** boîte de dialogue, sélectionnez le **Web Forms** modèle. Laissez l’authentification par défaut à **Comptes d’utilisateur individuels**. Si vous souhaitez héberger l’application dans Azure, laissez le **hôte dans le cloud** case est cochée.   
@@ -95,7 +93,6 @@ Bien que ce didacticiel montre uniquement comment ajouter la notification par co
 ### <a name="enable-email-confirmation"></a>Activer la Confirmation de courrier électronique
 
  Pour activer la confirmation par courrier électronique, vous allez modifier le code d’inscription en procédant comme suit.  
- 
 
 1. Dans le *compte* dossier, ouvrez le *Register.aspx.cs* code-behind et mettre à jour le `CreateUser_Click` méthode pour permettre les modifications suivantes : 
 

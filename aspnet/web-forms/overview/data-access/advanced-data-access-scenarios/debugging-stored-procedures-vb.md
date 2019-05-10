@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: 9ed8ccb5-5f31-4eb4-976d-cabf4b45ca09
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 6dda18eb27d45f8dfdb4803cf3aca3ffe96bf11e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e02f259d0c9833a91bd1592f46e0a4e30d59cea1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406559"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131849"
 ---
 # <a name="debugging-stored-procedures-vb"></a>Débogage des procédures stockées (VB)
 
@@ -23,7 +23,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Les éditions Visual Studio Professional et Team System vous permettent de définir des points d’arrêt et de participer à des procédures stockées dans SQL Server, permettent de faciliter le débogage des procédures stockées aussi simples que le débogage de code d’application. Ce didacticiel illustre le débogage direct de la base de données et débogage de l’application des procédures stockées.
 
-
 ## <a name="introduction"></a>Introduction
 
 Visual Studio fournit une riche expérience de débogage. Avec quelques séquences de touches ou des clics de souris, il s possible d’utiliser des points d’arrêt pour arrêter l’exécution d’un programme et examiner son état et contrôle de flux. En même temps que le débogage du code d’application, Visual Studio propose la prise en charge pour le débogage des procédures stockées à partir de SQL Server. Tout comme la peuvent de définir des points d’arrêt dans le code d’une classe code-behind d’ASP.NET ou d’une classe de la couche de logique métier, donc trop peuvent leur être placés dans des procédures stockées.
@@ -32,7 +31,6 @@ Dans ce didacticiel, nous allons examiner pas à pas détaillé dans les procéd
 
 > [!NOTE]
 > Malheureusement, les procédures stockées peuvent uniquement être détaillés et de débogage via les versions Professional et les systèmes de l’équipe de Visual Studio. Si vous utilisez Visual Web Developer ou la version standard de Visual Studio, vous avez la possibilité de lire le long que nous vous guidons à travers les étapes nécessaires pour déboguer les procédures stockées, mais vous ne serez pas en mesure de répliquer ces étapes sur votre ordinateur.
-
 
 ## <a name="sql-server-debugging-concepts"></a>Concepts de débogage SQL Server
 
@@ -58,25 +56,20 @@ Visual Studio rend plus facile à déboguer directement un objet de base de donn
 
 Dans la mesure où le `Products_SelectByCategoryID` procédure stockée attend un `@CategoryID` paramètre d’entrée, nous devons fournir cette valeur. Entrez 1, ce qui retourne des informations sur les boissons.
 
-
 ![Utilisez la valeur 1 pour le @CategoryID paramètre](debugging-stored-procedures-vb/_static/image1.png)
 
 **Figure 1**: Utilisez la valeur 1 pour le `@CategoryID` paramètre
 
-
 Après avoir fourni la valeur pour le `@CategoryID` paramètre, la procédure stockée est exécutée. Au lieu d’exécuter jusqu'à la fin, cependant, le débogueur interrompt l’exécution à la première instruction. Notez la flèche jaune dans la marge, indiquant l’emplacement actuel dans la procédure stockée. Vous pouvez afficher et modifier les valeurs de paramètre via la fenêtre Espion ou en pointant sur le nom du paramètre dans la procédure stockée.
-
 
 [![Le débogueur a interrompu sur la première instruction de la procédure stockée](debugging-stored-procedures-vb/_static/image3.png)](debugging-stored-procedures-vb/_static/image2.png)
 
 **Figure 2**: Le débogueur a interrompu sur la première instruction de la procédure stockée ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image4.png))
 
-
 Pour parcourir l’instruction d’une procédure stockée à la fois, cliquez sur le bouton pas à pas principal dans la barre d’outils ou appuyez sur la touche F10. Le `Products_SelectByCategoryID` procédure stockée contienne un seul `SELECT` instruction, en appuyant sur F10 allez effectuer un survol de l’instruction unique et terminer l’exécution de la procédure stockée. À l’issue de la procédure stockée, sa sortie s’affiche dans la fenêtre Sortie et le débogueur s’arrête.
 
 > [!NOTE]
 > Le débogage T-SQL se produit au niveau de l’instruction ; Vous ne pouvez pas entrer dans un `SELECT` instruction.
-
 
 ## <a name="step-2-configuring-the-website-for-application-debugging"></a>Étape 2 : Configuration du site Web pour le débogage de l’Application
 
@@ -84,22 +77,18 @@ Pendant le débogage d’une procédure stockée directement à partir de l’Ex
 
 Avant que nous pouvons commencer le débogage des procédures stockées appelées à partir de l’application, nous devons indiquer à l’application web ASP.NET à intégrer avec le débogueur SQL Server. Démarrer en cliquant sur le nom du site Web dans l’Explorateur de solutions (`ASPNET_Data_Tutorial_74_VB`). Choisissez l’option de Pages de propriétés dans le menu contextuel, sélectionnez l’élément Options de démarrage sur la gauche et cochez la case de SQL Server dans la section débogueurs (voir Figure 3).
 
-
 [![Cochez la case à cocher du serveur SQL dans les Pages de propriétés d’Application s](debugging-stored-procedures-vb/_static/image6.png)](debugging-stored-procedures-vb/_static/image5.png)
 
 **Figure 3**: Cochez la case à cocher du serveur SQL dans les Pages de propriétés de seconde Application ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image7.png))
-
 
 En outre, nous devons mettre à jour la chaîne de connexion de base de données utilisée par l’application afin que le regroupement de connexions est désactivé. Lorsqu’une connexion à une base de données est fermée, le correspondantes `SqlConnection` objet est placé dans un pool de connexions disponibles. Lorsque vous établissez une connexion à une base de données, un objet de connexion disponibles peuvent être récupérées à partir de ce pool plutôt que devoir créer et établir une nouvelle connexion. Cette mise en pool d’objets de connexion est une amélioration des performances et est activé par défaut. Toutefois, lors du débogage nous souhaitons désactiver le regroupement de connexions, car l’infrastructure de débogage n’est pas correctement rétablie lorsque vous travaillez avec une connexion qui a été extraite du pool.
 
 Pour le regroupement de connexion désactivée, mise à jour le `NORTHWNDConnectionString` dans `Web.config` afin qu’il inclue le paramètre `Pooling=false` .
 
-
 [!code-xml[Main](debugging-stored-procedures-vb/samples/sample1.xml)]
 
 > [!NOTE]
 > Une fois que vous avez terminé le débogage SQL Server via l’application ASP.NET veillez à rétablir le regroupement de connexions en supprimant le `Pooling` définition à partir de la chaîne de connexion (ou en lui affectant `Pooling=true` ).
-
 
 À ce stade, l’application ASP.NET a été configurée pour autoriser Visual Studio déboguer des objets de base de données SQL Server lorsqu’elle est appelée via l’application web. Il ne reste plus maintenant consiste à ajouter un point d’arrêt à une procédure stockée et de démarrer le débogage !
 
@@ -107,51 +96,40 @@ Pour le regroupement de connexion désactivée, mise à jour le `NORTHWNDConnect
 
 Ouvrez le `Products_SelectByCategoryID` procédure stockée et définissez un point d’arrêt au début de la `SELECT` instruction en cliquant dans la marge à l’emplacement approprié ou en plaçant votre curseur au début de la `SELECT` instruction et en appuyant sur F9. Comme l’illustre la Figure 4, le point d’arrêt apparaît sous la forme d’un cercle rouge dans la marge.
 
-
 [![Définir un point d’arrêt dans le Products_SelectByCategoryID procédure stockée](debugging-stored-procedures-vb/_static/image9.png)](debugging-stored-procedures-vb/_static/image8.png)
 
 **Figure 4**: Définir un point d’arrêt dans le `Products_SelectByCategoryID` la procédure stockée ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image10.png))
 
-
 Dans l’ordre pour un objet de base de données SQL à déboguer une application cliente, il est impératif que la base de données configurée pour prendre en charge le débogage de l’application. Lorsque vous définissez tout d’abord un point d’arrêt, ce paramètre doit être automatiquement activé, mais il est préférable de procéder à une. Avec le bouton droit sur le `NORTHWND.MDF` nœud dans l’Explorateur de serveurs. Le menu contextuel doit inclure un menu activé élément nommé de débogage de l’Application.
-
 
 ![Vérifiez que l’Option de débogage d’Application est activée.](debugging-stored-procedures-vb/_static/image11.png)
 
 **Figure 5**: Vérifiez que l’Option de débogage d’Application est activée.
 
-
 Le jeu de point d’arrêt et l’option de débogage de l’Application est activée, nous sommes prêts à déboguer la procédure stockée lorsqu’elle est appelée à partir de l’application ASP.NET. Démarrez le débogueur en accédant au menu Déboguer et icône choix de démarrer le débogage, en appuyant sur F5 ou en cliquant sur le vert de lecture dans la barre d’outils. Cela démarre le débogueur et lancer le site Web.
 
 Le `Products_SelectByCategoryID` procédure stockée a été créée dans le [à l’aide des procédures stockées existantes pour s DataSet typée TableAdapters](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md) didacticiel. La page web correspondante (`~/AdvancedDAL/ExistingSprocs.aspx`) contient un GridView qui affiche les résultats retournés par cette procédure stockée. Visitez cette page via le navigateur. Lorsque vous atteignez la page, le point d’arrêt dans le `Products_SelectByCategoryID` procédure stockée est atteint et que le contrôle retourné à Visual Studio. Comme à l’étape 1, vous pouvez parcourir les instructions de procédure stockée s et la vue et modifier les valeurs de paramètre.
-
 
 [![La Page ExistingSprocs.aspx affiche initialement les boissons](debugging-stored-procedures-vb/_static/image13.png)](debugging-stored-procedures-vb/_static/image12.png)
 
 **Figure 6**: Le `ExistingSprocs.aspx` Page affiche initialement les boissons ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image14.png))
 
-
 [![La procédure stockée s point d’arrêt a été atteint.](debugging-stored-procedures-vb/_static/image16.png)](debugging-stored-procedures-vb/_static/image15.png)
 
 **Figure 7**: Le s de la procédure stockée point d’arrêt a été atteint ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image17.png))
 
-
 En tant que la fenêtre Espion dans la Figure 7 montre, la valeur de la `@CategoryID` paramètre est 1. Il s’agit, car le `ExistingSprocs.aspx` page affiche initialement les produits dans la catégorie boissons, qui a un `CategoryID` la valeur 1. Choisissez une catégorie différente dans la liste déroulante. Cette opération entraîne une publication et réexécute la `Products_SelectByCategoryID` procédure stockée. Le point d’arrêt est atteint, mais cette fois le `@CategoryID` valeur du paramètre s reflète l’élément de liste déroulante sélectionnée s `CategoryID`.
-
 
 [![Choisissez une catégorie différente dans la liste déroulante](debugging-stored-procedures-vb/_static/image19.png)](debugging-stored-procedures-vb/_static/image18.png)
 
 **Figure 8**: Choisissez une catégorie différente dans la liste déroulante ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image20.png))
 
-
 [![Le @CategoryID paramètre reflète la catégorie sélectionnée à partir de la Page Web](debugging-stored-procedures-vb/_static/image22.png)](debugging-stored-procedures-vb/_static/image21.png)
 
 **Figure 9**: Le `@CategoryID` paramètre reflète la catégorie sélectionnée dans la Page Web ([cliquez pour afficher l’image en taille réelle](debugging-stored-procedures-vb/_static/image23.png))
 
-
 > [!NOTE]
 > Si le point d’arrêt dans le `Products_SelectByCategoryID` procédure stockée n’est pas atteint lors de la visite le `ExistingSprocs.aspx` , assurez-vous que la case à cocher de SQL Server a été cochée dans la section débogueurs de l’application ASP.NET s Page de propriétés, que le regroupement de connexions a été désactivé, et que la base de données s option de débogage de l’Application est activée. Si vous re toujours des difficultés, redémarrez Visual Studio et réessayez.
-
 
 ## <a name="debugging-t-sql-database-objects-on-remote-instances"></a>Débogage des objets de base de données de T-SQL sur des Instances distantes
 
@@ -166,14 +144,12 @@ La seconde tâche nécessite que le compte d’utilisateur Windows utilisé pour
 
 Un exemple devrait permettre de clarifier les choses. Imaginez qu’il existe un compte Windows nommé `SQLDebug` au sein du domaine Windows. Ce compte devra être ajouté à l’instance distante de SQL Server sous la forme d’une connexion valide et un membre de la `sysadmin` rôle. Ensuite, pour déboguer l’instance distante de SQL Server à partir de Visual Studio, nous devons exécuter Visual Studio en tant que le `SQLDebug` utilisateur. Cela peut être effectuée en vous connectant en dehors de notre station de travail, se reconnectent en tant que `SQLDebug`, et puis en lançant Visual Studio, mais une approche plus simple consisterait à se connecter à notre station de travail à l’aide de nos propres informations d’identification, puis utilisez `runas.exe` pour lancer Visual Studio en tant que le `SQLDebug` utilisateur. `runas.exe` permet à une application particulière doit être exécuté sous la forme d’un autre compte d’utilisateur. Pour lancer Visual Studio en tant que `SQLDebug`, vous pouvez entrer l’instruction suivante à la ligne de commande :
 
-
 [!code-console[Main](debugging-stored-procedures-vb/samples/sample2.cmd)]
 
 Pour obtenir une explication plus détaillée sur ce processus, consultez [William R. Vaughn](http://betav.com/BLOG/billva/) s *Hitchhiker ' s s Guide Visual Studio et SQL Server, septième édition* ainsi que [How To : Définir des autorisations SQL Server pour le débogage](https://msdn.microsoft.com/library/w1bhybwz(VS.80).aspx).
 
 > [!NOTE]
 > Si votre ordinateur de développement s’exécute Windows XP Service Pack 2, vous devez configurer le pare-feu de connexion Internet pour autoriser le débogage distant. [La procédure : Activer le débogage de SQL Server 2005](https://msdn.microsoft.com/library/s0fk6z6e(VS.80).aspx) article vous indique que cela implique deux étapes : (a) sur l’ordinateur hôte Visual Studio, vous devez ajouter `Devenv.exe` à la liste des Exceptions et ouvrir le port TCP 135 ; et (b) sur l’ordinateur distant (SQL), vous devez ouvrir le TCP 135 le port et ajoutez `sqlservr.exe` à la liste des Exceptions. Si votre stratégie de domaine nécessite la communication réseau via IPSec, vous devez ouvrir les ports UDP 4500 et UDP 500.
-
 
 ## <a name="summary"></a>Récapitulatif
 

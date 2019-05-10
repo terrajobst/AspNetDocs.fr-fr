@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: a8aac1ac-89de-4415-afe0-97a41c6423d2
 msc.legacyurl: /web-pages/overview/routing/creating-readable-urls-in-aspnet-web-pages-sites
 msc.type: authoredcontent
-ms.openlocfilehash: bfce6120b76d68a3f212639eafa6aa091d7e345d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 832db8e144cab730f16c78f67c12feb9b7c92c7c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59381781"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131766"
 ---
 # <a name="creating-readable-urls-in-aspnet-web-pages-razor-sites"></a>Création d’URL lisibles dans les Sites ASP.NET Web Pages (Razor)
 
@@ -33,7 +33,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Ce didacticiel fonctionne également avec ASP.NET Web Pages 2.
-
 
 ## <a name="about-routing"></a>À propos du routage
 
@@ -77,7 +76,6 @@ Si la recherche trouvée exacte ne correspond à *.cshtml* fichiers dans leurs d
 > [!NOTE]
 > En fait, les demandes pour des pages spécifiques (autrement dit, les requêtes qui incluent le *.cshtml* extension de nom de fichier) fonctionnent comme prévu. Une requête semblable à `http://www.contoso.com/a/b.cshtml` exécutera la page *b.cshtml* parfaitement.
 
-
 À l’intérieur d’une page, vous pouvez obtenir les informations de chemin d’accès par le biais de la page `UrlData` propriété, qui est un dictionnaire. Imaginez que vous disposez d’un fichier nommé *ViewCustomers.cshtml* et votre site obtient cette demande :
 
 `http://mysite.com/myWebSite/ViewCustomers/1000`
@@ -88,7 +86,6 @@ Comme décrit dans les règles ci-dessus, la demande est transmise à votre page
 
 > [!NOTE]
 > Étant donné que le routage n’implique pas les noms de fichier complet, il peut y avoir une ambiguïté si vous avez des pages qui ont le même nom mais des extensions de nom de fichier (par exemple, *MyPage.cshtml* et *MyPage.html*) . Afin d’éviter des problèmes de routage, il est préférable de s’assurer que vous n’avez des pages de votre site dont les noms diffèrent uniquement par leur extension.
-
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Ressources supplémentaires

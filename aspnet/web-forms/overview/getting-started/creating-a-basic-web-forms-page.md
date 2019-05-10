@@ -8,12 +8,12 @@ ms.date: 03/03/2014
 ms.assetid: a2f1c635-0817-4a9a-8c13-d5b5d29727c0
 msc.legacyurl: /web-forms/overview/getting-started/creating-a-basic-web-forms-page
 msc.type: authoredcontent
-ms.openlocfilehash: bf3336c2467553ba3714bbd4fbb41a35a0490768
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 80254135d2d363ea151e2ea70aeca988b33b0d4d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410602"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134660"
 ---
 # <a name="using-visual-studio-2013-to-create-a-basic-aspnet-45-web-forms-page"></a>À l’aide de Visual Studio 2013 pour créer une Page ASP.NET 4.5 Web Forms base
 # 
@@ -45,7 +45,6 @@ Pour exécuter cette procédure pas à pas, vous avez besoin des éléments su
     >   
     > Si vous utilisez Visual Studio, cette procédure pas à pas suppose que vous avez choisi le **développement Web** collection de paramètres de la première fois que vous avez démarré Visual Studio. Pour plus d'informations, voir [Procédure : Sélectionnez les paramètres d’environnement de développement de Web](https://msdn.microsoft.com/library/ff521558.aspx).
 
-
 ## <a name="creating-a-web-application-project-and-a-page"></a>Création d’un projet d’application Web et une Page
 
 <a id="sectionToggle0"></a>
@@ -69,16 +68,13 @@ Dans cette partie de la procédure pas à pas, vous créez un projet d’applica
     Visual Studio crée un nouveau projet qui inclut les fonctionnalités prégénérées basée sur le modèle Web Forms. Il vous fournit non seulement un *Home.aspx* page, un *About.aspx* page, un *Contact.aspx* page, mais inclut également des fonctionnalités d’appartenance qui enregistre les utilisateurs et l’enregistre leurs informations d’identification afin qu’ils peuvent se connecter à votre site Web. Lorsqu’une nouvelle page est créée, par défaut, Visual Studio affiche la page dans **Source** vue, où vous pouvez voir les éléments HTML de la page. L’illustration suivante montre ce que vous verriez dans **Source** afficher si vous avez créé une page Web nommée *BasicWebApp.aspx*.  
     ![Mode Source](creating-a-basic-web-forms-page/_static/image4.png)
 
-
 ### <a name="a-tour-of-the-visual-studio-web-development-environment"></a>Visite guidée de l’environnement de développement Web Visual Studio
-
 
 Avant de continuer en modifiant la page, il est utile pour vous familiariser avec l’environnement de développement Visual Studio. L’illustration suivante vous montre les fenêtres et les outils qui sont disponibles dans Visual Studio et Visual Studio Express pour le Web.
 
 > [!NOTE] 
 > 
 > Ce diagramme illustre les emplacements de fenêtre et des fenêtres par défaut. Le **vue** menu vous permet d’afficher des fenêtres supplémentaires et réorganisez et redimensionnez windows pour l’adapter à vos préférences. Si les modifications ont déjà été apportées à la disposition de fenêtre, ce que vous voyez ne correspondre pas l’illustration.
-
 
  L’environnement Visual Studio
 
@@ -96,14 +92,11 @@ Examinez l’illustration ci-dessus et correspond au texte à la liste suivante,
 - **Boîte à outils**. Fournit des contrôles et des éléments HTML que vous pouvez faire glisser sur votre page. **Boîte à outils** éléments sont regroupés selon leur fonction.
 - S **erver Explorer**. Affiche les connexions de base de données. Si l’Explorateur de serveurs n’est pas visible, dans le menu Affichage, cliquez sur Explorateur de serveurs.
 
-
 ### <a name="creating-a-new-aspnet-web-forms-page"></a>Création d’une Page ASP.NET Web Forms
-
 
 Lorsque vous créez une nouvelle application Web Forms à l’aide du **Application Web ASP.NET** modèle de projet, Visual Studio ajoute une page ASP.NET (page Web Forms) nommée *Default.aspx*, ainsi que plusieurs autres fichiers et les dossiers. Vous pouvez utiliser la *Default.aspx* page comme page d’accueil pour votre application Web. Toutefois, pour cette procédure pas à pas, vous créez et travailler avec une nouvelle page.
 
 ### <a name="to-add-a-page-to-the-web-application"></a>Pour ajouter une page à l’application Web
-
 
 1. Fermer le *Default.aspx* page. Pour ce faire, cliquez sur l’onglet qui affiche le nom de fichier, puis sur l’option ferme.
 2. Dans **l’Explorateur de solutions**, cliquez sur le nom d’application Web (dans ce didacticiel est le nom de l’application **BasicWebSite**), puis cliquez sur **ajouter**  - &gt; **Un nouvel élément**.   
@@ -113,14 +106,11 @@ La boîte de dialogue **Ajouter un nouvel élément** s’affiche.
 4. Cliquez sur **ajouter** pour ajouter la page web à votre projet.  
 Visual Studio crée la page et l’ouvre.
 
-
 ### <a name="adding-html-to-the-page"></a>Ajout de code HTML à la Page
-
 
 Dans cette partie de la procédure pas à pas, vous allez ajouter du texte statique à la page.
 
 ### <a name="to-add-text-to-the-page"></a>Pour ajouter du texte à la page
-
 
 1. En bas de la fenêtre de document, cliquez sur le **conception** tab pour passer à **conception** vue.
 
@@ -136,14 +126,11 @@ Dans cette partie de la procédure pas à pas, vous allez ajouter du texte stati
     Vous pouvez voir le code HTML dans **Source** vue que vous avez créé lorsque vous avez tapé dans **conception** vue.  
     ![Page Web avec du texte statique](creating-a-basic-web-forms-page/_static/image8.png)
 
-
 ### <a name="running-the-page"></a>Exécution de la Page
-
 
 Avant de continuer en ajoutant des contrôles à la page, vous pouvez l’exécuter.
 
 ### <a name="to-run-the-page"></a>Pour exécuter la page
-
 
 1. Dans **l’Explorateur de solutions**, avec le bouton droit *PremièrePageWeb.aspx* et sélectionnez **définir comme Page de démarrage**.
 2. Appuyez sur **CTRL + F5** pour exécuter la page.
@@ -153,9 +140,7 @@ Avant de continuer en ajoutant des contrôles à la page, vous pouvez l’exécu
     Pour afficher une page dans le navigateur vous pouvez également cliquer sur la page dans **l’Explorateur de solutions** et sélectionnez **afficher dans le navigateur**.
 3. Fermez le navigateur pour arrêter l’application Web.
 
-
 ## <a name="adding-and-programming-controls"></a>Ajout et la programmation de contrôles
-
 
 <a id="sectionToggle1"></a>
 
@@ -164,7 +149,6 @@ Vous allez maintenant ajouter des contrôles serveur à la page. Les contrôles 
 Vous ajouterez un [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) contrôle, un [zone de texte](https://msdn.microsoft.com/library/system.web.ui.webcontrols.textbox.aspx) contrôle et un [étiquette](https://msdn.microsoft.com/library/system.web.ui.webcontrols.label.aspx) le contrôle à la page et d’écrire du code pour gérer les [cliquez sur](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.click.aspx) événement pour le [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) contrôle.
 
 ### <a name="to-add-controls-to-the-page"></a>Pour ajouter des contrôles à la page
-
 
 1. Cliquez sur le **conception** tab pour passer à **conception** vue.
 2. Placez le point d’insertion à la fin de la **Bienvenue dans Visual Web Developer** texte et appuyez sur **entrée** cinq fois ou plus pour libérer de l’espace dans le **div** boîte de l’élément.
@@ -179,14 +163,11 @@ Notez que vous devrez peut-être développer le **boîte à outils** fenêtre su
 
     ![Trois contrôles en mode Design](creating-a-basic-web-forms-page/_static/image9.png "trois contrôles en mode Design")
 
-
 ### <a name="setting-control-properties"></a>Définition des propriétés de contrôle
-
 
 Visual Studio vous propose différentes façons de définir les propriétés des contrôles sur la page. Dans cette partie de la procédure pas à pas, vous allez définir des propriétés dans les deux **conception** vue et **Source** vue.
 
 ### <a name="to-set-control-properties"></a>Pour définir les propriétés de contrôle
-
 
 1. Tout d’abord, afficher le **propriétés** windows en sélectionnant à partir de la **vue** menu -&gt; **Windows autres**  - &gt; **Fenêtre Propriétés**. Vous pouvez également sélectionner **F4** pour afficher le **propriétés** fenêtre.
 2. Sélectionnez le [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) contrôle, puis, dans le **propriétés** fenêtre, définissez la valeur de **texte** à **nom d’affichage**. Le texte que vous avez entré s’affiche sur le bouton dans le concepteur, comme indiqué dans l’illustration suivante.
@@ -217,14 +198,11 @@ Visual Studio vous propose différentes façons de définir les propriétés des
 
     Le **ForeColor** attribut se termine avec la couleur que vous avez sélectionnées, y compris les guillemets fermants.
 
-
 ### <a name="programming-the-button-control"></a>Programmation du contrôle de bouton
-
 
 Pour cette procédure pas à pas, vous allez écrire du code qui lit le nom que l’utilisateur entre dans la zone de texte et affiche ensuite le nom dans la [étiquette](https://msdn.microsoft.com/library/system.web.ui.webcontrols.label.aspx) contrôle.
 
 ### <a name="add-a-default-button-event-handler"></a>Ajoutez un gestionnaire d’événements de bouton par défaut
-
 
 1. Basculez vers **conception** vue.
 2. Double-cliquez sur le [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) contrôle.
@@ -252,14 +230,11 @@ Pour cette procédure pas à pas, vous allez écrire du code qui lit le nom que 
 
     Méthodes de gestionnaire d’événements peuvent avoir n’importe quel nom ; le nom que vous voyez est le nom par défaut créé par Visual Studio. Le point important est que le nom utilisé pour le **OnClick** attribut dans le code HTML doit correspondre au nom d’une méthode définie dans le code-behind.
 
-
 ### <a name="running-the-page"></a>Exécution de la Page
-
 
 Vous pouvez maintenant tester les contrôles serveur dans la page.
 
 ### <a name="to-run-the-page"></a>Pour exécuter la page
-
 
 1. Appuyez sur **CTRL + F5** pour exécuter la page dans le navigateur. Si une erreur se produit, vérifiez à nouveau les étapes ci-dessus.
 2. Entrez un nom dans la zone de texte et cliquez sur le **surnom** bouton.
@@ -270,7 +245,6 @@ Vous pouvez maintenant tester les contrôles serveur dans la page.
     Dans le code source de la page, vous voyez HTML sans aucun code serveur. Plus précisément, vous ne voyez pas le **&lt;asp :&gt;** les éléments que vous utilisiez dans **Source** vue. Lorsque la page s’exécute, ASP.NET traite les contrôles serveur et restitue des éléments HTML à la page qui effectuent les fonctions qui représentent le contrôle. Par exemple, le **&lt;asp : Button&gt;** contrôle est restitué en tant que le code HTML **&lt;type d’entrée =&quot;soumettre&quot; &gt;** élément.
 4. Fermez le navigateur.
 
-
 ## <a name="working-with-additional-controls"></a>Utilisation des contrôles supplémentaires
 
 <a id="sectionToggle2"></a>
@@ -280,7 +254,6 @@ Dans cette partie de la procédure pas à pas, vous allez travailler avec les [c
 Dans cette section, vous allez ajouter un [System.Web.UI.WebControls.Calendar](https://msdn.microsoft.com/library/system.web.ui.webcontrols.calendar.aspx) le contrôle à la page et de mettre en forme.
 
 ### <a name="to-add-a-calendar-control"></a>Pour ajouter un contrôle de calendrier
-
 
 1. Dans Visual Studio, basculez vers **conception** vue.
 2. À partir de la **Standard** section de la **boîte à outils**, faites glisser un [calendrier](https://msdn.microsoft.com/library/system.web.ui.webcontrols.calendar.aspx) contrôler sur la page et déposez-la en dessous le **div** élément qui contient les autres contrôles.
@@ -300,14 +273,11 @@ Dans cette section, vous allez ajouter un [System.Web.UI.WebControls.Calendar](h
 
     ![Contrôle dans la vue de Source de calendrier](creating-a-basic-web-forms-page/_static/image15.png "Calendar control dans la vue de Source")
 
-
 ### <a name="programming-the-calendar-control"></a>Programmation du contrôle de calendrier
-
 
 Dans cette section, vous programmerez le [calendrier](https://msdn.microsoft.com/library/system.web.ui.webcontrols.calendar.aspx) contrôle pour afficher la date actuellement sélectionnée.
 
 ### <a name="to-program-the-calendar-control"></a>Pour programmer le contrôle Calendar
-
 
 1. Dans **conception** , double-cliquez sur le [calendrier](https://msdn.microsoft.com/library/system.web.ui.webcontrols.calendar.aspx) contrôle.
 
@@ -316,19 +286,15 @@ Dans cette section, vous programmerez le [calendrier](https://msdn.microsoft.com
 
     [!code-csharp[Main](creating-a-basic-web-forms-page/samples/sample3.cs?highlight=3)]
 
-
     [!code-vb[Main](creating-a-basic-web-forms-page/samples/sample4.vb?highlight=2)]
 
     Le code ci-dessus définit le texte du contrôle label à la date sélectionnée du contrôle calendar.
 
-
 ### <a name="running-the-page"></a>Exécution de la Page
-
 
 Vous pouvez maintenant tester le calendrier.
 
 ### <a name="to-run-the-page"></a>Pour exécuter la page
-
 
 1. Appuyez sur **CTRL + F5** pour exécuter la page dans le navigateur.
 2. Cliquez sur une date dans le calendrier.
@@ -339,9 +305,7 @@ Vous pouvez maintenant tester le calendrier.
     Notez que le [calendrier](https://msdn.microsoft.com/library/system.web.ui.webcontrols.calendar.aspx) contrôle a été restitué à la page comme un **table**, avec chaque jour comme un **td** élément.
 4. Fermez le navigateur.
 
-
 ## <a name="next-steps"></a>Étapes suivantes
-
 
 <a id="nextStepsToggle"></a>
 

@@ -8,12 +8,12 @@ ms.date: 09/13/2006
 ms.assetid: 58618954-a9ed-4ca0-8c2d-95a5ffd9c03e
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/displaying-data-with-the-datalist-and-repeater-controls-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e275b552af1348da48937e26012f7625a2bb3b93
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2d14d80f0fa0df0dd929c106ee86c9757e6ab033
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383909"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126066"
 ---
 # <a name="displaying-data-with-the-datalist-and-repeater-controls-vb"></a>Affichage de données avec les contrôles DataList et Repeater (VB)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_29_VB.exe) ou [télécharger le PDF](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/datatutorial29vb1.pdf)
 
 > Dans les didacticiels précédents, nous avons utilisé le contrôle GridView pour afficher des données. À partir de ce didacticiel, nous intéresser à la construction des modèles de création de rapports courants avec les contrôles DataList et Repeater, en commençant par les principes fondamentaux de l’affichage des données avec ces contrôles.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -42,88 +41,69 @@ Avant de commencer ce didacticiel, laissez s tout d’abord prendre un moment po
 - `RepeatColumnAndDirection.aspx`
 - `NestedControls.aspx`
 
-
 ![Créez un dossier DataListRepeaterBasics et ajouter les Pages ASP.NET didacticiel](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image1.png)
 
 **Figure 1**: Créer un `DataListRepeaterBasics` dossier et ajouter les Pages ASP.NET didacticiel
 
-
 Ouvrir le `Default.aspx` page et faites glisser le `SectionLevelTutorialListing.ascx` contrôle utilisateur à partir de la `UserControls` dossier sur l’aire de conception. Ce contrôle utilisateur, que nous avons créée dans le [Pages maîtres et Navigation du Site](../introduction/master-pages-and-site-navigation-vb.md) didacticiel, énumère le plan du site et affiche les didacticiels à partir de la section en cours dans une liste à puces.
-
 
 [![Ajouter le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image3.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image2.png)
 
 **Figure 2**: Ajouter le `SectionLevelTutorialListing.ascx` contrôle utilisateur à `Default.aspx` ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image4.png))
 
-
 Afin de disposer de l’affichage de liste à puces les didacticiels contrôles DataList et Repeater, que nous allons créer, nous avons besoin de les ajouter au plan du site. Ouvrez le `Web.sitemap` fichier, puis ajoutez le balisage suivant après la balise de nœud de plan de site Ajout de boutons personnalisés :
 
-
 [!code-xml[Main](displaying-data-with-the-datalist-and-repeater-controls-vb/samples/sample1.xml)]
-
 
 ![Mettre à jour le plan du Site pour inclure les nouvelles Pages ASP.NET](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image5.png)
 
 **Figure 3**: Mettre à jour le plan du Site pour inclure les nouvelles Pages ASP.NET
 
-
 ## <a name="step-2-displaying-product-information-with-the-datalist"></a>Étape 2 : Affichage des informations de produit avec le contrôle DataList
 
 Comme pour le contrôle FormView, le contrôle DataList s sortie rendue dépend modèles plutôt que BoundFields, CheckBoxFields et ainsi de suite. Contrairement à FormView, le contrôle DataList est conçu pour afficher un ensemble d’enregistrements au lieu d’un solitaires. Permettent de commencer ce didacticiel avec un aperçu des informations de produit de liaison dans un contrôle DataList s. Commencez par ouvrir le `Basics.aspx` page dans le `DataListRepeaterBasics` dossier. Ensuite, faites glisser un contrôle DataList à partir de la boîte à outils vers le concepteur. Comme le montre la Figure 4, avant de spécifier les modèles DataList s, le Concepteur de l’affiche sous la forme d’une zone grise.
-
 
 [![Faites glisser le contrôle DataList à partir de la boîte à outils vers le Concepteur](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image7.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image6.png)
 
 **Figure 4**: Faites glisser la DataList à partir de la boîte à outils vers le concepteur ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image8.png))
 
-
 À partir du contrôle DataList s balise active, ajouter un nouveau ObjectDataSource et configurez-le pour utiliser le `ProductsBLL` classe s `GetProducts` (méthode). Dans la mesure où nous re création d’un contrôle DataList en lecture seule dans ce didacticiel, définir la liste déroulante (aucun) dans le s Assistant INSERT, UPDATE et DELETE d’onglets.
-
 
 [![Choisir de créer un nouveau ObjectDataSource](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image10.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image9.png)
 
 **Figure 5**: Opter pour créer un nouveau ObjectDataSource ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image11.png))
 
-
 [![Configurer pour utiliser la classe ProductsBLL ObjectDataSource](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image13.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image12.png)
 
 **Figure 6**: Configurer l’ObjectDataSource à utiliser le `ProductsBLL` classe ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image14.png))
-
 
 [![Récupérer des informations sur tous les produits à l’aide de la méthode GetProducts](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image16.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image15.png)
 
 **Figure 7**: Récupérer des informations sur tous les produits à l’aide du `GetProducts` (méthode) ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image17.png))
 
-
 Après avoir configuré les ObjectDataSource et son association à la DataList via sa balise active, Visual Studio crée automatiquement un `ItemTemplate` dans le contrôle DataList qui affiche le nom et la valeur de chaque champ de données retourné par la source de données (consultez la balisage ci-dessous). Cette valeur par défaut `ItemTemplate` aspect est identique à celle des modèles créés automatiquement lors de la liaison d’une source de données pour le contrôle FormView via le concepteur.
-
 
 [!code-aspx[Main](displaying-data-with-the-datalist-and-repeater-controls-vb/samples/sample2.aspx)]
 
 > [!NOTE]
 > Rappelez-vous que, lors de la liaison d’une source de données à un contrôle FormView via la balise active de s FormView, Visual Studio a créé un `ItemTemplate`, `InsertItemTemplate`, et `EditItemTemplate`. Avec le contrôle DataList, toutefois, uniquement un `ItemTemplate` est créé. Il s’agit, car le contrôle DataList n’a pas intégrés même édition et insertion de prise en charge offerte par le contrôle FormView. Le contrôle DataList ne contient-elle pas edit et delete liés à des événements et la modification et suppression de prise en charge ne peuvent être ajoutés avec un peu de code, mais s’il y a aucune simple out-of-the-box prise en charge en tant qu’avec le contrôle FormView. Nous verrons comment inclure la modification et suppression dans un futur didacticiel de prise en charge avec le contrôle DataList.
 
-
 Laissez s prenez un moment pour améliorer l’apparence de ce modèle. Au lieu d’afficher tous les champs de données, permettent d’afficher uniquement le-s nom de produit, le fournisseur, la catégorie, la quantité par unité et prix unitaire s. En outre, s permettent d’afficher le nom dans un `<h4>` titre et pour disposer les champs restants à l’aide un `<table>` sous le titre.
 
 Pour effectuer ces modifications, que vous pouvez soit utiliser le fonctionnalités du concepteur à partir du contrôle DataList s smart tag cliquez sur le lien Modifier les modèles ou vous pouvez modifier le modèle manuellement à l’aide de la syntaxe déclarative s de page de modification de modèle. Si vous utilisez l’option Modifier les modèles dans le concepteur, votre balisage qui en résulte peut ne pas correspond exactement le balisage suivant, mais lorsqu’ils sont affichés via un navigateur doit ressembler très à l’écran illustré à la Figure 8.
-
 
 [!code-aspx[Main](displaying-data-with-the-datalist-and-repeater-controls-vb/samples/sample3.aspx)]
 
 > [!NOTE]
 > L’exemple ci-dessus utilise étiquette de contrôles Web dont la propriété `Text` la valeur de la syntaxe de liaison de données est attribuée à la propriété. Vous pouvez également nous pourrions ont omis les étiquettes purement et simplement en tapant dans uniquement la syntaxe de liaison de données. Autrement dit, au lieu d’utiliser `<asp:Label ID="CategoryNameLabel" runat="server" Text='<%# Eval("CategoryName") %>' />` nous pourrions avoir utilisé à la place la syntaxe déclarative `<%# Eval("CategoryName") %>`.
 
-
 En laissant dans les contrôles Web Label, toutefois, offre deux avantages. Tout d’abord, il fournit un moyen plus simple pour mettre en forme les données en fonction des données, comme nous allons le voir dans le didacticiel suivant. Deuxièmement, l’option Modifier les modèles dans la syntaxe de liaison de données déclarative concepteur n t complet qui apparaît en dehors de la partie du contrôle Web. Au lieu de cela, l’interface de modifier les modèles est conçu pour faciliter l’utilisation de balisage statique Web les contrôles et part du principe que toute liaison de données se fera via la boîte de dialogue Modifier les DataBindings, qui est accessible à partir de balises actives de contrôles Web.
 
 Par conséquent, lorsque vous travaillez avec le contrôle DataList, qui offre la possibilité de modifier les modèles via le concepteur, je préfère utiliser des contrôles Web de l’étiquette afin que le contenu est accessible via l’interface de modifier les modèles. Comme nous le verrons bientôt, le Repeater nécessite que le contenu du modèle s être modifiées à partir de la vue de Source. Par conséquent, lors de l’élaboration les modèles de s Repeater je mentionnerai pas souvent le Web de l’étiquette de contrôle, sauf si je sais que j’ai besoin de mettre en forme l’apparence des données texte de la limite en fonction de la logique de programmation.
 
-
 [![Chaque produit s sortie est restitué à l’aide de DataList s ItemTemplate](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image19.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image18.png)
 
 **Figure 8**: La sortie de chaque produit s est restitué à l’aide de DataList s `ItemTemplate` ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image20.png))
-
 
 ## <a name="step-3-improving-the-appearance-of-the-datalist"></a>Étape 3 : Amélioration de l’apparence du contrôle DataList
 
@@ -133,14 +113,11 @@ Comme indiqué dans le [affichant les données avec ObjectDataSource le](../basi
 
 Pour ajouter un fichier d’apparence, cliquez sur le `App_Themes/DataWebControls` dossier, choisissez Ajouter un nouvel élément et sélectionnez l’option de fichier d’apparence dans la liste. Nommez le fichier `DataList.skin`.
 
-
 [![Créer un nouveau fichier d’apparence nommé DataList.skin](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image22.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image21.png)
 
 **Figure 9**: Créer un nouveau fichier apparence nommé `DataList.skin` ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image23.png))
 
-
 Utiliser le balisage suivant pour le `DataList.skin` fichier :
-
 
 [!code-aspx[Main](displaying-data-with-the-datalist-and-repeater-controls-vb/samples/sample4.aspx)]
 
@@ -148,11 +125,9 @@ Ces paramètres attribuer les mêmes classes CSS pour les propriétés de DataLi
 
 Avec l’ajout de ce fichier d’apparence, l’apparence de s DataList est mis à jour dans le concepteur (vous devrez peut-être actualiser la vue de concepteur pour voir les effets du nouveau fichier d’apparence ; dans le menu Affichage, cliquez sur Actualiser). Comme le montre la Figure 10, chaque produit en alternance a une couleur d’arrière-plan rose.
 
-
 [![Créer un nouveau fichier d’apparence nommé DataList.skin](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image25.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image24.png)
 
 **Figure 10**: Créer un nouveau fichier apparence nommé `DataList.skin` ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image26.png))
-
 
 ## <a name="step-4-exploring-the-datalist-s-other-templates"></a>Étape 4 : Exploration s autres modèles DataList
 
@@ -170,36 +145,28 @@ Lorsque vous spécifiez le `HeaderTemplate` ou `FooterTemplate`, le contrôle Da
 > [!NOTE]
 > Comme nous l’avons vu dans la [affichant des informations de résumé dans le pied de page/s GridView](../custom-formatting/displaying-summary-information-in-the-gridview-s-footer-vb.md) (didacticiel), tandis que les lignes d’en-tête et pied de page n la syntaxe de liaison de données de la prise en charge t, les informations spécifiques aux données peut être injecté directement dans ces lignes à partir de la GridView s `RowDataBound` Gestionnaire d’événements. Cette technique peut être utilisée pour les deux calculent des totaux cumulés ou autres informations à partir des données liées au contrôle ainsi qu’affecter ces informations pour le pied de page. Ce même concept peut être appliqué pour les contrôles DataList et Repeater ; la seule différence est que pour les contrôles DataList et Repeater de création d’un gestionnaire d’événements pour le `ItemDataBound` événement (au lieu de pour le `RowDataBound` événement).
 
-
 Dans notre exemple, let s ont le titre d’informations produit affiché en haut du contrôle DataList s provoque un `<h3>` titre. Pour ce faire, ajoutez un `HeaderTemplate` avec le balisage approprié. À partir du concepteur, il est possible en cliquant sur le lien Modifier les modèles dans la balise active DataList s, en choisissant le modèle d’en-tête dans la liste déroulante et en tapant dans le texte après avoir sélectionné l’option de titre 3 à partir du menu déroulant de style liste (voir Figure 11).
-
 
 [![Ajouter un HeaderTemplate avec les informations de produit du texte](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image28.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image27.png)
 
 **Figure 11**: Ajouter un `HeaderTemplate` avec les informations de produit du texte ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image29.png))
 
-
 Ou bien, il peut être ajouté manière déclarative en entrant le balisage suivant dans le `<asp:DataList>` balises :
-
 
 [!code-html[Main](displaying-data-with-the-datalist-and-repeater-controls-vb/samples/sample5.html)]
 
 Pour ajouter un peu d’espace entre chaque liste de produits, permettent s d’ajouter un `SeparatorTemplate` qui inclut une ligne entre chaque section. La balise de règle horizontale (`<hr>`), ajoute un diviseur de ce type. Créer le `SeparatorTemplate` afin qu’il dispose le balisage suivant :
-
 
 [!code-html[Main](displaying-data-with-the-datalist-and-repeater-controls-vb/samples/sample6.html)]
 
 > [!NOTE]
 > Comme le `HeaderTemplate` et `FooterTemplates`, le `SeparatorTemplate` n’est pas lié à un enregistrement à partir de la source de données et par conséquent ne peut pas directement la source de données liées à la DataList des enregistrements des accès.
 
-
 Après avoir établi la cet ajout, lorsque vous affichez la page via un navigateur qu’il doit ressembler à la Figure 12. Notez la ligne d’en-tête et la ligne entre chaque liste de produits.
-
 
 [![Le contrôle DataList inclut une ligne d’en-tête et une règle horizontale entre chaque liste de produits](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image31.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image30.png)
 
 **Figure 12**: Le contrôle DataList inclut une ligne d’en-tête et un Horizontal règle entre chaque liste de produits ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image32.png))
-
 
 ## <a name="step-5-rendering-specific-markup-with-the-repeater-control"></a>Étape 5 : Rendu du balisage spécifique avec le contrôle Repeater
 
@@ -221,54 +188,43 @@ Dans ASP.NET 1.x, le Repeater contrôle était couramment utilisé pour afficher
 > [!NOTE]
 > ASP.NET 2.0 introduit la nouvelle [contrôle BulletedList](https://msdn.microsoft.com/library/ms228101.aspx), qui peut être lié à un contrôle de source de données afin d’afficher une liste à puces simple. Avec le contrôle BulletedList, nous n’avez pas besoin de spécifier le code HTML liés à la liste ; au lieu de cela, nous indiquons simplement le champ de données à afficher en tant que le texte pour chaque élément de liste.
 
-
 Le Repeater sert un bloc catch de toutes les données de contrôle Web. Si il n’est pas un contrôle existant qui génère le balisage nécessaire, le contrôle Repeater peut être utilisé. Pour illustrer l’utilisation de répéteur, permettent de s disposent de la liste des catégories affiché au-dessus du contrôle DataList informations de produit créé à l’étape 2. En particulier, let s ont les catégories affichées dans une seule ligne HTML `<table>` avec chaque catégorie affiché sous la forme d’une colonne dans la table.
 
 Pour ce faire, nous allons faire glisser un contrôle Repeater à partir de la boîte à outils vers le concepteur, au-dessus du contrôle DataList informations de produit. Comme avec le contrôle DataList, Repeater affiche initialement comme une zone grisée jusqu'à ce que ses modèles ont été définis.
-
 
 [![Ajouter un répéteur au concepteur](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image34.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image33.png)
 
 **Figure 13**: Ajouter un répéteur vers le concepteur ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image35.png))
 
-
 Il s uniquement une option dans le répéteur s des balises actives : Choisir la Source de données. Choisir de créer un nouveau ObjectDataSource et configurez-le pour utiliser le `CategoriesBLL` classe s `GetCategories` (méthode).
-
 
 [![Créer un nouveau ObjectDataSource](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image37.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image36.png)
 
 **Figure 14**: Créer un nouveau ObjectDataSource ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image38.png))
 
-
 [![Configurer pour utiliser la classe CategoriesBLL ObjectDataSource](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image40.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image39.png)
 
 **Figure 15**: Configurer l’ObjectDataSource à utiliser le `CategoriesBLL` classe ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image41.png))
-
 
 [![Récupérer des informations sur toutes les catégories à l’aide de la méthode GetCategories](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image43.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image42.png)
 
 **Figure 16**: Récupérer des informations sur toutes les catégories à l’aide de la `GetCategories` (méthode) ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image44.png))
 
-
 Contrairement à la DataList, Visual Studio ne crée pas automatiquement un modèle ItemTemplate pour le contrôle Repeater après sa liaison à une source de données. En outre, les modèles de s Repeater ne peut pas être configurés via le concepteur et doivent être spécifiés de façon déclarative.
 
 Pour afficher les catégories en tant qu’une seule ligne `<table>` avec une colonne pour chaque catégorie, nous avons besoin de la répétition d’émettre un balisage semblable au suivant :
-
 
 [!code-html[Main](displaying-data-with-the-datalist-and-repeater-controls-vb/samples/sample7.html)]
 
 Dans la mesure où la `<td>Category X</td>` texte correspond à la partie qui se répète, cela apparaît dans le répéteur s ItemTemplate. Le balisage qui s’affiche avant - `<table><tr>` -seront placés dans le `HeaderTemplate` lors de la balise de fin - `</tr></table>` -sera placé dans le `FooterTemplate`. Pour entrer ces paramètres de modèle, accédez à la partie déclarative de la page ASP.NET en cliquant sur le bouton de la Source dans l’angle inférieur gauche et tapez la syntaxe suivante :
 
-
 [!code-aspx[Main](displaying-data-with-the-datalist-and-repeater-controls-vb/samples/sample8.aspx)]
 
 Le Repeater émet le balisage précis comme spécifié par ses modèles, rien de plus, rien de moins. Figure 17 montre la sortie de s Repeater lorsqu’ils sont affichés via un navigateur.
 
-
 [![Une seule ligne de HTML &lt;table&gt; répertorie chaque catégorie dans une colonne distincte](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image46.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image45.png)
 
 **Figure 17**: Une seule ligne de HTML `<table>` répertorie chaque catégorie dans une colonne distincte ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image47.png))
-
 
 ## <a name="step-6-improving-the-appearance-of-the-repeater"></a>Étape 6 : Amélioration de l’apparence du répéteur
 
@@ -276,26 +232,21 @@ Dans la mesure où le contrôle Repeater émet précisément le balisage spécif
 
 Dans notre exemple, laisser s ont les colonnes de catégorie alterner les couleurs d’arrière-plan, comme avec les lignes en alternance dans le contrôle DataList. Pour ce faire, vous devez affecter la `RowStyle` classe CSS à chaque élément du Repeater et le `AlternatingRowStyle` classe CSS à chaque élément du Repeater en alternance via le `ItemTemplate` et `AlternatingItemTemplate` modèles, comme suit :
 
-
 [!code-aspx[Main](displaying-data-with-the-datalist-and-repeater-controls-vb/samples/sample9.aspx)]
 
 Permettent de s également ajouter une ligne d’en-tête à la sortie avec le texte de catégories de produits. Dans la mesure où nous n t savoir combien de colonnes notre résultant `<table>` sera constitué de, la façon la plus simple de générer une ligne d’en-tête est garantie pour couvrir toutes les colonnes consiste à utiliser *deux* `<table>` s. La première `<table>` contiendra deux lignes de la ligne d’en-tête et une ligne qui contient la seule ligne deuxième, `<table>` qui a une colonne pour chaque catégorie dans le système. Autrement dit, nous voulons émettre le balisage suivant :
-
 
 [!code-html[Main](displaying-data-with-the-datalist-and-repeater-controls-vb/samples/sample10.html)]
 
 Ce qui suit `HeaderTemplate` et `FooterTemplate` entraîner dans le balisage de votre choix :
 
-
 [!code-aspx[Main](displaying-data-with-the-datalist-and-repeater-controls-vb/samples/sample11.aspx)]
 
 Figure 18 montre le Repeater après ont apporté ces modifications.
 
-
 [![Les colonnes de la catégorie autre couleur d’arrière-plan et inclut une ligne d’en-tête](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image49.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image48.png)
 
 **Figure 18**: L’autre catégorie de colonnes dans la couleur d’arrière-plan et inclut une ligne d’en-tête ([cliquez pour afficher l’image en taille réelle](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image50.png))
-
 
 ## <a name="summary"></a>Récapitulatif
 

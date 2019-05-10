@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 2e6e9c24-bb97-446a-b05e-1bd88824d352
 msc.legacyurl: /web-forms/videos/aspnet-35
 msc.type: chapter
-ms.openlocfilehash: b858dfc24a14e182319122320d8bb6af3b8fcb3c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 369f3f1516dace0c7d8fc3a87b2d50ec71889de0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422692"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133779"
 ---
 # <a name="aspnet-35"></a>ASP.NET 3.5
 
 > Comment créer des applications ASP.NET 3.5, en mettant l’accent sur les nouvelles fonctionnalités.
-
 
 - [Guide pratique pour](how-do-i/index.md)
 

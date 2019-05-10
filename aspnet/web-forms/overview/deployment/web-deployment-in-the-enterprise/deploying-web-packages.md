@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: a5c5eed2-8683-40a5-a2e1-35c9f8d17c29
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/deploying-web-packages
 msc.type: authoredcontent
-ms.openlocfilehash: c42fa327c324ac2b721268c56782a24755ec7225
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 91b99e6e250342851aea6860164b6f6af54818d1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391063"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119324"
 ---
 # <a name="deploying-web-packages"></a>Déploiement de packages web
 
@@ -37,7 +37,6 @@ par [Jason Lee](https://github.com/jrjlee)
 > - Vous avez généré et empaqueté votre application web, comme décrit dans [génération et empaquetage Web Application Projects](building-and-packaging-web-application-projects.md).
 > - Vous avez modifié le *SetParameters.xml* fichier pour fournir les valeurs de paramètre de droite pour votre environnement cible, comme décrit dans [configuration des paramètres pour le déploiement du Package Web](configuring-parameters-for-web-package-deployment.md).
 
-
 En cours d’exécution le [*nom_projet*]*. deploy.cmd* fichier est la façon la plus simple pour déployer un package web. En particulier, à l’aide de la *. deploy.cmd* fichier offre les avantages suivants par rapport à l’aide de MSDeploy.exe directement :
 
 - Vous n’avez pas besoin de spécifier l’emplacement du package de déploiement web&#x2014;le *. deploy.cmd* fichier sait déjà où il est.
@@ -52,9 +51,7 @@ Avant d’utiliser le *. deploy.cmd* fichier pour déployer un package web, vous
 
 Le *. deploy.cmd* fichier prend en charge diverses options de ligne de commande. Lorsque vous exécutez le fichier à partir d’une invite de commandes, il s’agit de la syntaxe de base :
 
-
 [!code-console[Main](deploying-web-packages/samples/sample1.cmd)]
-
 
 Vous devez spécifier soit un **/T** indicateur ou un **/Y** indicateur, pour indiquer si vous souhaitez effectuer un essai ou un déploiement en direct respectivement (n’utilisez pas les deux indicateurs dans la même commande). Ce tableau explique l’objectif de chacun de ces indicateurs.
 
@@ -71,7 +68,6 @@ Vous devez spécifier soit un **/T** indicateur ou un **/Y** indicateur, pour in
 
 > [!NOTE]
 > Chaque fois que le processus de génération crée un package web, il crée également un fichier nommé *[nom_projet] .deploy-readme.txt* qui explique ces options de déploiement.
-
 
 Outre ces indicateurs, vous pouvez spécifier des paramètres d’opération Web Deploy comme supplémentaires *. deploy.cmd* paramètres. Tous les autres paramètres que vous spécifiez sont simplement transmises à la commande MSDeploy.exe sous-jacent. Pour plus d’informations sur ces paramètres, consultez [Web déployer des paramètres de fonctionnement](https://technet.microsoft.com/library/dd569089(WS.10).aspx).
 
@@ -94,9 +90,7 @@ Dans cet exemple :
 
 Pour illustrer comment l’utilisation du *. deploy.cmd* fichier simplifie le processus de déploiement, examinons la commande MSDeploy.exe qui obtient générée et exécutée lorsque vous exécutez *ContactManager.Mvc.deploy.cmd* en utilisant les options ci-dessus.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample3.cmd)]
-
 
 Pour plus d’informations sur l’utilisation de la *. deploy.cmd* fichier pour déployer un package web, consultez [Comment : Installer un Package de déploiement à l’aide du fichier deploy.cmd](https://msdn.microsoft.com/library/ff356104.aspx).
 
@@ -152,13 +146,10 @@ Dans de nombreux scénarios d’entreprise, vous souhaiterez déployer vos packa
 
 Dans l’exemple de solution du Gestionnaire de contacts, examinons le **PublishWebPackages** cibler dans le *Publish.proj* fichier. Cette cible s’exécute une fois pour chaque *. deploy.cmd* fichier identifié par une liste d’éléments nommée **PublishPackages**. La cible utilise les propriétés et métadonnées d’élément pour générer un ensemble complet de valeurs d’argument pour chaque *. deploy.cmd* fichier, puis utilise le **Exec** tâche pour exécuter la commande.
 
-
 [!code-xml[Main](deploying-web-packages/samples/sample8.xml)]
-
 
 > [!NOTE]
 > Pour une vue d’ensemble plus large dans le fichier du modèle de projet dans l’exemple de solution et une introduction aux fichiers de projet personnalisé en général, consultez [présentation du fichier projet](understanding-the-project-file.md) et [comprendre le processus de génération](understanding-the-build-process.md).
-
 
 ## <a name="endpoint-considerations"></a>Considérations sur le point de terminaison
 
@@ -166,33 +157,24 @@ Indépendamment de si vous déployez votre package web en exécutant la *. deplo
 
 Si le serveur web de destination est configuré pour le déploiement à l’aide du service Web déployer l’Agent à distance, vous spécifiez l’URL du service cible en tant que votre destination.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample9.cmd)]
-
 
 Sinon, vous pouvez spécifier uniquement le nom du serveur en tant que votre destination et Web Deploy déduira l’URL du service agent distant.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample10.cmd)]
-
 
 Si le serveur web de destination est configuré pour le déploiement à l’aide du Gestionnaire de déploiement Web, vous devez spécifier l’adresse de point de terminaison du Service de gestion IIS Web (WMSvc) en tant que votre destination. Par défaut, cela prend la forme :
 
-
 [!code-console[Main](deploying-web-packages/samples/sample11.cmd)]
-
 
 Vous pouvez cibler un de ces points de terminaison à l’aide du *. deploy.cmd* MSDeploy.exe directement ou fichier. Toutefois, si vous souhaitez déployer sur le Gestionnaire de déploiement Web en tant qu’un utilisateur non-administrateur, comme décrit dans [configurer un serveur Web pour déployer publication sur le Web (Gestionnaire de déploiement Web)](../configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md), vous devez ajouter une chaîne de requête à l’adresse de point de terminaison de service.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample12.cmd)]
-
 
 Il s’agit, car l’utilisateur non administrateur n’a pas accès au niveau du serveur IIS ; il ou elle n’a accès à un site Web IIS spécifique. Au moment de l’écriture, en raison d’un bogue dans le Pipeline de publication Web (WPP), vous ne pouvez pas exécuter le *. deploy.cmd* fichier à l’aide d’une adresse de point de terminaison qui inclut une chaîne de requête. Dans ce scénario, vous devez déployer votre package web à l’aide de MSDeploy.exe directement.
 
 > [!NOTE]
 > Pour plus d’informations sur le service Web déployer l’Agent à distance et le Gestionnaire de déploiement Web, consultez [choix de l’approche de droite pour le déploiement Web](../configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md). Pour obtenir des conseils sur la façon de configurer vos fichiers de projet spécifique à l’environnement pour déployer sur ces points de terminaison, consultez [configurer les propriétés de déploiement pour un environnement cible](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
-
 
 ## <a name="authentication-considerations"></a>Considérations relatives à l’authentification
 

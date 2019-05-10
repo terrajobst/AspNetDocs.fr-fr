@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: 051296f0-9519-4e78-835c-d868da13b0a0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d917982d5bd97bf1fa9d926e761c6fe847bb0574
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1c28f520f710f77689548158e88d87d1051235d8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394196"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124235"
 ---
 # <a name="processing-unhandled-exceptions-vb"></a>Traitement des exceptions non gérées (VB)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Affichez ou téléchargez l’exemple de code](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-vb/samples) ([procédure de téléchargement](/aspnet/core/tutorials/index#how-to-download-a-sample))
 
 > Lorsqu’une erreur d’exécution se produit sur une application web en production, il est important pour avertir un développeur et d’enregistrer l’erreur afin qu’il peut être diagnostiqué à un moment ultérieur dans le temps. Ce didacticiel fournit une présentation de la façon dont ASP.NET traite les erreurs d’exécution et examine une façon d’exécuter un code personnalisé chaque fois qu’un bulles d’exception non gérée à l’exécution d’ASP.NET.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -34,7 +33,6 @@ Ce didacticiel montre comment accéder aux détails d’une exception non géré
 
 > [!NOTE]
 > Les informations examinées dans ce didacticiel sont particulièrement utiles si vous avez besoin traiter les exceptions non gérées d’une manière unique ou personnalisée. Dans les cas où vous devez uniquement consigner l’exception et de notifier un développeur, à l’aide d’une bibliothèque de journalisation d’erreur est la meilleure option. Les deux didacticiels fournissent une vue d’ensemble de deux de ces bibliothèques.
-
 
 ## <a name="executing-code-when-theerrorevent-is-raised"></a>L’exécution de Code lorsque le`Error`événement est déclenché.
 
@@ -56,7 +54,6 @@ Le `Global.asax` fichier créé dans un proxy d’application Web par le modèle
 > [!NOTE]
 > Lors du déploiement de l’application ASP.NET vous devez copier le `Global.asax` fichier à l’environnement de production. Le `Global.asax.vb` fichier, qui est créé dans le proxy d’application Web, n’a pas besoin être copiés vers la production, car ce code est compilé dans l’assembly du projet.
 
-
 Les gestionnaires d’événements créés par le modèle de classe d’Application globale de Visual Studio ne sont pas exhaustifs. Vous pouvez ajouter un gestionnaire d’événements pour les `HttpApplication` événement en nommant le Gestionnaire d’événements `Application_EventName`. Par exemple, vous pouvez ajouter le code suivant à la `Global.asax` fichier pour créer un gestionnaire d’événements pour le [ `AuthorizeRequest` événement](https://msdn.microsoft.com/library/system.web.httpapplication.authorizerequest.aspx):
 
 [!code-vb[Main](processing-unhandled-exceptions-vb/samples/sample1.vb)]
@@ -65,7 +62,6 @@ De même, vous pouvez supprimer les gestionnaires d’événements créés par l
 
 > [!NOTE]
 > *Les Modules HTTP* offrent une autre manière de définir des gestionnaires d’événements pour `HttpApplication` événements. Les Modules HTTP sont créés en tant qu’un fichier de classe qui peut être placé directement dans le projet d’application web ou séparé et répartis dans une bibliothèque de classes distincte. Car ils peuvent être séparées dans une bibliothèque de classes, des Modules HTTP offrent un modèle plus flexible et réutilisable pour la création de `HttpApplication` gestionnaires d’événements. Tandis que le `Global.asax` fichier est spécifique à l’application web dans lequel il réside, les Modules HTTP peut être compilés dans des assemblys, à quel point l’ajout du HTTP Module à un site Web est aussi simple que la suppression de l’assembly le `Bin` dossier et l’enregistrement le Module dans `Web.config`. Ce didacticiel ne recherche pas dans la création et l’utilisation des Modules HTTP, mais les bibliothèques de journalisation des erreurs deux utilisées dans les deux didacticiels suivants sont implémentées sous forme de Modules HTTP. Pour plus d’informations sur les avantages de Modules HTTP, reportez-vous à [à l’aide des Modules HTTP et des gestionnaires pour créer des composants enfichables ASP.NET](https://msdn.microsoft.com/library/aa479332.aspx).
-
 
 ## <a name="retrieving-information-about-the-unhandled-exception"></a>Récupérer des informations sur l’Exception non gérée
 
@@ -92,7 +88,6 @@ Les classes .NET Framework dans le [ `System.Net.Mail` espace de noms](https://m
 > [!NOTE]
 > Le `<system.net>` élément contient les paramètres du serveur SMTP utilisés par le `SmtpClient` classe lors de l’envoi d’un message électronique. Votre entreprise d’hébergement web a un serveur SMTP que vous pouvez utiliser pour envoyer un e-mail à partir de votre application. Pour plus d’informations sur les paramètres du serveur SMTP que vous devez utiliser dans votre application web, consultez la section de prise en charge de votre hôte web.
 
-
 Ajoutez le code suivant à la `Application_Error` Gestionnaire d’événements à envoyer un e-mail d’un développeur lorsqu’une erreur se produit :
 
 [!code-vb[Main](processing-unhandled-exceptions-vb/samples/sample4.vb)]
@@ -105,7 +100,6 @@ L’étape finale consiste à envoyer le `MailMessage`. Cela s’effectue en cr�
 
 > [!NOTE]
 > Avant d’utiliser ce code dans votre application web, vous souhaiterez modifier les valeurs dans le `ToAddress` et `FromAddress` constantes de support@example.com à toute adresse e-mail adresse l’e-mail de notification d’erreur doivent être envoyées à et provenir. Vous devez également spécifier les paramètres du serveur SMTP dans le `<system.net>` section `Web.config`. Consultez votre fournisseur d’hébergement web pour déterminer les paramètres du serveur SMTP à utiliser.
-
 
 Chaque fois qu’une erreur s’est le développeur est envoyé avec ce code en place un message électronique qui résume l’erreur et inclut le YSOD. Dans le didacticiel précédent, nous avons présenté une erreur d’exécution en visitant Genre.aspx et en transmettant un non valide `ID` valeur via la chaîne de requête, comme `Genre.aspx?ID=foo`. Visiter la page avec le `Global.asax` fichier sur place génère la même expérience utilisateur, comme dans le didacticiel précédent - dans l’environnement de développement vous continuerez à voir l’Exception détails jaune écran de mort, tandis que dans l’environnement de production, vous allez consultez la page d’erreur personnalisée. En plus de ce comportement existant, le développeur reçoit un e-mail.
 

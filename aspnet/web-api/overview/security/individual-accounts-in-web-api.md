@@ -8,12 +8,12 @@ ms.date: 10/15/2014
 ms.assetid: 92c84846-f0ea-4b5e-94b6-5004874eb060
 msc.legacyurl: /web-api/overview/security/individual-accounts-in-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 29c3670ad7ab93acb0be878e5bd961d0ea446eee
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7492c4aa4c2a0a8aeed64c3462bda8fc51f35a6b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396225"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134309"
 ---
 # <a name="secure-a-web-api-with-individual-accounts-and-local-login-in-aspnet-web-api-22"></a>Sécuriser une API Web avec des comptes individuels et de la connexion locale dans ASP.NET Web API 2.2
 
@@ -29,7 +29,6 @@ par [Mike Wasson](https://github.com/MikeWasson)
 > - [Visual Studio 2013 Update 3](https://www.microsoft.com/visualstudio/eng/2013-downloads)
 > - [Web API 2.2](../releases/whats-new-in-aspnet-web-api-22.md)
 > - [ASP.NET Identity 2.1](../../../identity/index.md)
-
 
 Dans Visual Studio 2013, le modèle de projet API Web propose trois options pour l’authentification :
 
@@ -239,7 +238,6 @@ Le **SuppressDefaultHostAuthentication** méthode indique à l’API Web pour ig
 
 > [!NOTE]
 > En particulier, la partie MVC de votre application peut utiliser l’authentification par formulaire, qui stocke les informations d’identification dans un cookie. Authentification basée sur les cookies nécessite l’utilisation de jetons anti-contrefaçon, pour empêcher les attaques CSRF. C’est un problème pour les API, web, car il n’existe aucun moyen pratique de l’API web pour envoyer le jeton anti-contrefaçon au client. (Pour plus d’informations sur ce problème, consultez [empêcher les attaques CSRF dans l’API Web](preventing-cross-site-request-forgery-csrf-attacks.md).) Appel **SuppressDefaultHostAuthentication** garantit que l’API Web n’est pas vulnérable aux attaques de falsification de requête Intersites à partir des informations d’identification stockées dans des cookies.
-
 
 Lorsque le client demande une ressource protégée, voici ce qui se passe dans le pipeline de l’API Web :
 

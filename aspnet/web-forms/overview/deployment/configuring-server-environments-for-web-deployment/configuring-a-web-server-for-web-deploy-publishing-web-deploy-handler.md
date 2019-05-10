@@ -8,12 +8,12 @@ ms.date: 01/29/2017
 ms.assetid: 90ebf911-1c46-4470-b876-1335bd0f590f
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler
 msc.type: authoredcontent
-ms.openlocfilehash: cf18a8860d34daa23f61e3dde13c2c79c6c0d4a5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 51a8fdf44199b5a4735e0e00657639b191f51255
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048116"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125979"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler"></a>Configuration d’un serveur web pour la publication Web Deploy (Gestionnaire Web Deploy)
 
@@ -28,7 +28,6 @@ ms.locfileid: "57048116"
 > - Utilisez *déploiement hors connexion*. Cette approche nécessite une configuration minimale du serveur web, mais un administrateur de serveur doit manuellement copier le package web sur le serveur et importez-le via le Gestionnaire des services Internet.
 > 
 > Pour plus d’informations sur les fonctionnalités clés, les avantages et les inconvénients de ces approches, consultez [choix de l’approche de droite pour le déploiement Web](choosing-the-right-approach-to-web-deployment.md).
-
 
 Oui, si vous souhaitez autoriser les utilisateurs non-administrateurs à déployer du contenu vers des sites Web IIS spécifiques. Cette approche est souvent souhaitable dans ces types de scénarios :
 
@@ -64,7 +63,6 @@ Cette rubrique sera vous montrent comment effectuer chacune de ces procédures. 
 > [!NOTE]
 > Pour plus d’informations sur la jonction des ordinateurs à un domaine, consultez [joindre des ordinateurs au domaine et journalisation](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Pour plus d’informations sur la configuration des adresses IP statiques, consultez [configurer une adresse IP statique](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx).
 
-
 ## <a name="install-products-and-components"></a>Installer les produits et composants
 
 Cette section va vous guider dans l’installation des produits requis et composants sur le serveur web. Avant de commencer, une bonne pratique consiste à exécuter des mises à jour de Windows pour vous assurer que votre serveur est à jour.
@@ -80,7 +78,6 @@ Dans ce cas, vous devez installer ces éléments :
 
 > [!NOTE]
 > Cette procédure pas à pas décrit l’utilisation de Web Platform Installer pour installer et configurer les différents composants. Bien que vous n’êtes pas obligé d’utiliser Web Platform Installer, il simplifie le processus d’installation en détectant les dépendances automatiquement et en garantissant que vous obtenez toujours les dernières versions de produit. Pour plus d’informations, consultez [Microsoft Web Platform Installer](https://go.microsoft.com/?linkid=9805118).
-
 
 **Pour installer les produits requis et les composants**
 
@@ -239,7 +236,6 @@ L’approche la plus courante consiste à attribuer des autorisations à l’ord
 > [!NOTE]
 > Pour plus d’informations sur les identités du pool d’applications dans IIS 7.5, consultez [identités du Pool d’applications](https://go.microsoft.com/?linkid=9805123).
 
-
 **Pour configurer les autorisations de dossier pour un site Web IIS**
 
 1. Dans l’Explorateur Windows, accédez à l’emplacement de votre dossier local.
@@ -281,7 +277,6 @@ Par défaut, le Service de gestion Web IIS écoute sur le port TCP 8172. Si le p
 | --- | --- | --- | --- |
 | Trafic entrant | Any | 8172 | TCP |
 | Sortant | 8172 | Any | TCP |
-  
 
 Pour plus d’informations sur la configuration des règles dans le pare-feu Windows, consultez [configuration des règles de pare-feu](https://technet.microsoft.com/library/dd448559(WS.10).aspx). Pour les pare-feu tiers, consultez votre documentation du produit.
 

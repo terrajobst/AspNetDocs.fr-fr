@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: b1abb452-642a-4ff3-8504-37b85590ff79
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 52b1aec577634dfb9fec7753e4f9b8bf46d159f0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6b444de67f3bce3d09dd8c3c172895cf07f58df8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416257"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134412"
 ---
 # <a name="logging-error-details-with-aspnet-health-monitoring-c"></a>Journalisation des détails des erreurs avec la supervision de l’intégrité ASP.NET (C#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger le Code](http://download.microsoft.com/download/1/0/C/10CC829F-A808-4302-97D3-59989B8F9C01/ASPNET_Hosting_Tutorial_13_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial13_HealthMonitoring_cs.pdf)
 
 > Système de surveillance de l’intégrité de Microsoft fournit un moyen facile et personnalisable pour vous connecter divers événements web, y compris les exceptions non gérées. Ce didacticiel Guide d’installation de l’intégrité système de surveillance pour consigner les exceptions non gérées dans une base de données et pour avertir les développeurs via un message électronique.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -67,7 +66,6 @@ Le `SqlWebEventProvider` classe fait partie de l’intégrité du système de su
 > [!NOTE]
 > Le `aspnet_regsql.exe` outil a été abordé dans le [ *configuration d’un site Web qu’utilise les Services d’Application* didacticiel](configuring-a-website-that-uses-application-services-cs.md) lorsque nous avons ajouté la prise en charge pour ASP. Services d’application de NET. Par conséquent, base de données du site Web critiques de livres contient déjà le `aspnet_WebEvent_LogEvent` procédure stockée, qui stocke les informations d’événement dans une table nommée `aspnet_WebEvent_Events`.
 
-
 Une fois que vous disposez de la procédure stockée nécessaire et la table ajoutée à votre base de données, reste qu’à indiquer pour consigner toutes les exceptions non gérées dans la base de données de contrôle d’intégrité. Cela en ajoutant le balisage suivant à votre site Web `Web.config` fichier :
 
 [!code-xml[Main](logging-error-details-with-asp-net-health-monitoring-cs/samples/sample2.xml)]
@@ -82,7 +80,6 @@ Ces informations de configuration indique à l’intégrité système pour enreg
 
 > [!NOTE]
 > Le `WebBaseErrorEvent` événement est déclenché uniquement pour les erreurs de serveur ; il n’est pas déclenché pour les erreurs HTTP, telle qu’une demande pour une ressource ASP.NET qui est introuvable. Ce comportement diffère de la `HttpApplication` la classe `Error` événement, qui est déclenché pour le serveur et erreurs HTTP.
-
 
 Pour voir l’intégrité système dans l’action de surveillance, visitez le site Web et générer une erreur d’exécution en vous rendant sur `Genre.aspx?ID=foo`. Vous devez voir la page d’erreur approprié - Exception détails jaune écran de décès (lors de la visite localement) ou la page d’erreur personnalisée (lors de la visite le site de production). Dans les coulisses, l’intégrité système de surveillance enregistrées les informations d’erreur dans la base de données. Il doit y avoir un seul enregistrement dans le `aspnet_WebEvent_Events` table (voir **Figure 1**) ; cet enregistrement contient des informations sur l’erreur d’exécution qui s’est produite.
 
@@ -99,7 +96,6 @@ Si vous créez une telle page, veillez à que prendre des mesures pour autoriser
 
 > [!NOTE]
 > Le didacticiel suivant explore une autre erreur journalisation et notification système nommé ELMAH. ELMAH inclut un mécanisme intégré pour afficher le journal des erreurs depuis les deux une page web et comme un flux RSS.
-
 
 ## <a name="logging-events-to-email"></a>Journalisation des événements à la messagerie
 

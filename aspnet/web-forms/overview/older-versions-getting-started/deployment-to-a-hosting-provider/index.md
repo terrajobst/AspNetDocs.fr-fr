@@ -8,17 +8,16 @@ ms.date: 11/29/2011
 ms.assetid: 6798c7e4-f08e-4802-9fa5-443f67d5df62
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider
 msc.type: chapter
-ms.openlocfilehash: 87de6c92375594ab6ee726f1b66a94a0db793fd2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bb9a47eeb4197348e85bb469b68c0055e7c696a0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417050"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119443"
 ---
 # <a name="aspnet-4---web-deployment-with-sql-server-compact-using-visual-studio"></a>ASP.NET 4 - Déploiement web avec SQL Server Compact avec Visual Studio
 
 > Cette série de didacticiels montre comment rendre une application web ASP.NET qui utilise SQL Server Compact disponibles sur internet en la déployant sur un fournisseur d’hébergement tiers. Nécessite Visual Studio 2012 RC ou Visual Studio 2010. Pour plus d’informations à jour sur les fonctionnalités de déploiement, ou pour plus d’informations sur le déploiement des éditions de SQL Server autre que SQL Server Compact, consultez [le déploiement Web ASP.NET à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 - [Déploiement web Visual Studio avec SQL Server Compact - Introduction](deployment-to-a-hosting-provider-introduction-1-of-12.md)
 - [Déploiement web Visual Studio avec SQL Server Compact - Déploiement de bases de données SQL Server Compact](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md)

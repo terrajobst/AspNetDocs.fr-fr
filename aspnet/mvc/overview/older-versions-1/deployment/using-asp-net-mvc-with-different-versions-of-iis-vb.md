@@ -8,19 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: 1c1283b2-6956-4937-b568-d30de432ce23
 msc.legacyurl: /mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0446a125845134d2fad869094a540c960f6b0a25
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b754175c853c20eec6be3521376b62d62f33106d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406468"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123211"
 ---
 # <a name="using-aspnet-mvc-with-different-versions-of-iis-vb"></a>Utilisation d’ASP.NET MVC avec différentes versions d’IIS (VB)
 
 by [Microsoft](https://github.com/microsoft)
 
 > Dans ce didacticiel, vous allez apprendre à utiliser ASP.NET MVC et le routage d’URL, avec différentes versions d’Internet Information Services. Vous découvrez des stratégies différentes pour l’utilisation d’ASP.NET MVC avec IIS 7.0 (mode classic), IIS 6.0 et versions antérieures d’IIS.
-
 
 L’infrastructure ASP.NET MVC varie selon le routage ASP.NET pour acheminer les demandes de navigateur pour les actions de contrôleur. Pour tirer parti du routage ASP.NET, vous devrez peut-être effectuer des étapes de configuration supplémentaires sur votre serveur web. Tout dépend de la version d’Internet Information Services (IIS) et le mode de votre application de traitement de requête.
 
@@ -53,18 +52,15 @@ Le mode de traitement de demande est déterminé par le pool d’applications. V
 
 Par défaut, IIS est configuré pour prendre en charge les deux pools d’applications : **DefaultAppPool** et **Classic .NET AppPool**. Si DefaultAppPool est sélectionnée, votre application s’exécute en mode de traitement de requêtes intégré. Si .NET AppPool classique est sélectionné, votre application s’exécute en mode de traitement de la requête classique.
 
-
 [![La boîte de dialogue Nouveau projet](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.png)
 
 **Figure 1**: Détection du mode de traitement de demande ([cliquez pour afficher l’image en taille réelle](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image2.png))
-
 
 Notez que vous pouvez modifier le mode de traitement de la requête dans la boîte de dialogue Modifier l’Application. Cliquez sur le bouton Sélectionner et modifier le pool d’applications associé à l’application. Notez qu’il n’y a des problèmes de compatibilité lors de la modification d’une application ASP.NET de classique vers le mode intégré. Pour plus d’informations, consultez les articles suivants :
 
 - Mise à niveau d’ASP.NET 1.1 vers IIS 7.0 sur Windows Vista et Windows Server 2008-- [https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/upgrading-aspnet-11-to-iis-on-windows-vista-and-windows-server-2008](https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/upgrading-aspnet-11-to-iis-on-windows-vista-and-windows-server-2008)
 
 - Intégration d’ASP.NET à IIS 7.0 : [https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/aspnet-integration-with-iis](https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/aspnet-integration-with-iis)
-
 
 Si une application ASP.NET utilise DefaultAppPool, vous n’avez pas besoin effectuer les étapes supplémentaires pour obtenir le routage ASP.NET (et par conséquent, ASP.NET MVC) fonctionne. Toutefois, si l’application ASP.NET est configurée pour utiliser .NET AppPool classique, puis poursuivez votre lecture, vous avez plus rien à faire.
 
@@ -96,11 +92,9 @@ L’itinéraire par défaut configuré dans le Listing 1 vous permet à l’URL 
 
 Malheureusement, les versions antérieures d’IIS ne sont pas transmettre ces demandes à l’infrastructure ASP.NET. Par conséquent, ces requêtes ne sont acheminées vers un contrôleur. Par exemple, si vous effectuez une demande de navigateur pour l’URL de base/Index puis vous obtiendrez la page d’erreur dans la Figure 2.
 
-
 [![La boîte de dialogue Nouveau projet](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.png)
 
 **Figure 2**: Réception d’une erreur 404 introuvable ([cliquez pour afficher l’image en taille réelle](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image4.png))
-
 
 Les versions antérieures d’IIS mappent uniquement certaines demandes à l’infrastructure ASP.NET. La demande doit être une URL avec l’extension de fichier droit. Par exemple, une demande pour /SomePage.aspx Obtient le mappage à l’infrastructure ASP.NET. Cependant, une demande pour /SomePage.htm n’est pas.
 
@@ -116,9 +110,7 @@ Le fichier Global.asax modifié dans la liste 2 fonctionne avec les versions ant
 
 [!code-vb[Main](using-asp-net-mvc-with-different-versions-of-iis-vb/samples/sample2.vb)]
 
-
 Important : n’oubliez pas générer votre Application ASP.NET MVC après la modification du fichier Global.asax.
-
 
 Il existe deux modifications importantes apportées au fichier Global.asax dans le Listing 2. Il existe désormais deux itinéraires définis dans Global.asax. Le modèle d’URL pour l’itinéraire par défaut, le premier itinéraire ressemble maintenant :
 
@@ -138,9 +130,7 @@ Le deuxième itinéraire, l’itinéraire racine, est une nouveauté. Ce modèle
 
 Après avoir apporté ces modifications à votre table de routage, vous devez vous assurer que tous les liens dans votre application sont compatibles avec ces nouveaux modèles d’URL. En d’autres termes, assurez-vous que tous vos liens incluent l’extension .mvc. Si vous utilisez la méthode d’assistance Html.ActionLink() pour générer vos liens, vous devez inutile d’apporter des modifications.
 
-
 Au lieu d’utiliser le script registermvc.wcf, vous pouvez ajouter une nouvelle extension pour IIS qui est mappé à la main à l’infrastructure ASP.NET. Lorsque vous ajoutez une nouvelle extension vous-même, assurez-vous que la case à cocher intitulée **vérifier l’existence du fichier** n’est pas vérifiée.
-
 
 ## <a name="hosted-server"></a>Serveur hébergé
 
@@ -172,11 +162,9 @@ Voici comment vous activez un mappage de script générique pour IIS 7.0 :
 6. Entrez le nom MVC
 7. Cliquez sur le **OK** bouton
 
-
 [![La boîte de dialogue Nouveau projet](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.png)
 
 **Figure 3**: Création d’un mappage de script générique avec IIS 7.0 ([cliquez pour afficher l’image en taille réelle](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image6.png))
-
 
 Suivez ces étapes pour créer un mappage de script générique avec IIS 6.0 :
 
@@ -189,19 +177,15 @@ Suivez ces étapes pour créer un mappage de script générique avec IIS 6.0 :
 7. Décochez la case à cocher **vérifier l’existence du fichier**
 8. Cliquez sur le **OK** bouton
 
-
 [![La boîte de dialogue Nouveau projet](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image7.png)
 
 **Figure 4**: Création d’un mappage de script générique avec IIS 6.0 ([cliquez pour afficher l’image en taille réelle](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image8.png))
 
-
 Après avoir activé les mappages de scripts génériques, vous devez modifier la table de routage dans le fichier Global.asax afin qu’il inclue un itinéraire racine. Sinon, vous obtiendrez la page d’erreur dans la Figure 5 lorsque vous faites une demande pour la page de la racine de votre application. Vous pouvez utiliser le fichier Global.asax modifié sur la liste 4.
-
 
 [![La boîte de dialogue Nouveau projet](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image9.png)
 
 **Figure 5**: Erreur d’itinéraire racine manquant ([cliquez pour afficher l’image en taille réelle](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image10.png))
-
 
 **Liste 4 - Global.asax (modifiée avec l’itinéraire racine)**
 

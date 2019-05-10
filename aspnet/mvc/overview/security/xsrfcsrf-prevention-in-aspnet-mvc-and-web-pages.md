@@ -8,12 +8,12 @@ ms.date: 03/14/2013
 ms.assetid: aadc5fa4-8215-4fc7-afd5-bcd2ef879728
 msc.legacyurl: /mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages
 msc.type: authoredcontent
-ms.openlocfilehash: de0e9cc168b9f18fd2bd83329106df45d7551b1a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a6e10c52d83dc3c29ab2f9f6bb0c05cfbbf6aad1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386553"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126363"
 ---
 # <a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prévention de XSRF/CSRF dans ASP.NET MVC et les pages web
 
@@ -24,7 +24,6 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > Une attaque XSRF est distincte à partir d’une attaque par phishing. Les attaques par hameçonnage requièrent une interaction avec la victime. Dans une attaque par phishing, un site web malveillant va imiter le site web cible et la victime est dupée pour fournir des informations sensibles à la personne malveillante. Dans une attaque XSRF, aucune interaction n’est souvent nécessaire de la victime. Au lieu de cela, l’attaquant se repose sur le navigateur d’envoyer automatiquement tous les cookies utiles pour le site de destination.
 > 
 > Pour plus d’informations, consultez le [Open Web Application Security Project](https://www.owasp.org/index.php/Main_Page)(OWASP) [XSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)).
-
 
 ## <a name="anatomy-of-an-attack"></a>Anatomie d’une attaque
 

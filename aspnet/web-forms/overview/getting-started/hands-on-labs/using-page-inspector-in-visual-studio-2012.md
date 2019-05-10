@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 73232292-a5fe-4720-82a1-8f6553effd1f
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/using-page-inspector-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: d85fab0aeec86013761fc07ada1789b7719b24d9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f42b1be2697ba7d1145b3e334fe8f4ebf019cd12
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396555"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133554"
 ---
 # <a name="using-page-inspector-in-visual-studio-2012"></a>Utilisation de l’Inspecteur de page dans Visual Studio 2012
 
@@ -36,7 +36,6 @@ par [Web Camps Team](https://twitter.com/webcamps)
 > Ce laboratoire vous guide les améliorations et les nouvelles fonctionnalités décrites précédemment en appliquant des modifications mineures à un exemple d’application Web dans le dossier Source.
 > 
 > Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409 ](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
-
 
 <a id="Objectives"></a>
 
@@ -74,13 +73,12 @@ Ce laboratoire pratique inclut les exercices suivants :
 > [!NOTE]
 > Chaque exercice est accompagné d’une solution de départ, située dans le dossier de début de l’exercice, ce qui vous permet de suivre chaque exercice indépendamment des autres. Dans le code source pour un exercice, vous y trouverez également un dossier de fin contenant une solution Visual Studio avec le code qui résulte d’effectuer les étapes dans l’exercice correspondant. Si vous avez besoin d’aide au cours de cet atelier, vous pouvez utiliser ces solutions en tant que guide.
 
-
 Durée estimée pour effectuer ce laboratoire : **30 minutes**.
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Using_Page_Inspector_in_ASPNET_MVC_Projects"></a>
-### <a name="exercise-1-using-page-inspector-in-aspnet-mvc-projects"></a>Exercice 1 : À l’aide de l’inspecteur de Page dans les projets ASP.NET MVC
+### <a name="exercise-1-using-page-inspector-in-aspnet-mvc-projects"></a>Exercice 1 : À l’aide de l’inspecteur de Page dans les projets ASP.NET MVC
 
 Dans cet exercice, vous allez apprendre à afficher un aperçu et de déboguer un **ASP.NET MVC 4** à l’aide de la solution **inspecteur de Page**. Tout d’abord, vous allez effectuer une brève visite guidée de l’outil pour découvrir les fonctionnalités qui facilitent le processus de débogage de Web. Ensuite, vous allez travailler dans une page web qui contient les problèmes de style. Vous allez apprendre à utiliser l’inspecteur de Page pour trouver le code source qui génère le problème et y remédier.
 
@@ -271,7 +269,7 @@ Dans cette tâche, vous utilisez l’inspecteur de Page et corriger certains pro
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Using_Page_Inspector_in_WebForms_Projects"></a>
-### <a name="exercise-2-using-page-inspector-in-webforms-projects"></a>Exercice 2 : À l’aide de l’inspecteur de Page dans les projets WebForms
+### <a name="exercise-2-using-page-inspector-in-webforms-projects"></a>Exercice 2 : À l’aide de l’inspecteur de Page dans les projets WebForms
 
 Dans cet exercice, vous allez apprendre à afficher un aperçu et de déboguer une solution Web Forms à l’aide de l’inspecteur de Page. Vous allez tout d’abord effectuer une brève visite guidée de l’outil pour découvrir les fonctionnalités de l’inspecteur de Page qui facilitent le processus de débogage de Web. Ensuite, vous allez travailler dans une page web qui contient les problèmes de style. Vous allez apprendre à utiliser l’inspecteur de Page pour trouver le code source qui génère le problème et y remédier.
 

@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: 2ddd4407-d143-4a94-877c-21771bfb97a6
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c126270304178d178f4b8f9739fa5c51e5dd0551
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: be43712d3dd5235117558e991d9dd71aa30ec470
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415360"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123736"
 ---
 # <a name="adding-dynamic-content-to-a-cached-page-c"></a>Ajout de contenu dynamique à une page mise en cache (C#)
 
@@ -21,16 +21,13 @@ by [Microsoft](https://github.com/microsoft)
 
 > Découvrez comment combiner le contenu dynamique et mise en cache dans la même page. Post-cache vous permet d’afficher le contenu dynamique, tels que les publications de bannière ou de nouveaux éléments au sein d’une page qui a été une sortie mise en cache.
 
-
 En tirant parti de la mise en cache de sortie, vous pouvez améliorer considérablement les performances d’une application ASP.NET MVC. Au lieu de la régénération d’une page chaque fois que la page est demandée, la page peut être générée une fois et mis en cache en mémoire pour plusieurs utilisateurs.
 
 Mais il existe un problème. Que se passe-t-il si vous devez afficher le contenu dynamique dans la page ? Par exemple, imaginez que vous souhaitez afficher une publicité de bannière dans la page. Vous ne voulez pas la publication de la bannière doit être mis en cache afin que chaque utilisateur voit la même publication. Vous n’aurait pas gagner de l’argent de cette façon !
 
 Heureusement, il existe une solution facile. Vous pouvez tirer parti d’une fonctionnalité de l’infrastructure ASP.NET appelée *post-cache*. Post-cache vous permet de remplacer le contenu dynamique dans une page qui a été mis en cache en mémoire.
 
-
 Normalement, lors de la sortie du cache une page à l’aide de l’attribut [OutputCache], la page est mise en cache sur le serveur et le client (navigateur web). Lorsque vous utilisez post-cache, une page est mise en cache uniquement sur le serveur.
-
 
 #### <a name="using-post-cache-substitution"></a>À l’aide de la substitution post-cache
 

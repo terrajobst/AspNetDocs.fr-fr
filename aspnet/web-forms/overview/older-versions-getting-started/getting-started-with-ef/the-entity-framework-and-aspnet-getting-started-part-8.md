@@ -8,19 +8,18 @@ ms.date: 12/03/2010
 ms.assetid: aaadd9bb-5508-448c-ad57-5497dff90e13
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8
 msc.type: authoredcontent
-ms.openlocfilehash: 0fd943eba4c6d80bba5ca6c4d69cbd3a8927513d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ff6a808dd501df8056c0fb0784a8e42e094d5db7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391505"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132067"
 ---
 # <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-8"></a>Bien démarrer avec Entity Framework 4.0 Database First et 4 les Web Forms ASP.NET - partie 8
 
 par [Tom Dykstra](https://github.com/tdykstra)
 
 > L’exemple d’application web Contoso University montre comment créer des applications Web Forms ASP.NET à l’aide de l’Entity Framework 4.0 et Visual Studio 2010. Pour plus d’informations sur la série de didacticiels, consultez [le premier didacticiel de la série](the-entity-framework-and-aspnet-getting-started-part-1.md)
-
 
 ## <a name="using-dynamic-data-functionality-to-format-and-validate-data"></a>À l’aide des fonctionnalités Dynamic Data pour mettre en forme et valider des données
 

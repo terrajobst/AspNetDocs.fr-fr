@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 24ad086d-865e-433c-9ac9-05f1a553da16
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/introduction
 msc.type: authoredcontent
-ms.openlocfilehash: 0edab77cd973af129e54c7867265f86b47c349a6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8ed7414c0b27fc41360e259bfb0a4c82e88a4e15
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410134"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128675"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-introduction"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Introduction
 
@@ -30,7 +30,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > Si vous avez des questions qui ne sont pas directement liées à ce didacticiel, vous pouvez les publier à le [forum ASP.NET déploiement](https://forums.asp.net/26.aspx/1?Configuration+and+Deployment) ou [StackOverflow](http://stackoverflow.com).
 > 
 > Ce contenu est également disponible comme un livre électronique gratuit dans [la galerie de E-Book TechNet](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#ASPNETWebDeploymentusingVisualStudio).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -133,7 +132,6 @@ En fonction du nombre des dépendances du Kit de développement logiciel vous di
 
 > [!NOTE]
 > Ce didacticiel a été écrit avec version 1.8.1 du SDK Azure. Depuis des versions plus récentes avec des fonctionnalités supplémentaires ont été publiées. Les didacticiels ont été mis à jour pour mentionner ces fonctionnalités et un lien vers les ressources qui ont plus d’informations à leur sujet.
-
 
 Les instructions et les captures d’écran sont basées sur Windows 8, mais les didacticiels expliquent les différences pour Windows 7.
 

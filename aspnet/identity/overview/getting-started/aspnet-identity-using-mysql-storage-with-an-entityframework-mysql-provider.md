@@ -9,19 +9,18 @@ ms.assetid: 15253312-a92c-43ba-908e-b5dacd3d08b8
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider
 msc.type: authoredcontent
-ms.openlocfilehash: 6a73efb7d577cc70ca5ebaa69e8fdd03f3735ae4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e89ed139657c5ce9ddcc56879946c62038919483
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59379662"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121449"
 ---
 # <a name="aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider-c"></a>ASP.NET Identity : Utilisation du stockage MySQL avec un fournisseur MySQL Entity Framework (C#)
 
 par [Maurycy Markowski](https://github.com/maumar), [Raquel Soares De Almeida](https://github.com/raquelsa), [Robert McMurray](https://github.com/rmcmurray)
 
 > Ce didacticiel vous montre comment remplacer le mécanisme de stockage de données par défaut pour [ **ASP.NET Identity** ](introduction-to-aspnet-identity.md) avec Entity Framework (fournisseur SQL client) avec un fournisseur de MySQL.
-
 
 Les rubriques suivantes sont traitées dans ce didacticiel :
 
@@ -90,7 +89,6 @@ Dans l’ordre pour Entity Framework pour se connecter à la base de données My
 > [!NOTE]
 > Il s’agit d’une version préliminaire de l’assembly, et par conséquent il peut contenir des bogues. Vous ne devez pas utiliser une version préliminaire du fournisseur en production.
 
-
 [Cliquez sur l’image suivante pour la développer.]
 
 [![](aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider/_static/image22.png)](aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider/_static/image21.png)
@@ -101,7 +99,6 @@ Dans cette section, que vous allez configurer Entity Framework pour utiliser le 
 
 > [!NOTE]
 > Les exemples suivants contiennent une version d’assembly spécifique pour MySql.Data.dll. Si la version d’assembly change, vous devez modifier les paramètres de configuration approprié avec la version correcte.
-
 
 1. Ouvrez le fichier Web.config de votre projet dans Visual Studio 2013.
 2. Recherchez les paramètres de configuration suivants, qui définissent le fournisseur de base de données par défaut et la fabrique pour Entity Framework :
@@ -131,7 +128,6 @@ Le fournisseur MySQL qui sera proposé dans ce didacticiel ne gère pas actuelle
 
 > [!NOTE]
 > Cette étape n’est pas requise si vous vous connectez à une instance de SQL Server sur Azure ou si vous utilisez une base de données qui est hébergé localement.
-
 
 Pour créer un initialiseur d’Entity Framework personnalisé pour MySQL, utilisez les étapes suivantes :
 

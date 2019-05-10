@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: 3e20e64a-8808-4b49-88d6-014e2629d56f
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 20ea33efbd1db657a03b20a665a041ecf3a6d248
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: dd1fd089bc4faa18fb2e8112b2820788c1f25ceb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399552"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130962"
 ---
 # <a name="efficiently-paging-through-large-amounts-of-data-vb"></a>Pagination efficace dans de grandes quantités de données (VB)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_25_VB.exe) ou [télécharger le PDF](efficiently-paging-through-large-amounts-of-data-vb/_static/datatutorial25vb1.pdf)
 
 > L’option de la pagination par défaut d’un contrôle de présentation de données ne convient pas lorsque vous travaillez avec grandes quantités de données, comme son contrôle de source de données sous-jacente récupère tous les enregistrements, même si seul un sous-ensemble de données est affiché. Dans de telles circonstances, nous devons activer personnalisés à la pagination.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -37,7 +36,6 @@ Le défi de la pagination personnalisée est la possibilité d’écrire une req
 
 > [!NOTE]
 > Le gain de performances exact exposé par la pagination personnalisée varie selon le nombre total d’enregistrements en cours de pagination via et de la charge qui est placée sur le serveur de base de données. À la fin de ce didacticiel, nous allons examiner certaines mesures approximative qui mettent en évidence les avantages de performances obtenues via la pagination personnalisée.
-
 
 ## <a name="step-1-understanding-the-custom-paging-process"></a>Étape 1 : Présentation du processus de la pagination personnalisée
 
@@ -62,47 +60,37 @@ Dans les deux étapes suivantes, nous allons examiner le script SQL nécessaire 
 
 Avant d’examiner comment récupérer le sous-ensemble précis d’enregistrements pour la page s’affiche, permettent de s commencer par examiner comment retourner le nombre total d’enregistrements en cours de pagination via. Ces informations sont nécessaires pour configurer correctement l’interface utilisateur de pagination. Le nombre total d’enregistrements renvoyés par une requête SQL spécifique peut être obtenu à l’aide de la [ `COUNT` fonction d’agrégation](https://msdn.microsoft.com/library/ms175997.aspx). Par exemple, pour déterminer le nombre total d’enregistrements dans la `Products` table, nous pouvons utiliser la requête suivante :
 
-
 [!code-sql[Main](efficiently-paging-through-large-amounts-of-data-vb/samples/sample1.sql)]
 
 Permettent d’ajouter une méthode à notre DAL qui retourne cette information s. En particulier, nous allons créer une méthode de la couche DAL appelée `TotalNumberOfProducts()` qui exécute la `SELECT` instruction ci-dessus.
 
 Commencez par ouvrir le `Northwind.xsd` fichier DataSet typée dans la `App_Code/DAL` dossier. Ensuite, avec le bouton droit sur le `ProductsTableAdapter` dans le concepteur et choisissez Ajouter une requête. Comme nous ve vu dans les didacticiels précédents, cela nous permettra d’ajouter une nouvelle méthode à la couche DAL qui, lorsqu’elle est appelée, exécute une procédure stockée ou une instruction SQL donnée. Comme avec nos méthodes TableAdapter dans les didacticiels précédents, pour celle-ci opter pour utiliser une instruction SQL d’ad-hoc.
 
-
 ![Utilisez une instruction SQL de Ad-Hoc](efficiently-paging-through-large-amounts-of-data-vb/_static/image1.png)
 
 **Figure 1**: Utilisez une instruction SQL de Ad-Hoc
 
-
 Dans l’écran suivant, nous pouvons spécifier quel type de requête à créer. Étant donné que cette requête retourne une valeur scalaire unique le nombre total d’enregistrements dans le `Products` tableau choisir le `SELECT` qui retourne une option de valeur unique.
-
 
 ![Configurer la requête pour utiliser une instruction SELECT qui retourne une valeur unique](efficiently-paging-through-large-amounts-of-data-vb/_static/image2.png)
 
 **Figure 2**: Configurer la requête pour utiliser une instruction SELECT qui retourne une valeur unique
 
-
 Après avoir indiquant le type de requête à utiliser, nous devons ensuite spécifier la requête.
-
 
 ![Utiliser le SELECT count à partir de la requête de produits](efficiently-paging-through-large-amounts-of-data-vb/_static/image3.png)
 
 **Figure 3**: Utiliser le SELECT COUNT (\*) FROM produits requête
 
-
 Enfin, spécifiez le nom de la méthode. Comme mentionné ci-dessus, vous permettent de s utiliser `TotalNumberOfProducts`.
-
 
 ![Nom de la méthode de la couche DAL TotalNumberOfProducts](efficiently-paging-through-large-amounts-of-data-vb/_static/image4.png)
 
 **Figure 4**: Nom de la méthode de la couche DAL TotalNumberOfProducts
 
-
 Après avoir cliqué sur Terminer, l’Assistant ajoutera les `TotalNumberOfProducts` méthode à la couche DAL. Les méthodes de retour scalaires dans la couche DAL retournent des types nullable, au cas où le résultat de la requête SQL est `NULL`. Notre `COUNT` requête, cependant, retourne toujours une non -`NULL` valeur ; tous les cas, la méthode de la couche DAL retourne un entier nullable.
 
 Outre la méthode de la couche DAL, nous avons également besoin d’une méthode dans la couche BLL. Ouvrir le `ProductsBLL` fichier de classe et ajoutez un `TotalNumberOfProducts` méthode qui appelle simplement vers le bas de la couche DAL s `TotalNumberOfProducts` méthode :
-
 
 [!code-vb[Main](efficiently-paging-through-large-amounts-of-data-vb/samples/sample2.vb)]
 
@@ -127,41 +115,33 @@ Ce didacticiel met en œuvre à l’aide de la pagination personnalisée la `ROW
 
 Le `ROW_NUMBER()` mot clé associé à un classement chaque enregistrement retourné sur un classement spécifique à l’aide de la syntaxe suivante :
 
-
 [!code-sql[Main](efficiently-paging-through-large-amounts-of-data-vb/samples/sample3.sql)]
 
 `ROW_NUMBER()` Retourne une valeur numérique qui spécifie le classement pour chaque enregistrement en ce qui concerne l’ordre indiqué. Par exemple, pour voir le rang de chaque produit, classé du plus coûteux pour le moins, nous pourrions utiliser la requête suivante :
-
 
 [!code-sql[Main](efficiently-paging-through-large-amounts-of-data-vb/samples/sample4.sql)]
 
 La figure 5 illustre cette requête résultats s lors de l’exécution via la fenêtre de requête dans Visual Studio. Notez que les produits sont classés par prix, ainsi que d’un rang de prix pour chaque ligne.
 
-
 ![Le rang de prix est inclus pour chaque enregistrement retourné](efficiently-paging-through-large-amounts-of-data-vb/_static/image5.png)
 
 **Figure 5**: Le rang de prix est inclus pour chaque enregistrement retourné
 
-
 > [!NOTE]
 > `ROW_NUMBER()` un seul des nombreuses nouvelles fonctions de classement n’est pas disponible dans SQL Server 2005. Pour une discussion plus approfondie de `ROW_NUMBER()`, ainsi que les autres fonctions de classement, lire [retour de résultats classés avec Microsoft SQL Server 2005](http://www.4guysfromrolla.com/webtech/010406-1.shtml).
-
 
 Lorsque les résultats de classement par spécifié `ORDER BY` colonne dans le `OVER` clause (`UnitPrice`, dans l’exemple ci-dessus), SQL Server doit trier les résultats. Ceci est une opération rapide s’il y a un index cluster sur l’ou les colonnes les résultats sont classées par, ou s’il existe une couverture d’index, mais peut être plus coûteux dans le cas contraire. Pour aider à améliorer les performances des requêtes suffisamment volumineuses, envisagez d’ajouter un index non cluster pour la colonne selon laquelle les résultats sont triés par. Consultez [fonctions de classement et de performances dans SQL Server 2005](http://www.sql-server-performance.com/ak_ranking_functions.asp) pour examiner les considérations de performances plus détaillée.
 
 Les informations de classement retournées par `ROW_NUMBER()` ne peut pas être utilisé directement dans le `WHERE` clause. Toutefois, une table dérivée peut être utilisée pour retourner le `ROW_NUMBER()` résultat, qui peut ensuite apparaître dans le `WHERE` clause. Par exemple, la requête suivante utilise une table dérivée pour retourner les colonnes ProductName et UnitPrice, ainsi que la `ROW_NUMBER()` résultat, puis utilise un `WHERE` clause afin de retourner uniquement les produits dont le rang prix est compris entre 11 et 20 :
 
-
 [!code-sql[Main](efficiently-paging-through-large-amounts-of-data-vb/samples/sample5.sql)]
 
 Étendre ce concept un peu plus tard, que nous pouvons utiliser cette approche pour récupérer une page spécifique de données selon les valeurs d’Index de ligne de début et le nombre maximal de lignes souhaités :
-
 
 [!code-html[Main](efficiently-paging-through-large-amounts-of-data-vb/samples/sample6.html)]
 
 > [!NOTE]
 > Comme nous verrons plus loin dans ce didacticiel, le *`StartRowIndex`* fourni par ObjectDataSource est indexé à partir de zéro, tandis que le `ROW_NUMBER()` valeur retournée par SQL Server 2005 est indexée en commençant à 1. Par conséquent, le `WHERE` clause retourne les enregistrements où `PriceRank` est strictement supérieur à *`StartRowIndex`* et inférieure ou égale à *`StartRowIndex`*  +  *`MaximumRows`*.
-
 
 Maintenant que nous avons ve abordé comment `ROW_NUMBER()` peut être utilisée pour récupérer une page particulière de données selon les valeurs d’Index de ligne de début et le nombre maximal de lignes, nous devons maintenant implémenter cette logique en tant que méthodes dans la couche DAL et la couche BLL.
 
@@ -169,67 +149,51 @@ Lors de la création de cette requête, que nous devons déterminer l’ordre se
 
 Dans la section précédente, nous avons créé la méthode de la couche DAL comme instruction SQL ad hoc. Malheureusement, l’analyseur T-SQL dans Visual Studio utilisé par le TableAdapter Assistant n t comme le `OVER` syntaxe utilisée par le `ROW_NUMBER()` (fonction). Par conséquent, nous devons créer cette méthode de la couche DAL comme une procédure stockée. Sélectionnez l’Explorateur de serveurs à partir du menu Affichage (ou appuyez sur Ctrl + Alt + S) et développez le `NORTHWND.MDF` nœud. Pour ajouter une nouvelle procédure stockée, avec le bouton droit sur le nœud procédures stockées et choisissez Ajouter une nouvelle procédure stockée (voir Figure 6).
 
-
 ![Ajouter une nouvelle procédure stockée pour la pagination via les produits](efficiently-paging-through-large-amounts-of-data-vb/_static/image6.png)
 
 **Figure 6**: Ajouter une nouvelle procédure stockée pour la pagination via les produits
 
-
 Cette procédure stockée doit accepter deux paramètres d’entrée de type entier - `@startRowIndex` et `@maximumRows` et utiliser le `ROW_NUMBER()` fonction classés par le `ProductName` champ, retour uniquement les lignes supérieures à spécifié `@startRowIndex` et inférieur à ou égal à `@startRowIndex`  +  `@maximumRow` s. Entrez le script suivant dans la nouvelle procédure stockée, puis sur l’icône Enregistrer pour ajouter la procédure stockée à la base de données.
-
 
 [!code-sql[Main](efficiently-paging-through-large-amounts-of-data-vb/samples/sample7.sql)]
 
 Après avoir créé la procédure stockée, prenez un moment pour faire des tests. Avec le bouton droit sur le `GetProductsPaged` procédure stockée nom dans l’Explorateur de serveurs et choisissez l’option d’exécution. Visual Studio vous invitera ensuite les paramètres d’entrée, `@startRowIndex` et `@maximumRow` s (voir la Figure 7). Essayer différentes valeurs et examiner les résultats.
 
-
 ![Entrez une valeur pour le @startRowIndex et @maximumRows paramètres](efficiently-paging-through-large-amounts-of-data-vb/_static/image7.png)
 
 <strong>Figure 7</strong>: Entrez une valeur pour le @startRowIndex et @maximumRows paramètres
 
-
 Une fois ces choix des valeurs de paramètres d’entrée, la fenêtre Sortie affiche les résultats. La figure 8 illustre les résultats lors du passage de 10 à la fois pour le `@startRowIndex` et `@maximumRows` paramètres.
-
 
 [![Les enregistrements que s’affiche dans la deuxième Page de données sont retournées.](efficiently-paging-through-large-amounts-of-data-vb/_static/image9.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image8.png)
 
 **Figure 8**: Les enregistrements que s’affiche dans la deuxième Page de données sont retournés ([cliquez pour afficher l’image en taille réelle](efficiently-paging-through-large-amounts-of-data-vb/_static/image10.png))
 
-
 Avec cette procédure stockée créée, nous vous êtes prêt à créer le `ProductsTableAdapter` (méthode). Ouvrez le `Northwind.xsd` DataSet typée, avec le bouton droit dans le `ProductsTableAdapter`, puis choisissez l’option Ajouter une requête. Au lieu de créer la requête à l’aide d’une instruction SQL ad hoc, créez-le à l’aide d’une procédure stockée existante.
-
 
 ![Créer la méthode de la couche DAL à l’aide d’une procédure stockée existante](efficiently-paging-through-large-amounts-of-data-vb/_static/image11.png)
 
 **Figure 9**: Créer la méthode de la couche DAL à l’aide d’une procédure stockée existante
 
-
 Ensuite, nous sommes invités à sélectionner la procédure stockée à appeler. Choisir le `GetProductsPaged` procédure dans la liste déroulante.
-
 
 ![Choisissez le GetProductsPaged procédure dans la liste déroulante](efficiently-paging-through-large-amounts-of-data-vb/_static/image12.png)
 
 **Figure 10**: Choisissez le GetProductsPaged procédure dans la liste déroulante
 
-
 L’écran suivant vous demande ensuite de quel type de données est retourné par la procédure stockée : données tabulaires, une valeur unique ou aucune valeur. Dans la mesure où le `GetProductsPaged` procédure stockée peut retourner plusieurs enregistrements, indiquer qu’il retourne des données tabulaires.
-
 
 ![Indiquer que la procédure stockée retourne des données tabulaires](efficiently-paging-through-large-amounts-of-data-vb/_static/image13.png)
 
 **Figure 11**: Indiquer que la procédure stockée retourne des données tabulaires
 
-
 Enfin, indiquez les noms des méthodes que vous souhaitez avoir créé. Comme avec nos didacticiels précédents, continuez et créer un jeu de méthodes à l’aide à la fois le remplissage et retourner un DataTable. Nommez la première méthode `FillPaged` et le second `GetProductsPaged`.
-
 
 ![Nom de la FillPaged de méthodes et GetProductsPaged](efficiently-paging-through-large-amounts-of-data-vb/_static/image14.png)
 
 **Figure 12**: Nom de la FillPaged de méthodes et GetProductsPaged
 
-
 En outre créé une méthode de la couche DAL pour retourner une page particulière de produits, nous devons également fournir cette fonctionnalité dans la couche BLL. Comme la méthode de la couche DAL, la couche BLL GetProductsPaged méthode doit accepter deux entrées entier pour spécifier l’Index de ligne de début et le nombre maximal de lignes et doit retourner uniquement les enregistrements qui se situent dans la plage spécifiée. Créer une telle méthode BLL dans la classe ProductsBLL que simplement des appels vers le bas dans le s DAL GetProductsPaged (méthode), comme suit :
-
 
 [!code-vb[Main](efficiently-paging-through-large-amounts-of-data-vb/samples/sample8.vb)]
 
@@ -239,34 +203,27 @@ Vous pouvez utiliser n’importe quel nom pour les paramètres d’entrée de la
 
 Avec les méthodes BLL et DAL pour accéder à un sous-ensemble particulier d’enregistrements terminées, nous vous êtes prêt à créer un GridView contrôler ce pages via ses enregistrements sous-jacent à l’aide de la pagination personnalisée. Commencez par ouvrir le `EfficientPaging.aspx` page dans le `PagingAndSorting` dossier, ajoutez un GridView à la page et configurez-le pour utiliser un nouveau contrôle ObjectDataSource. Dans nos derniers didacticiels, nous avions souvent ObjectDataSource configuré pour utiliser le `ProductsBLL` classe s `GetProducts` (méthode). Cette fois, cependant, nous souhaitons utiliser la `GetProductsPaged` méthode au lieu de cela, depuis le `GetProducts` méthode retourne *tous les* des produits dans la base de données tandis que `GetProductsPaged` retourne uniquement un sous-ensemble particulier d’enregistrements.
 
-
 ![Configurer pour utiliser la méthode de GetProductsPaged ProductsBLL classe s ObjectDataSource](efficiently-paging-through-large-amounts-of-data-vb/_static/image15.png)
 
 **Figure 13**: Configurer pour utiliser la méthode de GetProductsPaged ProductsBLL classe s ObjectDataSource
-
 
 Dans la mesure où re création d’un GridView en lecture seule, prenez un moment pour définir la liste déroulante de méthode dans l’instruction INSERT, UPDATE et supprimer des onglets à (None).
 
 Ensuite, l’Assistant ObjectDataSource nous demande les sources de la `GetProductsPaged` méthode s `startRowIndex` et `maximumRows` les valeurs de paramètres d’entrée. Ces paramètres d’entrée sont réellement définies par le contrôle GridView automatiquement, il vous suffit de None conservez la valeur de la source et cliquez sur Terminer.
 
-
 ![Laissez les Sources de paramètre d’entrée en tant que None](efficiently-paging-through-large-amounts-of-data-vb/_static/image16.png)
 
 **Figure 14**: Laissez les Sources de paramètre d’entrée en tant que None
 
-
 À l’issue de l’Assistant ObjectDataSource, le contrôle GridView contiendra un BoundField ou du CheckBoxField pour chacun des champs de données de produit. N’hésitez pas à personnaliser l’apparence de s GridView comme vous le souhaitez. Je ve choisi d’afficher uniquement les `ProductName`, `CategoryName`, `SupplierName`, `QuantityPerUnit`, et `UnitPrice` BoundFields. En outre, configurez le contrôle GridView pour prendre en charge la pagination en cochant la case Activer la pagination dans sa balise active. Après ces modifications, le balisage déclaratif GridView et ObjectDataSource doit ressembler à ce qui suit :
-
 
 [!code-aspx[Main](efficiently-paging-through-large-amounts-of-data-vb/samples/sample9.aspx)]
 
 Si vous visitez la page via un navigateur, toutefois, le contrôle GridView est introuvable à rechercher.
 
-
 ![Le contrôle GridView est pas affichée](efficiently-paging-through-large-amounts-of-data-vb/_static/image17.png)
 
 **Figure 15**: Le contrôle GridView est pas affichée
-
 
 Le contrôle GridView est manquant, car l’ObjectDataSource est actuellement à l’aide de 0 en tant que les valeurs pour les deux le `GetProductsPaged` `startRowIndex` et `maximumRows` paramètres d’entrée. Par conséquent, la requête SQL qui en résulte n’est retourner aucun enregistrement et par conséquent le GridView n’est pas affiché.
 
@@ -279,28 +236,22 @@ Pour résoudre ce problème, nous devons configurer ObjectDataSource pour utilis
 
 Après avoir apporté ces modifications, la syntaxe déclarative de s ObjectDataSource doit ressembler à ce qui suit :
 
-
 [!code-aspx[Main](efficiently-paging-through-large-amounts-of-data-vb/samples/sample10.aspx)]
 
 Notez que le `EnablePaging` et `SelectCountMethod` propriétés ont été définies et le `<asp:Parameter>` éléments ont été supprimés. Figure 16 illustre une capture d’écran de la fenêtre Propriétés après ont apporté ces modifications.
-
 
 ![Pour utiliser la pagination personnalisée, configurer le contrôle ObjectDataSource](efficiently-paging-through-large-amounts-of-data-vb/_static/image18.png)
 
 **Figure 16**: Pour utiliser la pagination personnalisée, configurer le contrôle ObjectDataSource
 
-
 Après avoir apporté ces modifications, visitez cette page via un navigateur. Vous devriez voir 10 produits répertoriés, classés par ordre alphabétique. Prenez un moment pour parcourir les données d’une page à la fois. Il n’existe aucune différence visuelle à partir de la perspective de s utilisateur final entre la pagination par défaut et la pagination personnalisée, plus efficacement la pagination personnalisée pages dans de grandes quantités de données, car elle récupère uniquement les enregistrements qui doivent être affichés pour une page donnée.
-
 
 [![Les données, trié par le produit s nom, est notifié par radiomessagerie à l’aide personnalisée la pagination](efficiently-paging-through-large-amounts-of-data-vb/_static/image20.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image19.png)
 
 **Figure 17**: Les données, trié par le produit s nom, est personnalisé paginée à l’aide de pagination ([cliquez pour afficher l’image en taille réelle](efficiently-paging-through-large-amounts-of-data-vb/_static/image21.png))
 
-
 > [!NOTE]
 > Avec la pagination personnalisée, la page compter la valeur retournée par les opérations de mappage ObjectDataSource `SelectCountMethod` est stocké dans l’état d’affichage GridView s. Autres variables GridView le `PageIndex`, `EditIndex`, `SelectedIndex`, `DataKeys` collection et ainsi de suite sont stockés dans *état du contrôle*, qui est conservé sans tenir compte de la valeur de la s GridView `EnableViewState` propriété. Dans la mesure où le `PageCount` valeur est persistante entre les postbacks à l’aide d’état d’affichage, lorsque vous utilisez une interface de pagination qui inclut un lien vers la dernière page, il est impératif que l’état d’affichage GridView s soit activé. (Si votre interface de pagination n’inclut pas un lien direct vers la dernière page, puis vous pouvez désactiver l’état d’affichage).
-
 
 En cliquant sur le dernier lien de page provoque une publication (postback) et indique le contrôle GridView à mettre à jour son `PageIndex` propriété. Si l’utilisateur clique sur le dernier lien de page, le contrôle GridView assigne son `PageIndex` propriété à une valeur inférieure à sa `PageCount` propriété. Avec l’état d’affichage désactivé, le `PageCount` valeur est perdue entre les postbacks et `PageIndex` est affectée la valeur maximale entière à la place. Ensuite, le contrôle GridView tente de déterminer l’index de ligne de départ en multipliant le `PageSize` et `PageCount` propriétés. Il en résulte un `OverflowException` dans la mesure où le produit dépasse la taille maximum autorisée d’un entier.
 
@@ -308,11 +259,9 @@ En cliquant sur le dernier lien de page provoque une publication (postback) et i
 
 Notre implémentation de la pagination personnalisée actuelle nécessite que l’ordre selon lequel les données sont paginées via être spécifié de manière statique lorsque vous créez le `GetProductsPaged` procédure stockée. Toutefois, vous avez peut-être noté que la balise active de GridView s contient une case à cocher Activer le tri en plus de l’option Activer la pagination. Malheureusement, ajout de prise en charge de tri pour le contrôle GridView avec notre implémentation de la pagination personnalisée en cours ne concerne que les enregistrements sur la page actuellement affichée de données. Par exemple, si vous configurez le contrôle GridView pour prennent également en charge la pagination et, lors de l’affichage de la première page de données, trier par nom de produit par ordre décroissant, il sera inverser l’ordre des produits sur la page 1. Comme le montre la Figure 18, par exemple montre crevettes tigres en tant que le premier produit lors du tri par ordre alphabétique inverse, qui ignore les 71 autres produits qui suivent crevettes tigres, par ordre alphabétique ; Seuls les enregistrements sur la première page sont prises en compte dans le tri.
 
-
 [![Uniquement les données affichées sur la Page actuelle est triée.](efficiently-paging-through-large-amounts-of-data-vb/_static/image23.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image22.png)
 
 **Figure 18**: Uniquement les données affichées sur la Page actuelle est triée ([cliquez pour afficher l’image en taille réelle](efficiently-paging-through-large-amounts-of-data-vb/_static/image24.png))
-
 
 Le tri s’applique uniquement à la page de données actuelle, car le tri se produit une fois que les données ont été récupérées à partir de la couche BLL s `GetProductsPaged` (méthode) et cette méthode retourne uniquement les enregistrements de la page spécifique. Pour implémenter le tri correctement, nous devons transmettre l’expression de tri à la `GetProductsPaged` méthode afin que les données peuvent être classées de façon appropriée avant de retourner la page spécifique de données. Nous verrons comment procéder dans notre didacticiel suivant.
 
@@ -333,11 +282,9 @@ Pour résoudre ce problème, nous avons deux options. La première consiste à c
 
 Cette approche fonctionne, car elle met à jour le `PageIndex` après l’étape 1, mais avant l’étape 2. Par conséquent, à l’étape 2, l’ensemble approprié d’enregistrements est retournée. Pour ce faire, utilisez le code comme suit :
 
-
 [!code-vb[Main](efficiently-paging-through-large-amounts-of-data-vb/samples/sample11.vb)]
 
 Une autre solution consiste à créer un gestionnaire d’événements pour les opérations de mappage ObjectDataSource `RowDeleted` événement et de définir le `AffectedRows` propriété une valeur de 1. Après avoir supprimé l’enregistrement à l’étape 1 (mais avant de les récupérer de nouveau les données à l’étape 2), le contrôle GridView met à jour son `PageIndex` propriété si une ou plusieurs lignes ont été affectés par l’opération. Toutefois, le `AffectedRows` propriété n’est pas définie par l’ObjectDataSource et par conséquent, cette étape est ignorée. Pour disposer de cette étape exécutée consiste à définir manuellement le `AffectedRows` propriété si l’opération de suppression est terminée avec succès. Cela peut être accompli à l’aide de code semblable au suivant :
-
 
 [!code-vb[Main](efficiently-paging-through-large-amounts-of-data-vb/samples/sample12.vb)]
 
@@ -351,14 +298,12 @@ Malheureusement, s’il y a aucune convenant à tous les répondent ici. Le gain
 
 Un article de mes amis, [la pagination personnalisée dans ASP.NET 2.0 avec SQL Server 2005](http://aspnet.4guysfromrolla.com/articles/031506-1.aspx), contient certains tests de performances que j’ai exécuté pour présenter les différences entre ces deux techniques de pagination lorsque vous choisissez une table de base de données avec les performances 50 000 enregistrements. Dans ces tests, j’ai examiné les deux le temps d’exécution de la requête au niveau de SQL Server (à l’aide de [SQL Profiler](https://msdn.microsoft.com/library/ms173757.aspx)) et à la page ASP.NET à l’aide [fonctionnalités de traçage ASP.NET s](https://msdn.microsoft.com/library/y13fw6we.aspx). N’oubliez pas que ces tests ont été exécutés sur mon développement avec un seul utilisateur actif, par conséquent peu scientifique et sont n’imitent pas les modèles de charge de site Web classique. Malgré tout, les résultats illustrent les différences relatives de durée d’exécution pour la valeur par défaut et la pagination personnalisée lorsque vous travaillez avec suffisamment de grandes quantités de données.
 
-
 |  | **Moy. Durée (s)** | **Lectures** |
 | --- | --- | --- |
 | **Par défaut la pagination SQL Profiler** | 1.411 | 383 |
 | **Profiler SQL de la pagination personnalisée** | 0.002 | 29 |
 | **Trace de ASP.NET de la pagination par défaut** | 2.379 | *N/A* |
 | **Trace de ASP.NET de la pagination personnalisée** | 0.029 | *N/A* |
-
 
 Comme vous pouvez le voir, récupération d’une page particulière de données requis 354 moins de lectures en moyenne et terminée en une fraction du temps. Sur la page ASP.NET, personnalisé la page a été en mesure d’effectuer le rendu dans proche de 1/100<sup>th</sup> du temps nécessaire lors de l’utilisation de la pagination par défaut. Consultez [mon article](http://aspnet.4guysfromrolla.com/articles/031506-1.aspx) pour plus d’informations sur ces résultats, ainsi que le code et une base de données, vous pouvez télécharger pour reproduire ces tests dans votre propre environnement.
 

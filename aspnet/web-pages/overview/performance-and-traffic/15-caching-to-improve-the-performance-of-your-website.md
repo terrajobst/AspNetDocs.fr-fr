@@ -8,12 +8,12 @@ ms.date: 02/14/2014
 ms.assetid: 961e525b-7700-469e-8a68-d7010b6fb68c
 msc.legacyurl: /web-pages/overview/performance-and-traffic/15-caching-to-improve-the-performance-of-your-website
 msc.type: authoredcontent
-ms.openlocfilehash: 10b853966ba80b673e1a6786987893f919369e7a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 01796d3ca699a6af5d9162b22a926551435c2040
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412903"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134588"
 ---
 # <a name="caching-data-in-an-aspnet-web-pages-razor-site-for-better-performance"></a>La mise en cache des données dans un Site ASP.NET Web Pages (Razor) pour optimiser les performances
 
@@ -38,7 +38,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Ce didacticiel fonctionne également avec ASP.NET Web Pages 2.
 
-
 Chaque fois qu’un utilisateur demande une page de votre site, le serveur web doit effectuer un travail afin de répondre à la demande. Pour certaines de vos pages, le serveur peut devoir effectuer des tâches qui prennent (comparativement) beaucoup de temps, par exemple pour récupérer des données à partir d’une base de données. Même si ces tâches ne prennent pas longtemps en termes absolus, si votre site connaît un trafic important, une série de requêtes individuelles qui provoquent le serveur web effectuer la tâche complexe ou lente peut totaliser une grande quantité de travail. Cela peut finalement affecter les performances du site.
 
 Une façon d’améliorer les performances de votre site Web dans un cas comme celui-ci est en cache des données. Si votre site reçoit des requêtes répétées pour les mêmes informations et les informations n’a pas besoin d’être modifiées pour chaque personne, et il n’est pas le temps sensibles, au lieu de nouveau l’extraction ou le recalcul, vous pouvez extraire les données qu’une seule fois et puis stocker les résultats. La prochaine fois qu’une demande arrive pour que plus d’informations, vous simplement obtenir hors du cache.
@@ -47,7 +46,6 @@ En règle générale, vous mettez en cache les informations qui ne changent pas 
 
 > [!NOTE]
 > Entrées dans le cache risque d’être retirées pour des raisons autres que qu’ils ont expiré. Par exemple, le serveur web peut temporairement manquer de mémoire, et une façon qu’il puisse récupérer la mémoire est en levant des entrées du cache. Comme vous le verrez, même si vous avez fourni d’informations dans le cache, vous devez vérifiez si qu'elle existe toujours lorsque vous en avez besoin.
-
 
 Imaginez que votre site Web comporte une page qui affiche la température actuelle et les prévisions météorologiques. Pour obtenir ce type d’information, vous pouvez envoyer une demande à un service externe. Étant donné que ces informations ne changent pas beaucoup (dans un délai de deux heures, par exemple) et dans la mesure où les appels externes prendre du temps et bande passante, il est un bon candidat pour la mise en cache.
 
@@ -77,7 +75,6 @@ ASP.NET inclut un `WebCache` helper qui permet de facilement ajouter la mise en 
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Ressources supplémentaires
-
 
 - [Affichage de données dans un graphique](https://go.microsoft.com/fwlink/?LinkId=202895)
 - [Référence de l’API de WebCache](https://msdn.microsoft.com/library/system.web.helpers.webcache(v=vs.99).aspx) (MSDN)

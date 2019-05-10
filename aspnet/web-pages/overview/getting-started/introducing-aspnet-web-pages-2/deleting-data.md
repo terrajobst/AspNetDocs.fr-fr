@@ -8,12 +8,12 @@ ms.date: 01/02/2018
 ms.assetid: 75b5c1cf-84bd-434f-8a86-85c568eb5b09
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/deleting-data
 msc.type: authoredcontent
-ms.openlocfilehash: e9ffe0ea3e2bf817675a4a771d3471ec6eb91133
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c8620fc1abc61d514bdc039c66f7a84e67e89abe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406741"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133498"
 ---
 # <a name="introducing-aspnet-web-pages---deleting-database-data"></a>Présentation des Pages Web ASP.NET - suppression de la base de données
 
@@ -33,7 +33,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > - Le `WebGrid` helper.
 > - Le code SQL `Delete` commande.
 > - Le `Database.Execute` méthode à exécuter une instance SQL `Delete` commande.
-
 
 ## <a name="what-youll-build"></a>Ce que vous allez générer
 
@@ -86,7 +85,6 @@ Vous pouvez désormais créer la page qui sera la cible pour le **supprimer** li
 > Lorsque votre application permet de modifier un enregistrement, vous devez présenter l’enregistrement à l’utilisateur pour la modification de toute façon. Mais vous pouvez être tenté d’ignorer cette étape pour la suppression d’un enregistrement. N’ignorez pas cette étape, cependant. (Il est également utile pour les utilisateurs voient l’enregistrement et de confirmer qu’ils vous supprimez l’enregistrement ils destinés.)
 > 
 > Dans un ensemble de didacticiels suivant, vous verrez comment ajouter la fonctionnalité de connexion pour un utilisateur devra se connecter avant la suppression d’un enregistrement.
-
 
 Créez une page nommée *DeleteMovie.cshtml* et remplacer celui qui figure dans le fichier avec le balisage suivant :
 

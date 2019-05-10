@@ -8,12 +8,12 @@ ms.date: 07/21/2010
 ms.assetid: 50223ee9-11b9-4cf3-bca2-e2f10bf471f3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: 646aeb4ad99ba9b0ee114c6be4aa528e62ef4775
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ffd2b862c727db9572c272b7b21bcc33c822fffa
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59389945"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126870"
 ---
 # <a name="part-7-adding-features"></a>Partie 7 : Ajout de fonctionnalités
 
@@ -22,7 +22,6 @@ par [Joe Stagner](https://github.com/JoeStagner)
 > Tailspin Spyworks montre comment extrêmement simple est de créer des applications puissantes et évolutives pour la plate-forme .NET. Il montre comment utiliser les nouvelles fonctionnalités dans ASP.NET 4 pour créer un magasin en ligne, y compris les achats, extraction et administration.
 > 
 > Cette série de didacticiels décrit en détail les étapes prises pour générer l’exemple d’application Tailspin Spyworks. Partie 7 ajoute des fonctionnalités supplémentaires, telles que la révision de compte, les évaluations de produits et les « éléments populaires » et les contrôles utilisateur « également acheté ».
-
 
 ## <a id="_Toc260221673"></a>  Ajout de fonctionnalités
 

@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
-ms.openlocfilehash: 9969a68a3e1aa043845fb5affd6d3b73dec4136d
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8656f4a4211c2e97d71d76dd2f799412539896ca
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425390"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118846"
 ---
 # <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Options de stockage de données (création d’applications Cloud réalistes avec Azure)
 
@@ -22,7 +22,6 @@ par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > Le **Building Real World Cloud Apps with Azure** e-book est basé sur une présentation développée par Scott Guthrie. Il explique 13 modèles et pratiques qui peuvent vous aider à réussir le développement d’applications web pour le cloud. Pour plus d’informations sur l’e-book, consultez [le premier chapitre](introduction.md).
-
 
 La plupart des gens sont utilisés pour les bases de données relationnelles, et ils ont tendance à négliger les autres options de stockage de données lorsqu’elles vous concevez une application cloud. Le résultat peut être des problèmes de performances, coûts élevés, voire pire, étant donné que [NoSQL](http://en.wikipedia.org/wiki/NoSQL) bases de données (non relationnelles) peuvent gérer certaines tâches plus efficacement que les bases de données relationnelles. Lorsque les clients nous demandent de l’aide pour résoudre un problème de stockage de données critiques, il est souvent parce qu’ils ont une base de données relationnelle dans laquelle une des options NoSQL aurait fonctionné mieux. Dans ce cas le client aurait été préférable si elles avaient implémenté la solution NoSQL avant de déployer l’application en production.
 

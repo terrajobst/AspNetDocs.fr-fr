@@ -8,19 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: b0cf4a34-2c1d-4717-bb54-ff029e722990
 msc.legacyurl: /mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0ca34f670202a35c627a514d3394fa430f5d8f26
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3b0a9509c0600f3598fd1218a7b383430548d4c0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396341"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123237"
 ---
 # <a name="using-aspnet-mvc-with-different-versions-of-iis-c"></a>Utilisation d’ASP.NET MVC avec différentes versions d’IIS (C#)
 
 by [Microsoft](https://github.com/microsoft)
 
 > Dans ce didacticiel, vous allez apprendre à utiliser ASP.NET MVC et le routage d’URL, avec différentes versions d’Internet Information Services. Vous découvrez des stratégies différentes pour l’utilisation d’ASP.NET MVC avec IIS 7.0 (mode classic), IIS 6.0 et versions antérieures d’IIS.
-
 
 L’infrastructure ASP.NET MVC varie selon le routage ASP.NET pour acheminer les demandes de navigateur pour les actions de contrôleur. Pour tirer parti du routage ASP.NET, vous devrez peut-être effectuer des étapes de configuration supplémentaires sur votre serveur web. Tout dépend de la version d’Internet Information Services (IIS) et le mode de votre application de traitement de requête.
 

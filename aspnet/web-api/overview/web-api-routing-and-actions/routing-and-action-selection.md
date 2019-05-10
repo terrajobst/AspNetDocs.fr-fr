@@ -8,12 +8,12 @@ ms.date: 12/14/2018
 ms.assetid: bcf2d223-cb7f-411e-be05-f43e96a14015
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions/routing-and-action-selection
 msc.type: authoredcontent
-ms.openlocfilehash: 238efd312a73e2452ca5f679f2b8f5ed1336c4dc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 62114e56fb29e80c93b82dcb78ce2bc2a123a83b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385876"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133653"
 ---
 # <a name="routing-and-action-selection-in-aspnet-web-api"></a>Routage et sélection d’Action dans l’API Web ASP.NET
 
@@ -23,7 +23,6 @@ Cet article décrit comment les API Web ASP.NET achemine une requête HTTP à un
 
 > [!NOTE]
 > Pour obtenir une vue d’ensemble du routage, consultez [routage dans ASP.NET Web API](routing-in-aspnet-web-api.md).
-
 
 Cet article examine les détails du processus de routage. Si vous créez un projet d’API Web et trouver certaines demandes n’obtenez pas acheminé comme vous le souhaitez, j’espère que cet article vous aide à.
 
@@ -135,7 +134,6 @@ Tous les exemples de types simples le [types primitifs .NET Framework](https://m
 
 > [!NOTE]
 > Il est possible de remplacer les règles de liaison par défaut. Consultez [liaison de paramètre de l’API Web sous le capot](https://blogs.msdn.com/b/jmstall/archive/2012/05/11/webapi-parameter-binding-under-the-hood.aspx).
-
 
 En gardant, voici l’algorithme de sélection d’action.
 

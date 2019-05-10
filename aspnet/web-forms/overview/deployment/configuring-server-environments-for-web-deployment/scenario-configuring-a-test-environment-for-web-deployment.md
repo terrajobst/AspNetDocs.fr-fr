@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 44a22ac7-1fc7-4174-b946-c6129fb6a19b
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 7ea8c74a6621200e3a0d52a7c37fed6b5eeff4e5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d580e550f2461837f0e8a4e477273348b49cb53e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391622"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132399"
 ---
 # <a name="scenario-configuring-a-test-environment-for-web-deployment"></a>Scénario : configuration d’un environnement de test pour le déploiement web
 
@@ -22,7 +22,6 @@ par [Jason Lee](https://github.com/jrjlee)
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit un scénario de déploiement web typique pour un développeur ou environnements de test et décrit les tâches que vous devez suivre pour configurer un environnement similaire.
-
 
 Lorsque les développeurs travaillent sur les applications web, ils ont souvent accès à un environnement de serveur qu’ils peuvent utiliser pour tester les modifications apportées à leurs applications dans un paramètre réaliste. Ce type d’environnement de développement ou de test possède généralement ces caractéristiques :
 
@@ -47,7 +46,6 @@ L’environnement de test doit prendre en charge de la seule étape ou automatis
 
 > [!NOTE]
 > Vous pouvez également utiliser [Web déployer à la demande](https://technet.microsoft.com/library/ee517345(WS.10).aspx) (le terme « temp agent »). Cela est similaire à l’approche de l’agent distant en termes d’exigences et contraintes.
-
 
 Dans ce cas, les développeurs ont des privilèges d’administrateur sur les serveurs de destination, et l’environnement de test n’est pas soumis aux contraintes de sécurité strict, le choix logique consiste donc à configurer le serveur web de test pour prendre en charge le déploiement à l’aide de l’agent distant. Cela est moins complexe et requiert une configuration initiale moins que l’approche de gestionnaire de déploiement Web. Vous devrez également configurer votre serveur de base de données pour prendre en charge le déploiement et l’accès à distance.
 

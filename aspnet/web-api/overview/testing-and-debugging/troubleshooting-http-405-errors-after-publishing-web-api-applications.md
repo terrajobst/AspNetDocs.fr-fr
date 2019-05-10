@@ -8,12 +8,12 @@ ms.date: 01/23/2019
 ms.assetid: 07ec7d37-023f-43ea-b471-60b08ce338f7
 msc.legacyurl: /web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications
 msc.type: authoredcontent
-ms.openlocfilehash: ce5b617cc1032d190cc2450aa554b462ea6f6156
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 336df47dd4bda813839913676f12a51b899c0cf9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025326"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121980"
 ---
 # <a name="troubleshooting-http-405-errors-after-publishing-web-api-applications"></a>Dépannage des erreurs HTTP 405 après la publication d’applications d’API Web
 
@@ -24,7 +24,6 @@ ms.locfileid: "57025326"
 > 
 > - [Internet Information Services (IIS)](https://www.iis.net/) (version 7 ou version ultérieure)
 > - [API web](../../index.md) 
-
 
 Les applications d’API Web utilisent plusieurs verbes HTTP courants : GET, POST, PUT, DELETE et parfois des correctifs. Cela étant dit, les développeurs peuvent s’exécuter dans les situations où ces verbes sont implémentées par un autre module d’IIS sur leur serveur de production, ce qui conduit à une situation où un contrôleur d’API Web qui fonctionne correctement dans Visual Studio ou sur un serveur de développement retournera un HTTP 405 erreur lorsqu’elle est déployée sur un serveur de production. Heureusement, ce problème est facilement résolu, mais la résolution mérite une explication de la raison pour laquelle le problème se produit.
 
@@ -58,18 +57,13 @@ Toutefois, quand une méthode HTTP est configurée pour une utilisation sur le s
 
 La requête HTTP d’exemple suivante et la réponse illustrent une situation où un client HTTP tente de placer la valeur à une application API Web sur un serveur web et le serveur retourne une erreur HTTP, ce qui indique que la méthode PUT n’est pas autorisé :
 
-
 Requête HTTP :
-
 
 [!code-console[Main](troubleshooting-http-405-errors-after-publishing-web-api-applications/samples/sample1.cmd)]
 
-
 Réponse HTTP :
 
-
 [!code-console[Main](troubleshooting-http-405-errors-after-publishing-web-api-applications/samples/sample2.cmd)]
-
 
 Dans cet exemple, le client HTTP envoyé une demande JSON valide à l’URL pour une application API Web sur un serveur web, mais le serveur a retourné un message d’erreur HTTP 405 qui indique que la méthode PUT n’était pas autorisée dans l’URL. En revanche, si l’URI de demande ne correspondait pas un itinéraire pour l’application API Web, le serveur renvoie une réponse HTTP 404 ***introuvable*** erreur.
 

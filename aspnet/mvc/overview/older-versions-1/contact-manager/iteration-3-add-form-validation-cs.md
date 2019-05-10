@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 51a0d175-913b-43d8-95e3-840fb96ad1a9
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 973878ef0afd62035b3fc840371e6c6223c8951c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: af2e86e820f60f0a3d8e3db8f78eba67ef63579a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413787"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123961"
 ---
 # <a name="iteration-3--add-form-validation-c"></a>Itération #3 : ajouter une validation de formulaire (c#)
 
@@ -23,9 +23,7 @@ by [Microsoft](https://github.com/microsoft)
 
 > Dans la troisième itération, nous ajouter la validation de formulaire de base. Nous empêcher des personnes à partir de l’envoi d’un formulaire sans compléter les champs obligatoires. Nous avons également valider que les adresses de messagerie et les numéros de téléphone.
 
-
 ## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Création d’une Application ASP.NET MVC de gestion des contacts (c#)
-  
 
 Dans cette série de didacticiels, nous créer une application de gestion des contacts entière à partir du début à la fin. L’application Gestionnaire de Contact permet vous permettent de stocker les informations de contact (noms, numéros de téléphone et adresses de messagerie) pour obtenir la liste de personnes.
 
@@ -45,16 +43,13 @@ Nous générer l’application sur de multiples itérations. Avec chaque itérat
 
 - Itération #7 - ajouter des fonctionnalités Ajax. Dans l’itération septième, nous améliorer la réactivité et les performances de notre application en ajoutant la prise en charge d’Ajax.
 
-
 ## <a name="this-iteration"></a>Cette itération
 
 Dans ce deuxième itération de l’application Gestionnaire de contacts, nous ajouter la validation de formulaire de base. Nous empêcher des personnes de soumettre un contact sans entrer de valeurs pour les champs obligatoires. Nous avons également valider que les numéros de téléphone et adresses de messagerie (voir Figure 1).
 
-
 [![La boîte de dialogue Nouveau projet](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
 
 **Figure 01**: Un formulaire avec la validation ([cliquez pour afficher l’image en taille réelle](iteration-3-add-form-validation-cs/_static/image2.png))
-
 
 Dans cette itération, nous ajoutons la logique de validation directement sur les actions de contrôleur. En règle générale, cela n’est pas recommandée pour ajouter une validation à une application ASP.NET MVC. Une meilleure approche consiste à placer une logique de validation application s dans une fonction [couche de service](http://martinfowler.com/eaaCatalog/serviceLayer.html). Dans l’itération suivante, nous refactoriser l’application Gestionnaire de contacts pour rendre l’application plus facile à gérer.
 
@@ -86,7 +81,6 @@ La classe d’erreur de validation de champ est utilisée pour définir le style
 > 
 > Vous pouvez modifier les classes de feuille de style décrites dans cette section pour personnaliser l’apparence des messages d’erreur de validation.
 
-
 ## <a name="adding-validation-logic-to-the-create-action"></a>Ajout de la logique de Validation à l’Action de création
 
 Actuellement, la vue Create affiche jamais les messages d’erreur de validation, car nous avons écrit pas la logique pour générer des messages. Pour afficher les messages d’erreur de validation, vous devez ajouter les messages d’erreur à ModelState.
@@ -94,7 +88,6 @@ Actuellement, la vue Create affiche jamais les messages d’erreur de validation
 > [!NOTE] 
 > 
 > La méthode UpdateModel() ajoute automatiquement les messages d’erreur à ModelState lorsqu’il existe une erreur, affectez la valeur d’un champ de formulaire à une propriété. Par exemple, si vous tentez d’affecter la chaîne « apple » à une propriété de date de naissance qui accepte des valeurs de date/heure, la méthode UpdateModel() ajoute une erreur à ModelState.
-
 
 La méthode Create() modifiée dans le Listing 2 contient une nouvelle section qui valide les propriétés de la classe Contact avant que le nouveau contact est inséré dans la base de données.
 
@@ -116,7 +109,6 @@ Une fois que les règles de validation sont exécutées, la propriété IsValid 
 > [!NOTE] 
 > 
 > J’ai reçu les expressions régulières pour valider l’adresse de messagerie et le numéro de téléphone à partir du référentiel de l’expression régulière à [*http://regexlib.com*](http://regexlib.com)
-
 
 ## <a name="adding-validation-logic-to-the-edit-action"></a>Ajout d’une logique de Validation à l’Action de modification
 

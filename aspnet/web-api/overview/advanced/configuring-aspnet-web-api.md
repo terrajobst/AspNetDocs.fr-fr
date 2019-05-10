@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 9e10a700-8d91-4d2e-a31e-b8b569fe867c
 msc.legacyurl: /web-api/overview/advanced/configuring-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 39629ba404e536b29318db00bce8c4443a782497
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4f76728fa5e4602e35e1b7cb2d41b2245093cad8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411941"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115959"
 ---
 # <a name="configuring-aspnet-web-api-2"></a>Configuration d’ASP.NET Web API 2
 
@@ -45,7 +45,6 @@ Paramètres de configuration Web API sont définies dans le [HttpConfiguration](
 | **Propriétés** | Un jeu de propriétés génériques. |
 | **Itinéraires** | La collection d’itinéraires. Consultez [routage dans ASP.NET Web API](../web-api-routing-and-actions/routing-in-aspnet-web-api.md). |
 | **Services** | La collection de services. Consultez [Services](#services). |
-
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -91,11 +90,9 @@ Le **HttpConfiguration.Services** collection contient un ensemble de services gl
 > [!NOTE]
 > Le **Services** collection n’est pas un mécanisme à usage général pour l’injection des services de découverte ou la dépendance. Il stocke uniquement les types de service qui sont connus pour l’infrastructure API Web.
 
-
 Le **Services** collection est initialisée avec un ensemble de services par défaut, et vous pouvez fournir vos propres implémentations personnalisées. Certains services prend en charge plusieurs instances, alors que d’autres utilisateurs peuvent avoir qu’une seule instance. (Toutefois, vous pouvez également fournir des services au niveau du contrôleur ; consultez [par contrôleur Configuration](#percontrollerconfig).
 
 Services d’Instance unique
-
 
 | Service | Description |
 | --- | --- |
@@ -116,7 +113,6 @@ Services d’Instance unique
 | **IModelValidatorCache** | Fournit un cache de validateurs de modèle. |
 
 Services de plusieurs instances
-
 
 |                 Service                 |                                                                                                              Description                                                                                                               |
 |-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

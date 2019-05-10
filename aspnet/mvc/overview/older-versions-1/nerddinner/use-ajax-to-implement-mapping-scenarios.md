@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: f731990a-0a81-4d62-81df-87d676cdedd6
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-ajax-to-implement-mapping-scenarios
 msc.type: authoredcontent
-ms.openlocfilehash: 90705b897f5cb3787bae35b48057eaf66abde579
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7fc90f978b9f9eca511feca70a3c0d02ec69b940
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402165"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125511"
 ---
 # <a name="use-ajax-to-implement-mapping-scenarios"></a>Utiliser AJAX pour implémenter des scénarios de mappage
 
@@ -26,7 +26,6 @@ by [Microsoft](https://github.com/microsoft)
 > Étape 11 montre comment intégrer la prise en charge du mappage AJAX dans notre application NerdDinner, permettant aux utilisateurs qui créent, modification ou affichage dîners pour voir l’emplacement du dîner graphiquement.
 > 
 > Si vous utilisez ASP.NET MVC 3, nous vous recommandons de suivre le [mise en route avec MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) ou [Store de musique MVC](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) didacticiels.
-
 
 ## <a name="nerddinner-step-11-integrating-an-ajax-map"></a>NerdDinner étape 11 : L’intégration d’une carte d’AJAX
 

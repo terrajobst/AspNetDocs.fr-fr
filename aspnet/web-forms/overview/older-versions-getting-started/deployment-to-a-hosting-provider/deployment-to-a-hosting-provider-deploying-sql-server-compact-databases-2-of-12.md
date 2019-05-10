@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: c3c76516-4c48-4153-bd03-d70e3a3edbb0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: cc8568847e050e868a3e7563b5fc1fc6fbf25d86
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b265d210ff3b1eeb8697a973cc245f6c97b3eb07
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405480"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134182"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-sql-server-compact-databases---2-of-12"></a>Déploiement d’une Application de Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : Déploiement de SQL Server Compact bases de données - 2 de 12
 
@@ -24,7 +24,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > Cette série de didacticiels vous montre comment déployer une ASP.NET (publier) projet d’application web qui inclut une base de données SQL Server Compact à l’aide de Visual Studio 2012 RC ou Visual Studio Express 2012 RC pour le Web. Vous pouvez également utiliser Visual Studio 2010 si vous installez la mise à jour de publication Web. Pour une introduction à la série, consultez [le premier didacticiel de la série](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Pour obtenir un didacticiel qui montre les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions de SQL Server autre que SQL Server Compact et montre comment déployer dans Azure App Service Web Apps, consultez [déploiement Web ASP.NET à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -144,7 +143,6 @@ Cette sélection de menu ajoute le code suivant aux `using` instructions située
 > 
 > Cet exemple indiqué pour ce didacticiel utilise le `AddOrUpdate` méthode dans le `Seed` méthode les Migrations Code First `Configuration` classe. Code First Migrations appelle la `Seed` méthode après chaque migration et cette méthode met à jour les lignes qui ont déjà été insérés, ou les insère si elles n’existent pas encore. La méthode `AddOrUpdate` peut ne pas être le meilleur choix pour votre scénario. Pour plus d'informations, voir [ Faites attention avec la méthode AddOrUpdate d'EF 4.3 ](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/) sur le blog de Julie Lerman.
 
-
 Appuyez sur CTRL-MAJ-B pour générer le projet.
 
 L’étape suivante consiste à créer un `DbMigration` classe pour la migration initiale. Vous souhaitez que cette migration pour créer une nouvelle base de données, donc vous devez supprimer la base de données qui existe déjà. Bases de données SQL Server Compact sont contenues dans *.sdf* des fichiers dans le *application\_données* dossier. Dans **l’Explorateur de solutions**, développez *application\_données* dans le projet ContosoUniversity pour voir les deux bases de données SQL Server Compact, qui sont représenté par *.sdf*fichiers.
@@ -187,7 +185,6 @@ Lorsque vous déployez un site pour la première fois, il est courant d’exclur
 
 > [!NOTE]
 > La base de données d’appartenances stocke un hachage des mots de passe de compte. Pour déployer des comptes à partir d’un ordinateur à un autre, il se peut que vous devez vous assurer que les routines de hachage ne pas générer de hachages différents sur le serveur de destination qu’ils l’ordinateur source. Ils génèrent les hachages mêmes lorsque vous utilisez les fournisseurs universels ASP.NET, tant que vous ne modifiez pas l’algorithme par défaut. L’algorithme par défaut est HMACSHA256 et qu’il est spécifié dans le **validation** attribut de la **[machineKey](https://msdn.microsoft.com/library/w8h3skw9.aspx)** élément dans le fichier Web.config.
-
 
 La base de données d’appartenance n’est pas gérée par les Migrations Code First, et il n’est pas automatique d’initialiseur qui peuple la base de données avec des comptes de test (car il est pour la base de données School). Par conséquent, pour conserver les données de test disponibles vous apporterez une copie de la base de données de test avant de créer un nouveau.
 

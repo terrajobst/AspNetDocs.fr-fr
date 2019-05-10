@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: f640e063-150e-453d-8cfc-7e54a6ce0f1e
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-7-add-ajax-functionality-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 3df4258b2de309aed5a3a598caeb1e7332c321f6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cee2b6e7c7517a1e03ae26d5233fc438857a030c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383956"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123877"
 ---
 # <a name="iteration-7--add-ajax-functionality-vb"></a>Itération #7 : ajouter des fonctionnalités Ajax (VB)
 
@@ -23,9 +23,7 @@ by [Microsoft](https://github.com/microsoft)
 
 > Dans l’itération septième, nous améliorer la réactivité et les performances de notre application en ajoutant la prise en charge d’Ajax.
 
-
 ## <a name="building-a-contact-management-aspnet-mvc-application-vb"></a>Création d’une Application ASP.NET MVC de gestion des contacts (VB)
-  
 
 Dans cette série de didacticiels, nous créer une application de gestion des contacts entière à partir du début à la fin. L’application Gestionnaire de Contact permet vous permettent de stocker les informations de contact (noms, numéros de téléphone et adresses de messagerie) pour obtenir la liste de personnes.
 
@@ -93,11 +91,9 @@ Ajoutez le code JavaScript suivant inclut à l’intérieur de la &lt;head&gt; b
 
 Laissez s commencez par modifier notre vue Index afin qu’en cliquant sur un groupe de contacts met à jour uniquement pour la région de la vue qui affiche les contacts. La zone rouge dans la Figure 1 contient la région que nous souhaitons mettre à jour.
 
-
 [![La mise à jour uniquement les contacts](iteration-7-add-ajax-functionality-vb/_static/image1.jpg)](iteration-7-add-ajax-functionality-vb/_static/image1.png)
 
 **Figure 01**: La mise à jour uniquement les contacts ([cliquez pour afficher l’image en taille réelle](iteration-7-add-ajax-functionality-vb/_static/image2.png))
-
 
 La première étape consiste à séparer la partie de la vue que nous souhaitons mettre à jour de façon asynchrone dans un partiel distinct (contrôle utilisateur). La section de la vue Index qui affiche la table de contacts a été déplacée dans le partielle dans le Listing 1.
 
@@ -133,9 +129,7 @@ Notez que l’action Index() sans devoir revenir autant de données lorsqu’ell
 
 Notre affichage Index modifié fonctionne dans le cas des navigateurs de niveau supérieur et de niveau inférieur. Si vous cliquez sur un groupe, et que votre navigateur prend en charge JavaScript, seule la région de la vue qui contient la liste de contacts est mis à jour. Si, en revanche, votre navigateur ne prend pas en charge JavaScript, toute la vue est mise à jour.
 
-
 Notre vue Index mis à jour a un problème. Lorsque vous cliquez sur un groupe de contacts, le groupe sélectionné n’est pas mis en surbrillance. Étant donné que la liste des groupes s’affiche en dehors de la région qui est mis à jour pendant une requête Ajax, le groupe de droite ne pas obtenir mis en surbrillance. Nous allons corriger ce problème dans la section suivante.
-
 
 ## <a name="adding-jquery-animation-effects"></a>Ajout d’effets d’Animation de jQuery
 
@@ -193,11 +187,9 @@ Lorsqu’un utilisateur atteint le précédent du navigateur ou le bouton suivan
 
 Actuellement, pour supprimer un contact, vous devez cliquer sur le lien Supprimer et puis cliquez sur le bouton de suppression affiché dans la page de confirmation de suppression (voir Figure 2). Cela semble être un grand nombre de demandes de pages de faire quelque chose de simple comme la suppression d’un enregistrement de base de données.
 
-
 [![La page de confirmation de suppression](iteration-7-add-ajax-functionality-vb/_static/image2.jpg)](iteration-7-add-ajax-functionality-vb/_static/image3.png)
 
 **Figure 02**: La page de confirmation de suppression ([cliquez pour afficher l’image en taille réelle](iteration-7-add-ajax-functionality-vb/_static/image4.png))
-
 
 Il est tentant de les ignorer la page de confirmation de suppression et de supprimer un contact directement à partir de la vue Index. Vous devez éviter la tentation, car cette approche ouvre votre application à des failles de sécurité. En règle générale, don t souhaitez effectuer une opération HTTP GET lors de l’appel d’une action qui modifie l’état de votre application web. Lorsque vous effectuez une suppression, que vous souhaitez effectuer une requête HTTP POST, ou mieux encore, une opération HTTP DELETE.
 
@@ -214,7 +206,6 @@ Le lien Supprimer est rendu avec l’appel suivant à la méthode Ajax.ImageActi
 > [!NOTE] 
 > 
 > Le Ajax.ImageActionLink() n’est pas une partie standard de l’infrastructure ASP.NET MVC. Le Ajax.ImageActionLink() est des méthodes d’assistance personnalisés inclus dans le projet de gestionnaire de contacts.
-
 
 Le paramètre AjaxOptions a deux propriétés. Tout d’abord, la propriété confirmer est utilisée pour afficher une boîte de dialogue contextuelle JavaScript confirmation. En second lieu, la propriété HttpMethod est utilisée pour effectuer une opération HTTP DELETE.
 

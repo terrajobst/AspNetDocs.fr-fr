@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 0a1f88bd-97da-4ed1-86f1-605199dc75a4
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45
 msc.type: authoredcontent
-ms.openlocfilehash: 52f6ec17fb21019e93ebf2795e95d5b27e4edbe6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 301af8ed877b58624e419c04f605c41f27dbdd0c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401736"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132086"
 ---
 # <a name="whats-new-in-web-forms-in-aspnet-45"></a>Nouveautés de Web Forms dans ASP.NET 4.5
 
@@ -40,7 +40,6 @@ par [Web Camps Team](https://twitter.com/webcamps)
 > Dans le portail ASP.NET officiels, vous trouverez plus d’exemples des nouvelles fonctionnalités dans ASP.NET WebForms 4.5 : [Nouveautés d’ASP.NET 4.5 et de Visual Studio 2012](../../../../whitepapers/whats-new-in-aspnet-45-and-visual-studio-2012.md#_Toc318097385)
 > 
 > Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409 ](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
-
 
 <a id="Objectives"></a>
 ### <a name="objectives"></a>Objectifs
@@ -83,13 +82,12 @@ Ce laboratoire pratique inclut les exercices suivants :
 > [!NOTE]
 > Chaque exercice est accompagné par un **fin** dossier contenant la solution obtenue, vous devez obtenir après avoir effectué les exercices. Si vous avez besoin d’aide supplémentaire sur l’utilisation via les exercices, vous pouvez utiliser cette solution comme guide.
 
-
 Durée estimée pour effectuer ce laboratoire : **60 minutes**.
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Model_Binding_in_ASPNET_Web_Forms"></a>
-### <a name="exercise-1-model-binding-in-aspnet-web-forms"></a>Exercice 1 : Liaison de modèle dans ASP.NET Web Forms
+### <a name="exercise-1-model-binding-in-aspnet-web-forms"></a>Exercice 1 : Liaison de modèle dans ASP.NET Web Forms
 
 La nouvelle version de Web Forms ASP.NET introduit de nombreuses améliorations axées sur l’amélioration de l’expérience lorsque vous travaillez avec des données. Tout au long de cet exercice, vous allez en savoir plus sur les contrôles de données fortement typées et liaison de modèle.
 
@@ -325,7 +323,7 @@ Vous mettrez à jour les catégories GridView pour permettre à l’utilisateur 
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Data_Validation"></a>
-### <a name="exercise-2-data-validation"></a>Exercice 2 : Validation de données
+### <a name="exercise-2-data-validation"></a>Exercice 2 : Validation de données
 
 Dans cet exercice, vous allez découvrir les nouvelles fonctionnalités de validation de données dans ASP.NET 4.5. Vous vérifierez les nouvelles fonctions de validation non obstrusive dans Web Forms. Vous allez utiliser des annotations de données dans les classes de modèle d’application pour la validation des entrées utilisateur, et enfin, vous allez apprendre à activer ou désactiver la validation de la demande par des contrôles individuels dans une page.
 
@@ -610,7 +608,6 @@ Opérations de longue durée sur votre site web sont d’excellents candidats po
 
 > [!NOTE]
 > En outre, vous pouvez déployer cette application à Azure suit [annexe b : Publication d’une Application ASP.NET MVC 4, à l’aide de Web Deploy](#AppendixB).
-
 
 ---
 

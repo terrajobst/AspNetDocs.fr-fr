@@ -8,19 +8,18 @@ ms.date: 02/16/2009
 ms.assetid: b7cce113-c82c-45bf-b97b-357e5d9f7f56
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-route-constraint-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 8c7b2274ff396f222382488ed877599e86ae5b99
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 205742dd8f866c8828008c8aac7ab3f98b173ceb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412682"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123426"
 ---
 # <a name="creating-a-route-constraint-vb"></a>Création d’une contrainte de route (VB)
 
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Dans ce didacticiel, Stephen Walther montre comment vous pouvez contrôler la façon dont le navigateur demande itinéraires de correspondance en créant des contraintes de routage avec des expressions régulières.
-
 
 Contraintes de routage vous permet de limiter les demandes du navigateur qui correspondent à un itinéraire particulier. Vous pouvez utiliser une expression régulière pour spécifier une contrainte d’itinéraire.
 
@@ -50,11 +49,9 @@ Malheureusement, l’itinéraire correspond également les URL suivantes :
 
 Étant donné que l’action Details() attend un paramètre de type entier, qui effectue une requête qui contient l’autre chose qu’une valeur entière provoque une erreur. Par exemple, si vous tapez l’URL /Product/apple dans votre navigateur, vous obtiendrez la page d’erreur dans la Figure 1.
 
-
 [![La boîte de dialogue Nouveau projet](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
 
 **Figure 01**: Voir une page explode ([cliquez pour afficher l’image en taille réelle](creating-a-route-constraint-vb/_static/image2.png))
-
 
 Ce que vous voulez vraiment faire est uniquement en correspondance les URL qui contiennent un productId entier approprié. Vous pouvez utiliser une contrainte lors de la définition d’un itinéraire pour restreindre les URL qui correspondent à l’itinéraire. L’itinéraire de produit modifié dans la liste 3 contient une contrainte d’expression régulière qui correspond uniquement à des entiers.
 

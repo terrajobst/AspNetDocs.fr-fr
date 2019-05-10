@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 9c0cce4d-efd9-4c14-b0e8-a1a140abb3f4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/master-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 348e28778e0e7d96230534df1d61386ed39f8f11
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 36f2caf7c2c9bcafd22c8f6681c1d6b19fe5078a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381144"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131072"
 ---
 # <a name="master-pages"></a>Pages maîtres
 
 by [Microsoft](https://github.com/microsoft)
 
 > Un des composants clés pour un site Web a réussi est un aspect cohérent. Dans ASP.NET 1.x, les développeurs des contrôles utilisateur utilisé pour répliquer les éléments de page communs sur une application Web. Alors que c’est certainement une solution possible, à l’aide de contrôles utilisateur également quelques inconvénients. Par exemple, une modification de la position d’un contrôle utilisateur nécessite une modification de plusieurs pages sur un site. Contrôles utilisateur ne sont pas également restituées en mode Création après avoir inséré sur une page.
-
 
 Un des composants clés pour un site Web a réussi est un aspect cohérent. Dans ASP.NET 1.x, les développeurs des contrôles utilisateur utilisé pour répliquer les éléments de page communs sur une application Web. Alors que c’est certainement une solution possible, à l’aide de contrôles utilisateur également quelques inconvénients. Par exemple, une modification de la position d’un contrôle utilisateur nécessite une modification de plusieurs pages sur un site. Contrôles utilisateur ne sont pas également restituées en mode Création après avoir inséré sur une page.
 
@@ -47,14 +46,11 @@ Une page maître peut contenir n’importe quel nombre de contrôles ContentPlac
 > [!NOTE]
 > Vous entendrez souvent personnes décrivent les pages maîtres comme étant une classe de base pour les autres pages. Ceci ne constitue pas réellement. La relation entre les pages maîtres et les pages de contenu n’est pas un de l’héritage.
 
-
 **Figure 1** montre une page maître et une page de contenu associée tels qu’ils apparaissent dans Visual Studio 2005. Vous pouvez voir le contrôle ContentPlaceHolder dans la page maître et le correspondantes contrôle dans la page de contenu de contenu. Notez que le contenu de pages maîtres qui se trouve en dehors de ContentPlaceHolder est visible mais est grisé dans la page de contenu. Uniquement le contenu à l’intérieur de ContentPlaceHolder peut être supplanté par la page de contenu. Tout autre contenu provient de la page maître est immuable.
-
 
 ![Une page maître et sa page de contenu associé](master-pages/_static/image1.jpg)
 
 **Figure 1**: Une page maître et sa page de contenu associé
-
 
 ## <a name="creating-a-master-page"></a>Création d’une Page maître
 
@@ -65,11 +61,9 @@ Pour créer une nouvelle page maître :
 3. Choisissez fichier Master à partir de la boîte de dialogue Ajouter un nouvel élément, comme indiqué dans **figure 2**.
 4. Cliquez sur Ajouter.
 
-
 ![Création d’une Page maître](master-pages/_static/image2.jpg)
 
 **Figure 2**: Création d’une Page maître
-
 
 Notez que l’extension de fichier pour une page maître est *.master*. Il s’agit d’une des manières qui diffère d’une page maître à partir d’une page ordinaire. La principale différence est que dans procédural à la place d’un @Page directive, la page maître contient un @Master directive. Basculer en mode Source pour le masque de page que vous venez de créer et d’examiner le code.
 
@@ -86,29 +80,23 @@ Dans cet atelier, vous créez une page maître et définissent trois contrôles 
     3. Sélectionnez le contrôle ContentPlaceHolder en cliquant sur la bordure ombrée supérieure du contrôle et supprimez-le en appuyant sur la touche SUPPR de votre clavier.
     4. Insérer une nouvelle table en utilisant le *en-tête et côté* modèle comme illustré à la figure 3. Modifier la largeur et la hauteur à 90 %, afin que la table entière est visible dans le concepteur.
 
-
 ![](master-pages/_static/image3.jpg)
 
 **Figure 3**
-
 
 1. Placez le curseur dans chaque cellule de la table et définissez le *valign* propriété *haut*.
 2. À partir de la boîte à outils, insérez un contrôle ContentPlaceHolder dans la cellule supérieure de la table (la cellule d’en-tête.)
 3. Lorsque vous insérez ce contrôle ContentPlaceHolder, vous remarquerez que la hauteur de ligne peut prendre jusqu'à presque toute la page, comme indiqué dans la figure 4. Ne soyez pas inquiet à qui ce stade.
 
-
 ![L’espace vide est dans la même cellule comme ContentPlaceHolder](master-pages/_static/image1.gif)
 
 **Figure 4**: L’espace vide est dans la même cellule comme ContentPlaceHolder
 
-
 1. Placez un contrôle ContentPlaceHolder dans les deux autres cellules. Une fois que les autres contrôles ContentPlaceHolder ont été insérées, la taille des cellules de tableau doit être comme vous pouvez l’imaginer. La page doit maintenant ressembler à la page illustrée **figure 5**.
-
 
 ![Le maître avec tous les contrôles ContentPlaceHolder. Notez que la hauteur de cellule pour la cellule d’en-tête est maintenant il doit être](master-pages/_static/image2.gif)
 
 **Figure 5**: Le maître avec tous les contrôles ContentPlaceHolder. Notez que la hauteur de cellule pour la cellule d’en-tête est maintenant il doit être
-
 
 1. Entrez du texte de votre choix dans chacun des trois contrôles ContentPlaceHolder.
 2. Enregistrez la page maître en tant que exercise1.master.
@@ -117,11 +105,9 @@ Dans cet atelier, vous créez une page maître et définissent trois contrôles 
 5. Sélectionnez **Web Form** dans la boîte de dialogue Ajouter un nouvel élément.
 6. Assurez-vous que la case à cocher Sélectionner la page maître est vérifiée comme illustré à la figure 6.
 
-
 ![Ajout d’une nouvelle Page de contenu](master-pages/_static/image3.gif)
 
 **Figure 6**: Ajout d’une nouvelle Page de contenu
-
 
 1. Cliquez sur Ajouter.
 2. Sélectionnez la exercise1.master dans l’instruction Select une boîte de dialogue de page maître comme indiqué dans la figure 7.
@@ -129,11 +115,9 @@ Dans cet atelier, vous créez une page maître et définissent trois contrôles 
 
 La nouvelle page de contenu s’affiche dans Visual Studio avec un contrôle de contenu pour chaque contrôle ContentPlaceHolder sur la page maître. Par défaut, les contrôles de contenu sont vides, afin que vous puissiez ajouter votre propre contenu. Si vous souhaitez que d’utiliser le contenu à partir du contrôle ContentPlaceHolder sur la page maître, cliquez simplement sur le symbole de balise active (la petite flèche noire dans le coin supérieur droit du contrôle) et choisissez *maîtres contenu par défaut* à partir de la balise active comme indiqué dans **figure 8**. Lorsque vous procédez ainsi, l’élément de menu change pour *créer un contenu personnalisé*. En cliquant sur à ce stade supprime le contenu à partir de la page maître, ce qui vous permet de définir le contenu personnalisé pour ce contrôle de contenu particulier.
 
-
 ![Définition d’un contrôle de contenu pour le contenu de Pages maître par défaut](master-pages/_static/image4.gif)
 
 **Figure 7**: Définition d’un contrôle de contenu pour le contenu de Pages maître par défaut
-
 
 ## <a name="connecting-master-page-and-content-pages"></a>Connexion de Page maître et les Pages de contenu
 
@@ -183,15 +167,11 @@ Notez que dans ce scénario, le maître de l’enfant est également une page de
 > [!NOTE]
 > Prise en charge de concepteur n’est pas disponible pour les pages maîtres imbriquées. Lorsque vous développez à l’aide de maîtres imbriquées, vous devez utiliser la vue de source.
 
-
 Cette vidéo montre une procédure pas à pas de l’utilisation des pages maîtres imbriquées.
-
 
 ![](master-pages/_static/image1.png)
 
-
 [Ouvre vidéo plein écran](master-pages/_static/nested1.wmv)
-
 
 ![Sélection d’une Page maître](master-pages/_static/image4.jpg)
 

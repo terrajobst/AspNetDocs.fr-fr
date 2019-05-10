@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 416438a1-3b2f-4d27-bf53-6b76223c33bf
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: 19cda45ce1b425462ec491bcc86b7a0b76dec162
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b9c4a4d035c78b4f4c53942219ccfa3048c7a82b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409796"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133818"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Déploiement à des fins de production
 
@@ -22,7 +22,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 [Télécharger le projet de démarrage](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Cette série de didacticiels vous montre comment déployer (publier) un ASP.NET web application dans Azure App Service Web Apps ou à un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -41,7 +40,6 @@ Si vous n’avez pas déjà un compte Azure, vous pouvez créer un compte d’es
 > [!NOTE]
 > Depuis la rédaction de ce didacticiel, Azure App Service ajouté une nouvelle fonctionnalité pour automatiser la plupart des processus permettant de créer des environnements intermédiaire et de production. Consultez [définir des environnements intermédiaires pour applications web dans Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-staged-publishing/).
 
-
 Comme expliqué dans la [déployer dans le didacticiel sur l’environnement de Test](deploying-to-iis.md), le meilleur environnement de test fiable est un site web au fournisseur d’hébergement qui a comme le site web de production. À nombreux fournisseurs d’hébergement, vous devez peser les avantages par rapport à un coût, mais dans Azure, vous pouvez créer une application web libre supplémentaire que votre application intermédiaire. Vous avez également besoin d’une base de données, et les dépenses supplémentaires pour ce faire, sur les dépenses liées à votre base de données de production sera aucun ou minimale. Dans Azure, vous payez pour la quantité de stockage de base de données que vous utilisez plutôt que pour chaque base de données, et la quantité de stockage supplémentaire, que vous allez utiliser dans un environnement intermédiaire sera minime.
 
 Comme expliqué dans la [déployer dans le didacticiel sur l’environnement de Test](deploying-to-iis.md), intermédiaire et de production que vous allez déployer vos deux bases de données dans une base de données. Si vous souhaitez les conserver séparément, le processus sera toujours le même, à ceci près que vous devez créer une base de données supplémentaire pour chaque environnement et vous sélectionneriez la chaîne de destination correct pour chaque base de données lorsque vous créez le profil de publication.
@@ -50,7 +48,6 @@ Dans cette section du didacticiel, vous allez créer une application web et la b
 
 > [!NOTE]
 > Les étapes suivantes montrent comment créer une application web dans Azure App Service à l’aide du portail de gestion Azure. Dans la dernière version du SDK Azure, vous pouvez également procéder sans quitter Visual Studio, à l’aide de l’Explorateur de serveurs. Dans Visual Studio 2013, vous pouvez également créer une application web directement à partir de la boîte de dialogue Publier. Pour plus d’informations, consultez [créer une application web ASP.NET dans Azure App Service.](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet)
-
 
 1. Dans le [portail de gestion](https://manage.windowsazure.com/), cliquez sur **sites Web**, puis cliquez sur **New**.
 2. Cliquez sur **site Web**, puis cliquez sur **création personnalisée**.
@@ -97,7 +94,6 @@ Maintenant que vous avez créé une application web et la base de données pour 
 
 > [!NOTE]
 > Ces instructions indiquent comment créer un profil de publication en téléchargeant un *.publishsettings* fichier, ce qui fonctionne non seulement pour Azure, mais également pour les fournisseurs d’hébergement tiers. La dernière version du SDK Azure vous permet également se connecter directement à Azure à partir de Visual Studio et choisir parmi une liste d’applications web que vous avez dans votre compte Azure. Dans Visual Studio 2013, vous pouvez vous connecter à Azure à partir de la **Web Publish** boîte de dialogue ou à partir de la **Explorateur de serveurs** fenêtre. Pour plus d’informations, consultez [créer une application web ASP.NET dans Azure App Service](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet).
-
 
 ### <a name="download-the-publishsettings-file"></a>Télécharger le fichier .publishsettings
 
@@ -165,7 +161,6 @@ Maintenant que vous avez créé une application web et la base de données pour 
 
 > [!NOTE]
 > Cette section montre comment configurer une transformation de Web.config pour l’indicateur de l’environnement. Étant donné que l’indicateur est dans le `<appSettings>` élément, vous avez une autre solution pour la spécification de la transformation lorsque vous déployez sur Azure App Service. Pour plus d’informations, consultez [Web.config en spécifiant les paramètres dans Azure](web-config-transformations.md#watransforms).
-
 
 1. Dans **l’Explorateur de solutions**, développez **propriétés**, puis développez **PublishProfiles**.
 2. Avec le bouton droit *Staging.pubxml*, puis cliquez sur **ajouter une transformation de Config**.

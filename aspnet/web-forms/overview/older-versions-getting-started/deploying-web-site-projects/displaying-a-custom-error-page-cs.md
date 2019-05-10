@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: cb061642-faf3-41b2-9372-69e13444d458
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0ccb1a737fdfc3cf2ffdcc22131650e1b79cd2cb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f56241a6a3d1d54f917d366b08edb4a1a43bbce8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407222"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134447"
 ---
 # <a name="displaying-a-custom-error-page-c"></a>Affichage d’une page d’erreur personnalisée (C#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger le Code](http://download.microsoft.com/download/1/0/C/10CC829F-A808-4302-97D3-59989B8F9C01/ASPNET_Hosting_Tutorial_11_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial11_CustomErrors_cs.pdf)
 
 > Ce que voit l’utilisateur lorsqu’une erreur d’exécution se produit dans une application web ASP.NET ? La réponse dépend du site Web &lt;customErrors&gt; configuration. Par défaut, les utilisateurs sont affichés à un écran jaune affreux vantant qu’une erreur d’exécution s’est produite. Ce didacticiel montre comment personnaliser ces paramètres à la page d’erreur personnalisée affichage un esthétiques qui correspond à apparence de votre site.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -47,7 +46,6 @@ Les développeurs de pages d’erreur sont plus familier avec est le YSOD détai
 > [!NOTE]
 > Pour reproduire cette erreur dans l’application web de démonstration disponible au téléchargement, vous pouvez visiter `Genre.aspx?ID=foo` directement ou cliquez sur le lien « Générer une erreur d’exécution » dans `Default.aspx`.
 
-
 Notez les informations d’exception présentées dans **Figure 1**. Le message d’exception, « Échec de la Conversion lors de la conversion à partir d’une chaîne de caractères en uniqueidentifier » se trouve en haut de la page. Le type de l’exception, `System.Data.SqlClient.SqlException`, est également répertorié. Il existe également une trace de la pile.
 
 [![](displaying-a-custom-error-page-cs/_static/image2.png)](displaying-a-custom-error-page-cs/_static/image1.png)
@@ -61,7 +59,6 @@ Par défaut, le YSOD d’erreur de Runtime est affichée pour les utilisateurs q
 
 > [!NOTE]
 > Si vous suivez et DiscountASP.NET comme votre hôte web, vous pouvez remarquer que le YSOD d’erreur de Runtime n’affiche pas lorsque vous visitez le site actif. Il s’agit, car DiscountASP.NET a leurs serveurs configurés pour afficher le YSOD de détails d’Exception par défaut. La bonne nouvelle est que vous pouvez remplacer ce comportement par défaut en ajoutant un `<customErrors>` section à votre `Web.config` fichier. La section « Configuration qui erreur Page s’affiche » examine le `<customErrors>` section en détail.
-
 
 [![](displaying-a-custom-error-page-cs/_static/image5.png)](displaying-a-custom-error-page-cs/_static/image4.png)
 
@@ -140,7 +137,6 @@ Avec cette modification en place, chaque fois qu’un utilisateur visite à dist
 > [!NOTE]
 > Découvrez [des Pages d’erreur 404, une fois plus](http://www.smashingmagazine.com/2009/01/29/404-error-pages-one-more-time/) pour obtenir des conseils sur la création de pages d’erreur 404 efficace.
 
-
 [![](displaying-a-custom-error-page-cs/_static/image19.png)](displaying-a-custom-error-page-cs/_static/image18.png)**Figure 7**: La Page d’erreur 404 personnalisée affiche un Message plus ciblé que `Oops.aspx`  
  ([Cliquez pour afficher l’image en taille réelle](displaying-a-custom-error-page-cs/_static/image20.png)) 
 
@@ -148,7 +144,6 @@ Avec cette modification en place, chaque fois qu’un utilisateur visite à dist
 
 > [!NOTE]
 > La page d’erreur personnalisée s’affiche uniquement lorsqu’une demande est faite à une ressource gérée par le moteur ASP.NET. Comme expliqué dans la [principales différences entre IIS et le serveur de développement ASP.NET](core-differences-between-iis-and-the-asp-net-development-server-cs.md) didacticiel, le serveur web peut gérer certaines demandes lui-même. Par défaut, IIS web server traite les requêtes de contenu statique tel que des images et les fichiers HTML sans appeler le moteur ASP.NET. Par conséquent, si l’utilisateur demande un fichier inexistant image ils obtiennent en retour du message d’erreur 404 d’IIS par défaut plutôt que ASP. Page d’erreurs configuré du NET.
-
 
 ## <a name="summary"></a>Récapitulatif
 

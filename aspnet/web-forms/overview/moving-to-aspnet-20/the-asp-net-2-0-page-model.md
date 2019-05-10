@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: af4575a3-0ae3-4638-ba4d-218fad7a1642
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/the-asp-net-2-0-page-model
 msc.type: authoredcontent
-ms.openlocfilehash: 09f8389a04c5600ca9ee8365a9dc5a0d607c0a4d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bcb71b2b5a484e8756406867e08e8aa699a9024d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403920"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127916"
 ---
 # <a name="the-aspnet-20-page-model"></a>Le modèle de Page 2.0 ASP.NET
 
 by [Microsoft](https://github.com/microsoft)
 
 > Dans ASP.NET 1.x, les développeurs devaient choisir entre un modèle de code inline et un modèle de code code-behind. Code-behind peut être implémenté à l’aide de l’attribut Src ou l’attribut code-behind de la @Page directive. Dans ASP.NET 2.0, les développeurs ont toujours un choix entre le code inline et code-behind, mais il améliorations significatives ont été pour le modèle code-behind.
-
 
 Dans ASP.NET 1.x, les développeurs devaient choisir entre un modèle de code inline et un modèle de code code-behind. Code-behind peut être implémenté à l’aide de l’attribut Src ou l’attribut code-behind de la @Page directive. Dans ASP.NET 2.0, les développeurs ont toujours un choix entre le code inline et code-behind, mais il améliorations significatives ont été pour le modèle code-behind.
 
@@ -47,12 +46,10 @@ Une définition de classe standard dans un fichier de code-behind d’ASP.NET 2.
 > [!NOTE]
 > C# et Visual Basic sont des langages managés uniquement qui prennent actuellement en charge les classes partielles. Par conséquent, les développeurs qui utilisent J# ne sera pas en mesure d’utiliser le modèle code-behind dans ASP.NET 2.0.
 
-
 Le nouveau modèle améliore le modèle code-behind, car les développeurs n’ont maintenant des fichiers de code qui contiennent uniquement le code qu’ils ont créés. Il fournit également une séparation true de code et du contenu, car il n’y a aucune déclaration de variable d’instance dans le fichier code-behind.
 
 > [!NOTE]
 > Étant donné que la classe partielle pour la page ASPX est lorsque la liaison de l’événement a lieu, les développeurs Visual Basic peuvent réaliser une légère augmentation des performances en utilisant le mot-clé Handles dans du code-behind pour lier les événements. C# ne possède aucun mot clé équivalent.
-
 
 ## <a name="new--page-directive-attributes"></a>Nouveaux attributs de la Directive @ Page
 
@@ -128,12 +125,9 @@ Une autre nouvelle fonctionnalité de la directive @ Page dans ASP.NET 2.0 est l
 
 Le **SomeText** attribut de la directive @ Page définit la valeur initiale de la propriété SomeText dans la classe de base à *Hello !*. La vidéo ci-dessous est une procédure pas à pas de définition de la valeur initiale d’une propriété publique dans une classe de base à l’aide de la directive @ Page.
 
-
 ![](the-asp-net-2-0-page-model/_static/image1.png)
 
-
 [Ouvre vidéo plein écran](the-asp-net-2-0-page-model/_static/setprop1.wmv)
-
 
 ## <a name="new-public-properties-of-the-page-class"></a>Nouvelles propriétés publiques de la classe de Page
 
@@ -365,12 +359,9 @@ Lorsque la page est publiée, la Page qui lance la publication (postback) est ac
 
 La vidéo ci-dessous est une procédure pas à pas d’une publication de plusieurs pages.
 
-
 ![](the-asp-net-2-0-page-model/_static/image2.png)
 
-
 [Ouvre vidéo plein écran](the-asp-net-2-0-page-model/_static/xpage1.wmv)
-
 
 ## <a name="more-details-on-cross-page-postbacks"></a>Plus d’informations sur les publications de plusieurs pages
 
@@ -423,16 +414,12 @@ L’étape suivante consiste à appeler la méthode AddOnPreRenderCompleteAsync 
 
 La vidéo ci-dessous est une procédure pas à pas d’une requête de page asynchrone.
 
-
 ![](the-asp-net-2-0-page-model/_static/image3.png)
-
 
 [Ouvre vidéo plein écran](the-asp-net-2-0-page-model/_static/async1.wmv)
 
-
 > [!NOTE]
 > Une page asynchrone ne rend pas dans le navigateur jusqu'à ce que le EndEventHandler est terminée. Aucun doute, mais que certains développeurs pense que des demandes asynchrones sont semblables aux rappels d’async. Il est important de savoir qu’ils ne sont pas. L’avantage pour les demandes asynchrones est que le premier thread de travail peut être retourné au pool de threads pour les nouvelles demandes de service, ce qui réduit la contention en raison d’e/s liée, etc.
-
 
 ## <a name="script-callbacks-in-aspnet-20"></a>Rappels de script dans ASP.NET 2.0
 
@@ -459,14 +446,12 @@ Comme mentionné précédemment, l’appel XMLHttp est encapsulé dans le Gestio
 > [!NOTE]
 > \_\_doPostBack est toujours rendu dans la page dans un scénario de rappel de script client. Toutefois, il n’est pas utilisé pour le rappel.
 
-
 Les arguments pour le Web Form\_DoCallback (fonction) côté client sont fournies via la fonction côté serveur GetCallbackEventReference qui devrait être appelé dans la Page\_charge. Un appel standard à GetCallbackEventReference peut ressembler à ceci :
 
 [!code-csharp[Main](the-asp-net-2-0-page-model/samples/sample12.cs)]
 
 > [!NOTE]
 > Dans ce cas, cm est une instance de ClientScriptManager. La classe ClientScriptManager est abordée plus loin dans ce module.
-
 
 Il existe plusieurs versions surchargées de GetCallbackEventReference. Dans ce cas, les arguments sont les suivantes :
 
@@ -522,12 +507,9 @@ Le ICallbackEventHandler contient deux méthodes dont vous avez besoin d’impl�
 
 Une fois que vous avez terminé les étapes ci-dessus, vous êtes prêt à effectuer un rappel de script dans ASP.NET 2.0.
 
-
 ![](the-asp-net-2-0-page-model/_static/image4.png)
 
-
 [Ouvre vidéo plein écran](the-asp-net-2-0-page-model/_static/callback1.wmv)
-
 
 Rappels de script dans ASP.NET sont prises en charge dans n’importe quel navigateur qui prend en charge les appels XMLHttp. Incluant tous les navigateurs modernes en cours d’utilisation dès aujourd'hui. Internet Explorer utilise l’objet XMLHttp ActiveX tandis que d’autres navigateurs modernes (y compris la prochaine IE 7) utilisent un objet XMLHttp intrinsèque. Pour déterminer par programme si un navigateur prend en charge les rappels, vous pouvez utiliser la **Request.Browser.SupportCallback** propriété. Cette propriété retourne **true** si le client demandeur prend en charge les rappels de script.
 
@@ -537,7 +519,6 @@ Scripts clients dans ASP.NET 2.0 sont gérés par le biais de l’utilisation de
 
 > [!NOTE]
 > Lorsqu’un script a été inscrit sur une page, toute tentative ultérieure pour inscrire le même script entraîne simplement le script n’est pas inscrit une deuxième fois. Aucun script en double n’est ajoutées, et aucune exception ne se produit. Pour éviter les calculs inutiles, voici les méthodes que vous pouvez utiliser pour déterminer si un script est déjà inscrit afin que vous n’essayez pas inscrire plusieurs fois.
-
 
 Les méthodes de ClientScriptManager doivent être familiers à tous les développeurs ASP.NET en cours :
 
@@ -580,7 +561,6 @@ Ce code génère le code suivant dans la page rendue :
 > [!NOTE]
 > Le bloc de script est rendu au bas de la page.
 
-
 Utilisez la méthode IsClientScriptIncludeRegistered pour déterminer si un script a déjà été inscrit. Cela vous permet d’éviter une tentative pour réinscrire un script.
 
 ## <a name="registerstartupscript"></a>RegisterStartupScript
@@ -590,13 +570,11 @@ La méthode RegisterStartupScript accepte les mêmes arguments que la méthode R
 > [!NOTE]
 > Si vous enregistrez une fonction avec RegisterStartupScript, cette fonction n’exécute pas jusqu'à ce que vous l’appelez explicitement dans le code côté client.
 
-
 Utilisez la méthode IsStartupScriptRegistered pour déterminer si un script a déjà été inscrit et éviter une tentative pour réinscrire un script.
 
 ## <a name="other-clientscriptmanager-methods"></a>Autres méthodes ClientScriptManager
 
 Voici quelques-unes des autres méthodes utiles de la classe ClientScriptManager.
-
 
 |  <strong>GetCallbackEventReference</strong>   |                                                 Consultez les rappels de script plus haut dans ce module.                                                 |
 |-----------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -606,4 +584,3 @@ Voici quelques-unes des autres méthodes utiles de la classe ClientScriptManager
 | <strong>RegisterClientScriptResource</strong> |     Inscrit une ressource Web avec la page. Il s’agit des ressources incorporées dans un assembly et gérée par le nouveau gestionnaire de WebResource.axd.      |
 |     <strong>RegisterHiddenField</strong>      |                                                 Inscrit un champ de formulaire masqué avec la page.                                                 |
 |  <strong>RegisterOnSubmitStatement</strong>   |                                  Inscrit le code côté client qui s’exécute lorsque le formulaire HTML est envoyé.                                   |
-
