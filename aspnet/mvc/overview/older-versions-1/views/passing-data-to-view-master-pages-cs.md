@@ -8,12 +8,12 @@ ms.date: 10/16/2008
 ms.assetid: 5fee879b-8bde-42a9-a434-60ba6b1cf747
 msc.legacyurl: /mvc/overview/older-versions-1/views/passing-data-to-view-master-pages-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 863fe772a1d79201b83da8498bf7e981acf7fd0e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 852492211ace3cd14593e4a61a8015d49d3a41db
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401073"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130171"
 ---
 # <a name="passing-data-to-view-master-pages-c"></a>Passage de données à des pages maîtres de vue (C#)
 
@@ -23,7 +23,6 @@ by [Microsoft](https://github.com/microsoft)
 
 > L’objectif de ce didacticiel est d’expliquer comment vous pouvez passer des données à partir d’un contrôleur à une page maître de vue. Nous allons examiner deux stratégies pour passer des données à une page maître de vue. Tout d’abord, nous abordons une solution facile qui résulte dans une application qui est difficile à gérer. Ensuite, nous examinons une bien meilleure solution qui nécessite un peu plus de travail initiale, mais les résultats dans une application beaucoup plus facile à gérer.
 
-
 ## <a name="passing-data-to-view-master-pages"></a>Passage de données à des Pages maîtres de vue
 
 L’objectif de ce didacticiel est d’expliquer comment vous pouvez passer des données à partir d’un contrôleur à une page maître de vue. Nous allons examiner deux stratégies pour passer des données à une page maître de vue. Tout d’abord, nous abordons une solution facile qui résulte dans une application qui est difficile à gérer. Ensuite, nous examinons une bien meilleure solution qui nécessite un peu plus de travail initiale, mais les résultats dans une application beaucoup plus facile à gérer.
@@ -32,11 +31,9 @@ L’objectif de ce didacticiel est d’expliquer comment vous pouvez passer des 
 
 Imaginez que vous générez une application de base de données de films et que vous souhaitez afficher la liste des catégories de films sur chaque page dans votre application (voir Figure 1). En outre, imaginez que la liste des catégories de films est stockée dans une table de base de données. Dans ce cas, il serait judicieux pour récupérer les catégories à partir de la base de données et de restituer la liste des catégories de films dans une page maître de vue.
 
-
 [![Affichage des catégories de films dans une page maître de vue](passing-data-to-view-master-pages-cs/_static/image2.png)](passing-data-to-view-master-pages-cs/_static/image1.png)
 
 **Figure 01**: Affichage des catégories de films dans une page maître de vue ([cliquez pour afficher l’image en taille réelle](passing-data-to-view-master-pages-cs/_static/image3.png))
-
 
 Voici le problème. Comment pour récupérer la liste des catégories de film dans la page maître ? Il est tentant d’appeler directement les méthodes de vos classes de modèle dans la page maître. En d’autres termes, il est tentant d’inclure le code de récupération des données à partir de la droite de la base de données dans votre page maître. Toutefois, en ignorant vos contrôleurs MVC pour accéder à la base de données risque de violer la séparation claire des préoccupations qui est un des principaux avantages de la création d’une application MVC.
 
@@ -58,11 +55,9 @@ Notez que le Index() et les actions Details() ajouter deux éléments pour affic
 
 L’action Details() ajoute également deux clés nommée catégories et des films. La clé de catégories, représente une fois encore, la liste des catégories de film affiché par la page maître de vue. La clé de films représente la liste de films dans une catégorie particulière, affiché par la page de vue de détails (voir Figure 2).
 
-
 [![La vue Détails](passing-data-to-view-master-pages-cs/_static/image5.png)](passing-data-to-view-master-pages-cs/_static/image4.png)
 
 **Figure 02**: La vue Détails ([cliquez pour afficher l’image en taille réelle](passing-data-to-view-master-pages-cs/_static/image6.png))
-
 
 La vue Index est contenue dans le Listing 2. Il itère simplement la liste de films représenté par l’élément de films dans les données d’affichage.
 

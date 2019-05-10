@@ -8,12 +8,12 @@ ms.date: 06/17/2015
 ms.assetid: 7526ed45-a97d-4e8a-8301-01324ef0eff9
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/intro-to-web-pages-programming
 msc.type: authoredcontent
-ms.openlocfilehash: 81c2c6f0070a409c289128ccf5d39f9fff788b48
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 474de7671ac2931e5ba9ff635d77385403644521
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387345"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130506"
 ---
 # <a name="introducing-aspnet-web-pages---programming-basics"></a>Présentation des Pages Web ASP.NET - notions de programmation
 
@@ -34,7 +34,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - NuGet et le Gestionnaire de package.
 > - Le `Gravatar` helper.
-
 
 Ce didacticiel est principalement un exercice de présentation de la syntaxe de programmation que vous utiliserez pour ASP.NET Web Pages. Vous allez découvrir *syntaxe Razor* et langage de programmation de code qui est écrit en c#. Vous avez obtenu un aperçu de cette syntaxe dans le didacticiel précédent ; Dans ce didacticiel, nous expliquerons la syntaxe plus.
 
@@ -60,7 +59,6 @@ Copiez ce qui suit dans le fichier, remplacer complètement qu’il est déjà.
 
 > [!NOTE]
 > Lorsque vous copiez balisage ou code dans les exemples dans une page, la mise en retrait et l’alignement peut-être pas les mêmes que dans le didacticiel. Mise en retrait et l’alignement n’affectent pas l’exécution du code, cependant.
-
 
 [!code-cshtml[Main](intro-to-web-pages-programming/samples/sample1.cshtml)]
 
@@ -126,7 +124,6 @@ Comme prévu à partir de votre expérience dans le didacticiel précédent, le 
 > 
 > Nous y fait allusion car si vous recherchez des informations sur la programmation ASP.NET Web Pages, vous trouverez un grand nombre de références à Razor. Toutefois, un grand nombre de ces références ne s’appliquent pas à ce que vous êtes cela et pouvez donc être déroutant. Et en fait, la plupart de vos questions sur la programmation vraiment vont être sur l’utilisation de c# ou de travailler avec ASP.NET. Par conséquent, si vous recherchez spécifiquement les informations sur Razor, vous ne trouviez pas les réponses que vous avez besoin.
 
-
 ## <a name="adding-some-conditional-logic"></a>Ajout d’une logique conditionnelle
 
 Une des fonctionnalités sur l’utilisation de code dans une page est que vous pouvez modifier ce qui se passe en fonction de différentes conditions. Dans cette partie du didacticiel, vous allez expérimenter certains moyens de modifier ce qui est affiché dans la page.
@@ -166,7 +163,6 @@ Vous pouvez tester les variables par rapport aux valeurs ou par rapport aux expr
 
 > [!NOTE]
 > Assurez-vous que vous remarquerez que l’opérateur de comparaison égal à (==) n’est pas le même que =. Le = opérateur est utilisé uniquement pour affecter des valeurs (var un = 2). Si vous mélangez ces opérateurs, vous obtenez une erreur ou vous obtiendrez des résultats inattendus.
-
 
 Pour vérifier si quelque chose a la valeur true, la syntaxe complète est if(IsDone == true). Mais vous pouvez également utiliser le raccourci if(IsDone). S’il n’existe aucun opérateur de comparaison, ASP.NET suppose que vous testez la valeur true.
 
@@ -231,7 +227,6 @@ Il existe une astuce ici, comme vous pouvez le voir. Comme son nom l’indique, 
 > **Types de données et les méthodes As()**
 > 
 > Nous avons seulement dit que jusqu'à présent, lorsque vous créez une variable, utiliser le mot clé var. N’est pas tout l’article, cependant. Afin de manipuler les valeurs, pour ajouter des numéros, ou concaténer des chaînes, ou comparer les dates ou tester pour la valeur true/false, c# doit fonctionner avec une représentation interne appropriée de la valeur. C# peut *généralement* déterminer ce que cette représentation doit être (autrement dit, ce qui *type* les données sont) en fonction de ce que vous faites avec les valeurs. Maintenant, puis, cependant, il ne peut pas le faire. Si ce n’est pas le cas, vous devez aider en explicitement indiquant comment c# doit représenter des données. La méthode AsBool fait, il indique à c# qu’une valeur de chaîne « true » ou « false » doit être traitée comme une valeur booléenne. Il existe des méthodes similaires pour représenter des chaînes comme d’autres types, tels que AsInt (considérer comme un entier), AsDateTime (considérer comme une date/heure), AsFloat (considérer comme un nombre à virgule flottante) et ainsi de suite. Lorsque vous utilisez en tant que méthodes (), si c# ne peut pas représenter la valeur de chaîne comme demandé, vous verrez une erreur.
-
 
 Dans le balisage de la page, supprimez ou commentez cet élément (ici il est indiqué comme commenté) :
 

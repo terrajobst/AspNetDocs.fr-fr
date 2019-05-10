@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 9b2af539-7ad9-47aa-b66e-873bd9906e79
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/deploying-database-role-memberships-to-test-environments
 msc.type: authoredcontent
-ms.openlocfilehash: fd0914ed62a280fea290b9f1b150fc25c8ed6d40
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a15f5bf5f659d151e91ef9e53c5ad55bcd8e2b01
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385330"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130408"
 ---
 # <a name="deploying-database-role-memberships-to-test-environments"></a>Déploiement d’appartenances aux rôles de base de données dans les environnements de test
 
@@ -32,7 +32,6 @@ par [Jason Lee](https://github.com/jrjlee)
 > Dans ce scénario, il est souvent avantageux de créer des utilisateurs de base de données automatiquement et d’affecter des appartenances aux rôles de base de données dans le cadre du processus de déploiement.
 > 
 > Le facteur clé est que cette opération doit être conditionnel en fonction de l’environnement cible. Si vous déployez dans un environnement intermédiaire ou un environnement de production, vous souhaitez ignorer l’opération. Si vous effectuez un déploiement à un développeur ou l’environnement de test, que vous souhaitez déployer des appartenances aux rôles sans aucune autre intervention. Cette rubrique décrit une approche que vous pouvez utiliser pour relever ce défi.
-
 
 Cette rubrique fait partie d’une série de didacticiels basées sur les exigences de déploiement d’entreprise de la société fictive Fabrikam, Inc. Cette série de didacticiels utilise un exemple de solution&#x2014;le [solution Gestionnaire de contacts](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;pour représenter une application web avec un niveau réaliste de complexité, y compris une application ASP.NET MVC 3, une Communication de Windows Foundation (WCF) service et un projet de base de données.
 
@@ -79,13 +78,10 @@ Vous pouvez créer un script Transact-SQL dans un grand nombre de façons diffé
 
 Dans l’idéal, vous exécuteriez tous les scripts Transact-SQL nécessaires dans le cadre d’un script de post-déploiement lorsque vous déployez votre projet de base de données. Toutefois, scripts de post-déploiement ne vous permettent d’exécuter la logique conditionnelle basée sur les configurations de solutions ou les propriétés de génération. L’alternative consiste à exécuter vos scripts SQL directement à partir du fichier de projet MSBuild, en créant un **cible** élément qui exécute une commande sqlcmd.exe. Vous pouvez utiliser cette commande pour exécuter votre script sur la base de données cible :
 
-
 [!code-console[Main](deploying-database-role-memberships-to-test-environments/samples/sample2.cmd)]
-
 
 > [!NOTE]
 > Pour plus d’informations sur les options de ligne de commande sqlcmd, consultez [utilitaire sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx).
-
 
 Avant de vous incorporez cette commande dans une cible MSBuild, vous devez envisager les conditions dans lesquelles le script à exécuter :
 
@@ -100,15 +96,11 @@ Si vous utilisez l’approche de fichier de projet de fractionnement décrite da
 
 Dans le fichier de projet spécifique à un environnement, vous devez définir le nom du serveur de base de données, le nom de la base de données cible et une propriété booléenne qui permet à l’utilisateur de spécifier s’il faut déployer les appartenances aux rôles.
 
-
 [!code-xml[Main](deploying-database-role-memberships-to-test-environments/samples/sample3.xml)]
-
 
 Dans le fichier de projet d’application universelle, vous devez fournir l’emplacement de l’exécutable sqlcmd et l’emplacement du script SQL que vous souhaitez exécuter. Ces propriétés restent les mêmes, quel que soit l’environnement de destination. Vous devez également créer une cible MSBuild pour exécuter la commande sqlcmd.
 
-
 [!code-xml[Main](deploying-database-role-memberships-to-test-environments/samples/sample4.xml)]
-
 
 Notez que vous ajoutez l’emplacement de l’exécutable sqlcmd une propriété statique, comme cela peut être utile à d’autres cibles. En revanche, définir l’emplacement de votre script SQL et la syntaxe de la commande sqlcmd en tant que propriétés dynamiques au sein de la cible, car ils ne seront pas requis avant l’exécution de la cible. Dans ce cas, le **DeployTestDBPermissions** cible est exécutée uniquement si ces conditions sont remplies :
 
@@ -117,9 +109,7 @@ Notez que vous ajoutez l’emplacement de l’exécutable sqlcmd une propriété
 
 Enfin, n’oubliez pas d’appeler la cible. Dans le *Publish.proj* fichier, vous pouvez ce faire, ajoutez la cible à la liste des dépendances pour la valeur par défaut **FullPublish** cible. Vous devez vous assurer que le **DeployTestDBPermissions** cible n’est pas exécutée avant la **PublishDbPackages** cible a été exécutée.
 
-
 [!code-xml[Main](deploying-database-role-memberships-to-test-environments/samples/sample5.xml)]
-
 
 ## <a name="conclusion"></a>Conclusion
 

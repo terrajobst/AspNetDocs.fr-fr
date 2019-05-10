@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: c979535f-48a3-4ec4-a633-a77889b86ddb
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/deploying-a-specific-build
 msc.type: authoredcontent
-ms.openlocfilehash: 0ab58aee6f1203beaf3990536b059f8209e66547
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6bede6b36c24ade928ab052e14daec1e017bd0b2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393481"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131942"
 ---
 # <a name="deploying-a-specific-build"></a>Déploiement d’une build spécifique
 
@@ -22,7 +22,6 @@ par [Jason Lee](https://github.com/jrjlee)
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit comment déployer des packages web et des scripts de base de données à partir d’une build précédente spécifique à une nouvelle destination, comme un environnement intermédiaire ou de production.
-
 
 Cette rubrique fait partie d’une série de didacticiels basées sur les exigences de déploiement d’entreprise de la société fictive Fabrikam, Inc. Cette série de didacticiels utilise un exemple de solution&#x2014;le [solution Gestionnaire de contacts](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;pour représenter une application web avec un niveau réaliste de complexité, y compris une application ASP.NET MVC 3, une Communication de Windows Foundation (WCF) service et un projet de base de données.
 
@@ -47,21 +46,15 @@ Dans le [exemple de solution](../web-deployment-in-the-enterprise/the-contact-ma
 > [!NOTE]
 > **OutputRoot** est un nom de propriété couramment utilisés. Les fichiers de projet Visual c# et Visual Basic également déclarent cette propriété pour stocker l’emplacement racine de toutes les sorties de génération.
 
-
 [!code-xml[Main](deploying-a-specific-build/samples/sample1.xml)]
-
 
 Si vous souhaitez que votre fichier projet pour déployer des packages web et de scripts à partir d’un autre emplacement de base de données&#x2014;telles que les sorties de build TFS précédente&#x2014;vous devez simplement remplacer le **OutputRoot** propriété. Vous devez définir la valeur de propriété dans le dossier génération pertinentes sur le serveur Team Build. Si vous exécutiez MSBuild à partir de la ligne de commande, vous pouvez spécifier une valeur pour **OutputRoot** comme un argument de ligne de commande :
 
-
 [!code-console[Main](deploying-a-specific-build/samples/sample2.cmd)]
-
 
 Dans la pratique, toutefois, vous serez également ignorer le **Build** cible&#x2014;il est inutile de créer votre solution si vous ne souhaitez pas utiliser les sorties de génération. Vous pouvez effectuer cela en spécifiant les cibles que vous souhaitez exécuter à partir de la ligne de commande :
 
-
 [!code-console[Main](deploying-a-specific-build/samples/sample3.cmd)]
-
 
 Toutefois, dans la plupart des cas, vous souhaitez créer votre logique de déploiement dans une définition de build TFS. Cela permet aux utilisateurs avec le **builds en file d’attente** autorisé à déclencher le déploiement à partir de toute installation de Visual Studio avec une connexion au serveur TFS.
 

@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 92df4051-77c6-492c-bd34-23d24189cea4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/profiles-themes-and-web-parts
 msc.type: authoredcontent
-ms.openlocfilehash: 0f3b376cee8d391eb087664a51cc25e3b58d16b9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cf5c45781be6d003d28c6aa27efa08032579a6dd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390036"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132789"
 ---
 # <a name="profiles-themes-and-web-parts"></a>Profils, thèmes et composants WebPart
 
 by [Microsoft](https://github.com/microsoft)
 
 > Voici les principales modifications de configuration et l’instrumentation dans ASP.NET 2.0. La nouvelle API de configuration ASP.NET permet des modifications de configuration être apportée par programmation. En outre, existent de nombreux nouveaux paramètres de configuration permettant de nouvelles configurations et l’instrumentation.
-
 
 ASP.NET 2.0 représente une amélioration importante dans la zone de sites Web personnalisés. Outre les fonctionnalités d’appartenance que nous avons déjà abordé, les profils ASP.NET, les thèmes et les composants WebPart améliorent considérablement la personnalisation de sites Web.
 
@@ -155,16 +154,13 @@ Le fichier d’apparence est un fichier XML qui contient les définitions de pro
 
 **Figure 1** ci-dessous montre une page ASP.NET petite consultés sans appliquer un thème. **Figure 2** montre le même fichier avec un thème est appliqué. La couleur d’arrière-plan et la couleur de texte sont configurés via un fichier CSS. L’apparence du bouton et la zone de texte sont configurés à l’aide du fichier d’apparence répertorié ci-dessus.
 
-
 ![Aucun thème](profiles-themes-and-web-parts/_static/image1.gif)
 
 **Figure 1**: Aucun thème
 
-
 ![Thème appliqué](profiles-themes-and-web-parts/_static/image2.gif)
 
 **Figure 2**: Thème appliqué
-
 
 Le fichier d’apparence répertorié ci-dessus définit une apparence par défaut pour tous les contrôles de zone de texte et les contrôles de bouton. Cela signifie que chaque contrôle de zone de texte et les insérer sur une page de contrôle de bouton aura cette apparence. Vous pouvez également définir une apparence qui peut être appliquée à des instances spécifiques de ces contrôles à l’aide de la **SkinID** propriété du contrôle.
 
@@ -329,7 +325,6 @@ Dans cette partie de la procédure pas à pas, vous créez une page qui utilise 
 > [!NOTE]
 > Vous n’avez pas besoin de rien à faire pour activer la personnalisation WebPart ; Il est activé par défaut pour le jeu de composants WebPart. Lorsque vous exécutez tout d’abord une page WebPart sur un site, ASP.NET définit un fournisseur de personnalisations par défaut pour stocker les paramètres de personnalisation utilisateur. Pour plus d’informations sur la personnalisation, consultez Vue d’ensemble de personnalisation de parties Web.
 
-
 ### <a name="to-create-a-page-for-containing-web-parts-controls"></a>Pour créer une page contenant des contrôles WebPart
 
 1. Fermez la page par défaut et ajoutez une nouvelle page au site nommé WebPartsDemo.aspx.
@@ -402,11 +397,9 @@ Vous pouvez maintenant tester votre page en y accédant dans votre navigateur. L
 
 **Page de démonstration WebPart avec deux zones**
 
-
 ![Capture d’écran de procédure pas à pas 1 Web VS des WebParts](profiles-themes-and-web-parts/_static/image3.gif)
 
 **Figure 3**: Capture d’écran de procédure pas à pas 1 Web VS des WebParts
-
 
 Dans le titre de la barre de chaque contrôle est une flèche vers le bas qui permet d’accéder à un menu d’actions verbales des actions disponibles, que vous pouvez effectuer sur un contrôle. Cliquez sur le menu d’actions verbales pour un des contrôles, puis cliquez sur le **réduire** verbe et notez que le contrôle est réduit. Dans le menu d’actions verbales, cliquez sur **restaurer**, et le contrôle retourne à sa taille normale.
 
@@ -449,11 +442,9 @@ Vous pouvez maintenant tester la capacité de modifier des pages et mise en page
 
 ### <a name="web-parts-demo-page-with-my-links-control-moved"></a>Page de démonstration WebPart avec contrôle de mes liens déplacé
 
-
 ![Capture d’écran de procédure pas à pas 2 Web VS des WebParts](profiles-themes-and-web-parts/_static/image4.gif)
 
 **Figure 4**: Capture d’écran de procédure pas à pas 2 Web VS des WebParts
-
 
 1. Cliquez sur le **Mode d’affichage** menu déroulant, puis sélectionnez **Parcourir**. La page est actualisée, les noms de zones disparaissent et le **Mes liens** contrôle reste où vous l’avez positionné.
 2. Pour démontrer que la personnalisation fonctionne, fermez le navigateur et puis charger à nouveau la page. Les modifications apportées sont enregistrées pour les futures sessions de navigateur.
@@ -467,22 +458,18 @@ Vous pouvez maintenant tester la capacité de modifier des pages et mise en page
 
 ### <a name="web-parts-demo-page-in-edit-mode"></a>Page de démonstration WebPart en mode édition
 
-
 ![Capture d’écran de procédure pas à pas 3 Web VS des WebParts](profiles-themes-and-web-parts/_static/image5.gif)
 
 **Figure 5**: Capture d’écran de procédure pas à pas 3 Web VS des WebParts
-
 
 1. Cliquez sur le **Mode d’affichage** menu, puis sélectionnez **Parcourir** pour repasser en mode de navigation.
 2. Le contrôle a maintenant un titre mis à jour et aucune bordure, comme indiqué dans la capture d’écran suivante.
 
 ### <a name="edited-web-parts-demo-page"></a>Page de démonstration WebPart modifiée
 
-
 ![Capture d’écran de procédure pas à pas 4 Web VS des WebParts](profiles-themes-and-web-parts/_static/image6.gif)
 
 **Figure 4**: Capture d’écran de procédure pas à pas 4 Web VS des WebParts
-
 
 ### <a name="adding-web-parts-at-run-time"></a>Ajout de composants WebPart en cours d’exécution
 

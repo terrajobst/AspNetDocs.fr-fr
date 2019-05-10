@@ -8,19 +8,18 @@ ms.date: 03/26/2015
 ms.assetid: c205805f-efdd-4fa7-9616-f26eab180611
 msc.legacyurl: /mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
 msc.type: authoredcontent
-ms.openlocfilehash: 078382191595d1f65b5ebe9d0de8d41cd70e376d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 051253d1e7a09f6285ebe0a83f87155de8467536
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419884"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129411"
 ---
 # <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Profiler et déboguer votre application ASP.NET MVC avec Glimpse
 
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Aperçu est plein essor et en constante évolution de la famille de packages NuGet d’open source qui fournit les données de performances détaillées, débogage et des informations de diagnostic pour les applications ASP.NET. Il est très facile à installer, léger et ultra rapide et affiche les mesures de performances clés en bas de chaque page. Il vous permet d’approfondir votre application lorsque vous avez besoin savoir ce qui se passait au niveau du serveur. Aperçu fournit des informations précieuses tellement que nous vous recommandons de qu'utiliser cela dans votre cycle de développement, y compris votre environnement de test Azure. Tandis que [Fiddler](http://www.telerik.com/fiddler) et [les outils de développement F-12](https://msdn.microsoft.com/library/ie/gg589512(v=vs.85).aspx) fournissent un côté client vue Aperçu fournit une vue détaillée à partir du serveur. Ce didacticiel aborde l’utilisation de l’aperçu ASP.NET MVC et les packages d’EF, mais de nombreux autres packages sont disponibles. Lorsque cela est possible de lier sera à approprié [apercevoir docs](http://getglimpse.com/Docs/) dont j’ai aider à maintenir. Aperçu est un projet open source, vous pouvez trop contribuer au code source et la documentation.
-
 
 - [L’installation d’aperçu](#ig)
 - [Activer l’aperçu pour localhost](#eg)
@@ -116,7 +115,6 @@ Supprimez les commentaires de la *GlimpseSecurityPolicy.cs* du fichier et change
 
 > [!WARNING]
 > Sécurité - données riches fournies par l’aperçu peut exposer la sécurité de votre application. Microsoft n’a pas effectué un audit de sécurité de l’aperçu pour une utilisation sur les applications de production.
-
 
 Pour plus d’informations sur l’ajout de rôles, consultez mon [déployer une application web de Secure ASP.NET MVC 5 avec appartenance, OAuth et base de données SQL dans Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database/) didacticiel.
 

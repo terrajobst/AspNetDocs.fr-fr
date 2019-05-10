@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 634ea84b-f904-4afe-b71b-49cccef4d9cc
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-models-and-data-access
 msc.type: authoredcontent
-ms.openlocfilehash: 53ca3bc4e550f488f3ae4c41f02a636e747107cb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 90635b617930d0a9c126795f4c8790d542e33dc9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384888"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129688"
 ---
 # <a name="aspnet-mvc-4-models-and-data-access"></a>Modèles ASP.NET MVC 4 et accès aux données
 
@@ -53,7 +53,6 @@ Les avantages de cette approche est que le modèle reste indépendant de l’inf
 > 
 > Si vous souhaitez Explorer la totalité **Music Store** application didacticiel, vous pouvez le trouver dans [MVC-musique-Store](https://github.com/evilDave/MVC-Music-Store).
 
-
 <a id="Prerequisites"></a>
 
 <a id="Prerequisites"></a>
@@ -90,13 +89,12 @@ Ce laboratoire pratique est constitué par les exercices suivants :
 > [!NOTE]
 > Chaque exercice est accompagné par un **fin** dossier contenant la solution obtenue, vous devez obtenir après avoir effectué les exercices. Si vous avez besoin d’aide supplémentaire sur l’utilisation via les exercices, vous pouvez utiliser cette solution comme guide.
 
-
 Durée estimée pour effectuer ce laboratoire : **35 minutes**.
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Adding_a_Database"></a>
-### <a name="exercise-1-adding-a-database"></a>Exercice 1 : Ajout d’une base de données
+### <a name="exercise-1-adding-a-database"></a>Exercice 1 : Ajout d’une base de données
 
 Dans cet exercice, vous allez apprendre à ajouter une base de données avec les tables de l’application du Store musique à la solution pour utiliser ses données. Une fois la base de données est généré avec le modèle et ajouté à la solution, vous allez modifier la classe StoreController pour fournir le modèle de vue avec les données extraites de la base de données, au lieu d’utiliser des valeurs codées en dur.
 
@@ -186,7 +184,6 @@ Dans cette tâche, vous allez créer un modèle de données pour interagir avec 
     > [!NOTE]
     > Les modèles T4 (.tt) exécuter du code pour générer les classes d’entités et remplaceront les classes existantes portant le même nom. Dans cet exemple, les classes &quot;Album&quot;, &quot;Genre&quot; et &quot;artiste&quot; ont été remplacés par le code généré.
 
-
 <a id="Ex1Task3"></a>
 
 <a id="Task_3_-_Building_the_Application"></a>
@@ -265,7 +262,7 @@ Dans cette tâche, vous allez vérifier que la page d’Index de Store s’affic
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Creating_a_Database_Using_Code_First"></a>
-### <a name="exercise-2-creating-a-database-using-code-first"></a>Exercice 2 : Création d’une base de données à l’aide de Code tout d’abord
+### <a name="exercise-2-creating-a-database-using-code-first"></a>Exercice 2 : Création d’une base de données à l’aide de Code tout d’abord
 
 Dans cet exercice, vous allez apprendre comment utiliser l’approche Code First pour créer une base de données avec les tables de l’application du Store musique et comment accéder à ses données.
 
@@ -273,7 +270,6 @@ Une fois que le modèle est généré, vous allez modifier le StoreController po
 
 > [!NOTE]
 > Si vous avez terminé l’exercice 1 et que vous avez déjà travaillé avec l’approche Database First, vous allez maintenant apprendre à obtenir les mêmes résultats avec un autre processus. Les tâches qui sont en commun avec exercice 1 ont été marqués pour faciliter la lecture. Si vous ne sont pas terminées exercice 1 mais que vous souhaitez en savoir plus l’approche Code First, vous pouvez démarrer à partir de cet exercice et obtenir une couverture complète de la rubrique.
-
 
 <a id="Ex2Task1"></a>
 
@@ -383,7 +379,6 @@ Dans cette tâche, vous mettrez à jour la classe StoreController afin que, au l
 > Cette tâche est en commun avec l’exercice 1.
 > 
 > Si vous avez terminé l’exercice 1 vous noterez que ces étapes sont les mêmes dans les deux approches (tout d’abord la base de données ou de Code first). Elles sont différentes dans la façon dont les données sont liées avec le modèle, mais l’accès aux entités de données est encore transparent à partir du contrôleur.
-
 
 1. Ouvrez **Controllers\StoreController.cs** et ajoutez le champ suivant à la classe pour contenir une instance de la **MusicStoreEntities** classe, nommée **storeDB**:
 

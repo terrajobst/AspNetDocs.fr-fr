@@ -8,12 +8,12 @@ ms.date: 04/01/2009
 ms.assetid: 548e75f6-4d6c-4cb4-8da8-417915eb8393
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 48af71fc5ff4dad3371687726660a5d914236df5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5ff344bdff379a72a5fc3d26ab66afb095cd2e0d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379376"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125748"
 ---
 # <a name="common-configuration-differences-between-development-and-production-vb"></a>Différences de configuration courantes entre le développement et la production (VB)
 
@@ -23,9 +23,7 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Dans les didacticiels précédents, nous avons déployé notre site Web en copiant tous les fichiers pertinentes à partir de l’environnement de développement dans l’environnement de production. Toutefois, il n’est pas rare pour permettre les différences de configuration entre environnements, ce qui nécessite que chaque environnement ont un unique fichier Web.config. Ce didacticiel examine les différences de configuration classique et examine les stratégies pour gérer les informations de configuration distinct.
 
-
 ## <a name="introduction"></a>Introduction
-
 
 Les deux derniers didacticiels passé en revue le déploiement d’une application web simple. Le [ *déploiement de votre Site à l’aide d’un FTP Client* ](deploying-your-site-using-an-ftp-client-vb.md) didacticiel vous a montré comment utiliser un client FTP autonome pour copier les fichiers nécessaires à partir de l’environnement de développement jusqu'à la production. Le didacticiel précédent, [ *déploiement de votre Site à l’aide de Visual Studio*](deploying-your-site-using-visual-studio-vb.md), rechercher au moment du déploiement à l’aide d’outil Copier le Site Web et l’option de publication de Visual Studio. Dans les deux didacticiels chaque fichier dans l’environnement de production a été une copie d’un fichier sur l’environnement de développement. Toutefois, il n’est pas rare que les fichiers de configuration dans l’environnement de production diffèrent de celles figurant dans l’environnement de développement. Configuration d’une application web est stockée dans le `Web.config` de fichiers et comprend généralement des informations sur les ressources externes, telles que la base de données, web et serveurs de messagerie. Il indique également le comportement de l’application dans certaines situations, telles que le plan d’action à entreprendre lorsqu’une exception non gérée se produit.
 
@@ -40,7 +38,6 @@ Chaînes de connexion de base de données sont un bon exemple d’informations d
 > [!NOTE]
 > Didacticiels futures explorent le déploiement d’applications orientées données, moment où nous nous plongerons dans les détails de la façon dont les chaînes de connexion de base de données sont stockées dans le fichier de configuration.
 
-
 Le comportement prévu des environnements de développement et de production diffère considérablement. Une application web dans l’environnement de développement est en cours créée, testé et débogué par un petit groupe de développeurs. Dans l’environnement de production, cette même application est visitée par un grand nombre d’utilisateurs simultané. ASP.NET inclut un certain nombre de fonctionnalités qui permettent aux développeurs de tester et déboguer une application, mais ces fonctionnalités doivent être désactivées pour des raisons de performances et sécurité dans l’environnement de production. Examinons quelques ces paramètres de configuration.
 
 ### <a name="configuration-settings-that-impact-performance"></a>Paramètres de configuration qui affectent les performances
@@ -51,7 +48,6 @@ L’attribut de débogage est un des attributs plus importants dans le `<compila
 
 > [!NOTE]
 > `WebResource.axd` est un gestionnaire HTTP intégré introduit dans ASP.NET 2.0 qui utilisent des contrôles serveur pour récupérer des ressources incorporées, telles que les fichiers de script, des images, des fichiers CSS et autres contenus. Pour plus d’informations sur la façon de `WebResource.axd` fonctionne et comment vous pouvez l’utiliser pour accéder à des ressources incorporées à partir de vos contrôles serveur personnalisés, consultez [l’accès à Embedded ressources via une URL à l’aide `WebResource.axd` ](http://aspnet.4guysfromrolla.com/articles/080906-1.aspx).
-
 
 Le `<compilation>` l’élément `debug` attribut est généralement défini sur « true » dans l’environnement de développement. En fait, cet attribut doit être défini sur « true » pour déboguer une application web ; Si vous essayez de déboguer une application ASP.NET à partir de Visual Studio et le `debug` attribut est défini sur « false », Visual Studio affiche un message expliquant que l’application ne peut pas être déboguée jusqu'à ce que le `debug` attribut est défini sur « true » et sera offre pour effectuer cette modification pour vous.
 
@@ -71,7 +67,6 @@ Lorsque vous développez et testez une application, qu'il est utile de consulter
 
 > [!NOTE]
 > La valeur par défaut `<customErrors>` paramètre section affiche les détails de l’exception du message uniquement lorsque la page est visitée via localhost et montre la page d’erreur générique runtime dans le cas contraire. Ce n’est pas idéale, mais elle est garantie pour savoir que le comportement par défaut ne révèle les détails de l’exception pour les visiteurs non local. Un futur didacticiel examine les `<customErrors>` section plus en détail et montre comment une page d’erreur personnalisé affiché lorsqu’une erreur se produit en production.
-
 
 Une autre fonctionnalité d’ASP.NET qui est utile lors du développement est le suivi. Le suivi, si activé, enregistre des informations sur chaque demande entrante et fournit une page web spéciale, `Trace.axd`, pour l’affichage des détails de la demande récente. Vous pouvez activer et configurer le suivi via la [ `<trace>` élément](https://msdn.microsoft.com/library/6915t83k.aspx) dans `Web.config`.
 
@@ -111,7 +106,6 @@ Pour en savoir plus sur l’utilisation du projet de déploiement Web, consultez
 
 > [!NOTE]
 > Vous ne pouvez pas utiliser le projet de déploiement Web avec Visual Web Developer, car le projet de déploiement Web est implémenté comme un Visual Studio Add-In et les éditions Visual Studio Express (y compris Visual Web Developer) ne prennent pas en charge des compléments.
-
 
 ## <a name="summary"></a>Récapitulatif
 

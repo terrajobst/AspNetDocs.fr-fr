@@ -8,12 +8,12 @@ ms.date: 01/12/2011
 ms.assetid: 28970e1b-1845-4015-86ef-121e52a6c397
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: 387c0ab407df2badfd8ff848b6a13c68769fbba7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c723134e829da23db8a43ef228db47ce9826f3e8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379857"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129990"
 ---
 # <a name="adding-a-new-field-to-the-movie-model-and-database-table-vb"></a>Ajout d’un nouveau champ à la table et au modèle Movie (VB)
 
@@ -28,7 +28,6 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > Si vous utilisez Visual Studio 2010 au lieu de Visual Web Developer 2010, installez les composants requis en cliquant sur le lien suivant : [Visual Studio 2010 prerequisites](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
 > Un projet de Visual Web Developer avec le code source VB.NET est disponible pour accompagner cette rubrique. [Téléchargez la version VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez c#, basculez vers le [c# version](../cs/adding-a-new-field.md) de ce didacticiel.
-
 
 Dans cette section, vous allez apporter des modifications pour les classes de modèle et apprendre comment vous pouvez mettre à jour le schéma de base de données pour refléter les modifications de modèle.
 
@@ -80,7 +79,6 @@ Nous allons mettre à jour l’application afin que le Code First automatiquemen
 > [!NOTE] 
 > 
 > **Avertissement** vous devez activer cette approche d’automatiquement et recréer la base de données uniquement lorsque vous utilisez une base de données de test ou de développement et *jamais* sur une base de données de production qui contient des données réelles. L’aide sur un serveur de production peut entraîner une perte de données.
-
 
 Dans **l’Explorateur de solutions**, avec le bouton droit cliquez sur le *modèles* dossier, sélectionnez **ajouter**, puis sélectionnez **classe**.
 

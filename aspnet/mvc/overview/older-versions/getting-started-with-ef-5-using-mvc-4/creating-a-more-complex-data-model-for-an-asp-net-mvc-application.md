@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: f81f3d80-3674-4d8e-a9b1-87feed1a93c9
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/creating-a-more-complex-data-model-for-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 15bdaa588792c3cf4a8e6eee651e0675f959f942
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2ba7ca22074fe3c131209482180f8f7706714dd5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382229"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129837"
 ---
 # <a name="creating-a-more-complex-data-model-for-an-aspnet-mvc-application-4-of-10"></a>Création d’un modèle de données plus complexe pour une Application ASP.NET MVC (4 sur 10)
 
@@ -26,7 +26,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Si vous rencontrez un problème que vous ne pouvez pas résoudre, [télécharger le chapitre terminé](building-the-ef5-mvc4-chapter-downloads.md) et essayez de reproduire votre problème. Vous trouverez généralement la solution au problème en comparant votre code pour le code complet. Pour certaines erreurs courantes et comment les résoudre, consultez [erreurs et des solutions de contournement.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 Dans les didacticiels précédents, vous avez travaillé avec un modèle de données simple composé de trois entités. Dans ce didacticiel, vous allez ajouter des entités et des relations et vous personnaliserez le modèle de données en spécifiant la mise en forme, de validation et de règles de mappage de base de données. Vous verrez deux façons de personnaliser le modèle de données : en ajoutant des attributs aux classes d’entité et en ajoutant du code à la classe de contexte de base de données.
 
@@ -52,9 +51,7 @@ Le [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannot
 
 L’attribut `DisplayFormat` est utilisé pour spécifier explicitement le format de date :
 
-
 [!code-csharp[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample2.cs)]
-
 
 Le `ApplyFormatInEditMode` paramètre spécifie que la mise en forme spécifiée doit également être appliquée quand la valeur est affichée dans une zone de texte pour la modification. (Ceci ne peut pas être souhaitable pour certains champs, par exemple, pour les valeurs monétaires, vous ne pouvez pas vouloir le symbole monétaire dans la zone de texte pour modification.)
 
@@ -124,7 +121,6 @@ Vous pouvez également modifier base de données de mappage à l’aide de la [A
 
 > [!NOTE]
 > Si vous essayez de compiler avant d’avoir créé toutes ces classes d’entité, vous pouvez obtenir des erreurs du compilateur.
-
 
 ## <a name="create-the-instructor-entity"></a>Créer l’entité Instructor
 
@@ -260,12 +256,11 @@ Les propriétés de clé étrangère et de navigation reflètent les relations s
 
 [!code-csharp[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample24.cs)]
 
-
 ## <a name="modifying-the-student-entity"></a>Modification de l’entité Student
 
 ![Student_entity](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/_static/image10.png)
 
-Dans *Models\Student.cs*, remplacez le code que vous avez ajouté précédemment par le code suivant. Les modifications sont mises en surbrillance.
+Dans *Models\Student.cs*, remplacez le code que vous avez ajouté précédemment par le code suivant. Les modifications apparaissent en surbrillance.
 
 [!code-csharp[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample25.cs?highlight=12,15,24-27)]
 
@@ -378,7 +373,6 @@ Une fois que vous avez terminé de modifier le &lt; *timestamp&gt;\_Chap4.cs* de
 > [!code-xml[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample35.xml?highlight=1-2)]
 > 
 > Avec une base de données, il n’existe pas de données à migrer et le `update-database` commande est beaucoup plus susceptible de s’exécuter sans erreur. Pour obtenir des instructions sur la suppression de la base de données, consultez [comment supprimer une base de données à partir de Visual Studio 2012](http://romiller.com/2013/05/17/how-to-drop-a-database-from-visual-studio-2012/).
-
 
 Ouvrez la base de données **Explorateur de serveurs** comme vous l’avez fait précédemment, puis développez le **Tables** nœud pour voir que toutes les tables ont été créées. (Si vous avez toujours **Explorateur de serveurs** ouvrir à partir de l’état antérieur, cliquez sur le **Actualiser** bouton.)
 

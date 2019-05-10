@@ -8,19 +8,18 @@ ms.date: 01/26/2011
 ms.assetid: 2990bd10-590d-43d5-9529-6b503ce5455d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering
 msc.type: authoredcontent
-ms.openlocfilehash: 19726a728fc6d94552c315b38315a29c269d97db
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 603120864528b9a5ff81214270eb9a7f1b68b347
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380416"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130678"
 ---
 # <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-3-sorting-and-filtering"></a>À l’aide d’Entity Framework 4.0 et que le contrôle ObjectDataSource, partie 3 : Tri et filtrage
 
 par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels s’appuie sur l’application web Contoso University créé par le [mise en route avec Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) série de didacticiels. Si vous n’avez pas effectué les didacticiels précédents, comme point de départ pour ce didacticiel vous pouvez [télécharger l’application](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que vous l’auriez créée. Vous pouvez également [télécharger l’application](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) qui est créé par la série de didacticiels terminée. Si vous avez des questions sur les didacticiels, vous pouvez les publier à le [forum ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
-
 
 Dans le didacticiel précédent, vous avez implémenté le modèle de référentiel dans une application web des applications multicouches qui utilise Entity Framework et le `ObjectDataSource` contrôle. Ce didacticiel montre comment effectuer le tri et de filtrage et de gérer les scénarios maître / détail. Vous allez ajouter les améliorations suivantes à la *Departments.aspx* page :
 

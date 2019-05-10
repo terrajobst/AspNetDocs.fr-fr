@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 6d40d276-1642-4a77-b6c9-02ac914f6805
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: 3833e3f3c6c49ff2b317ad04aff33c9119cb1f41
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 80c77ec65ed86b06e417d3f6ba608e404c46768b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420209"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132098"
 ---
 # <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Nouveautés du développement ASP.NET et web dans Visual Studio 2012
 
@@ -30,7 +30,6 @@ par [Web Camps Team](https://twitter.com/webcamps)
 > Ce laboratoire vous guide les améliorations et les nouvelles fonctionnalités décrites précédemment en appliquant des modifications mineures à un exemple d’application Web dans le dossier Source.
 > 
 > Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409 ](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
-
 
 <a id="Objectives"></a>
 
@@ -70,7 +69,7 @@ Durée estimée pour effectuer ce laboratoire : **60 minutes**.
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Whats_New_in_the_CSS_Editor"></a>
-### <a name="exercise-1-whats-new-in-the-css-editor"></a>Exercice 1 : Quelles sont les nouveautés dans l’éditeur CSS
+### <a name="exercise-1-whats-new-in-the-css-editor"></a>Exercice 1 : Quelles sont les nouveautés dans l’éditeur CSS
 
 Les développeurs Web doivent être familiarisés avec la plupart des difficultés liées à la modification de CSS. Un des plus grands problèmes de styles CSS est la compatibilité entre les navigateurs. Il arrive souvent que, après l’application des styles à votre site, vous remarquerez qu’il semble différent si vous l’ouvrez dans un autre navigateur ou l’appareil. Par conséquent, vous pouvez ensuite passer beaucoup de temps pour résoudre ces problèmes visual pour réaliser que, lorsque vous enfin que cela fonctionne dans un navigateur, elle est scindée dans les autres.
 
@@ -204,7 +203,7 @@ Dans cette tâche, vous allez apprendre à utiliser entre navigateurs compatible
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Whats_New_in_the_HTML_Editor"></a>
-### <a name="exercise-2-whats-new-in-the-html-editor"></a>Exercice 2 : Quelles sont les nouveautés dans l’éditeur HTML
+### <a name="exercise-2-whats-new-in-the-html-editor"></a>Exercice 2 : Quelles sont les nouveautés dans l’éditeur HTML
 
 Visual Studio propose un éditeur HTML amélioré. Certaines des améliorations incluses dans cette version sont la mise en retrait intelligente dans des documents HTML, des extraits de code HTML5, début HTML et correspondance de balise de fin et une validation HTML. Dans cet exercice, vous verrez comment ces modifications améliorent votre aptitude à lorsque vous travaillez dans le balisage de site Web.
 
@@ -331,7 +330,6 @@ Une des meilleures pratiques en HTML est mise en retrait les éléments imbriqu�
 > [!NOTE]
 > Dans la version précédente de Visual Studio, la mise en retrait intelligente était disponible dans l’éditeur XML, mais pas dans l’éditeur HTML.
 
-
 1. Assurez-vous que la configuration de mise en retrait dans l’éditeur HTML est définie pour la mise en retrait intelligente. Pour ce faire, sélectionnez le **outils | Options** option de menu, puis sélectionnez le **éditeur de texte | HTML | Onglets** page dans le volet gauche de l’écran. Sélectionnez l’option de mise en retrait intelligente.
 
     ![Paramètres de l’éditeur HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image33.png "paramètres de l’éditeur HTML")
@@ -433,7 +431,6 @@ Dans cette tâche, vous allez découvrir la nouvelle validation JavaScript pour 
 > [!NOTE]
 > Visual Studio 2010 implémenté ECMAStript3 conformité, alors que Visual Studio 2012 fournit la conformité ECMAScript5.
 
-
 1. Ouvrez **ECMA5script5.js** situé sous le **Scripts\custom** dossier du projet. Vous allez maintenant tester la validation de ECMAScript5 standard.
 
     [!code-html[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample8.html)]
@@ -494,11 +491,10 @@ Dans cette tâche, vous allez explorer les fonctionnalités de Visual Studio pou
 > [!NOTE]
 > Assurez-vous que GotoDefinition.js ne qu’aucune erreur de syntaxe avant d’enregistrer le fichier.
 
-
 <a id="Exercise4"></a>
 
 <a id="Exercise_4_Bundling_and_Minification"></a>
-### <a name="exercise-4-bundling-and-minification"></a>Exercice 4 : Bundles et minimisation
+### <a name="exercise-4-bundling-and-minification"></a>Exercice 4 : Bundles et minimisation
 
 Nombre de fois où vos sites Web incluent-ils fichier plusieurs JavaScript ou CSS ? Il s’agit d’un scénario très courant dans lequel les regroupement et minimisation peuvent aider à réduire la taille du fichier et rendre le site d’effectuer plus rapidement. La nouvelle fonctionnalité de regroupement dans ASP.NET 4.5 place un ensemble de fichiers JS ou CSS dans un élément unique et sa taille diminue de minimisation le contenu (suppression des espaces vides non requises, supprimer des commentaires, ce qui réduit d’identificateurs).
 
@@ -675,7 +671,6 @@ Dans cet exemple, vous allez apprendre à utiliser le **DynamicFolderBundle** cl
 
 > [!NOTE]
 > En outre, vous pouvez déployer cette application à Sites Web Windows Azure suit [annexe b : Publication d’une Application ASP.NET MVC 4, à l’aide de Web Deploy](#AppendixB).
-
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Récapitulatif

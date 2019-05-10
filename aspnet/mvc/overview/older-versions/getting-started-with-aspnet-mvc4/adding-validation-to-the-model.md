@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 5d9a2999-fcc4-4c45-a018-271fddf74a3b
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-validation-to-the-model
 msc.type: authoredcontent
-ms.openlocfilehash: 266d2e3fda54a9e584622ccd595e41229c96e6b0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 25037d2994354c92f9fe831c948393df32e120a1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420742"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129917"
 ---
 # <a name="adding-validation-to-the-model"></a>Ajout de la validation au modèle
 
@@ -21,7 +21,6 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
 > > Une version mise à jour de ce didacticiel est disponible [ici](../../getting-started/introduction/getting-started.md) qui utilise ASP.NET MVC 5 et Visual Studio 2013. Il est plus sécurisé, beaucoup plus simple à suivre et illustre plusieurs fonctionnalités.
-
 
 Dans cette section, vous allez ajouter la logique de validation pour la `Movie` modèle et vous avez la certitude que les règles de validation sont appliquées chaque fois qu’un utilisateur tente de créer ou modifier un film à l’aide de l’application.
 
@@ -79,7 +78,6 @@ Cliquez sur le **créer un nouveau** lien permettant d’ajouter un nouveau film
 
 > [!NOTE]
 > pour prendre en charge la validation jQuery pour les paramètres régionaux non anglais qui utilisent une virgule (&quot;,&quot;) pour une décimale, vous devez inclure *globalize.js* et votre propre *cultures/globalize.cultures.js* fichier (à partir de [ https://github.com/jquery/globalize ](https://github.com/jquery/globalize) ) et JavaScript pour utiliser `Globalize.parseFloat`. Le code suivant montre les modifications au fichier Views\Movies\Edit.cshtml pour travailler avec le &quot;fr-FR&quot; culture :
-
 
 [!code-cshtml[Main](adding-validation-to-the-model/samples/sample6.cshtml)]
 

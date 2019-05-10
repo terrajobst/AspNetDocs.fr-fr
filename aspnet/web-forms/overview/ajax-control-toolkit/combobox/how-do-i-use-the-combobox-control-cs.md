@@ -8,19 +8,18 @@ ms.date: 05/12/2009
 ms.assetid: 0bbf4134-04df-4226-8930-d5bb99e27128
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/combobox/how-do-i-use-the-combobox-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2d23e65f817c11e45adab56ea054a7c46a35d4f3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1c5fc61300441303b39e348d3eee83b6ee6847b4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386435"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132167"
 ---
 # <a name="how-do-i-use-the-combobox-control-c"></a>Comment utiliser le contrôle de zone de liste déroulante ? (C#)
 
 by [Microsoft](https://github.com/microsoft)
 
 > Zone de liste déroulante est un contrôle ASP.NET AJAX qui combine la souplesse d’une zone de texte avec une liste d’options à partir de laquelle les utilisateurs peuvent choisir.
-
 
 L’objectif de ce didacticiel est d’expliquer le contrôle ComboBox de boîte à outils de contrôle AJAX. La zone de liste déroulante fonctionne comme une combinaison entre un contrôle DropDownList de ASP.NET standard et un contrôle de zone de texte. Vous pouvez sélectionner dans une liste déjà existante d’éléments ou entrez un nouvel élément.
 
@@ -36,27 +35,21 @@ Si vous souhaitez utiliser le contrôle de zone de liste déroulante dans la pag
 
 Ensuite, faites glisser le contrôle de zone de liste déroulante sur la page. Vous trouverez le contrôle de zone de liste déroulante dans la boîte à outils avec les autres contrôles AJAX Control Toolkit et extendeurs de contrôle (voir figure 1).
 
-
 [![Formulaire simple pour la création d’une carte de visite](how-do-i-use-the-combobox-control-cs/_static/image1.jpg)](how-do-i-use-the-combobox-control-cs/_static/image1.png)
 
 **Figure 01**: Sélection du contrôle de zone de liste déroulante à partir de la boîte à outils ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-cs/_static/image2.png))
 
-
 Nous ll utiliser le contrôle de zone de liste déroulante pour afficher une liste statique de choix. L’utilisateur peut sélectionner un niveau particulier de spiciness pour leurs produits alimentaires à partir d’une liste de choix de trois : Violence, support et à chaud (voir Figure 2).
-
 
 [![Sélection d’une liste statique d’éléments](how-do-i-use-the-combobox-control-cs/_static/image2.jpg)](how-do-i-use-the-combobox-control-cs/_static/image3.png)
 
 **Figure 02**: Sélection d’une liste statique d’éléments ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-cs/_static/image4.png))
 
-
 Il existe deux façons que vous pouvez ajouter ces choix pour le contrôle de zone de liste déroulante. Tout d’abord, vous sélectionnez l’option de tâche de modifier les Options lorsque vous pointez votre souris sur le contrôle en mode Design et que vous ouvrez l’éditeur d’élément (voir Figure 3).
-
 
 [![Modification d’éléments de la zone de liste déroulante](how-do-i-use-the-combobox-control-cs/_static/image3.jpg)](how-do-i-use-the-combobox-control-cs/_static/image5.png)
 
 **Figure 03**: Modification d’éléments de la zone de liste déroulante ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-cs/_static/image6.png))
-
 
 La deuxième option consiste à ajouter la liste des éléments entre les balises &lt;asp : zone de liste déroulante&gt; balises en mode Source. La page dans le Listing 1 contient la zone de liste déroulante mis à jour comportant la liste d’éléments.
 
@@ -70,11 +63,9 @@ Toutefois, vous avez également la possibilité d’entrer un nouveau choix (par
 
 Indépendamment de si vous choisissez un préexistants élément ou que vous entrez un élément personnalisé, lorsque vous envoyez le formulaire, votre choix s’affiche dans le contrôle d’étiquette. Lorsque vous envoyez le formulaire, le niveau de btnSubmit\_cliquez sur Gestionnaire s’exécute et met à jour de l’étiquette (voir Figure 4).
 
-
 [![Affichage de l’élément sélectionné](how-do-i-use-the-combobox-control-cs/_static/image4.jpg)](how-do-i-use-the-combobox-control-cs/_static/image7.png)
 
 **Figure 04**: Affichage de l’élément sélectionné ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-cs/_static/image8.png))
-
 
 La zone de liste déroulante prend en charge les mêmes propriétés que le contrôle DropDownList pour la récupération de l’élément sélectionné après l’envoi d’un formulaire :
 
@@ -103,16 +94,13 @@ Imaginez que vous souhaitez afficher une liste de films dans une zone de liste d
 11. Dans le **choisir la Source de données** étape, sélectionnez la colonne de titre pour le champ à afficher et de la colonne Id pour les données de champ (voir Figure).
 12. Cliquez sur le bouton OK pour fermer l’Assistant.
 
-
 [![Choix d’une source de données](how-do-i-use-the-combobox-control-cs/_static/image5.jpg)](how-do-i-use-the-combobox-control-cs/_static/image9.png)
 
 **Figure 05**: Choix d’une source de données ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-cs/_static/image10.png))
 
-
 [![Choisir les champs de texte et la valeur de données](how-do-i-use-the-combobox-control-cs/_static/image6.jpg)](how-do-i-use-the-combobox-control-cs/_static/image11.png)
 
 **Figure 06**: Choisir les champs de texte et la valeur de données ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-cs/_static/image12.png))
-
 
 Après avoir terminé les étapes ci-dessus, la zone de liste déroulante est liée à un contrôle SqlDataSource qui représente les films à partir de la table de base de données de films. La source de la page ressemble à la liste 2 (j’ai nettoyé un peu la mise en forme).
 
@@ -122,11 +110,9 @@ Après avoir terminé les étapes ci-dessus, la zone de liste déroulante est li
 
 Notez que le contrôle de zone de liste déroulante a une propriété DataSourceID qui pointe vers le contrôle SqlDataSource. Lorsque vous ouvrez la page dans un navigateur, la liste de films à partir de la base de données s’affiche (voir la Figure 7). Vous pouvez un choix un film à partir de la liste ou entrez un nouveau film en tapant le film dans la zone de liste déroulante.
 
-
 [![Affiche une liste de films](how-do-i-use-the-combobox-control-cs/_static/image7.jpg)](how-do-i-use-the-combobox-control-cs/_static/image13.png)
 
 **Figure 07**: Affiche une liste de films ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-cs/_static/image14.png))
-
 
 ## <a name="setting-the-dropdownstyle"></a>Définissant le DropDownStyle
 
@@ -149,21 +135,17 @@ La propriété ComboBox AutoCompleteMode vous permet de spécifier que se passe-
 - Append : le contrôle ComboBox n’affiche pas la liste, et il ajoute l’élément correspondant dans la liste sur ce que vous avez tapé (voir Figure 9).
 - À la fois SuggestAppend - la zone de liste déroulante affiche la liste et ajoute l’élément correspondant dans la liste sur ce que vous avez tapé (voir Figure 10).
 
-
 [![La zone de liste déroulante affiche une suggestion](how-do-i-use-the-combobox-control-cs/_static/image8.jpg)](how-do-i-use-the-combobox-control-cs/_static/image15.png)
 
 **Figure 08**: La zone de liste déroulante affiche une suggestion ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-cs/_static/image16.png))
-
 
 [![Zone de liste déroulante ajoute du texte correspondant](how-do-i-use-the-combobox-control-cs/_static/image9.jpg)](how-do-i-use-the-combobox-control-cs/_static/image17.png)
 
 **Figure 09**: Zone de liste déroulante ajoute du texte correspondant ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-cs/_static/image18.png))
 
-
 [![La zone de liste déroulante suggère et ajoute](how-do-i-use-the-combobox-control-cs/_static/image10.jpg)](how-do-i-use-the-combobox-control-cs/_static/image19.png)
 
 **Figure 10**: La zone de liste déroulante suggère et ajoute ([cliquez pour afficher l’image en taille réelle](how-do-i-use-the-combobox-control-cs/_static/image20.png))
-
 
 ## <a name="summary"></a>Récapitulatif
 

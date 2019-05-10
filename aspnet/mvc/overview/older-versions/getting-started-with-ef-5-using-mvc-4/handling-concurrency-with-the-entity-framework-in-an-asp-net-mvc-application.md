@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: b83f47c4-8521-4d0a-8644-e8f77e39733e
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: a79cca143df9a10b4255796a6d034688713e4e52
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d55f01bd2204a2fdb26664827b92c72d68e00a89
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379753"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129804"
 ---
 # <a name="handling-concurrency-with-the-entity-framework-in-an-aspnet-mvc-application-7-of-10"></a>Gestion des accès concurrentiels avec Entity Framework dans une Application ASP.NET MVC (7 sur 10)
 
@@ -26,7 +26,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Si vous rencontrez un problème que vous ne pouvez pas résoudre, [télécharger le chapitre terminé](building-the-ef5-mvc4-chapter-downloads.md) et essayez de reproduire votre problème. Vous trouverez généralement la solution au problème en comparant votre code pour le code complet. Pour certaines erreurs courantes et comment les résoudre, consultez [erreurs et des solutions de contournement.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 Dans les deux didacticiels précédents, vous avez travaillé avec les données associées. Ce didacticiel montre comment gérer l’accès concurrentiel. Vous allez créer des pages web qui fonctionnent avec le `Department` entité et les pages qui modifient et suppriment `Department` entités gérera les erreurs d’accès concurrentiel. Les illustrations suivantes montrent les pages d’Index et Delete, notamment certains messages sont affichés si un conflit d’accès concurrentiel se produit.
 
@@ -189,7 +188,7 @@ Vous avez également changé le nom de la méthode d’action de `DeleteConfirme
 
 Si une erreur d’accès concurrentiel est interceptée, le code réaffiche la page de confirmation de suppression et fournit un indicateur indiquant qu’elle doit afficher un message d’erreur d’accès concurrentiel.
 
-Dans *Views\Department\Delete.cshtml*, remplacez le code généré automatiquement par le code suivant qui effectue une mise en forme change et ajoute un champ de message d’erreur. Les modifications sont mises en surbrillance.
+Dans *Views\Department\Delete.cshtml*, remplacez le code généré automatiquement par le code suivant qui effectue une mise en forme change et ajoute un champ de message d’erreur. Les modifications apparaissent en surbrillance.
 
 [!code-cshtml[Main](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample16.cshtml?highlight=9,37,40,45-46)]
 

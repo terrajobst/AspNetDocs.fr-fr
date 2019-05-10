@@ -8,19 +8,18 @@ ms.date: 02/10/2010
 ms.assetid: fa429113-5f8f-4ef4-97c5-5c04900a19fa
 msc.legacyurl: /whitepapers/request-validation
 msc.type: content
-ms.openlocfilehash: d721bb14b9907ae594d1d5207b6f802e84326c9c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 807cccd6fe1acdd6359b014387abd3878840d4cd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59414723"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130501"
 ---
 # <a name="request-validation---preventing-script-attacks"></a>Validation des demandes - Prévention des attaques par script
 
 > Cet article décrit la fonctionnalité de validation de demande d’ASP.NET où, par défaut, l’application ne peut pas traiter du contenu HTML non codé envoyé au serveur. Cette fonctionnalité de validation de demande peut être désactivée lors de l’application a été conçue pour traiter en toute sécurité des données HTML.
 > 
 > S’applique à ASP.NET 1.1 et ASP.NET 2.0.
-
 
 Validation de la demande, une fonctionnalité d’ASP.NET depuis la version 1.1, empêche l’acceptation de contenu HTML non encodé contenant le serveur. Cette fonctionnalité est conçue pour aider à éviter certaines attaques d’injection de script par laquelle le code de script client ou HTML peut être envoyée involontairement à un serveur, stockée et ensuite présenté à d’autres utilisateurs. Nous vous recommandons vivement que vous validez les données d’entrée et encoder en HTML, le cas échéant.
 

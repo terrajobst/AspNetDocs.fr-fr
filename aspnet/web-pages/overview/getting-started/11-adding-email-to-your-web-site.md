@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: fc49bcb9-f1a9-4048-8c3f-b60951853200
 msc.legacyurl: /web-pages/overview/getting-started/11-adding-email-to-your-web-site
 msc.type: authoredcontent
-ms.openlocfilehash: 0263f736b96f8e8572536f3783d86c261d7c0512
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 23e9717329525fb5a0ed505c9dc94505d4f9dbbe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411226"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130544"
 ---
 # <a name="sending-email-from-an-aspnet-web-pages-razor-site"></a>Envoi d’E-mails à partir d’un Site ASP.NET Web Pages (Razor)
 
@@ -39,7 +39,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Ce didacticiel fonctionne également avec ASP.NET Web Pages 2.
 
-
 <a id="Sending_Email_Messages"></a>
 ## <a name="sending-email-messages-from-your-website"></a>Envoi d’E-mails à partir de votre site Web
 
@@ -57,7 +56,6 @@ Dans cette procédure, vous créez deux pages. La première page a un formulaire
 
 > [!NOTE]
 > Pour simplifier cet exemple, le code initialise le `WebMail` droite d’assistance dans la page où vous l’utilisez. Toutefois, pour les sites Web réels, il est plus judicieux de placer le code d’initialisation comme suit dans un fichier global, afin que vous initialisez le `WebMail` auxiliaire pour tous les fichiers dans votre site Web. Pour plus d’informations, consultez [personnalisation du comportement de l’échelle du Site pour ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202906#Setting_Values_For_Helpers).
-
 
 1. Créer un nouveau site Web.
 2. Ajoutez une nouvelle page nommée *EmailRequest.cshtml* et ajoutez le balisage suivant : 
@@ -133,7 +131,6 @@ Vous pouvez également envoyer des fichiers qui sont joints aux messages électr
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Ressources supplémentaires
-
 
 - [ASP.NET Web Pages (Razor) - Guide de résolution des problèmes](https://go.microsoft.com/fwlink/?LinkId=253001)
 - [Simple Mail Transfer Protocol](https://msdn.microsoft.com/library/aa480435.aspx)

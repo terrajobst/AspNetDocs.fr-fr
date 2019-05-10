@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 8a07210c-eb0e-485e-9ee8-82a101520e65
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/positioning-a-modalpopup-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e37d2f4450c697f963d954c2fbb58e3ed20a1566
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d5cfcd2ff8956b54f241ee7002aa00a0bd47469e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421145"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132658"
 ---
 # <a name="positioning-a-modalpopup-vb"></a>Positionnement d’un ModalPopup (VB)
 
@@ -22,7 +22,6 @@ par [Christian Wenz](https://github.com/wenz)
 [Télécharger le Code](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup4.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup4VB.pdf)
 
 > Le contrôle ModalPopup dans AJAX Control Toolkit offre un moyen simple de créer une contextuelle modale à l’aide de moyens de côté client. Toutefois le contrôle n’offre pas une fonctionnalité intégrée pour positionner la fenêtre contextuelle.
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -53,7 +52,6 @@ Maintenant, tout ce qui reste à faire consiste à appeler ces fonctions dès qu
 Et le `stopMoving()` fonction qu’intervient la fermeture de la fenêtre contextuelle peut être déclenchée dans le `ModalPopupExtender` contrôle :
 
 [!code-aspx[Main](positioning-a-modalpopup-vb/samples/sample6.aspx)]
-
 
 [![La fenêtre contextuelle modale s’affiche à la position désignée](positioning-a-modalpopup-vb/_static/image2.png)](positioning-a-modalpopup-vb/_static/image1.png)
 

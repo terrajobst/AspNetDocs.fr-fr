@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: dde851d7-882e-4d99-9b96-cf96daed81cc
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-view
 msc.type: authoredcontent
-ms.openlocfilehash: 1ab1ea8b277b48b3b72edb9dd45aa4cc2937ffa8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 58dc8baf3f2e8e3cf412c0f9c7d9355f933c89d9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418051"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129965"
 ---
 # <a name="adding-a-view"></a>Ajout d’une vue
 
@@ -21,7 +21,6 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
 > > Une version mise à jour de ce didacticiel est disponible [ici](../../getting-started/introduction/getting-started.md) qui utilise ASP.NET MVC 5 et Visual Studio 2013. Il est plus sécurisé, beaucoup plus simple à suivre et illustre plusieurs fonctionnalités.
-
 
 Dans cette section vous allez modifier la `HelloWorldController` classe à utiliser la vue fichiers de modèle proprement encapsulent le processus de génération des réponses HTML à un client.
 

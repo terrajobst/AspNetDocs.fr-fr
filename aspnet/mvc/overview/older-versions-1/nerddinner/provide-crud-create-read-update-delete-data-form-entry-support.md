@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: bbb976e5-6150-4283-a374-c22fbafe29f5
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/provide-crud-create-read-update-delete-data-form-entry-support
 msc.type: authoredcontent
-ms.openlocfilehash: 242665b3ba2e2ad2157abbe2c44ae207f15e72ce
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b3123af9a1477bc496a0d229d628510fc202b6d2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410862"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128341"
 ---
 # <a name="provide-crud-create-read-update-delete-data-form-entry-support"></a>Fournir une prise en charge des entrées dans les formulaires de données CRUD (créer, lire, mettre à jour, supprimer)
 
@@ -26,7 +26,6 @@ by [Microsoft](https://github.com/microsoft)
 > Étape 5 montre comment faire passer notre classe DinnersController davantage à prise en charge de l’activer pour modification, la création et la suppression dîners avec lui aussi.
 > 
 > Si vous utilisez ASP.NET MVC 3, nous vous recommandons de suivre le [mise en route avec MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) ou [Store de musique MVC](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) didacticiels.
-
 
 ## <a name="nerddinner-step-5-create-update-delete-form-scenarios"></a>NerdDinner étape 5 : Créer, mettre à jour, supprimer des scénarios de formulaire
 

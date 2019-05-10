@@ -8,12 +8,12 @@ ms.date: 09/13/2006
 ms.assetid: e2f401ae-37bb-4b19-aa97-d6b385d40f88
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/formatting-the-datalist-and-repeater-based-upon-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 8955e37aa084f339665bbd4dc0475f7be74f3b26
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 50e6ce94a807b9ca1e3634382aa72b87fc35502f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421600"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131188"
 ---
 # <a name="formatting-the-datalist-and-repeater-based-upon-data-vb"></a>Mise en forme des contrôles DataList et Repeater en fonction des données (VB)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_30_VB.exe) ou [télécharger le PDF](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/datatutorial30vb1.pdf)
 
 > Dans ce didacticiel nous allons parcourir des exemples de la façon dont nous mettre en forme l’apparence des contrôles DataList et Repeater, à l’aide des fonctions de mise en forme au sein des modèles ou en gérant l’événement lié aux données.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -60,7 +59,6 @@ Lors de la liaison de données au contrôle Repeater, elle concerne toute exacte
 > [!NOTE]
 > Le lecteur astucieux avez peut-être remarqué une légère anomalie entre la séquence d’étapes qui se produira lorsque les contrôles DataList et Repeater liés aux données et lorsque le contrôle GridView est lié aux données. À la fin de la fin du processus de liaison de données, le contrôle GridView déclenche le `DataBound` événement ; Toutefois, le contrôle Repeater ni DataList ont un tel événement. Il s’agit, car les contrôles DataList et Repeater ont été créés dans le délai d’exécution ASP.NET 1.x, avant que le modèle de gestionnaire d’événements pré- et post-niveau était devenu commun.
 
-
 Comme avec le contrôle GridView, une option de mise en forme en fonction des données consiste à créer un gestionnaire d’événements pour le `ItemDataBound` événement. Ce gestionnaire d’événements aurait inspecter les données qui avaient simplement été liées à la `DataListItem` ou `RepeaterItem` et affectent la mise en forme du contrôle en fonction des besoins.
 
 Pour le contrôle DataList, mise en forme pour l’élément entier peut être implémentée à l’aide de la `DataListItem` s associées au style propriétés, notamment la norme `Font`, `ForeColor`, `BackColor`, `CssClass`, et ainsi de suite. Pour affecter la mise en forme de contrôles Web particuliers dans le modèle de s DataList, nous devons accéder par programmation et de modifier le style de ces contrôles Web. Nous avons vu comment accomplir cette arrière dans le *mise en forme en fonction lors de données personnalisées* didacticiel. Comme le contrôle Repeater, le `RepeaterItem` classe n’a pas de propriétés associées au style ; par conséquent, toutes les modifications associées au style apportées à un `RepeaterItem` dans le `ItemDataBound` Gestionnaire d’événements doit être effectué en accédant par programme et de contrôles Web au sein de la mise à jour le modèle.
@@ -73,11 +71,9 @@ Avant de nous soucier de la mise en forme, s permettent de créer une page qui u
 
 Une fois que vous avez répliqué la fonctionnalité des contrôles DataList et ObjectDataSource depuis `Basics.aspx` dans `Formatting.aspx`, prenez un moment pour modifier le contrôle DataList s `ID` propriété à partir de `DataList1` à plus descriptif `ItemDataBoundFormattingExample`. Ensuite, affichez le contrôle DataList dans un navigateur. Comme le montre la Figure 1, la seule différence de mise en forme entre chaque produit est que fait alterner la couleur d’arrière-plan.
 
-
 [![Les produits sont répertoriés dans le contrôle DataList](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image2.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image1.png)
 
 **Figure 1**: Les produits sont répertoriés dans le contrôle DataList ([cliquez pour afficher l’image en taille réelle](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image3.png))
-
 
 Pour ce didacticiel, permettent de mettre en forme le contrôle DataList telles que tous les produits dont le prix est inférieur à $20,00 aura à la fois son nom et le prix unitaire affiché en surbrillance jaune s.
 
@@ -86,7 +82,6 @@ Pour ce didacticiel, permettent de mettre en forme le contrôle DataList telles 
 Étant donné qu’uniquement les produits dont le prix sous $ 20,00 par la mise en forme personnalisée appliquée, nous devons être en mesure de déterminer le prix de s de chaque produit. Lors de la liaison de données à un contrôle DataList, le contrôle DataList énumère les enregistrements dans sa source de données et, pour chaque enregistrement, crée un `DataListItem` instance, la liaison de l’enregistrement de source de données à le `DataListItem`. Une fois l’enregistrement particulier s des données a été liées à actuel `DataListItem` objet, le contrôle DataList s `ItemDataBound` événement est déclenché. Nous pouvons créer un gestionnaire d’événements pour cet événement pour inspecter les valeurs de données pour le cours `DataListItem` et, en fonction de ces valeurs, effectuez les modifications de mise en forme nécessaires.
 
 Créer un `ItemDataBound` événement pour le contrôle DataList et ajoutez le code suivant :
-
 
 [!code-vb[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample1.vb)]
 
@@ -111,28 +106,22 @@ Une fois que nous savons que les prix d’un produit s est inférieur à $20,00,
 
 Pour appliquer la mise en forme, il suffit de définir les deux contrôles Web Label `CssClass` propriétés à `AffordablePriceEmphasis`, comme illustré dans le code suivant :
 
-
 [!code-vb[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample2.vb)]
 
 Avec le `ItemDataBound` terminée de gestionnaire d’événements, de revoir le `Formatting.aspx` page dans un navigateur. Comme le montre la Figure 2, ces produits dont le prix sous $20,00 ont leur nom et le prix mis en surbrillance.
-
 
 [![Ces produits inférieur 20,00 $ sont mises en surbrillance](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image5.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image4.png)
 
 **Figure 2**: Ces produits inférieur 20,00 $ sont mis en surbrillance ([cliquez pour afficher l’image en taille réelle](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image6.png))
 
-
 > [!NOTE]
 > Étant donné que le contrôle DataList est restitué sous la forme d’un élément HTML `<table>`, ses `DataListItem` instances possèdent des propriétés associées au style qui peuvent être définies pour appliquer un style spécifique à l’élément entier. Par exemple, si nous voulions mettre en surbrillance le *entière* élément jaune lorsque son prix était inférieur à $20,00, nous pourrions avoir remplacé le code qui a référencé les étiquettes et définir leur `CssClass` propriétés avec la ligne de code suivante : `e.Item.CssClass = "AffordablePriceEmphasis"` (voir Figure 3).
 
-
 Le `RepeaterItem` s qui composent le contrôle Repeater, toutefois, don t offrent ces propriétés au niveau du style. Par conséquent, l’application mise en forme personnalisée pour le contrôle Repeater nécessite l’application de propriétés de style pour les contrôles Web dans les modèles Repeater s, comme nous l’avons fait dans la Figure 2.
-
 
 [![L’élément de produit entier est mis en surbrillance pour les produits sous 20,00 $](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image8.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image7.png)
 
 **Figure 3**: L’élément de produit entier est mis en surbrillance pour les produits sous $20,00 ([cliquez pour afficher l’image en taille réelle](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image9.png))
-
 
 ## <a name="using-formatting-functions-from-within-the-template"></a>Utilisation de fonctions de mise en forme à partir de dans le modèle
 
@@ -140,23 +129,19 @@ Dans le *à l’aide de TemplateFields dans le contrôle GridView* didacticiel, 
 
 Pour illustrer les fonctions de mise en forme, s permettent de disposer des informations produit incluent le texte [DISCONTINUED] en regard du nom de produit s si elle s abandonné. En outre, let s ont if jaune en surbrillance prix il s inférieur à $20,00 (comme nous l’avons fait le `ItemDataBound` exemple de gestionnaire d’événements) ; si le prix est 20,00 $ ou s plus élevé, vous permettent pas d’afficher le prix réel, mais le texte, veuillez appeler à la place de devis. Figure 4 montre une capture d’écran des liste avec des ces règles de mise en forme des produits.
 
-
 [![Pour les produits coûteuse, le prix est remplacé par le texte, appelez de devis](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image11.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image10.png)
 
 **Figure 4**: Pour les produits coûteuse, le prix est remplacé par le texte, appelez de devis ([cliquez pour afficher l’image en taille réelle](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image12.png))
 
-
 ## <a name="step-1-create-the-formatting-functions"></a>Étape 1 : Créer les fonctions de mise en forme
 
 Pour cet exemple nous avons besoin de deux fonctions de mise en forme, qui affiche le nom du produit ainsi que le texte [DISCONTINUED], si nécessaire et un autre qui affiche soit un prix en surbrillance si elle s inférieure 20,00 $ ou le texte, appelez de devis sinon. Laisser s créer ces fonctions dans la classe code-behind de pages ASP.NET et nommez-les `DisplayProductNameAndDiscontinuedStatus` et `DisplayPrice`. Les deux méthodes doivent retourner le code HTML à restituer sous forme de chaîne et les deux doivent être marqués `Protected` (ou `Public`) afin d’être appelé à partir de la partie de la syntaxe déclarative s de page ASP.NET. Le code pour ces deux méthodes suit :
-
 
 [!code-vb[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample3.vb)]
 
 Notez que le `DisplayProductNameAndDiscontinuedStatus` méthode accepte les valeurs de la `productName` et `discontinued` champs de données en tant que valeurs scalaires, alors que le `DisplayPrice` méthode accepte un `ProductsRow` instance (au lieu d’un `unitPrice` valeur scalaire). Chacune de ces approches fonctionnera ; Toutefois, si la fonction de mise en forme fonctionne avec des valeurs scalaires qui peuvent contenir de base de données `NULL` valeurs (telles que `UnitPrice`; ni `ProductName` ni `Discontinued` autoriser `NULL` valeurs), doit être particulièrement vigilant dans la gestion de ces entrées scalaires.
 
 En particulier, le paramètre d’entrée doit être de type `Object` dans la mesure où la valeur entrante peut être un `DBNull` instance au lieu du type de données attendu. En outre, il doit être vérifié pour déterminer si la valeur entrante est une base de données `NULL` valeur. Autrement dit, si nous voulions le `DisplayPrice` méthode accepter le prix comme une valeur scalaire, nous d obligé d’utiliser le code suivant :
-
 
 [!code-vb[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample4.vb)]
 
@@ -166,26 +151,21 @@ Notez que le `unitPrice` paramètre d’entrée est de type `Object` et que l’
 
 Avec les fonctions de mise en forme ajoutées à la classe code-behind ASP.NET page s, il reste qu’à appeler ces fonctions à partir du contrôle DataList s de mise en forme `ItemTemplate`. Pour appeler une fonction de mise en forme à partir d’un modèle, placez l’appel de fonction au sein de la syntaxe de liaison de données :
 
-
 [!code-aspx[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample5.aspx)]
 
 Dans le contrôle DataList s `ItemTemplate` le `ProductNameLabel` contrôle Web Label affiche actuellement le nom du produit s, affectez son `Text` propriété le résultat de `<%# Eval("ProductName") %>`. Afin qu’il affiche le nom et le texte [DISCONTINUED], si nécessaire, mettre à jour la syntaxe déclarative afin qu’il assigne à la place la `Text` propriété la valeur de la `DisplayProductNameAndDiscontinuedStatus` (méthode). Ce cas, nous devons passer dans le nom de produit s et les valeurs supprimées à l’aide de la `Eval("columnName")` syntaxe. `Eval` Retourne une valeur de type `Object`, mais la `DisplayProductNameAndDiscontinuedStatus` méthode attend des paramètres d’entrée de type `String` et `Boolean`; par conséquent, nous devons convertir les valeurs retournées par la `Eval` méthode aux types de paramètre d’entrée attendu, comme suit :
-
 
 [!code-aspx[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample6.aspx)]
 
 Pour afficher le prix, nous pouvons simplement définir la `UnitPriceLabel` étiquette s `Text` propriété à la valeur retournée par la `DisplayPrice` méthode, comme nous l’avez fait pour l’affichage du nom de produit s et [supprimé] texte. Toutefois, au lieu de passer le `UnitPrice` comme paramètre d’entrée scalaire, nous passons à la place dans l’ensemble `ProductsRow` instance :
 
-
 [!code-aspx[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample7.aspx)]
 
 Avec les appels aux fonctions de mise en forme en place, prenez un moment pour consulter notre progression dans un navigateur. Votre écran doit ressembler à la Figure 5, avec les produits interrompus, y compris le texte [DISCONTINUED] et les produits d’évaluation des coûts de plus de $ 20,00 par avoir leur prix remplacé par le texte, l’appel de devis.
 
-
 [![Pour les produits coûteuse, le prix est remplacé par le texte, appelez de devis](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image14.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image13.png)
 
 **Figure 5**: Pour les produits coûteuse, le prix est remplacé par le texte, appelez de devis ([cliquez pour afficher l’image en taille réelle](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image15.png))
-
 
 ## <a name="summary"></a>Récapitulatif
 

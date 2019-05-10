@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: e57f8c7c-3940-4bc0-9468-3a0ca69158ea
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/animating-an-updatepanel-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 36d1166e1bd2b4c97b3cf3dd0bc3a7e8010a9443
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c403cddd1e3eb5b66f795a2e4032fae63fdb26ca
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393689"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130744"
 ---
 # <a name="animating-an-updatepanel-control-c"></a>Animation d’un contrôle UpdatePanel (C#)
 
@@ -22,7 +22,6 @@ par [Christian Wenz](https://github.com/wenz)
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/UpdatePanelAnimation1.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/updatepanelanimation1CS.pdf)
 
 > Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Pour le contenu d’un UpdatePanel, un extendeur spécial existe qui s’appuie fortement sur l’infrastructure d’animation : UpdatePanelAnimation. Ce didacticiel montre comment configurer ce type d’une animation pour un UpdatePanel.
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -48,7 +47,6 @@ Dans ce scénario, le nouveau contenu de la `UpdatePanel` (après la publication
 [!code-aspx[Main](animating-an-updatepanel-control-cs/samples/sample3.aspx)]
 
 Maintenant chaque fois qu’une publication (postback) se produit dans le contrôle UpdatePanel, le nouveau contenu du panneau Fondu léger.
-
 
 [![L’étape suivante de l’Assistant est fondu](animating-an-updatepanel-control-cs/_static/image2.png)](animating-an-updatepanel-control-cs/_static/image1.png)
 

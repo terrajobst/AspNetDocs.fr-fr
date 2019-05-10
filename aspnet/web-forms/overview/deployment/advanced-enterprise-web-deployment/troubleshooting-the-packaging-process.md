@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 794bd819-00fc-47e2-876d-fc5d15e0de1c
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/troubleshooting-the-packaging-process
 msc.type: authoredcontent
-ms.openlocfilehash: 79774c6a1a1d05d5a7bcd82a5d7aa888933cf089
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8ad649dfff085a8774cc13c11d8a3e3d48277d66
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420105"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128701"
 ---
 # <a name="troubleshooting-the-packaging-process"></a>Résolution des problèmes du processus d’empaquetage
 
@@ -34,7 +34,6 @@ par [Jason Lee](https://github.com/jrjlee)
 > > [!NOTE]
 > > Le **EnablePackageProcessLoggingAndAssert** propriété fonctionne uniquement si vous générez votre projet en utilisant le **déboguer** configuration. La propriété est ignorée dans d’autres configurations.
 
-
 Cette rubrique fait partie d’une série de didacticiels basées sur les exigences de déploiement d’entreprise de la société fictive Fabrikam, Inc. Cette série de didacticiels utilise un exemple de solution&#x2014;le [solution Gestionnaire de contacts](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;pour représenter une application web avec un niveau réaliste de complexité, y compris une application ASP.NET MVC 3, une Communication de Windows Foundation (WCF) service et un projet de base de données.
 
 La méthode de déploiement au cœur de ces didacticiels est basée sur l’approche de fichier de projet de fractionnement décrite dans [présentation du fichier projet](../web-deployment-in-the-enterprise/understanding-the-project-file.md), dans lequel le processus de génération est contrôlé par deux fichiers de projet&#x2014;contenant un seul les instructions qui s’appliquent à chaque environnement de destination et celui qui contient les paramètres de génération et de déploiement spécifiques à l’environnement de génération. Au moment de la génération, le fichier de projet spécifique à l’environnement est fusionné dans le fichier de projet d’indépendant de l’environnement pour former un ensemble complet d’instructions de génération.
@@ -45,13 +44,10 @@ La méthode de déploiement au cœur de ces didacticiels est basée sur l’appr
 
 Un grand nombre de ces cibles WPP inclure une logique conditionnelle qui enregistre les informations supplémentaires lors de la **EnablePackageProcessLoggingAndAssert** propriété est définie sur **true**. Par exemple, si vous passez en revue la **Package** cible, vous pouvez voir qu’il crée un répertoire de journal supplémentaires et écrit une liste de fichiers dans un fichier texte si **EnablePackageProcessLoggingAndAssert** est égal à **true**.
 
-
 [!code-xml[Main](troubleshooting-the-packaging-process/samples/sample1.xml)]
-
 
 > [!NOTE]
 > Les cibles WPP sont définies dans le *Microsoft.Web.Publishing.targets* fichier dans le dossier de %\MSBuild\Microsoft\VisualStudio\v10.0\Web % PROGRAMFILES (x 86). Vous pouvez ouvrir ce fichier et passez en revue les cibles dans Visual Studio 2010 ou de n’importe quel éditeur XML. Vous ne devez ne pas pour modifier le contenu du fichier.
-
 
 ## <a name="enabling-the-additional-logging"></a>L’activation de la journalisation supplémentaire
 
@@ -59,27 +55,20 @@ Vous pouvez fournir une valeur pour le **EnablePackageProcessLoggingAndAssert** 
 
 Si vous générez votre projet à partir de la ligne de commande, vous pouvez fournir une valeur pour le **EnablePackageProcessLoggingAndAssert** propriété comme un argument de ligne de commande :
 
-
 [!code-console[Main](troubleshooting-the-packaging-process/samples/sample2.cmd)]
-
 
 Si vous utilisez un fichier de projet personnalisé pour générer vos projets, vous pouvez inclure le **EnablePackageProcessLoggingAndAssert** valeur dans le **propriétés** attribut de la **MSBuild**tâche :
 
-
 [!code-xml[Main](troubleshooting-the-packaging-process/samples/sample3.xml)]
-
 
 Si vous utilisez une définition de build Team Foundation Server (TFS) pour générer vos projets, vous pouvez fournir une valeur pour le **EnablePackageProcessLoggingAndAssert** propriété dans le **Arguments MSBuild** ligne :![](troubleshooting-the-packaging-process/_static/image1.png)
 
 > [!NOTE]
 > Pour plus d’informations sur la création et configuration des définitions de build, consultez [création d’un Build définition que prend en charge déploiement](../configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md).
 
-
 Vous pouvez également, si vous souhaitez inclure le package dans chaque build, vous pouvez modifier le fichier projet pour votre projet d’application web définir le **EnablePackageProcessLoggingAndAssert** propriété **true**. Vous devez ajouter la propriété à la première **PropertyGroup** élément au sein de votre fichier .csproj ou .vbproj.
 
-
 [!code-xml[Main](troubleshooting-the-packaging-process/samples/sample4.xml)]
-
 
 ## <a name="reviewing-the-log-files"></a>Vérifier les fichiers journaux
 
@@ -100,7 +89,6 @@ La liste des fichiers que vous voyez varient selon les choses dans votre projet 
 
 > [!NOTE]
 > En général, les noms des fichiers journaux supplémentaires correspondent aux cibles WPP. Vous pouvez consulter ces cibles en examinant le *Microsoft.Web.Publishing.targets* fichier dans le dossier de %\MSBuild\Microsoft\VisualStudio\v10.0\Web % PROGRAMFILES (x 86).
-
 
 Si le contenu de votre package web ne sont pas ce que vous attendiez, l’examen de ces fichiers peut être un moyen utile pour identifier à quel point dans les opérations de processus s’est produite.
 

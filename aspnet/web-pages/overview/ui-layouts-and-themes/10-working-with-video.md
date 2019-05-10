@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: 332fb3da-e2a5-460d-bb90-dd911e1e2c95
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/10-working-with-video
 msc.type: authoredcontent
-ms.openlocfilehash: 204611513860e268001596b9c7ac9e9c023caa12
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 516d46f38ce8910209f4207c474b0404bf012950
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399851"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130950"
 ---
 # <a name="displaying-video-in-an-aspnet-web-pages-razor-site"></a>Affichage de vidéo dans un Site ASP.NET Web Pages (Razor)
 
@@ -40,7 +40,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Ce didacticiel fonctionne également avec WebMatrix 3.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -88,7 +87,6 @@ Le `Silverlight` acteur de le `Video` helper vous permet de lire la vidéo de Wi
 > [!NOTE]
 > Dans le cas où vous ne connaissez pas déjà Silverlight : le *.xap* fichier est un fichier compressé qui contient des instructions de mise en page dans un *.xaml* de fichiers, le code managé dans les assemblys et les ressources facultatives. Vous pouvez créer un *.xap* fichier dans Visual Studio en tant qu’un projet d’application Silverlight.
 
-
 Le `Silverlight` lecteur vidéo utilise à la fois les paramètres que vous fournissez pour le joueur et les paramètres qui sont fournis dans le *.xap* fichier.
 
 > [!TIP] 
@@ -101,7 +99,6 @@ Le `Silverlight` lecteur vidéo utilise à la fois les paramètres que vous four
 > - `application/x-shockwave-flash`
 > - `application/x-mplayer2`
 > - `application/x-silverlight-2`
-
 
 <a id="Playing_Flash"></a>
 ## <a name="playing-flash-swf-videos"></a>Lecture des vidéos de Flash (.swf)
@@ -179,7 +176,6 @@ Cette procédure vous montre comment lire la vidéo contenue dans un Silverlight
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Ressources supplémentaires
-
 
 [Présentation de Silverlight](https://msdn.microsoft.com/library/bb404700(VS.95).aspx)
 

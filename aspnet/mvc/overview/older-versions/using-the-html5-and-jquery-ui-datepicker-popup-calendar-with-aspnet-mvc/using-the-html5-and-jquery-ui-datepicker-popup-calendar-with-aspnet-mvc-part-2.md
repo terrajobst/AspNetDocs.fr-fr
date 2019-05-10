@@ -8,19 +8,18 @@ ms.date: 08/29/2011
 ms.assetid: 21a178de-4c5a-4211-8a9c-74ec576c0f30
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2
 msc.type: authoredcontent
-ms.openlocfilehash: 9e3e22c1784b48bbbb7c1ea075951ea4c1fb39a5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ba6246d97ecd48a5fe947d4998b42250133039e3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59411031"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129596"
 ---
 # <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-2"></a>Utilisation de HTML5 et Datepicker calendrier contextuel jQuery UI avec ASP.NET MVC - partie 2
 
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Ce didacticiel vous apprend les notions de base de l’utilisation des modèles de l’éditeur, les modèles d’affichage et le calendrier contextuel jQuery UI datepicker dans une application Web ASP.NET MVC.
-
 
 ## <a name="adding-an-automatic-datetime-template"></a>Ajout d’un modèle de date/heure automatique
 

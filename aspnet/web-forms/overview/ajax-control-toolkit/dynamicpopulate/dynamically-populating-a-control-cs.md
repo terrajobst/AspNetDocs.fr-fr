@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: e1fec43e-1daf-49d2-b0c7-7f1b930455cc
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 42c1cd684196c026f1435cba289fc2535187087c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1b3e944e45e8d2b746b2e42360693c245d93901f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417297"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132857"
 ---
 # <a name="dynamically-populating-a-control-c"></a>Remplissage dynamique d’un contrôle (C#)
 
@@ -22,7 +22,6 @@ par [Christian Wenz](https://github.com/wenz)
 [Télécharger le Code](http://download.microsoft.com/download/d/8/f/d8f2f6f9-1b7c-46ad-9252-e1fc81bdea3e/dynamicpopulate0.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dynamicpopulate0CS.pdf)
 
 > Le contrôle DynamicPopulate dans ASP.NET AJAX Control Toolkit appelle un service web (ou une méthode de page) et remplit la valeur obtenue dans un contrôle cible dans la page, sans une actualisation de la page.
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -64,7 +63,6 @@ Comme vous pouvez le voir, le contrôle nécessite des informations mais tout ce
 [!code-aspx[Main](dynamically-populating-a-control-cs/samples/sample5.aspx)]
 
 Exécuter la page ASP.NET dans le navigateur, puis cliquez sur le bouton ; Vous recevrez la date actuelle au format de mois-jour-année.
-
 
 [![Un clic sur le bouton récupère la date à partir du serveur](dynamically-populating-a-control-cs/_static/image2.png)](dynamically-populating-a-control-cs/_static/image1.png)
 

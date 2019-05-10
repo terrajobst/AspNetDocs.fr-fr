@@ -8,12 +8,12 @@ ms.date: 01/12/2011
 ms.assetid: cad00de1-3c68-4ff4-a436-54236d449459
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 289dd429081fde12699db678e619a9fd5ed98942
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: beaad3440a9f333ab22f29d0c6683d71e8962fc2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403283"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130052"
 ---
 # <a name="accessing-your-models-data-from-a-controller-vb"></a>Accès aux données de votre modèle à partir d’un contrôleur (VB)
 
@@ -28,7 +28,6 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > Si vous utilisez Visual Studio 2010 au lieu de Visual Web Developer 2010, installez les composants requis en cliquant sur le lien suivant : [Visual Studio 2010 prerequisites](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
 > Un projet de Visual Web Developer avec le code source VB.NET est disponible pour accompagner cette rubrique. [Téléchargez la version VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Si vous préférez c#, basculez vers le [c# version](../cs/accessing-your-models-data-from-a-controller.md) de ce didacticiel.
-
 
 Dans cette section, vous allez créer un nouveau `MoviesController` classe et d’écrire du code qui Récupère les données de film et l’affiche dans le navigateur à l’aide d’un modèle de vue. Veillez à générer votre application avant de continuer.
 
@@ -112,7 +111,6 @@ Double-cliquez sur *Movies.sdf* pour ouvrir **Explorateur de serveurs**. Puis d�
 
 > [!NOTE]
 > Si vous obtenez une erreur lorsque vous double-cliquez sur *Movies.sdf*, assurez-vous que vous avez installé **Visual Studio 2010 SP1 Tools pour SQL Server Compact 4.0**. (Pour obtenir des liens vers le logiciel, consultez la liste des conditions préalables dans la partie 1 de cette série de didacticiels). Si vous installez la version maintenant, vous devrez fermer et rouvrir Visual Web Developer.
-
 
 [![DB_explorer](accessing-your-models-data-from-a-controller/_static/image14.png)](accessing-your-models-data-from-a-controller/_static/image13.png)
 

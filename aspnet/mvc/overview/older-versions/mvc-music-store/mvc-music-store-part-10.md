@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: 0c6e4c2f-fcdb-4978-9656-1990c6f15727
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-10
 msc.type: authoredcontent
-ms.openlocfilehash: 48404f449ce2641bdff55b9ad75aa5eec1aee46b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f701d1fbabc3e1a97c3750d00e96bf8dba1105cd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403296"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129719"
 ---
 # <a name="part-10-final-updates-to-navigation-and-site-design-conclusion"></a>Partie Mises à jour finales de la navigation et de la conception du site, conclusion
 
@@ -24,7 +24,6 @@ par [Jon Galloway](https://github.com/jongalloway)
 > Le Store de musique MVC est une implémentation de magasin d’exemple léger qui vend des albums de musique en ligne et implémente l’administration de site de base, connexion de l’utilisateur et les fonctionnalités de panier d’achat.  
 >   
 > Cette série de didacticiels décrit en détail les étapes prises pour générer l’exemple d’application ASP.NET MVC Music Store. Partie 10 couvre les mises à jour finales de Navigation et de conception de Site, Conclusion.
-
 
 Nous avons terminé toutes les fonctionnalités principales pour notre site, mais nous avons toujours certaines fonctionnalités à ajouter à la navigation du site, la page d’accueil et la page Rechercher un Store.
 
@@ -133,7 +132,6 @@ Maintenant, lorsque nous exécutons l’application, nous verrons notre page d�
 ## <a name="conclusion"></a>Conclusion
 
 Nous avons vu que ASP.NET MVC facilite la création d’un site Web sophistiqué avec un accès de base de données, l’appartenance, AJAX, etc. assez rapidement. J’espère que ce didacticiel vous a donné les outils que vous avez besoin pour commencer à créer votre propre MVC ASP.NET applications !
-
 
 > [!div class="step-by-step"]
 > [Précédent](mvc-music-store-part-9.md)
