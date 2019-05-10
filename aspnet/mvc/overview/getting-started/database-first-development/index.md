@@ -8,21 +8,20 @@ ms.date: 09/17/2013
 ms.assetid: 3437215a-c4ba-46ed-8378-d61c79c9d38c
 msc.legacyurl: /mvc/overview/getting-started/database-first-development
 msc.type: chapter
-ms.openlocfilehash: c30544586fdcbdc805e593fae0f186810a412be9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0b47981d3e28458b702e73988b8dc5cd7f0e0afa
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412370"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121217"
 ---
-# <a name="getting-started-with-entity-framework-6-database-first-using-mvc-5"></a><span data-ttu-id="7e744-103">Bien démarrer avec Entity Framework 6 Database tout d’abord à l’aide de MVC 5</span><span class="sxs-lookup"><span data-stu-id="7e744-103">Getting Started with Entity Framework 6 Database First Using MVC 5</span></span>
+# <a name="getting-started-with-entity-framework-6-database-first-using-mvc-5"></a><span data-ttu-id="22a74-103">Bien démarrer avec Entity Framework 6 Database tout d’abord à l’aide de MVC 5</span><span class="sxs-lookup"><span data-stu-id="22a74-103">Getting Started with Entity Framework 6 Database First Using MVC 5</span></span>
 
-> <span data-ttu-id="7e744-104">Cette série montre comment utiliser le développement première base de données pour la création d’une application MVC 5 avec Entity Framework</span><span class="sxs-lookup"><span data-stu-id="7e744-104">This series shows how to use Database First development for creating an MVC 5 application with Entity Framework</span></span>
+> <span data-ttu-id="22a74-104">Cette série montre comment utiliser le développement première base de données pour la création d’une application MVC 5 avec Entity Framework</span><span class="sxs-lookup"><span data-stu-id="22a74-104">This series shows how to use Database First development for creating an MVC 5 application with Entity Framework</span></span>
 
-
-- [<span data-ttu-id="7e744-105">Bien démarrer avec Entity Framework 6 Database First avec MVC 5</span><span class="sxs-lookup"><span data-stu-id="7e744-105">Getting Started with Entity Framework 6 Database First using MVC 5</span></span>](setting-up-database.md)
-- [<span data-ttu-id="7e744-106">Création de l’application web et des modèles de données</span><span class="sxs-lookup"><span data-stu-id="7e744-106">Creating the Web Application and Data Models</span></span>](creating-the-web-application.md)
-- [<span data-ttu-id="7e744-107">Génération de vues</span><span class="sxs-lookup"><span data-stu-id="7e744-107">Generating Views</span></span>](generating-views.md)
-- [<span data-ttu-id="7e744-108">Modification de la base de données</span><span class="sxs-lookup"><span data-stu-id="7e744-108">Changing the Database</span></span>](changing-the-database.md)
-- [<span data-ttu-id="7e744-109">Personnalisation d’une vue</span><span class="sxs-lookup"><span data-stu-id="7e744-109">Customizing a View</span></span>](customizing-a-view.md)
-- [<span data-ttu-id="7e744-110">Amélioration de la validation des données</span><span class="sxs-lookup"><span data-stu-id="7e744-110">Enhancing Data Validation</span></span>](enhancing-data-validation.md)
+- [<span data-ttu-id="22a74-105">Bien démarrer avec Entity Framework 6 Database First avec MVC 5</span><span class="sxs-lookup"><span data-stu-id="22a74-105">Getting Started with Entity Framework 6 Database First using MVC 5</span></span>](setting-up-database.md)
+- [<span data-ttu-id="22a74-106">Création de l’application web et des modèles de données</span><span class="sxs-lookup"><span data-stu-id="22a74-106">Creating the Web Application and Data Models</span></span>](creating-the-web-application.md)
+- [<span data-ttu-id="22a74-107">Génération de vues</span><span class="sxs-lookup"><span data-stu-id="22a74-107">Generating Views</span></span>](generating-views.md)
+- [<span data-ttu-id="22a74-108">Modification de la base de données</span><span class="sxs-lookup"><span data-stu-id="22a74-108">Changing the Database</span></span>](changing-the-database.md)
+- [<span data-ttu-id="22a74-109">Personnalisation d’une vue</span><span class="sxs-lookup"><span data-stu-id="22a74-109">Customizing a View</span></span>](customizing-a-view.md)
+- [<span data-ttu-id="22a74-110">Amélioration de la validation des données</span><span class="sxs-lookup"><span data-stu-id="22a74-110">Enhancing Data Validation</span></span>](enhancing-data-validation.md)
