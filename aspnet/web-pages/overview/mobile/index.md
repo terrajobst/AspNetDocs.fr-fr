@@ -8,16 +8,15 @@ ms.date: 09/08/2014
 ms.assetid: ce83fbc9-ef24-4f59-8e76-7ca1b983bf9a
 msc.legacyurl: /web-pages/overview/mobile
 msc.type: chapter
-ms.openlocfilehash: 552d047286adbc53e4161b412432cbf0b3bfb4c9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 887219bd6311bb3f76f1cdb690b0ccbec401175d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380299"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133387"
 ---
-# <a name="mobile"></a><span data-ttu-id="6006b-103">Mobile</span><span class="sxs-lookup"><span data-stu-id="6006b-103">Mobile</span></span>
+# <a name="mobile"></a><span data-ttu-id="31104-103">Mobile</span><span class="sxs-lookup"><span data-stu-id="31104-103">Mobile</span></span>
 
-> <span data-ttu-id="6006b-104">Comment utiliser des périphériques mobiles dans les applications ASP.NET Web Pages.</span><span class="sxs-lookup"><span data-stu-id="6006b-104">How to work with Mobile devices in ASP.NET Web Pages applications.</span></span>
+> <span data-ttu-id="31104-104">Comment utiliser des périphériques mobiles dans les applications ASP.NET Web Pages.</span><span class="sxs-lookup"><span data-stu-id="31104-104">How to work with Mobile devices in ASP.NET Web Pages applications.</span></span>
 
-
-- [<span data-ttu-id="6006b-105">Rendu des sites ASP.NET Web Pages pour les appareils mobiles</span><span class="sxs-lookup"><span data-stu-id="6006b-105">Rendering ASP.NET Web Pages Sites for Mobile Devices</span></span>](rendering-aspnet-web-pages-sites-for-mobile-devices.md)
+- [<span data-ttu-id="31104-105">Rendu des sites ASP.NET Web Pages pour les appareils mobiles</span><span class="sxs-lookup"><span data-stu-id="31104-105">Rendering ASP.NET Web Pages Sites for Mobile Devices</span></span>](rendering-aspnet-web-pages-sites-for-mobile-devices.md)
