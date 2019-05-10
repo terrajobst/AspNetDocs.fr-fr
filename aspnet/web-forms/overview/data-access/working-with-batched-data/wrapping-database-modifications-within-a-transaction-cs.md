@@ -8,12 +8,12 @@ ms.date: 06/26/2007
 ms.assetid: b45fede3-c53a-4ea1-824b-20200808dbae
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/wrapping-database-modifications-within-a-transaction-cs
 msc.type: authoredcontent
-ms.openlocfilehash: bbc54a39ba6ca3771acd7c4da37795a23e8ee2df
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1c174b824595f2d85eef97f467ff99082cfeb6d3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383380"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108285"
 ---
 # <a name="wrapping-database-modifications-within-a-transaction-c"></a>Inclusion de modifications d’une base de données dans une transaction (C#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger le Code](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_63_CS.zip) ou [télécharger le PDF](wrapping-database-modifications-within-a-transaction-cs/_static/datatutorial63cs1.pdf)
 
 > Ce didacticiel est le premier des quatre examine la mise à jour, suppression et l’insertion des lots de données. Ce didacticiel explique comment les transactions de base de données autorisent les modifications de traitement par lots à effectuer qu’une opération atomique, ce qui garantit que toutes les étapes réussissent ou échouent de toutes les étapes.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -38,7 +37,6 @@ Dans ce didacticiel, nous allons examiner comment étendre la couche DAL pour ut
 
 > [!NOTE]
 > Lorsque vous modifiez des données dans une transaction par lot, atomicité n’est pas toujours nécessaire. Dans certains scénarios, il peut être acceptable d’avoir quelques modifications de données réussit et que d’autres dans le même lot échoue, par exemple quand la suppression d’un ensemble d’e-mails à partir d’un client de messagerie basée sur le web. Si un base de données erreur au milieu de la suppression de s il traite, il s probablement acceptable que ces enregistrements traités sans erreur restent supprimés. Dans ce cas, la couche DAL pas doit-elle être modifiée pour prendre en charge les transactions de base de données. Il existe d’autres lots opération scénarios, toutefois, où l’atomicité est vital. Lorsqu’un client met son fonds d’un compte bancaire vers un autre, les deux opérations doivent être effectuées : fonds doivent être déduits à partir du premier compte et ensuite ajoutés à la seconde. Bien que la banque ne peut pas peur la première étape réussit mais échouer de la deuxième étape, ses clients naturellement serait contraries. Je vous encourage à utiliser ce didacticiel et implémenter les améliorations apportées à la couche DAL pour prendre en charge les transactions de base de données, même si vous n’envisagez pas de leur utilisation dans le lot d’insertion, la mise à jour et suppression des interfaces que nous allons créer dans les didacticiels suivants de trois.
-
 
 ## <a name="an-overview-of-transactions"></a>Une vue d’ensemble de Transactions
 
@@ -56,9 +54,7 @@ Les instructions SQL utilisées pour créer, valider et restaurer la transaction
 > [!NOTE]
 > Le [ `TransactionScope` classe](https://msdn.microsoft.com/library/system.transactions.transactionscope.aspx) dans le `System.Transactions` espace de noms permet aux développeurs d’encapsuler par programmation une série d’instructions dans l’étendue d’une transaction et inclut la prise en charge pour les transactions complexes qui impliquent plusieurs sources, telles que les deux bases de données différentes ou même hétérogènes types de magasins de données, comme une base de données Microsoft SQL Server, une base de données Oracle et un service Web. Je ve décidé d’utiliser des transactions ADO.NET pour ce didacticiel à la place de la `TransactionScope` classe ADO.NET est plus spécifique pour les transactions de base de données et, dans de nombreux cas, étant donné que nécessite beaucoup moins de ressources. En outre, dans certains scénarios le `TransactionScope` classe utilise Microsoft Distributed Transaction Coordinator (MSDTC). Les problèmes de configuration, de mise en œuvre et de performances MSDTC environnante rend une rubrique plutôt spécialisée et avancée qui dépasse la portée de ces didacticiels.
 
-
 Lorsque vous travaillez avec le fournisseur SqlClient dans ADO.NET, les transactions sont initiées via un appel à la [ `SqlConnection` classe](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.aspx) s [ `BeginTransaction` méthode](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.begintransaction.aspx), qui retourne un [ `SqlTransaction` objet](https://msdn.microsoft.com/library/system.data.sqlclient.sqltransaction.aspx). Les instructions de modification de données que la transaction de composition sont placés dans un `try...catch` bloc. Si une erreur se produit dans une instruction dans le `try` bloquer, l’exécution des transferts vers le `catch` bloc dans lequel la transaction peut être restaurée par le biais de la `SqlTransaction` objet s [ `Rollback` (méthode)](https://msdn.microsoft.com/library/system.data.sqlclient.sqltransaction.rollback.aspx). Si toutes les instructions terminent avec succès, un appel à la `SqlTransaction` objet s [ `Commit` méthode](https://msdn.microsoft.com/library/system.data.sqlclient.sqltransaction.commit.aspx) à la fin de la `try` bloc valide la transaction. L’extrait de code suivant illustre ce modèle. Consultez [maintenance de cohérence de base de données avec des Transactions](http://aspnet.4guysfromrolla.com/articles/072705-1.aspx) pour une syntaxe supplémentaire et des exemples d’utilisation de transactions avec ADO.NET.
-
 
 [!code-csharp[Main](wrapping-database-modifications-within-a-transaction-cs/samples/sample1.cs)]
 
@@ -74,32 +70,25 @@ Avant de commencer à Explorer la manière d’améliorer la couche DAL pour pre
 - `BatchDelete.aspx`
 - `BatchInsert.aspx`
 
-
 ![Ajouter les Pages ASP.NET pour les didacticiels de SqlDataSource](wrapping-database-modifications-within-a-transaction-cs/_static/image1.gif)
 
 **Figure 1**: Ajouter les Pages ASP.NET pour les didacticiels de SqlDataSource
 
-
 Comme avec les autres dossiers, `Default.aspx` utilisera le `SectionLevelTutorialListing.ascx` contrôle utilisateur pour répertorier les didacticiels dans sa section. Par conséquent, ajoutez ce contrôle utilisateur à `Default.aspx` en le faisant glisser à partir de l’Explorateur de solutions sur la page s en mode Création.
-
 
 [![Ajouter le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx](wrapping-database-modifications-within-a-transaction-cs/_static/image2.gif)](wrapping-database-modifications-within-a-transaction-cs/_static/image1.png)
 
 **Figure 2**: Ajouter le `SectionLevelTutorialListing.ascx` contrôle utilisateur à `Default.aspx` ([cliquez pour afficher l’image en taille réelle](wrapping-database-modifications-within-a-transaction-cs/_static/image2.png))
 
-
 Enfin, ajoutez ces quatre pages sous forme d’entrées pour le `Web.sitemap` fichier. Plus précisément, ajoutez le balisage suivant après la personnalisation du plan du Site `<siteMapNode>`:
-
 
 [!code-xml[Main](wrapping-database-modifications-within-a-transaction-cs/samples/sample2.xml)]
 
 Après la mise à jour `Web.sitemap`, prenez un moment pour afficher le site Web de didacticiels via un navigateur. Le menu de gauche inclut désormais les éléments de travail avec les didacticiels de données par lot.
 
-
 ![Le plan de Site inclut maintenant des entrées pour l’utilisation des didacticiels de données par lot](wrapping-database-modifications-within-a-transaction-cs/_static/image3.gif)
 
 **Figure 3**: Le plan de Site inclut maintenant des entrées pour l’utilisation des didacticiels de données par lot
-
 
 ## <a name="step-2-updating-the-data-access-layer-to-support-database-transactions"></a>Étape 2 : La mise à jour de la couche d’accès aux données pour prendre en charge les Transactions de base de données
 
@@ -111,14 +100,11 @@ Dans certains scénarios, nous souhaitons garantir l’atomicité sur une série
 
 Le DataSet typé `Northwind.xsd` se trouve dans le `App_Code` dossier s `DAL` sous-dossier. Créez un sous-dossier dans le `DAL` dossier nommé `TransactionSupport` et ajoutez un nouveau fichier de classe nommé `ProductsTableAdapter.TransactionSupport.cs` (voir Figure 4). Ce fichier contiendra l’implémentation partielle de la `ProductsTableAdapter` qui inclut des méthodes pour effectuer des modifications de données à l’aide d’une transaction.
 
-
 ![Ajouter un dossier nommé propriété TransactionSupport et un fichier de classe nommé ProductsTableAdapter.TransactionSupport.cs](wrapping-database-modifications-within-a-transaction-cs/_static/image4.gif)
 
 **Figure 4**: Ajoutez un dossier nommé `TransactionSupport` et un fichier de classe nommé `ProductsTableAdapter.TransactionSupport.cs`
 
-
 Entrez le code suivant dans le `ProductsTableAdapter.TransactionSupport.cs` fichier :
-
 
 [!code-csharp[Main](wrapping-database-modifications-within-a-transaction-cs/samples/sample3.cs)]
 
@@ -130,13 +116,11 @@ Ces méthodes fournissent les blocs de construction nécessaires au démarrage, 
 
 Avec ces méthodes terminées, nous re prêt à ajouter des méthodes à `ProductsDataTable` ou la couche BLL qui effectuent une série de commandes dans le cadre d’une transaction. La méthode suivante utilise le modèle de mise à jour par lot pour mettre à jour un `ProductsDataTable` instance à l’aide d’une transaction. Il démarre une transaction en appelant le `BeginTransaction` (méthode), puis utilise un `try...catch` bloc pour émettre les instructions de modification de données. Si l’appel à la `Adapter` objet s `Update` méthode entraîne une exception, l’exécution est transférés vers le `catch` bloc dans lequel la transaction sera restaurée et l’exception levée à nouveau. N’oubliez pas que le `Update` méthode implémente le modèle de mise à jour par lots en énumérant les lignes de l’élément `ProductsDataTable` et effectuer le nécessaire `InsertCommand`, `UpdateCommand`, et `DeleteCommand` s. Si l’une de ces résultats de commandes dans une erreur, la transaction est restaurée, annulant les modifications précédentes apportées pendant la durée de vie de s de transaction. Doit le `Update` instruction se terminer sans erreur, la transaction est validée dans son intégralité.
 
-
 [!code-csharp[Main](wrapping-database-modifications-within-a-transaction-cs/samples/sample4.cs)]
 
 Ajouter le `UpdateWithTransaction` méthode à la `ProductsTableAdapter` classe via la classe partielle dans `ProductsTableAdapter.TransactionSupport.cs`. Sinon, cette méthode peut être ajoutée à la couche de logique métier s `ProductsBLL` classe avec quelques modifications syntaxiques mineures. À savoir, le mot clé dans `this.BeginTransaction()`, `this.CommitTransaction()`, et `this.RollbackTransaction()` devra être remplacé par `Adapter` (n’oubliez pas que `Adapter` est le nom d’une propriété dans `ProductsBLL` de type `ProductsTableAdapter`).
 
 Le `UpdateWithTransaction` méthode utilise le modèle de mise à jour par lots, mais une série d’appels de Direct à la base de données peut également servir dans l’étendue d’une transaction, comme dans l’exemple de méthode suivant. Le `DeleteProductsWithTransaction` méthode accepte comme entrée un `List<T>` de type `int`, qui sont le `ProductID` s à supprimer. La méthode lance la transaction via un appel à `BeginTransaction` puis, dans le `try` bloc, effectue une itération dans la liste fournie le modèle Direct à la base de données de l’appel `Delete` méthode pour chaque `ProductID` valeur. Si un des appels à `Delete` échoue, le contrôle est transféré à la `catch` bloc dans lequel la transaction est annulée et l’exception levée à nouveau. Si tous les appels à `Delete` réussisse, puis de la transaction est validée. Ajoutez la méthode suivante à la `ProductsBLL` classe.
-
 
 [!code-csharp[Main](wrapping-database-modifications-within-a-transaction-cs/samples/sample5.cs)]
 
@@ -154,12 +138,10 @@ Une autre option consiste à créer une classe d’assistance dans la couche DAL
 
 Ouvrez le `ProductsBLL` fichier de classe et ajoutez une méthode nommée `UpdateWithTransaction` qui appelle simplement à la méthode correspondante de la couche DAL. Doit être maintenant deux nouvelles méthodes dans `ProductsBLL`: `UpdateWithTransaction`, ce qui vous venez d’ajouter, et `DeleteProductsWithTransaction`, qui a été ajouté à l’étape 3.
 
-
 [!code-csharp[Main](wrapping-database-modifications-within-a-transaction-cs/samples/sample6.cs)]
 
 > [!NOTE]
 > Ces méthodes n’incluent pas le `DataObjectMethodAttribute` attribut assigné à la plupart des autres méthodes dans la `ProductsBLL` classe, car nous allons appeler ces méthodes directement à partir des classes de code-behind de pages ASP.NET. N’oubliez pas que `DataObjectMethodAttribute` est utilisé pour indiquer quelles méthodes doivent apparaître dans le s ObjectDataSource configurer la Source de données Assistant et sous l’onglet (SELECT, UPDATE, INSERT ou DELETE). Dans la mesure où le contrôle GridView ne dispose pas en charge intégrée pour le lot de modification ou la suppression, nous devrons appeler ces méthodes par programme plutôt que d’utiliser l’approche sans code déclaratif.
-
 
 ## <a name="step-5-atomically-updating-database-data-from-the-presentation-layer"></a>Étape 5 : Atomiquement la mise à jour des données de base de données à partir de la couche de présentation
 
@@ -167,37 +149,29 @@ Pour illustrer l’effet que la transaction a lors de la mise à jour d’un lot
 
 Commencez par ouvrir le `Transactions.aspx` page dans le `BatchData` dossier et faites glisser un GridView à partir de la boîte à outils vers le concepteur. Définissez ses `ID` à `Products` et, à partir de sa balise active, liez-le à une nouvelle ObjectDataSource nommé `ProductsDataSource`. Configurer l’ObjectDataSource afin d’extraire ses données à partir de la `ProductsBLL` classe s `GetProducts` (méthode). Cela sera être un GridView en lecture seule, donc définir les listes déroulantes dans la mise à jour, insertion et supprimer des onglets à (None), cliquez sur Terminer.
 
-
 [![Figure 5 : Configurer pour utiliser la méthode de GetProducts ProductsBLL classe s ObjectDataSource](wrapping-database-modifications-within-a-transaction-cs/_static/image5.gif)](wrapping-database-modifications-within-a-transaction-cs/_static/image3.png)
 
 **Figure 5**: Figure 5 : Configurer l’ObjectDataSource à utiliser le `ProductsBLL` classe s `GetProducts` (méthode) ([cliquez pour afficher l’image en taille réelle](wrapping-database-modifications-within-a-transaction-cs/_static/image4.png))
-
 
 [![Définir les listes déroulantes dans la mise à jour, insertion et supprimer des onglets à (None)](wrapping-database-modifications-within-a-transaction-cs/_static/image6.gif)](wrapping-database-modifications-within-a-transaction-cs/_static/image5.png)
 
 **Figure 6**: La valeur est la liste déroulante répertorie dans la mise à jour, insertion et supprimer des onglets (aucun) ([cliquez pour afficher l’image en taille réelle](wrapping-database-modifications-within-a-transaction-cs/_static/image6.png))
 
-
 À l’issue de l’Assistant Configurer la Source de données, Visual Studio créera BoundFields et un CheckBoxField pour les champs de données de produit. Supprimez tous ces champs à l’exception de `ProductID`, `ProductName`, `CategoryID`, et `CategoryName` et renommer le `ProductName` et `CategoryName` BoundFields `HeaderText` propriétés pour le produit et la catégorie, respectivement. À partir de la balise active, activez l’option Activer la pagination. Après avoir apporté ces modifications, le balisage déclaratif s GridView et ObjectDataSource doit ressembler à ce qui suit :
-
 
 [!code-aspx[Main](wrapping-database-modifications-within-a-transaction-cs/samples/sample7.aspx)]
 
 Ensuite, ajoutez trois contrôles de bouton Web ci-dessus le GridView. La valeur est le premier bouton s propriété Text actualiser la grille, le deuxième s à modifier les catégories (avec TRANSACTION) et le troisième s afin de modifier les catégories (sans TRANSACTION).
 
-
 [!code-aspx[Main](wrapping-database-modifications-within-a-transaction-cs/samples/sample8.aspx)]
 
 À ce stade le mode de conception dans Visual Studio doit ressembler à l’écran illustré à la Figure 7.
-
 
 [![La Page contient un GridView et trois contrôles Web](wrapping-database-modifications-within-a-transaction-cs/_static/image7.gif)](wrapping-database-modifications-within-a-transaction-cs/_static/image7.png)
 
 **Figure 7**: La Page contient un GridView et les trois contrôles Web ([cliquez pour afficher l’image en taille réelle](wrapping-database-modifications-within-a-transaction-cs/_static/image8.png))
 
-
 Créer des gestionnaires d’événements pour chaque du bouton trois s `Click` événements et utilisez le code suivant :
-
 
 [!code-csharp[Main](wrapping-database-modifications-within-a-transaction-cs/samples/sample9.cs)]
 
@@ -209,26 +183,21 @@ La troisième `Click` Gestionnaire d’événements met à jour les produits `Ca
 
 Pour illustrer ce comportement, visitez cette page via un navigateur. Initialement, vous devez voir la première page de données comme indiqué dans la Figure 8. Ensuite, cliquez sur le bouton Modifier les catégories (avec TRANSACTION). Cela provoque une publication (postback) et tentez de mettre à jour tous les produits `CategoryID` valeurs, mais entraîne une violation de contrainte de clé étrangère (voir Figure 9).
 
-
 [![Les produits sont affichés dans un GridView paginable](wrapping-database-modifications-within-a-transaction-cs/_static/image8.gif)](wrapping-database-modifications-within-a-transaction-cs/_static/image9.png)
 
 **Figure 8**: Les produits sont affichés dans un GridView paginable ([cliquez pour afficher l’image en taille réelle](wrapping-database-modifications-within-a-transaction-cs/_static/image10.png))
-
 
 [![En réaffectant les résultats de catégories une violation de contrainte de clé étrangère](wrapping-database-modifications-within-a-transaction-cs/_static/image9.gif)](wrapping-database-modifications-within-a-transaction-cs/_static/image11.png)
 
 **Figure 9**: En réaffectant les résultats de catégories dans une Violation de contrainte de clé étrangère ([cliquez pour afficher l’image en taille réelle](wrapping-database-modifications-within-a-transaction-cs/_static/image12.png))
 
-
 Appuyez à présent sur le bouton de précédent de votre navigateur s, puis sur le bouton Actualiser la grille. Lors de l’actualisation des données, vous devez voir le même résultat exact comme indiqué dans la Figure 8. Autrement dit, même si certains produits `CategoryID` s étaient des valeurs modifiées Legal et mis à jour dans la base de données, ils ont été annulées lors de la violation de contrainte de clé étrangère s’est produite.
 
 Essayez maintenant en cliquant sur le bouton Modifier les catégories (sans TRANSACTION). Ainsi, la même erreur de violation de contrainte de clé étrangère (voir Figure 9), mais cette fois, les produits dont `CategoryID` valeurs ont été remplacées par un juridiques valeur ne sera pas restaurée. Appuyez sur le bouton de précédent de votre navigateur s, puis sur le bouton Actualiser la grille. Comme le montre la Figure 10, le `CategoryID` s des huit premiers produits ont été réaffectée. Par exemple, dans la Figure 8, suivi modifications avaient un `CategoryID` 1, mais dans la Figure 10 informatique s été réaffectée à 2.
 
-
 [![Certaines valeurs de CategoryID produits ont été mis à jour alors que d’autres ont été pas](wrapping-database-modifications-within-a-transaction-cs/_static/image10.gif)](wrapping-database-modifications-within-a-transaction-cs/_static/image13.png)
 
 **Figure 10**: Certains produits `CategoryID` valeurs ont été mis à jour alors que d’autres ont été pas ([cliquez pour afficher l’image en taille réelle](wrapping-database-modifications-within-a-transaction-cs/_static/image14.png))
-
 
 ## <a name="summary"></a>Récapitulatif
 

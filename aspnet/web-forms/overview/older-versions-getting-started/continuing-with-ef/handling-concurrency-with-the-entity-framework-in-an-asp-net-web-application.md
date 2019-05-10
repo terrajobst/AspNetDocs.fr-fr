@@ -8,19 +8,18 @@ ms.date: 01/26/2011
 ms.assetid: a5aa22a6-fb7f-4f41-9c7f-addda151940b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: fc9ce539005bce1790c726dfb859305f4ff78a6b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3df5f7d9c8fb22e1ea34fe16560bdb9a1309bb56
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422562"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131883"
 ---
 # <a name="handling-concurrency-with-the-entity-framework-40-in-an-aspnet-4-web-application"></a>Gestion des accès concurrentiels avec Entity Framework 4.0 dans une Application Web 4 ASP.NET
 
 par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels s’appuie sur l’application web Contoso University créé par le [mise en route avec Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) série de didacticiels. Si vous n’avez pas effectué les didacticiels précédents, comme point de départ pour ce didacticiel vous pouvez [télécharger l’application](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que vous l’auriez créée. Vous pouvez également [télécharger l’application](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) qui est créé par la série de didacticiels terminée. Si vous avez des questions sur les didacticiels, vous pouvez les publier à le [forum ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
-
 
 Dans le didacticiel précédent vous avez appris comment trier et données de filtre à l’aide du `ObjectDataSource` contrôle et Entity Framework. Ce didacticiel présente des options de gestion des accès concurrentiels dans une application web ASP.NET qui utilise Entity Framework. Vous allez créer une nouvelle page web qui est dédié à la mise à jour des affectations des formateurs. Vous allez gérer les problèmes d’accès concurrentiel dans cette page et dans la page de services que vous avez créé précédemment.
 

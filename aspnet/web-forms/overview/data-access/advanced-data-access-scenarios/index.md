@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 00d198ed-fddc-4fd3-a86e-3f29c5f707cc
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios
 msc.type: chapter
-ms.openlocfilehash: 735832675b48427d866612817ce7c8ef0290374b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 25041560b9e8ff0a8c944572dad344e655100b0d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421301"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108545"
 ---
 # <a name="advanced-data-access-scenarios"></a>Scénarios avancés d’accès aux données
 
 > Ces didacticiels couvrent l’utilisation des procédures stockées et des colonnes calculées, comment utiliser des jointures avec les tables de base de données et comment chiffrer les informations de connexion de données.
-
 
 - [Création de procédures stockées pour les TableAdapters de dataset typé (C#)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)
 - [Utilisation de procédures stockées existantes pour les TableAdapters de dataset typé (C#)](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)

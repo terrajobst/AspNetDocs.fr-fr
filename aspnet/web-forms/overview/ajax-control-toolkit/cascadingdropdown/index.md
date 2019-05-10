@@ -8,17 +8,16 @@ ms.date: 11/14/2011
 ms.assetid: 5cc304e2-0013-4c26-8fe6-e897a533809f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown
 msc.type: chapter
-ms.openlocfilehash: b4e8dfe9deaf8ee4196d327d94d9b99f568bd11d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d28441e3ea3ae1ee999b52f9ab0b42ec8862f472
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405766"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132221"
 ---
 # <a name="cascadingdropdown"></a>CascadingDropdown
 
 > Ce didacticiel montre comment utiliser le contrôle CascadingDropDown pour créer des listes déroulantes associées qui mettent à jour lorsque les utilisateurs effectuer une sélection.
-
 
 - [Remplissage d’une liste avec CascadingDropDown (C#)](filling-a-list-using-cascadingdropdown-cs.md)
 - [Utilisation de CascadingDropDown avec une base de données (C#)](using-cascadingdropdown-with-a-database-cs.md)

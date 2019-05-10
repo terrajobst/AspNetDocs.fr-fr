@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 7dcaba80-f2ec-4db3-ad98-daadc3afdb49
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/advanced-enterprise-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 2f27e9436f246e3da2fbb129bbcd2d80e39b5f28
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bf4c7d021763017592483df35cb717295c4924aa
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385317"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108906"
 ---
 # <a name="advanced-enterprise-web-deployment"></a>Déploiement web d’entreprise avancé
 
@@ -24,7 +24,6 @@ par [Jason Lee](https://github.com/jrjlee)
 > Ce didacticiel vous explique comment effectuer diverses tâches sont obligatoires ou souhaitable dans de nombreux scénarios de déploiement d’entreprise.
 > 
 > Pour obtenir une traduction italienne de ces didacticiels, visitez [ http://www.lucamorelli.it ](http://www.lucamorelli.it).
-
 
 Cela fait partie d’une série de didacticiels basées sur les exigences de déploiement d’entreprise de la société fictive Fabrikam, Inc. Cette série de didacticiels utilise un exemple de solution&#x2014;le [Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md) solution&#x2014;pour représenter une application web avec un niveau réaliste de complexité, y compris une application ASP.NET MVC 3, une Communication de Windows Foundation (WCF) service et un projet de base de données.
 

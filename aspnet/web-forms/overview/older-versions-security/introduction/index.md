@@ -8,17 +8,16 @@ ms.date: 11/04/2011
 ms.assetid: ac5fcd71-317a-41ba-91ac-95121fc68126
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction
 msc.type: chapter
-ms.openlocfilehash: cf64b3c939245d196be3c73309b9ed621581043e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7481981ad95eab7cd1bd906084f3a979c5a44dd1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385668"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132289"
 ---
 # <a name="aspnet-35---introduction-to-security"></a>ASP.NET 3.5 - Introduction à la sécurité
 
 > Cette série de tutoriels explore les techniques d’authentification des utilisateurs à l’aide d’un formulaire de connexion (l’authentification par formulaire) et autoriser l’accès aux pages individuelles dans une application ASP.NET.
-
 
 - [Concepts de base et prise en charge de la sécurité par ASP.NET (C#)](security-basics-and-asp-net-support-cs.md)
 - [Vue d’ensemble de l’authentification par formulaire (C#)](an-overview-of-forms-authentication-cs.md)

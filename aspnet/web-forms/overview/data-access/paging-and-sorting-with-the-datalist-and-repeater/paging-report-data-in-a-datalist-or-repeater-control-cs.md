@@ -8,12 +8,12 @@ ms.date: 11/13/2006
 ms.assetid: e8e0809b-25c4-4c3b-8d12-9a17048148ae
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4657d1ffbcae90a9a0bc283c0d6f604891e29d13
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7ec86332d7c9157e06042abbe17a6a810d827504
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414463"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108478"
 ---
 # <a name="paging-report-data-in-a-datalist-or-repeater-control-c"></a>Pagination des données d’un rapport dans un contrôle DataList ou Repeater (C#)
 
@@ -23,7 +23,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Bien que Repeater ni DataList offre automatique la pagination ou trier la prise en charge, ce didacticiel montre comment ajouter la prise en charge la pagination à la DataList ou Repeater, ce qui permet d’interfaces d’affichage pour la pagination et les données beaucoup plus flexible.
 
-
 ## <a name="introduction"></a>Introduction
 
 Pagination et tri sont deux fonctionnalités très courantes lors de l’affichage des données dans une application en ligne. Par exemple, lors de la recherche pour la documentation d’ASP.NET à une librairie en ligne, il peut y avoir des centaines d’ouvrages, mais le rapport affichant les résultats de recherche répertorie les correspondances seulement dix par page. En outre, les résultats peuvent être triées par titre, prix, nombre de pages, nom de l’auteur et ainsi de suite. Comme expliqué dans la [la pagination et tri des données de rapport](../paging-and-sorting/paging-and-sorting-report-data-cs.md) didacticiel, les contrôles GridView, DetailsView et FormView fournissent tous prise en charge de la pagination intégrée peut être activée au battement d’une case à cocher. Le contrôle GridView inclut également la prise en charge de tri.
@@ -32,7 +31,6 @@ Malheureusement, Repeater ni DataList offrent la pagination automatique ou le tr
 
 > [!NOTE]
 > Ce didacticiel se concentre exclusivement sur la pagination. Dans le didacticiel suivant, nous allons porter notre attention à l’ajout de fonctionnalités de tri.
-
 
 ## <a name="step-1-adding-the-paging-and-sorting-tutorial-web-pages"></a>Étape 1 : Ajout de la pagination et tri des Pages Web didacticiels
 
@@ -44,30 +42,23 @@ Avant de commencer ce didacticiel, laissez s tout d’abord prendre un moment po
 - `SortingWithDefaultPaging.aspx`
 - `SortingWithCustomPaging.aspx`
 
-
 ![Créez un dossier PagingSortingDataListRepeater et ajouter les Pages ASP.NET didacticiel](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image1.png)
 
 **Figure 1**: Créer un `PagingSortingDataListRepeater` dossier et ajouter les Pages ASP.NET didacticiel
 
-
 Ensuite, ouvrez le `Default.aspx` page et faites glisser le `SectionLevelTutorialListing.ascx` contrôle utilisateur à partir de la `UserControls` dossier sur l’aire de conception. Ce contrôle utilisateur, que nous avons créée dans le [Pages maîtres et Navigation du Site](../introduction/master-pages-and-site-navigation-cs.md) didacticiel, énumère le plan du site et affiche ces didacticiels dans la section en cours dans une liste à puces.
-
 
 [![Ajouter le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image3.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image2.png)
 
 **Figure 2**: Ajouter le `SectionLevelTutorialListing.ascx` contrôle utilisateur à `Default.aspx` ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image4.png))
 
-
 Pour afficher la pagination et tri des didacticiels, que nous allons créer la liste à puces, nous avons besoin de les ajouter au plan du site. Ouvrez le `Web.sitemap` fichier, puis ajoutez le balisage suivant après la modification et suppression avec le balisage de nœud de plan de site DataList :
 
-
 [!code-xml[Main](paging-report-data-in-a-datalist-or-repeater-control-cs/samples/sample1.xml)]
-
 
 ![Mettre à jour le plan du Site pour inclure les nouvelles Pages ASP.NET](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image5.png)
 
 **Figure 3**: Mettre à jour le plan du Site pour inclure les nouvelles Pages ASP.NET
-
 
 ## <a name="a-review-of-paging"></a>Une revue de pagination
 
@@ -79,11 +70,9 @@ Dans la mesure où la pagination par défaut demande nouveau tous les enregistre
 
 Pour implémenter la pagination par défaut dans les contrôles DataList ou Repeater, nous pouvons utiliser le [ `PagedDataSource` classe](https://msdn.microsoft.com/library/system.web.ui.webcontrols.pageddatasource.aspx) comme un wrapper autour du `ProductsDataTable` dont le contenu est en cours de pagination. Le `PagedDataSource` classe a un `DataSource` propriété qui peut être affectée à n’importe quel objet énumérable et [ `PageSize` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.pageddatasource.pagesize.aspx) et [ `CurrentPageIndex` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.pageddatasource.currentpageindex.aspx) propriétés qui indiquent le nombre d’enregistrements à Afficher par page et l’index de page actuel. Une fois que ces propriétés ont été définies, le `PagedDataSource` peut être utilisé comme source de données de n’importe quel contrôle Web de données. Le `PagedDataSource`, lorsqu’elle est énumérée, retournent seulement un sous-ensemble approprié d’enregistrements de son interne `DataSource` selon le `PageSize` et `CurrentPageIndex` propriétés. Figure 4 illustre les fonctionnalités de la `PagedDataSource` classe.
 
-
 ![Le PagedDataSource encapsule un objet énumérable avec une Interface paginable](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image6.png)
 
 **Figure 4**: Le `PagedDataSource` encapsule un objet énumérable avec une Interface paginable
-
 
 Le `PagedDataSource` objet peut être créé et configuré directement à partir de la couche de logique métier et lié à un contrôle DataList ou le Repeater via un ObjectDataSource, ou peut être créé et configuré directement dans la classe code-behind de pages ASP.NET. Si cette dernière approche est utilisée, nous devons renoncer à l’aide de l’ObjectDataSource et lie les données paginées au DataList ou Repeater par programmation.
 
@@ -102,26 +91,21 @@ Ajoutez une méthode à la `ProductsBLL` classe nommée `GetProductsAsPagedDataS
 
 `GetProductsAsPagedDataSource` commence par récupérer *tous les* des enregistrements à partir de `GetProducts()`. Il crée ensuite un `PagedDataSource` objet, en définissant son `CurrentPageIndex` et `PageSize` propriétés aux valeurs du passé en `pageIndex` et `pageSize` paramètres. La méthode se termine en renvoyant celle-ci a été configurée `PagedDataSource`:
 
-
 [!code-csharp[Main](paging-report-data-in-a-datalist-or-repeater-control-cs/samples/sample2.cs)]
 
 ## <a name="step-3-displaying-product-information-in-a-datalist-using-default-paging"></a>Étape 3 : Affichage des informations de produit dans un contrôle DataList à l’aide de la pagination par défaut
 
 Avec le `GetProductsAsPagedDataSource` méthode ajoutée à la `ProductsBLL` (classe), nous pouvons créer un contrôle DataList ou le Repeater qui fournit la pagination par défaut. Commencez par ouvrir le `Paging.aspx` page dans le `PagingSortingDataListRepeater` dossier et faites glisser un contrôle DataList à partir de la boîte à outils vers le concepteur, en définissant le contrôle DataList s `ID` propriété `ProductsDefaultPaging`. À partir de la balise active DataList s, créez un nouveau ObjectDataSource nommé `ProductsDefaultPagingDataSource` et configurez-la afin qu’il récupère des données à l’aide du `GetProductsAsPagedDataSource` (méthode).
 
-
 [![Créer un ObjectDataSource et configurez-le pour utiliser le () GetProductsAsPagedDataSource (méthode)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image8.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image7.png)
 
 **Figure 5**: Créer un ObjectDataSource et configurez-le pour utiliser le `GetProductsAsPagedDataSource` `()` (méthode) ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image9.png))
 
-
 Définir les listes déroulantes dans la mise à jour, insertion et supprimer des onglets à (None).
-
 
 [![Définir les listes de liste déroulante dans la mise à jour, insertion et supprimer des onglets à (None)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image11.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image10.png)
 
 **Figure 6**: Définir les listes de liste déroulante dans la mise à jour, insertion et supprimer des onglets à (None) ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image12.png))
-
 
 Dans la mesure où le `GetProductsAsPagedDataSource` méthode nécessite deux paramètres d’entrée, l’Assistant nous demande la source de ces valeurs de paramètre.
 
@@ -129,38 +113,30 @@ Les index de page et les valeurs de taille de page doivent être mémorisés ent
 
 En particulier, utilisez le pageIndex des champs de chaîne de requête et pageSize pour le `pageIndex` et `pageSize` paramètres, respectivement (voir la Figure 7). Prenez un moment pour définir les valeurs par défaut pour ces paramètres, comme les valeurs de chaîne de requête ne sera pas présentes lorsqu’un utilisateur visite tout d’abord cette page. Pour `pageIndex`, la valeur par défaut la valeur est 0 (ce qui affiche la première page de données) et `pageSize` valeur par défaut de s à 4.
 
-
 [![Utiliser la chaîne de requête comme Source pour les paramètres pageIndex et pageSize](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image14.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image13.png)
 
 **Figure 7**: Utiliser la chaîne de requête comme Source pour le `pageIndex` et `pageSize` paramètres ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image15.png))
 
-
 Après avoir configuré l’ObjectDataSource, Visual Studio crée automatiquement un `ItemTemplate` pour le contrôle DataList. Personnaliser le `ItemTemplate` afin que seuls le nom de produit s, catégorie et le fournisseur sont affichés. Également définir le contrôle DataList s `RepeatColumns` propriété à 2, son `Width` à 100 % et sa `ItemStyle` s `Width` à 50 %. Ces paramètres de la largeur fournira un espacement identique pour les deux colonnes.
 
 Après avoir apporté ces modifications, le balisage de s contrôles DataList et ObjectDataSource doit ressembler à ce qui suit :
-
 
 [!code-aspx[Main](paging-report-data-in-a-datalist-or-repeater-control-cs/samples/sample3.aspx)]
 
 > [!NOTE]
 > Étant donné que nous n’effectuent pas une mise à jour ou supprimer des fonctionnalités dans ce didacticiel, vous pouvez désactiver l’état d’affichage DataList s pour réduire la taille de la page rendue.
 
-
 Lors de l’initialement visite cette page via un navigateur, ni le `pageIndex` ni `pageSize` paramètres querystring sont fournis. Par conséquent, les valeurs par défaut de 0 et 4 sont utilisés. Comme le montre la Figure 8, cela entraîne un contrôle DataList qui affiche les quatre premiers produits.
-
 
 [![Les quatre premiers produits sont répertoriés.](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image17.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image16.png)
 
 **Figure 8**: Les quatre premiers produits sont répertoriés ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image18.png))
 
-
 Sans une interface de pagination, là s actuellement non simple signifie pour un utilisateur de naviguer vers la deuxième page de données. Nous allons créer une interface de pagination à l’étape 4. Pour l’instant, cependant, la pagination peut uniquement faire directement en spécifiant les critères de la pagination dans la chaîne de requête. Par exemple, pour afficher la deuxième page, modifiez l’URL dans la barre d’adresse de navigateur s à partir de `Paging.aspx` à `Paging.aspx?pageIndex=2` et appuyez sur ENTRÉE. Cela entraîne la deuxième page de données à afficher (voir Figure 9).
-
 
 [![La deuxième Page de données s’affiche.](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image20.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image19.png)
 
 **Figure 9**: La deuxième Page de données s’affiche ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image21.png))
-
 
 ## <a name="step-4-creating-the-paging-interface"></a>Étape 4 : Création de l’Interface de pagination
 
@@ -174,7 +150,6 @@ Il existe une variété de différentes interfaces de pagination qui peut être 
 Pour DataList et Repeater, nous sommes responsables pour le choix d’une interface de pagination et de son implémentation. Cela implique la création de contrôles Web nécessaires dans la page et en affichant la page demandée lors de l’utilisateur clique sur un bouton d’interface de pagination particulier. En outre, certains contrôles d’interface de pagination peuvent doit être désactivé. Par exemple, lorsque vous affichez la première page de données à l’aide de l’autre, précédent, tout d’abord, dernière interface, le premier et le précédent boutons sont désactivées.
 
 Pour ce didacticiel, let s, utilisez le suivant, précédent, tout d’abord, dernière interface. Ajoutez quatre contrôles Web de bouton à la page et définissez leurs `ID` s à `FirstPage`, `PrevPage`, `NextPage`, et `LastPage`. Définir le `Text` propriétés à &lt; &lt; tout d’abord, &lt; préc., en regard &gt;et le dernier &gt; &gt; .
-
 
 [!code-aspx[Main](paging-report-data-in-a-datalist-or-repeater-control-cs/samples/sample4.aspx)]
 
@@ -191,11 +166,9 @@ Le nombre de pages est calculé comme le plafond du nombre total de lignes divis
 
 Si l’interface de pagination inclut un bouton en dernier, il est impératif que le nombre total d’enregistrements en cours de pagination via être mémorisées entre les postbacks afin que lorsque l’utilisateur clique sur le bouton de dernière, nous pouvons déterminer le dernier index de page. Pour ce faire, créez un `TotalRowCount` propriété dans la classe code-behind de page s ASP.NET qui conserve sa valeur à l’état d’affichage :
 
-
 [!code-csharp[Main](paging-report-data-in-a-datalist-or-repeater-control-cs/samples/sample5.cs)]
 
 En plus de `TotalRowCount`, prenez une minute pour créer des propriétés de niveau de la page en lecture seule pour accéder facilement à l’index de page, la taille de la page et du nombre de pages :
-
 
 [!code-csharp[Main](paging-report-data-in-a-datalist-or-repeater-control-cs/samples/sample6.cs)]
 
@@ -205,7 +178,6 @@ Le `PagedDataSource` objet retourné à partir de l’ObjectDataSource s `Select
 
 Pour ce faire, créez un gestionnaire d’événements pour les opérations de mappage ObjectDataSource `Selected` événement. Dans le `Selected` Gestionnaire d’événements, nous avons accès à la valeur de retour de l’ObjectDataSource s `Select()` méthode dans ce cas, le `PagedDataSource`.
 
-
 [!code-csharp[Main](paging-report-data-in-a-datalist-or-repeater-control-cs/samples/sample7.cs)]
 
 ## <a name="displaying-the-requested-page-of-data"></a>Affichage de la Page demandée de données
@@ -213,7 +185,6 @@ Pour ce faire, créez un gestionnaire d’événements pour les opérations de m
 Lorsque l’utilisateur clique sur un des boutons dans l’interface de pagination, nous devons afficher la page demandée de données. Étant donné que les paramètres de pagination sont spécifiés par le biais de la chaîne de requête pour afficher la page demandée de données, utilisez `Response.Redirect(url)` pour que l’utilisateur s navigateur redemander le `Paging.aspx` page avec les paramètres appropriés de la pagination. Par exemple, pour afficher la deuxième page de données, nous redirige l’utilisateur à `Paging.aspx?pageIndex=1`.
 
 Pour ce faire, créez un `RedirectUser(sendUserToPageIndex)` méthode qui redirige l’utilisateur vers `Paging.aspx?pageIndex=sendUserToPageIndex`. Ensuite, appelez cette méthode à partir du bouton quatre `Click` gestionnaires d’événements. Dans le `FirstPage` `Click` Gestionnaire d’événements, appelez `RedirectUser(0)`, de les envoyer à la première page ; dans le `PrevPage` `Click` Gestionnaire d’événements, utilisez `PageIndex - 1` en tant que l’index de page ; et ainsi de suite.
-
 
 [!code-csharp[Main](paging-report-data-in-a-datalist-or-repeater-control-cs/samples/sample8.cs)]
 
@@ -225,32 +196,26 @@ Actuellement, les quatre boutons sont activées, quel que soit la page affichée
 
 Ajoutez le code suivant pour les opérations de mappage ObjectDataSource `Selected` Gestionnaire d’événements :
 
-
 [!code-csharp[Main](paging-report-data-in-a-datalist-or-repeater-control-cs/samples/sample9.cs)]
 
 Avec cet ajout, les boutons premier et précédent seront désactivées lors de l’affichage de la première page, tandis que les boutons suivant et dernier seront désactivés lors de l’affichage de la dernière page.
 
 S permettent de réaliser l’interface de pagination en informant l’utilisateur qu’ils page re actuellement affiché et le nombre total de pages existent. Ajoutez un contrôle Web Label à la page et définissez son `ID` propriété `CurrentPageNumber`. Définissez ses `Text` propriété ObjectDataSource s sélectionnés Gestionnaire d’événements tel qu’il inclut la page actuelle affichée (`PageIndex + 1`) et le nombre total de pages (`PageCount`).
 
-
 [!code-csharp[Main](paging-report-data-in-a-datalist-or-repeater-control-cs/samples/sample10.cs)]
 
 La figure 10 illustre `Paging.aspx` lors de la première visite. Étant donné que la chaîne de requête est vide, le contrôle DataList est par défaut affichant les quatre premiers produits ; les boutons premier et précédent sont désactivées. Cliquez sur Suivant pour afficher les quatre enregistrements (voir Figure 11) ; le premier et précédent sont maintenant activées.
-
 
 [![La première Page de données s’affiche.](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image23.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image22.png)
 
 **Figure 10**: La première Page de données s’affiche ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image24.png))
 
-
 [![La deuxième Page de données s’affiche.](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image26.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image25.png)
 
 **Figure 11**: La deuxième Page de données s’affiche ([cliquez pour afficher l’image en taille réelle](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image27.png))
 
-
 > [!NOTE]
 > L’interface de pagination peut encore être améliorée en permettant à l’utilisateur de spécifier le nombre de pages pour afficher par page. Par exemple, la liste des options de taille de page comme 5, 10, 25, 50 et tous les pu être ajouté à un contrôle DropDownList. Lors de la sélection d’une taille de page, l’utilisateur doit être redirigé vers `Paging.aspx?pageIndex=0&pageSize=selectedPageSize`. Je laisse l’implémentation de cette amélioration en guise d’exercice pour le lecteur.
-
 
 ## <a name="using-custom-paging"></a>À l’aide de la pagination personnalisée
 

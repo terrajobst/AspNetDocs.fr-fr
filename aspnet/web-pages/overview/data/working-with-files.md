@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: eee916e4-ba4c-439a-a24e-68df7d45a569
 msc.legacyurl: /web-pages/overview/data/working-with-files
 msc.type: authoredcontent
-ms.openlocfilehash: 4a62cce3af57b507882744f948ce208becdb03ac
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3ff852232212ddda4930597731911be60c092667
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382301"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108947"
 ---
 # <a name="working-with-files-in-an-aspnet-web-pages-razor-site"></a>Utilisation des fichiers dans un Site ASP.NET Web Pages (Razor)
 
@@ -48,7 +48,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Ce didacticiel fonctionne également avec WebMatrix 3.
-
 
 <a id="Creating_a_Text_File"></a>
 ## <a name="creating-a-text-file-and-writing-data-to-it"></a>Création d’un fichier texte et écrire des données
@@ -145,7 +144,6 @@ Cette procédure vous montre comment lire et afficher les données que vous avez
 > 
 > Vous pouvez utiliser Microsoft Excel pour enregistrer les données contenues dans une feuille de calcul sous forme de fichier délimité par des virgules (*.csv* fichier). Lorsque vous le faites, le fichier est enregistré en texte brut, pas au format Excel. Chaque ligne dans la feuille de calcul est séparé par un saut de ligne dans le fichier texte, et chaque élément de données est séparé par une virgule. Vous pouvez utiliser le code indiqué dans l’exemple précédent pour lire un fichier délimité par des virgules d’Excel simplement en modifiant le nom du fichier de données dans votre code.
 
-
 <a id="Deleting_Files"></a>
 ## <a name="deleting-files"></a>Suppression de fichiers
 
@@ -154,7 +152,6 @@ Pour supprimer les fichiers à partir de votre site Web, vous pouvez utiliser le
 > [!NOTE] 
 > 
 > **Important** dans un site Web de production, vous généralement Limitez les personnes autorisées à apporter des modifications aux données. Pour plus d’informations sur comment configurer l’appartenance et sur les façons d’autoriser les utilisateurs à effectuer des tâches sur le site, consultez [Ajout de la sécurité et l’appartenance à un Site ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202904).
-
 
 1. Dans le site Web, créez un sous-dossier nommé *images*.
 2. Copie un ou plusieurs *.jpg* de fichiers dans le *images* dossier.
@@ -255,7 +252,6 @@ Dans l’exemple précédent, vous laisser les utilisateurs télécharger un fic
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Ressources supplémentaires
-
 
 [Utilisation des Images dans un Site ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202897)
 

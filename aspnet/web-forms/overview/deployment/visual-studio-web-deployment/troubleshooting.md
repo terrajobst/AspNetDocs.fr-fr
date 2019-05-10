@@ -8,12 +8,12 @@ ms.date: 06/01/2015
 ms.assetid: c0090595-ab3b-4b9b-9e16-7a1891e8cb2f
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/troubleshooting
 msc.type: authoredcontent
-ms.openlocfilehash: b59cd34036c733579e678eab78097d3393f3e671
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 652ed86826616dec5a4d1900dd57d7e6fd43a4e7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421080"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108875"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-troubleshooting"></a>Déploiement de Web ASP.NET à l’aide de Visual Studio : Résolution des problèmes
 
@@ -22,7 +22,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 [Télécharger le projet de démarrage](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Cette série de didacticiels vous montre comment déployer (publier) un ASP.NET web application dans Azure App Service Web Apps ou à un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
-
 
 Cette page décrit certains problèmes courants qui peuvent survenir lorsque vous déployez une application web ASP.NET à l’aide de Visual Studio. Pour chacune d’elles, une ou plusieurs causes possibles et les solutions correspondantes sont fournies.
 

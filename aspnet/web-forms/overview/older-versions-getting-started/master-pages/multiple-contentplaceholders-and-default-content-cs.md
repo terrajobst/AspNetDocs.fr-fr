@@ -8,12 +8,12 @@ ms.date: 05/21/2008
 ms.assetid: b9b9798b-027d-46cc-9636-473378e437ac
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2900c9d519c445e0f732f21a3d48cd082d0116ca
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2196446bf870a3b7ceba01656d0415deac0c7124
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413150"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106864"
 ---
 # <a name="multiple-contentplaceholders-and-default-content-c"></a>ContentPlaceHolders multiples et contenu par défaut (C#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger le Code](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_02_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_02_CS.pdf)
 
 > Examine comment ajouter plusieurs espaces réservés contenu à une page maître, ainsi que comment spécifier le contenu par défaut dans les espaces réservés contenu.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -36,19 +35,15 @@ De nombreuses conceptions de site Web contient plusieurs domaines personnalisés
 
 La figure 1 montre `Default.aspx` lorsqu’ils sont affichés via un navigateur. La zone entourée en rouge est le balisage spécifiques à la page correspondant à `MainContent`.
 
-
 [![La région encerclée affiche la zone personnalisable actuellement sur une base de Page par Page](multiple-contentplaceholders-and-default-content-cs/_static/image2.png)](multiple-contentplaceholders-and-default-content-cs/_static/image1.png)
 
 **Figure 01**: La région avec cercle affiche la zone actuellement personnalisable sur une base de Page par Page ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-cs/_static/image3.png))
 
-
 Imaginez qu’en plus de la région indiquée dans la Figure 1, nous devons également ajouter des éléments spécifiques à la page à la colonne de gauche sous les leçons et les actualités sections. Pour ce faire, nous ajoutons un autre contrôle ContentPlaceHolder à la page maître. Pour suivre la procédure, ouvrez le `Site.master` page dans Visual Web Developer maître et faites glisser un contrôle ContentPlaceHolder à partir de la boîte à outils vers le concepteur, après la section d’actualités. Définir le ContentPlaceHolder `ID` à `LeftColumnContent`.
-
 
 [![Ajouter un contrôle ContentPlaceHolder à la colonne de gauche de la Page maître](multiple-contentplaceholders-and-default-content-cs/_static/image5.png)](multiple-contentplaceholders-and-default-content-cs/_static/image4.png)
 
 **Figure 02**: Ajouter un contrôle ContentPlaceHolder à la colonne de gauche de la Page maître ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-cs/_static/image6.png))
-
 
 Avec l’ajout de la `LeftColumnContent` ContentPlaceHolder à la page maître, nous pouvons définir le contenu de cette région sur une base de page par page en incluant un contenu contrôle dans la page dont `ContentPlaceHolderID` est défini sur `LeftColumnContent`. Nous examinons ce processus à l’étape 2.
 
@@ -66,11 +61,9 @@ Entrez du contenu dans le contrôle de contenu faisant référence à la `MainCo
 
 Après avoir ajouté ce balisage, visitez la page via un navigateur. Comme le montre la Figure 3, le balisage est placé dans le `Content3` contrôle de contenu s’affiche dans la colonne de gauche sous la section Actualités (entourée en rouge). Le balisage est placé dans `Content2` s’affiche dans la partie droite de la page (encerclée en bleu).
 
-
 [![La colonne de gauche inclut désormais le contenu propre à la Page sous la Section Actualités](multiple-contentplaceholders-and-default-content-cs/_static/image8.png)](multiple-contentplaceholders-and-default-content-cs/_static/image7.png)
 
 **Figure 03**: La colonne maintenant inclut spécifiques à la Page contenu sous le News Section gauche ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-cs/_static/image9.png))
-
 
 ### <a name="defining-content-in-existing-content-pages"></a>Définition du contenu dans les Pages de contenu existants
 
@@ -80,11 +73,9 @@ Contrairement à la plupart des contrôles Web ASP.NET, la boîte à outils de V
 
 Pour ajouter un contrôle de contenu pour le `LeftColumnContent` ContentPlaceHolder à `About.aspx`, développez la balise active de ContentPlaceHolder, puis cliquez sur le lien Créer un contenu personnalisé.
 
-
 [![La vue de conception de About.aspx affiche LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-cs/_static/image11.png)](multiple-contentplaceholders-and-default-content-cs/_static/image10.png)
 
 **Figure 04**: La vue de conception pour `About.aspx` montre le `LeftColumnContent` ContentPlaceHolder ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-cs/_static/image12.png))
-
 
 Cliquant sur le lien Créer un contenu personnalisé génère nécessaires contrôle dans la page et les ensembles de contenu son `ContentPlaceHolderID` propriété le ContentPlaceHolder `ID`. Par exemple, en cliquant sur le lien Créer un contenu personnalisé pour `LeftColumnContent` région dans `About.aspx` ajoute le balisage déclaratif suivant à la page :
 
@@ -96,11 +87,9 @@ ASP.NET ne nécessite pas que toutes les pages de contenu incluent des contrôle
 
 Actuellement, `Default.aspx` contient deux contrôles de contenu pour le `head` et `MainContent` ContentPlaceHolders ; il n’a pas d’un contrôle de contenu pour `LeftColumnContent`. Par conséquent, lorsque `Default.aspx` est rendu le `LeftColumnContent` le contenu de ContentPlaceHolder par défaut est utilisé. Étant donné que nous devons encore définir n’importe quel contenu par défaut pour cette ContentPlaceHolder, l’effet net est qu’aucune balise n’est émis pour cette région. Pour vérifier ce comportement, visitez `Default.aspx` via un navigateur. Comme le montre la Figure 5, aucune balise n’est émis dans la colonne de gauche sous la section d’actualités.
 
-
 [![Aucun contenu n’est rendu pour LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-cs/_static/image14.png)](multiple-contentplaceholders-and-default-content-cs/_static/image13.png)
 
 **Figure 05**: Aucun contenu n’est rendu pour le `LeftColumnContent` ContentPlaceHolder ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-cs/_static/image15.png))
-
 
 ## <a name="step-3-specifying-default-content-in-the-master-page"></a>Étape 3 : Spécification du contenu par défaut dans la Page maître
 
@@ -113,7 +102,6 @@ Une meilleure solution consiste à définir les zones de texte Nom d’utilisate
 > [!NOTE]
 > Le reste de ce didacticiel met à jour notre site Web pour inclure une interface de connexion dans la colonne de gauche pour toutes les pages, mais la page de connexion. Toutefois, ce didacticiel n’examine pas comment configurer le site Web pour prendre en charge les comptes d’utilisateur. Pour plus d’informations sur ce sujet, reportez-vous à mon [l’authentification par formulaire, autorisation, des comptes d’utilisateur et les rôles](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md) didacticiels.
 
-
 ### <a name="adding-a-contentplaceholder-and-specifying-its-default-content"></a>Ajout d’un ContentPlaceHolder et en spécifiant son contenu par défaut
 
 Ouvrez le `Site.master` page maître et ajoutez le balisage suivant à la colonne gauche entre la `DateDisplay` section étiquette et les leçons :
@@ -122,11 +110,9 @@ Ouvrez le `Site.master` page maître et ajoutez le balisage suivant à la colonn
 
 Après avoir ajouté ce balisage mode de création de votre page maître doit ressembler à la Figure 6.
 
-
 [![La Page maître inclut un contrôle de connexion](multiple-contentplaceholders-and-default-content-cs/_static/image17.png)](multiple-contentplaceholders-and-default-content-cs/_static/image16.png)
 
 **Figure 06**: La Page maître inclut un contrôle de connexion ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-cs/_static/image18.png))
-
 
 Cette ContentPlaceHolder, `QuickLoginUI`, a un contrôle Web de connexion en tant que son contenu par défaut. Le contrôle de connexion affiche une interface utilisateur qui invite l’utilisateur à leur nom d’utilisateur et le mot de passe, ainsi que d’un bouton de connexion. Lorsque vous cliquez sur le bouton se connecter, le contrôle de connexion valide en interne les informations d’identification utilisateur par rapport à l’API d’appartenance. Ensuite, pour utiliser ce contrôle de connexion dans la pratique, vous devez configurer votre site pour utiliser l’appartenance. Cette rubrique est dépasse le cadre de ce didacticiel. reportez-vous à mon [l’authentification par formulaire, autorisation, des comptes d’utilisateur et les rôles](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md) didacticiels pour plus d’informations sur la création d’une application web qui prend en charge les comptes d’utilisateur.
 
@@ -144,11 +130,9 @@ Après avoir défini le contenu pour le `MainContent` et `LeftColumnContent` ré
 
 Figure 7 illustre cette page lorsqu’ils sont affichés via un navigateur. Étant donné que cette page spécifie un contrôle de contenu pour le `QuickLoginUI` ContentPlaceHolder, ce paramètre remplace le contenu par défaut spécifié dans la page maître. L’effet net est que le contrôle de connexion affiché dans la conception de la page maître (voir Figure 6) n'est pas restituée dans cette page.
 
-
 [![La Page de connexion Represses contenu de par défaut de la QuickLoginUI ContentPlaceHolder](multiple-contentplaceholders-and-default-content-cs/_static/image20.png)](multiple-contentplaceholders-and-default-content-cs/_static/image19.png)
 
 **Figure 07**: La Page de connexion Represses la `QuickLoginUI` par défaut contenu de ContentPlaceHolder ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-cs/_static/image21.png))
-
 
 ### <a name="using-the-default-content-in-new-pages"></a>À l’aide du contenu par défaut dans les nouvelles Pages
 
@@ -160,11 +144,9 @@ Pour supprimer le contrôle de contenu, vous pouvez supprimer son balisage décl
 
 La figure 8 illustre `Default.aspx` lorsqu’ils sont affichés via un navigateur. N’oubliez pas que `Default.aspx` a uniquement deux contrôles de contenu spécifiées dans son balisage déclaratif - un pour `head` et l’autre pour `MainContent`. Par conséquent, la valeur par défaut du contenu pour le `LeftColumnContent` et `QuickLoginUI` ContentPlaceHolders sont affichés.
 
-
 [![Le contenu par défaut pour les LeftColumnContent QuickLoginUI ContentPlaceHolders sont affichés](multiple-contentplaceholders-and-default-content-cs/_static/image23.png)](multiple-contentplaceholders-and-default-content-cs/_static/image22.png)
 
 **Figure 08**: Le contenu par défaut pour le `LeftColumnContent` et `QuickLoginUI` ContentPlaceHolders sont affichés ([cliquez pour afficher l’image en taille réelle](multiple-contentplaceholders-and-default-content-cs/_static/image24.png))
-
 
 ## <a name="summary"></a>Récapitulatif
 

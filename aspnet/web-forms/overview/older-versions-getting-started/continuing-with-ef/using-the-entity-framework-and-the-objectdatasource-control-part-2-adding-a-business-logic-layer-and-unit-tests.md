@@ -8,19 +8,18 @@ ms.date: 01/26/2011
 ms.assetid: efb0e677-10b8-48dc-93d3-9ba3902dd807
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests
 msc.type: authoredcontent
-ms.openlocfilehash: 4d436b0e5d605027cfcf5243f615f9ac167c5888
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 24344cc33d7c26d7c408db26c0530ef2c708a7d3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388047"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133451"
 ---
 # <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests"></a>À l’aide d’Entity Framework 4.0 et que le contrôle ObjectDataSource, partie 2 : Ajout d’une couche de logique métier et de tests unitaires
 
 par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels s’appuie sur l’application web Contoso University créé par le [mise en route avec Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) série de didacticiels. Si vous n’avez pas effectué les didacticiels précédents, comme point de départ pour ce didacticiel vous pouvez [télécharger l’application](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que vous l’auriez créée. Vous pouvez également [télécharger l’application](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) qui est créé par la série de didacticiels terminée. Si vous avez des questions sur les didacticiels, vous pouvez les publier à le [forum ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
-
 
 Dans le didacticiel précédent, vous avez créé une application à n niveaux web à l’aide d’Entity Framework et le `ObjectDataSource` contrôle. Ce didacticiel montre comment ajouter une logique métier tout en conservant la couche de logique métier (BLL) et la couche d’accès aux données (DAL) distinct, et il montre comment créer des tests unitaires automatisés pour la couche BLL.
 
@@ -72,7 +71,6 @@ Les méthodes CRUD qui appellent la classe de dépôt et les deux constructeurs 
 
 > [!NOTE]
 > Techniquement, les objets d’entité sont toujours pas ignorant la persistance, car elles sont instanciées à partir de classes qui héritent d’Entity Framework `EntityObject` classe. Pour l’ignorance de la persistance terminée, vous pouvez utiliser *bons vieux objets CLR*, ou *oct*, à la place des objets qui héritent de la `EntityObject` classe. À l’aide d’oct est dépasse le cadre de ce didacticiel. Pour plus d’informations, consultez [testabilité et Entity Framework 4.0](https://msdn.microsoft.com/library/ff714955.aspx) sur le site Web MSDN.)
-
 
 Vous pouvez désormais connecter le `ObjectDataSource` contrôles à la logique métier classe au lieu du référentiel et vérifier que tout fonctionne comme avant.
 

@@ -8,17 +8,16 @@ ms.date: 11/14/2011
 ms.assetid: a923735c-2d34-456c-8327-40aa62a4c1d6
 msc.legacyurl: /web-forms/videos/data-access
 msc.type: chapter
-ms.openlocfilehash: b41843143dfbd957ef242c67e67101af79d9efba
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 66c8851d53cef59ea560818a054729115ca62b3b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419403"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106751"
 ---
 # <a name="data-access"></a>Accès aux données
 
 > Comment créer une couche d’accès aux données (DAL).
-
 
 - [ADO.NET Data Services](adonet-data-services/index.md)
 

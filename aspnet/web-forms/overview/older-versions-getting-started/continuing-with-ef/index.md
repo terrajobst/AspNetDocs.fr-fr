@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 25a6b7ba-e374-4c3f-9e53-83f665cfdd21
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef
 msc.type: chapter
-ms.openlocfilehash: 03eb0f69428c4f4f48487f8eefe91c33f9f1ebbd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a1c149bcc6efad712529bea21f4f13d8b05260d7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59378801"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108425"
 ---
 # <a name="aspnet-4---continuing-with-entity-framework-4-and-web-forms"></a>ASP.NET 4 - Continuer avec Entity Framework 4 et Web Forms
 
 > Comment générer l’application Contoso U comme une application multiniveau à l’aide du contrôle ObjectDataSource et comment gérer l’accès concurrentiel et optimiser les performances.
-
 
 - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 1 : Mise en route](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
 - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 2 : Ajout d’une couche de logique métier et les Tests unitaires](using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)

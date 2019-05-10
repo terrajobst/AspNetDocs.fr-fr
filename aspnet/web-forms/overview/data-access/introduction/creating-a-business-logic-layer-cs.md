@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: 85554606-47cb-4e4f-9848-eed9da579056
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-business-logic-layer-cs
 msc.type: authoredcontent
-ms.openlocfilehash: fd3bf46394f562462c561bf06370d2f372e47d0a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c0278841b7b0701f09b2de5115e06da87aed49cf
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415261"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109035"
 ---
 # <a name="creating-a-business-logic-layer-c"></a>Création d’une couche de logique métier (C#)
 
@@ -23,18 +23,15 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Dans ce didacticiel, nous allons voir comment centraliser vos règles d’entreprise dans une couche BLL (Business Logic) qui sert d’intermédiaire pour l’échange de données entre la couche de présentation et la couche DAL.
 
-
 ## <a name="introduction"></a>Introduction
 
 La couche DAL (Data Access) est créé dans le [premier didacticiel](creating-a-data-access-layer-cs.md) sépare correctement les données d’accès logique à partir de la logique de présentation. Toutefois, alors que la couche DAL sépare les détails d’accès aux données à partir de la couche de présentation, il n’applique pas les règles d’entreprise qui peuvent s’appliquer. Par exemple, pour notre application nous souhaiterons peut-être interdire la `CategoryID` ou `SupplierID` champs de la `Products` table d’être modifiées lorsque le `Discontinued` champ est défini sur 1, ou nous pourrions appliquer des règles d’ancienneté, interdisant les situations dans lesquelles un employé est géré par une personne qui a été embauchés après leur. Un autre scénario courant est d’autorisation peut-être seuls les utilisateurs dans un rôle particulier peuvent supprimer des produits ou peuvent modifier le `UnitPrice` valeur.
 
 Dans ce didacticiel, nous allons voir comment centraliser ces règles d’entreprise dans une couche BLL (Business Logic) qui sert d’intermédiaire pour l’échange de données entre la couche de présentation et la couche DAL. Dans une application réelle, la couche BLL doit être implémentée comme un projet de bibliothèque de classes distinct ; Toutefois, pour ces didacticiels, nous allons implémenter la couche BLL comme une série de classes dans notre `App_Code` dossier afin de simplifier la structure de projet. La figure 1 illustre les relations architecturales entre la couche de présentation, BLL et DAL.
 
-
 ![La couche BLL sépare la couche de présentation de la couche d’accès aux données et impose des règles d’entreprise](creating-a-business-logic-layer-cs/_static/image1.png)
 
 **Figure 1**: La couche BLL sépare la couche de présentation de la couche d’accès aux données et impose des règles d’entreprise
-
 
 ## <a name="step-1-creating-the-bll-classes"></a>Étape 1 : Création des Classes de couche de logique métier
 
@@ -44,17 +41,14 @@ Pour plus de proprement séparer les classes liées BLL et DAL, nous allons cré
 
 Ensuite, créez les quatre fichiers de classe de couche de logique métier dans le `BLL` sous-dossier. Pour ce faire, cliquez sur le `BLL` sous-dossier, choisissez Ajouter un nouvel élément, puis choisissez le modèle de classe. Nommez les quatre classes `ProductsBLL`, `CategoriesBLL`, `SuppliersBLL`, et `EmployeesBLL`.
 
-
 ![Ajoutez quatre nouvelles Classes dans le dossier App_Code](creating-a-business-logic-layer-cs/_static/image2.png)
 
 **Figure 2**: Ajoutez quatre nouvelles Classes pour la `App_Code` dossier
-
 
 Ensuite, nous allons ajouter des méthodes pour chacune des classes simplement d’intégrer les méthodes définies pour les TableAdapters dans le premier didacticiel. Pour l’instant, ces méthodes simplement appelle directement dans la couche DAL ; Nous allons retourner par la suite pour ajouter une logique métier nécessaire.
 
 > [!NOTE]
 > Si vous utilisez Visual Studio Standard Edition ou ultérieur (autrement dit, vous êtes *pas* à l’aide de Visual Web Developer), vous pouvez éventuellement concevoir vos classes visuellement à l’aide de la [Concepteur de classes](https://msdn.microsoft.com/library/default.asp?url=/library/dv_vstechart/html/clssdsgnr.asp). Reportez-vous à la [classe concepteur Blog](https://blogs.msdn.com/classdesigner/default.aspx) pour plus d’informations sur cette nouvelle fonctionnalité dans Visual Studio.
-
 
 Pour le `ProductsBLL` nous devons ajouter un total de sept méthodes de classe :
 
@@ -67,7 +61,6 @@ Pour le `ProductsBLL` nous devons ajouter un total de sept méthodes de classe 
 - `DeleteProduct(productID)` Supprime le produit spécifié à partir de la base de données
 
 ProductsBLL.cs
-
 
 [!code-csharp[Main](creating-a-business-logic-layer-cs/samples/sample1.cs)]
 
@@ -107,7 +100,6 @@ Avec la `ProductsBLL` classe complète, nous avons besoin ajouter des classes po
 
 La méthode à noter est la `SuppliersBLL` la classe `UpdateSupplierAddress` (méthode). Cette méthode fournit une interface pour la mise à jour uniquement les informations d’adresse du fournisseur. En interne, cette méthode lit dans le `SupplierDataRow` objet spécifié `supplierID` (à l’aide de `GetSupplierBySupplierID`), définit ses propriétés liées aux adresses et appelle ensuite vers le bas dans la `SupplierDataTable`de `Update` (méthode). Le `UpdateSupplierAddress` méthode suit :
 
-
 [!code-csharp[Main](creating-a-business-logic-layer-cs/samples/sample2.cs)]
 
 Reportez-vous au téléchargement de cet article pour mon implémentation complète de classes de la couche BLL.
@@ -116,21 +108,17 @@ Reportez-vous au téléchargement de cet article pour mon implémentation compl�
 
 Dans le premier didacticiel nous avons cité des exemples de travailler directement avec le DataSet typé par programmation, mais avec l’ajout de nos classes de la couche BLL, la couche de présentation doit fonctionner par rapport à la couche BLL à la place. Dans le `AllProducts.aspx` exemple à partir du premier didacticiel, le `ProductsTableAdapter` a été utilisée pour lier la liste des produits à un GridView, comme indiqué dans le code suivant :
 
-
 [!code-csharp[Main](creating-a-business-logic-layer-cs/samples/sample3.cs)]
 
 Pour utiliser la couche BLL de nouvelles classes, tout cela doit être modifiée est la première ligne de code suffit de remplacer le `ProductsTableAdapter` de l’objet avec un `ProductBLL` objet :
-
 
 [!code-csharp[Main](creating-a-business-logic-layer-cs/samples/sample4.cs)]
 
 Les classes de la couche BLL sont également accessible déclarative (comme vous pouvez le DataSet typé) à l’aide de l’ObjectDataSource. Nous allons aborder l’ObjectDataSource plus en détail dans les didacticiels suivants.
 
-
 [![La liste de produits s’affiche dans un GridView](creating-a-business-logic-layer-cs/_static/image4.png)](creating-a-business-logic-layer-cs/_static/image3.png)
 
 **Figure 3**: La liste de produits s’affiche dans un GridView ([cliquez pour afficher l’image en taille réelle](creating-a-business-logic-layer-cs/_static/image5.png))
-
 
 ## <a name="step-3-adding-field-level-validation-to-the-datarow-classes"></a>Étape 3 : Ajout d’une Validation au niveau du champ pour les Classes de DataRow
 
@@ -145,24 +133,19 @@ Ces règles peuvent et doivent être exprimés au niveau de la base de données.
 
 En plus en appliquant ces règles à la base de données qu’ils doivent également être appliquées au niveau du jeu de données. En fait, la longueur de champ et si une valeur est obligatoire ou facultatif sont déjà capturés pour l’ensemble de chaque DataTable de DataColumns. Pour afficher la validation au niveau du champ existante fournie automatiquement, accédez au Concepteur de DataSet, sélectionnez un champ à partir d’une des tables et puis accédez à la fenêtre Propriétés. Comme le montre la Figure 4, le `QuantityPerUnit` DataColumn dans le `ProductsDataTable` a une longueur maximale de 20 caractères et autorise `NULL` valeurs. Si vous tentez de définir la `ProductsDataRow`de `QuantityPerUnit` propriété une valeur de chaîne plue de 20 caractères un `ArgumentException` sera levée.
 
-
 [![Le DataColumn fournit une Validation au niveau du champ de base](creating-a-business-logic-layer-cs/_static/image7.png)](creating-a-business-logic-layer-cs/_static/image6.png)
 
 **Figure 4**: Le DataColumn fournit au niveau du champ Validation de base ([cliquez pour afficher l’image en taille réelle](creating-a-business-logic-layer-cs/_static/image8.png))
 
-
 Malheureusement, nous ne pouvons pas spécifier les vérifications des limites, telles que la `UnitPrice` valeur doit être supérieure ou égale à zéro, via la fenêtre Propriétés. Pour fournir ce type de validation au niveau du champ que nous avons besoin créer un gestionnaire d’événements pour le DataTable [ColumnChanging](https://msdn.microsoft.com/library/system.data.datatable.columnchanging%28VS.80%29.aspx) événement. Comme mentionné dans le [didacticiel précédent](creating-a-data-access-layer-cs.md), les objets DataSet, DataTables et DataRow créés par le DataSet typé peuvent être étendus via l’utilisation des classes partielles. À l’aide de cette technique, nous pouvons créer un `ColumnChanging` Gestionnaire d’événements pour le `ProductsDataTable` classe. Commencez par créer une classe dans le `App_Code` dossier nommé `ProductsDataTable.ColumnChanging.cs`.
-
 
 [![Ajoutez une nouvelle classe dans le dossier App_Code](creating-a-business-logic-layer-cs/_static/image10.png)](creating-a-business-logic-layer-cs/_static/image9.png)
 
 **Figure 5**: Ajoutez une nouvelle classe à la `App_Code` dossier ([cliquez pour afficher l’image en taille réelle](creating-a-business-logic-layer-cs/_static/image11.png))
 
-
 Ensuite, créez un gestionnaire d’événements pour le `ColumnChanging` événement qui garantit que le `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`, et `ReorderLevel` les valeurs de colonne (si ce n’est pas `NULL`) sont supérieurs ou égaux à zéro. Si une telle colonne est hors limites, lever une `ArgumentException`.
 
 ProductsDataTable.ColumnChanging.cs
-
 
 [!code-csharp[Main](creating-a-business-logic-layer-cs/samples/sample5.cs)]
 
@@ -180,13 +163,11 @@ Imaginez que notre entreprise déterminée par les règles qu’un produit pas p
 
 Pour appliquer cette règle d’entreprise dans le `UpdateProducts` méthode nous démarre en vérifiant si `Discontinued` a été défini sur `true` et, si par conséquent, nous devrions appeler `GetProductsBySupplierID` pour déterminer combien de produits que nous avons acheté à partir de ce fournisseur. Si seul un produit acheté à partir de ce fournisseur, nous levons une `ApplicationException`.
 
-
 [!code-csharp[Main](creating-a-business-logic-layer-cs/samples/sample6.cs)]
 
 ## <a name="responding-to-validation-errors-in-the-presentation-tier"></a>Répondre aux erreurs de Validation dans la couche de présentation
 
 Lors de l’appel de la couche BLL à partir de la couche de présentation que nous pouvons décider tenter de gérer les exceptions qui peuvent être déclenchées ou leur permettent de se propagent dans ASP.NET (ce qui déclenche la `HttpApplication`de `Error` événement). Pour gérer une exception lorsque vous travaillez par programmation de la couche BLL, nous pouvons utiliser un [try... catch](https://msdn.microsoft.com/library/0yd65esw.aspx) bloc, comme le montre l’exemple suivant :
-
 
 [!code-csharp[Main](creating-a-business-logic-layer-cs/samples/sample7.cs)]
 

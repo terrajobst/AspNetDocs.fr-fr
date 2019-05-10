@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: 67b25f4c-2823-42b6-b07d-1d650b3fd711
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-the-formview-s-templates-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 268403a7b832596421120a24c64580f63eb987c3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ae21259a14378ea6b41f5d45cf2cac6954175dfa
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383878"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109103"
 ---
 # <a name="using-the-formviews-templates-vb"></a>À l’aide de modèles de FormView (VB)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/5/7/0/57084608-dfb3-4781-991c-407d086e2adc/ASPNET_Data_Tutorial_14_VB.exe) ou [télécharger le PDF](using-the-formview-s-templates-vb/_static/datatutorial14vb1.pdf)
 
 > Contrairement à DetailsView, FormView n’est pas composé de champs. Au lieu de cela, le contrôle FormView est restitué à l’aide de modèles. Dans ce didacticiel, nous allons examiner utilisant le contrôle FormView pour présenter un affichage moins rigid de données.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -39,21 +38,17 @@ Contrairement à DetailsView, FormView n’est pas composé de champs. Impossibl
 
 Dans ce didacticiel, nous allons examiner utilisant le contrôle FormView pour présenter un affichage moins rigid de produits. Au lieu d’avoir des champs pour le nom, catégorie, fournisseur et d’ainsi de suite, le contrôle FormView `ItemTemplate` affiche ces valeurs à l’aide d’une combinaison d’un élément d’en-tête et un `<table>` (voir Figure 1).
 
-
 [![Le contrôle FormView découpe de la disposition de grille illustrée dans le contrôle DetailsView](using-the-formview-s-templates-vb/_static/image2.png)](using-the-formview-s-templates-vb/_static/image1.png)
 
 **Figure 1**: Le contrôle FormView quitte la disposition Grid-Like vu dans le contrôle DetailsView ([cliquez pour afficher l’image en taille réelle](using-the-formview-s-templates-vb/_static/image3.png))
-
 
 ## <a name="step-1-binding-the-data-to-the-formview"></a>Étape 1 : Liaison des données pour le contrôle FormView
 
 Ouvrez le `FormView.aspx` page et faites glisser un FormView à partir de la boîte à outils vers le concepteur. Lorsque vous ajoutez le contrôle FormView il apparaît comme une zone grise, en nous demandant qu’un `ItemTemplate` est nécessaire.
 
-
 [![Le contrôle FormView ne peut pas être restitué dans le concepteur jusqu'à ce qu’un modèle ItemTemplate est fourni](using-the-formview-s-templates-vb/_static/image5.png)](using-the-formview-s-templates-vb/_static/image4.png)
 
 **Figure 2**: Les FormView ne peut pas être restitué dans le concepteur jusqu'à ce qu’un `ItemTemplate` est fourni ([cliquez pour afficher l’image en taille réelle](using-the-formview-s-templates-vb/_static/image6.png))
-
 
 Le `ItemTemplate` peuvent être créés manuellement (via la syntaxe déclarative) ou peut être créé automatiquement par le contrôle FormView de liaison à un contrôle de source de données via le concepteur. Cette statistique créée automatiquement `ItemTemplate` contient du code HTML que répertorie le nom de chaque champ et une étiquette de contrôle dont `Text` propriété est liée à la valeur du champ. Cette approche également auto-crée un `InsertItemTemplate` et `EditItemTemplate`, qui sont remplies avec les contrôles d’entrée pour chacun des champs de données retournés par le contrôle de source de données.
 
@@ -62,7 +57,6 @@ Si vous souhaitez créer automatiquement le modèle, à partir de la balise acti
 Si vous créeriez au lieu de cela les `ItemTemplate` manuellement, vous pouvez ajouter et configurer l’ObjectDataSource en le faisant glisser à partir de la boîte à outils vers le concepteur. Toutefois, ne définissez pas source de données de FormView à partir du concepteur. Au lieu de cela, accédez à la vue de Source et définir manuellement le FormView `DataSourceID` propriété le `ID` valeur de l’ObjectDataSource. Ensuite, ajoutez manuellement le `ItemTemplate`.
 
 Quelle que soit quelle approche vous décidé de prendre, à ce stade balisage déclaratif de votre FormView doit ressembler :
-
 
 [!code-aspx[Main](using-the-formview-s-templates-vb/samples/sample1.aspx)]
 
@@ -76,7 +70,6 @@ Ce balisage peut être entré dans via l’interface de modification de modèle 
 
 Le balisage suivant montre le balisage déclaratif FormView après le `ItemTemplate`de structure a été effectuée :
 
-
 [!code-aspx[Main](using-the-formview-s-templates-vb/samples/sample2.aspx)]
 
 Notez que la syntaxe de liaison de données - `<%# Eval("ProductName") %>`, par exemple peut être injecté directement dans la sortie du modèle. Autrement dit, elle ne doive pas être affectée à un contrôle Label `Text` propriété. Par exemple, nous avons le `ProductName` valeur affichée dans un `<h3>` à l’aide de l’élément `<h3><%# Eval("ProductName") %></h3>`, qui, pour le produit Chai s’affiche en tant que `<h3>Chai</h3>`.
@@ -87,16 +80,13 @@ Dans la mesure où aucun CheckBoxFields ne sont disponibles avec le contrôle Fo
 
 Avec la `ItemTemplate` terminée, les informations de produit s’affichent de manière beaucoup plus fluide. Comparez la sortie de DetailsView à partir du dernier didacticiel (Figure 3) avec la sortie générée par le contrôle FormView dans ce didacticiel (Figure 4).
 
-
 [![La sortie de DetailsView rigides](using-the-formview-s-templates-vb/_static/image8.png)](using-the-formview-s-templates-vb/_static/image7.png)
 
 **Figure 3**: La sortie de DetailsView rigide ([cliquez pour afficher l’image en taille réelle](using-the-formview-s-templates-vb/_static/image9.png))
 
-
 [![La sortie de FormView FLUIDE](using-the-formview-s-templates-vb/_static/image11.png)](using-the-formview-s-templates-vb/_static/image10.png)
 
 **Figure 4**: La sortie de FormView fluide ([cliquez pour afficher l’image en taille réelle](using-the-formview-s-templates-vb/_static/image12.png))
-
 
 ## <a name="summary"></a>Récapitulatif
 

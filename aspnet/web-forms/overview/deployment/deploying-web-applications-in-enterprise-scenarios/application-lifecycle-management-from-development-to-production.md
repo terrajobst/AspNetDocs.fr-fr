@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: f97a1145-6470-4bca-8f15-ccfb25fb903c
 msc.legacyurl: /web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: 3b7f154936222c85bd7897ea10cbb5ae9d1aa670
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 230cf4393db0ee19cfc42ed54359d61e7926a49d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408938"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109289"
 ---
 # <a name="application-lifecycle-management-from-development-to-production"></a>Gestion du cycle de vie des applications : du développement à la production
 
@@ -27,7 +27,6 @@ par [Jason Lee](https://github.com/jrjlee)
 > 
 > > [!NOTE]
 > > Par souci de simplicité, cette rubrique n’explique pas la mise à jour des bases de données dans le cadre du processus de déploiement. Toutefois, effectuer des mises à jour incrémentielles aux fonctionnalités de bases de données est une exigence de nombreux scénarios de déploiement d’entreprise, et vous trouverez des conseils sur la façon d’y parvenir plus loin dans cette série de didacticiels. Pour plus d’informations, consultez [déploiement de projets de base de données](../web-deployment-in-the-enterprise/deploying-database-projects.md).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -94,7 +93,6 @@ Pour exécuter le déploiement, un utilisateur exécute le *Publish.proj* fichie
 > Le fonctionnement de ces fichiers de projet personnalisé est indépendant du mécanisme que vous permet d’appeler MSBuild. Par exemple, vous pouvez utiliser la ligne de commande MSBuild directement, comme décrit dans [présentation du fichier projet](../web-deployment-in-the-enterprise/understanding-the-project-file.md). Vous pouvez exécuter les fichiers projet à partir d’un fichier de commandes, comme décrit dans [créer et exécuter un fichier de commandes de déploiement](../web-deployment-in-the-enterprise/creating-and-running-a-deployment-command-file.md). Vous pouvez également exécuter les fichiers projet à partir d’une définition de build dans TFS, comme décrit dans [création d’une définition de Build que le déploiement prend en charge](../configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md).  
 > Dans chaque cas, le résultat final est le même&#x2014;MSBuild exécute le fichier de projet fusionné et déploie votre solution dans l’environnement cible. Cela vous offre une grande flexibilité dans la façon dont vous déclenchez votre processus de publication.
 
-
 Une fois qu’il a créé les fichiers de projet personnalisé, Matt les ajoute à un dossier de solution et les vérifie dans le contrôle de code source.
 
 ### <a name="create-build-definitions"></a>Créer les définitions de build
@@ -125,15 +123,12 @@ Le résultat final est que si la solution est générée avec succès et passe d
 
 Le **DeployToTest** build fournitures de définition de ces arguments à MSBuild :
 
-
 [!code-console[Main](application-lifecycle-management-from-development-to-production/samples/sample1.cmd)]
-
 
 Le **DeployOnBuild = true** et **DeployTarget = package** propriétés sont utilisées lorsque Team Build génère les projets dans la solution. Lorsque le projet est un projet d’application web, ces propriétés demander à MSBuild pour créer un package de déploiement web pour le projet. Le **TargetEnvPropsFile** propriété indique le *Publish.proj* où trouver le fichier de projet spécifique à un environnement à importer de fichiers.
 
 > [!NOTE]
 > Pour obtenir une description détaillée sur la création d’une définition de build comme suit, consultez [création d’une définition de Build que le déploiement prend en charge](../configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md).
-
 
 Le *Publish.proj* fichier contient des cibles qui générer chaque projet dans la solution. Toutefois, il inclut également une logique conditionnelle qu’ignore ces cibles de génération si vous exécutez le fichier dans Team Build. Cela vous permet de tirer parti de la fonctionnalité de génération supplémentaires par Team Build, comme la possibilité d’exécuter des tests unitaires. Si la génération de la solution ou l’unité de tests échouent, le *Publish.proj* fichier n’est pas exécuté et l’application ne sera pas déployée.
 
@@ -164,9 +159,7 @@ Voici la procédure à suivre pour un déploiement dans l’environnement interm
 
 Le **DeployToStaging** build fournitures de définition de ces arguments à MSBuild :
 
-
 [!code-console[Main](application-lifecycle-management-from-development-to-production/samples/sample2.cmd)]
-
 
 Le **TargetEnvPropsFile** propriété indique le *Publish.proj* où trouver le fichier de projet spécifique à un environnement à importer de fichiers. Le **OutputRoot** propriété remplace la valeur intégrée et indique l’emplacement du dossier de build qui contient les ressources que vous souhaitez déployer. Lorsque Rob files d’attente la build, il utilise le **paramètres** onglet pour fournir une valeur mise à jour pour le **OutputRoot** propriété.
 
@@ -175,24 +168,19 @@ Le **TargetEnvPropsFile** propriété indique le *Publish.proj* où trouver le f
 > [!NOTE]
 > Pour plus d’informations sur la création d’une définition de build comme suit, consultez [déployer une Build spécifique](../configuring-team-foundation-server-for-web-deployment/deploying-a-specific-build.md).
 
-
 Le **DeployToStaging-WhatIf** définition de build contient la même logique de déploiement que les **DeployToStaging** définition de build. Toutefois, il inclut l’argument supplémentaire **WhatIf = true**:
 
-
 [!code-console[Main](application-lifecycle-management-from-development-to-production/samples/sample3.cmd)]
-
 
 Dans le *Publish.proj* fichier, le **WhatIf** propriété indique que toutes les ressources de déploiement doivent être publiées en mode « que se passe-t-il si ». En d’autres termes, les fichiers journaux sont générés comme si le déploiement est passé à l’avance, mais rien n’est réellement changé dans l’environnement de destination. Cela vous permet d’évaluer l’impact d’un déploiement proposé&#x2014;en particulier, ce qui seront ajouté, ce qui sera mis à jour, et ce qui sera supprimé&#x2014;avant d’apporter des modifications.
 
 > [!NOTE]
 > Pour plus d’informations sur la façon de configurer des déploiements « que se passe-t-il si », consultez [exécution d’un déploiement « Que se passe-t-il si »](../advanced-enterprise-web-deployment/performing-a-what-if-deployment.md).
 
-
 Une fois que vous avez déployé votre application sur le serveur web principal dans l’environnement intermédiaire, le WFF se synchronise automatiquement l’application sur tous les serveurs dans la batterie de serveurs.
 
 > [!NOTE]
 > Pour plus d’informations sur la configuration de la WFF pour synchroniser les serveurs web, consultez [créer une batterie de serveurs avec l’infrastructure de batterie de serveurs Web](../configuring-server-environments-for-web-deployment/creating-a-server-farm-with-the-web-farm-framework.md).
-
 
 ## <a name="deployment-to-production"></a>Déploiement en Production
 

@@ -8,12 +8,12 @@ ms.date: 01/23/2019
 ms.assetid: 1e1927c0-ded1-4752-80fd-a146628d2f09
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-endpoint
 msc.type: authoredcontent
-ms.openlocfilehash: c6a4aa4eb563fd77d5afd9248175d5f5b7984d19
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 81d134cbd3231b9a0d5537ccbd1bbfe6419254af
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042596"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108713"
 ---
 # <a name="create-an-odata-v4-endpoint-using-aspnet-web-api"></a>Créer un point de terminaison OData v4 à l’aide de l’API Web ASP.NET 
 
@@ -45,8 +45,6 @@ Développez **installé** &gt; **Visual C#**  &gt; **Web**, puis sélectionnez l
 
 Sélectionnez **OK**.
 
-
-
 [![](create-an-odata-v4-endpoint/_static/image8.png)](create-an-odata-v4-endpoint/_static/image8.png)
 
 Sélectionnez le **vide** modèle. Sous **ajouter des dossiers et les références principales pour :**, sélectionnez **API Web**. Sélectionnez **OK**.
@@ -70,7 +68,6 @@ Dans l’Explorateur de solutions, cliquez sur le dossier de modèles. Dans le m
 > [!NOTE]
 > Par convention, les classes de modèle sont placés dans le dossier Modèles, mais vous n’êtes pas obligé de suivre cette convention dans vos propres projets.
 
-
 Nommez la classe `Product`. Dans le fichier Product.cs, remplacez le code réutilisable avec les éléments suivants :
 
 [!code-csharp[Main](create-an-odata-v4-endpoint/samples/sample2.cs)]
@@ -83,7 +80,6 @@ Pour ce didacticiel, nous allons utiliser Code First de Entity Framework (EF) po
 
 > [!NOTE]
 > API Web OData ne nécessite pas d’EF. Utilisez n’importe quelle couche d’accès aux données qui peut traduire des entités de base de données dans des modèles.
-
 
 Tout d’abord, installez le package NuGet pour Entity Framework. Dans le menu **Outils**, sélectionnez **Gestionnaire de package NuGet** &gt; **Console du gestionnaire de package**. Dans la fenêtre de Console du Gestionnaire de Package, tapez :
 
@@ -130,7 +126,6 @@ Dans l’Explorateur de solutions, cliquez sur le dossier contrôleurs, puis sé
 
 > [!NOTE]
 > La version de ce didacticiel pour OData v3 utilise le **ajouter un contrôleur** génération de modèles automatique. Actuellement, il n’existe aucune génération de modèles automatique pour OData v4.
-
 
 Remplacez le code réutilisable dans ProductsController.cs avec les éléments suivants.
 

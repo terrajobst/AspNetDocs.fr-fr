@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: a172979a-1318-4318-a9c6-4f9560d26267
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/customizing-database-deployments-for-multiple-environments
 msc.type: authoredcontent
-ms.openlocfilehash: 865e901618b48bc4bfdc6d7a3ca4e8868d4cb46b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8ae8cb1a322afb95c5d2e8d5e73c7825c7b2fe5a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412981"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108310"
 ---
 # <a name="customizing-database-deployments-for-multiple-environments"></a>Personnalisation de déploiements de base de données pour plusieurs environnements
 
@@ -30,7 +30,6 @@ par [Jason Lee](https://github.com/jrjlee)
 > Lorsque vous déployez un projet de base de données vers plusieurs destinations, vous aurez souvent besoin de personnaliser les propriétés de déploiement de base de données pour chaque environnement cible. Par exemple, dans les environnements de test vous serez généralement recréer la base de données sur chaque déploiement, tandis que dans les environnements de production ou intermédiaire vous serait beaucoup plus susceptibles de rendre les mises à jour incrémentielles pour préserver vos données.
 > 
 > Dans un projet de base de données Visual Studio 2010, les paramètres de déploiement sont contenus dans un fichier de configuration (.sqldeployment) de déploiement. Cette rubrique sera vous montrent comment créer des fichiers de configuration spécifiques à l’environnement de déploiement et de spécifier celui que vous souhaitez utiliser comme paramètre VSDBCMD.
-
 
 Cette rubrique fait partie d’une série de didacticiels basées sur les exigences de déploiement d’entreprise de la société fictive Fabrikam, Inc. Cette série de didacticiels utilise un exemple de solution&#x2014;le [solution Gestionnaire de contacts](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;pour représenter une application web avec un niveau réaliste de complexité, y compris une application ASP.NET MVC 3, une Communication de Windows Foundation (WCF) service et un projet de base de données.
 
@@ -76,11 +75,9 @@ Ce tableau montre les paramètres de déploiement classique pour différents env
 | **Sauvegarder la base de données avant le déploiement** | False | Peut-être | True |
 | **Générer des instructions DROP pour les objets dans la base de données cible, mais qui ne sont pas dans le projet de base de données** | False | True | True |
 | **N’utilisez pas d’instructions ALTER ASSEMBLY pour mettre à jour les types CLR** | False | False | False |
-  
 
 > [!NOTE]
 > Pour plus d’informations sur les propriétés de déploiement de base de données et les considérations sur l’environnement, consultez [une vue d’ensemble de base de données de paramètres de projet](https://msdn.microsoft.com/library/aa833291(v=VS.100).aspx), [Comment : Configurer les propriétés des détails du déploiement](https://msdn.microsoft.com/library/dd172125.aspx), [générer et déployer la base de données à un environnement de développement isolé](https://msdn.microsoft.com/library/dd193409.aspx), et [créer et déployer des bases de données dans un environnement intermédiaire ou d’un environnement de Production](https://msdn.microsoft.com/library/dd193413.aspx).
-
 
 Pour prendre en charge le déploiement d’un projet de base de données vers plusieurs destinations, vous devez créer un fichier de configuration de déploiement pour chaque environnement cible.
 
@@ -104,13 +101,10 @@ Lorsque vous utilisez des configurations de solution (par exemple, Debug et Rele
 
 Pour spécifier un fichier de configuration de déploiement dans votre VSDBCMD, utilisez le **p:/DeploymentConfigurationFile** basculer et fournir le chemin d’accès complet à votre fichier. Cela remplace le fichier de configuration de déploiement qui identifie le manifeste de déploiement. Par exemple, vous pouvez utiliser cette commande VSDBCMD pour déployer le **ContactManager** base de données à un environnement de test :
 
-
 [!code-console[Main](customizing-database-deployments-for-multiple-environments/samples/sample1.cmd)]
-
 
 > [!NOTE]
 > Notez que le processus de génération peut renommer votre fichier .sqldeployment lorsqu’il copie le fichier vers le répertoire de sortie.
-
 
 Si vous utilisez des variables de commande SQL dans vos scripts SQL de prédéploiement ou de post-déploiement, vous pouvez utiliser une approche similaire pour associer un fichier spécifique à l’environnement .sqlcmdvars à votre déploiement. Dans ce cas, vous utilisez le **p:/SqlCommandVariablesFile** commutateur pour identifier votre fichier .sqlcmdvars.
 
@@ -118,9 +112,7 @@ Si vous utilisez des variables de commande SQL dans vos scripts SQL de prédépl
 
 Vous pouvez appeler une commande VSDBCMD à partir d’un fichier projet MSBuild à l’aide un **Exec** tâche dans une cible MSBuild. Dans sa forme la plus simple, elle ressemblerait à ceci :
 
-
 [!code-xml[Main](customizing-database-deployments-for-multiple-environments/samples/sample2.xml)]
-
 
 - Dans la pratique, pour rendre vos fichiers projet facile à lire et à réutiliser, vous souhaiterez créer des propriétés pour stocker les différents paramètres de ligne de commande. Cela rend plus facile pour les utilisateurs à fournir des valeurs de propriété dans un fichier de projet spécifique à l’environnement ou à remplacer les valeurs par défaut à partir de la ligne de commande MSBuild. Si vous utilisez l’approche de fichier de projet de fractionnement décrite dans [présentation du fichier de projet](../web-deployment-in-the-enterprise/understanding-the-project-file.md), vous devez diviser vos instructions de génération et les propriétés entre les deux fichiers en conséquence :
 - Les paramètres spécifiques à l’environnement, telles que le nom de fichier de configuration de déploiement, la chaîne de connexion de base de données et le nom de la base de données cible doit être placé dans le fichier de projet spécifique à l’environnement.

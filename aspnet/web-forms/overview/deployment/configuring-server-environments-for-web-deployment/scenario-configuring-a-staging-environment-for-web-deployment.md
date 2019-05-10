@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 5a8e49b7-5317-4125-b107-7e2466b47bb3
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 7e66c6cd8c7296b889dfe6cc1ebd1eb62cda10ea
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: eaa61ca850817f8dd98955b59e94be93389bf256
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384322"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106846"
 ---
 # <a name="scenario-configuring-a-staging-environment-for-web-deployment"></a>Scénario : configuration d’un environnement de préproduction pour le déploiement web
 
@@ -22,7 +22,6 @@ par [Jason Lee](https://github.com/jrjlee)
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit un scénario de déploiement web typique pour un environnement intermédiaire et décrit les tâches que vous devez suivre pour configurer un environnement similaire.
-
 
 Un grand nombre d’organisations utilisent des environnements intermédiaires pour afficher un aperçu des mises à jour des applications web ou sites Web. Cela donne des personnes au sein de l’organisation une occasion d’Explorer et d’examiner les nouvelles fonctionnalités ou contenu avant que le site « publiée », ou en d’autres termes, est déployé dans un environnement de production. L’environnement intermédiaire est conçu pour répliquer l’environnement de production aussi fidèlement que possible, afin de fournir un aperçu réaliste. Ce type d’environnement intermédiaire a en général, ces caractéristiques :
 
@@ -33,7 +32,6 @@ Un grand nombre d’organisations utilisent des environnements intermédiaires p
 
 > [!NOTE]
 > Montée en charge un déploiement de base de données sur plusieurs serveurs n’entre pas dans le cadre de ce didacticiel. Pour plus d’informations sur ce sujet, consultez [la documentation en ligne de SQL Server](https://technet.microsoft.com/library/ms130214.aspx).
-
 
 Par exemple, dans notre [scénario du didacticiel](../deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md), Team Foundation Server (TFS) gère la solution Gestionnaire de contacts. L’administrateur TFS, Rob Walters, a créé une définition de build qui permet aux développeurs de déclencher un déploiement dans l’environnement intermédiaire en fonction des besoins.
 

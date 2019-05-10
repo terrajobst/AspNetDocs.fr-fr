@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: c3b0c86e-fe98-41ee-b26f-ca38cddaa75e
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/an-overview-of-editing-and-deleting-data-in-the-datalist-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 7e29ae36b81b08df2b6f52e0f6d9e1a10d9b6f19
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a1ea830bc2fe5a88bc80416375e7bfd7959b667e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384927"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108372"
 ---
 # <a name="an-overview-of-editing-and-deleting-data-in-the-datalist-c"></a>Une vue d’ensemble de la modification et suppression de données dans le contrôle DataList (c#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_36_CS.exe) ou [télécharger le PDF](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/datatutorial36cs1.pdf)
 
 > Tandis que le contrôle DataList ne dispose pas de modification intégrée et la suppression de fonctionnalités, que vous dans ce didacticiel, nous allons voir comment créer un contrôle DataList qui prend en charge la modification et suppression de ses données sous-jacentes.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -34,7 +33,6 @@ Dans ce didacticiel, nous allons voir comment créer un contrôle DataList qui p
 
 > [!NOTE]
 > Comme le contrôle DataList, le contrôle Repeater ne dispose pas hors de la fonctionnalité de zone d’insertion, de mise à jour ou de suppression. Bien que ces fonctionnalités peuvent être ajoutées, le contrôle DataList inclut propriétés et événements introuvable dans le répéteur qui simplifient l’ajout de ces fonctionnalités. Par conséquent, ce didacticiel et futurs qui examinent la modification et suppression concentrerons strictement sur le contrôle DataList.
-
 
 ## <a name="step-1-creating-the-editing-and-deleting-tutorials-web-pages"></a>Étape 1 : Créer les Pages Web Didacticiels Édition et la suppression
 
@@ -50,32 +48,25 @@ Avant de commencer expliquant comment mettre à jour et supprimer des données �
 - `ConfirmationOnDelete.aspx`
 - `UserLevelAccess.aspx`
 
-
 ![Ajouter les Pages ASP.NET pour les didacticiels](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image1.png)
 
 **Figure 1**: Ajouter les Pages ASP.NET pour les didacticiels
 
-
 Comme dans les autres dossiers, `Default.aspx` dans le `EditDeleteDataList` dossier répertorie les didacticiels dans sa section. N’oubliez pas que le `SectionLevelTutorialListing.ascx` contrôle utilisateur fournit cette fonctionnalité. Par conséquent, ajoutez ce contrôle utilisateur à `Default.aspx` en le faisant glisser à partir de l’Explorateur de solutions sur la page s en mode Création.
-
 
 [![Ajouter le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image3.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image2.png)
 
 **Figure 2**: Ajouter le `SectionLevelTutorialListing.ascx` contrôle utilisateur à `Default.aspx` ([cliquez pour afficher l’image en taille réelle](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image4.png))
 
-
 Enfin, ajoutez les pages en tant qu’entrées pour le `Web.sitemap` fichier. Plus précisément, ajoutez le balisage suivant après les rapports maître/détail avec les contrôles DataList et Repeater `<siteMapNode>`:
-
 
 [!code-xml[Main](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/samples/sample1.xml)]
 
 Après la mise à jour `Web.sitemap`, prenez un moment pour afficher le site Web de didacticiels via un navigateur. Le menu de gauche inclut maintenant des éléments pour le contrôle DataList de modification et suppression des didacticiels.
 
-
 ![Le plan de Site inclut maintenant des entrées pour le contrôle DataList de modification et suppression des didacticiels](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image5.png)
 
 **Figure 3**: Le plan de Site inclut maintenant des entrées pour le contrôle DataList de modification et suppression des didacticiels
-
 
 ## <a name="step-2-examining-techniques-for-updating-and-deleting-data"></a>Étape 2 : Examen des Techniques pour la mise à jour et suppression de données
 
@@ -106,49 +97,39 @@ Dans ce didacticiel, nous allons créer un contrôle DataList qui affiche des in
 
 Commencez par ouvrir le `Basics.aspx` page dans le `EditDeleteDataList` dossier et, à partir de la vue conception, ajoutez un contrôle DataList à la page. Ensuite, à partir de la balise active de s DataList, créez un nouveau ObjectDataSource. Étant donné que nous travaillons en collaboration avec les données de produit, configurez-le pour utiliser le `ProductsBLL` classe. Pour récupérer *tous les* produits, choisissez le `GetProducts()` méthode dans l’onglet sélection.
 
-
 [![Configurer pour utiliser la classe ProductsBLL ObjectDataSource](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image7.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image6.png)
 
 **Figure 4**: Configurer l’ObjectDataSource à utiliser le `ProductsBLL` classe ([cliquez pour afficher l’image en taille réelle](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image8.png))
-
 
 [![Retourner les informations de produit à l’aide de la méthode GetProducts()](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image10.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image9.png)
 
 **Figure 5**: Retourner les informations de produit en utilisant le `GetProducts()` (méthode) ([cliquez pour afficher l’image en taille réelle](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image11.png))
 
-
 Le contrôle DataList, tels que le contrôle GridView, n’est pas conçu pour l’insertion de nouvelles données ; Par conséquent, sélectionnez (aucun) option dans la liste déroulante dans l’onglet Insertion. Choisissez également (aucune) pour les onglets de la mise à jour et suppression depuis les mises à jour et suppressions se fera par programmation via la couche BLL.
-
 
 [![Vérifiez que les listes déroulantes dans le s ObjectDataSource insertion, mise à jour et supprimer des onglets sont définis à (None)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image13.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image12.png)
 
 **Figure 6**: Vérifiez que la liste déroulante répertorie ObjectDataSource s insertion, mise à jour, et supprimer des onglets sont définis à (None) ([cliquez pour afficher l’image en taille réelle](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image14.png))
-
 
 Après avoir configuré l’ObjectDataSource, cliquez sur Terminer, retourner au concepteur. Comme nous ve vu dans ces exemples, lorsque vous terminez la configuration ObjectDataSource, Visual Studio automatiquement crée un `ItemTemplate` pour l’objet DropDownList, affichage de chacun des champs de données. Remplacez ceci `ItemTemplate` avec celui qui affiche uniquement le nom de produit s et le prix. En outre, définissez le `RepeatColumns` propriété à 2.
 
 > [!NOTE]
 > Comme indiqué dans le *vue d’ensemble de l’insertion, mise à jour et suppression des données* (didacticiel), lors de la modification des données à l’aide de l’ObjectDataSource notre architecture requiert que nous supprimons le `OldValuesParameterFormatString` propriété à partir de l’ObjectDataSource s balisage déclaratif (ou le réinitialiser à sa valeur par défaut, `{0}`). Dans ce didacticiel, toutefois, nous utilisons l’ObjectDataSource uniquement pour récupérer des données. Par conséquent, nous n’avez pas besoin de modifier les opérations de mappage ObjectDataSource `OldValuesParameterFormatString` valeur de propriété (bien qu’il ne fait pas de mal pour faire).
 
-
 Après avoir remplacé la valeur par défaut DataList `ItemTemplate` avec une, le balisage déclaratif sur votre page doit ressembler à ce qui suit :
-
 
 [!code-aspx[Main](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/samples/sample2.aspx)]
 
 Prenez un moment pour consulter notre progression via un navigateur. Comme le montre la Figure 7, le contrôle DataList affiche le produit nom et le prix unitaire pour chaque produit dans deux colonnes.
 
-
 [![Les noms de produits et les prix sont affichés dans un contrôle DataList de deux colonnes](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image16.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image15.png)
 
 **Figure 7**: Les noms de produits et les prix sont affichés dans un contrôle DataList de deux colonnes ([cliquez pour afficher l’image en taille réelle](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image17.png))
-
 
 > [!NOTE]
 > Le contrôle DataList a un nombre de propriétés qui sont requis pour le processus de mise à jour et suppression, et ces valeurs sont stockées dans l’état d’affichage. Par conséquent, lors de la création d’un contrôle DataList qui prend en charge la modification ou la suppression des données, il est essentiel que l’état d’affichage DataList s soit activé.  
 >   
 > Le lecteur astucieux suggérait que nous avons pu désactiver l’état d’affichage lors de la création modifiable des contrôles GridView, DetailsViews et FormViews. Il s’agit, car les contrôles Web ASP.NET 2.0 peuvent inclure *état du contrôle*, qui est état rendu persistant entre les postbacks comme état d’affichage, mais essentielles présumé.
-
 
 Désactiver l’affichage de l’état dans le contrôle GridView simplement omet les informations d’état simple, mais conserve l’état du contrôle (qui inclut l’état nécessaire pour la modification et suppression). Le contrôle DataList, ayant été créé dans le délai d’exécution ASP.NET 1.x, n’utilise pas l’état du contrôle et doit donc état d’affichage est activé. Consultez [vs d’état du contrôle. État d’affichage](https://msdn.microsoft.com/library/1whwt1k7.aspx) pour plus d’informations sur l’objectif de l’état du contrôle et la façon dont il diffère de l’état d’affichage.
 
@@ -160,30 +141,24 @@ Le contrôle DataList, restitue quant à eux, ses éléments à l’aide de mod�
 
 Le `EditItemTemplate` peuvent être créés soit de manière déclarative ou par le biais du concepteur (en sélectionnant l’option Modifier les modèles à partir de la balise active DataList s). Pour utiliser l’option Modifier les modèles, cliquez d’abord sur le lien Modifier les modèles dans la balise active, puis le `EditItemTemplate` élément dans la liste déroulante.
 
-
 [![Opter pour travailler avec DataList s EditItemTemplate](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image19.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image18.png)
 
 **Figure 8**: Opter pour travailler avec le contrôle DataList s `EditItemTemplate` ([cliquez pour afficher l’image en taille réelle](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image20.png))
 
-
 Ensuite, tapez dans nom du produit : et prix : puis faites glisser deux contrôles TextBox à partir de la boîte à outils dans le `EditItemTemplate` interface sur le concepteur. Définir les zones de texte `ID` propriétés à `ProductName` et `UnitPrice`.
-
 
 [![Ajouter une zone de texte pour le nom de produit s et le prix](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image22.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image21.png)
 
 **Figure 9**: Ajouter une zone de texte pour le nom de produit et un prix ([cliquez pour afficher l’image en taille réelle](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image23.png))
-
 
 Nous avons besoin lier les valeurs de champ de données produit correspondant à la `Text` propriétés des deux zones de texte. Dans les balises actives de zones de texte, cliquez sur le lien Modifier les DataBindings, puis associez le champ de données appropriées avec la `Text` propriété, comme illustré dans la Figure 10.
 
 > [!NOTE]
 > Lors de la liaison la `UnitPrice` champ de données au prix de zone de texte s `Text` champ, vous pouvez mettez-la en forme comme une valeur monétaire (`{0:C}`), un nombre Général (`{0:N}`), ou laissez-le sans mise en forme.
 
-
 ![Lier le ProductName et les champs de données de prix unitaire pour les propriétés de texte des zones de texte](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image24.png)
 
 **Figure 10**: Lier le `ProductName` et `UnitPrice` des champs de données pour le `Text` propriétés des zones de texte
-
 
 Notez en quoi la boîte de dialogue Modifier les DataBindings dans la Figure 10 *pas* incluent la case à cocher de liaison de données bidirectionnelle est présent lors de la modification d’un TemplateField dans le contrôle GridView ou DetailsView, ou un modèle dans le contrôle FormView. La fonctionnalité de liaison de données bidirectionnelle autorisés la valeur entrée dans le contrôle Web d’entrée soit attribué automatiquement au s ObjectDataSource correspondant `InsertParameters` ou `UpdateParameters` pendant l’insertion ou la mise à jour des données. Le contrôle DataList ne prend pas en charge la liaison de données bidirectionnelle nous verrons plus tard dans ce didacticiel, une fois l’utilisateur effectue sa change et est prêt à mettre à jour les données, nous devons accéder par programmation à ces zones de texte `Text` propriétés et leurs valeurs à passer le appropriée `UpdateProduct` méthode dans la `ProductsBLL` classe.
 
@@ -197,14 +172,11 @@ N’oubliez pas que ces événements sont déclenchés *outre* le `ItemCommand` 
 
 Ajouter à la `EditItemTemplate` deux contrôles bouton, un dont `CommandName` est défini sur la mise à jour et les autres s défini sur Annuler. Après avoir ajouté ces deux contrôles bouton Web le concepteur doit ressembler à ce qui suit :
 
-
 [![Ajouter la mise à jour et annuler des boutons à EditItemTemplate](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image26.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image25.png)
 
 **Figure 11**: Ajouter la mise à jour et les boutons Annuler le `EditItemTemplate` ([cliquez pour afficher l’image en taille réelle](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image27.png))
 
-
 Avec le `EditItemTemplate` complète votre balisage déclaratif DataList s doit ressembler à ce qui suit :
-
 
 [!code-aspx[Main](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/samples/sample3.aspx)]
 
@@ -214,11 +186,9 @@ Avec le `EditItemTemplate` complète votre balisage déclaratif DataList s doit 
 
 Une fois que vous avez ajouté ce bouton Modifier, prenez un moment pour afficher la page via un navigateur. Ainsi, chaque liste de produits doit inclure un bouton Modifier.
 
-
 [![Ajouter la mise à jour et annuler des boutons à EditItemTemplate](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image29.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image28.png)
 
 **Figure 12**: Ajouter la mise à jour et les boutons Annuler le `EditItemTemplate` ([cliquez pour afficher l’image en taille réelle](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image30.png))
-
 
 En cliquant sur le bouton provoque une publication (postback), contrairement à *pas* mettre le produit listing en mode édition. Pour rendre le produit modifiables, nous devons :
 
@@ -227,18 +197,15 @@ En cliquant sur le bouton provoque une publication (postback), contrairement à 
 
 Depuis le contrôle DataList s `EditCommand` événement est déclenché lorsque l’utilisateur clique sur le bouton Modifier, créer un `EditCommand` Gestionnaire d’événements par le code suivant :
 
-
 [!code-csharp[Main](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/samples/sample4.cs)]
 
 Le `EditCommand` est transmis au gestionnaire d’événements dans un objet de type `DataListCommandEventArgs` en tant que son deuxième paramètre d’entrée, qui inclut une référence à la `DataListItem` dont bouton Modifier (`e.Item`). Le Gestionnaire d’événements définit tout d’abord le contrôle DataList s `EditItemIndex` à la `ItemIndex` de la liste modifiable `DataListItem` , puis relie les données pour le contrôle DataList en appelant le contrôle DataList s `DataBind()` (méthode).
 
 Après avoir ajouté ce gestionnaire d’événements, visitez la page dans un navigateur. En cliquant sur le bouton Modifier maintenant rend l’utilisateur a cliqué dessus produit modifiable (voir Figure 13).
 
-
 [![En cliquant sur le fait de bouton Modifier le produit modifiable](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image32.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image31.png)
 
 **Figure 13**: En cliquant sur le bouton Modifier permet du modifier de produit ([cliquez pour afficher l’image en taille réelle](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image33.png))
-
 
 ## <a name="step-6-saving-the-user-s-changes"></a>Étape 6 : L’enregistrement des modifications utilisateur s
 
@@ -250,7 +217,6 @@ Pour que le contrôle DataList restituer tous ses éléments dans le mode lectur
 2. Relier les données pour le contrôle DataList. Depuis non `DataListItem` `ItemIndex` es correspondent à la DataList s `EditItemIndex`, le contrôle DataList entière sera rendu dans un mode en lecture seule.
 
 Ces étapes peuvent être effectuées avec le code de gestionnaire d’événements suivantes :
-
 
 [!code-csharp[Main](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/samples/sample5.cs)]
 
@@ -269,7 +235,6 @@ Pour obtenir le nom du produit mis à jour et le prix, nous devons utiliser le `
 
 Le code suivant implémente les quatre étapes :
 
-
 [!code-csharp[Main](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/samples/sample6.cs)]
 
 Le Gestionnaire d’événements démarre en lisant le produit modifié s `ProductID` à partir de la `DataKeys` collection. Ensuite, les deux zones de texte dans le `EditItemTemplate` sont référencés et leurs `Text` propriétés stockées dans des variables locales, `productNameValue` et `unitPriceValue`. Nous utilisons le `Decimal.Parse()` méthode pour lire la valeur de la `UnitPrice` zone de texte afin qu’en cas de la valeur entrée a un symbole de devise, il peut toujours être correctement converti en un `Decimal` valeur.
@@ -277,26 +242,21 @@ Le Gestionnaire d’événements démarre en lisant le produit modifié s `Produ
 > [!NOTE]
 > Les valeurs à partir de la `ProductName` et `UnitPrice` zones de texte sont uniquement affectées aux variables productNameValue et unitPriceValue si les propriétés de texte des zones de texte ont une valeur spécifiée. Sinon, une valeur de `Nothing` est utilisé pour les variables, ce qui a pour effet de mettre à jour les données avec une base de données `NULL` valeur. Autrement dit, notre code traite convertit des chaînes à la base de données vides `NULL` valeurs, qui est le comportement par défaut de l’interface de modification dans les contrôles GridView, DetailsView et FormView.
 
-
 Après avoir lu les valeurs, le `ProductsBLL` classe s `UpdateProduct` est appelée, en passant le nom de produit s, prix, et `ProductID`. Le Gestionnaire d’événements se termine en renvoyant le contrôle DataList à son état préalable édition à l’aide de la même logique exactement comme dans le `CancelCommand` Gestionnaire d’événements.
 
 Avec le `EditCommand`, `CancelCommand`, et `UpdateCommand` terminer des gestionnaires d’événements, un visiteur peut modifier le nom et le prix d’un produit. Du 14 au 16 chiffres montrant ce flux de travail en action.
-
 
 [![Lorsque la première visite de la Page, tous les produits sont en Mode lecture seule](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image35.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image34.png)
 
 **Figure 14**: Lors de la première visite la Page, tous les produits sont en Mode lecture seule ([cliquez pour afficher l’image en taille réelle](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image36.png))
 
-
 [![Pour mettre à jour un s nom ou le prix du produit, cliquez sur le bouton Modifier](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image38.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image37.png)
 
 **Figure 15**: Pour mettre à jour d’un nom de produit ou le prix, cliquez sur le bouton Modifier ([cliquez pour afficher l’image en taille réelle](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image39.png))
 
-
 [![Après avoir modifié la valeur, cliquez sur la mise à jour pour retourner au Mode en lecture seule](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image41.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image40.png)
 
 **Figure 16**: Après avoir modifié la valeur, cliquez sur la mise à jour pour retourner au Mode en lecture seule ([cliquez pour afficher l’image en taille réelle](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image42.png))
-
 
 ## <a name="step-7-adding-delete-capabilities"></a>Étape 7 : Ajout de fonctionnalités de suppression
 
@@ -312,11 +272,9 @@ Lorsque vous cliquez sur, un bouton dont `CommandName` est mise à jour, modifie
 
 Ajouter un bouton Supprimer en regard du bouton Modifier dans le `ItemTemplate`, ce qui affecte ses `CommandName` propriété à supprimer. Après avoir ajouté ce contrôle bouton votre DataList s `ItemTemplate` syntaxe déclarative doit ressembler à :
 
-
 [!code-aspx[Main](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/samples/sample7.aspx)]
 
 Ensuite, créez un gestionnaire d’événements pour le contrôle DataList s `DeleteCommand` événement, en utilisant le code suivant :
-
 
 [!code-csharp[Main](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/samples/sample8.cs)]
 

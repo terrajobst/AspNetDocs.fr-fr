@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: f11d22a7-5d32-4ad0-8a9b-276460a61c06
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/manually-installing-web-packages
 msc.type: authoredcontent
-ms.openlocfilehash: 9d0e57eb85242a0d6fa8ca9eef7f6c741862069d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f778549d3e26989a2e71ef21171adec521842729
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408795"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132130"
 ---
 # <a name="manually-installing-web-packages"></a>Installation manuelle de packages web
 
@@ -29,7 +29,6 @@ par [Jason Lee](https://github.com/jrjlee)
 > 
 > Dans ces scénarios, votre seule option peut être le package web sur le serveur de destination du port et l’importer manuellement dans IIS. Bien que cette approche empêche le déploiement automatisé, il est toujours une technique très efficace pour publier une application web&#x2014;vous simplement de copier un seul fichier zip sur votre serveur web et d’utiliser un Assistant pour vous guider tout au long du processus d’importation.
 
-
 Cette rubrique fait partie d’une série de didacticiels basées sur les exigences de déploiement d’entreprise de la société fictive Fabrikam, Inc. Cette série de didacticiels utilise un exemple de solution&#x2014;le [solution Gestionnaire de contacts](the-contact-manager-solution.md)&#x2014;pour représenter une application web avec un niveau réaliste de complexité, y compris une application ASP.NET MVC 3, une Communication de Windows Foundation (WCF) service et un projet de base de données.
 
 ## <a name="task-overview"></a>Présentation de la tâche
@@ -44,7 +43,6 @@ Cette rubrique sera vous montrent comment effectuer ces procédures. Les tâches
 
 > [!NOTE]
 > Cette rubrique est mieux utilisée conjointement avec [configurer un serveur Web pour déployer publication sur le Web (déploiement hors connexion)](../configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md), qui explique comment installer les composants requis et préparer un site Web IIS pour l’importation du package.
-
 
 ## <a name="create-a-web-deployment-package"></a>Créer un Package de déploiement Web
 
@@ -68,9 +66,7 @@ Vous pouvez créer un package de déploiement web pour un projet d’application
 
 Vous pouvez créer un package de déploiement web à partir de la ligne de commande en appelant le **Package** cible sur votre projet d’application web à l’aide de MSBuild. La commande doit ressembler à ceci :
 
-
 [!code-console[Main](manually-installing-web-packages/samples/sample1.cmd)]
-
 
 Selon l’approche que vous utilisez, le résultat final est le même. Les fournisseurs de services crée un package de déploiement web dans un fichier zip, ainsi que diverses ressources de prise en charge, dans le dossier de sortie pour votre projet d’application web.
 

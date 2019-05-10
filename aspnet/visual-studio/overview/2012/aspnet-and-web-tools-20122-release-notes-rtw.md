@@ -8,17 +8,16 @@ ms.date: 02/14/2013
 ms.assetid: 9534e58b-1d15-4f1d-b04c-10c79b9d8227
 msc.legacyurl: /visual-studio/overview/2012/aspnet-and-web-tools-20122-release-notes-rtw
 msc.type: content
-ms.openlocfilehash: e4545f36d5a2668bc6a21249a89a94ece9bb2ca2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: abd6d8ce0646852a194369589cb730fc98ecb3ad
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59397979"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113144"
 ---
 # <a name="aspnet-and-web-tools-20122-release-notes"></a>ASP.NET et Web Tools 2012.2 - Notes de publication
 
 > Ce document décrit la version d’ASP.NET et Web Tools 2012.2. Il est une mise à jour des outils de Visual Studio Web et ASP.NET.
-
 
 - [Notes d’installation](#_Installation)
 - [Documentation](#_Documentation)

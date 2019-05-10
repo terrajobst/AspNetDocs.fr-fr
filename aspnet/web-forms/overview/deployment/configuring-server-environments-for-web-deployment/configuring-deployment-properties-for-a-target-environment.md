@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: b5b86e03-b8ed-46e6-90fa-e1da88ef34e9
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment
 msc.type: authoredcontent
-ms.openlocfilehash: 74fc0f4cb7d3ed7d1ef091cdb8fa829091af5a7a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9742be7d718384c1b108d5f2c0c43e8e8d4fe8a9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388684"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108671"
 ---
 # <a name="configuring-deployment-properties-for-a-target-environment"></a>Configuration des propriétés de déploiement pour un environnement cible
 
@@ -22,7 +22,6 @@ par [Jason Lee](https://github.com/jrjlee)
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit comment configurer les propriétés spécifiques à l’environnement pour déployer l’exemple de solution de gestionnaire de contacts dans un environnement cible spécifique.
-
 
 Cette rubrique fait partie d’une série de didacticiels basées sur les exigences de déploiement d’entreprise de la société fictive Fabrikam, Inc. Cette série de didacticiels utilise un exemple de solution&#x2014;le [Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md) solution&#x2014;pour représenter une application web avec un niveau réaliste de complexité, y compris une application ASP.NET MVC 3, une Communication de Windows Foundation (WCF) service et un projet de base de données.
 
@@ -64,7 +63,6 @@ Pour déployer la solution Gestionnaire de contacts sur votre propre environneme
 
 Ce tableau décrit l’objectif de chaque propriété dans l’exemple de fichier de projet spécifique à l’environnement, *Env-Dev.proj*et fournit des conseils sur les valeurs que vous devez fournir.
 
-
 |                                                        Nom de la propriété                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Détails                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |              <strong>MSDeployComputerName</strong> le nom de la destination serveur ou le service point de terminaison web.               |                                                                                                                                                                                                                                              Si vous déployez dans le service de l’agent distant sur le serveur web de destination, vous pouvez spécifier le nom de l’ordinateur cible (par exemple, <strong>TESTWEB1</strong> ou <strong>TESTWEB1.fabrikam.net</strong>), ou vous pouvez spécifier l’instance distante point de terminaison de l’agent (par exemple, `http://TESTWEB1/MSDEPLOYAGENTSERVICE`). Le déploiement fonctionne de la même façon dans chaque cas. Si vous déployez dans le Gestionnaire de déploiement Web sur le serveur web de destination, vous devez spécifier le point de terminaison de service et inclure le nom du site Web IIS comme un paramètre de chaîne de requête (par exemple, `https://STAGEWEB1:8172/MSDeploy.axd?site=DemoSite`).                                                                                                                                                                                                                                              |
@@ -87,9 +85,7 @@ Dans cet exemple :
 - Vous indiquez Web Deploy pour utiliser l’authentification NTLM. Web Deploy s’exécute en utilisant les informations d’identification que vous avez utilisé pour appeler Microsoft Build Engine (MSBuild).
 - Vous utilisez l’authentification intégrée pour déployer le **ContactManager** base de données TESTDB1. La base de données sera déployée à l’aide des informations d’identification que vous avez utilisé pour appeler MSBuild.
 
-
 [!code-xml[Main](configuring-deployment-properties-for-a-target-environment/samples/sample1.xml)]
-
 
 ### <a name="example-2x2014deployment-to-the-web-deploy-handler-endpoint"></a>Exemple 2&#x2014;Gestionnaire de point de terminaison de déploiement de déploiement sur le Web
 
@@ -100,9 +96,7 @@ Dans cet exemple :
 - Vous spécifiez que Web Deploy doit emprunter l’identité du compte FABRIKAM\stagingdeployer sur l’ordinateur distant.
 - Vous utilisez l’authentification SQL Server pour déployer le **ContactManager** STAGEDB1 base de données.
 
-
 [!code-xml[Main](configuring-deployment-properties-for-a-target-environment/samples/sample2.xml)]
-
 
 ## <a name="conclusion"></a>Conclusion
 

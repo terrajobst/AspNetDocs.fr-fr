@@ -8,12 +8,12 @@ ms.date: 03/28/2008
 ms.assetid: 54d9df99-1161-4899-b4e8-2679c85915e7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax
 msc.type: authoredcontent
-ms.openlocfilehash: d2d7982a4e0175824ffede965dc8206219485df2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: aa842aeb228abc763540d8ca8dafdfdca0b8b395
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396471"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109015"
 ---
 # <a name="understanding-partial-page-updates-with-aspnet-ajax"></a>Présentation des mises à jour de page partielles avec ASP.NET AJAX
 
@@ -22,7 +22,6 @@ par [Scott Cate](https://github.com/scottcate)
 [Télécharger PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial01_Partial_Page_Updates_cs.pdf)
 
 > La fonctionnalité la plus visible des Extensions ASP.NET AJAX est peut-être la possibilité d’effectuer des mises à jour une page partielle ou incrémentielle sans effectuer une publication automatique complète sur le serveur, sans modifications de code et les changements de balise minimal. Les avantages sont étendues : l’état de vos éléments multimédias (par exemple, Adobe Flash ou un support de Windows) est inchangé, coûts de bande passante sont réduits, et le client ne connaît pas le scintillement généralement associé à une publication (postback).
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -48,7 +47,6 @@ La possibilité d’intégrer le rendu de page partielle est intégrée à ASP.N
 
 ## <a name="walkthrough-integrating-partial-rendering-into-an-existing-project"></a>Procédure pas à pas : L’intégration de rendu partiel dans un projet existant
 
-
 1. Dans Microsoft Visual Studio 2008, créez un projet de Site Web ASP.NET en accédant à <em>fichier</em>  <em>- &gt; New</em>  <em>- &gt; le Site Web</em> et en sélectionnant le Site Web ASP.NET à partir de la boîte de dialogue. Vous pouvez le nommer comme vous le souhaitez, et vous pouvez l’installer dans le système de fichiers ou dans les Services Internet (IIS).
 2. S’affiche avec la page par défaut vide avec le balisage de base ASP.NET (un formulaire côté serveur et un `@Page` directive). Supprimer une étiquette appelée `Label1` et un bouton appelé `Button1` sur la page dans l’élément de formulaire. Vous pouvez définir leurs propriétés de texte à votre convenance.
 3. En mode conception, double-cliquez sur `Button1` pour générer un gestionnaire d’événements de code-behind. Dans ce gestionnaire d’événements, définissez `Label1.Text` à, vous avez cliqué sur le bouton ! .
@@ -64,11 +62,9 @@ La possibilité d’intégrer le rendu de page partielle est intégrée à ASP.N
 1. Appuyez sur F5 pour lancer votre site web. Visual Studio vous invite à ajouter un fichier web.config pour activer le débogage ; le faire. Lorsque vous cliquez sur le bouton, notez que la page est actualisée pour modifier le texte dans l’étiquette, et il existe un scintillement brève comme la page est redessinée.
 2. Après la fermeture de la fenêtre du navigateur, retournez à Visual Studio et à la page de balisage. Défiler vers le bas dans la boîte à outils Visual Studio et l’onglet Extensions AJAX. (Si vous n’avez pas cet onglet, car vous utilisez une version antérieure des extensions AJAX ou Atlas, reportez-vous à la procédure pas à pas pour enregistrer les éléments de boîte à outils des Extensions AJAX plus loin dans ce livre blanc, ou installez la version actuelle avec le programme d’installation de Windows téléchargeable à partir du site Web).
 
-
 [![](understanding-partial-page-updates-with-asp-net-ajax/_static/image2.png)](understanding-partial-page-updates-with-asp-net-ajax/_static/image1.png)
 
 ([Cliquez pour afficher l’image en taille réelle](understanding-partial-page-updates-with-asp-net-ajax/_static/image3.png))
-
 
 1. <em>Problème connu :</em>si vous installez Visual Studio 2008 sur un ordinateur équipé de Visual Studio 2005 est installé avec les Extensions ASP.NET 2.0 AJAX, Visual Studio 2008 importe les éléments de boîte à outils AJAX Extensions. Vous pouvez déterminer si c’est le cas en examinant l’info-bulle des composants ; Il doivent indiquer la Version 3.5.0.0. S’ils disent Version 2.0.0.0, puis vous avez importé vos anciens éléments de boîte à outils et devez les importer manuellement à l’aide de la boîte de dialogue Choisir des éléments de boîte à outils dans Visual Studio. Il se peut que vous ne pourrez pas ajouter des contrôles de Version 2 via le concepteur.
 
@@ -76,11 +72,9 @@ La possibilité d’intégrer le rendu de page partielle est intégrée à ASP.N
 3. Faites glisser la fermeture `</asp:UpdatePanel>` balise après la fin de l’élément Button, afin que l’élément soit bien formé avec les contrôles Label et Button encapsulés.
 4. Après l’ouverture `<asp:UpdatePanel>` balise, commencer une nouvelle balise d’ouverture. Notez qu’IntelliSense vous présente deux options. Dans ce cas, créez un `<ContentTemplate>` balise. Veillez à encapsuler cette balise autour de votre étiquette et un bouton afin que le balisage est bien formé.
 
-
 [![](understanding-partial-page-updates-with-asp-net-ajax/_static/image5.png)](understanding-partial-page-updates-with-asp-net-ajax/_static/image4.png)
 
 ([Cliquez pour afficher l’image en taille réelle](understanding-partial-page-updates-with-asp-net-ajax/_static/image6.png))
-
 
 1. N’importe où dans le `<form>` élément, inclure un contrôle ScriptManager en double-cliquant sur le `ScriptManager` élément dans la boîte à outils.
 2. Modifier le `<asp:ScriptManager>` balise afin qu’il inclue l’attribut `EnablePartialRendering= true`.
@@ -93,11 +87,9 @@ La possibilité d’intégrer le rendu de page partielle est intégrée à ASP.N
 
 1. Quelles sont les nouveautés dans Visual Studio 2008 : Le fichier web.config qui est fourni avec le Site de Web ASP.NET modèles de projet automatiquement inclut toutes les références nécessaires pour les Extensions ASP.NET AJAX et inclut les sections d’informations de configuration qui peuvent être non commentée pour activer supplémentaires commentées fonctionnalité. Visual Studio 2005 avaient des modèles similaires lorsque ASP.NET 2.0 AJAX Extensions ont été installées. Toutefois, dans Visual Studio 2008, les Extensions AJAX sont opt-out par défaut (autrement dit, ils sont référencés par défaut, mais peuvent être supprimés en tant que références).
 
-
 [![](understanding-partial-page-updates-with-asp-net-ajax/_static/image8.png)](understanding-partial-page-updates-with-asp-net-ajax/_static/image7.png)
 
 ([Cliquez pour afficher l’image en taille réelle](understanding-partial-page-updates-with-asp-net-ajax/_static/image9.png))
-
 
 1. Appuyez sur F5 pour lancer votre site Web. Notez comment aucune modification de code source ont été nécessaires pour prendre en charge le rendu partiel - uniquement le balisage a été modifié.
 
@@ -233,16 +225,13 @@ Le contrôle UpdatePanel fonctionne comme un élément d’une boîte noire, enc
 
 Envisagez un formulaire comprenant, entre autres choses, une zone de texte code postal qui devrait permettre de remplir un champ Ville et l’état sur un formulaire ou contrôle. Ce formulaire collecte finalement les informations d’appartenance, y compris le nom d’un utilisateur, adresse et les informations de contact. Il existe de nombreuses considérations de conception à prendre en compte, en fonction des exigences d’un projet spécifique.
 
-
 [![](understanding-partial-page-updates-with-asp-net-ajax/_static/image11.png)](understanding-partial-page-updates-with-asp-net-ajax/_static/image10.png)
 
 ([Cliquez pour afficher l’image en taille réelle](understanding-partial-page-updates-with-asp-net-ajax/_static/image12.png))
 
-
 [![](understanding-partial-page-updates-with-asp-net-ajax/_static/image14.png)](understanding-partial-page-updates-with-asp-net-ajax/_static/image13.png)
 
 ([Cliquez pour afficher l’image en taille réelle](understanding-partial-page-updates-with-asp-net-ajax/_static/image15.png))
-
 
 Dans l’itération d’origine de cette application, un contrôle a été créé incorporé de l’intégralité des données d’inscription utilisateur, y compris le code postal, ville et état. L’ensemble du contrôle a été encapsulé dans un UpdatePanel et déposé sur un formulaire Web. Une fois le code postal est entré par l’utilisateur, le contrôle UpdatePanel détecte l’événement (l’événement TextChanged correspondant dans le serveur principal, en spécifiant des déclencheurs ou à l’aide de la propriété ChildrenAsTriggers a la valeur true). AJAX publie tous les champs dans le contrôle UpdatePanel, telles que capturées par FireBug (voir le diagramme de droite).
 
@@ -252,11 +241,9 @@ Il peut également être intéressant de voir comment ASP.NET AJAX met à jour l
 
 La régénération du modèle DOM déclenche un nombre de problèmes supplémentaires :
 
-
 [![](understanding-partial-page-updates-with-asp-net-ajax/_static/image17.png)](understanding-partial-page-updates-with-asp-net-ajax/_static/image16.png)
 
 ([Cliquez pour afficher l’image en taille réelle](understanding-partial-page-updates-with-asp-net-ajax/_static/image18.png))
-
 
 - Si l’élément HTML ayant le focus se trouve dans UpdatePanel, il perd le focus. Par conséquent, pour les utilisateurs enfoncée la touche Tab pour quitter la zone de texte code postal, leur destination suivante aurait été la zone de texte Ville. Toutefois, une fois que le contrôle UpdatePanel actualisé l’affichage, le formulaire aurait dû n’est plus le focus, et en appuyant sur Tab aurait démarré la mise en surbrillance les éléments de la vue (notamment les liens).
 - Si n’importe quel type de script côté client personnalisé est en cours d’utilisation que les éléments DOM de l’accès, les références conservées par les fonctions peut-être devenir obsolète après une publication automatique partielle.

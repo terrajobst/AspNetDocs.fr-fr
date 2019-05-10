@@ -8,12 +8,12 @@ ms.date: 05/12/2009
 ms.assetid: 9f8fa166-49a2-402c-b236-20caef0c658f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0b00fd5dc12c21183ef61d7ebb23211a1aa4719e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ff614308555b31710b11f408e12e9a6fadbf98d0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418961"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112824"
 ---
 # <a name="get-started-with-the-ajax-control-toolkit-vb"></a>Bien démarrer avec AJAX Control Toolkit (VB)
 
@@ -21,26 +21,21 @@ by [Microsoft](https://github.com/microsoft)
 
 > Apprendre tout ce que vous devez savoir pour commencer à utiliser les outils de contrôle AJAX.
 
-
 AJAX Control Toolkit contient plus de 30 contrôles gratuits que vous pouvez utiliser dans vos applications ASP.NET. Dans ce didacticiel, vous allez apprendre à télécharger les outils de contrôle AJAX et ajoutez les contrôles de boîte à outils à votre boîte à outils Visual Studio/Visual Web Developer Express.
 
 ## <a name="downloading-the-ajax-control-toolkit"></a>Télécharger les outils de contrôle AJAX
 
 Le [AJAX Control Toolkit](http://devexpress.com/act) est un projet open source développé par les membres de la Communauté ASP.NET et de l’équipe ASP.NET.
 
-
 [![Télécharger les outils de contrôle AJAX](get-started-with-the-ajax-control-toolkit-vb/_static/image1.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image1.png)
 
 **Figure 01**: Téléchargement AJAX Control Toolkit ([cliquez pour afficher l’image en taille réelle](get-started-with-the-ajax-control-toolkit-vb/_static/image2.png))
 
-
 Après avoir téléchargé le fichier, vous devez débloquer le fichier. Cliquez sur le fichier, sélectionnez Propriétés, puis cliquez sur le **Unblock** bouton (voir Figure 2).
-
 
 [![Débloquant le fichier ZIP de boîte à outils de contrôle AJAX](get-started-with-the-ajax-control-toolkit-vb/_static/image2.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image3.png)
 
 **Figure 02**: Débloquant le fichier ZIP de boîte à outils de contrôle AJAX ([cliquez pour afficher l’image en taille réelle](get-started-with-the-ajax-control-toolkit-vb/_static/image4.png))
-
 
 Une fois que vous débloquez le fichier, vous pouvez décompresser le fichier : Cliquez sur le fichier et sélectionnez le **extraire tout** option de menu. Maintenant, nous sommes prêts à ajouter le Kit de ressources à la boîte à outils Visual Studio/Visual Web Developer.
 
@@ -48,11 +43,9 @@ Une fois que vous débloquez le fichier, vous pouvez décompresser le fichier :
 
 Pour utiliser les outils de contrôle AJAX le plus simple consiste à ajouter le Kit de ressources à votre boîte à outils Visual Studio/Visual Web Developer (voir Figure 3). De cette façon, vous pouvez simplement faire glisser un contrôle de boîte à outils sur une page lorsque vous souhaitez l’utiliser.
 
-
 [![Outils de contrôle AJAX s’affiche dans la boîte à outils](get-started-with-the-ajax-control-toolkit-vb/_static/image3.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image5.png)
 
 **Figure 03**: Outils de contrôle AJAX s’affiche dans la boîte à outils ([cliquez pour afficher l’image en taille réelle](get-started-with-the-ajax-control-toolkit-vb/_static/image6.png))
-
 
 Tout d’abord, vous devez ajouter un onglet de boîte à outils de contrôle AJAX à la boîte à outils. Suivez ces étapes.
 
@@ -60,22 +53,18 @@ Tout d’abord, vous devez ajouter un onglet de boîte à outils de contrôle AJ
 2. Avec le bouton droit de la boîte à outils sous l’onglet Général et sélectionnez l’option de menu **ajouter un onglet** (voir Figure 4).
 3. Entrez un nouvel onglet appelé AJAX Control Toolkit.
 
-
 [![Ajout d’un nouvel onglet](get-started-with-the-ajax-control-toolkit-vb/_static/image4.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image7.png)
 
 **Figure 04**: Ajout d’un nouvel onglet ([cliquez pour afficher l’image en taille réelle](get-started-with-the-ajax-control-toolkit-vb/_static/image8.png))
-
 
 Ensuite, vous devez ajouter les contrôles AJAX Control Toolkit pour le nouvel onglet. Procédez comme suit :
 
 - Avec le bouton droit sous l’onglet AJAX Control Toolkit et sélectionnez l’option de menu **choisir des éléments (voir Figure 5)**.
 - Accédez à l’emplacement où vous avez décompressé AJAX Control Toolkit et sélectionnez l’assembly AjaxControlToolkit.dll.
 
-
 [![Choisissez les éléments à ajouter à la boîte à outils](get-started-with-the-ajax-control-toolkit-vb/_static/image5.jpg)](get-started-with-the-ajax-control-toolkit-vb/_static/image9.png)
 
 **Figure 05**: Choisissez les éléments à ajouter à la boîte à outils ([cliquez pour afficher l’image en taille réelle](get-started-with-the-ajax-control-toolkit-vb/_static/image10.png))
-
 
 Après avoir effectué ces étapes, tous les contrôles de boîte à outils seront affiche dans votre boîte à outils.
 

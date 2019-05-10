@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 4f4bf092-c400-471f-a876-78fda0417890
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/url-routing
 msc.type: authoredcontent
-ms.openlocfilehash: 992cea256302231ee7031a21c798117b73eaa01c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f8a374be79a41b34dc8f17fa8d44c6e0680984d7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384317"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108621"
 ---
 # <a name="url-routing"></a>Routage d’URL
 
@@ -22,7 +22,6 @@ par [Erik Reitan](https://github.com/Erikre)
 [Télécharger le projet de Wingtip Toys exemple (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
-
 
 Dans ce didacticiel, vous allez modifier l’exemple d’application Wingtip Toys pour prendre en charge le routage d’URL. Routage permet à votre application web utiliser des URL qui sont mieux pris en charge par les moteurs de recherche, plus facile à mémoriser et convivial. Ce didacticiel s’appuie sur le didacticiel précédent, « L’appartenance et Administration » et fait partie de la série de didacticiels Wingtip Toys.
 
@@ -82,7 +81,6 @@ Le deuxième paramètre de l’itinéraire inclut une valeur dynamique spécifi�
 > **Optional**
 > 
 > Il peut s’avérer plus facile à gérer votre code en déplaçant le `RegisterCustomRoutes` méthode à une classe distincte. Dans le *logique* dossier, créez un distinct `RouteActions` classe. Déplacer la méthode ci-dessus `RegisterCustomRoutes` méthode à partir de la *Global.asax.cs* fichier dans le nouvel `RoutesActions` classe. Utilisez le `RoleActions` classe et le `createAdmin` un exemple montrant comment appeler la méthode le `RegisterCustomRoutes` méthode à partir de la *Global.asax.cs* fichier.
-
 
 Vous peut-être également remarqué le `RegisterRoutes` appel de méthode à l’aide du `RouteConfig` objet situé au début de la `Application_Start` Gestionnaire d’événements. Cet appel est effectué pour implémenter le routage par défaut. Il a été inclus en tant que code par défaut lorsque vous avez créé l’application à l’aide du modèle de Web Forms de Visual Studio.
 

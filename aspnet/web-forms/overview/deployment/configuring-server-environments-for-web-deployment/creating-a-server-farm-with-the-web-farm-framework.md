@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 656dd06d-806c-467c-863d-9fc45e5ba3ab
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/creating-a-server-farm-with-the-web-farm-framework
 msc.type: authoredcontent
-ms.openlocfilehash: 19c061e83257e118aee74c9373a627b8c56defe3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 204996514bed336e60ab77f184a923f04e7e2bba
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421236"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106909"
 ---
 # <a name="creating-a-server-farm-with-the-web-farm-framework"></a>Création d’une batterie de serveurs avec le framework de batterie de serveurs web
 
@@ -22,7 +22,6 @@ par [Jason Lee](https://github.com/jrjlee)
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique décrit l’utilisation de Web Farm Framework (WFF) 2.0 pour créer et configurer une batterie de serveurs web à partir d’une collection de serveurs.
-
 
 WFF vous permet de synchroniser des produits de la plate-forme web et les composants, les applications web, les sites Web et les paramètres de configuration sur plusieurs serveurs web avec équilibrage de charge. Dans les scénarios où vous avez besoin de plusieurs serveurs web, comme les environnements intermédiaire et de production, cela peut considérablement simplifier votre processus de déploiement et la configuration. Vous pouvez déployer une application web à un seul serveur&#x2014;le *serveur principal*&#x2014;et WFF vont être répliqués automatiquement cette application web sur tous les autres serveurs de web dans la batterie de serveurs.
 
@@ -63,7 +62,6 @@ Les tâches et les procédures pas à pas dans cette rubrique supposent que vous
 
 > [!NOTE]
 > Pour plus d’informations sur la jonction des ordinateurs à un domaine, consultez [joindre des ordinateurs au domaine et journalisation](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Pour plus d’informations sur la configuration des adresses IP statiques, consultez [configurer une adresse IP statique](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx).
-
 
 ## <a name="create-the-wff-controller-server"></a>Créer le serveur de contrôleur WFF
 
@@ -185,7 +183,6 @@ WFF est conçu pour s’intégrer étroitement avec IIS ARR. Pour tirer parti de
 
 > [!NOTE]
 > Vous n’êtes pas obligé d’utiliser ARR avec WFF ; Vous pouvez configurer WFF pour travailler avec les solutions d’équilibrage de charge tiers. Pour plus d’informations, consultez [vue d’ensemble du Framework de batterie de serveurs Web 2.0 pour IIS 7](https://go.microsoft.com/?linkid=9805126).
-
 
 L’équilibrage de charge à l’aide d’ARR est un sujet complexe, plus dont est dépasse le cadre de ce didacticiel. Toutefois, vous pouvez utiliser la procédure suivante pour installer le module ARR et de prise en main l’équilibrage de charge.
 
