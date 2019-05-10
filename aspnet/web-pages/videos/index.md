@@ -8,47 +8,46 @@ ms.date: 05/18/2012
 ms.assetid: febf2824-4e3d-4dc6-84c5-f99777ec6144
 msc.legacyurl: /web-pages/videos
 msc.type: book
-ms.openlocfilehash: 86b90a21f59ee0ad52a3e6f7db19d4714282105c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4c22b024240740d971740e9f043231ccbcdc47fb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401138"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127689"
 ---
-# <a name="videos"></a><span data-ttu-id="2e8c7-102">Vidéos</span><span class="sxs-lookup"><span data-stu-id="2e8c7-102">Videos</span></span>
-
+# <a name="videos"></a><span data-ttu-id="f6625-102">Vidéos</span><span class="sxs-lookup"><span data-stu-id="f6625-102">Videos</span></span>
 
 > [!NOTE] 
-> <span data-ttu-id="2e8c7-103">WebMatrix n’est plus recommandé comme un environnement de développement intégré pour ASP.NET Web Pages.</span><span class="sxs-lookup"><span data-stu-id="2e8c7-103">WebMatrix is no longer recommended as an integrated development environment for ASP.NET Web Pages.</span></span> <span data-ttu-id="2e8c7-104">Utilisez [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou [Visual Studio Code](https://code.visualstudio.com/).</span><span class="sxs-lookup"><span data-stu-id="2e8c7-104">Use [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) or [Visual Studio Code](https://code.visualstudio.com/).</span></span>
+> <span data-ttu-id="f6625-103">WebMatrix n’est plus recommandé comme un environnement de développement intégré pour ASP.NET Web Pages.</span><span class="sxs-lookup"><span data-stu-id="f6625-103">WebMatrix is no longer recommended as an integrated development environment for ASP.NET Web Pages.</span></span> <span data-ttu-id="f6625-104">Utilisez [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou [Visual Studio Code](https://code.visualstudio.com/).</span><span class="sxs-lookup"><span data-stu-id="f6625-104">Use [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) or [Visual Studio Code](https://code.visualstudio.com/).</span></span>
 
-- [<span data-ttu-id="2e8c7-105">Introduction</span><span class="sxs-lookup"><span data-stu-id="2e8c7-105">Introduction</span></span>](introduction/index.md)
+- [<span data-ttu-id="f6625-105">Introduction</span><span class="sxs-lookup"><span data-stu-id="f6625-105">Introduction</span></span>](introduction/index.md)
 
-    - [<span data-ttu-id="2e8c7-106">Introduction à ASP.NET Web Pages (5 minutes)</span><span class="sxs-lookup"><span data-stu-id="2e8c7-106">5 Minute Intro to ASP.NET Web Pages</span></span>](introduction/5-minute-introduction-to-aspnet-web-pages.md)
-    - [<span data-ttu-id="2e8c7-107">Installer et utiliser l’outil Microsoft WebMatrix</span><span class="sxs-lookup"><span data-stu-id="2e8c7-107">Install and Use the Microsoft WebMatrix Tool</span></span>](introduction/install-and-use-the-microsoft-webmatrix-tool.md)
-    - [<span data-ttu-id="2e8c7-108">Créer un site web avec WebMatrix</span><span class="sxs-lookup"><span data-stu-id="2e8c7-108">Create a Website Using WebMatrix</span></span>](introduction/create-a-website-using-webmatrix.md)
-    - [<span data-ttu-id="2e8c7-109">Modifier le style visuel d’une page web</span><span class="sxs-lookup"><span data-stu-id="2e8c7-109">Change the Visual Style of a Web Page</span></span>](introduction/change-the-visual-style-of-a-web-page.md)
-    - [<span data-ttu-id="2e8c7-110">Utiliser les fonctionnalités de disposition dans WebMatrix</span><span class="sxs-lookup"><span data-stu-id="2e8c7-110">Use the Layout Features in WebMatrix</span></span>](introduction/use-the-layout-features-in-webmatrix.md)
-    - [<span data-ttu-id="2e8c7-111">Créer une page web dynamique pilotée par les données</span><span class="sxs-lookup"><span data-stu-id="2e8c7-111">Create a Data-Driven Dynamic Web Page</span></span>](introduction/create-a-data-driven-dynamic-web-page.md)
-    - [<span data-ttu-id="2e8c7-112">Créer une interface web dans WebMatrix</span><span class="sxs-lookup"><span data-stu-id="2e8c7-112">Create a Web Interface in WebMatrix</span></span>](introduction/create-a-web-interface-in-webmatrix.md)
-    - [<span data-ttu-id="2e8c7-113">Créer une page de modification des données dans WebMatrix</span><span class="sxs-lookup"><span data-stu-id="2e8c7-113">Create an Edit Data Page in WebMatrix</span></span>](introduction/create-an-edit-data-page-in-webmatrix.md)
-    - [<span data-ttu-id="2e8c7-114">Créer une page de suppression des données dans WebMatrix</span><span class="sxs-lookup"><span data-stu-id="2e8c7-114">Create a Delete Data Page in WebMatrix</span></span>](introduction/create-a-delete-data-page-in-webmatrix.md)
-    - [<span data-ttu-id="2e8c7-115">Publier un site web sur Internet avec WebMatrix</span><span class="sxs-lookup"><span data-stu-id="2e8c7-115">Publish a Website to the Internet Using WebMatrix</span></span>](introduction/publish-a-website-to-the-internet-using-webmatrix.md)
-- [<span data-ttu-id="2e8c7-116">Pages ASP.NET Razor</span><span class="sxs-lookup"><span data-stu-id="2e8c7-116">ASP.NET Razor Pages</span></span>](aspnet-razor-pages/index.md)
+    - [<span data-ttu-id="f6625-106">Introduction à ASP.NET Web Pages (5 minutes)</span><span class="sxs-lookup"><span data-stu-id="f6625-106">5 Minute Intro to ASP.NET Web Pages</span></span>](introduction/5-minute-introduction-to-aspnet-web-pages.md)
+    - [<span data-ttu-id="f6625-107">Installer et utiliser l’outil Microsoft WebMatrix</span><span class="sxs-lookup"><span data-stu-id="f6625-107">Install and Use the Microsoft WebMatrix Tool</span></span>](introduction/install-and-use-the-microsoft-webmatrix-tool.md)
+    - [<span data-ttu-id="f6625-108">Créer un site web avec WebMatrix</span><span class="sxs-lookup"><span data-stu-id="f6625-108">Create a Website Using WebMatrix</span></span>](introduction/create-a-website-using-webmatrix.md)
+    - [<span data-ttu-id="f6625-109">Modifier le style visuel d’une page web</span><span class="sxs-lookup"><span data-stu-id="f6625-109">Change the Visual Style of a Web Page</span></span>](introduction/change-the-visual-style-of-a-web-page.md)
+    - [<span data-ttu-id="f6625-110">Utiliser les fonctionnalités de disposition dans WebMatrix</span><span class="sxs-lookup"><span data-stu-id="f6625-110">Use the Layout Features in WebMatrix</span></span>](introduction/use-the-layout-features-in-webmatrix.md)
+    - [<span data-ttu-id="f6625-111">Créer une page web dynamique pilotée par les données</span><span class="sxs-lookup"><span data-stu-id="f6625-111">Create a Data-Driven Dynamic Web Page</span></span>](introduction/create-a-data-driven-dynamic-web-page.md)
+    - [<span data-ttu-id="f6625-112">Créer une interface web dans WebMatrix</span><span class="sxs-lookup"><span data-stu-id="f6625-112">Create a Web Interface in WebMatrix</span></span>](introduction/create-a-web-interface-in-webmatrix.md)
+    - [<span data-ttu-id="f6625-113">Créer une page de modification des données dans WebMatrix</span><span class="sxs-lookup"><span data-stu-id="f6625-113">Create an Edit Data Page in WebMatrix</span></span>](introduction/create-an-edit-data-page-in-webmatrix.md)
+    - [<span data-ttu-id="f6625-114">Créer une page de suppression des données dans WebMatrix</span><span class="sxs-lookup"><span data-stu-id="f6625-114">Create a Delete Data Page in WebMatrix</span></span>](introduction/create-a-delete-data-page-in-webmatrix.md)
+    - [<span data-ttu-id="f6625-115">Publier un site web sur Internet avec WebMatrix</span><span class="sxs-lookup"><span data-stu-id="f6625-115">Publish a Website to the Internet Using WebMatrix</span></span>](introduction/publish-a-website-to-the-internet-using-webmatrix.md)
+- [<span data-ttu-id="f6625-116">Pages ASP.NET Razor</span><span class="sxs-lookup"><span data-stu-id="f6625-116">ASP.NET Razor Pages</span></span>](aspnet-razor-pages/index.md)
 
-    - [<span data-ttu-id="2e8c7-117">Bien démarrer avec WebMatrix et ASP.NET Web Pages</span><span class="sxs-lookup"><span data-stu-id="2e8c7-117">Getting Started with WebMatrix and ASP.NET Web Pages</span></span>](aspnet-razor-pages/getting-started-with-webmatrix-and-aspnet-web-pages.md)
-    - [<span data-ttu-id="2e8c7-118">Introduction à la syntaxe Razor de la programmation web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="2e8c7-118">Intro to ASP.NET Web Programming Razor Syntax</span></span>](aspnet-razor-pages/introduction-to-aspnet-web-programming-using-the-razor-syntax.md)
-    - [<span data-ttu-id="2e8c7-119">Création d’une apparence cohérente (Partie 1)</span><span class="sxs-lookup"><span data-stu-id="2e8c7-119">Creating a Consistent Look (Part 1)</span></span>](aspnet-razor-pages/creating-a-consistent-look-part-1.md)
-    - [<span data-ttu-id="2e8c7-120">Création d’une apparence cohérente (Partie 2)</span><span class="sxs-lookup"><span data-stu-id="2e8c7-120">Creating a Consistent Look (Part 2)</span></span>](aspnet-razor-pages/creating-a-consistent-look-part-2.md)
-    - [<span data-ttu-id="2e8c7-121">Utilisation des formulaires (Partie 1)</span><span class="sxs-lookup"><span data-stu-id="2e8c7-121">Working with Forms (Part 1)</span></span>](aspnet-razor-pages/working-with-forms-part-1.md)
-    - [<span data-ttu-id="2e8c7-122">Utilisation des formulaires (Partie 2)</span><span class="sxs-lookup"><span data-stu-id="2e8c7-122">Working with Forms (Part 2)</span></span>](aspnet-razor-pages/working-with-forms-part-2.md)
-    - [<span data-ttu-id="2e8c7-123">Utilisation des données (Partie 1)</span><span class="sxs-lookup"><span data-stu-id="2e8c7-123">Working with Data (Part 1)</span></span>](aspnet-razor-pages/working-with-data-part-1.md)
-    - [<span data-ttu-id="2e8c7-124">Utilisation des données (Partie 2)</span><span class="sxs-lookup"><span data-stu-id="2e8c7-124">Working with Data (Part 2)</span></span>](aspnet-razor-pages/working-with-data-part-2.md)
-    - [<span data-ttu-id="2e8c7-125">Affichage de données dans une grille</span><span class="sxs-lookup"><span data-stu-id="2e8c7-125">Displaying Data in a Grid</span></span>](aspnet-razor-pages/displaying-data-in-a-grid.md)
-    - [<span data-ttu-id="2e8c7-126">Affichage de données dans un graphique (Partie 1)</span><span class="sxs-lookup"><span data-stu-id="2e8c7-126">Displaying Data in a Chart (Part 1)</span></span>](aspnet-razor-pages/displaying-data-in-a-chart-part-1.md)
-    - [<span data-ttu-id="2e8c7-127">Affichage de données dans un graphique (Partie 2)</span><span class="sxs-lookup"><span data-stu-id="2e8c7-127">Displaying Data in a Chart (Part 2)</span></span>](aspnet-razor-pages/displaying-data-in-a-chart-part-2.md)
-    - [<span data-ttu-id="2e8c7-128">Utilisation de fichiers</span><span class="sxs-lookup"><span data-stu-id="2e8c7-128">Working with Files</span></span>](aspnet-razor-pages/working-with-files.md)
-    - [<span data-ttu-id="2e8c7-129">Utilisation d’images</span><span class="sxs-lookup"><span data-stu-id="2e8c7-129">Working with Images</span></span>](aspnet-razor-pages/working-with-images.md)
-    - [<span data-ttu-id="2e8c7-130">Utilisation de la vidéo</span><span class="sxs-lookup"><span data-stu-id="2e8c7-130">Working with Video</span></span>](aspnet-razor-pages/working-with-video.md)
-    - [<span data-ttu-id="2e8c7-131">Ajout de fonctionnalités d’e-mail à votre site web</span><span class="sxs-lookup"><span data-stu-id="2e8c7-131">Adding Email to Your Web Site</span></span>](aspnet-razor-pages/adding-email-to-your-web-site.md)
-    - [<span data-ttu-id="2e8c7-132">Ajout de fonctionnalités de recherche à votre site web</span><span class="sxs-lookup"><span data-stu-id="2e8c7-132">Adding Search to Your Web Site</span></span>](aspnet-razor-pages/adding-search-to-your-web-site.md)
-    - [<span data-ttu-id="2e8c7-133">Ajout de fonctionnalités de réseaux sociaux à votre site web</span><span class="sxs-lookup"><span data-stu-id="2e8c7-133">Adding Social Networking to Your Website</span></span>](aspnet-razor-pages/adding-social-networking-to-your-website.md)
+    - [<span data-ttu-id="f6625-117">Bien démarrer avec WebMatrix et ASP.NET Web Pages</span><span class="sxs-lookup"><span data-stu-id="f6625-117">Getting Started with WebMatrix and ASP.NET Web Pages</span></span>](aspnet-razor-pages/getting-started-with-webmatrix-and-aspnet-web-pages.md)
+    - [<span data-ttu-id="f6625-118">Introduction à la syntaxe Razor de la programmation web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f6625-118">Intro to ASP.NET Web Programming Razor Syntax</span></span>](aspnet-razor-pages/introduction-to-aspnet-web-programming-using-the-razor-syntax.md)
+    - [<span data-ttu-id="f6625-119">Création d’une apparence cohérente (Partie 1)</span><span class="sxs-lookup"><span data-stu-id="f6625-119">Creating a Consistent Look (Part 1)</span></span>](aspnet-razor-pages/creating-a-consistent-look-part-1.md)
+    - [<span data-ttu-id="f6625-120">Création d’une apparence cohérente (Partie 2)</span><span class="sxs-lookup"><span data-stu-id="f6625-120">Creating a Consistent Look (Part 2)</span></span>](aspnet-razor-pages/creating-a-consistent-look-part-2.md)
+    - [<span data-ttu-id="f6625-121">Utilisation des formulaires (Partie 1)</span><span class="sxs-lookup"><span data-stu-id="f6625-121">Working with Forms (Part 1)</span></span>](aspnet-razor-pages/working-with-forms-part-1.md)
+    - [<span data-ttu-id="f6625-122">Utilisation des formulaires (Partie 2)</span><span class="sxs-lookup"><span data-stu-id="f6625-122">Working with Forms (Part 2)</span></span>](aspnet-razor-pages/working-with-forms-part-2.md)
+    - [<span data-ttu-id="f6625-123">Utilisation des données (Partie 1)</span><span class="sxs-lookup"><span data-stu-id="f6625-123">Working with Data (Part 1)</span></span>](aspnet-razor-pages/working-with-data-part-1.md)
+    - [<span data-ttu-id="f6625-124">Utilisation des données (Partie 2)</span><span class="sxs-lookup"><span data-stu-id="f6625-124">Working with Data (Part 2)</span></span>](aspnet-razor-pages/working-with-data-part-2.md)
+    - [<span data-ttu-id="f6625-125">Affichage de données dans une grille</span><span class="sxs-lookup"><span data-stu-id="f6625-125">Displaying Data in a Grid</span></span>](aspnet-razor-pages/displaying-data-in-a-grid.md)
+    - [<span data-ttu-id="f6625-126">Affichage de données dans un graphique (Partie 1)</span><span class="sxs-lookup"><span data-stu-id="f6625-126">Displaying Data in a Chart (Part 1)</span></span>](aspnet-razor-pages/displaying-data-in-a-chart-part-1.md)
+    - [<span data-ttu-id="f6625-127">Affichage de données dans un graphique (Partie 2)</span><span class="sxs-lookup"><span data-stu-id="f6625-127">Displaying Data in a Chart (Part 2)</span></span>](aspnet-razor-pages/displaying-data-in-a-chart-part-2.md)
+    - [<span data-ttu-id="f6625-128">Utilisation de fichiers</span><span class="sxs-lookup"><span data-stu-id="f6625-128">Working with Files</span></span>](aspnet-razor-pages/working-with-files.md)
+    - [<span data-ttu-id="f6625-129">Utilisation d’images</span><span class="sxs-lookup"><span data-stu-id="f6625-129">Working with Images</span></span>](aspnet-razor-pages/working-with-images.md)
+    - [<span data-ttu-id="f6625-130">Utilisation de la vidéo</span><span class="sxs-lookup"><span data-stu-id="f6625-130">Working with Video</span></span>](aspnet-razor-pages/working-with-video.md)
+    - [<span data-ttu-id="f6625-131">Ajout de fonctionnalités d’e-mail à votre site web</span><span class="sxs-lookup"><span data-stu-id="f6625-131">Adding Email to Your Web Site</span></span>](aspnet-razor-pages/adding-email-to-your-web-site.md)
+    - [<span data-ttu-id="f6625-132">Ajout de fonctionnalités de recherche à votre site web</span><span class="sxs-lookup"><span data-stu-id="f6625-132">Adding Search to Your Web Site</span></span>](aspnet-razor-pages/adding-search-to-your-web-site.md)
+    - [<span data-ttu-id="f6625-133">Ajout de fonctionnalités de réseaux sociaux à votre site web</span><span class="sxs-lookup"><span data-stu-id="f6625-133">Adding Social Networking to Your Website</span></span>](aspnet-razor-pages/adding-social-networking-to-your-website.md)
