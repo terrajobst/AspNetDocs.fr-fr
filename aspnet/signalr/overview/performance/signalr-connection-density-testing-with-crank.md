@@ -8,12 +8,12 @@ ms.date: 02/22/2015
 ms.assetid: 148d9ca7-1af1-44b6-a9fb-91e261b9b463
 msc.legacyurl: /signalr/overview/performance/signalr-connection-density-testing-with-crank
 msc.type: authoredcontent
-ms.openlocfilehash: bb8a7da1080dc325c0479b337d114b8dcdf6e102
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 901e039fbb81651ed18d560c99745b7e7f716e01
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59390062"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116085"
 ---
 # <a name="signalr-connection-density-testing-with-crank"></a>Test de la densité des connexions SignalR avec Crank
 
@@ -22,7 +22,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
 > Cet article décrit comment utiliser l’outil de manivelle pour tester une application avec plusieurs clients simulés.
-
 
 Une fois que votre application s’exécute dans son environnement d’hébergement (Azure un rôle, IIS, web ou auto-hébergé à l’aide d’Owin), vous pouvez tester la réponse de l’application à un niveau élevé de la densité des connexions à l’aide de l’outil manivelle. L’environnement d’hébergement peut être un serveur Internet Information Services (IIS), un hôte Owin ou un rôle web Azure. (Remarque : Compteurs de performances ne sont pas disponibles sur Azure App Service Web Apps, donc vous ne serez pas en mesure d’obtenir des données de performances à partir d’un test de densité de connexion.)
 

@@ -6,12 +6,12 @@ description: Liste des guides pas à pas pour le développement d’applications
 ms.assetid: fddf8e5e-c055-4f81-b691-78deef871112
 ms.author: riande
 ms.date: 09/20/2017
-ms.openlocfilehash: 240260a496ee797556ca5dbd2c8faec79d23ac64
-ms.sourcegitcommit: 2d53ed9e4c8b19d3526cbc689bfa8394c9449cec
+ms.openlocfilehash: 106b4b88d2e7de90900b7a73570ecd6140e2db66
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59905668"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113193"
 ---
 # <a name="aspnet-tutorials"></a>Didacticiels ASP.NET
 
@@ -81,7 +81,6 @@ Les guides pas à pas suivants pour le développement d’applications ASP.NET s
 * [Envoi de données de formulaire HTML dans l’API Web : Données de Form-UrlEncode](web-api/overview/advanced/sending-html-form-data-part-1.md)
 * [Envoi de données de formulaire HTML dans l’API Web : Chargement du fichier et MIME à parties multiples](web-api/overview/advanced/sending-html-form-data-part-2.md)
 
-
 ## <a name="web-pages"></a>Pages web
 
 * [Programmer ASP.NET Web Pages dans Visual Studio](web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio.md)
@@ -111,7 +110,6 @@ Les guides pas à pas suivants pour le développement d’applications ASP.NET s
 * [Analyse du trafic](web-pages/overview/performance-and-traffic/14-analyzing-traffic.md)
 * [Bundles et minimisation des ressources dans un site ASP.NET Web Pages (Razor)](web-pages/overview/performance-and-traffic/bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)
 
-
 ## <a name="aspnet-signalr"></a>SignalR ASP.NET
 
 * [Tutoriel : Bien démarrer avec SignalR 2](signalr/overview/getting-started/tutorial-getting-started-with-signalr.md)
@@ -129,7 +127,6 @@ Les guides pas à pas suivants pour le développement d’applications ASP.NET s
 * [Tutoriel : Auto-hébergement de SignalR](signalr/overview/deployment/tutorial-signalr-self-host.md)
 * [Utilisation de SignalR avec Web Apps dans Azure App Service](signalr/overview/deployment/using-signalr-with-azure-web-sites.md)
 
-
 ## <a name="aspnet-identity"></a>ASP.NET Identity
 
 * [Ajout d’ASP.NET Identity à un projet Web Forms vide ou existant](identity/overview/getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
@@ -141,7 +138,6 @@ Les guides pas à pas suivants pour le développement d’applications ASP.NET s
 * [Changer la clé principale pour les utilisateurs dans ASP.NET Identity](identity/overview/extensibility/change-primary-key-for-users-in-aspnet-identity.md)
 * [Migration d’un site web existant de l’appartenance SQL vers ASP.NET Identity](identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity.md)
 * [Migration des données du fournisseur universel pour l’appartenance et les profils utilisateur vers ASP.NET Identity (C#)](identity/overview/migrations/migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity.md)
-
 
 ## <a name="owin-and-katana"></a>OWIN et Katana
 

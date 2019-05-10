@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: 46bff772-01e0-40f0-9ae6-9e18c5442ee6
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site
 msc.type: authoredcontent
-ms.openlocfilehash: 28cb3af081f68c20dd9cd9e0b2578f5656d2d652
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1f5109324ff3ce919e88fe976587a179eeaa5a5d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389438"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116034"
 ---
 # <a name="creating-and-using-a-helper-in-an-aspnet-web-pages-razor-site"></a>Création et utilisation d’une application auxiliaire dans un Site ASP.NET Web Pages (Razor)
 
@@ -37,7 +37,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Ce didacticiel fonctionne également avec ASP.NET Web Pages 2.
-
 
 ## <a name="overview-of-helpers"></a>Vue d’ensemble des programmes d’assistance
 
@@ -75,7 +74,6 @@ Cette procédure vous montre comment créer l’application d’assistance qui c
     ![Capture d’écran affichant la page dans le navigateur et comment l’application d’assistance généré le balisage qui place une zone autour du texte spécifié.](creating-and-using-a-helper-in-an-aspnet-web-pages-site/_static/image1.jpg)
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
-
 
 [Un menu horizontal en tant qu’un helper Razor](http://mikepope.com/blog/DisplayBlog.aspx?permalink=2341). Cette entrée de blog par Mike Pope montre comment créer un menu horizontal en tant qu’une assistance à l’aide de balisage, CSS et le code.
 

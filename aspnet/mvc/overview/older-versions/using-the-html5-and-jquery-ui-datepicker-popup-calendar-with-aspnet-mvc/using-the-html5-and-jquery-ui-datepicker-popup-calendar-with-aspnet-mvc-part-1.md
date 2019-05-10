@@ -8,19 +8,18 @@ ms.date: 08/29/2011
 ms.assetid: c23d27f7-b0cf-44f2-8445-fb69e045c674
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 31a01f250e4f5473e954f040e1a506dbaf61be76
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6e7d31d96a36b55e2e1a9a475e2d90526cc6a5b2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393578"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112395"
 ---
 # <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-1"></a>Utilisation de HTML5 et Datepicker calendrier contextuel jQuery UI avec ASP.NET MVC - partie 1
 
 par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Ce didacticiel vous apprend les notions de base de l’utilisation des modèles de l’éditeur, les modèles d’affichage et le calendrier contextuel jQuery UI datepicker dans une application Web ASP.NET MVC.
-
 
 Ce didacticiel vous apprend les notions de base de l’utilisation des modèles de l’éditeur, modèles d’affichage et le jQuery [l’interface utilisateur du calendrier contextuel](http://plugins.jquery.com/project/datepicker) dans une application Web ASP.NET MVC. Pour ce didacticiel, vous pouvez utiliser Microsoft Visual Web Developer 2010 Express Service Pack 1 (&quot;Visual Web Developer&quot;), qui est une version gratuite de Microsoft Visual Studio, ou vous pouvez utiliser Visual Studio 2010 SP1 si vous l’avez déjà.
 

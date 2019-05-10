@@ -8,17 +8,16 @@ ms.date: 06/25/2013
 ms.assetid: 646edfc7-dc62-4fa0-84c2-926996c92aeb
 msc.legacyurl: /visual-studio/overview/2013
 msc.type: chapter
-ms.openlocfilehash: c7c0de7ade31e43e3b43495cb6755608872d506d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0b1dab287735de3c4804a6e6a520a2ae87113e9e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412747"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113114"
 ---
 # <a name="aspnet-and-visual-studio-2013"></a>ASP.NET et Visual Studio 2013
 
 > Développer des applications web ASP.NET avec Visual Studio 2013
-
 
 - [Création de projets web ASP.NET dans Visual Studio 2013](creating-web-projects-in-visual-studio.md)
 - [Fonctionnalités de l’éditeur web de Visual Studio 2013 - Lien de navigateur](visual-studio-2013-web-editor-features-browser-link.md)

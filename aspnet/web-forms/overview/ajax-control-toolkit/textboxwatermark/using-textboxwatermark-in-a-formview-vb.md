@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 41497361-7fba-4825-b36c-f58d79522a88
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 056e89b20ccab0e56b1fab422c817d842beff446
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7dd213e632f6114b0ef468e97943e789e71a474a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400839"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124529"
 ---
 # <a name="using-textboxwatermark-in-a-formview-vb"></a>Utilisation de TextBoxWatermark dans un FormView (VB)
 
@@ -22,7 +22,6 @@ par [Christian Wenz](https://github.com/wenz)
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/TextBoxWatermark1.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/textboxwatermark1VB.pdf)
 
 > Le contrôle TextBoxWatermark dans AJAX Control Toolkit étend une zone de texte afin qu’un texte est affiché dans la zone. Lorsqu’un utilisateur clique dans la zone, elle est vidée. Si l’utilisateur laisse la zone sans saisie de texte, le texte prérempli réapparaît. C’est également possible au sein d’un contrôle FormView.
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -47,7 +46,6 @@ N’oubliez pas le nom (`ID`) de la source de données, dans la mesure où il se
 [!code-aspx[Main](using-textboxwatermark-in-a-formview-vb/samples/sample3.aspx)]
 
 Maintenant lorsque l’utilisateur modifie le mode d’insertion de la `FormView` contrôler, le champ de texte pour le nouveau fournisseur est prérempli grâce à la `TextBoxWatermarkExtender` contrôle. Un clic à l’intérieur de la zone de texte permet le texte de remplissage disparaissent.
-
 
 [![Le filigrane dans le champ provient de l’extendeur](using-textboxwatermark-in-a-formview-vb/_static/image2.png)](using-textboxwatermark-in-a-formview-vb/_static/image1.png)
 

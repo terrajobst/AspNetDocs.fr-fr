@@ -8,12 +8,12 @@ ms.author: riande
 ms.date: 03/12/2010
 msc.legacyurl: ''
 msc.type: content
-ms.openlocfilehash: 1ab51453913b387ffecf898536eb55b7418b0285
-ms.sourcegitcommit: 2d53ed9e4c8b19d3526cbc689bfa8394c9449cec
+ms.openlocfilehash: d4b96bd2ff99bb30ff59b9697a27e33acb0f719d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59905629"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120093"
 ---
 # <a name="aspnet-overview"></a>Vue d’ensemble d’ASP.NET
 
@@ -100,10 +100,6 @@ WebHooks est un modèle HTTP léger en fournissant un modèle pub/sub simple pou
 WebHooks sont exposés par un grand nombre de services, notamment la Dropbox, GitHub, Instagram, MailChimp, PayPal, Slack, Trello et bien plus encore. Par exemple, un WebHook peut indiquer qu’un fichier a changé dans Dropbox, ou une modification de code a été validée dans GitHub, ou un paiement a été lancé dans PayPal ou une carte a été créée dans Trello.
 
 [En savoir plus sur les WebHooks](webhooks/index.md)
-
-
-
-
 
 <!--
 Create Deployment TOC based on https://www.asp.net/aspnet/overview/deployment

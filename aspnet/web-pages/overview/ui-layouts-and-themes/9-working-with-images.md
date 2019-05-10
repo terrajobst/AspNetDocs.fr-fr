@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: 778c4e58-4372-4d25-bab9-aec4a8d8e38d
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/9-working-with-images
 msc.type: authoredcontent
-ms.openlocfilehash: fedd1013c036ebdb85877a868aaaa172733e5b8a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 53514b3c314fc182a43c82974ffcfa8158a636a1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394703"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114385"
 ---
 # <a name="working-with-images-in-an-aspnet-web-pages-razor-site"></a>Utilisation des Images dans un Site ASP.NET Web Pages (Razor)
 
@@ -44,7 +44,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Ce didacticiel fonctionne également avec WebMatrix 3.
-
 
 <a id="Adding_an_Image"></a>
 ## <a name="adding-an-image-to-a-web-page-dynamically"></a>Ajout dynamique d’une Image à une Page Web
@@ -133,7 +132,6 @@ L’exemple précédent vous a montré comment afficher une image de manière dy
 > 
 > Un GUID (identificateur global unique) est un identificateur qui est généralement affiché dans un format comme suit : `936DA01F-9ABD-4d9d-80C7-02AF85C822A8`. Les chiffres et lettres (de A à F) différent pour chaque GUID, mais elles suivent le modèle d’utilisation des groupes de 8-4-4-4-12 caractères. (Techniquement, un GUID est un nombre de 16 octets/128 bits.) Lorsque vous avez besoin d’un GUID, vous pouvez appeler un code spécialisé qui génère un GUID pour vous. L’idée derrière le GUID est qu’entre la très grande taille du nombre (3.4 x 10<sup>38</sup>) et l’algorithme de génération d’elle, le nombre résultant est pratiquement garanti s’agir d’un type. Par conséquent, les GUID sont un bon moyen de générer les noms de choses lorsque vous devez vous assurer que vous n’utilisez le même nom à deux reprises. L’inconvénient, bien sûr, est que GUID ne sont pas particulièrement convivial, afin qu’ils ont tendance à être utilisé lorsque le nom est utilisé uniquement dans le code.
 
-
 <a id="Resizing_an_Image"></a>
 ## <a name="resizing-an-image"></a>Redimensionnement d'une image
 
@@ -218,7 +216,6 @@ Au lieu d’utiliser le texte pour un filigrane, vous pouvez utiliser une autre 
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Ressources supplémentaires
-
 
 [Utilisation des fichiers dans un Site ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202896)
 

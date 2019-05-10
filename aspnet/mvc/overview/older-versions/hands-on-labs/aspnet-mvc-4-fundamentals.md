@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: b7dba543-73c3-4534-a9a0-ba70fa2c6a8a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-fundamentals
 msc.type: authoredcontent
-ms.openlocfilehash: 38aea3b3480dde6ec6182a45c4f61f44eea8e05e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 95e9b9f55b2080c0ed01dc34e3a32f9f1c905644
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380221"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117247"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Concepts de base d’ASP.NET MVC 4
 
@@ -108,13 +108,12 @@ Ce laboratoire pratique est constitué par les exercices suivants :
 > [!NOTE]
 > Chaque exercice est accompagné par un **fin** dossier contenant la solution obtenue, vous devez obtenir après avoir effectué les exercices. Si vous avez besoin d’aide supplémentaire sur l’utilisation via les exercices, vous pouvez utiliser cette solution comme guide.
 
-
 Durée estimée pour effectuer ce laboratoire : **60 minutes**.
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_Creating_MusicStore_ASPNET_MVC_Web_Application_Project"></a>
-### <a name="exercise-1-creating-musicstore-aspnet-mvc-web-application-project"></a>Exercice 1 : Création de projet d’Application Web du Store musique ASP.NET MVC
+### <a name="exercise-1-creating-musicstore-aspnet-mvc-web-application-project"></a>Exercice 1 : Création de projet d’Application Web du Store musique ASP.NET MVC
 
 Dans cet exercice, vous allez apprendre à créer une application ASP.NET MVC dans Visual Studio 2012 Express pour Web, ainsi que son organisation des dossiers principaux. En outre, vous allez apprendre à ajouter un nouveau contrôleur et les rendre afficher une chaîne simple dans la page d’accueil de l’application.
 
@@ -210,7 +209,7 @@ Dans cette tâche, vous allez essayer l’application dans un navigateur web.
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Creating_a_Controller"></a>
-### <a name="exercise-2-creating-a-controller"></a>Exercice 2 : Création d’un contrôleur
+### <a name="exercise-2-creating-a-controller"></a>Exercice 2 : Création d’un contrôleur
 
 Dans cet exercice, vous allez apprendre à mettre à jour le contrôleur pour implémenter une fonctionnalité simple de l’application de Store de musique. Ce contrôleur de définir les méthodes d’action pour gérer chacune des requêtes spécifiques suivantes :
 
@@ -359,7 +358,7 @@ Dans cette tâche, vous essayez de l’Application dans un navigateur web et uti
 <a id="Exercise4"></a>
 
 <a id="Exercise_4_Creating_a_View"></a>
-### <a name="exercise-4-creating-a-view"></a>Exercice 4 : Création d’une vue
+### <a name="exercise-4-creating-a-view"></a>Exercice 4 : Création d’une vue
 
 Jusqu'à présent, vous avez retournait chaînes à partir d’actions de contrôleur. Bien que ce soit un moyen utile de comprendre le fonctionnement des contrôleurs, il n’est pas comment vos applications Web réelles sont générées. Les vues sont des composants qui fournissent une meilleure approche pour générer le code HTML au navigateur à l’aide de fichiers de modèle.
 
@@ -471,7 +470,7 @@ Avec l’application ouverte dans un navigateur, vous devez noter que :
 <a id="Exercise5"></a>
 
 <a id="Exercise_5_Creating_a_View_Model"></a>
-### <a name="exercise-5-creating-a-view-model"></a>Exercice 5 : Création d’un modèle de vue
+### <a name="exercise-5-creating-a-view-model"></a>Exercice 5 : Création d’un modèle de vue
 
 Jusqu’ici, vous avez apportées à vos vues afficher codée en dur HTML, mais, pour créer des applications web dynamiques, le modèle de vue doit recevoir des informations à partir du contrôleur. Est une technique courante pour être utilisée à cet effet la **ViewModel** modèle, ce qui permet à un contrôleur créer un package avec toutes les informations nécessaires pour générer la réponse HTML appropriée.
 
@@ -945,7 +944,6 @@ Dans cet exercice, vous allez explorer les améliorations dans les modèles de p
 
 > [!NOTE]
 > En outre, vous pouvez déployer cette application à Sites Web Windows Azure suit [annexe b : Publication d’une Application ASP.NET MVC 4, à l’aide de Web Deploy](#AppendixB).
-
 
 ---
 

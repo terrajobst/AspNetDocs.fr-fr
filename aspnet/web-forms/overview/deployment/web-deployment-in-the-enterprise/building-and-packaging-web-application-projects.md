@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 94e92f80-a7e3-4d18-9375-ff8be5d666ac
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/building-and-packaging-web-application-projects
 msc.type: authoredcontent
-ms.openlocfilehash: 82134b8da7ab5ca49fef8e769128db9010fd231f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1d0ee0264ce6461d7b0159f1a44de4de31e2d079
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396328"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114667"
 ---
 # <a name="building-and-packaging-web-application-projects"></a>Génération et empaquetage des projets d’application web
 
@@ -27,7 +27,6 @@ par [Jason Lee](https://github.com/jrjlee)
 > - Comment l’outil de déploiement Web Internet Information Services (IIS) (Web Deploy) transforme votre application web dans un package de déploiement.
 > - Comment la génération et l’empaquetage fonctionnement du processus et les fichiers sont automatiquement créés.
 
-
 Dans Visual Studio 2010, le processus de génération et de déploiement pour les projets d’application web est prise en charge par les fournisseurs de services. Les fournisseurs de services fournit un jeu de cibles de Microsoft Build Engine (MSBuild) qui étendent les fonctionnalités de MSBuild et lui permettre d’intégrer avec Web Deploy. Dans Visual Studio, vous pouvez voir cette fonctionnalité étendue sur les pages de propriétés pour votre projet d’application web. Le **Package/Publication Web** page, avec le **Package/Publication SQL** page, vous pouvez configurer la façon dont votre projet d’application web est empaqueté pour le déploiement lorsque le processus de génération est terminé.
 
 ![](building-and-packaging-web-application-projects/_static/image1.png)
@@ -36,17 +35,13 @@ Dans Visual Studio 2010, le processus de génération et de déploiement pour le
 
 Si vous examinez le fichier projet pour c#-projet d’application web en fonction, vous pouvez voir qu’il importe de deux fichiers .targets.
 
-
 [!code-xml[Main](building-and-packaging-web-application-projects/samples/sample1.xml)]
-
 
 La première **importation** instruction est commune à tous les projets Visual c#. Ce fichier, *Microsoft.CSharp.targets*, contient les cibles et les tâches qui sont spécifiques à Visual c#. Par exemple, le compilateur c# (**Csc**) tâche est appelée ici. Le *Microsoft.CSharp.targets* de fichiers à son tour importations le *Microsoft.Common.targets* fichier. Définit les cibles qui sont communes à tous les projets, comme **Build**, **reconstruire**, **exécuter**, **compiler**, et **nettoyer** . La seconde **importation** instruction est spécifique aux projets d’application web. Le *Microsoft.WebApplication.targets* de fichiers à son tour importations le *Microsoft.Web.Publishing.targets* fichier. Le *Microsoft.Web.Publishing.targets* fichier essentiellement *est* les fournisseurs de services. Il définit des cibles, par exemple **Package** et **MSDeployPublish**, qui appeler Web Deploy pour effectuer diverses tâches de déploiement.
 
 Pour comprendre comment ces cibles supplémentaires sont utilisés, dans l’exemple de solution du Gestionnaire de contacts, ouvrez le *Publish.proj* de fichiers et de jeter un coup de œil à la **BuildProjects** cible.
 
-
 [!code-xml[Main](building-and-packaging-web-application-projects/samples/sample2.xml)]
-
 
 Cette cible utilise la **MSBuild** tâche pour générer des projets différents. Notez que le **DeployOnBuild** et **DeployTarget** propriétés :
 
@@ -58,7 +53,6 @@ Le **Package** cible est définie dans le *Microsoft.Web.Publishing.targets* fic
 > [!NOTE]
 > Pour afficher un fichier de projet (par exemple, <em>ContactManager.Mvc.csproj</em>) dans Visual Studio 2010, vous devez tout d’abord décharger le projet à partir de votre solution. Dans le <strong>l’Explorateur de solutions</strong> fenêtre, cliquez sur le nœud de projet, puis cliquez sur <strong>décharger le projet</strong>. Cliquez à nouveau sur le nœud du projet, puis cliquez sur <strong>modifier</strong><em>[fichier de projet]</em>). Le fichier projet s’ouvre dans sa forme XML brut. N’oubliez pas à recharger le projet lorsque vous avez terminé.  
 > Pour plus d’informations sur les cibles de MSBuild, tâches, et <strong>importation</strong> instructions, consultez [présentation du fichier projet](understanding-the-project-file.md). Pour une présentation plus approfondie des fichiers projet et les fournisseurs de services, consultez [à l’intérieur de la Microsoft Build Engine : À l’aide de MSBuild et Team Foundation Build](http://amzn.com/0735645248) par Sayed Ibrahim Hashimi et William Bartholomew, ISBN : 978-0-7356-4524-0.
-
 
 ## <a name="what-is-a-web-deployment-package"></a>Qu’est un Package de déploiement Web ?
 
@@ -87,7 +81,6 @@ Le *SetParameters.xml* fichier est essentielle pour la gestion du processus de d
 
 > [!NOTE]
 > Dans Visual Studio 2010, les fournisseurs de services ne prend pas en charge la précompiler les pages dans une application web avant d’empaquetage. La prochaine version de Visual Studio et les fournisseurs de services inclut la possibilité de précompiler une application web comme une option de package.
-
 
 ## <a name="conclusion"></a>Conclusion
 

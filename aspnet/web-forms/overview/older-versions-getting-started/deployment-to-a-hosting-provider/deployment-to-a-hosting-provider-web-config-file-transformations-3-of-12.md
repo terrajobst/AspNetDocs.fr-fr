@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: 2b0df3d9-450b-4ea6-b315-4c9650722cad
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 2b289099f7f9a928b2d63a09ac5ccd685d9d4386
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ed442e2bd3140264facc7644d89589dbbe8840e7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406524"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119370"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-webconfig-file-transformations---3-of-12"></a>Déploiement d’une Application de Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : Transformations du fichier Web.Config - 3 sur 12
 
@@ -24,7 +24,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > Cette série de didacticiels vous montre comment déployer une ASP.NET (publier) projet d’application web qui inclut une base de données SQL Server Compact à l’aide de Visual Studio 2012 RC ou Visual Studio Express 2012 RC pour le Web. Vous pouvez également utiliser Visual Studio 2010 si vous installez la mise à jour de publication Web. Pour une introduction à la série, consultez [le premier didacticiel de la série](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Pour obtenir un didacticiel qui montre les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions de SQL Server autre que SQL Server Compact et montre comment déployer dans Azure App Service Web Apps, consultez [déploiement Web ASP.NET à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -95,7 +94,6 @@ Vous n’êtes pas obligé de restreindre l’accès de journal d’erreur dans 
 > [!NOTE] 
 > 
 > **Note de sécurité** jamais afficher les détails de l’erreur pour le grand public dans une application de production, ou stocker ces informations dans un emplacement public. Les attaquants peuvent utiliser les informations d’erreur pour découvrir des vulnérabilités dans un site. Si vous utilisez ELMAH dans votre propre application, veillez à examiner les différentes façons dans lequel ELMAH peut être configuré afin de minimiser les risques de sécurité. L’exemple ELMAH dans ce didacticiel ne doit pas être considérée une configuration recommandée. Il est un exemple qui a été choisi afin d’illustrer comment gérer un dossier que l’application doit être en mesure de créer des fichiers dans.
-
 
 ## <a name="setting-an-environment-indicator"></a>Définition d’un indicateur d’environnement
 

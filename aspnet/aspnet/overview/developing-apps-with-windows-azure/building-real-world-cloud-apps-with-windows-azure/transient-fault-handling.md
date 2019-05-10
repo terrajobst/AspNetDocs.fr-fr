@@ -8,12 +8,12 @@ ms.date: 11/03/2015
 ms.assetid: 7ead83bc-c08c-4b26-8617-00e07292e35c
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling
 msc.type: authoredcontent
-ms.openlocfilehash: 9076ce7d933d9bbaaf4d34ccb6df7b6823cd38bf
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e15cba87b6ff4093aeac428542ce421b82e1bba1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59417011"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118506"
 ---
 # <a name="transient-fault-handling-building-real-world-cloud-apps-with-azure"></a>Erreurs temporaires gestion (création d’applications de Cloud réalistes avec Azure)
 
@@ -22,7 +22,6 @@ par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > Le **Building Real World Cloud Apps with Azure** e-book est basé sur une présentation développée par Scott Guthrie. Il explique 13 modèles et pratiques qui peuvent vous aider à réussir le développement d’applications web pour le cloud. Pour plus d’informations sur l’e-book, consultez [le premier chapitre](introduction.md).
-
 
 Lorsque vous créez une application de cloud du monde réel, l’une des choses que vous devez penser consiste à gérer les interruptions de service temporaire. Ce problème est important identifie de façon unique dans les applications cloud, car vous êtes dépendent des connexions réseau et les services externes. Vous trouverez souvent des problèmes peu généralement auto-adaptation, et si vous n’êtes pas prêt à les gérer intelligemment, ils amèneront entraîne une mauvaise expérience pour vos clients.
 

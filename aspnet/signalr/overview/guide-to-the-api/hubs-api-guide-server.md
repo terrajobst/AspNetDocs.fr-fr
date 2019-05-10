@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: b19913e5-cd8a-4e4b-a872-5ac7a858a934
 msc.legacyurl: /signalr/overview/guide-to-the-api/hubs-api-guide-server
 msc.type: authoredcontent
-ms.openlocfilehash: adfd540562ec54938860740ab280c770e24f492e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c681b104b15bfc4a04587c7abf685dcf20def2ca
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411408"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112792"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---server-c"></a>Guide de l’API ASP.NET SignalR Hubs - serveur (c#)
 
@@ -562,7 +562,6 @@ Dans votre classe de concentrateur, vous pouvez accéder à ces données dans le
 
 > [!NOTE]
 > Ce mécanisme de persistance de l’état n’est pas destiné pour de grandes quantités de données, depuis tout ce que vous placez dans le `state` ou `Clients.Caller` propriété est un aller-retour avec chaque appel de méthode. Il est utile pour les éléments plus petits tels que les noms d’utilisateur ou de compteurs.
-
 
 Dans VB.NET ou dans un concentrateur fortement typées, l’objet d’état de l’appelant n’est pas accessible via `Clients.Caller`; au lieu de cela, utilisez `Clients.CallerState` (introduite dans SignalR 2.1) :
 

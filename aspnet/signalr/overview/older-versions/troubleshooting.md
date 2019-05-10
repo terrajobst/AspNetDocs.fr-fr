@@ -8,12 +8,12 @@ ms.date: 06/05/2013
 ms.assetid: 347210ba-c452-4feb-886f-b51d89f58971
 msc.legacyurl: /signalr/overview/older-versions/troubleshooting
 msc.type: authoredcontent
-ms.openlocfilehash: 5f7ebf7cc6d6a65216021911fe77036357369980
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3dbf091ac2daa4da477b405852bb4d1316584fcd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389269"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116020"
 ---
 # <a name="signalr-troubleshooting-signalr-1x"></a>Résolution des problèmes de SignalR (SignalR 1.x)
 
@@ -22,7 +22,6 @@ par [Patrick Fletcher](https://github.com/pfletcher)
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
 > Ce document décrit la résolution des problèmes courants avec SignalR.
-
 
 Ce document contient les sections suivantes.
 

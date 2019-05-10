@@ -9,12 +9,12 @@ ms.date: 10/03/2018
 ms.assetid: 2a127d3b-21ed-4cc9-bec0-cdab4e742a25
 msc.legacyurl: /signalr/overview/performance/using-signalr-performance-counters-in-an-azure-web-role
 msc.type: authoredcontent
-ms.openlocfilehash: 8e17e945bc144731dd149bd7ddfc9e29160eaf0b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 969a2ce43a7cb8d649555daf282f900401c0c914
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049196"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113596"
 ---
 # <a name="using-signalr-performance-counters-in-an-azure-web-role"></a>À l’aide des compteurs de performance SignalR dans un rôle Web Azure
 
@@ -88,7 +88,6 @@ Compteurs de performances de SignalR sont utilisés pour surveiller les performa
     ![Définir la copie au répertoire de sortie pour toujours copier](using-signalr-performance-counters-in-an-azure-web-role/_static/image8.png)
 
 15. Répétez l’étape précédente pour le *SignalRPerfCounterInstall.cmd* fichier.
-
 
 16. Avec le bouton droit sur le *SignalRPerfCounterInstall.cmd* fichier et sélectionnez **ouvrir avec**. Dans la boîte de dialogue qui s’affiche, sélectionnez **éditeur binaire** et sélectionnez **OK**.
 

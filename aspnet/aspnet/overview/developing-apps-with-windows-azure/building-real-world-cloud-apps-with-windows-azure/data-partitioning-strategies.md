@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 513837a7-cfea-4568-a4e9-1f5901245d24
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
 msc.type: authoredcontent
-ms.openlocfilehash: 1050018794526e12aad43cd473665de5ff575d7d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3aecd64bc59ffa961aa97dd30b037f9aeb2acdd8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59403556"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118895"
 ---
 # <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>Données (création d’applications Cloud réalistes avec Azure) de stratégies de partitionnement
 
@@ -22,7 +22,6 @@ par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > Le **Building Real World Cloud Apps with Azure** e-book est basé sur une présentation développée par Scott Guthrie. Il explique 13 modèles et pratiques qui peuvent vous aider à réussir le développement d’applications web pour le cloud. Pour plus d’informations sur la série, consultez [le premier chapitre](introduction.md).
-
 
 Nous avons précédemment vu combien il est facile à l’échelle de la couche web d’une application cloud, en ajoutant et supprimant des serveurs web. Mais si elles vous atteignez même magasin de données, déplace de goulot d’étranglement de votre application à partir de la partie frontale vers le back-end et la couche données est la plus difficile de mettre à l’échelle. Dans ce chapitre, nous examinons comment vous pouvez rendre votre couche de données évolutive en partitionnant les données dans plusieurs bases de données relationnelles, ou en combinant le stockage de base de données relationnelle avec d’autres options de stockage de données.
 

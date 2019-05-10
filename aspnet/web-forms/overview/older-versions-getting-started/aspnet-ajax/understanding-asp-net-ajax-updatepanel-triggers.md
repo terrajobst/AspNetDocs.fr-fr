@@ -8,12 +8,12 @@ ms.date: 03/12/2008
 ms.assetid: faab8503-2984-48a9-8a40-7728461abc50
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-updatepanel-triggers
 msc.type: authoredcontent
-ms.openlocfilehash: e3821eee8c7bf2c2f9b45ea75ade2bd5b3b8ef19
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c61d10c28ba3975cb6fbadc6eda1f7a3c9406dfc
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406260"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114610"
 ---
 # <a name="understanding-aspnet-ajax-updatepanel-triggers"></a>Présentation des déclencheurs UpdatePanel d’ASP.NET AJAX
 
@@ -22,7 +22,6 @@ par [Scott Cate](https://github.com/scottcate)
 [Télécharger PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial02_Triggers_cs.pdf)
 
 > Lorsque vous travaillez dans l’éditeur de balisage dans Visual Studio, vous pouvez remarquer (à partir d’IntelliSense) qu’il existe deux éléments enfants d’un contrôle UpdatePanel. Un d’eux est l’élément de déclencheurs, qui spécifie les contrôles sur la page (ou le contrôle utilisateur, si vous en utilisez un) qui déclenchera un rendu partiel du contrôle UpdatePanel dans lequel réside l’élément.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -76,11 +75,9 @@ De même, le `<asp:PostBackTrigger>` élément peut être utilisé pour restitue
 
 1. Appuyez sur F5 pour générer et exécuter le projet. Notez que, lorsque vous cliquez sur les panneaux de mise à jour à la fois, les deux étiquettes modifier du texte ; Cependant, lorsque vous cliquez sur Panneau de cette mise à jour, Label1 uniquement mises à jour.
 
-
 [![](understanding-asp-net-ajax-updatepanel-triggers/_static/image2.png)](understanding-asp-net-ajax-updatepanel-triggers/_static/image1.png)
 
 ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-updatepanel-triggers/_static/image3.png))
-
 
 ## <a name="under-the-hood"></a>*Rouages du système*
 
@@ -90,11 +87,9 @@ Un examen du code source page montre presque aucune configuration particulière�
 
 Cliquez sur le bouton de mise à jour ce panneau de configuration et notez que le contrôle UpdatePanel supérieur sera actualisée avec l’heure actuelle du serveur. Dans le FireBug, choisissez l’onglet Console afin que vous puissiez examiner la demande. Examinez tout d’abord les paramètres de la demande POST :
 
-
 [![](understanding-asp-net-ajax-updatepanel-triggers/_static/image5.png)](understanding-asp-net-ajax-updatepanel-triggers/_static/image4.png)
 
 ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-updatepanel-triggers/_static/image6.png))
-
 
 Notez que le contrôle UpdatePanel a indiqué au code côté serveur AJAX précisément quelle arborescence de contrôle a été déclenché via le paramètre ScriptManager1 : `Button1` de la `UpdatePanel1` contrôle. Maintenant, cliquez sur le bouton de mise à jour des panneaux à la fois. Puis, examiner la réponse, nous voyons une série délimitée une barre verticale de variables définies dans une chaîne ; plus précisément, nous voyons l’UpdatePanel supérieur, `UpdatePanel1`, a l’intégralité de son code HTML envoyé au navigateur. La bibliothèque de scripts client AJAX substitue d’origine contenu HTML l’UpdatePanel avec le nouveau contenu via le `.innerHTML` propriété, et par conséquent, le serveur envoie le contenu est modifié à partir du serveur au format HTML.
 
@@ -104,11 +99,9 @@ Comme nous pouvons le constater, car aucun code spécial n’est utilisé pour e
 
 Prenons l’exemple d’un contrôle de case à cocher ; Examinez le code machine de classe dans .NET Reflector. Pour ce faire, vérifiez que votre assembly System.Web est ouvert et accédez à la `System.Web.UI.WebControls.CheckBox` classe, en ouvrant le `RenderInputTag` (méthode). Recherchez un conditionnel qui vérifie le `AutoPostBack` propriété :
 
-
 [![](understanding-asp-net-ajax-updatepanel-triggers/_static/image8.png)](understanding-asp-net-ajax-updatepanel-triggers/_static/image7.png)
 
 ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-updatepanel-triggers/_static/image9.png))
-
 
 Lorsque la publication (postback) automatique est activée sur un `CheckBox` contrôler (via la propriété AutoPostBack ayant pour valeur true), la résultante `<input>` balise est donc rendue avec un événement ASP.NET gère le script dans son `onclick` attribut. L’interception de soumission du formulaire, puis, permet à ASP.NET AJAX devant être injectés dans la page nonintrusively, contribuant à éviter les éventuelles modifications avec rupture qui peuvent se produire en utilisant un remplacement de chaîne éventuellement imprécise. En outre, cela permet *n’importe quel* contrôle ASP.NET personnalisé à utiliser la puissance d’ASP.NET AJAX sans code supplémentaire pour prendre en charge son utilisation dans un conteneur d’UpdatePanel.
 
@@ -128,11 +121,9 @@ Et Voici le nouveau code-behind :
 
 L’idée derrière cette page est que la liste déroulante sélectionne une des trois couleurs pour afficher le deuxième contrôle label, que la case à cocher détermine à la fois s’il est en gras et indique si les étiquettes d’affichent la date, ainsi que le temps. La case à cocher ne doivent pas provoquer une mise à jour AJAX, mais la liste déroulante doit, même si elle n’est pas hébergée dans un UpdatePanel.
 
-
 [![](understanding-asp-net-ajax-updatepanel-triggers/_static/image11.png)](understanding-asp-net-ajax-updatepanel-triggers/_static/image10.png)
 
 ([Cliquez pour afficher l’image en taille réelle](understanding-asp-net-ajax-updatepanel-triggers/_static/image12.png))
-
 
 Comme c’est évident dans la capture d’écran ci-dessus, le bouton de la plus récente sur lequel cliquer a été le bouton droit de mise à jour de ce panneau de configuration, qui le temps supérieur, indépendamment du temps en bas de mise à jour. La date a été désactivée également entre les clics, comme la date est visible dans l’étiquette du bas. Enfin, d’intérêt est la couleur de l’étiquette bas : il a été mis à jour plus récemment que le texte du libellé, qui montre que l’état du contrôle est important, et les utilisateurs s’attendent à pouvoir être conservé dans les renvois AJAX. *Toutefois*, l’heure n’a pas été mis à jour. Le temps a été automatiquement complétée par le biais de la persistance du \_ \_champ d’état d’affichage de la page en cours d’interprétation par le runtime ASP.NET lorsque le contrôle a été à nouveau rendu sur le serveur. Le code de serveur ASP.NET AJAX ne reconnaît pas dans lequel les contrôles de méthodes modifiez état ; Il remplit simplement à partir de l’état d’affichage et exécute ensuite les événements qui sont appropriés.
 

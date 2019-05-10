@@ -8,12 +8,12 @@ ms.date: 04/17/2013
 ms.assetid: c334adc3-d6dc-44f3-9f06-f7634475aad3
 msc.legacyurl: /signalr/overview/older-versions/signalr-1x-hubs-api-guide-net-client
 msc.type: authoredcontent
-ms.openlocfilehash: 1551b4533e05a6cd7dcc29e4c6bc17e854889ee8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2b22b53c405a865f91b04e677f60b82dd46dbf9b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402243"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120121"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---net-client-signalr-1x"></a>Guide de l’API ASP.NET SignalR Hubs - Client .NET (SignalR 1.x)
 
@@ -26,7 +26,6 @@ par [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://gith
 > L’API de concentrateurs SignalR vous permet de vous permettent d’effectuer des appels de procédure distante (RPC) à partir d’un serveur aux clients connectés et à partir de clients sur le serveur. Dans le code serveur, vous définissez des méthodes qui peuvent être appelées par les clients, et vous appelez des méthodes qui s’exécutent sur le client. Dans le code client, vous définissez des méthodes qui peuvent être appelées à partir du serveur, et vous appelez des méthodes qui s’exécutent sur le serveur. SignalR s’occupe de tous les éléments client-serveur pour vous.
 > 
 > SignalR offre également une API de niveau inférieur appelée connexions persistantes. Pour une introduction à SignalR Hubs et connexions persistantes, ou pour obtenir un didacticiel qui montre comment générer une application de SignalR complète, consultez [SignalR - mise en route](../getting-started/index.md).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -87,7 +86,6 @@ Avant de pouvoir établir une connexion, vous devez créer un `HubConnection` de
 
 > [!NOTE]
 > Pour les clients JavaScript, vous devez inscrire au moins un gestionnaire d’événements avant d’appeler le `Start` méthode pour établir la connexion. Cela n’est pas nécessaire pour les clients .NET. Pour les clients JavaScript, le code proxy généré crée automatiquement des proxys pour tous les concentrateurs qui existent sur le serveur et l’inscription d’un gestionnaire sert à indiquer les Hubs votre client prévoit d’utiliser. Mais pour un client .NET vous créer des proxys de Hub manuellement, afin de SignalR part du principe que vous utilisez n’importe quel Hub que vous créez un proxy pour.
-
 
 L’exemple de code utilise la valeur par défaut « / signalr « URL pour se connecter à votre service de SignalR. Pour plus d’informations sur la façon de spécifier une autre URL de base, consultez [Guide de l’API ASP.NET SignalR Hubs - Server - URL /signalr](../guide-to-the-api/hubs-api-guide-server.md#signalrurl).
 

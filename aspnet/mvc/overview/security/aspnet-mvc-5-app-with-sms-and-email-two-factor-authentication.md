@@ -8,12 +8,12 @@ ms.date: 08/20/2015
 ms.assetid: f50a5cdb-c06a-46ed-aa14-fc5b049dc8dc
 msc.legacyurl: /mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: 25d21efaf2f01ee1c162408a3caf699ac818aaa7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2a0275959cbada52b53adca984ee1023a2ee2552
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384954"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112344"
 ---
 # <a name="aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication"></a>Application ASP.NET MVC 5 avec authentification à deux facteurs par SMS et e-mail
 
@@ -22,7 +22,6 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > Ce didacticiel vous montre comment créer une application web de ASP.NET MVC 5 avec authentification à deux facteurs. Vous devez effectuer [créer une application web de ASP.NET MVC 5 sécurisée avec connexion, réinitialisation de confirmation et le mot de passe de messagerie](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md) avant de continuer. Vous pouvez télécharger l’application terminée [ici](https://code.msdn.microsoft.com/MVC-5-with-2FA-email-8f26d952). Le téléchargement contient les helpers de débogage qui vous permettent de tester une confirmation par e-mail et par SMS sans configurer un fournisseur de messagerie ou de SMS.
 > 
 > Ce didacticiel a été écrit par [Rick Anderson](https://blogs.msdn.com/rickAndy) (Twitter : [ @RickAndMSFT ](https://twitter.com/RickAndMSFT) ).
-
 
 - [Créer une application ASP.NET MVC](#createMvc)
 - [Configurer SMS pour l’authentification à deux facteurs](#SMS)
@@ -36,7 +35,6 @@ Démarrez en installant et en cours d’exécution [Visual Studio Express 2013 p
 
 > [!NOTE]
 > Avertissement : Vous devez effectuer [créer une application web de ASP.NET MVC 5 sécurisée avec connexion, réinitialisation de confirmation et le mot de passe de messagerie](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md) avant de continuer. Vous devez installer [Visual Studio 2013 Update 3](https://go.microsoft.com/fwlink/?LinkId=390465) ou une version ultérieure pour suivre ce didacticiel.
-
 
 1. Créez un projet Web ASP.NET et sélectionnez le modèle MVC. Web Forms prend également en charge ASP.NET Identity : vous pouvez donc suivre des étapes similaires dans une application Web Forms.  
     ![](aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication/_static/image1.png)

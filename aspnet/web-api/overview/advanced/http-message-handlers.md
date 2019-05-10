@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 9002018b-3aa3-4358-bb1c-fbb5bc751d01
 msc.legacyurl: /web-api/overview/advanced/http-message-handlers
 msc.type: authoredcontent
-ms.openlocfilehash: 308d2e3dd21917e7656f7ffe889dc965d9275d74
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a8e6f1da8df4802e1acf7779a2fc75bfe8ab876f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59392103"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115546"
 ---
 # <a name="http-message-handlers-in-aspnet-web-api"></a>Gestionnaires de messages HTTP dans l’API Web ASP.NET
 
@@ -47,7 +47,6 @@ Ce diagramme illustre deux gestionnaires personnalisés insérés dans le pipeli
 > [!NOTE]
 > Du côté client, HttpClient utilise également des gestionnaires de messages. Pour plus d’informations, consultez [gestionnaires de messages HttpClient](httpclient-message-handlers.md).
 
-
 ## <a name="custom-message-handlers"></a>Gestionnaires de messages personnalisés
 
 Pour écrire un gestionnaire de messages personnalisés, dérivez de **System.Net.Http.DelegatingHandler** et remplacer le **SendAsync** (méthode). Cette méthode a la signature suivante :
@@ -67,7 +66,6 @@ Voici un exemple simple :
 
 > [!NOTE]
 > L’appel à `base.SendAsync` est asynchrone. Si le gestionnaire effectue tout travail après cet appel, utilisez le **await** mot clé, comme indiqué.
-
 
 Un gestionnaire de délégation peut également ignorer le gestionnaire interne et créer directement la réponse :
 
@@ -131,7 +129,6 @@ Si la demande n’a pas d’une clé valide, le gestionnaire crée un message de
 
 > [!NOTE]
 > Si la clé d’API s’applique uniquement à certaines actions de contrôleur, envisagez d’utiliser un filtre d’action au lieu d’un gestionnaire de messages. Filtres d’action exécutent après l’exécution de routage de l’URI.
-
 
 ## <a name="per-route-message-handlers"></a>Gestionnaires de messages d’itinéraire
 

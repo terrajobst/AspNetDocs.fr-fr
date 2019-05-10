@@ -8,12 +8,12 @@ ms.date: 06/06/2012
 ms.assetid: a56572ba-81c3-47af-826d-941e9c4775ec
 msc.legacyurl: /mvc/overview/performance/using-asynchronous-methods-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: 8292fd43ffa2bc66b4daa8f0fc09569226d90bff
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8d42ebf770e1b75e2867cca36e71423ba9467ee2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379558"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112437"
 ---
 # <a name="using-asynchronous-methods-in-aspnet-mvc-4"></a>Utilisation de méthodes asynchrones dans ASP.NET MVC 4
 
@@ -22,7 +22,6 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > Ce didacticiel vous apprend les notions de base de la création d’une application Web ASP.NET MVC asynchrone à l’aide [Visual Studio Express 2012 pour Web](https://www.microsoft.com/visualstudio/11), qui est une version gratuite de Microsoft Visual Studio. Vous pouvez également utiliser [Visual Studio 2012](https://www.microsoft.com/visualstudio/11).
 > 
 > Un exemple complet est fourni pour ce didacticiel sur github [https://github.com/RickAndMSFT/Async-ASP.NET/](https://github.com/RickAndMSFT/Async-ASP.NET/)
-
 
 ASP.NET MVC 4 [contrôleur](https://msdn.microsoft.com/library/system.web.mvc.controller(VS.108).aspx) classe conjointement [.NET 4.5](https://msdn.microsoft.com/library/w0x726c2(VS.110).aspx) vous permet d’écrire des méthodes d’action asynchrones qui retournent un objet de type [tâche&lt;ActionResult&gt; ](https://msdn.microsoft.com/library/dd321424(VS.110).aspx). Le .NET Framework 4 a introduit un concept de programmation asynchrone appelé une [tâche](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) et ASP.NET MVC 4 prend en charge [tâche](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx). Les tâches sont représentées par le **tâche** type et les types associés dans le [System.Threading.Tasks](https://msdn.microsoft.com/library/system.threading.tasks.aspx) espace de noms. Le .NET Framework 4.5 s’appuie sur cette prise en charge asynchrone avec le [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) et [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) mots clés qui facilitent l’utilisation avec [tâche](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) objets beaucoup moins complexes que la précédente approches asynchrones. Le [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) mot clé est un raccourci syntaxique pour indiquer un morceau de code d’attente de façon asynchrone sur un autre fragment de code. Le [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) mot clé représente un indicateur que vous pouvez utiliser pour marquer des méthodes comme méthodes asynchrones basées sur des tâches. La combinaison de **await**, **async**et le **tâche** objet rend beaucoup plus facile à écrire du code asynchrone dans .NET 4.5. Le nouveau modèle pour les méthodes asynchrones est appelé le *Task-based Asynchronous Pattern* (**appuyez sur**). Ce didacticiel suppose que vous êtes familiarisé avec la programmation asynchrone à l’aide [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) et [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) mots clés et les [tâche](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) espace de noms.
 

@@ -8,19 +8,18 @@ ms.date: 03/02/2009
 ms.assetid: 4733b9f1-9999-48fb-8b73-6038fbcc5ecb
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-the-idataerrorinfo-interface-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 3e1399d17840a2f5301349cb91deb07b0cc34363
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 938b180da02b1963acffd021d18621d75d1d0447
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421977"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117557"
 ---
 # <a name="validating-with-the-idataerrorinfo-interface-c"></a>Validation avec l’interface IDataErrorInfo (C#)
 
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther vous montre comment afficher des messages d’erreur de validation personnalisée en implémentant l’interface IDataErrorInfo dans une classe de modèle.
-
 
 L’objectif de ce didacticiel est d’expliquer une approche pour la validation dans une application ASP.NET MVC. Vous allez apprendre à empêcher un utilisateur d’envoyer un formulaire HTML sans fournir de valeurs pour les champs obligatoires. Dans ce didacticiel, vous allez apprendre à effectuer la validation à l’aide de l’interface IErrorDataInfo.
 
@@ -30,7 +29,6 @@ Dans ce didacticiel, je vais utiliser la base de données MoviesDB et la table d
 
 <a id="0.5_table01"></a>
 
-
 | **Nom de la colonne** | **Type de données** | **Null autorisé** |
 | --- | --- | --- |
 | Id | Int | False |
@@ -38,19 +36,15 @@ Dans ce didacticiel, je vais utiliser la base de données MoviesDB et la table d
 | Directeur | Nvarchar(100) | False |
 | DateReleased | DateTime | False |
 
-
 Dans ce didacticiel, j’utilise Microsoft Entity Framework pour générer mes classes de modèle de base de données. La classe Movie générée par Entity Framework s’affiche dans la Figure 1.
-
 
 [![L’entité de film](validating-with-the-idataerrorinfo-interface-cs/_static/image1.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image1.png)
 
 **Figure 01**: L’entité de film ([cliquez pour afficher l’image en taille réelle](validating-with-the-idataerrorinfo-interface-cs/_static/image2.png))
 
-
 > [!NOTE] 
 > 
 > Pour en savoir plus sur l’utilisation d’Entity Framework pour générer vos classes de modèle de base de données, consultez que mon didacticiel intitulé Création des Classes de modèle avec Entity Framework.
-
 
 ## <a name="the-controller-class"></a>La classe de contrôleur
 
@@ -72,11 +66,9 @@ La propriété IsValid retourne false quand il existe une erreur de validation. 
 
 La classe Movie est générée par Entity Framework. Vous pouvez voir le code de la classe Movie si vous développez le fichier MoviesDBModel.edmx dans la fenêtre Explorateur de solutions et ouvrez le fichier MoviesDBModel.Designer.cs dans l’éditeur de Code (voir Figure 2).
 
-
 [![Le code de l’entité de film](validating-with-the-idataerrorinfo-interface-cs/_static/image2.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image3.png)
 
 **Figure 02**: Le code de l’entité de film ([cliquez pour afficher l’image en taille réelle](validating-with-the-idataerrorinfo-interface-cs/_static/image4.png))
-
 
 La classe Movie est une classe partielle. Cela signifie que nous pouvons ajouter une autre classe partielle portant le même nom pour étendre les fonctionnalités de la classe Movie. Nous allons ajouter notre logique de validation à la nouvelle classe partielle.
 
@@ -110,7 +102,6 @@ Vous pouvez tirer parti de ces méthodes partielles pour ajouter la logique de v
 > [!NOTE] 
 > 
 > Une méthode partielle est une méthode définie dans une classe que vous n’êtes pas obligé de mettre en œuvre. Si vous n’implémentez une méthode partielle ensuite le compilateur supprime la signature de méthode et tous les appels à la méthode, par conséquent, il n’existe aucun coût d’exécution associé à la méthode partielle. Dans l’éditeur de Code Visual Studio, vous pouvez ajouter une méthode partielle en tapant le mot clé *partielle* suivi d’un espace pour afficher une liste des vues partielles pour implémenter.
-
 
 **Liste 3 - Models\Movie.cs**
 
@@ -146,11 +137,9 @@ Dans la liste 4, la propriété d’indexeur vérifie le \_collection d’erreur
 
 Vous n’avez pas besoin de modifier le contrôleur Home en aucune façon d’utiliser la classe Movie modifiée. La page affichée dans la Figure 3 illustre que se passe-t-il quand aucune valeur n’est entrée pour les champs de formulaire titre ou directeur.
 
-
 [![Création automatique de méthodes d’action](validating-with-the-idataerrorinfo-interface-cs/_static/image3.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image5.png)
 
 **Figure 03**: Un formulaire avec des valeurs manquantes ([cliquez pour afficher l’image en taille réelle](validating-with-the-idataerrorinfo-interface-cs/_static/image6.png))
-
 
 Notez que la valeur DateReleased est validée automatiquement. Étant donné que la propriété DateReleased n’accepte pas les valeurs NULL, le DefaultModelBinder génère automatiquement une erreur de validation pour cette propriété lorsqu’elle n’a pas une valeur. Si vous souhaitez modifier le message d’erreur pour la propriété DateReleased vous devez créer un classeur de modèles personnalisés.
 

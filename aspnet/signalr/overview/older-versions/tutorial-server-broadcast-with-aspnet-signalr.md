@@ -8,12 +8,12 @@ ms.date: 04/10/2013
 ms.assetid: ab7b2554-956a-4f6d-b2a0-4ae0c62e8580
 msc.legacyurl: /signalr/overview/older-versions/tutorial-server-broadcast-with-aspnet-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: a63bca69f137a4d4765db6a4925ff027c9d8bf7d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 68908be34f6b010e512677fe5f5e31bfdefab592
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403582"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116064"
 ---
 # <a name="tutorial-server-broadcast-with-aspnet-signalr-1x"></a>Tutoriel : Diffusion par le serveur avec ASP.NET SignalR 1.x
 
@@ -26,7 +26,6 @@ par [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://gith
 > L’application que vous allez créer dans ce didacticiel simule un téléscripteur, un scénario classique pour les fonctionnalités de diffusion de serveur.
 > 
 > Commentaires sur le didacticiel sont les bienvenus. Si vous avez des questions qui ne sont pas directement liées à ce didacticiel, vous pouvez les publier à le [ASP.NET SignalR forum](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -54,7 +53,6 @@ Ce didacticiel contient les sections suivantes :
 
 > [!NOTE]
 > Si vous ne souhaitez pas fonctionner à travers les étapes de génération de l’application, vous pouvez installer le package SignalR.Sample dans une nouvelle **une Application Web ASP.NET vide** projet, puis lire ces étapes pour obtenir des explications du code. La première partie du didacticiel couvre un sous-ensemble du code SignalR.Sample, et la deuxième partie explique les fonctionnalités clés des fonctionnalités supplémentaires dans le package SignalR.Sample.
-
 
 <a id="prerequisites"></a>
 

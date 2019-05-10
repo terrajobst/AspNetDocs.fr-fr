@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: 26b2f55e-ed42-4277-89b0-c941eb754145
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-8
 msc.type: authoredcontent
-ms.openlocfilehash: 2ba210d8c541c6c330dda74706470fa73a81474a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 89897ad41b217764cbd17317d4bf5d6a5c5d488f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379480"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112907"
 ---
 # <a name="part-8-shopping-cart-with-ajax-updates"></a>Partie 8 : Panier d’achat avec des mises à jour Ajax
 
@@ -24,7 +24,6 @@ par [Jon Galloway](https://github.com/jongalloway)
 > Le Store de musique MVC est une implémentation de magasin d’exemple léger qui vend des albums de musique en ligne et implémente l’administration de site de base, connexion de l’utilisateur et les fonctionnalités de panier d’achat.  
 >   
 > Cette série de didacticiels décrit en détail les étapes prises pour générer l’exemple d’application ASP.NET MVC Music Store. Partie 8 couvre le panier d’achat avec des mises à jour Ajax.
-
 
 Nous allons permettre aux utilisateurs de placer des albums dans leur panier d’achat sans l’enregistrer, mais ils doivent s’inscrire en tant qu’invités à l’extraction terminée. Le processus d’achat et l’extraction est divisée en deux contrôleurs : un contrôleur ShoppingCart qui permet d’ajouter des éléments anonymement à un panier d’achat et un contrôleur d’extraction qui gère le processus de validation. Nous allons commencer par le panier d’achat dans cette section, puis générez le processus de validation dans la section suivante.
 
@@ -156,7 +155,6 @@ Après avoir chargé votre panier d’achat, vous pouvez cliquer sur la supprime
 ![](mvc-music-store-part-8/_static/image8.png)
 
 Nous avons développé un travail panier qui permet à des utilisateurs non inscrits à ajouter des éléments à leur panier d’achat. Dans la section suivante, nous allons pouvoir inscrire et terminer le processus de validation.
-
 
 > [!div class="step-by-step"]
 > [Précédent](mvc-music-store-part-7.md)

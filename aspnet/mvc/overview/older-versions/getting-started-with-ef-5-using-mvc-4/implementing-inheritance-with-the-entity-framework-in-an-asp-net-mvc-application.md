@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: a5c3feff-5335-4cdd-a97d-f7a8785c2494
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-inheritance-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: fe2bc91c1bb37282389a45f662a34f8865dee301
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d61d02e23bbcaf9eff910613880ac49f79c15cac
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381066"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112387"
 ---
 # <a name="implementing-inheritance-with-the-entity-framework-in-an-aspnet-mvc-application-8-of-10"></a>Implémentation de l’héritage avec Entity Framework dans une Application ASP.NET MVC (8 sur 10)
 
@@ -26,7 +26,6 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Si vous rencontrez un problème que vous ne pouvez pas résoudre, [télécharger le chapitre terminé](building-the-ef5-mvc4-chapter-downloads.md) et essayez de reproduire votre problème. Vous trouverez généralement la solution au problème en comparant votre code pour le code complet. Pour certaines erreurs courantes et comment les résoudre, consultez [erreurs et des solutions de contournement.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 Dans le didacticiel précédent, vous avez géré les exceptions d’accès concurrentiel. Ce didacticiel vous indiquera comment implémenter l’héritage dans le modèle de données.
 
@@ -142,7 +141,6 @@ Exécutez le `update-database` réexécutez la commande.
 > [!code-xml[Main](implementing-inheritance-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample8.xml?highlight=1-2)]
 > 
 > Avec une base de données, il n’existe pas de données à migrer et le `update-database` commande est beaucoup plus susceptible de s’exécuter sans erreur. Pour obtenir des instructions sur la suppression de la base de données, consultez [comment supprimer une base de données à partir de Visual Studio 2012](http://romiller.com/2013/05/17/how-to-drop-a-database-from-visual-studio-2012/). Si vous adoptez cette approche pour poursuivre le didacticiel, ignorez l’étape de déploiement à la fin de ce didacticiel, étant donné que le site déployé obtiendriez la même erreur lorsqu’elle s’exécute automatiquement migrations. Si vous souhaitez corriger une erreur de migrations, la meilleure ressource est un des forums d’Entity Framework ou StackOverflow.com.
-
 
 ## <a name="testing"></a>Test
 

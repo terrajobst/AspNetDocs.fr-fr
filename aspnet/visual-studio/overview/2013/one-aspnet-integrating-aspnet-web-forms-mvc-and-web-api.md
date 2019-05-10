@@ -8,12 +8,12 @@ ms.date: 07/16/2014
 ms.assetid: 4fe2558d-67cc-4d12-a5c1-6fb9f6f16137
 msc.legacyurl: /visual-studio/overview/2013/one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 1023d9bef311e58fb5fb0bb24cde80e8320e6bac
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 165d104b5d3ef3281af449cc8673ad96f531d628
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419052"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113078"
 ---
 # <a name="hands-on-lab-one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api"></a>Atelier pratique : One ASP.NET : Intégration d’ASP.NET Web Forms, MVC et API Web
 
@@ -26,7 +26,6 @@ par [Web Camps Team](https://twitter.com/webcamps)
 > Visual Studio 2013 introduit un nouveau système de projet unifié qui vous permet de créer une application et utiliser toutes les technologies ASP.NET dans un projet. Cette fonctionnalité vous évite de devoir choisir qu’une seule technologie au début d’un projet et le stick avec lui et à la place encourage l’utilisation de plusieurs frameworks ASP.NET au sein d’un projet.
 > 
 > Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
-
 
 <a id="Overview"></a>
 ## <a name="overview"></a>Vue d'ensemble
@@ -62,7 +61,6 @@ Afin d’exécuter les exercices dans cet atelier, vous devez configurer votre e
 > [!NOTE]
 > Assurez-vous que vous avez activé toutes les dépendances pour ce laboratoire avant d’exécuter le programme d’installation.
 
-
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>À l’aide d’extraits de Code
 
@@ -70,7 +68,6 @@ Dans le document de laboratoire, vous serez invité à insérer des blocs de cod
 
 > [!NOTE]
 > Chaque exercice est accompagnée d’une solution de départ située dans le **commencer** dossier de l’exercice qui vous permet de suivre chaque exercice indépendamment des autres. N’oubliez pas que les extraits de code sont ajoutés au cours d’un exercice sont manquants à partir de ces solutions de démarrage et peut ne pas fonctionnent jusqu'à ce que vous avez terminé l’exercice. Dans le code source pour un exercice, vous y trouverez également un **fin** dossier qui contient une solution Visual Studio avec le code qui résulte d’effectuer les étapes dans l’exercice correspondant. Si vous avez besoin d’aide au cours de cet atelier, vous pouvez utiliser ces solutions en tant que guide.
-
 
 ---
 
@@ -88,9 +85,8 @@ Durée estimée pour effectuer ce laboratoire : **60 minutes**
 > [!NOTE]
 > Lorsque vous démarrez Visual Studio, vous devez sélectionner une des collections de paramètres prédéfinis. Chaque collection prédéfinie est conçue pour correspondre à un style de développement particulier et détermine les dispositions de fenêtres, le comportement de l’éditeur, extraits de code IntelliSense et les options de boîte de dialogue. Les procédures décrites dans ce laboratoire décrivent les actions nécessaires pour accomplir une tâche donnée dans Visual Studio lorsque vous utilisez le **paramètres de développement généraux** collection. Si vous choisissez une collection de paramètres différents pour votre environnement de développement, il peut y avoir des différences dans les étapes que vous devez prendre en compte.
 
-
 <a id="Exercise1"></a>
-### <a name="exercise-1-creating-a-new-web-forms-project"></a>Exercice 1 : Création d’un projet Web Forms
+### <a name="exercise-1-creating-a-new-web-forms-project"></a>Exercice 1 : Création d’un projet Web Forms
 
 Dans cet exercice, vous allez créer un nouveau site Web Forms dans Visual Studio 2013 à l’aide du **One ASP.NET** unifiée d’expérience de projet, ce qui vous permettra d’intégrer facilement des composants Web Forms, MVC et API Web dans la même application. Vous serez Explorer la solution générée, puis identifier ses parties, et enfin, vous verrez le site Web en action.
 
@@ -177,7 +173,7 @@ Dans cette tâche Exécuter la solution générée, vous explorez l’applicatio
 6. Revenez à Visual Studio, puis appuyez sur **MAJ + F5** pour arrêter le débogage.
 
 <a id="Exercise2"></a>
-### <a name="exercise-2-creating-an-mvc-controller-using-scaffolding"></a>Exercice 2 : Création d’un contrôleur MVC à l’aide de la génération de modèles automatique
+### <a name="exercise-2-creating-an-mvc-controller-using-scaffolding"></a>Exercice 2 : Création d’un contrôleur MVC à l’aide de la génération de modèles automatique
 
 Dans cet exercice vous serez tirer parti de l’infrastructure de génération de modèles automatique ASP.NET fournie par Visual Studio pour créer un contrôleur ASP.NET MVC 5 avec des actions et les vues Razor pour effectuer des opérations CRUD, sans avoir à écrire une seule ligne de code. Le processus de génération de modèles automatique utilise Entity Framework Code First pour générer le contexte de données et le schéma de base de données dans la base de données SQL.
 
@@ -189,7 +185,6 @@ Le flux de travail de modélisation Entity Framework Code First vous permet d’
 
 > [!NOTE]
 > Plus d’informations sur Entity Framework [ici](../../../entity-framework.md).
-
 
 <a id="Ex2Task1"></a>
 #### <a name="task-1--creating-a-new-model"></a>Tâche 1 : création d’un modèle
@@ -342,7 +337,6 @@ Dans cette tâche, vous allez utiliser Internet Explorer **outils de développem
 > ![Option d’Internet Explorer](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image27.png)
 > 
 > Le **outils de développement F12** ont un vaste ensemble de fonctionnalités qui ne sont pas couverte dans ce ateliers pratiques. Si vous souhaitez en savoir plus à ce sujet, reportez-vous à [à l’aide des outils de développement F12](https://msdn.microsoft.com/library/ie/bg182326(v=vs.85)).
-
 
 1. Appuyez sur **F5** pour exécuter la solution.
 

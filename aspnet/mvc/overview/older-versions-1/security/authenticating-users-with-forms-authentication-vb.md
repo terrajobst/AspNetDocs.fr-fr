@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 4341f5b1-6fe5-44c5-8b8a-18fa84f80177
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0a4e8dc3ce5764c6b2ec59c7e3f507064f8a8cb5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a2c2140631d59a7f8b21aa73613a92ea5c7a91d0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422159"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122078"
 ---
 # <a name="authenticating-users-with-forms-authentication-vb"></a>Authentification des utilisateurs avec l’authentification par formulaire (VB)
 
 by [Microsoft](https://github.com/microsoft)
 
 > Découvrez comment utiliser l’attribut [Authorize] au mot de passe protéger certaines pages dans votre application MVC. Vous allez apprendre à utiliser l’outil d’Administration de Site Web pour créer et gérer des utilisateurs et des rôles. Vous allez également apprendre à configurer où sont stockées les informations de compte et le rôle d’utilisateur.
-
 
 L’objectif de ce didacticiel est d’expliquer comment vous pouvez utiliser les formulaires l’authentification par mot de passe protéger les vues dans vos applications ASP.NET MVC. Vous allez apprendre à utiliser l’outil d’Administration de Site Web pour créer des utilisateurs et des rôles. Vous allez également apprendre à empêcher les utilisateurs non autorisés d’appeler des actions de contrôleur. Enfin, vous allez apprendre à configurer où les noms d’utilisateur et mots de passe sont stockés.
 
@@ -117,7 +116,6 @@ L’Assistant d’installation ASP.NET SQL Server vous permet de sélectionner u
 > 
 > 
 > C:\Windows\Microsoft.NET\Framework\v2.0.50727
-
 
 Après avoir créé les objets de base de données nécessaires, vous devez modifier la connexion de base de données utilisée par votre application MVC. Modifier la chaîne de connexion ApplicationServices dans votre fichier de configuration (web.config) web afin qu’il pointe vers la base de données de production. Par exemple, la connexion modifiée dans le Listing 3 pointe vers une base de données nommée MyProductionDB (la chaîne de connexion ApplicationServices cible d’origine a été commentée).
 

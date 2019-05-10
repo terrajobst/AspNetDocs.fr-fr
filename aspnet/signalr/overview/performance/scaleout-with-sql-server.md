@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 98358b6e-9139-4239-ba3a-2d7dd74dd664
 msc.legacyurl: /signalr/overview/performance/scaleout-with-sql-server
 msc.type: authoredcontent
-ms.openlocfilehash: c0c214ea32ad13b3a63be9ef84bcb4b8bc7311aa
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 709a9ebf8f3396842bee0d87e621c00ae1418ec1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393573"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113610"
 ---
 # <a name="signalr-scaleout-with-sql-server"></a>Scale-out de SignalR avec SQL Server
 
@@ -37,7 +37,6 @@ par [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://git
 > ## <a name="questions-and-comments"></a>Questions et commentaires
 >
 > Veuillez laisser des commentaires sur la façon dont vous avez apprécié ce didacticiel et ce que nous pouvions améliorer dans les commentaires en bas de la page. Si vous avez des questions qui ne sont pas directement liées à ce didacticiel, vous pouvez les publier à le [ASP.NET SignalR forum](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
-
 
 Dans ce didacticiel, vous allez utiliser SQL Server pour distribuer les messages sur une application de SignalR est déployée dans deux instances distinctes d’IIS. Vous pouvez également exécuter ce didacticiel sur un ordinateur de test unique, mais pour obtenir l’effet, vous devez déployer l’application de SignalR à deux ou plusieurs serveurs. Vous devez également installer SQL Server sur l’un des serveurs ou sur un serveur dédié distinct. Une autre option consiste à exécuter le didacticiel à l’aide de machines virtuelles sur Azure.
 
@@ -87,7 +86,6 @@ Pour activer Service Broker, utilisez la requête SQL suivante :
 
 > [!NOTE]
 > Si cette requête s’affiche en interblocage, vérifiez qu’il n’existe aucune application connectée à la base de données.
-
 
 Si vous avez activé le suivi, les traces montrera également si Service Broker est activé.
 

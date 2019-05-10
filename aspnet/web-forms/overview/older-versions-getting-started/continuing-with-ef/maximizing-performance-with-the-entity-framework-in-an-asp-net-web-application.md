@@ -8,19 +8,18 @@ ms.date: 01/26/2011
 ms.assetid: 4e43455e-dfa1-42db-83cb-c987703f04b5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: 116c557ad0d6c158f983da75668e634c9eb9747c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5630200a1ad1d30f6d89b38e15179f15b699fa9f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379586"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108583"
 ---
 # <a name="maximizing-performance-with-the-entity-framework-40-in-an-aspnet-4-web-application"></a>Optimisation des performances avec Entity Framework 4.0 dans une Application Web 4 ASP.NET
 
 par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels s’appuie sur l’application web Contoso University créé par le [mise en route avec Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) série de didacticiels. Si vous n’avez pas effectué les didacticiels précédents, comme point de départ pour ce didacticiel vous pouvez [télécharger l’application](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que vous l’auriez créée. Vous pouvez également [télécharger l’application](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) qui est créé par la série de didacticiels terminée. Si vous avez des questions sur les didacticiels, vous pouvez les publier à le [forum ASP.NET Entity Framework](https://forums.asp.net/1227.aspx).
-
 
 Dans le didacticiel précédent, vous avez vu comment gérer les conflits d’accès concurrentiel. Ce didacticiel montre les options pour améliorer les performances d’une application web ASP.NET qui utilise Entity Framework. Vous allez découvrir plusieurs méthodes pour optimiser les performances ou pour diagnostiquer les problèmes de performances.
 
@@ -43,7 +42,6 @@ Les informations présentées dans la section suivante peut être utiles pour le
 > Performances de l’application Web est affectée par de nombreux facteurs, notamment des renseignements tels que la taille des données de demande et de réponse, la vitesse des requêtes de base de données, de nombre de requêtes vers que le serveur peut être en file et de la vitesse à laquelle il peut traiter et même l’efficacité de n’importe quel vous utilisez peut-être de bibliothèques de script client. Si les performances sont critiques dans votre application, ou si le test ou l’expérience montre que les performances de l’application n’est pas satisfaisante, vous devez suivre le protocole normal pour le réglage des performances. Mesurer pour déterminer où sont produisent les goulots d’étranglement et puis résoudre les domaines ayant le plus grand impact sur les performances globales de l’application.
 > 
 > Cette rubrique se concentre principalement sur les façons dans lequel vous pouvez potentiellement améliorer les performances en particulier d’Entity Framework dans ASP.NET. Les suggestions ici sont utiles si vous déterminez que l’accès aux données est un des goulots d’étranglement de performances dans votre application. Sauf comme mentionné, les méthodes expliquées ici ne doit pas être considéré comme &quot;meilleures pratiques&quot; en général, bon nombre d'entre eux sont appropriées uniquement dans des situations exceptionnelles ou à l’adresse très particuliers des goulots d’étranglement de performances.
-
 
 Pour démarrer le didacticiel, démarrez Visual Studio et ouvrez l’application web Contoso University que vous utilisez dans le didacticiel précédent.
 
@@ -179,7 +177,6 @@ Comme alternative, la fonctionnalité IntelliTrace dans Visual Studio Ultimate f
 > [!NOTE]
 > Vous pouvez effectuer les procédures suivantes uniquement si vous avez Visual Studio Ultimate.
 
-
 Restaurer le code d’origine dans le `GetDepartmentsByName` (méthode), puis exécutez le *Departments.aspx* page dans le débogueur.
 
 Dans Visual Studio, sélectionnez le **déboguer** menu, puis **IntelliTrace**, puis **événements IntelliTrace**.
@@ -219,14 +216,12 @@ La requête à partir des services est devenue une simple `Select` de requête s
 > [!NOTE]
 > Si vous laissez différé le chargement est activé, le modèle que vous voyez ici, avec la même requête répétée à plusieurs reprises, peut entraîner le chargement différé. Un modèle que vous souhaitez généralement éviter est sur le chargement différé des données associées pour chaque ligne de la table primaire. À moins que vous avez vérifié qu’une requête de jointure unique est trop complexe pour être efficace, vous pourrez généralement améliorer les performances dans ce cas en modifiant la requête principale pour utiliser le chargement hâtif.
 
-
 ## <a name="pre-generating-views"></a>Pré-générer des affichages
 
 Quand un `ObjectContext` objet est créé dans un nouveau domaine d’application, Entity Framework génère un ensemble de classes qu’il utilise pour accéder à la base de données. Ces classes sont appelées *vues*, et si vous avez un modèle de données très volumineux, génération de ces vues peut retarder réponse du site web à la première requête pour une page après l’initialisation d’un nouveau domaine d’application. Vous pouvez réduire ce délai de la première requête en créant des vues au moment de la compilation plutôt qu’au moment de l’exécution.
 
 > [!NOTE]
 > Si votre application n’a pas un modèle de données extrêmement volumineux, ou si elle a un modèle de données de grande taille, mais vous ne vous inquiétez pas un problème de performances qui affecte uniquement la première requête de page une fois que IIS est recyclé, vous pouvez ignorer cette section. Vue de la création ne se produit chaque fois que vous instanciez un `ObjectContext` de l’objet, car les vues sont mis en cache dans le domaine d’application. Par conséquent, sauf si vous êtes recyclage fréquemment votre application dans IIS, les demandes de pages très peu tireront à partir des vues prégénérées.
-
 
 Vous pouvez prégénérer des vues à l’aide de la *EdmGen.exe* outil de ligne de commande ou en utilisant un *Text Template Transformation Toolkit* modèle (T4). Dans ce didacticiel, vous allez utiliser un modèle T4.
 

@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: d1983524-e0d5-4ee6-9d87-1f552f7cb964
 msc.legacyurl: /signalr/overview/testing-and-debugging/unit-testing-signalr-applications
 msc.type: authoredcontent
-ms.openlocfilehash: 1556e8275da446e285c88d1f850d072725de057b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2cf2e88f141d89971439dc1fc4979849f8dded47
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415672"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113446"
 ---
 # <a name="unit-testing-signalr-applications"></a>Tests unitaires des applications SignalR
 
@@ -35,7 +35,6 @@ par [Patrick Fletcher](https://github.com/pfletcher)
 > ## <a name="questions-and-comments"></a>Questions et commentaires
 >
 > Veuillez laisser des commentaires sur la façon dont vous avez apprécié ce didacticiel et ce que nous pouvions améliorer dans les commentaires en bas de la page. Si vous avez des questions qui ne sont pas directement liées à ce didacticiel, vous pouvez les publier à le [ASP.NET SignalR forum](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
-
 
 <a id="unit"></a>
 ## <a name="unit-testing-signalr-applications"></a>Tests unitaires d’applications de SignalR

@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 2f67d8ef-73ca-447d-a0cc-6e3168431e6a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/launching-a-modal-popup-window-from-server-code-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1fd12181e26012c59bde3e6fe153c196d8bf0d31
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cc2d9c7a571a8f76e9d935784810280c348b6bb8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413189"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132627"
 ---
 # <a name="launching-a-modal-popup-window-from-server-code-c"></a>Lancement d’une fenêtre contextuelle modale à partir de code serveur (C#)
 
@@ -22,7 +22,6 @@ par [Christian Wenz](https://github.com/wenz)
 [Télécharger le Code](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup1.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup1CS.pdf)
 
 > Le contrôle ModalPopup dans AJAX Control Toolkit offre un moyen simple de créer une contextuelle modale à l’aide de moyens de côté client. Toutefois certains scénarios nécessitent que l’ouverture de la fenêtre contextuelle modale est déclenchée sur le côté serveur.
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -63,7 +62,6 @@ Le `pageLoad()` fonction JavaScript est une fonction spéciale qui est exécuté
 [!code-javascript[Main](launching-a-modal-popup-window-from-server-code-cs/samples/sample8.js)]
 
 Le `$find()` fonction recherche un élément nommé dans la page et attend l’ID côté serveur en tant que paramètre. Par conséquent, `$find("mpe")` retourne la représentation sous forme de client du contrôle ModalPopup ; son `show()` méthode permet de la fenêtre contextuelle s’affichent.
-
 
 [![La fenêtre contextuelle modale s’affiche lorsque l’utilisateur clique sur un des boutons](launching-a-modal-popup-window-from-server-code-cs/_static/image2.png)](launching-a-modal-popup-window-from-server-code-cs/_static/image1.png)
 

@@ -8,12 +8,12 @@ ms.date: 01/20/2011
 ms.assetid: 3124f28e-cc32-418a-afe3-519fa56f4c36
 msc.legacyurl: /whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application
 msc.type: content
-ms.openlocfilehash: db8f336f3fd9a88dfb32f99510fc53cd7b4a5178
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 63c555358d06a9506bb5c8c993800c3307108192
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415984"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114446"
 ---
 # <a name="how-to-add-mobile-pages-to-your-aspnet-web-forms--mvc-application"></a>Procédure : Ajouter des pages mobiles à votre application ASP.NET Web Forms / MVC
 
@@ -25,7 +25,6 @@ ms.locfileid: "59415984"
 > **Résumé**
 > 
 > Cette procédure décrit différentes façons de servir des pages optimisées pour les appareils mobiles à partir de vos pages Web Forms ASP.NET / application MVC et suggère architecturales et les problèmes à prendre en compte lorsque vous ciblez une large gamme de périphériques de conception. Ce document explique également pourquoi ASP.NET Mobile Controls à partir d’ASP.NET 2.0 à 3.5 sont désormais obsolètes et présente des alternatives modernes.
-
 
 ## <a name="contents"></a>Sommaire
 
@@ -158,7 +157,6 @@ Vos pages mobiles peuvent partager des ressources de statiques courants (tels qu
 
 > [!NOTE]
 > Étant donné que cette approche implique généralement une duplication de code (pages mobiles sont susceptibles de partager certaines similitudes avec pages bureau), il est important de factoriser toute entreprise logique ou des données accès code commun dans une couche sous-jacente partagée ou un service. Sinon, vous allez double l’effort de création et gestion de votre application.
-
 
 #### <a name="redirecting-mobile-visitors-to-your-mobile-pages"></a>Redirection des visiteurs mobiles à vos pages mobiles
 
@@ -310,7 +308,6 @@ Pour plus d’informations, consultez [51degrees.mobi documentation Foundation](
 
 > [!NOTE]
 > Vous *pouvez* fonctionnalité de redirection de la Fondation utilisation 51Degrees.mobi sur les applications ASP.NET MVC, mais vous devez définir votre configuration de redirection en termes d’URL simples, pas en termes de paramètres de routage ou en plaçant les filtres MVC sur les actions. Il s’agit, car (au moment de la rédaction) 51Degrees.mobi Foundation ne reconnaît pas les filtres ou routage.
-
 
 ### <a name="disabling-transcoders-and-proxy-servers"></a>La désactivation des transcodeurs et les serveurs Proxy
 

@@ -8,12 +8,12 @@ ms.date: 01/05/2015
 ms.assetid: a610c796-c131-473c-baef-2e6c568cb2a2
 msc.legacyurl: /signalr/overview/security/hub-authorization
 msc.type: authoredcontent
-ms.openlocfilehash: 91703a9ea088ab8b2898945dbd80b671ee25be07
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5006af5e623da6958a6d59949c6f2cf776c77fc3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392494"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113646"
 ---
 # <a name="authentication-and-authorization-for-signalr-hubs"></a>Authentification et autorisation pour SignalR Hubs
 
@@ -39,7 +39,6 @@ par [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://g
 > ## <a name="questions-and-comments"></a>Questions et commentaires
 >
 > Veuillez laisser des commentaires sur la façon dont vous avez apprécié ce didacticiel et ce que nous pouvions améliorer dans les commentaires en bas de la page. Si vous avez des questions qui ne sont pas directement liées à ce didacticiel, vous pouvez les publier à le [ASP.NET SignalR forum](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 

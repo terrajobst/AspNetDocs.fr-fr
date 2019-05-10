@@ -8,12 +8,12 @@ ms.date: 04/17/2013
 ms.assetid: 03e4b9f5-0fea-4d94-959f-014b2762a301
 msc.legacyurl: /signalr/overview/older-versions/signalr-1x-hubs-api-guide-server
 msc.type: authoredcontent
-ms.openlocfilehash: 7d75c832f704ea88d365f6a8b83c1c3a024b30ca
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d9cd3fad36c0300d96c6dbdc61291ef119da2327
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382249"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113030"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---server-signalr-1x"></a>Guide de l’API ASP.NET SignalR Hubs - serveur (SignalR 1.x)
 
@@ -26,7 +26,6 @@ par [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://gith
 > L’API de concentrateurs SignalR vous permet de vous permettent d’effectuer des appels de procédure distante (RPC) à partir d’un serveur aux clients connectés et à partir de clients sur le serveur. Dans le code serveur, vous définissez des méthodes qui peuvent être appelées par les clients, et vous appelez des méthodes qui s’exécutent sur le client. Dans le code client, vous définissez des méthodes qui peuvent être appelées à partir du serveur, et vous appelez des méthodes qui s’exécutent sur le serveur. SignalR s’occupe de tous les éléments client-serveur pour vous.
 > 
 > SignalR offre également une API de niveau inférieur appelée connexions persistantes. Pour une introduction à SignalR Hubs et connexions persistantes, ou pour obtenir un didacticiel qui montre comment générer une application de SignalR complète, consultez [SignalR - mise en route](index.md).
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -516,7 +515,6 @@ Dans votre classe de concentrateur, vous pouvez accéder à ces données dans le
 
 > [!NOTE]
 > Ce mécanisme de persistance de l’état n’est pas destiné pour de grandes quantités de données, depuis tout ce que vous placez dans le `state` ou `Clients.Caller` propriété est un aller-retour avec chaque appel de méthode. Il est utile pour les éléments plus petits tels que les noms d’utilisateur ou de compteurs.
-
 
 <a id="handleErrors"></a>
 

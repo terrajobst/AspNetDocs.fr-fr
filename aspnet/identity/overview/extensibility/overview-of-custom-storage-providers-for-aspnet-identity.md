@@ -9,12 +9,12 @@ ms.assetid: 681a9204-462e-4260-9a0b-19f0644d6ad7
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 71201e9d91080855350349b966fe7916ce21a909
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4158939da036ee126eb649f31e5d8eaf504920be
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411265"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118085"
 ---
 # <a name="overview-of-custom-storage-providers-for-aspnet-identity"></a>Vue d’ensemble des fournisseurs de stockage personnalisés pour ASP.NET Identity
 
@@ -31,7 +31,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - Visual Studio 2013 avec Update 2
 > - Identité ASP.NET 2
-
 
 ## <a name="introduction"></a>Introduction
 

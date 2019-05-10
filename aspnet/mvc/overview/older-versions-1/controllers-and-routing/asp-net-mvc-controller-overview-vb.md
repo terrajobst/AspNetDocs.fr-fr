@@ -8,19 +8,18 @@ ms.date: 02/16/2008
 ms.assetid: 94c3e5d9-a904-445e-a34e-d92fd1ca108a
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-controller-overview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 33544825403db67fc3b8f0e9eae5d7671b8d2e67
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f19e7dd7fc025de2e0c387db898d36623e790e6a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402184"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123685"
 ---
 # <a name="aspnet-mvc-controller-overview-vb"></a>Vue d’ensemble du contrôleur ASP.NET MVC (VB)
 
 par [Stephen Walther](https://github.com/StephenWalther)
 
 > Dans ce didacticiel, Stephen Walther vous présente les contrôleurs ASP.NET MVC. Vous allez apprendre à créer de nouveaux contrôleurs et de retourner différents types de résultats d’action.
-
 
 Ce didacticiel explore le sujet de contrôleurs ASP.NET MVC, les actions de contrôleur et les résultats d’action. Après avoir terminé ce didacticiel, vous comprendrez comment les contrôleurs sont utilisés pour contrôler la façon dont un visiteur interagit avec un site Web ASP.NET MVC.
 
@@ -103,7 +102,6 @@ Le résultat d’action ContentResult est spécial. Vous pouvez utiliser le rés
 > 
 > 
 > System.Web.Mvc.Controller
-
 
 [!code-vb[Main](asp-net-mvc-controller-overview-vb/samples/sample4.vb)]
 

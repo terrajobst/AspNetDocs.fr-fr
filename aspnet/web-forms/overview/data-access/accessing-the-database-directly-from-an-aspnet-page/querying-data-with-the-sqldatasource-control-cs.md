@@ -8,12 +8,12 @@ ms.date: 02/20/2007
 ms.assetid: 60512d6a-b572-4b7a-beb3-3e44b4d2020c
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f6aa0e4535f88a04419695114d07ea2cf6ac7036
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: de0ad77967af2b1b7d6cca08a0c13df81a278091
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381157"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115014"
 ---
 # <a name="querying-data-with-the-sqldatasource-control-c"></a>Interrogation des données avec le contrôle SqlDataSource (C#)
 
@@ -23,7 +23,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Dans les didacticiels précédents, nous avons utilisé le contrôle ObjectDataSource pour séparer complètement la couche de présentation à partir de la couche d’accès aux données. À partir de ce didacticiel, nous Découvrez comment le contrôle SqlDataSource peut être utilisé pour les applications simples qui ne nécessitent pas de ce type d’une séparation stricte de présentation et d’accès aux données.
 
-
 ## <a name="introduction"></a>Introduction
 
 Tous les didacticiels nous ve analysée jusqu'à présent ont utilisé une architecture à plusieurs niveaux constituée de présentation, logique métier et couches d’accès aux données. La couche DAL (Data Access) a été conçu dans le premier didacticiel ([création d’une couche d’accès aux données](../introduction/creating-a-data-access-layer-cs.md)) et la couche de logique métier dans le deuxième ([création d’une couche de logique métier](../introduction/creating-a-business-logic-layer-cs.md)). En commençant par le [affichant les données avec ObjectDataSource the](../basic-reporting/displaying-data-with-the-objectdatasource-cs.md) didacticiel, nous avons vu comment utiliser le contrôle ObjectDataSource ASP.NET 2.0 s de manière déclarative l’interface avec l’architecture de la couche présentation.
@@ -32,11 +31,9 @@ Tandis que tous les didacticiels jusqu'à présent ont utilisé l’architecture
 
 ASP.NET 2.0 fournit des contrôles de source de données intégrés cinq [SqlDataSource](https://msdn.microsoft.com/library/dz12d98w%28vs.80%29.aspx), [AccessDataSource](https://msdn.microsoft.com/library/8e5545e1.aspx), [ObjectDataSource](https://msdn.microsoft.com/library/9a4kyhcx.aspx), [XmlDataSource](https://msdn.microsoft.com/library/e8d8587a%28en-US,VS.80%29.aspx), et [SiteMapDataSource](https://msdn.microsoft.com/library/5ex9t96x%28en-US,VS.80%29.aspx). SqlDataSource peut être utilisé pour accéder et modifier les données directement à partir d’une base de données relationnel, y compris Microsoft SQL Server, Microsoft Access, Oracle, MySQL et autres utilisateurs. Dans ce didacticiel et les trois suivants, nous allons examiner comment travailler avec le contrôle SqlDataSource, explorant comment interroger et filtrer les données de base de données, ainsi que comment utiliser SqlDataSource pour insérer, mettre à jour et supprimer des données.
 
-
 ![ASP.NET 2.0 inclut cinq contrôles de Source de données intégrés](querying-data-with-the-sqldatasource-control-cs/_static/image1.gif)
 
 **Figure 1**: ASP.NET 2.0 inclut cinq contrôles de Source de données intégrés
-
 
 ## <a name="comparing-the-objectdatasource-and-sqldatasource"></a>Comparaison de l’ObjectDataSource et SqlDataSource
 
@@ -44,15 +41,12 @@ Conceptuellement, les contrôles de l’ObjectDataSource et SqlDataSource sont s
 
 SqlDataSource fournit les mêmes fonctionnalités, mais s’applique à une base de données relationnelle plutôt que dans une bibliothèque d’objets. Avec SqlDataSource, nous devez spécifier la chaîne de connexion de base de données et les requêtes SQL ad hoc ou des procédures stockées pour exécuter pour insérer, mettre à jour, supprimer et récupérer des données. Les opérations de mappage SqlDataSource `Select()`, `Insert()`, `Update()`, et `Delete()` méthodes, lorsqu’elle est appelée, se connecter à la base de données spécifiée et exécuter une requête SQL appropriée. Comme le montre le diagramme suivant, ces méthodes effectuent les tâches rébarbatives de connexion à une base de données, émettre une requête et retourner les résultats.
 
-
 ![SqlDataSource sert de Proxy pour la base de données](querying-data-with-the-sqldatasource-control-cs/_static/image2.gif)
 
 **Figure 2**: SqlDataSource sert de Proxy pour la base de données
 
-
 > [!NOTE]
 > Dans ce didacticiel, nous nous concentrerons sur la récupération de données à partir de la base de données. Dans le [insertion, mise à jour et suppression des données avec le contrôle SqlDataSource](inserting-updating-and-deleting-data-with-the-sqldatasource-cs.md) didacticiel, nous verrons comment configurer SqlDataSource pour prendre en charge d’insertion, de la mise à jour et de suppression.
-
 
 ## <a name="the-sqldatasource-and-accessdatasource-controls"></a>Les AccessDataSource contrôles SqlDataSource
 
@@ -70,79 +64,62 @@ Avant de commencer la manière de travailler directement avec les données de ba
 - `InsertUpdateDelete.aspx`
 - `OptimisticConcurrency.aspx`
 
-
 ![Ajouter les Pages ASP.NET pour les didacticiels de SqlDataSource](querying-data-with-the-sqldatasource-control-cs/_static/image3.gif)
 
 **Figure 3**: Ajouter les Pages ASP.NET pour les didacticiels de SqlDataSource
 
-
 Comme dans les autres dossiers, `Default.aspx` dans le `SqlDataSource` dossier répertorie les didacticiels dans sa section. N’oubliez pas que le `SectionLevelTutorialListing.ascx` contrôle utilisateur fournit cette fonctionnalité. Par conséquent, ajoutez ce contrôle utilisateur à `Default.aspx` en le faisant glisser à partir de l’Explorateur de solutions sur la page s en mode Création.
-
 
 [![Ajouter le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx](querying-data-with-the-sqldatasource-control-cs/_static/image5.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image4.gif)
 
 **Figure 4**: Ajouter le `SectionLevelTutorialListing.ascx` contrôle utilisateur à `Default.aspx` ([cliquez pour afficher l’image en taille réelle](querying-data-with-the-sqldatasource-control-cs/_static/image6.gif))
 
-
 Enfin, ajoutez ces quatre pages sous forme d’entrées pour le `Web.sitemap` fichier. Plus précisément, ajoutez le balisage suivant après l’ajout de boutons personnalisés pour les contrôles DataList et Repeater `<siteMapNode>`:
-
 
 [!code-sql[Main](querying-data-with-the-sqldatasource-control-cs/samples/sample1.sql)]
 
 Après la mise à jour `Web.sitemap`, prenez un moment pour afficher le site Web de didacticiels via un navigateur. Le menu de gauche inclut désormais les éléments de la modification, insertion et suppression des didacticiels.
 
-
 ![Le plan de Site inclut maintenant des entrées pour les didacticiels de SqlDataSource](querying-data-with-the-sqldatasource-control-cs/_static/image7.gif)
 
 **Figure 5**: Le plan de Site inclut maintenant des entrées pour les didacticiels de SqlDataSource
-
 
 ## <a name="step-2-adding-and-configuring-the-sqldatasource-control"></a>Étape 2 : Ajout et configuration du contrôle SqlDataSource
 
 Commencez par ouvrir le `Querying.aspx` page dans le `SqlDataSource` dossier et basculez en mode Design. Faites glisser un contrôle SqlDataSource à partir de la boîte à outils vers le concepteur et le jeu de son `ID` à `ProductsDataSource`. À l’instar de l’ObjectDataSource, SqlDataSource ne génère aucune sortie rendue et par conséquent apparaît sous la forme d’une zone grise sur l’aire de conception. Pour configurer SqlDataSource, cliquez sur le lien configurer la Source de données à partir de la balise active de SqlDataSource s.
 
-
 ![Cliquez sur la configuration de lien de Source de données à partir de la balise active de s SqlDataSource](querying-data-with-the-sqldatasource-control-cs/_static/image8.gif)
 
 **Figure 6**: Cliquez sur la configuration de lien de Source de données à partir de la balise active de s SqlDataSource
-
 
 Ceci fait apparaître l’Assistant Configurer la Source de données de SqlDataSource contrôle s. Les étapes de l’Assistant s différent à partir du contrôle ObjectDataSource s, l’objectif final est le même pour fournir les détails sur la façon de récupérer, insérer, mettre à jour et supprimer des données via la source de données. Pour SqlDataSource, cela implique la base de données sous-jacent à utiliser et de fournir les instructions SQL ad hoc ou les procédures stockées.
 
 La première étape de l’Assistant nous invite pour la base de données. La liste déroulante inclut les bases de données trouvées dans le s d’application web `App_Data` dossier et ceux qui ont été ajoutés au nœud Connexions de données dans l’Explorateur de serveurs. Depuis que nous avons ajouté une déjà une chaîne de connexion pour le `NORTHWIND.MDF` de base de données dans le `App_Data` dossier à notre projet s `Web.config` fichier, la liste déroulante inclut une référence à cette chaîne de connexion, `NORTHWINDConnectionString`. Choisissez cet élément dans la liste déroulante et cliquez sur Suivant.
 
-
 ![Choisissez le NORTHWINDConnectionString dans la liste déroulante](querying-data-with-the-sqldatasource-control-cs/_static/image9.gif)
 
 **Figure 7**: Choisissez le `NORTHWINDConnectionString` dans la liste déroulante
-
 
 Après avoir choisi la base de données, l’Assistant vous demande de la requête pour retourner des données. Nous pouvons spécifier les colonnes d’une table ou vue à retourner ou peut entrer une instruction SQL personnalisée ou spécifier une procédure stockée. Vous pouvez basculer entre ce choix via la spécifier une instruction SQL personnalisée ou une procédure stockée et spécifiez les colonnes d’une table ou afficher des cases d’option.
 
 > [!NOTE]
 > Pour ce premier exemple permettent s d’utiliser les spécifiez les colonnes d’une option de table ou vue. Nous revenir à l’Assistant, plus loin dans ce didacticiel et explorez la spécifier une instruction SQL personnalisée ou une option de procédure stockée.
 
-
 La figure 8 illustre la configurer à l’écran de l’instruction Select lorsque vous spécifiez les colonnes à partir d’un bouton de case d’option de table ou la vue est sélectionnée. La liste déroulante contienne l’ensemble des tables et des vues dans la base de données Northwind, avec la table sélectionnée ou des colonnes de s vue affichées dans la liste de case à cocher ci-dessous. Pour cet exemple, s permettent de retourner le `ProductID`, `ProductName`, et `UnitPrice` colonnes à partir de la `Products` table. Comme le montre la Figure 8, une fois vos ces sélections de l’Assistant affiche l’instruction SQL obtenue `SELECT [ProductID], [ProductName], [UnitPrice] FROM [Products]`.
-
 
 ![Retourner des données à partir de la Table Products](querying-data-with-the-sqldatasource-control-cs/_static/image10.gif)
 
 **Figure 8**: Renvoyer des données depuis le `Products` Table
 
-
 Une fois que vous avez configuré l’Assistant pour retourner le `ProductID`, `ProductName`, et `UnitPrice` colonnes à partir de la `Products` , cliquez sur le bouton suivant. Cet écran final permet d’examiner les résultats de la requête configurée à partir de l’étape précédente. En cliquant sur le bouton Tester la requête s’exécute configuré `SELECT` instruction et affiche les résultats dans une grille.
-
 
 ![Cliquez sur le bouton de requête de Test pour passer en revue votre requête SELECT](querying-data-with-the-sqldatasource-control-cs/_static/image11.gif)
 
 **Figure 9**: Cliquez sur le bouton de la requête de Test pour vérifier votre `SELECT` requête
 
-
 Pour terminer l’Assistant, cliquez sur Terminer.
 
 Comme avec ObjectDataSource, l’Assistant de s SqlDataSource simplement assigne des valeurs aux propriétés du contrôle s, à savoir le [ `ConnectionString` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.sqldatasource.connectionstring.aspx) et [ `SelectCommand` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.sqldatasource.selectcommand.aspx) propriétés. À l’issue de l’Assistant, votre balisage déclaratif s du contrôle SqlDataSource doit ressembler à ce qui suit :
-
 
 [!code-aspx[Main](querying-data-with-the-sqldatasource-control-cs/samples/sample2.aspx)]
 
@@ -154,26 +131,21 @@ Le `SelectCommand` propriété spécifie l’instruction de SQL ad hoc ou procé
 
 Une fois que SqlDataSource a été configuré, il peut être lié à un contrôle Web, tel qu’un GridView ou d’un contrôle DetailsView de données. Pour ce didacticiel, permettent d’afficher les données dans un GridView s. Dans la boîte à outils, faites glisser un GridView sur la page, puis liez-le à le `ProductsDataSource` SqlDataSource en choisissant la source de données à partir de la liste déroulante dans la balise active de s GridView.
 
-
 [![Ajouter un GridView et le lier au contrôle SqlDataSource](querying-data-with-the-sqldatasource-control-cs/_static/image13.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image12.gif)
 
 **Figure 10**: Ajouter un GridView et le lier au contrôle SqlDataSource ([cliquez pour afficher l’image en taille réelle](querying-data-with-the-sqldatasource-control-cs/_static/image14.gif))
-
 
 Une fois que vous avez déjà sélectionné le contrôle SqlDataSource à partir de la liste déroulante dans la balise active de s GridView, Visual Studio ajoute automatiquement un BoundField ou du CheckBoxField au GridView pour chacune des colonnes retournées par le contrôle de source de données. Étant donné que SqlDataSource retourne trois colonnes de base de données `ProductID`, `ProductName`, et `UnitPrice` il existe trois champs dans le contrôle GridView.
 
 Prenez un moment pour configurer les trois opérations de mappage GridView BoundFields. Modifier le `ProductName` champ s `HeaderText` propriété nom de produit et le `UnitPrice` s champ prix. Également mettre en forme le `UnitPrice` champ sous forme de devise. Après avoir apporté ces modifications, votre balisage déclaratif de GridView s doit ressembler à ce qui suit :
 
-
 [!code-aspx[Main](querying-data-with-the-sqldatasource-control-cs/samples/sample3.aspx)]
 
 Visitez cette page via un navigateur. Comme le montre la Figure 11, le contrôle GridView répertorie chaque produit s `ProductID`, `ProductName`, et `UnitPrice` valeurs.
 
-
 [![Le contrôle GridView affiche chaque produit s ProductID, ProductName et UnitPrice valeurs](querying-data-with-the-sqldatasource-control-cs/_static/image16.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image15.gif)
 
 **Figure 11**: Les opérations de mappage GridView affiche chaque produit `ProductID`, `ProductName`, et `UnitPrice` valeurs ([cliquez pour afficher l’image en taille réelle](querying-data-with-the-sqldatasource-control-cs/_static/image17.gif))
-
 
 Lorsque la page est visitée le GridView appelle son contrôle de source de données s `Select()` (méthode). Lorsque nous utilisions le contrôle ObjectDataSource, on le `ProductsBLL` classe s `GetProducts()` (méthode). Avec SqlDataSource, toutefois, le `Select()` méthode établit une connexion à la base de données spécifiée et les problèmes le `SelectCommand` (`SELECT [ProductID], [ProductName], [UnitPrice] FROM [Products]`, dans cet exemple). SqlDataSource retourne ses résultats dans lequel le contrôle GridView énumère ensuite, création d’une ligne dans le contrôle GridView pour chaque enregistrement de base de données retourné.
 
@@ -195,43 +167,33 @@ Lorsque vous configurez le contrôle SqlDataSource, la requête utilisée pour r
 
 Ajouter un autre contrôle GridView à la `Querying.aspx` page et choisir de créer une nouvelle source de données à partir de la liste déroulante dans la balise active. Ensuite, indiquent que les données se fera à partir d’une base de données cela créera un nouveau contrôle SqlDataSource. Nommez le contrôle `ProductsWithCategoryInfoDataSource`.
 
-
 ![Créer un contrôle SqlDataSource nommé ProductsWithCategoryInfoDataSource](querying-data-with-the-sqldatasource-control-cs/_static/image18.gif)
 
 **Figure 12**: Créer un contrôle SqlDataSource nommé `ProductsWithCategoryInfoDataSource`
 
-
 L’écran suivant nous demande de spécifier la base de données. Comme nous l’avons fait dans la Figure 7, sélectionnez le `NORTHWINDConnectionString` à partir de la liste déroulante liste et cliquez sur Suivant. Dans la configuration de l’écran de l’instruction Select, choisissez la spécifier une instruction SQL personnalisée ou une procédure stockée case et cliquez sur Suivant. Cela fera apparaître l’écran de définir des instructions personnalisées ou des procédures stockées, qui offre des onglets : SELECT, UPDATE, INSERT et DELETE. Dans chaque onglet, vous pouvez entrer une instruction SQL personnalisée dans la zone de texte ou choisissez une procédure stockée dans la liste déroulante. Dans ce didacticiel, nous examinerons entrer une instruction SQL personnalisée ; le didacticiel suivant inclut un exemple qui utilise une procédure stockée.
-
 
 ![Entrez une instruction SQL personnalisée ou sélectionner une procédure stockée](querying-data-with-the-sqldatasource-control-cs/_static/image19.gif)
 
 **Figure 13**: Entrez une instruction SQL personnalisée ou sélectionner une procédure stockée
 
-
 L’instruction SQL personnalisée peut être entrée manuellement dans la zone de texte ou peut être construite sous forme graphique en cliquant sur le bouton Générateur de requêtes. Dans le Générateur de requêtes ou la zone de texte, utilisez la requête suivante pour renvoyer le `ProductID` et `ProductName` champs à partir de la `Products` à l’aide de la table un `JOIN` pour récupérer le produit s `CategoryName` à partir de la `Categories` table :
 
-
 [!code-sql[Main](querying-data-with-the-sqldatasource-control-cs/samples/sample4.sql)]
-
 
 ![Vous pouvez graphiquement construire la requête à l’aide du Générateur de requêtes](querying-data-with-the-sqldatasource-control-cs/_static/image20.gif)
 
 **Figure 14**: Vous pouvez graphiquement construire la requête à l’aide du Générateur de requêtes
 
-
 Après avoir spécifié la requête, cliquez sur Suivant pour passer à l’écran de requête de Test. Cliquez sur Terminer pour terminer l’Assistant de SqlDataSource.
 
 À l’issue de l’Assistant, le contrôle GridView aura trois BoundFields ajoutés à ce dernier affichage de la `ProductID`, `ProductName`, et `CategoryName` colonnes retournées par la requête et résultant dans le balisage déclaratif suivant :
 
-
 [!code-aspx[Main](querying-data-with-the-sqldatasource-control-cs/samples/sample5.aspx)]
-
 
 [![Le contrôle GridView affiche chaque ID de produit s, le nom de la catégorie de nom et associé](querying-data-with-the-sqldatasource-control-cs/_static/image22.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image21.gif)
 
 **Figure 15**: Le GridView affiche chaque s Id_produit, le nom et le nom de catégorie associés ([cliquez pour afficher l’image en taille réelle](querying-data-with-the-sqldatasource-control-cs/_static/image23.gif))
-
 
 ## <a name="summary"></a>Récapitulatif
 

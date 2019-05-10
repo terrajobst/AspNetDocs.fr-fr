@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: ebbc93a8-e6c4-4122-8e0d-3aa42293c747
 msc.legacyurl: /signalr/overview/older-versions/mapping-users-to-connections
 msc.type: authoredcontent
-ms.openlocfilehash: 75c8d2f4a102bef541195280a01d75271331dec4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9d948495e9b8821fcb465611b6926603c3756a19
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422510"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117097"
 ---
 # <a name="mapping-signalr-users-to-connections-in-signalr-1x"></a>Mappage des utilisateurs SignalR aux connexions dans SignalR 1.x
 
@@ -22,7 +22,6 @@ par [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://g
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
 > Cette rubrique montre comment conserver des informations sur les utilisateurs et de leurs connexions.
-
 
 ## <a name="introduction"></a>Introduction
 

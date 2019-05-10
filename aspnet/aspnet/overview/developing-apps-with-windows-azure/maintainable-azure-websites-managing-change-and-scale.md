@@ -8,12 +8,12 @@ ms.date: 07/16/2014
 ms.assetid: ecfd0eb4-c4ad-44e6-9db9-a2a66611ff6a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale
 msc.type: authoredcontent
-ms.openlocfilehash: ec0058472f8bc1d8d58e7c78deeb8b6097532510
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c88bae40a8aa092037c0b359ee391acaf161cf10
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409731"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118296"
 ---
 # <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Atelier pratique : Sites web Azure faciles à gérer : gestion des modifications et de la mise à l’échelle
 
@@ -34,7 +34,6 @@ par [Web Camps Team](https://twitter.com/webcamps)
 > Tous les exemples de code et extraits de code sont inclus dans le Kit de formation Camps Web, disponible à l’adresse [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 >
 > Pour plus de couverture approfondie de cette rubrique, consultez le [développement d’applications Cloud réalistes avec Azure e-book](building-real-world-cloud-apps-with-windows-azure/introduction.md).
-
 
 <a id="Overview"></a>
 ## <a name="overview"></a>Vue d'ensemble
@@ -79,7 +78,6 @@ Afin d’exécuter les exercices dans cet atelier, vous devez configurer votre e
 > [!NOTE]
 > Assurez-vous que vous avez activé toutes les dépendances pour ce laboratoire avant d’exécuter le programme d’installation.
 
-
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>À l’aide d’extraits de Code
 
@@ -87,7 +85,6 @@ Dans le document de laboratoire, vous serez invité à insérer des blocs de cod
 
 > [!NOTE]
 > Chaque exercice est accompagnée d’une solution de départ située dans le **commencer** dossier de l’exercice qui vous permet de suivre chaque exercice indépendamment des autres. N’oubliez pas que les extraits de code sont ajoutés au cours d’un exercice sont manquants à partir de ces solutions de démarrage et peut ne pas fonctionnent jusqu'à ce que vous avez terminé l’exercice. Dans le code source pour un exercice, vous y trouverez également un **fin** dossier qui contient une solution Visual Studio avec le code qui résulte d’effectuer les étapes dans l’exercice correspondant. Si vous avez besoin d’aide au cours de cet atelier, vous pouvez utiliser ces solutions en tant que guide.
-
 
 ---
 
@@ -107,9 +104,8 @@ Durée estimée pour effectuer ce laboratoire : **75 minutes**
 > [!NOTE]
 > Lorsque vous démarrez Visual Studio, vous devez sélectionner une des collections de paramètres prédéfinis. Chaque collection prédéfinie est conçue pour correspondre à un style de développement particulier et détermine les dispositions de fenêtres, le comportement de l’éditeur, extraits de code IntelliSense et les options de boîte de dialogue. Les procédures décrites dans ce laboratoire décrivent les actions nécessaires pour accomplir une tâche donnée dans Visual Studio lorsque vous utilisez le **paramètres de développement généraux** collection. Si vous choisissez une collection de paramètres différents pour votre environnement de développement, il peut y avoir des différences dans les étapes que vous devez prendre en compte.
 
-
 <a id="Exercise1"></a>
-### <a name="exercise-1-using-entity-framework-migrations"></a>Exercice 1 : À l’aide des Migrations Entity Framework
+### <a name="exercise-1-using-entity-framework-migrations"></a>Exercice 1 : À l’aide des Migrations Entity Framework
 
 Lorsque vous développez une application, votre modèle de données peut changer au fil du temps. Ces modifications peuvent affecter le modèle existant dans votre base de données (si vous créez une nouvelle version) et il est important de maintenir votre base de données à jour pour empêcher des erreurs.
 
@@ -241,7 +237,7 @@ Dans cette tâche, vous allez utiliser **Migrations Entity Framework Code First*
     *Affichage de la nouvelle contrainte*
 
 <a id="Exercise2"></a>
-### <a name="exercise-2-deploying-a-web-app-to-staging"></a>Exercice 2 : Déploiement d’une application Web dans un environnement intermédiaire
+### <a name="exercise-2-deploying-a-web-app-to-staging"></a>Exercice 2 : Déploiement d’une application Web dans un environnement intermédiaire
 
 **Applications Web dans Azure App Service** vous permet d’effectuer la publication intermédiaire. La publication intermédiaire crée un emplacement de site intermédiaire pour chaque site de production par défaut et vous permet d’échanger ces emplacements sans temps d’arrêt. Il s’agit vraiment utile pour valider les modifications avant de libérer au public, intégrer le contenu du site incrémentielle et restauration si des modifications ne fonctionnent pas comme prévu.
 
@@ -249,7 +245,6 @@ Dans cet exercice, vous allez déployer le **Geek questionnaire** application da
 
 > [!NOTE]
 > Pour activer la publication intermédiaire, l’application web doit être dans **mode Standard**. Notez que des frais supplémentaires seront facturés si vous modifiez votre application web en mode Standard. Pour plus d’informations sur la tarification, consultez [tarification d’App Service](https://azure.microsoft.com/pricing/details/app-service/).
-
 
 <a id="Ex2Task1"></a>
 #### <a name="task-1--creating-a-web-app-in-azure-app-service"></a>Tâche 1 : création d’une application Web dans Azure App Service
@@ -576,7 +571,7 @@ Vous allez maintenant pousser les modifications apportées dans la tâche préc�
     [!code-console[Main](maintainable-azure-websites-managing-change-and-scale/samples/sample16.cmd)]
 
 <a id="Exercise4"></a>
-### <a name="exercise-4-scaling-using-azure-storage"></a>Exercice 4 : Mise à l’échelle à l’aide du stockage Azure
+### <a name="exercise-4-scaling-using-azure-storage"></a>Exercice 4 : Mise à l’échelle à l’aide du stockage Azure
 
 **Objets BLOB** constituent la manière la plus simple de stocker de grandes quantités de texte non structuré ou des données binaires telles que la vidéo, audio et images. Déplacez le contenu statique de votre application vers le stockage, permet à l’échelle de votre application en fournissant des images ou des documents directement dans le navigateur.
 
@@ -726,11 +721,10 @@ Dans cette tâche, vous allez utiliser **Internet Explorer** pour parcourir le *
     *Vérification de la redirection d’URL*
 
 <a id="Exercise5"></a>
-### <a name="exercise-5-using-autoscale-for-web-apps"></a>Exercice 5 : À l’aide de la mise à l’échelle pour les applications Web
+### <a name="exercise-5-using-autoscale-for-web-apps"></a>Exercice 5 : À l’aide de la mise à l’échelle pour les applications Web
 
 > [!NOTE]
 > Cet exercice est facultatif, car elle nécessite la prise en charge pour la charge Web &amp; qui est uniquement disponible pour les tests de performances **Visual Studio 2013 Ultimate Edition**. Pour plus d’informations sur les fonctionnalités spécifiques de Visual Studio 2013, comparer les versions [ici](https://www.microsoft.com/visualstudio/eng/products/compare).
-
 
 **Azure App Service Web Apps** fournit la fonctionnalité de mise à l’échelle pour les applications web exécutées **Mode Standard**. Mise à l’échelle permet Azure automatiquement à l’échelle le nombre d’instances de votre application web en fonction de la charge. Lorsque l’échelle automatique est activée, Azure vérifie l’UC de votre application web une fois toutes les cinq minutes et ajoute les instances en fonction des besoins à ce stade dans le temps. Si l’utilisation du processeur est faible, Azure supprime des instances toutes les deux heures pour vous assurer que les performances de votre application web ne sont pas dégradées.
 

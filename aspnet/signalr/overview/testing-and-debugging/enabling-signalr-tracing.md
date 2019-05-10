@@ -8,12 +8,12 @@ ms.date: 08/08/2014
 ms.assetid: 30060acb-be3e-4347-996f-3870f0c37829
 msc.legacyurl: /signalr/overview/testing-and-debugging/enabling-signalr-tracing
 msc.type: authoredcontent
-ms.openlocfilehash: 1dadbdb6fa1dc58b855402f1d6f18e8af861f756
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 34fe2cdb10c4b41a6e8cac7fb1741d53c02dfc80
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399357"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114400"
 ---
 # <a name="enabling-signalr-tracing"></a>Activation du traçage SignalR
 
@@ -37,7 +37,6 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > ## <a name="questions-and-comments"></a>Questions et commentaires
 >
 > Veuillez laisser des commentaires sur la façon dont vous avez apprécié ce didacticiel et ce que nous pouvions améliorer dans les commentaires en bas de la page. Si vous avez des questions qui ne sont pas directement liées à ce didacticiel, vous pouvez les publier à le [ASP.NET SignalR forum](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
-
 
 Lorsque le traçage est activé, une application de SignalR crée des entrées de journal des événements. Vous pouvez consigner les événements provenant du client et le serveur. Le suivi sur la connexion du serveur de journaux, fournisseur de montée en puissance parallèle et événements de bus de messages. Le suivi sur les événements de connexion de journaux de clients. Dans SignalR 2.1 et versions ultérieures, le suivi sur le client enregistre le contenu complet des messages d’appel de concentrateur.
 

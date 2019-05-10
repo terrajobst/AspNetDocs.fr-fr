@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: c125ca47-606a-4d6f-a1fc-1fc62928af93
 msc.legacyurl: /web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
 msc.type: authoredcontent
-ms.openlocfilehash: 855c3fa35d82173c87d13adb51e10fd13698ade5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3c2a41482b7f9b60a8864b853df23ab5991b6da7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381352"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108754"
 ---
 # <a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Activation des opérations CRUD dans ASP.NET Web API 1
 
@@ -29,7 +29,6 @@ par [Mike Wasson](https://github.com/MikeWasson)
 > 
 > - Visual Studio 2012
 > - Web API 1 (fonctionne également avec l’API Web 2)
-
 
 CRUD est l’acronyme &quot;Create, Read, Update et Delete,&quot; qui sont les quatre opérations de base de données. De nombreux services HTTP également les opérations CRUD via REST ou API REST de type de modèle.
 
@@ -136,7 +135,6 @@ Dans le **ajouter un contrôleur** Assistant, nommez le contrôleur &quot;Produc
 > [!NOTE]
 > Il n’est pas nécessaire de le placer vos contrôleurs dans un dossier nommé contrôleurs. Le nom du dossier n’est pas important ; Il est simplement un moyen pratique d’organiser vos fichiers sources.
 
-
 Le **ajouter un contrôleur** Assistant va créer un fichier nommé ProductsController.cs dans le dossier contrôleurs. Si ce fichier n’est pas déjà ouvert, double-cliquez sur le fichier pour l’ouvrir. Ajoutez le code suivant **à l’aide de** instruction :
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample4.cs)]
@@ -147,7 +145,6 @@ Ajouter un champ qui contient un **IProductRepository** instance.
 
 > [!NOTE]
 > Appel `new ProductRepository()` dans le contrôleur n’est pas la meilleure conception, parce qu’elle lie le contrôleur à une implémentation particulière de `IProductRepository`. Pour une meilleure approche, consultez [à l’aide du résolveur de dépendance d’API Web](../advanced/dependency-injection.md).
-
 
 ## <a name="getting-a-resource"></a>Obtention d’une ressource
 
@@ -205,7 +202,6 @@ Le **CreateResponse** méthode crée un **HttpResponseMessage** et automatiqueme
 
 > [!NOTE]
 > Cet exemple ne valide pas le `Product`. Pour plus d’informations sur la validation de modèle, consultez [Validation de modèle dans ASP.NET Web API](../formats-and-model-binding/model-validation-in-aspnet-web-api.md).
-
 
 ## <a name="updating-a-resource"></a>La mise à jour une ressource
 

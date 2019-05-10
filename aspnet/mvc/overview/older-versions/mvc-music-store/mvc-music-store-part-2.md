@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: 998ce4e1-9d72-435b-8f1c-399a10ae4360
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-2
 msc.type: authoredcontent
-ms.openlocfilehash: b452c59f16107be6d356f86e6c313ba3229dbce6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9dc2226f4951d4bed122df37d35bbb94730a00ad
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392753"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112412"
 ---
 # <a name="part-2-controllers"></a>Partie 2 : Contrôleurs
 
@@ -24,7 +24,6 @@ par [Jon Galloway](https://github.com/jongalloway)
 > Le Store de musique MVC est une implémentation de magasin d’exemple léger qui vend des albums de musique en ligne et implémente l’administration de site de base, connexion de l’utilisateur et les fonctionnalités de panier d’achat.  
 >   
 > Cette série de didacticiels décrit en détail les étapes prises pour générer l’exemple d’application ASP.NET MVC Music Store. Partie 2 couvre les contrôleurs.
-
 
 Avec les infrastructures web traditionnelles, les URL entrantes sont généralement mappés à des fichiers sur disque. Par exemple : une requête pour une URL semblable à « / Products.aspx » ou « /.PHP » peut être traitée par un fichier « Products.aspx » ou «.php ».
 
@@ -136,7 +135,6 @@ Récapitulons ce que nous avons faites jusqu'à présent :
 - Nous avons appris à exécuter notre site Web à l’aide du serveur de développement ASP.NET
 - Nous avons créé deux classes de contrôleur : un HomeController et un StoreController
 - Nous avons ajouté des méthodes d’Action à nos contrôleurs qui répondent aux demandes d’URL et retournent du texte dans le navigateur
-
 
 > [!div class="step-by-step"]
 > [Précédent](mvc-music-store-part-1.md)

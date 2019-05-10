@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: fdc3599a-5217-44c1-951f-0eec9812dce7
 msc.legacyurl: /signalr/overview/older-versions/tutorial-getting-started-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 288f5017acde5a103460ace688933609fba0b02c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 87a90b47ae30bee43e0b0c1e078597db54b8e67d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391024"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113873"
 ---
 # <a name="tutorial-getting-started-with-signalr-1x"></a>Tutoriel : Bien démarrer avec SignalR 1.x
 
@@ -22,7 +22,6 @@ par [Patrick Fletcher](https://github.com/pfletcher), [Tim Teebken](https://gith
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
 > Ce didacticiel montre comment utiliser SignalR pour créer une application de conversation en temps réel. Vous ajouter SignalR à une application de web ASP.NET vide et créer une page HTML pour envoyer et afficher des messages.
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -148,7 +147,6 @@ Le code suivant déclare un proxy pour un concentrateur.
 > [!NOTE]
 > Dans jQuery, la référence à la classe de serveur et de ses membres est en casse mixte. L’exemple de code fait référence à celle de C# **ChatHub** classe dans jQuery comme **chatHub**.
 
-
 Le code suivant est la façon dont vous créez une fonction de rappel dans le script. La classe de concentrateur sur le serveur appelle cette fonction pour envoyer des mises à jour de contenu à chaque client. Les deux lignes qu’encoder en HTML le contenu avant de les afficher sont facultatifs et affichent un moyen simple d’empêcher l’injection de script.
 
 [!code-html[Main](tutorial-getting-started-with-signalr/samples/sample7.html)]
@@ -157,7 +155,6 @@ Le code suivant montre comment ouvrir une connexion avec le hub. Le code démarr
 
 > [!NOTE]
 > Cette approche garantit que la connexion est établie avant que le Gestionnaire d’événements s’exécute.
-
 
 [!code-javascript[Main](tutorial-getting-started-with-signalr/samples/sample8.js)]
 

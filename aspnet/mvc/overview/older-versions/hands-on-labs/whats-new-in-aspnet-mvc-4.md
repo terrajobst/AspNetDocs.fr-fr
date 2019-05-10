@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 48f7feb3-872f-485d-b96f-e30011ff8c4a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/whats-new-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: b9da2522cfaed324a23f43265d4e234ebb4950bd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: adb6e990d0ca98df38c47adf8c37fdffeb6d3d73
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411122"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112998"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Nouveautés d’ASP.NET MVC 4
 
@@ -83,13 +83,12 @@ Ce laboratoire pratique inclut les exercices suivants :
 > [!NOTE]
 > Chaque exercice est accompagné par un **fin** dossier contenant la solution obtenue, vous devez obtenir après avoir effectué les exercices. Si vous avez besoin d’aide supplémentaire sur l’utilisation via les exercices, vous pouvez utiliser cette solution comme guide.
 
-
 Durée estimée pour effectuer ce laboratoire : **60 minutes**.
 
 <a id="Exercise1"></a>
 
 <a id="Exercise_1_New_ASPNET_MVC_4_Project_Templates"></a>
-### <a name="exercise-1-new-aspnet-mvc-4-project-templates"></a>Exercice 1 : Nouveaux modèles de projet ASP.NET MVC 4
+### <a name="exercise-1-new-aspnet-mvc-4-project-templates"></a>Exercice 1 : Nouveaux modèles de projet ASP.NET MVC 4
 
 Dans cet exercice, vous allez explorer les améliorations dans les modèles de projet ASP.NET MVC 4. Outre le modèle Application Internet, déjà présents dans MVC 3, cette version inclut désormais un modèle séparé pour les applications mobiles. Tout d’abord, vous allez examiner certaines fonctionnalités pertinentes de chacun des modèles. Ensuite, vous allez travailler sur votre page correctement sur les différentes plateformes de rendu à l’aide de la bonne approche.
 
@@ -223,7 +222,6 @@ ASP.NET MVC 4 facilite le développement de sites Web pour mobile et Tablet PC n
 8. Le nouveau modèle utilise également le **balise meta de la fenêtre d’affichage**. Les navigateurs mobiles plus définissent une largeur d’une fenêtre de navigateur virtuel ou &quot;viewport&quot;, qui est supérieur à la largeur réelle de l’appareil mobile. Cela permet aux navigateurs mobiles afficher la page web entière à l’intérieur de l’écran virtuel. Le **balise meta de la fenêtre d’affichage** permet aux développeurs web définir la largeur, hauteur et la mise à l’échelle de la zone de navigateur sur les appareils mobiles **.** Le modèle ASP.NET MVC 4 pour les Applications mobiles définit la fenêtre d’affichage de la largeur de l’appareil (&quot;largeur = largeur de l’appareil&quot;) dans le modèle de disposition (*Views\Shared\_Layout.cshtml*), de sorte que tous les pages verront leur fenêtre d’affichage à passer à la largeur d’écran de périphérique. Notez que la balise meta de la fenêtre d’affichage ne change pas la vue du navigateur par défaut.
 9. Ouvrez  **\_Layout.cshtml**, situé dans le **vues | Partagé** dossier et le commentaire de la balise méta du Viewport. Exécutez l’application, si ce n’est pas déjà ouvert et découvrez les différences.
 
-
 [!code-cshtml[Main](whats-new-in-aspnet-mvc-4/samples/sample2.cshtml)]
 
 ![Le site après la balise méta viewport de commentaires](whats-new-in-aspnet-mvc-4/_static/image15.png "le site après la balise méta viewport de commentaires")
@@ -231,7 +229,6 @@ ASP.NET MVC 4 facilite le développement de sites Web pour mobile et Tablet PC n
 *Le site après la balise méta viewport de commentaires*
 10. Dans Visual Studio, appuyez sur **MAJ** + **F5** pour arrêter le débogage de l’application.
 11. Supprimez les commentaires de la balise méta viewport.
-
 
 [!code-cshtml[Main](whats-new-in-aspnet-mvc-4/samples/sample3.cshtml)]
 
@@ -249,7 +246,6 @@ La flexibilité fournie par la technique de rendu adaptatif permet toute personn
 > [!NOTE]
 > Le format de base d’une requête de média est : @media \[Étendue : tous les | poche | imprimer | projection | écran\] ([ : valeur de propriété] et... propriété : valeur)
 
-
 Exemples de requêtes de média : &gt;  **@media tous les et (la largeur maximale : 1000px) et (la largeur minimale : 700px) {}:** Pour toutes les résolutions entre 700px et 1000px.
 
 > **@media écran et (la largeur minimale : 400px) et (la largeur maximale : 700px) {...} :** Uniquement pour les écrans. La résolution doit être compris entre 400 et 700px.
@@ -257,7 +253,6 @@ Exemples de requêtes de média : &gt;  **@media tous les et (la largeur maxima
 > **@media ordinateur de poche et (la largeur minimale : 20em), écran et (la largeur minimale : 20em) {...} :** Pour les ordinateurs de poche (mobile et appareils) et les écrans. La largeur minimale doit être supérieure à 20em.
 > 
 > Vous trouverez plus d’informations sur la [W3C site](http://www.w3.org/TR/css3-mediaqueries/).
-
 
 Vous allez maintenant Explorer le fonctionnement de rendu adaptable, améliorer la lisibilité de ASP.NET MVC 4 par défaut le modèle de site Web.
 
@@ -292,7 +287,7 @@ Vous allez maintenant Explorer le fonctionnement de rendu adaptable, améliorer 
 <a id="Exercise2"></a>
 
 <a id="Exercise_2_Creating_the_Photo_Gallery_Web_Application"></a>
-### <a name="exercise-2-creating-the-photo-gallery-web-application"></a>Exercice 2 : Création de l’Application Web de la galerie de photos
+### <a name="exercise-2-creating-the-photo-gallery-web-application"></a>Exercice 2 : Création de l’Application Web de la galerie de photos
 
 Dans cet exercice, vous allez travailler sur une application de galerie de photos pour afficher les photos. Vous allez commencer avec le modèle de projet ASP.NET MVC 4, et ensuite, vous ajoutez une fonctionnalité pour récupérer des photos à partir d’un service et les afficher dans la page d’accueil.
 
@@ -584,7 +579,6 @@ Une fois ce code s’exécute lorsqu’un navigateur iPhone génère une demande
 5. Ouvrez  **\_Layout.iPhone.cshtml** vous avez créé à l’étape précédente.
 6. Rechercher l’élément div avec l’attribut data-role à **page** et modifiez le **data-theme** attribut &quot; **un**&quot;.
 
-
 [!code-cshtml[Main](whats-new-in-aspnet-mvc-4/samples/sample17.cshtml)]
 
 Maintenant, vous avez 3 mises en page dans votre application ASP.NET MVC 4 :
@@ -602,7 +596,7 @@ Maintenant, vous avez 3 mises en page dans votre application ASP.NET MVC 4 :
 <a id="Exercise4"></a>
 
 <a id="Exercise_4_Using_Asynchronous_Controllers"></a>
-### <a name="exercise-4-using-asynchronous-controllers"></a>Exercice 4 : À l’aide de contrôleurs asynchrones
+### <a name="exercise-4-using-asynchronous-controllers"></a>Exercice 4 : À l’aide de contrôleurs asynchrones
 
 Microsoft .NET Framework 4.5 introduit de nouvelles fonctionnalités de langage dans c# et Visual Basic pour fournir une nouvelle fondation pour le comportement asynchrone dans la programmation .NET. Cette nouvelle foundation rend la programmation asynchrone similaire à - et aussi simple que la programmation synchrone. Vous êtes maintenant en mesure d’écrire des méthodes d’action asynchrones dans ASP.NET MVC 4 à l’aide de la **AsyncController** classe. Vous pouvez utiliser les méthodes d’action asynchrones pour la durée d’exécution longue, pas le processeur lié des demandes. Cela évite de bloquer le serveur Web de réaliser un travail pendant le traitement de la demande. La classe AsyncController est généralement utilisée pour les appels de service Web long terme.
 
@@ -696,7 +690,6 @@ Méthodes d’action asynchrones qui retournent des instances de tâche peuvent 
 
 > [!NOTE]
 > En outre, vous pouvez déployer cette application à Sites Web Windows Azure suit [annexe d : Publication d’une Application ASP.NET MVC 4, à l’aide de Web Deploy](#AppendixD).
-
 
 <a id="Summary"></a>
 

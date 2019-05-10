@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: 6b09413a-6d6a-425a-87c9-629f91b91b28
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-5
 msc.type: authoredcontent
-ms.openlocfilehash: e02e15a8955fa42692fac486dadfa426540295f7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 20b99cbe57b5dfa623205838a5929733a6c2d70d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59387470"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112986"
 ---
 # <a name="part-5-edit-forms-and-templating"></a>Partie 5 : Formulaires de modification et création de modèles
 
@@ -24,7 +24,6 @@ par [Jon Galloway](https://github.com/jongalloway)
 > Le Store de musique MVC est une implémentation de magasin d’exemple léger qui vend des albums de musique en ligne et implémente l’administration de site de base, connexion de l’utilisateur et les fonctionnalités de panier d’achat.
 > 
 > Cette série de didacticiels décrit en détail les étapes prises pour générer l’exemple d’application ASP.NET MVC Music Store. Partie 5 couvre les formulaires de modification et de création de modèles.
-
 
 Dans le chapitre passé, nous étions le chargement des données à partir de notre base de données et afficher. Dans ce chapitre, nous allons également activer la modification des données.
 
@@ -260,7 +259,6 @@ Maintenant lorsque nous accédez à l’URL /StoreManager/, les albums et les ti
 ![](mvc-music-store-part-5/_static/image18.png)
 
 Remarque : Cela montre un cas simple de création et utilisation d’un programme d’assistance dans une vue. Pour en savoir plus sur la création de programmes d’assistance que vous pouvez utiliser tout au long de votre site, consultez mon blog : [http://bit.ly/mvc3-helper-options](http://bit.ly/mvc3-helper-options)
-
 
 > [!div class="step-by-step"]
 > [Précédent](mvc-music-store-part-4.md)

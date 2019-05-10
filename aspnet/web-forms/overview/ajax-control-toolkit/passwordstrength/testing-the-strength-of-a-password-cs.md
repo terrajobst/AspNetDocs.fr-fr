@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: cb4afbae-9b8f-483d-9729-476d4b9f85fc
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d8ac50874d0325ed9583a16e1b4e19b3becabb99
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1aeea5af6fee22a91893e52b6ebe15f9ed00db45
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391512"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115269"
 ---
 # <a name="testing-the-strength-of-a-password-c"></a>Test de la force d’un mot de passe (C#)
 
@@ -22,7 +22,6 @@ par [Christian Wenz](https://github.com/wenz)
 [Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PasswordStrength0.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/passwordstrength0CS.pdf)
 
 > Presque n’importe où, les mots de passe sont requis afin que les utilisateurs différés ont tendance à choisir des mots de passe simples qui sont faciles à arrêter. Le contrôle PasswordStrength dans ASP.NET AJAX Control Toolkit peut vérifier la qualité est d’un mot de passe.
-
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -42,7 +41,6 @@ Le `StrengthIndicatorType` fournit les informations comment présenter la force 
 [!code-aspx[Main](testing-the-strength-of-a-password-cs/samples/sample1.aspx)]
 
 Exécutez la page et tapez suite : Uniquement une fois que vous avez entré des lettres minuscules, lettres majuscules, chiffres et symboles, le mot de passe est jugé comme unbreakable.
-
 
 [![Le mot de passe est maintenant () bien](testing-the-strength-of-a-password-cs/_static/image2.png)](testing-the-strength-of-a-password-cs/_static/image1.png)
 

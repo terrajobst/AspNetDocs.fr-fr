@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 7d061207-22b8-4883-bafa-e89b1e7749ca
 msc.legacyurl: /web-api/overview/formats-and-model-binding/model-validation-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: d4e792f8cc2f79c2ab82c5a74fd50f49475fac4f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 531a66b7ab642bd012663517640f2766f1917f25
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59404570"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112823"
 ---
 # <a name="model-validation-in-aspnet-web-api"></a>Validation de modèle dans l’API Web ASP.NET
 
@@ -66,7 +66,6 @@ Les utilisateurs à mettre à jour le `IsAdmin` propriété et aux administrateu
 
 > [!NOTE]
 > Billet de blog de Brad Wilson »[vs de Validation des entrées. Validation de modèle dans ASP.NET MVC](http://bradwilson.typepad.com/blog/2010/01/input-validation-vs-model-validation-in-aspnet-mvc.html)« a des informations intéressantes de validation incomplète et survalidation. Bien que la publication est sur ASP.NET MVC 2, les problèmes sont toujours applicables à l’API Web.
-
 
 ## <a name="handling-validation-errors"></a>Gestion des erreurs de Validation
 

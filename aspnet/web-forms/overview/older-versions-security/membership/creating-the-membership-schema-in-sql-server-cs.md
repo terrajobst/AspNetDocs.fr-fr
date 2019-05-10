@@ -8,12 +8,12 @@ ms.date: 01/18/2008
 ms.assetid: b4ac129d-1b8e-41ca-a38f-9b19d7c7bb0e
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/creating-the-membership-schema-in-sql-server-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8a2cc19ea2ebd0e3be8ba5de40cd6c0c94dbc9dd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b172990c87a1433678d05e004a592d44802ff25d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409276"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113652"
 ---
 # <a name="creating-the-membership-schema-in-sql-server-c"></a>Création du schéma d’appartenance dans SQL Server (C#)
 
@@ -22,7 +22,6 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Télécharger le Code](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/ASPNET_Security_Tutorial_04_CS.zip) ou [télécharger le PDF](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/aspnet_tutorial04_MembershipSetup_cs.pdf)
 
 > Ce didacticiel commence par examiner des techniques permettant d’ajouter le schéma nécessaire à la base de données pour pouvoir utiliser SqlMembershipProvider. Ensuite, nous examiner les tables de clés dans le schéma et discuter de leur utilité et leur importance. Ce didacticiel se termine par examiner comment indiquer à quel fournisseur de l’infrastructure de l’appartenance doit utiliser une application ASP.NET.
-
 
 ## <a name="introduction"></a>Introduction
 
@@ -54,22 +53,17 @@ L’application que nous avons créé dans la mesure où le deuxième didacticie
 > [!NOTE]
 > Tout au long de cette série de didacticiels nous utiliserons un [Microsoft SQL Server 2005 Express Edition](https://msdn.microsoft.com/sql/Aa336346.aspx) base de données pour stocker nos tables de l’application et le `SqlMembershipProvider` schéma. Cette décision a été effectuée pour deux raisons : tout d’abord, en raison de son coût - gratuit - Express Edition est la version la plus lisiblement accessible de SQL Server 2005 ; Deuxièmement, les bases de données SQL Server 2005 Express Edition peuvent être placés directement dans l’application web `App_Data` dossier, en rendant un jeu d’enfant pour la base de données du package et une application web ensemble dans un seul fichier ZIP et redéployer sans les instructions de configuration spéciale options de configuration ou. Si vous préférez suivre la procédure à l’aide d’une version non - Express Edition de SQL Server, n’hésitez pas. Les étapes sont pratiquement identiques. Le `SqlMembershipProvider` schéma travaillera avec n’importe quelle version de Microsoft SQL Server 2000 et le haut.
 
-
 À partir de l’Explorateur de solutions, cliquez sur le `App_Data` dossier et choisir d’ajouter un nouvel élément. (Si vous ne voyez pas un `App_Data` dossier dans votre projet, avec le bouton droit sur le projet dans l’Explorateur de solutions, sélectionnez Ajouter le dossier ASP.NET et choisir `App_Data`.) À partir de la boîte de dialogue Ajouter un nouvel élément, choisissez d’ajouter une nouvelle base de données SQL nommée `SecurityTutorials.mdf`. Dans ce didacticiel, nous allons ajouter le `SqlMembershipProvider` schéma pour cette base de données ; dans les didacticiels suivants, nous allons créer supplémentaires tables pour capturer des données de notre application.
-
 
 [![Ajouter une nouvelle base de données SQL nommée SecurityTutorials.mdf de base de données dans le dossier App_Data](creating-the-membership-schema-in-sql-server-cs/_static/image2.png)](creating-the-membership-schema-in-sql-server-cs/_static/image1.png)
 
 **Figure 1**: Ajouter une nouvelle base de données SQL nommée `SecurityTutorials.mdf` base de données vers le `App_Data` dossier ([cliquez pour afficher l’image en taille réelle](creating-the-membership-schema-in-sql-server-cs/_static/image3.png))
 
-
 Ajout d’une base de données pour le `App_Data` dossier inclut automatiquement dans l’Explorateur de base de données. (Dans la version non - Express Edition de Visual Studio, l’Explorateur de base de données est appelée l’Explorateur de serveurs). Accédez à l’Explorateur de base de données et développez la juste ajouté `SecurityTutorials` base de données. Si vous ne voyez pas l’Explorateur de base de données à l’écran, accédez au menu Affichage et choisissez Explorateur de base de données ou appuyez sur Ctrl + Alt + S. Comme le montre la Figure 2, le `SecurityTutorials` base de données est vide ; il contient aucune table, aucune vue et aucune procédure stockée.
-
 
 [![La base de données SecurityTutorials est actuellement vide](creating-the-membership-schema-in-sql-server-cs/_static/image5.png)](creating-the-membership-schema-in-sql-server-cs/_static/image4.png)
 
 **Figure 2**: Le `SecurityTutorials` base de données est actuellement vide ([cliquez pour afficher l’image en taille réelle](creating-the-membership-schema-in-sql-server-cs/_static/image6.png))
-
 
 ## <a name="step-2-adding-thesqlmembershipproviderschema-to-the-database"></a>Étape 2 : Ajout de la`SqlMembershipProvider`schéma à la base de données
 
@@ -77,7 +71,6 @@ Le `SqlMembershipProvider` requiert un jeu de tables, vues et procédures stock�
 
 > [!NOTE]
 > Le `aspnet_regsql.exe` outil propose des fonctionnalités de la ligne de commande et une interface utilisateur graphique. L’interface graphique plus convivial et est ce que nous allons examiner dans ce didacticiel. L’interface de ligne de commande est utile lorsque l’ajout de la `SqlMembershipProvider` schéma doit être automatisée, comme dans la génération de scripts ou automatisée des scénarios de test.
-
 
 Le `aspnet_regsql.exe` outil est utilisé pour ajouter ou supprimer des *services d’application ASP.NET* à une base de données SQL Server spécifiée. Les services d’application ASP.NET englobent les schémas pour le `SqlMembershipProvider` et `SqlRoleProvider`, ainsi que les schémas pour les fournisseurs basé sur SQL pour d’autres frameworks d’ASP.NET 2.0. Nous devons fournir les deux bits d’information pour le `aspnet_regsql.exe` outil :
 
@@ -99,37 +92,29 @@ Pour déterminer le nom de la base de données le plus simple consiste à examin
 > [!NOTE]
 > Si vous avez également une version non - Express Edition de SQL Server 2005 est installé sur votre ordinateur de bureau, la version complète de Management Studio est probablement installée. Vous pouvez utiliser la version complète pour déterminer le nom de la base de données, suivant les mêmes étapes, comme indiqué ci-dessous pour l’édition Express.
 
-
 Commencez par fermer Visual Studio pour vous assurer que tous les verrous imposées par Visual Studio sur le fichier de base de données sont fermées. Ensuite, lancez SQL Server Management Studio et connectez-vous à la `localhost\InstanceName` base de données pour SQL Server 2005 Express Edition. Comme indiqué précédemment, il est probable qu’est le nom d’instance est `SQLExpress`. Pour l’option d’authentification, sélectionnez l’authentification Windows.
-
 
 [![Se connecter à l’Instance SQL Server 2005 Express Edition](creating-the-membership-schema-in-sql-server-cs/_static/image8.png)](creating-the-membership-schema-in-sql-server-cs/_static/image7.png)
 
 **Figure 3**: Se connecter à SQL Server 2005 Express Edition Instance ([cliquez pour afficher l’image en taille réelle](creating-the-membership-schema-in-sql-server-cs/_static/image9.png))
 
-
 Après vous être connecté à l’instance de SQL Server 2005 Express Edition, Management Studio affiche les dossiers pour les bases de données, les paramètres de sécurité, les objets de serveur et ainsi de suite. Si vous développez l’onglet bases de données vous verrez que le `SecurityTutorials.mdf` base de données est *pas* inscrits dans l’instance de la base de données - nous avons besoin attacher la base de données tout d’abord.
 
 Avec le bouton droit sur le dossier bases de données et cliquez sur Attacher dans le menu contextuel. Cela affiche la boîte de dialogue Attacher les bases de données. À ce stade, cliquez sur le bouton Ajouter, accédez à la `SecurityTutorials.mdf` de base de données, puis cliquez sur OK. Figure 4 montre la boîte de dialogue Attacher les bases de données après le `SecurityTutorials.mdf` base de données a été sélectionnée. La figure 5 illustre l’Explorateur d’objets de Management Studio une fois que la base de données a été correctement attachée.
-
 
 [![Attacher la base de données SecurityTutorials.mdf](creating-the-membership-schema-in-sql-server-cs/_static/image11.png)](creating-the-membership-schema-in-sql-server-cs/_static/image10.png)
 
 **Figure 4**: Attacher le `SecurityTutorials.mdf` base de données ([cliquez pour afficher l’image en taille réelle](creating-the-membership-schema-in-sql-server-cs/_static/image12.png))
 
-
 [![La base de données SecurityTutorials.mdf apparaît dans le dossier de bases de données](creating-the-membership-schema-in-sql-server-cs/_static/image14.png)](creating-the-membership-schema-in-sql-server-cs/_static/image13.png)
 
 **Figure 5**: Le `SecurityTutorials.mdf` base de données apparaît dans le dossier de bases de données ([cliquez pour afficher l’image en taille réelle](creating-the-membership-schema-in-sql-server-cs/_static/image15.png))
 
-
 Comme le montre la Figure 5, le `SecurityTutorials.mdf` base de données a un nom plutôt abstruse. Nous allons le modifier pour une plus facile à mémoriser (et plus facile à taper) nom. Avec le bouton droit sur la base de données, cliquez sur Renommer dans le menu contextuel et renommez-le `SecurityTutorialsDatabase`. Cela ne modifie pas le nom de fichier, simplement le nom de la base de données utilise pour s’identifier sur SQL Server.
-
 
 [![Renommez la base de données en SecurityTutorialsDatabase](creating-the-membership-schema-in-sql-server-cs/_static/image17.png)](creating-the-membership-schema-in-sql-server-cs/_static/image16.png)
 
 **Figure 6**: Renommer la base de données `SecurityTutorialsDatabase`([cliquez pour afficher l’image en taille réelle](creating-the-membership-schema-in-sql-server-cs/_static/image18.png))
-
 
 À ce stade nous savons que les noms de serveur et base de données pour le `SecurityTutorials.mdf` fichier de base de données : `localhost\InstanceName` et `SecurityTutorialsDatabase`, respectivement. Nous sommes maintenant prêts à installer les services d’application via le `aspnet_regsql.exe` outil.
 
@@ -139,19 +124,15 @@ Pour lancer le `aspnet_regsql.exe` outil, accédez au menu Démarrer et choisiss
 
 En cours d’exécution le `aspnet_regsql.exe` outil sans argument de ligne de commande lance l’interface utilisateur graphique d’Assistant ASP.NET SQL Server. L’Assistant rend plus facile ajouter ou supprimer les services d’application ASP.NET sur une base de données spécifiée. Le premier écran de l’Assistant, illustrée à la Figure 7, décrit l’objectif de l’outil.
 
-
 [![Utilisez l’Assistant d’installation ASP.NET SQL Server simplifie pour ajouter le schéma d’appartenance](creating-the-membership-schema-in-sql-server-cs/_static/image20.png)](creating-the-membership-schema-in-sql-server-cs/_static/image19.png)
 
 **Figure 7**: Permet du ASP.NET SQL Server Configuration Assistant permet d’ajouter le schéma d’abonnement ([cliquez pour afficher l’image en taille réelle](creating-the-membership-schema-in-sql-server-cs/_static/image21.png))
 
-
 La deuxième étape de l’Assistant vous demande de nous si nous souhaitons ajouter les services d’application ou les supprimer. Étant donné que nous souhaitons ajouter des tables, vues et procédures stockées nécessaires pour le `SqlMembershipProvider`, choisissez la configuration de SQL Server pour l’option de services d’application. Ultérieurement, si vous souhaitez supprimer ce schéma de votre base de données, réexécutez cet Assistant, mais à la place choisir les informations de services d’application supprimer à partir d’une option de base de données existante.
-
 
 [![Choisissez la configuration de SQL Server pour l’Option de Services d’Application](creating-the-membership-schema-in-sql-server-cs/_static/image23.png)](creating-the-membership-schema-in-sql-server-cs/_static/image22.png)
 
 **Figure 8**: Choisissez la configuration de SQL Server pour l’Option de Services d’Application ([cliquez pour afficher l’image en taille réelle](creating-the-membership-schema-in-sql-server-cs/_static/image24.png))
-
 
 La troisième étape invite à entrer les informations de base de données : le nom du serveur, les informations d’authentification et le nom de la base de données. Si vous avez suivi ce didacticiel et que vous avez ajouté le `SecurityTutorials.mdf` à la base de données `App_Data`, attaché à `localhost\InstanceName`et renommé en `SecurityTutorialsDatabase`, puis utilisez les valeurs suivantes :
 
@@ -159,29 +140,23 @@ La troisième étape invite à entrer les informations de base de données : le
 - Authentification Windows
 - Base de données : `SecurityTutorialsDatabase`
 
-
 [![Entrez les informations de base de données](creating-the-membership-schema-in-sql-server-cs/_static/image26.png)](creating-the-membership-schema-in-sql-server-cs/_static/image25.png)
 
 **Figure 9**: Entrez les informations de base de données ([cliquez pour afficher l’image en taille réelle](creating-the-membership-schema-in-sql-server-cs/_static/image27.png))
-
 
 Après avoir entré les informations de base de données, cliquez sur Suivant. La dernière étape résume les étapes à entreprendre. Cliquez sur Suivant pour installer les services d’application, puis sur Terminer pour terminer l’Assistant.
 
 > [!NOTE]
 > Si vous utilisez Management Studio pour attacher la base de données et renommez le fichier de base de données, veillez à détacher la base de données et fermez Management Studio avant de rouvrir Visual Studio. Pour détacher le `SecurityTutorialsDatabase` de base de données, avec le bouton droit sur le nom de la base de données et, dans le menu tâches, cliquez sur Détacher.
 
-
 À l’achèvement de l’Assistant, revenez à Visual Studio et accédez à l’Explorateur de base de données. Développez le dossier Tables. Vous devez voir une série de tables dont les noms commencent par le préfixe `aspnet_`. De même, vous pouvez trouver une variété de vues et procédures stockées dans les dossiers de vues et procédures stockées. Ces objets de base de données constituent le schéma de services d’application. Nous allons examiner les objets de base de données d’appartenance et de rôle spécifique à l’étape 3.
-
 
 [![Une variété de Tables, vues et procédures stockées ont été ajoutées à la base de données](creating-the-membership-schema-in-sql-server-cs/_static/image29.png)](creating-the-membership-schema-in-sql-server-cs/_static/image28.png)
 
 **Figure 10**: Une variété de Tables, vues et stockées procédures ont été ajoutées à la base de données ([cliquez pour afficher l’image en taille réelle](creating-the-membership-schema-in-sql-server-cs/_static/image30.png))
 
-
 > [!NOTE]
 > Le `aspnet_regsql.exe` interface utilisateur graphique de l’outil installe le schéma de services d’application dans son intégralité. Mais lors de l’exécution `aspnet_regsql.exe` à partir de la ligne de commande, vous pouvez spécifier quelle application particulière services de composants pour installer (ou supprimer). Par conséquent, si vous souhaitez ajouter uniquement les tables, vues, nécessaire pour des procédures stockées et les `SqlMembershipProvider` et `SqlRoleProvider` fournisseurs, exécutez `aspnet_regsql.exe` à partir de la ligne de commande. Ou bien, vous pouvez exécuter manuellement le sous-ensemble de T-SQL créer les scripts utilisés par `aspnet_regsql.exe`. Ces scripts se trouvent dans le `WINDIR%\Microsoft.Net\Framework\v2.0.50727\` dossier avec des noms tels que `InstallCommon.sql`,`InstallMembership.sql`,`InstallRoles.sql`, `InstallProfile.sql`,`InstallSqlState.sql`, et ainsi de suite.
-
 
 À ce stade, nous avons créé les objets de base de données requis par le `SqlMembershipProvider`. Toutefois, nous avons besoin indiquer à l’infrastructure de l’appartenance qu’il doit utiliser le `SqlMembershipProvider` (versus, par exemple, le `ActiveDirectoryMembershipProvider`) et que le `SqlMembershipProvider` doit utiliser le `SecurityTutorials` base de données. Nous allons examiner comment spécifier quel fournisseur à utiliser et comment personnaliser les paramètres du fournisseur sélectionné à l’étape 4. Mais tout d’abord, jetons un œil plus approfondie sur les objets de base de données qui viennent d’être créés.
 
@@ -195,11 +170,9 @@ Pour cette raison, nous pourrions utiliser en toute confiance les infrastructure
 
 Les frameworks d’appartenance et rôles soient conçus pour un seul magasin de l’utilisateur et le rôle peut être partagé entre différentes applications. Une application ASP.NET qui utilise les infrastructures d’appartenance ou de rôles doit spécifier quelle partition d’application à utiliser. En bref, plusieurs applications web peuvent utiliser les mêmes magasins d’utilisateur et le rôle. Figure 11 illustre l’utilisateur et le rôle des magasins sont partitionnés en trois applications : HRSite, CustomerSite et SalesSite. Ces applications de trois web ont leurs propres utilisateurs uniques et les rôles, mais ils tous les physiquement stockent leurs informations de compte et le rôle d’utilisateur dans les mêmes tables de base de données.
 
-
 [![Comptes d’utilisateur peuvent être partitionnées entre plusieurs Applications](creating-the-membership-schema-in-sql-server-cs/_static/image32.png)](creating-the-membership-schema-in-sql-server-cs/_static/image31.png)
 
 **Figure 11**: Comptes peuvent être partitionnées entre plusieurs Applications utilisateur ([cliquez pour afficher l’image en taille réelle](creating-the-membership-schema-in-sql-server-cs/_static/image33.png))
-
 
 Le `aspnet_Applications` table est ce qui définit ces partitions. Chaque application qui utilise la base de données pour stocker les informations de compte d’utilisateur est représentée par une ligne dans cette table. Le `aspnet_Applications` table comporte quatre colonnes : `ApplicationId`, `ApplicationName`, `LoweredApplicationName`, et `Description`. `ApplicationId` est de type [ `uniqueidentifier` ](https://msdn.microsoft.com/library/ms187942.aspx) et est la clé primaire de la table ; `ApplicationName` fournit un nom convivial unique pour chaque application.
 
@@ -242,7 +215,6 @@ Le tableau 1 illustre ce que ces trois colonnes peut se présenter comme pour le
 > [!NOTE]
 > Le chiffrement particulier ou un algorithme de hachage utilisé par le `SqlMembershipProvider` est déterminée par les paramètres dans le `<machineKey>` élément. Nous avons abordé cet élément de configuration à l’étape 3 de la <a id="Tutorial3"> </a> [ *Configuration de l’authentification de formulaires et des sujets avancés* ](../introduction/forms-authentication-configuration-and-advanced-topics-cs.md) didacticiel.
 
-
 ### <a name="storing-roles-and-role-associations"></a>Stockage des rôles et les Associations de rôle
 
 L’infrastructure de rôles permet aux développeurs de définir un ensemble de rôles et de spécifier quels utilisateurs appartiennent à quels rôles. Ces informations sont capturées dans la base de données dans les deux tables : `aspnet_Roles` et `aspnet_UsersInRoles`. Chaque enregistrement dans le `aspnet_Roles` table représente un rôle pour une application particulière. Comme beaucoup le `aspnet_Users` table, le `aspnet_Roles` comporte trois colonnes pertinentes pour notre discussion :
@@ -272,7 +244,6 @@ Outre le `name` et `type` attributs, la `<add>` élément contient des attributs
 > [!NOTE]
 > Toutes les valeurs par défaut indiqués dans le tableau 2 font référence aux valeurs par défaut définies dans le `SqlMembershipProvider` classe. Notez que not tous les paramètres de configuration dans `AspNetSqlMembershipProvider` correspondent aux valeurs par défaut de la `SqlMembershipProvider` classe. Par exemple, si non spécifié dans un fournisseur d’appartenances, le `requiresUniqueEmail` définissant les valeurs par défaut sur true. Toutefois, le `AspNetSqlMembershipProvider` remplace cette valeur par défaut en spécifiant explicitement une valeur de `false`.
 
-
 | **Paramètre&lt;\_o3a\_p /&gt;** | **Description&lt;\_o3a\_p /&gt;** |
 | --- | --- |
 | `ApplicationName` | Rappel qui permet à l’infrastructure de l’appartenance d’un magasin utilisateur unique d’être partitionnées entre plusieurs applications. Ce paramètre indique le nom de la partition d’application utilisé par le fournisseur d’appartenances. Si cette valeur n’est explicitement spécifiée, elle est définie, lors de l’exécution, à la valeur de chemin d’accès virtuel racine de l’application. |
@@ -298,7 +269,6 @@ En plus de `AspNetSqlMembershipProvider`, autres fournisseurs d’appartenance p
 
 > [!NOTE]
 > Le framework de rôles fonctionne à peu près la même façon : il existe un fournisseur de rôle inscrit par défaut dans `machine.config` et fournisseurs inscrits peuvent être personnalisés sur une base de l’application par application dans `Web.config`. Nous allons examiner l’infrastructure de rôles et de son balisage de configuration en détail dans un futur didacticiel.
-
 
 ### <a name="customizing-thesqlmembershipprovidersettings"></a>Personnalisation de le`SqlMembershipProvider`paramètres
 
@@ -332,7 +302,6 @@ Notez que le `SecurityTutorialsSqlMembershipProvider`de `connectionStringName` d
 
 > [!NOTE]
 > Rappel qui permet à l’infrastructure de l’appartenance d’un magasin utilisateur unique d’être partitionnées entre plusieurs applications. Le fournisseur d’appartenances `applicationName` paramètre indique quelle application que le fournisseur utilise lorsque vous travaillez avec le magasin d’utilisateurs. Il est important que vous définissez explicitement une valeur pour le `applicationName` paramètre de configuration, car si le `applicationName` n’est pas défini explicitement, il est affecté à un chemin d’accès virtuel racine de l’application web lors de l’exécution. Cela fonctionne bien tant que chemin d’accès virtuel racine de l’application ne change pas, mais si vous déplacez l’application vers un autre chemin d’accès, le `applicationName` paramètre est modifiées. Dans ce cas, le fournisseur d’appartenances travaillerons avec une partition d’application autre que celui utilisé précédemment. Comptes d’utilisateur créés avant le déplacement résidera dans une partition d’application différents, et ces utilisateurs ne seront plus en mesure de vous connecter au site. Pour obtenir une explication plus approfondie sur ce sujet, consultez [toujours définir le `applicationName` propriété lors de la configuration ASP.NET 2.0 de l’appartenance et les autres fournisseurs](https://weblogs.asp.net/scottgu/443634).
-
 
 ## <a name="summary"></a>Récapitulatif
 

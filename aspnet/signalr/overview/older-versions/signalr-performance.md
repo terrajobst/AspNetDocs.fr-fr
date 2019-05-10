@@ -8,12 +8,12 @@ ms.date: 07/03/2013
 ms.assetid: 9594d644-66b6-4223-acdd-23e29a6e4c46
 msc.legacyurl: /signalr/overview/older-versions/signalr-performance
 msc.type: authoredcontent
-ms.openlocfilehash: 5f7415d0a4275a3864dc9eefb9588f17698147cd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 915fd822caae9bbcb0a688c6dd7a5b2bda12c9df
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412695"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113899"
 ---
 # <a name="signalr-performance-signalr-1x"></a>Performances de SignalR (SignalR 1.x)
 
@@ -22,7 +22,6 @@ par [Patrick Fletcher](https://github.com/pfletcher)
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
 > Cette rubrique décrit comment concevoir pour, mesurer et améliorer les performances dans une application de SignalR.
-
 
 Pour obtenir une présentation récente sur les performances de SignalR et de la mise à l’échelle, consultez [mise à l’échelle du Web en temps réel avec ASP.NET SignalR](https://channel9.msdn.com/Events/Build/2013/3-502).
 

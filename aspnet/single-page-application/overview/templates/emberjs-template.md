@@ -8,12 +8,12 @@ ms.date: 01/30/2013
 ms.assetid: 04d5f142-5f62-494a-b5ea-4f3d068d34cb
 msc.legacyurl: /single-page-application/overview/templates/emberjs-template
 msc.type: authoredcontent
-ms.openlocfilehash: e2bb8a13a0036f1fcfdcfd03a6a6e74e886a7f2c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1aefa46dd0841b1b06675409cc8a09f9a218d7ac
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406858"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113509"
 ---
 # <a name="emberjs-template"></a>Modèle EmberJS
 
@@ -22,7 +22,6 @@ par [Xinyang Qiu](https://github.com/xqiu)
 > Le modèle MVC EmberJS est rédigé par Nathan Totten, Thiago Santos et Xinyang Qiu.
 > 
 > [Télécharger le modèle EmberJS MVC](https://go.microsoft.com/fwlink/?LinkId=282647)
-
 
 Le modèle EmberJS SPA est conçu pour vous aider à créer rapidement des applications web côté client interactives à l’aide de EmberJS.
 
