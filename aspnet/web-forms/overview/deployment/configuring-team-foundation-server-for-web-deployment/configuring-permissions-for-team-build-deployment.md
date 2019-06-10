@@ -34,7 +34,7 @@ Lorsque vous installez le service de build de 2010 Team Foundation Server (TFS),
 Les tâches de déploiement qui nécessitent l’authentification Windows, et que vous prévoyez d’automatiser à l’aide de Team Build, seront exécutera à l’aide de l’identité de service de build. Par conséquent, vous devez accorder à l’identité de service de build toutes les autorisations requises sur vos serveurs web et vos serveurs de base de données.
 
 > [!NOTE]
-> Le compte Service réseau utilise le compte d’ordinateur pour s’authentifier auprès d’autres ordinateurs. Comptes d’ordinateur prennent la forme * [Nom_domaine]\[nom_machine] ***$**&#x2014;, par exemple, **FABRIKAM\TFSBUILD$**. Par conséquent, si votre service de build s’exécute à l’aide de l’identité de Service réseau, vous devez accorder les autorisations requises pour l’identité de compte d’ordinateur pour votre serveur de builds.
+> Le compte Service réseau utilise le compte d’ordinateur pour s’authentifier auprès d’autres ordinateurs. Comptes d’ordinateur prennent la forme *[Nom_domaine]\[nom_machine]* **$** &#x2014;, par exemple, **FABRIKAM\TFSBUILD$** . Par conséquent, si votre service de build s’exécute à l’aide de l’identité de Service réseau, vous devez accorder les autorisations requises pour l’identité de compte d’ordinateur pour votre serveur de builds.
 
 ## <a name="configuring-web-server-permissions"></a>Configuration des autorisations de serveur Web
 
