@@ -88,7 +88,7 @@ Pour prendre en charge le déploiement d’un projet de base de données vers pl
 
     ![](customizing-database-deployments-for-multiple-environments/_static/image1.png)
 3. Dans le **nouveau fichier de Configuration de déploiement** boîte de dialogue zone, attribuez au fichier un nom explicite (par exemple, **TestEnvironment.sqldeployment**), puis cliquez sur **enregistrer**.
-4. Sur le *[nom_fichier] *** .sqldeployment** page, définissez les propriétés de déploiement qui répondent aux besoins de votre environnement de destination, puis enregistrez le fichier.
+4. Sur le *[nom_fichier]* **.sqldeployment** page, définissez les propriétés de déploiement qui répondent aux besoins de votre environnement de destination, puis enregistrez le fichier.
 
     ![](customizing-database-deployments-for-multiple-environments/_static/image2.png)
 5. Notez que le nouveau fichier est ajouté au dossier des propriétés dans votre projet de base de données.
