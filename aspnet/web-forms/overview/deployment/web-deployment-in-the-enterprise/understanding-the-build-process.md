@@ -164,7 +164,7 @@ Tout d’abord, notez que la balise d’ouverture inclut un **sorties** attribut
 
 [!code-xml[Main](understanding-the-build-process/samples/sample10.xml)]
 
-Il s’agit d’un exemple de *cible par lots*. Dans les fichiers de projet MSBuild, le traitement par lots est une technique pour itérer sur des collections. La valeur de la **sorties** attribut, **« % (DbPublishPackages.Identity) »**, fait référence à la **identité** propriété de métadonnées de la **DbPublishPackages**  liste d’éléments. Cette notation, **Outputs=%***(ItemList.ItemMetadataName)*, est traduit par :
+Il s’agit d’un exemple de *cible par lots*. Dans les fichiers de projet MSBuild, le traitement par lots est une technique pour itérer sur des collections. La valeur de la **sorties** attribut, **« % (DbPublishPackages.Identity) »** , fait référence à la **identité** propriété de métadonnées de la **DbPublishPackages**  liste d’éléments. Cette notation, **Outputs=%** *(ItemList.ItemMetadataName)* , est traduit par :
 
 - Fractionner les éléments de **DbPublishPackages** dans des lots d’éléments qui contiennent les mêmes **identité** valeur des métadonnées.
 - Exécuter la cible une fois par lot.
@@ -178,7 +178,7 @@ Vous pouvez voir une notation similaire dans le  **\_Cmd** propriété, qui gén
 
 [!code-xml[Main](understanding-the-build-process/samples/sample11.xml)]
 
-Dans ce cas, **%(DbPublishPackages.DatabaseConnectionString)**, **%(DbPublishPackages.TargetDatabase)**, et **%(DbPublishPackages.FullPath)** toutes faire référence à les valeurs de métadonnées de la **DbPublishPackages** collection d’éléments. Le  **\_Cmd** propriété est utilisée par le **Exec** tâche, qui appelle la commande.
+Dans ce cas, **%(DbPublishPackages.DatabaseConnectionString)** , **%(DbPublishPackages.TargetDatabase)** , et **%(DbPublishPackages.FullPath)** toutes faire référence à les valeurs de métadonnées de la **DbPublishPackages** collection d’éléments. Le **\_Cmd** propriété est utilisée par le **Exec** tâche, qui appelle la commande.
 
 [!code-xml[Main](understanding-the-build-process/samples/sample12.xml)]
 

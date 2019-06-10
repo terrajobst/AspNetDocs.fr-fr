@@ -83,7 +83,7 @@ Un fichier de projet doit généralement fournir un grand nombre d’éléments 
 
 [!code-xml[Main](understanding-the-project-file/samples/sample2.xml)]
 
-Pour récupérer une valeur de propriété, vous utilisez le format **$(***PropertyName***) ***.* Par exemple, pour récupérer la valeur de la **nom_serveur** propriété, vous devez taper :
+Pour récupérer une valeur de propriété, vous utilisez le format * *$(***PropertyName***)***.* Par exemple, pour récupérer la valeur de la **nom_serveur** propriété, vous devez taper :
 
 [!code-powershell[Main](understanding-the-project-file/samples/sample3.ps1)]
 
@@ -161,8 +161,8 @@ Cibles et tâches peuvent inclure **Condition** attributs. Par conséquent, vous
 
 En règle générale, lorsque vous créez des tâches utiles et cibles, vous devez faire référence aux propriétés et aux éléments que vous avez défini ailleurs dans le fichier projet :
 
-- Pour utiliser une valeur de propriété, tapez **$(***PropertyName***)**, où *PropertyName* est le nom de la **propriété** élément ou le nom de la paramètre.
-- Pour utiliser un élément, tapez **@(***ItemName***)**, où *ItemName* est le nom de la **élément** élément.
+- Pour utiliser une valeur de propriété, tapez **$(***PropertyName***)** , où *PropertyName* est le nom de la **propriété** élément ou le nom de la paramètre.
+- Pour utiliser un élément, tapez **@(***ItemName***)** , où *ItemName* est le nom de la **élément** élément.
 
 > [!NOTE]
 > N’oubliez pas que si vous créez plusieurs éléments portant le même nom, vous créez une liste. En revanche, si vous créez plusieurs propriétés portant le même nom, la dernière valeur de propriété que vous fournissez remplacera toutes les propriétés précédentes portant le même nom&#x2014;une propriété peut contenir uniquement une valeur unique.

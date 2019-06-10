@@ -88,7 +88,7 @@ La procédure suivante vous montre comment ajouter un *..WPP cible* fichier pour
 1. Ouvrez votre solution dans Visual Studio 2010.
 2. Dans le **l’Explorateur de solutions** fenêtre, avec le bouton droit de votre nœud de projet d’application web (par exemple, **ContactManager.Mvc**), pointez sur **ajouter**, puis cliquez sur **Un nouvel élément**.
 3. Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez le **fichier XML** modèle.
-4. Dans le **nom** , tapez *[nom_projet] ***.wpp.targets** (par exemple, **ContactManager.Mvc.wpp.targets**), puis cliquez sur **ajouter**.
+4. Dans le **nom** , tapez *[nom_projet]* **.wpp.targets** (par exemple, **ContactManager.Mvc.wpp.targets**), puis cliquez sur **ajouter**.
 
     ![](excluding-files-and-folders-from-deployment/_static/image3.png)
 
