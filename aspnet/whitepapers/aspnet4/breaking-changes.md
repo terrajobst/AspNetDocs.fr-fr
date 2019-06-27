@@ -8,12 +8,12 @@ ms.date: 02/10/2010
 ms.assetid: d601c540-f86b-4feb-890c-20c806b3da6c
 msc.legacyurl: /whitepapers/aspnet4/breaking-changes
 msc.type: content
-ms.openlocfilehash: 65b13065ae5324ce64ec1b87b2127e5277542fb8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 8ccad3b40a723c92a3164de082e1f94577141008
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125673"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411198"
 ---
 # <a name="aspnet-4-breaking-changes"></a>Changements importants dans ASP.NET 4
 
@@ -362,7 +362,7 @@ Lorsque vous rétablissez le modèle CAS hérité, les comportements d’autorit
 - Plusieurs jeux d’autorisations différents dans un seul domaine d’application est autorisés.
 - Assertions d’autorisation explicite ne sont pas requises pour les assemblys dans le GAC qui sont invoquées lorsque ASP.NET ou tout autre code .NET Framework se trouve sur la pile.
 
-Un scénario ne peut pas être annulée dans le .NET Framework 4 : les applications de confiance partielle non Web ne peuvent plus appeler certaines API dans des fichiers System.Web.dll et System.Web.Extensions.dll. Dans les versions précédentes du .NET Framework, il était possible pour les applications de confiance partielle non Web accordée explicitement <strong>autorisation AspNetHostingPermission</strong> autorisations. Ces applications peuvent ensuite utiliser <strong>System.Web.HttpUtility</strong>, les types dans les <strong>System.Web.ClientServices.\< /strong > * espaces de noms et types liés à l’appartenance, les rôles et les profils. Appel de ces types à partir d’applications de confiance partielle non Web n’est plus pris en charge dans le .NET Framework 4.
+Un scénario ne peut pas être annulée dans le .NET Framework 4 : les applications de confiance partielle non Web ne peuvent plus appeler certaines API dans des fichiers System.Web.dll et System.Web.Extensions.dll. Dans les versions précédentes du .NET Framework, il était possible pour les applications de confiance partielle non Web accordée explicitement **autorisation AspNetHostingPermission** autorisations. Ces applications peuvent ensuite utiliser **System.Web.HttpUtility**, les types dans les **System.Web.ClientServices.\***  espaces de noms et types liés à l’appartenance, les rôles et les profils. Appel de ces types à partir d’applications de confiance partielle non Web n’est plus pris en charge dans le .NET Framework 4.
 
 > [!NOTE]
 > Le **HtmlEncode** et **HtmlDecode** fonctionnalités de la **System.Web.HttpUtility** classe a été déplacée vers le nouveau .NET Framework 4  **System.Net.WebUtility** classe. S’il s’agissait de la fonctionnalité ASP.NET seule qui était utilisée, modifier le code de l’application pour utiliser la nouvelle **WebUtility** classe à la place.

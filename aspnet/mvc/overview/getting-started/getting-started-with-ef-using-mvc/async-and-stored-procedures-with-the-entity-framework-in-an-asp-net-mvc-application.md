@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 27d110fc-d1b7-4628-a763-26f1e6087549
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/async-and-stored-procedures-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 9041167af076d80ebf294e054ffe51293d11e888
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5612f2f25d06feb904a205505ed8f048d2263266
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033176"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410925"
 ---
 # <a name="tutorial-use-async-and-stored-procedures-with-ef-in-an-aspnet-mvc-app"></a>Tutoriel : Utiliser async et les procédures stockées avec Entity Framework dans une application ASP.NET MVC
 
@@ -113,7 +113,7 @@ Certains développeurs et les administrateurs préfèrent utiliser des procédur
 
     `add-migration DepartmentSP`
 
-    Ouvrez *Migrations\&lt ; horodatage&gt;\_DepartmentSP.cs* pour visualiser le code dans le `Up` méthode créé par Insert, Update et Delete de procédures stockées :
+    Ouvrez *Migrations\\&lt;timestamp&gt;\_DepartmentSP.cs* pour visualiser le code dans le `Up` méthode créé par Insert, Update et Delete de procédures stockées :
 
     [!code-csharp[Main](async-and-stored-procedures-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample8.cs?highlight=3-4,26-27,42-43)]
 3. Dans la Console de gestion de Package, entrez la commande suivante :

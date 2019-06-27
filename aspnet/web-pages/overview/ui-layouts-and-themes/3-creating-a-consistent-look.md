@@ -8,12 +8,12 @@ ms.date: 03/10/2014
 ms.assetid: d7bd001b-6db2-4422-9b78-f3d08b743b00
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/3-creating-a-consistent-look
 msc.type: authoredcontent
-ms.openlocfilehash: 7d580b3812c4a09d6bc8d34c46dc82339ba40ee8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 3f63ce68ae4c13970ac0df196167ace0b22b592c
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133370"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411253"
 ---
 # <a name="creating-a-consistent-layout-in-aspnet-web-pages-razor-sites"></a>Création d’une disposition cohérente dans les Sites ASP.NET Web Pages (Razor)
 
@@ -53,7 +53,7 @@ Le diagramme suivant illustre la façon dont contenu bloque le travail. Lorsqu�
 
 Dans cette procédure, vous allez créer une page qui fait référence à deux blocs de contenu (un en-tête et un pied de page) qui sont trouvent dans des fichiers distincts. Vous pouvez utiliser ces mêmes blocs de contenu dans n’importe quelle page de votre site. Lorsque vous avez terminé, vous obtiendrez une page comme celle-ci :
 
-![Capture d’écran montrant une page dans le navigateur qui résulte de l’exécution d’une page qui inclut les appels à la méthode RenderPage.](3-creating-a-consistent-look/_static/image2.jpg)
+![Capture d’écran montrant une page dans le navigateur qui résulte de l’exécution d’une page qui inclut les appels à la méthode RenderPage.](3-creating-a-consistent-look/_static/image2.png)
 
 1. Dans le dossier racine de votre site Web, créez un fichier nommé *Index.cshtml*.
 2. Remplacez le balisage existant par le code suivant :
@@ -118,7 +118,7 @@ La procédure suivante montre comment créer une disposition des pages de conten
     Il s’agit d’une page qui utilise une page de disposition. Le bloc de code en haut de la page indique quelle page de disposition à utiliser pour formater ce contenu.
 7. Exécutez *Content1.cshtml* dans un navigateur. La page rendue utilise le format et la feuille de style définis dans  *\_Layout1.cshtml* et le texte (contenu) définies dans *Content1.cshtml*.
 
-    ![[image]](3-creating-a-consistent-look/_static/image4.jpg)
+    ![[image]](3-creating-a-consistent-look/_static/image4.png)
 
     Vous pouvez répéter l’étape 6 pour créer des pages de contenu supplémentaires qui peuvent alors partager la même page de disposition.
 
@@ -148,7 +148,7 @@ Cette procédure montre comment créer une page de contenu qui a plusieurs secti
     Cette page de contenu contient un bloc de code en haut de la page. Chaque section nommée est contenue dans un bloc de section. Le reste de la page contient la section de contenu par défaut (sans nom).
 4. Exécutez *Content2.cshtml* dans un navigateur.
 
-    ![Capture d’écran montrant une page dans le navigateur qui résulte de l’exécution d’une page qui inclut les appels à la méthode RenderSection.](3-creating-a-consistent-look/_static/image6.jpg)
+    ![Capture d’écran montrant une page dans le navigateur qui résulte de l’exécution d’une page qui inclut les appels à la méthode RenderSection.](3-creating-a-consistent-look/_static/image6.png)
 
 ## <a name="making-content-sections-optional"></a>Rendre des Sections de contenu facultatif
 
@@ -165,7 +165,7 @@ Toutefois, vous pouvez remplacer ce comportement pour une section nommée en dé
     [!code-cshtml[Main](3-creating-a-consistent-look/samples/sample12.cshtml)]
 2. Enregistrez la page et exécutez-le dans un navigateur. Un message d’erreur s’affiche, étant donné que le contenu d’une section définie dans la page de disposition, à savoir la section d’en-tête ne fournit pas la page de contenu.
 
-    ![Capture d’écran montrant l’erreur qui se produit si vous exécutez une page qui appelle la méthode de RenderSection, mais la section correspondante n’est pas fournie.](3-creating-a-consistent-look/_static/image7.jpg)
+    ![Capture d’écran montrant l’erreur qui se produit si vous exécutez une page qui appelle la méthode de RenderSection, mais la section correspondante n’est pas fournie.](3-creating-a-consistent-look/_static/image7.png)
 3. Dans le *partagé* dossier, ouvrez le  *\_Layout2.cshtml* page et remplacez cette ligne :
 
     [!code-javascript[Main](3-creating-a-consistent-look/samples/sample13.js)]
@@ -210,10 +210,10 @@ La procédure suivante montre comment passer des données à partir d’une page
     [!code-html[Main](3-creating-a-consistent-look/samples/sample18.html)]
 4. Exécutez le *Content3.cshtml* page dans un navigateur. La page s’affiche avec la liste visible sur le côté gauche de la page et un **masquer la liste** bouton du bas.
 
-    ![Capture d’écran montrant la page qui inclut la liste et un bouton intitulé « Masquer la liste ».](3-creating-a-consistent-look/_static/image10.jpg)
+    ![Capture d’écran montrant la page qui inclut la liste et un bouton intitulé « Masquer la liste ».](3-creating-a-consistent-look/_static/image10.png)
 5. Cliquez sur **masquer la liste**. Disparaît de la liste et le bouton se transforme en **afficher la liste de**.
 
-    ![Capture d’écran montrant la page qui n’inclut pas la liste et un bouton intitulé « Afficher la liste ».](3-creating-a-consistent-look/_static/image11.jpg)
+    ![Capture d’écran montrant la page qui n’inclut pas la liste et un bouton intitulé « Afficher la liste ».](3-creating-a-consistent-look/_static/image11.png)
 6. Cliquez sur le **afficher la liste de** bouton et la liste s’affiche de nouveau.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires

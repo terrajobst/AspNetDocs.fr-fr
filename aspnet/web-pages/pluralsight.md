@@ -8,12 +8,12 @@ ms.date: 05/18/2012
 ms.assetid: 79eca52c-e7ad-44ab-a3e4-d8093e9da5a7
 msc.legacyurl: /web-pages/pluralsight
 msc.type: content
-ms.openlocfilehash: 5485b68f8ed87952a6d09e1880e6d8ce39eea73a
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: ce6d8a678e07945eff05baa080bb877bf06f6c6e
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108570"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411230"
 ---
 # <a name="webmatrix-and-web-pages-video-training-from-pluralsight"></a>Vidéo de formation à WebMatrix et à Web de Pluralsight
 
@@ -39,4 +39,4 @@ Scott Hanselman, responsable de programme, plate-forme Web et outils Azure, Micr
 
 Déverrouiller l’accès à 3 000 + dev, informatique et des cours creative que vous pouvez regarder à tout moment et en tout lieu.
 
-**En commençant à 29 $ / Mo.**[démarrer la version d’évaluation gratuite](https://pluralsight.com/microsoft/olt/subscribe/SubscriptionRedirector.aspx?freetrial=true&amp;utm_source=microsoft&amp;utm_medium=sponsored-page&amp;utm_content=webmatrix&amp;utm_campaign=microsoft-sponsored-course) [Abonnez-vous dès maintenant](https://pluralsight.com/microsoft/OLT/subscriptions.aspx?utm_source=microsoft&amp;utm_medium=sponsored-page&amp;utm_content=webmatrix&amp;utm_campaign=microsoft-sponsored-course)
+**En commençant à 35 $ / Mo.** [démarrer la version d’évaluation gratuite ou abonnez-vous dès maintenant](https://www.pluralsight.com/pricing&amp;utm_source=microsoft&amp;utm_medium=sponsored-page&amp;utm_content=webmatrix&amp;utm_campaign=microsoft-sponsored-course)

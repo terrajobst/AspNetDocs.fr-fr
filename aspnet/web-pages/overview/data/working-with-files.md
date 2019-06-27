@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: eee916e4-ba4c-439a-a24e-68df7d45a569
 msc.legacyurl: /web-pages/overview/data/working-with-files
 msc.type: authoredcontent
-ms.openlocfilehash: 3ff852232212ddda4930597731911be60c092667
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 684c47a8a8480dc040e5144144577c94c35d39e5
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108947"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411184"
 ---
 # <a name="working-with-files-in-an-aspnet-web-pages-razor-site"></a>Utilisation des fichiers dans un Site ASP.NET Web Pages (Razor)
 
@@ -22,7 +22,7 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > Cet article explique comment lire, écrire, ajouter, supprimer et télécharger des fichiers dans un site ASP.NET Web Pages (Razor).
 > 
 > > [!NOTE]
-> > Si vous souhaitez charger des images et de les manipuler (par exemple, retourner ou de les redimensionner), consultez [utilisation des Images dans un Site ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202897).
+> > Si vous souhaitez charger des images et de les manipuler (par exemple, retourner ou de les redimensionner), consultez [utilisation des Images dans un Site ASP.NET Web Pages](/aspnet/web-pages/overview/ui-layouts-and-themes/9-working-with-images).
 > 
 > 
 > **Ce que vous allez apprendre :** 
@@ -72,7 +72,7 @@ Si vous souhaitez stocker les données dans un fichier texte, vous pouvez utilis
 
     Vous créez ensuite une variable (`dataFile`) qui contient l’emplacement et le nom du fichier pour stocker les données dans. Définition de l’emplacement nécessite une gestion spéciale. Dans les sites Web, il est une mauvaise pratique pour faire référence dans le code à des chemins d’accès absolus comme *C:\Folder\File.txt* pour les fichiers sur le serveur web. Si un site Web est déplacé, est incorrecte en un chemin d’accès absolu. En outre, pour un site hébergé (plutôt que sur votre propre ordinateur) généralement sans savoir quel est le chemin d’accès correct lorsque vous écrivez le code.
 
-    Un chemin d’accès complet est nécessaire, mais parfois, (par exemple, maintenant, pour l’écriture d’un fichier). La solution consiste à utiliser le `MapPath` méthode de la `Server` objet. Cela retourne le chemin d’accès complet à votre site Web. Pour obtenir le chemin d’accès pour la racine du site Web, vous utilisateur le `~` opérateur (à represen le site virtuel de la racine) pour `MapPath`. (Vous pouvez également passer un nom de sous-dossier, telles que *~/App\_données /*, afin d’obtenir le chemin d’accès pour ce sous-dossier.) Vous pouvez ensuite concaténer des informations supplémentaires sur quelle que soit la méthode retourne pour créer un chemin d’accès complet. Dans cet exemple, vous ajoutez un nom de fichier. (Vous trouverez plus d’informations sur l’utilisation des chemins d’accès de fichier et dossier dans [Introduction à ASP.NET Web Pages programmation à l’aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkId=195205#ID_WorkingWithFileAndFolderPaths).)
+    Un chemin d’accès complet est nécessaire, mais parfois, (par exemple, maintenant, pour l’écriture d’un fichier). La solution consiste à utiliser le `MapPath` méthode de la `Server` objet. Cela retourne le chemin d’accès complet à votre site Web. Pour obtenir le chemin d’accès pour la racine du site Web, vous utilisateur le `~` opérateur (à represen le site virtuel de la racine) pour `MapPath`. (Vous pouvez également passer un nom de sous-dossier, telles que *~/App\_données /* , afin d’obtenir le chemin d’accès pour ce sous-dossier.) Vous pouvez ensuite concaténer des informations supplémentaires sur quelle que soit la méthode retourne pour créer un chemin d’accès complet. Dans cet exemple, vous ajoutez un nom de fichier. (Vous trouverez plus d’informations sur l’utilisation des chemins d’accès de fichier et dossier dans [Introduction à ASP.NET Web Pages programmation à l’aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkId=195205#ID_WorkingWithFileAndFolderPaths).)
 
     Le fichier est enregistré dans le *application\_données* dossier. Ce dossier est un dossier spécial dans ASP.NET est utilisé pour stocker les fichiers de données, comme décrit dans [Introduction à l’utilisation avec une base de données dans les Sites ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=195209).
 
@@ -142,12 +142,12 @@ Cette procédure vous montre comment lire et afficher les données que vous avez
 > 
 > **Affichage des données à partir d’un fichier délimité par des virgules de Microsoft Excel**
 > 
-> Vous pouvez utiliser Microsoft Excel pour enregistrer les données contenues dans une feuille de calcul sous forme de fichier délimité par des virgules (*.csv* fichier). Lorsque vous le faites, le fichier est enregistré en texte brut, pas au format Excel. Chaque ligne dans la feuille de calcul est séparé par un saut de ligne dans le fichier texte, et chaque élément de données est séparé par une virgule. Vous pouvez utiliser le code indiqué dans l’exemple précédent pour lire un fichier délimité par des virgules d’Excel simplement en modifiant le nom du fichier de données dans votre code.
+> Vous pouvez utiliser Microsoft Excel pour enregistrer les données contenues dans une feuille de calcul sous forme de fichier délimité par des virgules ( *.csv* fichier). Lorsque vous le faites, le fichier est enregistré en texte brut, pas au format Excel. Chaque ligne dans la feuille de calcul est séparé par un saut de ligne dans le fichier texte, et chaque élément de données est séparé par une virgule. Vous pouvez utiliser le code indiqué dans l’exemple précédent pour lire un fichier délimité par des virgules d’Excel simplement en modifiant le nom du fichier de données dans votre code.
 
 <a id="Deleting_Files"></a>
 ## <a name="deleting-files"></a>Suppression de fichiers
 
-Pour supprimer les fichiers à partir de votre site Web, vous pouvez utiliser le `File.Delete` (méthode). Cette procédure montre comment permettre aux utilisateurs de supprimer une image (*.jpg* fichier) à partir d’un *images* dossier s’ils savent le nom du fichier.
+Pour supprimer les fichiers à partir de votre site Web, vous pouvez utiliser le `File.Delete` (méthode). Cette procédure montre comment permettre aux utilisateurs de supprimer une image ( *.jpg* fichier) à partir d’un *images* dossier s’ils savent le nom du fichier.
 
 > [!NOTE] 
 > 

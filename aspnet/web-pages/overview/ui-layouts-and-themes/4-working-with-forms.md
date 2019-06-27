@@ -8,12 +8,12 @@ ms.date: 02/10/2014
 ms.assetid: f3f4b8c8-e8f6-4474-ad94-69228a6c01ee
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/4-working-with-forms
 msc.type: authoredcontent
-ms.openlocfilehash: ec5ad784978b2d5191d59398fc4b5ed25ae516fb
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: c7d4802063c8610a246afe67bd15eea429f7304a
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128404"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410841"
 ---
 # <a name="working-with-html-forms-in-aspnet-web-pages-razor-sites"></a>Utilisation des formulaires HTML dans les Sites ASP.NET Web Pages (Razor)
 
@@ -51,7 +51,7 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
     [!code-html[Main](4-working-with-forms/samples/sample1.html)]
 3. Lancer la page dans votre navigateur. (Dans WebMatrix, dans le **fichiers** espace de travail, cliquez sur le fichier, puis sélectionnez **lancer dans le navigateur**.) Un formulaire simple avec trois champs d’entrée et un **envoyer** bouton s’affiche.
 
-    ![Capture d’écran d’un formulaire avec trois zones de texte.](4-working-with-forms/_static/image1.jpg)
+    ![Capture d’écran d’un formulaire avec trois zones de texte.](4-working-with-forms/_static/image1.png)
 
     À ce stade, si vous cliquez sur le **envoyer** bouton, rien ne se produit. Pour que le formulaire soit utile, vous devez ajouter du code qui s’exécutera sur le serveur.
 
@@ -67,7 +67,7 @@ Pour traiter le formulaire, vous ajoutez le code qui lit les valeurs de champ so
 
     Lorsque vous envoyez la page de ce temps, les valeurs que vous avez entré sont affichent juste au-dessus de la forme :
 
-    ![Capture d’écran montrant les valeurs que vous avez entré affichées sur la page.](4-working-with-forms/_static/image2.jpg)
+    ![Capture d’écran montrant les valeurs que vous avez entré affichées sur la page.](4-working-with-forms/_static/image2.png)
 
     Examinez le code de la page. Vous utilisez d’abord la `IsPost` méthode pour déterminer si la page est en cours de publication &#8212; , autrement dit, si un utilisateur a cliqué sur le **envoyer** bouton. S’il s’agit d’un billet, `IsPost` retourne la valeur true. Il s’agit de la méthode standard dans les Pages Web ASP.NET pour déterminer si vous travaillez avec une demande initiale (une requête GET) ou une publication (postback) (une requête POST). (Pour plus d’informations sur GET et POST, consultez l’encadré « HTTP GET et POST et le IsPost Property » dans [Introduction à ASP.NET Web Pages programmation à l’aide de la syntaxe Razor](https://go.microsoft.com/fwlink/?LinkId=202890#SB_HttpGetPost).)
 

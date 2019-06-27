@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: cb061642-faf3-41b2-9372-69e13444d458
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f56241a6a3d1d54f917d366b08edb4a1a43bbce8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 2b84b4e0f57bdddb83fc79494b66be76edcad664
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134447"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411038"
 ---
 # <a name="displaying-a-custom-error-page-c"></a>Affichage d’une page d’erreur personnalisée (C#)
 
@@ -137,8 +137,10 @@ Avec cette modification en place, chaque fois qu’un utilisateur visite à dist
 > [!NOTE]
 > Découvrez [des Pages d’erreur 404, une fois plus](http://www.smashingmagazine.com/2009/01/29/404-error-pages-one-more-time/) pour obtenir des conseils sur la création de pages d’erreur 404 efficace.
 
-[![](displaying-a-custom-error-page-cs/_static/image19.png)](displaying-a-custom-error-page-cs/_static/image18.png)**Figure 7**: La Page d’erreur 404 personnalisée affiche un Message plus ciblé que `Oops.aspx`  
- ([Cliquez pour afficher l’image en taille réelle](displaying-a-custom-error-page-cs/_static/image20.png)) 
+[![](displaying-a-custom-error-page-cs/_static/image19.png)](displaying-a-custom-error-page-cs/_static/image18.png)
+
+**Figure 7**: La Page d’erreur 404 personnalisée affiche un Message plus ciblé que `Oops.aspx`  
+([Cliquez pour afficher l’image en taille réelle](displaying-a-custom-error-page-cs/_static/image20.png)) 
 
 Étant donné que vous savez que le `404.aspx` page est atteint uniquement quand l’utilisateur effectue une demande pour une page qui n’a été trouvée, vous pouvez améliorer cette page d’erreur personnalisée pour inclure les fonctionnalités pour aider l’utilisateur à résoudre ce type d’erreur spécifique. Par exemple, vous pouvez créer une table de base de données qui mappe connue une URL incorrecte pour la bonne URL, puis le `404.aspx` personnalisé page d’erreur exécuter une requête sur la table et suggèrent des pages de l’utilisateur essaie d’atteindre.
 

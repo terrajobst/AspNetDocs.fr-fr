@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: 6040f1fa32e9df340ebf3f8635b9d07be871ee40
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 7b0b42c02439fdb76bceecc80af881e1d58e470d
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118925"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410824"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Réseau de distribution de contenu Microsoft Ajax
 
@@ -776,7 +776,7 @@ Les versions suivantes de [Globalize](https://github.com/jquery/globalize "Globa
 
 ### <a name="respond-releases-on-the-cdn"></a>Répondre mises en production sur le CDN
 
-Les versions suivantes de [https://github.com/scottjehl/Respond](https://github.com/scottjehl/Respond "https://github.com/scottjehl/Respond") répondre sont hébergés sur le CDN :
+Les versions suivantes de [répondre](https://github.com/scottjehl/Respond "répondre") sont hébergés sur le CDN :
 
 #### <a name="respond-version-142"></a>Dans la version 1.4.2 de répondre
 

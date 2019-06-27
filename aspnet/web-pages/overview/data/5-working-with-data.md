@@ -8,12 +8,12 @@ ms.date: 02/18/2014
 ms.assetid: 673d502f-2c16-4a6f-bb63-dbfd9a77ef47
 msc.legacyurl: /web-pages/overview/data/5-working-with-data
 msc.type: authoredcontent
-ms.openlocfilehash: 4ed2a2a1ee3cff7a50e67b6571b85f74d01efab7
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 45e988d037465e59ad352bb9444af2c69fd3cd70
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133212"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411269"
 ---
 # <a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introduction à l’utilisation avec une base de données dans ASP.NET Web Pages (Razor) Sites
 
@@ -94,7 +94,7 @@ Cette procédure vous montre comment créer une base de données nommée SmallBa
 
     Lorsque vous avez terminé, la définition ressemblera à ceci :
 
-    ![[image]](5-working-with-data/_static/image2.jpg)
+    ![[image]](5-working-with-data/_static/image2.png)
 17. Appuyez sur Ctrl + S pour enregistrer la table.
 
 ## <a name="adding-data-to-the-database"></a>Ajout de données à la base de données

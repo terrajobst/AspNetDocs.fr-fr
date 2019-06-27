@@ -8,12 +8,12 @@ ms.date: 02/20/2005
 ms.assetid: 2bb109d2-e299-46ea-9054-fa0263b59165
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/caching
 msc.type: authoredcontent
-ms.openlocfilehash: 39f4eb7b0859cf52fe3ed2531e9c349b465b9327
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 4f0b021ca6ca151544dd9fb0587ed9e0cf14ff65
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65116865"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411237"
 ---
 # <a name="caching"></a>Mise en cache
 
@@ -94,7 +94,7 @@ Lorsque cette commande exécute les modifications suivantes sont apportées à l
 | AspNet\_SqlCacheUnRegisterTableStoredProcedure | Annule l’inscription d’une table pour la dépendance de cache SQL en supprimant l’entrée dans la table de notification et supprime le déclencheur. |
 | AspNet\_SqlCacheUpdateChangeIdStoredProcedure | Met à jour la table de notification en incrémentant le changeId pour la table modifiée. ASP.NET utilise cette valeur pour déterminer si les données ont été modifiés. Comme indiqué ci-dessous, cette procédure stockée est exécutée par le déclencheur créé lors de la table est activée. |
 
-- Un déclencheur SQL Server appelée ***table\_nom *\_AspNet\_SqlCacheNotification\_déclencheur** est créé pour la table. Ce déclencheur s’exécute le compte AspNet\_SqlCacheUpdateChangeIdStoredProcedure lorsqu’une insertion, mise à jour ou DELETE est effectuée sur la table.
+- Un déclencheur SQL Server appelé  **_table\_nom_\_AspNet\_SqlCacheNotification\_déclencheur** est créé pour la table. Ce déclencheur s’exécute le compte AspNet\_SqlCacheUpdateChangeIdStoredProcedure lorsqu’une insertion, mise à jour ou DELETE est effectuée sur la table.
 - Un rôle SQL Server appelé **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** est ajouté à la base de données.
 
 Le **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** rôle SQL Server dispose des autorisations de EXEC pour le compte AspNet\_SqlCachePollingStoredProcedure. Dans l’ordre pour le modèle d’interrogation fonctionne correctement, vous devez ajouter votre compte de processus pour le compte aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess rôle. Le compte aspnet\_regsql.exe outil ne sera pas le faire pour vous.
