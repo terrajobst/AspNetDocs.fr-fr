@@ -3,15 +3,15 @@ uid: ajax/cdn/jquery-validate/cdnjqueryvalidate1191
 title: jQuery Validation 1.19.0 | Microsoft Docs
 author: guardrex
 description: ''
-ms.author: chrissfanos
+ms.author: csfanos
 ms.date: 06/28/2019
 msc.type: content
-ms.openlocfilehash: 56238d406ce1d80d05773ddda8e2a1501e90c334
-ms.sourcegitcommit: a256895f6160acc28d75424b8ab5d03b4e74412e
+ms.openlocfilehash: 8701e29ae18e2a4ad2ac0c44e5e37ebacfdaf317
+ms.sourcegitcommit: 6a564984ad448db34cdfab5458af755d6b65e69c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67471419"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67538804"
 ---
 # <a name="jquery-validation-1191"></a>jQuery Validation 1.19.1
 
