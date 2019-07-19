@@ -309,7 +309,7 @@ Dans ce didacticiel, vous avez appris sur la gestion des erreurs au niveau de l�
 
 ## <a name="tutorial-series-conclusion"></a>Conclusion de la série de didacticiels
 
-*Nous vous remercions de procédure. J’espère que cette série de didacticiels vous ont aidé à vous familiariser avec les Web Forms ASP.NET. Si vous avez besoin de plus d’informations sur les fonctionnalités de Web Forms disponibles dans ASP.NET 4.5 et Visual Studio 2013, consultez* [ *ASP.NET et Web Tools pour Visual Studio 2013 Release Notes de publication* ](../../../../visual-studio/overview/2013/release-notes.md)  *. Veillez en outre, examinons le didacticiel mentionné dans le* ***étapes *** section et defintely essaient le* [ *essai Azure gratuit* ](https://azure.microsoft.com/pricing/free-trial/)*.*
+*Nous vous remercions de procédure. J’espère que cette série de didacticiels vous ont aidé à vous familiariser avec les Web Forms ASP.NET. Si vous avez besoin de plus d’informations sur les fonctionnalités de Web Forms disponibles dans ASP.NET 4.5 et Visual Studio 2013, consultez* [ *ASP.NET et Web Tools pour Visual Studio 2013 Release Notes de publication* ](../../../../visual-studio/overview/2013/release-notes.md)  *. Veillez en outre, examinons le didacticiel mentionné dans le* * **étapes *** section et defintely essaient le* [ *essai Azure gratuit* ](https://azure.microsoft.com/pricing/free-trial/)* .*
 
 ![Nous vous remercions - Erik](aspnet-error-handling/_static/image10.png)  
 

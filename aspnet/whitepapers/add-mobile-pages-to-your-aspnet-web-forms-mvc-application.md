@@ -234,7 +234,7 @@ Si vous souhaitez que l’URL /Mobile pour atteindre l’action de l’Index sur
 
 Cela signifie que la page d’accueil mobile maintenant se trouve à /Mobile, plutôt que/Mobile/Home, car « Home » est désormais l’implicitement les nom de contrôleur par défaut pour les pages mobiles.
 
-Ensuite, notez qu’en ajoutant un deuxième HomeController à votre application (par exemple, mobile celle qui, en plus un bureau existant), vous allez avez interrompu votre page d’accueil de postes de travail régulière. Elle échoue avec l’erreur «*plusieurs types ont été trouvés, qui correspondent le contrôleur nommé « Accueil »*». Pour résoudre ce problème, vous devez mettre à jour votre configuration de routage de niveau supérieur (dans Global.asax.cs) pour spécifier que votre bureau HomeController doit être prioritaires lorsqu’il existe une ambiguïté :
+Ensuite, notez qu’en ajoutant un deuxième HomeController à votre application (par exemple, mobile celle qui, en plus un bureau existant), vous allez avez interrompu votre page d’accueil de postes de travail régulière. Elle échoue avec l’erreur «*plusieurs types ont été trouvés, qui correspondent le contrôleur nommé « Accueil »* ». Pour résoudre ce problème, vous devez mettre à jour votre configuration de routage de niveau supérieur (dans Global.asax.cs) pour spécifier que votre bureau HomeController doit être prioritaires lorsqu’il existe une ambiguïté :
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample9.cs)]
 

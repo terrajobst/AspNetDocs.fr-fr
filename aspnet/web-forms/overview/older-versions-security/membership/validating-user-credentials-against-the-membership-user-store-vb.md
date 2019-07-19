@@ -202,7 +202,7 @@ Comme vous pouvez le voir, le `Authenticate` un objet de type est passé au gest
 
 ### <a name="determining-and-validating-the-supplied-credentials"></a>Détermination et valider les informations d’identification fournies
 
-Utiliser le contrôle Login [ `UserName` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.username.aspx) et [ `Password` propriétés](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.password.aspx) pour déterminer les informations d’identification de nom d’utilisateur et mot de passe entrées par l’utilisateur. Afin de déterminer les valeurs entrées dans les contrôles Web supplémentaires (telles que la `Email` TextBox, nous avons ajouté à l’étape précédente), utilisez `LoginControlID.FindControl`(«*`controlID`*») pour obtenir une référence de programmation pour le Web contrôle dans le modèle dont `ID` propriété est égale à *`controlID`*. Par exemple, pour obtenir une référence à la `Email` zone de texte, utilisez le code suivant :
+Utiliser le contrôle Login [ `UserName` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.username.aspx) et [ `Password` propriétés](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.password.aspx) pour déterminer les informations d’identification de nom d’utilisateur et mot de passe entrées par l’utilisateur. Afin de déterminer les valeurs entrées dans les contrôles Web supplémentaires (telles que la `Email` TextBox, nous avons ajouté à l’étape précédente), utilisez `LoginControlID.FindControl`(« *`controlID`* ») pour obtenir une référence de programmation pour le Web contrôle dans le modèle dont `ID` propriété est égale à *`controlID`* . Par exemple, pour obtenir une référence à la `Email` zone de texte, utilisez le code suivant :
 
 `Dim EmailTextBox As TextBox = CType(myLogin.FindControl("Email"), TextBox)`
 
@@ -277,7 +277,7 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, consulte
 
 ### <a name="about-the-author"></a>À propos de l’auteur
 
-Scott Mitchell, auteur de plusieurs livres sur ASP/ASP.NET et fondateur de 4GuysFromRolla.com, travaille avec les technologies Web Microsoft depuis 1998. Scott fonctionne comme un consultant indépendant, formateur et writer. Son dernier ouvrage est *[SAM animer vous-même ASP.NET 2.0 des dernières 24 heures](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco)*. Scott peut être atteint à [mitchell@4guysfromrolla.com](mailto:mitchell@4guysfromrolla.com) ou via son blog à [http://ScottOnWriting.NET](http://scottonwriting.net/).
+Scott Mitchell, auteur de plusieurs livres sur ASP/ASP.NET et fondateur de 4GuysFromRolla.com, travaille avec les technologies Web Microsoft depuis 1998. Scott fonctionne comme un consultant indépendant, formateur et writer. Son dernier ouvrage est *[SAM animer vous-même ASP.NET 2.0 des dernières 24 heures](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco)* . Scott peut être atteint à [mitchell@4guysfromrolla.com](mailto:mitchell@4guysfromrolla.com) ou via son blog à [http://ScottOnWriting.NET](http://scottonwriting.net/).
 
 ### <a name="special-thanks-to"></a>Remerciements
 
