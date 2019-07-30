@@ -63,19 +63,19 @@ L’API permet les opérations CRUD sur la base de données. Voici un résumé d
 
 | Auteurs |  |
 | --- | -- |
-| OBTENIR l’api/authors | Obtenir tous les auteurs. |
-| GET api/authors / {id} | Obtenir un auteur par ID. |
-| / Api/authors POST | Créer un nouvel auteur. |
-| PUT/API/authors / {id} | Mettre à jour un auteur existant. |
+| GET api/authors | Obtenir tous les auteurs. |
+| GET api/authors/{id} | Obtenir un auteur par ID. |
+| POST /api/authors | Créer un nouvel auteur. |
+| PUT /api/authors/{id} | Mettre à jour un auteur existant. |
 | DELETE /api/authors/{id} | Supprimer un auteur. |
 
 | Livres |  |
 | --- | -- |
-| OBTENIR /api/books | Obtenir tous les livres. |
-| OBTENIR/API/books / {id} | Obtenir un livre par ID. |
-| PUBLIER/api/la documentation | Créer un nouveau livre. |
-| PUT/API/books / {id} | Mettre à jour un livre existant. |
-| Supprimer/API/books / {id} | Supprimer un livre. |
+| GET /api/books | Obtenir tous les livres. |
+| GET /api/books/{id} | Obtenir un livre par ID. |
+| POST /api/books | Créer un nouveau livre. |
+| PUT /api/books/{id} | Mettre à jour un livre existant. |
+| DELETE /api/books/{id} | Supprimer un livre. |
 
 ## <a name="view-the-database-optional"></a>Afficher la base de données (facultatif)
 
