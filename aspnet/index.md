@@ -7,12 +7,12 @@ ms.author: riande
 title: Documentation d’ASP.NET
 ms.date: 08/24/2018
 description: Découvrez comment développer des applications web ASP.NET. Obtenez de la documentation, des exemples de code, des tutoriels et bien plus encore.
-ms.openlocfilehash: c907f2ba66ba6ff197ced0c67243a963ffab17e3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4bfa5b2a161cdf67f3d2df0057bd68958d8a5769
+ms.sourcegitcommit: f774732a3960fca079438a88a5472c37cf7be08a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384719"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810740"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -27,7 +27,7 @@ ms.locfileid: "59384719"
                         <ul id="core_overview" class="cardsC">
                             <li>
                                 <div class="container intro">
-                                    <p>ASP.NET Core est un nouveau framework open source et multiplateforme permettant de créer des applications web cloud modernes sur Windows, Mac ou Linux.</p>
+                                    <p>ASP.NET Core est un framework open source et multiplateforme permettant de créer des applications web cloud modernes sur Windows, Mac ou Linux.</p>
                                     <p><a href="https://docs.microsoft.com/aspnet/core/choose-aspnet-framework" data-raw-source="[Learn the benefits of both ASP.NET Core and ASP.NET](https://docs.microsoft.com/aspnet/core/choose-aspnet-framework)">Découvrez les avantages d’ASP.NET Core et d’ASP.NET</a>, et choisissez celui des deux qui vous convient.</p>
                                 </div>
                             </li>
@@ -148,13 +148,12 @@ ms.locfileid: "59384719"
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md">Contribuez aux documents et aux exemples ASP.NET Core</a></p>
-                                    <p><a href="https://docs.microsoft.com/dotnet/articles/project-json">Recherche de la version Visual Studio 2015/project.json de la documentation</a></p>
                                 </div>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#core_tutorials">Didacticiels</a>
+                        <a href="#core_tutorials">Tutoriels</a>
                         <ul id="core_tutorials" class="cardsZ">
                             <li>
                                 <div class="container intro">
@@ -569,7 +568,7 @@ ms.locfileid: "59384719"
                         </ul>
                     </li>
                     <li>
-                        <a href="#aspnet_tutorials">Didacticiels</a>
+                        <a href="#aspnet_tutorials">Tutoriels</a>
                         <ul id="aspnet_tutorials" class="cardsZ">
                             <li>
                                 <div class="container intro">
