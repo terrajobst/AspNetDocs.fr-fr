@@ -9,18 +9,20 @@ ms.custom: seoapril2019
 ms.assetid: 2fc4797c-38ef-4cc7-926c-ca431c4739e8
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/action-results
 msc.type: authoredcontent
-ms.openlocfilehash: 1eaaf8e87168096683212fa66d3ddf415ad6b22b
-ms.sourcegitcommit: b95316530fa51087d6c400ff91814fe37e73f7e8
+ms.openlocfilehash: f00ac0db453053e53d6d6942dd1557b409f4167b
+ms.sourcegitcommit: 4b324a11131e38f920126066b94ff478aa9927f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000716"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985835"
 ---
 # <a name="action-results-in-web-api-2"></a>Résultats des actions dans l’API Web 2
 
+[!INCLUDE[](~/includes/coreWebAPI.md)]
+
 Cette rubrique décrit comment API Web ASP.NET convertit la valeur de retour d’une action de contrôleur en message de réponse HTTP.
 
-Une action du contrôleur d’API Web peut retourner l’un des éléments suivants:
+Une action du contrôleur d’API Web peut retourner l’un des éléments suivants :
 
 1. void
 2. **HttpResponseMessage**
@@ -34,7 +36,7 @@ En fonction de la valeur renvoyée, l’API Web utilise un mécanisme différent
 | void | Retourne un 204 vide (aucun contenu) |
 | **HttpResponseMessage** | Convertissez directement en message de réponse HTTP. |
 | **IHttpActionResult** | Appelez **ExecuteAsync** pour créer un **HttpResponseMessage**, puis convertissez-le en message de réponse http. |
-| Autre type | Écrivez la valeur de retour sérialisée dans le corps de la réponse; retourne 200 (OK). |
+| Autre type | Écrivez la valeur de retour sérialisée dans le corps de la réponse ; retourne 200 (OK). |
 
 Le reste de cette rubrique décrit chaque option plus en détail.
 
@@ -42,11 +44,11 @@ Le reste de cette rubrique décrit chaque option plus en détail.
 
 Si le type de retour `void`est, l’API Web retourne simplement une réponse http vide avec le code d’État 204 (aucun contenu).
 
-Exemple de contrôleur:
+Exemple de contrôleur :
 
 [!code-csharp[Main](action-results/samples/sample1.cs)]
 
-Réponse HTTP:
+Réponse HTTP :
 
 [!code-console[Main](action-results/samples/sample2.cmd)]
 
@@ -82,11 +84,11 @@ L’interface **IHttpActionResult** a été introduite dans l’API Web 2. Fonda
 
 Si une action de contrôleur retourne un **IHttpActionResult**, l’API Web appelle la méthode **ExecuteAsync** pour créer un **HttpResponseMessage**. Il convertit ensuite le **HttpResponseMessage** en message de réponse http.
 
-Voici une implémentation simple de **IHttpActionResult** qui crée une réponse en texte brut:
+Voici une implémentation simple de **IHttpActionResult** qui crée une réponse en texte brut :
 
 [!code-csharp[Main](action-results/samples/sample7.cs)]
 
-Exemple d’action de contrôleur:
+Exemple d’action de contrôleur :
 
 [!code-csharp[Main](action-results/samples/sample8.cs)]
 
