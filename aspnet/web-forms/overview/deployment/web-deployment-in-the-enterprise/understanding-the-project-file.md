@@ -117,7 +117,7 @@ En spécifiant plusieurs éléments **Item** portant le même nom, vous créez e
 
 [!code-xml[Main](understanding-the-project-file/samples/sample7.xml)]
 
-De cette façon, le fichier projet demande à MSBuild de construire des listes de fichiers qui doivent être traités de la même façon&#x2014;que la liste de **références** comprend des assemblys qui doivent être en place pour une génération réussie, la liste de **compilation** comprend du code les fichiers qui doivent être compilés et la liste de **contenu** comprend les ressources qui doivent être copiées sans modification. Nous allons examiner comment le processus de génération référence et utilise ces éléments plus loin dans cette rubrique.
+De cette façon, le fichier projet demande à MSBuild de construire des listes de fichiers qui doivent être traités de la même&#x2014;façon que la liste de **références** comprend des assemblys qui doivent être en place pour une génération réussie, la liste de **compilation** contient des fichiers de code qui doivent être compilés, et la liste de **contenu** comprend des ressources qui doivent être copiées sans modification. Nous allons examiner comment le processus de génération référence et utilise ces éléments plus loin dans cette rubrique.
 
 Les éléments Item peuvent également inclure des éléments enfants [ItemMetadata,](https://msdn.microsoft.com/library/ms164284.aspx) . Il s’agit de paires clé-valeur définies par l’utilisateur et qui représentent essentiellement des propriétés spécifiques à cet élément. Par exemple, un grand nombre d’éléments d’élément de **compilation** dans le fichier projet incluent des éléments enfants **DependentUpon** .
 

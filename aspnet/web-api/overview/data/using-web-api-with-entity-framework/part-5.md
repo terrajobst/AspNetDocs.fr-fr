@@ -21,7 +21,7 @@ par [Mike Wasson](https://github.com/MikeWasson)
 
 [Télécharger le projet terminé](https://github.com/MikeWasson/BookService)
 
-Pour l’instant, notre API Web expose les entités de base de données au client. Le client reçoit des données qui sont mappées directement à vos tables de base de données. Toutefois, cela n’est pas toujours une bonne idée. Parfois, vous souhaitez modifier la forme des données que vous envoyez au client. Vous pouvez, par exemple, décider d'effectuer les opérations suivantes :
+Pour l’instant, notre API Web expose les entités de base de données au client. Le client reçoit des données qui sont mappées directement à vos tables de base de données. Toutefois, cela n’est pas toujours une bonne idée. Parfois, vous souhaitez modifier la forme des données que vous envoyez au client. Vous pouvez par exemple décider d'effectuer les opérations suivantes :
 
 - Supprimez les références circulaires (voir la section précédente).
 - Masquer les propriétés particulières que les clients ne sont pas censés afficher.

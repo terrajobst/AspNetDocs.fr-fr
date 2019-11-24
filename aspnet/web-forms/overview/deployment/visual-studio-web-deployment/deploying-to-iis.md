@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
-title: 'Déploiement Web ASP.NET à l’aide de Visual Studio : Déploiement à tester | Microsoft Docs'
+title: 'Déploiement Web ASP.NET à l’aide de Visual Studio : déploiement à tester | Microsoft Docs'
 author: tdykstra
 description: Cette série de didacticiels vous montre comment déployer (publier) une application Web ASP.NET sur Azure App Service Web Apps ou sur un fournisseur d’hébergement tiers, par utilisez...
 ms.author: riande
@@ -15,15 +15,15 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 09/13/2019
 ms.locfileid: "70985854"
 ---
-# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : Déploiement à des fins de test
+# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : déploiement à tester
 
-Par [Tom Dykstra](https://github.com/tdykstra)
+par [Tom Dykstra](https://github.com/tdykstra)
 
 Cette série de didacticiels montre comment déployer (publier) une application Web ASP.NET sur Azure App Service Web Apps ou sur un fournisseur d’hébergement tiers à l’aide de Visual Studio 2017. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
 
 Pour obtenir une version actuelle du déploiement sur Azure, consultez [créer une application web ASP.net core dans Azure](/azure/app-service/app-service-web-get-started-dotnet).
 
-## <a name="overview"></a>Présentation
+## <a name="overview"></a>Overview
 
 Dans ce didacticiel, vous allez déployer une application Web ASP.NET sur Internet Information Server (IIS) sur votre ordinateur local.
 
@@ -43,7 +43,7 @@ L’option 2 est la méthode la plus fiable pour tester. Si vous utilisez l’op
 
 Pour plus d’informations sur l’utilisation de serveurs Web dans Visual Studio, consultez [serveurs Web dans Visual Studio pour les projets web ASP.net](https://msdn.microsoft.com/library/58wxa9w5.aspx).
 
-Rappeler Si vous recevez un message d’erreur ou si une action ne fonctionne pas lorsque vous suivez le didacticiel, consultez la [page de résolution des problèmes](troubleshooting.md).
+Rappel : Si vous recevez un message d’erreur ou si une action ne fonctionne pas au fur et à mesure que vous parcourez le didacticiel, veillez à consulter la [page de résolution des problèmes](troubleshooting.md).
 
 ## <a name="download-the-contoso-university-starter-project"></a>Télécharger le projet de démarrage de Contoso University
 
@@ -67,7 +67,7 @@ Pour effectuer un déploiement sur IIS sur votre ordinateur de développement, v
 
      Des messages indiquant qu’IIS 7 sera installé s’affichent. Le lien fonctionne pour IIS 8 dans Windows 8 ; Toutefois, pour Windows 8 et versions ultérieures, suivez les étapes ci-dessous pour vous assurer que ASP.NET 4,7 est installé :
 
-   * Ouvrez **le panneau de configuration** > **programmes** > programmes**et fonctionnalités** > **activer ou désactiver des fonctionnalités Windows**.
+   * Ouvrez **le panneau de configuration** > **programmes** > **programmes et fonctionnalités** > **activer ou désactiver des fonctionnalités Windows**.
 
    * Développez **Internet Information Services**, **Services World Wide Web**et **fonctionnalités de développement d’applications**.
    
@@ -95,7 +95,7 @@ Après l’installation d’IIS, exécutez le **Gestionnaire des services Intern
 
 4. Si vous ne voyez que deux pools d’applications et que les deux sont définis sur .NET Framework 2,0, installez ASP.NET 4 dans IIS.
 
-   Pour Windows 8 ou version ultérieure, consultez les instructions de la section précédente pour vous assurer que ASP.NET 4,7 est installé ou voir [Comment installer ASP.NET 4,5 sur Windows 8 et Windows Server 2012](https://support.microsoft.com/kb/2736284). Pour Windows 7, ouvrez une fenêtre d’invite de commandes en cliquant avec le bouton droit sur **invite de commandes** dans le menu **Démarrer** de Windows, puis en sélectionnant **exécuter en tant qu’administrateur**. Exécutez [ASPNET\_regiis. exe](https://msdn.microsoft.com/library/k6h9cz8h.aspx) pour installer ASP.net 4 dans IIS à l’aide des commandes suivantes. (Dans les systèmes 32 bits, remplacez « Framework64 » par « Framework ».)
+   Pour Windows 8 ou version ultérieure, consultez les instructions de la section précédente pour vous assurer que ASP.NET 4,7 est installé ou voir [Comment installer ASP.NET 4,5 sur Windows 8 et Windows Server 2012](https://support.microsoft.com/kb/2736284). Pour Windows 7, ouvrez une fenêtre d’invite de commandes en cliquant avec le bouton droit sur **invite de commandes** dans le menu **Démarrer** de Windows, puis en sélectionnant **exécuter en tant qu’administrateur**. Exécutez [aspnet\_regiis. exe](https://msdn.microsoft.com/library/k6h9cz8h.aspx) pour installer ASP.net 4 dans IIS à l’aide des commandes suivantes. (Dans les systèmes 32 bits, remplacez « Framework64 » par « Framework ».)
 
    [!code-console[Main](deploying-to-iis/samples/sample1.cmd)]
 
@@ -109,7 +109,7 @@ Après l’installation d’IIS, exécutez le **Gestionnaire des services Intern
 
 7. Dans la boîte de dialogue **modifier le pool d’applications** , remplacez la **version CLR .net** par **.NET CLR v 4.0.30319**. Sélectionnez **OK**.
 
-   ![Selecting_. NET _4_for_DefaultAppPool](deploying-to-iis/_static/image6a.png)
+   ![Selecting_. NET_4_for_DefaultAppPool](deploying-to-iis/_static/image6a.png)
 
 Vous êtes maintenant prêt à publier une application Web sur IIS. Toutefois, créez d’abord des bases de données à des fins de test.
 
@@ -119,7 +119,7 @@ Vous êtes maintenant prêt à publier une application Web sur IIS. Toutefois, c
 
 La base de données locale n’étant pas conçue pour fonctionner dans IIS, votre environnement de test doit avoir SQL Server Express installé. Si vous utilisez Visual Studio 2010 SQL Server Express, il est déjà installé par défaut. Si vous utilisez Visual Studio 2012 ou une version ultérieure, installez SQL Server Express.
 
-Pour installer SQL Server Express, téléchargez-le et installez [-le à partir du centre de téléchargement : Microsoft SQL Server 2017 Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express). 
+Pour installer SQL Server Express, téléchargez-le et installez-le à partir du [Centre de téléchargement : Microsoft SQL Server 2017 Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express). 
 
 Sur la première page du centre d’installation SQL Server, sélectionnez **nouvelle SQL Server installation autonome ou ajout de fonctionnalités à une installation existante** et suivez les instructions qui acceptent les options par défaut. Dans l’Assistant Installation, acceptez les paramètres par défaut. Pour plus d’informations sur les options d’installation, consultez [installer SQL Server à partir de l’Assistant Installation (programme d’installation)](https://msdn.microsoft.com/library/ms143219.aspx).
 
@@ -144,7 +144,7 @@ Dans la boîte **de dialogue créer une nouvelle base de données SQL Server** ,
 
 ![Créer ASPNET-ContosoUniversity](deploying-to-iis/_static/image9.png)
 
-Suivez la même procédure pour créer une nouvelle base de données SQL Server Express `ContosoUniversity`School nommée.
+Suivez la même procédure pour créer une nouvelle base de données SQL Server Express School nommée `ContosoUniversity`.
 
 **Explorateur de serveurs** affiche les deux nouvelles bases de données.
 
@@ -164,7 +164,7 @@ Dans Visual Studio, ouvrez la solution Contoso University. Cliquez avec le bouto
 > Ce script est conçu pour fonctionner avec SQL Server Express 2012 ou version ultérieure et avec les paramètres IIS dans Windows 10, Windows 8 ou Windows 7 tels qu’ils sont spécifiés dans ce didacticiel. Si vous utilisez une autre version de SQL Server ou Windows, ou si vous configurez les services IIS sur votre ordinateur différemment, les modifications apportées à ce script peuvent être nécessaires. Pour plus d’informations sur les scripts SQL Server, consultez [documentation en ligne de SQL Server](https://go.microsoft.com/fwlink/?LinkId=132511).
 
 > [!NOTE] 
-> **Note de sécurité** Ce script accorde `db_owner` des autorisations à l’utilisateur qui accède à la base de données au moment de l’exécution, ce que vous aurez dans l’environnement de production. Dans certains scénarios, vous souhaiterez peut-être spécifier un utilisateur qui dispose d’autorisations de mise à jour complète du schéma de base de données uniquement pour le déploiement et spécifier pour l’exécution un autre utilisateur disposant d’autorisations uniquement pour lire et écrire des données. Pour plus d’informations, consultez [examen des modifications automatiques de Web. config pour migrations code First](#reviewingmigrations) plus loin dans ce didacticiel.
+> **Note de sécurité** Ce script donne `db_owner` autorisations à l’utilisateur qui accède à la base de données au moment de l’exécution, ce que vous aurez dans l’environnement de production. Dans certains scénarios, vous souhaiterez peut-être spécifier un utilisateur qui dispose d’autorisations de mise à jour complète du schéma de base de données uniquement pour le déploiement et spécifier pour l’exécution un autre utilisateur disposant d’autorisations uniquement pour lire et écrire des données. Pour plus d’informations, consultez [examen des modifications automatiques de Web. config pour migrations code First](#reviewingmigrations) plus loin dans ce didacticiel.
 
 <a id="publish"></a>
 
@@ -174,11 +174,11 @@ Vous pouvez configurer le profil de publication pour exécuter le script Grant d
 
 1. Dans Visual Studio, ouvrez le fichier *Grant. SQL* que vous avez créé précédemment.
 
-2. Sélectionnez **Connecter**. 
+2. Sélectionnez **se connecter**. 
 
     ![Bouton de connexion](deploying-to-iis/_static/image11.png)
 
-3. Dans la boîte de dialogue **se connecter au serveur** , entrez *.\SQLEXPRESS* comme **nom de serveur**. Sélectionnez **Connecter**.
+3. Dans la boîte de dialogue **se connecter au serveur** , entrez *.\SQLEXPRESS* comme **nom de serveur**. Sélectionnez **se connecter**.
 
 4. Dans la liste déroulante base de données, sélectionnez **ContosoUniversity**. Sélectionnez **exécuter**. 
 
@@ -205,7 +205,7 @@ Avant la publication, assurez-vous que vous exécutez Visual Studio en mode admi
 
 2. Sélectionnez **nouveau profil**. La boîte **de dialogue choisir une cible de publication** s’affiche.
 
-3. Sélectionnez **IIS, FTP, etc**. Sélectionnez **Créer un profil**. L’Assistant **publication** s’affiche.
+3. Sélectionnez **IIS, FTP, etc**. Sélectionnez **créer un profil**. L’Assistant **publication** s’affiche.
 
    ![Onglet de profil de l’Assistant publier le site Web](deploying-to-iis/_static/image26.png)
 
@@ -215,7 +215,7 @@ Avant la publication, assurez-vous que vous exécutez Visual Studio en mode admi
 
 6. Pour **nom du site**, entrez *Default Web site/ContosoUniversity*.
 
-7. Pour **URL de destination**, *http://localhost/ContosoUniversity* entrez.
+7. Pour **URL de destination**, entrez *http://localhost/ContosoUniversity* .
 
    Le paramètre de l' **URL de destination** n’est pas obligatoire. Une fois le déploiement de l’application terminé, Visual Studio ouvre automatiquement votre navigateur par défaut à cette URL. Si vous ne souhaitez pas que le navigateur s’ouvre automatiquement après le déploiement, laissez cette zone vide.
 
@@ -229,9 +229,9 @@ Avant la publication, assurez-vous que vous exécutez Visual Studio en mode admi
 
 10. La zone de liste déroulante **configuration** spécifie la configuration de build à déployer. Laissez la valeur par défaut de **Release**. Ce didacticiel ne vous permettra pas de déployer les versions Debug.
 
-11. Développez **options de publication de fichiers**. Sélectionnez **exclure les fichiers du dossier\_de données d’application**.
+11. Développez **options de publication de fichiers**. Sélectionnez **exclure les fichiers du dossier de données de l’application\_** .
 
-    Dans l’environnement de test, l’application accède aux bases de données que vous avez créées dans l’instance de SQL Server Express locale, et non aux fichiers. mdf du dossier de *données d’application\_* .
+    Dans l’environnement de test, l’application accède aux bases de données que vous avez créées dans l’instance de SQL Server Express locale, et non aux fichiers. mdf du dossier de données de l' *application\_* .
 
 12. Laissez les cases à cocher **précompiler pendant la publication** et **Supprimer les fichiers supplémentaires à la destination** désactivées.
 
@@ -246,7 +246,7 @@ Avant la publication, assurez-vous que vous exécutez Visual Studio en mode admi
     > 
     > Par exemple, si vous avez une application Web dans un sous-dossier sur le serveur lorsque vous déployez un projet dans le dossier racine, le sous-dossier sera supprimé. Vous pouvez avoir un projet pour le site principal sur contoso.com et un autre projet pour un blog sur contoso.com/blog. L’application de blog se trouve dans un sous-dossier. Si vous sélectionnez **Supprimer les fichiers supplémentaires à la destination** lorsque vous déployez le site principal, l’application de blog sera supprimée.
     > 
-    > Pour un autre exemple, votre\_dossier de données d’application peut être supprimé de manière inattendue. Certaines bases de données, telles que SQL Server Compact stockent les fichiers\_de base de données dans le dossier Application Data. Après le déploiement initial, vous ne souhaitez pas continuer à copier les fichiers de base de données dans les déploiements suivants. vous sélectionnez donc **exclure les données\_** de l’application sous l’onglet Package/Publication Web. Après cela, si vous avez sélectionné l’option **supprimer des fichiers supplémentaires à la destination** , vos fichiers de\_base de données et le dossier de données d’application proprement dit seront supprimés lors de la prochaine publication.
+    > Pour un autre exemple, votre application\_dossier de données peut être supprimé de manière inattendue. Certaines bases de données, telles que SQL Server Compact stockent les fichiers de base de données dans le dossier des données d’application\_. Après le déploiement initial, vous ne souhaitez pas continuer à copier les fichiers de base de données dans les déploiements suivants. vous devez donc sélectionner **exclure l’application\_données** dans l’onglet Package/Publication Web. Après cela, si vous avez sélectionné l’option **supprimer des fichiers supplémentaires à la destination** , vos fichiers de base de données et le dossier de données de l’application\_proprement dit seront supprimés lors de la prochaine publication.
 
 ### <a name="configure-deployment-for-the-membership-database"></a>Configurer le déploiement pour la base de données d’appartenance
 
@@ -258,7 +258,7 @@ Les étapes suivantes s’appliquent à la base de données **DefaultConnection*
 
    Le processus de déploiement place cette chaîne de connexion dans le fichier Web. config déployé, car l’option **utiliser cette chaîne de connexion au moment** de l’exécution est sélectionnée.
 
-    Vous pouvez également récupérer la chaîne de connexion à partir de **Explorateur de serveurs**. Dans **Explorateur de serveurs**, développez **connexions de données** et sélectionnez la  **&lt;&gt;** base de données NomOrdinateur \SQLEXPRESS.AspNet-ContosoUniversity, puis dans la fenêtre **Propriétés** , copiez la **chaîne de connexion.** valeur. Cette chaîne de connexion aura un paramètre supplémentaire que vous pouvez supprimer : `Pooling=False`.
+    Vous pouvez également récupérer la chaîne de connexion à partir de **Explorateur de serveurs**. Dans **Explorateur de serveurs**, développez **connexions de données** , sélectionnez la base de données **&lt;MachineName&gt;\SQLEXPRESS.AspNet-ContosoUniversity** , puis, dans la fenêtre **Propriétés** , copiez la valeur de la **chaîne de connexion** . Cette chaîne de connexion aura un paramètre supplémentaire que vous pouvez supprimer : `Pooling=False`.
 
 2. Sélectionnez **mettre à jour la base de données**.
 
@@ -276,9 +276,9 @@ Les étapes suivantes s’appliquent à la base de données **DefaultConnection*
 
 ### <a name="configure-deployment-for-the-application-database"></a>Configurer le déploiement pour la base de données d’application
 
-Lorsque Visual Studio détecte une classe Entity Framework `DbContext` , il crée une entrée dans la section **bases de données** qui contient une case à cocher **exécuter migrations code First** au lieu d’une **mise à jour de la base de données** . Pour ce didacticiel, vous allez utiliser cette case à cocher pour spécifier Migrations Code First déploiement.
+Lorsque Visual Studio détecte une classe Entity Framework `DbContext`, il crée une entrée dans la section **bases de données** qui contient une case à cocher **exécuter migrations code First** au lieu d’une **mise à jour de la base de données** . Pour ce didacticiel, vous allez utiliser cette case à cocher pour spécifier Migrations Code First déploiement.
 
-Dans certains scénarios, vous utilisez peut-être `DbContext` une base de données, mais vous souhaitez utiliser le fournisseur dbDacFx au lieu des migrations pour déployer la base de données. Dans ce cas, consultez [Comment faire déployer une base de données Code First sans migrations ?](https://msdn.microsoft.com/library/ee942158.aspx#deploy_code_first_without_migrations) dans le Forum aux questions sur le déploiement Web ASP.net sur MSDN.
+Dans certains scénarios, vous utilisez peut-être une base de données `DbContext`, mais vous souhaitez utiliser le fournisseur dbDacFx au lieu des migrations pour déployer la base de données. Dans ce cas, consultez [Comment faire déployer une base de données Code First sans migrations ?](https://msdn.microsoft.com/library/ee942158.aspx#deploy_code_first_without_migrations) dans le Forum aux questions sur le déploiement Web ASP.net sur MSDN.
 
 Les étapes suivantes s’appliquent à la base de données **SchoolContext** dans la section **bases de données** de la boîte de dialogue.
 
@@ -292,7 +292,7 @@ Les étapes suivantes s’appliquent à la base de données **SchoolContext** da
 
 2. Sélectionnez **exécuter migrations code First (s’exécute au démarrage de l’application)** .
 
-   Avec cette option, le processus de déploiement configure le fichier Web. config déployé pour `MigrateDatabaseToLatestVersion` spécifier l’initialiseur. Cet initialiseur met automatiquement à jour la base de données avec la version la plus récente lorsque l’application accède pour la première fois à la base de données après le déploiement.
+   Avec cette option, le processus de déploiement configure le fichier Web. config déployé pour spécifier l’initialiseur de `MigrateDatabaseToLatestVersion`. Cet initialiseur met automatiquement à jour la base de données avec la version la plus récente lorsque l’application accède pour la première fois à la base de données après le déploiement.
 
 ### <a name="configure-publish-profile-transforms"></a>Configurer les transformations de profil de publication
 
@@ -344,7 +344,7 @@ Les étapes suivantes s’appliquent à la base de données **SchoolContext** da
 
 Notez que l’indicateur d’environnement affiche « (test) » au lieu de « (dev) », qui indique que la transformation *Web. config* de l’indicateur d’environnement a réussi.
 
-Exécutez la page des **enseignants** pour vérifier que code First amorcé la base de données avec les données de l’instructeur. Lorsque vous sélectionnez cette page, le chargement peut prendre quelques minutes, car code First crée la base de données, puis exécute `Seed` la méthode. (Ce n’est pas le cas lorsque vous étiez sur la page d’hébergement parce que l’application n’a pas encore essayé d’accéder à la base de données.)
+Exécutez la page des **enseignants** pour vérifier que code First amorcé la base de données avec les données de l’instructeur. Lorsque vous sélectionnez cette page, le chargement peut prendre quelques minutes, car Code First crée la base de données, puis exécute la méthode `Seed`. (Ce n’est pas le cas lorsque vous étiez sur la page d’hébergement parce que l’application n’a pas encore essayé d’accéder à la base de données.)
 
 Sélectionnez l’onglet **students** pour vérifier que la base de données déployée ne dispose d’aucun étudiant.
 
@@ -366,13 +366,13 @@ Le processus de déploiement a également créé une nouvelle chaîne de connexi
 
 ![Chaîne de connexion Database_Publish](deploying-to-iis/_static/image22.png)
 
-Cette chaîne de connexion supplémentaire vous permet de spécifier un compte d’utilisateur pour les mises à jour de schéma de base de données et un autre compte d’utilisateur pour l’accès aux données d’application. Par exemple, vous pouvez assigner le rôle propriétaire de la **base de BDD\_** à migrations code First et à la base **\_** de. DataReader avec des rôles de **base de BD\_** à l’application. Il s’agit d’un modèle de défense en profondeur courant qui empêche le code potentiellement malveillant dans l’application de modifier le schéma de base de données. (Par exemple, cela peut se produire dans le cas d’une attaque par injection SQL réussie.) Ces didacticiels n’utilisent pas ce modèle. Pour implémenter ce modèle dans votre scénario, procédez comme suit :
+Cette chaîne de connexion supplémentaire vous permet de spécifier un compte d’utilisateur pour les mises à jour de schéma de base de données et un autre compte d’utilisateur pour l’accès aux données d’application. Par exemple, vous pouvez attribuer le rôle de propriétaire de la **base de\_DB** à migrations code First et **DB\_DataReader** avec des rôles de **\_base** de de base de à l’application. Il s’agit d’un modèle de défense en profondeur courant qui empêche le code potentiellement malveillant dans l’application de modifier le schéma de base de données. (Par exemple, cela peut se produire dans le cas d’une attaque par injection SQL réussie.) Ces didacticiels n’utilisent pas ce modèle. Pour implémenter ce modèle dans votre scénario, procédez comme suit :
 
-1. Dans l’Assistant **publier le site Web** sous l’onglet **paramètres** , entrez la chaîne de connexion qui spécifie un utilisateur disposant d’autorisations de mise à jour complète du schéma de base de données. Désactivez la case à cocher **utiliser cette chaîne de connexion au moment de l’exécution** . Dans le fichier Web. config déployé, il devient la `DatabasePublish` chaîne de connexion.
+1. Dans l’Assistant **publier le site Web** sous l’onglet **paramètres** , entrez la chaîne de connexion qui spécifie un utilisateur disposant d’autorisations de mise à jour complète du schéma de base de données. Désactivez la case à cocher **utiliser cette chaîne de connexion au moment de l’exécution** . Dans le fichier Web. config déployé, il s’agit de la chaîne de connexion `DatabasePublish`.
 
 2. Créez une transformation de fichier Web. config pour la chaîne de connexion que vous souhaitez que l’application utilise au moment de l’exécution.
 
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Résumé
 
 Vous avez maintenant déployé votre application sur IIS sur votre ordinateur de développement et vous l’avez testée ici.
 
