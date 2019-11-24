@@ -15,15 +15,15 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/02/2019
 ms.locfileid: "73445569"
 ---
-# <a name="creating-a-consistent-look-part-2"></a><span data-ttu-id="08778-103">Création d’une apparence cohérente (Partie 2)</span><span class="sxs-lookup"><span data-stu-id="08778-103">Creating a Consistent Look (Part 2)</span></span>
+# <a name="creating-a-consistent-look-part-2"></a><span data-ttu-id="06a86-103">Création d’une apparence cohérente (Partie 2)</span><span class="sxs-lookup"><span data-stu-id="06a86-103">Creating a Consistent Look (Part 2)</span></span>
 
-<span data-ttu-id="08778-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="08778-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="06a86-104">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="06a86-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="08778-105">Vidéo exceptionnelle dans le didacticiel Création d’un look cohérent (partie 2)</span><span class="sxs-lookup"><span data-stu-id="08778-105">Video accompaniment to the Creating a Consistent Look tutorial (Part 2)</span></span>
+<span data-ttu-id="06a86-105">Vidéo exceptionnelle dans le didacticiel Création d’un look cohérent (partie 2)</span><span class="sxs-lookup"><span data-stu-id="06a86-105">Video accompaniment to the Creating a Consistent Look tutorial (Part 2)</span></span>
 
-<span data-ttu-id="08778-106">[&#9654;Regarder la vidéo (5 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-a-consistent-look-(part-2))</span><span class="sxs-lookup"><span data-stu-id="08778-106">[&#9654; Watch video (5 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-a-consistent-look-(part-2))</span></span>
+<span data-ttu-id="06a86-106">[&#9654;Regarder la vidéo (5 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-a-consistent-look-(part-2))</span><span class="sxs-lookup"><span data-stu-id="06a86-106">[&#9654; Watch video (5 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-a-consistent-look-(part-2))</span></span>
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="08778-107">[Précédent](creating-a-consistent-look-part-1.md)
-> [Suivant](working-with-forms-part-1.md)</span><span class="sxs-lookup"><span data-stu-id="08778-107">[Previous](creating-a-consistent-look-part-1.md)
+> <span data-ttu-id="06a86-107">[Précédent](creating-a-consistent-look-part-1.md)
+> [Suivant](working-with-forms-part-1.md)</span><span class="sxs-lookup"><span data-stu-id="06a86-107">[Previous](creating-a-consistent-look-part-1.md)
 [Next](working-with-forms-part-1.md)</span></span>
