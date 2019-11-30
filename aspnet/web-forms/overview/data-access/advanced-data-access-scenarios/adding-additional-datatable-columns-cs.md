@@ -1,188 +1,188 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-cs
-title: Ajout de colonnes de DataTable supplémentaires (c#) | Microsoft Docs
+title: Ajout de colonnes de DataTableC#supplémentaires () | Microsoft Docs
 author: rick-anderson
-description: Lorsque vous utilisez l’Assistant TableAdapter pour créer un DataSet typé, le DataTable contient les colonnes retournées par la requête de base de données principale. Mais là...
+description: Lorsque vous utilisez l’Assistant TableAdapter pour créer un DataSet typé, le DataTable correspondant contient les colonnes retournées par la requête de base de données principale. Mais ici...
 ms.author: riande
 ms.date: 07/18/2007
 ms.assetid: 615f3361-f21f-4338-8bc1-fce8ae071de9
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 931a918d51c1accec1757a9370c8e611a9a038ec
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: a96f254aa54e7077456ac1a9bd6c5e2a17619d96
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65124430"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74610667"
 ---
 # <a name="adding-additional-datatable-columns-c"></a>Ajout de colonnes de DataTable supplémentaires (C#)
 
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger le Code](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_70_CS.zip) ou [télécharger le PDF](adding-additional-datatable-columns-cs/_static/datatutorial70cs1.pdf)
+[Télécharger le code](https://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_70_CS.zip) ou [Télécharger le PDF](adding-additional-datatable-columns-cs/_static/datatutorial70cs1.pdf)
 
-> Lorsque vous utilisez l’Assistant TableAdapter pour créer un DataSet typé, le DataTable contient les colonnes retournées par la requête de base de données principale. Mais il arrive parfois lorsque la table de données doit inclure des colonnes supplémentaires. Dans ce didacticiel, nous Découvrez pourquoi les procédures stockées sont recommandées lorsque nous avons besoin des colonnes de DataTable supplémentaires.
+> Lorsque vous utilisez l’Assistant TableAdapter pour créer un DataSet typé, le DataTable correspondant contient les colonnes retournées par la requête de base de données principale. Toutefois, il existe des occasions où le DataTable doit inclure des colonnes supplémentaires. Dans ce didacticiel, nous expliquons pourquoi des procédures stockées sont recommandées lorsque nous avons besoin de colonnes DataTable supplémentaires.
 
 ## <a name="introduction"></a>Introduction
 
-Lorsque vous ajoutez un TableAdapter à un DataSet typé, le schéma s DataTable correspondant est déterminé par la requête principale de TableAdapter s. Par exemple, si la requête principale renvoie les champs de données *A*, *B*, et *C*, la table de données aura trois colonnes correspondantes nommées *A*, *B*, et *C*. Outre sa requête principale, un TableAdapter peut inclure des requêtes supplémentaires qui retournent, par exemple, un sous-ensemble des données en fonction de certains paramètres. Par exemple, en plus de la `ProductsTableAdapter` requête principale s, qui retourne des informations sur tous les produits, elle contient également des méthodes comme `GetProductsByCategoryID(categoryID)` et `GetProductByProductID(productID)`, qui renvoient des informations de produit spécifique en fonction d’un paramètre fourni.
+Quand vous ajoutez un TableAdapter à un DataSet typé, le schéma du DataTable s correspondant est déterminé par la requête principale du TableAdapter. Par exemple, si la requête principale retourne les champs *de données a*, *b*et *c*, le DataTable aura trois colonnes correspondantes nommées *a*, *b*et *c*. En plus de sa requête principale, un TableAdapter peut inclure des requêtes supplémentaires qui retournent, éventuellement, un sous-ensemble de données basé sur un paramètre. Par exemple, en plus de la requête principale de `ProductsTableAdapter` s, qui retourne des informations sur tous les produits, elle contient également des méthodes comme `GetProductsByCategoryID(categoryID)` et `GetProductByProductID(productID)`, qui retournent des informations spécifiques sur les produits en fonction d’un paramètre fourni.
 
-Le modèle d’avoir le schéma s DataTable reflètent la requête principale de TableAdapter s fonctionne bien si toutes les méthodes TableAdapter s retournent les mêmes ou moins de champs de données que celles spécifiées dans la requête principale. Si une méthode du TableAdapter doit retourner les champs de données supplémentaires, nous devons développer le schéma s DataTable en conséquence. Dans le [maître/détail à l’aide d’une liste à puces des enregistrements maîtres avec une DataList des détails](../filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs.md) didacticiel, nous avons ajouté une méthode à la `CategoriesTableAdapter` qui a retourné le `CategoryID`, `CategoryName`, et `Description` définies dans les champs de données la requête principale plue `NumberOfProducts`, un champ de données supplémentaires qui a signalé le nombre de produits associées à chaque catégorie. Nous avons ajouté manuellement une nouvelle colonne à la `CategoriesDataTable` afin de capturer le `NumberOfProducts` valeur à partir de cette nouvelle méthode de champ de données.
+Le modèle d’utilisation du schéma de la table de données reflète bien la requête principale de TableAdapter si toutes les méthodes de TableAdapter retournent le même nombre de champs de données ou moins que ceux spécifiés dans la requête principale. Si une méthode TableAdapter doit retourner des champs de données supplémentaires, nous devons développer le schéma DataTable s en conséquence. Dans le [maître/détail à l’aide d’une liste à puces d’enregistrements maîtres avec un didacticiel détails sur DataList](../filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs.md) , nous avons ajouté une méthode au `CategoriesTableAdapter` qui a renvoyé les champs de données `CategoryID`, `CategoryName`et `Description` définis dans la requête principale plus `NumberOfProducts`, un champ de données supplémentaire qui a signalé le nombre de produits associés à chaque catégorie. Nous avons ajouté manuellement une nouvelle colonne au `CategoriesDataTable` afin de capturer la valeur du champ de données `NumberOfProducts` à partir de cette nouvelle méthode.
 
-Comme indiqué dans le [télécharger des fichiers](../working-with-binary-files/uploading-files-cs.md) didacticiel, vous devez veiller avec les TableAdapters qui utilisent des instructions SQL ad hoc et ont des méthodes dont les champs de données ne correspondent pas précisément la requête principale. Si l’Assistant Configuration de TableAdapter est relancée, elle sera mise à jour toutes les méthodes TableAdapter s afin que leur liste de champs de données correspond à la requête principale. Par conséquent, toutes les méthodes avec des listes de colonne personnalisé seront revenir à la liste de colonnes de la requête principale s et ne retourne pas les données attendues. Ce problème ne se pose pas lors de l’utilisation de procédures stockées.
+Comme indiqué dans le didacticiel sur le [téléchargement de fichiers](../working-with-binary-files/uploading-files-cs.md) , il est important de bien comprendre les TableAdapters qui utilisent des instructions SQL ad hoc et les méthodes dont les champs de données ne correspondent pas exactement à la requête principale. Si l’Assistant Configuration de TableAdapter est réexécuté, il met à jour toutes les méthodes de TableAdapter pour que la liste des champs de données corresponde à la requête principale. Par conséquent, toutes les méthodes avec des listes de colonnes personnalisées sont restaurées dans la liste des colonnes de la requête principale et ne retournent pas les données attendues. Ce problème ne se pose pas lors de l’utilisation de procédures stockées.
 
-Dans ce didacticiel, nous allons examiner comment étendre un schéma de s DataTable pour inclure des colonnes supplémentaires. En raison de la fragilité du TableAdapter lors de l’utilisation d’instructions SQL ad hoc, dans ce didacticiel, nous allons utiliser des procédures stockées. Reportez-vous à la [création de nouvelles procédures stockées pour s DataSet typée TableAdapters](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) et [à l’aide des procédures stockées existantes pour s DataSet typée TableAdapters](https://data-access/tutorials/using-existing-stored-procedures-for-the-typed-dataset-amp-rsquo-s-tableadapters-cs) didacticiels pour plus d’informations sur configuration d’un TableAdapter pour utiliser des procédures stockées.
+Dans ce didacticiel, nous allons examiner comment étendre un schéma DataTable s pour inclure des colonnes supplémentaires. En raison de la fragilité du TableAdapter lors de l’utilisation d’instructions SQL ad hoc, dans ce didacticiel, nous allons utiliser des procédures stockées. Pour plus d’informations sur la configuration d’un TableAdapter pour l’utilisation de procédures stockées, consultez [création de procédures stockées pour les TableAdapters de DataSet typés](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) et [utilisation de procédures stockées existantes pour les didacticiels de TableAdapters de datasets typés](https://data-access/tutorials/using-existing-stored-procedures-for-the-typed-dataset-amp-rsquo-s-tableadapters-cs) .
 
-## <a name="step-1-adding-apricequartilecolumn-to-theproductsdatatable"></a>Étape 1 : Ajout d’un`PriceQuartile`colonne à la`ProductsDataTable`
+## <a name="step-1-adding-apricequartilecolumn-to-theproductsdatatable"></a>Étape 1 : ajout d’une colonne`PriceQuartile`à la`ProductsDataTable`
 
-Dans le *création de nouvelles procédures stockées pour s DataSet typée TableAdapters* didacticiel, nous avons créé un DataSet typé nommé `NorthwindWithSprocs`. Ce jeu de données contient actuellement des deux DataTables : `ProductsDataTable` et `EmployeesDataTable`. Le `ProductsTableAdapter` a trois méthodes suivantes :
+Dans le didacticiel *création de nouvelles procédures stockées pour les TableAdapters de DataSet typé* , nous avons créé un DataSet typé nommé `NorthwindWithSprocs`. Ce jeu de données contient actuellement deux DataTables : `ProductsDataTable` et `EmployeesDataTable`. L' `ProductsTableAdapter` présente les trois méthodes suivantes :
 
-- `GetProducts` -la requête principale, qui retourne tous les enregistrements à partir de la `Products` table
-- `GetProductsByCategoryID(categoryID)` -Retourne tous les produits avec la valeur *categoryID*.
-- `GetProductByProductID(productID)` -Retourne le produit avec la valeur *productID*.
+- `GetProducts`-la requête principale, qui retourne tous les enregistrements de la table `Products`
+- `GetProductsByCategoryID(categoryID)`-retourne tous les produits avec la *CategoryID*spécifiée.
+- `GetProductByProductID(productID)` : renvoie le produit spécifique avec le *ProductID*spécifié.
 
-La requête principale et toutes les deux méthodes supplémentaires retournent le même ensemble de champs de données, à savoir toutes les colonnes à partir de la `Products` table. Il n’y a aucune sous-requêtes corrélées ou `JOIN` s extraction de données connexes à partir de la `Categories` ou `Suppliers` tables. Par conséquent, le `ProductsDataTable` a une colonne correspondante pour chaque champ dans le `Products` table.
+La requête principale et les deux autres méthodes retournent toutes le même jeu de champs de données, à savoir toutes les colonnes de la table `Products`. Il n’y a pas de sous-requêtes corrélées, ni de `JOIN` qui extraient les données associées des tables `Categories` ou `Suppliers`. Par conséquent, la `ProductsDataTable` a une colonne correspondante pour chaque champ de la table `Products`.
 
-Pour ce didacticiel, s permettent d’ajouter une méthode à la `ProductsTableAdapter` nommé `GetProductsWithPriceQuartile` qui retourne tous les produits. En plus des champs de données de produit standard, `GetProductsWithPriceQuartile` inclut également un `PriceQuartile` champ de données qui indique dans quel quartile se situe le prix du produit s. Par exemple, les produits dont les prix sont dans les 25 % plus coûteuses aura un `PriceQuartile` la valeur 1, tandis que ceux dont les prix se situent dans la partie inférieure de 25 % aura une valeur de 4. Avant de nous soucier de la création de la procédure stockée pour retourner ces informations, toutefois, nous devons d’abord mettre à jour le `ProductsDataTable` pour inclure une colonne contenant le `PriceQuartile` résultats lorsque la `GetProductsWithPriceQuartile` méthode est utilisée.
+Pour ce didacticiel, nous allons ajouter une méthode au `ProductsTableAdapter` nommé `GetProductsWithPriceQuartile` qui retourne tous les produits. En plus des champs de données de produit standard, `GetProductsWithPriceQuartile` inclura également un champ de données `PriceQuartile` qui indique le niveau d’activité du quartile du prix du produit. Par exemple, les produits dont le prix est inférieur ou supérieur à 25% auront une valeur `PriceQuartile` de 1, tandis que ceux dont les prix tombent dans les 25% inférieurs auront la valeur 4. Avant de nous soucier de la création de la procédure stockée pour retourner ces informations, nous devons tout d’abord mettre à jour le `ProductsDataTable` pour inclure une colonne qui contiendra le `PriceQuartile` résultats lorsque la méthode `GetProductsWithPriceQuartile` est utilisée.
 
-Ouvrez le `NorthwindWithSprocs` jeu de données et avec le bouton droit sur le `ProductsDataTable`. Cliquez sur Ajouter dans le menu contextuel, puis choisissez colonne.
+Ouvrez le jeu de données `NorthwindWithSprocs`, puis cliquez avec le bouton droit sur l' `ProductsDataTable`. Choisissez Ajouter dans le menu contextuel, puis choisissez colonne.
 
-[![Ajouter une nouvelle colonne à la ProductsDataTable](adding-additional-datatable-columns-cs/_static/image2.png)](adding-additional-datatable-columns-cs/_static/image1.png)
+[![ajouter une nouvelle colonne au ProductsDataTable](adding-additional-datatable-columns-cs/_static/image2.png)](adding-additional-datatable-columns-cs/_static/image1.png)
 
-**Figure 1**: Ajouter une nouvelle colonne à la `ProductsDataTable` ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image3.png))
+**Figure 1**: ajouter une nouvelle colonne au `ProductsDataTable` ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image3.png))
 
-Cela ajoutera une nouvelle colonne au DataTable nommé Column1 de type `System.String`. Nous devons mettre à jour de ce nom de colonne s à PriceQuartile et son type `System.Int32` , car il sera utilisé pour contenir un nombre compris entre 1 et 4. Sélectionnez la colonne nouvellement ajouté dans le `ProductsDataTable` et, à partir de la fenêtre Propriétés, définissez la `Name` propriété PriceQuartile et le `DataType` propriété `System.Int32`.
+Cette opération ajoute une nouvelle colonne au DataTable nommé Column1 de type `System.String`. Nous devons mettre à jour ce nom de colonne s en PriceQuartile et son type à `System.Int32`, car il sera utilisé pour contenir un nombre compris entre 1 et 4. Sélectionnez la colonne qui vient d’être ajoutée dans le `ProductsDataTable` et, dans la Fenêtre Propriétés, affectez à la propriété `Name` la valeur PriceQuartile et à la propriété `DataType` la valeur `System.Int32`.
 
-[![Définir les propriétés de type de données et le nouveau nom de colonne s](adding-additional-datatable-columns-cs/_static/image5.png)](adding-additional-datatable-columns-cs/_static/image4.png)
+[![définir les propriétés de nom et de type de données de la nouvelle colonne](adding-additional-datatable-columns-cs/_static/image5.png)](adding-additional-datatable-columns-cs/_static/image4.png)
 
-**Figure 2**: Définir la nouvelle colonne s `Name` et `DataType` propriétés ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image6.png))
+**Figure 2**: définir les propriétés des nouvelles colonnes `Name` et `DataType` ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image6.png))
 
-Comme le montre la Figure 2, il existe des propriétés supplémentaires qui peuvent être définies, telles que si les valeurs dans la colonne doivent être uniques, si la colonne est une colonne à incrémentation automatique, la base de données ou non `NULL` valeurs sont autorisées et ainsi de suite. Laissez ces valeurs définies à leurs valeurs par défaut.
+Comme le montre la figure 2, il existe des propriétés supplémentaires qui peuvent être définies, par exemple si les valeurs de la colonne doivent être uniques, si la colonne est une colonne à incrémentation automatique, si les valeurs `NULL` de la base de données sont autorisées ou non, et ainsi de suite. Laissez ces valeurs définies sur leurs valeurs par défaut.
 
-## <a name="step-2-creating-thegetproductswithpricequartilemethod"></a>Étape 2 : Création de la`GetProductsWithPriceQuartile`(méthode)
+## <a name="step-2-creating-thegetproductswithpricequartilemethod"></a>Étape 2 : création de la méthode`GetProductsWithPriceQuartile`
 
-Maintenant que le `ProductsDataTable` a été mis à jour pour inclure le `PriceQuartile` colonne, nous sommes prêts à créer la `GetProductsWithPriceQuartile` (méthode). Démarrer en cliquant sur le TableAdapter et en choisissant Ajouter une requête dans le menu contextuel. Ceci fait apparaître l’Assistant Configuration de requêtes TableAdapter, qui demande tout d’abord nous si nous souhaitons utiliser les instructions SQL ad hoc ou une procédure stockée nouveau ou existante. Étant donné que nous ne pas mais une procédure stockée qui retourne les données de quartile prix, permettent de s autoriser le TableAdapter créer cette procédure stockée pour nous. Sélectionnez l’option de procédure stockée nouveau de créer et cliquez sur Suivant.
+Maintenant que la `ProductsDataTable` a été mise à jour pour inclure la colonne `PriceQuartile`, nous sommes prêts à créer la méthode `GetProductsWithPriceQuartile`. Commencez par cliquer avec le bouton droit sur le TableAdapter et choisissez Ajouter une requête dans le menu contextuel. L’Assistant Configuration de requêtes TableAdapter s’affiche pour la première fois, qui nous invite à indiquer si vous souhaitez utiliser des instructions SQL ad hoc ou une procédure stockée nouvelle ou existante. Étant donné que nous ne disposons pas encore d’une procédure stockée qui retourne les données du prix du quartile, autorisez le TableAdapter à créer cette procédure stockée pour nous. Sélectionnez l’option créer une nouvelle procédure stockée, puis cliquez sur suivant.
 
-[![Demander à l’Assistant TableAdapter pour créer la procédure stockée pour nous](adding-additional-datatable-columns-cs/_static/image8.png)](adding-additional-datatable-columns-cs/_static/image7.png)
+[![demander à l’Assistant TableAdapter de créer la procédure stockée pour nous](adding-additional-datatable-columns-cs/_static/image8.png)](adding-additional-datatable-columns-cs/_static/image7.png)
 
-**Figure 3**: Demander à l’Assistant TableAdapter pour créer le stockées procédure pour nous ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image9.png))
+**Figure 3**: demander à l’Assistant TableAdapter de créer la procédure stockée pour nous ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image9.png))
 
-Dans l’écran suivant, illustré Figure 4, l’Assistant nous demande quel type de requête à ajouter. Dans la mesure où le `GetProductsWithPriceQuartile` méthode retournera toutes les colonnes et les enregistrements à partir de la `Products` de table, sélectionnez l’instruction SELECT qui retourne des lignes, cliquez sur Suivant.
+Dans l’écran suivant, illustré à la figure 4, l’Assistant nous demande le type de requête à ajouter. Étant donné que la méthode `GetProductsWithPriceQuartile` retourne toutes les colonnes et tous les enregistrements de la table `Products`, sélectionnez l’option SELECT qui retourne des lignes, puis cliquez sur suivant.
 
-[![Notre requête sera une instruction SELECT qui retourne plusieurs lignes](adding-additional-datatable-columns-cs/_static/image11.png)](adding-additional-datatable-columns-cs/_static/image10.png)
+[![notre requête sera une instruction SELECT qui retourne plusieurs lignes](adding-additional-datatable-columns-cs/_static/image11.png)](adding-additional-datatable-columns-cs/_static/image10.png)
 
-**Figure 4**: Notre requête sera un `SELECT` instruction qui retourne plusieurs lignes ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image12.png))
+**Figure 4**: notre requête sera une instruction `SELECT` qui retourne plusieurs lignes ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image12.png))
 
-Ensuite, nous sommes invités pour le `SELECT` requête. Dans l’Assistant, entrez la requête suivante :
+Nous sommes ensuite invités à entrer la requête `SELECT`. Entrez la requête suivante dans l’Assistant :
 
 [!code-sql[Main](adding-additional-datatable-columns-cs/samples/sample1.sql)]
 
-La requête ci-dessus utilise SQL Server 2005 s nouveau [ `NTILE` fonction](https://msdn.microsoft.com/library/ms175126.aspx) pour diviser les résultats en quatre groupes où les groupes sont déterminées par la `UnitPrice` valeurs triées dans l’ordre décroissant.
+La requête ci-dessus utilise la nouvelle [fonction`NTILE`](https://msdn.microsoft.com/library/ms175126.aspx) de SQL Server 2005 s pour diviser les résultats en quatre groupes, où les groupes sont déterminés par les valeurs de `UnitPrice` triées dans l’ordre décroissant.
 
-Malheureusement, le Générateur de requêtes ne sait pas comment analyser le `OVER` mot clé et affichera une erreur lors de l’analyse de la requête ci-dessus. Par conséquent, entrez la requête ci-dessus directement dans la zone de texte dans l’Assistant sans utiliser le Générateur de requêtes.
-
-> [!NOTE]
-> Pour plus d’informations sur les s NTILE et SQL Server 2005 autres fonctions de classement, consultez [retour de résultats classés avec Microsoft SQL Server 2005](http://www.4guysfromrolla.com/webtech/010406-1.shtml) et [section fonctions de classement](https://msdn.microsoft.com/library/ms189798.aspx) à partir de la [SQL Server 2005 Books Online](https://msdn.microsoft.com/library/ms189798.aspx).
-
-Après avoir entré la `SELECT` requête et en cliquant sur Suivant, l’Assistant nous invite à fournir un nom pour la procédure stockée est créé. Nommez la nouvelle procédure stockée `Products_SelectWithPriceQuartile` et cliquez sur Suivant.
-
-[![Nom de la procédure stockée Products_SelectWithPriceQuartile](adding-additional-datatable-columns-cs/_static/image14.png)](adding-additional-datatable-columns-cs/_static/image13.png)
-
-**Figure 5**: Nom de la procédure stockée `Products_SelectWithPriceQuartile` ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image15.png))
-
-Enfin, nous allons vous y êtes invités à nommer les méthodes TableAdapter. Laissez les deux le remplissage un DataTable et retourner un DataTable les cases cochées et les méthodes `FillWithPriceQuartile` et `GetProductsWithPriceQuartile`.
-
-[![Nom du TableAdapter s méthodes et cliquez sur Terminer](adding-additional-datatable-columns-cs/_static/image17.png)](adding-additional-datatable-columns-cs/_static/image16.png)
-
-**Figure 6**: Nommer le TableAdapter s méthodes et cliquez sur Terminer ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image18.png))
-
-Avec le `SELECT` requête spécifiée et la procédure stockée et les méthodes TableAdapter nommés, cliquez sur Terminer pour terminer l’Assistant. À ce stade que vous receviez un message d’avertissement ou deux à partir de l’Assistant, indiquant que le `OVER` construction SQL ou une instruction n’est pas pris en charge. Vous pouvez ignorer ces avertissements.
-
-À l’issue de l’Assistant, le TableAdapter doit inclure le `FillWithPriceQuartile` et `GetProductsWithPriceQuartile` méthodes et la base de données doivent inclure une procédure stockée nommée `Products_SelectWithPriceQuartile`. Prenez un moment pour vérifier que le TableAdapter ne contient en effet de cette nouvelle méthode et que la procédure stockée a été correctement ajoutée à la base de données. Lors de la vérification de la base de données, si vous ne voyez pas la procédure stockée try effectuant un clic droit sur le dossier de procédures stockées et en choisissant d’actualisation.
-
-![Vérifiez qu’une nouvelle méthode a été ajoutée au TableAdapter](adding-additional-datatable-columns-cs/_static/image19.png)
-
-**Figure 7**: Vérifiez qu’une nouvelle méthode a été ajoutée au TableAdapter
-
-[![Assurez-vous que la base de données contienne le Products_SelectWithPriceQuartile procédure stockée](adding-additional-datatable-columns-cs/_static/image21.png)](adding-additional-datatable-columns-cs/_static/image20.png)
-
-**Figure 8**: Vérifiez que la base de données contient le `Products_SelectWithPriceQuartile` la procédure stockée ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image22.png))
+Malheureusement, le Générateur de requêtes ne sait pas comment analyser le mot clé `OVER` et affiche une erreur lors de l’analyse de la requête ci-dessus. Par conséquent, entrez la requête ci-dessus directement dans la zone de texte de l’Assistant sans utiliser l’Générateur de requêtes.
 
 > [!NOTE]
-> Un des avantages de l’utilisation de procédures stockées au lieu d’instructions SQL ad hoc est que réexécuter l’Assistant Configuration de TableAdapter ne modifiera pas les listes de colonnes de procédures stockées. Vérifier cela en effectuant un clic droit sur le TableAdapter, en choisissant l’option de configuration dans le menu contextuel pour démarrer l’Assistant et puis en cliquant sur Terminer pour terminer. Ensuite, accédez à la base de données et la vue la `Products_SelectWithPriceQuartile` procédure stockée. Notez que sa liste de colonnes n’a pas été modifiée. Avions nous avons été à l’aide des instructions SQL ad hoc, exécuter à nouveau l’Assistant Configuration de TableAdapter aurait été rétablies cette liste de colonnes de requête s pour correspondre à la liste des colonnes requête principale, en supprimant l’instruction NTILE à partir de la requête utilisée par le `GetProductsWithPriceQuartile` (méthode).
+> Pour plus d’informations sur les autres fonctions de classement de NTILE et SQL Server 2005, consultez [renvoi de résultats classés avec Microsoft SQL Server 2005](http://www.4guysfromrolla.com/webtech/010406-1.shtml) et la [section fonctions de classement](https://msdn.microsoft.com/library/ms189798.aspx) de la [documentation en ligne de SQL Server 2005](https://msdn.microsoft.com/library/ms189798.aspx).
 
-Lors de la couche d’accès aux données s `GetProductsWithPriceQuartile` méthode est appelée, le TableAdapter exécute le `Products_SelectWithPriceQuartile` procédure stockée et ajoute une ligne à la `ProductsDataTable` pour chaque enregistrement retourné. Les champs de données retournés par la procédure stockée sont mappées à la `ProductsDataTable` des colonnes de s. Dans la mesure où il existe un `PriceQuartile` champ de données retourné à partir de la procédure stockée, sa valeur est assignée à la `ProductsDataTable` s `PriceQuartile` colonne.
+Après avoir entré la requête `SELECT` et cliqué sur suivant, l’Assistant nous invite à fournir un nom pour la procédure stockée qu’il va créer. Nommez la nouvelle procédure stockée `Products_SelectWithPriceQuartile`, puis cliquez sur suivant.
 
-Pour les méthodes TableAdapter dont les requêtes ne retournent pas un `PriceQuartile` champ de données, le `PriceQuartile` valeur de colonne s est la valeur spécifiée par son `DefaultValue` propriété. Comme le montre la Figure 2, cette valeur est définie sur `DBNull`, la valeur par défaut. Si vous préférez une valeur par défaut différente, il suffit de définir le `DefaultValue` propriété en conséquence. Assurez-vous simplement que le `DefaultValue` valeur n’est valide selon la colonne s `DataType` (par exemple, `System.Int32` pour la `PriceQuartile` colonne).
+[![nom de la procédure stockée Products_SelectWithPriceQuartile](adding-additional-datatable-columns-cs/_static/image14.png)](adding-additional-datatable-columns-cs/_static/image13.png)
 
-À ce stade, nous avons effectué les étapes nécessaires pour l’ajout d’une colonne supplémentaire à un DataTable. Pour vérifier que cette colonne supplémentaire fonctionne comme prévu, permettent de créer une page ASP.NET qui affiche chaque produit s nom, prix et quartile de prix s. Avant cela, cependant, nous devons d’abord mettre à jour de la couche de logique métier pour inclure une méthode qui appelle vers le bas de la couche DAL s `GetProductsWithPriceQuartile` (méthode). Nous mettre à jour de la couche BLL ensuite, à l’étape 3 et ensuite créer la page ASP.NET à l’étape 4.
+**Figure 5**: nommer la procédure stockée `Products_SelectWithPriceQuartile` ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image15.png))
 
-## <a name="step-3-augmenting-the-business-logic-layer"></a>Étape 3 : Augmentation de la couche de logique métier
+Enfin, nous sommes invités à nommer les méthodes TableAdapter. Laissez les cases à cocher remplir un DataTable et retourner un DataTable activée, puis nommez les méthodes `FillWithPriceQuartile` et `GetProductsWithPriceQuartile`.
 
-Avant de pouvoir utiliser le nouveau `GetProductsWithPriceQuartile` méthode à partir de la couche de présentation, nous devons tout d’abord ajouter une méthode correspondante à la couche BLL. Ouvrez le `ProductsBLLWithSprocs` fichier de classe et ajoutez le code suivant :
+[![nommez les méthodes TableAdapter s et cliquez sur terminer](adding-additional-datatable-columns-cs/_static/image17.png)](adding-additional-datatable-columns-cs/_static/image16.png)
+
+**Figure 6**: nommer les méthodes des TableAdapter s et cliquer sur Terminer ([Cliquer pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image18.png))
+
+Avec la requête `SELECT` spécifiée et la procédure stockée et les méthodes TableAdapter nommées, cliquez sur Terminer pour terminer l’Assistant. À ce stade, vous pouvez recevoir un avertissement ou deux de l’Assistant, indiquant que la construction ou l’instruction SQL `OVER` n’est pas prise en charge. Ces avertissements peuvent être ignorés.
+
+Une fois l’Assistant terminé, le TableAdapter doit inclure les méthodes `FillWithPriceQuartile` et `GetProductsWithPriceQuartile` et la base de données doit inclure une procédure stockée nommée `Products_SelectWithPriceQuartile`. Prenez un moment pour vérifier que le TableAdapter contient effectivement cette nouvelle méthode et que la procédure stockée a été correctement ajoutée à la base de données. Lorsque vous vérifiez la base de données, si vous ne voyez pas la procédure stockée, essayez de cliquer avec le bouton droit sur le dossier procédures stockées, puis choisissez actualiser.
+
+![Vérifier qu’une nouvelle méthode a été ajoutée au TableAdapter](adding-additional-datatable-columns-cs/_static/image19.png)
+
+**Figure 7**: vérifier qu’une nouvelle méthode a été ajoutée au TableAdapter
+
+[![vérifier que la base de données contient la procédure stockée Products_SelectWithPriceQuartile](adding-additional-datatable-columns-cs/_static/image21.png)](adding-additional-datatable-columns-cs/_static/image20.png)
+
+**Figure 8**: vérifier que la base de données contient la procédure stockée `Products_SelectWithPriceQuartile` ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image22.png))
+
+> [!NOTE]
+> L’un des avantages de l’utilisation des procédures stockées au lieu des instructions SQL ad hoc est que la réexécution de l’Assistant Configuration de TableAdapter ne modifiera pas les listes de colonnes de procédures stockées. Pour vérifier cela, cliquez avec le bouton droit sur le TableAdapter, choisissez l’option configurer dans le menu contextuel pour démarrer l’Assistant, puis cliquez sur Terminer pour le terminer. Ensuite, accédez à la base de données et affichez la procédure stockée `Products_SelectWithPriceQuartile`. Notez que la liste des colonnes n’a pas été modifiée. Si nous avions utilisé des instructions SQL ad hoc, la réexécution de l’Assistant Configuration de TableAdapter aurait rétabli la liste des colonnes de cette requête pour qu’elle corresponde à la liste des colonnes de requête principale, supprimant ainsi l’instruction NTILE de la requête utilisée par la méthode `GetProductsWithPriceQuartile`.
+
+Lorsque la méthode `GetProductsWithPriceQuartile` de la couche d’accès aux données est appelée, le TableAdapter exécute la procédure stockée `Products_SelectWithPriceQuartile` et ajoute une ligne au `ProductsDataTable` pour chaque enregistrement retourné. Les champs de données retournés par la procédure stockée sont mappés aux colonnes `ProductsDataTable` s. Comme il existe un champ de données `PriceQuartile` renvoyé par la procédure stockée, sa valeur est assignée à la colonne `ProductsDataTable` s `PriceQuartile`.
+
+Pour les méthodes TableAdapter dont les requêtes ne retournent pas de champ de données `PriceQuartile`, la valeur de `PriceQuartile` colonne s est la valeur spécifiée par sa propriété `DefaultValue`. Comme le montre la figure 2, cette valeur est définie sur `DBNull`, la valeur par défaut. Si vous préférez une autre valeur par défaut, il vous suffit de définir la propriété `DefaultValue` en conséquence. Assurez-vous simplement que la valeur `DefaultValue` est valide étant donné la colonne s `DataType` (c’est-à-dire, `System.Int32` pour la colonne `PriceQuartile`).
+
+À ce stade, nous avons effectué les étapes nécessaires pour ajouter une colonne supplémentaire à un DataTable. Pour vérifier que cette colonne supplémentaire fonctionne comme prévu, créez une page ASP.NET qui affiche chaque nom de produit, Price et Price quartile. Avant cela, cependant, nous devons tout d’abord mettre à jour la couche de logique métier pour inclure une méthode qui appelle la méthode de `GetProductsWithPriceQuartile` DAL. Nous allons mettre à jour la couche BLL suivant, à l’étape 3, puis créer la page ASP.NET à l’étape 4.
+
+## <a name="step-3-augmenting-the-business-logic-layer"></a>Étape 3 : augmentation de la couche de logique métier
+
+Avant d’utiliser la nouvelle méthode `GetProductsWithPriceQuartile` de la couche de présentation, nous devons d’abord ajouter une méthode correspondante à la couche BLL. Ouvrez le fichier de classe `ProductsBLLWithSprocs` et ajoutez le code suivant :
 
 [!code-csharp[Main](adding-additional-datatable-columns-cs/samples/sample2.cs)]
 
-Comme les autres méthodes de récupération de données dans `ProductsBLLWithSprocs`, le `GetProductsWithPriceQuartile` méthode appelle simplement la couche DAL s correspondant `GetProductsWithPriceQuartile` méthode et retourne ses résultats.
+À l’instar des autres méthodes de récupération de données dans `ProductsBLLWithSprocs`, la méthode `GetProductsWithPriceQuartile` appelle simplement la couche DAL correspondant `GetProductsWithPriceQuartile` méthode et retourne ses résultats.
 
-## <a name="step-4-displaying-the-price-quartile-information-in-an-aspnet-web-page"></a>Étape 4 : Afficher les informations de Quartile prix dans une Page Web ASP.NET
+## <a name="step-4-displaying-the-price-quartile-information-in-an-aspnet-web-page"></a>Étape 4 : affichage des informations sur le prix du quartile dans une page Web ASP.NET
 
-Avec l’ajout de la couche BLL terminer nous re prêt à créer une page ASP.NET qui affiche le quartile prix pour chaque produit. Ouvrir le `AddingColumns.aspx` page dans le `AdvancedDAL` dossier et faites glisser un GridView à partir de la boîte à outils vers le concepteur, en définissant son `ID` propriété `Products`. À partir de la balise active de s GridView, liez-le à une nouvelle ObjectDataSource nommé `ProductsDataSource`. Configurer l’ObjectDataSource à utiliser le `ProductsBLLWithSprocs` classe s `GetProductsWithPriceQuartile` (méthode). Dans la mesure où il s’agit d’une grille en lecture seule, définissez les listes déroulantes dans la mise à jour, insertion et supprimer des onglets à (None).
+À l’aide de l’ajout de la couche BLL, nous sommes prêts à créer une page ASP.NET qui indique le quartile tarifaire pour chaque produit. Ouvrez la page `AddingColumns.aspx` dans le dossier `AdvancedDAL` et faites glisser un contrôle GridView de la boîte à outils vers le concepteur, en affectant à sa propriété `ID` la valeur `Products`. À partir de la balise active GridView s, liez-le à un nouvel ObjectDataSource nommé `ProductsDataSource`. Configurez le ObjectDataSource pour utiliser la méthode de `GetProductsWithPriceQuartile` de la classe `ProductsBLLWithSprocs`. Étant donné qu’il s’agit d’une grille en lecture seule, définissez les listes déroulantes dans les onglets mettre à jour, insérer et supprimer sur (aucun).
 
-[![Configurer pour utiliser la classe ProductsBLLWithSprocs ObjectDataSource](adding-additional-datatable-columns-cs/_static/image24.png)](adding-additional-datatable-columns-cs/_static/image23.png)
+[![configurer ObjectDataSource pour utiliser la classe ProductsBLLWithSprocs](adding-additional-datatable-columns-cs/_static/image24.png)](adding-additional-datatable-columns-cs/_static/image23.png)
 
-**Figure 9**: Configurer l’ObjectDataSource à utiliser le `ProductsBLLWithSprocs` classe ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image25.png))
+**Figure 9**: configurer ObjectDataSource pour utiliser la classe `ProductsBLLWithSprocs` ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image25.png))
 
-[![Récupérer des informations sur les produits à partir de la méthode GetProductsWithPriceQuartile](adding-additional-datatable-columns-cs/_static/image27.png)](adding-additional-datatable-columns-cs/_static/image26.png)
+[![récupérer les informations sur le produit à partir de la méthode GetProductsWithPriceQuartile](adding-additional-datatable-columns-cs/_static/image27.png)](adding-additional-datatable-columns-cs/_static/image26.png)
 
-**Figure 10**: Récupérer des informations de produit à partir de la `GetProductsWithPriceQuartile` (méthode) ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image28.png))
+**Figure 10**: récupérer des informations sur le produit à partir de la méthode `GetProductsWithPriceQuartile` ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image28.png))
 
-À l’issue de l’Assistant Configurer la Source de données, Visual Studio ajoute automatiquement un BoundField ou du CheckBoxField au GridView pour chacun des champs de données retournés par la méthode. Un de ces champs de données est `PriceQuartile`, qui est la colonne que nous avons ajouté à la `ProductsDataTable` à l’étape 1.
+À l’issue de l’exécution de l’Assistant Configuration de la source de données, Visual Studio ajoute automatiquement un BoundField ou un CheckBoxField au GridView pour chacun des champs de données retournés par la méthode. L’un de ces champs de données est `PriceQuartile`, qui est la colonne que nous avons ajoutée au `ProductsDataTable` à l’étape 1.
 
-Modifier les champs de s GridView, supprimant tout sauf la `ProductName`, `UnitPrice`, et `PriceQuartile` BoundFields. Configurer le `UnitPrice` BoundField à mettre en forme sa valeur comme une devise et ont le `UnitPrice` et `PriceQuartile` BoundFields et centre alignée à droite, respectivement. Enfin, mettez à jour de la BoundFields restantes `HeaderText` propriétés produit, les prix et les prix Quartile, respectivement. En outre, cochez la case à cocher Activer le tri à partir de la balise active de GridView s.
+Modifiez les champs GridView s, en supprimant tous les `ProductName`, `UnitPrice`et `PriceQuartile` BoundFields. Configurez l' `UnitPrice` BoundField pour mettre en forme sa valeur en tant que devise et pour que les `UnitPrice` et `PriceQuartile` BoundFields alignés à droite et au centre, respectivement. Enfin, mettez à jour les propriétés de `HeaderText` BoundFields restantes en, Price et Price quartile, respectivement. Activez également la case à cocher Activer le tri à partir de la balise active GridView s.
 
-Après ces modifications, le balisage déclaratif s GridView et ObjectDataSource doit ressembler à ce qui suit :
+Une fois ces modifications effectuées, les balises déclaratives GridView et ObjectDataSource doivent ressembler à ce qui suit :
 
 [!code-aspx[Main](adding-additional-datatable-columns-cs/samples/sample3.aspx)]
 
-Figure 11 illustre cette page quand consultées via un navigateur. Notez que, tout d’abord, les produits sont classés par leur prix dans l’ordre décroissant avec chaque produit est attribué approprié `PriceQuartile` valeur. Bien entendu ces données peuvent être triées par d’autres critères, avec la valeur de colonne de prix Quartile toujours refléter le classement de produit s en ce qui concerne les prix (voir Figure 12).
+La figure 11 illustre cette page lorsqu’elle est visitée via un navigateur. Notez que, initialement, les produits sont classés par prix dans l’ordre décroissant, avec chaque produit affecté à une valeur de `PriceQuartile` appropriée. Bien entendu, ces données peuvent être triées en fonction d’autres critères avec la valeur de la colonne du quartile tarifaire qui reflète toujours le classement du produit en ce qui concerne le prix (voir figure 12).
 
-[![Les produits sont triés par leurs prix](adding-additional-datatable-columns-cs/_static/image30.png)](adding-additional-datatable-columns-cs/_static/image29.png)
+[![les produits sont classés par prix](adding-additional-datatable-columns-cs/_static/image30.png)](adding-additional-datatable-columns-cs/_static/image29.png)
 
-**Figure 11**: Les produits sont triés par leurs prix ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image31.png))
+**Figure 11**: les produits sont classés par prix ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image31.png))
 
-[![Les produits sont classés par nom](adding-additional-datatable-columns-cs/_static/image33.png)](adding-additional-datatable-columns-cs/_static/image32.png)
+[![les produits sont classés en fonction de leur nom](adding-additional-datatable-columns-cs/_static/image33.png)](adding-additional-datatable-columns-cs/_static/image32.png)
 
-**Figure 12**: Les produits sont triés par leur nom ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image34.png))
+**Figure 12**: les produits sont classés selon leur nom ([cliquez pour afficher l’image en taille réelle](adding-additional-datatable-columns-cs/_static/image34.png))
 
 > [!NOTE]
-> Avec quelques lignes de code nous aurions pu augmenter le contrôle GridView afin qu’il les lignes de produit en fonction de la couleur leurs `PriceQuartile` valeur. Nous pourrions couleur ces produits dans le premier quartile vert clair, celles figurant dans le deuxième quartile un jaune clair et ainsi de suite. Je vous encourage à prendre un moment pour ajouter cette fonctionnalité. Si vous avez besoin d’un rappel de mise en forme d’un GridView, consultez le [mise en forme en fonction lors de données personnalisées](../custom-formatting/custom-formatting-based-upon-data-cs.md) didacticiel.
+> Avec quelques lignes de code, nous pourrions augmenter le GridView afin qu’il colore les lignes de produits en fonction de leur valeur de `PriceQuartile`. Il est possible que les produits soient colorés dans le premier quartile en vert clair, dans le second quartile en jaune clair, etc. Je vous encourage à prendre un moment pour ajouter cette fonctionnalité. Si vous avez besoin d’un actualisateur pour la mise en forme d’un GridView, consultez le didacticiel sur la [mise en forme personnalisée basée](../custom-formatting/custom-formatting-based-upon-data-cs.md) sur les données.
 
-## <a name="an-alternative-approach---creating-another-tableadapter"></a>Une autre approche - création d’un autre TableAdapter
+## <a name="an-alternative-approach---creating-another-tableadapter"></a>Une autre approche : création d’un autre TableAdapter
 
-Comme nous l’avons vu dans ce didacticiel, lors de l’ajout d’une méthode à un TableAdapter qui renvoie les champs de données autres que ceux décrits par la requête principale, nous pouvons ajouter des colonnes correspondantes à la table de données. Une telle approche, cependant, fonctionne bien uniquement s’il existe un petit nombre de méthodes dans le TableAdapter qui retournent des différents champs de données et si ces champs de données de remplacement ne varient pas trop à partir de la requête principale.
+Comme nous l’avons vu dans ce didacticiel, lors de l’ajout d’une méthode à un TableAdapter qui retourne des champs de données autres que ceux de la requête principale, nous pouvons ajouter des colonnes correspondantes au DataTable. Toutefois, une telle approche fonctionne bien uniquement s’il existe un petit nombre de méthodes dans le TableAdapter qui retournent des champs de données différents et si ces champs de données de remplacement ne varient pas trop de la requête principale.
 
-Au lieu d’ajouter des colonnes à la table de données, vous pouvez ajouter un autre TableAdapter au jeu de données qui contient les méthodes à partir de la première TableAdapter qui retournent des différents champs de données. Pour ce didacticiel, plutôt que d’ajouter le `PriceQuartile` colonne à la `ProductsDataTable` (où il est utilisé uniquement par le `GetProductsWithPriceQuartile` (méthode)), nous aurions pu ajouter un TableAdapter supplémentaire au jeu de données nommé `ProductsWithPriceQuartileTableAdapter` servant le `Products_SelectWithPriceQuartile` stockées procédure en tant que sa requête principale. Les pages ASP.NET qui nécessaires pour obtenir des informations de produit avec le quartile prix utiliserait le `ProductsWithPriceQuartileTableAdapter`, tandis que ceux qui n’a pas pu continuer à utiliser le `ProductsTableAdapter`.
+Au lieu d’ajouter des colonnes au DataTable, vous pouvez ajouter un autre TableAdapter au DataSet qui contient les méthodes du premier TableAdapter qui retournent des champs de données différents. Pour ce didacticiel, au lieu d’ajouter la colonne `PriceQuartile` à la `ProductsDataTable` (où elle est utilisée uniquement par la méthode `GetProductsWithPriceQuartile`), nous aurions pu ajouter un TableAdapter supplémentaire au DataSet nommé `ProductsWithPriceQuartileTableAdapter` qui utilisait la procédure stockée `Products_SelectWithPriceQuartile` comme requête principale. Les pages ASP.NET qui devaient recevoir des informations sur le produit avec le quartile Price utilisent la `ProductsWithPriceQuartileTableAdapter`, tandis que celles qui ne pouvaient pas continuer à utiliser le `ProductsTableAdapter`.
 
-En ajoutant un nouveau TableAdapter, les tables de données restent untarnished et leurs colonnes reflètent précisément les champs de données retournés par leurs méthodes de s TableAdapter. Toutefois, les TableAdapters supplémentaires peut introduire des fonctionnalités et les tâches répétitives. Par exemple, si ces des pages ASP.NET qui affiche le `PriceQuartile` colonne également nécessaire pour fournir insert, update et delete prise en charge, le `ProductsWithPriceQuartileTableAdapter` doit avoir son `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés correctement configuré. Bien que ces propriétés mettrait en miroir le `ProductsTableAdapter` s, cette configuration présente une étape supplémentaire. En outre, il existe maintenant deux façons de mettre à jour, supprimer ou ajouter un produit à la base de données - via la `ProductsTableAdapter` et `ProductsWithPriceQuartileTableAdapter` classes.
+En ajoutant un nouveau TableAdapter, les DataTables restent internis et leurs colonnes reflètent précisément les champs de données retournés par leurs méthodes TableAdapter s. Toutefois, des TableAdapters supplémentaires peuvent introduire des tâches et des fonctionnalités répétitives. Par exemple, si les pages ASP.NET qui affichaient la colonne `PriceQuartile` étaient également nécessaires pour assurer la prise en charge de l’insertion, de la mise à jour et de la suppression, les propriétés `InsertCommand`, `UpdateCommand`et `DeleteCommand` de la `ProductsWithPriceQuartileTableAdapter` doivent être correctement configurées. Bien que ces propriétés reflètent le `ProductsTableAdapter` s, cette configuration introduit une étape supplémentaire. En outre, il existe deux façons de mettre à jour, de supprimer ou d’ajouter un produit à la base de données, par le biais des classes `ProductsTableAdapter` et `ProductsWithPriceQuartileTableAdapter`.
 
-Le téléchargement de ce didacticiel inclut une `ProductsWithPriceQuartileTableAdapter` classe dans le `NorthwindWithSprocs` jeu de données qui illustre cette approche alternative.
+Le téléchargement de ce didacticiel comprend une classe `ProductsWithPriceQuartileTableAdapter` dans le jeu de données `NorthwindWithSprocs` qui illustre cette approche alternative.
 
 ## <a name="summary"></a>Récapitulatif
 
-Dans la plupart des scénarios, toutes les méthodes dans un TableAdapter retournera le même ensemble de champs de données, mais parfois, quand une méthode particulière ou deux devra peut-être retourner un champ supplémentaire. Par exemple, dans le [maître/détail à l’aide d’une liste à puces des enregistrements maîtres avec une DataList des détails](../filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs.md) didacticiel, nous avons ajouté une méthode à la `CategoriesTableAdapter` qui, en plus des champs de données de la requête principale s, retournés un `NumberOfProducts` champ qui a signalé le nombre de produits associées à chaque catégorie. Dans ce didacticiel nous avons vu de l’ajout d’une méthode dans le `ProductsTableAdapter` qui a retourné un `PriceQuartile` champ en plus des champs de données de la requête principale s. Pour capturer des données supplémentaires champs retournés par les méthodes de s TableAdapter que nous devons ajouter des colonnes correspondantes dans le DataTable.
+Dans la plupart des scénarios, toutes les méthodes d’un TableAdapter retournent le même jeu de champs de données, mais il peut arriver qu’une méthode particulière ou deux doive retourner un champ supplémentaire. Par exemple, dans le [maître/détail à l’aide d’une liste à puces d’enregistrements maîtres avec un didacticiel détails sur DataList](../filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs.md) , nous avons ajouté une méthode au `CategoriesTableAdapter` qui, en plus des champs de données de la requête principale, a retourné un champ `NumberOfProducts` qui a signalé le nombre de produits associés à chaque catégorie. Dans ce didacticiel, nous avons examiné l’ajout d’une méthode dans la `ProductsTableAdapter` qui a retourné un champ `PriceQuartile` en plus des champs de données de la requête principale. Pour capturer des champs de données supplémentaires retournés par les méthodes TableAdapter s, nous devons ajouter des colonnes correspondantes au DataTable.
 
-Si vous envisagez sur l’ajout manuel des colonnes à la table de données, il est recommandé que le TableAdapter utiliser des procédures stockées. Si le TableAdapter utilise des instructions SQL ad hoc, n’importe quel moment de l’Assistant Configuration de TableAdapter est exécuté toutes les méthodes rétablir des listes de champs de données pour les champs de données retournés par la requête principale. Ce problème ne s’étend pas aux procédures stockées, c’est pourquoi ils sont recommandés et ont été utilisés dans ce didacticiel.
+Si vous prévoyez d’ajouter manuellement des colonnes au DataTable, il est recommandé que le TableAdapter utilise des procédures stockées. Si le TableAdapter utilise des instructions SQL ad hoc, chaque fois que l’Assistant Configuration de TableAdapter est exécuté, toutes les listes de champs de données de méthode reprennent les champs de données retournés par la requête principale. Ce problème ne s’étend pas aux procédures stockées, c’est pourquoi il est recommandé et utilisé dans ce didacticiel.
 
 Bonne programmation !
 
 ## <a name="about-the-author"></a>À propos de l’auteur
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept les livres sur ASP/ASP.NET et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec les technologies Web Microsoft depuis 1998. Scott fonctionne comme un consultant indépendant, formateur et writer. Son dernier ouvrage est [*SAM animer vous-même ASP.NET 2.0 des dernières 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve à [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept livres ASP/ASP. net et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec des technologies Web Microsoft depuis 1998. Scott travaille en tant que consultant, formateur et auteur indépendant. Son dernier livre est [*Sams vous apprend vous-même ASP.NET 2,0 en 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve sur [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
-## <a name="special-thanks-to"></a>Remerciements
+## <a name="special-thanks-to"></a>Remerciements à
 
-Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Les réviseurs tête pour ce didacticiel ont été Randy Schmidt, Goor Jacky, Bernadette Leigh et Hilton Giesenow. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Cette série de didacticiels a été examinée par de nombreux réviseurs utiles. Les réviseurs de leads pour ce didacticiel étaient Randy Schmidt, Jacky Goor, Bernadette Leigh et Hilton Giesenow. Vous souhaitez revoir mes prochains articles MSDN ? Si c’est le cas, insérez une ligne sur [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Précédent](updating-the-tableadapter-to-use-joins-cs.md)

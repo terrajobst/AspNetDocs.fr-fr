@@ -1,230 +1,230 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-cs
-title: Utilisation des colonnes calculées (c#) | Microsoft Docs
+title: Utilisation des colonnes calculées (C#) | Microsoft Docs
 author: rick-anderson
-description: Lorsque vous créez une table de base de données, Microsoft SQL Server vous permet de définir une colonne calculée, dont la valeur est calculée à partir d’une expression pouvant généralement referen...
+description: Lors de la création d’une table de base de données, Microsoft SQL Server vous permet de définir une colonne calculée dont la valeur est calculée à partir d’une expression qui fait généralement référence à...
 ms.author: riande
 ms.date: 08/03/2007
 ms.assetid: 57459065-ed7c-4dfe-ac9c-54c093abc261
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 91568543496904f3db0146eee4e414eb2c61c49e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: ad6a96f2721510c2478f707c8eed018ae797f27a
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108557"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74603257"
 ---
 # <a name="working-with-computed-columns-c"></a>Utilisation de colonnes calculées (C#)
 
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger le Code](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_71_CS.zip) ou [télécharger le PDF](working-with-computed-columns-cs/_static/datatutorial71cs1.pdf)
+[Télécharger le code](https://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_71_CS.zip) ou [Télécharger le PDF](working-with-computed-columns-cs/_static/datatutorial71cs1.pdf)
 
-> Lorsque vous créez une table de base de données, Microsoft SQL Server vous permet de définir une colonne calculée, dont la valeur est calculée à partir d’une expression qui référence généralement les autres valeurs dans le même enregistrement de base de données. Ces valeurs sont en lecture seule à la base de données, ce qui nécessite des considérations particulières lorsque vous travaillez avec les TableAdapters. Dans ce didacticiel, nous apprendre relever les défis posés par les colonnes calculées.
+> Lors de la création d’une table de base de données, Microsoft SQL Server vous permet de définir une colonne calculée dont la valeur est calculée à partir d’une expression qui fait généralement référence à d’autres valeurs dans le même enregistrement de base de données. Ces valeurs sont en lecture seule dans la base de données, ce qui nécessite des considérations particulières lors de l’utilisation de TableAdapters. Dans ce didacticiel, nous allons apprendre à répondre aux défis posés par les colonnes calculées.
 
 ## <a name="introduction"></a>Introduction
 
-Permet à Microsoft SQL Server pour  *[les colonnes calculées](https://msdn.microsoft.com/library/ms191250.aspx)*, qui sont des colonnes dont les valeurs sont calculées à partir d’une expression qui référence généralement les valeurs des autres colonnes dans la même table. Par exemple, un modèle de données de suivi de temps peut avoir une table nommée `ServiceLog` avec des colonnes, y compris `ServicePerformed`, `EmployeeID`, `Rate`, et `Duration`, entre autres. Tandis que le montant dû par service, élément (la vitesse multipliée par la durée) peut être calculée via une page web ou une autre interface de programmation, il peut être utile d’inclure une colonne dans la `ServiceLog` table nommée `AmountDue` qui a signalé cette plus d’informations. Cette colonne peut être créée comme une colonne, mais elle aurait besoin d’être mis à jour à tout moment le `Rate` ou `Duration` les valeurs de colonne modifiées. Une meilleure approche consisterait à lancer le `AmountDue` une colonne calculée à l’aide de l’expression de colonne `Rate * Duration`. Entraînerait SQL Server permet de calculer automatiquement le `AmountDue` valeur chaque fois qu’il a été référencé dans une requête de la colonne.
+Microsoft SQL Server permet les *[colonnes calculées](https://msdn.microsoft.com/library/ms191250.aspx)* , qui sont des colonnes dont les valeurs sont calculées à partir d’une expression qui fait généralement référence aux valeurs d’autres colonnes de la même table. Par exemple, un modèle de données de suivi temporel peut avoir une table nommée `ServiceLog` avec des colonnes incluant `ServicePerformed`, `EmployeeID`, `Rate`et `Duration`, entre autres. Bien que le montant dû par article de service (soit le taux multiplié par la durée) puisse être calculé par le biais d’une page Web ou d’une autre interface de programmation, il peut être pratique d’inclure une colonne dans la table `ServiceLog` nommée `AmountDue` qui a signalé ces informations. Cette colonne peut être créée en tant que colonne normale, mais elle doit être mise à jour chaque fois que la `Rate` ou `Duration` valeurs de colonne modifiées. Une meilleure approche consisterait à transformer la colonne `AmountDue` en colonne calculée à l’aide de l’expression `Rate * Duration`. En procédant ainsi, SQL Server calcule automatiquement la valeur de colonne `AmountDue` chaque fois qu’elle a été référencée dans une requête.
 
-Dans la mesure où une valeur de colonne calculée s est déterminée par une expression, ces colonnes sont en lecture seule et par conséquent ne peut pas attribuer une valeur correspondante dans `INSERT` ou `UPDATE` instructions. Toutefois, lorsque les colonnes calculées font partie de la requête principale d’un TableAdapter qui utilise des instructions SQL ad hoc, ils sont automatiquement inclus dans générées automatiquement `INSERT` et `UPDATE` instructions. Par conséquent, le TableAdapter s `INSERT` et `UPDATE` requêtes et `InsertCommand` et `UpdateCommand` propriétés doivent être mis à jour pour supprimer les références à toutes les colonnes calculées.
+Dans la mesure où une valeur s de colonne calculée est déterminée par une expression, ces colonnes sont en lecture seule et ne peuvent donc pas avoir de valeurs qui leur sont affectées dans les instructions `INSERT` ou `UPDATE`. Toutefois, lorsque des colonnes calculées font partie de la requête principale pour un TableAdapter qui utilise des instructions SQL ad hoc, elles sont automatiquement incluses dans les instructions `INSERT` et `UPDATE` générées automatiquement. Par conséquent, les `INSERT` TableAdapter s et `UPDATE` et les propriétés `InsertCommand` et `UpdateCommand` doivent être mises à jour pour supprimer les références aux colonnes calculées.
 
-L’un des défis de l’utilisation de colonnes avec un TableAdapter qui utilise des instructions SQL ad hoc calculées est que le TableAdapter s `INSERT` et `UPDATE` requêtes sont automatiquement régénérées dès que l’Assistant Configuration de TableAdapter est terminé. Par conséquent, les colonnes calculées supprimé manuellement à partir de la `INSERT` et `UPDATE` requêtes réapparaissent si l’Assistant est relancée. Bien que les TableAdapters qui utilisent des procédures stockées ne pas être affectées par cette vulnérabilité, elles n’ont pas leurs propres particularités que nous étudierons à l’étape 3.
+L’un des défis liés à l’utilisation de colonnes calculées avec un TableAdapter qui utilise des instructions SQL ad hoc est que les requêtes TableAdapter `INSERT` et `UPDATE` sont automatiquement régénérées à chaque fois que l’Assistant Configuration de TableAdapter est terminé. Par conséquent, les colonnes calculées manuellement retirées du `INSERT` et `UPDATE` requêtes s’affichent à nouveau si l’Assistant est réexécuté. Bien que les TableAdapters qui utilisent des procédures stockées ne souffrent pas de cette fragilité, ils ont leurs propres excentriques que nous traiterons à l’étape 3.
 
-Dans ce didacticiel, nous allons ajouter une colonne calculée à la `Suppliers` de table dans la base de données Northwind, puis créez un TableAdapter correspondant pour travailler avec cette table et sa colonne calculée. Nous aurons notre TableAdapter et utiliser des procédures stockées au lieu d’instructions SQL ad hoc afin que notre personnalisations ne sont pas perdues lors de l’Assistant Configuration de TableAdapter est utilisé.
+Dans ce didacticiel, nous allons ajouter une colonne calculée à la table `Suppliers` de la base de données Northwind, puis créer un TableAdapter correspondant pour travailler avec cette table et sa colonne calculée. Notre TableAdapter utilise des procédures stockées plutôt que des instructions SQL ad hoc afin que nos personnalisations ne soient pas perdues lors de l’utilisation de l’Assistant Configuration de TableAdapter.
 
-Laissez s commencer !
+Commençons !
 
-## <a name="step-1-adding-a-computed-column-to-thesupplierstable"></a>Étape 1 : Ajout d’une colonne calculée à la`Suppliers`Table
+## <a name="step-1-adding-a-computed-column-to-thesupplierstable"></a>Étape 1 : ajout d’une colonne calculée à la table`Suppliers`
 
-La base de données Northwind n’a pas les colonnes calculées afin de nous devons ajouter un nous-mêmes. Pour ce didacticiel permettre s ajouter une colonne calculée à la `Suppliers` table appelée `FullContactName` qui retourne le nom de contact s, titre et la société elles travaillent pour le format suivant : `ContactName` (`ContactTitle`, `CompanyName`). Cela calculée de colonne peut être utilisée dans les rapports lors de l’affichage d’informations sur les fournisseurs.
+La base de données Northwind n’a pas de colonnes calculées. nous devons donc en ajouter une. Pour ce didacticiel, ajoutez une colonne calculée à la table `Suppliers` appelée `FullContactName` qui renvoie le nom du contact, le titre et la société pour laquelle il travaille dans le format suivant : `ContactName` (`ContactTitle`, `CompanyName`). Cette colonne calculée peut être utilisée dans les rapports lors de l’affichage d’informations sur les fournisseurs.
 
-Commencez par ouvrir le `Suppliers` définition de la table en cliquant sur le `Suppliers` de table dans l’Explorateur de serveurs et en choisissant Ouvrir la définition de Table dans le menu contextuel. Ceci affichera les colonnes de la table et leurs propriétés, telles que leur type de données, si elles permettent `NULL` s et ainsi de suite. Pour ajouter une colonne calculée, commencez par taper le nom de la colonne dans la définition de table. Ensuite, entrez son expression dans la zone de texte (formule) dans la section de la spécification de la colonne calculée dans la fenêtre Propriétés de colonne (voir Figure 1). Nom de la colonne calculée `FullContactName` et utiliser l’expression suivante :
+Commencez par ouvrir la définition de la table `Suppliers` en cliquant avec le bouton droit sur la table `Suppliers` dans la Explorateur de serveurs et en choisissant ouvrir la définition de table dans le menu contextuel. Cette opération affiche les colonnes de la table et leurs propriétés, telles que leur type de données, si elles autorisent `NULL`, etc. Pour ajouter une colonne calculée, commencez par taper le nom de la colonne dans la définition de la table. Ensuite, entrez l’expression dans la zone de texte (formule) sous la section Spécification de la colonne calculée de la colonne Fenêtre Propriétés (voir figure 1). Nommez la colonne calculée `FullContactName` et utilisez l’expression suivante :
 
 [!code-sql[Main](working-with-computed-columns-cs/samples/sample1.sql)]
 
-Notez que les chaînes peuvent être concaténées dans SQL à l’aide de la `+` opérateur. La `CASE` instruction peut être utilisée comme un conditionnel dans un langage de programmation traditionnel. Dans l’expression ci-dessus la `CASE` instruction peut être lu comme : Si `ContactTitle` n’est pas `NULL` puis générer la `ContactTitle` valeur concaténée avec une virgule, sinon émettre rien. Pour plus d’informations sur l’utilité de la `CASE` instruction, consultez [la puissance de SQL `CASE` instructions](http://www.4guysfromrolla.com/webtech/102704-1.shtml).
+Notez que les chaînes peuvent être concaténées en SQL à l’aide de l’opérateur `+`. L’instruction `CASE` peut être utilisée comme une condition conditionnelle dans un langage de programmation traditionnel. Dans l’expression ci-dessus, l’instruction `CASE` peut être lue comme suit : si `ContactTitle` n’est pas `NULL` puis qu’elle génère la valeur `ContactTitle` concaténée avec une virgule, sinon, n’émette rien. Pour plus d’informations sur l’utilité de l’instruction `CASE`, consultez les instructions relatives à la [puissance des instructions SQL `CASE`](http://www.4guysfromrolla.com/webtech/102704-1.shtml).
 
 > [!NOTE]
-> Au lieu d’utiliser un `CASE` instruction ici, nous aurions également pu utiliser `ISNULL(ContactTitle, '')`. [`ISNULL(checkExpression, replacementValue)`](https://msdn.microsoft.com/library/ms184325.aspx) Retourne *checkExpression* si elle n’est pas NULL, sinon elle retourne *replacementValue*. While soit `ISNULL` ou `CASE` fonctionnera dans ce cas, il existe des scénarios plus complexes où la flexibilité de la `CASE` instruction ne peut pas être mis en correspondance par `ISNULL`.
+> Au lieu d’utiliser une instruction `CASE` ici, nous pourrions également utiliser `ISNULL(ContactTitle, '')`. [`ISNULL(checkExpression, replacementValue)`](https://msdn.microsoft.com/library/ms184325.aspx) retourne *checkExpression* si la valeur n’est pas NULL ; sinon, elle retourne *replacementValue*. Bien que `ISNULL` ou `CASE` fonctionneront dans cette instance, il existe des scénarios plus complexes dans lesquels la flexibilité de l’instruction `CASE` ne peut pas être mise en correspondance par `ISNULL`.
 
-Après avoir ajouté cette colonne calculée votre écran doit ressembler à la capture d’écran de la Figure 1.
+Après avoir ajouté cette colonne calculée, votre écran doit ressembler à la capture d’écran de la figure 1.
 
-[![Ajouter une colonne calculée nommée FullContactName à la Table Suppliers](working-with-computed-columns-cs/_static/image2.png)](working-with-computed-columns-cs/_static/image1.png)
+[![ajouter une colonne calculée nommée FullContactName à la table Suppliers](working-with-computed-columns-cs/_static/image2.png)](working-with-computed-columns-cs/_static/image1.png)
 
-**Figure 1**: Ajouter une colonne calculée nommée `FullContactName` à la `Suppliers` Table ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image3.png))
+**Figure 1**: ajouter une colonne calculée nommée `FullContactName` à la table `Suppliers` ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image3.png))
 
-Après la colonne calculée d’affectation de noms et en entrant son expression, enregistrer les modifications apportées à la table en accédant au menu fichier et en choisissant Enregistrer en cliquant sur l’icône Enregistrer dans la barre d’outils ou en appuyant sur Ctrl + S `Suppliers`.
+Après avoir nommé la colonne calculée et entré son expression, enregistrez les modifications apportées à la table en cliquant sur l’icône Enregistrer dans la barre d’outils, en appuyant sur CTRL + S, ou en accédant au menu fichier et en choisissant enregistrer `Suppliers`.
 
-L’enregistrement de la table doit s’actualiser l’Explorateur de serveurs, y compris la colonne juste-ajouté dans le `Suppliers` liste des colonnes de table s. En outre, l’expression entrée dans la zone de texte (formule) ajuste automatiquement à une expression équivalente qui élimine l’espace blanc inutile, entoure les noms de colonne entre crochets (`[]`) et inclut des parenthèses pour afficher de manière plus explicite l’ordre des opérations :
+L’enregistrement de la table doit actualiser la Explorateur de serveurs, y compris la colonne qui vient d’être ajoutée dans la liste des colonnes de `Suppliers` table s. En outre, l’expression entrée dans la zone de texte (formule) s’ajuste automatiquement à une expression équivalente qui supprime les espaces superflus, entoure les noms de colonnes de crochets (`[]`) et comprend des parenthèses pour afficher plus explicitement l’ordre des opérations :
 
 [!code-sql[Main](working-with-computed-columns-cs/samples/sample2.sql)]
 
-Pour plus d’informations sur les colonnes calculées dans Microsoft SQL Server, reportez-vous à la [documentation technique](https://msdn.microsoft.com/library/ms191250.aspx). Consultez également le [Comment : Spécifier des colonnes calculées](https://msdn.microsoft.com/library/ms188300.aspx) pour une procédure pas à pas de créer des colonnes calculées.
+Pour plus d’informations sur les colonnes calculées dans Microsoft SQL Server, reportez-vous à la [documentation technique](https://msdn.microsoft.com/library/ms191250.aspx). Découvrez également [Comment : spécifier des colonnes calculées](https://msdn.microsoft.com/library/ms188300.aspx) pour une procédure pas à pas de création de colonnes calculées.
 
 > [!NOTE]
-> Par défaut, les colonnes calculées ne sont pas stockées physiquement dans la table mais sont recalculées à la place de chaque fois qu’ils sont référencés dans une requête. En cochant la case à cocher est rendue persistante, toutefois, vous pouvez demander à SQL Server pour le stockage physique de la colonne calculée dans la table. Ainsi, un index doit être créé sur la colonne calculée, ce qui peut améliorer les performances des requêtes qui utilisent la valeur de colonne calculée dans leurs `WHERE` clauses. Consultez [création d’index sur des colonnes calculées](https://msdn.microsoft.com/library/ms189292.aspx) pour plus d’informations.
+> Par défaut, les colonnes calculées ne sont pas physiquement stockées dans la table, mais elles sont recalculées à chaque fois qu’elles sont référencées dans une requête. En cochant la case est persistante, vous pouvez demander à SQL Server de stocker physiquement la colonne calculée dans la table. Cela permet de créer un index sur la colonne calculée, ce qui peut améliorer les performances des requêtes qui utilisent la valeur de colonne calculée dans leurs clauses de `WHERE`. Pour plus d’informations, consultez [création d’index sur des colonnes calculées](https://msdn.microsoft.com/library/ms189292.aspx) .
 
-## <a name="step-2-viewing-the-computed-column-s-values"></a>Étape 2 : Affichage des valeurs s colonne calculée
+## <a name="step-2-viewing-the-computed-column-s-values"></a>Étape 2 : affichage des valeurs des colonnes calculées
 
-Avant de commencer travail sur la couche Data Access, s permettent de prendre une minute pour afficher le `FullContactName` valeurs. À partir de l’Explorateur de serveurs, cliquez sur le `Suppliers` nom de la table et choisissez Nouvelle requête dans le menu contextuel. Cela fera apparaître une fenêtre de requête que vous êtes invité à choisir les tables à inclure dans la requête. Ajouter le `Suppliers` de table et cliquez sur Fermer. Ensuite, vérifiez la `CompanyName`, `ContactName`, `ContactTitle`, et `FullContactName` colonnes à partir de la table Suppliers. Enfin, cliquez sur l’icône de point d’exclamation rouge dans la barre d’outils pour exécuter la requête et afficher les résultats.
+Avant de commencer à travailler sur la couche d’accès aux données, attendez quelques minutes pour voir les valeurs de `FullContactName`. Dans le Explorateur de serveurs, cliquez avec le bouton droit sur le nom de la table `Suppliers` et choisissez nouvelle requête dans le menu contextuel. Une fenêtre de requête s’affiche pour vous inviter à choisir les tables à inclure dans la requête. Ajoutez la table `Suppliers`, puis cliquez sur Fermer. Ensuite, vérifiez les colonnes `CompanyName`, `ContactName`, `ContactTitle`et `FullContactName` de la table Suppliers. Enfin, cliquez sur l’icône de point d’exclamation rouge dans la barre d’outils pour exécuter la requête et afficher les résultats.
 
-Comme le montre la Figure 2, les résultats incluent `FullContactName`, qui répertorie les `CompanyName`, `ContactName`, et `ContactTitle` colonnes à l’aide du format ldquo ;`ContactName` (`ContactTitle`, `CompanyName`) .
+Comme le montre la figure 2, les résultats incluent `FullContactName`, qui répertorie les colonnes `CompanyName`, `ContactName`et `ContactTitle` à l’aide du format ldquo ;`ContactName` (`ContactTitle`, `CompanyName`).
 
-[![Le FullContactName utilise le Format ContactName (identifient, CompanyName)](working-with-computed-columns-cs/_static/image5.png)](working-with-computed-columns-cs/_static/image4.png)
+[![FullContactName utilise le format ContactName (ContactTitle, CompanyName)](working-with-computed-columns-cs/_static/image5.png)](working-with-computed-columns-cs/_static/image4.png)
 
-**Figure 2**: Le `FullContactName` utilise le Format `ContactName` (`ContactTitle`, `CompanyName`) ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image6.png))
+**Figure 2**: le `FullContactName` utilise le format `ContactName` (`ContactTitle`, `CompanyName`) ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image6.png))
 
-## <a name="step-3-adding-thesupplierstableadapterto-the-data-access-layer"></a>Étape 3 : Ajout de la`SuppliersTableAdapter`à la couche d’accès aux données
+## <a name="step-3-adding-thesupplierstableadapterto-the-data-access-layer"></a>Étape 3 : ajout de la`SuppliersTableAdapter`à la couche d’accès aux données
 
-Pour pouvoir fonctionner avec les informations de fournisseur dans notre application, nous devons d’abord créer un TableAdapter et un objet DataTable dans notre DAL. Dans l’idéal, cette opération s’effectue à l’aide de la même procédure simple examinée dans les didacticiels précédents. Toutefois, travailler avec des colonnes calculées présente quelques plis qui méritent discussion.
+Pour pouvoir utiliser les informations sur les fournisseurs dans notre application, nous devons d’abord créer un TableAdapter et un DataTable dans notre couche DAL. Dans l’idéal, cette opération est accomplie à l’aide des mêmes étapes simples que celles étudiées dans les didacticiels précédents. Toutefois, l’utilisation de colonnes calculées présente quelques plis qui méritent une discussion.
 
-Si vous utilisez un TableAdapter qui utilise des instructions SQL ad hoc, vous pouvez simplement inclure la colonne calculée dans la requête principale de s TableAdapter via l’Assistant Configuration de TableAdapter. Ceci, cependant, génère automatiquement `INSERT` et `UPDATE` les instructions contenant la colonne calculée. Si vous tentez d’exécuter une de ces méthodes, un `SqlException` avec le message de la colonne *ColumnName* ne peut pas être modifié, car il est soit une colonne calculée, soit le résultat d’un opérateur UNION est levé. Bien que le `INSERT` et `UPDATE` instruction peut être ajustée manuellement via le TableAdapter s `InsertCommand` et `UpdateCommand` propriétés, ces personnalisations seront perdues chaque fois que l’Assistant Configuration de TableAdapter est relancée.
+Si vous utilisez un TableAdapter qui utilise des instructions SQL ad hoc, vous pouvez simplement inclure la colonne calculée dans la requête principale du TableAdapter à l’aide de l’Assistant Configuration de TableAdapter. Toutefois, il génère automatiquement les instructions `INSERT` et `UPDATE` qui incluent la colonne calculée. Si vous essayez d’exécuter l’une de ces méthodes, une `SqlException` avec le message la colonne *ColumnName* ne peut pas être modifiée, car il s’agit d’une colonne calculée ou le résultat d’un opérateur Union est levé. Tandis que l’instruction `INSERT` et `UPDATE` peuvent être ajustées manuellement par le biais des propriétés `InsertCommand` et `UpdateCommand` du TableAdapter, ces personnalisations sont perdues à chaque réexécution de l’Assistant Configuration de TableAdapter.
 
-En raison de la fragilité de TableAdapters qui utilisent des instructions SQL ad hoc, il est recommandé que nous utilisons des procédures stockées lorsque vous travaillez avec des colonnes calculées. Si vous utilisez des procédures stockées existantes, il suffit de configurer le TableAdapter comme indiqué dans le [à l’aide des procédures stockées existantes pour s DataSet typée TableAdapters](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) didacticiel. Toutefois, si vous avez l’Assistant TableAdapter de créer les procédures stockées pour vous, il est important d’initialement omettre les colonnes calculées à partir de la requête principale. Si vous incluez une colonne calculée dans la requête principale, l’Assistant Configuration de TableAdapter vous informe, à l’achèvement, qu’il ne peut pas créer les procédures stockées correspondantes. En bref, nous devons configurer initialement le TableAdapter à l’aide d’une requête de libérer à la colonne principale calculée et puis mettre à jour manuellement la procédure stockée correspondante et les opérations de mappage TableAdapter `SelectCommand` pour inclure la colonne calculée. Cette approche est similaire à celui utilisé dans le [mise à jour le TableAdapter à utiliser](updating-the-tableadapter-to-use-joins-cs.md)`JOIN`*s* didacticiel.
+En raison de la fragilité des TableAdapters qui utilisent des instructions SQL ad hoc, nous vous recommandons d’utiliser des procédures stockées lors de l’utilisation de colonnes calculées. Si vous utilisez des procédures stockées existantes, il vous suffit de configurer le TableAdapter comme indiqué dans le didacticiel [utilisation de procédures stockées existantes pour les TableAdapters de DataSet typé](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) . Toutefois, si l’Assistant TableAdapter crée les procédures stockées pour vous, il est important d’omettre initialement les colonnes calculées de la requête principale. Si vous incluez une colonne calculée dans la requête principale, l’Assistant Configuration de TableAdapter vous informe, à l’achèvement, qu’il ne peut pas créer les procédures stockées correspondantes. En résumé, nous devons tout d’abord configurer le TableAdapter à l’aide d’une requête principale sans colonne calculée, puis mettre à jour manuellement la procédure stockée correspondante et les `SelectCommand` TableAdapter pour inclure la colonne calculée. Cette approche est similaire à celle utilisée dans le didacticiel [mise à jour du TableAdapter pour utiliser](updating-the-tableadapter-to-use-joins-cs.md)`JOIN`*s* .
 
-Pour ce didacticiel, permettent d’ajouter un nouveau TableAdapter et lui demander de générer automatiquement les procédures stockées pour nous s. Par conséquent, nous devons initialement omettre le `FullContactName` une colonne calculée à partir de la requête principale.
+Pour ce didacticiel, nous allons ajouter un nouveau TableAdapter et le faire créer automatiquement les procédures stockées pour nous. Par conséquent, nous devons initialement omettre la `FullContactName` colonne calculée de la requête principale.
 
-Commencez par ouvrir le `NorthwindWithSprocs` jeu de données dans le `~/App_Code/DAL` dossier. Avec le bouton droit dans le concepteur et, dans le menu contextuel, choisissez d’ajouter un nouveau TableAdapter. Cette action lance l’Assistant Configuration de TableAdapter. Spécifiez la base de données pour interroger des données à partir de (`NORTHWNDConnectionString` de `Web.config`) et cliquez sur Suivant. Étant donné que nous n’avons pas encore créé de toutes les procédures stockées pour l’interrogation ou modification de la `Suppliers` de table, sélectionnez Créer de nouvelles procédures stockées option afin que l’Assistant va créer pour nous et cliquez sur Suivant.
+Commencez par ouvrir le jeu de données `NorthwindWithSprocs` dans le dossier `~/App_Code/DAL`. Cliquez avec le bouton droit dans le concepteur et, dans le menu contextuel, choisissez d’ajouter un nouveau TableAdapter. L’Assistant Configuration de TableAdapter est lancé. Spécifiez la base de données à partir de laquelle interroger les données (`NORTHWNDConnectionString` `Web.config`), puis cliquez sur suivant. Étant donné que nous n’avons pas encore créé de procédures stockées pour interroger ou modifier la table `Suppliers`, sélectionnez l’option créer de nouvelles procédures stockées afin que l’Assistant les crée pour nous et clique sur suivant.
 
-[![Choisissez les créer nouvelles procédures stockées Option](working-with-computed-columns-cs/_static/image8.png)](working-with-computed-columns-cs/_static/image7.png)
+[![choisissez l’option créer de nouvelles procédures stockées](working-with-computed-columns-cs/_static/image8.png)](working-with-computed-columns-cs/_static/image7.png)
 
-**Figure 3**: Choisissez les créer nouvelles procédures stockées Option ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image9.png))
+**Figure 3**: choisissez l’option créer de nouvelles procédures stockées ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image9.png))
 
-L’étape suivante nous demande la requête principale. Entrez la requête suivante, qui retourne le `SupplierID`, `CompanyName`, `ContactName`, et `ContactTitle` colonnes pour chaque fournisseur. Notez que cette requête omet volontairement la colonne calculée (`FullContactName`) ; nous mettrons à jour la procédure stockée correspondante pour inclure cette colonne à l’étape 4.
+L’étape suivante nous invite à entrer la requête principale. Entrez la requête suivante, qui renvoie les colonnes `SupplierID`, `CompanyName`, `ContactName`et `ContactTitle` pour chaque fournisseur. Notez que cette requête omet intentionnellement la colonne calculée (`FullContactName`); Nous allons mettre à jour la procédure stockée correspondante pour inclure cette colonne à l’étape 4.
 
 [!code-sql[Main](working-with-computed-columns-cs/samples/sample3.sql)]
 
-Après avoir saisi la requête principale et en cliquant sur Suivant, l’Assistant nous permet de nommer les quatre procédures stockées, qu'il génère. Nommez ces procédures stockées `Suppliers_Select`, `Suppliers_Insert`, `Suppliers_Update`, et `Suppliers_Delete`, comme l’illustre la Figure 4.
+Après avoir entré la requête principale et cliqué sur suivant, l’Assistant nous permet de nommer les quatre procédures stockées qu’il va générer. Nommez ces procédures stockées `Suppliers_Select`, `Suppliers_Insert`, `Suppliers_Update`et `Suppliers_Delete`, comme illustré dans la figure 4.
 
-[![Personnalisez les noms des procédures stockées générées automatiquement](working-with-computed-columns-cs/_static/image11.png)](working-with-computed-columns-cs/_static/image10.png)
+[![personnaliser les noms des procédures stockées générées automatiquement](working-with-computed-columns-cs/_static/image11.png)](working-with-computed-columns-cs/_static/image10.png)
 
-**Figure 4**: Personnalisez les noms des procédures stockées Auto-Generated ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image12.png))
+**Figure 4**: personnaliser les noms des procédures stockées générées automatiquement ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image12.png))
 
-L’étape suivante de l’Assistant permet de nommer les méthodes de s TableAdapter et spécifier les modèles utilisés pour l’accès et mise à jour des données. Laissez toutes les cases à trois cocher activées, mais les renommer le `GetData` méthode `GetSuppliers`. Cliquez sur Terminer pour terminer l’Assistant.
+L’étape suivante de l’Assistant nous permet de nommer les méthodes TableAdapter s et de spécifier les modèles utilisés pour accéder aux données et les mettre à jour. Laissez les trois cases à cocher activées, mais renommez la méthode `GetData` pour `GetSuppliers`. Cliquez sur Terminer pour terminer l'Assistant.
 
-[![Renommez la méthode GetData GetSuppliers](working-with-computed-columns-cs/_static/image14.png)](working-with-computed-columns-cs/_static/image13.png)
+[![renommez la méthode GetData en GetSuppliers](working-with-computed-columns-cs/_static/image14.png)](working-with-computed-columns-cs/_static/image13.png)
 
-**Figure 5**: Renommer le `GetData` méthode `GetSuppliers` ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image15.png))
+**Figure 5**: renommer la méthode `GetData` en `GetSuppliers` ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image15.png))
 
-Lorsque vous cliquez sur Terminer, l’Assistant créer les quatre procédures stockées et ajouter le TableAdapter et DataTable correspondant au jeu de données typé.
+Quand vous cliquez sur terminer, l’Assistant crée les quatre procédures stockées et ajoute le TableAdapter et le DataTable correspondant au DataSet typé.
 
-## <a name="step-4-including-the-computed-column-in-the-tableadapter-s-main-query"></a>Étape 4 : Y compris la colonne calculée dans la requête principale de TableAdapter s
+## <a name="step-4-including-the-computed-column-in-the-tableadapter-s-main-query"></a>Étape 4 : inclusion de la colonne calculée dans la requête principale du TableAdapter
 
-Nous devons maintenant mettre à jour le TableAdapter et DataTable créé à l’étape 3 pour inclure la `FullContactName` colonne calculée. Cela implique deux étapes :
+Nous devons maintenant mettre à jour le TableAdapter et le DataTable créés à l’étape 3 pour inclure le `FullContactName` colonne calculée. Cette opération s'effectue en deux étapes :
 
-1. La mise à jour le `Suppliers_Select` procédure stockée pour retourner le `FullContactName` une colonne calculée, et
-2. La mise à jour de la table de données pour inclure un correspondant `FullContactName` colonne.
+1. Mise à jour de la procédure stockée `Suppliers_Select` pour retourner le `FullContactName` colonne calculée, et
+2. Mise à jour du DataTable pour inclure une colonne `FullContactName` correspondante.
 
-Démarrez en accédant à l’Explorateur de serveurs et de descente dans le dossier Stored Procedures. Ouvrez le `Suppliers_Select` procédure stockée et mise à jour le `SELECT` requête afin d’inclure la `FullContactName` colonne calculée :
+Commencez par naviguer jusqu’au Explorateur de serveurs et en explorant le dossier procédures stockées. Ouvrez la procédure stockée `Suppliers_Select` et mettez à jour la requête `SELECT` pour inclure la `FullContactName` colonne calculée :
 
 [!code-sql[Main](working-with-computed-columns-cs/samples/sample4.sql)]
 
-Enregistrer les modifications apportées à la procédure stockée en cliquant sur l’icône Enregistrer dans la barre d’outils, en appuyant sur Ctrl + S ou en choisissant l’enregistrement `Suppliers_Select` option dans le menu fichier.
+Enregistrez les modifications apportées à la procédure stockée en cliquant sur l’icône Enregistrer dans la barre d’outils, en appuyant sur CTRL + S ou en choisissant l’option Enregistrer `Suppliers_Select` dans le menu fichier.
 
-Ensuite, revenez dans le Concepteur de DataSet, avec le bouton droit sur le `SuppliersTableAdapter`et choisissez configurer dans le menu contextuel. Notez que le `Suppliers_Select` colonne inclut désormais la `FullContactName` colonne dans sa collection de colonnes de données.
+Ensuite, revenez au concepteur de DataSet, cliquez avec le bouton droit sur le `SuppliersTableAdapter`, puis choisissez configurer dans le menu contextuel. Notez que la colonne `Suppliers_Select` comprend maintenant la colonne `FullContactName` dans sa collection de colonnes de données.
 
-[![Exécutez l’Assistant de Configuration de s TableAdapter pour mettre à jour les colonnes de s DataTable](working-with-computed-columns-cs/_static/image17.png)](working-with-computed-columns-cs/_static/image16.png)
+[![exécuter l’Assistant Configuration de TableAdapter pour mettre à jour les colonnes du DataTable s](working-with-computed-columns-cs/_static/image17.png)](working-with-computed-columns-cs/_static/image16.png)
 
-**Figure 6**: Exécutez l’Assistant de Configuration pour mettre à jour les colonnes de s DataTable du TableAdapter s ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image18.png))
+**Figure 6**: exécuter l’Assistant Configuration de TableAdapter pour mettre à jour les colonnes de DataTable s ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image18.png))
 
-Cliquez sur Terminer pour terminer l’Assistant. Cela ajoutera automatiquement une colonne correspondante pour le `SuppliersDataTable`. L’Assistant TableAdapter est suffisamment intelligent pour détecter les `FullContactName` colonne est une colonne calculée et en lecture seule. Par conséquent, il définit la colonne s `ReadOnly` propriété `true`. Pour vérifier cela, sélectionnez la colonne à partir de la `SuppliersDataTable` , puis accédez à la fenêtre Propriétés (voir Figure 7). Notez que le `FullContactName` colonne s `DataType` et `MaxLength` propriétés sont également définies en conséquence.
+Cliquez sur Terminer pour terminer l'Assistant. Cette opération ajoute automatiquement une colonne correspondante au `SuppliersDataTable`. L’Assistant TableAdapter est suffisamment intelligent pour détecter que la colonne `FullContactName` est une colonne calculée et donc en lecture seule. Par conséquent, il définit la propriété de la colonne s `ReadOnly` sur `true`. Pour vérifier cela, sélectionnez la colonne dans la `SuppliersDataTable` puis accédez à la Fenêtre Propriétés (voir figure 7). Notez que les propriétés `FullContactName` Column s `DataType` et `MaxLength` sont également définies en conséquence.
 
-[![La colonne FullContactName est marquée comme étant en lecture seule](working-with-computed-columns-cs/_static/image20.png)](working-with-computed-columns-cs/_static/image19.png)
+[![la colonne FullContactName est marquée en lecture seule](working-with-computed-columns-cs/_static/image20.png)](working-with-computed-columns-cs/_static/image19.png)
 
-**Figure 7**: Le `FullContactName` colonne est marquée comme étant en lecture seule ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image21.png))
+**Figure 7**: la colonne `FullContactName` est marquée en lecture seule ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image21.png))
 
-## <a name="step-5-adding-agetsupplierbysupplieridmethod-to-the-tableadapter"></a>Étape 5 : Ajout d’un`GetSupplierBySupplierID`méthode au TableAdapter
+## <a name="step-5-adding-agetsupplierbysupplieridmethod-to-the-tableadapter"></a>Étape 5 : ajout d’une méthode`GetSupplierBySupplierID`au TableAdapter
 
-Pour ce didacticiel, nous allons créer une page ASP.NET qui affiche les fournisseurs dans une grille modifiable. Dans au-delà de didacticiels nous avons mis à jour un enregistrement unique de la couche de logique métier en récupérant qu’enregistrement particulier à partir de la couche DAL sous forme de DataTable fortement typée, en mettant à jour ses propriétés et envoyer la mise à jour de la table de données serveur à la couche DAL pour propager les modifications apportées à la base de données. Pour accomplir cette première étape - récupération de l’enregistrement mis à jour à partir de la couche DAL - nous devons tout d’abord ajouter un `GetSupplierBySupplierID(supplierID)` méthode à la couche DAL.
+Pour ce didacticiel, nous allons créer une page ASP.NET qui affiche les fournisseurs dans une grille modifiable. Dans les didacticiels précédents, nous avons mis à jour un enregistrement unique à partir de la couche de logique métier en extrayant cet enregistrement spécifique de la couche DAL en tant que DataTable fortement typé, en mettant à jour ses propriétés, puis en renvoyant le DataTable mis à jour à la couche DAL pour propager les modifications à base de données. Pour effectuer cette première étape, récupérez l’enregistrement en cours de mise à jour à partir de la couche DAL. nous devons d’abord ajouter une méthode de `GetSupplierBySupplierID(supplierID)` à la couche DAL.
 
-Avec le bouton droit sur le `SuppliersTableAdapter` dans la conception du jeu de données et choisissez l’option Ajouter une requête dans le menu contextuel. Comme nous l’avons fait à l’étape 3, laisser l’Assistant générer une nouvelle procédure stockée pour nous par l’option Créer nouvelle procédure stockée (voir Figure 3 pour une capture d’écran de cette étape). Étant donné que cette méthode retourne un enregistrement avec plusieurs colonnes, indiquent que nous souhaitons utiliser une requête SQL qui est une instruction SELECT qui retourne des lignes et cliquez sur Suivant.
+Cliquez avec le bouton droit sur la `SuppliersTableAdapter` dans la conception du jeu de données et choisissez l’option Ajouter une requête dans le menu contextuel. Comme nous l’avons fait à l’étape 3, laissez l’Assistant générer une nouvelle procédure stockée pour nous en sélectionnant l’option créer une nouvelle procédure stockée (reportez-vous à la figure 3 pour obtenir une capture d’écran de cette étape de l’Assistant). Étant donné que cette méthode retourne un enregistrement avec plusieurs colonnes, indiquez que nous souhaitons utiliser une requête SQL qui est une SELECT qui retourne des lignes, puis cliquez sur suivant.
 
-[![Choisissez l’instruction SELECT qui retourne des lignes, Option](working-with-computed-columns-cs/_static/image23.png)](working-with-computed-columns-cs/_static/image22.png)
+[![choisissez l’option Sélectionner les lignes à retourner](working-with-computed-columns-cs/_static/image23.png)](working-with-computed-columns-cs/_static/image22.png)
 
-**Figure 8**: Choisissez l’instruction SELECT qui retourne des lignes Option ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image24.png))
+**Figure 8**: choisissez l’option Sélectionner les lignes à retourner ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image24.png))
 
-L’étape suivante nous demande de la requête à utiliser pour cette méthode. Entrez la commande suivante, qui retourne les mêmes champs de données en tant que la requête principale, mais pour un fournisseur particulier.
+L’étape suivante nous invite à entrer la requête à utiliser pour cette méthode. Entrez la commande suivante, qui retourne les mêmes champs de données que la requête principale, mais pour un fournisseur particulier.
 
 [!code-sql[Main](working-with-computed-columns-cs/samples/sample5.sql)]
 
-L’écran suivant nous demande de nom de la procédure stockée qui sera généré automatiquement. Nom de cette procédure stockée `Suppliers_SelectBySupplierID` et cliquez sur Suivant.
+L’écran suivant nous demande de nommer la procédure stockée qui sera générée automatiquement. Nommez cette procédure stockée `Suppliers_SelectBySupplierID`, puis cliquez sur suivant.
 
-[![Nom de la procédure stockée Suppliers_SelectBySupplierID](working-with-computed-columns-cs/_static/image26.png)](working-with-computed-columns-cs/_static/image25.png)
+[![nom de la procédure stockée Suppliers_SelectBySupplierID](working-with-computed-columns-cs/_static/image26.png)](working-with-computed-columns-cs/_static/image25.png)
 
-**Figure 9**: Nom de la procédure stockée `Suppliers_SelectBySupplierID` ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image27.png))
+**Figure 9**: nommer la procédure stockée `Suppliers_SelectBySupplierID` ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image27.png))
 
-Enfin, les invites de l’Assistant nous pour les données d’accéder aux modèles et des noms de méthodes à utiliser pour le TableAdapter. Laissez les cases cochées, mais renommer le `FillBy` et `GetDataBy` méthodes à `FillBySupplierID` et `GetSupplierBySupplierID`, respectivement.
+Enfin, l’Assistant nous invite à entrer les modèles d’accès aux données et les noms de méthode à utiliser pour le TableAdapter. Laissez les cases à cocher activées, mais renommez les méthodes `FillBy` et `GetDataBy` en `FillBySupplierID` et `GetSupplierBySupplierID`, respectivement.
 
-[![Nom de la FillBySupplierID méthodes TableAdapter et GetSupplierBySupplierID](working-with-computed-columns-cs/_static/image29.png)](working-with-computed-columns-cs/_static/image28.png)
+[![nommez les méthodes TableAdapter FillBySupplierID et GetSupplierBySupplierID](working-with-computed-columns-cs/_static/image29.png)](working-with-computed-columns-cs/_static/image28.png)
 
-**Figure 10**: Nommez les méthodes TableAdapter `FillBySupplierID` et `GetSupplierBySupplierID` ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image30.png))
+**Figure 10**: nommer les méthodes TableAdapter `FillBySupplierID` et `GetSupplierBySupplierID` ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image30.png))
 
-Cliquez sur Terminer pour terminer l’Assistant.
+Cliquez sur Terminer pour terminer l'Assistant.
 
-## <a name="step-6-creating-the-business-logic-layer"></a>Étape 6 : Création de la couche de logique métier
+## <a name="step-6-creating-the-business-logic-layer"></a>Étape 6 : création de la couche de logique métier
 
-Avant de créer une page ASP.NET qui utilise la colonne calculée créée à l’étape 1, nous devons d’abord ajouter les méthodes correspondantes dans la couche BLL. Notre page ASP.NET, que nous allons créer à l’étape 7, permettra aux utilisateurs d’afficher et modifier des fournisseurs. Par conséquent, nous avons besoin de notre BLL à proposer au minimum, une méthode pour obtenir tous les fournisseurs et une autre pour mettre à jour d’un fournisseur particulier.
+Avant de créer une page ASP.NET qui utilise la colonne calculée créée à l’étape 1, nous devons d’abord ajouter les méthodes correspondantes dans la couche BLL. Notre page ASP.NET, que nous allons créer à l’étape 7, permettra aux utilisateurs d’afficher et de modifier des fournisseurs. Par conséquent, nous avons besoin de notre BLL pour fournir, au minimum, une méthode pour obtenir tous les fournisseurs et un autre pour mettre à jour un fournisseur particulier.
 
-Créer un nouveau fichier de classe nommé `SuppliersBLLWithSprocs` dans le `~/App_Code/BLL` dossier et ajoutez le code suivant :
+Créez un nouveau fichier de classe nommé `SuppliersBLLWithSprocs` dans le dossier `~/App_Code/BLL` et ajoutez le code suivant :
 
 [!code-csharp[Main](working-with-computed-columns-cs/samples/sample6.cs)]
 
-Comme les autres classes de la couche BLL, `SuppliersBLLWithSprocs` a un `protected` `Adapter` propriété qui retourne une instance de la `SuppliersTableAdapter` classe ainsi que deux `public` méthodes : `GetSuppliers` et `UpdateSupplier`. Le `GetSuppliers` méthode appelle et retourne le `SuppliersDataTable` retourné par le correspondantes `GetSupplier` méthode dans la couche d’accès aux données. Le `UpdateSupplier` méthode récupère des informations sur le fournisseur mis à jour via un appel à la couche DAL s `GetSupplierBySupplierID(supplierID)` (méthode). Il met ensuite à jour le `CategoryName`, `ContactName`, et `ContactTitle` propriétés et valide ces modifications à la base de données en appelant la couche d’accès aux données s `Update` méthode, en passant le texte modifié `SuppliersRow` objet.
+À l’instar des autres classes BLL, `SuppliersBLLWithSprocs` a une propriété `protected` `Adapter` qui retourne une instance de la classe `SuppliersTableAdapter`, ainsi que deux méthodes `public` : `GetSuppliers` et `UpdateSupplier`. La méthode `GetSuppliers` appelle et retourne le `SuppliersDataTable` retourné par la méthode `GetSupplier` correspondante dans la couche d’accès aux données. La méthode `UpdateSupplier` récupère des informations sur le fournisseur particulier qui est mis à jour via un appel à la méthode de `GetSupplierBySupplierID(supplierID)` DAL s. Il met ensuite à jour les propriétés `CategoryName`, `ContactName`et `ContactTitle` et valide ces modifications dans la base de données en appelant la méthode `Update` de la couche d’accès aux données, en passant l’objet `SuppliersRow` modifié.
 
 > [!NOTE]
-> À l’exception de `SupplierID` et `CompanyName`, toutes les colonnes dans la table Suppliers autorisent `NULL` valeurs. Par conséquent, si le passé dans `contactName` ou `contactTitle` sont des paramètres `null` nous devons définir le correspondantes `ContactName` et `ContactTitle` propriétés à un `NULL` valeur de la base de données à l’aide la `SetContactNameNull` et `SetContactTitleNull`méthodes, respectivement.
+> À l’exception de `SupplierID` et `CompanyName`, toutes les colonnes de la table Suppliers autorisent les valeurs `NULL`. Par conséquent, si les paramètres `contactName` ou `contactTitle` transmis sont `null` il est nécessaire de définir les propriétés `ContactName` et `ContactTitle` correspondantes sur une valeur de base de données `NULL` à l’aide des méthodes `SetContactNameNull` et `SetContactTitleNull`, respectivement.
 
-## <a name="step-7-working-with-the-computed-column-from-the-presentation-layer"></a>Étape 7 : Utilisation de la colonne calculée à partir de la couche de présentation
+## <a name="step-7-working-with-the-computed-column-from-the-presentation-layer"></a>Étape 7 : utilisation de la colonne calculée de la couche de présentation
 
-La colonne calculée est ajouté à la `Suppliers` table et la couche DAL et la couche BLL mis à jour en conséquence, nous sommes prêts à créer une page ASP.NET qui fonctionne avec la `FullContactName` colonne calculée. Commencez par ouvrir le `ComputedColumns.aspx` page dans le `AdvancedDAL` dossier et faites glisser un GridView à partir de la boîte à outils vers le concepteur. Définir les opérations de mappage GridView `ID` propriété `Suppliers` et, à partir de sa balise active, liez-le à une nouvelle ObjectDataSource nommé `SuppliersDataSource`. Configurer l’ObjectDataSource à utiliser le `SuppliersBLLWithSprocs` classe que nous avons ajouté la sauvegarde à l’étape 6, puis cliquez sur Suivant.
+Avec la colonne calculée ajoutée à la table `Suppliers` et la couche DAL et la couche BLL mises à jour en conséquence, nous sommes prêts à créer une page ASP.NET qui fonctionne avec la colonne calculée `FullContactName`. Commencez par ouvrir la page `ComputedColumns.aspx` dans le dossier `AdvancedDAL` et faites glisser un contrôle GridView de la boîte à outils vers le concepteur. Définissez la propriété GridView s `ID` sur `Suppliers` et, à partir de sa balise active, liez-la à un nouvel ObjectDataSource nommé `SuppliersDataSource`. Configurez le ObjectDataSource pour utiliser la classe `SuppliersBLLWithSprocs` que nous avons rajoutée à l’étape 6, puis cliquez sur suivant.
 
-[![Configurer pour utiliser la classe SuppliersBLLWithSprocs ObjectDataSource](working-with-computed-columns-cs/_static/image32.png)](working-with-computed-columns-cs/_static/image31.png)
+[![configurer ObjectDataSource pour utiliser la classe SuppliersBLLWithSprocs](working-with-computed-columns-cs/_static/image32.png)](working-with-computed-columns-cs/_static/image31.png)
 
-**Figure 11**: Configurer l’ObjectDataSource à utiliser le `SuppliersBLLWithSprocs` classe ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image33.png))
+**Figure 11**: configurer ObjectDataSource pour utiliser la classe `SuppliersBLLWithSprocs` ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image33.png))
 
-Il existe seulement deux méthodes définies dans le `SuppliersBLLWithSprocs` classe : `GetSuppliers` et `UpdateSupplier`. Assurez-vous que ces deux méthodes sont spécifiées dans l’instruction SELECT et mettre à jour des onglets, respectivement et cliquez sur Terminer pour terminer la configuration de l’ObjectDataSource.
+Il n’existe que deux méthodes définies dans la classe `SuppliersBLLWithSprocs` : `GetSuppliers` et `UpdateSupplier`. Assurez-vous que ces deux méthodes sont spécifiées respectivement dans les onglets sélectionner et mettre à jour, puis cliquez sur Terminer pour terminer la configuration de l’ObjectDataSource.
 
-À l’achèvement de l’Assistant Configuration de Source de données, Visual Studio ajoute un BoundField pour chacun des champs de données retournés. Supprimer le `SupplierID` BoundField et modifier le `HeaderText` propriétés de la `CompanyName`, `ContactName`, `ContactTitle`, et `FullContactName` BoundFields à l’entreprise, nom du Contact, titre et nom complet du Contact, respectivement. À partir de la balise active, cochez la case Activer la modification pour activer les fonctionnalités d’édition intégrées s GridView.
+À la fin de l’Assistant Configuration de source de données, Visual Studio ajoute un BoundField pour chacun des champs de données retournés. Supprimez le `SupplierID` BoundField et modifiez les propriétés de `HeaderText` des `CompanyName`, `ContactName`, `ContactTitle`et `FullContactName` BoundFields en société, nom de contact, titre et nom de contact complet, respectivement. À partir de la balise active, activez la case à cocher Activer la modification pour activer les fonctionnalités d’édition intégrées de GridView.
 
-Outre l’ajout de BoundFields au GridView, fin de l’Assistant Source de données entraîne également Visual Studio définir les opérations de mappage ObjectDataSource `OldValuesParameterFormatString` propriété original\_{0}. Rétablir ce paramètre à sa valeur par défaut, {0} .
+Outre l’ajout de BoundFields à GridView, l’exécution de l’Assistant source de données permet également à Visual Studio de définir la propriété ObjectDataSource s `OldValuesParameterFormatString` sur la valeur d’origine\_{0}. Rétablissez la valeur par défaut de ce paramètre, {0}.
 
-Après avoir apporté ces modifications pour les contrôles GridView et ObjectDataSource, leur balisage déclaratif doit ressembler à ce qui suit :
+Une fois ces modifications apportées aux contrôles GridView et ObjectDataSource, leur balisage déclaratif doit ressembler à ce qui suit :
 
 [!code-aspx[Main](working-with-computed-columns-cs/samples/sample7.aspx)]
 
-Ensuite, visitez cette page via un navigateur. Comme le montre la Figure 12, chaque fournisseur est répertorié dans une grille qui inclut le `FullContactName` sous forme de colonne, dont la valeur est simplement la concaténation des trois autres colonnes `ContactName` (`ContactTitle`, `CompanyName`).
+Ensuite, accédez à cette page via un navigateur. Comme le montre la figure 12, chaque fournisseur est listé dans une grille qui comprend la colonne `FullContactName`, dont la valeur est simplement la concaténation des trois autres colonnes mises en forme en tant que `ContactName` (`ContactTitle`, `CompanyName`).
 
-[![Chaque fournisseur est répertorié dans la grille](working-with-computed-columns-cs/_static/image35.png)](working-with-computed-columns-cs/_static/image34.png)
+[![chaque fournisseur est listé dans la grille](working-with-computed-columns-cs/_static/image35.png)](working-with-computed-columns-cs/_static/image34.png)
 
-**Figure 12**: Chaque fournisseur est répertorié dans la grille ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image36.png))
+**Figure 12**: chaque fournisseur est listé dans la grille ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image36.png))
 
-En cliquant sur le bouton Modifier pour un fournisseur particulier entraîne une publication (postback) et a cette ligne affiché dans sa modification de l’interface (voir Figure 13). Les trois premières colonnes s’affichent dans l’interface de modification par défaut : une zone de texte contrôle dont `Text` propriété est définie sur la valeur du champ de données. La `FullContactName` colonne, cependant, reste sous forme de texte. Lorsque les BoundFields ont été ajoutés au contrôle GridView à la fin de l’Assistant Configuration de Source de données, le `FullContactName` BoundField s `ReadOnly` propriété a été définie sur `true` car correspondant `FullContactName` colonne dans la `SuppliersDataTable` a son `ReadOnly` propriété définie sur `true`. Comme indiqué à l’étape 4, le `FullContactName` s `ReadOnly` propriété a été définie sur `true` , car le TableAdapter a détecté que la colonne a une colonne calculée.
+Le fait de cliquer sur le bouton modifier pour un fournisseur particulier entraîne une publication et affiche cette ligne dans son interface de modification (voir figure 13). Les trois premières colonnes s’affichent dans leur interface de modification par défaut, un contrôle TextBox dont la propriété `Text` est définie sur la valeur du champ de données. Toutefois, la colonne `FullContactName` reste sous forme de texte. Lorsque les BoundFields ont été ajoutés au contrôle GridView à la fin de l’Assistant Configuration de source de données, la propriété `FullContactName` BoundField s `ReadOnly` a été définie sur `true`, car la propriété `SuppliersDataTable` de la colonne `FullContactName` correspondante de la `ReadOnly` est définie sur `true`. Comme indiqué à l’étape 4, la propriété `FullContactName` s `ReadOnly` a été définie sur `true` car le TableAdapter a détecté que la colonne était une colonne calculée.
 
-[![La colonne FullContactName n’est pas modifiable.](working-with-computed-columns-cs/_static/image38.png)](working-with-computed-columns-cs/_static/image37.png)
+[![la colonne FullContactName n’est pas modifiable](working-with-computed-columns-cs/_static/image38.png)](working-with-computed-columns-cs/_static/image37.png)
 
-**Figure 13**: Le `FullContactName` colonne n’est pas modifiable ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image39.png))
+**Figure 13**: la colonne `FullContactName` n’est pas modifiable ([cliquez pour afficher l’image en taille réelle](working-with-computed-columns-cs/_static/image39.png))
 
-Continuons et mettre à jour la valeur d’un ou plusieurs des colonnes modifiables et cliquez sur la mise à jour. Notez comment la `FullContactName` valeur s est automatiquement mis à jour pour refléter la modification.
+Continuez et mettez à jour la valeur d’une ou plusieurs des colonnes modifiables, puis cliquez sur mettre à jour. Notez comment la valeur de `FullContactName` s est automatiquement mise à jour pour refléter la modification.
 
 > [!NOTE]
-> Le contrôle GridView utilise actuellement BoundFields pour les champs modifiables, ce qui entraîne la rédaction d’interface par défaut. Dans la mesure où le `CompanyName` champ est obligatoire, il doit être converti en TemplateField qui inclut un contrôle RequiredFieldValidator. Je laisse cela en guise d’exercice pour les lecteurs que cela intéresse. Consultez le [Ajout de contrôles de Validation pour l’édition et insertion des Interfaces](../editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-cs.md) didacticiel pour obtenir des instructions pas à pas sur la conversion en un BoundField TemplateField et ajout de contrôles de validation.
+> Le GridView utilise actuellement BoundFields pour les champs modifiables, ce qui se traduit par l’interface de modification par défaut. Étant donné que le champ `CompanyName` est obligatoire, il doit être converti en TemplateField qui comprend un RequiredFieldValidator. Je laisse cela en tant qu’exercice pour le lecteur intéressé. Pour obtenir des instructions pas à pas sur la conversion d’un BoundField en TemplateField et l’ajout de contrôles de validation, consultez le didacticiel [Ajout de contrôles de validation au didacticiel sur les interfaces de modification et d’insertion](../editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-cs.md) .
 
 ## <a name="summary"></a>Récapitulatif
 
-Lorsque vous définissez le schéma pour une table, Microsoft SQL Server permet l’inclusion de colonnes calculées. Il s’agit des colonnes dont les valeurs sont calculées à partir d’une expression qui référence généralement les valeurs des autres colonnes dans le même enregistrement. Depuis les valeurs pour les colonnes calculées sont basées sur une expression, ils sont en lecture seule et ne peut pas être assignées une valeur dans un `INSERT` ou `UPDATE` instruction. Cela introduit des problèmes lors de l’utilisation d’une colonne calculée dans la requête principale d’un TableAdapter qui essaie de générer automatiquement le correspondant `INSERT`, `UPDATE`, et `DELETE` instructions.
+Lors de la définition du schéma d’une table, Microsoft SQL Server permet l’inclusion de colonnes calculées. Il s’agit de colonnes dont les valeurs sont calculées à partir d’une expression qui fait généralement référence aux valeurs d’autres colonnes dans le même enregistrement. Étant donné que les valeurs des colonnes calculées sont basées sur une expression, elles sont en lecture seule et ne peuvent pas être assignées à une valeur dans une instruction `INSERT` ou `UPDATE`. Cela présente des difficultés lors de l’utilisation d’une colonne calculée dans la requête principale d’un TableAdapter qui tente de générer automatiquement les instructions `INSERT`, `UPDATE`et `DELETE` correspondantes.
 
-Dans ce didacticiel, nous avons abordé les techniques pour contourner les défis posés par les colonnes calculées. En particulier, nous avons utilisé des procédures stockées dans notre TableAdapter pour surmonter la fragilité inhérents aux TableAdapters qui utilisent des instructions SQL ad hoc. Lorsque ayant l’Assistant TableAdapter à créer des procédures stockées, il est important que nous avons la requête principale initialement omettre les colonnes calculées, car leur présence empêche les procédures stockées de modification de données d’être générée. Une fois le TableAdapter a été initialement configuré, son `SelectCommand` procédure stockée peut être remaniée pour inclure les colonnes calculées.
+Dans ce didacticiel, nous avons abordé les techniques permettant de contourner les problèmes posés par les colonnes calculées. En particulier, nous avons utilisé des procédures stockées dans notre TableAdapter pour surmonter la fragilité inhérente aux TableAdapters qui utilisent des instructions SQL ad hoc. Lorsque l’Assistant TableAdapter crée de nouvelles procédures stockées, il est important que la requête principale omette au départ toutes les colonnes calculées, car leur présence empêche la génération des procédures stockées de modification de données. Une fois que le TableAdapter a été initialement configuré, sa procédure stockée `SelectCommand` peut être redéfinie pour inclure toutes les colonnes calculées.
 
 Bonne programmation !
 
 ## <a name="about-the-author"></a>À propos de l’auteur
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept les livres sur ASP/ASP.NET et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec les technologies Web Microsoft depuis 1998. Scott fonctionne comme un consultant indépendant, formateur et writer. Son dernier ouvrage est [*SAM animer vous-même ASP.NET 2.0 des dernières 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve à [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept livres ASP/ASP. net et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec des technologies Web Microsoft depuis 1998. Scott travaille en tant que consultant, formateur et auteur indépendant. Son dernier livre est [*Sams vous apprend vous-même ASP.NET 2,0 en 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve sur [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
-## <a name="special-thanks-to"></a>Remerciements
+## <a name="special-thanks-to"></a>Remerciements à
 
-Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Les réviseurs tête pour ce didacticiel ont été Hilton Geisenow et Teresa Murphy. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Cette série de didacticiels a été examinée par de nombreux réviseurs utiles. Les réviseurs de leads pour ce didacticiel étaient Hilton Geisenow et Teresa Murphy. Vous souhaitez revoir mes prochains articles MSDN ? Si c’est le cas, insérez une ligne sur [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Précédent](adding-additional-datatable-columns-cs.md)

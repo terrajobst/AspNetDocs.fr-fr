@@ -1,141 +1,141 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb
-title: En spécifiant le titre, les balises Meta et les autres en-têtes HTML dans la Page maître (VB) | Microsoft Docs
+title: Spécification du titre, des balises meta et d’autres en-têtes HTML dans la page maître (VB) | Microsoft Docs
 author: rick-anderson
-description: Examine les différentes techniques permettant de définir assortis &lt;head&gt; éléments dans la Page maître depuis la page de contenu.
+description: Examine les différentes techniques permettant de définir les éléments assortis &lt;Head&gt; dans la page maître à partir de la page de contenu.
 ms.author: riande
 ms.date: 05/21/2008
 ms.assetid: ea8196f5-039d-43ec-8447-8997ad4d3900
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb
 msc.type: authoredcontent
-ms.openlocfilehash: fd4e628e15fa95531175c83fdf5853a5d671e705
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 160af664cdf27f9ede1273aaf915da749a39ad48
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65116303"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74637752"
 ---
 # <a name="specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb"></a>Spécification du titre, des balises META et d’autres en-têtes HTML dans la page maître (VB)
 
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger le Code](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_03_VB.zip) ou [télécharger le PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_03_VB.pdf)
+[Télécharger le code](https://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_03_VB.zip) ou [Télécharger le PDF](https://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_03_VB.pdf)
 
-> Examine les différentes techniques permettant de définir assortis &lt;head&gt; éléments dans la Page maître depuis la page de contenu.
+> Examine les différentes techniques permettant de définir les éléments assortis &lt;Head&gt; dans la page maître à partir de la page de contenu.
 
 ## <a name="introduction"></a>Introduction
 
-Nouvelles pages maîtres créés dans Visual Studio 2008 ont, par défaut, les deux contrôles ContentPlaceHolder : l’autre nommé `head`et situé dans le `<head>` ; et un élément nommé `ContentPlaceHolder1`, placé dans un formulaire Web. L’objectif de `ContentPlaceHolder1` consiste à définir une région dans le formulaire Web qui peut être personnalisé sur une base de page par page. Le `head` ContentPlaceHolder permet aux pages à ajouter du contenu personnalisé à la `<head>` section. (Bien sûr, ces deux ContentPlaceHolders peuvent être modifiés ou supprimés, et ContentPlaceHolder supplémentaire peut-être être ajouté à la page maître. Notre page maître, `Site.master`, a actuellement quatre contrôles ContentPlaceHolder.)
+Les nouvelles pages maîtres créées dans Visual Studio 2008 ont, par défaut, deux contrôles ContentPlaceHolder : l’un nommé `head`et situé dans l’élément `<head>` ; et l’autre nommé `ContentPlaceHolder1`, placé dans le formulaire Web. L’objectif de `ContentPlaceHolder1` est de définir une région dans le formulaire Web qui peut être personnalisée page par page. L' `head` ContentPlaceHolder permet aux pages d’ajouter du contenu personnalisé à la section `<head>`. (Bien sûr, ces deux ContentPlaceHolders peuvent être modifiées ou supprimées, et des ContentPlaceHolder supplémentaires peuvent être ajoutés à la page maître. Notre page maître, `Site.master`, possède actuellement quatre contrôles ContentPlaceHolder.)
 
-Le code HTML `<head>` l’élément est utilisé en tant que référentiel pour plus d’informations sur le document de page web qui ne fait pas partie du document lui-même. Cela inclut des informations telles que titre de la page web, meta-informations utilisées par les moteurs de recherche ou de robots d’indexation internes et des liens vers des ressources externes, telles que les flux RSS, JavaScript et CSS fichiers. Il se peut que certaines de ces informations peuvent être pertinentes à toutes les pages dans le site Web. Par exemple, vous souhaiterez peut-être importer globalement les mêmes règles CSS et JavaScript fichiers pour chaque page ASP.NET. Toutefois, il existe des parties de la `<head>` élément qui sont spécifiques à la page. Le titre de page est un parfait exemple.
+L’élément `<head>` HTML sert de référentiel pour les informations relatives au document de la page Web qui ne fait pas partie du document lui-même. Cela comprend des informations telles que le titre de la page Web, les méta-informations utilisées par les moteurs de recherche ou les robots internes, ainsi que des liens vers des ressources externes, telles que des flux RSS, JavaScript et des fichiers CSS. Certaines de ces informations peuvent s’avérer utiles pour toutes les pages du site Web. Par exemple, vous souhaiterez peut-être importer globalement les mêmes règles CSS et fichiers JavaScript pour chaque page ASP.NET. Toutefois, il existe des parties de l’élément `<head>` qui sont spécifiques à la page. Le titre de la page est un exemple premier.
 
-Dans ce didacticiel, nous examinons comment définir globaux et spécifiques à la page `<head>` balisage section dans la page maître et dans ses pages de contenu.
+Dans ce didacticiel, nous allons examiner comment définir des balises de section de `<head>` globales et spécifiques à une page dans la page maître et dans ses pages de contenu.
 
-## <a name="examining-the-master-pagesheadsection"></a>Examen de la Page maître`<head>`Section
+## <a name="examining-the-master-pagesheadsection"></a>Examen de la section`<head>`de la page maître
 
-Le fichier de page maître par défaut créé par Visual Studio 2008 contient le balisage suivant dans son `<head>` section :
+Le fichier de page maître par défaut créé par Visual Studio 2008 contient le balisage suivant dans sa section `<head>` :
 
 [!code-aspx[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample1.aspx)]
 
-Notez que le `<head>` élément contient un `runat="server"` attribut, qui indique qu’il s’agit d’un contrôle serveur (plutôt que du HTML statique). Toutes les pages ASP.NET dérivent le [ `Page` classe](https://msdn.microsoft.com/library/system.web.ui.page.aspx), qui se trouve dans le `System.Web.UI` espace de noms. Cette classe contient un [ `Header` propriété](https://msdn.microsoft.com/library/system.web.ui.page.header.aspx) qui fournit l’accès à la page `<head>` région. À l’aide de la `Header` propriété nous pouvons définir le titre d’une page ASP.NET ou ajouter des balises supplémentaires pour le rendu `<head>` section. Il est possible, puis, pour personnaliser une page de contenu `<head>` élément en écrivant un peu de code dans la page `Page_Load` Gestionnaire d’événements. Nous examinons comment définir par programmation le titre de la page à l’étape 1.
+Notez que l’élément `<head>` contient un attribut `runat="server"`, qui indique qu’il s’agit d’un contrôle serveur (plutôt que du code HTML statique). Toutes les pages ASP.NET dérivent de la [classe`Page`](https://msdn.microsoft.com/library/system.web.ui.page.aspx), qui se trouve dans l’espace de noms `System.Web.UI`. Cette classe contient une [propriété`Header`](https://msdn.microsoft.com/library/system.web.ui.page.header.aspx) qui fournit l’accès à la région `<head>` de la page. À l’aide de la propriété `Header`, nous pouvons définir le titre d’une page ASP.NET ou ajouter des balises supplémentaires à la section `<head>` rendue. Il est possible, ensuite, de personnaliser l’élément `<head>` d’une page de contenu en écrivant un peu de code dans le gestionnaire d’événements `Page_Load` de la page. Nous examinons comment définir par programmation le titre de la page à l’étape 1.
 
-Le balisage illustré à la `<head>` élément ci-dessus inclut également un contrôle ContentPlaceHolder nommé `head`. Ce contrôle ContentPlaceHolder n’est pas nécessaire, comme les pages de contenu peuvent ajouter du contenu personnalisé pour le `<head>` élément par programmation. Il est utile, toutefois, dans les situations où une page de contenu doit ajouter un balisage statique pour le `<head>` élément en tant que le balisage statique peut être ajouté de manière déclarative pour le contrôle de contenu correspondant plutôt que par programmation.
+Le balisage affiché dans l’élément `<head>` ci-dessus comprend également un contrôle ContentPlaceHolder nommé `head`. Ce contrôle ContentPlaceHolder n’est pas nécessaire, car les pages de contenu peuvent ajouter du contenu personnalisé à l’élément `<head>` par programmation. Toutefois, il est utile dans les situations où une page de contenu doit ajouter le balisage statique à l’élément `<head>`, car le balisage statique peut être ajouté de façon déclarative au contrôle de contenu correspondant plutôt que par programmation.
 
-Outre le `<title>` élément et `head` du ContentPlaceHolder, la page maître `<head>` élément doit contenir les `<head>`-niveau balisage qui est commun à toutes les pages. Dans notre site Web, toutes les pages d’utilisent les règles CSS définies dans le `Styles.css` fichier. Par conséquent, nous avons mis à jour le `<head>` élément dans le [ *création d’une disposition de l’échelle du Site avec des Pages maîtres* ](creating-a-site-wide-layout-using-master-pages-vb.md) didacticiel pour inclure un correspondant `<link>` élément. Notre `Site.master` actuel du gabarit `<head>` balisage est indiqué ci-dessous.
+En plus de l’élément `<title>` et `head` ContentPlaceHolder, l’élément `<head>` de la page maître doit contenir tout balisage de niveau `<head>`qui est commun à toutes les pages. Dans notre site Web, toutes les pages utilisent les règles CSS définies dans le fichier `Styles.css`. Par conséquent, nous avons mis à jour l’élément `<head>` dans le didacticiel [*création d’une disposition à l’ensemble du site avec des pages maîtres*](creating-a-site-wide-layout-using-master-pages-vb.md) pour inclure un élément `<link>` correspondant. Le balisage de `<head>` actuel de notre page maître `Site.master` est illustré ci-dessous.
 
 [!code-aspx[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample2.aspx)]
 
-## <a name="step-1-setting-a-content-pages-title"></a>Étape 1 : Définir un titre d’une Page de contenu
+## <a name="step-1-setting-a-content-pages-title"></a>Étape 1 : définition du titre d’une page de contenu
 
-Titre de la page web est spécifié via le `<title>` élément. Il est important de définir le titre de chaque page avec une valeur appropriée. Lorsque vous visitez une page, son titre s’affiche dans la barre de titre du navigateur. En outre, lors de la création de signets une page, navigateurs utilisent le titre de la page en tant que le nom suggéré pour le signet. En outre, de nombreux moteurs de recherche affichent le titre de la page lors de l’affichage des résultats de la recherche.
+Le titre de la page Web est spécifié via l’élément `<title>`. Il est important de définir le titre de chaque page sur une valeur appropriée. Lorsque vous visitez une page, son titre s’affiche dans la barre de titre du navigateur. En outre, lors de la création d’un signet sur une page, les navigateurs utilisent le titre de la page comme nom suggéré pour le signet. En outre, de nombreux moteurs de recherche affichent le titre de la page lors de l’affichage des résultats de la recherche.
 
 > [!NOTE]
-> Par défaut, Visual Studio définit le `<title>` élément dans la page maître pour « Page sans titre ». De même, les nouvelles pages ASP.NET ont leur `<title>` trop la valeur « Page sans titre, ». Car il est facile d’oublier de définir le titre de la page à une valeur appropriée, il existe de nombreuses pages sur Internet avec le titre « Page sans titre ». La recherche Google pour les pages web avec ce titre retourne à peu près les 2,460,000 résultats. Même Microsoft est vulnérable à la publication de pages web avec le titre « Page sans titre ». Au moment de la rédaction, une recherche Google signalée 236 ces pages web dans le domaine Microsoft.com.
+> Par défaut, Visual Studio affecte à l’élément `<title>` de la page maître la valeur « page sans titre ». De même, les `<title>` nouvelles pages de ASP.NET ont également la valeur « page sans titre ». Étant donné qu’il peut être facile d’oublier de définir le titre de la page sur une valeur appropriée, il existe de nombreuses pages sur Internet avec le titre « page sans titre ». La recherche de Google pour les pages Web avec ce titre retourne environ 2 460 000 résultats. Même Microsoft est susceptible de publier des pages Web avec le titre « page sans titre ». Au moment de la rédaction de cet article, une recherche Google a rapporté 236 pages Web dans le domaine Microsoft.com.
 
-Une page ASP.NET peut spécifier son titre dans une des manières suivantes :
+Une page ASP.NET peut spécifier son titre de l’une des manières suivantes :
 
-- En plaçant la valeur directement dans le `<title>` élément
-- À l’aide de la `Title` d’attribut dans le `<%@ Page %>` (directive)
-- Définition par programmation de la page `Title` propriété à l’aide de code tel que `Page.Title="title"` ou `Page.Header.Title="title"`.
+- En plaçant la valeur directement dans l’élément `<title>`
+- Utilisation de l’attribut `Title` dans la directive `<%@ Page %>`
+- Définition par programmation de la propriété `Title` de la page à l’aide d’un code comme `Page.Title="title"` ou `Page.Header.Title="title"`.
 
-Contenu de pages n’ont pas un `<title>` élément, tel qu’il est défini dans la page maître. Par conséquent, pour définir le titre d’une page de contenu, vous pouvez utiliser la `<%@ Page %>` de directive `Title` attribut ou définir par programme.
+Les pages de contenu n’ont pas d’élément `<title>`, tel qu’il est défini dans la page maître. Par conséquent, pour définir le titre d’une page de contenu, vous pouvez utiliser l’attribut `Title` de la directive `<%@ Page %>` ou le définir par programmation.
 
-### <a name="setting-the-pages-title-declaratively"></a>Définition de façon déclarative titre de la Page
+### <a name="setting-the-pages-title-declaratively"></a>Définition déclarative du titre de la page
 
-Titre d’une page de contenu permet de façon déclarative par la `Title` attribut de la [ `<%@ Page %>` directive](https://msdn.microsoft.com/library/ydy4x04a.aspx). Cette propriété peut être définie en modifiant directement le `<%@ Page %>` directive ou via la fenêtre Propriétés. Examinons les deux approches.
+Le titre d’une page de contenu peut être défini de façon déclarative via l’attribut `Title` de la [directive`<%@ Page %>`](https://msdn.microsoft.com/library/ydy4x04a.aspx). Cette propriété peut être définie en modifiant directement la directive `<%@ Page %>` ou le Fenêtre Propriétés. Examinons les deux approches.
 
-À partir de la vue de Source, recherchez la `<%@ Page %>` directive, qui est en haut du balisage déclaratif de la page. Le `<%@ Page %>` directive pour `Default.aspx` suit :
+À partir de la vue source, localisez la directive `<%@ Page %>`, qui se trouve en haut de la balise déclarative de la page. La directive `<%@ Page %>` pour `Default.aspx` suit :
 
 [!code-aspx[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample3.aspx)]
 
-Le `<%@ Page %>` directive spécifie les attributs spécifiques à la page utilisés par le moteur ASP.NET lors de l’analyse et la compilation de la page. Cela inclut son fichier de page maître, l’emplacement de son fichier de code et son titre, parmi d’autres informations.
+La directive `<%@ Page %>` spécifie des attributs spécifiques à la page utilisés par le moteur ASP.NET lors de l’analyse et de la compilation de la page. Cela comprend le fichier de la page maître, l’emplacement de son fichier de code et son titre, entre autres informations.
 
-Par défaut, lorsque vous créez une nouvelle page de contenu Visual Studio définit le `Title` attribut « Page sans titre ». Modification `Default.aspx`de `Title` d’attribut à partir de la « Page sans titre » à « Didacticiels de Page maître », puis affichez la page via un navigateur. La figure 1 illustre la barre de titre du navigateur, ce qui reflète le nouveau titre de page.
+Par défaut, lors de la création d’une page de contenu, Visual Studio affecte à l’attribut `Title` la valeur « page sans titre ». Modifiez l’attribut `Title` de `Default.aspx`de « page sans titre » en « didacticiels de page maître », puis affichez la page via un navigateur. La figure 1 montre la barre de titre du navigateur, qui reflète le nouveau titre de la page.
 
-![Barre de titre du navigateur affiche maintenant &quot;didacticiels de Page maître&quot; au lieu de &quot;Page sans titre&quot;](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image1.png)
+![La barre de titre du navigateur affiche maintenant &quot;didacticiels sur les pages maîtres&quot; au lieu de &quot;page sans titre&quot;](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image1.png)
 
-**Figure 01**: Barre de titre du navigateur affiche maintenant les « Didacticiels de la Page maître » au lieu de « Page sans titre »
+**Figure 01**: la barre de titre du navigateur affiche maintenant « didacticiels de page maître » au lieu de « page sans titre »
 
-Titre de la page peut également être défini à partir de la fenêtre Propriétés. À partir de la fenêtre Propriétés, sélectionnez le DOCUMENT dans la liste déroulante aux propriétés de charge niveau de la page, ce qui inclut le `Title` propriété. La figure 2 montre la fenêtre Propriétés après `Title` a été défini sur « Didacticiels de Page maître ».
+Le titre de la page peut également être défini à partir de la Fenêtre Propriétés. Dans la Fenêtre Propriétés, sélectionnez DOCUMENT dans la liste déroulante pour charger les propriétés au niveau de la page, ce qui comprend la propriété `Title`. La figure 2 illustre la Fenêtre Propriétés une fois que `Title` a été défini sur « didacticiels de page maître ».
 
-![Vous pouvez configurer le titre de la fenêtre Propriétés, trop](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image2.png)
+![Vous pouvez également configurer le titre à partir de la fenêtre Propriétés.](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image2.png)
 
-**Figure 02**: Vous pouvez configurer le titre de la fenêtre Propriétés, trop
+**Figure 02**: vous pouvez configurer le titre à partir de la fenêtre Propriétés.
 
-### <a name="setting-the-pages-title-programmatically"></a>Définition de titre de la Page par programmation
+### <a name="setting-the-pages-title-programmatically"></a>Définition du titre de la page par programmation
 
-La page maître `<head runat="server">` balisage est traduit en une [ `HtmlHead` classe](https://msdn.microsoft.com/library/system.web.ui.htmlcontrols.htmlhead.aspx) instance lorsque la page est affichée par le moteur ASP.NET. Le `HtmlHead` classe a un [ `Title` propriété](https://msdn.microsoft.com/library/system.web.ui.htmlcontrols.htmlhead.title.aspx) dont la valeur est reflétée dans le rendu `<title>` élément. Cette propriété est accessible à partir de la classe de code-behind d’une page ASP.NET via `Page.Header.Title`; ce même propriété est également accessible `Page.Title`.
+Le balisage `<head runat="server">` de la page maître est traduit en une instance de [classe`HtmlHead`](https://msdn.microsoft.com/library/system.web.ui.htmlcontrols.htmlhead.aspx) lorsque la page est rendue par le moteur ASP.net. La classe `HtmlHead` a une [propriété`Title`](https://msdn.microsoft.com/library/system.web.ui.htmlcontrols.htmlhead.title.aspx) dont la valeur est reflétée dans l’élément `<title>` rendu. Cette propriété est accessible à partir de la classe code-behind d’une page ASP.NET via `Page.Header.Title`; cette même propriété est également accessible via `Page.Title`.
 
-Exercez-vous à titre de la page par programme, accédez à la `About.aspx` code-behind de la page de classe et créer un gestionnaire d’événements de la page `Load` événement. Ensuite, définissez le titre de la page « didacticiels de Page maître :: Environ :: *date*», où *date* est la date actuelle. Après avoir ajouté ce code votre `Page_Load` Gestionnaire d’événements doit ressembler à ce qui suit :
+Pour vous entraîner à définir par programmation le titre de la page, accédez à la classe code-behind de la page `About.aspx` et créez un gestionnaire d’événements pour l’événement `Load` de la page. Ensuite, définissez le titre de la page sur « didacticiels de page maître :: about :: *Date*», où *Date* est la date actuelle. Après avoir ajouté ce code, votre gestionnaire d’événements `Page_Load` doit se présenter comme suit :
 
 [!code-vb[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample4.vb)]
 
-La figure 3 illustre la barre de titre du navigateur lors de la visite le `About.aspx` page.
+La figure 3 illustre la barre de titre du navigateur lors de la visite de la page `About.aspx`.
 
-![Titre de la Page est définie par programme et inclut la Date actuelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image3.png)
+![Le titre de la page est défini par programmation et comprend la date actuelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image3.png)
 
-**Figure 03**: Titre de la Page est définie par programme et inclut la Date actuelle
+**Figure 03**: le titre de la page est défini par programmation et comprend la date actuelle
 
-## <a name="step-2-automatically-assigning-a-page-title"></a>Étape 2 : Attribuer automatiquement un titre de Page
+## <a name="step-2-automatically-assigning-a-page-title"></a>Étape 2 : attribution automatique d’un titre de page
 
-Comme nous l’avons vu à l’étape 1, le titre d’une page peut être définie de manière déclarative ou par programmation. Si vous oubliez de modifier explicitement le titre pour qu’elle soit plus descriptive, toutefois, votre page aura le titre par défaut, « Page sans titre ». Dans l’idéal, titre de la page est automatiquement défini pour nous dans le cas où nous ne spécifions pas explicitement sa valeur. Par exemple, si lors de l’exécution le titre de la page est « Page sans titre », nous pourrions ont pour titre automatiquement mis à jour pour être le même que le nom de fichier de la page ASP.NET. La bonne nouvelle est qu’avec un peu de travail initial, qu'il est possible d’avoir le titre assigné automatiquement.
+Comme nous l’avons vu à l’étape 1, le titre d’une page peut être défini de façon déclarative ou par programme. Toutefois, si vous oubliez de remplacer explicitement le titre par un nom plus descriptif, votre page aura le titre par défaut « page sans titre ». Dans l’idéal, le titre de la page est défini automatiquement pour nous en cas de non-spécification explicite de sa valeur. Par exemple, si au moment de l’exécution le titre de la page est « page sans titre », nous pouvons souhaiter que le titre soit automatiquement mis à jour pour être le même que le nom de fichier de la page ASP.NET. La bonne nouvelle, c’est qu’avec un peu de travail initial, il est possible d’attribuer automatiquement le titre.
 
-Toutes les pages web ASP.NET dérivent la `Page` classe dans l’espace de noms System.Web.UI. Le `Page` classe définit les fonctionnalités minimales nécessaires à une page ASP.NET et expose des propriétés essentielles telles que `IsPostBack`, `IsValid`, `Request`, et `Response`, entre autres. Souvent, chaque page dans une application web nécessite des fonctionnalités ou des fonctionnalités supplémentaires. Une méthode courante de fournir ce consiste à créer une classe de page de base personnalisée. Une classe de page de base personnalisée est une classe que vous créez et qui dérive de la `Page` classe et inclut des fonctionnalités supplémentaires. Une fois que cette classe de base a été créée, vous pouvez avoir à vos pages ASP.NET de dériver à partir de celui-ci (plutôt que la `Page` classe), ce qui offre la fonctionnalité étendue à vos pages ASP.NET.
+Toutes les pages Web ASP.NET dérivent de la classe `Page` de l’espace de noms System. Web. UI. La classe `Page` définit les fonctionnalités minimales requises par une page ASP.NET et expose des propriétés essentielles comme `IsPostBack`, `IsValid`, `Request`et `Response`, parmi de nombreuses autres. Souvent, chaque page d’une application Web requiert des fonctionnalités ou des fonctionnalités supplémentaires. Pour ce faire, il est courant de créer une classe de page de base personnalisée. Une classe de page de base personnalisée est une classe que vous créez qui dérive de la classe `Page` et qui comprend des fonctionnalités supplémentaires. Une fois cette classe de base créée, vous pouvez faire en sorte que vos pages ASP.NET dérivent de celle-ci (plutôt que la classe `Page`), offrant ainsi les fonctionnalités étendues à vos pages ASP.NET.
 
-Dans cette étape, nous créer une page de base qui définit automatiquement le titre de la page au nom de fichier de la page ASP.NET si le titre n'a pas été explicitement défini autrement. Étape 3 examine définissant le titre de la page selon le plan du site.
-
-> [!NOTE]
-> Un examen approfondi de la création et l’utilisation des classes de page de base personnalisée est dépasse le cadre de cette série de didacticiels. Pour plus d’informations, consultez [à l’aide d’une classe de Base personnalisée pour les Classes de Code-Behind de vos Pages ASP.NET](http://aspnet.4guysfromrolla.com/articles/041305-1.aspx).
-
-### <a name="creating-the-base-page-class"></a>Création de la classe de Page de Base
-
-Notre première tâche consiste à créer une classe de page de base, qui est une classe qui étend la `Page` classe. Commencez par ajouter un `App_Code` dossier à votre projet en cliquant sur le nom du projet dans l’Explorateur de solutions, choisissez Ajouter le dossier ASP.NET, puis en sélectionnant `App_Code`. Ensuite, avec le bouton droit sur le `App_Code` dossier et ajoutez une nouvelle classe nommée `BasePage.vb`. La figure 4 illustre l’Explorateur de solutions après la `App_Code` dossier et `BasePage.vb` classe ont été ajoutés.
-
-![Ajouter un dossier App_Code et une classe nommée BasePage](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image4.png)
-
-**Figure 04**: Ajouter un `App_Code` dossier et une classe nommée `BasePage`
+Dans cette étape, nous créons une page de base qui définit automatiquement le titre de la page sur le nom de fichier de la page ASP.NET, si le titre n’a pas été explicitement défini. L’étape 3 examine la définition du titre de la page en fonction du plan du site.
 
 > [!NOTE]
-> Visual Studio prend en charge deux modes de gestion de projet : Projets de Site Web et projets d’Application Web. Le `App_Code` dossier est conçu pour être utilisé avec le modèle de projet de Site Web. Si vous utilisez le modèle de projet d’Application Web, placez le `BasePage.vb` classe dans un dossier nommé autrement que `App_Code`, tel que `Classes`. Pour plus d’informations sur ce sujet, reportez-vous à [migration d’un projet de Site Web à un projet d’Application Web](http://webproject.scottgu.com/VisualBasic/Migration2/Migration2.aspx).
+> La création et l’utilisation de classes de page de base personnalisées n’entrent pas dans le cadre de cette série de didacticiels. Pour plus d’informations, consultez [utilisation d’une classe de base personnalisée pour les classes code-behind de vos Pages ASP.net](http://aspnet.4guysfromrolla.com/articles/041305-1.aspx).
 
-Étant donné que la page de base personnalisée sert de classe de base pour les classes de code-behind des pages ASP.NET, il doit étendre la `Page` classe.
+### <a name="creating-the-base-page-class"></a>Création de la classe de base page
+
+Notre première tâche consiste à créer une classe de page de base, qui est une classe qui étend la classe `Page`. Commencez par ajouter un dossier `App_Code` à votre projet en cliquant avec le bouton droit sur le nom du projet dans la Explorateur de solutions, en choisissant Ajouter un dossier ASP.NET, puis en sélectionnant `App_Code`. Ensuite, cliquez avec le bouton droit sur le dossier `App_Code` et ajoutez une nouvelle classe nommée `BasePage.vb`. La figure 4 montre les Explorateur de solutions après l’ajout du dossier `App_Code` et de la classe `BasePage.vb`.
+
+![Ajoutez un dossier App_Code et une classe nommée BasePage](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image4.png)
+
+**Figure 04**: ajouter un dossier `App_Code` et une classe nommée `BasePage`
+
+> [!NOTE]
+> Visual Studio prend en charge deux modes de gestion de projet : les projets de site Web et les projets d’application Web. Le dossier `App_Code` est conçu pour être utilisé avec le modèle de projet de site Web. Si vous utilisez le modèle de projet d’application Web, placez la classe `BasePage.vb` dans un dossier nommé autre chose que `App_Code`, tel que `Classes`. Pour plus d’informations sur cette rubrique, consultez [migration d’un projet de site Web vers un projet d’application Web](http://webproject.scottgu.com/VisualBasic/Migration2/Migration2.aspx).
+
+Étant donné que la page de base personnalisée sert de classe de base pour les classes code-behind des pages ASP.NET, elle doit étendre la classe `Page`.
 
 [!code-vb[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample5.vb)]
 
-Chaque fois qu’une page ASP.NET est demandée, elle parcoure une série d’étapes, sanctionné dans la page demandée est rendue en HTML. Nous pouvons exploiter dans une étape en remplaçant le `Page` la classe `OnEvent` (méthode). Pour notre base de page Nous allons définir automatiquement le titre s’il n’a pas été explicitement spécifié par le `LoadComplete` scène (qui, comme vous l’avez peut-être deviné, se produit après le `Load` étape).
+Chaque fois qu’une page ASP.NET est demandée, elle passe par une série d’étapes, aboutissant à la restitution de la page demandée en HTML. Nous pouvons appuyer sur une étape en remplaçant la méthode `OnEvent` de la classe `Page`. Pour notre page de base, nous allons définir automatiquement le titre s’il n’a pas été explicitement spécifié par l’étape de `LoadComplete` (ce qui, comme vous l’avez peut-être deviné, se produit après l’étape de `Load`).
 
-Pour ce faire, vous devez remplacer le `OnLoadComplete` (méthode) et entrez le code suivant :
+Pour ce faire, remplacez la méthode `OnLoadComplete` et entrez le code suivant :
 
 [!code-vb[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample6.vb)]
 
-Le `OnLoadComplete` méthode commence par déterminer si le `Title` propriété n'a pas encore été définie explicitement. Si le `Title` est propriété `Nothing`, une chaîne vide, ou a la valeur « Page sans titre », elle est affectée au nom de fichier de la page ASP.NET demandée. Le chemin d’accès physique à la page ASP.NET demandée - `C:\MySites\Tutorial03\Login.aspx`, par exemple, est accessible via la `Request.PhysicalPath` propriété. Le `Path.GetFileNameWithoutExtension` méthode est utilisée pour extraire uniquement la partie du nom de fichier, et ce nom de fichier est ensuite assigné à la `Page.Title` propriété.
+La méthode `OnLoadComplete` commence par déterminer si la propriété `Title` n’a pas encore été explicitement définie. Si la propriété `Title` est `Nothing`, une chaîne vide ou a la valeur « page sans titre », elle est assignée au nom de fichier de la page ASP.NET demandée. Le chemin d’accès physique à la page ASP.NET demandée-`C:\MySites\Tutorial03\Login.aspx`, par exemple, est accessible via la propriété `Request.PhysicalPath`. La méthode `Path.GetFileNameWithoutExtension` est utilisée pour extraire uniquement la partie de nom de fichier, et ce nom de fichier est ensuite assigné à la propriété `Page.Title`.
 
 > [!NOTE]
-> Je vous invite à améliorer cette logique pour améliorer le format du titre. Par exemple, si le nom de fichier de la page est `Company-Products.aspx`, le code ci-dessus génère le titre « Produits de la société », mais dans l’idéal, le tiret aurait été remplacé par un espace, comme dans « Produits d’entreprise ». En outre, vous pouvez envisager un espace chaque fois qu’un changement de casse. Autrement dit, envisagez d’ajouter du code qui transforme le nom de fichier `OurBusinessHours.aspx` à un titre de « notre entreprise heures ».
+> Je vous invite à améliorer cette logique pour améliorer le format du titre. Par exemple, si le nom de fichier de la page est `Company-Products.aspx`, le code ci-dessus produit le titre « Company-Products », mais dans l’idéal, le tiret est remplacé par un espace, comme dans « Company Products ». Envisagez également d’ajouter un espace à chaque fois qu’un changement de casse est nécessaire. Autrement dit, pensez à ajouter du code qui transforme le nom de fichier `OurBusinessHours.aspx` en titre « notre heure d’ouverture ».
 
-### <a name="having-the-content-pages-inherit-the-base-page-class"></a>Avoir les Pages de contenu d’hériter de la classe de Page de Base
+### <a name="having-the-content-pages-inherit-the-base-page-class"></a>Utilisation des pages de contenu pour hériter de la classe de base page
 
-Nous devons maintenant mettre à jour les pages ASP.NET dans notre site dériver à partir de la page de base personnalisée (`BasePage`) au lieu du `Page` classe. Pour ce faire, affichez à chaque classe code-behind et modifiez la déclaration de classe à partir de :
+Nous devons maintenant mettre à jour les pages ASP.NET de notre site pour qu’elles dérivent de la page de base personnalisée (`BasePage`) au lieu de la classe `Page`. Pour ce faire, accédez à chaque classe code-behind et modifiez la déclaration de classe à partir de :
 
 [!code-vb[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample7.vb)]
 
@@ -143,163 +143,163 @@ Nous devons maintenant mettre à jour les pages ASP.NET dans notre site dériver
 
 [!code-vb[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample8.vb)]
 
-Après cela, visitez le site via un navigateur. Si vous visitez une page dont le titre est explicitement défini, tel que `Default.aspx` ou `About.aspx`, le titre spécifié explicitement est utilisé. Si, toutefois, vous visitez une page dont le titre n’a pas été modifié à partir de la valeur par défaut (« Page sans titre »), la classe de page de base définit le titre au nom de fichier de la page.
+À l’issue de cette procédure, visitez le site via un navigateur. Si vous visitez une page dont le titre est défini explicitement, par exemple `Default.aspx` ou `About.aspx`, le titre explicitement spécifié est utilisé. Toutefois, si vous visitez une page dont le titre n’a pas été modifié par rapport à la valeur par défaut (« page sans titre »), la classe de base page définit le titre sur le nom de fichier de la page.
 
-La figure 5 illustre le `MultipleContentPlaceHolders.aspx` page lorsqu’ils sont affichés via un navigateur. Notez que le titre est précisément de la page Nom du fichier (moins l’extension), « MultipleContentPlaceHolders ».
+La figure 5 illustre la page de `MultipleContentPlaceHolders.aspx` lorsque vous l’affichez dans un navigateur. Notez que le titre est précisément le nom de fichier de la page (moins l’extension), « MultipleContentPlaceHolders ».
 
-[![Si un titre n’est pas explicitement spécifié, le nom de fichier de la Page est automatiquement utilisé](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image6.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image5.png)
+[![si un titre n’est pas explicitement spécifié, le nom de fichier de la page est automatiquement utilisé](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image6.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image5.png)
 
-**Figure 05**: Si un titre n’est pas explicitement spécifié, le nom de fichier de la Page est automatiquement utilisé ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image7.png))
+**Figure 05**: si un titre n’est pas explicitement spécifié, le nom de fichier de la page est automatiquement utilisé ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image7.png))
 
-## <a name="step-3-basing-the-page-title-on-the-site-map"></a>Étape 3 : Baser le titre de la Page sur le plan du Site
+## <a name="step-3-basing-the-page-title-on-the-site-map"></a>Étape 3 : baser le titre de la page sur le plan du site
 
-ASP.NET offre une infrastructure de carte de site robuste qui permet aux développeurs de page définir un plan de site hiérarchique dans une ressource externe (par exemple, une table de base de données ou fichier XML), ainsi que les contrôles Web pour afficher des informations sur le plan du site (par exemple, le contrôle SiteMapPath, Menus et contrôles TreeView).
+ASP.NET offre une infrastructure de plan de site robuste qui permet aux développeurs de pages de définir un plan de site hiérarchique dans une ressource externe (par exemple, un fichier XML ou une table de base de données), ainsi que des contrôles Web permettant d’afficher des informations sur le plan de site (par exemple, SiteMapPath, Les contrôles menu et TreeView).
 
-La structure de plan de site est également accessible par programmation à partir de la classe de code-behind d’une page ASP.NET. De cette manière nous pouvons automatiquement définir le titre d’une page au titre de son nœud correspondant dans le plan du site. Nous allons améliorer la `BasePage` classe créée à l’étape 2 afin qu’il offre cette fonctionnalité. Mais tout d’abord, nous devons créer un plan de site pour notre site.
+La structure de plan de site est également accessible par programme à partir de la classe code-behind d’une page ASP.NET. De cette façon, nous pouvons définir automatiquement le titre d’une page sur le titre de son nœud correspondant dans le plan du site. Nous allons améliorer la classe `BasePage` créée à l’étape 2 afin qu’elle offre cette fonctionnalité. Nous devons tout d’abord créer un plan de site pour notre site.
 
 > [!NOTE]
-> Ce didacticiel suppose que le lecteur est déjà familiarisé avec l’ASP. Fonctionnalités de mappage de site du NET. Pour plus d’informations sur l’utilisation de la carte de site, consultez ma série d’articles de plusieurs parties, [ASP d’examen. Navigation sur le Site de NET](http://aspnet.4guysfromrolla.com/articles/111605-1.aspx).
+> Ce didacticiel part du principe que le lecteur est déjà familiarisé avec ASP. Fonctionnalités du plan de site du réseau. Pour plus d’informations sur l’utilisation du plan de site, consultez la série d’articles en plusieurs parties, [examen d’ASP. Navigation sur le site NET](http://aspnet.4guysfromrolla.com/articles/111605-1.aspx).
 
-### <a name="creating-the-site-map"></a>Création du plan du Site
+### <a name="creating-the-site-map"></a>Création du plan de site
 
-Le système de mappage de site est construit sur le [modèle de fournisseur](http://aspnet.4guysfromrolla.com/articles/101905-1.aspx), qui dissocie le plan du site API à partir de la logique qui sérialise les informations de plan de site entre la mémoire et un magasin persistant. Le .NET Framework est livré avec le [ `XmlSiteMapProvider` classe](https://msdn.microsoft.com/library/system.web.xmlsitemapprovider.aspx), qui est le fournisseur de plan de site par défaut. Comme son nom l’indique, `XmlSiteMapProvider` utilise un fichier XML comme magasin de mappage de site. Nous allons utiliser ce fournisseur pour la définition de notre plan de site.
+Le système de plan de site est créé au-dessus du [modèle de fournisseur](http://aspnet.4guysfromrolla.com/articles/101905-1.aspx), qui découple l’API de plan de site de la logique qui sérialise les informations de plan de site entre la mémoire et un magasin persistant. Le .NET Framework est fourni avec la [classe`XmlSiteMapProvider`](https://msdn.microsoft.com/library/system.web.xmlsitemapprovider.aspx), qui est le fournisseur de plan de site par défaut. Comme son nom l’indique, `XmlSiteMapProvider` utilise un fichier XML comme magasin de plan de site. Utilisons ce fournisseur pour définir notre plan de site.
 
-Commencez par créer un fichier de mappage de site dans le dossier de racine du site Web nommé `Web.sitemap`. Pour ce faire, avec le bouton droit sur le nom de site Web dans l’Explorateur de solutions, choisissez Ajouter un nouvel élément, sélectionnez le modèle de plan de Site. Assurez-vous que le fichier est nommé `Web.sitemap` et cliquez sur Ajouter.
+Commencez par créer un fichier de plan de site dans le dossier racine du site Web nommé `Web.sitemap`. Pour ce faire, cliquez avec le bouton droit sur le nom du site Web dans Explorateur de solutions, choisissez Ajouter un nouvel élément, puis sélectionnez le modèle plan du site. Assurez-vous que le fichier est nommé `Web.sitemap`, puis cliquez sur Ajouter.
 
-[![Ajoutez un fichier nommé Web.sitemap au dossier de racine du site Web](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image9.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image8.png)
+[![ajouter un fichier nommé Web. sitemap au dossier racine du site Web](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image9.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image8.png)
 
-**Figure 06**: Ajouter un fichier nommé `Web.sitemap` au dossier racine du site Web de ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image10.png))
+**Figure 06**: ajouter un fichier nommé `Web.sitemap` au dossier racine du site Web ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image10.png))
 
-Ajoutez le code XML suivant à la `Web.sitemap` fichier :
+Ajoutez le code XML suivant au fichier `Web.sitemap` :
 
 [!code-xml[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample9.xml)]
 
-Ce fichier XML définit la structure de plan de site hiérarchique illustrée à la Figure 7.
+Ce code XML définit la structure de plan de site hiérarchique présentée à la figure 7.
 
-![Le plan de Site est actuellement composé de trois nœuds](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image11.png)
+![Le plan de site est actuellement composé de trois nœuds de plan de site](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image11.png)
 
-**Figure 07**: Le plan de Site est actuellement composé de trois nœuds
+**Figure 07**: le plan de site est actuellement composé de trois nœuds de plan de site
 
-Nous mettrons à jour la structure de plan de site dans les didacticiels futures pendant que nous ajoutons de nouveaux exemples.
+Nous allons mettre à jour la structure de plan de site dans les prochains didacticiels à mesure que nous ajouterons de nouveaux exemples.
 
-### <a name="updating-the-master-page-to-include-navigation-web-controls"></a>La mise à jour de la Page maître pour inclure les contrôles de Navigation Web
+### <a name="updating-the-master-page-to-include-navigation-web-controls"></a>Mise à jour de la page maître pour inclure des contrôles Web de navigation
 
-Maintenant que nous disposons d’un plan de site défini, nous allons mettre à jour la page maître pour inclure les contrôles de navigation Web. Plus précisément, nous allons ajouter un contrôle ListView à la colonne de gauche dans la section de leçons qui restitue une liste non triée avec un élément de liste pour chaque nœud défini dans le plan du site.
+Maintenant que nous disposons d’un plan de site défini, nous allons mettre à jour la page maître pour inclure des contrôles Web de navigation. En particulier, nous allons ajouter un contrôle ListView à la colonne de gauche de la section leçons qui restitue une liste non triée avec un élément de liste pour chaque nœud défini dans le plan de site.
 
 > [!NOTE]
-> Le contrôle ListView est une nouveauté pour ASP.NET version 3.5. Si vous utilisez une version antérieure d’ASP.NET, utilisez plutôt le contrôle du répéteur. Pour plus d’informations sur le contrôle ListView, consultez [ListView à l’aide de ASP.NET 3.5 et les contrôles DataPager](http://aspnet.4guysfromrolla.com/articles/122607-1.aspx).
+> Le contrôle ListView est une nouveauté de ASP.NET version 3,5. Si vous utilisez une version antérieure de ASP.NET, utilisez le contrôle Repeater à la place. Pour plus d’informations sur le contrôle ListView, consultez [utilisation des contrôles ListView et DataPager de ASP.net 3.5](http://aspnet.4guysfromrolla.com/articles/122607-1.aspx).
 
-Démarrez en supprimant le balisage existant de la liste non triée de la section de leçons. Ensuite, faites glisser un contrôle ListView à partir de la boîte à outils et déposez-le sous les leçons titre. Le ListView se trouve dans la section données de la boîte à outils, en même temps que les autres contrôles d’affichage : le GridView, DetailsView et FormView. Définir le ListView `ID` propriété `LessonsList`.
+Commencez par supprimer le balisage de liste non triée existant de la section leçons. Ensuite, faites glisser un contrôle ListView de la boîte à outils et déposez-le sous l’en-tête leçons. Le ListView se trouve dans la section données de la boîte à outils, parallèlement aux autres contrôles d’affichage : GridView, DetailsView et FormView. Définissez la propriété `ID` de ListView sur `LessonsList`.
 
-À partir de l’Assistant de Configuration de Source de données choisir de lier le ListView à un nouveau contrôle SiteMapDataSource nommé `LessonsDataSource`. Le contrôle SiteMapDataSource retourne la structure hiérarchique du système de site map.
+À partir de l’Assistant Configuration de source de données, choisissez de lier le ListView à un nouveau contrôle SiteMapDataSource nommé `LessonsDataSource`. Le contrôle SiteMapDataSource retourne la structure hiérarchique du système de plan de site.
 
-[![Lier un contrôle SiteMapDataSource au contrôle ListView de LessonsList](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image13.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image12.png)
+[![lier un contrôle SiteMapDataSource au contrôle ListView LessonsList](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image13.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image12.png)
 
-**Figure 08**: Lier un contrôle SiteMapDataSource au contrôle ListView LessonsList ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image14.png))
+**Figure 08**: lier un contrôle SiteMapDataSource au contrôle ListView LessonsList ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image14.png))
 
-Après avoir créé le contrôle SiteMapDataSource, nous devons définir les modèles de la ListView afin qu’il génère une liste non triée avec un élément de liste pour chaque nœud retourné par le contrôle SiteMapDataSource. Cela peut être accompli à l’aide de la balise de modèle suivante :
+Après avoir créé le contrôle SiteMapDataSource, nous devons définir les modèles de ListView afin qu’il restitue une liste non triée avec un élément de liste pour chaque nœud retourné par le contrôle SiteMapDataSource. Pour ce faire, vous pouvez utiliser le balisage de modèle suivant :
 
 [!code-aspx[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample10.aspx)]
 
-Le `LayoutTemplate` génère le balisage pour une liste non triée (`<ul>...</ul>`) alors que le `ItemTemplate` restitue chaque élément retourné par SiteMapDataSource comme un élément de liste (`<li>`) qui contient un lien vers la leçon particulier.
+Le `LayoutTemplate` génère le balisage pour une liste non triée (`<ul>...</ul>`) tandis que le `ItemTemplate` restitue chaque élément retourné par SiteMapDataSource sous la forme d’un élément de liste (`<li>`) qui contient un lien vers la leçon en question.
 
-Après avoir configuré les modèles de la ListView, visitez le site Web. Comme le montre la Figure 9, la section de leçons contient un seul élément de liste à puces, accueil. Où se trouvent les propos et à l’aide de leçons de contrôles ContentPlaceHolder plusieurs ? SiteMapDataSource est conçue pour retourner un ensemble hiérarchique de données, mais le contrôle ListView peut uniquement afficher un seul niveau de la hiérarchie. Par conséquent, seul le premier niveau de nœuds retourné par SiteMapDataSource s’affiche.
+Une fois les modèles de ListView configurés, visitez le site Web. Comme le montre la figure 9, la section leçons contient un seul élément à puces, page d’hébergement. Où se trouvent les leçons sur et à l’aide de plusieurs contrôles ContentPlaceHolder ? SiteMapDataSource est conçu pour retourner un ensemble hiérarchique de données, mais le contrôle ListView ne peut afficher qu’un seul niveau de la hiérarchie. Par conséquent, seul le premier niveau des nœuds de plan de site retournés par SiteMapDataSource est affiché.
 
-[![La Section leçons contient un seul élément de liste](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image16.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image15.png)
+[![la section leçons contient un seul élément de liste](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image16.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image15.png)
 
-**Figure 09**: La Section leçons contient un seul élément de liste ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image17.png))
+**Figure 09**: la section leçons contient un seul élément de liste ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image17.png))
 
-Pour afficher plusieurs niveaux nous pourrions imbriquer plusieurs ListView dans le `ItemTemplate`. Cette technique a été examinée dans le [ *Pages maîtres et Navigation dans les sites* didacticiel](../../data-access/introduction/master-pages-and-site-navigation-vb.md) de mon [fonctionne avec la série de didacticiels de données](../../data-access/index.md). Toutefois, pour cette série de didacticiels notre plan de site contient uniquement un deux niveaux : Accueil (haut niveau) ; et chaque leçon en tant qu’enfant d’accueil. Au lieu de l’élaboration d’un ListView imbriqué, nous pouvons demander à la place à SiteMapDataSource pour ne pas retourner le nœud de démarrage en définissant son [ `ShowStartingNode` propriété](https://msdn.microsoft.com/library/system.web.ui.webcontrols.sitemapdatasource.showstartingnode.aspx) à `False`. L’effet net est que SiteMapDataSource démarre en renvoyant le deuxième niveau de nœuds de plan de site.
+Pour afficher plusieurs niveaux, nous pourrions imbriquer plusieurs ListViews au sein de la `ItemTemplate`. Cette technique a été examinée dans le [didacticiel *pages maîtres et navigation* ](../../data-access/introduction/master-pages-and-site-navigation-vb.md) dans le site consacré [à la série de didacticiels](../../data-access/index.md)sur l’utilisation des données. Toutefois, pour cette série de didacticiels, notre plan de site contient seulement deux niveaux : la page d’hébergement (le plus haut niveau); et chaque leçon en tant qu’enfant de la famille. Au lieu d’élaborer un ListView imbriqué, nous pouvons demander à SiteMapDataSource de ne pas retourner le nœud de départ en définissant sa [propriété`ShowStartingNode`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.sitemapdatasource.showstartingnode.aspx) sur `False`. L’effet net est que la SiteMapDataSource commence par retourner le deuxième niveau de nœuds de plan de site.
 
-Avec cette modification, le ListView affiche les éléments de liste à puces pour le propos et à l’aide de plusieurs contrôles ContentPlaceHolder leçons, mais omet un élément de liste à puces pour la maison. Pour résoudre ce problème, nous pouvons ajouter explicitement un élément de liste à puces pour la maison dans le `LayoutTemplate`:
+Avec cette modification, ListView affiche des puces pour les leçons sur et à l’aide de plusieurs contrôles ContentPlaceHolder, mais omet un élément de puce pour la page d’hébergement. Pour y remédier, nous pouvons ajouter explicitement un élément à puce pour la page d’hébergement dans le `LayoutTemplate`:
 
 [!code-aspx[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample11.aspx)]
 
-En configurant SiteMapDataSource pour omettre le nœud de démarrage et en ajoutant explicitement un élément de liste à puces d’accueil, la section leçons affiche désormais la sortie prévue.
+Si vous configurez SiteMapDataSource pour omettre le nœud de départ et ajouter explicitement un élément à puce personnelle, la section leçons affiche maintenant la sortie prévue.
 
-[![La Section leçons contient un élément de liste à puces pour chaque nœud enfant et personnels](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image19.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image18.png)
+[![la section leçons contient un élément à puce pour la page d’hébergement et chaque nœud enfant](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image19.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image18.png)
 
-**Figure 10**: La Section leçons contient un élément de liste à puces pour chaque nœud enfant et personnels ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image20.png))
+**Figure 10**: la section leçons contient un élément à puce pour la page d’hébergement et chaque nœud enfant ([cliquez pour afficher l’image en taille réelle](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image20.png))
 
-### <a name="setting-the-title-based-on-the-site-map"></a>Définition du titre basé sur le plan du Site
+### <a name="setting-the-title-based-on-the-site-map"></a>Définition du titre en fonction du plan du site
 
-Avec le plan du site en place, nous pouvons mettre à jour notre `BasePage` classe à utiliser le titre spécifié dans le plan du site. Comme nous l’avons fait à l’étape 2, nous voulons uniquement utiliser les titre du nœud de plan de site si le titre de la page n’a pas été défini explicitement par le développeur de pages. Si la page demandée n’a pas défini de manière explicite titre de la page et est introuvable dans le plan du site, puis nous allons revenir à l’aide du nom de fichier de la page demandée (moins l’extension), comme nous l’avons fait à l’étape 2. Figure 11 illustre ce processus de décision.
+Une fois le plan de site en place, nous pouvons mettre à jour notre classe de `BasePage` pour utiliser le titre spécifié dans le plan du site. Comme nous l’avons fait à l’étape 2, nous souhaitons uniquement utiliser le titre du nœud de plan de site si le titre de la page n’a pas été explicitement défini par le développeur de pages. Si la page demandée n’a pas de titre de page explicitement défini et qu’elle est introuvable dans le plan de site, nous revenons à l’utilisation du nom de fichier de la page demandée (moins l’extension), comme nous l’avons fait à l’étape 2. La figure 11 illustre ce processus de décision.
 
-![En l’Absence d’une explicitement définir titre de la Page, titre du Site carte nœud correspondant est utilisé](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image21.png)
+![En l’absence d’un titre de page défini explicitement, le titre du nœud de plan de site correspondant est utilisé](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image21.png)
 
-**Figure 11**: En l’Absence d’une explicitement définir titre de la Page, titre du Site carte nœud correspondant est utilisé
+**Figure 11**: en l’absence d’un titre de page défini explicitement, le titre du nœud de plan de site correspondant est utilisé
 
-Mise à jour le `BasePage` la classe `OnLoadComplete` méthode pour inclure le code suivant :
+Mettez à jour la méthode `OnLoadComplete` de la classe `BasePage` pour inclure le code suivant :
 
 [!code-vb[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample12.vb)]
 
-Comme auparavant, la `OnLoadComplete` méthode commence par déterminer si titre de la page a été défini explicitement. Si `Page.Title` est `Nothing`, une chaîne vide, ou est affectée la valeur « Page sans titre », puis le code affecte automatiquement une valeur à `Page.Title`.
+Comme précédemment, la méthode `OnLoadComplete` commence par déterminer si le titre de la page a été défini explicitement. Si `Page.Title` est `Nothing`, une chaîne vide ou si la valeur « page sans titre » lui est assignée, le code assigne automatiquement une valeur à `Page.Title`.
 
-Pour déterminer le titre à utiliser, le code commence par référencer le [ `SiteMap` classe](https://msdn.microsoft.com/library/system.web.sitemap.aspx)de [ `CurrentNode` propriété](https://msdn.microsoft.com/library/system.web.sitemap.currentnode.aspx). `CurrentNode` Retourne le [ `SiteMapNode` ](https://msdn.microsoft.com/library/system.web.sitemapnode.aspx) instance dans le plan de site qui correspond à la page actuellement demandée. En supposant que la page actuellement demandée se trouve dans le plan du site, le `SiteMapNode`de `Title` propriété est affectée à titre de la page. Si la page actuellement demandée n’est pas dans le plan du site, `CurrentNode` retourne `Nothing` et nom de fichier de la page demandée est utilisé comme titre (comme l’a été effectuée à l’étape 2).
+Pour déterminer le titre à utiliser, le code commence par référencer la [propriété`CurrentNode`](https://msdn.microsoft.com/library/system.web.sitemap.currentnode.aspx)de la [classe`SiteMap`](https://msdn.microsoft.com/library/system.web.sitemap.aspx). `CurrentNode` retourne l’instance de [`SiteMapNode`](https://msdn.microsoft.com/library/system.web.sitemapnode.aspx) dans le plan de site qui correspond à la page actuellement demandée. En supposant que la page actuellement demandée se trouve dans le plan du site, la propriété `Title` de l' `SiteMapNode`est assignée au titre de la page. Si la page actuellement demandée ne se trouve pas dans le plan du site, `CurrentNode` retourne `Nothing` et le nom de fichier de la page demandée est utilisé comme titre (comme cela a été fait à l’étape 2).
 
-La figure 12 illustre le `MultipleContentPlaceHolders.aspx` page lorsqu’ils sont affichés via un navigateur. Étant donné que le titre de cette page n’est pas définie explicitement, titre du son site carte nœud correspondant est utilisé à la place.
+La figure 12 illustre la page de `MultipleContentPlaceHolders.aspx` lorsque vous l’affichez dans un navigateur. Étant donné que le titre de cette page n’est pas défini explicitement, le titre du nœud de plan de site correspondant est utilisé à la place.
 
-![Titre de la MultipleContentPlaceHolders.aspx Page est extraite du plan de Site](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image22.png)
+![Le titre de la page MultipleContentPlaceHolders. aspx est extrait du plan du site](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image22.png)
 
-**Figure 12**: Titre de la MultipleContentPlaceHolders.aspx Page est extraite du plan de Site
+**Figure 12**: le titre de la page MultipleContentPlaceHolders. aspx est extrait du plan du site
 
-## <a name="step-4-adding-other-page-specific-markup-to-theheadsection"></a>Étape 4 : Ajout d’autres balises spécifiques à la Page à la`<head>`Section
+## <a name="step-4-adding-other-page-specific-markup-to-theheadsection"></a>Étape 4 : ajout d’un autre balisage spécifique à la page à la section`<head>`
 
-Les étapes 1, 2 et 3 a examiné de personnalisation de la `<title>` élément sur une base de page par page. En plus de `<title>`, le `<head>` est susceptible de contenir `<meta>` éléments et `<link>` éléments. Comme indiqué précédemment dans ce didacticiel, `Site.master`de `<head>` section comprend un `<link>` élément à `Styles.css`. Étant donné que cela `<link>` élément est défini dans la page maître, il est inclus dans le `<head>` section pour toutes les pages de contenu. Mais comment pouvons-nous ajout `<meta>` et `<link>` éléments sur une base de page par page ?
+Les étapes 1, 2 et 3 ont examiné la personnalisation de l’élément `<title>` page par page. En plus de `<title>`, la section `<head>` peut contenir des éléments `<meta>` et des éléments de `<link>`. Comme indiqué précédemment dans ce didacticiel, la section `<head>` de `Site.master`comprend un élément `<link>` à `Styles.css`. Étant donné que cet élément `<link>` est défini dans la page maître, il est inclus dans la section `<head>` pour toutes les pages de contenu. Mais comment faire pour ajouter des `<meta>` et `<link>` des éléments page par page ?
 
-Le moyen le plus simple pour ajouter du contenu propre à la page à la `<head>` section consiste à créer un contrôle ContentPlaceHolder dans la page maître. Nous avons déjà un telle ContentPlaceHolder (nommé `head`). Par conséquent, pour ajouter un objet personnalisé `<head>` balisage, créer un correspondant contrôle dans la page de contenu et de placer le balisage il.
+Le moyen le plus simple d’ajouter du contenu spécifique à la page à la section `<head>` consiste à créer un contrôle ContentPlaceHolder dans la page maître. Nous avons déjà un tel ContentPlaceHolder (nommé `head`). Par conséquent, pour ajouter des balises `<head>` personnalisées, créez un contrôle de contenu correspondant dans la page et placez-y le balisage.
 
-Pour illustrer l’ajout personnalisé `<head>` balisage à une page, nous allons insérer une `<meta>` description, élément pour notre jeu de pages de contenu actuel. Le `<meta>` élément description fournit une brève description sur la page web ; la plupart des moteurs de recherche incorporent cette information dans une certaine forme lors de l’affichage des résultats de la recherche.
+Pour illustrer l’ajout de balises `<head>` personnalisées à une page, nous allons inclure un élément de description `<meta>` à notre ensemble de pages de contenu actuel. L’élément Description de `<meta>` fournit une brève description de la page Web. la plupart des moteurs de recherche incorporent ces informations sous une forme quelconque lors de l’affichage des résultats de la recherche.
 
-Un `<meta>` élément description a la forme suivante :
+Un élément de description `<meta>` se présente sous la forme suivante :
 
 [!code-html[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample13.html)]
 
-Pour ajouter cette balise à une page de contenu, ajoutez le texte ci-dessus pour le contrôle de contenu qui mappe à la page maître `head` ContentPlaceHolder. Par exemple, pour définir un `<meta>` description, élément pour `Default.aspx`, ajoutez le balisage suivant :
+Pour ajouter cette balise à une page de contenu, ajoutez le texte ci-dessus au contrôle de contenu mappé au `head` ContentPlaceHolder de la page maître. Par exemple, pour définir un élément de description `<meta>` pour `Default.aspx`, ajoutez le balisage suivant :
 
 [!code-aspx[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample14.aspx)]
 
-Étant donné que le `head` ContentPlaceHolder n’est pas dans le corps de la page HTML, le balisage ajouté au contrôle de contenu n’est pas affiché dans la vue de conception. Pour voir les `<meta>` description élément visite `Default.aspx` via un navigateur. Une fois que la page a été chargée, afficher la source et notez que le `<head>` section inclut le balisage spécifié dans le contrôle de contenu.
+Étant donné que le `head` ContentPlaceHolder ne se trouve pas dans le corps de la page HTML, le balisage ajouté au contrôle de contenu n’est pas affiché dans le Mode Création. Pour afficher l’élément de description `<meta>`, accédez `Default.aspx` via un navigateur. Une fois la page chargée, affichez la source et notez que la section `<head>` inclut le balisage spécifié dans le contrôle de contenu.
 
-Prenez un moment pour ajouter `<meta>` des éléments de description à `About.aspx`, `MultipleContentPlaceHolders.aspx`, et `Login.aspx`.
+Prenez un moment pour ajouter des éléments de description `<meta>` à `About.aspx`, `MultipleContentPlaceHolders.aspx`et `Login.aspx`.
 
-### <a name="programmatically-adding-markup-to-theheadregion"></a>Ajoutant par programme la balise à le`<head>`région
+### <a name="programmatically-adding-markup-to-theheadregion"></a>Ajout par programmation du balisage à la région`<head>`
 
-Le `head` ContentPlaceHolder permet d’ajouter de façon déclarative un balisage personnalisé à la page maître `<head>` région. Balisage personnalisée peut également être ajouté par programmation. N’oubliez pas que le `Page` la classe `Header` propriété retourne le `HtmlHead` instance définie dans la page maître (le `<head runat="server">`).
+Le `head` ContentPlaceHolder nous permet d’ajouter de façon déclarative un balisage personnalisé à la région `<head>` de la page maître. Un balisage personnalisé peut également être ajouté par programme. N’oubliez pas que la propriété `Header` de la classe `Page` retourne l’instance `HtmlHead` définie dans la page maître (le `<head runat="server">`).
 
-La possibilité d’ajouter du contenu par programmation le `<head>` région est utile lorsque le contenu à ajouter est dynamique. Par exemple il est basé sur l’utilisateur accédant à la page ; peut-être qu’il est extrait à partir d’une base de données. Quelle que soit la raison, vous pouvez ajouter du contenu à la `HtmlHead` en ajoutant des contrôles à ses `Controls` collection comme suit :
+La possibilité d’ajouter du contenu à la zone de `<head>` par programmation est utile lorsque le contenu à ajouter est dynamique. Il est peut-être basé sur l’utilisateur visitant la page. elle est peut-être extraite d’une base de données. Quelle que soit la raison, vous pouvez ajouter du contenu à la `HtmlHead` en ajoutant des contrôles à sa collection `Controls` comme suit :
 
 [!code-vb[Main](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/samples/sample15.vb)]
 
-Le code ci-dessus ajoute le `<meta>` keywords, élément pour le `<head>` région, qui fournit une liste délimitée par des virgules des mots clés qui décrivent la page. Notez que pour ajouter un `<meta>` balise que vous créez un [ `HtmlMeta` ](https://msdn.microsoft.com/library/system.web.ui.htmlcontrols.htmlmeta.aspx) d’instance, définissez son `Name` et `Content` propriétés, puis ajoutez-le à la `Header`de `Controls` collection. De même, pour ajouter par programmation un `<link>` élément, créer un [ `HtmlLink` ](https://msdn.microsoft.com/library/system.web.ui.htmlcontrols.htmllink.aspx) de l’objet, définissez ses propriétés, puis ajoutez-le à la `Header`de `Controls` collection.
+Le code ci-dessus ajoute l’élément `<meta>` Keywords à la région `<head>`, qui fournit une liste délimitée par des virgules de mots clés qui décrivent la page. Notez que pour ajouter une balise `<meta>` vous créez une [`HtmlMeta`](https://msdn.microsoft.com/library/system.web.ui.htmlcontrols.htmlmeta.aspx) instance, définissez ses propriétés `Name` et `Content`, puis ajoutez-la à la collection `Header`de `Controls`. De même, pour ajouter par programmation un élément `<link>`, créez un objet [`HtmlLink`](https://msdn.microsoft.com/library/system.web.ui.htmlcontrols.htmllink.aspx) , définissez ses propriétés, puis ajoutez-le à la collection `Controls` de `Header`.
 
 > [!NOTE]
-> Pour ajouter le balisage arbitraire, créez un [ `LiteralControl` ](https://msdn.microsoft.com/library/system.web.ui.literalcontrol.aspx) de l’instance, définissez son `Text` propriété, puis ajoutez-le à la `Header`de `Controls` collection.
+> Pour ajouter des balises arbitraires, créez une instance [`LiteralControl`](https://msdn.microsoft.com/library/system.web.ui.literalcontrol.aspx) , définissez sa propriété `Text`, puis ajoutez-la à la collection `Controls` de `Header`.
 
 ## <a name="summary"></a>Récapitulatif
 
-Dans ce didacticiel, nous avons un grand nombre de façons d’ajouter `<head>` balisage région sur une base de page par page. Une page maître doit inclure un `HtmlHead` instance (`<head runat="server">`) avec un ContentPlaceHolder. Le `HtmlHead` instance autorise les pages de contenu pour accéder par programmation la `<head>` région et de façon déclarative et par programme, définir la page de titre ; le contrôle ContentPlaceHolder permet de balisage personnalisée à ajouter à la `<head>` section de façon déclarative par le biais d’un contrôle de contenu.
+Dans ce didacticiel, nous avons étudié plusieurs façons d’ajouter `<head>` balise de région page par page. Une page maître doit inclure une instance de `HtmlHead` (`<head runat="server">`) avec ContentPlaceHolder. L’instance `HtmlHead` permet aux pages de contenu d’accéder par programme à la région `<head>` et de définir de façon déclarative et par programmation le titre de la page ; le contrôle ContentPlaceHolder permet d’ajouter le balisage personnalisé à la section `<head>` de façon déclarative via un contrôle de contenu.
 
 Bonne programmation !
 
 ### <a name="further-reading"></a>informations supplémentaires
 
-Pour plus d’informations sur les sujets abordés dans ce didacticiel, consultez les ressources suivantes :
+Pour plus d’informations sur les sujets abordés dans ce didacticiel, reportez-vous aux ressources suivantes :
 
-- [Définition dynamique de titre de la Page dans ASP.NET](http://aspnet.4guysfromrolla.com/articles/051006-1.aspx)
-- [Examen ASP. Navigation dans les sites de NET](http://aspnet.4guysfromrolla.com/articles/111605-1.aspx)
-- [Comment utiliser des balises HTML Meta](http://searchenginewatch.com/showPage.html?page=2167931)
-- [Pages maître dans ASP.NET](http://www.odetocode.com/articles/419.aspx)
-- [À l’aide d’ASP.NET de 3.5 ListView et contrôles DataPager](http://aspnet.4guysfromrolla.com/articles/122607-1.aspx)
-- [À l’aide d’une classe de Base personnalisée pour les Classes de Code-Behind de vos Pages ASP.NET](http://aspnet.4guysfromrolla.com/articles/041305-1.aspx)
+- [Définition dynamique du titre de la page dans ASP.NET](http://aspnet.4guysfromrolla.com/articles/051006-1.aspx)
+- [Examen d’ASP. Navigation sur le site NET](http://aspnet.4guysfromrolla.com/articles/111605-1.aspx)
+- [Comment utiliser des balises méta HTML](http://searchenginewatch.com/showPage.html?page=2167931)
+- [Pages maîtres dans ASP.NET](http://www.odetocode.com/articles/419.aspx)
+- [Utilisation des contrôles ListView et DataPager de ASP.NET 3.5](http://aspnet.4guysfromrolla.com/articles/122607-1.aspx)
+- [Utilisation d’une classe de base personnalisée pour les classes code-behind de vos pages ASP.NET](http://aspnet.4guysfromrolla.com/articles/041305-1.aspx)
 
 ### <a name="about-the-author"></a>À propos de l’auteur
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de plusieurs livres de sur ASP/ASP.NET et fondateur de 4GuysFromRolla.com, travaille avec les technologies Web Microsoft depuis 1998. Scott fonctionne comme un consultant indépendant, formateur et writer. Son dernier livre s’intitule [ *Sams Teach vous-même ASP.NET 3.5 des dernières 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Scott peut être atteint à [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com) ou via son blog à [http://ScottOnWriting.NET](http://scottonwriting.net/).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de plusieurs ouvrages ASP/ASP. net et fondateur de 4GuysFromRolla.com, travaille avec les technologies Web de Microsoft depuis 1998. Scott travaille en tant que consultant, formateur et auteur indépendant. Son dernier livre est [*Sams vous apprend vous-même ASP.NET 3,5 en 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Scott peut être contacté au [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com) ou via son blog à l’adresse [http://ScottOnWriting.NET](http://scottonwriting.net/).
 
-### <a name="special-thanks-to"></a>Remerciements
+### <a name="special-thanks-to"></a>Remerciements à
 
-Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Les réviseurs tête pour ce didacticiel ont été Zack Jones et Suchi Banerjee. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com ](mailto:mitchell@4GuysFromRolla.com).
+Cette série de didacticiels a été examinée par de nombreux réviseurs utiles. Les réviseurs de leads pour ce didacticiel étaient Zack Jones et Banerjee. Vous souhaitez revoir mes prochains articles MSDN ? Si c’est le cas, insérez une ligne sur [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com).
 
 > [!div class="step-by-step"]
 > [Précédent](multiple-contentplaceholders-and-default-content-vb.md)

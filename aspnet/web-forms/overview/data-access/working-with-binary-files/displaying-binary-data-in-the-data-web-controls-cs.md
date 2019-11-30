@@ -1,200 +1,200 @@
 ---
 uid: web-forms/overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-cs
-title: Contrôle l’affichage de données binaires dans le site Web de données (c#) | Microsoft Docs
+title: Affichage de données binaires dans les contrôles WebC#de données () | Microsoft Docs
 author: rick-anderson
-description: Dans ce didacticiel, nous examinons les options de présenter des données binaires sur une page Web, y compris l’affichage d’un fichier image et la fourniture d’un lien 'Télécharger' f...
+description: Dans ce didacticiel, nous examinons les options permettant de présenter des données binaires sur une page Web, y compris l’affichage d’un fichier image et la fourniture d’un lien’Télécharger'...
 ms.author: riande
 ms.date: 03/27/2007
 ms.assetid: 5cbeb9f8-5f92-4ba8-87ae-0b4d460ae6d4
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4c5c2befd31299b0d9dedf0a3cdb9c8a65d692ec
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: f38de7adcd77b3dc2622759646168cf533b8308f
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127155"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74642564"
 ---
 # <a name="displaying-binary-data-in-the-data-web-controls-c"></a>Affichage de données binaires dans les contrôles web de données (C#)
 
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger l’exemple d’application](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_55_CS.exe) ou [télécharger le PDF](displaying-binary-data-in-the-data-web-controls-cs/_static/datatutorial55cs1.pdf)
+[Télécharger l’exemple d’application](https://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_55_CS.exe) ou [Télécharger le PDF](displaying-binary-data-in-the-data-web-controls-cs/_static/datatutorial55cs1.pdf)
 
-> Dans ce didacticiel, nous examiner les options de présenter des données binaires sur une page Web, y compris l’affichage d’un fichier image et la fourniture d’un lien « Télécharger » pour un fichier PDF.
+> Dans ce didacticiel, nous examinons les options permettant de présenter des données binaires sur une page Web, notamment l’affichage d’un fichier image et la fourniture d’un lien « Télécharger » pour un fichier PDF.
 
 ## <a name="introduction"></a>Introduction
 
-Dans le didacticiel précédent, nous exploré les deux techniques permettant d’associer des données binaires à un modèle de données sous-jacent application s et du contrôle FileUpload permet de charger des fichiers à partir d’un navigateur sur le système de fichiers web server s. Nous ve encore pour voir comment associer les données binaires téléchargées avec le modèle de données. Autrement dit, une fois un fichier a été téléchargé et enregistré dans le système de fichiers, un chemin d’accès au fichier doit figurer dans l’enregistrement de base de données appropriée. Si les données sont en cours stockées directement dans la base de données, les données binaires téléchargées ne doivent pas être enregistrées dans le système de fichiers, mais il doivent être injectées dans la base de données.
+Dans le didacticiel précédent, nous avons exploré les deux techniques permettant d’associer des données binaires à un modèle de données sous-jacent des applications et utilisé le contrôle FileUpload pour charger des fichiers à partir d’un navigateur vers le système de fichiers du serveur Web s. Nous avons encore vu comment associer les données binaires téléchargées au modèle de données. Autrement dit, une fois qu’un fichier a été téléchargé et enregistré dans le système de fichiers, un chemin d’accès au fichier doit être stocké dans l’enregistrement de base de données approprié. Si les données sont stockées directement dans la base de données, les données binaires téléchargées ne doivent pas être enregistrées dans le système de fichiers, mais doivent être injectées dans la base de données.
 
-Avant d’examiner associant les données avec le modèle de données, cependant, permettent de s commencer par examiner comment fournir les données binaires à l’utilisateur final. Présentation des données de texte est assez simple, mais comment les données binaires doivent être présentées ? Il dépend, bien sûr, le type de données binaires. Pour les images, nous souhaitons probablement afficher l’image ; pour les fichiers PDF, documents Microsoft Word, les fichiers ZIP et les autres types de données binaires, en fournissant un lien de téléchargement est probablement plus appropriés.
+Avant d’envisager d’associer les données au modèle de données, voyons d’abord comment fournir les données binaires à l’utilisateur final. La présentation des données texte est assez simple, mais comment les données binaires doivent-elles être présentées ? Il dépend, bien sûr, du type de données binaires. Pour les images, nous souhaitons probablement afficher l’image. pour les fichiers PDF, les documents Microsoft Word, les fichiers ZIP et d’autres types de données binaires, la fourniture d’un lien de téléchargement est probablement plus appropriée.
 
-Dans ce didacticiel, que nous allons examiner comment présenter les données binaires en même temps que ses données de texte associée à l’aide de données de contrôles Web tels que GridView et DetailsView. Dans le didacticiel suivant, nous allons porter notre attention associer un fichier téléchargé à la base de données.
+Dans ce didacticiel, nous allons examiner comment présenter les données binaires en même temps que les données texte associées à l’aide de contrôles Web de données tels que GridView et DetailsView. Dans le didacticiel suivant, nous allons attirer l’attention sur l’Association d’un fichier chargé à la base de données.
 
-## <a name="step-1-providingbrochurepathvalues"></a>Étape 1 : Fournissant`BrochurePath`valeurs
+## <a name="step-1-providingbrochurepathvalues"></a>Étape 1 : fournir des valeurs de`BrochurePath`
 
-Le `Picture` colonne dans la `Categories` table contient déjà des données binaires pour les différentes images de catégorie. Plus précisément, le `Picture` colonne pour chaque enregistrement contient le contenu binaire d’une image bitmap granuleuse faible qualité, 16 couleurs. Chaque image de la catégorie est 172 pixels de larges et 120 pixels de hauteur et consomme environ 11 Ko. Nouveautés plus, le contenu binaire dans le `Picture` colonne inclut un octet de 78 [OLE](http://en.wikipedia.org/wiki/Object_Linking_and_Embedding) en-tête doit être supprimé avant d’afficher l’image. Ces informations d’en-tête sont présentes, car la base de données Northwind a ses racines dans Microsoft Access. Dans Access, les données binaires sont stockées à l’aide du type de données OLE Object, qui s’attache à cet en-tête. Pour l’instant, nous verrons comment supprimer les en-têtes à partir de ces images de basse qualité afin d’afficher l’image. Dans un futur didacticiel, nous allons créer une interface pour la mise à jour une catégorie s `Picture` colonne et remplacer ces images bitmap qui utilisent des en-têtes OLE avec des images JPG équivalents sans les en-têtes OLE inutiles.
+La `Picture` colonne de la table `Categories` contient déjà des données binaires pour les différentes images de catégorie. Plus précisément, la `Picture` colonne pour chaque enregistrement contient le contenu binaire d’une image bitmap de couleur de grain, de faible qualité et de plus de 16 couleurs. Chaque image de catégorie a une largeur de 172 pixels et une hauteur de 120 pixels et consomme environ 11 Ko. De plus, le contenu binaire de la colonne `Picture` comprend un en-tête [OLE](http://en.wikipedia.org/wiki/Object_Linking_and_Embedding) de 78 octets qui doit être supprimé avant d’afficher l’image. Ces informations d’en-tête sont présentes, car la base de données Northwind a ses racines dans Microsoft Access. Dans Access, les données binaires sont stockées à l’aide du type de données objet OLE, qui s’oriente sur cet en-tête. Pour le moment, nous verrons comment supprimer les en-têtes de ces images de qualité inférieure afin d’afficher l’image. Dans un prochain didacticiel, nous allons créer une interface pour mettre à jour une catégorie s `Picture` colonne et remplacer ces images bitmap qui utilisent des en-têtes OLE avec des images JPG équivalentes sans en-têtes OLE inutiles.
 
-Dans le didacticiel précédent, nous avons vu comment utiliser le contrôle FileUpload. Par conséquent, vous pouvez poursuivre et ajouter des fichiers de la brochure au système de fichiers web server s. Ce faisant, toutefois, ne pas mettre à jour le `BrochurePath` colonne dans la `Categories` table. Dans le didacticiel suivant, nous allons voir comment effectuer cette opération, mais pour l’instant, nous avons besoin fournir manuellement des valeurs pour cette colonne.
+Dans le didacticiel précédent, nous avons vu comment utiliser le contrôle FileUpload. Par conséquent, vous pouvez continuer et ajouter des fichiers de brochure au système de fichiers du serveur Web s. Toutefois, cela ne met pas à jour la colonne `BrochurePath` dans la table `Categories`. Dans le didacticiel suivant, nous allons voir comment y parvenir, mais pour le moment, nous devons fournir manuellement les valeurs de cette colonne.
 
-Dans ce téléchargement didacticiel s, vous trouverez sept fichiers de brochure PDF dans le `~/Brochures` dossier, un pour chacune des catégories, à l’exception Seafood. J’ai omis volontairement l’ajout d’une brochure Seafood pour illustrer comment gérer les scénarios où pas tous les enregistrements ont données binaires associées données. Pour mettre à jour le `Categories` table avec ces valeurs, avec le bouton droit sur le `Categories` nœud à partir de l’Explorateur de serveurs et choisissez Afficher les données de Table. Ensuite, entrez les chemins d’accès virtuels pour les fichiers de la brochure pour chaque catégorie qui présente une brochure, comme montre la Figure 1. Dans la mesure où il n’existe aucun brochure pour la catégorie de produits de la mer, laissez son `BrochurePath` valeur de colonne s `NULL`.
+Dans ce didacticiel, vous allez télécharger sept fichiers de brochure PDF dans le dossier `~/Brochures`, un pour chacune des catégories, à l’exception des fruits de mer. J’ai volontairement omis d’ajouter une brochure de produits de la mer pour illustrer comment gérer les scénarios où tous les enregistrements n’ont pas de données binaires associées. Pour mettre à jour la table `Categories` avec ces valeurs, cliquez avec le bouton droit sur le nœud `Categories` à partir de Explorateur de serveurs, puis choisissez afficher les données de la table. Ensuite, entrez les chemins d’accès virtuels aux fichiers de brochure pour chaque catégorie qui a une brochure, comme le montre la figure 1. Étant donné qu’il n’y a aucune brochure pour la catégorie de produits de la mer, conservez la valeur de `BrochurePath` colonne s comme `NULL`.
 
-[![Entrez manuellement les valeurs pour la colonne BrochurePath catégories s](displaying-binary-data-in-the-data-web-controls-cs/_static/image1.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image1.png)
+[![entrer manuellement les valeurs de la colonne BrochurePath de la table des catégories](displaying-binary-data-in-the-data-web-controls-cs/_static/image1.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image1.png)
 
-**Figure 1**: Entrez manuellement les valeurs pour le `Categories` Table s `BrochurePath` colonne ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image2.png))
+**Figure 1**: entrer manuellement les valeurs de la colonne `Categories` de la Table s `BrochurePath` ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image2.png))
 
-## <a name="step-2-providing-a-download-link-for-the-brochures-in-a-gridview"></a>Étape 2 : En fournissant un lien de téléchargement pour les Brochures dans un GridView
+## <a name="step-2-providing-a-download-link-for-the-brochures-in-a-gridview"></a>Étape 2 : fournir un lien de téléchargement pour les brochures dans un GridView
 
-Avec le `BrochurePath` valeurs fournies pour le `Categories` table, nous vous êtes prêt à créer un GridView qui répertorie chaque catégorie, ainsi qu’un lien pour télécharger la brochure catégorie s. À l’étape 4, nous allons étendre cette GridView pour afficher également l’image de catégorie s.
+Avec les valeurs `BrochurePath` fournies pour la table `Categories`, nous sommes prêts à créer un GridView qui répertorie chaque catégorie avec un lien pour télécharger la brochure catégorie s. À l’étape 4, nous allons étendre ce GridView pour afficher également l’image de la catégorie s.
 
-Nous allons faire glisser un GridView à partir de la boîte à outils vers le Concepteur de la `DisplayOrDownloadData.aspx` page dans le `BinaryData` dossier. Définir les opérations de mappage GridView `ID` à `Categories` via la balise active de s GridView, choisissez de le lier à une source de données. Plus précisément, liez-le à un ObjectDataSource nommé `CategoriesDataSource` qui Récupère des données à l’aide du `CategoriesBLL` objet s `GetCategories()` (méthode).
+Commencez par faire glisser un contrôle GridView de la boîte à outils vers le concepteur de la page `DisplayOrDownloadData.aspx` dans le dossier `BinaryData`. Définissez le `ID` GridView s sur `Categories` et par le biais de la balise active GridView s, puis choisissez de le lier à une nouvelle source de données. Plus précisément, liez-le à un ObjectDataSource nommé `CategoriesDataSource` qui récupère les données à l’aide de la méthode `GetCategories()` `CategoriesBLL` objet.
 
-[![Créer un nouveau ObjectDataSource nommé CategoriesDataSource](displaying-binary-data-in-the-data-web-controls-cs/_static/image2.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image3.png)
+[![créer un ObjectDataSource nommé CategoriesDataSource](displaying-binary-data-in-the-data-web-controls-cs/_static/image2.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image3.png)
 
-**Figure 2**: Créer une nouvelle nommée de ObjectDataSource `CategoriesDataSource` ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image4.png))
+**Figure 2**: créer un ObjectDataSource nommé `CategoriesDataSource` ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image4.png))
 
-[![Configurer pour utiliser la classe CategoriesBLL ObjectDataSource](displaying-binary-data-in-the-data-web-controls-cs/_static/image3.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image5.png)
+[![configurer ObjectDataSource pour utiliser la classe CategoriesBLL](displaying-binary-data-in-the-data-web-controls-cs/_static/image3.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image5.png)
 
-**Figure 3**: Configurer l’ObjectDataSource à utiliser le `CategoriesBLL` classe ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image6.png))
+**Figure 3**: configurer ObjectDataSource pour utiliser la classe `CategoriesBLL` ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image6.png))
 
-[![Récupérer la liste des catégories à l’aide de la méthode GetCategories()](displaying-binary-data-in-the-data-web-controls-cs/_static/image4.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image7.png)
+[![récupérer la liste des catégories à l’aide de la méthode GetCategories ()](displaying-binary-data-in-the-data-web-controls-cs/_static/image4.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image7.png)
 
-**Figure 4**: Récupérer la liste de catégories en utilisant le `GetCategories()` (méthode) ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image8.png))
+**Figure 4**: récupérer la liste des catégories à l’aide de la méthode `GetCategories()` ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image8.png))
 
-À l’issue de l’Assistant Configurer la Source de données, Visual Studio ajoute automatiquement un BoundField à la `Categories` GridView pour les `CategoryID`, `CategoryName`, `Description`, `NumberOfProducts`, et `BrochurePath` `DataColumn` s. Poursuivre et supprimer le `NumberOfProducts` BoundField depuis le `GetCategories()` requête de méthode s ne récupère pas de ces informations. Supprimer également le `CategoryID` BoundField et renommer le `CategoryName` et `BrochurePath` BoundFields `HeaderText` propriétés à la catégorie et de la Brochure, respectivement. Après avoir apporté ces modifications, votre balisage déclaratif s GridView et ObjectDataSource doit ressembler à ce qui suit :
+À l’issue de l’exécution de l’Assistant Configuration de la source de données, Visual Studio ajoute automatiquement un BoundField au `Categories` GridView pour les `NumberOfProducts`s `CategoryID`, `CategoryName`, `Description`, `BrochurePath` et `DataColumn`. Continuez et supprimez le `NumberOfProducts` BoundField puisque la requête de la méthode `GetCategories()` ne récupère pas ces informations. Supprimez également le `CategoryID` BoundField et renommez les propriétés `CategoryName` et `BrochurePath` BoundFields `HeaderText` en Category et brochure, respectivement. Une fois ces modifications effectuées, vos balises déclaratives GridView et ObjectDataSource doivent ressembler à ce qui suit :
 
 [!code-aspx[Main](displaying-binary-data-in-the-data-web-controls-cs/samples/sample1.aspx)]
 
-Afficher cette page via un navigateur (voir Figure 5). Chacune des huit catégories est répertorié. Les sept catégories avec `BrochurePath` valeurs ont le `BrochurePath` valeur affichée dans le BoundField respectif. Mer, ce qui a un `NULL` valeur pour son `BrochurePath`, affiche une cellule vide.
+Affichez cette page dans un navigateur (voir figure 5). Chacune des huit catégories est indiquée. Les sept catégories avec `BrochurePath` valeurs ont la valeur `BrochurePath` affichée dans le BoundField respectif. Les fruits de mer, qui ont une valeur de `NULL` pour ses `BrochurePath`, affichent une cellule vide.
 
-[![Chaque catégorie s nom, Description et une valeur de BrochurePath est répertorié.](displaying-binary-data-in-the-data-web-controls-cs/_static/image5.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image9.png)
+[![chaque nom, description et valeur BrochurePath de chaque catégorie est indiqué](displaying-binary-data-in-the-data-web-controls-cs/_static/image5.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image9.png)
 
-**Figure 5**: Chaque catégorie s nom, Description, et `BrochurePath` valeur est répertoriée ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image10.png))
+**Figure 5**: chaque nom de catégorie, Description et `BrochurePath` valeur est listé ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image10.png))
 
-Au lieu d’afficher le texte de la `BrochurePath` colonne, nous voulons créer un lien vers la brochure. Pour ce faire, supprimez le `BrochurePath` BoundField et remplacez-le par un HyperLinkField. Définir la nouvelle s HyperLinkField `HeaderText` propriété Brochure, son `Text` propriété Brochure de vue et son `DataNavigateUrlFields` propriété `BrochurePath`.
+Au lieu d’afficher le texte de la colonne `BrochurePath`, nous voulons créer un lien vers la brochure. Pour ce faire, supprimez le `BrochurePath` BoundField et remplacez-le par un HyperLinkField. Affectez à la nouvelle propriété HyperLinkField s `HeaderText` la valeur brochure, à sa propriété `Text` la valeur afficher la brochure et à la propriété `DataNavigateUrlFields` la valeur `BrochurePath`.
 
 ![Ajouter un HyperLinkField pour BrochurePath](displaying-binary-data-in-the-data-web-controls-cs/_static/image6.gif)
 
-**Figure 6**: Ajouter un HyperLinkField pour `BrochurePath`
+**Figure 6**: ajouter un HyperLinkField pour `BrochurePath`
 
-Cette opération ajoute une colonne de liens au GridView, comme le montre la Figure 7. En cliquant sur un lien de vue Brochure sera afficher le fichier PDF directement dans le navigateur ou inviter l’utilisateur à télécharger le fichier, selon qu’un lecteur PDF est installé et les paramètres du navigateur s.
+Cette opération ajoute une colonne de liens au GridView, comme le montre la figure 7. Le fait de cliquer sur un lien Afficher la brochure permet d’afficher le fichier PDF directement dans le navigateur ou de demander à l’utilisateur de télécharger le fichier, selon qu’un lecteur PDF est installé et les paramètres du navigateur.
 
-[![Une catégorie s Brochure peut être affiché en cliquant sur le lien de la Brochure vue](displaying-binary-data-in-the-data-web-controls-cs/_static/image7.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image11.png)
+[![une brochure de catégorie s peut être affichée en cliquant sur le lien Afficher la brochure](displaying-binary-data-in-the-data-web-controls-cs/_static/image7.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image11.png)
 
-**Figure 7**: Une catégorie s Brochure peuvent être affichés en cliquant sur le lien de la Brochure vue ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image12.png))
+**Figure 7**: une brochure catégorie s peut être affichée en cliquant sur le lien Afficher la brochure ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image12.png))
 
-[![La catégorie s Brochure PDF s’affiche.](displaying-binary-data-in-the-data-web-controls-cs/_static/image8.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image13.png)
+[![le fichier PDF de la brochure catégorie s s’affiche](displaying-binary-data-in-the-data-web-controls-cs/_static/image8.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image13.png)
 
-**Figure 8**: La catégorie s Brochure PDF est affichée ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image14.png))
+**Figure 8**: affichage du fichier PDF de la brochure catégorie s ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image14.png))
 
-## <a name="hiding-the-view-brochure-text-for-categories-without-a-brochure"></a>Masquer le texte de la Brochure vue pour les catégories sans une Brochure
+## <a name="hiding-the-view-brochure-text-for-categories-without-a-brochure"></a>Masquage du texte afficher la brochure pour les catégories sans brochure
 
-Comme le montre la Figure 7, le `BrochurePath` HyperLinkField affiche son `Text` la valeur de propriété (vue Brochure) pour tous les enregistrements, indépendamment de si là s non -`NULL` valeur pour `BrochurePath`. Bien sûr, si `BrochurePath` est `NULL`, puis le lien s’affiche sous forme de texte uniquement, comme c’est le cas avec la catégorie Seafood (voir la Figure 7). Au lieu d’afficher le texte Brochure de vue, il peut être intéressant d’avoir ces catégories sans un `BrochurePath` valeur afficher un texte de remplacement, comme non Brochure disponibles.
+Comme illustré à la figure 7, le `BrochurePath` HyperLinkField affiche sa valeur de propriété `Text` (afficher la brochure) pour tous les enregistrements, qu’il y ait une valeur non`NULL` pour `BrochurePath`ou non. Bien entendu, si `BrochurePath` est `NULL`, le lien est affiché sous forme de texte uniquement, comme c’est le cas avec la catégorie Food (reportez-vous à la figure 7). Au lieu d’afficher la brochure de l’affichage de texte, il peut être intéressant de faire en sorte que ces catégories n’affichent pas `BrochurePath` de texte de remplacement, comme aucune brochure disponible.
 
-Afin de fournir ce comportement, nous devons utiliser TemplateField dont le contenu est généré via un appel à une méthode de page qui émet la sortie appropriée selon la `BrochurePath` valeur. Nous avons tout d’abord examiné cette technique de mise en forme dans le [à l’aide de TemplateFields dans le contrôle GridView](../custom-formatting/using-templatefields-in-the-gridview-control-cs.md) didacticiel.
+Pour fournir ce comportement, nous devons utiliser un TemplateField dont le contenu est généré via un appel à une méthode de page qui émet la sortie appropriée en fonction de la valeur de `BrochurePath`. Nous avons d’abord abordé cette technique de mise en forme dans le didacticiel [utilisation de TemplateFields dans le contrôle GridView](../custom-formatting/using-templatefields-in-the-gridview-control-cs.md) .
 
-Activer la HyperLinkField en TemplateField en sélectionnant le `BrochurePath` HyperLinkField et puis en cliquant sur la convertir ce champ en TemplateField lien dans la boîte de dialogue Modifier les colonnes.
+Transformez le HyperLinkField en TemplateField en sélectionnant le `BrochurePath` HyperLinkField, puis en cliquant sur le lien convertir ce champ en TemplateField dans la boîte de dialogue Modifier les colonnes.
 
 ![Convertir le HyperLinkField en TemplateField](displaying-binary-data-in-the-data-web-controls-cs/_static/image9.gif)
 
-**Figure 9**: Convertir le HyperLinkField en TemplateField
+**Figure 9**: convertir le HyperLinkField en TemplateField
 
-Cela créera un TemplateField avec un `ItemTemplate` qui contient un site Web HyperLink contrôle dont `NavigateUrl` propriété est liée à la `BrochurePath` valeur. Remplacez cette balise par un appel à la méthode `GenerateBrochureLink`, en passant la valeur de `BrochurePath`:
+Cela créera un TemplateField avec un `ItemTemplate` qui contient un contrôle Web HYPERLINK dont la propriété `NavigateUrl` est liée à la valeur `BrochurePath`. Remplacez ce balisage par un appel à la méthode `GenerateBrochureLink`, en passant la valeur de `BrochurePath`:
 
 [!code-aspx[Main](displaying-binary-data-in-the-data-web-controls-cs/samples/sample2.aspx)]
 
-Ensuite, créez un `protected` méthode dans l’ASP.NET page classe code-behind de s nommée `GenerateBrochureLink` qui retourne un `string` et accepte un `object` comme paramètre d’entrée.
+Ensuite, créez une méthode `protected` dans la classe code-behind ASP.NET page s nommée `GenerateBrochureLink` qui retourne un `string` et qui accepte un `object` comme paramètre d’entrée.
 
 [!code-csharp[Main](displaying-binary-data-in-the-data-web-controls-cs/samples/sample3.cs)]
 
-Cette méthode détermine si le passé dans `object` valeur est une base de données `NULL` et, dans ce cas, retourne un message indiquant que la catégorie ne dispose pas d’une brochure. Sinon, s’il existe un `BrochurePath` valeur, elle s’affiché dans un lien hypertexte. Notez que si le `BrochurePath` valeur est présente s passé dans le [ `ResolveUrl(url)` méthode](https://msdn.microsoft.com/library/system.web.ui.control.resolveurl.aspx). Cette méthode résout le passé dans *url*, en remplaçant le `~` caractère avec le chemin d’accès virtuel approprié. Par exemple, si l’application est enracinée au `/Tutorial55`, `ResolveUrl("~/Brochures/Meats.pdf")` retournera `/Tutorial55/Brochures/Meat.pdf`.
+Cette méthode détermine si la valeur `object` passée est une base de données `NULL` et, le cas échéant, retourne un message indiquant que la catégorie n’a pas de brochure. Sinon, s’il existe une valeur `BrochurePath`, elle s’affiche dans un lien hypertexte. Notez que si la valeur `BrochurePath` est présente, elle est transmise dans la [méthode`ResolveUrl(url)`](https://msdn.microsoft.com/library/system.web.ui.control.resolveurl.aspx). Cette méthode résout l' *URL*passée, en remplaçant le caractère `~` par le chemin d’accès virtuel approprié. Par exemple, si l’application est enracinée à `/Tutorial55`, `ResolveUrl("~/Brochures/Meats.pdf")` retourne `/Tutorial55/Brochures/Meat.pdf`.
 
-Figure 10 montre la page une fois que ces modifications ont été appliquées. Notez que la catégorie Seafood s `BrochurePath` champ affiche maintenant le texte non Brochure disponibles.
+La figure 10 montre la page après que ces modifications ont été appliquées. Notez que le champ `BrochurePath` des catégories de produits de la mer contient maintenant le texte aucune brochure disponible.
 
-[![Texte non Brochure disponibles s’affiche pour les catégories sans une Brochure](displaying-binary-data-in-the-data-web-controls-cs/_static/image10.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image15.png)
+[![le texte aucune brochure disponible ne s’affiche pour ces catégories sans brochure](displaying-binary-data-in-the-data-web-controls-cs/_static/image10.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image15.png)
 
-**Figure 10**: Texte non Brochure disponibles s’affiche pour les catégories sans une Brochure ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image16.png))
+**Figure 10**: le texte aucune brochure disponible s’affiche pour ces catégories sans brochure ([cliquez pour afficher l’image en plein écran](displaying-binary-data-in-the-data-web-controls-cs/_static/image16.png))
 
-## <a name="step-3-adding-a-web-page-to-display-a-category-s-picture"></a>Étape 3 : Ajout d’une Page Web pour afficher une image de s catégorie
+## <a name="step-3-adding-a-web-page-to-display-a-category-s-picture"></a>Étape 3 : ajout d’une page Web pour afficher une image de catégorie
 
-Lorsqu’un utilisateur visite une page ASP.NET, ils reçoivent la page s HTML ASP.NET. Le HTML reçu est uniquement le texte et ne contient-elle pas toutes les données binaires. Il existe des données binaires supplémentaires, telles que des images, fichiers audio, les applications de Macromedia Flash, embedded vidéos de Windows Media Player et ainsi de suite, comme des ressources distinctes sur le serveur web. Le code HTML contient des références à ces fichiers, mais n’inclut pas le contenu réel des fichiers.
+Lorsqu’un utilisateur visite une page ASP.NET, il reçoit le code HTML de la page ASP.NET. Le code HTML reçu est simplement du texte et ne contient pas de données binaires. Toutes les données binaires supplémentaires, telles que les images, les fichiers audio, les applications Macromedia Flash, les vidéos Windows Media Player incorporées, etc., existent en tant que ressources distinctes sur le serveur Web. Le code HTML contient des références à ces fichiers, mais il n’inclut pas le contenu réel des fichiers.
 
-Par exemple, en HTML la `<img>` élément est utilisé pour référencer une image, avec la `src` attribut pointant vers le fichier d’image comme suit :
+Par exemple, en HTML, l’élément `<img>` est utilisé pour référencer une image, avec l’attribut `src` qui pointe vers le fichier image comme suit :
 
 [!code-html[Main](displaying-binary-data-in-the-data-web-controls-cs/samples/sample4.html)]
 
-Si un navigateur reçoit ce code HTML, il effectue une autre demande au serveur web pour récupérer le contenu binaire du fichier image, qu’il affiche ensuite dans le navigateur. Le même concept s’applique à toutes les données binaires. À l’étape 2, la brochure n'a pas été envoyée vers le bas dans le navigateur en tant que partie du balisage HTML de s de page. Au lieu de cela, le code HTML restitué fourni des liens hypertexte qui, lorsque vous cliquez dessus, a provoqué le navigateur demander le document PDF directement.
+Quand un navigateur reçoit ce code HTML, il envoie une autre demande au serveur Web pour récupérer le contenu binaire du fichier image, qu’il affiche ensuite dans le navigateur. Le même concept s’applique à toutes les données binaires. À l’étape 2, la brochure n’a pas été envoyée au navigateur dans le cadre du balisage HTML de la page. Au lieu de cela, le HTML rendu fournissait des liens hypertexte qui, lorsque vous cliquez dessus, ont fait en sorte que le navigateur demande le document PDF directement.
 
-Pour afficher ou permettre aux utilisateurs de télécharger des données binaires qui se trouvent dans la base de données, nous devons créer une page web distincte qui retourne les données. Pour notre application, qu’un seul champ de données binaires là s stockée directement dans l’image de base de données s de la catégorie. Par conséquent, nous avons besoin d’une page qui, lorsqu’elle est appelée, retourne les données d’image pour une catégorie particulière.
+Pour afficher ou autoriser les utilisateurs à télécharger des données binaires qui résident dans la base de données, nous devons créer une page Web distincte qui retourne les données. Pour notre application, il n’y a qu’un seul champ de données binaires stocké directement dans la base de données de l’image de la catégorie. Par conséquent, nous avons besoin d’une page qui, lorsqu’elle est appelée, retourne les données d’image pour une catégorie particulière.
 
-Ajoutez une nouvelle page ASP.NET pour le `BinaryData` dossier nommé `DisplayCategoryPicture.aspx`. Ce cas, laissez la case à cocher Sélectionner la page maître désactivée. Cette page attend un `CategoryID` valeur dans la chaîne de requête et retourne les données binaires de cette catégorie s `Picture` colonne. Étant donné que cette page retourne des données binaires et rien d’autre, il n’a pas besoin tout balisage dans la section de code HTML. Par conséquent, cliquez sur l’onglet Source dans l’angle inférieur gauche et supprimer toutes les marques de la page s à l’exception de la `<%@ Page %>` directive. Autrement dit, `DisplayCategoryPicture.aspx` balisage déclaratif s doit être composé d’une seule ligne :
+Ajoutez une nouvelle page ASP.NET au dossier `BinaryData` nommé `DisplayCategoryPicture.aspx`. Quand vous procédez ainsi, n’activez pas la case à cocher sélectionner une page maître. Cette page attend une valeur `CategoryID` dans QueryString et retourne les données binaires de cette catégorie `Picture` colonne. Étant donné que cette page retourne des données binaires et rien d’autre, elle n’a besoin d’aucun balisage dans la section HTML. Par conséquent, cliquez sur l’onglet source dans le coin inférieur gauche et supprimez tout le balisage de la page, à l’exception de la directive `<%@ Page %>`. Autrement dit, `DisplayCategoryPicture.aspx` le balisage déclaratif doit se composer d’une seule ligne :
 
 [!code-aspx[Main](displaying-binary-data-in-the-data-web-controls-cs/samples/sample5.aspx)]
 
-Si vous voyez le `MasterPageFile` d’attribut dans la `<%@ Page %>` directive, supprimez-le.
+Si vous voyez l’attribut `MasterPageFile` dans la directive `<%@ Page %>`, supprimez-le.
 
-Dans la classe code-behind de la page s, ajoutez le code suivant à la `Page_Load` Gestionnaire d’événements :
+Dans la classe code-behind de la page, ajoutez le code suivant au gestionnaire d’événements `Page_Load` :
 
 [!code-csharp[Main](displaying-binary-data-in-the-data-web-controls-cs/samples/sample6.cs)]
 
-Ce code commence en lisant le `CategoryID` valeur de chaîne de requête dans une variable nommée `categoryID`. Ensuite, les données d’image sont récupérées via un appel à la `CategoriesBLL` classe s `GetCategoryWithBinaryDataByCategoryID(categoryID)` (méthode). Ces données sont retournées au client à l’aide de la `Response.BinaryWrite(data)` (méthode), mais avant que cela soit appelée, le `Picture` en-tête de colonne valeur s OLE doit être supprimé. Cela s’effectue en créant un `byte` tableau nommé `strippedImageData` qui contiendra précisément 78 caractères inférieur à ce qui est dans le `Picture` colonne. Le [ `Array.Copy` méthode](https://msdn.microsoft.com/library/z50k9bft.aspx) est utilisé pour copier les données à partir de `category.Picture` recommencer à la position 78 à `strippedImageData`.
+Ce code commence par lire la valeur QueryString `CategoryID` dans une variable nommée `categoryID`. Ensuite, les données de l’image sont récupérées via un appel à la méthode `CategoriesBLL` classe s `GetCategoryWithBinaryDataByCategoryID(categoryID)`. Ces données sont retournées au client à l’aide de la méthode `Response.BinaryWrite(data)`, mais avant que cette méthode soit appelée, l’en-tête OLE de la valeur de colonne `Picture` s doit être supprimé. Pour ce faire, vous devez créer un tableau `byte` nommé `strippedImageData` qui contiendra précisément 78 caractères inférieurs à ceux de la colonne `Picture`. La [méthode`Array.Copy`](https://msdn.microsoft.com/library/z50k9bft.aspx) est utilisée pour copier les données à partir de `category.Picture` en commençant à la position 78 sur `strippedImageData`.
 
-Le `Response.ContentType` propriété spécifie le [type MIME](http://en.wikipedia.org/wiki/MIME) du contenu qui est retourné afin que le navigateur sait comment rendre. Dans la mesure où le `Categories` table s `Picture` colonne est une image bitmap, la type MIME de la bitmap est utilisée ici (image/bmp). Si vous omettez le type MIME, la plupart des navigateurs s’affichera toujours l’image correctement, car il peuvent déduire le type en fonction du contenu des données binaires de s de fichier image. Toutefois, il s prudente inclure le MIME tapez lorsque cela est possible. Consultez le [du site Web Internet Assigned Numbers Authority](http://www.iana.org/) pour une liste complète des [types de média MIME](http://www.iana.org/assignments/media-types/).
+La propriété `Response.ContentType` spécifie le [type MIME](http://en.wikipedia.org/wiki/MIME) du contenu renvoyé afin que le navigateur sache comment le restituer. Étant donné que la colonne `Categories` table s `Picture` est une image bitmap, le type MIME bitmap est utilisé ici (image/BMP). Si vous omettez le type MIME, la plupart des navigateurs affichent toujours l’image correctement, car ils peuvent déduire le type en fonction du contenu des données binaires du fichier image. Toutefois, il est prudent d’inclure le type MIME lorsque cela est possible. Pour obtenir la liste complète des [types de média MIME](http://www.iana.org/assignments/media-types/), consultez le [site Web de l’autorité de certification Internet Assigned Numbers](http://www.iana.org/) .
 
-Avec cette page est créée, une image de la catégorie particulière s sont consultables en vous rendant sur `DisplayCategoryPicture.aspx?CategoryID=categoryID`. La figure 11 illustre l’image de catégorie s boissons, qui peut être affiché à partir de `DisplayCategoryPicture.aspx?CategoryID=1`.
+Une fois cette page créée, une image particulière des catégories peut être affichée en visitant `DisplayCategoryPicture.aspx?CategoryID=categoryID`. La figure 11 montre l’image des catégories de boissons, que vous pouvez afficher à partir de `DisplayCategoryPicture.aspx?CategoryID=1`.
 
-[![Les opérations de mappage catégorie boissons Qu'image s’affiche.](displaying-binary-data-in-the-data-web-controls-cs/_static/image11.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image17.png)
+[![l’image de la catégorie boissons est affichée](displaying-binary-data-in-the-data-web-controls-cs/_static/image11.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image17.png)
 
-**Figure 11**: Les opérations de mappage catégorie boissons image est affichée ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image18.png))
+**Figure 11**: l’image de la catégorie boissons s s’affiche ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image18.png))
 
-Si, lors de la visite de `DisplayCategoryPicture.aspx?CategoryID=categoryID`, vous obtenez une exception qui se lit impossible à convertit un objet de type « System.DBNull » en type 'System.Byte []', il existe deux choses qui peuvent en être la cause. Tout d’abord, le `Categories` table s `Picture` colonne autorise `NULL` valeurs. Le `DisplayCategoryPicture.aspx` page, suppose toutefois, il est non -`NULL` valeur présente. Le `Picture` propriété de la `CategoriesDataTable` ne sont pas accessibles directement si elle a un `NULL` valeur. Si vous ne souhaitez pas autoriser `NULL` valeurs pour la `Picture` colonne, d Voulez-vous inclure la condition suivante :
+Si, lors de la visite `DisplayCategoryPicture.aspx?CategoryID=categoryID`, vous obtenez une exception qui empêche le cast d’un objet de type’System. DBNull’en type’System. Byte [] ', il y a deux choses qui peuvent être à l’origine de ce problème. Tout d’abord, la colonne `Categories` table s `Picture` autorise les valeurs `NULL`. La page `DisplayCategoryPicture.aspx`, cependant, suppose qu’il y a une valeur non`NULL` présente. La propriété `Picture` du `CategoriesDataTable` ne peut pas être directement accessible si elle a une valeur de `NULL`. Si vous ne souhaitez pas autoriser `NULL` valeurs pour la colonne `Picture`, vous devez inclure la condition suivante :
 
 [!code-csharp[Main](displaying-binary-data-in-the-data-web-controls-cs/samples/sample7.cs)]
 
-Le code ci-dessus suppose il s certains image fichier nommé `NoPictureAvailable.gif` dans le `Images` dossier que vous souhaitez afficher des catégories sans une image.
+Le code ci-dessus suppose que certains fichiers image nommés `NoPictureAvailable.gif` dans le dossier `Images` que vous souhaitez afficher pour ces catégories sans image.
 
-Cette exception peut également se produire si le `CategoriesTableAdapter` s `GetCategoryWithBinaryDataByCategoryID` méthode s `SELECT` instruction a restauré vers la liste de colonnes de la requête principale s, ce qui peut se produire si vous utilisez des instructions SQL ad hoc et ve vous réexécutez l’Assistant TableAdapter s requête principale. Vérifiez que `GetCategoryWithBinaryDataByCategoryID` méthode s `SELECT` instruction inclut toujours le `Picture` colonne.
+Cette exception peut également se produire si l’instruction `CategoriesTableAdapter` s `GetCategoryWithBinaryDataByCategoryID` méthode s `SELECT` est revenue à la liste des colonnes de la requête principale, ce qui peut se produire si vous utilisez des instructions SQL ad hoc et que vous exécutez à nouveau l’Assistant pour la requête principale du TableAdapter. Vérifiez que `GetCategoryWithBinaryDataByCategoryID` méthode s `SELECT` contient toujours la colonne `Picture`.
 
 > [!NOTE]
-> Chaque fois que le `DisplayCategoryPicture.aspx` est visitée, la base de données est accessible et que les données d’image de la catégorie spécifiée s sont retournées. Si l’image de s catégorie n’a pas changé depuis la dernière visite, c’est un effort inutile. Heureusement, HTTP permet *obtient conditionnel*. Avec une opération GET conditionnelle, le client qui effectue la requête HTTP envoie le long d’un [ `If-Modified-Since` en-tête HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) qui fournit la date et heure de la dernière récupération par le client cette ressource à partir du serveur web. Si le contenu n’a pas changé dans la mesure où cela spécifié date, le serveur web peut répondre avec un [code d’état non modifié (304)](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) et renoncer à renvoyer le contenu de la ressource demandée s. En bref, cette technique évite d’avoir à envoyer de nouveau contenu pour une ressource s’il n’a pas été modifié depuis le client dernier accès le serveur web.
+> Chaque fois que la `DisplayCategoryPicture.aspx` est visitée, la base de données est accédée et les données d’image des catégories spécifiées sont retournées. Toutefois, si l’image de la catégorie n’a pas changé depuis la dernière consultation de l’utilisateur, l’effort est perdu. Heureusement, le protocole HTTP permet d' *obtenir des inconditionnels*. Avec un accès conditionnel, le client qui effectue la requête HTTP envoie le long d’un [en-tête http`If-Modified-Since`](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) qui fournit la date et l’heure auxquelles le client a récupéré la dernière fois cette ressource à partir du serveur Web. Si le contenu n’a pas été modifié depuis la date spécifiée, le serveur Web peut répondre avec un [code d’État non modifié (304)](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) et renoncer à renvoyer le contenu des ressources demandées. En bref, cette technique évite au serveur Web d’avoir à renvoyer le contenu d’une ressource s’il n’a pas été modifié depuis le dernier accès au client.
 
-Pour implémenter ce comportement, toutefois, vous devez ajouter les un `PictureLastModified` colonne à la `Categories` table pour capturer lorsque le `Picture` colonne a été mises à jour, ainsi que le code de vérification de la `If-Modified-Since` en-tête. Pour plus d’informations sur la `If-Modified-Since` en-tête et le workflow GET conditionnel, consultez [HTTP GET conditionnel pour les pirates RSS](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers) et [A plus approfondie examiner effectuant des requêtes HTTP dans une Page ASP.NET](http://aspnet.4guysfromrolla.com/articles/122204-1.aspx).
+Toutefois, pour implémenter ce comportement, vous devez ajouter une colonne `PictureLastModified` à la table `Categories` pour capturer la dernière mise à jour de la colonne `Picture`, ainsi que le code permettant de vérifier l’en-tête `If-Modified-Since`. Pour plus d’informations sur l’en-tête `If-Modified-Since` et le flux de travail d’extraction conditionnel, consultez la page obtenir une requête HTTP [conditionnelle pour les pirates RSS](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers) et [un examen plus approfondi sur l’exécution de requêtes http dans une page ASP.net](http://aspnet.4guysfromrolla.com/articles/122204-1.aspx).
 
-## <a name="step-4-displaying-the-category-pictures-in-a-gridview"></a>Étape 4 : Afficher les images de catégorie dans un GridView
+## <a name="step-4-displaying-the-category-pictures-in-a-gridview"></a>Étape 4 : affichage des images de catégorie dans un GridView
 
-Maintenant que nous avons une page web pour afficher une image de la catégorie particulière s, nous pouvons afficher à l’aide de la [contrôle Image Web](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/ctrlref/standard/image.aspx) ou HTML `<img>` élément pointant vers `DisplayCategoryPicture.aspx?CategoryID=categoryID`. Les images dont l’URL est déterminée par les données de base de données peuvent être affichées dans le GridView ou DetailsView, à l’aide de l’ImageField. Contient l’ImageField `DataImageUrlField` et `DataImageUrlFormatString` propriétés qui fonctionnent comme les opérations de mappage HyperLinkField `DataNavigateUrlFields` et `DataNavigateUrlFormatString` propriétés.
+Maintenant que nous disposons d’une page Web pour afficher une image particulière des catégories, nous pouvons l’afficher à l’aide du [contrôle image Web](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/ctrlref/standard/image.aspx) ou d’un élément `<img>` html pointant vers `DisplayCategoryPicture.aspx?CategoryID=categoryID`. Les images dont l’URL est déterminée par les données de la base de données peuvent être affichées dans le contrôle GridView ou DetailsView à l’aide de ImageField. ImageField contient des propriétés `DataImageUrlField` et `DataImageUrlFormatString` qui fonctionnent comme les propriétés HyperLinkField s `DataNavigateUrlFields` et `DataNavigateUrlFormatString`.
 
-S permettent d’augmenter la `Categories` GridView dans `DisplayOrDownloadData.aspx` en ajoutant un ImageField pour afficher chaque image de catégorie s. Simplement ajouter l’ImageField et définissez son `DataImageUrlField` et `DataImageUrlFormatString` propriétés à `CategoryID` et `DisplayCategoryPicture.aspx?CategoryID={0}`, respectivement. Cela crée une colonne GridView qui restitue une `<img>` élément dont `src` les références d’attribut `DisplayCategoryPicture.aspx?CategoryID={0}`, où {0} est remplacée par la ligne GridView s `CategoryID` valeur.
+Nous allons ajouter le `Categories` GridView dans `DisplayOrDownloadData.aspx` en ajoutant un ImageField pour afficher chaque image de catégorie. Ajoutez simplement le ImageField et définissez ses propriétés `DataImageUrlField` et `DataImageUrlFormatString` sur `CategoryID` et `DisplayCategoryPicture.aspx?CategoryID={0}`, respectivement. Cela permet de créer une colonne GridView qui restitue un élément `<img>` dont l’attribut `src` fait référence à `DisplayCategoryPicture.aspx?CategoryID={0}`, où {0} est remplacé par la valeur `CategoryID` de la ligne GridView.
 
 ![Ajouter un ImageField au GridView](displaying-binary-data-in-the-data-web-controls-cs/_static/image12.gif)
 
-**Figure 12**: Ajouter un ImageField au GridView
+**Figure 12**: ajouter un ImageField au GridView
 
-Après avoir ajouté l’ImageField, votre syntaxe déclarative des s GridView doit se présenter comme soothe suivantes :
+Après avoir ajouté le ImageField, la syntaxe déclarative de GridView s doit ressembler à la suivante :
 
 [!code-aspx[Main](displaying-binary-data-in-the-data-web-controls-cs/samples/sample8.aspx)]
 
-Prenez un moment pour afficher cette page via un navigateur. Notez la façon dont chaque enregistrement inclut désormais une image pour la catégorie.
+Prenez un moment pour afficher cette page par le biais d’un navigateur. Notez comment chaque enregistrement comprend désormais une image pour la catégorie.
 
-[![La catégorie s image est affichée pour chaque ligne](displaying-binary-data-in-the-data-web-controls-cs/_static/image13.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image19.png)
+[![l’image des catégories s’affiche pour chaque ligne](displaying-binary-data-in-the-data-web-controls-cs/_static/image13.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image19.png)
 
-**Figure 13**: La catégorie s image est affichée pour chaque ligne ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image20.png))
+**Figure 13**: l’image des catégories s’affiche pour chaque ligne ([cliquez pour afficher l’image en taille réelle](displaying-binary-data-in-the-data-web-controls-cs/_static/image20.png))
 
 ## <a name="summary"></a>Récapitulatif
 
-Dans ce didacticiel, nous avons examiné comment présenter des données binaires. Comment les données sont présentées varie selon le type de données. Pour les fichiers de la brochure PDF, nous vous avons proposé à l’utilisateur une Brochure vue lien qui, lorsque vous cliquez dessus, a pris de l’utilisateur directement dans le fichier PDF. Pour l’image de s catégorie, nous avons tout d’abord créé une page pour récupérer et retourner les données binaires à partir de la base de données et ensuite utilisé cette page pour afficher chaque image de s catégorie dans un GridView.
+Dans ce didacticiel, nous avons examiné comment présenter des données binaires. Le mode de présentation des données dépend du type de données. Pour les fichiers de la brochure PDF, nous avons proposé à l’utilisateur un lien Afficher la brochure qui, lorsque vous cliquez dessus, a pris l’utilisateur directement dans le fichier PDF. Pour l’image des catégories, nous avons d’abord créé une page pour récupérer et retourner les données binaires de la base de données, puis utilisé cette page pour afficher chaque image de catégorie dans un GridView.
 
-Maintenant que nous avons ve étudié la façon d’afficher les données binaires, nous vous êtes prêt à examiner comment effectuer l’insertion, de mises à jour et suppressions sur la base de données avec les données binaires. Dans le didacticiel suivant, nous allons examiner comment associer un fichier téléchargé à l’enregistrement correspondant de la base de données. Dans le didacticiel après cela, nous allons voir comment mettre à jour des données binaires existantes, ainsi que comment supprimer les données binaires lors de son enregistrement associé est supprimé.
+Maintenant que nous avons vu comment afficher des données binaires, nous sommes prêts à examiner comment effectuer des insertions, des mises à jour et des suppressions sur la base de données avec les données binaires. Dans le didacticiel suivant, nous allons examiner comment associer un fichier chargé à son enregistrement de base de données correspondant. Dans ce didacticiel, nous verrons comment mettre à jour les données binaires existantes et comment supprimer les données binaires lorsque l’enregistrement qui lui est associé est supprimé.
 
 Bonne programmation !
 
 ## <a name="about-the-author"></a>À propos de l’auteur
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept les livres sur ASP/ASP.NET et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec les technologies Web Microsoft depuis 1998. Scott fonctionne comme un consultant indépendant, formateur et writer. Son dernier ouvrage est [*SAM animer vous-même ASP.NET 2.0 des dernières 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve à [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept livres ASP/ASP. net et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec des technologies Web Microsoft depuis 1998. Scott travaille en tant que consultant, formateur et auteur indépendant. Son dernier livre est [*Sams vous apprend vous-même ASP.NET 2,0 en 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve sur [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
-## <a name="special-thanks-to"></a>Remerciements
+## <a name="special-thanks-to"></a>Remerciements à
 
-Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Les réviseurs tête pour ce didacticiel ont été Teresa Murphy et Dave Gardner. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Cette série de didacticiels a été examinée par de nombreux réviseurs utiles. Les réviseurs de leads pour ce didacticiel étaient Teresa Murphy et Dave Gardner. Vous souhaitez revoir mes prochains articles MSDN ? Si c’est le cas, insérez une ligne sur [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Précédent](uploading-files-cs.md)
