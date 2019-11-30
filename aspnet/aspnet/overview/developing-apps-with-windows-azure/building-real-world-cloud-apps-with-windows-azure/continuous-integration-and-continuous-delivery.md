@@ -1,75 +1,75 @@
 ---
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery
-title: Intégration continue et livraison continues (génération d’applications Cloud réalistes avec Azure) | Microsoft Docs
+title: Intégration continue et livraison continue (création d’applications Cloud réalistes avec Azure) | Microsoft Docs
 author: MikeWasson
-description: Building Real World Cloud Apps with Azure e-book est basé sur une présentation développée par Scott Guthrie. Il explique 13 modèles et pratiques qui peuvent il...
+description: La création d’applications Cloud réelles avec Azure e-book est basée sur une présentation développée par Scott Guthrie. Il décrit 13 modèles et pratiques qui peuvent le faire...
 ms.author: riande
 ms.date: 06/12/2014
 ms.assetid: eaece9f5-f80c-428b-b771-5db66d275b7d
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery
 msc.type: authoredcontent
-ms.openlocfilehash: 25767303e3a8a3bfd9fc6c7c10cda32d73e9994d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 52c710053feca7872aa6fcc93c99bce90359f8fc
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118864"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74585876"
 ---
-# <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Intégration continue et livraison continues (génération d’applications Cloud réalistes avec Azure)
+# <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Intégration continue et livraison continue (création d’applications Cloud réalistes avec Azure)
 
 par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
-[Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
+[Télécharger le projet Fix it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Télécharger le livre électronique](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
-> Le **Building Real World Cloud Apps with Azure** e-book est basé sur une présentation développée par Scott Guthrie. Il explique 13 modèles et pratiques qui peuvent vous aider à réussir le développement d’applications web pour le cloud. Pour plus d’informations sur l’e-book, consultez [le premier chapitre](introduction.md).
+> La **création d’applications Cloud réelles avec Azure** e-book est basée sur une présentation développée par Scott Guthrie. Il décrit 13 modèles et pratiques qui peuvent vous aider à réussir le développement d’applications Web pour le Cloud. Pour plus d’informations sur l’e-Book, consultez [le premier chapitre](introduction.md).
 
-Les deux premiers recommandé de modèles de processus de développement ont été [automatiser tout](automate-everything.md) et [contrôle de code Source](source-control.md), et le troisième modèle de processus de les combine. Intégration continue (CI) signifie que chaque fois qu’un développeur archive le code au référentiel source, une build est déclenchée automatiquement. Livraison continue (CD) prend une étape supplémentaire : après une build et tests d’unités automatisés sont réussies, vous déployez automatiquement l’application dans un environnement où vous pouvez effectuer un test plus approfondie.
+Les deux premiers modèles de processus de développement recommandés ont été d' [automatiser tout](automate-everything.md) le [contrôle de code source](source-control.md), et le troisième modèle de processus les combine. L’intégration continue signifie que chaque fois qu’un développeur Archive du code dans le référentiel source, une build est déclenchée automatiquement. La livraison continue (CD) va encore plus loin : après la réussite d’une génération et de tests unitaires automatisés, vous déployez automatiquement l’application dans un environnement où vous pouvez effectuer des tests plus approfondis.
 
-Le cloud vous permet de réduire le coût de maintenance d’un environnement de test, car vous payez uniquement pour les ressources d’environnement, que vous utilisez. Votre processus CD peut configurer l’environnement de test lorsque vous en avez besoin, et peut interrompre l’environnement lorsque vous avez terminé test.
+Le Cloud vous permet de réduire le coût de la maintenance d’un environnement de test, car vous payez uniquement pour les ressources d’environnement à condition que vous les utilisiez. Votre processus de CD peut configurer l’environnement de test lorsque vous en avez besoin, et vous pouvez mettre l’environnement en service lorsque vous avez terminé le test.
 
-## <a name="continuous-integration-and-continuous-delivery-workflow"></a>Workflow d’intégration continue et livraison continues
+## <a name="continuous-integration-and-continuous-delivery-workflow"></a>Flux de travail d’intégration continue et de livraison continue
 
-En général nous vous recommandons d’effectuer la livraison continue pour le développement et de vos environnements intermédiaires. La plupart des équipes, même chez Microsoft, nécessitent un processus de révision et approbation manuels pour le déploiement de production. Pour une production déploiement, que vous souhaiterez peut-être vous assurer qu’elle se produit lorsque des personnes clés de l’équipe de développement sont disponibles pour la prise en charge, ou pendant les périodes de faible trafic. Mais rien ne vous empêche d’automatiser complètement vos environnements de développement et de test afin que tout développeur doit faire est d’archiver une modification et un environnement est configuré pour les tests d’acceptation.
+En général, nous vous recommandons d’effectuer une livraison continue dans vos environnements de développement et intermédiaires. La plupart des équipes, même chez Microsoft, requièrent un processus de révision et d’approbation manuel pour le déploiement en production. Pour un déploiement de production, vous souhaiterez peut-être vous assurer qu’il se produit lorsque des personnes clés de l’équipe de développement sont disponibles pour la prise en charge ou pendant des périodes de faible trafic. Mais rien ne vous empêche d’automatiser complètement vos environnements de développement et de test, de sorte que tous les développeurs doivent vérifier une modification et un environnement est configuré pour les tests d’acceptation.
 
-Le diagramme suivant tiré [un Microsoft Patterns and Practices e-book sur la livraison continue](https://aka.ms/ReleasePipeline) illustre un flux de travail classique. Cliquez sur l’image pour l’afficher à taille réelle dans son contexte d’origine.
+Le diagramme suivant d' [un livre électronique Microsoft Patterns and Practices sur la livraison continue](https://aka.ms/ReleasePipeline) illustre un flux de travail standard. Cliquez sur l’image pour afficher sa taille complète dans son contexte d’origine.
 
-[![Flux de travail de diffusion en continu](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
+[flux de travail de livraison continue ![](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
 
-## <a name="how-the-cloud-enables-cost-effective-ci-and-cd"></a>Comment le cloud permet économique CI et CD
+## <a name="how-the-cloud-enables-cost-effective-ci-and-cd"></a>Comment le Cloud active la solution de contrôle d’intégration et de livraison de CD
 
-Il est facile d’automatisation de ces processus dans Azure. Étant donné que vous exécutez tous les éléments dans le cloud, il est inutile d’acheter ou de gérer des serveurs pour vos builds ou de vos environnements de test. Et vous n’êtes pas obligé d’attendre pour être disponible pour effectuer vos tests sur un serveur. Avec chaque build que vous effectuez, vous pouvez faire tourner un environnement de test dans Azure à l’aide de votre script d’automatisation, les tests d’acceptation d’exécution ou plus approfondie de tests par rapport à elle et puis lorsque vous avez terminé de simplement détruire. Et si vous exécutez uniquement ce serveur pour 2 heures, 8 heures ou un jour, la somme d’argent que vous devez payer est minime, car vous payez uniquement pour la durée pendant laquelle un ordinateur est en cours d’exécution. Par exemple, l’environnement requis pour le correctif que si l’application coûte environ 1 cent par heure si vous monter d’un niveau à partir du niveau gratuit. Au cours d’un mois, si vous n’avez exécuté l’environnement une heure à la fois, votre environnement de test est probablement prix est inférieur à un latte vous achetez au client de Starbucks.
+L’automatisation de ces processus dans Azure est simple. Étant donné que vous exécutez tout dans le Cloud, vous n’avez pas besoin d’acheter ou de gérer des serveurs pour vos builds ou vos environnements de test. Et vous n’avez pas besoin d’attendre la disponibilité d’un serveur pour effectuer vos tests sur. Avec chaque Build que vous effectuez, vous pouvez créer un environnement de test dans Azure à l’aide de votre script d’automatisation, exécuter des tests d’acceptation ou des tests plus approfondis, puis, lorsque vous avez terminé, simplement le détacher. Et si vous exécutez ce serveur uniquement pendant 2 heures ou 8 heures ou une journée, la somme d’argent que vous devez payer pour celui-ci est minime, car vous payez uniquement pour la durée d’exécution réelle d’une machine. Par exemple, l’environnement requis pour l’application Fix it coûte fondamentalement 1% par heure si vous passez d’un niveau au niveau gratuit. Au cours d’un mois, si vous n’avez exécuté l’environnement qu’une heure à la fois, votre environnement de test aurait probablement coûté moins qu’une latte que vous achetez à Starbucks.
 
 ## <a name="azure-devops-services"></a>Azure DevOps Services 
 
-Azure DevOps Services fournit un certain nombre de fonctionnalités pour vous aider au développement d’applications à partir de la planification de déploiement.
+Azure DevOps Services fournit un certain nombre de fonctionnalités pour vous aider dans le développement d’applications, de la planification au déploiement.
 
-- Il prend en charge Git (distribué) et le contrôle de code source TFVC (centralisé).
-- Il offre un service de build élastique, ce qui signifie qu’il crée des serveurs de builds quand elles sont nécessaires et les retire lorsqu’ils ont terminé de dynamiquement. Vous pouvez lancer automatiquement une build lorsque qu’un utilisateur archive des modifications du code source, et que vous n’êtes pas obligé d’avoir allouer et de payer pour vos propres serveurs de build qui se trouvent la plupart du temps inactifs. Le service de build est gratuit, que vous ne dépassez pas un certain nombre de builds. Si vous prévoyez d’effectuer un grand nombre de builds, vous pouvez payer un peu supplémentaire pour les serveurs de build réservé.
+- Il prend en charge à la fois le contrôle de code source git (distribué) et TFVC (centralisé).
+- Il offre un service de build élastique, ce qui signifie qu’il crée dynamiquement des serveurs de builds lorsqu’ils sont nécessaires et les met en baisse lorsqu’ils sont terminés. Vous pouvez lancer automatiquement une build quand un utilisateur archive des modifications du code source et que vous n’avez pas besoin d’allouer et de payer pour vos propres serveurs de build qui s’inactivent la plupart du temps. Le service de build est gratuit tant que vous ne dépassez pas un certain nombre de builds. Si vous envisagez d’effectuer un volume élevé de builds, vous pouvez payer un peu plus pour les serveurs de build réservés.
 - Il prend en charge la livraison continue vers Azure.
-- Il prend en charge le test de charge automatisée. Test de charge est essentiel pour une application cloud, mais est souvent négligé jusqu'à ce qu’il soit trop tard. Test de charge simule une utilisation intensive d’une application par des milliers d’utilisateurs, ce qui vous permet de trouver les goulots d’étranglement et améliorer le débit, avant de publier l’application en production.
-- Il prend en charge les collaborations de salle d’équipe, qui facilite la communication en temps réel et la collaboration pour les petites équipes agiles.
+- Il prend en charge les tests de charge automatisés. Le test de charge est essentiel pour une application Cloud, mais il est souvent négligé jusqu’à ce qu’il soit trop tard. Le test de charge simule une utilisation intensive d’une application par des milliers d’utilisateurs, ce qui vous permet de trouver des goulots d’étranglement et d’améliorer le débit, avant de publier l’application en production.
+- Il prend en charge la collaboration de salle d’équipe, qui facilite la communication et la collaboration en temps réel pour les petites équipes Agile.
 - Il prend en charge la gestion de projet agile.
 
-Pour plus d’informations sur l’intégration continue et les fonctionnalités de livraison de Services de DevOps Azure, consultez [la documentation Azure DevOps](/azure/devops/index).
+Pour plus d’informations sur les fonctionnalités d’intégration et de remise continues de Azure DevOps Services, consultez [la documentation Azure DevOps](/azure/devops/index).
 
-Si vous avez besoin d’une gestion de projet de la clé en main, collaboration d’équipe et la solution de contrôle de code source, Découvrez les Services Azure DevOps. Inscrivez-vous sur [Azure DevOps Services](https://dev.azure.com/).
+Si vous recherchez une solution de gestion de projet, de collaboration d’équipe et de contrôle de code source, consultez Azure DevOps Services. Inscrivez-vous à [Azure DevOps services](https://dev.azure.com/).
 
 ## <a name="summary"></a>Récapitulatif
 
-Les modèles de développement trois cloud première ont été sur la façon d’implémenter un processus de développement prévisible, fiable et reproductible avec le temps de cycle faible. Dans le [chapitre suivant](web-development-best-practices.md) , nous commençons à examiner les modèles d’architecture et de codage.
+Les trois premiers modèles de développement Cloud ont été sur la façon d’implémenter un processus de développement reproductible, fiable et prévisible avec une durée de cycle faible. Dans le [chapitre suivant](web-development-best-practices.md) , nous commençons à examiner les modèles d’architecture et de codage.
 
 ## <a name="resources"></a>Ressources
 
-Pour plus d’informations, consultez [déployer une application web dans Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-deploy/).
+Pour plus d’informations, consultez [déployer une application Web dans Azure App service](https://azure.microsoft.com/documentation/articles/web-sites-deploy/).
 
 Consultez également les ressources suivantes :
 
-- [Création d’un Pipeline de mise en production avec Team Foundation Server 2012](https://aka.ms/ReleasePipeline). Ateliers pratiques, E-book et exemple de code par Microsoft Patterns and Practices, fournit une introduction complète à la livraison continue. Couvre l’utilisation de Visual Studio Lab Management et Visual Studio Release Management.
-- [ALM Rangers DevOps outils et conseils](https://aka.ms/vsarsolutions/). Le groupe ALM Rangers a introduit le DevOps Workbench exemple le Guide de solution et des conseils pratiques en collaboration avec les modèles &amp; livre de pratiques *création d’un Pipeline de mise en production avec TFS 2012*, comme un excellent moyen de démarrer apprendre les concepts de DevOps &amp; Release Management pour TFS 2012 et pour vos premiers pas. Le guide explique comment créer une seule fois et déployer dans plusieurs environnements.
-- [Test de livraison continue avec Visual Studio 2012](https://msdn.microsoft.com/library/jj159345.aspx). Livre électronique par Microsoft Patterns and Practices, explique comment intégrer les tests automatisés avec la livraison continue.
-- [WindowsAzureDeploymentTracker](https://github.com/RyanTBerry/WindowsAzureDeploymentTracker). Code source pour un outil conçu pour capturer une build à partir de TFS (basé sur une étiquette), générez-le, empaqueter, permet à un utilisateur dans le rôle DevOps pour configurer des aspects spécifiques de celui-ci et les intégrer à Azure. L’outil effectue le suivi du processus de déploiement afin de permettre les opérations « Annuler » pour une version précédemment déployée. L’outil n’a aucune dépendance externe et peut fonctionner autonome à l’aide d’API de TFS et le Kit de développement.
-- [Livraison continue : Versions du logiciel fiable via l’automatisation du déploiement, de Test et de Build](https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1377126361). Livre de Jez Humble.
-- [Libérez-le ! Concevoir et déployer des logiciels de prêt pour la Production](https://www.amazon.com/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213). Livre de Michael T. Nygard.
+- [Création d’un pipeline de mise en version avec Team Foundation Server 2012](https://aka.ms/ReleasePipeline). L’E-Book, les laboratoires pratiques et les exemples de code par Microsoft Patterns and Practices, fournit une présentation détaillée de la livraison continue. Couvre l’utilisation de Visual Studio Lab Management et de Visual Studio Release Management.
+- [ALM Rangers DevOps outils et conseils](https://aka.ms/vsarsolutions/). Les classeurs ALM ont introduit la solution d’accompagnement DevOps Workbench et des conseils pratiques en collaboration avec le manuel patterns &amp; Practices, *qui crée un pipeline de mise en œuvre avec tfs 2012*, pour commencer à apprendre les concepts de DevOps &amp; Release Management pour TFS 2012 et pour lancer les pneus. Ce guide montre comment générer une fois et déployer dans plusieurs environnements.
+- [Test de la livraison continue avec Visual Studio 2012](https://msdn.microsoft.com/library/jj159345.aspx). Livre électronique par Microsoft Patterns and Practices, explique comment intégrer des tests automatisés avec une livraison continue.
+- [WindowsAzureDeploymentTracker](https://github.com/RyanTBerry/WindowsAzureDeploymentTracker). Code source d’un outil conçu pour capturer une build à partir de TFS (en fonction d’une étiquette), la générer, la créer dans un package, autoriser une personne du rôle DevOps à configurer des aspects spécifiques de celle-ci et l’envoyer dans Azure. L’outil effectue le suivi du processus de déploiement afin d’autoriser les opérations à « restaurer » sur une version précédemment déployée. L’outil n’a pas de dépendances externes et peut fonctionner de manière autonome à l’aide des API TFS et du kit de développement logiciel (SDK) Azure.
+- [Livraison continue : publications de logiciels fiables via l’automatisation de la génération, du test et du déploiement](https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1377126361). Livrez par Jez de la modeste.
+- [Release ! concevez et déployez des logiciels prêts](https://www.amazon.com/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213)pour la production. Livre de Michael T. Nygard.
 
 > [!div class="step-by-step"]
 > [Précédent](source-control.md)

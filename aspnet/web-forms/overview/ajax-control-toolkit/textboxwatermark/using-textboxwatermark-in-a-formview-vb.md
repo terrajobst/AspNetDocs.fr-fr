@@ -2,52 +2,52 @@
 uid: web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-vb
 title: Utilisation de TextBoxWatermark dans un FormView (VB) | Microsoft Docs
 author: wenz
-description: Le contrôle TextBoxWatermark dans AJAX Control Toolkit étend une zone de texte afin qu’un texte est affiché dans la zone. Lorsqu’un utilisateur clique dans la zone, il je...
+description: Le contrôle TextBoxWatermark dans la boîte à outils du contrôle AJAX étend une zone de texte afin qu’un texte s’affiche dans la zone. Quand un utilisateur clique sur la zone, je vais...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 41497361-7fba-4825-b36c-f58d79522a88
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7dd213e632f6114b0ef468e97943e789e71a474a
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 1dd17ed57383680122c4ca613ca71f6682dec40e
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65124529"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74598347"
 ---
 # <a name="using-textboxwatermark-in-a-formview-vb"></a>Utilisation de TextBoxWatermark dans un FormView (VB)
 
 par [Christian Wenz](https://github.com/wenz)
 
-[Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/TextBoxWatermark1.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/textboxwatermark1VB.pdf)
+[Télécharger le code](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/TextBoxWatermark1.vb.zip) ou [Télécharger le PDF](https://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/textboxwatermark1VB.pdf)
 
-> Le contrôle TextBoxWatermark dans AJAX Control Toolkit étend une zone de texte afin qu’un texte est affiché dans la zone. Lorsqu’un utilisateur clique dans la zone, elle est vidée. Si l’utilisateur laisse la zone sans saisie de texte, le texte prérempli réapparaît. C’est également possible au sein d’un contrôle FormView.
+> Le contrôle TextBoxWatermark dans la boîte à outils du contrôle AJAX étend une zone de texte afin qu’un texte s’affiche dans la zone. Lorsqu’un utilisateur clique sur la zone, il est vidé. Si l’utilisateur quitte la zone sans entrer de texte, le texte prérempli réapparaît. Cela est également possible dans un contrôle FormView.
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d'ensemble de
 
-Le `TextBoxWatermark` contrôle dans AJAX Control Toolkit étend une zone de texte afin qu’un texte est affiché dans la zone. Lorsqu’un utilisateur clique dans la zone, elle est vidée. Si l’utilisateur laisse la zone sans saisie de texte, le texte prérempli réapparaît. C’est également possible au sein d’un `FormView` contrôle.
+Le contrôle `TextBoxWatermark` dans le kit d’outils de contrôle AJAX étend une zone de texte pour qu’un texte s’affiche dans la zone. Lorsqu’un utilisateur clique sur la zone, il est vidé. Si l’utilisateur quitte la zone sans entrer de texte, le texte prérempli réapparaît. Cela est également possible dans un contrôle de `FormView`.
 
 ## <a name="steps"></a>Étapes
 
-Tout d’abord une source de données est obligatoire. Cet exemple utilise la base de données AdventureWorks et Microsoft SQL Server 2005 Express Edition. La base de données est une partie facultative d’une installation de Visual Studio (y compris l’édition expresse) et est également disponible en téléchargement séparé sous [ https://go.microsoft.com/fwlink/?LinkId=64064 ](https://go.microsoft.com/fwlink/?LinkId=64064). La base de données AdventureWorks fait partie des exemples SQL Server 2005 et exemples de bases de données (téléchargement à l’adresse [ https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp; DisplayLang = fr](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)). Pour configurer la base de données le plus simple consiste à utiliser le Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp; DisplayLang = fr](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)) et attacher le `AdventureWorks.mdf` fichier de base de données.
+Tout d’abord, une source de données est requise. Cet exemple utilise la base de données AdventureWorks et la Microsoft SQL Server édition Express 2005. La base de données est une partie facultative d’une installation de Visual Studio (y compris l’édition Express) et est également disponible sous forme de téléchargement distinct sous [https://go.microsoft.com/fwlink/?LinkId=64064](https://go.microsoft.com/fwlink/?LinkId=64064). La base de données AdventureWorks fait partie des exemples SQL Server 2005 et des exemples de bases de données (téléchargez à l’adresse [https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;D isplaylang =](https://www.microsoft.com/downloads/details.aspx?FamilyID=e719ecf7-9f46-4312-af89-6ad8702e4e6e&amp;DisplayLang=en)en). Le moyen le plus simple de définir la base de données consiste à utiliser le Microsoft SQL Server Management Studio Express ([https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;D isplaylang =](https://www.microsoft.com/downloads/details.aspx?FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796&amp;DisplayLang=en)en) et à attacher le fichier de base de données de `AdventureWorks.mdf`.
 
-Pour cet exemple, nous partons du principe que l’instance de SQL Server 2005 Express Edition est appelée `SQLEXPRESS` et se trouve sur le même ordinateur que le serveur web ; il s’agit également de la configuration par défaut. Si votre programme d’installation est différente, vous devez adapter les informations de connexion pour la base de données.
+Pour cet exemple, nous partons du principe que l’instance de la SQL Server 2005 Express Edition est appelée `SQLEXPRESS` et réside sur le même ordinateur que le serveur Web. Il s’agit également de l’installation par défaut. Si votre installation diffère, vous devez adapter les informations de connexion de la base de données.
 
-Pour activer la fonctionnalité d’ASP.NET AJAX et les outils de contrôle, le `ScriptManager` contrôle doit être placé n’importe où sur la page (mais dans le `<form>` élément) :
+Pour activer les fonctionnalités de ASP.NET AJAX et de Control Toolkit, le contrôle de `ScriptManager` doit être placé n’importe où sur la page (mais dans l’élément `<form>`) :
 
 [!code-aspx[Main](using-textboxwatermark-in-a-formview-vb/samples/sample1.aspx)]
 
-Ensuite, ajoutez une source de données à la page qui prend en charge la `DELETE`, `INSERT` et `UPDATE` instructions SQL. Si vous utilisez l’assistant de Visual Studio pour créer la source de données, à l’esprit qu’un bogue dans la version actuelle ne précède pas le nom de table (`Vendor`) avec `Purchasing`. Le balisage suivant montre la syntaxe correcte :
+Ajoutez ensuite une source de données à la page qui prend en charge les instructions SQL `DELETE`, `INSERT` et `UPDATE`. Si vous utilisez l’Assistant Visual Studio pour créer la source de données, n’oubliez pas qu’un bogue dans la version actuelle ne précède pas le nom de la table (`Vendor`) avec `Purchasing`. Le balisage suivant illustre la syntaxe correcte :
 
 [!code-aspx[Main](using-textboxwatermark-in-a-formview-vb/samples/sample2.aspx)]
 
-N’oubliez pas le nom (`ID`) de la source de données, dans la mesure où il sera utilisé dans le `DataSourceID` propriété de la `FormView` contrôle. Le `<InsertItemTemplate>` section de la `FormView` contient une zone de texte qui est étendu par le `TextBoxWatermarkExtender` contrôle. Assurez-vous que l’extendeur réside dans le modèle et pas en dehors de celle-ci.
+Souvenez-vous du nom (`ID`) de la source de données, car il sera utilisé dans la propriété `DataSourceID` du contrôle `FormView`. La section `<InsertItemTemplate>` du `FormView` contient une zone de texte qui est étendue par le contrôle `TextBoxWatermarkExtender`. Assurez-vous que l’extendeur réside dans le modèle et non en dehors de celui-ci.
 
 [!code-aspx[Main](using-textboxwatermark-in-a-formview-vb/samples/sample3.aspx)]
 
-Maintenant lorsque l’utilisateur modifie le mode d’insertion de la `FormView` contrôler, le champ de texte pour le nouveau fournisseur est prérempli grâce à la `TextBoxWatermarkExtender` contrôle. Un clic à l’intérieur de la zone de texte permet le texte de remplissage disparaissent.
+Désormais, lorsque l’utilisateur passe en mode insertion du contrôle `FormView`, le champ de texte du nouveau fournisseur est prérempli grâce au contrôle `TextBoxWatermarkExtender`. Un clic à l’intérieur de la zone de texte permet de disparaître le texte du remplissage.
 
-[![Le filigrane dans le champ provient de l’extendeur](using-textboxwatermark-in-a-formview-vb/_static/image2.png)](using-textboxwatermark-in-a-formview-vb/_static/image1.png)
+[![le filigrane dans le champ provient de l’extendeur](using-textboxwatermark-in-a-formview-vb/_static/image2.png)](using-textboxwatermark-in-a-formview-vb/_static/image1.png)
 
 Le filigrane dans le champ provient de l’extendeur ([cliquez pour afficher l’image en taille réelle](using-textboxwatermark-in-a-formview-vb/_static/image3.png))
 

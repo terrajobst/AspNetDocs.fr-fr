@@ -1,251 +1,251 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12
-title: 'Déploiement d’une Application de Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : Déploiement dans l’environnement de Production - 7 sur 12 | Microsoft Docs'
+title: 'Déploiement d’une application Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : déploiement sur l’environnement de production-7 sur 12 | Microsoft Docs'
 author: tdykstra
-description: Cette série de didacticiels vous montre comment déployer une ASP.NET (publier) projet d’application web qui inclut une base de données SQL Server Compact à l’aide de Visual Stu...
+description: Cette série de didacticiels vous montre comment déployer (publier) un projet d’application Web ASP.NET qui comprend une base de données SQL Server Compact à l’aide de Stu...
 ms.author: riande
 ms.date: 11/17/2011
 ms.assetid: b83ab819-2b05-4776-b7b4-79ef78d457a5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 0b8e894684717e5d628fcc8c75b18d33118b9127
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: db838633accdedd7c0693b126a007e254ca681e4
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133334"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74627191"
 ---
-# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-to-the-production-environment---7-of-12"></a>Déploiement d’une Application de Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : Déploiement dans l’environnement de Production - 7 sur 12
+# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-to-the-production-environment---7-of-12"></a>Déploiement d’une application Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : déploiement sur l’environnement de production-7 sur 12
 
 par [Tom Dykstra](https://github.com/tdykstra)
 
-[Télécharger le projet de démarrage](http://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
+[Télécharger le projet de démarrage](https://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
 
-> Cette série de didacticiels vous montre comment déployer une ASP.NET (publier) projet d’application web qui inclut une base de données SQL Server Compact à l’aide de Visual Studio 2012 RC ou Visual Studio Express 2012 RC pour le Web. Vous pouvez également utiliser Visual Studio 2010 si vous installez la mise à jour de publication Web. Pour une introduction à la série, consultez [le premier didacticiel de la série](deployment-to-a-hosting-provider-introduction-1-of-12.md).
+> Cette série de didacticiels vous montre comment déployer (publier) un projet d’application Web ASP.NET qui comprend une base de données SQL Server Compact à l’aide de Visual Studio 2012 RC ou Visual Studio Express 2012 RC pour le Web. Vous pouvez également utiliser Visual Studio 2010 si vous installez la mise à jour de publication Web. Pour obtenir une présentation de la série, consultez [le premier didacticiel de la série](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
-> Pour obtenir un didacticiel qui montre les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions de SQL Server autre que SQL Server Compact et montre comment déployer dans Azure App Service Web Apps, consultez [déploiement Web ASP.NET à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
+> Pour obtenir un didacticiel qui présente les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions SQL Server autres que SQL Server Compact et montre comment déployer vers Azure App Service Web Apps, consultez [déploiement Web ASP.net à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d'ensemble de
 
-Dans ce didacticiel, vous configurez un compte avec un fournisseur d’hébergement et déployer votre application ASP.NET application web à l’environnement de production à l’aide de Visual Studio clic publier la fonctionnalité.
+Dans ce didacticiel, vous configurez un compte avec un fournisseur d’hébergement et déployez votre application Web ASP.NET dans l’environnement de production à l’aide de la fonctionnalité de publication en un clic de Visual Studio.
 
-Rappel : Si vous obtenez un message d’erreur ou quelque chose ne fonctionne pas lorsque vous parcourez le didacticiel, veillez à consulter le [page Résolution des problèmes](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md).
+Rappel : Si vous recevez un message d’erreur ou si une action ne fonctionne pas au fur et à mesure que vous parcourez le didacticiel, veillez à consulter la [page de résolution des problèmes](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md).
 
 ## <a name="selecting-a-hosting-provider"></a>Sélection d’un fournisseur d’hébergement
 
-Pour l’application Contoso University et cette série de didacticiels, vous avez besoin d’un fournisseur qui prend en charge ASP.NET 4 et Web Deploy. Une société d’hébergement spécifique a été choisie afin que les didacticiels pourraient illustrer l’expérience complète de déploiement sur un site Web actif. Chaque société d’hébergement fournit différentes fonctionnalités et l’expérience de déploiement sur leurs serveurs varie légèrement. Toutefois, la procédure décrite dans ce didacticiel est généralement utilisée pour l’ensemble du processus. Le fournisseur d’hébergement pour ce didacticiel, Cytanium.com, est un des nombreux qui sont disponibles, et son utilisation dans ce didacticiel ne constitue pas une approbation ou la recommandation.
+Pour l’application Contoso University et cette série de didacticiels, vous avez besoin d’un fournisseur qui prend en charge ASP.NET 4 et Web Deploy. Une société d’hébergement spécifique a été choisie afin que les didacticiels illustrent l’expérience complète du déploiement sur un site Web en ligne. Chaque société d’hébergement fournit des fonctionnalités différentes, et l’expérience de déploiement sur leurs serveurs varie quelque peu. Toutefois, le processus décrit dans ce didacticiel est courant pour le processus global. Le fournisseur d’hébergement utilisé pour ce didacticiel, Cytanium.com, est l’un des nombreux disponibles, et son utilisation dans ce didacticiel ne constitue pas une approbation ou une recommandation.
 
-Lorsque vous êtes prêt à sélectionner votre propre fournisseur d’hébergement, vous pouvez comparer les fonctionnalités et les prix dans la [galerie de fournisseurs](https://www.microsoft.com/web/hosting) sur le site Web Microsoft.com.
+Lorsque vous êtes prêt à sélectionner votre propre fournisseur d’hébergement, vous pouvez comparer les fonctionnalités et les prix dans la [Galerie de fournisseurs](https://www.microsoft.com/web/hosting) sur le site Microsoft.com/Web.
 
 ## <a name="creating-an-account"></a>Création d’un compte
 
-Créez un compte auprès de votre fournisseur sélectionné. Si prise en charge une base de données SQL Server complète est un ajout supplémentaire, vous n’avez pas besoin de le sélectionner pour ce didacticiel, mais vous en aurez besoin pour le [migration vers SQL Server](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12.md) didacticiel plus loin dans cette série.
+Créez un compte sur le fournisseur sélectionné. Si la prise en charge d’une base de données SQL Server complète est un ajout supplémentaire, vous n’avez pas besoin de la sélectionner pour ce didacticiel, mais vous en aurez besoin pour le didacticiel [sur la migration vers SQL Server](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12.md) plus loin dans cette série.
 
-Pour ces didacticiels, vous n’êtes pas obligé d’inscrire un nouveau nom de domaine. Vous pouvez tester pour vérifier la réussite du déploiement à l’aide de l’URL temporaire attribué au site par le fournisseur.
+Pour ces didacticiels, vous n’êtes pas obligé d’inscrire un nouveau nom de domaine. Vous pouvez effectuer un test pour vérifier que le déploiement a réussi à l’aide de l’URL temporaire attribuée au site par le fournisseur.
 
-Une fois que le compte a été créé, vous recevez généralement un e-mail de bienvenue qui contient toutes les informations que vous avez besoin pour déployer et gérer votre site. Les informations qui vous envoie par votre fournisseur d’hébergement seront similaires à celles indiquées ici. L’e-mail de bienvenue Cytanium est envoyé aux nouveaux propriétaires de comptes comprend les informations suivantes :
+Une fois le compte créé, vous recevez généralement un e-mail de bienvenue contenant toutes les informations dont vous avez besoin pour déployer et gérer votre site. Les informations que votre fournisseur d’hébergement envoie vous seront similaires à ce qui est présenté ici. Le courrier électronique de bienvenue Cytanium envoyé aux nouveaux propriétaires de compte comprend les informations suivantes :
 
-- URL vers le site du fournisseur contrôle panneau, où vous pouvez gérer les paramètres de votre site. L’ID et le mot de passe spécifiés sont inclus dans cette partie de l’e-mail de bienvenue pour faciliter la référence. (Les deux ont été modifiées pour une valeur de démonstration pour cette illustration.)
+- URL vers le site du panneau de configuration du fournisseur, dans lequel vous pouvez gérer les paramètres de votre site. L’ID et le mot de passe que vous avez spécifiés sont inclus dans cette partie de l’e-mail de bienvenue afin d’en faciliter la référence. (Les deux ont été remplacées par une valeur de démonstration pour cette illustration.)
 
     [![Welcome_Email_Control_Panel_URL](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image2.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image1.png)
-- La version du .NET Framework par défaut et les informations sur la modification. Nombreux hébergement sites par défaut vers la version 2.0, qui fonctionne avec les applications ASP.NET qui ciblent le .NET Framework 2.0, 3.0 ou 3.5. Toutefois Contoso University étant une application .NET Framework 4, vous devez modifier ce paramètre. (Pour une application ASP.NET 4.5 vous utiliseriez le paramètre .NET 4.0.)
+- La version .NET Framework par défaut et les informations sur la façon de le modifier. La plupart des sites d’hébergement ont par défaut la valeur 2,0, qui fonctionne avec les applications ASP.NET qui ciblent le .NET Framework 2,0, 3,0 ou 3,5. Toutefois, Contoso University étant une application .NET Framework 4, vous devez modifier ce paramètre. (Pour une application ASP.NET 4,5, vous utiliseriez le paramètre .NET 4,0.)
 
     [![Welcome_Email_Framework_Version](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image4.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image3.png)
-- L’URL temporaire que vous pouvez utiliser pour accéder à votre site web. Lorsque ce compte a été créé, « contosouniversity.com » a été entré en tant que le nom de domaine existant. Par conséquent, l’URL temporaire est `http://contosouniversity.com.vserver01.cytanium.com`.
+- URL temporaire que vous pouvez utiliser pour accéder à votre site Web. Lorsque ce compte a été créé, « contosouniversity.com » a été entré en tant que nom de domaine existant. Par conséquent, l’URL temporaire est `http://contosouniversity.com.vserver01.cytanium.com`.
 
     [![Welcome_Email_Temporary_URL](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image6.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image5.png)
-- Informations sur la configuration des bases de données et les chaînes de connexion dont vous avez besoin afin d’y accéder :
+- Informations sur la configuration des bases de données et les chaînes de connexion dont vous avez besoin pour y accéder :
 
     [![Welcome_Email_Database_Info](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image8.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image7.png)
-- Informations sur les outils et les paramètres pour le déploiement de votre site. (Le courrier électronique à partir de Cytanium mentionne également WebMatrix, qui est omis ici.)
+- Informations sur les outils et les paramètres pour le déploiement de votre site. (L’e-mail de Cytanium mentionne également WebMatrix, qui est omis ici.)
 
     [![Welcome_Email_Deploy_info](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image10.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image9.png)
 
-## <a name="setting-the-net-framework-version"></a>Définition de la Version du .NET Framework
+## <a name="setting-the-net-framework-version"></a>Définition de la version de .NET Framework
 
-L’e-mail de bienvenue Cytanium inclut un lien pour obtenir des instructions sur la modification de la version du .NET Framework. Ces instructions expliquent que cela est possible via le panneau de configuration Cytanium. Autres fournisseurs ont des sites de panneau de contrôle qui paraissent différentes, ou il peuvent vous demander de procéder de manière différente.
+L’e-mail de bienvenue Cytanium contient un lien vers des instructions sur la façon de modifier la version du .NET Framework. Ces instructions expliquent que cela peut être effectué par le biais du panneau de configuration Cytanium. Les autres fournisseurs disposent de sites du panneau de configuration qui s’affichent différemment, ou ils peuvent vous indiquer de le faire d’une autre façon.
 
-Accédez à l’URL de panneau de contrôle. Une fois connecté avec votre nom d’utilisateur et le mot de passe, vous consultez le panneau de configuration.
+Accédez à l’URL du panneau de configuration. Une fois connecté avec votre nom d’utilisateur et votre mot de passe, le panneau de configuration s’affiche.
 
 [![Cytanium_Control_Panel](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image12.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image11.png)
 
-Dans le **espaces hébergement** boîte, maintenez le pointeur sur l’icône Web et sélectionnez **Sites Web** dans le menu.
+Dans la zone **espaces d’hébergement** , maintenez le pointeur sur l’icône Web et sélectionnez **sites Web** dans le menu.
 
 [![Cytanium_Control_Panel_selecting_Web_Sites](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image14.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image13.png)
 
-Dans le **Sites Web** , cliquez sur **contosouniversity.com** (le nom du site que vous avez utilisé lorsque vous avez créé le compte).
+Dans la zone **sites Web** , cliquez sur **contosouniversity.com** (le nom du site que vous avez utilisé lors de la création du compte).
 
 [![Cytanium_Control_Panel_selecting_contosouniversity](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image16.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image15.png)
 
-Dans le **propriétés du Site Web** boîte, sélectionnez le **Extensions** onglet.
+Dans la zone **Propriétés du site Web** , sélectionnez l’onglet **Extensions** .
 
 [![Cytanium_Control_Panel_Extensions_tab](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image18.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image17.png)
 
-Changer d’ASP.NET à partir de **2.0 Pipeline intégré** à **4.0 (Pipeline intégré)**, puis cliquez sur **mise à jour**.
+Remplacez ASP.NET du **pipeline intégré 2,0** par **4,0 (pipeline intégré)** , puis cliquez sur **mettre à jour**.
 
 ## <a name="publishing-to-the-hosting-provider"></a>Publication sur le fournisseur d’hébergement
 
-L’e-mail de Bienvenue à partir du fournisseur d’hébergement inclut tous les paramètres que vous avez besoin pour publier le projet, et vous pouvez entrer manuellement ces informations dans un profil de publication. Mais vous allez utiliser un plus facile et moins sujette aux erreurs méthode pour configurer le déploiement vers le fournisseur : vous allez télécharger un *.publishsettings* de fichiers et les importer dans un profil de publication.
+L’e-mail de bienvenue du fournisseur d’hébergement comprend tous les paramètres dont vous avez besoin pour publier le projet, et vous pouvez entrer ces informations manuellement dans un profil de publication. Mais vous utiliserez une méthode plus simple et moins sujette aux erreurs pour configurer le déploiement sur le fournisseur : vous allez télécharger un fichier *. publishsettings* et l’importer dans un profil de publication.
 
-Dans votre navigateur, accédez au panneau de commande Cytanium et sélectionnez **Web** , puis sélectionnez **Sites Web.**
+Dans votre navigateur, accédez au panneau de configuration Cytanium, sélectionnez **Web** , puis sélectionnez **sites Web.**
 
-![Le panneau de configuration en sélectionnant des Sites Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image19.png)
+![Panneau de configuration sélection de sites Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image19.png)
 
-Sélectionnez le **contosouniversity.com** site web.
+Sélectionnez le site Web **contosouniversity.com** .
 
-![Le panneau de configuration en sélectionnant contosouniversity.com](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image20.png)
+![Panneau de configuration, sélection de contosouniversity.com](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image20.png)
 
-Sélectionnez le **publication Web** onglet.
+Sélectionnez l’onglet **publication Web** .
 
-![Onglet de contrôle de publication sur le panneau de configuration Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image21.png)
+![Onglet publication Web du panneau de configuration](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image21.png)
 
-Créer des informations d’identification à utiliser pour le web de publication en entrant un nom d’utilisateur et le mot de passe. Vous pouvez entrer les informations d’identification que vous utilisez pour vous connecter au panneau de commande. Puis cliquez sur **activer**.
+Créez les informations d’identification à utiliser pour la publication Web en entrant un nom d’utilisateur et un mot de passe. Vous pouvez entrer les mêmes informations d’identification que celles que vous utilisez pour ouvrir une session sur le panneau de configuration. Cliquez ensuite sur **activer**.
 
-![Le panneau de configuration créer les informations d’identification de publication](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image22.png)
+![Panneau de configuration-créer des informations d’identification de publication](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image22.png)
 
-Cliquez sur **télécharger le profil de publication pour ce site web**.
+Cliquez sur **Télécharger le profil de publication pour ce site Web**.
 
-![Profil de publication de contrôler le téléchargement du Panneau de configuration](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image23.png)
+![Panneau de configuration-Télécharger le profil de publication](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image23.png)
 
 Lorsque vous êtes invité à ouvrir ou enregistrer le fichier, enregistrez-le.
 
-![Enregistrez le fichier de profil de publication](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image24.png)
+![Enregistrer le fichier de profil de publication](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image24.png)
 
-Dans **l’Explorateur de solutions** dans Visual Studio, cliquez sur le projet ContosoUniversity et sélectionnez **publier**. Le **publier le site Web** boîte de dialogue s’ouvre sur la **aperçu** onglet avec le **Test** profil est sélectionné, car c’est le dernier profil que vous avez utilisé.
+Dans **Explorateur de solutions** dans Visual Studio, cliquez avec le bouton droit sur le projet ContosoUniversity et sélectionnez **publier**. La boîte de dialogue **publier le site Web** s’ouvre sous l’onglet **Aperçu** avec le profil de **test** sélectionné, car il s’agit du dernier profil que vous avez utilisé.
 
-Sélectionnez le **profil** onglet, puis cliquez sur **importation**.
+Sélectionnez l’onglet **Profil** , puis cliquez sur **Importer**.
 
-![Web Assistant Importation bouton Publier](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image25.png)
+![Bouton d’importation de l’Assistant publier le site Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image25.png)
 
-Dans le **importer les paramètres de publication** boîte de dialogue, sélectionnez le *.publishsettings* fichier que vous avez téléchargé, puis cliquez sur **Open**. L’Assistant avance à l’onglet connexion avec tous les champs renseignés.
+Dans la boîte de dialogue **Importer les paramètres de publication** , sélectionnez le fichier *. publishsettings* que vous avez téléchargé, puis cliquez sur **ouvrir**. L’Assistant passe à l’onglet connexion avec tous les champs renseignés.
 
-![Publication : onglet Web Assistant connexion](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image26.png)
+![Onglet de connexion de l’Assistant publier le site Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image26.png)
 
-Le fichier .publishsettings place l’URL permanente planifié pour le site dans la zone URL de Destination, mais si vous n’avez pas acheté ce domaine encore, remplacez la valeur par l’URL temporaire. Pour cet exemple, l’URL est  *[ http://contosouniversity.com.vserver01.cytanium.com ](http://contosouniversity.com.vserver01.cytanium.com).* Le seul objectif de cette zone consiste à spécifier les URL que le navigateur s’ouvre pour automatiquement après avoir correctement après le déploiement. Si vous laissez vide, la seule conséquence est que le navigateur ne démarre pas automatiquement après le déploiement.
+Le fichier. publishsettings place l’URL permanente planifiée pour le site dans la zone URL de destination, mais si vous n’avez pas encore acheté ce domaine, remplacez la valeur par l’URL temporaire. Pour cet exemple, l’URL est  *[http://contosouniversity.com.vserver01.cytanium.com](http://contosouniversity.com.vserver01.cytanium.com).* Le seul objectif de cette zone est de spécifier l’URL à laquelle le navigateur s’ouvrira automatiquement après le déploiement. Si vous laissez le champ vide, la seule conséquence est que le navigateur ne démarre pas automatiquement après le déploiement.
 
-Cliquez sur **valider la connexion** pour vérifier que les paramètres sont corrects et que vous pouvez vous connecter au serveur. Comme vous l’avez vu précédemment, une coche verte vérifie que la connexion est établie.
+Cliquez sur **valider la connexion** pour vérifier que les paramètres sont corrects et que vous pouvez vous connecter au serveur. Comme vous l’avez vu précédemment, une coche verte vérifie que la connexion a réussi.
 
-Lorsque vous cliquez sur Valider la connexion, vous pouvez voir un **erreur de certificat** boîte de dialogue. Si vous le faites, vérifiez que le nom du serveur est ce que vous attendez. Dans le cas, sélectionnez **enregistrer ce certificat pour les sessions ultérieures de Visual Studio** et cliquez sur **Accept**. (Cette erreur signifie que le fournisseur d’hébergement a choisi d’éviter de devoir acheter un certificat SSL pour l’URL que vous effectuez le déploiement. Si vous préférez établir une connexion sécurisée à l’aide d’un certificat valide, contactez votre fournisseur d’hébergement.)
+Lorsque vous cliquez sur valider la connexion, une boîte de dialogue **erreur de certificat** peut s’afficher. Si vous le faites, vérifiez que le nom du serveur correspond à ce que vous attendez. Si c’est le cas, sélectionnez **enregistrer ce certificat pour les futures sessions de Visual Studio** , puis cliquez sur **accepter**. (Cette erreur signifie que le fournisseur d’hébergement a choisi d’éviter les dépenses liées à l’achat d’un certificat SSL pour l’URL vers laquelle vous effectuez le déploiement. Si vous préférez établir une connexion sécurisée à l’aide d’un certificat valide, contactez votre fournisseur d’hébergement.)
 
 ![Erreur de certificat](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image27.png)
 
-Cliquez sur **Suivant**.
+Cliquez sur **Next**.
 
-Dans le **bases de données** section de la **paramètres** , entrez les mêmes valeurs que vous avez entré pour le Test de profil de publication. Vous trouverez les chaînes de connexion que vous avez besoin dans les listes déroulantes.
+Dans la section **bases de données** de l’onglet **paramètres** , entrez les mêmes valeurs que celles que vous avez entrées pour le profil de publication de test. Vous trouverez les chaînes de connexion dont vous avez besoin dans les listes déroulantes.
 
 - Dans la zone chaîne de connexion pour **SchoolContext,** sélectionnez `Data Source=|DataDirectory|School-Prod.sdf`
-- Sous **SchoolContext**, sélectionnez **appliquer des Migrations Code First**.
+- Sous **SchoolContext**, sélectionnez **appliquer migrations code First**.
 - Dans la zone chaîne de connexion pour **DefaultConnection**, sélectionnez `Data Source=|DataDirectory|aspnet-Prod.sdf`
-- Sous **DefaultConnection**, laissez **base de données de mise à jour** désactivée.
+- Sous **DefaultConnection**, laissez **mettre à jour la base de données** désactivée.
 
-![Publication : onglet Paramètres Assistant Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image28.png)
+![Onglet Paramètres de l’Assistant publier le site Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image28.png)
 
-Cliquez sur **Suivant**.
+Cliquez sur **Next**.
 
-Dans le **aperçu** , cliquez sur **démarrer l’aperçu** pour afficher la liste des fichiers qui seront copiés. Vous voyez la même liste que vous avez vu plus tôt lors du déploiement vers IIS sur l’ordinateur local.
+Dans l’onglet **Aperçu** , cliquez sur **Démarrer l’aperçu** pour afficher la liste des fichiers qui seront copiés. Vous voyez la même liste que celle que vous avez vue précédemment lorsque vous avez effectué le déploiement sur IIS sur l’ordinateur local.
 
-Avant de publier, modifier le nom du profil afin que votre fichier de transformation Web.Production.config sera appliqué. Sélectionnez le **profil** onglet et cliquez sur **gérer les profils**.
+Avant de publier, modifiez le nom du profil afin que votre fichier de transformation Web. production. config s’applique. Sélectionnez l’onglet **Profil** , puis cliquez sur **gérer les profils**.
 
-![Web Assistant Gérer les profils de publication](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image29.png)
+![Assistant publier le site Web-gérer les profils](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image29.png)
 
-Dans le **modifier les profils de publication Web** boîte de dialogue, sélectionnez le profil de production, cliquez sur **renommer**, puis remplacez le nom de profil en Production. Puis cliquez sur **fermer**.
+Dans la boîte de dialogue **modifier les profils de publication Web** , sélectionnez le profil de production, cliquez sur **Renommer**, puis remplacez le nom du profil par production. Cliquez ensuite sur **Fermer**.
 
-![Modifier la boîte de dialogue profils de publication Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image30.png)
+![Boîte de dialogue Modifier les profils de publication Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image30.png)
 
 Cliquez sur **Publier**.
 
-L’application est publiée dans le fournisseur d’hébergement. Le résultat s’affiche dans le **sortie** fenêtre.
+L’application est publiée sur le fournisseur d’hébergement. Le résultat s’affiche dans la fenêtre **sortie** .
 
 ![Fenêtre sortie après le déploiement](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image31.png)
 
-Le navigateur s’ouvre automatiquement à l’URL que vous avez entré dans **URL de Destination** zone sur le **connexion** onglet de la **publier le site Web** Assistant. Vous voyez la page d’accueil même lorsque vous exécutez le site dans Visual Studio, mais maintenant il n’existe aucun « (Test) » ou d’un indicateur d’environnement « (Dev) » dans la barre de titre. Cela indique que l’indicateur d’environnement *Web.config* transformation a fonctionné correctement.
+Le navigateur s’ouvre automatiquement à l’URL que vous avez entrée dans la zone **URL de destination** sous l’onglet **connexion** de l’Assistant **publier le site Web** . Vous voyez la même page d’hébergement que lorsque vous exécutez le site dans Visual Studio, à l’exception du fait qu’il n’y a pas d’indicateur d’environnement « (test) » ou « (dev) » dans la barre de titre. Cela indique que la transformation *Web. config* de l’indicateur d’environnement fonctionnait correctement.
 
 > [!NOTE]
-> Si vous voyez toujours « (Test) » dans le titre, supprimez le *obj* dossier le projet de ContosoUniversity et de redéploiement. Dans les versions préliminaires du logiciel, le fichier de transformation précédemment appliquées (Web.Test.config) peut obtenir appliqué à nouveau même si vous utilisez le profil de Production.
+> Si vous voyez toujours « (test) » dans le titre, supprimez le dossier *obj* du projet ContosoUniversity et redéployez. Dans les versions préliminaires du logiciel, le fichier de transformation appliqué précédemment (Web. test. config) peut être appliqué à nouveau bien que vous utilisiez le profil de production.
 
 [![Home_page_Prod](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image33.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image32.png)
 
-Avant d’exécuter une page qui provoque l’accès de base de données, assurez-vous que Elmah sera en mesure de consignation des erreurs qui se produisent.
+Avant d’exécuter une page qui provoque l’accès à la base de données, assurez-vous que ELMAH peut consigner les erreurs qui se produisent.
 
-## <a name="setting-folder-permissions-for-elmah"></a>Définition des autorisations de dossier pour Elmah
+## <a name="setting-folder-permissions-for-elmah"></a>Définition des autorisations de dossier pour ELMAH
 
-Comme vous vous souvenez du didacticiel précédent de cette série, il se peut que vous devez vous assurer que l’application dispose des autorisations d’écriture pour le dossier dans votre application où Elmah stocke les fichiers journaux des erreurs. Lors du déploiement vers IIS localement sur votre ordinateur, vous définissez manuellement ces autorisations. Dans cette section, vous verrez comment définir des autorisations au Cytanium. (Certains fournisseurs d’hébergement ne permettent pas cela ; il peut offrir un ou plusieurs dossiers prédéfinis avec des autorisations d’écriture. Dans ce cas vous devrez modifier votre application pour utiliser les dossiers spécifiés.)
+Comme vous le savez dans le didacticiel précédent de cette série, vous devez vous assurer que l’application dispose des autorisations en écriture sur le dossier de votre application où ELMAH stocke les fichiers journaux des erreurs. Lorsque vous déployez sur IIS localement sur votre ordinateur, vous définissez ces autorisations manuellement. Dans cette section, vous allez apprendre à définir des autorisations sur Cytanium. (Certains fournisseurs d’hébergement peuvent ne pas vous permettre de le faire ; ils peuvent proposer un ou plusieurs dossiers prédéfinis avec des autorisations d’écriture. Dans ce cas, vous devez modifier votre application pour utiliser les dossiers spécifiés.)
 
-Vous pouvez définir des autorisations de dossier dans le panneau de configuration Cytanium. Accédez au contrôle de panneau URL et sélectionnez **Gestionnaire de fichiers**.
+Vous pouvez définir des autorisations sur les dossiers dans le panneau de configuration Cytanium. Accédez à l’URL du panneau de configuration et sélectionnez **Gestionnaire de fichiers**.
 
 [![Cytanium_Control_Panel_with_File_Manager_selected](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image35.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image34.png)
 
-Dans le **Gestionnaire de fichiers** boîte, sélectionnez **contosouniversity.com** , puis **wwwroot** pour afficher le dossier racine de l’application. Cliquez sur l’icône de cadenas en regard **Elmah**.
+Dans la zone **Gestionnaire de fichiers** , sélectionnez **contosouniversity.com** , puis **wwwroot** pour afficher le dossier racine de l’application. Cliquez sur l’icône de cadenas en regard de **ELMAH**.
 
 [![Cytanium_Control_Panel_File_Manager_at_root_folder](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image37.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image36.png)
 
-Dans le **fichier**/**autorisations du dossier** fenêtre, sélectionnez le **en lecture** et **écrire** cases à cocher pour  **contosouniversity.com** et cliquez sur **définir des autorisations**.
+Dans la fenêtre autorisations de **fichier**/**dossier** , activez les cases à cocher **lecture** et **écriture** pour **contosouniversity.com** , puis cliquez sur **définir les autorisations**.
 
 [![Cytanium_Control_Panel_File_Folder_Permissions_Elmah](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image39.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image38.png)
 
-Assurez-vous que Elmah a accès en écriture à la *Elmah* dossier en provoquant une erreur, puis en affichant le rapport d’erreurs Elmah. Demander une URL non valide comme *Studentsxxx.aspx*. Comme auparavant, vous voyez la *GenericErrorPage.aspx* page. Cliquez sur le **se déconnecter** lier, puis exécutez *Elmah.axd*. Vous obtenez le **Log In** page tout d’abord, ce qui valide le fait que le *Web.config* transformation ajouté avec succès d’autorisation Elmah. Une fois que vous êtes connecté, vous voyez le rapport qui affiche l’erreur que vous venez d’origine.
+Assurez-vous que ELMAH a accès en écriture au dossier *ELMAH* en générant une erreur, puis en affichant le rapport d’erreurs ELMAH. Demandez une URL non valide telle que *Studentsxxx. aspx*. Comme précédemment, vous voyez la page *GenericErrorPage. aspx* . Cliquez sur le lien **déconnexion** , puis exécutez *ELMAH. axd*. Vous recevez d’abord la page **de connexion** , ce qui confirme que la transformation *Web. config* a ajouté l’autorisation ELMAH. Une fois connecté, vous voyez le rapport qui affiche l’erreur que vous venez de vous produire.
 
-[![Elmah.axd_Prod](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image41.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image40.png)
+[![ELMAH. axd_Prod](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image41.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image40.png)
 
-## <a name="testing-in-the-production-environment"></a>Test dans l’environnement de Production
+## <a name="testing-in-the-production-environment"></a>Test dans l’environnement de production
 
-Exécutez le **étudiants** page. L’application essaie d’accéder à la base de données School pour la première fois, ce qui déclenche les Migrations Code First pour créer la base de données. Lorsque la page s’affiche après le délai de tout moment, il montre qu’il n’y a aucun étudiant.
+Exécutez la page **students** . L’application tente d’accéder à la base de données School pour la première fois, ce qui déclenche Migrations Code First pour créer la base de données. Lorsque la page s’affiche après un certain délai, elle indique qu’il n’y a pas d’élèves.
 
 [![Students_page_Prod](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image43.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image42.png)
 
-Exécutez le **formateurs** page pour vérifier que les données d’amorçage insérées avec succès les données des formateurs dans la base de données.
+Exécutez la page des **instructeurs** pour vérifier que les données de départ ont correctement inséré les données de l’instructeur dans la base de données.
 
 [![Instructors_page_Prod](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image45.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image44.png)
 
-Comme vous l’avez fait dans l’environnement de test, que vous souhaitez vérifier que les mises à jour de la base de données fonctionnent dans l’environnement de production, mais en règle générale, vous ne souhaitez pas entrer des données de test dans votre base de données de production. Pour ce didacticiel, vous allez utiliser la même méthode que vous l’avez fait dans le test. Mais dans une application réelle, que vous souhaiterez sans doute trouver une méthode qui valide de cette base de données mises à jour réussissent sans introduire de données de test dans la base de données de production. Dans certaines applications, il peut être pratique ajouter un élément, puis le supprimer.
+Comme vous l’avez fait dans l’environnement de test, vous souhaitez vérifier que les mises à jour de base de données fonctionnent dans l’environnement de production, mais que vous ne souhaitez généralement pas entrer de données de test dans votre base de données de production. Pour ce didacticiel, vous allez utiliser la même méthode que dans le test. Toutefois, dans une application réelle, vous souhaiterez peut-être trouver une méthode qui valide la réussite des mises à jour de la base de données sans introduire de données de test dans la base de données de production. Dans certaines applications, il peut être pratique d’ajouter quelque sorte, puis de le supprimer.
 
-Ajoutez un étudiant, puis affichez les données que vous avez entré dans le **étudiants** page pour vérifier que vous pouvez mettre à jour des données dans la base de données.
+Ajoutez un étudiant, puis affichez les données que vous avez entrées dans la page des **étudiants** pour vérifier que vous pouvez mettre à jour les données dans la base de données.
 
 [![Add_Students_page_Prod](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image47.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image46.png)
 
 [![Students_page_with_new_student_Prod](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image49.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image48.png)
 
-Vérifiez que les règles d’autorisation sont fonctionne correctement en sélectionnant **crédits de la mise à jour** à partir de la **cours** menu. Le **Log In** page s’affiche. Entrez vos informations d’identification du compte administrateur, cliquez sur **Log In**et le **mise à jour crédits** page s’affiche.
+Vérifiez que les règles d’autorisation fonctionnent correctement en sélectionnant **mettre à jour les crédits** dans le menu **cours** . La page **de connexion** s’affiche. Entrez les informations d’identification de votre compte d’administrateur, cliquez sur **se connecter pour**afficher la page **mettre à jour les crédits** .
 
 [![Log_In_page_Prod](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image51.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image50.png)
 
-Si la connexion est réussie, le **mise à jour crédits** page s’affiche. Cela indique que la base de données d’appartenance ASP.NET (avec le compte administrateur unique) a été déployé avec succès.
+Si la connexion est établie, la page **mettre à jour les crédits** s’affiche. Cela indique que la base de données d’appartenance ASP.NET (avec le compte d’administrateur unique) a été déployée avec succès.
 
 [![Update_Credits_page_Prod](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image53.png)](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image52.png)
 
-Vous disposez maintenant de déployer et testé votre site et il est disponible publiquement sur Internet.
+Vous avez maintenant déployé et testé votre site avec succès et il est disponible publiquement sur Internet.
 
-## <a name="creating-a-more-reliable-test-environment"></a>Création d’un environnement de Test plus fiable
+## <a name="creating-a-more-reliable-test-environment"></a>Création d’un environnement de test plus fiable
 
-Comme expliqué dans la [déploiement dans l’environnement de Test](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md) didacticiel, l’environnement de test plus fiable serait un deuxième compte au fournisseur d’hébergement qui a comme le compte de production. Il s’agit plus onéreux qu’utiliser IIS local comme environnement de test, dans la mesure où vous seriez obligé de s’inscrire à un deuxième compte d’hébergement. Mais si elle empêche les erreurs de site de production ou de pannes, vous pouvez décider que cela vaut la peine.
+Comme expliqué dans le didacticiel [sur le déploiement dans l’environnement de test](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md) , l’environnement de test le plus fiable serait un deuxième compte au niveau du fournisseur d’hébergement, comme le compte de production. Cela serait plus onéreux que d’utiliser IIS local comme environnement de test, car vous devrez vous inscrire pour un deuxième compte d’hébergement. Mais s’il empêche les erreurs ou pannes de site de production, vous pouvez décider qu’il est intéressant de le coûter.
 
-La majeure partie du processus de création et de déploiement pour un compte de test est similaire à ce que vous avez déjà fait pour déployer en production :
+La majeure partie du processus de création et de déploiement sur un compte de test est similaire à ce que vous avez déjà fait pour effectuer un déploiement en production :
 
-- Créer un *Web.config* fichier de transformation.
-- Créer un compte au fournisseur d’hébergement.
-- Créer un nouveau profil de publication et déployez sur le compte de test.
+- Créez un fichier de transformation *Web. config* .
+- Créez un compte au niveau du fournisseur d’hébergement.
+- Créez un profil de publication et déployez-le sur le compte test.
 
-### <a name="preventing-public-access-to-the-test-site"></a>Empêche l’accès Public sur le Site de Test
+### <a name="preventing-public-access-to-the-test-site"></a>Empêcher l’accès public au site de test
 
-Une considération importante pour le compte de test est qu’il sera en direct sur Internet, mais vous ne souhaitez pas le public à l’utiliser. Pour conserver le site privé, vous pouvez utiliser un ou plusieurs des méthodes suivantes :
+Un point important à prendre en compte pour le compte de test est qu’il est en ligne sur Internet, mais que vous ne voulez pas que le public l’utilise. Pour conserver le site privé, vous pouvez utiliser une ou plusieurs des méthodes suivantes :
 
-- Contactez le fournisseur d’hébergement pour définir des règles de pare-feu qui autorisent l’accès au site de test uniquement à partir d’adresses IP que vous utilisez pour le test.
-- Masquer l’URL afin qu’il n’est pas similaire à l’URL du site public.
-- Utilisez un *robots.txt* fichier pour vous assurer que les moteurs de recherche pas analysera les liens de site et les rapports de test à ce dernier dans les résultats de la recherche.
+- Contactez le fournisseur d’hébergement pour définir des règles de pare-feu qui autorisent l’accès au site de test uniquement à partir des adresses IP que vous utilisez pour le test.
+- Déguisez l’URL de façon à ce qu’elle ne soit pas similaire à l’URL du site public.
+- Utilisez un fichier *robots. txt* pour vous assurer que les moteurs de recherche n’analyseront pas le site de test et les liens de rapport vers ce dernier dans les résultats de la recherche.
 
-La première de ces méthodes est évidemment le plus sécurisé, mais la procédure qui est spécifique à chaque fournisseur d’hébergement et n’est pas traitée dans ce didacticiel. Si vous effectuez l’organiser avec votre fournisseur d’hébergement pour autoriser uniquement votre adresse IP accéder à l’URL de compte de test, en théorie n’avoir à vous soucier de l’analyse il de moteurs de recherche. Mais même dans ce cas, déployez un *robots.txt* fichier est une bonne idée en tant que sauvegarde au cas où cette règle de pare-feu est jamais accidentellement désactivée.
+La première de ces méthodes est évidemment la plus sécurisée, mais la procédure pour qui est spécifique à chaque fournisseur d’hébergement et n’est pas traitée dans ce didacticiel. Si vous utilisez votre fournisseur d’hébergement pour n’autoriser que votre adresse IP à accéder à l’URL du compte de test, vous n’avez en théorie pas à vous soucier des moteurs de recherche qui l’analysent. Mais même dans ce cas, le déploiement d’un fichier *robots. txt* est une bonne idée comme une sauvegarde au cas où la règle de pare-feu serait jamais accidentellement désactivée.
 
-Le *robots.txt* fichier est placé dans votre dossier de projet et doit contenir le texte suivant :
+Le fichier *robots. txt* est placé dans votre dossier de projet et doit contenir le texte suivant :
 
 [!code-console[Main](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/samples/sample1.cmd)]
 
-Le `User-agent` ligne indique les moteurs de recherche les règles dans le fichier s’appliquent à tous les web robots d’indexation (robots), et le `Disallow` ligne spécifie qu’aucune page sur le site ne doit être analysé.
+La ligne `User-agent` indique aux moteurs de recherche que les règles du fichier s’appliquent à tous les robots d’indexation (robots) du moteur de recherche et que la ligne `Disallow` spécifie qu’aucune page du site ne doit être analysée.
 
-Vous ne voulez probablement pas que les moteurs de recherche pour le catalogue de votre site de production, vous devez exclure ce fichier de déploiement de production. Pour ce faire, consultez **exclure certains fichiers ou dossiers de déploiement ?** dans [Forum aux questions du déploiement de projet d’Application ASP.NET Web](https://msdn.microsoft.com/library/ee942158.aspx#can_i_exclude_specific_files_or_folders_from_deployment). Assurez-vous que vous spécifiez l’exclusion uniquement pour le profil de publication de la Production.
+Vous souhaitez probablement que les moteurs de recherche cataloguent votre site de production. vous devez donc exclure ce fichier du déploiement de production. Pour ce faire, consultez Comment **puis-je exclure des fichiers ou des dossiers spécifiques du déploiement ?** dans le [Forum aux questions sur le déploiement de projets d’application Web ASP.net](https://msdn.microsoft.com/library/ee942158.aspx#can_i_exclude_specific_files_or_folders_from_deployment). Veillez à spécifier l’exclusion uniquement pour le profil de publication de production.
 
-Créer un deuxième compte d’hébergement est une approche à travailler avec un environnement de test qui n’est pas obligatoire, mais peut être intéressant de la dépense supplémentaire. Dans les didacticiels suivants, vous allez continuer à utiliser IIS comme votre environnement de test.
+La création d’un deuxième compte d’hébergement est une approche de l’utilisation d’un environnement de test qui n’est pas obligatoire, mais peut être utile pour les dépenses ajoutées. Dans les didacticiels suivants, vous allez continuer à utiliser IIS comme environnement de test.
 
-Dans le didacticiel suivant, vous allez mettre à jour le code d’application et déploient vos modifications dans les environnements de test et de production.
+Dans le didacticiel suivant, vous allez mettre à jour le code de l’application et déployer vos modifications dans les environnements de test et de production.
 
 > [!div class="step-by-step"]
 > [Précédent](deployment-to-a-hosting-provider-setting-folder-permissions-6-of-12.md)

@@ -1,107 +1,107 @@
 ---
 uid: web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
-title: Activation des opérations CRUD dans ASP.NET Web API 1 - ASP.NET 4.x
+title: Activation des opérations CRUD dans API Web ASP.NET 1-ASP.NET 4. x
 author: MikeWasson
-description: Didacticiel montre comment prendre en charge des opérations CRUD dans un service HTTP à l’aide des API Web ASP.NET pour ASP.NET 4.x.
+description: Le didacticiel montre comment prendre en charge les opérations CRUD dans un service HTTP à l’aide de API Web ASP.NET pour ASP.NET 4. x.
 ms.author: riande
 ms.date: 01/28/2012
 ms.custom: seoapril2019
 ms.assetid: c125ca47-606a-4d6f-a1fc-1fc62928af93
 msc.legacyurl: /web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
 msc.type: authoredcontent
-ms.openlocfilehash: 3c2a41482b7f9b60a8864b853df23ab5991b6da7
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: a096fd1c54df33b40115907a5c2517b2e3fec5b8
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108754"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74600339"
 ---
-# <a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Activation des opérations CRUD dans ASP.NET Web API 1
+# <a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Activation des opérations CRUD dans API Web ASP.NET 1
 
 par [Mike Wasson](https://github.com/MikeWasson)
 
-[Télécharger le projet terminé](http://code.msdn.microsoft.com/ASP-NET-Web-API-Tutorial-c4761894)
+[Télécharger le projet terminé](https://code.msdn.microsoft.com/ASP-NET-Web-API-Tutorial-c4761894)
 
-> Ce didacticiel montre comment prendre en charge des opérations CRUD dans un service HTTP à l’aide des API Web ASP.NET pour ASP.NET 4.x.
+> Ce didacticiel montre comment prendre en charge les opérations CRUD dans un service HTTP à l’aide de API Web ASP.NET pour ASP.NET 4. x.
 > 
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versions des logiciels utilisées dans le didacticiel
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versions logicielles utilisées dans le didacticiel
 > 
 > 
 > - Visual Studio 2012
-> - Web API 1 (fonctionne également avec l’API Web 2)
+> - API Web 1 (fonctionne également avec l’API Web 2)
 
-CRUD est l’acronyme &quot;Create, Read, Update et Delete,&quot; qui sont les quatre opérations de base de données. De nombreux services HTTP également les opérations CRUD via REST ou API REST de type de modèle.
+CRUD est l’abréviation de &quot;Create, Read, Update et Delete,&quot; qui sont les quatre opérations de base de données. De nombreux services HTTP modélisent également les opérations CRUD via des API REST ou de type REST.
 
-Dans ce didacticiel, vous allez générer une API pour gérer une liste de produits de web très simple. Chaque produit contient un nom, le prix et la catégorie (tel que &quot;toys&quot; ou &quot;matériel&quot;), ainsi que d’un ID de produit.
+Dans ce didacticiel, vous allez créer une API Web très simple pour gérer une liste de produits. Chaque produit contient un nom, un prix et une catégorie (par exemple, &quot;Toys&quot; ou &quot;matériel&quot;), ainsi qu’un ID de produit.
 
-Les produits API exposera suivant des méthodes.
+L’API Products expose les méthodes suivantes.
 
 | Action | Méthode HTTP | URI relatif |
 | --- | --- | --- |
-| Obtenir une liste de tous les produits | GET | / api/produits |
-| Obtenir un produit par ID | GET | /api/products/*id* |
-| Obtenir un produit par catégorie | GET | /api/products?category=*category* |
-| Création d’un produit | PUBLIER | / api/produits |
-| Mettre à jour un produit | PUT | /api/products/*id* |
-| Supprimer un produit | SUPPR | /api/products/*id* |
+| Obtenir la liste de tous les produits | GET | /api/products |
+| Obtenir un produit par ID | GET | *ID* /API/Products/ |
+| Obtenir un produit par catégorie | GET | /API/products ? category =*catégorie* |
+| Créer un produit | Publier | /api/products |
+| Mettre à jour un produit | PUT | *ID* /API/Products/ |
+| Supprimer un produit | SUPPR | *ID* /API/Products/ |
 
-Notez que certains des URI comprennent l’ID de produit dans le chemin d’accès. Par exemple, pour obtenir le produit dont l’ID est 28, le client envoie une demande GET pour `http://hostname/api/products/28`.
+Notez que certains des URI incluent l’ID de produit dans path. Par exemple, pour obtenir le produit dont l’ID est 28, le client envoie une demande d’extraction pour `http://hostname/api/products/28`.
 
 ### <a name="resources"></a>Ressources
 
-Les produits API définit l’URI pour deux types de ressources :
+L’API Products définit des URI pour deux types de ressources :
 
 | Ressource | URI |
 | --- | --- |
-| La liste de tous les produits. | / api/produits |
-| Un produit individuel. | /api/products/*id* |
+| Liste de tous les produits. | /api/products |
+| Un produit individuel. | *ID* /API/Products/ |
 
 ### <a name="methods"></a>Méthodes
 
-Les quatre principales méthodes HTTP (GET, PUT, POST et DELETE) peuvent être mappés à des opérations CRUD comme suit :
+Les quatre méthodes HTTP principales (obtient, PUT, poster et supprimer) peuvent être mappées aux opérations CRUD comme suit :
 
-- GET récupère la représentation sous forme de la ressource à un URI spécifié. GET ne doit avoir aucun effet secondaire sur le serveur.
-- PUT met à jour une ressource à un URI spécifié. PUT peut également servir à créer une nouvelle ressource à un URI spécifié, si le serveur autorise les clients à spécifier de nouveaux URI. Pour ce didacticiel, l’API ne prendra pas en charge la création via PUT.
-- POST crée une nouvelle ressource. Le serveur assigne l’URI pour le nouvel objet et retourne cet URI en tant que partie du message de réponse.
-- DELETE supprime une ressource à un URI spécifié.
+- OBTENIR récupère la représentation de la ressource à l’URI spécifié. L’extraction ne doit pas avoir d’effets secondaires sur le serveur.
+- PUT met à jour une ressource à l’URI spécifié. PUT peut également être utilisé pour créer une ressource à un URI spécifié, si le serveur permet aux clients de spécifier de nouveaux URI. Pour ce didacticiel, l’API ne prend pas en charge la création via PUT.
+- La publication crée une ressource. Le serveur assigne l’URI pour le nouvel objet et retourne cet URI dans le cadre du message de réponse.
+- Supprimer supprime une ressource à l’URI spécifié.
 
-Remarque : La méthode PUT remplace l’entité de l’ensemble du produit. Autrement dit, le client est censé envoyer une représentation complète du produit mis à jour. Si vous souhaitez prendre en charge les mises à jour partielles, la méthode PATCH est préférée. Ce didacticiel n’implémente pas de correctif.
+Remarque : la méthode PUT remplace l’ensemble de l’entité Product. Autrement dit, le client est censé envoyer une représentation complète du produit mis à jour. Si vous souhaitez prendre en charge des mises à jour partielles, il est préférable d’utiliser la méthode PATCH. Ce didacticiel n’implémente pas les CORRECTIFs.
 
-## <a name="create-a-new-web-api-project"></a>Créer un nouveau projet d’API Web
+## <a name="create-a-new-web-api-project"></a>Créer un projet d’API Web
 
-Commencez par exécuter Visual Studio et sélectionnez **nouveau projet** à partir de la **Démarrer** page. Ou, à partir de la **fichier** menu, sélectionnez **New** , puis **projet**.
+Commencez par exécuter Visual Studio et sélectionnez **nouveau projet** dans la page de **démarrage** . Ou, dans le menu **fichier** , sélectionnez **nouveau** , puis **projet**.
 
-Dans le **modèles** volet, sélectionnez **modèles installés** et développez le **Visual C#** nœud. Sous **Visual C#**, sélectionnez **Web**. Dans la liste des modèles de projet, sélectionnez **ASP.NET MVC 4 Web Application**. Nommez le projet &quot;ProductStore&quot; et cliquez sur **OK**.
+Dans le volet **modèles** , sélectionnez **modèles installés** , puis développez le nœud **visuel C#**  . Sous **visuel C#** , sélectionnez **Web**. Dans la liste des modèles de projet, sélectionnez **application Web ASP.NET MVC 4**. Nommez le projet &quot;&quot; ProductStore, puis cliquez sur **OK**.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image1.png)
 
-Dans le **nouveau projet ASP.NET MVC 4** boîte de dialogue, sélectionnez **API Web** et cliquez sur **OK**.
+Dans la boîte de dialogue **nouveau projet ASP.NET MVC 4** , sélectionnez **API Web** , puis cliquez sur **OK**.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image2.png)
 
 ## <a name="adding-a-model"></a>Ajout d’un modèle
 
-Un *modèle* est un objet qui représente les données dans votre application. Dans l’API Web ASP.NET, vous pouvez utiliser des objets CLR fortement typés en tant que modèles, et ils sont automatiquement sérialisés au format XML ou JSON pour le client.
+Un *modèle* est un objet qui représente les données dans votre application. Dans API Web ASP.NET, vous pouvez utiliser des objets CLR fortement typés en tant que modèles, et ils seront automatiquement sérialisés en XML ou JSON pour le client.
 
-L’API ProductStore, nos données se composent de produits, nous allons créer une nouvelle classe nommée `Product`.
+Pour l’API ProductStore, nos données sont constituées de produits. nous allons donc créer une nouvelle classe nommée `Product`.
 
-Si l’Explorateur de solutions n’est pas déjà visible, cliquez sur le **vue** menu et sélectionnez **l’Explorateur de solutions**. Dans l’Explorateur de solutions, cliquez sur le **modèles** dossier. Dans le menu contextuel, sélectionnez **ajouter**, puis sélectionnez **classe**. Nommez la classe &quot;produit&quot;.
+Si Explorateur de solutions n’est pas déjà visible, cliquez sur le menu **affichage** et sélectionnez **Explorateur de solutions**. Dans Explorateur de solutions, cliquez avec le bouton droit sur le dossier **modèles** . Dans le menu contextuel, sélectionnez **Ajouter**, puis **classe**. Nommez la classe &quot;&quot;de produit.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image3.png)
 
-Ajoutez les propriétés suivantes à la `Product` classe.
+Ajoutez les propriétés suivantes à la classe `Product`.
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample1.cs)]
 
-## <a name="adding-a-repository"></a>Ajout d’un référentiel
+## <a name="adding-a-repository"></a>Ajout d'une base de données de référentiel
 
-Nous avons besoin de stocker une collection de produits. Il est judicieux de séparer la collecte à partir de notre implémentation de service. De cette façon, nous pouvons modifier le magasin de stockage sans réécrire la classe de service. Ce type de conception est appelé le *référentiel* modèle. Commencez par définir une interface générique pour le référentiel.
+Nous devons stocker une collection de produits. Il est judicieux de séparer la collection de notre implémentation de service. De cette façon, nous pouvons modifier le magasin de stockage sans réécrire la classe de service. Ce type de conception est appelé modèle de *référentiel* . Commencez par définir une interface générique pour le référentiel.
 
-Dans l’Explorateur de solutions, cliquez sur le **modèles** dossier. Sélectionnez **ajouter**, puis sélectionnez **un nouvel élément**.
+Dans Explorateur de solutions, cliquez avec le bouton droit sur le dossier **modèles** . Sélectionnez **Ajouter**, puis **nouvel élément**.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image4.png)
 
-Dans le **modèles** volet, sélectionnez **modèles installés** et développez le nœud c#. Dans c#, sélectionnez **Code**. Dans la liste des modèles de code, sélectionnez **Interface**. Nom de l’interface &quot;IProductRepository&quot;.
+Dans le volet **modèles** , sélectionnez **modèles installés** , puis développez le C# nœud. Sous C#, sélectionnez **code**. Dans la liste des modèles de code, sélectionnez **interface**. Nommez l’interface &quot;&quot;IProductRepository.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image5.png)
 
@@ -109,112 +109,112 @@ Ajoutez l’implémentation suivante :
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample2.cs)]
 
-Ajoutez maintenant une autre classe dans le dossier Modèles, nommé &quot;ProductRepository.&quot; Cette classe va implémenter l’interface `IProductRepository`. Ajoutez l’implémentation suivante :
+À présent, ajoutez une autre classe au dossier Models, nommé &quot;ProductRepository.&quot; cette classe implémentera l’interface `IProductRepository`. Ajoutez l’implémentation suivante :
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample3.cs)]
 
-Le référentiel conserve la liste dans la mémoire locale. Il s’agit OK pour obtenir un didacticiel, mais dans une application réelle, vous stockez les données de façon externe, une base de données ou dans le stockage cloud. Le modèle de référentiel facilitera modifier l’implémentation par la suite.
+Le référentiel conserve la liste dans la mémoire locale. Cela est correct pour un didacticiel, mais dans une application réelle, vous stockez les données en externe, soit une base de données, soit dans un stockage cloud. Le modèle de référentiel facilite la modification ultérieure de l’implémentation.
 
 ## <a name="adding-a-web-api-controller"></a>Ajout d’un contrôleur d’API Web
 
-Si vous avez travaillé avec ASP.NET MVC, puis vous êtes déjà familiarisé avec les contrôleurs. Dans l’API Web ASP.NET, un *contrôleur* est une classe qui gère les requêtes HTTP à partir du client. L’Assistant Nouveau projet créé deux contrôleurs pour vous lors de la création du projet. Pour les consulter, développez le dossier contrôleurs dans l’Explorateur de solutions.
+Si vous avez travaillé avec ASP.NET MVC, vous êtes déjà familiarisé avec les contrôleurs. Dans API Web ASP.NET, un *contrôleur* est une classe qui gère les requêtes http provenant du client. L’Assistant Nouveau projet a créé deux contrôleurs pour vous lors de la création du projet. Pour les afficher, développez le dossier Controllers dans Explorateur de solutions.
 
-- HomeController est un contrôleur ASP.NET MVC traditionnel. Il est responsable du traitement des pages HTML pour le site et n’est pas directement liée à notre API web.
+- HomeController est un contrôleur MVC ASP.NET traditionnel. Il est responsable de la fourniture des pages HTML pour le site et n’est pas directement lié à notre API Web.
 - ValuesController est un exemple de contrôleur WebAPI.
 
-Continuez et supprimer ValuesController, en double-cliquant sur le fichier dans l’Explorateur de solutions et en sélectionnant **supprimer.** Maintenant, ajoutez un nouveau contrôleur, comme suit :
+Continuez et supprimez ValuesController, en cliquant avec le bouton droit sur le fichier dans Explorateur de solutions et en sélectionnant **Supprimer.** Ajoutez maintenant un nouveau contrôleur, comme suit :
 
-Dans **l’Explorateur de solutions**, cliquez sur le dossier contrôleurs. Sélectionnez **ajouter** , puis sélectionnez **contrôleur**.
+Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le dossier Controllers. Sélectionnez **Ajouter** , puis **contrôleur**.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image6.png)
 
-Dans le **ajouter un contrôleur** Assistant, nommez le contrôleur &quot;ProductsController&quot;. Dans le **modèle** liste déroulante, sélectionnez **contrôleur d’API vide**. Cliquez ensuite sur **Ajouter**.
+Dans l’Assistant Ajout d’un **contrôleur** , nommez le contrôleur &quot;&quot;ProductsController. Dans la liste déroulante **modèle** , sélectionnez **contrôleur d’API vide**. Cliquez ensuite sur **Ajouter**.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image7.png)
 
 > [!NOTE]
-> Il n’est pas nécessaire de le placer vos contrôleurs dans un dossier nommé contrôleurs. Le nom du dossier n’est pas important ; Il est simplement un moyen pratique d’organiser vos fichiers sources.
+> Il n’est pas nécessaire de placer vos contrôleurs dans un dossier nommé contrôleurs. Le nom du dossier n’est pas important. Il s’agit simplement d’un moyen pratique d’organiser vos fichiers sources.
 
-Le **ajouter un contrôleur** Assistant va créer un fichier nommé ProductsController.cs dans le dossier contrôleurs. Si ce fichier n’est pas déjà ouvert, double-cliquez sur le fichier pour l’ouvrir. Ajoutez le code suivant **à l’aide de** instruction :
+L’Assistant Ajout d’un **contrôleur** crée un fichier nommé ProductsController.cs dans le dossier Controllers. Si ce fichier n’est pas déjà ouvert, double-cliquez sur le fichier pour l’ouvrir. Ajoutez l’instruction **using** suivante :
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample4.cs)]
 
-Ajouter un champ qui contient un **IProductRepository** instance.
+Ajoutez un champ qui contient une instance de **IProductRepository** .
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample5.cs)]
 
 > [!NOTE]
-> Appel `new ProductRepository()` dans le contrôleur n’est pas la meilleure conception, parce qu’elle lie le contrôleur à une implémentation particulière de `IProductRepository`. Pour une meilleure approche, consultez [à l’aide du résolveur de dépendance d’API Web](../advanced/dependency-injection.md).
+> L’appel de `new ProductRepository()` dans le contrôleur n’est pas la meilleure conception, car il associe le contrôleur à une implémentation particulière de `IProductRepository`. Pour une meilleure approche, consultez [utilisation du programme de résolution des dépendances de l’API Web](../advanced/dependency-injection.md).
 
 ## <a name="getting-a-resource"></a>Obtention d’une ressource
 
-L’API ProductStore expose plusieurs &quot;lire&quot; actions en tant que méthodes HTTP GET. Chaque action correspond à une méthode dans la `ProductsController` classe.
+L’API ProductStore expose plusieurs &quot;actions de lecture&quot; en tant que méthodes HTTP d’extraction. Chaque action correspond à une méthode dans la classe `ProductsController`.
 
 | Action | Méthode HTTP | URI relatif |
 | --- | --- | --- |
-| Obtenir une liste de tous les produits | GET | / api/produits |
-| Obtenir un produit par ID | GET | /api/products/*id* |
-| Obtenir un produit par catégorie | GET | /api/products?category=*category* |
+| Obtenir la liste de tous les produits | GET | /api/products |
+| Obtenir un produit par ID | GET | *ID* /API/Products/ |
+| Obtenir un produit par catégorie | GET | /API/products ? category =*catégorie* |
 
-Pour obtenir la liste de tous les produits, ajoutez cette méthode à la `ProductsController` classe :
+Pour afficher la liste de tous les produits, ajoutez cette méthode à la classe `ProductsController` :
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample6.cs)]
 
-Le nom de la méthode commence par &quot;obtenir&quot;, par convention, il mappe aux demandes GET. En outre, étant donné que la méthode n’a aucun paramètre, il est mappé à un URI qui ne contient-elle pas une *&quot;id&quot;* segment dans le chemin d’accès.
+Le nom de la méthode commence par &quot;obtient&quot;, donc par convention il est mappé aux demandes d’extraction. En outre, étant donné que la méthode n’a aucun paramètre, elle est mappée à un URI qui ne contient pas d' *ID de&quot;&quot;* segment dans le chemin d’accès.
 
-Pour obtenir un produit par ID, ajoutez cette méthode à la `ProductsController` classe :
+Pour obtenir un produit par ID, ajoutez cette méthode à la classe `ProductsController` :
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample7.cs)]
 
-Nom de la méthode commence également par &quot;obtenir&quot;, mais la méthode a un paramètre nommé *id*. Ce paramètre est mappé à la &quot;id&quot; segment du chemin d’accès de l’URI. L’infrastructure de l’API Web ASP.NET convertit automatiquement l’ID pour le type de données correct (**int**) pour le paramètre.
+Ce nom de méthode commence également par &quot;obtenir&quot;, mais la méthode a un paramètre nommé *ID*. Ce paramètre est mappé à l’ID de &quot;&quot; segment du chemin d’accès de l’URI. L’infrastructure de API Web ASP.NET convertit automatiquement l’ID en type de données correct (**int**) pour le paramètre.
 
-La méthode GetProduct lève une exception de type **HttpResponseException** si *id* n’est pas valide. Cette exception sera traduite par l’infrastructure en une erreur 404 (introuvable).
+La méthode GetProduct lève une exception de type **HttpResponseException** si l' *ID* n’est pas valide. Cette exception sera traduite par l’infrastructure en erreur 404 (introuvable).
 
-Enfin, ajoutez une méthode pour rechercher des produits par catégorie :
+Enfin, ajoutez une méthode pour rechercher les produits par catégorie :
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample8.cs)]
 
-Si l’URI de requête a une chaîne de requête, API Web tente de faire correspondre les paramètres de requête aux paramètres de la méthode de contrôleur. Par conséquent, un URI au format « api/products ? catégorie =*catégorie*» est mappé à cette méthode.
+Si l’URI de la demande a une chaîne de requête, l’API Web tente de faire correspondre les paramètres de requête aux paramètres de la méthode du contrôleur. Par conséquent, un URI de la forme « API/products ? category =*Category*» est mappé à cette méthode.
 
 ## <a name="creating-a-resource"></a>Création d’une ressource
 
-Ensuite, nous allons ajouter une méthode à la `ProductsController` classe pour créer un nouveau produit. Voici une implémentation simple de la méthode :
+Ensuite, nous allons ajouter une méthode à la classe `ProductsController` pour créer un nouveau produit. Voici une implémentation simple de la méthode :
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample9.cs)]
 
-Noter deux choses concernant cette méthode :
+Notez deux choses à propos de cette méthode :
 
-- Le nom de la méthode commence par &quot;Post... &quot;. Pour créer un nouveau produit, le client envoie une requête HTTP POST.
-- La méthode prend un paramètre de type de produit. Dans l’API Web, les paramètres avec des types complexes sont désérialisés à partir du corps de demande. Par conséquent, nous pensons que le client envoie une représentation sérialisée d’un objet de produit, au format XML ou JSON.
+- Le nom de la méthode commence par &quot;billet...&quot;. Pour créer un nouveau produit, le client envoie une requête HTTP après.
+- La méthode prend un paramètre de type Product. Dans l’API Web, les paramètres avec des types complexes sont désérialisés à partir du corps de la demande. Par conséquent, nous pensons que le client envoie une représentation sérialisée d’un objet de produit au format XML ou JSON.
 
-Cette implémentation fonctionnera, mais il n’est pas tout à fait complet. Dans l’idéal, nous aimerions la réponse HTTP à inclure les éléments suivants :
+Cette implémentation fonctionnera, mais elle n’est pas tout à fait complète. Dans l’idéal, nous aimerions que la réponse HTTP inclue les éléments suivants :
 
-- **Code de réponse :** Par défaut, l’infrastructure API Web définit le code d’état de réponse 200 (OK). Mais, conformément au protocole HTTP/1.1, quand une demande POST entraîne la création d’une ressource, le serveur doit répondre avec l’état 201 (créé).
+- **Code de réponse :** Par défaut, l’infrastructure d’API Web affecte au code d’état de réponse la valeur 200 (OK). Toutefois, selon le protocole HTTP/1.1, lorsqu’une requête de publication entraîne la création d’une ressource, le serveur doit répondre avec l’État 201 (créé).
 - **Emplacement :** Lorsque le serveur crée une ressource, il doit inclure l’URI de la nouvelle ressource dans l’en-tête Location de la réponse.
 
-API Web ASP.NET rend plus facile manipuler le message de réponse HTTP. Voici l’implémentation améliorée :
+API Web ASP.NET permet de manipuler facilement le message de réponse HTTP. Voici l’implémentation améliorée :
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample10.cs)]
 
-Notez que le type de retour de méthode est désormais **HttpResponseMessage**. En retournant un **HttpResponseMessage** au lieu d’un produit, nous pouvons contrôler les détails du message de réponse HTTP, y compris le code d’état et l’en-tête Location.
+Notez que le type de retour de la méthode est maintenant **HttpResponseMessage**. En retournant un **HttpResponseMessage** au lieu d’un produit, nous pouvons contrôler les détails du message de réponse http, notamment le code d’État et l’en-tête d’emplacement.
 
-Le **CreateResponse** méthode crée un **HttpResponseMessage** et automatiquement écrit une représentation sérialisée de l’objet Product dans le corps de fo le message de réponse.
+La méthode **CreateResponse** crée un **HttpResponseMessage** et écrit automatiquement une représentation sérialisée de l’objet Product dans le corps du message de réponse.
 
 > [!NOTE]
-> Cet exemple ne valide pas le `Product`. Pour plus d’informations sur la validation de modèle, consultez [Validation de modèle dans ASP.NET Web API](../formats-and-model-binding/model-validation-in-aspnet-web-api.md).
+> Cet exemple ne valide pas la `Product`. Pour plus d’informations sur la validation de modèle, consultez [validation de modèle dans API Web ASP.net](../formats-and-model-binding/model-validation-in-aspnet-web-api.md).
 
-## <a name="updating-a-resource"></a>La mise à jour une ressource
+## <a name="updating-a-resource"></a>Mise à jour d’une ressource
 
-La mise à jour d’un produit avec la méthode PUT est simple :
+La mise à jour d’un produit avec PUT est simple :
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample11.cs)]
 
-Le nom de la méthode commence par &quot;placer... &quot;, de sorte que l’API Web correspondant à des demandes PUT. La méthode accepte deux paramètres, l’ID de produit et les produits mis à jour. Le *id* paramètre est issu le chemin d’accès de l’URI et la *produit* paramètre est désérialisé à partir du corps de demande. Par défaut, l’infrastructure de l’API Web ASP.NET effectue des types de paramètres simples à partir de l’itinéraire et les types complexes à partir du corps de demande.
+Le nom de la méthode commence par &quot;put...&quot;, de sorte que l’API Web la met en correspondance pour placer les demandes. La méthode accepte deux paramètres, l’ID de produit et le produit mis à jour. Le paramètre *ID* est extrait du chemin d’accès à l’URI et le paramètre *Product* est désérialisé à partir du corps de la demande. Par défaut, le API Web ASP.NET Framework prend des types de paramètres simples de l’itinéraire et des types complexes du corps de la demande.
 
 ## <a name="deleting-a-resource"></a>Suppression d’une ressource
 
-Pour supprimer une ressource, définir un paramètre « Supprimer... » méthode.
+Pour supprimer une ressource, définissez une « suppression... » méthode.
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample12.cs)]
 
-Si une demande de suppression réussit, elle peut retourner l’état 200 (OK) avec un corps d’entité qui décrit l’état ; état 202 (accepté) si la suppression est toujours en attente ; état ou 204 (aucun contenu) sans corps d’entité. Dans ce cas, le `DeleteProduct` méthode a un `void` type de retour, afin de l’API Web ASP.NET traduit automatiquement cette situation en état code 204 (aucun contenu).
+Si une demande de suppression est réussie, elle peut retourner l’état 200 (OK) avec un corps d’entité qui décrit l’État. État 202 (accepté) si la suppression est toujours en attente ; ou état 204 (aucun contenu) sans corps d’entité. Dans ce cas, la méthode `DeleteProduct` a un type de retour `void`, donc API Web ASP.NET le convertit automatiquement en code d’État 204 (aucun contenu).

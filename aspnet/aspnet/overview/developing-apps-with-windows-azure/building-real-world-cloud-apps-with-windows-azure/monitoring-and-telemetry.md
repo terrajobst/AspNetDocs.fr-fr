@@ -2,290 +2,290 @@
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
 title: Surveillance et télémétrie (génération d’applications Cloud réalistes avec Azure) | Microsoft Docs
 author: MikeWasson
-description: Building Real World Cloud Apps with Azure e-book est basé sur une présentation développée par Scott Guthrie. Il explique 13 modèles et pratiques qui peuvent il...
+description: La création d’applications Cloud réelles avec Azure e-book est basée sur une présentation développée par Scott Guthrie. Il décrit 13 modèles et pratiques qui peuvent le faire...
 ms.author: riande
 ms.date: 07/09/2015
 ms.assetid: 7e986ab5-6615-4638-add7-4614ce7b51db
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
 msc.type: authoredcontent
-ms.openlocfilehash: 2fc8f6cdefe1e940f3e3eafc2b9acc9144690284
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 44941c9fd0dcd3223604fc4a4f2836f587578acb
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118731"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74585608"
 ---
 # <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Surveillance et télémétrie (génération d’applications Cloud réalistes avec Azure)
 
 par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
-[Téléchargement Fix It projet](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [télécharger l’E-book](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
+[Télécharger le projet Fix it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Télécharger le livre électronique](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
-> Le **Building Real World Cloud Apps with Azure** e-book est basé sur une présentation développée par Scott Guthrie. Il explique 13 modèles et pratiques qui peuvent vous aider à réussir le développement d’applications web pour le cloud. Pour plus d’informations sur l’e-book, consultez [le premier chapitre](introduction.md).
+> La **création d’applications Cloud réelles avec Azure** e-book est basée sur une présentation développée par Scott Guthrie. Il décrit 13 modèles et pratiques qui peuvent vous aider à réussir le développement d’applications Web pour le Cloud. Pour plus d’informations sur l’e-Book, consultez [le premier chapitre](introduction.md).
 
-Beaucoup de gens s’appuient sur les clients pour leur permettre de savoir quand leur application est arrêtée. Qui n’est pas vraiment une bonne pratique en tout lieu et surtout pas dans le cloud. Il n’existe aucune garantie de notification rapide, et lorsque vous soyez averti, vous obtenez souvent des données minimales ou trompeuses sur ce qui est arrivé. Avec le bon de télémétrie et systèmes de journalisation que vous pouvez être conscient de ce qui se passait avec votre application et lorsque quelque chose déraille vous immédiatement et vous disposez des informations de dépannage utiles pour travailler avec.
+Un grand nombre de personnes s’appuient sur les clients pour leur faire savoir quand leur application est défaillante. Ce n’est pas vraiment une pratique recommandée, et surtout pas dans le Cloud. Il n’existe aucune garantie de notification rapide et, lorsque vous êtes averti, vous recevez souvent des données minimales ou trompeuses sur ce qui s’est passé. Avec de bons systèmes de télémétrie et de journalisation, vous pouvez être conscient de ce qui se passe avec votre application, et en cas de problème, vous êtes immédiatement informé et vous avez des informations de dépannage utiles à utiliser.
 
 ## <a name="buy-or-rent-a-telemetry-solution"></a>Acheter ou louer une solution de télémétrie
 
 > [!NOTE]
-> Cet article a été écrit avant [Application Insights](/azure/application-insights/app-insights-overview) a été publiée. Application Insights est la meilleure approche pour les solutions de données de télémétrie sur Azure. Consultez [configurer Application Insights pour votre site Web ASP.NET](/azure/application-insights/app-insights-asp-net) pour plus d’informations.
+> Cet article a été écrit avant la sortie de [application Insights](/azure/application-insights/app-insights-overview) . Application Insights est l’approche préférée pour les solutions de télémétrie sur Azure. Pour plus d’informations, consultez [configurer application Insights pour votre site web ASP.net](/azure/application-insights/app-insights-asp-net) .
 
-L’une des choses qui est génial sur l’environnement de cloud est qu’il est très facile d’acheter ou de louer votre façon victoire. Données de télémétrie sont un exemple. Sans beaucoup d’efforts, vous pouvez obtenir un système de télémétrie très bon jusqu'à et en cours d’exécution, très à moindre coût. Il existe un ensemble de partenaires excellents qui s’intègrent à Azure, et certains d'entre eux ont des niveaux gratuits – afin d’obtenir des données de télémétrie de base pour rien. Voici quelques-unes de ceux actuellement disponibles sur Azure :
+L’un des aspects importants de l’environnement Cloud est qu’il est vraiment facile d’acheter ou de louer votre façon de vous faire une victoire. La télémétrie est un exemple. Sans trop d’efforts, vous pouvez obtenir un système de télémétrie vraiment efficace, très rentable. De nombreux partenaires s’intègrent à Azure et certains ont des niveaux gratuits, ce qui vous permet d’obtenir des données de télémétrie de base pour rien. Voici quelques-uns des éléments actuellement disponibles sur Azure :
 
-- [New Relic](http://newrelic.com/)
+- [Nouveau Relic](http://newrelic.com/)
 - [AppDynamics](http://www.appdynamics.com/)
-- [Dynatrace](https://datamarket.azure.com/application/b4011de2-1212-4375-9211-e882766121ff)
+- [DynaTrace](https://datamarket.azure.com/application/b4011de2-1212-4375-9211-e882766121ff)
 
-[Microsoft System Center](http://www.petri.co.il/microsoft-system-center-introduction.htm#) inclut également des fonctionnalités d’analyse.
+[Microsoft System Center](http://www.petri.co.il/microsoft-system-center-introduction.htm#) comprend également des fonctionnalités d’analyse.
 
-Nous allons étudier rapidement configurer New Relic pour montrer comment il est facile à utiliser un système de télémétrie.
+Nous allons rapidement passer en revue la configuration de nouvelles Relic pour montrer à quel degré il est facile d’utiliser un système de télémétrie.
 
-Dans le portail de gestion Azure, inscrivez-vous pour le service. Cliquez sur **New**, puis cliquez sur **Store**. Le **sélectionner un module complémentaire** boîte de dialogue s’affiche. Faites défiler et cliquez sur **New Relic**.
+Dans le portail de gestion Azure, inscrivez-vous au service. Cliquez sur **nouveau**, puis sur **Store**. La boîte de dialogue **choisir un module complémentaire** s’affiche. Faites défiler la liste et cliquez sur **New Relic**.
 
-![Sélectionner un module complémentaire](monitoring-and-telemetry/_static/image1.png)
+![Choisir un module complémentaire](monitoring-and-telemetry/_static/image1.png)
 
-Cliquez sur la flèche droite, puis choisissez le niveau de service que vous souhaitez. Pour cette démonstration, nous allons utiliser le niveau gratuit.
+Cliquez sur la flèche droite et choisissez le niveau de service souhaité. Pour cette démonstration, nous allons utiliser le niveau gratuit.
 
 ![Personnaliser le module complémentaire](monitoring-and-telemetry/_static/image2.png)
 
-Cliquez sur la flèche droite, confirmez le « acheter » et New Relic s’affiche maintenant comme module complémentaire dans le portail.
+Cliquez sur la flèche droite, confirmez « Purchase », et New Relic s’affiche maintenant comme module complémentaire dans le portail.
 
-![Revoir l’achat](monitoring-and-telemetry/_static/image3.png)
+![Passer en revue l’achat](monitoring-and-telemetry/_static/image3.png)
 
-![Nouveau module complémentaire de Relic dans le portail de gestion](monitoring-and-telemetry/_static/image4.png)
+![Nouveau module complémentaire Relic dans le portail de gestion](monitoring-and-telemetry/_static/image4.png)
 
 Cliquez sur **informations de connexion**, puis copiez la clé de licence.
 
 ![Informations de connexion](monitoring-and-telemetry/_static/image5.png)
 
-Accédez à la **configurer** onglet pour votre application web dans le portail, définissez **analyse des performances** à **module complémentaire**et définissez le **choisir un module complémentaire** liste déroulante à **New Relic**. Puis cliquez sur **enregistrer**.
+Accédez à l’onglet **configurer** de votre application Web dans le portail, définissez **analyse des performances** sur **complémentaire**, puis définissez la liste déroulante **choisir un module** complémentaire sur **nouveau Relic**. Cliquez ensuite sur **Enregistrer**.
 
-![New Relic dans l’onglet Configurer](monitoring-and-telemetry/_static/image6.png)
+![Nouveau Relic dans l’onglet configurer](monitoring-and-telemetry/_static/image6.png)
 
-Dans Visual Studio, installez le package NuGet New Relic dans votre application.
+Dans Visual Studio, installez le nouveau package NuGet Relic dans votre application.
 
-![Analytique de développeur dans l’onglet Configurer](monitoring-and-telemetry/_static/image7.png)
+![Analyse des développeurs dans l’onglet configurer](monitoring-and-telemetry/_static/image7.png)
 
-Déployer l’application sur Azure et l’utiliser. Créez quelques tâches Fix It pour fournir des activités pour New Relic surveiller.
+Déployez l’application sur Azure et commencez à l’utiliser. Créez quelques tâches Fix it pour fournir une activité pour les nouveaux Relic à surveiller.
 
-Puis revenez à la **New Relic** page dans le **modules complémentaires** onglet du portail et cliquez sur **gérer**. Le portail vous envoie au portail de gestion de New Relic, à l’aide de l’authentification unique pour l’authentification afin que vous n’êtes pas obligé de retaper vos informations d’identification. La page Vue d’ensemble présente une série de statistiques de performances. (Cliquez sur l’image pour afficher la taille complète de la page Vue d’ensemble.)
+Revenez ensuite à la page **nouveau Relic** sous l’onglet **modules complémentaires** du portail, puis cliquez sur **gérer**. Le portail vous envoie le nouveau portail de gestion Relic à l’aide de l’authentification unique pour l’authentification, ce qui vous évite de devoir entrer à nouveau vos informations d’identification. La page vue d’ensemble présente diverses statistiques de performances. (Cliquez sur l’image pour afficher la taille complète de la page de vue d’ensemble.)
 
-[![Nouvel onglet de surveillance Relic](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
+[![nouvel onglet d’analyse Relic](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
 
-Voici quelques-unes des statistiques, que vous pouvez voir :
+Voici quelques-unes des statistiques que vous pouvez voir :
 
 - Temps de réponse moyen à différents moments de la journée.
 
     ![Temps de réponse](monitoring-and-telemetry/_static/image10.png)
-- Taux de débit (nombre de requêtes par minute) à différents moments de la journée.
+- Taux de débit (en demandes par minute) à différents moments de la journée.
 
     ![Débit](monitoring-and-telemetry/_static/image11.png)
-- Temps processeur de serveur consacré à la gestion des différentes requêtes HTTP.
+- Temps processeur du serveur passé à gérer différentes requêtes HTTP.
 
-    ![Temps de Transaction Web](monitoring-and-telemetry/_static/image12.png)
+    ![Temps de transaction Web](monitoring-and-telemetry/_static/image12.png)
 - Temps processeur passé dans les différentes parties du code d’application :
 
-    ![Détails de la trace](monitoring-and-telemetry/_static/image13.png)
+    ![Détails du suivi](monitoring-and-telemetry/_static/image13.png)
 - Statistiques de performances historiques.
 
-    ![Historique des performances](monitoring-and-telemetry/_static/image14.png)
-- Appels aux services externes tels que le service Blob et les statistiques sur la manière fiable et plus réactive le service a.
+    ![Performances historiques](monitoring-and-telemetry/_static/image14.png)
+- Appels à des services externes tels que le service BLOB et statistiques sur la fiabilité et la réactivité du service.
 
     ![Services externes](monitoring-and-telemetry/_static/image15.png)
 
     ![Services externes](monitoring-and-telemetry/_static/image16.png)
 
     ![Service externe](monitoring-and-telemetry/_static/image17.png)
-- Informations sur l’emplacement dans le monde ou dans l’application web des États-Unis trafic d'où proviennent.
+- Des informations sur l’origine du trafic de l’application Web américaine.
 
     ![Geography](monitoring-and-telemetry/_static/image18.png)
 
-Vous pouvez également configurer les rapports et événements. Par exemple, vous pouvez par exemple à tout moment vous commencer à voir des erreurs, envoyez un e-mail à l’équipe du support technique alerte le problème.
+Vous pouvez également configurer des rapports et des événements. Par exemple, vous pouvez indiquer chaque fois que vous commencez à voir des erreurs, envoyer un e-mail au personnel de support technique d’alerte pour le problème.
 
 ![Rapports](monitoring-and-telemetry/_static/image19.png)
 
-New Relic est qu’un exemple d’un système de télémétrie ; Vous pouvez obtenir tout cela à partir d’autres services. La beauté du cloud qui est sans avoir à écrire du code et, pour un minimum ou sans frais, vous soudainement pouvez obtenir beaucoup plus d’informations sur l’utilisation de votre application et ce que vos clients rencontrez effectivement.
+New Relic n’est qu’un exemple de système de télémétrie ; vous pouvez également vous en procurer tous à partir d’autres services. La beauté du Cloud est que, sans avoir à écrire de code, et pour des dépenses minimes ou inexistantes, vous pouvez soudain obtenir beaucoup plus d’informations sur la façon dont votre application est utilisée et sur ce que vos clients rencontrent réellement.
 
 <a id="log"></a>
-## <a name="log-for-insight"></a>Journal pour obtenir des informations
+## <a name="log-for-insight"></a>Journal pour Insight
 
-Un package de télémétrie est une première étape, mais vous devez toujours instrumenter votre propre code. Le service de télémétrie vous indique quand il existe un problème et vous indique ce que les utilisateurs sont confrontés, mais il peut ne pas vous donne un grand nombre de compréhension sur ce qui se passe dans votre code.
+Un package de télémétrie est une bonne première étape, mais vous devez tout de même instrumenter votre propre code. Le service de télémétrie vous indique à quel moment il y a un problème et vous indique ce que les clients rencontrent, mais il peut ne pas vous donner une idée importante de ce qui se passe dans votre code.
 
-Vous ne souhaitez pas avoir à distance à un serveur de production pour voir ce que fait votre application. Cela peut être pratique lorsque vous avez un seul serveur, mais qu’en est-il lorsque vous avez mis à l’échelle à des centaines de serveurs et que vous ne connaissez pas celles qui vous avez besoin à distance à ? La journalisation doit fournir suffisamment d’informations que vous ne devez jamais à distance à des serveurs de production pour analyser et déboguer des problèmes. Que vous devez consigner suffisamment d’informations afin que vous pouvez isoler les problèmes uniquement via les journaux.
+Vous ne souhaitez pas avoir à accéder à distance à un serveur de production pour voir ce que fait votre application. Cela peut être pratique lorsque vous avez un serveur, mais qu’en est-il lorsque vous avez mis à l’échelle des centaines de serveurs et que vous ne savez pas à quoi vous devez vous mettre à distance ? Votre journalisation doit fournir suffisamment d’informations pour que vous n’ayez jamais à vous connecter à distance à des serveurs de production pour analyser et déboguer des problèmes. Vous devez consigner suffisamment d’informations pour pouvoir isoler les problèmes uniquement par le biais des journaux.
 
-### <a name="log-in-production"></a>Ouvrez une session en production
+### <a name="log-in-production"></a>Journalisation en production
 
-De nombreuses personnes activer le suivi en production uniquement lorsqu’il existe un problème et à déboguer. Cela peut introduire un délai important entre l’heure que vous êtes conscient d’un problème et le temps de qu'obtenir des informations de dépannage utiles à ce sujet. Et les informations que vous obtenez ne peuvent pas être utiles pour les erreurs intermittentes.
+De nombreuses personnes activent le suivi en production uniquement lorsqu’il y a un problème et qu’ils veulent déboguer. Cela peut entraîner un délai considérable entre le moment où vous avez pris connaissance d’un problème et le moment où vous recevez des informations de dépannage utiles à son sujet. Et les informations que vous recevez peuvent ne pas être utiles pour les erreurs intermittentes.
 
-Ce que nous vous recommandons de l’environnement cloud où le stockage est bon marché est toujours laisser une session en production. De cette façon, lorsque des erreurs se produisent, vous en avez pas connecté et que vous avez des données historiques qui peuvent aider à vous analysez les problèmes de développement dans le temps ou se produisent régulièrement à des moments différents. Vous pouvez automatiser un processus de purge pour supprimer les anciens journaux, mais vous constaterez peut-être qu’il est plus onéreux configurer un tel processus qu’il doit conserver les journaux.
+Ce que nous recommandons dans l’environnement Cloud où le stockage est peu coûteux, c’est que vous laissez toujours la journalisation en production. Ainsi, lorsque des erreurs se produisent, vous les avez déjà journalisées et vous avez des données historiques qui peuvent vous aider à analyser les problèmes qui se développent au fil du temps ou régulièrement à des moments différents. Vous pouvez automatiser un processus de vidage pour supprimer les anciens journaux, mais il est possible que la configuration d’un tel processus soit plus coûteuse que la conservation des journaux.
 
-La dépense supplémentaire de journalisation est triviale par rapport à la quantité de résolution des problèmes de temps et argent que vous pouvez enregistrer en présentant toutes les informations que vous devez déjà disponible lorsqu’une erreur survient. Puis quand quelqu'un vous dit qu’ils comportait une erreur aléatoire plus tard environ 8:00 Hier soir, mais ils ne vous souvenez pas de l’erreur, vous trouverez facilement quel était le problème.
+Les dépenses supplémentaires de journalisation sont très simples par rapport à la durée de résolution des problèmes et à l’argent que vous pouvez économiser en faisant en sorte que toutes les informations dont vous avez besoin soient déjà disponibles en cas de problème. Ensuite, lorsqu’une personne vous indique qu’elle a rencontré une erreur aléatoire à environ 8:00 la dernière nuit, mais qu’elle ne se souvient pas de l’erreur, vous pouvez facilement identifier le problème.
 
-Pour moins de 4 $ un mois, vous pouvez conserver quant à 50 Go de journaux et l’impact sur les performances de journalisation est trivial tant que vous gardez l’esprit--afin d’éviter les goulots d’étranglement de performances, assurez-vous que votre bibliothèque de journalisation est asynchrone.
+Pendant moins de $4 mois, vous pouvez conserver 50 gigaoctets de journaux, et l’impact sur les performances de la journalisation est trivial tant que vous gardez une chose à l’esprit : afin d’éviter les goulots d’étranglement des performances, assurez-vous que votre bibliothèque de journalisation est asynchrone.
 
-### <a name="differentiate-logs-that-inform-from-logs-that-require-action"></a>Différencier des journaux qui informent des journaux qui nécessitent une action
+### <a name="differentiate-logs-that-inform-from-logs-that-require-action"></a>Différencier les journaux qui informent des journaux qui nécessitent une action
 
-Journaux sont destinés à notifier (je veux que vous sachiez quelque chose) ou ACT (vous allez devoir faire quelque chose). Veillez à écrire uniquement des journaux d’ACT pour les problèmes qui nécessitent réellement une personne ou un processus automatisé pour prendre des mesures. Trop de journaux ACT créera le bruit, nécessiter trop de travail à passer en revue tout cela pour rechercher les problèmes authentiques. Et si vos journaux ACT déclenche automatiquement des actions telles que l’envoi de courrier électronique au personnel de support, évitez de laisser des milliers de telles actions déclenchées par un seul problème.
+Les journaux sont censés vous informer (je souhaite que vous sachiez quoi que ce soit) ou agir (je veux faire une opération). Veillez à écrire uniquement les journaux ACT pour les problèmes qui requièrent véritablement une personne ou un processus automatisé pour agir. Un trop grand nombre de journaux ACT créeront du bruit, nécessitant trop de travail pour les examiner tous afin de trouver des problèmes authentiques. Et si vos journaux ACT déclenchent automatiquement certaines actions, telles que l’envoi d’e-mails au personnel de support, évitez de laisser des milliers de telles actions être déclenchées par un seul problème.
 
-Dans le suivi .NET System.Diagnostics, journaux peuvent être affectés au niveau erreur, avertissement, Info et Debug/Verbose. Vous pouvez différencier ACT à partir des journaux de notifier en réservant le niveau d’erreur pour les journaux de ACT et pour les journaux de notifier à l’aide de niveaux inférieurs.
+Dans le suivi System. Diagnostics .NET, les journaux peuvent recevoir des niveaux d’erreur, d’avertissement, d’informations et de débogage/détaillé. Vous pouvez différencier les journaux d’information en réservant le niveau d’erreur pour les journaux ACT et en utilisant les niveaux inférieurs pour informer les journaux.
 
 ![Niveaux de journalisation](monitoring-and-telemetry/_static/image20.png)
 
 ### <a name="configure-logging-levels-at-run-time"></a>Configurer les niveaux de journalisation au moment de l’exécution
 
-S’il est donc utile de disposer d’une session toujours en production, une autre pratique recommandée consiste à implémenter une infrastructure de journalisation qui vous permet d’ajuster au moment de l’exécution le niveau de détail que vous êtes connecté, sans avoir à redéployer ou le redémarrage de votre application. Par exemple, lorsque vous utilisez la fonctionnalité de traçage dans `System.Diagnostics` vous pouvez créer d’erreur, avertissement, informations et journaux de débogage/Verbose. Nous vous recommandons de vous vous connectez toujours Error, Warning, Info se connecte en production, et vous souhaitez être en mesure d’ajouter dynamiquement la journalisation de débogage/Verbose pour la résolution des problèmes sur un cas par cas.
+Bien qu’il soit intéressant d’avoir la journalisation Always on en production, une autre meilleure pratique consiste à implémenter une infrastructure de journalisation qui vous permet d’ajuster au moment de l’exécution le niveau de détail que vous journalisez, sans redéployer ou redémarrer votre application. Par exemple, lorsque vous utilisez la fonctionnalité de suivi dans `System.Diagnostics` vous pouvez créer des journaux d’erreur, d’avertissement, d’informations et de débogage/commentaires. Nous vous recommandons de toujours enregistrer les journaux des erreurs, des avertissements et des informations en production, et vous pouvez ajouter dynamiquement la journalisation de débogage/commentaires pour la résolution des problèmes au cas par cas.
 
-Applications Web dans Azure App Service ont une prise en charge intégrée pour l’écriture `System.Diagnostics` journaux vers le système de fichiers, le stockage de Table ou le stockage d’objets Blob. Vous pouvez sélectionner différents niveaux de journalisation pour chaque destination de stockage, et vous pouvez modifier le niveau de journalisation à la volée sans avoir à redémarrer votre application. La prise en charge du stockage Blob rend plus facile d’exécuter [HDInsight](https://docs.microsoft.com/azure/hdinsight/) travaux d’analyse sur les journaux des applications, car HDInsight sait comment travailler directement avec le stockage d’objets Blob.
+Web Apps dans Azure App Service disposez d’une prise en charge intégrée pour écrire des journaux `System.Diagnostics` dans le système de fichiers, le stockage table ou le stockage BLOB. Vous pouvez sélectionner différents niveaux de journalisation pour chaque destination de stockage, et vous pouvez modifier le niveau de journalisation à la volée sans redémarrer votre application. La prise en charge du stockage d’objets BLOB facilite l’exécution de travaux d’analyse [HDInsight](https://docs.microsoft.com/azure/hdinsight/) sur vos journaux d’application, car HDInsight sait comment travailler directement avec le stockage d’objets BLOB.
 
 ### <a name="log-exceptions"></a>journaliser des exceptions
 
-Ne placez pas simplement *exception. ToString()* dans votre code de journalisation. Cela laisse des informations contextuelles. Dans le cas d’erreurs SQL, il omet le numéro d’erreur SQL. Pour toutes les exceptions, inclure des informations de contexte, l’exception lui-même et les exceptions internes pour vous assurer que vous fournissez tous les éléments qui seront nécessaires pour le dépannage. Par exemple, les informations de contexte peuvent inclure le nom du serveur, un identificateur de transaction et un nom d’utilisateur (mais pas le mot de passe ou les clés secrètes !).
+Ne vous contentez pas de placer une *exception. ToString ()* dans votre code de journalisation. Qui laisse des informations contextuelles. Dans le cas d’erreurs SQL, il ignore le numéro d’erreur SQL. Pour toutes les exceptions, incluez les informations de contexte, l’exception elle-même et les exceptions internes pour vous assurer que vous fournissez tout ce qui sera nécessaire pour le dépannage. Par exemple, les informations de contexte peuvent inclure le nom du serveur, un identificateur de transaction et un nom d’utilisateur (mais pas le mot de passe ou un secret).
 
-Si vous comptez sur chaque développeur à adoptent l’attitude avec l’exception de journalisation, certains d'entre eux ne. Pour veiller à ce qu’il obtient le droit de façon à chaque fois, générer directement dans votre interface de l’enregistreur d’événements de gestion des exceptions : passez l’objet d’exception à la classe d’enregistreur d’événements et connecter les données d’exception correctement dans la classe de journalisation.
+Si vous vous fiez à chaque développeur pour effectuer la bonne chose avec la journalisation des exceptions, certaines d’entre elles ne le sont pas. Pour vous assurer qu’il est correctement effectué à chaque fois, générez la gestion des exceptions directement dans votre interface d’enregistreur d’événements : transmettez l’objet exception lui-même à la classe Logger et Journalisez les données d’exception correctement dans la classe Logger.
 
-### <a name="log-calls-to-services"></a>Journal des appels aux services
+### <a name="log-calls-to-services"></a>Consigner les appels aux services
 
-Nous recommandons vivement d’écrire un journal chaque fois que votre application appelle un service, qu’il s’agisse d’une base de données ou une API REST ou un service externe. Inclure dans vos journaux non seulement une indication de réussite ou échec, mais la durée de chaque demande. Dans l’environnement de cloud vous verrez souvent des problèmes liés à des ralentissements plutôt que des pannes complètes. Quelque chose qui prend généralement 10 millisecondes peut soudainement commencez à prendre une seconde. Lorsque quelqu'un vous indique que votre application est lente, vous souhaitez être en mesure de rechercher sur New Relic ou n’importe quel service de télémétrie, vous avez et validez leur expérience et que vous souhaitez être en mesure de rechercher sont vos propres journaux de plonger dans les détails de la raison pour laquelle elle est lente.
+Nous vous recommandons vivement d’écrire un journal chaque fois que votre application appelle un service, qu’il s’agisse d’une base de données ou d’une API REST ou d’un service externe. Incluez dans vos journaux non seulement une indication de réussite ou d’échec, mais aussi la durée de chaque demande. Dans l’environnement Cloud, vous rencontrerez souvent des problèmes liés à des ralentissements et non à des interruptions complètes. Une opération qui prend normalement 10 millisecondes peut commencer soudainement à prendre une seconde. Quand quelqu’un vous indique que votre application est lente, vous souhaitez être en mesure de regarder de nouveaux Relic ou de tout service de télémétrie dont vous disposez et de valider leur expérience, et vous souhaitez que vous puissiez regarder vos propres journaux pour vous plonger dans les détails de la raison pour laquelle il est lent.
 
 ### <a name="use-an-ilogger-interface"></a>Utiliser une interface ILogger
 
-Ce que ceci est recommandé lorsque vous créez une application de production consiste à créer une simple *ILogger* interface et de respecter certaines méthodes qu’il contient. Cela rend plus facile de changer l’implémentation de journalisation par la suite et pas parcourir tout votre code pour cela. Nous aurions pu utiliser le `System.Diagnostics.Trace` classe tout au long de l’application Fix It, mais au lieu de cela nous allons l’utiliser en arrière-plan dans une classe de journalisation qui implémente *ILogger*, et nous nous assurons *ILogger* méthode appelle tout au long l’application.
+Ce que nous vous recommandons de faire lorsque vous créez une application de production consiste à créer une interface *ILogger* simple et à coller certaines méthodes dans celle-ci. Cela facilite la modification ultérieure de l’implémentation de journalisation et n’a pas besoin de parcourir l’ensemble de votre code pour le faire. Nous pourrions utiliser la classe `System.Diagnostics.Trace` tout au long de l’application Fix it, mais à la place, nous l’utilisons en coulisses dans une classe de journalisation qui implémente *ILogger*, et nous effectuons des appels de méthode *ILogger* dans toute l’application.
 
-De cette façon, si vous voulez enrichir la journalisation, vous pouvez remplacer [ `System.Diagnostics.Trace` ](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio#apptracelogs) avec tout mécanisme de journalisation souhaité. Par exemple, que votre application grandit vous pouvez décider que vous souhaitez utiliser un package de journalisation plus complète comme [NLog](http://nlog-project.org/) ou [bloc applicatif de journalisation de bibliothèque Enterprise](https://msdn.microsoft.com/library/dn440731(v=pandp.60).aspx). ([Log4Net](http://logging.apache.org/log4net/) est un autre framework de journalisation populaires mais il ne fait pas la journalisation asynchrone.)
+De cette façon, si vous souhaitez que votre journalisation soit plus riche, vous pouvez remplacer [`System.Diagnostics.Trace`](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio#apptracelogs) par le mécanisme de journalisation de votre choix. Par exemple, à mesure que votre application se développe, vous pouvez décider que vous souhaitez utiliser un package de journalisation plus complet, tel que [nlog](http://nlog-project.org/) ou le [bloc d’application de journalisation Enterprise Library](https://msdn.microsoft.com/library/dn440731(v=pandp.60).aspx). ([Log4net](http://logging.apache.org/log4net/) est un autre Framework de journalisation courant, mais il n’effectue pas de journalisation asynchrone.)
 
-Une des raisons possibles à l’aide d’une infrastructure telle que NLog sont de faciliter la division de la sortie de journalisation dans les magasins de données distincts de gros volumes de grande valeur. Qui vous aide à stocker efficacement d’importants volumes de données de notifier que vous n’avez pas besoin de l’exécuter rapidement des requêtes, tout en conservant un accès rapide aux données de ACT.
+L’une des raisons possibles de l’utilisation d’une infrastructure telle que NLog consiste à faciliter la Division de la sortie de journalisation en plusieurs magasins de données volumineux et de grande valeur. Cela vous permet de stocker efficacement des volumes importants de données informant que vous n’avez pas besoin d’exécuter des requêtes rapides sur, tout en conservant un accès rapide aux données ACT.
 
 ### <a name="semantic-logging"></a>Journalisation sémantique
 
-Pour un moyen relativement nouveau effectuer une journalisation qui peut produire des informations de diagnostic plus utiles, consultez [Enterprise Library journalisation sémantique Application bloc (SLAB)](http://convective.wordpress.com/2013/08/12/semantic-logging-application-block-slab/). PRÉPARE utilise [suivi d’événements pour Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803.aspx) (ETW) et [EventSource](https://msdn.microsoft.com/library/system.diagnostics.tracing.eventsource.aspx) prennent en charge dans .NET 4.5 pour vous permettre de créer des journaux plus structurées et peut être interrogés. Vous définissez une méthode différente pour chaque type d’événement que vous vous connectez, ce qui vous permet de personnaliser les informations que vous écrivez. Par exemple, pour se connecter à une erreur de base de données SQL que vous pouvez appeler un `LogSQLDatabaseError` (méthode). Pour ce type d’exception, vous connaissez qu'une information clé étant le numéro d’erreur, vous pouvez inclure un paramètre de numéro d’erreur dans la signature de méthode et enregistrer le numéro d’erreur comme un champ distinct dans l’enregistrement du journal que vous écrivez. Étant donné que le nombre est dans un champ distinct vous pouvez plus facilement et de façon fiable obtenir des rapports basés sur les numéros d’erreur SQL que vous pourriez le faire si vous ont été simplement concaténant le numéro d’erreur dans une chaîne de message.
+Pour une façon relativement nouvelle d’effectuer une journalisation qui peut produire des informations de diagnostic plus utiles, consultez [bloc d’application de journalisation sémantique d’Enterprise Library (dalle)](http://convective.wordpress.com/2013/08/12/semantic-logging-application-block-slab/). La dalle utilise la prise en charge des [suivi d’v nements pour Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803.aspx) (ETW) et [EventSource](https://msdn.microsoft.com/library/system.diagnostics.tracing.eventsource.aspx) dans .net 4,5 pour vous permettre de créer des journaux plus structurés et interrogeables. Vous définissez une méthode différente pour chaque type d’événement que vous journalisez, ce qui vous permet de personnaliser les informations que vous écrivez. Par exemple, pour consigner une erreur SQL Database vous pouvez appeler une méthode `LogSQLDatabaseError`. Pour ce type d’exception, vous savez qu’une information clé est le numéro de l’erreur. vous pouvez donc inclure un paramètre de numéro d’erreur dans la signature de la méthode et enregistrer le numéro d’erreur sous la forme d’un champ distinct dans l’enregistrement du journal que vous écrivez. Étant donné que le nombre se trouve dans un champ séparé, vous pouvez obtenir plus facilement et de manière fiable des rapports basés sur des numéros d’erreur SQL que vous ne pouviez pas si vous concaténez simplement le numéro d’erreur dans une chaîne de message.
 
-## <a name="logging-in-the-fix-it-app"></a>Journalisation dans le correctif il application
+## <a name="logging-in-the-fix-it-app"></a>Journalisation dans l’application Fix it
 
-### <a name="the-ilogger-interface"></a>L’interface ILogger
+### <a name="the-ilogger-interface"></a>Interface ILogger
 
-Voici le *ILogger* interface dans l’application Fix It.
+Voici l’interface *ILogger* dans l’application Fix it.
 
 [!code-csharp[Main](monitoring-and-telemetry/samples/sample1.cs)]
 
-Ces méthodes permettent d’écrire des journaux de quatre niveaux pris en charge par *System.Diagnostics*. Les méthodes TraceApi sont pour la journalisation des appels de service externe avec des informations sur la latence. Vous pouvez également ajouter un ensemble de méthodes pour le niveau de débogage/Verbose.
+Ces méthodes vous permettent d’écrire des journaux aux quatre mêmes niveaux pris en charge par *System. Diagnostics*. Les méthodes TraceApi sont destinées à la journalisation des appels de service externes avec des informations sur la latence. Vous pouvez également ajouter un ensemble de méthodes pour le niveau de débogage/détail.
 
-### <a name="the-logger-implementation-of-the-ilogger-interface"></a>L’implémentation de l’enregistreur d’événements de l’interface ILogger
+### <a name="the-logger-implementation-of-the-ilogger-interface"></a>Implémentation de l’enregistreur d’événements de l’interface ILogger
 
-L’implémentation de l’interface est très simple. Il en fait simplement appelle à la norme *System.Diagnostics* méthodes. L’extrait suivant montre les trois méthodes d’informations et un pour chacun des autres.
+L’implémentation de l’interface est très simple. En fait, il appelle simplement les méthodes *System. Diagnostics* standard. L’extrait de code suivant montre les trois méthodes d’informations et l’autre les unes des autres.
 
 [!code-csharp[Main](monitoring-and-telemetry/samples/sample2.cs)]
 
 ### <a name="calling-the-ilogger-methods"></a>Appel des méthodes ILogger
 
-Chaque fois que le code dans l’application Fix It intercepte une exception, il appelle un *ILogger* méthode pour journaliser les détails de l’exception. Et chaque fois qu’elle effectue un appel à la base de données, service Blob ou une API REST, il démarre un chronomètre avant l’appel, arrête le chronomètre lorsque le service est retournée et enregistre le temps écoulé, ainsi que des informations sur la réussite ou l’échec.
+Chaque fois que le code de l’application Fix it intercepte une exception, il appelle une méthode *ILogger* pour consigner les détails de l’exception. Et chaque fois qu’il effectue un appel vers la base de données, le service BLOB ou une API REST, il démarre un chronomètre avant l’appel, arrête le chronomètre lorsque le service retourne et enregistre le temps écoulé, ainsi que les informations sur la réussite ou l’échec.
 
-Notez que le message du journal inclut le nom de classe et le nom de la méthode. Il est conseillé de vous assurer que les messages de journal identifient quelle partie du code d’application de rédaction.
+Notez que le message du journal comprend le nom de la classe et le nom de la méthode. Il est recommandé de s’assurer que les messages du journal identifient la partie du code d’application qui les a écrits.
 
 [!code-csharp[Main](monitoring-and-telemetry/samples/sample3.cs?highlight=6,14,20-21,25)]
 
-À présent pour chaque fois que l’application Fix It a émis un appel à la base de données SQL, vous pouvez voir l’appel, la méthode qui l’a appelée, et exactement combien de temps il a fallu.
+Donc maintenant, pour chaque fois que l’application Fix it a effectué un appel à SQL Database, vous pouvez voir l’appel, la méthode qui l’a appelé et exactement le temps qu’il a pris.
 
-![Requête de base de données SQL dans les journaux](monitoring-and-telemetry/_static/image21.png)
+![SQL Database requête dans les journaux](monitoring-and-telemetry/_static/image21.png)
 
 ![](monitoring-and-telemetry/_static/image22.png)
 
-Si vous allez parcourir les journaux, vous pouvez voir que la durée des appels de base de données est variable. Que les informations peut être utiles : étant donné que l’application enregistre tout cela, vous pouvez analyser les tendances historiques dans comment le service de base de données s’effectue au fil du temps. Par exemple, un service peut être rapide la plupart du temps mais requêtes risquent d’échouer réponses peut être ralentie ou à certains moments de la journée.
+Si vous parcourez les journaux, vous pouvez voir que la durée des appels de base de données prend est variable. Ces informations peuvent être utiles : étant donné que l’application journalise tous ces éléments, vous pouvez analyser les tendances historiques en ce qui concerne le fonctionnement du service de base de données au fil du temps. Par exemple, un service peut être le plus souvent rapide, mais les demandes peuvent échouer ou les réponses peuvent ralentir à certaines heures de la journée.
 
-Vous pouvez faire la même chose pour le service Blob – pour chaque fois que l’application télécharge un nouveau fichier, il existe un journal, et vous pouvez voir exactement comment le temps nécessaire pour charger chaque fichier.
+Vous pouvez effectuer la même opération pour le service BLOB : chaque fois que l’application charge un nouveau fichier, il y a un journal, et vous pouvez voir exactement combien de temps il a fallu pour charger chaque fichier.
 
-![Journal de chargement d’objet BLOB](monitoring-and-telemetry/_static/image23.png)
+![Journal de chargement d’objets BLOB](monitoring-and-telemetry/_static/image23.png)
 
-Il s’agit de quelques lignes de code à écrire chaque fois que vous appelez un service, et maintenant chaque fois qu’une personne dit qu'a rencontré un problème, vous savez exactement quel était le problème, une erreur, ou même si elle a été simplement lente. Vous pouvez identifier la source du problème sans avoir à distance à un serveur ou activer la journalisation après l’erreur se produit et espère pouvoir recréer.
+Il s’agit simplement de quelques lignes de code supplémentaires à écrire chaque fois que vous appelez un service. à présent, chaque fois que quelqu’un dit qu’il a rencontré un problème, vous savez exactement ce qu’est le problème, s’il s’agit d’une erreur, ou même s’il s’est exécuté lentement. Vous pouvez identifier la source du problème sans avoir à vous connecter à distance à un serveur ou à activer la journalisation une fois que l’erreur se produit et à l’espoir de la recréer.
 
-## <a name="dependency-injection-in-the-fix-it-app"></a>L’Injection de dépendances dans le correctif il application
+## <a name="dependency-injection-in-the-fix-it-app"></a>Injection de dépendances dans l’application Fix it
 
-Vous vous demandez peut-être comment le constructeur de référentiel dans l’exemple ci-dessus Obtient l’enregistreur d’événements implémentation d’interface :
+Vous vous demandez peut-être comment le constructeur du référentiel dans l’exemple ci-dessus obtient l’implémentation de l’interface de l’enregistreur d’événements :
 
 [!code-csharp[Main](monitoring-and-telemetry/samples/sample4.cs?highlight=6)]
 
-Pour associer l’interface à l’implémentation de l’application utilise [l’injection de dépendances](http://en.wikipedia.org/wiki/Dependency_injection)(DI) avec [AutoFac](http://autofac.org/). L’injection de dépendance vous permet à utiliser un objet basé sur une interface à différents endroits de votre code. il suffit de spécifier au même endroit de l’implémentation qui est utilisée lorsque l’interface est instancié. Cela rend plus facile de modifier l’implémentation : par exemple, vous souhaiterez peut-être remplacer l’enregistreur d’événements System.Diagnostics avec un enregistreur d’événements NLog. Ou, pour les tests automatisés, vous souhaiterez remplacer par une version fictive de l’enregistreur d’événements.
+Pour associer l’interface à l’implémentation, l’application utilise l' [injection de dépendances](http://en.wikipedia.org/wiki/Dependency_injection)(di) avec [AutoFac](http://autofac.org/). L’injection de code vous permet d’utiliser un objet basé sur une interface à de nombreux emplacements de votre code, et vous devez simplement spécifier à un emplacement l’implémentation utilisée lorsque l’interface est instanciée. Cela facilite la modification de l’implémentation : par exemple, vous souhaiterez peut-être remplacer l’enregistreur d’événements System. Diagnostics par un enregistreur d’événements NLog. Ou pour les tests automatisés, vous pouvez substituer une version factice de l’enregistreur d’événements.
 
-L’application Fix It utilise l’injection de dépendances dans tous les référentiels et tous les contrôleurs. Les constructeurs des classes de contrôleur obtenir un *ITaskRepository* la même façon que le référentiel Obtient une interface de l’enregistreur d’événements de l’interface :
+L’application Fix It utilise DI dans tous les référentiels et tous les contrôleurs. Les constructeurs des classes de contrôleur obtiennent une interface *ITaskRepository* de la même façon que le référentiel obtient une interface de l’enregistreur d’événements :
 
 [!code-csharp[Main](monitoring-and-telemetry/samples/sample5.cs?highlight=5)]
 
-L’application utilise la bibliothèque de l’injection de dépendances AutoFac pour fournir automatiquement *TaskRepository* et *enregistreur d’événements* instances pour ces constructeurs.
+L’application utilise la bibliothèque AutoFac DI pour fournir automatiquement des instances *TaskRepository* et *logger* pour ces constructeurs.
 
 [!code-csharp[Main](monitoring-and-telemetry/samples/sample6.cs?highlight=8,10)]
 
-Ce code indique globalement que n’importe où un constructeur a besoin un *ILogger* l’interface, de passer une instance de la *enregistreur d’événements* (classe), et chaque fois qu’il a besoin un *IFixItTaskRepository*l’interface, de passer une instance de la *FixItTaskRepository* classe.
+Ce code indique en fait que partout où un constructeur a besoin d’une interface *ILogger* , passe une instance de la classe *logger* et, chaque fois qu’il a besoin d’une interface *IFixItTaskRepository* , passe une instance de la classe *FixItTaskRepository* .
 
-[AutoFac](http://autofac.org/) est une des nombreuses infrastructures d’injection de dépendance que vous pouvez utiliser. Un autre populaires est [Unity](https://blogs.msdn.com/b/agile/archive/2013/08/20/new-guide-dependency-injection-with-unity.aspx), qui est recommandé et pris en charge par Microsoft Patterns and Practices.
+[AutoFac](http://autofac.org/) est l’une des nombreuses infrastructures d’injection de dépendances que vous pouvez utiliser. [Unity](https://blogs.msdn.com/b/agile/archive/2013/08/20/new-guide-dependency-injection-with-unity.aspx), qui est recommandé et pris en charge par Microsoft Patterns and Practices, est un autre couramment utilisé.
 
-## <a name="built-in-logging-support-in-azure"></a>Prise en charge de la journalisation intégrée dans Azure
+## <a name="built-in-logging-support-in-azure"></a>Prise en charge intégrée de la journalisation dans Azure
 
-Azure prend en charge les types suivants de [journalisation pour les applications Web dans Azure App Service](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio):
+Azure prend en charge les types de [journalisation suivants pour Web Apps dans Azure App service](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio):
 
-- Suivi System.Diagnostics (vous pouvez activer et désactiver et définir des niveaux à la volée sans redémarrage du site).
-- Événements de Windows.
+- System. Diagnostics Tracing (vous pouvez activer et désactiver et définir des niveaux à la volée sans redémarrer le site).
+- Événements Windows.
 - Journaux IIS (HTTP/FREB).
 
-Azure prend en charge les types suivants de [journalisation dans les Services de Cloud](https://docs.microsoft.com/azure/cloud-services/cloud-services-dotnet-diagnostics):
+Azure prend en charge les types suivants de [journalisation dans les services Cloud](https://docs.microsoft.com/azure/cloud-services/cloud-services-dotnet-diagnostics):
 
-- Suivi de System.Diagnostics.
-- Compteurs de performance.
-- Événements de Windows.
+- Suivi System. Diagnostics.
+- Compteurs de performances.
+- Événements Windows.
 - Journaux IIS (HTTP/FREB).
-- Analyse du répertoire personnalisé.
+- Analyse de répertoire personnalisée.
 
-L’application Fix It utilise le suivi de System.Diagnostics. Il vous suffit de faire pour activer la journalisation dans une application web de System.Diagnostics est de retourner un commutateur dans le portail ou d’appeler l’API REST. Dans le portail, cliquez sur le **Configuration** onglet pour votre site et faites défiler pour voir le **Application Diagnostics** section. Vous pouvez activer ou désactiver la journalisation et sélectionnez le niveau de journalisation souhaité. Vous pouvez avoir à Azure d’écrire les journaux dans le système de fichiers ou à un compte de stockage.
+L’application Fix It utilise le suivi System. Diagnostics. Pour activer la journalisation de System. Diagnostics dans une application Web, il vous suffit de basculer un commutateur dans le portail ou d’appeler l’API REST. Dans le portail, cliquez sur l’onglet **configuration** de votre site, puis faites défiler la page pour voir la section **diagnostic d’application** . Vous pouvez activer ou désactiver la journalisation et sélectionner le niveau de journalisation de votre choix. Vous pouvez demander à Azure d’écrire les journaux dans le système de fichiers ou dans un compte de stockage.
 
-![Diagnostics d’application et les diagnostics de site dans l’onglet Configurer](monitoring-and-telemetry/_static/image24.png)
+![Diagnostics d’application et diagnostics de site dans l’onglet configurer](monitoring-and-telemetry/_static/image24.png)
 
-Après avoir activé la journalisation dans Azure, vous pouvez voir les journaux dans la fenêtre Sortie de Visual Studio lors de leur création.
+Après avoir activé la journalisation dans Azure, vous pouvez voir les journaux dans la fenêtre sortie de Visual Studio au fur et à mesure de leur création.
 
-![Menu de journaux de diffusion en continu](http://wacomdpsstorage.blob.core.windows.net/articlesmedia/content-ppe.windowsazure.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/20140115062810/tws-viewlogsmenu.png)
+![Menu journaux de diffusion en continu](http://wacomdpsstorage.blob.core.windows.net/articlesmedia/content-ppe.windowsazure.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/20140115062810/tws-viewlogsmenu.png)
 
-![Menu de journaux de diffusion en continu](http://wacomdpsstorage.blob.core.windows.net/articlesmedia/content-ppe.windowsazure.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/20140115062810/tws-nologsyet.png)
+![Menu journaux de diffusion en continu](http://wacomdpsstorage.blob.core.windows.net/articlesmedia/content-ppe.windowsazure.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/20140115062810/tws-nologsyet.png)
 
-Vous pouvez également avoir des journaux écrits dans votre compte de stockage et affichez les avec n’importe quel outil qui peut accéder au service de la Table de stockage Azure, tel que **Explorateur de serveurs** dans Visual Studio ou [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/).
+Vous pouvez également avoir des journaux écrits dans votre compte de stockage et les afficher avec n’importe quel outil pouvant accéder au service de table de stockage Azure, par exemple **Explorateur de serveurs** dans Visual Studio ou [Explorateur stockage Azure](https://azure.microsoft.com/features/storage-explorer/).
 
-![Journaux dans l’Explorateur de serveurs](http://wacomdpsstorage.blob.core.windows.net/articlesmedia/content-ppe.windowsazure.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/20140115062810/tws-storagelogs.png)
+![Journaux dans Explorateur de serveurs](http://wacomdpsstorage.blob.core.windows.net/articlesmedia/content-ppe.windowsazure.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/20140115062810/tws-storagelogs.png)
 
 ## <a name="summary"></a>Récapitulatif
 
-C’est très simple à implémenter un système de télémétrie d’out-of-the-box, instrumenter journalisation dans votre propre code et configurer la journalisation dans Azure. Et si vous rencontrez des problèmes de production, la combinaison d’un système de télémétrie et de journaux personnalisés vous aideront à résoudre rapidement les problèmes avant qu’ils deviennent des problèmes majeurs pour vos clients.
+Il est très simple d’implémenter un système de télémétrie prêt à l’emploi, d’enregistrer la journalisation dans votre propre code et de configurer la journalisation dans Azure. Et lorsque vous rencontrez des problèmes de production, la combinaison d’un système de télémétrie et de journaux personnalisés vous aidera à résoudre rapidement les problèmes avant qu’ils ne deviennent des problèmes majeurs pour vos clients.
 
-Dans le [chapitre suivant](transient-fault-handling.md) nous allons étudier comment gérer les erreurs temporaires de sorte qu’ils ne deviennent des problèmes de production que vous devez examiner.
+Dans le [chapitre suivant](transient-fault-handling.md) , nous allons examiner comment gérer les erreurs temporaires afin qu’elles ne deviennent pas des problèmes de production que vous devez examiner.
 
 ## <a name="resources"></a>Ressources
 
 Pour plus d'informations, voir les ressources ci-dessous.
 
-Documentation principalement sur les données de télémétrie :
+Documentation principalement sur la télémétrie :
 
-- [Microsoft Patterns and Practices - conseils Azure](https://msdn.microsoft.com/library/dn568099.aspx). Consultez les conseils d’Instrumentation et les données de télémétrie, des conseils de Service de contrôle, surveillance des points de terminaison de contrôle d’intégrité et Reconfiguration du Runtime modèle.
-- [Minime pincement dans le Cloud : L’activation de surveillance sur les sites Web Azure à des performances de Relic nouvelle](http://www.hanselman.com/blog/PennyPinchingInTheCloudEnablingNewRelicPerformanceMonitoringOnWindowsAzureWebsites.aspx).
-- [Meilleures pratiques pour la création de Services à grande échelle sur Azure Cloud Services](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). Livre blanc par Mark Simms et Michael Thomassy. Consultez la section données de télémétrie et Diagnostics.
-- [Développement de nouvelle génération avec Application Insights](https://msdn.microsoft.com/magazine/dn683794.aspx). Article de MSDN Magazine.
+- [Modèles et pratiques Microsoft-conseils Azure](https://msdn.microsoft.com/library/dn568099.aspx). Consultez Guide d’instrumentation et de télémétrie, conseils sur le contrôle de service, modèle de surveillance de point de terminaison d’intégrité et modèle de reconfiguration du Runtime.
+- [Un pincement minime dans le Cloud : activation de la surveillance des performances de nouvelle Relic sur les sites Web Azure](http://www.hanselman.com/blog/PennyPinchingInTheCloudEnablingNewRelicPerformanceMonitoringOnWindowsAzureWebsites.aspx).
+- [Meilleures pratiques pour la conception de services à grande échelle sur les services Cloud Azure](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). Livre blanc en Mark SIMM et Michael thomassy. Consultez la section télémétrie et Diagnostics.
+- [Développement de nouvelle génération avec application Insights](https://msdn.microsoft.com/magazine/dn683794.aspx). Article de MSDN Magazine.
 
 Documentation principalement sur la journalisation :
 
-- [Bloc d’Application de journalisation sémantique (SLAB)](http://convective.wordpress.com/2013/08/12/semantic-logging-application-block-slab/). Neil Mackenzie présente le cas pour la journalisation sémantique avec prépare.
-- [Création de journaux structurées et explicites avec journalisation sémantique](https://channel9.msdn.com/Events/Build/2013/3-336). (Vidéo) Julian Dominguez présente le cas pour la journalisation sémantique avec prépare.
-- [EF6 Enregistrement SQL – partie 1 : Journalisation simple](http://blog.oneunicorn.com/2013/05/08/ef6-sql-logging-part-1-simple-logging/). Arthur Vickers montre comment enregistrer des requêtes exécutées par Entity Framework dans EF 6.
-- [Résilience des connexions et Interception des commandes avec Entity Framework dans une Application ASP.NET MVC](../../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md). Quatrième dans une série de didacticiels neuf parties, montre comment utiliser la fonctionnalité de l’interception de commande EF 6 pour enregistrer les commandes SQL envoyées à la base de données par Entity Framework.
-- [Améliorer la journalisation à l’aide des attributs d’informations appelant 5.0 c#](http://www.dotnetcurry.com/showarticle.aspx?ID=972). Comment se connecter facilement le nom de la méthode d’appel sans coder en dur dans les littéraux ou à l’aide de la réflexion pour obtenir de manuellement.
+- [Bloc d’application de journalisation sémantique (dalle)](http://convective.wordpress.com/2013/08/12/semantic-logging-application-block-slab/). Neil Mackenzie présente le cas de la journalisation sémantique avec la dalle.
+- [Création de journaux structurés et significatifs avec la journalisation sémantique](https://channel9.msdn.com/Events/Build/2013/3-336). Vidéosurveillance Julien Dominguez présente le cas de la journalisation sémantique avec la dalle.
+- [EF6 journalisation SQL – Partie 1 : journalisation simple](http://blog.oneunicorn.com/2013/05/08/ef6-sql-logging-part-1-simple-logging/). Arthur Vickers montre comment enregistrer des requêtes exécutées par Entity Framework dans EF 6.
+- [Résilience des connexions et interception des commandes avec l’Entity Framework dans une application MVC ASP.net](../../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md). Quatrième dans une série de didacticiels en neuf parties, montre comment utiliser la fonctionnalité d’interception de commande EF 6 pour consigner les commandes SQL envoyées à la base de données par Entity Framework.
+- [Améliorez la C# journalisation à l’aide des attributs d’informations de l’appelant 5,0](http://www.dotnetcurry.com/showarticle.aspx?ID=972). Comment consigner facilement le nom de la méthode d’appel sans le coder en dur dans des littéraux ou utiliser la réflexion pour l’extraire manuellement.
 
 Documentation principalement sur la résolution des problèmes :
 
-- [Dépannage d’Azure &amp; débogage blog](https://blogs.msdn.com/b/kwill/).
-- [AzureTools : l’utilitaire de Diagnostic utilisé par l’équipe de Support du développeur Azure](https://blogs.msdn.com/b/kwill/archive/2013/08/26/azuretools-the-diagnostic-utility-used-by-the-windows-azure-developer-support-team.aspx?Redirected=true). Présente et fournit un lien de téléchargement pour un outil qui peut être utilisé sur une machine virtuelle Azure pour télécharger et exécuter un large éventail d’outils de diagnostics et d’analyse. Utile lorsque vous avez besoin pour diagnostiquer un problème sur une machine virtuelle particulière.
-- [Dépanner une application web dans Azure App Service à l’aide de Visual Studio](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio). Un didacticiel pas à pas pour bien démarrer avec le suivi System.Diagnostics et débogage à distance.
+- [Blog sur le dépannage d’Azure &amp; le débogage](https://blogs.msdn.com/b/kwill/).
+- [AzureTools : l’utilitaire de diagnostic utilisé par l’équipe de Developer support Azure](https://blogs.msdn.com/b/kwill/archive/2013/08/26/azuretools-the-diagnostic-utility-used-by-the-windows-azure-developer-support-team.aspx?Redirected=true). Présente et fournit un lien de téléchargement pour un outil qui peut être utilisé sur une machine virtuelle Azure pour télécharger et exécuter un large éventail d’outils de diagnostic et de surveillance. Utile lorsque vous devez diagnostiquer un problème sur une machine virtuelle particulière.
+- [Dépanner une application Web dans Azure App service à l’aide de Visual Studio](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio). Didacticiel pas à pas pour bien démarrer avec le suivi System. Diagnostics et le débogage à distance.
 
 Vidéos :
 
-- [Prévention de défaillance : Création de Services de Cloud évolutives, durables](https://channel9.msdn.com/Series/FailSafe). Série de neuf en parties par Ulrich Homann, Marc Mercuri et Mark Simms. Présente les principaux concepts et principes d’architecture de manière très accessible et intéressante, avec récits dessinés à partir de l’expérience de Microsoft Customer Advisory Team (CAT) de clients réels. Épisodes 4 et 9 concernent la surveillance et télémétrie. Épisode 9 inclut une vue d’ensemble de la surveillance des services MetricsHub, AppDynamics, New Relic et PagerDuty.
-- [Construction Big : Leçons apprises de clients Azure - partie II](https://channel9.msdn.com/Events/Build/2012/3-030). Mark Simms parle de la conception de l’échec et l’instrumentation de tous les éléments. Semblable à la série de prévention de défaillance, mais entrera en procédures plus de détails.
+- [Failsafe : création de services Cloud évolutifs et résilients](https://channel9.msdn.com/Series/FailSafe). Série en neuf parties de Ulrich Homann, Marc Mercuri et Mark SIMM. Présente des concepts de haut niveau et des principes architecturaux de manière très accessible et intéressante, avec des histoires tirées de l’expérience de l’équipe de conseil clientèle de Microsoft avec les clients réels. Les épisodes 4 et 9 concernent la surveillance et la télémétrie. L’épisode 9 comprend une vue d’ensemble des services de surveillance disponibles : metricshub, AppDynamics, New Relic et PagerDuty.
+- [Création de Big : leçons apprises par les clients Azure-partie II](https://channel9.msdn.com/Events/Build/2012/3-030). Mark SIMM parle de la conception en cas de défaillance et de l’instrumentation de tout. Semblable à la série Failsafe, mais présente des détails supplémentaires.
 
 Exemple de code :
 
-- [Cloud Service Fundamentals dans Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Exemple d’application créé par l’équipe de conseil clientèle Microsoft Azure. Montre les données de télémétrie et les méthodes de journalisation, comme expliqué dans les articles suivants. L’exemple implémente la journalisation de l’application à l’aide de [NLog](http://nlog-project.org/). Pour obtenir une documentation connexe, consultez le [série de quatre articles du wiki TechNet sur les données de télémétrie et de journalisation](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx#Telemetry_coming_soon).
+- [Notions de base du service Cloud dans Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Exemple d’application créé par l’équipe de conseil clientèle Microsoft Azure. Illustre les pratiques de télémétrie et de journalisation, comme expliqué dans les articles suivants. L’exemple implémente la journalisation des applications à l’aide de [nlog](http://nlog-project.org/). Pour obtenir une documentation connexe, consultez la [série de quatre articles wiki TechNet sur la télémétrie et la journalisation](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx#Telemetry_coming_soon).
 
 > [!div class="step-by-step"]
 > [Précédent](design-to-survive-failures.md)

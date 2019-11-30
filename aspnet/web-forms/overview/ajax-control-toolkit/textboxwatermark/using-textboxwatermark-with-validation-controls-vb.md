@@ -1,55 +1,55 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-with-validation-controls-vb
-title: Utilisation de TextBoxWatermark avec des contrôles de Validation (VB) | Microsoft Docs
+title: Utilisation de TextBoxWatermark avec des contrôles de validation (VB) | Microsoft Docs
 author: wenz
-description: Le contrôle TextBoxWatermark dans AJAX Control Toolkit étend une zone de texte afin qu’un texte est affiché dans la zone. Lorsqu’un utilisateur clique dans la zone, il je...
+description: Le contrôle TextBoxWatermark dans la boîte à outils du contrôle AJAX étend une zone de texte afin qu’un texte s’affiche dans la zone. Quand un utilisateur clique sur la zone, je vais...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: e6c2cb98-f745-4bc8-973a-813879c8a891
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-with-validation-controls-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 63363a8e25a351c23f89186ef3d9c44355ba3c44
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 141cae26c9e52be510e2a5a8f816cbac977dcf3d
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132490"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74597226"
 ---
 # <a name="using-textboxwatermark-with-validation-controls-vb"></a>Utilisation de TextBoxWatermark avec des contrôles Validation (VB)
 
 par [Christian Wenz](https://github.com/wenz)
 
-[Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/TextBoxWatermark2.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/textboxwatermark2VB.pdf)
+[Télécharger le code](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/TextBoxWatermark2.vb.zip) ou [Télécharger le PDF](https://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/textboxwatermark2VB.pdf)
 
-> Le contrôle TextBoxWatermark dans AJAX Control Toolkit étend une zone de texte afin qu’un texte est affiché dans la zone. Lorsqu’un utilisateur clique dans la zone, elle est vidée. Si l’utilisateur laisse la zone sans saisie de texte, le texte prérempli réapparaît. Cela peut entrer en conflit avec des contrôles de Validation ASP.NET sur la même page, mais ces problèmes peuvent être surmontés.
+> Le contrôle TextBoxWatermark dans la boîte à outils du contrôle AJAX étend une zone de texte afin qu’un texte s’affiche dans la zone. Lorsqu’un utilisateur clique sur la zone, il est vidé. Si l’utilisateur quitte la zone sans entrer de texte, le texte prérempli réapparaît. Cela peut entrer en conflit avec des contrôles de validation ASP.NET sur la même page, mais ces problèmes peuvent être résolus.
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d'ensemble de
 
-Le `TextBoxWatermark` contrôle dans AJAX Control Toolkit étend une zone de texte afin qu’un texte est affiché dans la zone. Lorsqu’un utilisateur clique dans la zone, elle est vidée. Si l’utilisateur laisse la zone sans saisie de texte, le texte prérempli réapparaît. Cela peut entrer en conflit avec des contrôles de Validation ASP.NET sur la même page, mais ces problèmes peuvent être surmontés.
+Le contrôle `TextBoxWatermark` dans le kit d’outils de contrôle AJAX étend une zone de texte pour qu’un texte s’affiche dans la zone. Lorsqu’un utilisateur clique sur la zone, il est vidé. Si l’utilisateur quitte la zone sans entrer de texte, le texte prérempli réapparaît. Cela peut entrer en conflit avec des contrôles de validation ASP.NET sur la même page, mais ces problèmes peuvent être résolus.
 
 ## <a name="steps"></a>Étapes
 
-La configuration de base de l’exemple est le suivant : un `TextBox` contrôle est lui appliquer un filigrane à l’aide un `TextBoxWatermarkExtender` contrôle. Un bouton déclenche une publication (postback) et est utilisé ultérieurement pour déclencher les contrôles de validation sur la page. En outre, un `ScriptManager` contrôle est requis pour initialiser d’ASP.NET AJAX :
+Le paramétrage de base de l’exemple est le suivant : un contrôle de `TextBox` est en filigrane à l’aide d’un contrôle `TextBoxWatermarkExtender`. Un bouton déclenche une publication (postback) et sera utilisé ultérieurement pour déclencher les contrôles de validation sur la page. En outre, un contrôle de `ScriptManager` est requis pour initialiser ASP.NET AJAX :
 
 [!code-aspx[Main](using-textboxwatermark-with-validation-controls-vb/samples/sample1.aspx)]
 
-Ajoutez maintenant un `RequiredFieldValidator` contrôle qui vérifie si le champ n’est texte lorsque le formulaire est envoyé. Le `InitialValue` propriété du validateur doit être définie sur la même valeur que celle qui est utilisée dans le `TextBoxWatermarkExtender` contrôle : Lorsque le formulaire est envoyé, la valeur d’une zone de texte inchangé est la valeur de filigrane qu’il contient :
+Ajoutez maintenant un contrôle de `RequiredFieldValidator` qui vérifie s’il existe un texte dans le champ lorsque le formulaire est envoyé. La valeur de la propriété `InitialValue` du validateur doit être identique à celle utilisée dans le contrôle `TextBoxWatermarkExtender` : lorsque le formulaire est envoyé, la valeur d’une zone de texte inchangée est la valeur de filigrane dans celle-ci :
 
 [!code-aspx[Main](using-textboxwatermark-with-validation-controls-vb/samples/sample2.aspx)]
 
-Toutefois il existe un problème avec cette approche : Si le client désactive JavaScript, le champ de texte n’est pas donc prérempli avec le texte de filigrane, les `RequiredFieldValidator` ne déclenche pas d’un message d’erreur. Par conséquent, une seconde `RequiredFieldValidator` contrôle est requise qui vérifie une zone de texte vide (en omettant la `InitialValue` attribut).
+Toutefois, il existe un problème avec cette approche : si le client désactive JavaScript, le champ de texte n’est pas prérempli avec le texte de filigrane, par conséquent le `RequiredFieldValidator` ne déclenche pas de message d’erreur. Par conséquent, un deuxième `RequiredFieldValidator` contrôle est requis, qui recherche une zone de texte vide (en omettant l’attribut `InitialValue`).
 
 [!code-aspx[Main](using-textboxwatermark-with-validation-controls-vb/samples/sample3.aspx)]
 
-Étant donné que les deux validateurs utilisent `Display` = `"Dynamic"`, l’utilisateur final ne peut pas distinguer à partir de l’apparence visuelle parmi les deux validateurs a été déclenché ; au lieu de cela, il semblerait qu’un seul d'entre eux.
+Étant donné que les deux validateurs utilisent `Display`=`"Dynamic"`, l’utilisateur final ne peut pas distinguer de l’apparence visuelle laquelle des deux validateurs ont été déclenchés ; au lieu de cela, il semblerait qu’il n’y en avait qu’un seul.
 
-Enfin, ajoutez du code côté serveur pour le texte dans le champ de sortie si aucun validateur n’émis un message d’erreur :
+Enfin, ajoutez du code côté serveur pour générer le texte dans le champ si aucun validateur n’a émis de message d’erreur :
 
 [!code-aspx[Main](using-textboxwatermark-with-validation-controls-vb/samples/sample4.aspx)]
 
-[![Le programme de validation se plaint qu’il n’existe aucun texte dans le champ](using-textboxwatermark-with-validation-controls-vb/_static/image2.png)](using-textboxwatermark-with-validation-controls-vb/_static/image1.png)
+[![le validateur se plaint qu’il n’y a aucun texte dans le champ](using-textboxwatermark-with-validation-controls-vb/_static/image2.png)](using-textboxwatermark-with-validation-controls-vb/_static/image1.png)
 
-Le programme de validation se plaint qu’il n’existe aucun texte dans le champ ([cliquez pour afficher l’image en taille réelle](using-textboxwatermark-with-validation-controls-vb/_static/image3.png))
+Le validateur se plaint qu’il n’y a pas de texte dans le champ ([cliquez pour afficher l’image en taille réelle](using-textboxwatermark-with-validation-controls-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Précédent](using-textboxwatermark-in-a-formview-vb.md)

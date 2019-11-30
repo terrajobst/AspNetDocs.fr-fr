@@ -1,109 +1,109 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-v3/odata-actions
-title: Prise en charge des Actions OData dans ASP.NET Web API 2 | Microsoft Docs
+title: Prise en charge des actions OData dans API Web ASP.NET 2 | Microsoft Docs
 author: MikeWasson
-description: 'Dans OData, les actions sont un moyen pour ajouter des comportements côté serveur qui ne sont pas facilement définies en tant qu’opérations CRUD sur les entités. Certaines utilisations pour les actions sont les suivantes : Implémentez...'
+description: 'Dans OData, les actions sont un moyen d’ajouter des comportements côté serveur qui ne sont pas facilement définis en tant qu’opérations CRUD sur les entités. Certaines utilisations des actions incluent : implémenter...'
 ms.author: riande
 ms.date: 02/25/2014
 ms.assetid: 2d7b3aa2-aa47-4e6e-b0ce-3d65a1c6fe02
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/odata-actions
 msc.type: authoredcontent
-ms.openlocfilehash: 523225d86b06914349ebd689c4042b0b20393b9b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: ae8b23f0868f992cb2bbbf14ee3f7ac848501515
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65112318"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74600351"
 ---
-# <a name="supporting-odata-actions-in-aspnet-web-api-2"></a>Prise en charge des Actions OData dans ASP.NET Web API 2
+# <a name="supporting-odata-actions-in-aspnet-web-api-2"></a>Prise en charge des actions OData dans API Web ASP.NET 2
 
 par [Mike Wasson](https://github.com/MikeWasson)
 
-[Télécharger le projet terminé](http://code.msdn.microsoft.com/ASPNET-Web-API-OData-cecdb524)
+[Télécharger le projet terminé](https://code.msdn.microsoft.com/ASPNET-Web-API-OData-cecdb524)
 
-> Dans OData, *actions* sont un moyen pour ajouter des comportements côté serveur qui ne sont pas facilement définies en tant qu’opérations CRUD sur les entités. Certaines utilisations pour les actions sont les suivantes :
+> Dans OData, les *actions* sont un moyen d’ajouter des comportements côté serveur qui ne sont pas facilement définis en tant qu’opérations CRUD sur les entités. Certaines utilisations des actions sont les suivantes :
 > 
-> - Implémentation des transactions complexes.
+> - Implémentation de transactions complexes.
 > - Manipulation de plusieurs entités à la fois.
-> - Ce qui permet des mises à jour uniquement certaines propriétés d’une entité.
-> - Envoi d’informations sur le serveur qui n’est pas défini dans une entité.
+> - Autorisation des mises à jour uniquement pour certaines propriétés d’une entité.
+> - Envoi d’informations au serveur qui n’est pas défini dans une entité.
 > 
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versions des logiciels utilisées dans le didacticiel
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versions logicielles utilisées dans le didacticiel
 > 
 > 
-> - Web API 2
-> - OData Version 3
+> - API Web 2
+> - OData version 3
 > - Entity Framework 6
 
-## <a name="example-rating-a-product"></a>Exemple : Évaluation d’un produit
+## <a name="example-rating-a-product"></a>Exemple : évaluation d’un produit
 
-Dans cet exemple, nous voulons permettre aux utilisateurs de classer les produits, puis l’exposer l’évaluation moyenne pour chaque produit. Sur la base de données, nous allons stocker une liste de contrôle d’accès, la clé de produits.
+Dans cet exemple, nous souhaitons permettre aux utilisateurs de évaluer les produits, puis d’exposer les évaluations moyennes pour chaque produit. Sur la base de données, nous stockerons une liste de classifications, indexées sur les produits.
 
 Voici le modèle que nous pouvons utiliser pour représenter les évaluations dans Entity Framework :
 
 [!code-csharp[Main](odata-actions/samples/sample1.cs)]
 
-Mais nous ne voulons pas les clients pour valider un `ProductRating` objet à une collection de « Notes ». Intuitivement, l’évaluation est associée à la collection de produits, et le client ne doit valider la valeur d’évaluation.
+Mais nous ne voulons pas que les clients PUBLIEnt un objet `ProductRating` dans une collection « Ratings ». Intuitivement, l’évaluation est associée à la collection Products et le client doit uniquement poster la valeur d’évaluation.
 
-Par conséquent, au lieu d’utiliser les opérations CRUD normales, nous définissons une action qu’un client peut appeler sur un produit. Dans la terminologie d’OData, l’action est *lié* aux entités du produit.
+Par conséquent, au lieu d’utiliser les opérations CRUD normales, nous définissons une action qu’un client peut appeler sur un produit. Dans la terminologie OData, l’action est *liée* aux entités Product.
 
->Actions ont des effets sur le serveur. Pour cette raison, ils sont appelés à l’aide de requêtes HTTP POST. Actions peuvent avoir des paramètres et types de retour, qui sont décrites dans les métadonnées du service. Le client envoie les paramètres dans le corps de la demande, et le serveur envoie la valeur de retour dans le corps de réponse. Pour appeler l’action « Taux produit », le client envoie un POST à un URI comme suit :
+>Les actions ont des effets secondaires sur le serveur. Pour cette raison, elles sont appelées à l’aide de requêtes HTTP HTTP. Les actions peuvent avoir des paramètres et des types de retour, qui sont décrits dans les métadonnées du service. Le client envoie les paramètres dans le corps de la demande, et le serveur envoie la valeur de retour dans le corps de la réponse. Pour appeler l’action « taux de produit », le client envoie un billet à un URI comme suit :
 
 [!code-console[Main](odata-actions/samples/sample2.cmd)]
 
-Les données dans la requête POST sont simplement l’évaluation de produit :
+Les données de la demande de publication sont simplement le classement du produit :
 
 [!code-console[Main](odata-actions/samples/sample3.cmd)]
 
-## <a name="declare-the-action-in-the-entity-data-model"></a>Déclarez l’Action dans l’Entity Data Model
+## <a name="declare-the-action-in-the-entity-data-model"></a>Déclarez l’action dans le Entity Data Model
 
-Dans la configuration de votre API Web, ajoutez l’action à l’entity data model (EDM) :
+Dans la configuration de votre API Web, ajoutez l’action à l’EDM (Entity Data Model) :
 
 [!code-csharp[Main](odata-actions/samples/sample4.cs)]
 
-Ce code définit « RateProduct » en tant qu’action qui peut être effectuée sur les entités Product. Elle déclare également que l’action prend un **int** paramètre nommé « Rating » et retourne un **int** valeur.
+Ce code définit « RateProduct » en tant qu’action qui peut être effectuée sur les entités Product. Elle déclare également que l’action prend un paramètre **int** nommé « Rating » et retourne une valeur **int** .
 
-## <a name="add-the-action-to-the-controller"></a>Ajoutez l’Action au contrôleur
+## <a name="add-the-action-to-the-controller"></a>Ajouter l’action au contrôleur
 
-L’action « RateProduct » est liée aux entités de produit. Pour implémenter l’action, ajoutez une méthode nommée `RateProduct` au contrôleur de produits :
+L’action « RateProduct » est liée aux entités Product. Pour implémenter l’action, ajoutez une méthode nommée `RateProduct` au contrôleur Products :
 
 [!code-csharp[Main](odata-actions/samples/sample5.cs)]
 
-Notez que le nom de méthode correspond au nom de l’action dans le modèle EDM. La méthode a deux paramètres :
+Notez que le nom de la méthode correspond au nom de l’action dans le modèle EDM. La méthode a deux paramètres :
 
-- *Clé*: La clé du produit d’un taux.
-- *Paramètres*: Dictionnaire de valeurs de paramètre d’action.
+- *clé*: clé du produit à évaluer.
+- *Parameters*: dictionnaire de valeurs de paramètre d’action.
 
-Si vous utilisez les conventions d’itinéraire par défaut, le paramètre de clé doit être nommé « clé ». Il est également important d’inclure le **[FromOdataUri]** d’attribut, comme indiqué. Cet attribut indique à l’API Web à utiliser les règles de syntaxe OData lorsqu’il analyse la clé à partir de l’URI de demande.
+Si vous utilisez les conventions de routage par défaut, le paramètre de clé doit être nommé « Key ». Il est également important d’inclure l’attribut **[FromOdataUri]** , comme indiqué. Cet attribut indique à l’API Web d’utiliser les règles de syntaxe OData lorsqu’elle analyse la clé à partir de l’URI de la demande.
 
-Utilisez le *paramètres* dictionnaire pour obtenir les paramètres d’action :
+Utilisez le dictionnaire de *paramètres* pour récupérer les paramètres d’action :
 
 [!code-csharp[Main](odata-actions/samples/sample6.cs)]
 
-Si le client envoie les paramètres d’action dans le bon format, la valeur de **ModelState.IsValid** a la valeur true. Dans ce cas, vous pouvez utiliser la **ODataActionParameters** dictionnaire pour obtenir les valeurs de paramètre. Dans cet exemple, le `RateProduct` action prend un paramètre unique nommé « Rating ».
+Si le client envoie les paramètres d’action dans le format correct, la valeur de **ModelState. IsValid** est true. Dans ce cas, vous pouvez utiliser le dictionnaire **ODataActionParameters** pour récupérer les valeurs des paramètres. Dans cet exemple, l’action `RateProduct` accepte un seul paramètre nommé « Rating ».
 
 ## <a name="action-metadata"></a>Métadonnées d’action
 
-Pour afficher les métadonnées du service, envoyez une requête GET à /odata/$ metadata. Voici la partie des métadonnées qui déclare le `RateProduct` action :
+Pour afficher les métadonnées du service, envoyez une demande de récupération à/OData/$metadata. Voici la partie des métadonnées qui déclare l’action `RateProduct` :
 
 [!code-xml[Main](odata-actions/samples/sample7.xml)]
 
-Le **FunctionImport** élément déclare l’action. La plupart des champs est explicite, mais les deux sont à noter :
+L’élément **FunctionImport** déclare l’action. La plupart des champs sont explicites, mais deux à noter :
 
-- **IsBindable** signifie que l’action peut être appelée sur l’entité cible, au moins du temps.
+- **IsBindable** signifie que l’action peut être appelée sur l’entité cible, au moins une partie du temps.
 - **IsAlwaysBindable** signifie que l’action peut toujours être appelée sur l’entité cible.
 
-La différence est que certaines actions sont toujours disponibles pour les clients, mais les autres actions peuvent dépendre de l’état de l’entité. Par exemple, supposons que vous définissez une action « Acheter ». Vous pouvez acheter uniquement un élément qui est en stock. Si l’élément est en rupture de stock, un client ne peut pas appeler cette action.
+La différence est que certaines actions sont toujours disponibles pour les clients, mais d’autres peuvent dépendre de l’état de l’entité. Supposons, par exemple, que vous définissiez une action « acheter ». Vous ne pouvez acheter qu’un article en stock. Si l’élément est en rupture de stock, un client ne peut pas appeler cette action.
 
-Lorsque vous définissez le modèle EDM, le **Action** méthode crée une action toujours pouvant être lié à :
+Lorsque vous définissez le modèle EDM, la méthode d' **action** crée une action toujours pouvant être liée :
 
 [!code-csharp[Main](odata-actions/samples/sample8.cs?highlight=1)]
 
-Je vous parlerai pas toujours liable actions (également appelé *temporaires* actions) plus loin dans cette rubrique.
+Je parlerai des actions non toujours liées (également appelées actions *transitoires* ) plus loin dans cette rubrique.
 
-## <a name="invoking-the-action"></a>Appel d’Action
+## <a name="invoking-the-action"></a>Appel de l’action
 
-Maintenant nous allons voir comment un client appelle cette action. Supposons que le client veut donner une évaluation égale à 2 pour le produit avec l’ID = 4. Voici un exemple de message de demande, à l’aide du format JSON pour le corps de la demande :
+Voyons maintenant comment un client appelle cette action. Supposons que le client souhaite attribuer une évaluation de 2 au produit avec ID = 4. Voici un exemple de message de demande, à l’aide du format JSON pour le corps de la demande :
 
 [!code-console[Main](odata-actions/samples/sample9.cmd)]
 
@@ -111,56 +111,56 @@ Voici le message de réponse :
 
 [!code-console[Main](odata-actions/samples/sample10.cmd)]
 
-## <a name="binding-an-action-to-an-entity-set"></a>Liaison d’une Action à un jeu d’entités
+## <a name="binding-an-action-to-an-entity-set"></a>Liaison d’une action à un jeu d’entités
 
-Dans l’exemple précédent, l’action est liée à une seule entité : Le client évalue un produit unique. Vous pouvez également lier une action à une collection d’entités. Apportez simplement les modifications suivantes :
+Dans l’exemple précédent, l’action est liée à une seule entité : le client évalue un produit unique. Vous pouvez également lier une action à une collection d’entités. Effectuez simplement les modifications suivantes :
 
-Dans le modèle EDM, ajoutez l’action à l’entité **Collection** propriété.
+Dans le modèle EDM, ajoutez l’action à la propriété de **collection** de l’entité.
 
 [!code-csharp[Main](odata-actions/samples/sample11.cs?highlight=1)]
 
-Dans la méthode de contrôleur, omettez la *clé* paramètre.
+Dans la méthode Controller, omettez le paramètre *Key* .
 
 [!code-csharp[Main](odata-actions/samples/sample12.cs)]
 
-Désormais, le client appelle l’action sur le jeu d’entités de produits :
+À présent, le client appelle l’action sur le jeu d’entités Products :
 
 [!code-console[Main](odata-actions/samples/sample13.cmd)]
 
-## <a name="actions-with-collection-parameters"></a>Actions avec des paramètres de collecte
+## <a name="actions-with-collection-parameters"></a>Actions avec paramètres de regroupement
 
-Actions peuvent avoir des paramètres qui acceptent une collection de valeurs. Dans le modèle EDM, utilisez **CollectionParameter&lt;T&gt;**  pour déclarer le paramètre.
+Les actions peuvent avoir des paramètres qui acceptent une collection de valeurs. Dans le modèle EDM, utilisez **CollectionParameter&lt;t&gt;** pour déclarer le paramètre.
 
 [!code-csharp[Main](odata-actions/samples/sample14.cs)]
 
-Cela déclare un paramètre nommé « Évaluation » qui accepte une collection de **int** valeurs. Dans la méthode de contrôleur, vous obtenez toujours la valeur du paramètre à partir de la **ODataActionParameters** objet, mais désormais la valeur est un **ICollection&lt;int&gt;**  valeur :
+Cela déclare un paramètre nommé « ratings » qui prend une collection de valeurs **int** . Dans la méthode Controller, vous recevez toujours la valeur de paramètre de l’objet **ODataActionParameters** , mais maintenant la valeur est une valeur **ICollection&lt;int&gt;** :
 
 [!code-csharp[Main](odata-actions/samples/sample15.cs)]
 
-## <a name="transient-actions"></a>Actions temporaires
+## <a name="transient-actions"></a>Actions transitoires
 
-Dans l’exemple « RateProduct », les utilisateurs peuvent évaluer toujours un produit, par conséquent, l’action est toujours disponible. Mais certaines actions dépendent de l’état de l’entité. Par exemple, dans un service de location de vidéo, l’action « Récupération » n’est pas toujours disponible. (Cela dépend si une copie de cette vidéo est disponible). Ce type d’action est appelé un *temporaires* action.
+Dans l’exemple « RateProduct », les utilisateurs peuvent toujours évaluer un produit, de sorte que l’action est toujours disponible. Toutefois, certaines actions dépendent de l’état de l’entité. Par exemple, dans un service de location vidéo, l’action « CheckOut » n’est pas toujours disponible. (Cela dépend de la disponibilité d’une copie de cette vidéo.) Ce type d’action est appelé action *transitoire* .
 
-Dans les métadonnées de service, une action temporaire a **IsAlwaysBindable** égal à false. C’est effectivement la valeur par défaut, et les métadonnées ressemblera à ceci :
+Dans les métadonnées du service, une action temporaire a **IsAlwaysBindable** égal à false. Il s’agit en fait de la valeur par défaut, de sorte que les métadonnées ressemblent à ceci :
 
 [!code-xml[Main](odata-actions/samples/sample16.xml)]
 
-Voici pourquoi il est important : Si une action est temporaire, le serveur doit indiquer au client lorsque l’action est disponible. Pour ce faire, il comprend un lien vers l’action dans l’entité. Voici un exemple d’une entité de film :
+Voici pourquoi cela est important : si une action est temporaire, le serveur doit indiquer au client quand l’action est disponible. Pour ce faire, il inclut un lien vers l’action dans l’entité. Voici un exemple pour une entité de film :
 
 [!code-console[Main](odata-actions/samples/sample17.cmd)]
 
 La propriété « #CheckOut » contient un lien vers l’action d’extraction. Si l’action n’est pas disponible, le serveur omet le lien.
 
-Pour déclarer une action temporaire dans le modèle EDM, appelez le **TransientAction** méthode :
+Pour déclarer une action transitoire dans le modèle EDM, appelez la méthode **TransientAction** :
 
 [!code-csharp[Main](odata-actions/samples/sample18.cs)]
 
-En outre, vous devez fournir une fonction qui retourne un lien d’action pour une entité donnée. Définir cette fonction en appelant **HasActionLink**. Vous pouvez écrire la fonction comme une expression lambda :
+Vous devez également fournir une fonction qui retourne un lien d’action pour une entité donnée. Définissez cette fonction en appelant **HasActionLink**. Vous pouvez écrire la fonction en tant qu’expression lambda :
 
 [!code-csharp[Main](odata-actions/samples/sample19.cs)]
 
-Si l’action est disponible, l’expression lambda renvoie un lien vers l’action. Le sérialiseur OData inclut ce lien lorsqu’il sérialise l’entité. Lorsque l’action n’est pas disponible, la fonction retourne `null`.
+Si l’action est disponible, l’expression lambda retourne un lien vers l’action. Le sérialiseur OData comprend ce lien lorsqu’il sérialise l’entité. Lorsque l’action n’est pas disponible, la fonction retourne `null`.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-[Exemple d’Actions OData](http://aspnet.codeplex.com/sourcecontrol/latest#Samples/WebApi/OData/v3/ODataActionsSample/)
+[Exemple d’actions OData](http://aspnet.codeplex.com/sourcecontrol/latest#Samples/WebApi/OData/v3/ODataActionsSample/)

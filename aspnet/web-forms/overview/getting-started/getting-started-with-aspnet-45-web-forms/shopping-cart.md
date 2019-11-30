@@ -2,34 +2,34 @@
 uid: web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
 title: Panier d’achat | Microsoft Docs
 author: Erikre
-description: Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour nous...
+description: Cette série de didacticiels vous apprend les bases de la création d’une application ASP.NET Web Forms à l’aide de ASP.NET 4,5 et Microsoft Visual Studio Express 2013 pour nous...
 ms.author: riande
 ms.date: 09/08/2014
 ms.assetid: 6898c601-6c31-432f-8388-e6843f8a17cb
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
 msc.type: authoredcontent
-ms.openlocfilehash: 1c54449e778eac96133cccdc90d86cbbaf05a70f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 46264a0ab2244cff24761ce94b41722e61e3f426
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132110"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74614924"
 ---
-# <a name="shopping-cart"></a>Panier d’achat
+# <a name="shopping-cart"></a>Panier d'achat
 
 par [Erik Reitan](https://github.com/Erikre)
 
-[Télécharger le projet de Wingtip Toys exemple (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [télécharger l’E-book (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Télécharger l’exemple de projet WingtipC#Toys ()](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Télécharger le livre électronique (PDF)](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un Visual Studio 2013 [projet avec du code source c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
+> Cette série de didacticiels vous apprend les bases de la création d’une application ASP.NET Web Forms à l’aide de ASP.NET 4,5 et Microsoft Visual Studio Express 2013 pour le Web. Un [projet Visual Studio 2013 avec C# le code source](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) est disponible pour accompagner cette série de didacticiels.
 
-Ce didacticiel décrit la logique métier nécessaire pour ajouter un panier d’achat à l’application de Web Forms ASP.NET exemple Wingtip Toys. Ce didacticiel s’appuie sur le didacticiel précédent, « Affichage données et les détails des éléments » et fait partie de la série de didacticiels Wingtip Toys Store. Lorsque vous avez terminé ce didacticiel, les utilisateurs de votre exemple d’application sera en mesure d’ajouter, supprimer et modifier les produits dans leur panier d’achat.
+Ce didacticiel décrit la logique métier requise pour ajouter un panier d’achat à l’exemple d’application ASP.NET Web Forms de Wingtip Toys. Ce didacticiel s’appuie sur le didacticiel précédent « afficher les éléments de données et les détails » et fait partie de la série de didacticiels sur Wingtip Toys Store. Lorsque vous aurez terminé ce didacticiel, les utilisateurs de votre exemple d’application pourront ajouter, supprimer et modifier les produits dans leur panier d’achat.
 
 ## <a name="what-youll-learn"></a>Ce que vous allez apprendre :
 
-1. Comment créer un panier d’achat pour l’application web.
-2. Explique comment permettre aux utilisateurs d’ajouter des éléments au panier.
-3. Comment ajouter un [GridView](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview(v=vs.110).aspx#introduction) contrôle pour afficher les détails de panier d’achat.
+1. Comment créer un panier d’achat pour l’application Web.
+2. Comment permettre aux utilisateurs d’ajouter des éléments au panier d’achat.
+3. Comment ajouter un contrôle [GridView](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview(v=vs.110).aspx#introduction) pour afficher les détails du panier d’achat.
 4. Comment calculer et afficher le total de la commande.
 5. Comment supprimer et mettre à jour des éléments dans le panier d’achat.
 6. Comment inclure un compteur de panier d’achat.
@@ -43,22 +43,22 @@ Ce didacticiel décrit la logique métier nécessaire pour ajouter un panier d�
 
 ## <a name="creating-a-shopping-cart"></a>Création d’un panier d’achat
 
-Plus haut dans cette série de didacticiels, vous avez ajouté les pages et le code pour afficher les données de produit à partir d’une base de données. Dans ce didacticiel, vous allez créer un panier d’achat pour gérer les produits que les utilisateurs souhaitent acheter. Les utilisateurs seront en mesure de parcourir et ajouter des éléments au panier même s’ils ne sont pas inscrits ou connectés. Pour gérer l’accès de panier d’achat, vous allez attribuer aux utilisateurs une unique `ID` à l’aide d’un identificateur global unique (GUID) lorsque l’utilisateur accède à l’achat de panier pour la première fois. Vous allez stocker ce `ID` à l’aide de l’état de Session ASP.NET.
+Plus haut dans cette série de didacticiels, vous avez ajouté des pages et du code pour afficher les données de produit d’une base de données. Dans ce didacticiel, vous allez créer un panier d’achat pour gérer les produits que les utilisateurs souhaitent acheter. Les utilisateurs peuvent parcourir et ajouter des éléments au panier d’achat même s’ils ne sont pas inscrits ou connectés. Pour gérer l’accès au panier d’achat, vous affectez aux utilisateurs un `ID` unique à l’aide d’un identificateur global unique (GUID) lorsque l’utilisateur accède pour la première fois au panier d’achat. Vous allez stocker ce `ID` à l’aide de l’état de session ASP.NET.
 
 > [!NOTE] 
 > 
-> L’état de Session ASP.NET est un emplacement pratique pour stocker des informations spécifiques à l’utilisateur qui va expirer après que l’utilisateur a quitté le site. Utilisation incorrecte de l’état de session peut avoir des implications en matière de performances sur les sites plus grands, compatibles utilisation de session état fonctionne bien à des fins de démonstration. L’exemple de projet de Wingtip Toys montre comment utiliser l’état de session sans un fournisseur externe, où l’état de session est stockée in-process sur le serveur web hébergeant le site. Sites de grande envergure qui fournissent plusieurs instances d’une application ou des sites qui exécutent plusieurs instances d’une application sur différents serveurs, envisagez d’utiliser **Windows Azure Cache Service**. Ce Service fournit un service de mise en cache distribué qui est externe au site web et résout le problème de l’état de session in-process. Pour plus d’informations, consultez [comment utiliser l’état de Session ASP.NET avec les Sites Web Windows Azure](https://docs.microsoft.com/azure/redis-cache/cache-aspnet-session-state-provider).
+> L’état de session ASP.NET est un emplacement pratique pour stocker des informations spécifiques à l’utilisateur, qui expirent une fois que l’utilisateur a quitté le site. Bien qu’une mauvaise utilisation de l’état de session puisse avoir un impact sur les performances sur les sites plus importants, l’utilisation légère de l’état de session fonctionne bien à des fins de démonstration. L’exemple de projet Wingtip Toys montre comment utiliser l’état de session sans fournisseur externe, où l’état de session est stocké in-process sur le serveur Web qui héberge le site. Pour les sites plus importants qui fournissent plusieurs instances d’une application ou pour les sites qui exécutent plusieurs instances d’une application sur des serveurs différents, envisagez d’utiliser **Windows Azure cache service**. Cette Cache Service fournit un service de mise en cache distribué qui est externe au site Web et résout le problème lié à l’utilisation de l’état de session in-process. Pour plus d’informations, consultez [utilisation de l’état de Session ASP.net avec les sites Web Windows Azure](https://docs.microsoft.com/azure/redis-cache/cache-aspnet-session-state-provider).
 
-### <a name="add-cartitem-as-a-model-class"></a>Ajouter CartItem comme une classe de modèle
+### <a name="add-cartitem-as-a-model-class"></a>Ajouter CartItem en tant que classe de modèle
 
-Plus haut dans cette série de didacticiels, vous avez défini le schéma pour les données de catégorie et de produit en créant le `Category` et `Product` classes dans le *modèles* dossier. Maintenant, ajoutez une nouvelle classe pour définir le schéma du panier d’achat. Plus loin dans ce didacticiel, vous allez ajouter une classe pour gérer l’accès aux données le `CartItem` table. Cette classe fournit la logique métier pour ajouter, supprimer et mettre à jour des éléments dans le panier d’achat.
+Plus haut dans cette série de didacticiels, vous avez défini le schéma pour les données de catégorie et de produit en créant les classes `Category` et `Product` dans le dossier *modèles* . À présent, ajoutez une nouvelle classe pour définir le schéma du panier d’achat. Plus loin dans ce didacticiel, vous allez ajouter une classe pour gérer l’accès aux données à la table `CartItem`. Cette classe fournit la logique métier pour ajouter, supprimer et mettre à jour des éléments dans le panier d’achat.
 
-1. Avec le bouton droit le *modèles* dossier et sélectionnez **ajouter**  - &gt; **un nouvel élément**. 
+1. Cliquez avec le bouton droit sur le dossier *modèles* , puis sélectionnez **Ajouter** -&gt; **nouvel élément**. 
 
-    ![Panier d’achat - le nouvel élément](shopping-cart/_static/image1.png)
-2. La boîte de dialogue **Ajouter un nouvel élément** s’affiche. Sélectionnez **Code**, puis sélectionnez **classe**. 
+    ![Panier d’achat-nouvel élément](shopping-cart/_static/image1.png)
+2. La boîte de dialogue **Ajouter un nouvel élément** s’affiche. Sélectionnez **code**, puis **classe**. 
 
-    ![Panier - ajouter la boîte de dialogue Nouvel élément](shopping-cart/_static/image2.png)
+    ![Panier d’achat-boîte de dialogue Ajouter un nouvel élément](shopping-cart/_static/image2.png)
 3. Nommez cette nouvelle classe *CartItem.cs*.
 4. Cliquez sur **Ajouter**.  
    Le nouveau fichier de classe s’affiche dans l’éditeur.
@@ -66,255 +66,255 @@ Plus haut dans cette série de didacticiels, vous avez défini le schéma pour l
 
     [!code-csharp[Main](shopping-cart/samples/sample1.cs)]
 
-Le `CartItem` classe contient le schéma qui définit chaque produit un utilisateur ajoute au panier. Cette classe est semblable pour les autres classes de schéma que vous avez créé plus haut dans cette série de didacticiels. Par convention, Entity Framework Code First s’attend que la clé primaire pour la `CartItem` table sera `CartItemId` ou `ID`. Toutefois, le code substitue le comportement par défaut à l’aide de l’annotation de données `[Key]` attribut. Le `Key` attribut de la propriété ItemId Spécifie que le `ItemID` propriété est la clé primaire.
+La classe `CartItem` contient le schéma qui définit chaque produit qu’un utilisateur ajoute au panier d’achat. Cette classe est similaire aux autres classes de schéma que vous avez créées précédemment dans cette série de didacticiels. Par Convention, Entity Framework Code First s’attend à ce que la clé primaire de la table `CartItem` soit `CartItemId` ou `ID`. Toutefois, le code remplace le comportement par défaut à l’aide de l’attribut de `[Key]` d’annotation de données. L’attribut `Key` de la propriété ItemId spécifie que la propriété `ItemID` est la clé primaire.
 
-Le `CartId` propriété spécifie le `ID` de l’utilisateur qui est associé à l’élément à acheter. Vous ajouterez du code pour créer cet utilisateur `ID` lorsque l’utilisateur accède au panier d’achat. Cela `ID` sera également stocké comme une variable de Session ASP.NET.
+La propriété `CartId` spécifie le `ID` de l’utilisateur associé à l’élément à acheter. Vous allez ajouter du code pour créer cet utilisateur `ID` lorsque l’utilisateur accède au panier d’achat. Cette `ID` est également stockée en tant que variable de session ASP.NET.
 
-### <a name="update-the-product-context"></a>Mettre à jour le contexte de produit
+### <a name="update-the-product-context"></a>Mettre à jour le contexte du produit
 
-Outre l’ajout de la `CartItem` (classe), vous devez mettre à jour la classe de contexte de base de données qui gère les classes d’entité et qui fournit l’accès à la base de données. Pour ce faire, vous allez ajouter nouvellement créé `CartItem` à la classe de modèle la `ProductContext` classe.
+Outre l’ajout de la classe `CartItem`, vous devrez mettre à jour la classe de contexte de base de données qui gère les classes d’entité et qui fournit l’accès aux données à la base de données. Pour ce faire, vous allez ajouter la classe de modèle de `CartItem` nouvellement créée à la classe `ProductContext`.
 
-1. Dans **l’Explorateur de solutions**, recherchez et ouvrez le *ProductContext.cs* de fichiers dans le *modèles* dossier.
-2. Ajoutez le code en surbrillance à la *ProductContext.cs* de fichiers comme suit :  
+1. Dans **Explorateur de solutions**, recherchez et ouvrez le fichier *ProductContext.cs* dans le dossier *modèles* .
+2. Ajoutez le code en surbrillance au fichier *ProductContext.cs* comme suit :  
 
     [!code-csharp[Main](shopping-cart/samples/sample2.cs?highlight=14)]
 
-Comme mentionné précédemment dans cette série de didacticiels, le code dans le *ProductContext.cs* fichier ajoute le `System.Data.Entity` espace de noms afin que vous avez accès à toutes les fonctionnalités principales d’Entity Framework. Cette fonctionnalité inclut la possibilité d’interroger, insérer, mettre à jour et supprimer des données en travaillant avec des objets fortement typés. Le `ProductContext` ajoute l’accès vers la nouvelle classe `CartItem` classe de modèle.
+Comme mentionné précédemment dans cette série de didacticiels, le code du fichier *ProductContext.cs* ajoute l’espace de noms `System.Data.Entity` afin que vous ayez accès à toutes les fonctionnalités principales du Entity Framework. Cette fonctionnalité offre la possibilité d’interroger, d’insérer, de mettre à jour et de supprimer des données en utilisant des objets fortement typés. La classe `ProductContext` ajoute l’accès à la classe de modèle `CartItem` récemment ajoutée.
 
-### <a name="managing-the-shopping-cart-business-logic"></a>La gestion de la logique métier de panier d’achat
+### <a name="managing-the-shopping-cart-business-logic"></a>Gestion de la logique métier du panier d’achat
 
-Ensuite, vous allez créer le `ShoppingCart` classe dans un nouveau *logique* dossier. Le `ShoppingCart` classe gère l’accès aux données le `CartItem` table. La classe inclura également la logique métier pour ajouter, supprimer et mettre à jour des éléments dans le panier d’achat.
+Ensuite, vous allez créer la classe `ShoppingCart` dans un nouveau dossier *logique* . La classe `ShoppingCart` gère l’accès aux données de la table `CartItem`. La classe inclura également la logique métier pour ajouter, supprimer et mettre à jour des éléments dans le panier d’achat.
 
-La logique de panier d’achat que vous ajouterez contiendra les fonctionnalités pour gérer les actions suivantes :
+La logique du panier d’achat que vous allez ajouter contiendra les fonctionnalités permettant de gérer les actions suivantes :
 
-1. Ajout d’articles au panier d’achat
-2. Suppression d’éléments de panier d’achat
-3. Obtention de l’ID du caddie
-4. Récupération des éléments du panier d’achat
-5. Un total de la quantité de tous les éléments de panier d’achat
-6. La mise à jour les données de panier d’achat
+1. Ajout d’éléments au panier d’achat
+2. Suppression d’éléments du panier d’achat
+3. Obtention de l’ID du panier d’achat
+4. Récupération d’éléments du panier d’achat
+5. Total de la quantité de tous les éléments du panier d’achat
+6. Mise à jour des données du panier d’achat
 
-Une page de panier d’achat (*ShoppingCart.aspx*) et la classe de panier d’achat est utilisée ensemble pour accéder aux données de panier d’achat. La page de panier d’achat affiche tous les éléments de que l’utilisateur ajoute au panier. Outre le shopping panier page et la classe, vous allez créer une page (*AddToCart.aspx*) pour ajouter des produits au panier. Vous allez également ajouter du code pour le *ProductList.aspx* page et le *ProductDetails.aspx* page qui fournit un lien vers le *AddToCart.aspx* page, afin que l’utilisateur peut ajouter produits de panier d’achat.
+Une page de panier d’achat (*ShoppingCart. aspx*) et la classe de panier d’achat seront utilisées ensemble pour accéder aux données du panier d’achat. La page du panier d’achat affiche tous les éléments que l’utilisateur ajoute au panier d’achat. Outre la page et la page du panier d’achat, vous allez créer une page (*AddToCart. aspx*) pour ajouter des produits au panier d’achat. Vous allez également ajouter du code à la page *ProductList. aspx* et à la page *ProductDetails. aspx* qui fournira un lien vers la page *AddToCart. aspx* , afin que l’utilisateur puisse ajouter des produits au panier d’achat.
 
-Le diagramme suivant illustre le processus de base qui se produit lorsque l’utilisateur ajoute un produit au panier.
+Le diagramme suivant illustre le processus de base qui se produit lorsque l’utilisateur ajoute un produit au panier d’achat.
 
-![Panier d’achat - ajout au panier](shopping-cart/_static/image3.png)
+![Panier d’achat-ajout au panier d’achat](shopping-cart/_static/image3.png)
 
-Lorsque l’utilisateur clique sur le **Add To Cart** lien soit le *ProductList.aspx* page ou le *ProductDetails.aspx* page, l’application permet d’accéder à la *AddToCart.aspx* page, puis automatiquement à la *ShoppingCart.aspx* page. Le *AddToCart.aspx* page ajoutera le sélectionner le produit au panier en appelant une méthode dans la classe ShoppingCart. Le *ShoppingCart.aspx* page affiche les produits qui ont été ajoutées au panier.
+Quand l’utilisateur clique sur le lien **Ajouter au panier** sur la page *ProductList. aspx* ou sur la page *ProductDetails. aspx* , l’application accède à la page *AddToCart. aspx* , puis automatiquement à la page *ShoppingCart. aspx* . La page *AddToCart. aspx* ajoute le produit Select au panier d’achat en appelant une méthode dans la classe ShoppingCart. La page *ShoppingCart. aspx* affiche les produits qui ont été ajoutés au panier d’achat.
 
 #### <a name="creating-the-shopping-cart-class"></a>Création de la classe de panier d’achat
 
-Le `ShoppingCart` classe est ajoutée à un dossier distinct dans l’application afin qu’il y aura une distinction claire entre le modèle (dossier Models), les pages (dossier racine) et la logique (dossier logique).
+La classe `ShoppingCart` sera ajoutée à un dossier distinct dans l’application afin qu’il y ait une distinction claire entre le modèle (dossier Models), les pages (dossier racine) et la logique (dossier logique).
 
-1. Dans **l’Explorateur de solutions**, avec le bouton droit le **WingtipToys**de projet et sélectionnez **ajouter**-&gt;**nouveau dossier**. Nommez le nouveau dossier *logique*.
-2. Cliquez sur le *logique* dossier, puis sélectionnez **ajouter**  - &gt; **un nouvel élément**.
+1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet **WingtipToys**, puis sélectionnez **Ajouter**-&gt;**nouveau dossier**. Nommez la nouvelle *logique*de dossier.
+2. Cliquez avec le bouton droit sur le dossier *logique* , puis sélectionnez **Ajouter** -&gt; **nouvel élément**.
 3. Ajoutez un nouveau fichier de classe nommé *ShoppingCartActions.cs*.
 4. Remplacez le code par défaut par le code suivant :   
 
     [!code-csharp[Main](shopping-cart/samples/sample3.cs)]
 
-Le `AddToCart` méthode permet à des produits individuels à inclure dans le panier d’achat en fonction du produit `ID`. Le produit est ajouté au panier d’achat, ou si le panier contient déjà un élément de ce produit, la quantité est incrémentée.
+La méthode `AddToCart` permet à des produits individuels d’être inclus dans le panier d’achat en fonction du produit `ID`. Le produit est ajouté au panier, ou si le panier contient déjà un élément pour ce produit, la quantité est incrémentée.
 
-Le `GetCartId` méthode retourne le panier `ID` pour l’utilisateur. Le panier `ID` est utilisé pour suivre les éléments dont dispose un utilisateur dans leur panier d’achat. Si l’utilisateur ne dispose pas d’un panier existant `ID`, un panier d’achat nouvelle `ID` est créé pour lui. Si l’utilisateur est connecté en tant qu’un utilisateur inscrit, le panier `ID` est défini sur son nom d’utilisateur. Toutefois, si l’utilisateur n’est pas connecté, le panier `ID` est définie sur une valeur unique (GUID). Un GUID garantit que seul panier est créé pour chaque utilisateur, en fonction de la session.
+La méthode `GetCartId` retourne le `ID` de panier de l’utilisateur. Le `ID` du panier est utilisé pour suivre les éléments dont dispose un utilisateur dans son panier. Si l’utilisateur n’a pas de `ID`de panier existant, un nouveau panier `ID` est créé pour eux. Si l’utilisateur est connecté en tant qu’utilisateur inscrit, le `ID` du panier est défini sur son nom d’utilisateur. Toutefois, si l’utilisateur n’est pas connecté, le `ID` du panier est défini sur une valeur unique (un GUID). Un GUID garantit qu’un seul panier est créé pour chaque utilisateur, en fonction de la session.
 
-Le `GetCartItems` méthode retourne une liste des articles du panier pour l’utilisateur. Plus loin dans ce didacticiel, vous verrez que la liaison de modèle est utilisée pour afficher les éléments de panier du panier d’achat à l’aide du `GetCartItems` (méthode).
+La méthode `GetCartItems` retourne une liste d’éléments de panier d’achat pour l’utilisateur. Plus loin dans ce didacticiel, vous verrez que la liaison de modèle est utilisée pour afficher les éléments du panier dans le panier à l’aide de la méthode `GetCartItems`.
 
-### <a name="creating-the-add-to-cart-functionality"></a>Création de la fonctionnalité à ajouter au panier
+### <a name="creating-the-add-to-cart-functionality"></a>Création de la fonctionnalité d’ajout de panier
 
-Comme mentionné précédemment, vous allez créer une page de traitement nommée *AddToCart.aspx* qui sera utilisé pour ajouter de nouveaux produits pour le panier d’achat de l’utilisateur. Cette page appellera le `AddToCart` méthode dans la `ShoppingCart` classe que vous venez de créer. Le *AddToCart.aspx* page qui attend un produit `ID` lui est passé. Ce produit `ID` sera utilisé lors de l’appel le `AddToCart` méthode dans la `ShoppingCart` classe.
+Comme mentionné précédemment, vous allez créer une page de traitement nommée *AddToCart. aspx* qui sera utilisée pour ajouter de nouveaux produits au panier d’achat de l’utilisateur. Cette page appellera la méthode `AddToCart` dans la classe `ShoppingCart` que vous venez de créer. La page *AddToCart. aspx* s’attend à ce qu’un `ID` de produit soit passé à celle-ci. Ce produit `ID` sera utilisé lors de l’appel de la méthode `AddToCart` dans la classe `ShoppingCart`.
 
 > [!NOTE] 
 > 
-> Vous allez modifier le code-behind (*AddToCart.aspx.cs*) de cette page, pas la page de l’interface utilisateur (*AddToCart.aspx*).
+> Vous allez modifier le code-behind (*AddToCart.aspx.cs*) de cette page, et non l’interface utilisateur de la page (*AddToCart. aspx*).
 
-#### <a name="to-create-the-add-to-cart-functionality"></a>Pour créer l’ajouter au panier fonctionnalités :
+#### <a name="to-create-the-add-to-cart-functionality"></a>Pour créer la fonctionnalité d’ajout de panier :
 
-1. Dans **l’Explorateur de solutions**, avec le bouton droit le **WingtipToys**du projet, cliquez sur **ajouter**  - &gt; **un nouvel élément**.  
+1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet **WingtipToys**, cliquez sur **Ajouter** -&gt; **nouvel élément**.  
    La boîte de dialogue **Ajouter un nouvel élément** s’affiche.
-2. Ajouter une nouvelle page standard (Web Form) à l’application nommée *AddToCart.aspx*. 
+2. Ajoutez une nouvelle page standard (Web Form) à l’application nommée *AddToCart. aspx*. 
 
-    ![Panier - ajouter un formulaire Web](shopping-cart/_static/image4.png)
-3. Dans **l’Explorateur de solutions**, cliquez sur le *AddToCart.aspx* page, puis cliquez sur **afficher le Code**. Le *AddToCart.aspx.cs* fichier code-behind s’ouvre dans l’éditeur.
-4. Remplacez le code existant dans le *AddToCart.aspx.cs* code-behind par le code suivant :   
+    ![Panier d’achat-ajouter un formulaire Web](shopping-cart/_static/image4.png)
+3. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur la page *AddToCart. aspx* , puis cliquez sur **afficher le code**. Le fichier code-behind *AddToCart.aspx.cs* s’ouvre dans l’éditeur.
+4. Remplacez le code existant dans le code-behind *AddToCart.aspx.cs* par le code suivant :   
 
     [!code-csharp[Main](shopping-cart/samples/sample4.cs)]
 
-Lorsque le *AddToCart.aspx* page est chargée, le produit `ID` est récupéré à partir de la chaîne de requête. Ensuite, une instance de la classe de panier d’achat est créée et utilisée pour appeler le `AddToCart` méthode que vous avez ajouté précédemment dans ce didacticiel. Le `AddToCart` méthode, contenu dans le *ShoppingCartActions.cs* de fichier, inclut la logique pour ajouter le produit sélectionné le panier d’achat ou d’incrémenter la quantité de produit du produit sélectionné. Si le produit n’a pas été ajouté au panier, le produit est ajouté à la `CartItem` table de la base de données. Si le produit a déjà été ajouté au panier et que l’utilisateur ajoute un élément supplémentaire du même produit, la quantité de produit est incrémentée dans la `CartItem` table. Enfin, la page se redirige vers le *ShoppingCart.aspx* page que vous ajouterez à l’étape suivante, où l’utilisateur voit une liste mise à jour des éléments dans le panier d’achat.
+Lorsque la page *AddToCart. aspx* est chargée, le `ID` de produit est récupéré à partir de la chaîne de requête. Ensuite, une instance de la classe de panier d’achat est créée et utilisée pour appeler la méthode `AddToCart` que vous avez ajoutée précédemment dans ce didacticiel. La méthode `AddToCart`, contenue dans le fichier *ShoppingCartActions.cs* , comprend la logique permettant d’ajouter le produit sélectionné au panier d’achat ou d’incrémenter la quantité de produits du produit sélectionné. Si le produit n’a pas été ajouté au panier d’achat, le produit est ajouté à la table `CartItem` de la base de données. Si le produit a déjà été ajouté au panier d’achat et que l’utilisateur ajoute un élément supplémentaire du même produit, la quantité de produit est incrémentée dans la table `CartItem`. Enfin, la page redirige vers la page *ShoppingCart. aspx* que vous ajouterez à l’étape suivante, où l’utilisateur verra une liste actualisée d’éléments dans le panier.
 
-Comme mentionné précédemment, un utilisateur `ID` sert à identifier les produits qui sont associés à un utilisateur spécifique. Cela `ID` est ajouté à une ligne dans le `CartItem` table chaque fois que l’utilisateur ajoute un produit au panier.
+Comme mentionné précédemment, un utilisateur `ID` est utilisé pour identifier les produits associés à un utilisateur spécifique. Cette `ID` est ajoutée à une ligne de la table `CartItem` chaque fois que l’utilisateur ajoute un produit au panier d’achat.
 
-### <a name="creating-the-shopping-cart-ui"></a>Création de l’interface utilisateur de panier d’achat
+### <a name="creating-the-shopping-cart-ui"></a>Création de l’interface utilisateur du panier d’achat
 
-Le *ShoppingCart.aspx* page affiche les produits que l’utilisateur a ajouté à leur panier d’achat. Elle fournit également la possibilité d’ajouter, supprimer et mettre à jour des éléments dans le panier d’achat.
+La page *ShoppingCart. aspx* affiche les produits que l’utilisateur a ajoutés à son panier d’achat. Il permet également d’ajouter, de supprimer et de mettre à jour des éléments dans le panier d’achat.
 
-1. Dans **l’Explorateur de solutions**, avec le bouton droit **WingtipToys**, cliquez sur **ajouter**  - &gt; **un nouvel élément**.  
+1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur **WingtipToys**, cliquez sur **Ajouter** -&gt; **nouvel élément**.  
    La boîte de dialogue **Ajouter un nouvel élément** s’affiche.
-2. Ajoutez une nouvelle page (formulaire Web) qui inclut une page maître en sélectionnant **Web Form avec Page maître**. Nommez la nouvelle page *ShoppingCart.aspx*.
-3. Sélectionnez **Site.Master** pour attacher la page maître vers le nouvel *.aspx* page.
-4. Dans le *ShoppingCart.aspx* page, remplacez le balisage existant par le balisage suivant :   
+2. Ajoutez une nouvelle page (formulaire Web) qui comprend une page maître en sélectionnant **Web Form à l’aide de la page maître**. Nommez la nouvelle page *ShoppingCart. aspx*.
+3. Sélectionnez **site. Master** pour attacher la page maître à la page *. aspx* nouvellement créée.
+4. Dans la page *ShoppingCart. aspx* , remplacez le balisage existant par le balisage suivant :   
 
     [!code-aspx[Main](shopping-cart/samples/sample5.aspx)]
 
-Le *ShoppingCart.aspx* page inclut un **GridView** contrôle nommé `CartList`. Ce contrôle utilise la liaison de modèle pour lier les données de panier d’achat à partir de la base de données pour le **GridView** contrôle. Lorsque vous définissez la `ItemType` propriété de la **GridView** contrôler, l’expression de liaison de données `Item` est disponible dans le balisage du contrôle et le contrôle devienne fortement typé. Comme mentionné plus haut dans cette série de didacticiels, vous pouvez sélectionner les détails de la `Item` de l’objet à l’aide d’IntelliSense. Pour configurer un contrôle de données pour utiliser la liaison de modèle pour sélectionner les données, vous définissez le `SelectMethod` propriété du contrôle. Dans le balisage ci-dessus, vous définissez le `SelectMethod` à utiliser la méthode GetShoppingCartItems qui retourne une liste de `CartItem` objets. Le **GridView** contrôle de données appelle la méthode au moment opportun dans le cycle de vie de page et lie automatiquement les données retournées. Le `GetShoppingCartItems` méthode doit toujours être ajoutée.
+La page *ShoppingCart. aspx* comprend un contrôle **GridView** nommé `CartList`. Ce contrôle utilise la liaison de modèle pour lier les données du panier d’achat de la base de données au contrôle **GridView** . Lorsque vous définissez la propriété `ItemType` du contrôle **GridView** , l’expression de liaison de données `Item` est disponible dans le balisage du contrôle et le contrôle est fortement typé. Comme mentionné plus haut dans cette série de didacticiels, vous pouvez sélectionner les détails de l’objet `Item` à l’aide d’IntelliSense. Pour configurer un contrôle de données afin d’utiliser la liaison de modèle pour sélectionner des données, vous devez définir la propriété `SelectMethod` du contrôle. Dans le balisage ci-dessus, vous définissez la `SelectMethod` pour utiliser la méthode GetShoppingCartItems qui retourne une liste d’objets `CartItem`. Le contrôle de données **GridView** appelle la méthode au moment approprié dans le cycle de vie de la page et lie automatiquement les données retournées. La méthode `GetShoppingCartItems` doit toujours être ajoutée.
 
-#### <a name="retrieving-the-shopping-cart-items"></a>Récupération des éléments du panier d'
+#### <a name="retrieving-the-shopping-cart-items"></a>Récupération des éléments du panier d’achat
 
-Ensuite, vous ajoutez le code à la *ShoppingCart.aspx.cs* code-behind pour extraire et remplir l’interface utilisateur de panier d’achat.
+Ensuite, vous ajoutez du code au code-behind *ShoppingCart.aspx.cs* pour récupérer et remplir l’interface utilisateur du panier d’achat.
 
-1. Dans **l’Explorateur de solutions**, cliquez sur le *ShoppingCart.aspx* page, puis cliquez sur **afficher le Code**. Le *ShoppingCart.aspx.cs* fichier code-behind s’ouvre dans l’éditeur.
+1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur la page *ShoppingCart. aspx* , puis cliquez sur **afficher le code**. Le fichier code-behind *ShoppingCart.aspx.cs* s’ouvre dans l’éditeur.
 2. Remplacez le code existant par le code ci-dessous :  
 
     [!code-csharp[Main](shopping-cart/samples/sample6.cs)]
 
-Comme mentionné ci-dessus, le `GridView` appels de contrôle de données le `GetShoppingCartItems` méthode au moment approprié dans la durée de vie de page cycle et lie automatiquement les données retournées. Le `GetShoppingCartItems` méthode crée une instance de la `ShoppingCartActions` objet. Le code utilise ensuite cette instance pour retourner les éléments dans le panier d’achat en appelant le `GetCartItems` (méthode).
+Comme indiqué ci-dessus, le contrôle de données `GridView` appelle la méthode `GetShoppingCartItems` au moment approprié dans le cycle de vie de la page et lie automatiquement les données retournées. La méthode `GetShoppingCartItems` crée une instance de l’objet `ShoppingCartActions`. Ensuite, le code utilise cette instance pour retourner les éléments du panier en appelant la méthode `GetCartItems`.
 
-### <a name="adding-products-to-the-shopping-cart"></a>Ajout de produits au panier
+### <a name="adding-products-to-the-shopping-cart"></a>Ajout de produits au panier d’achat
 
-Lorsque soit la *ProductList.aspx* ou *ProductDetails.aspx* page s’affiche, l’utilisateur sera en mesure d’ajouter le produit pour le panier d’achat à l’aide d’un lien. Lorsqu’ils cliquent sur le lien, l’application accède à la page de traitement nommée *AddToCart.aspx*. Le *AddToCart.aspx* page appellera le `AddToCart` méthode dans la `ShoppingCart` classe que vous avez ajouté précédemment dans ce didacticiel.
+Lorsque la page *ProductList. aspx* ou *ProductDetails. aspx* s’affiche, l’utilisateur peut ajouter le produit au panier d’achat à l’aide d’un lien. Lorsqu’il clique sur le lien, l’application accède à la page de traitement nommée *AddToCart. aspx*. La page *AddToCart. aspx* appellera la méthode `AddToCart` dans la classe `ShoppingCart` que vous avez ajoutée précédemment dans ce didacticiel.
 
-À présent, vous allez ajouter un **ajouter au panier** lien à la fois à la *ProductList.aspx* page et le *ProductDetails.aspx* page. Ce lien inclura le produit `ID` qui est récupéré à partir de la base de données.
+À présent, vous allez ajouter un lien **Ajouter au panier** à la page *ProductList. aspx* et à la page *ProductDetails. aspx* . Ce lien inclut le produit `ID` qui est récupéré à partir de la base de données.
 
-1. Dans **l’Explorateur de solutions**, recherchez et ouvrez la page nommée *ProductList.aspx*.
-2. Ajoutez le balisage mis en surbrillance en jaune pour le *ProductList.aspx* page afin que la page entière s’affiche comme suit :  
+1. Dans **Explorateur de solutions**, recherchez et ouvrez la page *ProductList. aspx*.
+2. Ajoutez la balise mise en surbrillance en jaune à la page *ProductList. aspx* afin que la page entière apparaisse comme suit :  
 
     [!code-aspx[Main](shopping-cart/samples/sample7.aspx?highlight=50-54)]
 
-### <a name="testing-the-shopping-cart"></a>Tester le panier d’achat
+### <a name="testing-the-shopping-cart"></a>Test du panier d’achat
 
-Exécutez l’application pour voir comment ajouter des produits au panier.
+Exécutez l’application pour voir comment vous ajoutez des produits au panier d’achat.
 
 1. Appuyez sur **F5** pour exécuter l’application.  
- Une fois le projet recrée la base de données, le navigateur s’ouvre et affiche le *Default.aspx* page.
-2. Sélectionnez **voitures** dans le menu de navigation de catégorie.  
- Le *ProductList.aspx* page affiche uniquement les produits inclus dans la catégorie « Cars ». 
+ Une fois que le projet a recréé la base de données, le navigateur s’ouvre et affiche la page *default. aspx* .
+2. Sélectionnez **Cars** dans le menu de navigation de la catégorie.  
+ La page *ProductList. aspx* s’affiche uniquement avec les produits inclus dans la catégorie « cars ». 
 
-    ![Panier d’achat - voitures](shopping-cart/_static/image5.png)
-3. Cliquez sur le **ajouter au panier** lien en regard de la première produit répertorié (la voiture convertible).   
- Le *ShoppingCart.aspx* page s’affiche, montrant la sélection dans votre panier d’achat. 
+    ![Panier d’achat-voitures](shopping-cart/_static/image5.png)
+3. Cliquez sur le lien **Ajouter au panier** en regard du premier produit listé (la voiture convertible).   
+ La page *ShoppingCart. aspx* s’affiche, affichant la sélection dans votre panier. 
 
-    ![Panier - panier d’achat](shopping-cart/_static/image6.png)
-4. Afficher les produits supplémentaires en sélectionnant **plans** dans le menu de navigation de catégorie.
-5. Cliquez sur le **ajouter au panier** lien en regard de la première produit répertorié.  
- Le *ShoppingCart.aspx* page est affichée avec l’élément supplémentaire.
+    ![Panier d’achat-panier](shopping-cart/_static/image6.png)
+4. Affichez des produits supplémentaires en sélectionnant **plans** dans le menu de navigation catégorie.
+5. Cliquez sur le lien **Ajouter au panier** en regard du premier produit listé.  
+ La page *ShoppingCart. aspx* s’affiche avec l’élément supplémentaire.
 6. Fermez le navigateur.
 
-### <a name="calculating-and-displaying-the-order-total"></a>Calcul et affichage Total de la commande
+### <a name="calculating-and-displaying-the-order-total"></a>Calcul et affichage du total de la commande
 
-Outre l’ajout de produits dans le panier d’achat, vous allez ajouter un `GetTotal` méthode à la `ShoppingCart` classe et afficher le montant total de la commande dans la page du panier.
+Outre l’ajout de produits au panier d’achat, vous allez ajouter une méthode de `GetTotal` à la classe `ShoppingCart` et afficher le montant total de la commande dans la page du panier d’achat.
 
-1. Dans **l’Explorateur de solutions**, ouvrez le *ShoppingCartActions.cs* de fichiers dans le *logique* dossier.
-2. Ajoutez le code suivant `GetTotal` méthode mis en surbrillance en jaune pour le `ShoppingCart` classe, afin que la classe s’affiche comme suit :   
+1. Dans **Explorateur de solutions**, ouvrez le fichier *ShoppingCartActions.cs* dans le dossier *logique* .
+2. Ajoutez la méthode `GetTotal` suivante mise en surbrillance en jaune à la classe `ShoppingCart`, afin que la classe apparaisse comme suit :   
 
     [!code-csharp[Main](shopping-cart/samples/sample8.cs?highlight=85-97)]
 
-Tout d’abord, le `GetTotal` méthode obtient l’ID de panier d’achat pour l’utilisateur. La méthode obtient ensuite le panier total en multipliant le prix du produit par la quantité de produit pour chaque produit répertorié dans le panier d’achat.
+Tout d’abord, la méthode `GetTotal` obtient l’ID du panier d’achat de l’utilisateur. La méthode obtient ensuite le total du panier en multipliant le prix du produit par la quantité de produit pour chaque produit figurant dans le panier.
 
 > [!NOTE] 
 > 
-> Le code ci-dessus utilise le type nullable «`int?`». Types Nullable peuvent représenter toutes les valeurs d’un type sous-jacent et également comme une valeur null. Pour plus d’informations, consultez [à l’aide des Types Nullable](https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx).
+> Le code ci-dessus utilise le type Nullable «`int?`». Les types Nullable peuvent représenter toutes les valeurs d’un type sous-jacent, et également en tant que valeur null. Pour plus d’informations, consultez [utilisation de types Nullable](https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx).
 
-### <a name="modify-the-shopping-cart-display"></a>Modifier l’affichage de panier d’achat
+### <a name="modify-the-shopping-cart-display"></a>Modifier l’affichage du panier d’achat
 
-Ensuite, vous allez modifier le code pour le *ShoppingCart.aspx* page pour appeler le `GetTotal` (méthode) et affichage total sur le *ShoppingCart.aspx* page lorsque la page se charge.
+Ensuite, vous allez modifier le code de la page *ShoppingCart. aspx* pour appeler la méthode `GetTotal` et afficher ce total sur la page *ShoppingCart. aspx* lors du chargement de la page.
 
-1. Dans **l’Explorateur de solutions**, cliquez sur le *ShoppingCart.aspx* page et sélectionnez **afficher le Code**.
-2. Dans le *ShoppingCart.aspx.cs* de fichiers, mettez à jour le `Page_Load` gestionnaire en ajoutant le code suivant mis en surbrillance en jaune :   
+1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur la page *ShoppingCart. aspx* , puis sélectionnez **afficher le code**.
+2. Dans le fichier *ShoppingCart.aspx.cs* , mettez à jour le gestionnaire de `Page_Load` en ajoutant le code suivant mis en surbrillance en jaune :   
 
     [!code-csharp[Main](shopping-cart/samples/sample9.cs?highlight=16-31)]
 
-Lorsque le *ShoppingCart.aspx* page se charge, il charge l’objet panier d’achat et récupère ensuite le total du panier en appelant le `GetTotal` méthode de la `ShoppingCart` classe. Si le panier d’achat est vide, un message s’affiche à cet effet.
+Lorsque la page *ShoppingCart. aspx* est chargée, elle charge l’objet de panier d’achat, puis récupère le total du panier en appelant la méthode `GetTotal` de la classe `ShoppingCart`. Si le panier d’achat est vide, un message s’affiche à cet effet.
 
-### <a name="testing-the-shopping-cart-total"></a>Tester le Total du panier d’achat
+### <a name="testing-the-shopping-cart-total"></a>Test du total du panier d’achat
 
-Exécutez maintenant l’application pour voir comment vous pouvez ajoute pas seulement un produit au panier d’achat, mais vous pouvez voir le total du panier d’achat.
+Exécutez l’application maintenant pour voir comment vous pouvez non seulement ajouter un produit au panier d’achat, mais vous pouvez voir le total du panier d’achat.
 
 1. Appuyez sur **F5** pour exécuter l’application.  
- Le navigateur s’ouvre et affiche le *Default.aspx* page.
-2. Sélectionnez **voitures** dans le menu de navigation de catégorie.
-3. Cliquez sur le **Add To Cart** lien en regard du produit en premier.   
- Le *ShoppingCart.aspx* page est affichée avec le total de la commande. 
+ Le navigateur s’ouvre et affiche la page *default. aspx* .
+2. Sélectionnez **Cars** dans le menu de navigation de la catégorie.
+3. Cliquez sur le lien **Ajouter au panier** en regard du premier produit.   
+ La page *ShoppingCart. aspx* s’affiche avec le total de commande. 
 
-    ![Panier d’achat - Total du panier](shopping-cart/_static/image7.png)
-4. Ajouter d’autres produits (par exemple, un plan) au panier.
-5. Le *ShoppingCart.aspx* page est affichée avec un total mis à jour pour tous les produits que vous avez ajouté. 
+    ![Panier d’achat-total du panier](shopping-cart/_static/image7.png)
+4. Ajoutez d’autres produits (par exemple, un plan) au panier.
+5. La page *ShoppingCart. aspx* s’affiche avec un total mis à jour pour tous les produits que vous avez ajoutés. 
 
-    ![Panier d’achat - plusieurs produits](shopping-cart/_static/image8.png)
-6. Arrêter l’application en cours d’exécution en fermant la fenêtre du navigateur.
+    ![Panier d’achat-plusieurs produits](shopping-cart/_static/image8.png)
+6. Arrêtez l’application en cours d’exécution en fermant la fenêtre du navigateur.
 
-### <a name="adding-update-and-checkout-buttons-to-the-shopping-cart"></a>Ajout de mise à jour et les boutons d’extraction pour le panier d’achat
+### <a name="adding-update-and-checkout-buttons-to-the-shopping-cart"></a>Ajout de boutons de mise à jour et d’extraction au panier d’achat
 
-Pour autoriser les utilisateurs à modifier le panier d’achat, vous allez ajouter un **mise à jour** bouton et un **extraction** bouton à la page de panier d’achat. Le **extraction** bouton n’est pas utilisé jusqu'à ce que plus loin dans cette série de didacticiels.
+Pour permettre aux utilisateurs de modifier le panier d’achat, vous devez ajouter un bouton **mettre à jour** et un bouton d' **extraction** à la page du panier d’achat. Le bouton d' **extraction** n’est pas utilisé plus loin dans cette série de didacticiels.
 
-1. Dans **l’Explorateur de solutions**, ouvrez le *ShoppingCart.aspx* page à la racine du projet d’application web.
-2. Pour ajouter le **mise à jour** bouton et le **extraction** bouton à la *ShoppingCart.aspx* page, ajoutez le balisage mis en surbrillance en jaune au balisage, comme indiqué dans le code suivant :   
+1. Dans **Explorateur de solutions**, ouvrez la page *ShoppingCart. aspx* à la racine du projet d’application Web.
+2. Pour ajouter le bouton **mettre à jour** et le bouton **Checkout** à la page *ShoppingCart. aspx* , ajoutez le balisage mis en surbrillance en jaune à la balise existante, comme illustré dans le code suivant :   
 
     [!code-aspx[Main](shopping-cart/samples/sample10.aspx?highlight=36-45)]
 
-Lorsque l’utilisateur clique sur le **mise à jour** bouton, le `UpdateBtn_Click` sera appelé gestionnaire d’événements. Ce gestionnaire d’événements appelle le code que vous ajouterez à l’étape suivante.
+Quand l’utilisateur clique sur le bouton **mettre à jour** , le gestionnaire d’événements `UpdateBtn_Click` est appelé. Ce gestionnaire d’événements appellera le code que vous ajouterez à l’étape suivante.
 
-Ensuite, vous pouvez mettre à jour le code contenu dans le *ShoppingCart.aspx.cs* fichier pour itérer sur les éléments du panier et appelez le `RemoveItem` et `UpdateItem` méthodes.
+Ensuite, vous pouvez mettre à jour le code contenu dans le fichier *ShoppingCart.aspx.cs* pour parcourir les éléments du panier et appeler les méthodes `RemoveItem` et `UpdateItem`.
 
-1. Dans **l’Explorateur de solutions**, ouvrez le *ShoppingCart.aspx.cs* fichier à la racine du projet d’application web.
-2. Ajoutez les sections suivantes de code mis en surbrillance en jaune pour le *ShoppingCart.aspx.cs* fichier :   
+1. Dans **Explorateur de solutions**, ouvrez le fichier *ShoppingCart.aspx.cs* à la racine du projet d’application Web.
+2. Ajoutez les sections de code suivantes mises en surbrillance en jaune au fichier *ShoppingCart.aspx.cs* :   
 
     [!code-csharp[Main](shopping-cart/samples/sample11.cs?highlight=9-11,33,44-89)]
 
-Lorsque l’utilisateur clique sur le **mise à jour** bouton sur le *ShoppingCart.aspx* page, la méthode UpdateCartItems est appelée. La méthode UpdateCartItems Obtient les valeurs mises à jour pour chaque élément dans le panier d’achat. Ensuite, la méthode UpdateCartItems appelle le `UpdateShoppingCartDatabase` (méthode) (ajouté et expliqué dans l’étape suivante) pour ajouter ou supprimer des éléments de panier d’achat. Une fois que la base de données a été mis à jour pour refléter les mises à jour le panier d’achat, le **GridView** contrôle est mis à jour sur la page du panier en appelant le `DataBind` méthode pour le **GridView**. En outre, le montant total de la commande sur la page de panier d’achat est mis à jour pour refléter la liste d’éléments de mise à jour.
+Quand l’utilisateur clique sur le bouton **mettre à jour** sur la page *ShoppingCart. aspx* , la méthode UpdateCartItems est appelée. La méthode UpdateCartItems obtient les valeurs mises à jour pour chaque élément dans le panier d’achat. Ensuite, la méthode UpdateCartItems appelle la méthode `UpdateShoppingCartDatabase` (ajoutée et expliquée à l’étape suivante) pour ajouter ou supprimer des éléments dans le panier d’achat. Une fois que la base de données a été mise à jour pour refléter les mises à jour du panier d’achat, le contrôle **GridView** est mis à jour sur la page du panier d’achat en appelant la méthode `DataBind` pour le **GridView**. En outre, le montant total de la commande sur la page du panier d’achat est mis à jour pour refléter la liste mise à jour des éléments.
 
-### <a name="updating-and-removing-shopping-cart-items"></a>La mise à jour et suppression d’articles du panier
+### <a name="updating-and-removing-shopping-cart-items"></a>Mise à jour et suppression des éléments du panier d’achat
 
-Sur le *ShoppingCart.aspx* page, vous pouvez voir les contrôles ont été ajoutés pour la quantité d’un élément de la mise à jour et suppression d’un élément. Maintenant, ajoutez le code qui fera ces contrôles fonctionnent.
+Sur la page *ShoppingCart. aspx* , vous pouvez voir que des contrôles ont été ajoutés pour mettre à jour la quantité d’un élément et supprimer un élément. À présent, ajoutez le code qui permet de faire fonctionner ces contrôles.
 
-1. Dans **l’Explorateur de solutions**, ouvrez le *ShoppingCartActions.cs* de fichiers dans le *logique* dossier.
-2. Ajoutez le code suivant mis en surbrillance en jaune pour le *ShoppingCartActions.cs* fichier de classe :   
+1. Dans **Explorateur de solutions**, ouvrez le fichier *ShoppingCartActions.cs* dans le dossier *logique* .
+2. Ajoutez le code suivant mis en surbrillance en jaune au fichier de classe *ShoppingCartActions.cs* :   
 
     [!code-csharp[Main](shopping-cart/samples/sample12.cs?highlight=99-213)]
 
-Le `UpdateShoppingCartDatabase` méthode, appelée à partir de la `UpdateCartItems` méthode sur le *ShoppingCart.aspx.cs* page, contient la logique pour mettre à jour ou supprimer des éléments de panier d’achat. Le `UpdateShoppingCartDatabase` méthode effectue une itération dans toutes les lignes dans la liste de panier d’achat. Si un article du panier d’achat a été marqué pour être supprimé, ou si la quantité est inférieure à 1, le `RemoveItem` méthode est appelée. Sinon, l’élément de panier d’achat est activé pour des mises à jour lorsque le `UpdateItem` méthode est appelée. Une fois que l’article du panier d’achat a été supprimé ou mis à jour, les modifications de base de données sont enregistrées.
+La méthode `UpdateShoppingCartDatabase`, appelée à partir de la méthode `UpdateCartItems` sur la page *ShoppingCart.aspx.cs* , contient la logique pour mettre à jour ou supprimer des éléments du panier d’achat. La méthode `UpdateShoppingCartDatabase` itère au sein de toutes les lignes dans la liste de panier d’achat. Si un élément de panier d’achat a été marqué pour être supprimé ou si la quantité est inférieure à un, la méthode `RemoveItem` est appelée. Dans le cas contraire, les mises à jour sont vérifiées lors de l’appel de la méthode `UpdateItem`. Une fois que l’élément de panier d’achat a été supprimé ou mis à jour, les modifications apportées à la base de données sont enregistrées.
 
-Le `ShoppingCartUpdates` structure est utilisée pour contenir tous les éléments du panier d’achat. Le `UpdateShoppingCartDatabase` méthode utilise le `ShoppingCartUpdates` structure pour déterminer si les éléments doivent être mis à jour ou supprimé.
+La structure `ShoppingCartUpdates` est utilisée pour contenir tous les éléments du panier d’achat. La méthode `UpdateShoppingCartDatabase` utilise la structure `ShoppingCartUpdates` pour déterminer si l’un des éléments doit être mis à jour ou supprimé.
 
-Dans le didacticiel suivant, vous allez utiliser le `EmptyCart` méthode pour effacer le shopping panier après l’achat de produits. Mais pour l’instant, vous allez utiliser le `GetCount` méthode que vous venez d’ajouter à la *ShoppingCartActions.cs* fichier pour déterminer le nombre d’éléments dans le panier d’achat.
+Dans le didacticiel suivant, vous allez utiliser la méthode `EmptyCart` pour effacer le panier d’achat après avoir acheté des produits. Mais pour le moment, vous allez utiliser la méthode `GetCount` que vous venez d’ajouter au fichier *ShoppingCartActions.cs* pour déterminer le nombre d’éléments dans le panier d’achat.
 
 ### <a name="adding-a-shopping-cart-counter"></a>Ajout d’un compteur de panier d’achat
 
-Pour autoriser l’utilisateur d’afficher le nombre total d’éléments dans le panier d’achat, vous allez ajouter un compteur à la *Site.Master* page. Ce compteur sera également agir comme un lien vers le panier d’achat.
+Pour permettre à l’utilisateur d’afficher le nombre total d’éléments dans le panier d’achat, vous allez ajouter un compteur à la page *site. Master* . Ce compteur fera également office de lien vers le panier d’achat.
 
-1. Dans **l’Explorateur de solutions**, ouvrez le *Site.Master* page.
-2. Modifiez le balisage en ajoutant le lien de compteur de panier d’achat comme indiqué en jaune dans la section de navigation afin qu’il apparaisse comme suit :  
+1. Dans **Explorateur de solutions**, ouvrez la page *site. Master* .
+2. Modifiez le balisage en ajoutant le lien du compteur du panier d’achat, comme indiqué en jaune à la section de navigation, afin qu’il apparaisse comme suit :  
 
     [!code-html[Main](shopping-cart/samples/sample13.html?highlight=6)]
-3. Ensuite, mettez à jour le code-behind de la *Site.Master.cs* fichier en ajoutant le code mis en surbrillance en jaune comme suit :  
+3. Ensuite, mettez à jour le code-behind du fichier *site.Master.cs* en ajoutant le code mis en surbrillance en jaune comme suit :  
 
     [!code-csharp[Main](shopping-cart/samples/sample14.cs?highlight=11,77-84)]
 
-Avant de la page est rendue au format HTML, le `Page_PreRender` événement est déclenché. Dans le `Page_PreRender` gestionnaire, le nombre total de panier d’achat est déterminée en appelant le `GetCount` (méthode). La valeur retournée est ajoutée à la `cartCount` étendue inclus dans le balisage de la *Site.Master* page. Le `<span>` balises permet les éléments internes doivent être rendus correctement. Lorsque n’importe quelle page du site s’affiche, le total du panier d’achat s’affichera. L’utilisateur peut cliquer également le total du panier d’achat pour afficher le panier d’achat.
+Avant que la page ne soit rendue en HTML, l’événement `Page_PreRender` est déclenché. Dans le gestionnaire de `Page_PreRender`, le nombre total du panier d’achat est déterminé par l’appel de la méthode `GetCount`. La valeur retournée est ajoutée à la `cartCount` étendue incluse dans le balisage de la page *site. Master* . Les balises `<span>` permettent de restituer correctement les éléments internes. Quand une page du site s’affiche, le total du panier d’achat s’affiche. L’utilisateur peut également cliquer sur le total du panier d’achat pour afficher le panier d’achat.
 
-## <a name="testing-the-completed-shopping-cart"></a>Tester le panier d’achat terminé
+## <a name="testing-the-completed-shopping-cart"></a>Test du panier d’achat terminé
 
-Vous pouvez exécuter l’application maintenant pour voir comment vous pouvez ajouter, supprimer et les éléments de mise à jour dans le panier d’achat. Le total du panier mentionnera le coût total de tous les éléments dans le panier d’achat.
+Vous pouvez exécuter l’application maintenant pour voir comment vous pouvez ajouter, supprimer et mettre à jour des éléments dans le panier d’achat. Le total du panier d’achat reflète le coût total de tous les articles dans le panier d’achat.
 
 1. Appuyez sur **F5** pour exécuter l’application.  
- Le navigateur s’ouvre et affiche le *Default.aspx* page.
-2. Sélectionnez **voitures** dans le menu de navigation de catégorie.
-3. Cliquez sur le **Add To Cart** lien en regard du produit en premier.   
- Le *ShoppingCart.aspx* page est affichée avec le total de la commande.
-4. Sélectionnez **plans** dans le menu de navigation de catégorie.
-5. Cliquez sur le **Add To Cart** lien en regard du produit en premier.
-6. Définir la quantité du premier élément dans le panier d’achat à 3, puis sélectionnez le **supprimer un élément** case à cocher du deuxième élément.<a id="a"></a>
-7. Cliquez sur le **mettre à jour** bouton pour mettre à jour de la page du panier et afficher le total de la nouvelle commande. 
+ Le navigateur s’ouvre et affiche la page *default. aspx* .
+2. Sélectionnez **Cars** dans le menu de navigation de la catégorie.
+3. Cliquez sur le lien **Ajouter au panier** en regard du premier produit.   
+ La page *ShoppingCart. aspx* s’affiche avec le total de commande.
+4. Sélectionnez **plans** dans le menu de navigation de la catégorie.
+5. Cliquez sur le lien **Ajouter au panier** en regard du premier produit.
+6. Définissez la quantité du premier élément du panier d’achat sur 3 et cochez la case **Supprimer l’élément** du deuxième élément.<a id="a"></a>
+7. Cliquez sur le bouton **mettre à jour** pour mettre à jour la page du panier d’achat et afficher le nouveau total de commande. 
 
-    ![Panier d’achat - mise à jour du panier](shopping-cart/_static/image9.png)
+    ![Panier d’achat-mise à jour du panier](shopping-cart/_static/image9.png)
 
 ## <a name="summary"></a>Récapitulatif
 
-Dans ce didacticiel, vous avez créé un panier d’achat pour l’exemple d’application Wingtip Toys Web Forms. Au cours de ce didacticiel, vous avez utilisé Entity Framework Code First, annotations de données, les contrôles de données fortement typées et liaison de modèle.
+Dans ce didacticiel, vous avez créé un panier d’achat pour l’exemple d’application Wingtip Toys Web Forms. Au cours de ce didacticiel, vous avez utilisé Entity Framework Code First, des annotations de données, des contrôles de données fortement typés et la liaison de modèle.
 
-Le panier d’achat prend en charge l’ajout, la suppression et la mise à jour des éléments de l’utilisateur a sélectionné à l’achat. En plus d’implémenter les fonctionnalités de panier d’achat, vous avez appris à afficher les éléments du panier d’achat dans un **GridView** contrôler et calculer le total de la commande.
+Le panier d’achat prend en charge l’ajout, la suppression et la mise à jour des éléments que l’utilisateur a sélectionnés pour l’achat. En plus d’implémenter la fonctionnalité de panier d’achat, vous avez appris à afficher les éléments du panier d’achat dans un contrôle **GridView** et à calculer le total de la commande.
 
-## <a name="addition-information"></a>Plus d’informations
+## <a name="addition-information"></a>Informations supplémentaires
 
-[Vue d’ensemble de l’état de Session ASP.NET](https://msdn.microsoft.com/library/ms178581.aspx)
+[Vue d’ensemble de l’état de session ASP.NET](https://msdn.microsoft.com/library/ms178581.aspx)
 
 > [!div class="step-by-step"]
 > [Précédent](display_data_items_and_details.md)

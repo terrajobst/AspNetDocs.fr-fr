@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
-title: 'Partie 7 : Création de la Main Page | Microsoft Docs'
+title: 'Partie 7 : création de la page principale | Microsoft Docs'
 author: MikeWasson
 description: ''
 ms.author: riande
@@ -8,61 +8,61 @@ ms.date: 07/04/2012
 ms.assetid: eb32a17b-626c-4373-9a7d-3387992f3c04
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: aaffcecccd138d30355ac0e7ce6c86a67246cc08
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: fe4074c701159a137be3644d65ca844f160c2399
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108938"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74599985"
 ---
-# <a name="part-7-creating-the-main-page"></a>Partie 7 : Création de la page principale
+# <a name="part-7-creating-the-main-page"></a>Partie 7 : création de la page principale
 
 par [Mike Wasson](https://github.com/MikeWasson)
 
-[Télécharger le projet terminé](http://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)
+[Télécharger le projet terminé](https://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)
 
 ## <a name="creating-the-main-page"></a>Création de la page principale
 
-Dans cette section, vous allez créer la page principale de l’application. Cette page sera plus complexe que la page d’administration, nous allons l’approche en plusieurs étapes. Tout au long du processus, vous verrez certaines techniques plus avancées de Knockout.js. Voici la disposition de base de la page :
+Dans cette section, vous allez créer la page principale de l’application. Cette page est plus complexe que la page d’administration. nous allons donc l’aborder en plusieurs étapes. En cours de route, vous verrez des techniques plus avancées de Knockout. js. Voici la disposition de base de la page :
 
 ![](using-web-api-with-entity-framework-part-7/_static/image1.png)
 
-- « Produits » contient un tableau de produits.
-- « Panier » conserve un tableau de produits avec des quantités. En cliquant sur « Add to Cart » met à jour le panier d’achat.
+- « Products » contient un tableau de produits.
+- « Cart » contient un tableau de produits avec des quantités. Cliquez sur « Ajouter au panier » pour mettre à jour le panier.
 - « Orders » contient un tableau d’ID de commande.
-- « Détails » contient un détail de commande, qui est un tableau d’éléments (produits avec des quantités)
+- « Détails » contient un détail de commande, qui est un tableau d’éléments (produits avec quantités)
 
-Nous allons commencer par définir une disposition de base en HTML, sans liaison de données ou d’un script. Ouvrez le fichier Views/Home/Index.cshtml et remplacez tout le contenu avec les éléments suivants :
+Nous allons commencer par définir une mise en page de base en HTML, sans liaison de données ni script. Ouvrez le fichier views/orig/index. cshtml et remplacez tout le contenu par ce qui suit :
 
 [!code-html[Main](using-web-api-with-entity-framework-part-7/samples/sample1.html)]
 
-Ensuite, ajoutez une section de Scripts et créer un modèle de vue vide :
+Ensuite, ajoutez une section scripts et créez un modèle d’affichage vide :
 
 [!code-cshtml[Main](using-web-api-with-entity-framework-part-7/samples/sample2.cshtml)]
 
-Selon la conception décrit plus haut, notre modèle de vue doit observables pour les produits, le panier, commandes et détails. Ajoutez les variables suivantes pour le `AppViewModel` objet :
+Selon la conception esquissée précédemment, notre modèle de vue a besoin de observables pour les produits, les paniers, les commandes et les détails. Ajoutez les variables suivantes à l’objet `AppViewModel` :
 
 [!code-javascript[Main](using-web-api-with-entity-framework-part-7/samples/sample3.js)]
 
-Les utilisateurs peuvent ajouter des éléments dans la liste de produits dans le panier et supprimer des éléments de panier. Pour encapsuler ces fonctions, nous allons créer une autre classe de modèle de vue qui représente un produit. Ajoutez le code suivant à `AppViewModel` :
+Les utilisateurs peuvent ajouter des éléments à partir de la liste des produits dans le panier et supprimer des éléments du panier. Pour encapsuler ces fonctions, nous allons créer une autre classe de modèle d’affichage qui représente un produit. Ajoutez le code suivant à `AppViewModel` :
 
 [!code-javascript[Main](using-web-api-with-entity-framework-part-7/samples/sample4.js?highlight=4)]
 
-Le `ProductViewModel` classe contient deux fonctions qui sont utilisées pour déplacer le produit vers et depuis le panier : `addItemToCart` ajoute une unité du produit au panier d’achat, et `removeAllFromCart` supprime toutes les quantités du produit.
+La classe `ProductViewModel` contient deux fonctions qui permettent de déplacer le produit vers et à partir du panier : `addItemToCart` ajoute une unité du produit au panier et `removeAllFromCart` supprime toutes les quantités du produit.
 
-Les utilisateurs peuvent sélectionner une commande existante et obtenir les détails de commande. Nous allons encapsuler cette fonctionnalité dans un autre modèle de vue :
+Les utilisateurs peuvent sélectionner une commande existante et récupérer les détails de la commande. Nous encapsulerons cette fonctionnalité dans un autre modèle d’affichage :
 
 [!code-javascript[Main](using-web-api-with-entity-framework-part-7/samples/sample5.js?highlight=4)]
 
-Le `OrderDetailsViewModel` est initialisé avec une commande, et il extrait les détails de commande en envoyant une requête AJAX au serveur.
+La `OrderDetailsViewModel` est initialisée avec une commande et extrait les détails de la commande en envoyant une demande AJAX au serveur.
 
-En outre, notez le `total` propriété sur le `OrderDetailsViewModel`. Cette propriété est un type spécial d’observable appelé un [calculée observable](http://knockoutjs.com/documentation/computedObservables.html). Comme son nom l’indique, un observable calculée vous permet de lier les données à une valeur calculée&#8212;dans ce cas, le coût total de l’ordre.
+Notez également la propriété `total` sur le `OrderDetailsViewModel`. Cette propriété est un type spécial d’observable appelé [observable calculé](http://knockoutjs.com/documentation/computedObservables.html). Comme son nom l’indique, un observable calculé vous permet de lier des données à une valeur&#8212;calculée dans ce cas, le coût total de la commande.
 
 Ensuite, ajoutez ces fonctions à `AppViewModel`:
 
-- `resetCart` Supprime tous les éléments du panier.
-- `getDetails` Obtient les détails d’une commande (en envoyant un nouveau `OrderDetailsViewModel` sur la `details` liste).
-- `createOrder` Crée un nouvel ordre et vide le panier d’achat.
+- `resetCart` supprime tous les éléments du panier.
+- `getDetails` obtient les détails d’une commande (en envoyant un nouvel `OrderDetailsViewModel` dans la liste `details`).
+- `createOrder` crée une nouvelle commande et vide le panier.
 
 [!code-javascript[Main](using-web-api-with-entity-framework-part-7/samples/sample6.js?highlight=4)]
 
@@ -70,49 +70,49 @@ Enfin, initialisez le modèle de vue en effectuant des demandes AJAX pour les pr
 
 [!code-javascript[Main](using-web-api-with-entity-framework-part-7/samples/sample7.js)]
 
-OK, cela représente beaucoup de code, mais nous avons pas à pas, donc j’espère que la conception est clair. Maintenant, nous pouvons ajouter certaines liaisons Knockout.js dans le code HTML.
+Bon, c’est beaucoup de code, mais nous l’avons créé pas à pas, donc j’espère que la conception est claire. Nous pouvons à présent ajouter des liaisons Knockout. js au code HTML.
 
 **Produits**
 
-Voici les liaisons pour la liste des produits :
+Voici les liaisons de la liste de produits :
 
 [!code-html[Main](using-web-api-with-entity-framework-part-7/samples/sample8.html)]
 
-Il effectue une itération sur le tableau de produits et affiche le nom et le prix. Le bouton « Ajouter à la commande » est visible uniquement lorsque l’utilisateur est connecté.
+Cela permet d’effectuer une itération sur le tableau Products et d’afficher le nom et le prix. Le bouton « Ajouter à la commande » n’est visible que lorsque l’utilisateur a ouvert une session.
 
-Les appels de bouton « Ajouter à la commande » `addItemToCart` sur la `ProductViewModel` instance pour le produit. Cela montre une fonctionnalité intéressante de Knockout.js : Lorsqu’un modèle de vue contient d’autres modèles de vue, vous pouvez appliquer ces liaisons au modèle interne. Dans cet exemple, les liaisons dans le `foreach` sont appliquées à chaque le `ProductViewModel` instances. Cette approche est beaucoup plus claire que placer toutes les fonctionnalités dans un modèle de vue unique.
+Le bouton « Ajouter à la commande » appelle `addItemToCart` sur l’instance `ProductViewModel` pour le produit. Cela démontre une fonctionnalité intéressante de Knockout. js : quand un modèle de vue contient d’autres modèles d’affichage, vous pouvez appliquer les liaisons au modèle interne. Dans cet exemple, les liaisons au sein du `foreach` sont appliquées à chacune des instances de `ProductViewModel`. Cette approche est bien plus propre que de placer toutes les fonctionnalités dans un modèle de vue unique.
 
-**Panier**
+**Caddie**
 
-Voici les liaisons pour le panier d’achat :
+Voici les liaisons du panier :
 
 [!code-html[Main](using-web-api-with-entity-framework-part-7/samples/sample9.html)]
 
-Il effectue une itération sur le tableau de panier et affiche le nom, le prix et la quantité. Notez que le lien « Supprimer » et le bouton « Créer une commande » sont liés aux fonctions de modèle de vue.
+Cela permet d’effectuer une itération sur le tableau Cart et d’afficher le nom, le prix et la quantité. Notez que le lien « supprimer » et le bouton « créer une commande » sont liés aux fonctions de modèle d’affichage.
 
-**Commandes**
+**O.f.**
 
-Voici les liaisons pour obtenir la liste de commandes :
+Voici les liaisons de la liste Orders :
 
 [!code-html[Main](using-web-api-with-entity-framework-part-7/samples/sample10.html)]
 
-Il effectue une itération sur les commandes et qui affiche l’ID de commande. L’événement de clic sur le lien est lié à la `getDetails` (fonction).
+Cela permet d’effectuer une itération sur les commandes et d’afficher l’ID de commande. L’événement Click sur le lien est lié à la fonction `getDetails`.
 
 **Détails de la commande**
 
-Voici les liaisons pour les détails de commande :
+Voici les liaisons pour les détails de la commande :
 
 [!code-html[Main](using-web-api-with-entity-framework-part-7/samples/sample11.html)]
 
-Il effectue une itération sur les éléments dans l’ordre et affiche le produit, le prix et la quantité. La balise div environnante est visible uniquement si le tableau de détails contient un ou plusieurs éléments.
+Cela permet d’effectuer une itération sur les éléments dans l’ordre et d’afficher le produit, le prix et la quantité. La balise div environnante est visible uniquement si le tableau de détails contient un ou plusieurs éléments.
 
 ## <a name="conclusion"></a>Conclusion
 
-Dans ce didacticiel, vous avez créé une application qui utilise Entity Framework pour communiquer avec la base de données et ASP.NET Web API pour fournir une interface publique sur la couche de données. ASP.NET MVC 4 nous permettent de restituer les pages HTML et Knockout.js ainsi que jQuery pour fournir des interactions sans rechargements de page dynamiques.
+Dans ce didacticiel, vous avez créé une application qui utilise Entity Framework pour communiquer avec la base de données, et API Web ASP.NET pour fournir une interface publique en plus de la couche de données. Nous utilisons ASP.NET MVC 4 pour afficher les pages HTML et Knockout. js plus jQuery pour fournir des interactions dynamiques sans rechargements de pages.
 
 Ressources supplémentaires :
 
-- [ASP.NET Data Access Content Map](https://msdn.microsoft.com/library/6759sth4.aspx)
+- [Plan de contenu d’accès aux données ASP.NET](https://msdn.microsoft.com/library/6759sth4.aspx)
 - [Centre de développement Entity Framework](https://msdn.microsoft.com/data/ef)
 
 > [!div class="step-by-step"]

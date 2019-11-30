@@ -1,61 +1,61 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-vb
-title: Exécution de plusieurs Animations en même temps (VB) | Microsoft Docs
+title: Exécution de plusieurs animations en même temps (VB) | Microsoft Docs
 author: wenz
-description: Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Il permet d’exécuter la chute...
+description: Le contrôle d’animation dans ASP.NET AJAX Control Toolkit n’est pas seulement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Il permet d’exécuter Severa...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 2469f7ea-1489-42fb-a8e1-414c90141ce9
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 02eb078a4fb8fddbbac18e4631214f354388cc2f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: fc11debd06c897c29db56d42167d483f5608cdf8
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133409"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74575302"
 ---
-# <a name="executing-several-animations-at-the-same-time-vb"></a>Exécution de plusieurs Animations en même temps (VB)
+# <a name="executing-several-animations-at-the-same-time-vb"></a>Exécution de plusieurs animations en même temps (VB)
 
 par [Christian Wenz](https://github.com/wenz)
 
-[Télécharger le Code](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation2.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation2VB.pdf)
+[Télécharger le code](https://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation2.vb.zip) ou [Télécharger le PDF](https://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation2VB.pdf)
 
-> Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Il permet d’exécuter plusieurs animations de manière parallèle.
+> Le contrôle d’animation dans ASP.NET AJAX Control Toolkit n’est pas seulement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Il permet d’exécuter plusieurs animations de manière parallèle.
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d'ensemble de
 
-Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Il permet d’exécuter plusieurs animations de manière parallèle.
+Le contrôle d’animation dans ASP.NET AJAX Control Toolkit n’est pas seulement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Il permet d’exécuter plusieurs animations de manière parallèle.
 
 ## <a name="steps"></a>Étapes
 
-Tout d’abord inclure le `ScriptManager` dans la page ; ensuite, la bibliothèque AJAX ASP.NET est chargée, ce qui permet d’utiliser les outils de contrôle :
+Tout d’abord, incluez la `ScriptManager` dans la page ; Ensuite, la bibliothèque ASP.NET AJAX est chargée, ce qui permet d’utiliser la boîte à outils de contrôle :
 
 [!code-aspx[Main](executing-several-animations-at-the-same-time-vb/samples/sample1.aspx)]
 
-L’animation sera appliquée à un volet de texte qui ressemble à ceci :
+L’animation sera appliquée à un panneau de texte qui ressemble à ceci :
 
 [!code-aspx[Main](executing-several-animations-at-the-same-time-vb/samples/sample2.aspx)]
 
-Dans la classe CSS associée pour le panneau, définir une couleur d’arrière-plan agréable et également définir une largeur fixe pour le panneau :
+Dans la classe CSS associée du panneau, définissez une couleur d’arrière-plan intéressante et définissez également une largeur fixe pour le panneau :
 
 [!code-css[Main](executing-several-animations-at-the-same-time-vb/samples/sample3.css)]
 
-Ensuite, ajoutez le `AnimationExtender` à la page, en fournissant un `ID`, le `TargetControlID` attribut et le texte obligatoire `runat="server"`:
+Ensuite, ajoutez le `AnimationExtender` à la page, en fournissant un `ID`, l’attribut `TargetControlID` et le `runat="server"`obligatoire :
 
 [!code-aspx[Main](executing-several-animations-at-the-same-time-vb/samples/sample4.aspx)]
 
-Dans le `<Animations>` nœud, utilisez `<OnLoad>` pour exécuter les animations, une fois que la page a été entièrement chargée. En règle générale, `<OnLoad>` accepte uniquement une animation. Le framework d’Animation vous permet de joindre plusieurs animations en un seul via le `<Parallel>` élément. Toutes les animations dans `<Parallel>` sont exécutées en même temps.
+Dans le nœud `<Animations>`, utilisez `<OnLoad>` pour exécuter les animations une fois que la page a été entièrement chargée. En règle générale, `<OnLoad>` n’accepte qu’une seule animation. L’infrastructure d’animation vous permet de joindre plusieurs animations à un seul à l’aide de l’élément `<Parallel>`. Toutes les animations au sein de `<Parallel>` sont exécutées en même temps.
 
-Voici l’un balisage possible pour le `AnimationExtender` contrôle, atténuant progressivement et redimensionner le panneau en même temps :
+Voici le balisage possible pour le contrôle `AnimationExtender`, le fondu et le redimensionnement du panneau en même temps :
 
 [!code-aspx[Main](executing-several-animations-at-the-same-time-vb/samples/sample5.aspx)]
 
-Et effectivement : lorsque vous exécutez ce script, le panneau s’affiche, puis redimensionne (plus de triple de sa largeur et sa hauteur de réduisant de moitié) et fondu en même temps.
+Et en effet : lorsque vous exécutez ce script, le panneau s’affiche, puis le redimensionnement (plus que la largeur et la moitié de sa hauteur) et disparaît en fondu en même temps.
 
-[![Le panneau est fondu et redimensionnement (y compris son contenu, grâce à moteur de rendu du navigateur)](executing-several-animations-at-the-same-time-vb/_static/image2.png)](executing-several-animations-at-the-same-time-vb/_static/image1.png)
+[![le panneau est en fondu et en redimensionnement (y compris son contenu, grâce au moteur de rendu du navigateur)](executing-several-animations-at-the-same-time-vb/_static/image2.png)](executing-several-animations-at-the-same-time-vb/_static/image1.png)
 
-Le panneau est fondu et redimensionnement (y compris son contenu, grâce à moteur de rendu du navigateur) ([cliquez pour afficher l’image en taille réelle](executing-several-animations-at-the-same-time-vb/_static/image3.png))
+Le panneau est en fondu et en redimensionnement (y compris son contenu, grâce au moteur de rendu du navigateur) ([cliquez pour afficher l’image en plein écran](executing-several-animations-at-the-same-time-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Précédent](adding-animation-to-a-control-vb.md)

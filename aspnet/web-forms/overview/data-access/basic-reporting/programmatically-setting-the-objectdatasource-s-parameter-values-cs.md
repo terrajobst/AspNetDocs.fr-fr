@@ -1,131 +1,131 @@
 ---
 uid: web-forms/overview/data-access/basic-reporting/programmatically-setting-the-objectdatasource-s-parameter-values-cs
-title: Définition par programmation des valeurs de paramètre de l’ObjectDataSource (c#) | Microsoft Docs
+title: Définition par programmation des valeurs de paramètre de ObjectDataSource (C#) | Microsoft Docs
 author: rick-anderson
-description: Dans ce didacticiel, nous allons examiner l’ajout d’une méthode à notre DAL et la couche BLL qui accepte un seul paramètre d’entrée et retourne des données. L’exemple définit ce paramètre...
+description: Dans ce didacticiel, nous allons examiner comment ajouter une méthode à nos DAL et BLL qui accepte un paramètre d’entrée unique et retourne des données. L’exemple définit ce paramètre...
 ms.author: riande
 ms.date: 03/31/2010
 ms.assetid: 1c4588bb-255d-4088-b319-5208da756f4d
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting/programmatically-setting-the-objectdatasource-s-parameter-values-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5d9419053b433f501212783d1cd3d9fb4734d63d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 8aa57172abcfc779fa74b128ad76d42c41dc5b98
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133124"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74602226"
 ---
 # <a name="programmatically-setting-the-objectdatasources-parameter-values-c"></a>Définition par programmation des valeurs des paramètres de ObjectDataSource (C#)
 
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger l’exemple d’application](http://download.microsoft.com/download/4/6/3/463cf87c-4724-4cbc-b7b5-3f866f43ba50/ASPNET_Data_Tutorial_6_CS.exe) ou [télécharger le PDF](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/datatutorial06cs1.pdf)
+[Télécharger l’exemple d’application](https://download.microsoft.com/download/4/6/3/463cf87c-4724-4cbc-b7b5-3f866f43ba50/ASPNET_Data_Tutorial_6_CS.exe) ou [Télécharger le PDF](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/datatutorial06cs1.pdf)
 
-> Dans ce didacticiel, nous allons examiner l’ajout d’une méthode à notre DAL et la couche BLL qui accepte un seul paramètre d’entrée et retourne des données. L’exemple définit ce paramètre par programmation.
+> Dans ce didacticiel, nous allons examiner comment ajouter une méthode à nos DAL et BLL qui accepte un paramètre d’entrée unique et retourne des données. L’exemple définit ce paramètre par programmation.
 
 ## <a name="introduction"></a>Introduction
 
-Comme nous l’avons vu dans la [didacticiel précédent](declarative-parameters-cs.md), plusieurs options sont disponibles pour le passage de façon déclarative les valeurs de paramètre aux méthodes de l’ObjectDataSource. Si la valeur du paramètre est codé en dur, provient d’un contrôle Web dans la page, ou dans toute autre source qui est lisible par une source de données n’est `Parameter` de l’objet, par exemple, que valeur peut être liée au paramètre d’entrée sans écrire une ligne de code.
+Comme nous l’avons vu dans le [didacticiel précédent](declarative-parameters-cs.md), un certain nombre d’options sont disponibles pour transmettre de manière déclarative des valeurs de paramètre aux méthodes de l’ObjectDataSource. Si la valeur du paramètre est codée en dur, provient d’un contrôle Web sur la page ou se trouve dans une autre source lisible par une source de données `Parameter` objet, par exemple, cette valeur peut être liée au paramètre d’entrée sans écrire une ligne de code.
 
-Il peut arriver, cependant, lorsque la valeur du paramètre provient de certains source pas déjà pris en compte par un de la source de données intégrés `Parameter` objets. Si notre site pris en charge les comptes d’utilisateur, nous voulons définir le paramètre selon l’actuellement connecté ID d’utilisateur. du visiteur Ou bien, nous sommes amenés à personnaliser la valeur du paramètre avant de les envoyer le long de sous-jacent de l’ObjectDataSource méthode d’objet.
+Toutefois, il peut arriver que la valeur du paramètre provient d’une source qui n’est pas encore prise en compte par une des objets de la source de données intégrée `Parameter`. Si notre site prend en charge les comptes d’utilisateur, nous pourrions souhaiter définir le paramètre en fonction de l’ID utilisateur du visiteur actuellement connecté. Ou nous pouvons être amenés à personnaliser la valeur du paramètre avant de l’envoyer à la méthode de l’objet sous-jacent de l’ObjectDataSource.
 
-Chaque fois que l’ObjectDataSource `Select` méthode est appelée ObjectDataSource déclenche tout d’abord sa [événement Selecting](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.selecting%28VS.80%29.aspx). Méthode de l’objet sous-jacent de l’ObjectDataSource est ensuite appelée. Une fois que la fin de l’opération de l’ObjectDataSource [sélectionnés événement](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.selected%28VS.80%29.aspx) se déclenche (Figure 1 illustre cette séquence d’événements). Les valeurs de paramètre passés dans la méthode de l’objet sous-jacent de l’ObjectDataSource peuvent être définies ou personnalisées dans un gestionnaire d’événements pour le `Selecting` événement.
+Chaque fois que la méthode de `Select` ObjectDataSource est appelée, ObjectDataSource commence par déclencher son [événement Selecting](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.selecting%28VS.80%29.aspx). La méthode de l’objet sous-jacent de ObjectDataSource est ensuite appelée. Une fois cette opération terminée, l' [événement sélectionné](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.selected%28VS.80%29.aspx) de l’ObjectDataSource se déclenche (la figure 1 illustre cette séquence d’événements). Les valeurs de paramètre passées dans la méthode de l’objet sous-jacent de ObjectDataSource peuvent être définies ou personnalisées dans un gestionnaire d’événements pour l’événement `Selecting`.
 
-[![L’ObjectDataSource sélectionnés et en sélectionnant le feu événements avant et d’après son objet sous-jacent la méthode est appelée.](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image2.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image1.png)
+[![les événements sélectionnés et de sélection de l’ObjectDataSource se déclenchent avant et après l’appel de la méthode de son objet sous-jacent](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image2.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image1.png)
 
-**Figure 1**: L’ObjectDataSource `Selected` et `Selecting` événements incendie avant et d’après son objet sous-jacent la méthode est appelée ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image3.png))
+**Figure 1**: les événements `Selected` et `Selecting` de l’ObjectDataSource se déclenchent avant et après l’appel de la méthode de l’objet sous-jacent ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image3.png))
 
-Dans ce didacticiel, nous examinerons l’ajout d’une méthode à notre DAL et la couche BLL qui accepte un seul paramètre d’entrée `Month`, de type `int` et retourne un `EmployeesDataTable` objet rempli avec les employés qui ont leur embauche anniversaire spécifié `Month`. Notre exemple définit ce paramètre par programmation selon le mois en cours, en affichant une liste de « Anniversaires ce mois-ci. »
+Dans ce didacticiel, nous allons examiner l’ajout d’une méthode à notre DAL et BLL qui accepte un paramètre d’entrée unique `Month`, de type `int` et retourne un objet `EmployeesDataTable` rempli avec les employés ayant leur anniversaire d’embauche dans le `Month`spécifié. Notre exemple définit ce paramètre par programmation en fonction du mois en cours, en présentant la liste des « anniversaires employés ce mois-ci ».
 
-C’est parti !
+Commençons !
 
-## <a name="step-1-adding-a-method-toemployeestableadapter"></a>Étape 1 : Ajout d’une méthode pour`EmployeesTableAdapter`
+## <a name="step-1-adding-a-method-toemployeestableadapter"></a>Étape 1 : ajout d’une méthode à`EmployeesTableAdapter`
 
-Pour notre premier exemple, nous devons ajouter un moyen de récupérer les employés dont `HireDate` s’est produite dans un mois spécifié. Pour offrir cette fonctionnalité conformément à notre architecture que nous devons tout d’abord créer une méthode dans `EmployeesTableAdapter` qui mappe à l’instruction SQL appropriée. Pour ce faire, commencez par ouvrir le DataSet typé de Northwind. Avec le bouton droit sur le `EmployeesTableAdapter` de l’étiquette et choisissez Ajouter une requête.
+Pour notre premier exemple, nous devons ajouter un moyen de récupérer les employés dont le `HireDate` s’est produit dans un mois donné. Pour fournir cette fonctionnalité conformément à notre architecture, nous devons d’abord créer une méthode dans `EmployeesTableAdapter` qui correspond à l’instruction SQL appropriée. Pour ce faire, commencez par ouvrir le DataSet typé Northwind. Cliquez avec le bouton droit sur l’étiquette `EmployeesTableAdapter`, puis choisissez Ajouter une requête.
 
-[![Ajouter une nouvelle requête à la EmployeesTableAdapter](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image5.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image4.png)
+[![ajouter une nouvelle requête au EmployeesTableAdapter](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image5.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image4.png)
 
-**Figure 2**: Ajouter une nouvelle requête pour le `EmployeesTableAdapter` ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image6.png))
+**Figure 2**: ajouter une nouvelle requête au `EmployeesTableAdapter` ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image6.png))
 
-Choisir d’ajouter une instruction SQL qui retourne des lignes. Quand vous atteignez la spécifier un `SELECT` instruction écran la valeur par défaut `SELECT` instruction pour la `EmployeesTableAdapter` sera déjà chargé. Ajoutez simplement dans le `WHERE` clause : `WHERE DATEPART(m, HireDate) = @Month`. [DATEPART](https://msdn.microsoft.com/library/ms174420.aspx) est une fonction T-SQL qui retourne une partie de date particulière d’un `datetime` type ; dans ce cas, nous utilisons `DATEPART` pour retourner le mois de la `HireDate` colonne.
+Choisissez d’ajouter une instruction SQL qui retourne des lignes. Quand vous atteignez l’écran spécifier une `SELECT` instruction, l’instruction par défaut `SELECT` pour l' `EmployeesTableAdapter` est déjà chargée. Ajoutez simplement la clause `WHERE` : `WHERE DATEPART(m, HireDate) = @Month`. [DatePart](https://msdn.microsoft.com/library/ms174420.aspx) est une fonction T-SQL qui retourne une partie de date particulière d’un type de `datetime` ; dans ce cas, nous utilisons `DATEPART` pour retourner le mois de la colonne `HireDate`.
 
-[![Retour uniquement les lignes où la HireDate colonne est inférieure ou égale à la @HiredBeforeDate paramètre](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image8.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image7.png)
+[![ne retourner que les lignes où la colonne HireDate est inférieure ou égale au paramètre @HiredBeforeDate](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image8.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image7.png)
 
-**Figure 3**: Retourner uniquement les lignes où la `HireDate` colonne est inférieure ou égale à la `@HiredBeforeDate` paramètre ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image9.png))
+**Figure 3**: retourner uniquement les lignes où la `HireDate` colonne est inférieure ou égale au paramètre `@HiredBeforeDate` ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image9.png))
 
-Enfin, changez le `FillBy` et `GetDataBy` pour les noms de méthode `FillByHiredDateMonth` et `GetEmployeesByHiredDateMonth`, respectivement.
+Enfin, modifiez les noms des méthodes `FillBy` et `GetDataBy` en `FillByHiredDateMonth` et `GetEmployeesByHiredDateMonth`, respectivement.
 
-[![Choisissez des noms de méthode plus appropriées que FillBy et GetDataBy](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image11.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image10.png)
+[![choisir des noms de méthode plus appropriés que FillBy et GetDataBy](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image11.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image10.png)
 
-**Figure 4**: Choisissez plus approprié méthode noms que `FillBy` et `GetDataBy` ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image12.png))
+**Figure 4**: choisir des noms de méthode plus appropriés que `FillBy` et `GetDataBy` ([Cliquer pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image12.png))
 
-Cliquez sur Terminer pour terminer l’Assistant et revenir à l’aire de conception du jeu de données. Le `EmployeesTableAdapter` doit inclure désormais un nouvel ensemble de méthodes pour accéder à des employés embauchés dans un mois spécifié.
+Cliquez sur Terminer pour terminer l’Assistant et revenir à l’aire de conception du jeu de données. Le `EmployeesTableAdapter` doit à présent inclure un nouvel ensemble de méthodes pour accéder aux employés embauchés au cours d’un mois donné.
 
-[![Les nouvelles méthodes s’affichent dans l’aire de conception du jeu de données](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image14.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image13.png)
+[![les nouvelles méthodes apparaissent dans le Aire de conception du jeu de données](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image14.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image13.png)
 
-**Figure 5**: Les nouvelles méthodes s’affichent dans l’aire de conception du jeu de données ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image15.png))
+**Figure 5**: les nouvelles méthodes apparaissent dans le aire de conception du jeu de données ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image15.png))
 
-## <a name="step-2-adding-thegetemployeesbyhireddatemonthmonthmethod-to-the-business-logic-layer"></a>Étape 2 : Ajout de la`GetEmployeesByHiredDateMonth(month)`à la couche de logique métier (méthode)
+## <a name="step-2-adding-thegetemployeesbyhireddatemonthmonthmethod-to-the-business-logic-layer"></a>Étape 2 : ajout de la méthode`GetEmployeesByHiredDateMonth(month)`à la couche de logique métier
 
-Étant donné que notre application architecture utilise distinct de couche pour la logique métier et les données d’accès logique, nous devons ajouter une méthode à notre BLL que les appels à la couche DAL pour récupérer les employés engagés avant une date spécifiée. Ouvrez le `EmployeesBLL.cs` fichier, puis ajoutez la méthode suivante :
+Étant donné que l’architecture de l’application utilise une couche distincte pour la logique métier et la logique d’accès aux données, nous devons ajouter une méthode à notre BLL qui appelle la couche DAL pour récupérer les employés recrutés avant une date spécifiée. Ouvrez le fichier `EmployeesBLL.cs` et ajoutez la méthode suivante :
 
 [!code-csharp[Main](programmatically-setting-the-objectdatasource-s-parameter-values-cs/samples/sample1.cs)]
 
-Comme avec nos autres méthodes dans cette classe, `GetEmployeesByHiredDateMonth(month)` appelle simplement vers le bas dans la couche DAL et retourne les résultats.
+Comme avec les autres méthodes de cette classe, `GetEmployeesByHiredDateMonth(month)` appelle simplement la couche DAL et retourne les résultats.
 
-## <a name="step-3-displaying-employees-whose-hiring-anniversary-is-this-month"></a>Étape 3 : Affichage des employés dont embauche anniversaire est ce mois-ci
+## <a name="step-3-displaying-employees-whose-hiring-anniversary-is-this-month"></a>Étape 3 : affichage des employés dont l’anniversaire d’embauche est ce mois-ci
 
-Notre dernière étape pour cet exemple consiste à afficher les employés dont embauche anniversaire est ce mois-ci. Commencez par ajouter un contrôle GridView à la `ProgrammaticParams.aspx` page dans le `BasicReporting` dossier et ajoutez un nouveau ObjectDataSource comme source de données. Configurer l’ObjectDataSource à utiliser le `EmployeesBLL` classe avec le `SelectMethod` défini sur `GetEmployeesByHiredDateMonth(month)`.
+L’étape finale de cet exemple consiste à afficher les employés dont l’anniversaire d’embauche est ce mois-ci. Commencez par ajouter un GridView à la page `ProgrammaticParams.aspx` dans le dossier `BasicReporting` et ajoutez un nouvel ObjectDataSource comme source de données. Configurez l’ObjectDataSource pour utiliser la classe `EmployeesBLL` avec la `SelectMethod` définie sur `GetEmployeesByHiredDateMonth(month)`.
 
-[![Utilisez la classe EmployeesBLL](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image17.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image16.png)
+[![utiliser la classe EmployeesBLL](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image17.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image16.png)
 
-**Figure 6**: Utilisez le `EmployeesBLL` classe ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image18.png))
+**Figure 6**: utiliser la classe `EmployeesBLL` ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image18.png))
 
-[![Sélectionnez les GetEmployeesByHiredDateMonth(month) à partir de la méthode](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image20.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image19.png)
+[![Select à partir de la méthode GetEmployeesByHiredDateMonth (month)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image20.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image19.png)
 
-**Figure 7**: Select From le `GetEmployeesByHiredDateMonth(month)` (méthode) ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image21.png))
+**Figure 7**: sélectionner dans la méthode `GetEmployeesByHiredDateMonth(month)` ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image21.png))
 
-Le dernier écran nous demande de fournir le `month` source de la valeur du paramètre. Étant donné que nous allons définir cette valeur par programmation, laissez le paramètre source la valeur par défaut aucune option et cliquez sur Terminer.
+L’écran final nous invite à fournir la source de la valeur de paramètre `month`. Étant donné que nous allons définir cette valeur par programmation, laissez la source de paramètres définie sur l’option None par défaut, puis cliquez sur Terminer.
 
-[![Conservez le paramètre Source None](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image23.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image22.png)
+[![laissez le paramètre source défini sur None](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image23.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image22.png)
 
-**Figure 8**: Laissez le paramètre Source définie sur None ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image24.png))
+**Figure 8**: conserver la source de paramètres définie sur aucun ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image24.png))
 
-Cela créera un `Parameter` objet dans l’ObjectDataSource `SelectParameters` collection qui n’a pas une valeur spécifiée.
+Cette opération crée un objet `Parameter` dans la collection de `SelectParameters` de l’ObjectDataSource qui n’a pas de valeur spécifiée.
 
 [!code-aspx[Main](programmatically-setting-the-objectdatasource-s-parameter-values-cs/samples/sample2.aspx)]
 
-Pour définir cette valeur par programmation, nous devons créer un gestionnaire d’événements pour l’ObjectDataSource `Selecting` événement. Pour ce faire, accédez à la vue conception, puis double-cliquez sur ObjectDataSource. Vous pouvez également sélectionnez ObjectDataSource, accédez à la fenêtre Propriétés, cliquez sur l’icône d’éclair. Ensuite, double-cliquez sur dans la zone de texte à côté du `Selecting` événement ou tapez le nom de gestionnaire d’événements que vous souhaitez utiliser.
+Pour définir cette valeur par programmation, nous devons créer un gestionnaire d’événements pour l’événement de `Selecting` de l’ObjectDataSource. Pour ce faire, accédez à la Mode Création et double-cliquez sur ObjectDataSource. Vous pouvez également sélectionner l’ObjectDataSource, accéder au Fenêtre Propriétés, puis cliquer sur l’icône représentant un éclair. Ensuite, double-cliquez dans la zone de texte à côté de l’événement `Selecting` ou tapez le nom du gestionnaire d’événements que vous souhaitez utiliser.
 
-![Cliquez sur l’icône d’éclair dans la fenêtre Propriétés pour répertorier les événements d’un contrôle Web](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image25.png)
+![Cliquez sur l’icône représentant un éclair dans la fenêtre Propriétés pour répertorier les événements d’un contrôle Web.](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image25.png)
 
-**Figure 9**: Cliquez sur l’icône d’éclair dans la fenêtre Propriétés pour répertorier les événements d’un contrôle Web
+**Figure 9**: cliquer sur l’icône représentant un éclair dans la fenêtre Propriétés pour répertorier les événements d’un contrôle Web
 
-Les deux approches ajouter un nouveau gestionnaire d’événements pour l’ObjectDataSource `Selecting` événement à la classe code-behind de la page. Dans ce gestionnaire d’événements, nous pouvons lire et écrire dans les valeurs de paramètre à l’aide de `e.InputParameters[parameterName]`, où *`parameterName`* est la valeur de la `Name` d’attribut dans le `<asp:Parameter>` balise (le `InputParameters` collection peut également être indexée ordinale, comme dans `e.InputParameters[index]`). Pour définir le `month` paramètre pour le mois en cours, ajoutez le code suivant à la `Selecting` Gestionnaire d’événements :
+Les deux approches ajoutent un nouveau gestionnaire d’événements pour l’événement de `Selecting` ObjectDataSource à la classe code-behind de la page. Dans ce gestionnaire d’événements, nous pouvons lire et écrire dans les valeurs de paramètre à l’aide de `e.InputParameters[parameterName]`, où *`parameterName`* est la valeur de l’attribut `Name` dans la balise `<asp:Parameter>` (la collection `InputParameters` peut également être indexée de manière ordinale, comme dans `e.InputParameters[index]`). Pour définir le paramètre `month` sur le mois actuel, ajoutez ce qui suit au gestionnaire d’événements `Selecting` :
 
 [!code-csharp[Main](programmatically-setting-the-objectdatasource-s-parameter-values-cs/samples/sample3.cs)]
 
-Lorsque vous visitez cette page via un navigateur, nous pouvons voir que seul un employé a été embauché ce mois-ci (mars) Laura Callahan, qui travaille chez l’entreprise depuis 1994.
+Lorsque vous accédez à cette page par le biais d’un navigateur, nous voyons que seul un employé a été embauché ce mois-ci (mars) Laura Callahan, qui fait partie de l’entreprise depuis 1994.
 
-[![Les employés dont les anniversaires ce mois-ci sont affichés.](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image27.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image26.png)
+[![les employés dont les anniversaires sont affichés](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image27.png)](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image26.png)
 
-**Figure 10**: Ces employés dont anniversaires ce mois sont affichés ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image28.png))
+**Figure 10**: les employés dont les anniversaires sont affichés par mois ([cliquez pour afficher l’image en taille réelle](programmatically-setting-the-objectdatasource-s-parameter-values-cs/_static/image28.png))
 
 ## <a name="summary"></a>Récapitulatif
 
-Valeurs des paramètres de l’ObjectDataSource peuvent en général être définies de façon déclarative, sans nécessiter une ligne de code, il est facile de définir les valeurs de paramètre par programmation. Il nous suffit est de créer un gestionnaire d’événements pour l’ObjectDataSource `Selecting` événement qui se déclenche avant que la méthode de l’objet sous-jacent est appelée et définir manuellement les valeurs pour un ou plusieurs paramètres via le `InputParameters` collection.
+Alors que les valeurs des paramètres de l’ObjectDataSource peuvent généralement être définies de façon déclarative, sans qu’il soit nécessaire de définir une ligne de code, il est facile de définir les valeurs des paramètres par programmation. Il nous suffit de créer un gestionnaire d’événements pour l’événement `Selecting` de l’ObjectDataSource, qui se déclenche avant l’appel de la méthode de l’objet sous-jacent, et de définir manuellement les valeurs d’un ou de plusieurs paramètres via la collection `InputParameters`.
 
-Ce didacticiel conclut la section rapports de base. Le [didacticiel suivant](../masterdetail/master-detail-filtering-with-a-dropdownlist-cs.md) lance la section de filtrage et les scénarios maître / détails, dans laquelle nous examinons les techniques permettant d’attribuer le visiteur pour filtrer les données et Explorer à partir d’un rapport principal dans un rapport détaillé.
+Ce didacticiel conclut la section Création de rapports de base. Le [didacticiel suivant](../masterdetail/master-detail-filtering-with-a-dropdownlist-cs.md) lance la section relative aux scénarios de filtrage et de détails maîtres, dans laquelle nous allons examiner les techniques permettant au visiteur de filtrer les données et d’effectuer un zoom avant d’un rapport maître dans un rapport détaillé.
 
 Bonne programmation !
 
 ## <a name="about-the-author"></a>À propos de l’auteur
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept les livres sur ASP/ASP.NET et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec les technologies Web Microsoft depuis 1998. Scott fonctionne comme un consultant indépendant, formateur et writer. Son dernier ouvrage est [*SAM animer vous-même ASP.NET 2.0 des dernières 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve à [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept livres ASP/ASP. net et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec des technologies Web Microsoft depuis 1998. Scott travaille en tant que consultant, formateur et auteur indépendant. Son dernier livre est [*Sams vous apprend vous-même ASP.NET 2,0 en 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve sur [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
-## <a name="special-thanks-to"></a>Remerciements
+## <a name="special-thanks-to"></a>Remerciements à
 
-Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Entraîner un réviseur pour ce didacticiel a été Hilton Giesenow. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Cette série de didacticiels a été examinée par de nombreux réviseurs utiles. Le réviseur de leads pour ce didacticiel était Hilton Giesenow. Vous souhaitez revoir mes prochains articles MSDN ? Si c’est le cas, insérez une ligne sur [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Précédent](declarative-parameters-cs.md)

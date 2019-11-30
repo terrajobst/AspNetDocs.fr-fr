@@ -1,73 +1,73 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/dynamicpopulate/using-dynamicpopulate-with-a-user-control-and-javascript-cs
-title: Utilisation de DynamicPopulate avec un contrôle utilisateur et le JavaScript (c#) | Microsoft Docs
+title: Utilisation de DynamicPopulate avec un contrôle utilisateur et JavaScriptC#() | Microsoft Docs
 author: wenz
-description: Le contrôle de DynamicPopulate dans ASP.NET AJAX Control Toolkit appelle un service web (ou une méthode de page) et remplit la valeur obtenue dans un contrôle cible sur t...
+description: Le contrôle DynamicPopulate dans la boîte à outils de contrôle ASP.NET AJAX appelle un service Web (ou une méthode de page) et remplit la valeur résultante dans un contrôle cible sur t...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 38ac8250-8854-444c-b9ab-8998faa41c5a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dynamicpopulate/using-dynamicpopulate-with-a-user-control-and-javascript-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 387cad748428249273cf9708b794dd8864cf982f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: a0e6d04a5f62ab558aceb8302d94d3bf2dc8a39f
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125048"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74599149"
 ---
 # <a name="using-dynamicpopulate-with-a-user-control-and-javascript-c"></a>Utilisation de DynamicPopulate avec un contrôle utilisateur et JavaScript (C#)
 
 par [Christian Wenz](https://github.com/wenz)
 
-[Télécharger le Code](http://download.microsoft.com/download/d/8/f/d8f2f6f9-1b7c-46ad-9252-e1fc81bdea3e/dynamicpopulate2.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dynamicpopulate2CS.pdf)
+[Télécharger le code](https://download.microsoft.com/download/d/8/f/d8f2f6f9-1b7c-46ad-9252-e1fc81bdea3e/dynamicpopulate2.cs.zip) ou [Télécharger le PDF](https://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dynamicpopulate2CS.pdf)
 
-> Le contrôle DynamicPopulate dans ASP.NET AJAX Control Toolkit appelle un service web (ou une méthode de page) et remplit la valeur obtenue dans un contrôle cible dans la page, sans une actualisation de la page. Il est également possible de déclencher le remplissage à l’aide d’un code JavaScript côté client personnalisé. Toutefois, une attention particulière doit être effectuée lorsque l’extendeur se trouve dans un contrôle utilisateur.
+> Le contrôle DynamicPopulate dans la boîte à outils de contrôle ASP.NET AJAX appelle un service Web (ou une méthode de page) et remplit la valeur résultante dans un contrôle cible sur la page, sans actualisation de page. Il est également possible de déclencher le remplissage à l’aide de code JavaScript côté client personnalisé. Toutefois, une attention particulière doit être prise lorsque l’extendeur réside dans un contrôle utilisateur.
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d'ensemble de
 
-Le `DynamicPopulate` contrôle dans ASP.NET AJAX Control Toolkit appelle un service web (ou une méthode de page) et remplit la valeur obtenue dans un contrôle cible dans la page, sans une actualisation de la page. Il est également possible de déclencher le remplissage à l’aide d’un code JavaScript côté client personnalisé. Toutefois, une attention particulière doit être effectuée lorsque l’extendeur se trouve dans un contrôle utilisateur.
+Le contrôle `DynamicPopulate` de la boîte à outils de contrôle ASP.NET AJAX appelle un service Web (ou une méthode de page) et remplit la valeur résultante dans un contrôle cible sur la page, sans actualisation de page. Il est également possible de déclencher le remplissage à l’aide de code JavaScript côté client personnalisé. Toutefois, une attention particulière doit être prise lorsque l’extendeur réside dans un contrôle utilisateur.
 
 ## <a name="steps"></a>Étapes
 
-Tout d’abord, vous avez besoin d’un Service Web de ASP.NET qui implémente la méthode doit être appelée par le `DynamicPopulateExtender` contrôle. Le service web implémente la méthode `getDate()` qui attend un argument de type chaîne, appelée `contextKey`, dans la mesure où le `DynamicPopulate` contrôle envoie une information de contexte à chaque appel de service web. Voici le code (fichier `DynamicPopulate.cs.asmx`) qui Récupère la date actuelle dans un des trois formats :
+Tout d’abord, vous avez besoin d’un service Web ASP.NET qui implémente la méthode à appeler par le contrôle `DynamicPopulateExtender`. Le service Web implémente la méthode `getDate()` qui attend un argument de type String, appelée `contextKey`, puisque le contrôle `DynamicPopulate` envoie une partie des informations de contexte avec chaque appel de service Web. Voici le code (`DynamicPopulate.cs.asmx`de fichier) qui récupère la date actuelle dans l’un des trois formats suivants :
 
 [!code-aspx[Main](using-dynamicpopulate-with-a-user-control-and-javascript-cs/samples/sample1.aspx)]
 
-Dans l’étape suivante, créez un nouveau contrôle utilisateur (`.ascx` fichier), il est signalé par la déclaration suivante dans sa première ligne :
+À l’étape suivante, créez un nouveau contrôle utilisateur (fichier`.ascx`), indiqué par la déclaration suivante sur sa première ligne :
 
 [!code-aspx[Main](using-dynamicpopulate-with-a-user-control-and-javascript-cs/samples/sample2.aspx)]
 
-Un &lt; `label` &gt; élément doit être utilisé pour afficher les données provenant du serveur.
+Un &lt;`label`élément &gt; sera utilisé pour afficher les données provenant du serveur.
 
 [!code-aspx[Main](using-dynamicpopulate-with-a-user-control-and-javascript-cs/samples/sample3.aspx)]
 
-Également dans le fichier de contrôle utilisateur, nous allons utiliser trois boutons radio, chacun d’eux représentant une des trois formats de date possibles prises en charge par le service web. Lorsque l’utilisateur clique sur l’un des boutons radio, le navigateur exécute le code JavaScript qui ressemble à ceci :
+Dans le fichier de contrôle utilisateur, nous allons également utiliser trois cases d’option, chacune représentant l’un des trois formats de date possibles pris en charge par le service Web. Quand l’utilisateur clique sur l’une des cases d’option, le navigateur exécute du code JavaScript qui ressemble à ceci :
 
 [!code-powershell[Main](using-dynamicpopulate-with-a-user-control-and-javascript-cs/samples/sample4.ps1)]
 
-Ce code accède à la `DynamicPopulateExtender` (ne vous inquiétez pas sur l’ID étrange encore, ce point sera abordé plus tard) et déclenche le remplissage dynamique des données. Dans le contexte de la case actuel, `this.value` fait référence à sa valeur soit `format1`, `format2` ou `format3` exactement ce qu’attend la méthode web.
+Ce code permet d’accéder à la `DynamicPopulateExtender` (ne vous inquiétez pas encore de l’ID étrange, cette opération sera traitée plus tard) et déclenchera le remplissage dynamique avec les données. Dans le contexte de la case d’option active, `this.value` fait référence à sa valeur qui est `format1`, `format2` ou `format3` exactement ce que la méthode Web attend.
 
-La seule chose que manquant encore dans le contrôle utilisateur est le `DynamicPopulateExtender` contrôle qui lie les boutons radio au service web.
+La seule chose manquante dans le contrôle utilisateur est le contrôle `DynamicPopulateExtender` qui lie les cases d’option au service Web.
 
 [!code-aspx[Main](using-dynamicpopulate-with-a-user-control-and-javascript-cs/samples/sample5.aspx)]
 
-Là encore, vous pouvez noter l’ID étrange utilisé dans le contrôle : `mcd1$myDate` au lieu de `myDate`. Auparavant, le code JavaScript utilisé `mcd1_dpe1` pour accéder à la `DynamicPopulateExtender` au lieu de `dpe1`. Cette stratégie d’affectation de noms est un besoin particulier lorsque vous utilisez `DynamicPopulateExtender` au sein d’un contrôle utilisateur. En outre, vous devez incorporer le contrôle utilisateur de manière spécifique pour que tout fonctionne. Créez une page ASP.NET et inscrire un préfixe de balise pour le contrôle utilisateur que vous venez d’implémenter :
+Là encore, vous pouvez noter l’ID étrange utilisé dans le contrôle : `mcd1$myDate` au lieu de `myDate`. Précédemment, le code JavaScript utilisé `mcd1_dpe1` pour accéder au `DynamicPopulateExtender` au lieu de `dpe1`. Cette stratégie de nommage est une exigence spéciale lors de l’utilisation de `DynamicPopulateExtender` dans un contrôle utilisateur. En outre, vous devez incorporer le contrôle utilisateur d’une manière spécifique pour le faire fonctionner. Créez une nouvelle page ASP.NET et enregistrez un préfixe de balise pour le contrôle utilisateur que vous venez d’implémenter :
 
 [!code-aspx[Main](using-dynamicpopulate-with-a-user-control-and-javascript-cs/samples/sample6.aspx)]
 
-Incluez ensuite ASP.NET AJAX `ScriptManager` contrôle sur la nouvelle page :
+Incluez ensuite le contrôle de `ScriptManager` AJAX ASP.NET sur la nouvelle page :
 
 [!code-aspx[Main](using-dynamicpopulate-with-a-user-control-and-javascript-cs/samples/sample7.aspx)]
 
-Enfin, ajoutez le contrôle utilisateur à la page. Vous devez uniquement définir son `ID` attribut (et `runat="server"`, bien sûr), mais vous devez également lui attribuer un nom spécifique : `mcd1` puisqu’il s’agit le préfixe utilisé dans le contrôle utilisateur pour accéder à l’aide de JavaScript.
+Enfin, ajoutez le contrôle utilisateur à la page. Il vous suffit de définir son attribut `ID` (et `runat="server"`, bien évidemment), mais vous devez également le définir sur un nom spécifique : `mcd1` puisque c’est le préfixe utilisé dans le contrôle utilisateur pour y accéder à l’aide de JavaScript.
 
 [!code-aspx[Main](using-dynamicpopulate-with-a-user-control-and-javascript-cs/samples/sample8.aspx)]
 
-Et voilà ! La page se comporte comme prévu : Un utilisateur clique sur un des boutons radio, le contrôle dans la boîte à outils appelle le service web et affiche la date actuelle au format souhaité.
+Et voilà ! La page se comporte comme prévu : un utilisateur clique sur l’une des cases d’option, le contrôle de la boîte à outils appelle le service Web et affiche la date actuelle au format souhaité.
 
-[![Les boutons radio résident dans un contrôle utilisateur](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image2.png)](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image1.png)
+[![les cases d’option résident dans un contrôle utilisateur](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image2.png)](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image1.png)
 
-Les boutons radio résident dans un contrôle utilisateur ([cliquez pour afficher l’image en taille réelle](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image3.png))
+Les cases d’option résident dans un contrôle utilisateur ([cliquez pour afficher l’image en taille réelle](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Précédent](dynamically-populating-a-control-using-javascript-code-cs.md)

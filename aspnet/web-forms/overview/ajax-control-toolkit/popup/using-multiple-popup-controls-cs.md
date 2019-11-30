@@ -1,55 +1,55 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-cs
-title: Utilisation de plusieurs contrôles de fenêtre contextuelle (c#) | Microsoft Docs
+title: Utilisation de plusieurs contrôles PopupC#() | Microsoft Docs
 author: wenz
-description: L’extendeur PopupControl dans les outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle lorsque n’importe quel autre contrôle est activé. Il est également possible d’utiliser m...
+description: L’extendeur PopupControl dans la boîte à outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle quand un autre contrôle est activé. Il est également possible d’utiliser m...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 91511b0b-311d-481f-9e7c-73f07b813b79
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 498afada4e020d0edf8dabef5d4a00336e15c5f5
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 8700fe89af591e8b481e853580b0efa0cddbf1bc
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65115148"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74611650"
 ---
 # <a name="using-multiple-popup-controls-c"></a>Utilisation de plusieurs contrôles de fenêtre contextuelle (C#)
 
 par [Christian Wenz](https://github.com/wenz)
 
-[Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PopupControl1.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/popupcontrol1CS.pdf)
+[Télécharger le code](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PopupControl1.cs.zip) ou [Télécharger le PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/popupcontrol1CS.pdf)
 
-> L’extendeur PopupControl dans les outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle lorsque n’importe quel autre contrôle est activé. Il est également possible d’utiliser plus d’un contrôle popup sur une seule page.
+> L’extendeur PopupControl dans la boîte à outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle quand un autre contrôle est activé. Il est également possible d’utiliser plusieurs contrôles Popup sur une page.
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d'ensemble de
 
-L’extendeur PopupControl dans les outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle lorsque n’importe quel autre contrôle est activé. Il est également possible d’utiliser plus d’un contrôle popup sur une seule page.
+L’extendeur PopupControl dans la boîte à outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle quand un autre contrôle est activé. Il est également possible d’utiliser plusieurs contrôles Popup sur une page.
 
 ## <a name="steps"></a>Étapes
 
-Pour activer la fonctionnalité d’ASP.NET AJAX et les outils de contrôle, le `ScriptManager` contrôle doit être placé n’importe où sur la page (mais dans le `<form>` élément) :
+Pour activer les fonctionnalités de ASP.NET AJAX et de Control Toolkit, le contrôle de `ScriptManager` doit être placé n’importe où sur la page (mais dans l’élément `<form>`) :
 
 [!code-aspx[Main](using-multiple-popup-controls-cs/samples/sample1.aspx)]
 
-Ensuite, ajoutez un panneau qui sert de la fenêtre contextuelle. Dans le scénario en cours, le panneau contient un `Calendar` contrôle. Afin d’éviter les actualisations de la page a provoqué par des publications (postback) du calendrier, le panneau est placé dans un `UpdatePanel` contrôle :
+Ensuite, ajoutez un panneau qui sert de fenêtre contextuelle. Dans le scénario actuel, le panneau contient un contrôle de `Calendar`. Afin d’éviter l’actualisation des pages provoquée par les publications du calendrier, le panneau est placé dans un contrôle `UpdatePanel` :
 
 [!code-aspx[Main](using-multiple-popup-controls-cs/samples/sample2.aspx)]
 
-La page contient également deux zones de texte. Chaque zone de texte, la fenêtre de calendrier apparaît une fois que la zone de texte est activée.
+La page contient également deux zones de texte. Pour chaque zone de texte, la fenêtre contextuelle du calendrier s’affiche une fois que la zone de texte est activée.
 
 [!code-aspx[Main](using-multiple-popup-controls-cs/samples/sample3.aspx)]
 
-À présent étendre les deux zones de texte avec un `PopupControlExtender`. Le `TargetControlID` attribut fournit l’ID du contrôle lié à l’extendeur. Le `PopupControlID` attribut contient l’ID du Panneau de menu contextuel. Dans ce cas, les deux extendeurs affichent le même panneau, mais différents panneaux est également possibles.
+À présent, étendez chacune des deux zones de texte avec une `PopupControlExtender`. L’attribut `TargetControlID` fournit l’ID du contrôle lié à l’extendeur. L’attribut `PopupControlID` contient l’ID du panneau contextuel. Dans ce cas, les deux extendeurs affichent le même panneau, mais des panneaux différents sont également possibles.
 
 [!code-aspx[Main](using-multiple-popup-controls-cs/samples/sample4.aspx)]
 
-Chaque fois que vous cliquez dans un champ de texte, un calendrier apparaît désormais sous le champ, ce qui vous permet de sélectionner une date. (Retour de la date sélectionnée dans les zones de texte sera développée dans un autre didacticiel.)
+À présent, lorsque vous cliquez dans un champ de texte, un calendrier apparaît sous le champ, ce qui vous permet de sélectionner une date. (L’extraction de la date sélectionnée dans les zones de texte sera traitée dans un autre didacticiel.)
 
-[![Le calendrier s’affiche lorsque l’utilisateur clique dans la zone de texte](using-multiple-popup-controls-cs/_static/image2.png)](using-multiple-popup-controls-cs/_static/image1.png)
+[![le calendrier s’affiche lorsque l’utilisateur clique dans la zone de texte](using-multiple-popup-controls-cs/_static/image2.png)](using-multiple-popup-controls-cs/_static/image1.png)
 
 Le calendrier s’affiche lorsque l’utilisateur clique dans la zone de texte ([cliquez pour afficher l’image en taille réelle](using-multiple-popup-controls-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Next](handling-postbacks-from-a-popup-control-with-an-updatepanel-cs.md)
+> [Suivant](handling-postbacks-from-a-popup-control-with-an-updatepanel-cs.md)

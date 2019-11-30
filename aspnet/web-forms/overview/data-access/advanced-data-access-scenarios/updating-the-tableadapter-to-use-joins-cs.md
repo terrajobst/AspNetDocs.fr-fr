@@ -1,229 +1,229 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-cs
-title: Mise à jour le TableAdapter à utiliser des jointures (c#) | Microsoft Docs
+title: Mise à jour du TableAdapter pour utiliser des JOINTUREs (C#) | Microsoft Docs
 author: rick-anderson
-description: Lorsque vous travaillez avec une base de données, il est courant pour demander des données qui sont réparties sur plusieurs tables. Pour récupérer des données à partir de deux tables différentes, nous pouvons utiliser soit...
+description: Lors de l’utilisation d’une base de données, il est courant de demander des données réparties sur plusieurs tables. Pour récupérer des données de deux tables différentes, nous pouvons les utiliser...
 ms.author: riande
 ms.date: 07/18/2007
 ms.assetid: 675531a7-cb54-4dd6-89ac-2636e4c285a5
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8ba750e8a07a7a88822116d2779633bf253f48d2
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 24ff3645783dabfcdef5ac313a2d4833e4998efc
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108839"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74607862"
 ---
 # <a name="updating-the-tableadapter-to-use-joins-c"></a>Mise à jour du TableAdapter pour l’utilisation de jointures (C#)
 
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger le Code](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_69_CS.zip) ou [télécharger le PDF](updating-the-tableadapter-to-use-joins-cs/_static/datatutorial69cs1.pdf)
+[Télécharger le code](https://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_69_CS.zip) ou [Télécharger le PDF](updating-the-tableadapter-to-use-joins-cs/_static/datatutorial69cs1.pdf)
 
-> Lorsque vous travaillez avec une base de données, il est courant pour demander des données qui sont réparties sur plusieurs tables. Pour récupérer des données à partir de deux tables différentes, nous pouvons utiliser une sous-requête corrélée ou sur une opération de jointure. Dans ce didacticiel, nous comparons les sous-requêtes en corrélation et la syntaxe de jointure avant de regarder comment créer un TableAdapter qui inclut une jointure dans sa requête principale.
+> Lors de l’utilisation d’une base de données, il est courant de demander des données réparties sur plusieurs tables. Pour extraire des données de deux tables différentes, vous pouvez utiliser une sous-requête corrélée ou une opération de jointure. Dans ce didacticiel, nous comparons les sous-requêtes corrélées et la syntaxe de jointure avant d’examiner comment créer un TableAdapter qui comprend une jointure dans sa requête principale.
 
 ## <a name="introduction"></a>Introduction
 
-Avec les bases de données relationnelles les données, nous nous intéressons dans l’utilisation sont souvent réparties sur plusieurs tables. Par exemple, lors de l’affichage des informations sur les produits nous souhaitons probablement répertorier chaque catégorie de produit s correspondante et les noms des fournisseurs s. Le `Products` table a `CategoryID` et `SupplierID` valeurs, mais les noms de catégorie et le fournisseur réels sont dans le `Categories` et `Suppliers` des tables, respectivement.
+Avec les bases de données relationnelles, les données qui nous intéressent sont souvent réparties sur plusieurs tables. Par exemple, lors de l’affichage des informations sur les produits, nous souhaitons probablement répertorier les noms des catégories et des fournisseurs correspondants pour chaque produit. La table `Products` a des valeurs `CategoryID` et `SupplierID`, mais les noms des catégories et des fournisseurs réels sont respectivement dans les tables `Categories` et `Suppliers`.
 
-Pour récupérer des informations à partir d’une autre table liée, nous pouvons utiliser *sous-requêtes corrélées* ou `JOIN` *s*. Une sous-requête corrélée est imbriquée `SELECT` requête qui fait référence aux colonnes dans la requête externe. Par exemple, dans le [création d’une couche d’accès aux données](../introduction/creating-a-data-access-layer-cs.md) didacticiel, nous avons utilisé deux sous-requêtes corrélées dans le `ProductsTableAdapter` requête principale de s pour retourner les noms de catégorie et le fournisseur pour chaque produit. Un `JOIN` est une construction SQL qui fusionne des lignes connexes à partir de deux tables différentes. Nous avons utilisé un `JOIN` dans le [interrogation des données avec le contrôle SqlDataSource](../accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs.md) didacticiel pour afficher des informations de catégorie en même temps que chaque produit.
+Pour récupérer des informations à partir d’une autre table associée, nous pouvons soit utiliser des sous- *requêtes corrélées* , soit `JOIN`*s*. Une sous-requête corrélée est une requête de `SELECT` imbriquée qui fait référence à des colonnes dans la requête externe. Par exemple, dans le didacticiel [création d’une couche d’accès aux données](../introduction/creating-a-data-access-layer-cs.md) , nous avons utilisé deux sous-requêtes corrélées dans la requête principale de `ProductsTableAdapter` s pour retourner les noms des catégories et des fournisseurs pour chaque produit. Une `JOIN` est une construction SQL qui fusionne les lignes associées de deux tables différentes. Nous avons utilisé une `JOIN` dans le didacticiel sur l' [interrogation des données avec le contrôle SqlDataSource](../accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs.md) pour afficher les informations de catégorie à côté de chaque produit.
 
-La raison pour laquelle nous avons abstained de l’utilisation de `JOIN` s avec les TableAdapters est en raison des limitations dans l’Assistant TableAdapter s pour générer automatiquement des correspondant `INSERT`, `UPDATE`, et `DELETE` instructions. Plus précisément, si la requête principale de TableAdapter s contient une `JOIN` s, le TableAdapter ne peut pas créer automatiquement les instructions SQL ad hoc ou les procédures stockées pour son `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés.
+La raison de l’utilisation de `JOIN` s avec les TableAdapters est due aux limitations de l’Assistant TableAdapter s pour générer automatiquement les instructions `INSERT`, `UPDATE`et `DELETE` correspondantes. Plus précisément, si la requête principale du TableAdapter contient des `JOIN` s, le TableAdapter ne peut pas créer automatiquement les instructions SQL ou les procédures stockées ad hoc pour ses propriétés `InsertCommand`, `UpdateCommand`et `DeleteCommand`.
 
-Dans ce didacticiel, nous allons comparer brièvement et le contraste des sous-requêtes corrélées et `JOIN` s avant d’Explorer la création d’un TableAdapter qui inclut `JOIN` s dans sa requête principale.
+Dans ce didacticiel, nous allons brièvement comparer et opposer les sous-requêtes corrélées et les `JOIN` s avant d’explorer la création d’un TableAdapter qui comprend `JOIN` s dans sa requête principale.
 
-## <a name="comparing-and-contrasting-correlated-subqueries-andjoin-s"></a>En comparant et différenciant les sous-requêtes en corrélation et`JOIN` s
+## <a name="comparing-and-contrasting-correlated-subqueries-andjoin-s"></a>Comparaison et différences entre les sous-requêtes corrélées et les`JOIN` s
 
-N’oubliez pas que le `ProductsTableAdapter` créé dans le premier didacticiel de la `Northwind` jeu de données utilise des sous-requêtes corrélées pour ramener chaque nom catégorie et le fournisseur correspondant produit s. Le `ProductsTableAdapter` requête principale s est indiqué ci-dessous.
+Rappelez-vous que le `ProductsTableAdapter` créé dans le premier didacticiel du jeu de données `Northwind` utilise des sous-requêtes corrélées pour rétablir chaque nom de catégorie et de fournisseur correspondant au produit. La requête principale `ProductsTableAdapter` s est indiquée ci-dessous.
 
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample1.sql)]
 
-Les deux en corrélation sous-requêtes - `(SELECT CategoryName FROM Categories WHERE Categories.CategoryID = Products.CategoryID)` et `(SELECT CompanyName FROM Suppliers WHERE Suppliers.SupplierID = Products.SupplierID)` -sont `SELECT` requêtes qui retournent une valeur unique par produit comme une colonne supplémentaire dans la liste externe `SELECT` liste des colonnes de l’instruction s.
+Les deux sous-requêtes corrélées-`(SELECT CategoryName FROM Categories WHERE Categories.CategoryID = Products.CategoryID)` et `(SELECT CompanyName FROM Suppliers WHERE Suppliers.SupplierID = Products.SupplierID)` sont des requêtes `SELECT` qui renvoient une valeur unique par produit sous la forme d’une colonne supplémentaire dans la liste des colonnes de l’instruction de `SELECT` externe.
 
-Vous pouvez également un `JOIN` peut être utilisée pour retourner chaque nom de fournisseur et la catégorie de produit s. La requête suivante retourne le même résultat que celui ci-dessus, mais utilise `JOIN` s à la place des sous-requêtes :
+Une `JOIN` peut également être utilisée pour retourner chaque fournisseur et nom de catégorie du produit. La requête suivante retourne la même sortie que la sortie ci-dessus, mais utilise `JOIN` s à la place des sous-requêtes :
 
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample2.sql)]
 
-Un `JOIN` fusionne les enregistrements d’une table avec des enregistrements à partir d’une autre table en fonction de certains critères. Dans la requête ci-dessus, par exemple, le `LEFT JOIN Categories ON Categories.CategoryID = Products.CategoryID` demande à SQL Server pour la fusion de chaque enregistrement de produit avec la catégorie enregistrement dont la propriété `CategoryID` valeur correspond au produit s `CategoryID` valeur. Le résultat fusionné nous permet de travailler avec les champs de catégorie correspondant pour chaque produit (tel que `CategoryName`).
+Un `JOIN` fusionne les enregistrements d’une table avec les enregistrements d’une autre table en fonction de certains critères. Dans la requête ci-dessus, par exemple, le `LEFT JOIN Categories ON Categories.CategoryID = Products.CategoryID` indique à SQL Server de fusionner chaque enregistrement de produit avec l’enregistrement de catégorie dont la valeur `CategoryID` correspond à la valeur `CategoryID` du produit. Le résultat fusionné nous permet de travailler avec les champs de catégorie correspondants pour chaque produit (par exemple, `CategoryName`).
 
 > [!NOTE]
-> `JOIN` s sont couramment utilisés lors de l’interrogation des données à partir de bases de données relationnelles. Si vous ne connaissez pas le `JOIN` syntaxe ou devoir d’agrémenter un peu sur son utilisation, je d recommande le [didacticiel SQL Join](http://www.w3schools.com/sql/sql_join.asp) à [W3 Schools](http://www.w3schools.com/). Également important de lecture sont le [ `JOIN` notions de base](https://msdn.microsoft.com/library/ms191517.aspx) et [principes de base](https://msdn.microsoft.com/library/ms189575.aspx) sections de la [la documentation en ligne de SQL](https://msdn.microsoft.com/library/ms130214.aspx).
+> les `JOIN` s sont couramment utilisés lors de l’interrogation de données à partir de bases de données relationnelles. Si vous ne connaissez pas la syntaxe de la `JOIN` ou si vous avez besoin de monter un peu sur son utilisation, j’ai recommandé le didacticiel sur la [jointure SQL](http://www.w3schools.com/sql/sql_join.asp) dans [W3 Schools](http://www.w3schools.com/). Il est également utile de lire les sections notions de base des [`JOIN`](https://msdn.microsoft.com/library/ms191517.aspx) et [sous-requêtes](https://msdn.microsoft.com/library/ms189575.aspx) de la [documentation en ligne de SQL](https://msdn.microsoft.com/library/ms130214.aspx).
 
-Dans la mesure où `JOIN` s et des sous-requêtes corrélées peuvent être utilisés pour récupérer les données associées provenant d’autres tables, de nombreux développeurs sont laissés leurs têtes infructueuses et vous vous demandez de l’approche à utiliser. Tous les gourous SQL je ve ont rapporté à peu près la même chose, qu’il ne peu performante que SQL Server génère des plans d’exécution à peu près identique. Leur avis, il faut utiliser la technique que vous et votre équipe sont convient le mieux. Il mérite de noter que, après particulier ce Conseil ces experts expriment immédiatement leurs préférences de `JOIN` s sur les sous-requêtes corrélées.
+Étant donné que les `JOIN` s et les sous-requêtes corrélées peuvent être utilisées pour récupérer des données associées à partir d’autres tables, de nombreux développeurs n’ont pas oublié leurs têtes et se demandent quelle approche utiliser. Tous les gourous SQL que j’ai parlés ont dit à peu près la même chose, qu’il n’a pas vraiment d’importance pour les performances, car SQL Server produira approximativement des plans d’exécution identiques. Leur avis est ensuite d’utiliser la technique avec laquelle vous et votre équipe êtes le plus à l’aise. Il est de plus en plus à noter qu’après avoir fait part de ces conseils, ces experts expriment immédiatement leur préférence de `JOIN` s par rapport à des sous-requêtes corrélées.
 
-Lors de la création d’une couche d’accès aux données à l’aide de jeux de données typé, les outils fonctionnent mieux lors de l’utilisation de sous-requêtes. En particulier, l’Assistant TableAdapter s pas génère automatiquement correspondant `INSERT`, `UPDATE`, et `DELETE` instructions si la requête principale contient une `JOIN` s, mais génère automatiquement ces instructions lorsque corrélées sous-requêtes sont utilisés.
+Lorsque vous créez une couche d’accès aux données à l’aide de DataSets typés, les outils fonctionnent mieux lorsque vous utilisez des sous-requêtes. En particulier, l’Assistant TableAdapter s ne génère pas automatiquement les instructions `INSERT`, `UPDATE`et `DELETE` correspondantes si la requête principale contient des `JOIN` s, mais génère automatiquement ces instructions lorsque des sous-requêtes corrélées sont utilisées.
 
-Pour Explorer cet inconvénient, créez un DataSet typé temporaire dans le `~/App_Code/DAL` dossier. Au cours de l’Assistant Configuration de TableAdapter, choisir d’utiliser des instructions SQL ad hoc et entrez les informations suivantes `SELECT` requête (voir Figure 1) :
+Pour explorer cette lacune, créez un jeu de données temporaire typé dans le dossier `~/App_Code/DAL`. Pendant l’Assistant Configuration de TableAdapter, choisissez d’utiliser des instructions SQL ad hoc et entrez la requête `SELECT` suivante (voir la figure 1) :
 
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample3.sql)]
 
-[![Entrez une requête principale qui contient des jointures](updating-the-tableadapter-to-use-joins-cs/_static/image2.png)](updating-the-tableadapter-to-use-joins-cs/_static/image1.png)
+[![entrez une requête principale qui contient des JOINTUREs](updating-the-tableadapter-to-use-joins-cs/_static/image2.png)](updating-the-tableadapter-to-use-joins-cs/_static/image1.png)
 
-**Figure 1**: Entrez une requête principale qui contient `JOIN` s ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image3.png))
+**Figure 1**: entrer une requête principale contenant `JOIN` s ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image3.png))
 
-Par défaut, le TableAdapter créera automatiquement `INSERT`, `UPDATE`, et `DELETE` instructions en fonction de la requête principale. Si vous cliquez sur le bouton Avancé, vous pouvez voir que cette fonctionnalité est activée. En dépit de ce paramètre, le TableAdapter sera pas en mesure de créer le `INSERT`, `UPDATE`, et `DELETE` instructions, car la requête principale contient un `JOIN`.
+Par défaut, le TableAdapter crée automatiquement les instructions `INSERT`, `UPDATE`et `DELETE` en fonction de la requête principale. Si vous cliquez sur le bouton avancé, vous pouvez voir que cette fonctionnalité est activée. Malgré ce paramètre, le TableAdapter ne peut pas créer les instructions `INSERT`, `UPDATE`et `DELETE`, car la requête principale contient un `JOIN`.
 
-![Entrez une requête principale qui contient des jointures](updating-the-tableadapter-to-use-joins-cs/_static/image4.png)
+![Entrer une requête principale qui contient des JOINTUREs](updating-the-tableadapter-to-use-joins-cs/_static/image4.png)
 
-**Figure 2**: Entrez une requête principale contenant `JOIN` s
+**Figure 2**: entrer une requête principale contenant `JOIN` s
 
-Cliquez sur Terminer pour terminer l’Assistant. À ce stade, votre Concepteur de DataSet s inclut un seul TableAdapter avec un DataTable avec des colonnes pour chacun des champs retournés dans le `SELECT` liste des colonnes de requête s. Cela inclut la `CategoryName` et `SupplierName`, comme le montre la Figure 3.
+Cliquez sur Terminer pour terminer l'Assistant. À ce stade, le concepteur de votre jeu de données inclut un TableAdapter unique avec un DataTable avec des colonnes pour chacun des champs retournés dans la liste de colonnes `SELECT` requête s. Cela comprend les `CategoryName` et les `SupplierName`, comme illustré dans la figure 3.
 
-![La table de données inclut une colonne pour chaque champ renvoyé dans la liste des colonnes](updating-the-tableadapter-to-use-joins-cs/_static/image5.png)
+![Le DataTable contient une colonne pour chaque champ retourné dans la liste des colonnes](updating-the-tableadapter-to-use-joins-cs/_static/image5.png)
 
-**Figure 3**: La table de données inclut une colonne pour chaque champ renvoyé dans la liste des colonnes
+**Figure 3**: le DataTable contient une colonne pour chaque champ retourné dans la liste des colonnes
 
-Alors que la table de données a les colonnes appropriées, le TableAdapter ne dispose pas des valeurs pour ses `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés. Pour vérifier cela, cliquez sur le TableAdapter dans le concepteur et passez à la fenêtre Propriétés. Il vous verrez que le `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés sont définies à (None).
+Tandis que le DataTable contient les colonnes appropriées, le TableAdapter n’a pas de valeurs pour ses propriétés `InsertCommand`, `UpdateCommand`et `DeleteCommand`. Pour confirmer cela, cliquez sur le TableAdapter dans le concepteur, puis accédez au Fenêtre Propriétés. Vous verrez que les propriétés `InsertCommand`, `UpdateCommand`et `DeleteCommand` sont définies sur (aucune).
 
-[![La propriété InsertCommand, UpdateCommand et DeleteCommand propriétés sont définies à (None)](updating-the-tableadapter-to-use-joins-cs/_static/image7.png)](updating-the-tableadapter-to-use-joins-cs/_static/image6.png)
+[![les propriétés InsertCommand, UpdateCommand et DeleteCommand ont la valeur (None)](updating-the-tableadapter-to-use-joins-cs/_static/image7.png)](updating-the-tableadapter-to-use-joins-cs/_static/image6.png)
 
-**Figure 4**: Le `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés sont définies à (None) ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image8.png))
+**Figure 4**: les propriétés `InsertCommand`, `UpdateCommand`et `DeleteCommand` sont définies sur (aucune) ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image8.png))
 
-Pour contourner cet inconvénient, nous pouvons fournir manuellement les instructions SQL et les paramètres pour le `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés via la fenêtre Propriétés. Ou bien, nous pouvons commencer en configurant la requête principale de s TableAdapter à *pas* inclure tous `JOIN` s. Cela permettra le `INSERT`, `UPDATE`, et `DELETE` à des instructions pour être généré automatiquement pour nous. À l’issue de l’Assistant, nous pourrions ensuite mettre à jour manuellement le TableAdapter s `SelectCommand` à partir de la fenêtre Propriétés afin qu’il inclue le `JOIN` syntaxe.
+Pour contourner ce manque, nous pouvons fournir manuellement les instructions et les paramètres SQL pour les propriétés `InsertCommand`, `UpdateCommand`et `DeleteCommand` via le Fenêtre Propriétés. Vous pouvez également commencer par configurer la requête principale du TableAdapter pour qu’il *n'* inclut aucun `JOIN` s. Cela permet aux instructions `INSERT`, `UPDATE`et `DELETE` d’être générées automatiquement pour nous. À la fin de l’Assistant, nous pourrions ensuite mettre à jour manuellement les `SelectCommand` du TableAdapter à partir de la Fenêtre Propriétés afin qu’il inclue la syntaxe de `JOIN`.
 
-Bien que cette approche fonctionne, il est très fragile lorsqu’à l’aide de requêtes SQL ad hoc, car chaque fois que la requête principale de s TableAdapter est reconfiguré via l’Assistant, générée automatiquement `INSERT`, `UPDATE`, et `DELETE` instructions sont recréées. Cela signifie que toutes les personnalisations plus tard, nous avons apporté seraient perdues si nous avez cliqué sur le TableAdapter a choisi de configurer dans le menu contextuel et terminé l’Assistant à nouveau.
+Bien que cette approche fonctionne, elle est très fragile quand vous utilisez des requêtes SQL ad hoc, car chaque fois que la requête principale du TableAdapter est reconfigurée par le biais de l’Assistant, les instructions générées automatiquement `INSERT`, `UPDATE`et `DELETE` sont recréées. Cela signifie que toutes les personnalisations que nous avons effectuées par la suite seraient perdues si vous cliquez avec le bouton droit sur le TableAdapter, que vous avez choisi configurer dans le menu contextuel et que vous avez reterminé l’Assistant.
 
-La fragilité de la s TableAdapter générées automatiquement `INSERT`, `UPDATE`, et `DELETE` instructions est, fort heureusement, limité aux instructions SQL ad hoc. Si votre TableAdapter utilise des procédures stockées, vous pouvez personnaliser le `SelectCommand`, `InsertCommand`, `UpdateCommand`, ou `DeleteCommand` des procédures stockées et réexécutez l’Assistant Configuration de TableAdapter sans avoir à craindre que les procédures stockées seront modifié.
+La fragilité des instructions générées automatiquement `INSERT`, `UPDATE`et `DELETE` du TableAdapter est, heureusement, limitée aux instructions SQL ad hoc. Si votre TableAdapter utilise des procédures stockées, vous pouvez personnaliser les procédures stockées `SelectCommand`, `InsertCommand`, `UpdateCommand`ou `DeleteCommand`, puis réexécuter l’Assistant Configuration de TableAdapter sans craindre que les procédures stockées soient modifiées.
 
-Le prochain plusieurs étapes, nous allons créer un TableAdapter qui, au départ, utilise une requête principale, qui omet les `JOIN` s afin que le correspondantes insérer, mettre à jour et procédures stockées de suppression sera généré automatiquement. Nous met ensuite à jour le `SelectCommand` donc qui utilise un `JOIN` qui retourne des colonnes supplémentaires à partir de tables associées. Enfin, nous créer une classe correspondante de la couche de logique métier et expliquent comment utiliser le TableAdapter dans une page web ASP.NET.
+Au cours des différentes étapes suivantes, nous allons créer un TableAdapter qui, à l’origine, utilise une requête principale qui omet tout `JOIN` s afin que les procédures stockées d’insertion, de mise à jour et de suppression correspondantes soient générées automatiquement. Nous allons ensuite mettre à jour le `SelectCommand` afin que utilise un `JOIN` qui retourne des colonnes supplémentaires à partir de tables associées. Enfin, nous allons créer une classe de couche de logique métier correspondante et illustrer l’utilisation du TableAdapter dans une page Web ASP.NET.
 
-## <a name="step-1-creating-the-tableadapter-using-a-simplified-main-query"></a>Étape 1 : Création du TableAdapter à l’aide d’une requête principale simplifiée
+## <a name="step-1-creating-the-tableadapter-using-a-simplified-main-query"></a>Étape 1 : création du TableAdapter à l’aide d’une requête principale simplifiée
 
-Pour ce didacticiel, nous allons ajouter un TableAdapter et la table de données fortement typées pour la `Employees` table dans le `NorthwindWithSprocs` jeu de données. Le `Employees` table contient un `ReportsTo` champ qui spécifié le `EmployeeID` de l’employé s responsable. Par exemple, les employés Anne Dodsworth a un `ReportTo` valeur 5, qui est le `EmployeeID` de Steven Buchanan. Par conséquent, Anne signale à Steven, son responsable. En même temps que la création de rapports chaque employé s `ReportsTo` valeur, nous souhaitions également récupérer le nom de son responsable. Cela peut être accompli à l’aide un `JOIN`. Mais l’utilisation un `JOIN` lors de la création du TableAdapter empêche l’Assistant à partir de la génération automatique de l’insertion correspondante, mettre à jour et supprimer des fonctionnalités. Par conséquent, nous allons commencer par la création d’un TableAdapter dont requête principale ne contienne aucun `JOIN` s. Ensuite, à l’étape 2, nous mettrons à jour la procédure stockée de requête principale pour récupérer le nom de gestionnaire s via un `JOIN`.
+Pour ce didacticiel, nous allons ajouter un TableAdapter et un DataTable fortement typés pour la table `Employees` dans le jeu de données `NorthwindWithSprocs`. La table `Employees` contient un champ `ReportsTo` qui spécifie la `EmployeeID` du gestionnaire des employés. Par exemple, l’employé Anne Dodsworth a une valeur `ReportTo` de 5, qui est la `EmployeeID` de Steven Buchanan. Par conséquent, Anne signale à Steven, son responsable. En plus de signaler chaque valeur de `ReportsTo` d’employé, nous pouvons également récupérer le nom de son responsable. Cela peut être accompli à l’aide d’un `JOIN`. Toutefois, l’utilisation d’un `JOIN` lors de la création initiale du TableAdapter empêche l’Assistant de générer automatiquement les fonctionnalités d’insertion, de mise à jour et de suppression correspondantes. Par conséquent, nous allons commencer par créer un TableAdapter dont la requête principale ne contient aucun `JOIN` s. Ensuite, à l’étape 2, nous allons mettre à jour la procédure stockée principale de la requête pour récupérer le nom du responsable via un `JOIN`.
 
-Commencez par ouvrir le `NorthwindWithSprocs` jeu de données dans le `~/App_Code/DAL` dossier. Avec le bouton droit sur le concepteur, sélectionnez l’option Ajouter dans le menu contextuel et choisissez l’élément de menu du TableAdapter. Cette action lance l’Assistant Configuration de TableAdapter. Comme la Figure 5 illustre, laisser l’Assistant créer des procédures stockées et cliquez sur Suivant. Pour un rappel sur la création de nouvelles procédures stockées à partir l’Assistant TableAdapter s, consultez le [création de nouvelles procédures stockées pour s DataSet typée TableAdapters](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) didacticiel.
+Commencez par ouvrir le jeu de données `NorthwindWithSprocs` dans le dossier `~/App_Code/DAL`. Cliquez avec le bouton droit sur le concepteur, sélectionnez l’option Ajouter dans le menu contextuel, puis choisissez l’élément de menu TableAdapter. L’Assistant Configuration de TableAdapter est lancé. Comme illustré à la figure 5, utilisez l’Assistant pour créer de nouvelles procédures stockées, puis cliquez sur suivant. Pour obtenir un actualisateur sur la création de nouvelles procédures stockées à partir de l’Assistant TableAdapter, consultez le didacticiel [création de nouvelles procédures stockées pour les TableAdapters de DataSet typé](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) .
 
-[![Sélectionnez les créer nouvelles procédures stockées Option](updating-the-tableadapter-to-use-joins-cs/_static/image10.png)](updating-the-tableadapter-to-use-joins-cs/_static/image9.png)
+[![sélectionnez l’option créer de nouvelles procédures stockées](updating-the-tableadapter-to-use-joins-cs/_static/image10.png)](updating-the-tableadapter-to-use-joins-cs/_static/image9.png)
 
-**Figure 5**: Sélectionnez la créer nouveau des procédures stockées Option ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image11.png))
+**Figure 5**: sélectionnez l’option créer de nouvelles procédures stockées ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image11.png))
 
-Utilisez la commande suivante `SELECT` instruction pour la requête principale de TableAdapter s :
+Utilisez l’instruction `SELECT` suivante pour la requête principale du TableAdapter :
 
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample4.sql)]
 
-Étant donné que cette requête ne contienne pas `JOIN` s, l’Assistant TableAdapter crée automatiquement des procédures stockées avec correspondant `INSERT`, `UPDATE`, et `DELETE` instructions, ainsi que d’une procédure stockée pour l’exécution de la main requête.
+Étant donné que cette requête n’inclut aucun `JOIN`, l’Assistant TableAdapter crée automatiquement des procédures stockées avec les instructions `INSERT`, `UPDATE`et `DELETE` correspondantes, ainsi qu’une procédure stockée pour l’exécution de la requête principale.
 
-L’étape suivante nous permet de nommer les procédures stockées de TableAdapter. Utilisez les noms `Employees_Select`, `Employees_Insert`, `Employees_Update`, et `Employees_Delete`, comme illustré dans la Figure 6.
+L’étape suivante nous permet de nommer les procédures stockées du TableAdapter. Utilisez les noms `Employees_Select`, `Employees_Insert`, `Employees_Update`et `Employees_Delete`, comme illustré à la figure 6.
 
-[![Nommez les procédures stockées de TableAdapter](updating-the-tableadapter-to-use-joins-cs/_static/image13.png)](updating-the-tableadapter-to-use-joins-cs/_static/image12.png)
+[![nom des procédures stockées du TableAdapter](updating-the-tableadapter-to-use-joins-cs/_static/image13.png)](updating-the-tableadapter-to-use-joins-cs/_static/image12.png)
 
-**Figure 6**: Nommez les procédures stockées de TableAdapter s ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image14.png))
+**Figure 6**: nommer les procédures stockées du TableAdapter ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image14.png))
 
-L’étape finale nous invite à nommer les méthodes de s TableAdapter. Utilisez `Fill` et `GetEmployees` en tant que les noms de méthode. Veillez également à laisser les créer des méthodes pour envoyer des mises à jour directement à la case à cocher de la base de données (GenerateDBDirectMethods) activée.
+L’étape finale nous invite à nommer les méthodes de TableAdapter s. Utilisez `Fill` et `GetEmployees` comme noms de méthode. Veillez également à activer la case à cocher créer des méthodes pour envoyer directement des mises à jour à la base de données (GenerateDBDirectMethods).
 
-[![Nom du remplissage de méthodes TableAdapter s et GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image16.png)](updating-the-tableadapter-to-use-joins-cs/_static/image15.png)
+[Nom de l' ![les méthodes Fill et GetEmployees du TableAdapter](updating-the-tableadapter-to-use-joins-cs/_static/image16.png)](updating-the-tableadapter-to-use-joins-cs/_static/image15.png)
 
-**Figure 7**: Nommez les méthodes du TableAdapter s `Fill` et `GetEmployees` ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image17.png))
+**Figure 7**: nommer les méthodes de TableAdapter s `Fill` et `GetEmployees` ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image17.png))
 
-À l’issue de l’Assistant, prenez un moment pour examiner les procédures stockées dans la base de données. Vous devez voir quatre nouveaux : `Employees_Select`, `Employees_Insert`, `Employees_Update`, et `Employees_Delete`. Ensuite, inspecter la `EmployeesDataTable` et `EmployeesTableAdapter` venez de créer. La table de données contient une colonne pour chaque champ renvoyé par la requête principale. Cliquez sur le TableAdapter et passez à la fenêtre Propriétés. Il vous verrez que le `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés sont correctement configurées pour appeler les procédures stockées correspondantes.
+Après avoir terminé l’Assistant, prenez un moment pour examiner les procédures stockées dans la base de données. Vous devez en voir quatre nouvelles : `Employees_Select`, `Employees_Insert`, `Employees_Update`et `Employees_Delete`. Ensuite, examinez le `EmployeesDataTable` et `EmployeesTableAdapter` venez de créer. Le DataTable contient une colonne pour chaque champ retourné par la requête principale. Cliquez sur le TableAdapter, puis accédez au Fenêtre Propriétés. Vous verrez que les propriétés `InsertCommand`, `UpdateCommand`et `DeleteCommand` sont correctement configurées pour appeler les procédures stockées correspondantes.
 
-[![Le TableAdapter inclut Insert, Update et supprimer des fonctionnalités](updating-the-tableadapter-to-use-joins-cs/_static/image19.png)](updating-the-tableadapter-to-use-joins-cs/_static/image18.png)
+[![le TableAdapter comprend des fonctionnalités d’insertion, de mise à jour et de suppression](updating-the-tableadapter-to-use-joins-cs/_static/image19.png)](updating-the-tableadapter-to-use-joins-cs/_static/image18.png)
 
-**Figure 8**: Le TableAdapter inclut insérer mise à jour et supprimer des fonctionnalités ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image20.png))
+**Figure 8**: le TableAdapter comprend des fonctionnalités d’insertion, de mise à jour et de suppression ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image20.png))
 
-Lors de l’insertion, mise à jour et supprimer des procédures stockées créées automatiquement et le `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés configurées correctement, nous sommes prêts à personnaliser le `SelectCommand` s procédure stockée pour retourner supplémentaires informations sur chaque employé s responsable. Plus précisément, nous devons mettre à jour le `Employees_Select` une procédure stockée à utiliser un `JOIN` et retourner le Gestionnaire de s `FirstName` et `LastName` valeurs. Une fois la procédure stockée a été mis à jour, nous devrons mettre à jour la table de données pour qu’elle inclue ces colonnes supplémentaires. Nous les aborderons ces deux tâches dans les étapes 2 et 3.
+Une fois les procédures stockées INSERT, Update et Delete créées automatiquement et les propriétés `InsertCommand`, `UpdateCommand`et `DeleteCommand` correctement configurées, nous sommes prêts à personnaliser la procédure stockée `SelectCommand` s pour qu’elle renvoie des informations supplémentaires sur chaque gestionnaire des employés. En particulier, nous devons mettre à jour la procédure stockée `Employees_Select` pour utiliser une `JOIN` et retourner les valeurs `FirstName` et `LastName` du gestionnaire. Après la mise à jour de la procédure stockée, nous devons mettre à jour le DataTable afin qu’il inclue ces colonnes supplémentaires. Nous allons aborder ces deux tâches aux étapes 2 et 3.
 
-## <a name="step-2-customizing-the-stored-procedure-to-include-ajoin"></a>Étape 2 : Personnalisation de la procédure stockée pour inclure un`JOIN`
+## <a name="step-2-customizing-the-stored-procedure-to-include-ajoin"></a>Étape 2 : personnalisation de la procédure stockée pour inclure une`JOIN`
 
-Commencez par passer à l’Explorateur de serveurs, la descente dans le dossier de procédures stockées de base de données Northwind et l’ouverture du `Employees_Select` procédure stockée. Si vous ne voyez pas cette procédure stockée, avec le bouton droit sur le dossier Stored Procedures, cliquez sur Actualiser. Mettre à jour de la procédure stockée afin qu’il utilise un `LEFT JOIN` pour retourner le Gestionnaire de s tout d’abord et du nom :
+Commencez par accéder à la Explorateur de serveurs, en explorant le dossier des procédures stockées de la base de données Northwind et en ouvrant la procédure stockée `Employees_Select`. Si vous ne voyez pas cette procédure stockée, cliquez avec le bouton droit sur le dossier procédures stockées, puis choisissez actualiser. Mettez à jour la procédure stockée pour qu’elle utilise une `LEFT JOIN` pour retourner le nom et le prénom du gestionnaire :
 
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample5.sql)]
 
-Après la mise à jour le `SELECT` instruction, enregistrez les modifications apportées en accédant au menu fichier et en choisissant Enregistrer `Employees_Select`. Vous pouvez également, cliquez sur l’icône Enregistrer dans la barre d’outils ou appuyez sur Ctrl + S. Après avoir enregistré vos modifications, cliquez sur le `Employees_Select` procédure stockée dans l’Explorateur de serveurs et cliquez sur Exécuter. Cela sera exécuter la procédure stockée et afficher ses résultats dans la fenêtre de sortie (voir la Figure 9).
+Après avoir mis à jour l’instruction `SELECT`, enregistrez les modifications en accédant au menu fichier, puis en choisissant enregistrer `Employees_Select`. Vous pouvez également cliquer sur l’icône Enregistrer dans la barre d’outils ou appuyer sur CTRL + S. Après avoir enregistré vos modifications, cliquez avec le bouton droit sur la procédure stockée `Employees_Select` dans le Explorateur de serveurs puis sélectionnez Exécuter. Cette opération exécute la procédure stockée et affiche ses résultats dans la fenêtre sortie (voir figure 9).
 
-[![Les résultats de procédures stockées sont affichés dans la fenêtre Sortie](updating-the-tableadapter-to-use-joins-cs/_static/image22.png)](updating-the-tableadapter-to-use-joins-cs/_static/image21.png)
+[![les résultats des procédures stockées s’affichent dans la Fenêtre Sortie](updating-the-tableadapter-to-use-joins-cs/_static/image22.png)](updating-the-tableadapter-to-use-joins-cs/_static/image21.png)
 
-**Figure 9**: Les résultats de procédures stockées sont affichés dans la fenêtre Sortie ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image23.png))
+**Figure 9**: les résultats des procédures stockées s’affichent dans la fenêtre sortie ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image23.png))
 
-## <a name="step-3-updating-the-datatable-s-columns"></a>Étape 3 : La mise à jour les colonnes de s DataTable
+## <a name="step-3-updating-the-datatable-s-columns"></a>Étape 3 : mise à jour des colonnes du DataTable s
 
-À ce stade, le `Employees_Select` procédure stockée renvoie `ManagerFirstName` et `ManagerLastName` valeurs, mais le `EmployeesDataTable` manque de ces colonnes. Ces colonnes manquantes peuvent être ajoutées à la table de données de deux manières :
+À ce stade, la procédure stockée `Employees_Select` retourne `ManagerFirstName` et `ManagerLastName` valeurs, mais ces colonnes ne sont pas présentes dans le `EmployeesDataTable`. Ces colonnes manquantes peuvent être ajoutées à l’objet DataTable de l’une des deux manières suivantes :
 
-- **Manuellement** - avec le bouton droit sur la table de données dans le Concepteur de DataSet et, dans le menu Ajouter, choisissez la colonne. Vous pouvez nommer la colonne, puis définissez ses propriétés en conséquence.
-- **Automatiquement** -l’Assistant Configuration de TableAdapter met à jour les colonnes de s DataTable pour refléter les champs retournés par la `SelectCommand` procédure stockée. Lorsque vous utilisez des instructions SQL ad hoc, l’Assistant va également supprimer la `InsertCommand`, `UpdateCommand`, et `DeleteCommand` propriétés depuis le `SelectCommand` contient maintenant un `JOIN`. Mais lorsque vous utilisez des procédures stockées, ces propriétés d’une commande restent intactes.
+- **Manuellement** , cliquez avec le bouton droit sur le DataTable dans le concepteur de DataSet et, dans le menu Ajouter, choisissez colonne. Vous pouvez ensuite nommer la colonne et définir ses propriétés en conséquence.
+- **Automatiquement** : l’Assistant Configuration de TableAdapter met à jour les colonnes DataTable s pour refléter les champs retournés par la procédure stockée `SelectCommand`. Lorsque vous utilisez des instructions SQL ad hoc, l’Assistant supprime également les propriétés `InsertCommand`, `UpdateCommand`et `DeleteCommand`, puisque le `SelectCommand` contient maintenant une `JOIN`. Toutefois, lorsque vous utilisez des procédures stockées, ces propriétés de commande restent intactes.
 
-Nous avons déjà exploré manuellement ajouter des colonnes de table de données dans les didacticiels précédents, y compris [maître/détail à l’aide d’une liste à puces des enregistrements maîtres avec une DataList des détails](../filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs.md) et [télécharger des fichiers](../working-with-binary-files/uploading-files-cs.md), et nous allons Examinez à nouveau ce processus plus en détail dans notre didacticiel suivant. Pour ce didacticiel, toutefois, laisser s utiliser l’approche automatique via l’Assistant Configuration de TableAdapter.
+Nous avons exploré manuellement l’ajout de colonnes de DataTable dans les didacticiels précédents, notamment le [maître/détail à l’aide d’une liste à puces d’enregistrements principaux avec les détails DataList](../filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs.md) et le [chargement de fichiers](../working-with-binary-files/uploading-files-cs.md), et nous examinerons à nouveau ce processus plus en détail dans le didacticiel suivant. Pour ce didacticiel, toutefois, nous allons utiliser l’approche automatique via l’Assistant Configuration de TableAdapter.
 
-Démarrer en cliquant sur le `EmployeesTableAdapter` et en sélectionnant configurer dans le menu contextuel. Ceci fait apparaître l’Assistant Configuration de TableAdapter, qui répertorie les procédures stockées utilisées pour la sélection, insertion, mise à jour et suppression, ainsi que leurs valeurs de retour et les paramètres (le cas échéant). La figure 10 illustre cet Assistant. Ici, nous pouvons voir que le `Employees_Select` procédure stockée maintenant renvoie le `ManagerFirstName` et `ManagerLastName` champs.
+Commencez par cliquer avec le bouton droit sur le `EmployeesTableAdapter` et sélectionnez configurer dans le menu contextuel. L’Assistant Configuration de TableAdapter s’affiche, qui répertorie les procédures stockées utilisées pour la sélection, l’insertion, la mise à jour et la suppression, ainsi que les valeurs de retour et les paramètres (le cas échéant). La figure 10 illustre cet Assistant. Ici, nous pouvons voir que la procédure stockée `Employees_Select` retourne désormais les champs `ManagerFirstName` et `ManagerLastName`.
 
-[![Le montre l’Assistant la liste des colonnes mises à jour pour le Employees_Select de procédure stockée](updating-the-tableadapter-to-use-joins-cs/_static/image25.png)](updating-the-tableadapter-to-use-joins-cs/_static/image24.png)
+[![l’Assistant affiche la liste des colonnes mises à jour pour la procédure stockée Employees_Select](updating-the-tableadapter-to-use-joins-cs/_static/image25.png)](updating-the-tableadapter-to-use-joins-cs/_static/image24.png)
 
-**Figure 10**: L’Assistant affiche la liste des colonnes mises à jour pour le `Employees_Select` la procédure stockée ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image26.png))
+**Figure 10**: l’Assistant affiche la liste des colonnes mises à jour pour la procédure stockée `Employees_Select` ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image26.png))
 
-Terminez l’Assistant en cliquant sur Terminer. Une fois de retour vers le Concepteur de DataSet, la `EmployeesDataTable` inclut deux colonnes supplémentaires : `ManagerFirstName` et `ManagerLastName`.
+Terminez l’Assistant en cliquant sur Terminer. Lors du retour au concepteur de DataSet, le `EmployeesDataTable` comprend deux colonnes supplémentaires : `ManagerFirstName` et `ManagerLastName`.
 
-[![Le EmployeesDataTable contient deux nouvelles colonnes](updating-the-tableadapter-to-use-joins-cs/_static/image28.png)](updating-the-tableadapter-to-use-joins-cs/_static/image27.png)
+[![EmployeesDataTable contient deux nouvelles colonnes](updating-the-tableadapter-to-use-joins-cs/_static/image28.png)](updating-the-tableadapter-to-use-joins-cs/_static/image27.png)
 
-**Figure 11**: Le `EmployeesDataTable` contient deux nouvelles colonnes ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image29.png))
+**Figure 11**: le `EmployeesDataTable` contient deux nouvelles colonnes ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image29.png))
 
-Pour montrer que la mise à jour `Employees_Select` procédure stockée est en vigueur et que l’instruction insert, update et delete des fonctionnalités du TableAdapter sont toujours fonctionnels, s permettent de créer une page web qui permet aux utilisateurs d’afficher et supprimer des employés. Avant de créer une telle page, toutefois, nous devons tout d’abord créer une nouvelle classe dans la couche de logique métier pour travailler avec les employés de la `NorthwindWithSprocs` jeu de données. À l’étape 4, nous allons créer un `EmployeesBLLWithSprocs` classe. À l’étape 5, nous allons utiliser cette classe à partir d’une page ASP.NET.
+Pour illustrer que la procédure stockée `Employees_Select` mise à jour est en vigueur et que les fonctionnalités d’insertion, de mise à jour et de suppression du TableAdapter sont toujours fonctionnelles, créez une page Web qui permet aux utilisateurs d’afficher et de supprimer des employés. Avant de créer une telle page, toutefois, nous devons d’abord créer une nouvelle classe dans la couche de logique métier pour travailler avec des employés à partir du jeu de données `NorthwindWithSprocs`. À l’étape 4, nous allons créer une classe `EmployeesBLLWithSprocs`. À l’étape 5, nous utiliserons cette classe à partir d’une page ASP.NET.
 
-## <a name="step-4-implementing-the-business-logic-layer"></a>Étape 4 : Implémentation de la couche de logique métier
+## <a name="step-4-implementing-the-business-logic-layer"></a>Étape 4 : implémentation de la couche de logique métier
 
-Créer un nouveau fichier de classe dans le `~/App_Code/BLL` dossier nommé `EmployeesBLLWithSprocs.cs`. Cette classe imite la sémantique existants `EmployeesBLL` (classe), uniquement cette nouvelle une fournit des méthodes moins et utilise le `NorthwindWithSprocs` jeu de données (au lieu du `Northwind` jeu de données). Ajoutez le code suivant à la classe `EmployeesBLLWithSprocs` .
+Créez un nouveau fichier de classe dans le dossier `~/App_Code/BLL` nommé `EmployeesBLLWithSprocs.cs`. Cette classe imite la sémantique de la classe de `EmployeesBLL` existante, seul celle-ci fournit moins de méthodes et utilise le jeu de données `NorthwindWithSprocs` (au lieu du DataSet `Northwind`). Ajoutez le code suivant à la classe `EmployeesBLLWithSprocs` .
 
 [!code-csharp[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample6.cs)]
 
-Le `EmployeesBLLWithSprocs` classe s `Adapter` propriété retourne une instance de la `NorthwindWithSprocs` DataSet s `EmployeesTableAdapter`. Cela est utilisé par la classe s `GetEmployees` et `DeleteEmployee` méthodes. Le `GetEmployees` les appels de méthode le `EmployeesTableAdapter` s correspondant `GetEmployees` (méthode), qui appelle le `Employees_Select` procédure stockée et remplit ses résultats dans un `EmployeeDataTable`. Le `DeleteEmployee` méthode même appelle le `EmployeesTableAdapter` s `Delete` (méthode), qui appelle le `Employees_Delete` procédure stockée.
+La propriété de la classe `EmployeesBLLWithSprocs` s `Adapter` retourne une instance du `NorthwindWithSprocs` DataSet s `EmployeesTableAdapter`. Cela est utilisé par les méthodes `GetEmployees` et `DeleteEmployee`. La méthode `GetEmployees` appelle la méthode `GetEmployees` correspondante `EmployeesTableAdapter`, qui appelle la procédure stockée `Employees_Select` et remplit ses résultats dans un `EmployeeDataTable`. La méthode `DeleteEmployee` appelle de la même manière la méthode `EmployeesTableAdapter` s `Delete`, qui appelle la procédure stockée `Employees_Delete`.
 
-## <a name="step-5-working-with-the-data-in-the-presentation-layer"></a>Étape 5 : Utilisation des données dans la couche de présentation
+## <a name="step-5-working-with-the-data-in-the-presentation-layer"></a>Étape 5 : utilisation des données dans la couche de présentation
 
-Avec la `EmployeesBLLWithSprocs` classe terminée, nous vous êtes prêt à travailler avec des données sur les employés via une page ASP.NET. Ouvrir le `JOINs.aspx` page dans le `AdvancedDAL` dossier et faites glisser un GridView à partir de la boîte à outils vers le concepteur, en définissant son `ID` propriété `Employees`. Ensuite, à partir de la balise active de s GridView, lier la grille pour un nouveau contrôle ObjectDataSource nommé `EmployeesDataSource`.
+Une fois la classe `EmployeesBLLWithSprocs` terminée, nous sommes prêts à travailler avec les données des employés via une page ASP.NET. Ouvrez la page `JOINs.aspx` dans le dossier `AdvancedDAL` et faites glisser un contrôle GridView de la boîte à outils vers le concepteur, en affectant à sa propriété `ID` la valeur `Employees`. Ensuite, à partir de la balise active GridView s, liez la grille à un nouveau contrôle ObjectDataSource nommé `EmployeesDataSource`.
 
-Configurer l’ObjectDataSource à utiliser le `EmployeesBLLWithSprocs` classe et, dans les onglets SELECT et DELETE, vérifiez que le `GetEmployees` et `DeleteEmployee` méthodes sont sélectionnés dans la liste déroulante. Cliquez sur Terminer pour terminer la configuration de s ObjectDataSource.
+Configurez l’ObjectDataSource pour utiliser la classe `EmployeesBLLWithSprocs` et, à partir des onglets sélectionner et supprimer, assurez-vous que les méthodes `GetEmployees` et `DeleteEmployee` sont sélectionnées dans les listes déroulantes. Cliquez sur Terminer pour terminer la configuration de ObjectDataSource s.
 
-[![Configurer pour utiliser la classe EmployeesBLLWithSprocs ObjectDataSource](updating-the-tableadapter-to-use-joins-cs/_static/image31.png)](updating-the-tableadapter-to-use-joins-cs/_static/image30.png)
+[![configurer ObjectDataSource pour utiliser la classe EmployeesBLLWithSprocs](updating-the-tableadapter-to-use-joins-cs/_static/image31.png)](updating-the-tableadapter-to-use-joins-cs/_static/image30.png)
 
-**Figure 12**: Configurer l’ObjectDataSource à utiliser le `EmployeesBLLWithSprocs` classe ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image32.png))
+**Figure 12**: configurer ObjectDataSource pour utiliser la classe `EmployeesBLLWithSprocs` ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image32.png))
 
-[![Avoir l’utilisation de l’ObjectDataSource les GetEmployees et les méthodes de DeleteEmployee](updating-the-tableadapter-to-use-joins-cs/_static/image34.png)](updating-the-tableadapter-to-use-joins-cs/_static/image33.png)
+[![que ObjectDataSource utilise les méthodes GetEmployees et DeleteEmployee](updating-the-tableadapter-to-use-joins-cs/_static/image34.png)](updating-the-tableadapter-to-use-joins-cs/_static/image33.png)
 
-**Figure 13**: Avoir l’utilisation de l’ObjectDataSource le `GetEmployees` et `DeleteEmployee` méthodes ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image35.png))
+**Figure 13**: avoir l’ObjectDataSource utiliser les méthodes `GetEmployees` et `DeleteEmployee` ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image35.png))
 
-Visual Studio ajoutera un BoundField au GridView pour chacun de la `EmployeesDataTable` des colonnes de s. Supprimez tous ces BoundFields à l’exception de `Title`, `LastName`, `FirstName`, `ManagerFirstName`, et `ManagerLastName` et renommer le `HeaderText` propriétés pour les quatre derniers BoundFields pour nom, prénom, prénom Manager s, et Gestionnaire de s nom, respectivement.
+Visual Studio ajoute un BoundField au GridView pour chaque colonne `EmployeesDataTable` s. Supprimez tous ces BoundFields, à l’exception de `Title`, `LastName`, `FirstName`, `ManagerFirstName`et `ManagerLastName` et renommez les propriétés `HeaderText` des quatre derniers BoundFields, respectivement, Last Name, First Name, Manager s First Name et Manager Names Name, respectivement.
 
-Pour permettre aux utilisateurs de supprimer des employés à partir de cette page, nous devons faire deux choses. Tout d’abord, demandez à GridView pour fournir des capacités de suppression en sélectionnant l’option Activer la suppression à partir de sa balise active. Ensuite, modifiez le s ObjectDataSource `OldValuesParameterFormatString` propriété à partir de la valeur définie par l’Assistant ObjectDataSource (`original_{0}`) à sa valeur par défaut (`{0}`). Après avoir apporté ces modifications, votre balisage déclaratif s GridView et ObjectDataSource doit ressembler à ce qui suit :
+Pour permettre aux utilisateurs de supprimer des employés de cette page, vous devez effectuer deux opérations. Tout d’abord, demandez au GridView de fournir des fonctionnalités de suppression en activant l’option Activer la suppression de sa balise active. Ensuite, modifiez la propriété ObjectDataSource s `OldValuesParameterFormatString` à partir de la valeur définie par l’Assistant ObjectDataSource (`original_{0}`) sur sa valeur par défaut (`{0}`). Une fois ces modifications effectuées, vos balises déclaratives GridView et ObjectDataSource doivent ressembler à ce qui suit :
 
 [!code-aspx[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample7.aspx)]
 
-Tester la page en accédant à via un navigateur. Comme le montre la Figure 14, la page répertorie chaque employé et son gestionnaire s nom (en supposant qu’il en a une).
+Testez la page en la visitant via un navigateur. Comme le montre la figure 14, la page répertorie chaque employé et son nom de responsable (en supposant qu’il en possède un).
 
-[![La jointure dans la Employees_Select procédure stockée renvoie le nom de s Manager](updating-the-tableadapter-to-use-joins-cs/_static/image37.png)](updating-the-tableadapter-to-use-joins-cs/_static/image36.png)
+[![la jointure dans la procédure stockée Employees_Select renvoie le nom du responsable](updating-the-tableadapter-to-use-joins-cs/_static/image37.png)](updating-the-tableadapter-to-use-joins-cs/_static/image36.png)
 
-**Figure 14**: Le `JOIN` dans le `Employees_Select` procédure stockée retourne le nom de gestionnaire ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image38.png))
+**Figure 14**: la `JOIN` dans la procédure stockée `Employees_Select` renvoie le nom du responsable ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image38.png))
 
-En cliquant sur le bouton Supprimer démarre le workflow de suppression, ce qui se termine par l’exécution de la `Employees_Delete` procédure stockée. Toutefois, la tentative `DELETE` instruction dans la procédure stockée échoue en raison d’une violation de contrainte de clé étrangère (voir Figure 15). Plus précisément, chaque employé possède un ou plusieurs enregistrements la `Orders` table, à l’origine de la suppression échoue.
+Le fait de cliquer sur le bouton supprimer démarre le workflow de suppression, qui termine l’exécution de la procédure stockée `Employees_Delete`. Toutefois, l’instruction tentée `DELETE` dans la procédure stockée échoue en raison d’une violation de contrainte de clé étrangère (voir figure 15). Plus précisément, chaque employé possède un ou plusieurs enregistrements dans la table `Orders`, ce qui entraîne l’échec de la suppression.
 
-[![Suppression d’un employé qui a des résultats de commandes correspondantes dans une Violation de contrainte de clé étrangère](updating-the-tableadapter-to-use-joins-cs/_static/image40.png)](updating-the-tableadapter-to-use-joins-cs/_static/image39.png)
+[![la suppression d’un employé qui a des commandes correspondantes entraîne une violation de contrainte de clé étrangère](updating-the-tableadapter-to-use-joins-cs/_static/image40.png)](updating-the-tableadapter-to-use-joins-cs/_static/image39.png)
 
-**Figure 15**: Suppression d’un employé qui a des résultats de commandes correspondantes dans une Violation de contrainte de clé étrangère ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image41.png))
+**Figure 15**: la suppression d’un employé qui a des commandes correspondantes entraîne une violation de contrainte de clé étrangère ([cliquez pour afficher l’image en taille réelle](updating-the-tableadapter-to-use-joins-cs/_static/image41.png))
 
-Pour autoriser un employé à être supprimé vous pouvez :
+Pour autoriser la suppression d’un employé, vous pouvez :
 
-- Mettre à jour de la contrainte de clé étrangère pour enchaîner des suppressions,
-- Supprimez manuellement les enregistrements à partir de la `Orders` table des employés que vous souhaitez supprimer, ou
-- Mise à jour le `Employees_Delete` procédure stockée pour tout d’abord supprimer les enregistrements associés à partir de la `Orders` table avant de supprimer le `Employees` enregistrement. Nous avons abordé cette technique dans le [à l’aide des procédures stockées existantes pour s DataSet typée TableAdapters](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) didacticiel.
+- Mettre à jour la contrainte de clé étrangère vers les suppressions en cascade,
+- Supprimez manuellement les enregistrements de la table `Orders` pour les employés que vous souhaitez supprimer, ou
+- Mettez à jour la procédure stockée `Employees_Delete` pour supprimer d’abord les enregistrements associés de la table `Orders` avant de supprimer l’enregistrement `Employees`. Nous avons abordé cette technique dans le didacticiel [utilisation de procédures stockées existantes pour les TableAdapters de DataSet typé](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) .
 
-Je laisse cela en guise d’exercice pour le lecteur.
+Je laisse cela en tant qu’exercice pour le lecteur.
 
 ## <a name="summary"></a>Récapitulatif
 
-Lorsque vous travaillez avec des bases de données relationnelle, il est courant pour les requêtes extraire leurs données à partir de plusieurs des tables associées. Sous-requêtes en corrélation et `JOIN` fournissent deux techniques différentes pour accéder aux données à partir de tables associées dans une requête. Dans des didacticiels précédents, nous avons apporté plus fréquemment utilisent des sous-requêtes corrélées, car le TableAdapter ne peut pas générer automatiquement `INSERT`, `UPDATE`, et `DELETE` instructions pour les requêtes impliquant `JOIN` s. Bien que ces valeurs peuvent être fournies manuellement, lors de l’utilisation d’instructions SQL ad hoc toutes les personnalisations sont remplacées lorsque l’Assistant Configuration de TableAdapter est terminé.
+Lorsque vous utilisez des bases de données relationnelles, il est courant que les requêtes extraient leurs données à partir de plusieurs tables associées. Les sous-requêtes corrélées et les `JOIN` s fournissent deux techniques différentes pour accéder aux données à partir de tables associées dans une requête. Dans les didacticiels précédents, nous utilisons le plus souvent des sous-requêtes corrélées car le TableAdapter ne peut pas générer automatiquement les instructions `INSERT`, `UPDATE`et `DELETE` pour les requêtes impliquant `JOIN` s. Si ces valeurs peuvent être fournies manuellement, lorsque vous utilisez des instructions SQL ad hoc, toutes les personnalisations sont remplacées à la fin de l’Assistant Configuration de TableAdapter.
 
-Heureusement, les TableAdapters créés à l’aide de procédures stockées ne sont pas confrontés à partir de la fragilité de même que ceux créés à l’aide d’instructions SQL ad hoc. Par conséquent, il est possible de créer un TableAdapter dont requête principale utilise un `JOIN` lors de l’utilisation de procédures stockées. Dans ce didacticiel, nous avons vu comment créer un TableAdapter de ce type. Nous avons commencé à l’aide un `JOIN`-moins `SELECT` de requête pour la requête principale de TableAdapter s afin que le correspondante insert, update et les procédures de suppression stockée soient créées automatiquement. Le TableAdapter s initial configuration terminée, nous avons augmenté la `SelectCommand` une procédure stockée à utiliser un `JOIN` et ré-exécuté l’Assistant Configuration de TableAdapter pour mettre à jour le `EmployeesDataTable` des colonnes de s.
+Heureusement, les TableAdapters créés à l’aide de procédures stockées ne souffrent pas de la même fragilité que celles créées à l’aide d’instructions SQL ad hoc. Par conséquent, il est possible de créer un TableAdapter dont la requête principale utilise un `JOIN` lors de l’utilisation de procédures stockées. Dans ce didacticiel, nous avons vu comment créer un TableAdapter de ce type. Nous avons commencé par utiliser une requête `JOIN``SELECT` pour la requête principale du TableAdapter afin que les procédures stockées d’insertion, de mise à jour et de suppression correspondantes soient créées automatiquement. Une fois la configuration initiale du TableAdapter terminée, nous avons augmenté la `SelectCommand` procédure stockée pour utiliser une `JOIN` et réexécuté l’Assistant Configuration de TableAdapter pour mettre à jour les colonnes `EmployeesDataTable` s.
 
-Exécuter à nouveau l’Assistant Configuration de TableAdapter automatiquement mis à jour le `EmployeesDataTable` colonnes afin de refléter les champs de données retournés par la `Employees_Select` procédure stockée. Vous pouvez également nous aurions pu ajouter ces colonnes manuellement au DataTable. Nous allons explorer les ajouter manuellement des colonnes au DataTable dans le didacticiel suivant.
+La nouvelle exécution de l’Assistant Configuration de TableAdapter a mis à jour automatiquement les colonnes de `EmployeesDataTable` pour refléter les champs de données retournés par la procédure stockée `Employees_Select`. Vous pouvez également ajouter ces colonnes manuellement au DataTable. Nous allons explorer l’ajout manuel de colonnes au DataTable dans le prochain didacticiel.
 
 Bonne programmation !
 
 ## <a name="about-the-author"></a>À propos de l’auteur
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept les livres sur ASP/ASP.NET et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec les technologies Web Microsoft depuis 1998. Scott fonctionne comme un consultant indépendant, formateur et writer. Son dernier ouvrage est [*SAM animer vous-même ASP.NET 2.0 des dernières 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve à [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept livres ASP/ASP. net et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec des technologies Web Microsoft depuis 1998. Scott travaille en tant que consultant, formateur et auteur indépendant. Son dernier livre est [*Sams vous apprend vous-même ASP.NET 2,0 en 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve sur [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
-## <a name="special-thanks-to"></a>Remerciements
+## <a name="special-thanks-to"></a>Remerciements à
 
-Cette série de didacticiels a été révisée par plusieurs réviseurs utiles. Les réviseurs tête pour ce didacticiel ont été Hilton Geisenow, David Suru et Teresa Murphy. Qui souhaitent consulter mes prochains articles MSDN ? Dans ce cas, envoyez-moi une ligne à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Cette série de didacticiels a été examinée par de nombreux réviseurs utiles. Les réviseurs de leads pour ce didacticiel étaient Hilton Geisenow, David SURU et Teresa Murphy. Vous souhaitez revoir mes prochains articles MSDN ? Si c’est le cas, insérez une ligne sur [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Précédent](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)

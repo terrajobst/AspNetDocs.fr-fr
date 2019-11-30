@@ -1,37 +1,37 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-vb
-title: Pagination et tri des données (VB) de rapports | Microsoft Docs
+title: Pagination et tri des données de rapport (VB) | Microsoft Docs
 author: rick-anderson
-description: Pagination et tri sont deux fonctionnalités très courantes lors de l’affichage des données dans une application en ligne. Dans ce didacticiel, nous allons un premier aperçu de l’ajout du tri et...
+description: La pagination et le tri sont deux fonctionnalités très courantes lors de l’affichage des données dans une application en ligne. Dans ce didacticiel, nous allons commencer par examiner l’ajout du tri et...
 ms.author: riande
 ms.date: 08/15/2006
 ms.assetid: b895e37e-0e69-45cc-a7e4-17ddd2e1b38d
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b35359de44b974566ed90e3c19afa46ab29975e8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 6785b5cd2d4d3a2c2e7f2c2fea93f5cd5e2fdf24
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131132"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74619075"
 ---
 # <a name="paging-and-sorting-report-data-vb"></a>Pagination et tri des données des rapports (VB)
 
 par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Télécharger l’exemple d’application](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_24_VB.exe) ou [télécharger le PDF](paging-and-sorting-report-data-vb/_static/datatutorial24vb1.pdf)
+[Télécharger l’exemple d’application](https://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_24_VB.exe) ou [Télécharger le PDF](paging-and-sorting-report-data-vb/_static/datatutorial24vb1.pdf)
 
-> Pagination et tri sont deux fonctionnalités très courantes lors de l’affichage des données dans une application en ligne. Dans ce didacticiel, nous allons un premier aperçu de l’ajout de tri et de pagination à vos rapports, nous allons créer puis à des didacticiels dans les futures.
+> La pagination et le tri sont deux fonctionnalités très courantes lors de l’affichage des données dans une application en ligne. Dans ce didacticiel, nous allons d’abord ajouter le tri et la pagination à vos rapports, que nous utiliserons ensuite dans les prochains didacticiels.
 
 ## <a name="introduction"></a>Introduction
 
-Pagination et tri sont deux fonctionnalités très courantes lors de l’affichage des données dans une application en ligne. Par exemple, lors de la recherche pour la documentation d’ASP.NET à une librairie en ligne, il peut y avoir des centaines d’ouvrages, mais le rapport affichant les résultats de recherche répertorie les correspondances seulement dix par page. En outre, les résultats peuvent être triées par titre, prix, nombre de pages, nom de l’auteur et ainsi de suite. Tandis que le passé des 23 didacticiels ont examiné comment créer toute une gamme de rapports, notamment les interfaces permettant l’ajout, modification et suppression de données, nous ve ne pas examiné comment trier les données et la seule pagination exemples nous ve vu ont été des contrôles DetailsView et FormView contrôles.
+La pagination et le tri sont deux fonctionnalités très courantes lors de l’affichage des données dans une application en ligne. Par exemple, lors de la recherche de livres ASP.NET dans une librairie en ligne, il peut y avoir des centaines de livres de ce type, mais le rapport qui répertorie les résultats de la recherche ne répertorie que dix correspondances par page. En outre, les résultats peuvent être triés par titre, par prix, par nombre de pages, par nom d’auteur, et ainsi de suite. Tandis que les 23 derniers didacticiels ont examiné comment créer un grand nombre de rapports, y compris les interfaces qui permettent d’ajouter, de modifier et de supprimer des données, nous n’avons pas vu comment trier les données, et les seuls exemples de pagination que nous avons vus ont été avec DetailsView et FormView commandes.
 
-Dans ce didacticiel, nous allons voir comment ajouter le tri et de pagination à vos rapports, ce qui peuvent être effectués en activant simplement quelques cases à cocher. Malheureusement, cette implémentation simpliste a ses inconvénients de que l’interface de tri laisse un peu plus tard à désirer et les routines de pagination ne sont pas conçus pour la pagination efficace dans de grands jeux de résultats. Didacticiels futures explorerons comment surmonter les restrictions de l’out-of-the-box pagination et tri des solutions.
+Dans ce didacticiel, nous allons voir comment ajouter le tri et la pagination à vos rapports, ce qui peut être accompli en cochant simplement quelques cases. Malheureusement, cette implémentation simpliste présente ses inconvénients. l’interface de tri laisse un peu de choix et les routines de pagination ne sont pas conçues pour une pagination efficace via des jeux de résultats volumineux. Les prochains didacticiels découvriront comment surmonter les limitations des solutions de pagination et de tri prêtes à l’emploi.
 
-## <a name="step-1-adding-the-paging-and-sorting-tutorial-web-pages"></a>Étape 1 : Ajout de la pagination et tri des Pages Web didacticiels
+## <a name="step-1-adding-the-paging-and-sorting-tutorial-web-pages"></a>Étape 1 : ajout des pages Web du didacticiel de pagination et de tri
 
-Avant de commencer ce didacticiel, laissez s tout d’abord prendre un moment pour ajouter les pages ASP.NET que nous aurons besoin de ce didacticiel et les trois suivants. Commencez par créer un nouveau dossier dans le projet nommé `PagingAndSorting`. Ensuite, ajoutez les pages ASP.NET cinq suivantes à ce dossier, présentant toutes les configurer pour utiliser la page maître `Site.master`:
+Avant de commencer ce didacticiel, nous allons tout d’abord prendre un moment pour ajouter les pages ASP.NET dont nous aurons besoin pour ce didacticiel et les trois prochaines. Commencez par créer un nouveau dossier dans le projet nommé `PagingAndSorting`. Ensuite, ajoutez les cinq pages ASP.NET suivantes à ce dossier, en faisant en sorte qu’elles soient toutes configurées pour utiliser la page maître `Site.master`:
 
 - `Default.aspx`
 - `SimplePagingSorting.aspx`
@@ -39,228 +39,228 @@ Avant de commencer ce didacticiel, laissez s tout d’abord prendre un moment po
 - `SortParameter.aspx`
 - `CustomSortingUI.aspx`
 
-![Créez un dossier PagingAndSorting et ajouter les Pages ASP.NET didacticiel](paging-and-sorting-report-data-vb/_static/image1.png)
+![Créer un dossier PagingAndSorting et ajouter les pages du didacticiel ASP.NET](paging-and-sorting-report-data-vb/_static/image1.png)
 
-**Figure 1**: Créez un dossier PagingAndSorting et ajouter les Pages ASP.NET didacticiel
+**Figure 1**: créer un dossier PagingAndSorting et ajouter les pages du didacticiel ASP.net
 
-Ensuite, ouvrez le `Default.aspx` page et faites glisser le `SectionLevelTutorialListing.ascx` contrôle utilisateur à partir de la `UserControls` dossier sur l’aire de conception. Ce contrôle utilisateur, que nous avons créée dans le [Pages maîtres et Navigation du Site](../introduction/master-pages-and-site-navigation-vb.md) didacticiel, énumère le plan du site et affiche ces didacticiels dans la section en cours dans une liste à puces.
+Ensuite, ouvrez la page `Default.aspx`, puis faites glisser le contrôle utilisateur `SectionLevelTutorialListing.ascx` à partir du dossier `UserControls` sur l’aire de conception. Ce contrôle utilisateur, que nous avons créé dans le didacticiel sur les [pages maîtres et la navigation](../introduction/master-pages-and-site-navigation-vb.md) dans les sites, énumère le plan du site et affiche ces didacticiels dans la section actuelle d’une liste à puces.
 
-![Ajouter le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx](paging-and-sorting-report-data-vb/_static/image2.png)
+![Ajouter le contrôle utilisateur SectionLevelTutorialListing. ascx à default. aspx](paging-and-sorting-report-data-vb/_static/image2.png)
 
-**Figure 2**: Ajouter le contrôle utilisateur de SectionLevelTutorialListing.ascx à Default.aspx
+**Figure 2**: ajouter le contrôle utilisateur SectionLevelTutorialListing. ascx à default. aspx
 
-Pour afficher la pagination et tri des didacticiels, que nous allons créer la liste à puces, nous avons besoin de les ajouter au plan du site. Ouvrez le `Web.sitemap` fichier, puis ajoutez le balisage suivant après la balise de nœud de mappage site Édition, insertion et suppression :
+Pour que la liste à puces affiche les didacticiels de pagination et de tri que nous allons créer, vous devez les ajouter au plan du site. Ouvrez le fichier `Web.sitemap` et ajoutez le balisage suivant après la modification, l’insertion et la suppression du balisage de nœud de plan de site :
 
 [!code-xml[Main](paging-and-sorting-report-data-vb/samples/sample1.xml)]
 
-![Mettre à jour le plan du Site pour inclure les nouvelles Pages ASP.NET](paging-and-sorting-report-data-vb/_static/image3.png)
+![Mettre à jour le plan du site pour inclure les nouvelles pages ASP.NET](paging-and-sorting-report-data-vb/_static/image3.png)
 
-**Figure 3**: Mettre à jour le plan du Site pour inclure les nouvelles Pages ASP.NET
+**Figure 3**: mettre à jour le plan du site pour inclure les nouvelles pages ASP.net
 
-## <a name="step-2-displaying-product-information-in-a-gridview"></a>Étape 2 : Affichage des informations sur les produits dans un GridView
+## <a name="step-2-displaying-product-information-in-a-gridview"></a>Étape 2 : affichage des informations sur le produit dans un GridView
 
-Avant de nous implémentons réellement la pagination et des fonctionnalités de tri, permettent de s tout d’abord créer un GridView non triable, non paginable standard qui répertorie les informations de produit. Il s’agit d’une tâche nous ve fait plusieurs fois avant tout au long de cette série de didacticiels, par conséquent, ces étapes doit être familier. Commencez par ouvrir le `SimplePagingSorting.aspx` page et faites glisser un contrôle GridView à partir de la boîte à outils vers le concepteur, en définissant son `ID` propriété `Products`. Ensuite, créez un nouveau ObjectDataSource qui utilise la classe ProductsBLL s `GetProducts()` méthode pour retourner toutes les informations de produit.
+Avant d’implémenter les fonctionnalités de pagination et de tri, nous allons tout d’abord créer un contrôle GridView non pouvant être trié et non paginable standard qui répertorie les informations sur le produit. Il s’agit d’une tâche que nous avons effectuée beaucoup de fois dans cette série de didacticiels pour que ces étapes soient familières. Commencez par ouvrir la page de `SimplePagingSorting.aspx` et faites glisser un contrôle GridView de la boîte à outils vers le concepteur, en affectant à sa propriété `ID` la valeur `Products`. Ensuite, créez un ObjectDataSource qui utilise la méthode ProductsBLL Class s `GetProducts()` pour retourner toutes les informations sur le produit.
 
-![Récupérer des informations sur tous les produits à l’aide de la méthode GetProducts()](paging-and-sorting-report-data-vb/_static/image4.png)
+![Récupérer des informations sur tous les produits à l’aide de la méthode GetProducts ()](paging-and-sorting-report-data-vb/_static/image4.png)
 
-**Figure 4**: Récupérer des informations sur tous les produits à l’aide de la méthode GetProducts()
+**Figure 4**: récupérer des informations sur tous les produits à l’aide de la méthode GetProducts ()
 
-Dans la mesure où ce rapport est un rapport en lecture seule s’il n’avez besoin mapper le s ObjectDataSource `Insert()`, `Update()`, ou `Delete()` méthodes correspondant `ProductsBLL` méthodes ; par conséquent, choisissez (aucun) dans la liste déroulante pour la mise à jour, insertion, et supprimer les tabulations.
+Étant donné que ce rapport est un rapport en lecture seule, il n’est pas nécessaire de mapper les méthodes de `Insert()`, `Update()`ou de `Delete()` ObjectDataSource aux méthodes `ProductsBLL` correspondantes ; par conséquent, choisissez (aucun) dans la liste déroulante des onglets mettre à jour, insérer et supprimer.
 
-![Choisissez (aucun) Option dans la liste déroulante dans la mise à jour, insertion et supprimer des onglets](paging-and-sorting-report-data-vb/_static/image5.png)
+![Choisissez l’option (aucune) dans la liste déroulante des onglets mettre à jour, insérer et supprimer](paging-and-sorting-report-data-vb/_static/image5.png)
 
-**Figure 5**: Choisissez (aucun) Option dans la liste déroulante dans la mise à jour, insertion et supprimer des onglets
+**Figure 5**: sélectionner l’option (aucune) dans la liste déroulante des onglets mettre à jour, insérer et supprimer
 
-Ensuite, permettent de s personnaliser les champs de s GridView afin qu’uniquement des noms de produits, fournisseurs, catégories, prix et états supprimées sont affichées. En outre, vous pouvez effectuer la mise en forme au niveau du champ change, notamment ajuster le `HeaderText` de propriétés ou de mise en forme le prix sous forme de devise. Après ces modifications, votre balisage déclaratif de GridView s doit ressembler à ce qui suit :
+Ensuite, nous allons personnaliser les champs GridView s afin que seuls les noms des produits, les fournisseurs, les catégories, les prix et les États abandonnés s’affichent. En outre, n’hésitez pas à apporter des modifications de mise en forme au niveau des champs, telles que l’ajustement des propriétés de `HeaderText` ou la mise en forme du prix en tant que devise. Une fois ces modifications effectuées, votre balisage déclaratif s doit ressembler à ce qui suit :
 
 [!code-aspx[Main](paging-and-sorting-report-data-vb/samples/sample2.aspx)]
 
-Figure 6 illustre notre progression jusqu'à présent lorsqu’ils sont affichés via un navigateur. Notez que la page répertorie tous les produits dans un seul écran, en affichant chaque nom de produit s, catégorie, fournisseur, les prix et supprimées d’état.
+La figure 6 montre notre progression jusqu’à présent dans un navigateur. Notez que la page répertorie tous les produits dans un seul écran, indiquant chaque nom de produit, catégorie, fournisseur, prix et état abandonné.
 
-[![Chacun des produits répertoriés](paging-and-sorting-report-data-vb/_static/image7.png)](paging-and-sorting-report-data-vb/_static/image6.png)
+[![chacun des produits est répertorié](paging-and-sorting-report-data-vb/_static/image7.png)](paging-and-sorting-report-data-vb/_static/image6.png)
 
-**Figure 6**: Chacun des produits sont répertoriés ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image8.png))
+**Figure 6**: chaque produit est répertorié ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image8.png))
 
-## <a name="step-3-adding-paging-support"></a>Étape 3 : Ajout de prise en charge la pagination
+## <a name="step-3-adding-paging-support"></a>Étape 3 : ajout de la prise en charge de la pagination
 
-Liste *tous les* des produits sur un seul écran peut entraîner la surcharge d’informations pour l’utilisateur qui lit les données. Pour aider à rendre les résultats plus gérables, nous pouvons divisez les données dans les pages de données plus petits et autoriser l’utilisateur à parcourir les données d’une page à la fois. Pour accomplir cela simplement cocher la case à cocher Activer la pagination de la balise active de s GridView (Cela définit les opérations de mappage GridView [ `AllowPaging` propriété](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.allowpaging.aspx) à `true`).
+La liste de *tous* les produits sur un seul écran peut entraîner une surcharge d’informations pour l’utilisateur qui utilise les données. Pour faciliter la gestion des résultats, nous pouvons diviser les données en pages de données plus petites et permettre à l’utilisateur de parcourir les données une page à la fois. Pour ce faire, cochez la case Activer la pagination de la balise active GridView s (cela définit la [propriété](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.allowpaging.aspx) gridview s`AllowPaging` sur `true`).
 
-[![La case Activer la pagination pour ajouter la prise en charge la pagination](paging-and-sorting-report-data-vb/_static/image10.png)](paging-and-sorting-report-data-vb/_static/image9.png)
+[![activez la case à cocher Activer la pagination pour ajouter la prise en charge de la pagination](paging-and-sorting-report-data-vb/_static/image10.png)](paging-and-sorting-report-data-vb/_static/image9.png)
 
-**Figure 7**: Case à cocher Activer la pagination pour ajouter la prise en charge la pagination ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image11.png))
+**Figure 7**: cochez la case Activer la pagination pour ajouter la prise en charge de la pagination ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image11.png))
 
-L’activation de la pagination limite le nombre d’enregistrements affichés par page et ajoute un *interface de pagination* au GridView. L’interface de pagination par défaut, illustrée dans la Figure 7, est une série de numéros de page, permettant à l’utilisateur accéder rapidement à partir d’une page de données à un autre. Cette interface de pagination doit vous sembler familière, comme nous ve vu lors de l’ajout de prise en charge la pagination pour les contrôles DetailsView et FormView dans ces didacticiels.
+L’activation de la pagination limite le nombre d’enregistrements affichés par page et ajoute une *interface de pagination* au GridView. L’interface de pagination par défaut, illustrée à la figure 7, est une série de numéros de page, ce qui permet à l’utilisateur de naviguer rapidement d’une page de données à une autre. Cette interface de pagination doit vous sembler familière, comme nous l’avons vu lors de l’ajout de la prise en charge de la pagination aux contrôles DetailsView et FormView dans les didacticiels précédents.
 
-Le contrôle DetailsView et FormView contrôles montrent uniquement un seul enregistrement par page. Le contrôle GridView, toutefois, consulte sa [ `PageSize` propriété](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.pagesize.aspx) pour déterminer le nombre d’enregistrements à afficher par page (cette propriété par défaut est une valeur de 10).
+Les contrôles DetailsView et FormView n’affichent qu’un seul enregistrement par page. Toutefois, le GridView consulte sa [propriété`PageSize`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.pagesize.aspx) pour déterminer le nombre d’enregistrements à afficher par page (la valeur par défaut de cette propriété est 10).
 
-Cette interface de pagination s GridView, DetailsView et FormView peut être personnalisée en utilisant les propriétés suivantes :
+Cette interface de pagination GridView, DetailsView et FormView peut être personnalisée à l’aide des propriétés suivantes :
 
-- `PagerStyle` Indique les informations de style pour l’interface de pagination ; peut spécifier de paramètres tels que `BackColor`, `ForeColor`, `CssClass`, `HorizontalAlign`, et ainsi de suite.
-- `PagerSettings` contient une multitude de propriétés que vous pouvez personnaliser les fonctionnalités de l’interface de pagination ; `PageButtonCount` indique le nombre maximal de numéros de page numérique affichée dans l’interface de pagination (la valeur par défaut est 10) ; le [ `Mode` propriété](https://msdn.microsoft.com/library/system.web.ui.webcontrols.pagersettings.mode.aspx) indique la façon dont l’interface de pagination fonctionne et peut être définie sur : 
+- `PagerStyle` indique les informations de style pour l’interface de pagination ; peut spécifier des paramètres comme `BackColor`, `ForeColor`, `CssClass`, `HorizontalAlign`, etc.
+- `PagerSettings` contient un multitude de propriétés qui peut personnaliser les fonctionnalités de l’interface de pagination. `PageButtonCount` indique le nombre maximal de numéros de page numériques affichés dans l’interface de pagination (la valeur par défaut est 10); la [propriété`Mode`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.pagersettings.mode.aspx) indique le fonctionnement de l’interface de pagination et peut avoir la valeur : 
 
-    - `NextPrevious` montre un boutons suivant et précédent, autorisant l’utilisateur à l’étape avancer ou reculer une page à la fois
-    - `NextPreviousFirstLast` en plus des boutons suivant et précédent, premier et dernier boutons sont également inclus, permettant à l’utilisateur à accéder rapidement à la première ou dernière page de données
-    - `Numeric` présente une série de numéros de page, permettant à l’utilisateur d’accéder immédiatement à n’importe quelle page
-    - `NumericFirstLast` Outre les numéros de page, inclut les boutons première et dernière, autorisant l’utilisateur à accéder rapidement à la première ou dernière page de données ; les premier/dernier les boutons sont affichés uniquement si tous les nombres de pages numériques ne rentrent pas
+    - `NextPrevious` affiche les boutons suivant et précédent, ce qui permet à l’utilisateur d’avancer ou de reculer d’une page à la fois.
+    - `NextPreviousFirstLast` en plus des boutons suivant et précédent, le premier et le dernier bouton sont également inclus, ce qui permet à l’utilisateur de passer rapidement à la première ou dernière page de données.
+    - `Numeric` affiche une série de numéros de page, ce qui permet à l’utilisateur d’accéder immédiatement à n’importe quelle page
+    - `NumericFirstLast` en plus des numéros de page, comprend les boutons premier et dernier, ce qui permet à l’utilisateur de passer rapidement à la première ou à la dernière page de données ; les premier et dernier boutons s’affichent uniquement si tous les numéros de page numériques ne sont pas adaptés
 
-En outre, le GridView, DetailsView et FormView offrent tous les `PageIndex` et `PageCount` propriétés, qui indiquent la page actuelle en cours de visualisation et le nombre total de pages de données, respectivement. Le `PageIndex` propriété est indexée en commençant à 0, ce qui signifie que, lors de l’affichage de la première page de données `PageIndex` est égale à 0. `PageCount`, quant à eux, démarre comptage à 1, ce qui signifie que `PageIndex` est limité pour les valeurs comprises entre 0 et `PageCount - 1`.
+En outre, les propriétés GridView, DetailsView et FormView offrent toutes les propriétés `PageIndex` et `PageCount`, qui indiquent respectivement la page actuelle affichée et le nombre total de pages de données. La propriété `PageIndex` est indexée à partir de 0, ce qui signifie que lorsque vous affichez la première page de données, `PageIndex` est égal à 0. `PageCount`, en revanche, commence à compter à 1, ce qui signifie que `PageIndex` est limitée aux valeurs comprises entre 0 et `PageCount - 1`.
 
-Permettent de prendre un moment pour améliorer l’apparence par défaut de notre interface de pagination de GridView s s. Plus précisément, vous autorise à s pour disposer de l’interface de pagination alignés à droite avec un arrière-plan gris clair. Au lieu de définir ces propriétés directement par le biais de la s GridView `PagerStyle` propriété, s permettent de créer une classe CSS dans `Styles.css` nommé `PagerRowStyle` , puis attribuez le `PagerStyle` s `CssClass` propriété via notre thème. Commencez par ouvrir `Styles.css` et de la définition de classe ajoutant le code CSS suivant :
+Essayons quelques instants pour améliorer l’apparence par défaut de notre interface de pagination de GridView s. En particulier, faites en sorte que l’interface de pagination soit alignée à droite avec un arrière-plan gris clair. Au lieu de définir ces propriétés directement par le biais de la propriété GridView s `PagerStyle`, créez une classe CSS dans `Styles.css` nommée `PagerRowStyle`, puis affectez la propriété `PagerStyle` s `CssClass` par le biais de notre thème. Commencez par ouvrir `Styles.css` et ajoutez la définition de classe CSS suivante :
 
 [!code-css[Main](paging-and-sorting-report-data-vb/samples/sample3.css)]
 
-Ensuite, ouvrez le `GridView.skin` de fichiers dans le `DataWebControls` dossier au sein de la `App_Themes` dossier. Comme expliqué dans la *Pages maîtres et Navigation du Site* les fichiers de didacticiel, peau peuvent être utilisés pour spécifier les valeurs de propriété par défaut pour un contrôle Web. Par conséquent, augmenter les paramètres existants pour inclure le paramètre de la `PagerStyle` s `CssClass` propriété `PagerRowStyle`. En outre, s permettent de configurer l’interface de pagination à afficher au maximum cinq pages numériques de boutons à l’aide de la `NumericFirstLast` interface de pagination.
+Ensuite, ouvrez le fichier `GridView.skin` dans le dossier `DataWebControls` dans le dossier `App_Themes`. Comme nous l’avons vu dans le didacticiel sur les *pages maîtres et la navigation* dans les sites, les fichiers d’apparence peuvent être utilisés pour spécifier les valeurs de propriété par défaut d’un contrôle Web. Par conséquent, augmentez les paramètres existants pour inclure la définition de la propriété `PagerStyle` s `CssClass` sur `PagerRowStyle`. En outre, configurez l’interface de pagination pour afficher au maximum cinq boutons de page numériques à l’aide de l’interface de pagination `NumericFirstLast`.
 
 [!code-aspx[Main](paging-and-sorting-report-data-vb/samples/sample4.aspx)]
 
 ## <a name="the-paging-user-experience"></a>L’expérience utilisateur de pagination
 
-La figure 8 illustre la page web quand consultées via un navigateur une fois que la case Activer la pagination de GridView s a été vérifiée et le `PagerStyle` et `PagerSettings` configurations ont été apportées par le biais du `GridView.skin` fichier. Notez comment seuls dix enregistrements sont affichés, et l’interface de pagination indique que nous consultons la première page de données.
+La figure 8 illustre la page Web lorsqu’elle est visitée via un navigateur après la vérification de la case à cocher de la pagination de GridView s et que les configurations `PagerStyle` et `PagerSettings` ont été effectuées par le biais du fichier `GridView.skin`. Notez que seuls dix enregistrements sont affichés et que l’interface de pagination indique que nous affichons la première page de données.
 
-[![Avec la pagination est activée, uniquement un sous-ensemble des enregistrements sont affichés à la fois](paging-and-sorting-report-data-vb/_static/image13.png)](paging-and-sorting-report-data-vb/_static/image12.png)
+[![avec la pagination activée, seul un sous-ensemble des enregistrements s’affiche à la fois.](paging-and-sorting-report-data-vb/_static/image13.png)](paging-and-sorting-report-data-vb/_static/image12.png)
 
-**Figure 8**: Avec la pagination est activée, uniquement un sous-ensemble des enregistrements sont affichés à la fois ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image14.png))
+**Figure 8**: lorsque la pagination est activée, seul un sous-ensemble des enregistrements s’affiche à la fois ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image14.png))
 
-Lorsque l’utilisateur clique sur l’un des numéros de page dans l’interface de pagination, s’ensuit une publication (postback) et la page recharge montrant que les enregistrements de la page s requis. La figure 9 illustre les résultats après vous être inscrit pour afficher la dernière page de données. Notez que la dernière page a uniquement un seul enregistrement ; Il s’agit, car il existe des 81 enregistrements au total, ce qui entraîne des huit pages de 10 enregistrements par page, plus une page avec un seul enregistrement.
+Lorsque l’utilisateur clique sur l’un des numéros de page dans l’interface de pagination, une publication (postback) est effectuée et les rechargements de page indiquent les enregistrements de la page demandée. La figure 9 montre les résultats après avoir choisi d’afficher la dernière page de données. Notez que la dernière page n’a qu’un seul enregistrement ; Cela est dû au fait qu’il y a 81 enregistrements au total, ce qui aboutit à huit pages de 10 enregistrements par page, plus une page avec un enregistrement solitaire.
 
-[![En cliquant sur un numéro de Page provoque une publication (postback) et montre le sous-ensemble approprié d’enregistrements](paging-and-sorting-report-data-vb/_static/image16.png)](paging-and-sorting-report-data-vb/_static/image15.png)
+[![le fait de cliquer sur un numéro de page provoque une publication et affiche le sous-ensemble approprié d’enregistrements](paging-and-sorting-report-data-vb/_static/image16.png)](paging-and-sorting-report-data-vb/_static/image15.png)
 
-**Figure 9**: En cliquant sur un numéro de Page provoque une publication (postback) et montre le sous-ensemble d’enregistrements appropriés ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image17.png))
+**Figure 9**: un clic sur un numéro de page entraîne une publication (postback) et affiche le sous-ensemble approprié d’enregistrements ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image17.png))
 
-## <a name="paging-s-server-side-workflow"></a>Flux de travail de la pagination s côté serveur
+## <a name="paging-s-server-side-workflow"></a>Pagination du flux de travail côté serveur
 
-Lorsque l’utilisateur final clique sur un bouton dans l’interface de pagination, s’ensuit une publication (postback) et commence le flux de travail côté serveur suivant :
+Lorsque l’utilisateur final clique sur un bouton dans l’interface de pagination, une publication (postback) est effectuée et le flux de travail côté serveur suivant commence :
 
-1. Le GridView s (ou DetailsView ou FormView) `PageIndexChanging` se déclenche des événements
-2. ObjectDataSource ré-demande *tous les* des données à partir de la couche BLL ; le s GridView `PageIndex` et `PageSize` les valeurs de propriété sont utilisées pour déterminer les enregistrements retournés à partir de la couche BLL à afficher dans le contrôle GridView
-3. Les opérations de mappage GridView `PageIndexChanged` se déclenche des événements
+1. L’événement `PageIndexChanging` GridView s (ou DetailsView ou FormView) est déclenché
+2. ObjectDataSource redemande *toutes* les données de la couche BLL ; les valeurs de propriété GridView s `PageIndex` et `PageSize` sont utilisées pour déterminer les enregistrements retournés par la couche BLL qui doivent être affichés dans le contrôle GridView.
+3. L’événement `PageIndexChanged` GridView s est déclenché
 
-À l’étape 2, ObjectDataSource ré-demande toutes les données à partir de sa source de données. Ce style de pagination est communément appelé *la pagination par défaut*, tel qu’il s le comportement de pagination utilisé par défaut lors de la définition du `AllowPaging` propriété `true`. Valeur par défaut la pagination des données contrôle Web naïvement récupère tous les enregistrements pour chaque page de données, même si seul un sous-ensemble des enregistrements réellement rendues dans le code HTML que s envoyée au navigateur. À moins que la base de données est mis en cache par la couche BLL ou ObjectDataSource, la pagination par défaut est rédhibitoire pour suffisamment grands jeux de résultats ou des applications web avec plusieurs utilisateurs simultanés.
+À l’étape 2, ObjectDataSource redemande toutes les données de sa source de données. Ce style de pagination est communément appelé *pagination par défaut*, car il s’agit du comportement de pagination utilisé par défaut lors de la définition de la propriété `AllowPaging` sur `true`. Avec la pagination par défaut, le contrôle Web de données naïvement récupère tous les enregistrements pour chaque page de données, même si seul un sous-ensemble d’enregistrements est effectivement rendu dans le code HTML qui est envoyé au navigateur. À moins que les données de la base de données ne soient mises en cache par la couche BLL ou ObjectDataSource, la pagination par défaut est impossible pour les jeux de résultats suffisamment volumineux ou pour les applications Web avec un grand nombre d’utilisateurs simultanés.
 
-Dans le didacticiel suivant, nous allons examiner comment implémenter *la pagination personnalisée*. Avec la pagination personnalisée vous pouvez demander spécifiquement à ObjectDataSource afin de récupérer l’ensemble d’enregistrements nécessaires pour la page demandée de données précis. Comme vous pouvez l’imaginer, la pagination personnalisée améliore considérablement l’efficacité de la pagination de grands jeux de résultats.
+Dans le didacticiel suivant, nous allons examiner comment implémenter la *pagination personnalisée*. Avec la pagination personnalisée, vous pouvez demander spécifiquement à ObjectDataSource de récupérer uniquement l’ensemble précis des enregistrements nécessaires pour la page de données demandée. Comme vous pouvez l’imaginer, la pagination personnalisée améliore considérablement l’efficacité de la pagination par le biais de jeux de résultats volumineux.
 
 > [!NOTE]
-> Alors que la pagination par défaut ne c'est-à-dire pas lors de la pagination via suffisamment grands jeux de résultats ou pour les sites comportant de nombreux utilisateurs simultanés, sachez que la pagination personnalisée nécessite plus de modifications et d’efforts pour implémenter et n’est pas aussi simple que la vérification d’une case à cocher (comme c’est par défaut la pagination). Par conséquent, la pagination par défaut peut être le choix idéal pour les sites Web de petite taille, avec un trafic faible ou lorsque la pagination de résultats relativement petit définit, tel qu’il s beaucoup plus facile et plus rapide à implémenter.
+> Bien que la pagination par défaut ne soit pas appropriée lors de la pagination de jeux de résultats suffisamment volumineux ou pour des sites avec de nombreux utilisateurs simultanés, sachez que la pagination personnalisée nécessite plus de modifications et d’efforts pour implémenter et n’est pas aussi simple que d’activer une case à cocher (par défaut pagination). Par conséquent, la pagination par défaut peut être le choix idéal pour les petits sites Web à faible trafic ou pour la pagination via des jeux de résultats relativement petits, car elle est beaucoup plus facile et plus rapide à mettre en œuvre.
 
-Par exemple, si nous savons que nous aurons jamais plus de 100 produits dans notre base de données, le gain de performances minimal apprécié par la pagination personnalisée est probablement compensé par l’effort requis pour l’implémenter. Si, toutefois, nous avons un jour peut-être des milliers, voire des dizaines de milliers de produits, *pas* implémentant la pagination personnalisée est nuire considérablement l’évolutivité de notre application.
+Par exemple, si nous savons que nous n’aurons jamais plus de 100 produits dans notre base de données, le gain de performances minimal apprécié par la pagination personnalisée est probablement compensé par l’effort nécessaire pour l’implémenter. Toutefois, si nous avons un jour qui a des milliers ou des dizaines de milliers de produits, le *non* -déploiement de la pagination personnalisée risquerait de nuire à l’évolutivité de notre application.
 
-## <a name="step-4-customizing-the-paging-experience"></a>Étape 4 : Personnalisation de l’expérience de la pagination
+## <a name="step-4-customizing-the-paging-experience"></a>Étape 4 : personnalisation de l’expérience de pagination
 
-Contrôles data Web fournissent un nombre de propriétés qui peut être utilisé pour améliorer l’expérience de la pagination utilisateur s. Le `PageCount` propriété, par exemple, indique que le nombre total de pages sont, tandis que le `PageIndex` propriété indique la page actuelle qui est visitée et peut être définie pour déplacer rapidement un utilisateur à une page spécifique. Pour illustrer comment utiliser ces propriétés pour améliorer l’expérience de la pagination utilisateur s, permettent d’ajouter une étiquette s Web le contrôle à notre page qui informe l’utilisateur quelle page ils re actuellement consultant, ainsi que d’un contrôle DropDownList qui leur permet d’accéder rapidement à n’importe quelle page donnée .
+Les contrôles Web de données fournissent un certain nombre de propriétés qui peuvent être utilisées pour améliorer l’expérience de pagination des utilisateurs. La propriété `PageCount`, par exemple, indique le nombre total de pages, tandis que la propriété `PageIndex` indique la page actuellement visitée et peut être définie pour déplacer rapidement un utilisateur vers une page spécifique. Pour illustrer comment utiliser ces propriétés pour améliorer l’expérience de pagination des utilisateurs, ajoutez un contrôle Web Label à notre page pour informer l’utilisateur de la page visitée, ainsi qu’un contrôle DropDownList qui lui permet d’accéder rapidement à une page donnée. .
 
-Tout d’abord, ajoutez un contrôle Web Label à votre page, en définissant son `ID` propriété `PagingInformation`et effacer son `Text` propriété. Ensuite, créez un gestionnaire d’événements pour les opérations de mappage GridView `DataBound` événement et ajoutez le code suivant :
+Tout d’abord, ajoutez un contrôle Web Label à votre page, affectez à sa propriété `ID` la valeur `PagingInformation`et effacez sa propriété `Text`. Ensuite, créez un gestionnaire d’événements pour l’événement `DataBound` GridView s et ajoutez le code suivant :
 
 [!code-vb[Main](paging-and-sorting-report-data-vb/samples/sample5.vb)]
 
-Ce gestionnaire d’événements affecte le `PagingInformation` étiquette s `Text` propriété à un message informant l’utilisateur de la page qu’ils visitent `Products.PageIndex + 1` hors le nombre total de pages `Products.PageCount` (nous ajouter 1 au `Products.PageIndex` propriété, car `PageIndex` est indexée en commençant à 0). J’ai choisi l’attribuer à cette étiquette s `Text` propriété dans le `DataBound` Gestionnaire d’événements par opposition à la `PageIndexChanged` Gestionnaire d’événements, car le `DataBound` événement est déclenché chaque fois que les données sont liées au GridView tandis que le `PageIndexChanged` Gestionnaire d’événements se déclenche lorsque l’index de page est modifiée. Lorsque le contrôle GridView est initialement lié aux données sur la première page à consulter, le `PageIndexChanging` événement déclencheur de t ne (alors que le `DataBound` événement).
+Ce gestionnaire d’événements affecte la propriété `PagingInformation` étiquette s `Text` à un message informant l’utilisateur que la page sur laquelle il est actuellement visité `Products.PageIndex + 1` le nombre total de pages `Products.PageCount` (nous ajoutons 1 à la propriété `Products.PageIndex`, car `PageIndex` est indexé à partir de 0). J’ai choisi la propriété assigner cette étiquette `Text` dans le gestionnaire d’événements `DataBound` au lieu du gestionnaire d’événements `PageIndexChanged`, car l’événement `DataBound` se déclenche chaque fois que des données sont liées au GridView alors que le gestionnaire d’événements `PageIndexChanged` se déclenche uniquement lorsque l’index de page est modifié. Lorsque le GridView est initialement lié aux données sur la première page, l’événement `PageIndexChanging` ne se déclenche pas (contrairement à l’événement `DataBound`).
 
-Avec cet ajout, l’utilisateur voit désormais un message indiquant quelle page ils visitent et le nombre total de pages de données est.
+Avec cet ajout, l’utilisateur affiche maintenant un message indiquant la page visitée et le nombre total de pages de données qu’il contient.
 
-[![Le numéro de Page actuel et le nombre Total de Pages sont affichés.](paging-and-sorting-report-data-vb/_static/image19.png)](paging-and-sorting-report-data-vb/_static/image18.png)
+[![le numéro de page actuel et le nombre total de pages affichées](paging-and-sorting-report-data-vb/_static/image19.png)](paging-and-sorting-report-data-vb/_static/image18.png)
 
-**Figure 10**: Le numéro de Page actuel et le nombre Total de Pages s’affichent ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image20.png))
+**Figure 10**: le numéro de page actuel et le nombre total de pages s’affichent ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image20.png))
 
-Outre le contrôle d’étiquette, permettent de s également ajouter un contrôle DropDownList qui répertorie les numéros de page dans le contrôle GridView avec la page actuellement affichée est sélectionnée. L’idée ici est que l’utilisateur peut accéder rapidement à partir de la page actuelle à l’autre en sélectionnant simplement le nouvel index de page dans la liste DropDownList. Commencez par ajouter un contrôle DropDownList vers le concepteur, en définissant son `ID` propriété `PageList` et la vérification de l’option Activer AutoPostBack à partir de sa balise active.
+En plus du contrôle Label, les autres ajoutent également un contrôle DropDownList qui répertorie les numéros de page dans le GridView avec la page actuellement affichée sélectionnée. L’idée est que l’utilisateur peut rapidement passer de la page actuelle à une autre en sélectionnant simplement le nouvel index de page dans le DropDownList. Commencez par ajouter un contrôle DropDownList au concepteur, en affectant à sa propriété `ID` la valeur `PageList` et en activant l’option Activer AutoPostBack à partir de sa balise active.
 
-Ensuite, revenez à la `DataBound` Gestionnaire d’événements et ajoutez le code suivant :
+Ensuite, revenez au gestionnaire d’événements `DataBound` et ajoutez le code suivant :
 
 [!code-vb[Main](paging-and-sorting-report-data-vb/samples/sample6.vb)]
 
-Ce code commence en supprimant les éléments dans le `PageList` DropDownList. Cela peut sembler superflu, dans la mesure où un n’aurait pas attendre le nombre de pages pour modifier, mais les autres utilisateurs peuvent être à l’aide du système simultanément, l’ajout ou suppression d’enregistrements à partir de la `Products` table. Insertions ou des suppressions peuvent modifier le nombre de pages de données.
+Ce code commence par effacer les éléments dans le `PageList` DropDownList. Cela peut paraître superflu, car il n’est pas prévu que le nombre de pages change, mais d’autres utilisateurs utilisent le système simultanément, en ajoutant ou en supprimant des enregistrements de la table `Products`. De telles insertions ou suppressions pourraient altérer le nombre de pages de données.
 
-Ensuite, nous devons créer les numéros de page à nouveau et celui qui mappe au GridView actuel `PageIndex` sélectionné par défaut. Effectuer cette opération avec une boucle allant de 0 à `PageCount - 1`, ajout d’une nouvelle `ListItem` dans chaque itération et le paramètre son `Selected` propriété sur true si l’index d’itération actuelle est égale à la s GridView `PageIndex` propriété.
+Ensuite, nous devons recréer les numéros de page et avoir celui qui est mappé au GridView actuel `PageIndex` sélectionné par défaut. Nous faisons cela avec une boucle comprise entre 0 et `PageCount - 1`, en ajoutant un nouveau `ListItem` dans chaque itération et en définissant sa propriété `Selected` sur true si l’index d’itération actuel est égal à la propriété GridView s `PageIndex`.
 
-Enfin, nous devons créer un gestionnaire d’événements pour les opérations de mappage DropDownList `SelectedIndexChanged` événement qui se déclenche chaque fois que l’utilisateur choisir un autre élément dans la liste. Pour créer ce gestionnaire d’événements, double-cliquez sur l’objet DropDownList dans le concepteur, puis ajoutez le code suivant :
+Enfin, nous devons créer un gestionnaire d’événements pour l’événement DropDownList s `SelectedIndexChanged`, qui se déclenche chaque fois que l’utilisateur choisit un élément différent dans la liste. Pour créer ce gestionnaire d’événements, il vous suffit de double-cliquer sur le DropDownList dans le concepteur, puis d’ajouter le code suivant :
 
 [!code-vb[Main](paging-and-sorting-report-data-vb/samples/sample7.vb)]
 
-Comme le montre la Figure 11, changez simplement le s GridView `PageIndex` propriété entraîne les données à être reliée au GridView. Dans le s GridView `DataBound` Gestionnaire d’événements, la liste DropDownList appropriée `ListItem` est sélectionné.
+Comme le montre la figure 11, le simple fait de modifier la propriété GridView s `PageIndex` entraîne la reliaison des données au contrôle GridView. Dans le gestionnaire d’événements `DataBound` GridView s, la `ListItem` DropDownList appropriée est sélectionnée.
 
-[![L’utilisateur est automatiquement dirigé vers la sixième Page lors de la sélection de l’élément de liste déroulante de Page 6](paging-and-sorting-report-data-vb/_static/image22.png)](paging-and-sorting-report-data-vb/_static/image21.png)
+[![l’utilisateur est automatiquement dirigé vers la sixième page lors de la sélection de l’élément de liste déroulante page 6](paging-and-sorting-report-data-vb/_static/image22.png)](paging-and-sorting-report-data-vb/_static/image21.png)
 
-**Figure 11**: L’utilisateur est automatiquement dirigé vers la sixième Page lors de la sélection de l’élément de liste déroulante de Page 6 ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image23.png))
+**Figure 11**: l’utilisateur est automatiquement dirigé vers la sixième page lors de la sélection de l’élément de liste déroulante page 6 ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image23.png))
 
-## <a name="step-5-adding-bi-directional-sorting-support"></a>Étape 5 : Ajout de prise en charge de tri bidirectionnel
+## <a name="step-5-adding-bi-directional-sorting-support"></a>Étape 5 : ajout de la prise en charge du tri bidirectionnel
 
-Ajout de prise en charge du tri bidirectionnelle est aussi simple que d’ajouter la prise en charge la pagination simplement cocher l’option Activer le tri à partir de la balise active de s GridView (qui définit les opérations de mappage GridView [ `AllowSorting` propriété](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.allowsorting.aspx) à `true`). Cela affiche chacun des en-têtes des champs s GridView en tant que type LinkButton qui, lorsque vous cliquez sur, provoquer une publication (postback) et retourner les données triées par la colonne sélectionnée dans l’ordre croissant. Cliquez à nouveau sur le même en-tête LinkButton retrie les données dans l’ordre décroissant.
+L’ajout de la prise en charge du tri bidirectionnel est aussi simple que l’ajout de la prise en charge de la pagination. activez simplement l’option Activer le tri à partir de la balise active de GridView s (qui affecte à la propriété GridView s [`AllowSorting`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.allowsorting.aspx) la valeur `true`). Cela génère le rendu de chacun des en-têtes des champs GridView s en tant que LinkButtons qui, lorsque vous cliquez dessus, provoquent une publication (postback) et retournent les données triées par la colonne sur laquelle l’utilisateur a cliqué dans l’ordre croissant. Le fait de cliquer sur le même LinkButton d’en-tête retrie à nouveau les données dans l’ordre décroissant.
 
 > [!NOTE]
-> Si vous utilisez une couche d’accès aux données personnalisées plutôt que d’un DataSet typé, peut-être pas une option d’activer le tri dans la balise active de s GridView. Uniquement les contrôles GridView liés à des sources de données qui prennent en charge de tri ont cette case à cocher est disponible. Le DataSet typé fournit la prise en charge du tri d’out-of-the-box dans la mesure où l’objet DataTable ADO.NET fournit un `Sort` méthode qui, lorsqu’elle est appelée, trie les s DataTable DataRows à l’aide des critères spécifiés.
+> Si vous utilisez une couche d’accès aux données personnalisée plutôt qu’un DataSet typé, vous ne disposez peut-être pas de l’option Activer le tri dans la balise active GridView s. Seuls les GridViews liés à des sources de données qui prennent en charge le tri en mode natif disposent de cette case à cocher disponible. Le DataSet typé fournit une prise en charge de tri prête à l’emploi puisque le DataTable ADO.NET fournit une méthode `Sort` qui, lorsqu’elle est appelée, trie les DataRow s à l’aide des critères spécifiés.
 
-Si votre couche DAL ne retourne pas les objets en mode natif la prise en charge de tri que vous devrez configurer ObjectDataSource pour transmettre des informations de tri à la couche de logique métier, qui peut trier les données ou les données triée par la couche DAL. Nous allons découvrir comment trier les données à la logique métier et couches d’accès aux données dans un futur didacticiel.
+Si votre couche DAL ne retourne pas d’objets qui prennent en charge le tri en mode natif, vous devez configurer ObjectDataSource pour transmettre les informations de tri à la couche de logique métier, qui peut soit trier les données, soit faire en sorte que les données soient triées par la couche DAL. Nous allons découvrir comment trier les données au niveau de la logique métier et des couches d’accès aux données dans un prochain didacticiel.
 
-Le type de tri LinkButton est rendus sous forme de liens hypertexte HTML, dont les couleurs actuelles (bleues pour un lien non visité et rouge foncé pour un lien visité) entrer en conflit avec la couleur d’arrière-plan de la ligne d’en-tête. Au lieu de cela, let s ont tous les liens de ligne d’en-tête affichés en blanc, indépendamment de si elles ve été visité ou non. Cela est possible en ajoutant le code suivant à la `Styles.css` classe :
+Les LinkButtonss de tri sont rendus sous forme de liens hypertexte HTML, dont les couleurs actuelles (bleu pour un lien non visité et un lien rouge foncé pour un lien visité) sont en conflit avec la couleur d’arrière-plan de la ligne d’en-tête. À la place, laissez tous les liens d’en-tête de ligne s’afficher en blanc, qu’ils aient été ou non visités. Pour ce faire, vous pouvez ajouter le code suivant à la classe `Styles.css` :
 
 [!code-css[Main](paging-and-sorting-report-data-vb/samples/sample8.css)]
 
-Cette syntaxe indique l’utilisation de texte blanc lors de l’affichage des liens hypertexte dans un élément qui utilise la classe HeaderStyle.
+Cette syntaxe indique d’utiliser le texte blanc lors de l’affichage de ces liens hypertexte dans un élément qui utilise la classe HeaderStyle.
 
-Après cet ajout CSS, lorsque vous visitez la page via un navigateur votre écran doit ressembler à la Figure 12. En particulier, la Figure 12 montre les résultats après un clic sur le lien d’en-tête prix champ s.
+Après cet ajout de CSS, lors de la visite de la page via un navigateur, votre écran doit ressembler à la figure 12. En particulier, la figure 12 montre les résultats une fois que vous avez cliqué sur le lien de l’en-tête s des champs de prix.
 
-[![Les résultats ont été triés par le prix unitaire dans l’ordre croissant](paging-and-sorting-report-data-vb/_static/image25.png)](paging-and-sorting-report-data-vb/_static/image24.png)
+[![les résultats ont été triés par prix unitaire dans l’ordre croissant](paging-and-sorting-report-data-vb/_static/image25.png)](paging-and-sorting-report-data-vb/_static/image24.png)
 
-**Figure 12**: Les résultats ont été triés par le prix unitaire par ordre croissant ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image26.png))
+**Figure 12**: les résultats ont été triés par prix unitaire dans l’ordre croissant ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image26.png))
 
-## <a name="examining-the-sorting-workflow"></a>Examiner le flux de travail de tri
+## <a name="examining-the-sorting-workflow"></a>Examen du flux de travail de tri
 
-GridView tous les champs le BoundField, CheckBoxField, TemplateField, et ainsi de suite ont un `SortExpression` propriété qui indique l’expression qui doit être utilisée pour trier les données de cas de clic sur ce champ s tri lien d’en-tête. Ce GridView comporte également un `SortExpression` propriété. Lorsqu’un en-tête de tri utilisateur clique sur le LinkButton, le contrôle GridView affecte ce champ s `SortExpression` valeur son `SortExpression` propriété. Ensuite, les données sont ré-récupérées à partir de l’ObjectDataSource et triées en fonction de la s GridView `SortExpression` propriété. La liste suivante décrit en détail la séquence d’étapes qui se passe réellement lorsqu’un utilisateur final trie les données dans un GridView :
+Tous les champs GridView, BoundField, CheckBoxField, TemplateField, etc., ont une propriété `SortExpression` qui indique l’expression à utiliser pour trier les données lorsque l’utilisateur clique sur le lien d’en-tête de tri de ce champ. Le GridView possède également une propriété `SortExpression`. Quand l’utilisateur clique sur un contrôle LinkButton d’en-tête de tri, le contrôle GridView affecte à la propriété `SortExpression` la valeur de ce `SortExpression` champ. Ensuite, les données sont récupérées à partir de ObjectDataSource et triées en fonction de la propriété GridView s `SortExpression`. La liste suivante décrit en détail la séquence d’étapes qui s’écoule lorsqu’un utilisateur final trie les données dans un GridView :
 
-1. Les opérations de mappage GridView [événement Sorting](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.sorting(VS.80).aspx) se déclenche
-2. Les opérations de mappage GridView [ `SortExpression` propriété](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.sortexpression.aspx) est défini sur le `SortExpression` du champ dont l’utilisateur a cliqué sur LinkButton l’en-tête tri
-3. ObjectDataSource nouveau récupère toutes les données à partir de la couche BLL, puis trie les données à l’aide de la s GridView `SortExpression`
-4. Les opérations de mappage GridView `PageIndex` propriété est réinitialisée à 0, ce qui signifie que, lors du tri de l’utilisateur est renvoyé à la première page de données (en supposant la prise en charge la pagination a été implémenté)
-5. Les opérations de mappage GridView [ `Sorted` événement](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.sorted(VS.80).aspx) se déclenche
+1. L’événement de [Tri](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.sorting(VS.80).aspx) GridView s est déclenché
+2. La propriété GridView s [`SortExpression`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.sortexpression.aspx) est définie sur le `SortExpression` du champ dont l’en-tête de tri LinkButton a été cliqué
+3. ObjectDataSource récupère à nouveau toutes les données de la couche BLL, puis trie les données à l’aide du `SortExpression` GridView s
+4. La propriété de la `PageIndex` GridView s est réinitialisée à 0, ce qui signifie que lorsque le tri de l’utilisateur est retourné à la première page de données (en supposant que la prise en charge de la pagination a été implémentée)
+5. L' [événement`Sorted`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.sorted(VS.80).aspx) GridView s est déclenché
 
-Comme avec la pagination par défaut, la valeur par défaut, option de tri ré-récupère *tous les* des enregistrements à partir de la couche BLL. Lors de l’utilisation de tri sans pagination ou lors de l’utilisation de tri avec valeur par défaut la pagination, là s aucun moyen de contourner ces performances d’accès (moins de la mise en cache de la base de données). Toutefois, comme nous le verrons dans un futur didacticiel, il s possible de trier efficacement les données lors de l’utilisation de la pagination personnalisée.
+Comme avec la pagination par défaut, l’option de tri par défaut récupère *tous* les enregistrements de la couche BLL. Lors de l’utilisation du tri sans pagination ou lors de l’utilisation du tri avec la pagination par défaut, il n’existe aucun moyen de contourner ce gain de performance (à l’instar de la mise en cache des données de base de données) Toutefois, comme nous le verrons dans un prochain didacticiel, il est possible de trier efficacement les données lors de l’utilisation de la pagination personnalisée.
 
-Lors de la liaison d’ObjectDataSource pour le contrôle GridView dans la liste déroulante dans la balise active de s GridView, chaque champ GridView a automatiquement son `SortExpression` propriété affectée au nom du champ de données dans le `ProductsRow` classe. Par exemple, le `ProductName` BoundField s `SortExpression` a la valeur `ProductName`, comme illustré dans le balisage déclaratif suivant :
+Lors de la liaison d’un ObjectDataSource au contrôle GridView via la liste déroulante de la balise active GridView s, la propriété `SortExpression` de chaque champ GridView est automatiquement assignée au nom du champ de données dans la classe `ProductsRow`. Par exemple, le `ProductName` BoundField s `SortExpression` a la valeur `ProductName`, comme indiqué dans le balisage déclaratif suivant :
 
 [!code-aspx[Main](paging-and-sorting-report-data-vb/samples/sample9.aspx)]
 
-Un champ peut être configuré afin qu’il s ne pouvant pas être trié en effaçant les sa `SortExpression` propriété (l’affectation d’une chaîne vide). Pour illustrer cela, imaginez que nous ne voulions permettre à nos clients trier nos produits par prix. Le `UnitPrice` BoundField s `SortExpression` propriété peut être supprimée à partir du balisage déclaratif ou via la boîte de dialogue champs (qui est accessible en cliquant sur le lien Modifier les colonnes dans la balise active de GridView s).
+Un champ peut être configuré de sorte qu’il ne puisse pas être trié en effaçant sa propriété `SortExpression` (en l’assignant à une chaîne vide). Pour illustrer cela, imaginez que nous ne souhaitions pas permettre à nos clients de trier nos produits par prix. La propriété `UnitPrice` BoundField s `SortExpression` peut être supprimée soit du balisage déclaratif, soit de la boîte de dialogue champs (accessible en cliquant sur le lien modifier les colonnes dans la balise active de GridView s).
 
-![Les résultats ont été triés par le prix unitaire dans l’ordre croissant](paging-and-sorting-report-data-vb/_static/image27.png)
+![Les résultats ont été triés par prix unitaire dans l’ordre croissant](paging-and-sorting-report-data-vb/_static/image27.png)
 
-**Figure 13**: Les résultats ont été triés par le prix unitaire dans l’ordre croissant
+**Figure 13**: les résultats ont été triés par prix unitaire dans l’ordre croissant
 
-Une fois le `SortExpression` propriété a été supprimée pour le `UnitPrice` BoundField, l’en-tête est restitué sous forme de texte plutôt que sous forme de lien, ce qui empêche les utilisateurs de trier les données par prix.
+Une fois que la propriété `SortExpression` a été supprimée pour le `UnitPrice` BoundField, l’en-tête est restitué sous forme de texte et non en tant que lien, ce qui empêche les utilisateurs de trier les données par prix.
 
-[![En supprimant la propriété SortExpression, les utilisateurs peuvent trier ne sont plus les produits par prix](paging-and-sorting-report-data-vb/_static/image29.png)](paging-and-sorting-report-data-vb/_static/image28.png)
+[![en supprimant la propriété SortExpression, les utilisateurs ne peuvent plus trier les produits par prix](paging-and-sorting-report-data-vb/_static/image29.png)](paging-and-sorting-report-data-vb/_static/image28.png)
 
-**Figure 14**: En supprimant la propriété SortExpression, les utilisateurs peuvent trier n’est plus le prix de produits ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image30.png))
+**Figure 14**: en supprimant la propriété SortExpression, les utilisateurs ne peuvent plus trier les produits par prix ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image30.png))
 
-## <a name="programmatically-sorting-the-gridview"></a>Tri par programmation le contrôle GridView
+## <a name="programmatically-sorting-the-gridview"></a>Tri par programmation du contrôle GridView
 
-Vous pouvez également trier le contenu du contrôle GridView par programmation à l’aide de la s GridView [ `Sort` méthode](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.sort.aspx). Il suffit de passer le `SortExpression` valeur lequel trier avec le [ `SortDirection` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.sortdirection.aspx) (`Ascending` ou `Descending`), et les données de s GridView sera retriées.
+Vous pouvez également trier par programmation le contenu de GridView à l’aide de la [méthode`Sort`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.sort.aspx)GridView s. Transmettez simplement la valeur `SortExpression` pour effectuer un tri en même temps que la [`SortDirection`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.sortdirection.aspx) (`Ascending` ou `Descending`), et les données GridView s seront retriées.
 
-Imaginez que la raison pour laquelle nous avons désactivé en triant le `UnitPrice` a été car nous n’avons pas inquiets que nos clients achèterait simplement les produits moins cher. Toutefois, nous souhaitons les encourager à acheter des produits les plus chers, donc nous d comme ils soient en mesure de trier les produits par prix, mais uniquement du prix de la plus coûteux pour le moins.
+Imaginez que la raison pour laquelle nous avons désactivé le tri par le `UnitPrice` était parce que nous avons peur que nos clients achètent simplement les produits les plus chers. Toutefois, nous souhaitons les inciter à acheter les produits les plus chers. nous aimerions donc pouvoir trier les produits par prix, mais uniquement du prix le plus onéreux au moins.
 
-Pour accomplir cela ajouter un contrôle bouton Web à la page, définissez son `ID` propriété `SortPriceDescending`et son `Text` propriété trier par prix. Ensuite, créez un gestionnaire d’événements pour le bouton s `Click` événement en double-cliquant sur le contrôle de bouton dans le concepteur. Ajoutez le code suivant à ce gestionnaire d’événements :
+Pour ce faire, ajoutez un contrôle Web Button à la page, affectez à sa propriété `ID` la valeur `SortPriceDescending`et à sa propriété `Text` la valeur Trier par Price. Ensuite, créez un gestionnaire d’événements pour le bouton s `Click` événement en double-cliquant sur le contrôle bouton dans le concepteur. Ajoutez le code suivant à ce gestionnaire d’événements :
 
 [!code-vb[Main](paging-and-sorting-report-data-vb/samples/sample10.vb)]
 
-Cliquez sur ce bouton renvoie l’utilisateur à la première page avec les produits triés par tarif, du plus cher moins coûteuse (voir Figure 15).
+En cliquant sur ce bouton, vous redonnez à l’utilisateur la première page contenant les produits triés par prix, de la plus coûteuse à la moins coûteuse (voir figure 15).
 
-[![En cliquant sur le bouton trie les produits à partir de la plus coûteuse à la moins](paging-and-sorting-report-data-vb/_static/image32.png)](paging-and-sorting-report-data-vb/_static/image31.png)
+[![cliquant sur le bouton classe les produits du plus onéreux au moins](paging-and-sorting-report-data-vb/_static/image32.png)](paging-and-sorting-report-data-vb/_static/image31.png)
 
-**Figure 15**: En cliquant sur le bouton trie la produits à partir de la plus coûteuse à la moins ([cliquez pour afficher l’image en taille réelle](paging-and-sorting-report-data-vb/_static/image33.png))
+**Figure 15**: cliquer sur le bouton classe les produits du plus onéreux au moins ([cliquez pour afficher l’image en plein écran](paging-and-sorting-report-data-vb/_static/image33.png))
 
 ## <a name="summary"></a>Récapitulatif
 
-Dans ce didacticiel, que nous avons vu comment implémenter la pagination et des fonctionnalités de tri par défaut, qui ont été aussi simples que la vérification d’une case à cocher ! Quand un utilisateur trie ou parcourt des données, un flux de travail similaire qui se déroule :
+Dans ce didacticiel, nous avons vu comment implémenter les fonctionnalités de pagination et de tri par défaut, qui étaient aussi simples que de vérifier une case à cocher. Lorsqu’un utilisateur effectue un tri ou des pages de données, un flux de travail similaire est déplié :
 
-1. S’ensuit une publication (postback)
-2. Les données de contrôle Web s niveau préalable se déclenche des événements (`PageIndexChanging` ou `Sorting`)
-3. Toutes les données sont ré-récupérées par ObjectDataSource
-4. Les données de contrôle Web s postérieures se déclenche des événements de niveau (`PageIndexChanged` ou `Sorted`)
+1. Une publication (postback) résulte
+2. L’événement de préniveau des contrôles Web de données est déclenché (`PageIndexChanging` ou `Sorting`)
+3. Toutes les données sont récupérées à nouveau par ObjectDataSource
+4. L’événement de publication des contrôles Web de données est déclenché (`PageIndexChanged` ou `Sorted`)
 
-Tandis que l’implémentation de la pagination de base et le tri est un jeu d’enfant, plus l’effort doit être exercé d’utiliser la pagination personnalisée plus efficace ou pour améliorer davantage l’interface de pagination ou de tri. Didacticiels futures explorerons ces rubriques.
+Bien que l’implémentation de la pagination et du tri de base soit un peu, l’effort nécessaire pour utiliser la pagination personnalisée plus efficace ou pour améliorer l’interface de pagination ou de tri est plus poussé. Les prochains didacticiels exploreront ces rubriques.
 
 Bonne programmation !
 
 ## <a name="about-the-author"></a>À propos de l’auteur
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept les livres sur ASP/ASP.NET et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec les technologies Web Microsoft depuis 1998. Scott fonctionne comme un consultant indépendant, formateur et writer. Son dernier ouvrage est [*SAM animer vous-même ASP.NET 2.0 des dernières 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve à [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept livres ASP/ASP. net et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec des technologies Web Microsoft depuis 1998. Scott travaille en tant que consultant, formateur et auteur indépendant. Son dernier livre est [*Sams vous apprend vous-même ASP.NET 2,0 en 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve sur [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
 > [!div class="step-by-step"]
 > [Précédent](creating-a-customized-sorting-user-interface-cs.md)

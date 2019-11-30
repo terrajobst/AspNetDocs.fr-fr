@@ -8,12 +8,12 @@ ms.date: 01/16/2019
 ms.assetid: 8bf2c4fb-4ee5-4841-bfc2-03462c1f7a7a
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
 msc.type: authoredcontent
-ms.openlocfilehash: c45003325832258466a787bc589bf40e844248a2
-ms.sourcegitcommit: 4b324a11131e38f920126066b94ff478aa9927f8
+ms.openlocfilehash: 738318cce442fdc5d58dd1e4c992d4941be2487e
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985854"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74591245"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : déploiement à tester
 
@@ -23,7 +23,7 @@ Cette série de didacticiels montre comment déployer (publier) une application 
 
 Pour obtenir une version actuelle du déploiement sur Azure, consultez [créer une application web ASP.net core dans Azure](/azure/app-service/app-service-web-get-started-dotnet).
 
-## <a name="overview"></a>Overview
+## <a name="overview"></a>Vue d'ensemble de
 
 Dans ce didacticiel, vous allez déployer une application Web ASP.NET sur Internet Information Server (IIS) sur votre ordinateur local.
 
@@ -49,7 +49,7 @@ Rappel : Si vous recevez un message d’erreur ou si une action ne fonctionne p
 
 Téléchargez et installez la solution et le projet de démarrage de Contoso University Visual Studio. Cette solution contient le didacticiel terminé. 
 
-[Télécharger le projet de démarrage](http://go.microsoft.com/fwlink/p/?LinkId=282627)
+[Télécharger le projet de démarrage](https://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 ## <a name="install-iis"></a>Installer IIS
 
@@ -372,7 +372,7 @@ Cette chaîne de connexion supplémentaire vous permet de spécifier un compte d
 
 2. Créez une transformation de fichier Web. config pour la chaîne de connexion que vous souhaitez que l’application utilise au moment de l’exécution.
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Vous avez maintenant déployé votre application sur IIS sur votre ordinateur de développement et vous l’avez testée ici.
 
@@ -380,7 +380,7 @@ Vous avez maintenant déployé votre application sur IIS sur votre ordinateur de
 
 Cela permet de vérifier que le processus de déploiement a copié le contenu de l’application à l’emplacement approprié (à l’exclusion des fichiers que vous ne souhaitez pas déployer) et que Web Deploy configuré IIS correctement au cours du déploiement. Dans le didacticiel suivant, vous allez exécuter un test supplémentaire qui recherche une tâche de déploiement qui n’a pas encore été effectuée : définition des autorisations de dossier sur le dossier de l' *Elm* .
 
-## <a name="more-information"></a>Plus d’informations
+## <a name="more-information"></a>Plus d'informations
 
 Pour plus d’informations sur l’exécution d’IIS ou de IIS Express dans Visual Studio, consultez les ressources suivantes :
 

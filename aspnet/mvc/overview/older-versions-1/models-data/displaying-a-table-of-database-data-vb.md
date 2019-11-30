@@ -1,166 +1,166 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-vb
-title: Affichage d’une Table de base de données (VB) | Microsoft Docs
+title: Affichage d’une table de données de base de données (VB) | Microsoft Docs
 author: microsoft
-description: Dans ce didacticiel, je vais montrer deux méthodes d’affichage d’un ensemble d’enregistrements de base de données. Je montrerai des deux méthodes de mise en forme un jeu d’enregistrements de base de données dans le code HTML ta...
+description: Dans ce didacticiel, j’illustre deux méthodes d’affichage d’un ensemble d’enregistrements de base de données. J’affiche deux méthodes de mise en forme d’un ensemble d’enregistrements de base de données dans un fichier HTML...
 ms.author: riande
 ms.date: 10/07/2008
 ms.assetid: 5bb4587f-5bcd-44f5-b368-3c1709162b35
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9bb26e4364d1e32a428b34bd03918303206d21c9
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: f2e2489ac8455913f55c746dbe05b9fe8272285b
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65122427"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74590911"
 ---
 # <a name="displaying-a-table-of-database-data-vb"></a>Affichage d’une table de données de la base de données (VB)
 
-by [Microsoft](https://github.com/microsoft)
+par [Microsoft](https://github.com/microsoft)
 
-[Télécharger PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_11_VB.pdf)
+[Télécharger PDF](https://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_11_VB.pdf)
 
-> Dans ce didacticiel, je vais montrer deux méthodes d’affichage d’un ensemble d’enregistrements de base de données. Je montrerai des deux méthodes de mise en forme d’un jeu d’enregistrements de base de données dans une table HTML. Tout d’abord, je montrerai comment vous pouvez mettre en forme les enregistrements de base de données directement dans une vue. Ensuite, je vais montrer comment vous pouvez tirer parti des vues partielles lors de la mise en forme d’enregistrements de base de données.
+> Dans ce didacticiel, j’illustre deux méthodes d’affichage d’un ensemble d’enregistrements de base de données. J’affiche deux méthodes de mise en forme d’un ensemble d’enregistrements de base de données dans une table HTML. Tout d’abord, je vais vous montrer comment vous pouvez mettre en forme les enregistrements de base de données directement dans une vue. Ensuite, je vous montre comment tirer parti des partiels lors de la mise en forme des enregistrements de base de données.
 
-L’objectif de ce didacticiel est d’expliquer comment vous pouvez afficher un tableau HTML de base de données dans une application ASP.NET MVC. Tout d’abord, vous allez apprendre à utiliser les outils de génération de modèles automatique inclus dans Visual Studio pour générer une vue qui affiche un ensemble d’enregistrements automatiquement. Ensuite, vous allez apprendre à utiliser un partiel en tant que modèle lors de la mise en forme d’enregistrements de base de données.
+L’objectif de ce didacticiel est d’expliquer comment vous pouvez afficher une table HTML de données de base de données dans une application MVC ASP.NET. Tout d’abord, vous allez apprendre à utiliser les outils de génération de modèles automatique inclus dans Visual Studio pour générer une vue qui affiche automatiquement un ensemble d’enregistrements. Ensuite, vous allez apprendre à utiliser une partie partielle comme modèle lors de la mise en forme d’enregistrements de base de données.
 
-## <a name="create-the-model-classes"></a>Créer les Classes de modèle
+## <a name="create-the-model-classes"></a>Créer les classes de modèle
 
-Nous allons afficher le jeu d’enregistrements de la table de base de données de films. La table de base de données de films contient les colonnes suivantes :
+Nous allons afficher l’ensemble des enregistrements de la table de base de données de films. La table de base de données movies contient les colonnes suivantes :
 
 <a id="0.4_table01"></a>
 
-| **Nom de la colonne** | **Type de données** | **Null autorisé** |
+| **Nom de la colonne** | **Type de données** | **Autoriser les valeurs null** |
 | --- | --- | --- |
-| Id | Int | False |
-| Titre | Nvarchar(200) | False |
-| Directeur | NVarchar(50) | False |
+| ID | int | False |
+| Titre | Nvarchar (200) | False |
+| MetaDirectory | NVarchar (50) | False |
 | DateReleased | DateTime | False |
 
-Afin de représenter la table de films dans notre application ASP.NET MVC, nous devons créer une classe de modèle. Dans ce didacticiel, nous utilisons Microsoft Entity Framework pour créer nos classes de modèle.
+Pour représenter le tableau films dans notre application ASP.NET MVC, nous devons créer une classe de modèle. Dans ce didacticiel, nous utilisons le Entity Framework Microsoft pour créer nos classes de modèle.
 
 > [!NOTE] 
 > 
-> Dans ce didacticiel, nous utilisons Microsoft Entity Framework. Toutefois, il est important de comprendre que vous pouvez utiliser une variété de technologies différentes pour interagir avec une base de données à partir d’une application ASP.NET MVC, y compris LINQ to SQL, NHibernate ou ADO.NET.
+> Dans ce didacticiel, nous utilisons le Entity Framework Microsoft. Toutefois, il est important de comprendre que vous pouvez utiliser une variété de technologies différentes pour interagir avec une base de données à partir d’une application ASP.NET MVC, y compris LINQ to SQL, NHibernate ou ADO.NET.
 
-Suivez ces étapes pour lancer l’Assistant Entity Data Model :
+Pour lancer l’Assistant Entity Data Model, procédez comme suit :
 
-1. Cliquez sur le dossier de modèles dans la fenêtre Explorateur de solutions puis sélectionnez l’option de menu **ajouter, nouvel élément**.
-2. Sélectionnez le **données** catégorie, puis sélectionnez le **ADO.NET Entity Data Model** modèle.
-3. Nommez votre modèle de données *MoviesDBModel.edmx* et cliquez sur le **ajouter** bouton.
+1. Cliquez avec le bouton droit sur le dossier modèles dans la fenêtre Explorateur de solutions et sélectionnez l’option de menu **Ajouter, nouvel élément**.
+2. Sélectionnez la catégorie de **données** et sélectionnez le modèle de **Entity Data Model ADO.net** .
+3. Donnez au modèle de données le nom *MoviesDBModel. edmx* , puis cliquez sur le bouton **Ajouter** .
 
-Après avoir cliqué sur le bouton Ajouter, l’Assistant Entity Data Model s’affiche (voir Figure 1). Suivez ces étapes pour terminer l’Assistant :
+Une fois que vous avez cliqué sur le bouton Ajouter, l’Assistant Entity Data Model s’affiche (voir figure 1). Pour terminer l’Assistant, procédez comme suit :
 
-1. Dans le **choisir le contenu du modèle** étape, sélectionnez le **générer à partir de la base de données** option.
-2. Dans le **choisir votre connexion de données** étape, utilisez le *MoviesDB.mdf* connexion de données et le nom *MoviesDBEntities* des paramètres de connexion. Cliquez sur le **suivant** bouton.
-3. Dans le **choisir vos objets de base de données** étape, développez le nœud Tables, sélectionnez la table de films. Entrez l’espace de noms *modèles* et cliquez sur le **Terminer** bouton.
+1. Dans l’étape **choisir le contenu du modèle** , sélectionnez l’option **générer à partir de la base de données** .
+2. Dans l’étape **choisir votre connexion de données** , utilisez la connexion de données *MoviesDB. mdf* et le nom *MoviesDBEntities* pour les paramètres de connexion. Cliquez sur le bouton **suivant** .
+3. Dans l’étape **choisir vos objets de base de données** , développez le nœud tables, puis sélectionnez le tableau films. Entrez les *modèles* d’espace de noms, puis cliquez sur le bouton **Terminer** .
 
-[![Création de LINQ aux classes SQL](displaying-a-table-of-database-data-vb/_static/image1.jpg)](displaying-a-table-of-database-data-vb/_static/image1.png)
+[![de la création de classes LINQ to SQL](displaying-a-table-of-database-data-vb/_static/image1.jpg)](displaying-a-table-of-database-data-vb/_static/image1.png)
 
-**Figure 01**: Création de LINQ aux classes SQL ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image2.png))
+**Figure 01**: création de classes LINQ to SQL ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image2.png))
 
-Après avoir terminé l’Assistant Entity Data Model, Entity Data Model Designer s’ouvre. Le concepteur doit afficher l’entité de films (voir Figure 2).
+Une fois que vous avez terminé l’Assistant Entity Data Model, le concepteur de Entity Data Model s’ouvre. Le concepteur doit afficher l’entité Movies (voir figure 2).
 
-[![L’Entity Data Model Designer](displaying-a-table-of-database-data-vb/_static/image2.jpg)](displaying-a-table-of-database-data-vb/_static/image3.png)
+[![le concepteur de Entity Data Model](displaying-a-table-of-database-data-vb/_static/image2.jpg)](displaying-a-table-of-database-data-vb/_static/image3.png)
 
-**Figure 02**: L’Entity Data Model Designer ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image4.png))
+**Figure 02**: concepteur de Entity Data Model ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image4.png))
 
-Nous devons apporter une modification avant de continuer. L’Assistant génère une classe de modèle nommée *films* qui représente la table de base de données de films. Étant donné que nous allons utiliser la classe de films pour représenter un film, nous devons modifier le nom de la classe à être *film* au lieu de *films* (singulier plutôt qu’au pluriel).
+Nous devons apporter une modification avant de continuer. L’Assistant données d’entité génère une classe de modèle nommée *movies* qui représente la table de base de données de films. Étant donné que nous allons utiliser la classe movies pour représenter un film particulier, nous devons modifier le nom de la classe pour qu’elle soit *Movie* au lieu de *films* (singulier plutôt que pluriel).
 
-Double-cliquez sur le nom de la classe sur l’aire du concepteur et modifiez le nom de la classe films par film. Après avoir apporté cette modification, cliquez sur le **enregistrer** bouton (l’icône de la disquette) pour générer la classe Movie.
+Double-cliquez sur le nom de la classe sur l’aire du concepteur et remplacez le nom de la classe films par film. Après avoir apporté cette modification, cliquez sur le bouton **Enregistrer** (l’icône de la disquette) pour générer la classe Movie.
 
-## <a name="create-the-movies-controller"></a>Créer le contrôleur de films
+## <a name="create-the-movies-controller"></a>Créer le contrôleur movies
 
-Maintenant que nous avons un moyen pour représenter des enregistrements de notre base de données, nous pouvons créer un contrôleur qui retourne la collection de films. Dans la fenêtre Explorateur de solutions Visual Studio, cliquez sur le dossier contrôleurs, puis sélectionnez l’option de menu **ajouter, de contrôleur** (voir Figure 3).
+Maintenant que nous disposons d’un moyen de représenter nos enregistrements de base de données, nous pouvons créer un contrôleur qui retourne la collection de films. Dans la fenêtre de Explorateur de solutions de Visual Studio, cliquez avec le bouton droit sur le dossier Controllers et sélectionnez l’option de menu **Ajouter, contrôleur** (voir figure 3).
 
-[![Le contrôleur Menu ajouter](displaying-a-table-of-database-data-vb/_static/image3.jpg)](displaying-a-table-of-database-data-vb/_static/image5.png)
+[![le menu Ajouter un contrôleur](displaying-a-table-of-database-data-vb/_static/image3.jpg)](displaying-a-table-of-database-data-vb/_static/image5.png)
 
-**Figure 03**: Le contrôleur de Menu d’ajout ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image6.png))
+**Figure 03**: menu Ajouter un contrôleur ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image6.png))
 
-Lorsque le **ajouter un contrôleur** boîte de dialogue s’affiche, entrez le nom du contrôleur MovieController (voir Figure 4). Cliquez sur le **ajouter** pour ajouter le nouveau contrôleur.
+Quand la boîte de dialogue **Ajouter un contrôleur** s’affiche, entrez le nom du contrôleur MovieController (voir figure 4). Cliquez sur le bouton **Ajouter** pour ajouter le nouveau contrôleur.
 
-[![La boîte de dialogue Ajouter un contrôleur](displaying-a-table-of-database-data-vb/_static/image4.jpg)](displaying-a-table-of-database-data-vb/_static/image7.png)
+[![la boîte de dialogue Ajouter un contrôleur](displaying-a-table-of-database-data-vb/_static/image4.jpg)](displaying-a-table-of-database-data-vb/_static/image7.png)
 
-**Figure 04**: La boîte de dialogue Ajouter un contrôleur ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image8.png))
+**Figure 04**: boîte de dialogue Ajouter un contrôleur ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image8.png))
 
-Nous avons besoin modifier l’action Index() exposée par le contrôleur de films afin qu’il retourne le jeu d’enregistrements de base de données. Modifier le contrôleur afin qu’il semble que le contrôleur dans le Listing 1.
+Nous devons modifier l’action d’index () exposée par le contrôleur de film afin qu’il retourne l’ensemble des enregistrements de la base de données. Modifiez le contrôleur afin qu’il ressemble au contrôleur de la liste 1.
 
 **Liste 1 – Controllers\MovieController.vb**
 
 [!code-vb[Main](displaying-a-table-of-database-data-vb/samples/sample1.vb)]
 
-Dans la liste 1, la classe MoviesDBEntities est utilisée pour représenter la base de données MoviesDB. L’expression *entités. MovieSet.ToList()* retourne le jeu de tous les films à partir de la table de base de données de films.
+Dans la liste 1, la classe MoviesDBEntities est utilisée pour représenter la base de données MoviesDB. Entités d’expression *. MovieSet. ToList ()* retourne le jeu de tous les films de la table de base de données de films.
 
 ## <a name="create-the-view"></a>Créer la vue
 
-Pour afficher un jeu d’enregistrements de base de données dans un tableau HTML, le plus simple consiste à tirer parti de la génération de modèles fournie par Visual Studio.
+Le moyen le plus simple d’afficher un ensemble d’enregistrements de base de données dans un tableau HTML est de tirer parti de la génération de modèles automatique fournie par Visual Studio.
 
-Générez votre application en sélectionnant l’option de menu **créer, générer la Solution**. Vous devez générer votre application avant d’ouvrir le **ajouter une vue** boîte de dialogue ou de vos classes de données n’apparaîtront pas dans la boîte de dialogue.
+Générez votre application en sélectionnant l’option de menu **Générer, générer la solution**. Vous devez générer votre application avant d’ouvrir la boîte de dialogue **Ajouter une vue** ou vos classes de données n’apparaissent pas dans la boîte de dialogue.
 
-L’action Index() de clic droit et sélectionnez l’option de menu **ajouter une vue** (voir Figure 5).
+Cliquez avec le bouton droit sur l’action index () et sélectionnez l’option de menu **Ajouter une vue** (voir figure 5).
 
-[![Ajout d’une vue](displaying-a-table-of-database-data-vb/_static/image5.jpg)](displaying-a-table-of-database-data-vb/_static/image9.png)
+[![ajout d’une vue](displaying-a-table-of-database-data-vb/_static/image5.jpg)](displaying-a-table-of-database-data-vb/_static/image9.png)
 
-**Figure 05**: Ajout d’une vue ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image10.png))
+**Figure 05**: ajout d’une vue ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image10.png))
 
-Dans le **ajouter une vue** boîte de dialogue, cochez la case intitulée **créer une vue fortement typée**. Sélectionnez la classe Movie comme le **afficher la classe de données**. Sélectionnez *liste* en tant que le **afficher le contenu** (voir Figure 6). Sélection de ces options génère une vue fortement typée qui affiche une liste de films.
+Dans la boîte de dialogue **Ajouter une vue** , activez la case à cocher **créer une vue fortement typée**. Sélectionnez la classe Movie comme **classe de données d’affichage**. Sélectionnez *liste* comme contenu de la **vue** (voir figure 6). La sélection de ces options génère un affichage fortement typé qui affiche une liste de films.
 
-[![La boîte de dialogue Ajouter une vue](displaying-a-table-of-database-data-vb/_static/image6.jpg)](displaying-a-table-of-database-data-vb/_static/image11.png)
+[![la boîte de dialogue Ajouter une vue](displaying-a-table-of-database-data-vb/_static/image6.jpg)](displaying-a-table-of-database-data-vb/_static/image11.png)
 
-**Figure 06**: La boîte de dialogue Ajouter une vue ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image12.png))
+**Figure 06**: boîte de dialogue Ajouter une vue ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image12.png))
 
-Après avoir cliqué sur le **ajouter** bouton, la vue dans la liste 2 est généré automatiquement. Cette vue contient le code requis pour effectuer une itération dans la collection de films et afficher chacune des propriétés d’un film.
+Une fois que vous avez cliqué sur le bouton **Ajouter** , la vue dans la liste 2 est générée automatiquement. Cette vue contient le code requis pour itérer au sein de la collection de films et afficher chacune des propriétés d’un film.
 
-**Listing 2 – Views\Movie\Index.aspx**
+**Liste 2 – Views\Movie\Index.aspx**
 
 [!code-aspx[Main](displaying-a-table-of-database-data-vb/samples/sample2.aspx)]
 
-Vous pouvez exécuter l’application en sélectionnant l’option de menu **déboguer, démarrer le débogage** (ou en appuyant sur la touche F5). Exécution de l’application lance Internet Explorer. Si vous accédez à l’URL de /Movie vous verrez la page dans la Figure 7.
+Vous pouvez exécuter l’application en sélectionnant l’option de menu **Déboguer, démarrer le débogage** (ou en appuyant sur la touche F5). L’exécution de l’application lance Internet Explorer. Si vous accédez à l’URL/Movie, vous verrez la page de la figure 7.
 
-[![Une table de films](displaying-a-table-of-database-data-vb/_static/image7.jpg)](displaying-a-table-of-database-data-vb/_static/image13.png)
+[![un tableau de films](displaying-a-table-of-database-data-vb/_static/image7.jpg)](displaying-a-table-of-database-data-vb/_static/image13.png)
 
-**Figure 07**: Une table de films ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image14.png))
+**Figure 07**: un tableau de films ([cliquez pour afficher l’image en taille réelle](displaying-a-table-of-database-data-vb/_static/image14.png))
 
-Si vous n’aimez pas quoi que ce soit sur l’apparence de la grille d’enregistrements de base de données dans la Figure 7 vous pouvez simplement modifier la vue Index. Par exemple, vous pouvez modifier le *DateReleased* en-tête à *Date de publication* en modifiant la vue Index.
+Si vous n’aimez rien sur l’apparence de la grille des enregistrements de base de données de la figure 7, vous pouvez simplement modifier la vue index. Par exemple, vous pouvez remplacer l’en-tête *DateReleased* par *Date de publication* en modifiant la vue index.
 
-## <a name="create-a-template-with-a-partial"></a>Créer un modèle avec un partiel
+## <a name="create-a-template-with-a-partial"></a>Créer un modèle avec une partie
 
-Lorsqu’une vue est trop compliquée, il est judicieux de commencer avec rupture de la vue dans les vues partielles. À l’aide de vues partielles rend plus facile à comprendre et à gérer vos vues. Nous allons créer un partiel qui nous pouvons utiliser comme modèle pour mettre en forme chacun des enregistrements de base de données de film.
+Quand une vue est trop compliquée, il est judicieux de commencer à décomposer la vue en partiels. L’utilisation de partiels rend vos vues plus faciles à comprendre et à gérer. Nous allons créer une partie partielle que nous pouvons utiliser comme modèle pour mettre en forme chacun des enregistrements de la base de données de films.
 
-Suivez ces étapes pour créer le partielle :
+Pour créer le partiel, procédez comme suit :
 
-1. Cliquez sur le dossier Views\Movie et sélectionnez l’option de menu **ajouter une vue**.
-2. Cochez la case intitulée *créer une vue partielle (.ascx)*.
-3. Nommez le partielle *MovieTemplate*.
-4. Cochez la case intitulée **créer une vue fortement typée**.
-5. Sélectionnez le film comme le *afficher la classe de données*.
-6. Sélectionnez vide en tant que le *afficher le contenu*.
-7. Cliquez sur le **ajouter** pour ajouter le partielle à votre projet.
+1. Cliquez avec le bouton droit sur le dossier Views\Movie et sélectionnez l’option de menu **Ajouter une vue**.
+2. Cochez la case *créer une vue partielle (. ascx)* .
+3. Nommez le *MovieTemplate*partiel.
+4. Cochez la case **créer une vue fortement typée**.
+5. Sélectionnez Movie comme *classe de données d’affichage*.
+6. Sélectionnez vide comme contenu de la *vue*.
+7. Cliquez sur le bouton **Ajouter** pour ajouter le partiel à votre projet.
 
-Après avoir effectué ces étapes, modifiez le MovieTemplate partielle ressemble à la liste 3.
+Une fois ces étapes terminées, modifiez le MovieTemplate partiel pour qu’il ressemble à Listing 3.
 
 **Liste 3 – Views\Movie\MovieTemplate.ascx**
 
 [!code-aspx[Main](displaying-a-table-of-database-data-vb/samples/sample3.aspx)]
 
-Partielle dans le Listing 3 contient un modèle pour une seule ligne d’enregistrements.
+Le partiel de la liste 3 contient un modèle pour une seule ligne d’enregistrements.
 
-La vue Index modifiée sur la liste 4 utilise la MovieTemplate partielle.
+La vue d’index modifiée de la liste 4 utilise le MovieTemplate partiel.
 
 **Liste 4 – Views\Movie\Index.aspx**
 
 [!code-aspx[Main](displaying-a-table-of-database-data-vb/samples/sample4.aspx)]
 
-La vue sur la liste 4 contient un pour chaque boucle qui itère au sein de tous les films. Pour chaque film, le MovieTemplate partielle est utilisé pour mettre en forme le film. Le MovieTemplate est rendu en appelant la méthode d’assistance RenderPartial().
+La vue de la liste 4 contient une boucle for each qui itère au sein de tous les films. Pour chaque film, le MovieTemplate partiel est utilisé pour mettre en forme le film. Le MovieTemplate est rendu en appelant la méthode d’assistance RenderPartial ().
 
-La vue Index modifiée restitue la même table HTML d’enregistrements de base de données. Toutefois, la vue a été considérablement simplifiée.
+La vue d’index modifiée affiche la même table HTML des enregistrements de base de données. Toutefois, la vue a été considérablement simplifiée.
 
-La méthode RenderPartial() est différente de la plupart des autres méthodes d’assistance, car elle ne retourne pas une chaîne. Par conséquent, vous devez appeler la méthode RenderPartial() à l’aide &lt;Html.RenderPartial() %&gt; au lieu de &lt;% = Html.RenderPartial() %&gt;.
+La méthode RenderPartial () est différente de la plupart des autres méthodes d’assistance, car elle ne retourne pas de chaîne. Par conséquent, vous devez appeler la méthode RenderPartial () à l’aide de &lt;% html. RenderPartial ()%&gt; au lieu de &lt;% = html. RenderPartial ()%&gt;.
 
 ## <a name="summary"></a>Récapitulatif
 
-L’objectif de ce didacticiel est d’expliquer comment vous pouvez afficher un jeu d’enregistrements de base de données dans une table HTML. Tout d’abord, vous avez appris à retourner un jeu d’enregistrements de base de données à partir d’une action de contrôleur en tirant parti de Microsoft Entity Framework. Ensuite, vous avez appris à utiliser la structure de Visual Studio pour générer une vue qui affiche une collection d’éléments automatiquement. Enfin, vous avez appris à simplifier l’affichage en tirant parti d’un partiel. Vous avez appris comment utiliser un partiel en tant que modèle afin que vous pouvez mettre en forme chaque enregistrement de base de données.
+L’objectif de ce didacticiel était d’expliquer comment vous pouvez afficher un ensemble d’enregistrements de base de données dans une table HTML. Tout d’abord, vous avez appris à retourner un jeu d’enregistrements de base de données à partir d’une action de contrôleur en tirant parti de la Entity Framework Microsoft. Ensuite, vous avez appris à utiliser la génération de modèles automatique de Visual Studio pour générer une vue qui affiche automatiquement une collection d’éléments. Enfin, vous avez appris à simplifier la vue en tirant parti d’un partiel. Vous avez appris à utiliser une partie partielle comme modèle pour pouvoir mettre en forme chaque enregistrement de base de données.
 
 > [!div class="step-by-step"]
 > [Précédent](creating-model-classes-with-linq-to-sql-vb.md)

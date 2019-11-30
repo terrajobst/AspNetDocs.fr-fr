@@ -2,55 +2,55 @@
 uid: web-forms/overview/ajax-control-toolkit/animation/animating-an-updatepanel-control-vb
 title: Animation d’un contrôle UpdatePanel (VB) | Microsoft Docs
 author: wenz
-description: Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Pour le contenu d’un...
+description: Le contrôle d’animation dans ASP.NET AJAX Control Toolkit n’est pas seulement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Pour le contenu d’un...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 4c306a2c-92b6-4904-b70b-365b847334fe
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/animating-an-updatepanel-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b44dfd284ac1ed94e92bd52f4ca426a36bf86825
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: d66dda923940a328c0757049c9d8bfa3b2d2b9fc
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130759"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74607071"
 ---
 # <a name="animating-an-updatepanel-control-vb"></a>Animation d’un contrôle UpdatePanel (VB)
 
 par [Christian Wenz](https://github.com/wenz)
 
-[Télécharger le Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/UpdatePanelAnimation1.vb.zip) ou [télécharger le PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/updatepanelanimation1VB.pdf)
+[Télécharger le code](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/UpdatePanelAnimation1.vb.zip) ou [Télécharger le PDF](https://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/updatepanelanimation1VB.pdf)
 
-> Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Pour le contenu d’un UpdatePanel, un extendeur spécial existe qui s’appuie fortement sur l’infrastructure d’animation : UpdatePanelAnimation. Ce didacticiel montre comment configurer ce type d’une animation pour un UpdatePanel.
+> Le contrôle d’animation dans ASP.NET AJAX Control Toolkit n’est pas seulement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Pour le contenu d’un UpdatePanel, il existe un extendeur spécial qui s’appuie fortement sur l’infrastructure d’animation : UpdatePanelAnimation. Ce didacticiel montre comment configurer une telle animation pour un UpdatePanel.
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d'ensemble de
 
-Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Pour le contenu d’un `UpdatePanel`, un extendeur spécial existe qui s’appuie fortement sur l’infrastructure d’animation : `UpdatePanelAnimation`. Ce didacticiel montre comment configurer ce type d’une animation pour un `UpdatePanel`.
+Le contrôle d’animation dans ASP.NET AJAX Control Toolkit n’est pas seulement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Pour le contenu d’un `UpdatePanel`, il existe un extendeur spécial qui s’appuie fortement sur l’infrastructure d’animation : `UpdatePanelAnimation`. Ce didacticiel montre comment configurer une telle animation pour un `UpdatePanel`.
 
 ## <a name="steps"></a>Étapes
 
-La première étape consiste comme d’habitude à inclure le `ScriptManager` dans la page afin que la bibliothèque ASP.NET AJAX est chargée et les outils de contrôle peut être utilisé :
+La première étape consiste à inclure la `ScriptManager` dans la page de sorte que la bibliothèque AJAX ASP.NET soit chargée et que la boîte à outils de contrôle puisse être utilisée :
 
 [!code-aspx[Main](animating-an-updatepanel-control-vb/samples/sample1.aspx)]
 
-L’animation dans ce scénario sera appliquée à un ASP.NET `Wizard` contrôle web résidant dans un `UpdatePanel`. Trois étapes (arbitraires) offrent suffisamment déclenchent des publications :
+L’animation dans ce scénario sera appliquée à un contrôle Web `Wizard` ASP.NET résidant dans une `UpdatePanel`. Trois étapes (arbitraires) fournissent suffisamment d’options pour déclencher des publications (postback) :
 
 [!code-aspx[Main](animating-an-updatepanel-control-vb/samples/sample2.aspx)]
 
-Le balisage nécessaire pour le `UpdatePanelAnimationExtender` contrôle est assez semblable à celui utilisé pour le `AnimationExtender`. Dans le `TargetControlID` attribut nous fournissons le `ID` de la `UpdatePanel` pour animer ; dans le `UpdatePanelAnimationExtender` contrôle, le `<Animations>` élément contient le balisage XML de l’animation. Il n’existe toutefois une différence : La quantité d’événements et gestionnaires d’événements est limitée par rapport à `AnimationExtender`. Pour `UpdatePanels`, seuls deux d'entre elles existe :
+Le balisage nécessaire pour le contrôle `UpdatePanelAnimationExtender` est assez similaire à celui utilisé pour le `AnimationExtender`. Dans l’attribut `TargetControlID`, nous fournissons le `ID` du `UpdatePanel` à animer. dans le contrôle `UpdatePanelAnimationExtender`, l’élément `<Animations>` contient le balisage XML pour la ou les animations. Toutefois, il existe une différence : la quantité d’événements et de gestionnaires d’événements est limitée par rapport à `AnimationExtender`. Pour `UpdatePanels`, seuls deux d’entre eux existent :
 
-- `<OnUpdated>` Lorsque le contrôle UpdatePanel a été mis à jour
-- `<OnUpdating>` Lorsque le contrôle UpdatePanel démarre la mise à jour
+- `<OnUpdated>` lorsque UpdatePanel a été mis à jour
+- `<OnUpdating>` lors du démarrage de la mise à jour de UpdatePanel
 
-Dans ce scénario, le nouveau contenu de la `UpdatePanel` (après la publication (postback)) est apparition en fondu. Voici le balisage nécessaire pour ce faire :
+Dans ce scénario, le nouveau contenu du `UpdatePanel` (après la publication) s’estompe. Il s’agit du balisage nécessaire pour ce qui suit :
 
 [!code-aspx[Main](animating-an-updatepanel-control-vb/samples/sample3.aspx)]
 
-Maintenant chaque fois qu’une publication (postback) se produit dans le contrôle UpdatePanel, le nouveau contenu du panneau Fondu léger.
+Maintenant, chaque fois qu’une publication (postback) se produit dans le UpdatePanel, le nouveau contenu du panneau s’estompe en douceur.
 
-[![L’étape suivante de l’Assistant est fondu](animating-an-updatepanel-control-vb/_static/image2.png)](animating-an-updatepanel-control-vb/_static/image1.png)
+[![l’étape suivante de l’Assistant est en fondu](animating-an-updatepanel-control-vb/_static/image2.png)](animating-an-updatepanel-control-vb/_static/image1.png)
 
-L’étape suivante de l’Assistant est fondu ([cliquez pour afficher l’image en taille réelle](animating-an-updatepanel-control-vb/_static/image3.png))
+L’étape suivante de l’Assistant est en fondu ([cliquez pour afficher l’image en taille réelle](animating-an-updatepanel-control-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Précédent](changing-an-animation-using-client-side-code-vb.md)
