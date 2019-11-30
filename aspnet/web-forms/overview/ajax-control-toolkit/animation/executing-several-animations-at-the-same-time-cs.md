@@ -1,63 +1,63 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-cs
-title: Exécution de plusieurs Animations en même temps (c#) | Microsoft Docs
+title: Exécution de plusieurs animations en même temps (C#) | Microsoft Docs
 author: wenz
-description: Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Il permet d’exécuter la chute...
+description: Le contrôle d’animation dans ASP.NET AJAX Control Toolkit n’est pas seulement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Il permet d’exécuter Severa...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 219149e1-3ee9-4b79-8fe4-7433f6b7d15b
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f6ca48ff8bc4be982e0eff55d8d9c3385176897b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: fe71feccbcbc4ee8e9cdc09d6220de6a53dd2d2b
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108231"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74575386"
 ---
-# <a name="executing-several-animations-at-the-same-time-c"></a><span data-ttu-id="cc689-104">Exécution de plusieurs Animations en même temps (c#)</span><span class="sxs-lookup"><span data-stu-id="cc689-104">Executing Several Animations at The Same Time (C#)</span></span>
+# <a name="executing-several-animations-at-the-same-time-c"></a><span data-ttu-id="47379-104">Exécution de plusieurs animations en même temps (C#)</span><span class="sxs-lookup"><span data-stu-id="47379-104">Executing Several Animations at The Same Time (C#)</span></span>
 
-<span data-ttu-id="cc689-105">par [Christian Wenz](https://github.com/wenz)</span><span class="sxs-lookup"><span data-stu-id="cc689-105">by [Christian Wenz](https://github.com/wenz)</span></span>
+<span data-ttu-id="47379-105">par [Christian Wenz](https://github.com/wenz)</span><span class="sxs-lookup"><span data-stu-id="47379-105">by [Christian Wenz](https://github.com/wenz)</span></span>
 
-<span data-ttu-id="cc689-106">[Télécharger le Code](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation2.cs.zip) ou [télécharger le PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation2CS.pdf)</span><span class="sxs-lookup"><span data-stu-id="cc689-106">[Download Code](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation2.cs.zip) or [Download PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation2CS.pdf)</span></span>
+<span data-ttu-id="47379-106">[Télécharger le code](https://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation2.cs.zip) ou [Télécharger le PDF](https://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation2CS.pdf)</span><span class="sxs-lookup"><span data-stu-id="47379-106">[Download Code](https://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation2.cs.zip) or [Download PDF](https://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation2CS.pdf)</span></span>
 
-> <span data-ttu-id="cc689-107">Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle.</span><span class="sxs-lookup"><span data-stu-id="cc689-107">The Animation control in the ASP.NET AJAX Control Toolkit is not just a control but a whole framework to add animations to a control.</span></span> <span data-ttu-id="cc689-108">Il permet d’exécuter plusieurs animations de manière parallèle.</span><span class="sxs-lookup"><span data-stu-id="cc689-108">It allows to run several animations in a parallel fashion.</span></span>
+> <span data-ttu-id="47379-107">Le contrôle d’animation dans ASP.NET AJAX Control Toolkit n’est pas seulement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle.</span><span class="sxs-lookup"><span data-stu-id="47379-107">The Animation control in the ASP.NET AJAX Control Toolkit is not just a control but a whole framework to add animations to a control.</span></span> <span data-ttu-id="47379-108">Il permet d’exécuter plusieurs animations de manière parallèle.</span><span class="sxs-lookup"><span data-stu-id="47379-108">It allows to run several animations in a parallel fashion.</span></span>
 
-## <a name="overview"></a><span data-ttu-id="cc689-109">Vue d'ensemble</span><span class="sxs-lookup"><span data-stu-id="cc689-109">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="47379-109">Vue d'ensemble de</span><span class="sxs-lookup"><span data-stu-id="47379-109">Overview</span></span>
 
-<span data-ttu-id="cc689-110">Le contrôle d’Animation dans ASP.NET AJAX Control Toolkit n’est pas simplement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle.</span><span class="sxs-lookup"><span data-stu-id="cc689-110">The Animation control in the ASP.NET AJAX Control Toolkit is not just a control but a whole framework to add animations to a control.</span></span> <span data-ttu-id="cc689-111">Il permet d’exécuter plusieurs animations de manière parallèle.</span><span class="sxs-lookup"><span data-stu-id="cc689-111">It allows to run several animations in a parallel fashion.</span></span>
+<span data-ttu-id="47379-110">Le contrôle d’animation dans ASP.NET AJAX Control Toolkit n’est pas seulement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle.</span><span class="sxs-lookup"><span data-stu-id="47379-110">The Animation control in the ASP.NET AJAX Control Toolkit is not just a control but a whole framework to add animations to a control.</span></span> <span data-ttu-id="47379-111">Il permet d’exécuter plusieurs animations de manière parallèle.</span><span class="sxs-lookup"><span data-stu-id="47379-111">It allows to run several animations in a parallel fashion.</span></span>
 
-## <a name="steps"></a><span data-ttu-id="cc689-112">Étapes</span><span class="sxs-lookup"><span data-stu-id="cc689-112">Steps</span></span>
+## <a name="steps"></a><span data-ttu-id="47379-112">Étapes</span><span class="sxs-lookup"><span data-stu-id="47379-112">Steps</span></span>
 
-<span data-ttu-id="cc689-113">Tout d’abord inclure le `ScriptManager` dans la page ; ensuite, la bibliothèque AJAX ASP.NET est chargée, ce qui permet d’utiliser les outils de contrôle :</span><span class="sxs-lookup"><span data-stu-id="cc689-113">First of all, include the `ScriptManager` in the page; then, the ASP.NET AJAX library is loaded, making it possible to use the Control Toolkit:</span></span>
+<span data-ttu-id="47379-113">Tout d’abord, incluez la `ScriptManager` dans la page ; Ensuite, la bibliothèque ASP.NET AJAX est chargée, ce qui permet d’utiliser la boîte à outils de contrôle :</span><span class="sxs-lookup"><span data-stu-id="47379-113">First of all, include the `ScriptManager` in the page; then, the ASP.NET AJAX library is loaded, making it possible to use the Control Toolkit:</span></span>
 
 [!code-aspx[Main](executing-several-animations-at-the-same-time-cs/samples/sample1.aspx)]
 
-<span data-ttu-id="cc689-114">L’animation sera appliquée à un volet de texte qui ressemble à ceci :</span><span class="sxs-lookup"><span data-stu-id="cc689-114">The animation will be applied to a panel of text which looks like this:</span></span>
+<span data-ttu-id="47379-114">L’animation sera appliquée à un panneau de texte qui ressemble à ceci :</span><span class="sxs-lookup"><span data-stu-id="47379-114">The animation will be applied to a panel of text which looks like this:</span></span>
 
 [!code-aspx[Main](executing-several-animations-at-the-same-time-cs/samples/sample2.aspx)]
 
-<span data-ttu-id="cc689-115">Dans la classe CSS associée pour le panneau, définir une couleur d’arrière-plan agréable et également définir une largeur fixe pour le panneau :</span><span class="sxs-lookup"><span data-stu-id="cc689-115">In the associated CSS class for the panel, define a nice background color and also set a fixed width for the panel:</span></span>
+<span data-ttu-id="47379-115">Dans la classe CSS associée du panneau, définissez une couleur d’arrière-plan intéressante et définissez également une largeur fixe pour le panneau :</span><span class="sxs-lookup"><span data-stu-id="47379-115">In the associated CSS class for the panel, define a nice background color and also set a fixed width for the panel:</span></span>
 
 [!code-css[Main](executing-several-animations-at-the-same-time-cs/samples/sample3.css)]
 
-<span data-ttu-id="cc689-116">Ensuite, ajoutez le `AnimationExtender` à la page, en fournissant un `ID`, le `TargetControlID` attribut et le texte obligatoire `runat="server"`:</span><span class="sxs-lookup"><span data-stu-id="cc689-116">Then, add the `AnimationExtender` to the page, providing an `ID`, the `TargetControlID` attribute and the obligatory `runat="server"`:</span></span>
+<span data-ttu-id="47379-116">Ensuite, ajoutez le `AnimationExtender` à la page, en fournissant un `ID`, l’attribut `TargetControlID` et le `runat="server"`obligatoire :</span><span class="sxs-lookup"><span data-stu-id="47379-116">Then, add the `AnimationExtender` to the page, providing an `ID`, the `TargetControlID` attribute and the obligatory `runat="server"`:</span></span>
 
 [!code-aspx[Main](executing-several-animations-at-the-same-time-cs/samples/sample4.aspx)]
 
-<span data-ttu-id="cc689-117">Dans le `<Animations>` nœud, utilisez `<OnLoad>` pour exécuter les animations, une fois que la page a été entièrement chargée.</span><span class="sxs-lookup"><span data-stu-id="cc689-117">Within the `<Animations>` node, use `<OnLoad>` to run the animations once the page has been fully loaded.</span></span> <span data-ttu-id="cc689-118">En règle générale, `<OnLoad>` accepte uniquement une animation.</span><span class="sxs-lookup"><span data-stu-id="cc689-118">Generally, `<OnLoad>` only accepts one animation.</span></span> <span data-ttu-id="cc689-119">Le framework d’Animation vous permet de joindre plusieurs animations en un seul via le `<Parallel>` élément.</span><span class="sxs-lookup"><span data-stu-id="cc689-119">The Animation framework allows you to join several animations into one using the `<Parallel>` element.</span></span> <span data-ttu-id="cc689-120">Toutes les animations dans `<Parallel>` sont exécutées en même temps.</span><span class="sxs-lookup"><span data-stu-id="cc689-120">All animations within `<Parallel>` are executed at the same time.</span></span>
+<span data-ttu-id="47379-117">Dans le nœud `<Animations>`, utilisez `<OnLoad>` pour exécuter les animations une fois que la page a été entièrement chargée.</span><span class="sxs-lookup"><span data-stu-id="47379-117">Within the `<Animations>` node, use `<OnLoad>` to run the animations once the page has been fully loaded.</span></span> <span data-ttu-id="47379-118">En règle générale, `<OnLoad>` n’accepte qu’une seule animation.</span><span class="sxs-lookup"><span data-stu-id="47379-118">Generally, `<OnLoad>` only accepts one animation.</span></span> <span data-ttu-id="47379-119">L’infrastructure d’animation vous permet de joindre plusieurs animations à un seul à l’aide de l’élément `<Parallel>`.</span><span class="sxs-lookup"><span data-stu-id="47379-119">The Animation framework allows you to join several animations into one using the `<Parallel>` element.</span></span> <span data-ttu-id="47379-120">Toutes les animations au sein de `<Parallel>` sont exécutées en même temps.</span><span class="sxs-lookup"><span data-stu-id="47379-120">All animations within `<Parallel>` are executed at the same time.</span></span>
 
-<span data-ttu-id="cc689-121">Voici l’un balisage possible pour le `AnimationExtender` contrôle, atténuant progressivement et redimensionner le panneau en même temps :</span><span class="sxs-lookup"><span data-stu-id="cc689-121">Here is the a possible markup for the `AnimationExtender` control, fading out and resizing the panel at the same time:</span></span>
+<span data-ttu-id="47379-121">Voici le balisage possible pour le contrôle `AnimationExtender`, le fondu et le redimensionnement du panneau en même temps :</span><span class="sxs-lookup"><span data-stu-id="47379-121">Here is the a possible markup for the `AnimationExtender` control, fading out and resizing the panel at the same time:</span></span>
 
 [!code-aspx[Main](executing-several-animations-at-the-same-time-cs/samples/sample5.aspx)]
 
-<span data-ttu-id="cc689-122">Et effectivement : lorsque vous exécutez ce script, le panneau s’affiche, puis redimensionne (plus de triple de sa largeur et sa hauteur de réduisant de moitié) et fondu en même temps.</span><span class="sxs-lookup"><span data-stu-id="cc689-122">And indeed: when you run this script, the panel is displayed, then resizes (more than tripling its width and halving its height) and fades out at the same time.</span></span>
+<span data-ttu-id="47379-122">Et en effet : lorsque vous exécutez ce script, le panneau s’affiche, puis le redimensionnement (plus que la largeur et la moitié de sa hauteur) et disparaît en fondu en même temps.</span><span class="sxs-lookup"><span data-stu-id="47379-122">And indeed: when you run this script, the panel is displayed, then resizes (more than tripling its width and halving its height) and fades out at the same time.</span></span>
 
-<span data-ttu-id="cc689-123">[![Le panneau est fondu et redimensionnement (y compris son contenu, grâce à moteur de rendu du navigateur)](executing-several-animations-at-the-same-time-cs/_static/image2.png)](executing-several-animations-at-the-same-time-cs/_static/image1.png)</span><span class="sxs-lookup"><span data-stu-id="cc689-123">[![The panel is fading out and resizing (including its content, thanks to the browser's rendering engine)](executing-several-animations-at-the-same-time-cs/_static/image2.png)](executing-several-animations-at-the-same-time-cs/_static/image1.png)</span></span>
+<span data-ttu-id="47379-123">[![le panneau est en fondu et en redimensionnement (y compris son contenu, grâce au moteur de rendu du navigateur)](executing-several-animations-at-the-same-time-cs/_static/image2.png)](executing-several-animations-at-the-same-time-cs/_static/image1.png)</span><span class="sxs-lookup"><span data-stu-id="47379-123">[![The panel is fading out and resizing (including its content, thanks to the browser's rendering engine)](executing-several-animations-at-the-same-time-cs/_static/image2.png)](executing-several-animations-at-the-same-time-cs/_static/image1.png)</span></span>
 
-<span data-ttu-id="cc689-124">Le panneau est fondu et redimensionnement (y compris son contenu, grâce à moteur de rendu du navigateur) ([cliquez pour afficher l’image en taille réelle](executing-several-animations-at-the-same-time-cs/_static/image3.png))</span><span class="sxs-lookup"><span data-stu-id="cc689-124">The panel is fading out and resizing (including its content, thanks to the browser's rendering engine) ([Click to view full-size image](executing-several-animations-at-the-same-time-cs/_static/image3.png))</span></span>
+<span data-ttu-id="47379-124">Le panneau est en fondu et en redimensionnement (y compris son contenu, grâce au moteur de rendu du navigateur) ([cliquez pour afficher l’image en plein écran](executing-several-animations-at-the-same-time-cs/_static/image3.png))</span><span class="sxs-lookup"><span data-stu-id="47379-124">The panel is fading out and resizing (including its content, thanks to the browser's rendering engine) ([Click to view full-size image](executing-several-animations-at-the-same-time-cs/_static/image3.png))</span></span>
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="cc689-125">[Précédent](adding-animation-to-a-control-cs.md)
-> [Suivant](executing-several-animations-after-each-other-cs.md)</span><span class="sxs-lookup"><span data-stu-id="cc689-125">[Previous](adding-animation-to-a-control-cs.md)
+> <span data-ttu-id="47379-125">[Précédent](adding-animation-to-a-control-cs.md)
+> [Suivant](executing-several-animations-after-each-other-cs.md)</span><span class="sxs-lookup"><span data-stu-id="47379-125">[Previous](adding-animation-to-a-control-cs.md)
 [Next](executing-several-animations-after-each-other-cs.md)</span></span>
