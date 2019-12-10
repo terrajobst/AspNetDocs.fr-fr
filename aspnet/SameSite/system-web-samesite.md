@@ -5,12 +5,12 @@ description: Découvrez comment utiliser pour SameSite des cookies dans ASP.NET
 ms.author: riande
 ms.date: 12/03/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: 40e5c13b6834912c13b41cbfad7da8cd84ca6c8b
-ms.sourcegitcommit: 969e7db924ebad3cc0f0cb0d65d148e8b9221b9a
+ms.openlocfilehash: 47a3d7576edb0e818c39b32fbbcb98475248e18e
+ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74902023"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74993065"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>Utiliser des cookies SameSite dans ASP.NET
 
@@ -35,10 +35,7 @@ Consultez [HttpCookie. SameSite, propriété](/dotnet/api/system.web.httpcookie.
 
 La prise en charge de SameSite a été implémentée pour la première fois dans .NET 4.7.2 à l’aide de la [norme draft 2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07#section-4.1).
 
-Le 19 novembre 2019 mises à jour pour Windows a mis à jour .NET 4.7.2 + de la norme 2016 à la norme 2019. Des mises à jour supplémentaires sont à venir pour d’autres versions de Windows. Pour plus d’informations, consultez les Articles de la base de connaissances suivants :
-
-* [Article 4531182 de la base de connaissances](https://support.microsoft.com/help/4531182/kb4531182)
-* [Article 4524421 de la base de connaissances](https://support.microsoft.com/help/4524421/kb4524421)
+Le 19 novembre 2019 mises à jour pour Windows a mis à jour .NET 4.7.2 + de la norme 2016 à la norme 2019. Des mises à jour supplémentaires sont à venir pour d’autres versions de Windows. Pour plus d'informations, consultez <xref:samesite/kbs-samesite>.
 
  Le brouillon 2019 de la spécification SameSite :
 

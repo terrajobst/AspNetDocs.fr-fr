@@ -5,12 +5,12 @@ description: Utiliser des cookies SameSite et l’interface Open Web pour .NET (
 ms.author: riande
 ms.date: 12/6/2019
 uid: owin-samesite
-ms.openlocfilehash: fc64315e8c3614e460c9a8d551bcb0848b3fe8f9
-ms.sourcegitcommit: 516a168548252ff0eaae2c02ec4bd9ffcfa8375e
+ms.openlocfilehash: ac5ae24eeb9e8e1cc6296667a4bebef72c3eb62c
+ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74951895"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74993076"
 ---
 # <a name="samesite-cookies-and-the-open-web-interface-for-net-owin"></a>SameSite cookies et l’interface Open Web pour .NET (OWIN)
 
@@ -39,7 +39,7 @@ Pour obtenir la version ASP.NET 4. x de cet article, consultez <xref:samesite/sy
 
 `SystemWebCookieManager` dépend des API .NET 4.7.2 `System.Web` pour activer la prise en charge `SameSite` et des correctifs pour modifier le comportement.
 
-Les raisons justifiant l’utilisation de `SystemWebCookieManager` sont présentées dans [OWIN et les problèmes d’intégration de cookie de réponse Web](https://github.com/aspnet/AspNetKatana/wiki/System.Web-response-cookie-integration-issues). `SystemWebCookieManager` est recommandé lors de l’exécution sur `System.Web`. 
+Les raisons justifiant l’utilisation de `SystemWebCookieManager` sont présentées dans [OWIN et les problèmes d’intégration de cookie de réponse Web](https://github.com/aspnet/AspNetKatana/wiki/System.Web-response-cookie-integration-issues). `SystemWebCookieManager` est recommandé lors de l’exécution sur `System.Web`.
 
 Le code suivant définit `SameSite` sur `Lax`:
 
@@ -74,9 +74,7 @@ Le brouillon 2019 de la spécification `SameSite` :
 * Spécifie que les cookies sont traités comme `SameSite=Lax` par défaut.
 * Spécifie les cookies qui déclarent explicitement `SameSite=None` afin d’activer la remise entre sites qui doit être marquée comme `Secure`. `None` est une nouvelle entrée à refuser.
 * Est planifié pour être activé par [chrome](https://chromestatus.com/feature/5088147346030592) par défaut au [2020 février](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html). Les navigateurs ont commencé à passer à cette norme dans 2019.
-* Est pris en charge par les correctifs émis comme décrit dans les Articles de la base de connaissances suivants :
-  * [Article 4531182 de la base de connaissances](https://support.microsoft.com/help/4531182/kb4531182)
-  * [Article 4524421 de la base de connaissances](https://support.microsoft.com/help/4524421/kb4524421)
+* Est pris en charge par les correctifs émis comme décrit dans les Articles de la base de connaissances. Pour plus d'informations, consultez <xref:samesite/kbs-samesite>.
 
 <a name="sob"></a>
 
