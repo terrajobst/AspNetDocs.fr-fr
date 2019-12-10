@@ -3768,6 +3768,8 @@
   items:
     - name: Livres blancs
       href: whitepapers/overview.md
+    - name: ASP.NET SameSite
+      href: SameSite/system-web-samesite.md
     - name: "Vue d’ensemble du développement web ASP.NET\_4 et Visual Studio\_2010"
       href: whitepapers/aspnet4/index.md
       items:
