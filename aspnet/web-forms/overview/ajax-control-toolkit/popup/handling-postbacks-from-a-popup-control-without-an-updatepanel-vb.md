@@ -43,7 +43,7 @@ Lorsque la page est chargée, le code JavaScript ajoute un gestionnaire d’év�
 
 [!code-html[Main](handling-postbacks-from-a-popup-control-without-an-updatepanel-vb/samples/sample3.html)]
 
-Dans le code côté serveur, la valeur du champ masqué doit être lue. Étant donné que les champs de formulaire masqués sont faciles à manipuler, une approche de liste blanche pour valider la valeur cachée est requise. Une fois que la zone de texte correcte a été identifiée, la date du calendrier est écrite dans celle-ci.
+Dans le code côté serveur, la valeur du champ masqué doit être lue. Étant donné que les champs de formulaire masqués sont faciles à manipuler, une approche de liste verte pour valider la valeur cachée est requise. Une fois que la zone de texte correcte a été identifiée, la date du calendrier est écrite dans celle-ci.
 
 [!code-aspx[Main](handling-postbacks-from-a-popup-control-without-an-updatepanel-vb/samples/sample4.aspx)]
 

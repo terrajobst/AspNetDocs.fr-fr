@@ -106,7 +106,7 @@ Remplacez la méthode `HttpPost` `Edit` par le code suivant. qui gère les mises
 Le code effectue les actions suivantes :
 
 - Obtient l'entité `Instructor` en cours à partir de la base de données à l’aide d’un chargement hâtif de la propriété de navigation `OfficeAssignment`. C’est identique à ce que vous avez fait dans la méthode `HttpGet` `Edit`.
-- Met à jour l’entité `Instructor` récupérée avec les valeurs du classeur de modèles. La surcharge [TryUpdateModel](https://msdn.microsoft.com/library/dd470908(v=vs.108).aspx) utilisée vous permet de *liste blanche* les propriétés que vous souhaitez inclure. Cela empêche la post-publication, comme expliqué dans [le deuxième didacticiel](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md).
+- Met à jour l’entité `Instructor` récupérée avec les valeurs du classeur de modèles. La surcharge [TryUpdateModel](https://msdn.microsoft.com/library/dd470908(v=vs.108).aspx) utilisée vous permet de *liste verte* les propriétés que vous souhaitez inclure. Cela empêche la post-publication, comme expliqué dans [le deuxième didacticiel](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md).
 
     [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample10.cs)]
 - Si l’emplacement du Bureau est vide, affecte à la propriété `Instructor.OfficeAssignment` la valeur NULL afin que la ligne associée dans la table `OfficeAssignment` soit supprimée.
