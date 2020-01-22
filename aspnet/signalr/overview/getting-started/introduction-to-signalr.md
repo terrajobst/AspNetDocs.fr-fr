@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 0fab5e35-8c1f-43d4-8635-b8aba8766a71
 msc.legacyurl: /signalr/overview/getting-started/introduction-to-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 11b494b4839c646b018098c76a8a9ae0a2169757
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 8dbc31a5c8d59fa55dc5b513c1a51d24d18a685f
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600489"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519399"
 ---
 # <a name="introduction-to-signalr"></a>Introduction à SignalR
 
@@ -39,11 +39,19 @@ Signalr fournit une API simple pour la création d’appels de procédure distan
 
 ![Appel de méthodes avec Signalr](introduction-to-signalr/_static/image1.png)
 
-Signalr gère automatiquement la gestion des connexions et vous permet de diffuser des messages à tous les clients connectés simultanément, comme une salle de conversation. Vous pouvez également envoyer des messages à des clients spécifiques. La connexion entre le client et le serveur est persistante, contrairement à une connexion HTTP classique, qui est rétablie pour chaque communication.
+SignalR traite automatiquement la gestion des connexions et vous permet de diffuser des messages à tous les clients connectés simultanément, comme une salle de conversation. Vous pouvez également envoyer des messages à des clients spécifiques. La connexion entre le client et le serveur est permanente, contrairement à une connexion HTTP classique qui est rétablie pour chaque communication.
 
 Signalr prend en charge les fonctionnalités « push du serveur », dans lesquelles le code serveur peut appeler le code client dans le navigateur à l’aide d’appels de procédure distante (RPC), plutôt que du modèle de demande-réponse actuellement sur le Web.
 
-Les applications signalr peuvent être mises à l’échelle jusqu’à des milliers de clients à l’aide de Service Bus, SQL Server ou des [ReDim](http://redis.io).
+Les applications signalr peuvent être mises à l’échelle jusqu’à des milliers de clients à l’aide de fournisseurs de montée en puissance parallèle intégrés et tiers.
+
+Les fournisseurs intégrés incluent les éléments suivants :
+* [Service Bus](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.ServiceBus3)
+* [SQL Server](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.SqlServer)
+* [Redis](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.Redis)
+
+Les fournisseurs tiers incluent :
+* [NCache](https://www.alachisoft.com/ncache/asp-net-core-signalr.html).
 
 Signalr est open source, accessible via [GitHub](https://github.com/signalr).
 
@@ -136,7 +144,7 @@ Une connexion représente un point de terminaison simple pour l’envoi de messa
 
 Un Hub est un pipeline plus élevé basé sur l’API de connexion qui permet à votre client et à votre serveur d’appeler directement des méthodes. Signalr gère la distribution à travers les limites de l’ordinateur comme s’il s’agissait de Magic, ce qui permet aux clients d’appeler des méthodes sur le serveur aussi facilement que les méthodes locales, et vice versa. L’utilisation du modèle de communication hubs sera familière aux développeurs qui ont utilisé des API d’appel à distance telles que .NET Remoting. L’utilisation d’un hub vous permet également de passer des paramètres fortement typés aux méthodes, en activant la liaison de modèle.
 
-### <a name="architecture-diagram"></a>Diagramme d’architecture
+### <a name="architecture-diagram"></a>Diagramme de l’architecture
 
 Le diagramme suivant montre la relation entre les concentrateurs, les connexions persistantes et les technologies sous-jacentes utilisées pour les transports.
 

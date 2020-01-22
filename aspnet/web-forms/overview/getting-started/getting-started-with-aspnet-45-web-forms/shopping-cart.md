@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 6898c601-6c31-432f-8388-e6843f8a17cb
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
 msc.type: authoredcontent
-ms.openlocfilehash: 46264a0ab2244cff24761ce94b41722e61e3f426
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: d3b619ebd9448d30857ffbaf17fd245b1d54a662
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74614924"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519295"
 ---
 # <a name="shopping-cart"></a>Panier d'achat
 
@@ -229,7 +229,7 @@ Lorsque la page *ShoppingCart. aspx* est chargée, elle charge l’objet de pani
 Exécutez l’application maintenant pour voir comment vous pouvez non seulement ajouter un produit au panier d’achat, mais vous pouvez voir le total du panier d’achat.
 
 1. Appuyez sur **F5** pour exécuter l’application.  
- Le navigateur s’ouvre et affiche la page *default. aspx* .
+ Le navigateur s’ouvre et affiche la page *Default.aspx* .
 2. Sélectionnez **Cars** dans le menu de navigation de la catégorie.
 3. Cliquez sur le lien **Ajouter au panier** en regard du premier produit.   
  La page *ShoppingCart. aspx* s’affiche avec le total de commande. 
@@ -312,9 +312,11 @@ Dans ce didacticiel, vous avez créé un panier d’achat pour l’exemple d’a
 
 Le panier d’achat prend en charge l’ajout, la suppression et la mise à jour des éléments que l’utilisateur a sélectionnés pour l’achat. En plus d’implémenter la fonctionnalité de panier d’achat, vous avez appris à afficher les éléments du panier d’achat dans un contrôle **GridView** et à calculer le total de la commande.
 
+Pour comprendre comment les fonctionnalités décrites fonctionnent dans une application métier réelle, vous pouvez consulter l’exemple de panier d’achat Open source basé sur [nopCommerce](https://github.com/nopSolutions/nopCommerce) -ASP.net. À l’origine, elle a été conçue sur Web Forms et au cours des années où elle a été déplacée vers MVC et désormais vers ASP.NET Core.
+
 ## <a name="addition-information"></a>Informations supplémentaires
 
-[Vue d’ensemble de l’état de session ASP.NET](https://msdn.microsoft.com/library/ms178581.aspx)
+[Vue d'ensemble de l'état de session ASP.NET](https://msdn.microsoft.com/library/ms178581.aspx)
 
 > [!div class="step-by-step"]
 > [Précédent](display_data_items_and_details.md)

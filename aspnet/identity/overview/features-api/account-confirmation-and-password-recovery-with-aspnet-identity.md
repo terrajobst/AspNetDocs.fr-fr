@@ -1,63 +1,63 @@
 ---
 uid: identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity
-title: Compte Confirmation & de la récupération de mot de passe - ASP.NET Identity (C#)-ASP.NET 4.x
+title: Confirmation de compte & récupération du mot deC#passe-ASP.net Identity ()-ASP.net 4. x
 author: HaoK
-description: Avant d’effectuer ce didacticiel, que vous devez effectuer tout d’abord créer une application web de ASP.NET MVC 5 sécurisée avec connexion, réinitialisation de confirmation et le mot de passe de messagerie. Ce didacticiel...
+description: Avant de suivre ce didacticiel, vous devez d’abord créer une application Web ASP.NET MVC 5 sécurisée avec connexion, confirmation par e-mail et réinitialisation du mot de passe. Ce didacticiel...
 ms.author: riande
 ms.date: 01/23/2019
 ms.assetid: 8d54180d-f826-4df7-b503-7debf5ed9fb3
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: ded3a9d931cc4cd4b99c1cb5012469fe66209f76
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 4b2c88280df39aa81d60f9508910e8fe5d6db6b8
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118025"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519113"
 ---
-# <a name="account-confirmation-and-password-recovery-with-aspnet-identity-c"></a>Compte de récupération de confirmation et le mot de passe avec ASP.NET Identity (C#)
+# <a name="account-confirmation-and-password-recovery-with-aspnet-identity-c"></a>Confirmation de compte et récupération de mot deC#passe avec ASP.net Identity ()
 
-> Avant de procéder à ce didacticiel vous devez commencer par suivre [créer une application web de ASP.NET MVC 5 sécurisée avec connexion, réinitialisation de confirmation et le mot de passe de messagerie](../../../mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md). Ce didacticiel contient plus de détails et vous montrera comment paramétrer la messagerie électronique de confirmation de compte local et aux utilisateurs de réinitialiser leur mot de passe oublié dans ASP.NET Identity.
+> Avant de suivre ce didacticiel, vous devez [d’abord créer une application web ASP.NET MVC 5 sécurisée avec connexion, confirmation par e-mail et réinitialisation du mot de passe](../../../mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md). Ce didacticiel contient plus de détails et vous indique comment configurer la messagerie électronique pour la confirmation du compte local et permettre aux utilisateurs de réinitialiser leur mot de passe oublié dans ASP.NET Identity.
 
-Un compte d’utilisateur local, l’utilisateur doit créer un mot de passe pour le compte et ce mot de passe est stocké (en toute sécurité) dans l’application web. ASP.NET Identity prend également en charge les comptes de réseaux sociaux, qui ne nécessitent pas l’utilisateur de créer un mot de passe pour l’application. [Comptes de réseaux sociaux](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) utiliser un tiers (par exemple, Google, Twitter, Facebook ou Microsoft) pour authentifier les utilisateurs. Cette rubrique aborde les thèmes suivants :
+Un compte d’utilisateur local oblige l’utilisateur à créer un mot de passe pour le compte et ce mot de passe est stocké (en toute sécurité) dans l’application Web. ASP.NET Identity prend également en charge les comptes sociaux, qui ne nécessitent pas que l’utilisateur crée un mot de passe pour l’application. Les [comptes sociaux](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) utilisent un tiers (par exemple, Google, Twitter, Facebook ou Microsoft) pour authentifier les utilisateurs. Cette rubrique couvre les sujets suivants :
 
-- [Créer une application ASP.NET MVC](#createMvc) et Explorer les fonctionnalités d’identité ASP.NET.
-- [Générer l’exemple d’identité](#build)
-- [Configurer la confirmation par courrier électronique](#email)
+- [Créez une application MVC ASP.net](#createMvc) et explorez les fonctionnalités de ASP.net Identity.
+- [Générer l’exemple Identity](#build)
+- [Configurer la confirmation par e-mail](#email)
 
-Nouveaux utilisateurs inscrivent leurs alias de messagerie, ce qui crée un compte local.
+Les nouveaux utilisateurs inscrivent leur alias de messagerie, ce qui crée un compte local.
 
 ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image1.png)
 
-En sélectionnant le bouton inscrire envoie un e-mail de confirmation contenant un jeton de validation à une adresse e-mail.
+Le fait de sélectionner le bouton inscrire envoie un e-mail de confirmation contenant un jeton de validation à son adresse de messagerie.
 
 ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image2.png)
 
-L’utilisateur reçoit un e-mail avec un jeton de confirmation pour leur compte.
+L’utilisateur reçoit un e-mail avec un jeton de confirmation pour son compte.
 
 ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image3.png)
 
-En sélectionnant le lien confirme le compte.
+La sélection du lien confirme le compte.
 
 ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image4.png)
 
 <a id="passwordReset"></a>
 
-## <a name="password-recoveryreset"></a>Récupération de mot de passe/réinitialisation
+## <a name="password-recoveryreset"></a>Récupération/réinitialisation du mot de passe
 
-Les utilisateurs locaux qui oublient leur mot de passe peuvent avoir un jeton de sécurité envoyé à son compte de messagerie, ce qui leur permet de réinitialiser leur mot de passe.  
+Les utilisateurs locaux qui oublient leur mot de passe peuvent avoir un jeton de sécurité envoyé à leur compte de messagerie, ce qui leur permet de réinitialiser leur mot de passe.  
   
 ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image5.png)  
   
-L’utilisateur sera bientôt un e-mail avec un lien leur permettant de réinitialiser leur mot de passe.  
+L’utilisateur recevra bientôt un e-mail contenant un lien leur permettant de réinitialiser leur mot de passe.  
   
 ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image6.png)  
-En sélectionnant le lien mène à la page de réinitialisation.  
+Si vous sélectionnez le lien, la page de réinitialisation est redéfinie.  
   
 ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image7.png)  
   
-En sélectionnant le **réinitialiser** bouton pour confirmer le mot de passe a été réinitialisé.  
+Le fait de sélectionner le bouton **Réinitialiser** confirme que le mot de passe a été réinitialisé.  
   
 ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image8.png)
 
@@ -65,170 +65,169 @@ En sélectionnant le **réinitialiser** bouton pour confirmer le mot de passe a 
 
 ## <a name="create-an-aspnet-web-app"></a>Créer une application web ASP.NET
 
-Démarrez en installant et en cours d’exécution [Visual Studio 2017](https://visualstudio.microsoft.com/).
+Commencez par installer et exécuter [Visual Studio 2017](https://visualstudio.microsoft.com/).
 
-1. Créez un projet Web ASP.NET et sélectionnez le modèle MVC. Web Forms prennent également en charge ASP.NET Identity, afin que vous pouvez suivre des étapes similaires dans une application web forms.
-2. Définissez l’authentification sur **comptes d’utilisateur individuels**.
-3. Exécutez l’application, sélectionnez le **inscrire** lier et inscrire un utilisateur. À ce stade, la seule validation sur l’adresse e-mail se fait avec l'attribut [[EmailAddress]](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.emailaddressattribute(v=vs.110).aspx).
-4. Dans l’Explorateur de serveurs, accédez à **données Connections\DefaultConnection\Tables\AspNetUsers**, avec le bouton droit et sélectionnez **ouvrir la définition de la table**.
+1. Créez un projet Web ASP.NET et sélectionnez le modèle MVC. Web Forms également prendre en charge ASP.NET Identity, vous pouvez suivre des étapes similaires dans une application Web Forms.
+2. Modifiez l’authentification en **comptes d’utilisateur individuels**.
+3. Exécutez l’application, sélectionnez le lien **Register** et inscrivez un utilisateur. À ce stade, la seule validation sur l’adresse e-mail se fait avec l'attribut [[EmailAddress]](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.emailaddressattribute(v=vs.110).aspx).
+4. Dans Explorateur de serveurs, accédez à **Data Connections\DefaultConnection\Tables\AspNetUsers**, cliquez avec le bouton droit et sélectionnez **ouvrir la définition de table**.
 
     L’illustration suivante montre le schéma `AspNetUsers` :
 
     ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image9.png)
-5. Avec le bouton droit sur le **AspNetUsers** de table et sélectionnez **afficher les données de Table**.  
+5. Cliquez avec le bouton droit sur la table **AspNetUsers** et sélectionnez **afficher les données**de la table.  
   
     ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image10.png)  
   
    À ce stade, l’adresse de messagerie n’a pas été confirmée.
 
+Le magasin de données par défaut pour ASP.NET Identity est Entity Framework, mais vous pouvez le configurer pour utiliser d’autres magasins de données et ajouter des champs supplémentaires. Consultez la section [ressources supplémentaires](#addRes) à la fin de ce didacticiel.
 
-Le magasin de données par défaut pour ASP.NET Identity est Entity Framework, mais vous pouvez le configurer pour utiliser d’autres magasins de données et ajouter des champs supplémentaires. Consultez [des ressources supplémentaires](#addRes) section à la fin de ce didacticiel.
+La [classe de démarrage OWIN](../../../aspnet/overview/owin-and-katana/owin-startup-class-detection.md) ( *Startup.cs* ) est appelée lorsque l’application démarre et appelle la méthode `ConfigureAuth` dans l' *application\_Start\Startup.auth.cs*, qui configure le pipeline OWIN et initialise ASP.net Identity. Examinez la méthode `ConfigureAuth`. Chaque appel de `CreatePerOwinContext` inscrit un rappel (enregistré dans le `OwinContext`) qui sera appelé une fois par demande pour créer une instance du type spécifié. Vous pouvez définir un point d’arrêt dans le constructeur et `Create` méthode de chaque type (`ApplicationDbContext, ApplicationUserManager`) et vérifier qu’ils sont appelés à chaque requête. Une instance de `ApplicationDbContext` et `ApplicationUserManager` est stockée dans le contexte OWIN, accessible dans l’ensemble de l’application. ASP.NET Identity des hooks dans le pipeline OWIN via l’intergiciel de cookies. Pour plus d’informations, consultez Gestion de la [durée de vie des demandes pour la classe usermanager dans ASP.net Identity](https://blogs.msdn.com/b/webdev/archive/2014/02/12/per-request-lifetime-management-for-usermanager-class-in-asp-net-identity.aspx).
 
-Le [classe de démarrage OWIN](../../../aspnet/overview/owin-and-katana/owin-startup-class-detection.md) ( *Startup.cs* ) est appelée lorsque l’application démarre et appelle le `ConfigureAuth` méthode dans *application\_Start\Startup.Auth.cs*, qui configure le pipeline OWIN et initialise l’identité ASP.NET. Examinez la méthode `ConfigureAuth`. Chaque `CreatePerOwinContext` appel enregistre un rappel (enregistré dans le `OwinContext`) qui sera appelé une fois par demande pour créer une instance du type spécifié. Vous pouvez définir un point d’arrêt dans le constructeur et `Create` de chaque type (méthode) (`ApplicationDbContext, ApplicationUserManager`) et vérifiez qu’ils sont appelés à chaque demande. Une instance de `ApplicationDbContext` et `ApplicationUserManager` est stocké dans le contexte OWIN, qui est accessible dans toute l’application. ASP.NET Identity raccorde le pipeline OWIN via middleware de cookie. Pour plus d’informations, consultez [par la gestion des demandes de durée de vie pour la classe UserManager dans ASP.NET Identity](https://blogs.msdn.com/b/webdev/archive/2014/02/12/per-request-lifetime-management-for-usermanager-class-in-asp-net-identity.aspx).
+Lorsque vous modifiez votre profil de sécurité, un nouveau tampon de sécurité est généré et stocké dans le champ `SecurityStamp` de la table *AspNetUsers* . Notez que le champ `SecurityStamp` est différent du cookie de sécurité. Le cookie de sécurité n’est pas stocké dans la table `AspNetUsers` (ou n’importe où ailleurs dans la base de l’identité). Le jeton de cookie de sécurité est auto-signé à l’aide de [DPAPI](https://msdn.microsoft.com/library/system.security.cryptography.protecteddata.aspx) et est créé avec les informations de `UserId, SecurityStamp` et d’heure d’expiration.
 
-Lorsque vous modifiez votre profil de sécurité, un nouvel horodatage de sécurité est généré et stocké dans le `SecurityStamp` champ la *AspNetUsers* table. Notez que le `SecurityStamp` champ diffère le cookie de sécurité. Le cookie de sécurité n’est pas stocké dans le `AspNetUsers` table (ou tout autre emplacement de la base de données d’identité). Le jeton de cookie de sécurité est auto-signé à l’aide de [DPAPI](https://msdn.microsoft.com/library/system.security.cryptography.protecteddata.aspx) et est créé avec le `UserId, SecurityStamp` et les informations d’heure d’expiration.
+L’intergiciel de cookies vérifie le cookie à chaque requête. La méthode `SecurityStampValidator` de la classe `Startup` atteint la base de donnée et vérifie périodiquement la présence d’un tampon de sécurité, comme spécifié avec le `validateInterval`. Cela se produit toutes les 30 minutes (dans notre exemple), sauf si vous modifiez votre profil de sécurité. L’intervalle de 30 minutes a été choisi pour limiter les allers-retours vers la base de données. Pour plus d’informations, consultez [le didacticiel sur l’authentification à deux facteurs](index.md) .
 
-Le middleware de cookie vérifie le cookie à chaque demande. Le `SecurityStampValidator` méthode dans le `Startup` classe accède à la base de données et vérifie le tampon de sécurité régulièrement, comme spécifié par le `validateInterval`. Cela se produit uniquement toutes les 30 minutes (dans notre exemple), sauf si vous modifiez votre profil de sécurité. L’intervalle de 30 minutes a été choisi pour réduire les allers-retours vers la base de données. Consultez mon [didacticiel d’authentification à deux facteurs](index.md) pour plus d’informations.
+En fonction des commentaires du code, la méthode `UseCookieAuthentication` prend en charge l’authentification par cookie. Le champ `SecurityStamp` et le code associé fournissent une couche supplémentaire de sécurité à votre application. quand vous modifiez votre mot de passe, vous êtes déconnecté du navigateur avec lequel vous vous êtes connecté. La méthode `SecurityStampValidator.OnValidateIdentity` permet à l’application de valider le jeton de sécurité lorsque l’utilisateur se connecte, ce qui est utilisé lorsque vous modifiez un mot de passe ou utilisez la connexion externe. Cela est nécessaire pour garantir que tous les jetons (cookies) générés avec l’ancien mot de passe sont invalidés. Dans l’exemple de projet, si vous modifiez le mot de passe des utilisateurs, un nouveau jeton est généré pour l’utilisateur, tous les jetons précédents sont invalidés et le champ `SecurityStamp` est mis à jour.
 
-Par les commentaires dans le code, le `UseCookieAuthentication` méthode prend en charge l’authentification des cookies. Le `SecurityStamp` code de champ et associé fournit une couche supplémentaire de sécurité à votre application, lorsque vous modifiez votre mot de passe, vous serez connecté en dehors du navigateur que vous êtes connecté. Le `SecurityStampValidator.OnValidateIdentity` méthode permet à l’application valider le jeton de sécurité lors de l’utilisateur se connecte, qui est utilisée lorsque vous modifiez un mot de passe ou utilisez la connexion externe. Cela est nécessaire pour vous assurer que tous les jetons (cookies) générés avec l’ancien mot de passe sont invalidés. Dans l’exemple de projet, si vous modifiez le mot de passe utilisateurs, puis un nouveau jeton est généré pour l’utilisateur, tous les jetons précédentes sont invalidées et `SecurityStamp` champ est mis à jour.
-
-Le système d’identité vous autorise à configurer votre application, lorsque le profil de sécurité des utilisateurs change (par exemple, lorsque l’utilisateur modifie son mot de passe ou les modifications associé nom de connexion (par exemple, de Facebook, Google, compte Microsoft, etc.), l’utilisateur est déconnecté tous les instances de navigateur. Par exemple, l’image ci-dessous montre le [exemple de déconnexion unique](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/SingleSignOutSample/readme.txt) application, ce qui permet à l’utilisateur de se déconnecter de toutes les instances de navigateur (dans ce cas, Internet Explorer, Firefox et Chrome) en sélectionnant un bouton. Vous pouvez également l’exemple vous permet d’enregistrer uniquement en dehors d’une instance du navigateur spécifique.
+Le système d’identité vous permet de configurer votre application de sorte que le profil de sécurité des utilisateurs change (par exemple, lorsque l’utilisateur modifie son mot de passe ou modifie la connexion associée (par exemple, à partir de Facebook, Google, compte Microsoft, etc.), l’utilisateur se déconnecte de tous les instances de navigateur. Par exemple, l’image ci-dessous montre l’exemple d’application [SignOut unique](https://github.com/aspnet/samples/tree/master/samples/aspnet/Identity/SingleSignOutSample) , qui permet à l’utilisateur de se déconnecter de toutes les instances de navigateur (dans ce cas, IE, Firefox et chrome) en sélectionnant un bouton. L’exemple vous permet également de vous déconnecter d’une instance de navigateur spécifique.
 
 ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image11.png)
 
-Le [exemple de déconnexion unique](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/SingleSignOutSample/readme.txt) application montre comment ASP.NET Identity vous permet de régénérer le jeton de sécurité. Cela est nécessaire pour vous assurer que tous les jetons (cookies) générés avec l’ancien mot de passe sont invalidés. Cette fonctionnalité fournit une couche supplémentaire de sécurité à votre application ; Lorsque vous modifiez votre mot de passe, vous allez être déconnecté d’où vous êtes connecté à cette application.
+L' [exemple d’application SignOut unique](https://github.com/aspnet/samples/tree/master/samples/aspnet/Identity/SingleSignOutSample) montre comment ASP.net Identity vous permet de régénérer le jeton de sécurité. Cela est nécessaire pour garantir que tous les jetons (cookies) générés avec l’ancien mot de passe sont invalidés. Cette fonctionnalité fournit une couche supplémentaire de sécurité à votre application. Lorsque vous modifiez votre mot de passe, vous êtes déconnecté de l’emplacement où vous vous êtes connecté à cette application.
 
-Le *application\_Start\IdentityConfig.cs* fichier contient le `ApplicationUserManager`, `EmailService` et `SmsService` classes. Le `EmailService` et `SmsService` classes chaque implémentent la `IIdentityMessageService` interface, afin d’avoir des méthodes courantes dans chaque classe pour configurer l’e-mail et SMS. Bien que ce didacticiel montre uniquement comment ajouter la notification par courrier électronique via [SendGrid](http://sendgrid.com/), vous pouvez envoyer des e-mails à l’aide de SMTP et autres mécanismes.
+Le fichier *App\_Start\IdentityConfig.cs* contient les classes `ApplicationUserManager`, `EmailService` et `SmsService`. Les classes `EmailService` et `SmsService` implémentent chacune l’interface `IIdentityMessageService`. par conséquent, vous disposez de méthodes communes pour chaque classe afin de configurer la messagerie électronique et SMS. Bien que ce didacticiel montre uniquement comment ajouter des notifications par courrier électronique via [SendGrid](http://sendgrid.com/), vous pouvez envoyer des e-mails à l’aide de SMTP et d’autres mécanismes.
 
-Le `Startup` classe contient également standard pour ajouter des connexions sociales (Facebook, Twitter, etc.), consultez mon didacticiel [application MVC 5 avec Facebook, Twitter, LinkedIn et authentification Google OAuth2](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) pour plus d’informations.
+La classe `Startup` contient également une plaque de chaudière pour ajouter des connexions sociales (Facebook, Twitter, etc.). pour plus d’informations, consultez mon didacticiel [application MVC 5 avec Facebook, Twitter, LinkedIn et l’authentification Google OAuth2](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) .
 
-Examiner la `ApplicationUserManager` classe, qui contient les informations d’identité utilisateurs et configure les fonctionnalités suivantes :
+Examinez la classe `ApplicationUserManager`, qui contient les informations d’identité des utilisateurs et configure les fonctionnalités suivantes :
 
-- Exigences de force de mot de passe.
-- Verrouillage utilisateur (tentatives et l’heure).
+- Exigences de la force du mot de passe.
+- Verrouillage de l’utilisateur (tentatives et temps).
 - Authentification à deux facteurs (2FA). Je vais aborder 2FA et SMS dans un autre didacticiel.
-- Raccorder l’e-mail et les services SMS. (J’aborderai SMS dans un autre didacticiel).
+- Raccordement de l’e-mail et des services SMS. (Je couvrirai SMS dans un autre didacticiel).
 
-Le `ApplicationUserManager` classe est dérivée de l’objet générique `UserManager<ApplicationUser>` classe. `ApplicationUser` dérive de [IdentityUser](https://msdn.microsoft.com/library/microsoft.aspnet.identity.entityframework.identityuser.aspx). `IdentityUser` dérive le générique `IdentityUser` classe :
+La classe `ApplicationUserManager` dérive de la classe `UserManager<ApplicationUser>` générique. `ApplicationUser` dérive de [IdentityUser](https://msdn.microsoft.com/library/microsoft.aspnet.identity.entityframework.identityuser.aspx). `IdentityUser` dérive de la classe `IdentityUser` générique :
 
 [!code-csharp[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample1.cs)]
 
-Les propriétés ci-dessus coïncident avec les propriétés dans le `AspNetUsers` table, ci-dessus.
+Les propriétés ci-dessus coïncident avec les propriétés de la table `AspNetUsers`, comme indiqué ci-dessus.
 
-Les arguments génériques sur `IUser` vous permettent de dériver une classe à l’aide de différents types pour la clé primaire. Consultez le [ChangePK](https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/ChangePK/readme.txt) exemple qui montre comment modifier la clé primaire à partir de la chaîne en int ou GUID.
+Les arguments génériques sur les `IUser` vous permettent de dériver une classe à l’aide de différents types pour la clé primaire. Consultez l’exemple [ChangePK](https://github.com/aspnet/samples/tree/master/samples/aspnet/Identity/ChangePK) qui montre comment modifier la clé primaire de String en int ou de GUID.
 
 ### <a name="applicationuser"></a>ApplicationUser
 
-`ApplicationUser` (`public class ApplicationUserManager : UserManager<ApplicationUser>`) est défini dans *Models\IdentityModels.cs* en tant que :
+`ApplicationUser` (`public class ApplicationUserManager : UserManager<ApplicationUser>`) est défini dans *Models\IdentityModels.cs* comme suit :
 
 [!code-csharp[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample2.cs?highlight=8-9)]
 
-Le code en surbrillance ci-dessus génère un [ClaimsIdentity](https://msdn.microsoft.com/library/system.security.claims.claimsidentity.aspx). ASP.NET Identity et l’authentification des cookies OWIN basée sur les revendications, par conséquent, le framework requiert l’application pour générer un `ClaimsIdentity` pour l’utilisateur. `ClaimsIdentity` contient des informations sur toutes les revendications pour l’utilisateur, telles que le nom d’utilisateur, l’âge et les rôles de l’utilisateur appartient. Vous pouvez également ajouter plusieurs revendications de l’utilisateur à ce stade.
+Le code en surbrillance ci-dessus génère un [ClaimsIdentity](https://msdn.microsoft.com/library/system.security.claims.claimsidentity.aspx). ASP.NET Identity et l’authentification des cookies OWIN sont basées sur les revendications. par conséquent, l’infrastructure requiert que l’application génère un `ClaimsIdentity` pour l’utilisateur. `ClaimsIdentity` contient des informations sur toutes les revendications pour l’utilisateur, telles que le nom de l’utilisateur, l’âge et les rôles auxquels l’utilisateur appartient. Vous pouvez également ajouter d’autres revendications pour l’utilisateur à ce niveau.
 
-OWIN `AuthenticationManager.SignIn` méthode passe dans le `ClaimsIdentity` et se connecte l’utilisateur :
+La méthode OWIN `AuthenticationManager.SignIn` transmet le `ClaimsIdentity` et se connecte à l’utilisateur :
 
 [!code-csharp[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample3.cs?highlight=4-6)]
 
-[Application MVC 5 avec Facebook, Twitter, LinkedIn et authentification Google OAuth2](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) montre comment vous pouvez ajouter des propriétés supplémentaires à la `ApplicationUser` classe.
+L' [application MVC 5 avec Facebook, Twitter, LinkedIn et l’authentification Google OAuth2](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) montre comment vous pouvez ajouter des propriétés supplémentaires à la classe `ApplicationUser`.
 
-## <a name="email-confirmation"></a>E-mail de confirmation
+## <a name="email-confirmation"></a>Confirmation par e-mail
 
-Il est judicieux de confirmer l’adresse de messagerie un nouvel utilisateur auprès de vérifier qu’ils ne sont pas emprunter l’identité d’une autre personne (autrement dit, ils n’ont pas inscrit auprès de quelqu'un d’autre e-mail). Supposons que vous ayez un forum de discussion : vous voudriez empêcher `"bob@example.com"` de s'inscrire en tant que `"joe@contoso.com"`. ans la confirmation par courrier électronique, `"joe@contoso.com"` pourrait recevoir du courrier indésirable à partir de votre application. Supposons que Bob accidentellement inscrit en tant que `"bib@example.com"` et vous l’auriez pas remarqué, il ne serait pas en mesure d’utiliser la récupération de mot de passe, car l’application n’a pas son adresse de messagerie correcte. E-mail de confirmation fournit uniquement une protection limitée des robots et ne fournit pas une protection à partir des expéditeurs de courrier indésirable déterminés, ils ont des alias de messagerie travail nombreux, qu'ils peuvent utiliser pour inscrire. Dans l’exemple ci-dessous, l’utilisateur ne pourra modifier son mot de passe jusqu'à ce que son compte a été confirmé (en les sélectionnant reçu sur le compte de messagerie avec qu'ils inscrits un lien de confirmation.) Vous pouvez appliquer ce flux de travail à d’autres scénarios, par exemple envoyer un lien pour confirmer et réinitialiser le mot de passe sur les nouveaux comptes créés par l’administrateur, en envoyant à l’utilisateur un e-mail lorsque qu’ils ont modifié leur profil et ainsi de suite. En règle générale, vous souhaitez empêcher les nouveaux utilisateurs d'envoyer des données à votre site web avant qu’ils soient confirmés par courrier électronique, par SMS ou via un autre mécanisme. <a id="build"></a>
+Il est judicieux de confirmer l’adresse de messagerie à laquelle un nouvel utilisateur s’inscrit afin de vérifier qu’il n’emprunte pas l’identité d’un autre utilisateur (autrement dit, s’il ne s’est pas inscrit auprès de l’e-mail de quelqu’un d’autre). Supposons que vous ayez un forum de discussion : vous voudriez empêcher `"bob@example.com"` de s'inscrire en tant que `"joe@contoso.com"`. ans la confirmation par courrier électronique, `"joe@contoso.com"` pourrait recevoir du courrier indésirable à partir de votre application. Supposons que Bob s’est inscrit accidentellement comme `"bib@example.com"` et n’avait pas remarqué qu’il ne serait pas en mesure d’utiliser la récupération de mot de passe parce que l’application n’a pas son adresse e-mail correcte. La confirmation par courrier électronique fournit uniquement une protection limitée des robots et ne fournit pas de protection contre les spammeurs déterminés. ils ont de nombreux alias de messagerie de travail qu’ils peuvent utiliser pour s’inscrire. Dans l’exemple ci-dessous, l’utilisateur ne peut pas modifier son mot de passe tant que son compte n’a pas été confirmé (en sélectionnant un lien de confirmation reçu sur le compte de messagerie qu’il a inscrit avec). Vous pouvez appliquer ce processus à d’autres scénarios, par exemple en envoyant un lien pour confirmer et réinitialiser le mot de passe sur les nouveaux comptes créés par l’administrateur, en envoyant un e-mail à l’utilisateur lorsqu’il a modifié son profil, et ainsi de suite. En règle générale, vous souhaitez empêcher les nouveaux utilisateurs d'envoyer des données à votre site web avant qu’ils soient confirmés par courrier électronique, par SMS ou via un autre mécanisme. <a id="build"></a>
 
-## <a name="build-a-more-complete-sample"></a>Générer un exemple plus complet
+## <a name="build-a-more-complete-sample"></a>Créer un exemple plus complet
 
-Dans cette section, vous allez utiliser NuGet pour télécharger un exemple plus complet, de que nous nous efforcerons.
+Dans cette section, vous allez utiliser NuGet pour télécharger un exemple plus complet avec lequel nous allons travailler.
 
-1. Créer un nouveau ***vide*** projet Web ASP.NET.
-2. Dans la Console du Gestionnaire de Package, entrez les commandes suivantes : 
+1. Créez un projet Web ASP.NET ***vide*** .
+2. Dans la console du gestionnaire de package, entrez les commandes suivantes : 
 
     [!code-console[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample4.cmd)]
 
-   Dans ce didacticiel, nous allons utiliser [SendGrid](http://sendgrid.com/) pour envoyer un e-mail. Le `Identity.Samples` package installe le code que nous travaillons avec.
-3. Définir le [projet pour utiliser SSL](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md).
-4. Tester la création du compte local en exécutant l’application, en sélectionnant le **inscrire** de liaison et de publier le formulaire d’inscription.
-5. Sélectionnez le lien de messagerie de démonstration, qui simule l’e-mail de confirmation.
-6. Supprimer le code de confirmation de lien e-mail démonstration de l’exemple (le `ViewBag.Link` code dans le contrôleur de compte. Consultez le `DisplayEmail` et `ForgotPasswordConfirmation` méthodes d’action et les vues razor).
+   Dans ce didacticiel, nous allons utiliser [SendGrid](http://sendgrid.com/) pour envoyer des courriers électroniques. Le package `Identity.Samples` installe le code que nous allons utiliser.
+3. Définissez le [projet pour utiliser SSL](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md).
+4. Testez la création du compte local en exécutant l’application, en sélectionnant le lien **Register** et en publiant le formulaire d’inscription.
+5. Sélectionnez le lien e-mail de démonstration, qui simule la confirmation de l’e-mail.
+6. Supprimez le code de confirmation de la liaison par e-mail de démonstration de l’exemple (le code `ViewBag.Link` dans le contrôleur de compte. Consultez les méthodes d’action `DisplayEmail` et `ForgotPasswordConfirmation` et les vues Razor).
 
 > [!WARNING]
-> Si vous modifiez les paramètres de sécurité dans cet exemple, les applications de productions devez sont soumis à un audit de sécurité qui appelle explicitement les modifications apportées.
+> Si vous modifiez l’un des paramètres de sécurité de cet exemple, les applications de production doivent subir un audit de sécurité qui appelle explicitement les modifications apportées.
 
-## <a name="examine-the-code-in-appstartidentityconfigcs"></a>Examinez le code dans l’application\_Start\IdentityConfig.cs
+## <a name="examine-the-code-in-app_startidentityconfigcs"></a>Examinez le code dans l’application\_Start\IdentityConfig.cs
 
-L’exemple montre comment créer un compte et l’ajouter à la *administrateur* rôle. Vous devez remplacer l’e-mail dans l’exemple avec l’e-mail que vous utiliserez pour le compte d’administrateur. Le moyen le plus simple pour créer un compte d’administrateur est par programmation dans le `Seed` (méthode). Nous espérons que dans le futur un outil qui vous permet de créer et administrer des utilisateurs et des rôles. L’exemple de code vous permet à créer et gérer des utilisateurs et des rôles, mais vous devez disposer d’un compte d’administrateurs pour exécuter les rôles et les pages d’administration utilisateur. Dans cet exemple, le compte d’administrateur est créé lors de la base de données est amorcée.
+L’exemple montre comment créer un compte et l’ajouter au rôle d' *administrateur* . Vous devez remplacer l’adresse de messagerie dans l’exemple par le courrier électronique que vous allez utiliser pour le compte d’administrateur. La méthode la plus simple pour créer un compte d’administrateur est par programmation dans la méthode `Seed`. Nous espérons avoir un outil à l’avenir qui vous permettra de créer et d’administrer des utilisateurs et des rôles. L’exemple de code vous permet de créer et de gérer des utilisateurs et des rôles, mais vous devez d’abord disposer d’un compte administrateurs pour exécuter les pages rôles et administrateur d’utilisateur. Dans cet exemple, le compte d’administrateur est créé lorsque la base de code est amorcée.
 
-Remplacez le mot de passe et le nom à un compte dans lequel vous pouvez recevoir des notifications par courrier électronique.
+Modifiez le mot de passe et remplacez le nom par un compte dans lequel vous pouvez recevoir des notifications par courrier électronique.
 
 > [!WARNING]
 > Sécurité - Ne jamais stocker de données sensibles dans votre code source.
 
-Comme mentionné précédemment, le `app.CreatePerOwinContext` appel de la classe startup ajoute des rappels pour le `Create` méthode l’application DB contenus, manager et le rôle Gestionnaire de classes d’utilisateurs. Appels de pipeline OWIN le `Create` méthode sur ces classes pour chaque demande et stocke le contexte pour chaque classe. Le contrôleur de compte expose le Gestionnaire des utilisateurs à partir du contexte HTTP (qui contient le contexte OWIN) :
+Comme mentionné précédemment, l’appel de `app.CreatePerOwinContext` dans la classe Startup ajoute des rappels à la méthode `Create` du contenu de la base de données de l’application, au gestionnaire des utilisateurs et aux classes de gestionnaires de rôles. Le pipeline OWIN appelle la méthode `Create` sur ces classes pour chaque requête et stocke le contexte pour chaque classe. Le contrôleur de compte expose le gestionnaire des utilisateurs à partir du contexte HTTP (qui contient le contexte OWIN) :
 
 [!code-csharp[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample5.cs)]
 
-Lorsqu’un utilisateur s’inscrit à un compte local, le `HTTP Post Register` méthode est appelée :
+Lorsqu’un utilisateur inscrit un compte local, la méthode `HTTP Post Register` est appelée :
 
 [!code-csharp[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample6.cs)]
 
-Le code ci-dessus utilise les données du modèle pour créer un nouveau compte d’utilisateur à l’aide de l’e-mail et le mot de passe entré. Si l’alias de messagerie se trouve dans le magasin de données, la création du compte échoue et le formulaire s’affiche à nouveau. Le `GenerateEmailConfirmationTokenAsync` méthode crée un jeton de confirmation sécurisé et les stocke dans le magasin de données d’identité ASP.NET. Le [Url.Action](https://msdn.microsoft.com/library/dd505232(v=vs.118).aspx) méthode crée un lien contenant le `UserId` et jeton de confirmation. Ce lien est ensuite envoyé par e-mail à l’utilisateur, l’utilisateur peut sélectionner sur le lien dans leur application de messagerie pour confirmer son compte.
+Le code ci-dessus utilise les données du modèle pour créer un nouveau compte d’utilisateur à l’aide de l’adresse de messagerie et du mot de passe entrés. Si l’alias de messagerie se trouve dans le magasin de données, la création du compte échoue et le formulaire s’affiche à nouveau. La méthode `GenerateEmailConfirmationTokenAsync` crée un jeton de confirmation sécurisé et le stocke dans le magasin de données ASP.NET Identity. La méthode [URL. action](https://msdn.microsoft.com/library/dd505232(v=vs.118).aspx) crée un lien contenant le `UserId` et le jeton de confirmation. Ce lien est ensuite envoyé par courrier électronique à l’utilisateur, l’utilisateur peut sélectionner le lien dans son application de messagerie pour confirmer son compte.
 
 <a id="email"></a>
 
-## <a name="set-up-email-confirmation"></a>Configurer la confirmation par courrier électronique
+## <a name="set-up-email-confirmation"></a>Configurer la confirmation par e-mail
 
-Accédez à la [page d’inscription Azure SendGrid](https://azure.microsoft.com/gallery/store/sendgrid/sendgrid-azure/) et vous inscrire gratuitement compte. Ajoutez un code similaire à ce qui suit pour configurer SendGrid :
+Accédez à la [page d’inscription à Azure SendGrid](https://azure.microsoft.com/gallery/store/sendgrid/sendgrid-azure/) et inscrivez-vous pour obtenir un compte gratuit. Ajoutez du code semblable au suivant pour configurer SendGrid :
 
 [!code-csharp[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample7.cs?highlight=5)]
 
 > [!NOTE]
-> Souvent, les clients de messagerie acceptent uniquement les messages de texte (aucun HTML). Vous devez fournir le message en texte et HTML. Dans l’exemple de SendGrid ci-dessus, cela se fait par le `myMessage.Text` et `myMessage.Html` code ci-dessus.
+> Les clients de messagerie acceptent souvent uniquement les messages texte (pas de code HTML). Vous devez fournir le message au format texte et HTML. Dans l’exemple SendGrid ci-dessus, cette opération est effectuée avec le `myMessage.Text` et `myMessage.Html` code indiqué ci-dessus.
 
-Le code suivant montre comment envoyer des e-mails à l’aide du [MailMessage](https://msdn.microsoft.com/library/system.net.mail.mailmessage.aspx) classe where `message.Body` retourne uniquement le lien.
+Le code suivant montre comment envoyer un e-mail à l’aide de la classe [MailMessage](https://msdn.microsoft.com/library/system.net.mail.mailmessage.aspx) où `message.Body` retourne uniquement le lien.
 
 [!code-csharp[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample8.cs)]
 
 > [!WARNING]
-> Sécurité - Ne jamais stocker de données sensibles dans votre code source. Le compte et les informations d’identification sont stockés dans l’appSetting.  Sur Azure, vous pouvez stocker en toute sécurité ces valeurs sur l'onglet **[Configurer](https://blogs.msdn.com/b/webdev/archive/2014/06/04/queuebackgroundworkitem-to-reliably-schedule-and-run-long-background-process-in-asp-net.aspx)** dans le portail Azure. Consultez [les meilleures pratiques pour le déploiement des mots de passe et autres données sensibles sur ASP.NET et Azure](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md).
+> Sécurité - Ne jamais stocker de données sensibles dans votre code source. Le compte et les informations d’identification sont stockés dans l’appSetting. Sur Azure, vous pouvez stocker en toute sécurité ces valeurs sur l'onglet **[Configurer](https://blogs.msdn.com/b/webdev/archive/2014/06/04/queuebackgroundworkitem-to-reliably-schedule-and-run-long-background-process-in-asp-net.aspx)** dans le portail Azure. Consultez [les meilleures pratiques pour le déploiement des mots de passe et autres données sensibles sur ASP.NET et Azure](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md).
 
-Entrez vos informations d’identification SendGrid, exécuter l’application, s’enregistrer auprès d’un alias de messagerie peut sélectionner le lien de confirmation dans votre adresse de messagerie. Pour voir comment procéder avec votre [Outlook.com](http://outlook.com) compte de messagerie, consultez de John Atten [ C# Configuration SMTP pour l’hôte SMTP de Outlook.Com](http://typecastexception.com/post/2013/12/20/C-SMTP-Configuration-for-OutlookCom-SMTP-Host.aspx) et son[ASP.NET Identity 2.0 : Validation de compte et l’autorisation de deux facteurs](http://typecastexception.com/post/2014/04/20/ASPNET-Identity-20-Setting-Up-Account-Validation-and-Two-Factor-Authorization.aspx) valide.
+Entrez vos informations d’identification SendGrid, exécutez l’application, inscrivez-vous avec un alias de messagerie vous pouvez sélectionner le lien confirmer dans votre e-mail. Pour savoir comment faire avec votre compte de messagerie [Outlook.com](http://outlook.com) , consultez Configuration SMTP de John atten [ C# pour l’hôte SMTP Outlook.com](http://typecastexception.com/post/2013/12/20/C-SMTP-Configuration-for-OutlookCom-SMTP-Host.aspx) et son[ASP.net Identity 2,0 : configuration de la validation de compte et des publications d’autorisation à deux facteurs](http://typecastexception.com/post/2014/04/20/ASPNET-Identity-20-Setting-Up-Account-Validation-and-Two-Factor-Authorization.aspx) .
 
-Une fois qu’un utilisateur sélectionne le **inscrire** bouton un e-mail de confirmation contenant un jeton de validation est envoyé à une adresse e-mail.
+Une fois qu’un utilisateur a sélectionné le bouton **inscrire** , un e-mail de confirmation contenant un jeton de validation est envoyé à son adresse de messagerie.
 
 ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image12.png)
 
-L’utilisateur reçoit un e-mail avec un jeton de confirmation pour leur compte.
+L’utilisateur reçoit un e-mail avec un jeton de confirmation pour son compte.
 
 ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image13.png)
 
-## <a name="examine-the-code"></a>Examinez le code
+## <a name="examine-the-code"></a>Examiner le code
 
 Le code suivant montre la méthode `POST ForgotPassword`.
 
 [!code-csharp[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample9.cs)]
 
-La méthode échoue sans avertissement si l’e-mail de l’utilisateur n’a pas été confirmée. Si une erreur a été validée pour une adresse de messagerie non valide, les utilisateurs malveillants peuvent utiliser ces informations pour rechercher le nom d’utilisateur valide (alias de messagerie) aux attaques.
+La méthode échoue en silence si la messagerie de l’utilisateur n’a pas été confirmée. Si une erreur a été publiée pour une adresse de messagerie non valide, des utilisateurs malveillants pouvaient utiliser ces informations pour trouver des ID d’utilisateur (alias de messagerie) valides pour attaquer.
 
-Le code suivant illustre la `ConfirmEmail` méthode dans le contrôleur de compte qui est appelé lorsque l’utilisateur sélectionne le lien de confirmation dans le message électronique qui leur sont envoyé :
+Le code suivant montre la méthode `ConfirmEmail` dans le contrôleur de compte qui est appelée lorsque l’utilisateur sélectionne le lien de confirmation dans le message électronique qui lui est envoyé :
 
 [!code-csharp[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample10.cs)]
 
-Une fois qu’un jeton de mot de passe oublié a été utilisé, elle est invalidée. Le changement de code suivant dans le `Create` (méthode) (dans le *application\_Start\IdentityConfig.cs* fichier) définit les jetons arrivent à expiration dans les 3 heures.
+Une fois qu’un jeton de mot de passe oublié a été utilisé, il est invalidé. La modification de code suivante dans la méthode `Create` (dans le fichier *App\_Start\IdentityConfig.cs* ) définit les jetons pour qu’ils expirent dans 3 heures.
 
 [!code-csharp[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample11.cs?highlight=6-8)]
 
-Avec le code ci-dessus, le mot de passe oublié et les jetons de confirmation de courrier électronique va expirer dans les 3 heures. La valeur par défaut `TokenLifespan` est un jour.
+Avec le code ci-dessus, le mot de passe oublié et les jetons de confirmation par courrier électronique expirent dans 3 heures. La `TokenLifespan` par défaut est d’un jour.
 
-Le code suivant illustre la méthode de confirmation de courrier électronique :
+Le code suivant illustre la méthode de confirmation par courrier électronique :
 
 [!code-csharp[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample12.cs)]
 
- Pour renforcer la sécurité de votre application, ASP.NET Identity prend en charge l’authentification à deux facteurs (2FA). Consultez [ASP.NET Identity 2.0 : Configuration de la Validation du compte et l’autorisation de deux facteurs](http://typecastexception.com/post/2014/04/20/ASPNET-Identity-20-Setting-Up-Account-Validation-and-Two-Factor-Authorization.aspx) par John Atten. Bien que vous pouvez définir le verrouillage de compte sur les échecs de tentative de mot de passe de connexion, cette approche rend votre identifiant de connexion susceptibles d’être [DOS](http://en.wikipedia.org/wiki/Denial-of-service_attack) verrouillages. Nous vous recommandons de qu'utiliser le verrouillage de compte uniquement avec 2FA.  
+ Pour renforcer la sécurité de votre application, ASP.NET Identity prend en charge l’authentification à deux facteurs (2FA). Consultez [ASP.NET Identity 2,0 : configuration de la validation de compte et de l’autorisation à deux facteurs](http://typecastexception.com/post/2014/04/20/ASPNET-Identity-20-Setting-Up-Account-Validation-and-Two-Factor-Authorization.aspx) par John atten. Bien que vous puissiez définir le verrouillage de compte lors de tentatives de mot de passe de connexion, cette approche rend votre connexion vulnérable aux verrouillages [dos](http://en.wikipedia.org/wiki/Denial-of-service_attack) . Nous vous recommandons d’utiliser le verrouillage de compte uniquement avec 2FA.  
 <a id="addRes"></a>
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 - [Vue d’ensemble des fournisseurs de stockage personnalisés pour ASP.NET Identity](../extensibility/overview-of-custom-storage-providers-for-aspnet-identity.md)
-- [Application MVC 5 avec Facebook, Twitter, LinkedIn et authentification Google OAuth2](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) montre également comment ajouter des informations de profil à la table d’utilisateurs.
-- [ASP.NET MVC et identité 2.0 : Comprendre les notions de base](http://typecastexception.com/post/2014/04/20/ASPNET-MVC-and-Identity-20-Understanding-the-Basics.aspx) par John Atten.
+- L' [application MVC 5 avec Facebook, Twitter, LinkedIn et l’authentification Google OAuth2](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) montre également comment ajouter des informations de profil au tableau utilisateurs.
+- [ASP.NET MVC et identity 2,0 : présentation des concepts de base](http://typecastexception.com/post/2014/04/20/ASPNET-MVC-and-Identity-20-Understanding-the-Basics.aspx) de John atten.
 - [Introduction à ASP.NET Identity](../getting-started/introduction-to-aspnet-identity.md)
-- [Annonce de version RTM d’ASP.NET Identity 2.0.0](https://blogs.msdn.com/b/webdev/archive/2014/03/20/test-announcing-rtm-of-asp-net-identity-2-0-0.aspx) Pranav rastogi.
+- [Annonce de la version RTM de ASP.net Identity 2.0.0](https://blogs.msdn.com/b/webdev/archive/2014/03/20/test-announcing-rtm-of-asp-net-identity-2-0-0.aspx) par Pranav Rastogi.

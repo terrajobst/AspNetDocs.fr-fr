@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 513837a7-cfea-4568-a4e9-1f5901245d24
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
 msc.type: authoredcontent
-ms.openlocfilehash: 2f79b1f459aff3e81dab7ea7eb4ebf3f71084463
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: b8c901ec30b6d37237f80100a2978350ac389b7a
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585814"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519165"
 ---
 # <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>Stratégies de partitionnement des données (création d’applications Cloud réalistes avec Azure)
 
@@ -61,7 +61,7 @@ Le stockage d’images dans le stockage d’objets BLOB au lieu d’une base de 
 
 Il s’agit de l’approche de partitionnement que nous avons implémentée dans l’application Fix it. nous examinerons le code correspondant dans le [chapitre stockage d’objets BLOB](unstructured-blob-storage.md). Sans ce schéma de partitionnement, et en supposant une taille d’image moyenne de 3 mégaoctets, l’application Fix it ne peut stocker que environ 40 000 tâches avant d’atteindre la taille de base de données maximale de 150 gigaoctets. Après avoir supprimé les images, la base de données peut stocker 10 fois plus de tâches ; vous pouvez aller plus longtemps avant de devoir envisager d’implémenter un schéma de partitionnement horizontal. Au fur et à mesure que l’application évolue, vos dépenses augmentent plus lentement, car la majeure partie de vos besoins de stockage est dans un stockage d’objets BLOB très peu coûteux.
 
-## <a name="horizontal-partitioning-sharding"></a>Partitionnement horizontal (partitionnement)
+## <a name="horizontal-partitioning-sharding"></a>Partitionnement horizontal (sharding)
 
 La segmentation horizontale revient à fractionner une table par lignes : un ensemble de lignes est placé dans un magasin de données, et un autre ensemble de lignes est placé dans un magasin de données différent.
 

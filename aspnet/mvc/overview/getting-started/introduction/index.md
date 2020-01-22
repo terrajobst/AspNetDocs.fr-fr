@@ -1,29 +1,29 @@
 ---
 uid: mvc/overview/getting-started/introduction/index
-title: Bien démarrer avec ASP.NET MVC 5 | Microsoft Docs
+title: Prise en main avec ASP.NET MVC 5 | Microsoft Docs
 author: rick-anderson
-description: Introduction à ASP.NET MVC 5
+description: Présentation de ASP.NET MVC 5
 ms.author: riande
 ms.date: 06/10/2013
 ms.assetid: 9afe7454-f1bd-4e81-8ecf-12fe54d080c1
 msc.legacyurl: /mvc/overview/getting-started/introduction
 msc.type: chapter
 ms.openlocfilehash: 055142be60257f0917eb22bc08471c0bec54ca2e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387176"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518741"
 ---
 # <a name="getting-started-with-aspnet-mvc-5"></a>Bien démarrer avec ASP.NET MVC 5
 
-> Introduction à ASP.NET MVC 5
+> Présentation de ASP.NET MVC 5
 
 [!INCLUDE [consider RP](../../../../includes/razor.md)]
 
-Cette série de didacticiels suivante couvre ASP.NET MVC : Source se trouve sur [GitHub](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
+La série de didacticiels suivante couvre ASP.NET MVC : source situé sur [GitHub](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
 
-- [Prise en main](getting-started.md)
+- [Bien démarrer](getting-started.md)
 - [Ajout d’un contrôleur](adding-a-controller.md)
 - [Ajout d’une vue](adding-a-view.md)
 - [Ajout d’un modèle](adding-a-model.md)

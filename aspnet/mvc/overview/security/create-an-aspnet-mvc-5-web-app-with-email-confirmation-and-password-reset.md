@@ -8,20 +8,20 @@ ms.date: 03/26/2015
 ms.assetid: d4911cb3-1afb-4805-b860-10818c4b1280
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: 07f5b290b73f75000e6f29fe09e4dc25e144452f
-ms.sourcegitcommit: 969e7db924ebad3cc0f0cb0d65d148e8b9221b9a
+ms.openlocfilehash: 6169c972ad0f4ee2079d3638c54a5accc4b8b3de
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899698"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519347"
 ---
 # <a name="create-a-secure-aspnet-mvc-5-web-app-with-log-in-email-confirmation-and-password-reset-c"></a>Créer une application web ASP.NET MVC 5 sécurisée avec connexion, confirmation par e-mail et réinitialisation du mot de passe (C#)
 
-par [Rick Anderson]((https://twitter.com/RickAndMSFT))
+par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 Ce didacticiel vous montre comment créer une application web ASP.NET MVC 5 avec confirmation par courrier électronique et réinitialisation de mot de passe en utilisant le système d’appartenance d'ASP.NET Identity.
 
-Pour obtenir une version mise à jour de ce didacticiel qui utilise .NET Core, consultez [confirmation de compte et récupération de mot de passe dans ASP.NET Core [/ASPNET/Core/Security/Authentication/accconfirm).
+Pour obtenir une version mise à jour de ce didacticiel qui utilise .NET Core, consultez [confirmation de compte et récupération de mot de passe dans ASP.net Core](/aspnet/core/security/authentication/accconfirm).
 
 <a id="createMvc"></a>
 ## <a name="create-an-aspnet-mvc-app"></a>Créer une application MVC ASP.NET

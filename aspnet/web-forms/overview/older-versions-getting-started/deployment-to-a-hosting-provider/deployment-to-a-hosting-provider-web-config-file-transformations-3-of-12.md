@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: 2b0df3d9-450b-4ea6-b315-4c9650722cad
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: fe71e6cfb0f4c5f1d99b326e9d90edb6c8c5feee
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 9e7902bcf8a16c154aee1a982824bfaedeea7d9d
+ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600524"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76309234"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-webconfig-file-transformations---3-of-12"></a>Déploiement d’une application Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : transformations de fichier Web. config-3 sur 12
 
@@ -43,7 +43,7 @@ Pour le scénario couvert par ce didacticiel, vous savez tout ce qui doit être 
 
 Dans **Explorateur de solutions**, développez *Web. config* pour voir les fichiers de transformation *Web. Debug. config* et *Web. Release. config* qui sont créés par défaut pour les deux configurations de build par défaut.
 
-![Web. config_transform_files](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image1.png)
+![Web.config_transform_files](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image1.png)
 
 Vous pouvez créer des fichiers de transformation pour des configurations de build personnalisées en cliquant avec le bouton droit sur le fichier Web. config et en choisissant **Ajouter des transformations de configuration** dans le menu contextuel, mais pour ce didacticiel, vous n’avez pas besoin de le faire.
 
