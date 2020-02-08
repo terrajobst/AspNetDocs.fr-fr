@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: b83f47c4-8521-4d0a-8644-e8f77e39733e
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 0383974baa16bb0d5fc588f9303290bdb0fd979c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 9800a313879477f36a730e6a70c79bc06d403ae3
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595345"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074950"
 ---
 # <a name="handling-concurrency-with-the-entity-framework-in-an-aspnet-mvc-application-7-of-10"></a>Gestion de l’accès concurrentiel avec l’Entity Framework dans une application ASP.NET MVC (7 sur 10)
 
@@ -85,6 +85,8 @@ Dans *Models\Department.cs*, ajoutez une propriété de suivi nommée `RowVersio
 L’attribut [timestamp](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.timestampattribute.aspx) spécifie que cette colonne sera incluse dans la clause `Where` de `Update` et `Delete` commandes envoyées à la base de données. L’attribut est appelé [timestamp](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.timestampattribute.aspx) , car les versions précédentes de SQL Server utilisé un type de données [timestamp](https://msdn.microsoft.com/library/ms182776(v=SQL.90).aspx) SQL avant que le [rowversion](https://msdn.microsoft.com/library/ms182776(v=sql.110).aspx) SQL ne le remplace. Le type .net pour `rowversion` est un tableau d’octets. Si vous préférez utiliser l’API Fluent, vous pouvez utiliser la méthode [IsConcurrencyToken](https://msdn.microsoft.com/library/gg679501(v=VS.103).aspx) pour spécifier la propriété de suivi, comme indiqué dans l’exemple suivant :
 
 [!code-csharp[Main](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample2.cs)]
+
+Consultez le problème GitHub [remplacer IsConcurrencyToken par IsRowVersion](https://github.com/aspnet/AspNetDocs/issues/302).
 
 En ajoutant une propriété, vous avez changé le modèle de base de données et vous devez donc effectuer une autre migration. Dans la console du Gestionnaire de package, entrez les commandes suivantes :
 
@@ -158,7 +160,7 @@ Cliquez sur **Enregistrer** dans la deuxième fenêtre du navigateur. Vous voyez
 
 ![Department_Edit_page_2_after_clicking_Save](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image10.png)
 
-Cliquez à nouveau sur **Save**. La valeur que vous avez entrée dans le deuxième navigateur est enregistrée avec la valeur d’origine des données que vous modifiez dans le premier navigateur. Vous voyez les valeurs enregistrées quand la page Index apparaît.
+Cliquez à nouveau sur **Enregistrer**. La valeur que vous avez entrée dans le deuxième navigateur est enregistrée avec la valeur d’origine des données que vous modifiez dans le premier navigateur. Vous voyez les valeurs enregistrées quand la page Index apparaît.
 
 ![Department_Index_page_with_change_from_second_browser](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image11.png)
 
@@ -188,7 +190,7 @@ Vous avez également changé le nom de la méthode d’action de `DeleteConfirme
 
 Si une erreur d’accès concurrentiel est interceptée, le code réaffiche la page de confirmation de suppression et fournit un indicateur indiquant qu’elle doit afficher un message d’erreur d’accès concurrentiel.
 
-Dans *Views\Department\Delete.cshtml*, remplacez le code généré automatiquement par le code suivant qui effectue certaines modifications de mise en forme et ajoute un champ de message d’erreur. Les modifications sont mises en surbrillance.
+Dans *Views\Department\Delete.cshtml*, remplacez le code généré automatiquement par le code suivant qui effectue certaines modifications de mise en forme et ajoute un champ de message d’erreur. Les modifications apparaissent en surbrillance.
 
 [!code-cshtml[Main](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample16.cshtml?highlight=9,37,40,45-46)]
 
@@ -224,7 +226,7 @@ Vous voyez le message d’erreur d’accès concurrentiel et les valeurs du dép
 
 Si vous recliquez sur **Delete**, vous êtes redirigé vers la page Index, qui montre que le département a été supprimé.
 
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Résumé
 
 Ceci termine l’introduction à la gestion des conflits d’accès concurrentiel. Pour plus d’informations sur les autres façons de gérer différents scénarios d’accès concurrentiel, consultez [modèles d’accès concurrentiel optimiste](https://blogs.msdn.com/b/adonet/archive/2011/02/03/using-dbcontext-in-ef-feature-ctp5-part-9-optimistic-concurrency-patterns.aspx) et [utilisation des valeurs de propriété](https://blogs.msdn.com/b/adonet/archive/2011/01/30/using-dbcontext-in-ef-feature-ctp5-part-5-working-with-property-values.aspx) sur le blog de l’équipe Entity Framework. Le didacticiel suivant montre comment implémenter l’héritage TPH (table par hiérarchie) pour les entités `Instructor` et `Student`.
 

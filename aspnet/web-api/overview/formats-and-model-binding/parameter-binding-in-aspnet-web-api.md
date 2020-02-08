@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: e42c8388-04ed-4341-9fdb-41b1b4c06320
 msc.legacyurl: /web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 032368f94ce32cf6231458649e8fdd42bee685e9
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 464cb9b45dc0b62c4da38b7cf612934808854d32
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519256"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074902"
 ---
 # <a name="parameter-binding-in-aspnet-web-api"></a>Liaison de paramètre dans API Web ASP.NET
 
@@ -102,7 +102,7 @@ Un classeur de modèles obtient des valeurs d’entrée brutes à partir d’un 
 
 Le fournisseur de valeurs par défaut dans l’API Web obtient des valeurs à partir des données d’itinéraire et de la chaîne de requête. Par exemple, si l’URI est `http://localhost/api/values/1?location=48,-122`, le fournisseur de valeurs crée les paires clé-valeur suivantes :
 
-- id = &quot;1&quot;
+- ID = &quot;1&quot;
 - emplacement = &quot;48 122&quot;
 
 (Je suppose que le modèle de routage par défaut est &quot;API/{Controller}/{ID}&quot;.)
@@ -205,7 +205,7 @@ Si vous le souhaitez, vous pouvez remplacer l’ensemble du service **IActionVal
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-[Exemple de liaison de paramètre personnalisé](http://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/CustomParameterBinding)
+[Exemple de liaison de paramètre personnalisé](https://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/CustomParameterBinding)
 
 Mike Stall a écrit une bonne série de billets de blog sur la liaison de paramètres d’API Web :
 

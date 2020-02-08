@@ -8,12 +8,12 @@ ms.date: 09/25/2014
 ms.assetid: b9882e53-b3ca-4def-89b0-322846973ccb
 msc.legacyurl: /web-api/overview/security/authentication-filters
 msc.type: authoredcontent
-ms.openlocfilehash: b6815baf05303d5f47a14ee5fe0fdfc2836c1868
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 2ef9e62a6c634237e920b6d7aba2127b835f959d
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519373"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075071"
 ---
 # <a name="authentication-filters-in-aspnet-web-api-2"></a>Filtres d’authentification dans API Web ASP.NET 2
 
@@ -23,7 +23,7 @@ par [Mike Wasson](https://github.com/MikeWasson)
 
 Les filtres d’authentification vous permettent de définir un schéma d’authentification pour des contrôleurs ou des actions individuels. De cette façon, votre application peut prendre en charge différents mécanismes d’authentification pour différentes ressources HTTP.
 
-Dans cet article, je vais vous montrer le code de l’exemple [d’authentification de base](http://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/BasicAuthentication) sur [https://github.com/aspnet/samples](https://github.com/aspnet/samples). L’exemple montre un filtre d’authentification qui implémente le schéma d’authentification d’accès de base HTTP (RFC 2617). Le filtre est implémenté dans une classe nommée `IdentityBasicAuthenticationAttribute`. Je n’affiche pas l’intégralité du code de l’exemple, mais uniquement les parties qui illustrent comment écrire un filtre d’authentification.
+Dans cet article, je vais vous montrer le code de l’exemple [d’authentification de base](https://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/BasicAuthentication) sur [https://github.com/aspnet/samples](https://github.com/aspnet/samples). L’exemple montre un filtre d’authentification qui implémente le schéma d’authentification d’accès de base HTTP (RFC 2617). Le filtre est implémenté dans une classe nommée `IdentityBasicAuthenticationAttribute`. Je n’affiche pas l’intégralité du code de l’exemple, mais uniquement les parties qui illustrent comment écrire un filtre d’authentification.
 
 ## <a name="setting-an-authentication-filter"></a>Définition d’un filtre d’authentification
 
@@ -108,7 +108,7 @@ Voici un aperçu général de l’implémentation de **AuthenticateAsync**.
 5. Si les informations d’identification sont incorrectes, retournez 401 en définissant `context.ErrorResult`.
 6. Si les informations d’identification sont valides, créez un **IPrincipal** et définissez `context.Principal`.
 
-Le code suivant illustre la méthode **AuthenticateAsync** de l’exemple [d’authentification de base](http://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/BasicAuthentication) . Les commentaires indiquent chaque étape. Le code illustre plusieurs types d’erreurs : un en-tête d’autorisation sans informations d’identification, des informations d’identification incorrectes et un nom d’utilisateur/mot de passe incorrect.
+Le code suivant illustre la méthode **AuthenticateAsync** de l’exemple [d’authentification de base](https://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/BasicAuthentication) . Les commentaires indiquent chaque étape. Le code illustre plusieurs types d’erreurs : un en-tête d’autorisation sans informations d’identification, des informations d’identification incorrectes et un nom d’utilisateur/mot de passe incorrect.
 
 [!code-csharp[Main](authentication-filters/samples/sample5.cs)]
 

@@ -6,22 +6,22 @@ description: Présentation des webhooks ASP.NET.
 ms.author: riande
 ms.date: 01/17/2012
 ms.assetid: 5e2843f0-f499-448f-a712-33d4e9858321
-ms.openlocfilehash: aa65a20e1af16d58533e37fafc77ac246e0fe327
-ms.sourcegitcommit: b95316530fa51087d6c400ff91814fe37e73f7e8
+ms.openlocfilehash: 1e21c92e950893c0ff87c63f03f4710a158441fd
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000728"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075084"
 ---
 # <a name="aspnet-webhooks-overview"></a>Vue d’ensemble des webhooks ASP.NET
 
 Webhook est un modèle HTTP léger qui fournit un modèle Pub/Sub simple pour le câblage des API Web et des services SaaS. Lorsqu’un événement se produit dans un service, une notification est envoyée sous la forme d’une requête HTTP POSTALe aux abonnés inscrits. La demande de publication contient des informations sur l’événement, ce qui permet au récepteur d’agir en conséquence.
 
-En raison de leur simplicité, les webhooks sont déjà exposés par un grand nombre de services, notamment [Dropbox](http://dropbox.com/), [GitHub](http://www.github.com/), [bitbucket](https://bitbucket.org/), [MailChimp](http://www.mailchimp.com/), [PayPal](http://www.paypal.com/), les [marges](http://www.slack.com), les [rayures](http://www.stripe.com), les [Trello](http://www.trello.com/)et de nombreux libérer. Par exemple, un webhook peut indiquer qu’un fichier a été modifié dans [Dropbox](http://dropbox.com/)ou qu’une modification du code a été validée dans GitHub, ou qu’un paiement a été initié dans [PayPal](http://www.paypal.com/)ou qu’une carte a été créée dans [Trello](http://www.trello.com/). Les possibilités sont infinies!
+En raison de leur simplicité, les webhooks sont déjà exposés par un grand nombre de services, notamment [Dropbox](http://dropbox.com/), [GitHub](https://www.github.com/), [bitbucket](https://bitbucket.org/), [MailChimp](http://www.mailchimp.com/), [PayPal](http://www.paypal.com/), les [marges](http://www.slack.com), les [rayures](http://www.stripe.com), les [Trello](http://www.trello.com/)et bien d’autres encore. Par exemple, un webhook peut indiquer qu’un fichier a été modifié dans [Dropbox](http://dropbox.com/)ou qu’une modification du code a été validée dans GitHub, ou qu’un paiement a été initié dans [PayPal](http://www.paypal.com/)ou qu’une carte a été créée dans [Trello](http://www.trello.com/). Les possibilités sont infinies !
 
-Microsoft ASP.NET webhooks facilite l’envoi et la réception de webhooks dans le cadre de votre application ASP.NET:
+Microsoft ASP.NET webhooks facilite l’envoi et la réception de webhooks dans le cadre de votre application ASP.NET :
 
-* Du côté de la réception, il fournit un modèle commun pour la réception et le traitement de webhooks à partir d’un nombre quelconque de fournisseurs de webhook. Elle est prête à l’emploi avec la prise en charge de [Dropbox](http://dropbox.com/), [GitHub](http://www.github.com/), [bitbucket](https://bitbucket.org/), [MailChimp](http://www.mailchimp.com/), [PayPal](http://www.paypal.com/), [Pusher](http://www.pusher.com), [Salesforce](http://www.salesforce.com), [mou](http://www.slack.com), [Stripe](http://www.stripe.com), [Trello](http://www.trello.com/),[WordPress](http://www.wordpress.com) et [Zendesk](https://www.zendesk.com/) , mais il est facile d’ajouter la prise en charge pour plus.
+* Du côté de la réception, il fournit un modèle commun pour la réception et le traitement de webhooks à partir d’un nombre quelconque de fournisseurs de webhook. Il est prêt à l’emploi avec la prise en charge de [Dropbox](http://dropbox.com/), [GitHub](https://www.github.com/), [bitbucket](https://bitbucket.org/), [MailChimp](http://www.mailchimp.com/), [PayPal](http://www.paypal.com/), [Pusher](http://www.pusher.com), [Salesforce](http://www.salesforce.com), [mou](http://www.slack.com), [Stripe](http://www.stripe.com), [Trello](http://www.trello.com/),[WordPress](http://www.wordpress.com) et [Zendesk](https://www.zendesk.com/) , mais il est facile d’ajouter la prise en charge pour plus.
 
 * Côté envoi, il prend en charge la gestion et le stockage des abonnements, ainsi que l’envoi de notifications d’événements à l’ensemble approprié d’abonnés. Cela vous permet de définir votre propre ensemble d’événements auxquels les abonnés peuvent s’abonner et de les notifier lorsque des événements se produisent.
 
@@ -33,7 +33,7 @@ Le code cible API Web ASP.NET 2 et ASP.NET MVC 5 et est disponible en tant que [
 
 Webhook est un modèle qui signifie qu’il varie en fonction de son utilisation du service au service, mais l’idée de base est la même. Vous pouvez considérer les webhooks comme un modèle Pub/Sub simple dans lequel un utilisateur peut s’abonner à des événements qui se produisent ailleurs. Les notifications d’événements sont propagées en tant que requêtes HTTP POSTALes contenant des informations sur l’événement lui-même.
 
-En général, la requête HTTP HTTP contient un objet JSON ou des données de formulaire HTML déterminés par l’expéditeur webhook, y compris des informations sur l’événement qui provoque le déclenchement du webhook. Par exemple, un corps de requête POSTALe de webhook de [GitHub](http://www.github.com/) ressemble à ceci suite à l’ouverture d’un nouveau problème dans un référentiel particulier:
+En général, la requête HTTP HTTP contient un objet JSON ou des données de formulaire HTML déterminés par l’expéditeur webhook, y compris des informations sur l’événement qui provoque le déclenchement du webhook. Par exemple, un corps de requête POSTALe de webhook de [GitHub](https://www.github.com/) ressemble à ceci suite à l’ouverture d’un nouveau problème dans un référentiel particulier :
 
 ```json
 {
@@ -63,15 +63,15 @@ En général, la requête HTTP HTTP contient un objet JSON ou des données de fo
 
 Pour vous assurer que le webhook provient bien de l’expéditeur prévu, la demande de publication est sécurisée d’une certaine façon, puis vérifiée par le destinataire. Par exemple, le [Webhook GitHub](https://developer.github.com/webhooks/) comprend un en-tête http *X-Hub-signature* avec un hachage du corps de la demande qui est vérifié par l’implémentation du récepteur, de sorte que vous n’avez pas à vous en soucier.
 
-Le flot de webhook ressemble généralement à ceci:
+Le flot de webhook ressemble généralement à ceci :
 
 * L’expéditeur de webhook expose les événements auxquels un client peut s’abonner. Les événements décrivent les modifications observables du système, par exemple, qu’un nouvel élément de données a été inséré, qu’un processus est terminé ou autre chose.
 
-* Le récepteur de webhook s’abonne en inscrivant un webhook constitué de quatre éléments:
+* Le récepteur de webhook s’abonne en inscrivant un webhook constitué de quatre éléments :
 
      1. URI pour lequel la notification d’événement doit être publiée sous la forme d’une requête HTTP POST.
 
-     2. Ensemble de filtres décrivant les événements particuliers pour lesquels le webhook doit être déclenché;
+     2. Ensemble de filtres décrivant les événements particuliers pour lesquels le webhook doit être déclenché ;
 
      3. Clé secrète utilisée pour signer la requête HTTP.
 
@@ -81,13 +81,13 @@ Le flot de webhook ressemble généralement à ceci:
 
 ## <a name="webhooks-processing-pipeline"></a>Pipeline de traitement des webhooks
 
-Le pipeline de traitement du webhook Microsoft ASP.NET pour les webhooks entrants se présente comme suit:
+Le pipeline de traitement du webhook Microsoft ASP.NET pour les webhooks entrants se présente comme suit :
 
 ![Pipeline de traitement des webhooks ASP.NET](_static/WebHookReceivers.png)
 
 Les deux concepts clés ici sont les *récepteurs* et les *gestionnaires*:
 
-* Les destinataires sont responsables de la gestion de la version particulière du webhook d’un expéditeur donné et de l’application de vérifications de sécurité pour s’assurer que la requête de webhook provient bien de l’expéditeur prévu.
+* Les *destinataires* sont responsables de la gestion de la version particulière du webhook d’un expéditeur donné et de l’application de vérifications de sécurité pour s’assurer que la requête de webhook provient bien de l’expéditeur prévu.
 
 * Les *gestionnaires* sont généralement là où le code utilisateur exécute le traitement du webhook particulier.
 
