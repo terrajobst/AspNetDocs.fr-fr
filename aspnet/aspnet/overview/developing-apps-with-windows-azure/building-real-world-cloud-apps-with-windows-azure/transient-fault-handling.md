@@ -8,16 +8,16 @@ ms.date: 11/03/2015
 ms.assetid: 7ead83bc-c08c-4b26-8617-00e07292e35c
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling
 msc.type: authoredcontent
-ms.openlocfilehash: fc281e3d8f7c9edd4d98b029a67e58113132a8b3
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: e798cb83cfb97db63fef6dc38c8f62804461d01b
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583657"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456853"
 ---
 # <a name="transient-fault-handling-building-real-world-cloud-apps-with-azure"></a>Gestion des erreurs temporaires (création d’applications Cloud réalistes avec Azure)
 
-par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet Fix it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Télécharger le livre électronique](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -72,7 +72,7 @@ Il n’y a pas de stratégie de nouvelle tentative adaptée à une seule taille.
 
 Pour SQL Database de l’aide sur les stratégies de nouvelle tentative, consultez [résoudre les erreurs temporaires et les erreurs de connexion à SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-connectivity-issues/).
 
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Résumé
 
 Une stratégie de nouvelle tentative/interruption peut aider à rendre les erreurs temporaires invisibles au client la plupart du temps, et Microsoft fournit des infrastructures que vous pouvez utiliser pour réduire votre travail à l’implémentation d’une stratégie, que vous utilisiez ADO.NET, Entity Framework ou le service de stockage Azure.
 
@@ -98,7 +98,7 @@ Vidéos
 
 Exemple de code
 
-- [Notions de base du service Cloud dans Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Exemple d’application créé par le Microsoft Azure équipe de Conseil client qui montre comment utiliser le [bloc de gestion des erreurs temporaires](http://nuget.org/packages/EnterpriseLibrary.TransientFaultHandling/) (TFH) d’Enterprise Library. Pour plus d’informations, consultez [couche d’accès aux données des notions de base du service Cloud-gestion des erreurs temporaires](https://social.technet.microsoft.com/wiki/contents/articles/18665.cloud-service-fundamentals-data-access-layer-transient-fault-handling.aspx). TFH est recommandé pour l’accès aux bases de données à l’aide de ADO.NET directement (sans utiliser Entity Framework).
+- [Notions de base du service Cloud dans Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Exemple d’application créé par le Microsoft Azure équipe de Conseil client qui montre comment utiliser le [bloc de gestion des erreurs temporaires](http://nuget.org/packages/EnterpriseLibrary.TransientFaultHandling/) (TFH) d’Enterprise Library. Pour plus d’informations, consultez [Couche d’accès aux données de Cloud Service Fundamentals - Gestion des erreurs temporaires](https://social.technet.microsoft.com/wiki/contents/articles/18665.cloud-service-fundamentals-data-access-layer-transient-fault-handling.aspx). TFH est recommandé pour l’accès aux bases de données à l’aide de ADO.NET directement (sans utiliser Entity Framework).
 
 > [!div class="step-by-step"]
 > [Précédent](monitoring-and-telemetry.md)

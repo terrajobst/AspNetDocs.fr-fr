@@ -5,12 +5,12 @@ description: Utiliser des cookies SameSite et l’interface Open Web pour .NET (
 ms.author: riande
 ms.date: 12/6/2019
 uid: owin-samesite
-ms.openlocfilehash: ac5ae24eeb9e8e1cc6296667a4bebef72c3eb62c
-ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
+ms.openlocfilehash: a3353fd0f0332899aaba26b83aea0ff7c3a6d19b
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74993076"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77455735"
 ---
 # <a name="samesite-cookies-and-the-open-web-interface-for-net-owin"></a>SameSite cookies et l’interface Open Web pour .NET (OWIN)
 
@@ -74,14 +74,14 @@ Le brouillon 2019 de la spécification `SameSite` :
 * Spécifie que les cookies sont traités comme `SameSite=Lax` par défaut.
 * Spécifie les cookies qui déclarent explicitement `SameSite=None` afin d’activer la remise entre sites qui doit être marquée comme `Secure`. `None` est une nouvelle entrée à refuser.
 * Est planifié pour être activé par [chrome](https://chromestatus.com/feature/5088147346030592) par défaut au [2020 février](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html). Les navigateurs ont commencé à passer à cette norme dans 2019.
-* Est pris en charge par les correctifs émis comme décrit dans les Articles de la base de connaissances. Pour plus d'informations, consultez <xref:samesite/kbs-samesite>.
+* Est pris en charge par les correctifs émis comme décrit dans les Articles de la base de connaissances. Pour plus d’informations, consultez <xref:samesite/kbs-samesite>.
 
 <a name="sob"></a>
 
 ## <a name="supporting-older-browsers"></a>Prise en charge des navigateurs plus anciens
 
 La norme 2016 `SameSite` stipulant que les valeurs inconnues doivent être traitées comme des valeurs `SameSite=Strict`. Les applications accessibles depuis des navigateurs plus anciens qui prennent en charge la norme 2016 `SameSite` peuvent s’arrêter lorsqu’ils obtiennent une propriété `SameSite` avec la valeur `None`. Les applications Web doivent implémenter la détection du navigateur si elles envisagent de prendre en charge des navigateurs plus anciens. ASP.NET n’implémente pas la détection du navigateur, car les valeurs des agents utilisateur sont très volatiles et changent fréquemment. Un point d’extension dans [ICookieManager](/previous-versions/aspnet/dn800238(v%3Dvs.113)) permet de brancher une logique spécifique à l’agent utilisateur.
-<!-- https://docs.microsoft.com/en-us/previous-versions/aspnet/dn800238(v%3Dvs.113) -->
+<!-- https://docs.microsoft.com/previous-versions/aspnet/dn800238(v%3Dvs.113) -->
 
 Dans `Startup.Configuration`, ajoutez du code similaire à ce qui suit :
 

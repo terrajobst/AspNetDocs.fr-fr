@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 364ce84e-5af8-4e08-afc9-75a512b01f84
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/design-to-survive-failures
 msc.type: authoredcontent
-ms.openlocfilehash: 9bf9acb8b4f8521d03c053c124c5fc4a07d6cb9a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 348232af531b5d53dc3cb46d6d2c7931d95a572d
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585650"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457126"
 ---
 # <a name="design-to-survive-failures-building-real-world-cloud-apps-with-azure"></a>Conception pour survivre aux défaillances (création d’applications Cloud réalistes avec Azure)
 
-par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet Fix it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Télécharger le livre électronique](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -58,7 +58,7 @@ Les régions entières peuvent échouer. Une catastrophe naturelle peut détruir
 
 L’objectif d’Azure est de faciliter considérablement la gestion de tous ces types de défaillances, et vous verrez des exemples de la façon dont nous faisons cela dans les chapitres suivants.
 
-## <a name="slas"></a>SLA
+## <a name="slas"></a>Contrats SLA
 
 Les gens sont souvent informés des contrats de niveau de service (SLA) dans l’environnement Cloud. Fondamentalement, ceux-ci sont des promesses que les entreprises font de la fiabilité de leur service. Un contrat SLA de 99,9% signifie que vous devez vous attendre à ce que le service fonctionne correctement 99,9% du temps. Il s’agit d’une valeur assez courante pour un contrat SLA et elle ressemble à un nombre très élevé, mais vous risquez de ne pas vous rendre compte du temps d’inactivité de 1%. Voici un tableau qui indique le temps d’indisponibilité, en pourcentage, de plusieurs contrats de niveau de service par rapport à une année, un mois et une semaine.
 
@@ -70,7 +70,7 @@ Une chose à savoir sur un contrat SLA est le laps de temps auquel il fait réf�
 
 Bien sûr, nous cherchons toujours à faire mieux que le contrat SLA. en règle générale, vous serez trop loin. La promesse est que, si nous sommes toujours en baisse pendant une période plus longue que la durée maximale, vous pouvez demander de l’argent. La quantité d’argent que vous recevez ne compensera probablement pas complètement l’impact sur l’activité de l’excédent, mais cet aspect du contrat SLA agit comme une stratégie de mise en application et vous informe que nous le faisons très sérieusement.
 
-### <a name="composite-slas"></a>SLA composites
+### <a name="composite-slas"></a>Contrats SLA composites
 
 Un élément important à prendre en compte lorsque vous examinez les contrats SLA est l’impact de l’utilisation de plusieurs services dans une application, chaque service ayant un contrat SLA distinct. Par exemple, l’application Fix It utilise Azure App Service Web Apps, stockage Azure et SQL Database. Voici leurs numéros de contrat SLA à la date de rédaction de ce livre électronique en décembre 2013 :
 
@@ -78,7 +78,7 @@ Un élément important à prendre en compte lorsque vous examinez les contrats S
 
 Quelle est la durée d’indisponibilité maximale attendue pour l’application en fonction de ces contrats SLA de service ? Vous pensez peut-être que votre temps d’arrêt est égal au taux de contrat de service (SLA) le plus défavorable, ou à 99,9% dans ce cas. Cela est vrai si les trois services ont toujours échoué en même temps, mais ce n’est pas nécessairement ce qui se passe réellement. Chaque service peut échouer indépendamment à des moments différents. vous devez donc calculer le contrat SLA composite en multipliant les numéros de contrats SLA individuels.
 
-![SLA composite](design-to-survive-failures/_static/image4.png)
+![Contrat SLA composite](design-to-survive-failures/_static/image4.png)
 
 Par conséquent, votre application peut être arrêtée non seulement 43,2 minutes par mois, mais également 3 fois cette quantité, 108 minutes par mois, et toujours dans les limites du contrat SLA Azure.
 
@@ -98,7 +98,7 @@ Sachez également que tous les services Cloud n’ont même pas de contrat SLA. 
 
 Certains services de Cloud Computing peuvent délibérément refuser le service si votre application les utilise. C’est ce que l’on appelle la *limitation*. Si un service a un contrat SLA, il doit indiquer les conditions dans lesquelles vous pouvez être limité, et la conception de votre application doit éviter ces conditions et réagir de manière appropriée à la limitation si elle se produit. Par exemple, si les demandes à un service commencent à échouer lorsque vous dépassez un certain nombre par seconde, vous souhaitez vous assurer que les nouvelles tentatives automatiques ne se produisent pas si rapidement qu’elles provoquent la poursuite de la limitation. Nous aurons plus d’informations sur la limitation dans le [chapitre relatif à la gestion des erreurs temporaires](transient-fault-handling.md).
 
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Résumé
 
 Ce chapitre a essayé de vous aider à comprendre pourquoi une application Cloud réelle doit être conçue pour survivre aux défaillances de manière appropriée. À compter du [chapitre suivant](monitoring-and-telemetry.md), les autres modèles de cette série décrivent plus en détail certaines stratégies que vous pouvez utiliser pour effectuer cette opération :
 

@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 52d6c941-2cd9-442f-9872-2c798d6d90cd
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices
 msc.type: authoredcontent
-ms.openlocfilehash: 0956aaaf1f6a1a0d2f5d93f98cb6959cec98dbaf
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: dfd8a3ac2328d3f17dfbe36e68b37d181177b0f4
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74582705"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457087"
 ---
 # <a name="web-development-best-practices-building-real-world-cloud-apps-with-azure"></a>Meilleures pratiques pour le développement Web (création d’applications Cloud réalistes avec Azure)
 
-par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet Fix it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Télécharger le livre électronique](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -45,7 +45,7 @@ La plupart des applications réelles doivent stocker l’état d’une session W
 
 À titre d’exemple, la facilité de mise à l’échelle d’une application dans les sites Web Windows Azure si votre niveau Web est sans État, consultez l’onglet mettre à l' **échelle** d’un site Web Windows Azure dans le portail de gestion :
 
-![Onglet mettre à l’échelle](web-development-best-practices/_static/image1.png)
+![Onglet Mettre à l’échelle](web-development-best-practices/_static/image1.png)
 
 Si vous souhaitez ajouter des serveurs Web, il vous suffit de faire glisser le curseur nombre d’instances vers la droite. Affectez-lui la valeur 5, puis cliquez sur **Enregistrer**. en quelques secondes, vous avez 5 serveurs Web dans Windows Azure qui gèrent le trafic de votre site Web.
 
@@ -76,7 +76,7 @@ La capacité de votre application à être montée en charge est presque illimit
 <a id="sessionstate"></a>
 ## <a name="avoid-session-state"></a>Éviter l’état de la session
 
-Dans une application Cloud réelle, il n’est souvent pas pratique d’éviter de stocker une forme d’État pour une session utilisateur, mais certaines approches ont une incidence sur les performances et l’évolutivité plus que d’autres. Si vous devez stocker l’État, la meilleure solution consiste à conserver la quantité d’État petite et à la stocker dans les cookies. Si cela n’est pas possible, la meilleure solution consiste à utiliser l’état de session ASP.NET avec un fournisseur pour le [cache en mémoire distribué](distributed-caching.md#sessionstate). La solution la plus défavorable du point de vue des performances et de l’extensibilité consiste à utiliser un fournisseur d’état de session sauvegardé dans la base de données.
+Dans une application cloud réelle, il n’est souvent pas pratique d’éviter de stocker une forme d’état de session utilisateur, mais certaines approches ont davantage d’incidence que d’autres sur les performances et l'extensibilité. Si vous devez stocker un état, la meilleure solution consiste à veiller à ce qu’il reste de petite taille et à le stocker dans des cookies. Si cela n’est pas possible, la meilleure solution consiste à utiliser l’état de session ASP.NET avec un fournisseur pour le [cache en mémoire distribué](distributed-caching.md#sessionstate). La pire solution du point de vue des performances et de l’extensibilité consiste à utiliser un fournisseur d’état de session s'appuyant sur une base de données.
 
 <a id="cdn"></a>
 ## <a name="use-a-cdn-to-cache-static-file-assets"></a>Utiliser un CDN pour mettre en cache les ressources de fichiers statiques
@@ -126,7 +126,7 @@ Et cette prise en charge asynchrone n’est pas seulement pour les insertions, l
 
 Il existe une version `Async` de la méthode `ToList`, car, dans ce code, il s’agit de la méthode qui entraîne l’envoi d’une requête à la base de données. Les méthodes `Where` et `OrderByDescending` configurent uniquement la requête, tandis que la méthode `ToListAsync` exécute la requête et stocke la réponse dans la variable `result`.
 
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Résumé
 
 Vous pouvez implémenter les meilleures pratiques de développement Web décrites ici dans n’importe quelle infrastructure de programmation Web et n’importe quel environnement Cloud, mais nous avons des outils dans ASP.NET et Windows Azure pour faciliter la tâche. Si vous suivez ces modèles, vous pouvez facilement augmenter la capacité de votre niveau Web et réduire vos dépenses, car chaque serveur sera en mesure de gérer davantage de trafic.
 

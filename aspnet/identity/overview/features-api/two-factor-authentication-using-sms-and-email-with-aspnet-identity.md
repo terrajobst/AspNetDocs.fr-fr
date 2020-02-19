@@ -9,22 +9,22 @@ ms.assetid: 053e23c4-13c9-40fa-87cb-3e9b0823b31e
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 5f5218ca6c65ed3a2cd39d4e100349efa35d14cd
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.openlocfilehash: 527b4392846e60dae0b216fdeabf21fd6618e4d7
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74115092"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456736"
 ---
 # <a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Authentification à deux facteurs à l’aide de SMS et e-mail avec ASP.NET Identity
 
-par [Hao Kung](https://github.com/HaoK), [Pranav Rastogi](https://github.com/rustd), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Suhas Joshi](https://github.com/suhasj)
+par [Hao Kung](https://github.com/HaoK), [Pranav Rastogi](https://github.com/rustd), [Rick Anderson](https://twitter.com/RickAndMSFT), [Suhas Joshi](https://github.com/suhasj)
 
 > Ce didacticiel vous montre comment configurer l’authentification à deux facteurs (2FA) à l’aide de SMS et de la messagerie électronique.
 > 
 > Cet article a été rédigé par Rick Anderson ([@RickAndMSFT](https://twitter.com/#!/RickAndMSFT)), Pranav Rastogi ([@rustd](https://twitter.com/rustd)), Hao Kung et Suhas Joshi. L’exemple NuGet a été écrit principalement par Hao Kung.
 
-Cette rubrique aborde les sujets suivants :
+Cette rubrique couvre les sujets suivants :
 
 - [Génération de l’exemple Identity](#build)
 - [Configurer SMS pour l’authentification à deux facteurs](#SMS)
@@ -69,7 +69,7 @@ Ce didacticiel fournit des instructions sur l’utilisation de Twilio ou de ASPS
 2. **Installation de packages supplémentaires ou ajout de références de service**  
   
    Twilio  
-   Dans la console du gestionnaire de package, entrez la commande suivante :  
+   Dans la Console du gestionnaire de package, entrez la commande suivante :  
     `Install-Package Twilio`  
   
    ASPSMS:  
@@ -107,7 +107,7 @@ Ce didacticiel fournit des instructions sur l’utilisation de Twilio ou de ASPS
     [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample1.cs)]
 
     > [!WARNING]
-    > Sécurité : ne stockez jamais des données sensibles dans votre code source. Le compte et les informations d’identification sont ajoutés au code ci-dessus pour que l’exemple reste simple. Consultez ASP.NET MVC de Jon atten [: conserver les paramètres privés en dehors du contrôle de code source](http://typecastexception.com/post/2014/04/06/ASPNET-MVC-Keep-Private-Settings-Out-of-Source-Control.aspx).
+    > Sécurité - Ne jamais stocker de données sensibles dans votre code source. Le compte et les informations d’identification sont ajoutés au code ci-dessus pour que l’exemple reste simple. Consultez ASP.NET MVC de Jon atten [: conserver les paramètres privés en dehors du contrôle de code source](http://typecastexception.com/post/2014/04/06/ASPNET-MVC-Keep-Private-Settings-Out-of-Source-Control.aspx).
 6. **Implémentation du transfert de données vers le fournisseur SMS**  
   
    Configurez la classe `SmsService` dans le fichier *App\_Start\IdentityConfig.cs* .  
@@ -214,7 +214,7 @@ Vous pouvez ajouter d’autres fournisseurs 2FA tels que des générateurs de co
 
 ## <a name="combine-social-and-local-login-accounts"></a>Combiner les comptes de connexion sociale et locale
 
-Vous pouvez combiner des comptes locaux et sociaux en cliquant sur le lien de votre adresse de messagerie. Dans l’ordre suivant &quot;RickAndMSFT@gmail.com&quot; est d’abord créé en tant que connexion locale, mais vous pouvez créer le compte comme journal social dans un premier temps, puis ajouter une connexion locale.
+Vous pouvez combiner des comptes locaux et de réseaux sociaux en cliquant sur le lien de votre e-mail. Dans l’ordre suivant &quot;RickAndMSFT@gmail.com&quot; est d’abord créé en tant que connexion locale, mais vous pouvez créer le compte comme journal social dans un premier temps, puis ajouter une connexion locale.
 
 ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image13.png)
 
@@ -222,7 +222,7 @@ Cliquez sur le lien **gérer** . Notez la valeur 0 externe (connexions sociales)
 
 ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image14.png)
 
-Cliquez sur le lien vers un autre service de connexion et acceptez les demandes de l’application. Les deux comptes ont été combinés, vous pouvez ouvrir une session avec l’un ou l’autre de ces comptes. Vous souhaiterez peut-être que vos utilisateurs ajoutent des comptes locaux au cas où leur journal social dans le service d’authentification est défaillant, ou plus probable qu’ils aient perdu l’accès à leur compte social.
+Cliquez sur le lien vers un autre service de connexion et acceptez les demandes d’application. Les deux comptes ont été combinés : vous pourrez donc vous connecter avec l'un ou l'autre compte. Vous pouvez permettre à vos utilisateurs d’ajouter des comptes locaux au cas où leur service d’authentification de connexion de réseau social serait indisponible, ou au cas plus probable où ils auraient perdu l’accès à leur compte social.
 
 Dans l’image suivante, Tom est une connexion sociale (que vous pouvez voir à partir des **connexions externes : 1** apparaissant sur la page).
 

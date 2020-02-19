@@ -8,16 +8,16 @@ ms.date: 10/17/2013
 ms.assetid: 4085de68-d243-4378-8a64-86236ea8d2da
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: d79655bfadff83095bf4cb84445f5efaf44d6a89
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 5974e53e4610dccc7812df261dc97a9b0327de85
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519074"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456684"
 ---
 # <a name="adding-a-new-field"></a>Ajout d’un nouveau champ
 
-par [Rick Anderson]((https://twitter.com/RickAndMSFT))
+par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 [!INCLUDE [Tutorial Note](index.md)]
 
@@ -111,7 +111,7 @@ La classe `Movie` complète ressemble maintenant au code suivant :
 
 Générez l’application (Ctrl + Maj + B).
 
-Étant donné que vous avez ajouté un nouveau champ à la `Movie` (classe), vous devez également mettre à jour la liaison *liste verte* pour cette nouvelle propriété sera incluse. Mettez à jour l’attribut `bind` pour `Create` et `Edit` méthodes d’action pour inclure la propriété `Rating` :
+Étant donné que vous avez ajouté un nouveau champ à la classe `Movie`, vous devez également mettre à jour la *liste* verte de liaison pour inclure cette nouvelle propriété. Mettez à jour l’attribut `bind` pour `Create` et `Edit` méthodes d’action pour inclure la propriété `Rating` :
 
 [!code-csharp[Main](adding-a-new-field/samples/sample7.cs?highlight=1)]
 
@@ -140,8 +140,8 @@ Vous voyez cette erreur, car la classe de modèle `Movie` mise à jour dans l’
 Plusieurs approches sont possibles pour résoudre l’erreur :
 
 1. Laissez Entity Framework supprimer et recréer automatiquement la base de données sur la base du nouveau schéma de classe de modèle. Cette approche est très utile au début du cycle de développement quand vous effectuez un développement actif sur une base de données de test. Elle permet de faire évoluer rapidement le schéma de modèle et de base de données ensemble. L’inconvénient, cependant, est que vous perdez les données existantes dans la base de données, de sorte que vous *ne souhaitez pas* utiliser cette approche sur une base de données de production. L’utilisation d’un initialiseur pour amorcer automatiquement une base de données avec des données de test est souvent un moyen efficace pour développer une application. Pour plus d’informations sur les initialiseurs de base de données Entity Framework, consultez le [didacticiel ASP.NET MVC/Entity Framework](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
-2. Modifier explicitement le schéma de la base de données existante pour le faire correspondre aux classes du modèle. L’avantage de cette approche est que vous conservez vos données. Vous pouvez apporter cette modification manuellement ou en créant un script de modification de la base de données.
-3. Utilisez les migrations Code First pour mettre à jour le schéma de base de données.
+2. Modifiez explicitement le schéma de la base de données existante pour le faire correspondre aux classes du modèle. L’avantage de cette approche est que vous conservez vos données. Vous pouvez apporter cette modification manuellement ou en créant un script de modification de la base de données.
+3. Utilisez Migrations Code First pour mettre à jour le schéma de base de données.
 
 Pour ce didacticiel, nous allons utiliser les migrations Code First.
 

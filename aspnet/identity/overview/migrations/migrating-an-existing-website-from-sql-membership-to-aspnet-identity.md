@@ -9,22 +9,22 @@ ms.custom: seoapril2019
 ms.assetid: 220d3d75-16b2-4240-beae-a5b534f06419
 msc.legacyurl: /identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: eacfbb8a5b2d1aa3678892bc2077a56185fdebbc
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 633229cc4311d151121bf6a91b9fa8aeecca1197
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519152"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456151"
 ---
 # <a name="migrating-an-existing-website-from-sql-membership-to-aspnet-identity"></a>Migration d’un site web existant de l’appartenance SQL vers ASP.NET Identity
 
-par [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Suhas Joshi](https://github.com/suhasj)
+par [Rick Anderson](https://twitter.com/RickAndMSFT), [Suhas Joshi](https://github.com/suhasj)
 
 > Ce didacticiel décrit les étapes de migration d’une application Web existante avec les données d’utilisateur et de rôle créées à l’aide de l’appartenance SQL au nouveau système de ASP.NET Identity. Cette approche implique de remplacer le schéma de base de données existant par celui qui est requis par le ASP.NET Identity et de se connecter aux anciennes/nouvelles classes. Après l’adoption de cette approche, une fois votre base de données migrée, les futures mises à jour de l’identité seront gérées sans effort.
 
 Pour ce didacticiel, nous allons utiliser un modèle d’application Web (Web Forms) créé à l’aide de Visual Studio 2010 pour créer des données d’utilisateur et de rôle. Nous utiliserons ensuite des scripts SQL pour migrer la base de données existante vers les tables nécessaires au système d’identité. Ensuite, nous allons installer les packages NuGet nécessaires et ajouter de nouvelles pages de gestion des comptes qui utilisent le système d’identité pour la gestion des appartenances. En guise de test de migration, les utilisateurs créés à l’aide de l’appartenance SQL doivent pouvoir se connecter et de nouveaux utilisateurs doivent être en mesure de s’inscrire. Vous trouverez l’exemple complet [ici](https://github.com/aspnet/samples/tree/master/samples/aspnet/Identity/SQLMembership-Identity-OWIN/). Voir aussi [migration de l’appartenance à ASP.net vers ASP.net Identity](http://travis.io/blog/2015/03/24/migrate-from-aspnet-membership-to-aspnet-identity.html).
 
-## <a name="getting-started"></a>Bien démarrer
+## <a name="getting-started"></a>Prise en main
 
 ### <a name="creating-an-application-with-sql-membership"></a>Création d’une application avec l’appartenance SQL
 
@@ -85,13 +85,13 @@ Pour que les classes ASP.NET Identity soient prêtes à l’emploi avec les donn
 
 | **IdentityUser** | **Type** | **IdentityRole** | **IdentityUserRole** | **IdentityUserLogin** | **IdentityUserClaim** |
 | --- | --- | --- | --- | --- | --- |
-| ID | string | ID | RoleId | ProviderKey | ID |
-| Utilisateur | string | Name | UserId | UserId | ClaimType |
-| PasswordHash | string |  |  | LoginProvider | ClaimValue |
-| SecurityStamp | string |  |  |  | ID de\_de l’utilisateur |
-| Messagerie | string |  |  |  |  |
+| ID | chaîne | ID | RoleId | ProviderKey | ID |
+| Nom d’utilisateur | chaîne | Nom | UserId | UserId | ClaimType |
+| PasswordHash | chaîne |  |  | LoginProvider | ClaimValue |
+| SecurityStamp | chaîne |  |  |  | ID de\_de l’utilisateur |
+| Email | chaîne |  |  |  |  |
 | EmailConfirmed | bool |  |  |  |  |
-| PhoneNumber | string |  |  |  |  |
+| PhoneNumber | chaîne |  |  |  |  |
 | PhoneNumberConfirmed | bool |  |  |  |  |
 | LockoutEnabled | bool |  |  |  |  |
 | LockoutEndDate | DateTime |  |  |  |  |
@@ -104,7 +104,7 @@ Nous devons disposer de tables pour chacun de ces modèles avec des colonnes cor
 | IdentityUser | AspnetUsers | ID |  |
 | IdentityRole | AspnetRoles | ID |  |
 | IdentityUserRole | AspnetUserRole | UserId + RoleId | ID d'\_utilisateur-&gt;AspnetUsers RoleId-&gt;AspnetRoles |
-| IdentityUserLogin | AspnetUserLogins | ProviderKey+UserId + LoginProvider | UserId-&gt;AspnetUsers |
+| IdentityUserLogin | AspnetUserLogins | ProviderKey+UserId + LoginProvider | AspnetUsers UserId-&gt; |
 | IdentityUserClaim | AspnetUserClaims | ID | ID d'\_utilisateur-&gt;AspnetUsers |
 
 Ces informations nous permettent de créer des instructions SQL pour créer des tables. Nous pouvons soit écrire chaque instruction individuellement, soit générer le script entier à l’aide des commandes PowerShell EntityFramework que nous pouvons ensuite modifier en fonction des besoins. Pour ce faire, dans VS, ouvrez la **console du gestionnaire de package** à partir du menu **affichage** ou **Outils** .

@@ -1,143 +1,143 @@
 ---
 uid: mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2
-title: Utilisation de HTML5 et Datepicker calendrier contextuel jQuery UI avec ASP.NET MVC - partie 2 | Microsoft Docs
+title: Utilisation du calendrier contextuel de la fenêtre contextuelle du sélecteur de dates de l’interface utilisateur HTML5 et jQuery avec ASP.NET MVC-partie 2 | Microsoft Docs
 author: Rick-Anderson
-description: Ce didacticiel vous apprend les notions de base de l’utilisation des modèles de l’éditeur, les modèles d’affichage et le calendrier contextuel jQuery UI datepicker dans une MV ASP.NET...
+description: Ce didacticiel vous apprend les bases de l’utilisation des modèles de l’éditeur, de l’affichage des modèles et du calendrier contextuel du sélecteur de dates de l’interface utilisateur jQuery dans un ASP.NET MV...
 ms.author: riande
 ms.date: 08/29/2011
 ms.assetid: 21a178de-4c5a-4211-8a9c-74ec576c0f30
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2
 msc.type: authoredcontent
-ms.openlocfilehash: ba6246d97ecd48a5fe947d4998b42250133039e3
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 325cc90eb6e717c47863eda6253e0d48d796386b
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65129596"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77455891"
 ---
-# <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-2"></a>Utilisation de HTML5 et Datepicker calendrier contextuel jQuery UI avec ASP.NET MVC - partie 2
+# <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-2"></a>Utilisation du calendrier contextuel de la fenêtre contextuelle de l’interface utilisateur HTML5 et jQuery avec ASP.NET MVC-partie 2
 
-par [Rick Anderson]((https://twitter.com/RickAndMSFT))
+par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-> Ce didacticiel vous apprend les notions de base de l’utilisation des modèles de l’éditeur, les modèles d’affichage et le calendrier contextuel jQuery UI datepicker dans une application Web ASP.NET MVC.
+> Ce didacticiel vous apprend les bases de l’utilisation des modèles de l’éditeur, de l’affichage des modèles et du calendrier contextuel du sélecteur de dates de l’interface utilisateur jQuery dans une application Web ASP.NET MVC.
 
-## <a name="adding-an-automatic-datetime-template"></a>Ajout d’un modèle de date/heure automatique
+## <a name="adding-an-automatic-datetime-template"></a>Ajout d’un modèle de date et d’heure automatique
 
-Dans la première partie de ce didacticiel, vous avez vu comment vous pouvez ajouter des attributs au modèle pour spécifier explicitement la mise en forme, et comment vous pouvez spécifier explicitement le modèle qui est utilisé pour restituer le modèle. Par exemple, le [DisplayFormat](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) attribut dans le code suivant spécifie explicitement la mise en forme pour le `ReleaseDate` propriété.
+Dans la première partie de ce didacticiel, vous avez vu comment vous pouvez ajouter des attributs au modèle pour spécifier explicitement la mise en forme, et comment vous pouvez spécifier explicitement le modèle utilisé pour afficher le modèle. Par exemple, l’attribut [displayFormat](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) dans le code suivant spécifie explicitement la mise en forme de la propriété `ReleaseDate`.
 
 [!code-csharp[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/samples/sample1.cs)]
 
-Dans l’exemple suivant, le [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) d’attribut, à l’aide de la `Date` énumération, spécifie que le modèle de date doit être utilisé pour restituer le modèle. S’il n’existe aucun modèle de date dans votre projet, le modèle de dates intégrée est utilisé.
+Dans l’exemple suivant, l’attribut [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) , à l’aide de l’énumération `Date`, spécifie que le modèle de date doit être utilisé pour restituer le modèle. Si votre projet ne contient pas de modèle de date, le modèle de date intégré est utilisé.
 
 [!code-csharp[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/samples/sample2.cs)]
 
-Toutefois, ASP. MVC peut effectuer une correspondance de type à l’aide de la convention-sur-configuration, en recherchant un modèle qui correspond au nom d’un type. Cela vous permet de créer un modèle de données met automatiquement en forme sans utiliser les attributs ou le code du tout. Pour cette partie du didacticiel, vous allez créer un modèle qui est automatiquement appliqué aux propriétés de modèle de type [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx). Vous ne devez utiliser un attribut ou une autre configuration pour spécifier que le modèle doit être utilisé pour afficher toutes les propriétés du modèle de type [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx).
+Toutefois, ASP. MVC peut effectuer une correspondance de type à l’aide de la Convention-sur-Configuration, en recherchant un modèle qui correspond au nom d’un type. Cela vous permet de créer un modèle qui met automatiquement en forme les données sans utiliser d’attributs ou de code. Pour cette partie du didacticiel, vous allez créer un modèle qui est appliqué automatiquement aux propriétés de modèle de type [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx). Vous n’avez pas besoin d’utiliser un attribut ou une autre configuration pour spécifier que le modèle doit être utilisé pour afficher toutes les propriétés de modèle de type [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx).
 
-Vous apprendrez également la possibilité de personnaliser l’affichage des propriétés individuelles ou même des champs spécifiques.
+Vous découvrirez également un moyen de personnaliser l’affichage des propriétés individuelles, voire des champs individuels.
 
-Pour commencer, nous allons supprimer les informations de mise en forme existantes et afficher des dates complets dans l’application.
+Pour commencer, nous allons supprimer les informations de mise en forme existantes et afficher les dates complètes dans l’application.
 
-Ouvrir le *Movie.cs* de fichiers et commentez la `DataType` attribut sur le `ReleaseDate` propriété :
+Ouvrez le fichier *Movie.cs* et commentez l’attribut `DataType` sur la propriété `ReleaseDate` :
 
 [!code-csharp[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/samples/sample3.cs)]
 
-Appuyez sur CTRL+F5 pour exécuter l'application.
+Appuyez sur Ctrl+F5 pour exécuter l’application.
 
-Notez que le `ReleaseDate` propriété affiche désormais la date et l’heure, car il s’agit de la valeur par défaut lorsque aucune information de mise en forme est fournie.
+Notez que la propriété `ReleaseDate` affiche à présent la date et l’heure, car il s’agit de la valeur par défaut quand aucune information de mise en forme n’est fournie.
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/_static/image1.png)
 
-### <a name="adding-css-styles-for-testing-new-templates"></a>Ajout de Styles CSS pour le test des nouveaux modèles
+### <a name="adding-css-styles-for-testing-new-templates"></a>Ajout de styles CSS pour tester de nouveaux modèles
 
-Avant de créer un modèle pour mettre en forme des dates, vous allez ajouter quelques règles de style CSS que vous pouvez appliquer aux nouveaux modèles. Ils vous aideront à vérifier que la page rendue utilise le nouveau modèle.
+Avant de créer un modèle pour mettre en forme des dates, vous devez ajouter quelques règles de style CSS que vous pouvez appliquer aux nouveaux modèles. Celles-ci vous aideront à vérifier que la page rendue utilise le nouveau modèle.
 
-Ouvrez le *Content\Site.cs*s fichier, puis ajoutez les règles CSS suivantes vers le bas du fichier :
+Ouvrez le fichier *Content\Site.cs*s et ajoutez les règles CSS suivantes au bas du fichier :
 
 [!code-css[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/samples/sample4.css)]
 
-### <a name="adding-datetime-display-templates"></a>Ajout de modèles d’affichage de date/heure
+### <a name="adding-datetime-display-templates"></a>Ajout de modèles d’affichage DateTime
 
-Vous pouvez maintenant créer le nouveau modèle. Dans le *Views\Movies* dossier, créez un *DisplayTemplates* dossier.
+Vous pouvez maintenant créer le nouveau modèle. Dans le dossier *Views\Movies* , créez un dossier *DisplayTemplates* .
 
-Dans le *Views\Shared* dossier, créez un *DisplayTemplates* dossier et un *EditorTemplates* dossier.
+Dans le dossier *Views\Shared* , créez un dossier *DisplayTemplates* et un dossier *EditorTemplates* .
 
-Les modèles d’affichage dans le *Views\Shared\DisplayTemplates* dossier sera utilisé par tous les contrôleurs. Les modèles d’affichage dans le *Views\Movie\DisplayTemplates* dossier sera utilisé uniquement par le `Movie` contrôleur. (Si un modèle portant le même nom apparaît dans les deux dossiers, le modèle dans le *Views\Movie\DisplayTemplates* dossier, autrement dit, le modèle plus spécifique, est prioritaire pour les vues retournées par la `Movie` contrôleur.)
+Les modèles d’affichage dans le dossier *Views\Shared\DisplayTemplates.* seront utilisés par tous les contrôleurs. Les modèles d’affichage dans le dossier *Views\Movie\DisplayTemplates* seront utilisés uniquement par le contrôleur `Movie`. (Si un modèle portant le même nom apparaît dans les deux dossiers, le modèle dans le dossier *Views\Movie\DisplayTemplates* , autrement dit, le modèle plus spécifique, est prioritaire pour les affichages retournés par le contrôleur `Movie`.)
 
-Dans **l’Explorateur de solutions**, développez le *vues* dossier, développez le *partagé* dossier et avec le bouton droit puis le *Views\Shared\DisplayTemplates* dossier.
+Dans **Explorateur de solutions**, développez le dossier *views* , développez le dossier *Shared* , puis cliquez avec le bouton droit sur le dossier *Views\Shared\DisplayTemplates.* .
 
-Cliquez sur **ajouter** puis cliquez sur **vue**. Le **ajouter une vue** boîte de dialogue s’affiche.
+Cliquez sur **Ajouter** , puis sur **affichage**. La boîte de dialogue **Ajouter une vue** s’affiche.
 
-Dans le **nom de la vue** , tapez `DateTime`. (Vous devez utiliser ce nom pour faire correspondre le nom du type).
+Dans la zone nom de la **vue** , tapez `DateTime`. (Vous devez utiliser ce nom pour faire correspondre le nom du type.)
 
-Sélectionnez le **créer comme une vue partielle** case à cocher. Assurez-vous que le **utiliser une disposition ou la page maître** et **créer une vue fortement typée** cases à cocher ne sont pas sélectionnés.
+Activez la case à cocher **créer comme vue partielle** . Vérifiez que les cases à cocher **utiliser une disposition ou une page maître** et **créer un affichage fortement typé** ne sont pas activées.
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/_static/image2.png)
 
-Cliquez sur **Ajouter**. Un *DateTime.cshtml* modèle est créé dans le *Views\Shared\DisplayTemplates*.
+Cliquez sur **Ajouter**. Un modèle *DateTime. cshtml* est créé dans *Views\Shared\DisplayTemplates.* .
 
-L’illustration suivante montre le *vues* dossier dans **l’Explorateur de solutions** après le `DateTime` affichage et l’éditeur de modèles sont créés.
+L’illustration suivante montre le dossier *views* dans **Explorateur de solutions** une fois que les modèles d’affichage et d’éditeur de `DateTime` sont créés.
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/_static/image3.png)
 
-Ouvrez le *Views\Shared\DisplayTemplates\DateTime.cshtml* fichier, puis ajoutez le balisage suivant, qui utilise le [String.Format](https://msdn.microsoft.com/library/system.string.format.aspx) méthode pour mettre en forme la propriété comme une date sans heure. (Le `{0:d}` format Spécifie le format de date courte.)
+Ouvrez le fichier *Views\Shared\DisplayTemplates\DateTime.cshtml* et ajoutez le balisage suivant, qui utilise la méthode [String. format](https://msdn.microsoft.com/library/system.string.format.aspx) pour mettre en forme la propriété en tant que date sans l’heure. (Le format de `{0:d}` spécifie un format de date abrégé.)
 
 [!code-csharp[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/samples/sample5.cs)]
 
-Répétez cette étape pour créer un `DateTime` modèle dans le *Views\Movie\DisplayTemplates* dossier. Utilisez le code suivant dans le *Views\Movie\DisplayTemplates\DateTime.cshtml* fichier.
+Répétez cette étape pour créer un modèle de `DateTime` dans le dossier *Views\Movie\DisplayTemplates* . Utilisez le code suivant dans le fichier *Views\Movie\DisplayTemplates\DateTime.cshtml* .
 
 [!code-csharp[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/samples/sample6.cs)]
 
-Le `loud-1` classe CSS provoque la date s’afficher en texte rouge et en gras. Vous avez ajouté le `loud-1` classe CSS comme une mesure temporaire, donc vous pouvez facilement voir que ce modèle est utilisé.
+La classe CSS `loud-1` entraîne l’affichage de la date en texte rouge gras. Vous avez ajouté la classe CSS `loud-1` de la même manière qu’une mesure temporaire afin de pouvoir voir facilement quand ce modèle particulier est utilisé.
 
-Ce que vous avez fait est créé et modèles ASP.NET utilisera pour afficher des dates personnalisés. Le modèle plus général (dans le *Views\Shared\DisplayTemplates* dossier) affiche une date courte simple. Le modèle est conçue spécifiquement pour le `Movie` contrôleur (dans le *Views\Movies\DisplayTemplates* dossier) affiche une date courte qui est également mis en forme en tant que texte gras rouge.
+Ce que vous avez fait, c’est créer des modèles personnalisés que ASP.NET utilisera pour afficher des dates. Le modèle plus général (dans le dossier *Views\Shared\DisplayTemplates.* ) affiche une date abrégée simple. Le modèle qui est spécifiquement pour le contrôleur `Movie` (dans le dossier *Views\Movies\DisplayTemplates* ) affiche une date brève qui est également mise en forme en texte rouge en gras.
 
-Appuyez sur CTRL+F5 pour exécuter l'application. Le navigateur restitue la vue Index pour l’application.
+Appuyez sur Ctrl+F5 pour exécuter l’application. Le navigateur restitue la vue index pour l’application.
 
-Le `ReleaseDate` propriété affiche maintenant la date en gras rouge sans le temps. Cela vous permet de vérifier que le `DateTime` helper basé sur un modèle dans le *Views\Movies\DisplayTemplates* dossier est sélectionné sur la `DateTime` helper basé sur un modèle dans le dossier partagé (*Views\Shared\ DisplayTemplates*).
+La propriété `ReleaseDate` affiche à présent la date dans une police rouge en gras sans l’heure. Cela vous permet de vérifier que le `DateTime` Helper basé sur un modèle dans le dossier *Views\Movies\DisplayTemplates* est sélectionné sur le `DateTime` Helper basé sur un modèle dans le dossier partagé (*Views\Shared\DisplayTemplates.* ).
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/_static/image4.png)
 
-Maintenant renommer le *Views\Movies\DisplayTemplates\DateTime.cshtml* fichier *Views\Movies\DisplayTemplates\LoudDateTime.cshtml*.
+Maintenant, renommez le fichier *Views\Movies\DisplayTemplates\DateTime.cshtml* en *Views\Movies\DisplayTemplates\LoudDateTime.cshtml*.
 
-Appuyez sur CTRL+F5 pour exécuter l'application.
+Appuyez sur Ctrl+F5 pour exécuter l’application.
 
-Cette fois le `ReleaseDate` propriété affiche une date sans heure et sans la police en gras rouge. Cet exemple illustre que le type de modèle qui porte le nom des données (dans ce cas `DateTime`) est automatiquement utilisée pour afficher toutes les propriétés de modèle de ce type. Après avoir renommé le *DateTime.cshtml* fichier *LoudDateTime.cshtml*, ASP.NET trouvé n’est plus un modèle dans le *Views\Movies\DisplayTemplates* dossier, afin qu’il utilisé le *DateTime.cshtml* modèle à partir de la * Views\Movies\Shared\* dossier.
+Cette fois, la propriété `ReleaseDate` affiche une date sans l’heure et sans la police rouge gras. Cela montre qu’un modèle qui porte le nom du type de données (dans ce cas `DateTime`) est utilisé automatiquement pour afficher toutes les propriétés de modèle de ce type. Une fois que vous avez renommé le fichier *DateTime. cshtml* en *LoudDateTime. cshtml*, ASP.net n’a plus trouvé de modèle dans le dossier *Views\Movies\DisplayTemplates* , donc il a utilisé le modèle *DateTime. cshtml* à partir du dossier * Views\Movies\Shared\*.
 
-(La correspondance de modèle respecte la casse, donc vous pouvez créer le nom de fichier de modèle avec toutes les casses. Par exemple, *DATETIME.cshtml, datetime.cshtml*, et *DaTeTiMe.cshtml* correspondrait à tous les `DateTime` type.)
+(La correspondance de modèle ne respecte pas la casse, vous pouvez donc avoir créé le nom du fichier de modèle avec n’importe quelle casse. Par exemple, *DateTime. cshtml, DateTime. cshtml*et *DateTime. cshtml* correspondront tous au type de `DateTime`.)
 
-Pour passer en revue : à ce stade, le `ReleaseDate` de champ est affiché à l’aide de la *Views\Movies\DisplayTemplates\DateTime.cshtml* modèle, qui affiche les données à l’aide d’un format de date courte, mais sinon n’ajoute aucun format spécial.
+Pour réviser : à ce stade, le champ `ReleaseDate` s’affiche à l’aide du modèle *Views\Movies\DisplayTemplates\DateTime.cshtml* , qui affiche les données à l’aide d’un format de date abrégé, mais n’ajoute pas d’autre format spécial.
 
-### <a name="using-uihint-to-specify-a-display-template"></a>À l’aide de la propriété UIHint pour spécifier un modèle d’affichage
+### <a name="using-uihint-to-specify-a-display-template"></a>Utilisation de UIHint pour spécifier un modèle d’affichage
 
-Si votre application web possède de nombreuses `DateTime` champs par défaut que vous souhaitez afficher la totalité ou la plupart d'entre eux dans le format de date uniquement, le *DateTime.cshtml* modèle constitue une bonne approche. Mais que se passe-t-il si vous avez quelques dates où vous souhaitez afficher la date et heure complètes ? Aucun problème. Vous pouvez créer un modèle supplémentaire et utiliser le [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) attribut pour spécifier la mise en forme pour la date et heure complètes. Vous pouvez ensuite appliquer de manière sélective ce modèle. Vous pouvez utiliser la [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) attribut au niveau du modèle, ou vous pouvez spécifier le modèle à l’intérieur d’une vue. Dans cette section, vous allez apprendre à utiliser le `UIHint` attribut à modifier de manière sélective la mise en forme pour certaines instances de champs date-heure.
+Si votre application Web comporte de nombreux champs `DateTime` et que vous souhaitez afficher par défaut la totalité ou la plupart d’entre elles au format date uniquement, le modèle *DateTime. cshtml* est une bonne approche. Mais que se passe-t-il si vous souhaitez afficher la date et l’heure complètes ? Pas de problème. Vous pouvez créer un modèle supplémentaire et utiliser l’attribut [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) pour spécifier la mise en forme de la date et de l’heure complètes. Vous pouvez ensuite appliquer de manière sélective ce modèle. Vous pouvez utiliser l’attribut [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) au niveau du modèle ou vous pouvez spécifier le modèle à l’intérieur d’une vue. Dans cette section, vous allez apprendre à utiliser l’attribut `UIHint` pour modifier de manière sélective la mise en forme de certaines instances de champs date-heure.
 
-Ouvrez le *Views\Movies\DisplayTemplates\LoudDateTime.cshtml* fichier et remplacez le code existant par le code suivant :
+Ouvrez le fichier *Views\Movies\DisplayTemplates\LoudDateTime.cshtml* et remplacez le code existant par ce qui suit :
 
 [!code-cshtml[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/samples/sample7.cshtml)]
 
-Cela provoque la date et heure complètes à afficher et ajoute la classe CSS qui met le texte vert et de grande taille.
+Cela entraîne l’affichage de la date et de l’heure complètes et ajoute la classe CSS qui rend le texte vert et grand.
 
-Ouvrez le *Movie.cs* fichier, puis ajoutez le [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) attribut le `ReleaseDate` propriété, comme indiqué dans l’exemple suivant :
+Ouvrez le fichier *Movie.cs* et ajoutez l’attribut [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) à la propriété `ReleaseDate`, comme indiqué dans l’exemple suivant :
 
 [!code-csharp[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/samples/sample8.cs)]
 
-Ce code indique à ASP.NET MVC que lorsqu’il affiche le `ReleaseDate` propriété (en particulier et pas seulement les `DateTime` objet), il doit utiliser le *LoudDateTime.cshtml* modèle.
+Cela indique à ASP.NET MVC que lorsqu’il affiche la propriété `ReleaseDate` (plus précisément, et pas seulement un objet `DateTime`), il doit utiliser le modèle *LoudDateTime. cshtml* .
 
-Appuyez sur CTRL+F5 pour exécuter l'application.
+Appuyez sur Ctrl+F5 pour exécuter l’application.
 
-Notez que le `ReleaseDate` propriété affiche désormais la date et l’heure dans une grande taille de police vert.
+Notez que la propriété `ReleaseDate` affiche désormais la date et l’heure dans une grande police verte.
 
-Retour à la `UIHint` d’attribut dans le *Movie.cs* de fichiers et de mettre en commentaire la *LoudDateTime.cshtml* modèle ne sera pas utilisé. Exécutez de nouveau l'application. La date de publication n’est pas affichée volumineux et vert. Cela vérifie que le *Views\Shared\DisplayTemplates\DateTime.cshtml* modèle est utilisé dans les vues d’Index et Details.
+Revenez à l’attribut `UIHint` dans le fichier *Movie.cs* et commentez-le pour que le modèle *LoudDateTime. cshtml* ne soit pas utilisé. Exécutez de nouveau l'application. La date de sortie n’est pas affichée en grand et en vert. Cela permet de vérifier que le modèle *Views\Shared\DisplayTemplates\DateTime.cshtml* est utilisé dans les vues index et details.
 
-Comme mentionné précédemment, vous pouvez également appliquer un modèle dans une vue, ce qui vous permet d’appliquer le modèle à une instance individuelle de certaines données. Ouvrez le *Views\Movies\Details.cshtml* vue. Ajouter `"LoudDateTime"` comme deuxième paramètre de la [Html.DisplayFor](https://msdn.microsoft.com/library/ee407420.aspx) appeler pour le `ReleaseDate` champ. Le code complet se présente ainsi :
+Comme mentionné précédemment, vous pouvez également appliquer un modèle dans une vue, ce qui vous permet d’appliquer le modèle à une instance individuelle de certaines données. Ouvrez la vue *Views\Movies\Details.cshtml* . Ajoutez `"LoudDateTime"` comme deuxième paramètre de l’appel [html. DisplayFor](https://msdn.microsoft.com/library/ee407420.aspx) pour le champ `ReleaseDate`. Le code complet se présente ainsi :
 
 [!code-cshtml[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/samples/sample9.cshtml)]
 
-Cela spécifie que le `LoudDateTime` modèle doit être utilisé pour afficher la propriété de modèle, quel que soit les attributs qui sont appliqués au modèle.
+Cela spécifie que le modèle de `LoudDateTime` doit être utilisé pour afficher la propriété de modèle, quels que soient les attributs appliqués au modèle.
 
-Appuyez sur CTRL+F5 pour exécuter l'application.
+Appuyez sur Ctrl+F5 pour exécuter l’application.
 
-Vérifiez que la page d’index de film est à l’aide de la *Views\Shared\DisplayTemplates\DateTime.cshtml* modèle (rouge en gras) et le *Movie\Details* à l’aide de la page le *Views\Movies\ DisplayTemplates\LoudDateTime.cshtml* modèle (volumineux et vert).
+Vérifiez que la page d’index des films utilise le modèle *Views\Shared\DisplayTemplates\DateTime.cshtml* (rouge gras) et que la page *Movie\Details* utilise le modèle *Views\Movies\DisplayTemplates\LoudDateTime.cshtml* (grand et vert).
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/_static/image5.png)
 

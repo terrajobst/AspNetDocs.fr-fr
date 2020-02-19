@@ -8,16 +8,16 @@ ms.date: 07/09/2015
 ms.assetid: 7e986ab5-6615-4638-add7-4614ce7b51db
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
 msc.type: authoredcontent
-ms.openlocfilehash: 44941c9fd0dcd3223604fc4a4f2836f587578acb
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: f61810ea7b486b2fa0bbb234edea7541eedde835
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585608"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457061"
 ---
 # <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Surveillance et télémétrie (génération d’applications Cloud réalistes avec Azure)
 
-par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet Fix it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Télécharger le livre électronique](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -32,7 +32,7 @@ Un grand nombre de personnes s’appuient sur les clients pour leur faire savoir
 
 L’un des aspects importants de l’environnement Cloud est qu’il est vraiment facile d’acheter ou de louer votre façon de vous faire une victoire. La télémétrie est un exemple. Sans trop d’efforts, vous pouvez obtenir un système de télémétrie vraiment efficace, très rentable. De nombreux partenaires s’intègrent à Azure et certains ont des niveaux gratuits, ce qui vous permet d’obtenir des données de télémétrie de base pour rien. Voici quelques-uns des éléments actuellement disponibles sur Azure :
 
-- [Nouveau Relic](http://newrelic.com/)
+- [New Relic](http://newrelic.com/)
 - [AppDynamics](http://www.appdynamics.com/)
 - [DynaTrace](https://datamarket.azure.com/application/b4011de2-1212-4375-9211-e882766121ff)
 
@@ -58,7 +58,7 @@ Cliquez sur **informations de connexion**, puis copiez la clé de licence.
 
 ![Informations de connexion](monitoring-and-telemetry/_static/image5.png)
 
-Accédez à l’onglet **configurer** de votre application Web dans le portail, définissez **analyse des performances** sur **complémentaire**, puis définissez la liste déroulante **choisir un module** complémentaire sur **nouveau Relic**. Cliquez ensuite sur **Enregistrer**.
+Accédez à l’onglet **configurer** de votre application Web dans le portail, définissez **analyse des performances** sur **complémentaire**, puis définissez la liste déroulante **choisir un module** complémentaire sur **nouveau Relic**. Ensuite, cliquez sur **Enregistrer**.
 
 ![Nouveau Relic dans l’onglet configurer](monitoring-and-telemetry/_static/image6.png)
 
@@ -247,7 +247,7 @@ Vous pouvez également avoir des journaux écrits dans votre compte de stockage 
 
 ![Journaux dans Explorateur de serveurs](http://wacomdpsstorage.blob.core.windows.net/articlesmedia/content-ppe.windowsazure.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/20140115062810/tws-storagelogs.png)
 
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Résumé
 
 Il est très simple d’implémenter un système de télémétrie prêt à l’emploi, d’enregistrer la journalisation dans votre propre code et de configurer la journalisation dans Azure. Et lorsque vous rencontrez des problèmes de production, la combinaison d’un système de télémétrie et de journaux personnalisés vous aidera à résoudre rapidement les problèmes avant qu’ils ne deviennent des problèmes majeurs pour vos clients.
 
@@ -255,7 +255,7 @@ Dans le [chapitre suivant](transient-fault-handling.md) , nous allons examiner c
 
 ## <a name="resources"></a>Ressources
 
-Pour plus d'informations, voir les ressources ci-dessous.
+Pour plus d'informations, consultez les ressources ci-dessous.
 
 Documentation principalement sur la télémétrie :
 

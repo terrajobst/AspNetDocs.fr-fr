@@ -8,16 +8,16 @@ ms.date: 03/26/2015
 ms.assetid: f1d2a916-626c-4a54-8df4-77e6b9fff355
 msc.legacyurl: /mvc/overview/getting-started/introduction/examining-the-details-and-delete-methods
 msc.type: authoredcontent
-ms.openlocfilehash: 4ec8d239377d37d7e27fa23c0b1caef7420046ae
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: da06815b5c1d76a939fdfb77ce11774081dfb881
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519009"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456398"
 ---
 # <a name="examining-the-details-and-delete-methods"></a>Examen des méthodes Details et Delete
 
-par [Rick Anderson]((https://twitter.com/RickAndMSFT))
+par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 [!INCLUDE [Tutorial Note](index.md)]
 
@@ -53,7 +53,7 @@ Une autre méthode courante pour éviter un problème avec les méthodes qui ont
 
 [!code-csharp[Main](examining-the-details-and-delete-methods/samples/sample4.cs)]
 
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Résumé
 
 Vous disposez maintenant d’une application MVC ASP.NET complète qui stocke les données dans une base de données de base de données locale. Vous pouvez créer, lire, mettre à jour, supprimer et Rechercher des films.
 

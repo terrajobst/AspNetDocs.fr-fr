@@ -8,20 +8,20 @@ ms.date: 03/14/2013
 ms.assetid: aadc5fa4-8215-4fc7-afd5-bcd2ef879728
 msc.legacyurl: /mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages
 msc.type: authoredcontent
-ms.openlocfilehash: fb7e76101cbe6a874ddf5b3429ca2dc6d474334b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 1965063a9b613d0e2857cddcc2165f5fda64ec0c
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595757"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77455527"
 ---
 # <a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prévention de XSRF/CSRF dans ASP.NET MVC et les pages web
 
-par [Rick Anderson]((https://twitter.com/RickAndMSFT))
+par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-> La falsification de requête intersites (également appelée XSRF ou CSRF) est une attaque contre les applications hébergées sur le Web, ce qui permet à un site Web malveillant d’influencer l’interaction entre un navigateur client et un site Web approuvé par ce navigateur. Ces attaques sont rendues possibles, car les navigateurs Web enverront automatiquement des jetons d’authentification à chaque demande adressée à un site Web. L’exemple canonique est un cookie d’authentification, tel qu’ASP. Ticket d’authentification par formulaire du réseau. Toutefois, les sites Web qui utilisent un mécanisme d’authentification persistant (tel que l’authentification Windows, de base, etc.) peuvent être ciblés par ces attaques.
+> La falsification de requête intersites (également appelée XSRF ou CSRF) est une attaque contre les applications hébergées sur le Web, ce qui permet à un site Web malveillant d’influencer l’interaction entre un navigateur client et un site Web approuvé par ce navigateur. Ces attaques sont rendues possibles, car les navigateurs Web enverront automatiquement des jetons d’authentification à chaque demande adressée à un site Web. L'exemple classique est le cookie d'authentification, comme le ticket d'authentification d'ASP.NET. Toutefois, les sites Web qui utilisent un mécanisme d’authentification persistant (tel que l’authentification Windows, de base, etc.) peuvent être ciblés par ces attaques.
 > 
-> Une attaque XSRF est distincte d’une attaque par hameçonnage. Les attaques par hameçonnage nécessitent une interaction de la victime. Dans une attaque par hameçonnage, un site Web malveillant imite le site Web cible et la victime est trompeur en fournissant des informations sensibles à la personne malveillante. Dans une attaque XSRF, il n’y a souvent aucune interaction nécessaire de la part de la victime. Au lieu de cela, le pirate s’appuie sur le navigateur pour envoyer automatiquement tous les cookies pertinents au site Web de destination.
+> Une attaque XSRF est différente d'une attaque par hameçonnage (ou « phishing »). Les attaques par hameçonnage requièrent une interaction avec la victime. Dans une attaque par hameçonnage, un site Web malveillant imite le site Web cible et la victime est trompeur en fournissant des informations sensibles à la personne malveillante. Dans une attaque XSRF, il n'y a généralement pas d'interaction avec la victime. Au lieu de cela, le pirate s’appuie sur le navigateur pour envoyer automatiquement tous les cookies pertinents au site Web de destination.
 > 
 > Pour plus d’informations, consultez le projet OWASP ( [Open Web Application Security](https://www.owasp.org/index.php/Main_Page)) [XSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)).
 
@@ -159,13 +159,13 @@ La méthode *GetTokens* prend comme entrée un jeton de session de vérification
 
 Le développeur peut configurer le système anti-XSRF à partir du démarrage de l’application\_. La configuration est programmée. Les propriétés du type *AntiForgeryConfig* statique sont décrites ci-dessous. La plupart des utilisateurs qui utilisent des revendications doivent définir la propriété UniqueClaimTypeIdentifier.
 
-| **Property** | **Description** |
+| **Propriété** | **Description** |
 | --- | --- |
 | **AdditionalDataProvider** | [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) qui fournit des données supplémentaires lors de la génération du jeton et qui consomme des données supplémentaires lors de la validation du jeton. La valeur par défaut est *null*. Pour plus d’informations, consultez la section [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) . |
 | **CookieName** | Chaîne qui fournit le nom du cookie HTTP utilisé pour stocker le jeton de session anti-XSRF. Si cette valeur n’est pas définie, un nom est généré automatiquement en fonction du chemin d’accès virtuel déployé de l’application. La valeur par défaut est *null*. |
 | **RequireSsl** | Valeur booléenne qui détermine si les jetons anti-XSRF doivent être soumis sur un canal sécurisé SSL. Si cette valeur est *true*, tous les cookies générés automatiquement ont l’indicateur « Secure » défini, et les API anti-XSRF lèvent si elles sont appelées à partir d’une demande qui n’est pas envoyée via SSL. La valeur par défaut est *false*. |
-| **SuppressIdentityHeuristicChecks** | Valeur booléenne qui détermine si le système anti-XSRF doit désactiver sa prise en charge des identités basées sur les revendications. Si cette valeur est *true*, le système suppose que *IIdentity.Name* est approprié pour une utilisation en tant qu’identificateur unique pour chaque utilisateur et ne tente pas d’effectuer une opération spéciale *IClaimsIdentity* ou *CLCLAIMSIDENTITY* comme décrit dans le [WIF/ACS/ section authentification basée sur les revendications](#_WIF_ACS) . La valeur par défaut est `false`. |
-| **UniqueClaimTypeIdentifier** | Chaîne qui indique le type de revendication approprié pour une utilisation en tant qu’identificateur unique pour chaque utilisateur. Si cette valeur est définie et que le *IIdentity* actuel est basé sur les revendications, le système tente d’extraire une revendication du type spécifié par *UniqueClaimTypeIdentifier*, et la valeur correspondante est utilisée à la place du nom d’utilisateur de l’utilisateur lorsque génération du jeton de champ. Si le type de revendication est introuvable, le système ne parvient pas à effectuer la requête. La valeur par défaut est *null*, ce qui indique que le système doit utiliser le Tuple (fournisseur d’identité, identificateur de nom) comme décrit précédemment à la place du nom d’utilisateur de l’utilisateur. |
+| **SuppressIdentityHeuristicChecks** | Valeur booléenne qui détermine si le système anti-XSRF doit désactiver sa prise en charge des identités basées sur les revendications. Si cette valeur est *true*, le système suppose que *IIdentity.Name* est approprié pour une utilisation en tant qu’identificateur unique pour chaque utilisateur et ne tente pas d’effectuer une opération spéciale *IClaimsIdentity* ou *ClClaimsIdentity* comme décrit dans la section [WIF/ACS/authentification basée sur les revendications](#_WIF_ACS) . La valeur par défaut est `false`. |
+| **UniqueClaimTypeIdentifier** | Chaîne qui indique le type de revendication approprié pour une utilisation en tant qu’identificateur unique pour chaque utilisateur. Si cette valeur est définie et que le *IIdentity* actuel est basé sur les revendications, le système tente d’extraire une revendication du type spécifié par *UniqueClaimTypeIdentifier*, et la valeur correspondante est utilisée à la place du nom d’utilisateur de l’utilisateur lors de la génération du jeton de champ. Si le type de revendication est introuvable, le système ne parvient pas à effectuer la requête. La valeur par défaut est *null*, ce qui indique que le système doit utiliser le Tuple (fournisseur d’identité, identificateur de nom) comme décrit précédemment à la place du nom d’utilisateur de l’utilisateur. |
 
 <a id="_IAntiForgeryAdditionalDataProvider"></a>
 
@@ -185,6 +185,6 @@ Actuellement, les routines anti-XSRF ne se protègent pas contre [le détourneme
 
 Les développeurs Web doivent continuer à s’assurer que leur site ne soit pas vulnérable aux attaques XSS. Les attaques XSS sont très puissantes et une exploitation réussie interrompt également les défenses du runtime Web Stack ASP.NET contre les attaques XSRF.
 
-## <a name="acknowledgment"></a>Accusé
+## <a name="acknowledgment"></a>Accusé de réception
 
 [@LeviBroderick](https://twitter.com/LeviBroderick), qui a écrit une grande partie du code de sécurité ASP.net, il s’agit de l’essentiel de ces informations.

@@ -8,16 +8,16 @@ ms.date: 10/17/2013
 ms.assetid: caa1ba4a-f9f0-4181-ba21-042e3997861d
 msc.legacyurl: /mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: e01953dcfb2abf2db53a8aa869aa75b40485daca
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 5d882d765133d32d3acdba9ffb5d43b69119a273
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519087"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457230"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Accès aux données de votre modèle à partir d’un contrôleur
 
-par [Rick Anderson]((https://twitter.com/RickAndMSFT))
+par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 [!INCLUDE [Tutorial Note](index.md)]
 
@@ -60,7 +60,7 @@ Sélectionnez le lien **Créer nouveau**. Entrez des détails sur un film, puis 
 ![](accessing-your-models-data-from-a-controller/_static/image5.png)
 
 > [!NOTE]
-> Vous ne pourrez peut-être pas entrer des virgules ou des virgules dans le champ Price. pour prendre en charge la validation jQuery pour les paramètres régionaux autres que l’anglais qui utilisent une virgule (&quot;,&quot;) pour une virgule décimale et des formats de date autres que l’anglais des États-Unis, vous devez inclure *global. js* et votre fichier *cultures/globaliser. cultures. js* spécifique (à partir de [https://github.com/jquery/globalize](https://github.com/jquery/globalize) ) et JavaScript pour utiliser `Globalize.parseFloat`. Je vais vous montrer comment procéder dans le didacticiel suivant. Pour le moment, entrez simplement des nombres entiers tels que 10.
+> Vous ne pourrez peut-être pas entrer des virgules ou des virgules dans le champ Price. Pour prendre en charge la validation jQuery pour les paramètres régionaux autres que l’anglais qui utilisent une virgule (&quot;,&quot;) pour une virgule décimale et des formats de date autres que l’anglais des États-Unis, vous devez inclure *global. js* et votre fichier *cultures/globaliser. cultures. js* spécifique (à partir de [https://github.com/jquery/globalize](https://github.com/jquery/globalize) ) et JavaScript pour utiliser `Globalize.parseFloat`. Je vais vous montrer comment procéder dans le didacticiel suivant. Pour le moment, entrez simplement des nombres entiers tels que 10.
 
 Si vous cliquez sur le bouton **créer** , le formulaire est publié sur le serveur, où les informations sur le film sont enregistrées dans la base de données. Vous êtes ensuite redirigé vers l’URL */movies* , où vous pouvez voir le film nouvellement créé dans la liste.
 

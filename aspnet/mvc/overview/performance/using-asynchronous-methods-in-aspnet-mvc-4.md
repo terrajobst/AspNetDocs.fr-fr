@@ -8,16 +8,16 @@ ms.date: 06/06/2012
 ms.assetid: a56572ba-81c3-47af-826d-941e9c4775ec
 msc.legacyurl: /mvc/overview/performance/using-asynchronous-methods-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: 5df6a9c136b1934b3afd731eb0ceac1e0faa483e
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.openlocfilehash: 15692b18fc112c4c6cce4d50a243a0e8d5fb52a4
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74115079"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457750"
 ---
-# <a name="using-asynchronous-methods-in-aspnet-mvc-4"></a>Utilisation de méthodes asynchrones dans ASP.NET MVC 4
+# <a name="using-asynchronous-methods-in-aspnet-mvc-4"></a>Utilisation des méthodes asynchrones dans ASP.NET MVC 4
 
-par [Rick Anderson]((https://twitter.com/RickAndMSFT))
+par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > Ce didacticiel vous apprend les bases de la création d’une application Web ASP.NET MVC asynchrone à l’aide de [Visual Studio Express 2012 pour le Web](https://www.microsoft.com/visualstudio/11), qui est une version gratuite de Microsoft Visual Studio. Vous pouvez également utiliser [Visual Studio 2012](https://www.microsoft.com/visualstudio/11).
 > 
@@ -33,36 +33,36 @@ Pour plus d’informations sur l’utilisation des mots clés [await](https://ms
 
 ## <a id="HowRequestsProcessedByTP"></a>Mode de traitement des demandes par le pool de threads
 
-Sur le serveur Web, le .NET Framework gère un pool de threads utilisés pour traiter les demandes ASP.NET. Lorsqu’une requête arrive, un thread du pool est distribué pour traiter cette demande. Si la demande est traitée de façon synchrone, le thread qui traite la demande est occupé pendant le traitement de la demande et ce thread ne peut pas traiter une autre demande.   
+Sur le serveur Web, le .NET Framework gère un pool de threads utilisés pour traiter les demandes ASP.NET. À l'arrivée d'une requête, un thread du pool est distribué pour la traiter. Si la demande est traitée de façon synchrone, le thread qui traite la demande est occupé pendant le traitement de la demande et ce thread ne peut pas traiter une autre demande.   
   
-Cela peut ne pas être un problème, car le pool de threads peut être rendu suffisamment grand pour accueillir de nombreux threads occupés. Toutefois, le nombre de threads dans le pool de threads est limité (la valeur maximale par défaut pour .NET 4,5 est 5 000). Dans les applications de grande taille avec un haut niveau de concurrence des requêtes à long terme, tous les threads disponibles peuvent être occupés. Cette condition est connue sous le nom de privation de thread. Lorsque cette condition est atteinte, le serveur Web met en file d’attente les demandes. Si la file d’attente de demandes est pleine, le serveur Web rejette les demandes avec un état HTTP 503 (serveur encombré). Le pool de threads CLR présente des limitations sur les nouvelles injections de thread. Si la concurrence est éclatée (autrement dit, votre site Web peut obtenir soudainement un grand nombre de requêtes) et que tous les threads de requête disponibles sont occupés en raison des appels du backend avec une latence élevée, le taux d’injection de threads limité peut rendre votre application plus difficile à résoudre. En outre, chaque nouveau thread ajouté au pool de threads a une charge mémoire (par exemple, 1 Mo de mémoire de pile). Une application Web utilisant des méthodes synchrones pour traiter les appels à latence élevée où le pool de threads atteint le nombre maximal de 5 000 threads par défaut de .NET 4,5 consomme environ 5 Go de mémoire par rapport à une application capable de traiter les mêmes demandes à l’aide de les méthodes asynchrones et uniquement les threads 50. Lorsque vous effectuez un travail asynchrone, vous n’utilisez pas toujours un thread. Par exemple, lorsque vous effectuez une demande de service Web asynchrone, ASP.NET n’utilise aucun thread entre l’appel de méthode **Async** et l' **expression await**. L’utilisation du pool de threads pour traiter les demandes avec une latence élevée peut entraîner un grand encombrement mémoire et une mauvaise utilisation du matériel serveur.
+Cela peut ne pas être un problème, car le pool de threads peut être rendu suffisamment grand pour accueillir de nombreux threads occupés. Toutefois, le nombre de threads dans le pool de threads est limité (la valeur maximale par défaut pour .NET 4,5 est 5 000). Dans les applications de grande taille avec un haut niveau de concurrence des requêtes à long terme, tous les threads disponibles peuvent être occupés. Cet état est appelé privation de thread. Lorsque cette condition est atteinte, le serveur Web met en file d’attente les demandes. Si la file d’attente de demandes est pleine, le serveur Web rejette les demandes avec un état HTTP 503 (serveur encombré). Le pool de threads CLR présente des limitations sur les nouvelles injections de thread. Si la concurrence est éclatée (autrement dit, votre site Web peut obtenir soudainement un grand nombre de requêtes) et que tous les threads de requête disponibles sont occupés en raison des appels du backend avec une latence élevée, le taux d’injection de threads limité peut rendre votre application plus difficile à résoudre. En outre, chaque nouveau thread ajouté au pool de threads a une charge mémoire (par exemple, 1 Mo de mémoire de pile). Une application Web utilisant des méthodes synchrones pour traiter les appels à latence élevée où le pool de threads atteint le nombre maximal de 5 000 threads par défaut de .NET 4,5 consomme environ 5 Go de mémoire par rapport à une application capable de traiter les mêmes demandes à l’aide de les méthodes asynchrones et uniquement les threads 50. Lorsque vous effectuez un travail asynchrone, vous n’utilisez pas toujours un thread. Par exemple, lorsque vous effectuez une demande de service Web asynchrone, ASP.NET n’utilise aucun thread entre l’appel de méthode **Async** et l' **expression await**. L’utilisation du pool de threads pour traiter les demandes avec une latence élevée peut entraîner un grand encombrement mémoire et une mauvaise utilisation du matériel serveur.
 
-## <a name="processing-asynchronous-requests"></a>Traitement des demandes asynchrones
+## <a name="processing-asynchronous-requests"></a>Traitement des requêtes asynchrones
 
-Dans une application Web qui voit un grand nombre de demandes simultanées au démarrage ou a une charge de rafale (où l’accès concurrentiel augmente soudainement), le fait d’appeler le service Web de façon asynchrone augmente la réactivité de l’application. Une requête asynchrone prend le même temps de traitement qu’une demande synchrone. Si une demande effectue un appel de service Web qui nécessite deux secondes, la demande prend deux secondes, qu’elle soit exécutée de façon synchrone ou asynchrone. Toutefois, lors d’un appel asynchrone, un thread ne peut pas répondre à d’autres requêtes pendant qu’il attend la fin de la première requête. Par conséquent, les requêtes asynchrones empêchent la mise en file d’attente des demandes et la croissance du pool de threads lorsqu’il existe de nombreuses demandes simultanées qui appellent des opérations de longue durée
+Dans une application Web qui voit un grand nombre de demandes simultanées au démarrage ou a une charge de rafale (où l’accès concurrentiel augmente soudainement), le fait d’appeler le service Web de façon asynchrone augmente la réactivité de l’application. Une requête asynchrone demande la même durée de traitement qu'une requête synchrone. Si une demande effectue un appel de service Web qui nécessite deux secondes, la demande prend deux secondes, qu’elle soit exécutée de façon synchrone ou asynchrone. Toutefois, lors d’un appel asynchrone, un thread ne peut pas répondre à d’autres requêtes pendant qu’il attend la fin de la première requête. Par conséquent, les requêtes asynchrones empêchent la mise en file d’attente des demandes et la croissance du pool de threads lorsqu’il existe de nombreuses demandes simultanées qui appellent des opérations de longue durée
 
 ## <a id="ChoosingSyncVasync"></a>Choix de méthodes d’action synchrones ou asynchrones
 
-Cette section répertorie les instructions relatives à l’utilisation des méthodes d’action synchrones ou asynchrones. Il s’agit simplement de recommandations. Examinez chaque application individuellement pour déterminer si les méthodes asynchrones permettent d’obtenir des performances optimales.
+Cette section répertorie des directives relatives aux situations dans lesquelles utiliser les méthodes d'action synchrones ou asynchrones. Il s’agit simplement de recommandations. Examinez chaque application individuellement pour déterminer si les méthodes asynchrones permettent d’obtenir des performances optimales.
 
 En général, utilisez des méthodes synchrones pour les conditions suivantes :
 
-- Les opérations sont simples ou à exécution rapide.
-- La simplicité est plus importante que l’efficacité.
-- Les opérations sont principalement des opérations de processeur plutôt que des opérations qui impliquent une surcharge de disque ou de réseau étendue. L’utilisation de méthodes d’action asynchrones sur les opérations liées à l’UC n’offre aucun avantage et aboutit à une plus grande surcharge.
+- Les opérations sont simples ou à durée d'exécution courte.
+- La simplicité est plus importante que l'efficacité.
+- Les opérations sont essentiellement des opérations UC, et non des opérations qui impliquent une surcharge du disque ou du réseau. L'utilisation de méthodes d'action asynchrones sur des opérations utilisant le processeur de manière intensive ne présente aucun avantage et donne lieu à une surcharge plus importante.
 
 En général, utilisez des méthodes asynchrones pour les conditions suivantes :
 
 - Vous appelez des services qui peuvent être utilisés par le biais de méthodes asynchrones, et vous utilisez .NET 4,5 ou une version ultérieure.
-- Les opérations sont liées au réseau ou à des e/s au lieu d’être liées à l’UC.
+- Les opérations utilisent le réseau ou les E/S de manière intensive et non le processeur.
 - Le parallélisme est plus important que la simplicité du code.
-- Vous souhaitez fournir un mécanisme qui permet aux utilisateurs d’annuler une demande longue.
+- Vous souhaitez fournir un mécanisme qui permet aux utilisateurs d'annuler une requête à durée d'exécution longue.
 - Lorsque l’avantage du changement de threads compense le coût du changement de contexte. En général, vous devez faire en sorte qu’une méthode soit asynchrone si la méthode synchrone attend sur le thread de demande ASP.NET en ne procédant à aucun travail. En effectuant l’appel de manière asynchrone, le thread de demande ASP.NET n’est pas bloqué et n’effectue aucun travail pendant qu’il attend la fin de la demande de service Web.
 - Les tests montrent que les opérations bloquantes représentent un goulot d’étranglement dans les performances de site et qu’IIS peut traiter davantage de demandes en utilisant des méthodes asynchrones pour ces appels bloquant.
 
-L’exemple téléchargeable montre comment utiliser efficacement des méthodes d’action asynchrones. L’exemple fourni a été conçu pour fournir une démonstration simple de la programmation asynchrone dans ASP.NET MVC 4 à l’aide de .NET 4,5. L’exemple n’est pas destiné à être une architecture de référence pour la programmation asynchrone dans ASP.NET MVC. L’exemple de programme appelle [API Web ASP.net](../../../web-api/index.md) méthodes qui à son tour appellent [Task. Delay](https://msdn.microsoft.com/library/hh139096(VS.110).aspx) pour simuler des appels de service Web à long terme. La plupart des applications de production n’illustrent pas les avantages évidents de l’utilisation des méthodes d’action asynchrones.   
+L'exemple téléchargeable indique comment utiliser efficacement des méthodes d'action asynchrones. L’exemple fourni a été conçu pour fournir une démonstration simple de la programmation asynchrone dans ASP.NET MVC 4 à l’aide de .NET 4,5. L’exemple n’est pas destiné à être une architecture de référence pour la programmation asynchrone dans ASP.NET MVC. L’exemple de programme appelle [API Web ASP.net](../../../web-api/index.md) méthodes qui à son tour appellent [Task. Delay](https://msdn.microsoft.com/library/hh139096(VS.110).aspx) pour simuler des appels de service Web à long terme. La plupart des applications de production n’illustrent pas les avantages évidents de l’utilisation des méthodes d’action asynchrones.   
   
-Certaines applications requièrent que toutes les méthodes d’action soient asynchrones. Souvent, la conversion de quelques méthodes d’action synchrones en méthodes asynchrones offre une meilleure augmentation de l’efficacité pour la quantité de travail requise.
+Peu d'applications requièrent que toutes leurs méthodes d'action soient asynchrones. Souvent, la conversion de quelques méthodes d'action synchrones en méthodes asynchrones offre le meilleur rapport performances/travail requis.
 
 ## <a id="SampleApp"></a>L’exemple d’application
 
@@ -109,7 +109,7 @@ Dans le corps de la méthode `GetGizmosAsync` une autre méthode asynchrone, `Ge
 
 Le mot clé **await** ne bloque pas le thread tant que la tâche n’est pas terminée. Il inscrit le reste de la méthode en tant que rappel sur la tâche et retourne immédiatement. Lorsque la tâche attendue finit par se terminer, elle appelle ce rappel et, par conséquent, reprend l’exécution de la méthode juste là où elle s’était arrêtée. Pour plus d’informations sur l’utilisation des mots clés [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) et [Async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) et de l’espace de noms de [tâche](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) , consultez [références Async](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/async).
 
-Le code suivant illustre les méthodes `GetGizmos` et `GetGizmosAsync`.
+Le code suivant représente les méthodes `GetGizmos` et `GetGizmosAsync`.
 
 [!code-csharp[Main](using-asynchronous-methods-in-aspnet-mvc-4/samples/sample5.cs)]
 

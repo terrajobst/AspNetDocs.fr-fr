@@ -8,16 +8,16 @@ ms.date: 03/30/2015
 ms.assetid: 9f05ccb1-2004-4661-ad8b-c370e6c09c8e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/unstructured-blob-storage
 msc.type: authoredcontent
-ms.openlocfilehash: 2afd4b5cf640eb97080de7e5280409f5e5347731
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: f48b2be755b84dff9b2672bd348c73107602c6dd
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583622"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456789"
 ---
 # <a name="unstructured-blob-storage-building-real-world-cloud-apps-with-azure"></a>Stockage d’objets BLOB non structuré (création d’applications Cloud réalistes avec Azure)
 
-par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet Fix it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Télécharger le livre électronique](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -25,7 +25,7 @@ par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 
 Dans le chapitre précédent, nous avons examiné les schémas de partitionnement et expliqué comment l’application Fix it stocke les images dans le service Azure Storage Blob, ainsi que d’autres données de tâche dans Azure SQL Database. Dans ce chapitre, nous allons approfondir le service BLOB et montrer comment il est implémenté dans le code de projet Fix it.
 
-## <a name="what-is-blob-storage"></a>Qu’est-ce que le stockage BLOB ?
+## <a name="what-is-blob-storage"></a>Présentation du stockage d'objets blob
 
 Le service Azure Storage Blob fournit un moyen de stocker des fichiers dans le Cloud. Le service BLOB présente un certain nombre d’avantages par rapport au stockage de fichiers dans un système de fichiers de réseau local :
 
@@ -127,7 +127,7 @@ Si vous examinez le code HTML de la page qui s’affiche, vous voyez l’URL qui
 
 [!code-cshtml[Main](unstructured-blob-storage/samples/sample13.cshtml?highlight=11)]
 
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Résumé
 
 Vous avez vu comment l’application Fix it stocke des images dans le service BLOB et uniquement des URL d’image dans la base de données SQL. L’utilisation du service BLOB permet de conserver la base de données SQL beaucoup plus petite que ce qui serait le cas, ce qui permet une mise à l’échelle jusqu’à un nombre quasiment illimité de tâches et peut être effectuée sans écrire beaucoup de code.
 

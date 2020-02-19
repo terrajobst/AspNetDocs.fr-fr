@@ -8,16 +8,16 @@ ms.date: 01/06/2019
 ms.assetid: 9f35ca15-e216-4db6-9ebf-24380b0f31b4
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-validation
 msc.type: authoredcontent
-ms.openlocfilehash: 67df1a473cd13a651c1276054b93f34323479082
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: f508d9e38dab5cc4cc44cc5aaa4eae87cf273bd5
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519022"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456048"
 ---
-# <a name="adding-validation"></a>Ajouter une validation
+# <a name="adding-validation"></a>Ajout de la validation
 
-par [Rick Anderson]((https://twitter.com/RickAndMSFT))
+par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 [!INCLUDE [Tutorial Note](index.md)]
 
@@ -132,7 +132,7 @@ Les attributs de [type](https://msdn.microsoft.com/library/system.componentmodel
 
 `DataType.Date` ne spécifie pas le format de la date qui s’affiche. Par défaut, le champ de données est affiché conformément aux formats par défaut basés sur le [CultureInfo](https://msdn.microsoft.com/library/vstudio/system.globalization.cultureinfo(v=vs.110).aspx)du serveur.
 
-L’attribut `DisplayFormat` est utilisé pour spécifier explicitement le format de date :
+L’attribut `DisplayFormat` est utilisé pour spécifier explicitement le format de date :
 
 [!code-csharp[Main](adding-validation/samples/sample8.cs)]
 
@@ -153,7 +153,7 @@ Si vous utilisez l’attribut `DataType` avec un champ date, vous devez spécifi
 > 
 > Vous devez désactiver la validation de date jQuery pour utiliser l’attribut [Range](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.rangeattribute.aspx) avec [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx). Il n’est généralement pas recommandé de compiler des dates dures dans vos modèles. par conséquent, l’utilisation de l’attribut [Range](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.rangeattribute.aspx) et de [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx) est déconseillée.
 
-Le code suivant illustre la combinaison d’attributs sur une seule ligne :
+Le code suivant illustre la combinaison d’attributs sur une seule ligne :
 
 [!code-csharp[Main](adding-validation/samples/sample10.cs?highlight=4,6,10,12)]
 

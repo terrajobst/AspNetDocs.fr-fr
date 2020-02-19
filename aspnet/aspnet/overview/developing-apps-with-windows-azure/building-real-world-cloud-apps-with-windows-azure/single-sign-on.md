@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 7d82d5e9-0619-4f22-9e03-32a6d52940a5
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
 msc.type: authoredcontent
-ms.openlocfilehash: 7e32f444dc38132296cffd45ac658f5abf51f314
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 1ca93cce22487295a24aae95437b3e69dfc5b504
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585279"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457139"
 ---
 # <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Authentification unique (création d’applications Cloud réalistes avec Azure)
 
-par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet Fix it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Télécharger le livre électronique](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -42,7 +42,7 @@ Ce que Azure AD vous permet de créer un répertoire dans le Cloud. Il s’agit 
 
 Il peut être entièrement indépendant de votre Active Directory local ; vous pouvez y placer les personnes de votre choix et les authentifier dans des applications Internet.
 
-![Windows Azure Active Directory](single-sign-on/_static/image2.png)
+![Microsoft Azure Active Directory](single-sign-on/_static/image2.png)
 
 Vous pouvez ou l’intégrer à votre AD local.
 
@@ -68,7 +68,7 @@ Dans le portail de gestion, cliquez sur l’onglet Active Directory.
 
 Vous disposez automatiquement d’un locataire Azure AD pour votre compte Azure, et vous pouvez cliquer sur le bouton **Ajouter** au bas de la page pour créer des répertoires supplémentaires. Vous pouvez en avoir besoin pour un environnement de test et un autre pour la production, par exemple. Réfléchissez bien à ce que vous nommez un nouveau répertoire. Si vous utilisez votre nom pour le répertoire et que vous utilisez à nouveau votre nom pour l’un des utilisateurs, cela peut prêter à confusion.
 
-![jouter un annuaire](single-sign-on/_static/image6.png)
+![Ajouter un annuaire](single-sign-on/_static/image6.png)
 
 Le portail offre une prise en charge complète de la création, de la suppression et de la gestion des utilisateurs au sein de cet environnement. Par exemple, pour ajouter un utilisateur, accédez à l’onglet **utilisateurs** , puis cliquez sur le bouton **Ajouter un utilisateur** .
 
@@ -84,7 +84,7 @@ Vous pouvez créer un utilisateur qui existe uniquement dans ce répertoire, ou 
 
 Vous pouvez affecter l’utilisateur à un rôle.
 
-![Profil utilisateur](single-sign-on/_static/image11.png)
+![User Profile](single-sign-on/_static/image11.png)
 
 Et le compte est créé avec un mot de passe temporaire.
 
@@ -146,7 +146,7 @@ Visual Studio simplifie grandement la création d’une application qui utilise 
 
 Lorsque vous créez une nouvelle application ASP.NET, MVC ou Web Forms, la méthode d’authentification par défaut est ASP.NET Identity. Pour modifier ce Azure AD, cliquez sur le bouton **modifier l’authentification** .
 
-![Modifier l’authentification](single-sign-on/_static/image23.png)
+![Modifier l'authentification](single-sign-on/_static/image23.png)
 
 Sélectionnez comptes professionnels, entrez votre nom de domaine, puis sélectionnez authentification unique.
 
@@ -168,7 +168,7 @@ Lorsque vous déployez l’application sur Azure, il vous suffit de cocher la ca
 
 Ces captures d’écran proviennent d’un didacticiel pas à pas complet qui montre comment créer une application qui utilise l’authentification Azure AD : [développement d’applications ASP.net avec Azure Active Directory](../../../../identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md).
 
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Résumé
 
 Dans ce chapitre, vous avez vu que Azure Active Directory, Visual Studio et ASP.NET, facilitent la configuration de l’authentification unique dans les applications Internet pour les utilisateurs de votre organisation. Vos utilisateurs peuvent se connecter à des applications Internet en utilisant les mêmes informations d’identification que celles qu’ils utilisent pour se connecter à l’aide d’Active Directory de votre réseau interne.
 
@@ -179,7 +179,7 @@ Le [chapitre suivant](data-storage-options.md) présente les options de stockage
 
 Pour plus d'informations, voir les ressources suivantes :
 
-- [Documentation Azure Active Directory](https://docs.microsoft.com/azure/active-directory/). Page du portail pour Azure AD de la documentation sur le site windowsazure.com. Pour obtenir des didacticiels pas à pas, consultez la section **développer** .
+- [Documentation Azure Active Directory](https://docs.microsoft.com/azure/active-directory/) Page du portail pour Azure AD de la documentation sur le site windowsazure.com. Pour obtenir des didacticiels pas à pas, consultez la section **développer** .
 - [Multi-Factor Authentication Azure](https://docs.microsoft.com/azure/multi-factor-authentication/). Page du portail pour obtenir de la documentation sur l’authentification multifacteur dans Azure.
 - [Options d’authentification du compte professionnel](../../../../visual-studio/overview/2013/creating-web-projects-in-visual-studio.md#orgauthoptions). Explication des options d’authentification Azure AD dans la boîte de dialogue Visual Studio 2013 New-Project.
 - [Modèles et pratiques Microsoft-modèle d’identité fédérée](https://msdn.microsoft.com/library/dn589790.aspx).

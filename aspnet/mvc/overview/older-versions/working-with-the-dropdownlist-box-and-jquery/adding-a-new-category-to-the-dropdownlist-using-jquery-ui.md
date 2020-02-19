@@ -8,16 +8,16 @@ ms.date: 01/12/2012
 ms.assetid: 44aa1ac4-6ea2-48a2-972d-52710c48eae5
 msc.legacyurl: /mvc/overview/older-versions/working-with-the-dropdownlist-box-and-jquery/adding-a-new-category-to-the-dropdownlist-using-jquery-ui
 msc.type: authoredcontent
-ms.openlocfilehash: cb9053593e2ea788638aec063c845cb91121861b
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.openlocfilehash: 3207079ee468232e5f75b081421241c232936baf
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075110"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77455722"
 ---
 # <a name="adding-a-new-category-to-the-dropdownlist-using-jquery-ui"></a>Ajout d’une nouvelle catégorie au contrôle DropDownList avec l’interface utilisateur jQuery
 
-par [Rick Anderson]((https://twitter.com/RickAndMSFT))
+par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 La balise de `Select` HTML est idéale pour présenter une liste de données de catégorie fixe, mais souvent, vous devez ajouter une nouvelle catégorie. Supposons que nous voulons ajouter le genre « Opera » aux catégories de notre base de données. Dans cette section, nous allons utiliser jQuery UI pour ajouter une boîte de dialogue que vous pouvez utiliser pour ajouter une nouvelle catégorie. L’image ci-dessous montre comment l’interface utilisateur sera présente dans le navigateur.
 
@@ -57,7 +57,7 @@ Exécutez l’application et cliquez sur le bouton **Ajouter un nouveau genre** 
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image4.png)
 
-Cliquez sur le bouton **Enregistrer** . Un appel AJAX crée la catégorie Opera, puis remplit la liste déroulante avec Opera et définit Opera comme genre sélectionné.
+Cliquez sur le bouton **Enregistrer**. Un appel AJAX crée la catégorie Opera, puis remplit la liste déroulante avec Opera et définit Opera comme genre sélectionné.
 
 ![](adding-a-new-category-to-the-dropdownlist-using-jquery-ui/_static/image5.png)
 

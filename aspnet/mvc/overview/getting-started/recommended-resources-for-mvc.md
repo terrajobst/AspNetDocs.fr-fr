@@ -8,16 +8,16 @@ ms.date: 04/10/2014
 ms.assetid: 7958d725-e958-4566-a85b-535eeb985f94
 msc.legacyurl: /mvc/overview/getting-started/recommended-resources-for-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: daccaedae0b0e60f5086f270f214f87da564a85d
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.openlocfilehash: 11f4a7cae8d425873b1828a9e5f51471def954fb
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074928"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457152"
 ---
 # <a name="mvc-recommended-resources"></a>Ressources recommandées pour MVC
 
-par [Rick Anderson]((https://twitter.com/RickAndMSFT))
+par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > Cette rubrique fournit des liens vers des ressources de documentation sur ASP.NET MVC 5. Si vous connaissez un billet de blog, un [StackOverflow](http://stackoverflow.com/) thread ou tout autre lien utile, envoyez- [moi](mailto:aspnetue@microsoft.com?subject=Great ASP.NET MVC link) un e-mail avec le lien. Les liens fournis ici sont régulièrement mis à jour. Vous pouvez trouver des liens ASP.NET MVC plus anciens (mais dans de nombreux cas toujours pertinents) sur le [plan de contenu MSDN](https://msdn.microsoft.com/library/gg416514(v=vs.108).aspx).
 >
@@ -327,7 +327,7 @@ par [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="best"></a>
 
-## <a name="best-practices"></a>Bonnes pratiques
+## <a name="best-practices"></a>Pratiques recommandées
 
 - [Ce qu’il ne faut pas faire dans ASP.NET et ce qu’il faut faire à la place](../../../aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead.md)
 - [Liste de vérification des développeurs Web](http://webdevchecklist.com/aspnet)

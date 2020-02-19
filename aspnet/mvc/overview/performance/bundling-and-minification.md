@@ -8,16 +8,16 @@ ms.date: 08/23/2012
 ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
-ms.openlocfilehash: 239980d747c6e0d6be1e9b4fe0371e276e37cf21
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 61bfe5dbac04b57e1461183b66ead2f01fe0734c
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519282"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457763"
 ---
 # <a name="bundling-and-minification"></a>Groupement et minimisation
 
-par [Rick Anderson]((https://twitter.com/RickAndMSFT))
+par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > Le regroupement et la minimisation sont deux techniques que vous pouvez utiliser dans ASP.NET 4,5 pour améliorer le temps de chargement des demandes. Le regroupement et la minimisation améliorent le temps de chargement en réduisant le nombre de demandes au serveur et en réduisant la taille des ressources demandées (telles que CSS et JavaScript).
 
@@ -39,7 +39,7 @@ L’illustration suivante montre la même vue de minuterie de la vue about prés
 
 ![](bundling-and-minification/_static/image3.png)
 
-## <a name="minification"></a>Minimisation
+## <a name="minification"></a>Réduction
 
 La minimisation effectue une grande variété d’optimisations du code pour les scripts ou la CSS, par exemple la suppression des espaces et des commentaires inutiles et le raccourcissement des noms de variables en un seul caractère. Considérons la fonction JavaScript suivante.
 
@@ -51,7 +51,7 @@ Après la minimisation, la fonction est réduite à ce qui suit :
 
 En plus de supprimer les commentaires et les espaces superflus, les noms de variables et les paramètres suivants ont été renommés (raccourcis) comme suit :
 
-| **Original** | **Renommé** |
+| **Ressource d’origine** | **Renommé** |
 | --- | --- |
 | imageTagAndImageID | n |
 | imageContext | t |
@@ -61,7 +61,7 @@ En plus de supprimer les commentaires et les espaces superflus, les noms de vari
 
 Le tableau suivant présente plusieurs différences importantes entre la liste de toutes les ressources individuellement et l’utilisation du regroupement et de la minimisation (B/M) dans l’exemple de programme.
 
-|  | **Utilisation de B/M** | **Sans B/M** | **Changement** |
+|  | **Utilisation de B/M** | **Sans B/M** | **Modification** |
 | --- | --- | --- | --- |
 | **Demandes de fichier** | 9 | 34 | 256% |
 | **Ko envoyés** | 3.26 | 11.92 | 266% |
@@ -154,7 +154,7 @@ Le chemin d’accès virtuel spécifié dans la méthode `Include` et le modèle
 
 Imaginez un projet avec les fichiers JavaScript suivants :
 
-- *Scripts\\Common\\AddAltToImg.js*
+- *Scripts\\Common\\AddAltToImg. js*
 - *Scripts\\Common\\ToggleDiv. js*
 - *Scripts\\Common\\ToggleImg. js*
 - *Scripts\\\\s courantes Sub1\\ToggleLinks. js*
@@ -165,13 +165,13 @@ Le tableau suivant montre les fichiers ajoutés à un regroupement à l’aide d
 
 | **Call** | **Fichiers ajoutés ou exception levée** |
 | --- | --- |
-| Include("~/Scripts/Common/\*.js") | *AddAltToImg.js*, *ToggleDiv.js*, *ToggleImg.js* |
-| Include("~/Scripts/Common/T\*.js") | Exception de modèle non valide. Le caractère générique est uniquement autorisé sur le préfixe ou le suffixe. |
+| Include ("~/Scripts/Common/\*. js") | *AddAltToImg. js*, *ToggleDiv. js*, *ToggleImg. js* |
+| Include ("~/Scripts/Common/T\*. js") | Exception de modèle non valide. Le caractère générique est uniquement autorisé sur le préfixe ou le suffixe. |
 | Include ("~/Scripts/Common/\*og.\*») | Exception de modèle non valide. Un seul caractère générique est autorisé. |
-| Include ("~/Scripts/Common/T\*") | *ToggleDiv.js*, *ToggleImg.js* |
+| Include ("~/Scripts/Common/T\*") | *ToggleDiv. js*, *ToggleImg. js* |
 | Include ("~/Scripts/Common/\*") | Exception de modèle non valide. Un segment de caractère générique pur n’est pas valide. |
-| IncludeDirectory("~/Scripts/Common", "T\*") | *ToggleDiv.js*, *ToggleImg.js* |
-| IncludeDirectory("~/Scripts/Common", "T\*", true) | *ToggleDiv.js*, *ToggleImg.js*, *ToggleLinks.js* |
+| IncludeDirectory ("~/Scripts/Common", "T\*") | *ToggleDiv. js*, *ToggleImg. js* |
+| IncludeDirectory ("~/Scripts/Common", "T\*", true) | *ToggleDiv. js*, *ToggleImg. js*, *ToggleLinks. js* |
 
 L’ajout explicite de chaque fichier à un bundle est généralement le chargement par défaut des fichiers avec caractères génériques, pour les raisons suivantes :
 

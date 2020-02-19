@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 1bc333c5-f096-4ea7-b170-779accc21c1a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
 msc.type: authoredcontent
-ms.openlocfilehash: e6fda47babd3c2505315f42667c45f09482218c2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 896196bdb6a6b0d12a6c798ead510e37dd38a9fc
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583744"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456879"
 ---
 # <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Annexe : exemple d’application Fix it (création d’applications Cloud réalistes avec Azure)
 
-par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet Fix it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4)
 
@@ -84,7 +84,7 @@ Les exemples de scripts d’automatisation PowerShell ont été écrits uniqueme
 ASP.NET empêche automatiquement les utilisateurs malveillants de tenter d’effectuer des attaques de script entre sites en entrant un script dans les zones de texte entrée utilisateur. Et le service d’assistance du `DisplayFor` MVC utilisé pour afficher les titres des tâches et les notes encodent automatiquement les valeurs qu’il envoie au navigateur. Mais dans une application de production, vous souhaiterez peut-être prendre des mesures supplémentaires. Pour plus d’informations, consultez [validation de la demande dans ASP.net](https://msdn.microsoft.com/library/hh882339.aspx).
 
 <a id="bestpractices"></a>
-## <a name="best-practices"></a>meilleures pratiques recommandées.
+## <a name="best-practices"></a>Meilleures pratiques
 
 Voici quelques problèmes qui ont été résolus après avoir été découverts dans la révision du code et les tests de la version d’origine de l’application Fix it. Certains ont été provoqués par le codeur d’origine qui n’a pas conscience d’une bonne pratique particulière, tout simplement parce que le code a été écrit rapidement et n’était pas destiné aux logiciels publiés. Nous répertorions les problèmes ici, au cas où nous avons appris cette revue et les tests, qui peuvent être utiles aux personnes qui développent également des applications Web.
 
@@ -215,7 +215,7 @@ Il existe deux façons d’exécuter l’application Fix it :
 <a id="runbase"></a>
 ### <a name="run-the-base-application"></a>Exécuter l’application de base
 
-1. Installez [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
+1. Installer [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 2. Installez le [Kit de développement logiciel (SDK) Azure pour .net pour Visual Studio](https://azure.microsoft.com/downloads/).
 3. Téléchargez le fichier. zip à partir de la [Galerie de code MSDN](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4).
 4. Dans l’Explorateur de fichiers, cliquez avec le bouton droit sur le fichier. zip, cliquez sur Propriétés, puis dans la Fenêtre Propriétés cliquez sur débloquer.
@@ -263,7 +263,7 @@ Si vous souhaitez exécuter dans Azure sans utiliser de files d’attente et que
 
 Ces instructions supposent que vous avez déjà téléchargé et exécuté la solution Fix it localement, et que vous disposez d’un compte Azure ou d’un abonnement Azure que vous êtes autorisé à gérer.
 
-1. Installez la console **Azure PowerShell** . Pour obtenir des instructions, consultez [Comment installer et configurer Azure PowerShell](https://docs.microsoft.com/powershell/azure/overview?view=azurermps-4.3.1).
+1. Installez la console **Azure PowerShell** . Pour obtenir des instructions, consultez la rubrique [Installation et configuration d'Azure PowerShell](https://docs.microsoft.com/powershell/azure/overview?view=azurermps-4.3.1).
 
     Cette console personnalisée est configurée pour fonctionner avec votre abonnement Azure. Le module Azure est installé dans le répertoire *Program Files* et est automatiquement importé à chaque utilisation de la console Azure PowerShell.
 

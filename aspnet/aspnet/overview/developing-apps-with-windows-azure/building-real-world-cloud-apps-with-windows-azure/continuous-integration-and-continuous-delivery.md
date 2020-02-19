@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: eaece9f5-f80c-428b-b771-5db66d275b7d
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery
 msc.type: authoredcontent
-ms.openlocfilehash: 52c710053feca7872aa6fcc93c99bce90359f8fc
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: cf3c65ef95528173eed3fb08984035b2512861c4
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585876"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457035"
 ---
 # <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Intégration continue et livraison continue (création d’applications Cloud réalistes avec Azure)
 
-par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet Fix it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Télécharger le livre électronique](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -54,7 +54,7 @@ Pour plus d’informations sur les fonctionnalités d’intégration et de remis
 
 Si vous recherchez une solution de gestion de projet, de collaboration d’équipe et de contrôle de code source, consultez Azure DevOps Services. Inscrivez-vous à [Azure DevOps services](https://dev.azure.com/).
 
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Résumé
 
 Les trois premiers modèles de développement Cloud ont été sur la façon d’implémenter un processus de développement reproductible, fiable et prévisible avec une durée de cycle faible. Dans le [chapitre suivant](web-development-best-practices.md) , nous commençons à examiner les modèles d’architecture et de codage.
 

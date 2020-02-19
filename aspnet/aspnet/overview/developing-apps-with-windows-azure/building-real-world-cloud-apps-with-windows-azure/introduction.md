@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: accfa16a-ab15-4c26-9ad4-babdc2a77d2e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction
 msc.type: authoredcontent
-ms.openlocfilehash: 8a4ef3aa37a9296e92fbeb513968e3abeee072d0
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: b88573b3702b755b155e8da35f5f8a67931bafc6
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585532"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457113"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Création d’applications Cloud réalistes avec Azure
 
-par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet Fix it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Télécharger le livre électronique](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -63,7 +63,7 @@ Ce livre électronique explique les treize modèles recommandés pour le dévelo
 
     - Présentation de Azure Active Directory.
     - Démo : créer une application ASP.NET qui utilise Azure Active Directory.
-- [Options de stockage des données](data-storage-options.md). 
+- [Options de stockage de données](data-storage-options.md) : 
 
     - Types de magasins de données.
     - Comment choisir le magasin de données approprié.
@@ -154,7 +154,7 @@ Tout cela a lieu automatiquement. Tout ce que vous avez à faire, c’est créer
 Pour obtenir un didacticiel pas à pas rapide et facile qui montre comment créer une application Web dans Visual Studio et la déployer sur un site Web Azure, consultez prise en [main d’Azure et de ASP.net](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-get-started/).
 
 <a id="summary"></a>
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Résumé
 
 Cette introduction a fourni une liste de rubriques abordées par le livre, des captures d’écran de l’exemple d’application et une brève présentation de l’Web Apps dans Azure App Service environnement Cloud. L’un des grands avantages du développement d’applications dans et pour le Cloud est qu’il est facile d’automatiser des tâches de développement répétitives, telles que la création d’un environnement de test et le déploiement de votre code vers celui-ci. La procédure à suivre est l’objet du [chapitre suivant](automate-everything.md).
 
@@ -174,4 +174,4 @@ Vidéos :
 - [Les sites Web Azure sont internes avec NIR Mashkowski](https://channel9.msdn.com/Shows/Web+Camps+TV/Windows-Azure-Web-Sites-Internals-with-Nir-Mashkowski).
 
 > [!div class="step-by-step"]
-> [Suivant](automate-everything.md)
+> [Next](automate-everything.md)

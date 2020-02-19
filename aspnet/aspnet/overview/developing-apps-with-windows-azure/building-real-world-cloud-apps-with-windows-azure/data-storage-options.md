@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
-ms.openlocfilehash: f97d973d87db895441f813376d757a8a2e94b255
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 9357ed5aef39bed501cdac9ac26d46c884d4fae0
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585931"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457178"
 ---
 # <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Options de stockage des données (création d’applications Cloud réalistes avec Azure)
 
-par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Télécharger le projet Fix it](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Télécharger le livre électronique](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -37,14 +37,14 @@ Grâce au Cloud, il est relativement facile d’utiliser un grand nombre de maga
 
 Le tableau ci-dessous présente quatre types de bases de données NoSQL :
 
-- Les [bases de données clé/valeur](https://msdn.microsoft.com/library/dn313285.aspx#sec7) stockent un objet sérialisé unique pour chaque valeur de clé. Ils sont utiles pour stocker de gros volumes de données où vous souhaitez obtenir un élément pour une valeur de clé donnée et vous n’avez pas besoin d’interroger en fonction d’autres propriétés de l’élément.
+- Les [bases de données clé/valeur](https://msdn.microsoft.com/library/dn313285.aspx#sec7) stockent un objet sérialisé unique pour chaque valeur de clé. Elles sont parfaites pour le stockage de grands volumes de données lorsque vous souhaitez obtenir un élément pour une valeur de clé donnée et que vous n’avez pas besoin d’interroger les données en fonction d’autres propriétés de l’élément.
 
     Le [stockage d’objets BLOB Azure](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-blobs/) est une base de données clé/valeur qui fonctionne comme le stockage de fichiers dans le Cloud, avec des valeurs de clés qui correspondent aux noms de dossiers et de fichiers. Vous récupérez un fichier par son nom de dossier et de fichier, et non par la recherche de valeurs dans le contenu du fichier.
 
     Le [stockage table Azure](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-tables/) est également une base de données clé/valeur. Chaque valeur est appelée une *entité* (semblable à une ligne, identifiée par une clé de partition et une clé de ligne) et contient plusieurs *Propriétés* (similaires aux colonnes, mais toutes les entités d’une table ne doivent pas partager les mêmes colonnes). L’interrogation sur des colonnes autres que la clé est extrêmement inefficace et doit être évitée. Par exemple, vous pouvez stocker les données de profil utilisateur, avec une partition qui stocke les informations relatives à un seul utilisateur. Vous pouvez stocker des données telles que le nom d’utilisateur, le hachage de mot de passe, la date de naissance, etc. dans des propriétés distinctes d’une entité ou dans des entités distinctes de la même partition. Mais vous ne souhaitez pas interroger tous les utilisateurs ayant une plage de dates de naissance donnée, et vous ne pouvez pas exécuter une requête JOIN entre votre table de profil et une autre table. Le stockage table est plus évolutif et moins onéreux qu’une base de données relationnelle, mais il n’active pas les requêtes ou les jointures complexes.
 - Les [Documentdatabases](https://msdn.microsoft.com/library/dn313285.aspx#sec8) sont des bases de données clé/valeur dans lesquelles les valeurs sont des *documents*. « Document » ici n’est pas utilisé dans le sens d’un document Word ou Excel, mais il s’agit d’une collection de valeurs et de champs nommés, qui peuvent être un document enfant. Par exemple, dans une table d’historique des commandes, un document de commande peut contenir les champs numéro de commande, date de commande et client ; et le champ Customer peut contenir des champs Name et Address. La base de données encode les données de champ dans un format tel que XML, YAML, JSON ou BSON ; ou elle peut utiliser du texte brut. Une fonctionnalité qui définit les bases de données de documents en dehors des bases de données clé/valeur est la capacité à interroger des champs non-clés et à définir des index secondaires pour rendre l’interrogation plus efficace. Cette fonctionnalité rend une base de données de documents plus adaptée aux applications qui doivent récupérer des données en fonction de critères plus complexes que la valeur de la clé de document. Par exemple, dans une base de données de documents historique des commandes client, vous pouvez interroger différents champs, tels que ID du produit, ID client, nom du client, etc. [MongoDB](http://www.mongodb.org/) est une base de données de documents populaires.
 - Les [bases de données de familles de colonnes](https://msdn.microsoft.com/library/dn313285.aspx#sec9) sont des magasins de données clé/valeur qui vous permettent de structurer le stockage des données dans des collections de colonnes associées appelées familles de colonnes. Par exemple, une base de données de recensement peut avoir un groupe de colonnes pour le nom d’une personne (prénom, deuxième prénom, dernier), un groupe pour l’adresse de la personne et un groupe pour les informations de profil de la personne (DOB, sexe, etc.). La base de données peut ensuite stocker chaque famille de colonnes dans une partition distincte tout en conservant toutes les données d’une personne liée à la même clé. Vous pouvez ensuite lire toutes les informations de profil sans avoir à lire toutes les informations de nom et d’adresse. [Cassandra](http://cassandra.apache.org/) est une base de données de familles de colonnes courante.
-- Les [bases de données de graphique](https://msdn.microsoft.com/library/dn313285.aspx#sec10) stockent les informations sous la forme d’une collection d’objets et de relations. L’objectif d’une base de données de graphiques est de permettre à une application d’effectuer efficacement des requêtes qui parcourent le réseau d’objets et les relations entre eux. Par exemple, les objets peuvent être des employés d’une base de données de ressources humaines, et vous pouvez souhaiter faciliter les requêtes telles que « rechercher tous les employés qui travaillent directement ou indirectement à Scott ». [Neo4j](http://www.neo4j.org/) est une base de données de graphiques populaire.
+- Les [bases de données de graphique](https://msdn.microsoft.com/library/dn313285.aspx#sec10) stockent les informations sous la forme d’une collection d’objets et de relations. L’objectif d’une base de données de graphiques est de permettre à une application d’effectuer efficacement des requêtes qui parcourent le réseau d’objets et les relations entre eux. Par exemple, les objets peuvent représenter les employés d’une base de données de ressources humaines, et vous pouvez définir des requêtes comme « rechercher tous les employés travaillant directement ou indirectement pour Scott. » [Neo4j](http://www.neo4j.org/) est une base de données de graphiques populaire.
 
 Par rapport aux bases de données relationnelles, les options NoSQL offrent une évolutivité et une rentabilité supérieures pour le stockage et l’analyse des données non structurées. Le compromis est qu’ils ne fournissent pas les fonctionnalités d’interrogation et d’intégrité des données relationnelles les plus performantes des bases de données relationnelles. NoSQL fonctionne bien pour les données de journal IIS, ce qui implique un volume élevé sans nécessiter de requêtes de jointure. NoSQL ne fonctionnera pas si bien pour les transactions bancaires, ce qui nécessite une intégrité absolue des données et implique de nombreuses relations avec d’autres données relatives au compte.
 
@@ -66,7 +66,7 @@ Sur Azure, [HDInsight](https://azure.microsoft.com/services/hdinsight/) vous per
     ![Journaux dans le stockage d’objets BLOB](data-storage-options/_static/image2.png)
 - À mesure que l’application obtient le trafic, les journaux IIS du serveur Web sont écrits dans le stockage d’objets BLOB.
 
-    ![Journaux de serveur Web](data-storage-options/_static/image3.png)
+    ![Journaux d’activité des serveurs Web](data-storage-options/_static/image3.png)
 - Dans le portail, cliquez sur **nouveau** - **Data Services** - **HDInsight** - **création rapide**, puis spécifiez un nom de cluster HDInsight, la taille du cluster (nombre de nœuds de données du cluster HDInsight) et un nom d’utilisateur et un mot de passe pour le cluster HDInsight.
 
     ![HDInsight](data-storage-options/_static/image4.png)
@@ -86,7 +86,7 @@ Comme expliqué dans le [chapitre automatiser tout](automate-everything.md), la 
 - Chargez les exécutables de tâche MapReduce (fichiers. jar ou. exe) dans le cluster HDInsight.
 - Soumettez un MapReduce qui stocke les données de sortie dans le stockage d’objets BLOB.
 - Attendez la fin de la tâche.
-- Supprimez le cluster HDInsight.
+- Suppression du cluster HDInsight.
 - Accédez à la sortie à partir du stockage d’objets BLOB.
 
 En exécutant un script qui effectue tout cela, vous réduisez la durée pendant laquelle le cluster HDInsight est approvisionné, ce qui réduit vos coûts.
@@ -99,8 +99,8 @@ Les options de stockage de données répertoriées précédemment incluent les s
 Les solutions de données PaaS offertes par Azure sont les suivantes :
 
 - Azure SQL Database (anciennement SQL Azure). Base de données relationnelle Cloud basée sur SQL Server.
-- Stockage table Azure. Base de données NoSQL clé/valeur.
-- Stockage d’objets BLOB Azure. Stockage de fichiers dans le Cloud.
+- Stockage Table Azure Base de données NoSQL clé/valeur.
+- Stockage Blob Azure. Stockage de fichiers dans le Cloud.
 
 Pour IaaS, vous pouvez exécuter tout ce que vous pouvez charger sur une machine virtuelle, par exemple :
 
@@ -125,7 +125,7 @@ Azure rend les options de stockage des données IaaS aussi faciles à utiliser q
 - Vous n’êtes pas obligé de créer des machines virtuelles, vous utilisez simplement le portail ou un script pour configurer un magasin de données. Si vous souhaitez un magasin de données de 200 téraoctets, vous pouvez simplement cliquer sur un bouton ou exécuter une commande, et en secondes, il est prêt à être utilisé.
 - Vous n’avez pas besoin de gérer ou de corriger les machines virtuelles utilisées par le service. Microsoft fait cela automatiquement pour vous. vous n’avez pas à vous soucier de la configuration de l’infrastructure pour la mise à l’échelle ou la haute disponibilité. Microsoft gère tout cela pour vous.
 - Vous n’avez pas besoin d’acheter des licences. les frais de licence sont inclus dans les frais de service.
-- Vous payez uniquement ce que vous utilisez.
+- Vous paierez uniquement pour ce que vous utiliserez.
 
 Les options de stockage de données PaaS dans Azure incluent des offres par des fournisseurs tiers. Par exemple, vous pouvez choisir le [module complémentaire MongoLab](https://azure.microsoft.com/documentation/articles/store-mongolab-web-sites-dotnet-store-data-mongodb/) dans le magasin Azure pour approvisionner une base de données MongoDB en tant que service.
 
@@ -146,8 +146,8 @@ Voici quelques questions à prendre en compte lorsque vous choisissez une approc
 | Opérations | -Quelle est la facilité de déploiement et d’exécution de la plateforme sur Azure ? PaaS? IaaS? Linux? Le stockage de tables et les SQL Database sont faciles à configurer sur Azure. Les plateformes qui ne sont pas des solutions PaaS Azure intégrées nécessitent davantage d’efforts. |
 | Prise en charge des API | -Est une API disponible qui facilite l’utilisation de la plateforme. Pour le service de table Azure, il existe un kit de développement logiciel (SDK) avec une API .NET qui prend en charge le modèle de programmation asynchrone .NET 4,5. Si vous écrivez une application .NET, il est beaucoup plus facile d’écrire et de tester le code pour le service de table Azure par rapport à une autre plateforme de magasin de données de colonne clé/valeur qui n’a pas d’API ou moins complète. |
 | Intégrité transactionnelle et cohérence des données | -Est-il essentiel que la plateforme prenne en charge les transactions afin de garantir la cohérence des données ? Pour assurer le suivi des courriers électroniques envoyés, les performances et le faible coût de stockage des données peuvent être plus importants que la prise en charge automatique des transactions ou de l’intégrité référentielle dans la plate-forme de données, ce qui rend le service de table Azure un bon choix. Pour le suivi des soldes de compte bancaire ou des bons de commande, une plateforme de base de données relationnelle qui fournit des garanties transactionnelles fortes est un meilleur choix. |
-| Continuité des activités | -Quelle est la simplicité de la sauvegarde, de la restauration et de la récupération d’urgence ? Les données de production tôt ou tard seront endommagées et vous aurez besoin d’une fonction d’annulation. Les bases de données relationnelles ont souvent des capacités de restauration affinées, telles que la possibilité de restaurer à un point dans le temps. La compréhension des fonctionnalités de restauration disponibles dans chaque plateforme que vous envisagez est un facteur important à prendre en compte. |
-| Cost | -Si plusieurs plateformes peuvent prendre en charge la charge de travail de vos données, comment les comparer en coût ? Par exemple, si vous utilisez ASP.NET Identity, vous pouvez stocker les données de profil utilisateur dans le service de table Azure ou Azure SQL Database. Si vous n’avez pas besoin des fonctions d’interrogation enrichie de SQL Database, vous pouvez choisir des tables Azure en partie, car cela coûte beaucoup moins cher pour une quantité de stockage donnée. |
+| Continuité de l’activité | -Quelle est la simplicité de la sauvegarde, de la restauration et de la récupération d’urgence ? Les données de production tôt ou tard seront endommagées et vous aurez besoin d’une fonction d’annulation. Les bases de données relationnelles ont souvent des capacités de restauration affinées, telles que la possibilité de restaurer à un point dans le temps. La compréhension des fonctionnalités de restauration disponibles dans chaque plateforme que vous envisagez est un facteur important à prendre en compte. |
+| Coût | -Si plusieurs plateformes peuvent prendre en charge la charge de travail de vos données, comment les comparer en coût ? Par exemple, si vous utilisez ASP.NET Identity, vous pouvez stocker les données de profil utilisateur dans le service de table Azure ou Azure SQL Database. Si vous n’avez pas besoin des fonctions d’interrogation enrichie de SQL Database, vous pouvez choisir des tables Azure en partie, car cela coûte beaucoup moins cher pour une quantité de stockage donnée. |
 
 Nous recommandons généralement de connaître la réponse aux questions de chacune de ces catégories avant de choisir vos solutions de stockage de données.
 
@@ -168,7 +168,7 @@ Il est également facile de créer des bases de données à l’aide du portail.
 
 Cliquez sur **nouveau--Data Services** -- **SQL Database** -- **création rapide**, entrez un nom de base de données, choisissez un serveur déjà présent dans votre compte ou créez-en un nouveau, puis cliquez sur **créer une SQL Database**.
 
-![Nouvelle base de données SQL](data-storage-options/_static/image9.png)
+![New SQL Database](data-storage-options/_static/image9.png)
 
 Patientez quelques secondes, et une base de données dans Azure vous est prête à être utilisée.
 
@@ -256,13 +256,13 @@ Si vous souhaitez utiliser SQL Server sur une machine virtuelle, vous pouvez uti
 
 Lorsque vous créez une machine virtuelle avec une image SQL Server, nous évaluons le coût de la licence SQL Server par heure en fonction de votre utilisation de la machine virtuelle. Si vous avez un projet qui ne sera exécuté que pendant quelques mois, il est moins cher de payer à l’heure. Si vous pensez que votre projet va durer des années, il est moins onéreux d’acheter la licence comme vous le feriez normalement.
 
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Résumé
 
 Le Cloud Computing permet de combiner et de faire correspondre les approches de stockage des données pour répondre au mieux aux besoins de votre application. Si vous créez une nouvelle application, réfléchissez bien aux questions répertoriées ici afin de choisir des approches qui continueront à fonctionner correctement lorsque votre application se développe. Le [chapitre suivant](data-partitioning-strategies.md) explique certaines stratégies de partitionnement que vous pouvez utiliser pour combiner plusieurs approches de stockage de données.
 
 ## <a name="resources"></a>Ressources
 
-Pour plus d'informations, voir les ressources ci-dessous.
+Pour plus d'informations, consultez les ressources ci-dessous.
 
 Choix d’une plateforme de base de données :
 
@@ -282,7 +282,7 @@ Choix entre SQL Server et SQL Database :
 Utilisation de Entity Framework et SQL Database dans une application Web ASP.NET
 
 - [Prise en main avec EF 6 à l’aide de MVC 5](../../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md). Série de didacticiels en neuf parties qui vous guident dans la création d’une application MVC qui utilise EF et déploie la base de données sur Azure et SQL Database.
-- [Déploiement Web ASP.net à l’aide de Visual Studio](../../../../web-forms/overview/deployment/visual-studio-web-deployment/introduction.md). Série de didacticiels en 12 parties qui explique plus en détail comment déployer une base de données à l’aide d’EF Code First.
+- [Déploiement web ASP.NET en utilisant Visual Studio](../../../../web-forms/overview/deployment/visual-studio-web-deployment/introduction.md). Série de didacticiels en 12 parties qui explique plus en détail comment déployer une base de données à l’aide d’EF Code First.
 - [Déployez une application ASP.NET MVC 5 sécurisée avec appartenance, OAuth et SQL Database à un site Web Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database/). Didacticiel pas à pas qui vous guide dans la création d’une application Web qui utilise l’authentification, stocke des tables d’application dans la base de données d’appartenance, modifie le schéma de la base de données et déploie l’application dans Azure.
 - [Mappage de contenu d’accès aux données ASP.net](https://go.microsoft.com/fwlink/p/?LinkId=282414). Liens vers les ressources relatives à l’utilisation d’EF et de SQL Database.
 
