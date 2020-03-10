@@ -2,28 +2,28 @@
 uid: web-forms/overview/data-access/masterdetail/index
 title: Maître/détail | Microsoft Docs
 author: rick-anderson
-description: Ces didacticiels montrent comment afficher les enregistrements maîtres dans une liste déroulante et les détails dans un contrôle GridView.
+description: Ces didacticiels montrent comment afficher des enregistrements maîtres dans une liste déroulante et des détails dans un contrôle GridView.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 104e4d22-22cf-44a4-aefe-f604f62e0cf8
 msc.legacyurl: /web-forms/overview/data-access/masterdetail
 msc.type: chapter
 ms.openlocfilehash: 9ae348f6af0188364cb3ac2973dccf05f4bb11a1
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131163"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78529406"
 ---
-# <a name="masterdetail"></a><span data-ttu-id="b30b3-103">Maître/détail</span><span class="sxs-lookup"><span data-stu-id="b30b3-103">Master/Detail</span></span>
+# <a name="masterdetail"></a><span data-ttu-id="36029-103">Maître/détail</span><span class="sxs-lookup"><span data-stu-id="36029-103">Master/Detail</span></span>
 
-> <span data-ttu-id="b30b3-104">Ces didacticiels montrent comment afficher les enregistrements maîtres dans une liste déroulante et les détails dans un contrôle GridView.</span><span class="sxs-lookup"><span data-stu-id="b30b3-104">These tutorials show how to display master records in a drop-down list and details in a GridView control.</span></span>
+> <span data-ttu-id="36029-104">Ces didacticiels montrent comment afficher des enregistrements maîtres dans une liste déroulante et des détails dans un contrôle GridView.</span><span class="sxs-lookup"><span data-stu-id="36029-104">These tutorials show how to display master records in a drop-down list and details in a GridView control.</span></span>
 
-- [<span data-ttu-id="b30b3-105">Filtrage maître/détail avec une DropDownList (C#)</span><span class="sxs-lookup"><span data-stu-id="b30b3-105">Master/Detail Filtering With a DropDownList (C#)</span></span>](master-detail-filtering-with-a-dropdownlist-cs.md)
-- [<span data-ttu-id="b30b3-106">Filtrage maître/détail avec deux DropDownList (C#)</span><span class="sxs-lookup"><span data-stu-id="b30b3-106">Master/Detail Filtering With Two DropDownLists (C#)</span></span>](master-detail-filtering-with-two-dropdownlists-cs.md)
-- [<span data-ttu-id="b30b3-107">Filtrage maître/détail sur deux pages (C#)</span><span class="sxs-lookup"><span data-stu-id="b30b3-107">Master/Detail Filtering Across Two Pages (C#)</span></span>](master-detail-filtering-across-two-pages-cs.md)
-- [<span data-ttu-id="b30b3-108">Représentation maître/détail utilisant un GridView maître pouvant être sélectionné avec une DetailView des détails (C#)</span><span class="sxs-lookup"><span data-stu-id="b30b3-108">Master/Detail Using a Selectable Master GridView with a Details DetailView (C#)</span></span>](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs.md)
-- [<span data-ttu-id="b30b3-109">Filtrage maître/détail avec une DropDownList (VB)</span><span class="sxs-lookup"><span data-stu-id="b30b3-109">Master/Detail Filtering With a DropDownList (VB)</span></span>](master-detail-filtering-with-a-dropdownlist-vb.md)
-- [<span data-ttu-id="b30b3-110">Filtrage maître/détail avec deux DropDownList (VB)</span><span class="sxs-lookup"><span data-stu-id="b30b3-110">Master/Detail Filtering With Two DropDownLists (VB)</span></span>](master-detail-filtering-with-two-dropdownlists-vb.md)
-- [<span data-ttu-id="b30b3-111">Filtrage maître/détail sur deux pages (VB)</span><span class="sxs-lookup"><span data-stu-id="b30b3-111">Master/Detail Filtering Across Two Pages (VB)</span></span>](master-detail-filtering-across-two-pages-vb.md)
-- [<span data-ttu-id="b30b3-112">Représentation maître/détail utilisant un GridView maître pouvant être sélectionné avec une DetailView des détails (VB)</span><span class="sxs-lookup"><span data-stu-id="b30b3-112">Master/Detail Using a Selectable Master GridView with a Details DetailView (VB)</span></span>](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-vb.md)
+- [<span data-ttu-id="36029-105">Filtrage maître/détail avec une DropDownList (C#)</span><span class="sxs-lookup"><span data-stu-id="36029-105">Master/Detail Filtering With a DropDownList (C#)</span></span>](master-detail-filtering-with-a-dropdownlist-cs.md)
+- [<span data-ttu-id="36029-106">Filtrage maître/détail avec deux DropDownList (C#)</span><span class="sxs-lookup"><span data-stu-id="36029-106">Master/Detail Filtering With Two DropDownLists (C#)</span></span>](master-detail-filtering-with-two-dropdownlists-cs.md)
+- [<span data-ttu-id="36029-107">Filtrage maître/détail sur deux pages (C#)</span><span class="sxs-lookup"><span data-stu-id="36029-107">Master/Detail Filtering Across Two Pages (C#)</span></span>](master-detail-filtering-across-two-pages-cs.md)
+- [<span data-ttu-id="36029-108">Représentation maître/détail utilisant un GridView maître pouvant être sélectionné avec une DetailView des détails (C#)</span><span class="sxs-lookup"><span data-stu-id="36029-108">Master/Detail Using a Selectable Master GridView with a Details DetailView (C#)</span></span>](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs.md)
+- [<span data-ttu-id="36029-109">Filtrage maître/détail avec une DropDownList (VB)</span><span class="sxs-lookup"><span data-stu-id="36029-109">Master/Detail Filtering With a DropDownList (VB)</span></span>](master-detail-filtering-with-a-dropdownlist-vb.md)
+- [<span data-ttu-id="36029-110">Filtrage maître/détail avec deux DropDownList (VB)</span><span class="sxs-lookup"><span data-stu-id="36029-110">Master/Detail Filtering With Two DropDownLists (VB)</span></span>](master-detail-filtering-with-two-dropdownlists-vb.md)
+- [<span data-ttu-id="36029-111">Filtrage maître/détail sur deux pages (VB)</span><span class="sxs-lookup"><span data-stu-id="36029-111">Master/Detail Filtering Across Two Pages (VB)</span></span>](master-detail-filtering-across-two-pages-vb.md)
+- [<span data-ttu-id="36029-112">Représentation maître/détail utilisant un GridView maître pouvant être sélectionné avec une DetailView des détails (VB)</span><span class="sxs-lookup"><span data-stu-id="36029-112">Master/Detail Using a Selectable Master GridView with a Details DetailView (VB)</span></span>](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-vb.md)

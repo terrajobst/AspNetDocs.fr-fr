@@ -6,20 +6,20 @@ ms.author: riande
 ms.date: 2/15/2019
 uid: samesite/CSharpWebForms
 ms.openlocfilehash: 50d4745eca5954275abaa59dab726e7cf7ea193f
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77458482"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78526116"
 ---
-# <a name="samesite-cookie-sample-for-aspnet-472-c-webforms"></a><span data-ttu-id="b75fb-103">Exemple de cookie SameSite pour ASP.NET C# 4.7.2 WebForms</span><span class="sxs-lookup"><span data-stu-id="b75fb-103">SameSite cookie sample for ASP.NET 4.7.2 C# WebForms</span></span>
+# <a name="samesite-cookie-sample-for-aspnet-472-c-webforms"></a><span data-ttu-id="60f95-103">Exemple de cookie SameSite pour ASP.NET C# 4.7.2 WebForms</span><span class="sxs-lookup"><span data-stu-id="60f95-103">SameSite cookie sample for ASP.NET 4.7.2 C# WebForms</span></span>
 
-<span data-ttu-id="b75fb-104">.NET Framework 4,7 dispose d’une prise en charge intégrée de l’attribut [SameSite](https://www.owasp.org/index.php/SameSite) , mais il adhère à la norme d’origine.</span><span class="sxs-lookup"><span data-stu-id="b75fb-104">.NET Framework 4.7 has built-in support for the [SameSite](https://www.owasp.org/index.php/SameSite) attribute, but it adheres to the original standard.</span></span>
-<span data-ttu-id="b75fb-105">Le comportement corrigé a modifié la signification de `SameSite.None` pour émettre l’attribut avec une valeur de `None`, au lieu de ne pas émettre la valeur du tout.</span><span class="sxs-lookup"><span data-stu-id="b75fb-105">The patched behavior changed the meaning of `SameSite.None` to emit the attribute with a value of `None`, rather than not emit the value at all.</span></span> <span data-ttu-id="b75fb-106">Si vous ne souhaitez pas émettre la valeur, vous pouvez définir la propriété `SameSite` sur un cookie sur-1.</span><span class="sxs-lookup"><span data-stu-id="b75fb-106">If you want to not emit the value you can set the `SameSite` property on a cookie to -1.</span></span>
+<span data-ttu-id="60f95-104">.NET Framework 4,7 dispose d’une prise en charge intégrée de l’attribut [SameSite](https://www.owasp.org/index.php/SameSite) , mais il adhère à la norme d’origine.</span><span class="sxs-lookup"><span data-stu-id="60f95-104">.NET Framework 4.7 has built-in support for the [SameSite](https://www.owasp.org/index.php/SameSite) attribute, but it adheres to the original standard.</span></span>
+<span data-ttu-id="60f95-105">Le comportement corrigé a modifié la signification de `SameSite.None` pour émettre l’attribut avec une valeur de `None`, au lieu de ne pas émettre la valeur du tout.</span><span class="sxs-lookup"><span data-stu-id="60f95-105">The patched behavior changed the meaning of `SameSite.None` to emit the attribute with a value of `None`, rather than not emit the value at all.</span></span> <span data-ttu-id="60f95-106">Si vous ne souhaitez pas émettre la valeur, vous pouvez définir la propriété `SameSite` sur un cookie sur-1.</span><span class="sxs-lookup"><span data-stu-id="60f95-106">If you want to not emit the value you can set the `SameSite` property on a cookie to -1.</span></span>
 
-## <a name="sampleCode"></a><span data-ttu-id="b75fb-107">Écriture de l’attribut SameSite</span><span class="sxs-lookup"><span data-stu-id="b75fb-107">Writing the SameSite attribute</span></span>
+## <a name="sampleCode"></a><span data-ttu-id="60f95-107">Écriture de l’attribut SameSite</span><span class="sxs-lookup"><span data-stu-id="60f95-107">Writing the SameSite attribute</span></span>
 
-<span data-ttu-id="b75fb-108">Voici un exemple d’écriture d’un attribut SameSite sur un cookie ;</span><span class="sxs-lookup"><span data-stu-id="b75fb-108">Following is an example of how to write a SameSite attribute on a cookie;</span></span>
+<span data-ttu-id="60f95-108">Voici un exemple d’écriture d’un attribut SameSite sur un cookie ;</span><span class="sxs-lookup"><span data-stu-id="60f95-108">Following is an example of how to write a SameSite attribute on a cookie;</span></span>
 
 ```c#
 // Create the cookie
@@ -46,7 +46,7 @@ Response.Cookies.Add(sameSiteCookie);
 
 [!INCLUDE[](~/includes/MTcomments.md)]
 
-<span data-ttu-id="b75fb-109">L’attribut sameSite par défaut d’un cookie d’authentification par formulaire est défini dans le paramètre `cookieSameSite` des paramètres d’authentification par formulaire dans `web.config`</span><span class="sxs-lookup"><span data-stu-id="b75fb-109">The default sameSite attribute for a forms authentication cookie is set in the `cookieSameSite` parameter of the forms authentication settings in `web.config`</span></span> 
+<span data-ttu-id="60f95-109">L’attribut sameSite par défaut d’un cookie d’authentification par formulaire est défini dans le paramètre `cookieSameSite` des paramètres d’authentification par formulaire dans `web.config`</span><span class="sxs-lookup"><span data-stu-id="60f95-109">The default sameSite attribute for a forms authentication cookie is set in the `cookieSameSite` parameter of the forms authentication settings in `web.config`</span></span> 
 
 ```xml
 <system.web>
@@ -57,7 +57,7 @@ Response.Cookies.Add(sameSiteCookie);
 </system.web>
 ```
 
-<span data-ttu-id="b75fb-110">L’attribut sameSite par défaut pour l’état de session est également défini dans le paramètre « cookieSameSite » des paramètres de session dans `web.config`</span><span class="sxs-lookup"><span data-stu-id="b75fb-110">The default sameSite attribute for session state is also set in the 'cookieSameSite' parameter of the session settings in `web.config`</span></span>
+<span data-ttu-id="60f95-110">L’attribut sameSite par défaut pour l’état de session est également défini dans le paramètre « cookieSameSite » des paramètres de session dans `web.config`</span><span class="sxs-lookup"><span data-stu-id="60f95-110">The default sameSite attribute for session state is also set in the 'cookieSameSite' parameter of the session settings in `web.config`</span></span>
 
 ```xml
 <system.web>
@@ -66,22 +66,22 @@ Response.Cookies.Add(sameSiteCookie);
 </system.web>
 ```
 
-<span data-ttu-id="b75fb-111">La mise à jour de novembre 2019 de .NET a modifié les paramètres par défaut pour l’authentification par formulaire et la session sur `lax` comme le paramètre le plus compatible. Toutefois, si vous incorporez des pages dans des IFRAME, vous devrez peut-être rétablir ce paramètre sur aucun, puis ajouter le code d' [interception](#interception) indiqué ci-dessous pour ajuster le comportement `none` en fonction de la fonctionnalité du navigateur.</span><span class="sxs-lookup"><span data-stu-id="b75fb-111">The November 2019 update to .NET changed the default settings for Forms Authentication and Session to `lax` as is the most compatible setting, however if you embed pages into iframes you may need to revert this setting to None, and then add the [interception](#interception) code shown below to adjust the `none` behavior depending on browser capability.</span></span>
+<span data-ttu-id="60f95-111">La mise à jour de novembre 2019 de .NET a modifié les paramètres par défaut pour l’authentification par formulaire et la session sur `lax` comme le paramètre le plus compatible. Toutefois, si vous incorporez des pages dans des IFRAME, vous devrez peut-être rétablir ce paramètre sur aucun, puis ajouter le code d' [interception](#interception) indiqué ci-dessous pour ajuster le comportement `none` en fonction de la fonctionnalité du navigateur.</span><span class="sxs-lookup"><span data-stu-id="60f95-111">The November 2019 update to .NET changed the default settings for Forms Authentication and Session to `lax` as is the most compatible setting, however if you embed pages into iframes you may need to revert this setting to None, and then add the [interception](#interception) code shown below to adjust the `none` behavior depending on browser capability.</span></span>
 
-### <a name="running-the-sample"></a><span data-ttu-id="b75fb-112">Exécution de l’exemple</span><span class="sxs-lookup"><span data-stu-id="b75fb-112">Running the sample</span></span>
+### <a name="running-the-sample"></a><span data-ttu-id="60f95-112">Exécution de l'exemple</span><span class="sxs-lookup"><span data-stu-id="60f95-112">Running the sample</span></span>
 
-<span data-ttu-id="b75fb-113">Si vous exécutez l’exemple de projet, chargez votre débogueur de navigateur sur la page initiale et utilisez-le pour afficher la collection de cookies pour le site.</span><span class="sxs-lookup"><span data-stu-id="b75fb-113">If you run the sample project  load your browser debugger on the initial page and use it to view the cookie collection for the site.</span></span>
-<span data-ttu-id="b75fb-114">Pour ce faire, dans Edge et chrome, appuyez sur `F12` sélectionnez l’onglet `Application` et cliquez sur l’URL du site sous l’option `Cookies` dans la section `Storage`.</span><span class="sxs-lookup"><span data-stu-id="b75fb-114">To do so in Edge and Chrome press `F12` then select the `Application` tab and click the site URL under the `Cookies` option in the `Storage` section.</span></span>
+<span data-ttu-id="60f95-113">Si vous exécutez l’exemple de projet, chargez votre débogueur de navigateur sur la page initiale et utilisez-le pour afficher la collection de cookies pour le site.</span><span class="sxs-lookup"><span data-stu-id="60f95-113">If you run the sample project  load your browser debugger on the initial page and use it to view the cookie collection for the site.</span></span>
+<span data-ttu-id="60f95-114">Pour ce faire, dans Edge et chrome, appuyez sur `F12` sélectionnez l’onglet `Application` et cliquez sur l’URL du site sous l’option `Cookies` dans la section `Storage`.</span><span class="sxs-lookup"><span data-stu-id="60f95-114">To do so in Edge and Chrome press `F12` then select the `Application` tab and click the site URL under the `Cookies` option in the `Storage` section.</span></span>
 
 ![Liste des cookies du débogueur de navigateur](sample/img/BrowserDebugger.png)
 
-<span data-ttu-id="b75fb-116">Vous pouvez voir à partir de l’image ci-dessus que le cookie créé par l’exemple lorsque vous cliquez sur le bouton « créer des cookies » a une valeur d’attribut SameSite de `Lax`, correspondant à la valeur définie dans l' [exemple de code](#sampleCode).</span><span class="sxs-lookup"><span data-stu-id="b75fb-116">You can see from the image above that the cookie created by the sample when you click the "Create Cookies" button has a SameSite attribute value of `Lax`, matching the value set in the [sample code](#sampleCode).</span></span>
+<span data-ttu-id="60f95-116">Vous pouvez voir à partir de l’image ci-dessus que le cookie créé par l’exemple lorsque vous cliquez sur le bouton « créer des cookies » a une valeur d’attribut SameSite de `Lax`, correspondant à la valeur définie dans l' [exemple de code](#sampleCode).</span><span class="sxs-lookup"><span data-stu-id="60f95-116">You can see from the image above that the cookie created by the sample when you click the "Create Cookies" button has a SameSite attribute value of `Lax`, matching the value set in the [sample code](#sampleCode).</span></span>
 
-## <a name="interception"></a><span data-ttu-id="b75fb-117">Interception des cookies que vous ne contrôlez pas</span><span class="sxs-lookup"><span data-stu-id="b75fb-117">Intercepting cookies you do not control</span></span>
+## <a name="interception"></a><span data-ttu-id="60f95-117">Interception des cookies que vous ne contrôlez pas</span><span class="sxs-lookup"><span data-stu-id="60f95-117">Intercepting cookies you do not control</span></span>
 
-<span data-ttu-id="b75fb-118">.NET 4.5.2 a introduit un nouvel événement pour intercepter l’écriture des en-têtes, `Response.AddOnSendingHeaders`.</span><span class="sxs-lookup"><span data-stu-id="b75fb-118">.NET 4.5.2 introduced a new event for intercepting the writing of headers, `Response.AddOnSendingHeaders`.</span></span> <span data-ttu-id="b75fb-119">Cela peut être utilisé pour intercepter les cookies avant qu’ils ne soient retournés à l’ordinateur client.</span><span class="sxs-lookup"><span data-stu-id="b75fb-119">This can be used to intercept cookies before they are returned to the client machine.</span></span> <span data-ttu-id="b75fb-120">Dans l’exemple, nous allons associer l’événement à une méthode statique qui vérifie si le navigateur prend en charge les modifications apportées au nouveau sameSite, et dans le cas contraire, modifie les cookies pour ne pas émettre l’attribut si la nouvelle valeur de `None` a été définie.</span><span class="sxs-lookup"><span data-stu-id="b75fb-120">In the sample we wire up the event to a static method which checks whether the browser supports the new sameSite changes, and if not, changes the cookies to not emit the attribute if the new `None` value has been set.</span></span>
+<span data-ttu-id="60f95-118">.NET 4.5.2 a introduit un nouvel événement pour intercepter l’écriture des en-têtes, `Response.AddOnSendingHeaders`.</span><span class="sxs-lookup"><span data-stu-id="60f95-118">.NET 4.5.2 introduced a new event for intercepting the writing of headers, `Response.AddOnSendingHeaders`.</span></span> <span data-ttu-id="60f95-119">Cela peut être utilisé pour intercepter les cookies avant qu’ils ne soient retournés à l’ordinateur client.</span><span class="sxs-lookup"><span data-stu-id="60f95-119">This can be used to intercept cookies before they are returned to the client machine.</span></span> <span data-ttu-id="60f95-120">Dans l’exemple, nous allons associer l’événement à une méthode statique qui vérifie si le navigateur prend en charge les modifications apportées au nouveau sameSite, et dans le cas contraire, modifie les cookies pour ne pas émettre l’attribut si la nouvelle valeur de `None` a été définie.</span><span class="sxs-lookup"><span data-stu-id="60f95-120">In the sample we wire up the event to a static method which checks whether the browser supports the new sameSite changes, and if not, changes the cookies to not emit the attribute if the new `None` value has been set.</span></span>
 
-<span data-ttu-id="b75fb-121">Consultez [global. asax](https://github.com/blowdart/AspNetSameSiteSamples/blob/master/AspNet472CSharpWebForms/Global.asax.cs) pour obtenir un exemple de raccordement de l’événement et de [SameSiteCookieRewriter.cs](https://github.com/blowdart/AspNetSameSiteSamples/blob/master/AspNet472CSharpWebForms/SameSiteCookieRewriter.cs) pour obtenir un exemple de gestion de l’événement et d’ajustement de l’attribut `sameSite` cookie.</span><span class="sxs-lookup"><span data-stu-id="b75fb-121">See [global.asax](https://github.com/blowdart/AspNetSameSiteSamples/blob/master/AspNet472CSharpWebForms/Global.asax.cs) for an example of hooking up the event and [SameSiteCookieRewriter.cs](https://github.com/blowdart/AspNetSameSiteSamples/blob/master/AspNet472CSharpWebForms/SameSiteCookieRewriter.cs) for an example of handling the event and adjusting the cookie `sameSite` attribute.</span></span>
+<span data-ttu-id="60f95-121">Consultez [global. asax](https://github.com/blowdart/AspNetSameSiteSamples/blob/master/AspNet472CSharpWebForms/Global.asax.cs) pour obtenir un exemple de raccordement de l’événement et de [SameSiteCookieRewriter.cs](https://github.com/blowdart/AspNetSameSiteSamples/blob/master/AspNet472CSharpWebForms/SameSiteCookieRewriter.cs) pour obtenir un exemple de gestion de l’événement et d’ajustement de l’attribut `sameSite` cookie.</span><span class="sxs-lookup"><span data-stu-id="60f95-121">See [global.asax](https://github.com/blowdart/AspNetSameSiteSamples/blob/master/AspNet472CSharpWebForms/Global.asax.cs) for an example of hooking up the event and [SameSiteCookieRewriter.cs](https://github.com/blowdart/AspNetSameSiteSamples/blob/master/AspNet472CSharpWebForms/SameSiteCookieRewriter.cs) for an example of handling the event and adjusting the cookie `sameSite` attribute.</span></span>
 
 ```c#
 public static void FilterSameSiteNoneForIncompatibleUserAgents(object sender)
@@ -109,7 +109,7 @@ public static void FilterSameSiteNoneForIncompatibleUserAgents(object sender)
 }
 ```
 
-<span data-ttu-id="b75fb-122">Vous pouvez modifier le comportement d’un cookie nommé de façon similaire ; l’exemple ci-dessous ajuste le cookie d’authentification par défaut de `Lax` à `None` sur les navigateurs qui prennent en charge la valeur de `None`, ou supprime l’attribut sameSite sur les navigateurs qui ne prennent pas en charge `None`.</span><span class="sxs-lookup"><span data-stu-id="b75fb-122">You can change specific named cookie behavior in much the same way; the sample below adjust the default authentication cookie from `Lax` to `None` on browsers which support the `None` value, or removes the sameSite attribute on browsers which do not support `None`.</span></span>
+<span data-ttu-id="60f95-122">Vous pouvez modifier le comportement d’un cookie nommé de façon similaire ; l’exemple ci-dessous ajuste le cookie d’authentification par défaut de `Lax` à `None` sur les navigateurs qui prennent en charge la valeur de `None`, ou supprime l’attribut sameSite sur les navigateurs qui ne prennent pas en charge `None`.</span><span class="sxs-lookup"><span data-stu-id="60f95-122">You can change specific named cookie behavior in much the same way; the sample below adjust the default authentication cookie from `Lax` to `None` on browsers which support the `None` value, or removes the sameSite attribute on browsers which do not support `None`.</span></span>
 
 ```c#
 public static void AdjustSpecificCookieSettings()
@@ -139,10 +139,10 @@ public static void AdjustSpecificCookieSettings()
 }
 ```
 
-## <a name="more-information"></a><span data-ttu-id="b75fb-123">Informations supplémentaires</span><span class="sxs-lookup"><span data-stu-id="b75fb-123">More Information</span></span>
+## <a name="more-information"></a><span data-ttu-id="60f95-123">Plus d'informations</span><span class="sxs-lookup"><span data-stu-id="60f95-123">More Information</span></span>
 
-[<span data-ttu-id="b75fb-124">Mises à jour chrome</span><span class="sxs-lookup"><span data-stu-id="b75fb-124">Chrome Updates</span></span>](https://www.chromium.org/updates/same-site)
+[<span data-ttu-id="60f95-124">Mises à jour chrome</span><span class="sxs-lookup"><span data-stu-id="60f95-124">Chrome Updates</span></span>](https://www.chromium.org/updates/same-site)
 
-[<span data-ttu-id="b75fb-125">Documentation ASP.NET</span><span class="sxs-lookup"><span data-stu-id="b75fb-125">ASP.NET Documentation</span></span>](/aspnet/samesite/system-web-samesite)
+[<span data-ttu-id="60f95-125">Documentation ASP.NET</span><span class="sxs-lookup"><span data-stu-id="60f95-125">ASP.NET Documentation</span></span>](/aspnet/samesite/system-web-samesite)
 
-[<span data-ttu-id="b75fb-126">Correctifs SameSite .NET</span><span class="sxs-lookup"><span data-stu-id="b75fb-126">.NET SameSite Patches</span></span>](/aspnet/samesite/kbs-samesite)
+[<span data-ttu-id="60f95-126">Correctifs SameSite .NET</span><span class="sxs-lookup"><span data-stu-id="60f95-126">.NET SameSite Patches</span></span>](/aspnet/samesite/kbs-samesite)

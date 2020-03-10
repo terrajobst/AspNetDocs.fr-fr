@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/jquery-mobile/cdnjquerymobile131
-title: jQuery Mobile 1.3.1 sur le CDN Microsoft Ajax | Microsoft Docs
+title: jQuery mobile 1.3.1 sur le CDN Microsoft Ajax | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,15 +9,15 @@ ms.assetid: b5c41c56-f5df-489e-9389-25e2523cdd28
 msc.legacyurl: /ajax/cdn/jquery-mobile/cdnjquerymobile131
 msc.type: content
 ms.openlocfilehash: 7c25f3e43a1d4a06c9fc2b22ba9f66a6fcef3bca
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59395398"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78562936"
 ---
-# <a name="jquery-mobile-131-on-the-microsoft-ajax-cdn"></a><span data-ttu-id="c603e-102">jQuery Mobile 1.3.1 sur le CDN Microsoft Ajax</span><span class="sxs-lookup"><span data-stu-id="c603e-102">jQuery Mobile 1.3.1 on the Microsoft Ajax CDN</span></span>
+# <a name="jquery-mobile-131-on-the-microsoft-ajax-cdn"></a><span data-ttu-id="46730-102">jQuery Mobile 1.3.1 sur le CDN Microsoft Ajax</span><span class="sxs-lookup"><span data-stu-id="46730-102">jQuery Mobile 1.3.1 on the Microsoft Ajax CDN</span></span>
 
-<span data-ttu-id="c603e-103">La bibliothèque de Mobile 1.3.1 jQuery inclut les fichiers suivants :</span><span class="sxs-lookup"><span data-stu-id="c603e-103">The jQuery Mobile 1.3.1 library includes the following files:</span></span>
+<span data-ttu-id="46730-103">La bibliothèque jQuery mobile 1.3.1 comprend les fichiers suivants :</span><span class="sxs-lookup"><span data-stu-id="46730-103">The jQuery Mobile 1.3.1 library includes the following files:</span></span>
 
 - https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.3.1/jquery.mobile.structure-1.3.1.css
 - https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css
