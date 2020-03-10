@@ -2,34 +2,34 @@
 uid: visual-studio/overview/2012/index
 title: ASP.NET et Visual Studio 2012 | Microsoft Docs
 author: rick-anderson
-description: Développer des applications web ASP.NET avec Visual Studio 2012
+description: Développement d’applications Web ASP.NET avec Visual Studio 2012
 ms.author: riande
 ms.date: 06/25/2013
 ms.assetid: 51900291-7787-4a6e-be4e-fa558486f5ff
 msc.legacyurl: /visual-studio/overview/2012
 msc.type: chapter
 ms.openlocfilehash: 56db68a976226cc77084aad782cdfe2e7fbf31e1
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113205"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558057"
 ---
-# <a name="aspnet-and-visual-studio-2012"></a><span data-ttu-id="6aa24-103">ASP.NET et Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="6aa24-103">ASP.NET and Visual Studio 2012</span></span>
+# <a name="aspnet-and-visual-studio-2012"></a><span data-ttu-id="966df-103">ASP.NET et Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="966df-103">ASP.NET and Visual Studio 2012</span></span>
 
-> <span data-ttu-id="6aa24-104">Développer des applications web ASP.NET avec Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="6aa24-104">Developing ASP.NET web apps with Visual Studio 2012</span></span>
+> <span data-ttu-id="966df-104">Développement d’applications Web ASP.NET avec Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="966df-104">Developing ASP.NET web apps with Visual Studio 2012</span></span>
 
-- [<span data-ttu-id="6aa24-105">Fonctionnalités d’édition HTML de Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="6aa24-105">Visual Studio 2012 HTML Editing Features</span></span>](visual-studio-2012-html-editing-features.md)
-- [<span data-ttu-id="6aa24-106">Éditeur CSS de Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="6aa24-106">Visual Studio 2012 CSS Editor</span></span>](visual-studio-2012-css-editor.md)
-- [<span data-ttu-id="6aa24-107">Éditeur JavaScript de Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="6aa24-107">Visual Studio 2012 JavaScript Editor</span></span>](visual-studio-2012-javascript-editor.md)
-- [<span data-ttu-id="6aa24-108">Inspecteur de page de Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="6aa24-108">Visual Studio 2012 Page Inspector</span></span>](visual-studio-2012-page-inspector.md)
-- [<span data-ttu-id="6aa24-109">Améliorations de la publication web de Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="6aa24-109">Visual Studio 2012 Web Publishing Improvements</span></span>](visual-studio-2012-web-publishing-improvements.md)
-- [<span data-ttu-id="6aa24-110">ASP.NET et Web Tools 2013.1 pour Visual Studio 2012 - Notes de publication</span><span class="sxs-lookup"><span data-stu-id="6aa24-110">Release Notes for ASP.NET and Web Tools 2013.1 for Visual Studio 2012</span></span>](aspnet-and-web-tools-20131-for-visual-studio-2012.md)
-- [<span data-ttu-id="6aa24-111">Tâches guidées de l’éditeur HTML et génération d’un gestionnaire d’événements</span><span class="sxs-lookup"><span data-stu-id="6aa24-111">HTML Editor Smart Tasks and Event Handler Generation</span></span>](visual-studio-vnext-videos-html-editor-smart-tasks-and-event-handler-generation.md)
-- [<span data-ttu-id="6aa24-112">Indentation hiérarchique de l’éditeur CSS</span><span class="sxs-lookup"><span data-stu-id="6aa24-112">CSS Editor Hierarchical Indentation</span></span>](visual-studio-vnext-videos-css-editor-hierarchical-indentation.md)
-- [<span data-ttu-id="6aa24-113">Extraits de code de l’éditeur CSS</span><span class="sxs-lookup"><span data-stu-id="6aa24-113">CSS Editor Snippets</span></span>](visual-studio-vnext-videos-css-editor-snippets.md)
-- [<span data-ttu-id="6aa24-114">Sélecteur de couleurs de l’éditeur CSS</span><span class="sxs-lookup"><span data-stu-id="6aa24-114">CSS Editor Color Picker</span></span>](visual-studio-vnext-videos-css-editor-color-picker.md)
-- [<span data-ttu-id="6aa24-115">Inspecteur de page - Introduction</span><span class="sxs-lookup"><span data-stu-id="6aa24-115">Page Inspector - Introduction</span></span>](visual-studio-vnext-videos-page-inspector-introduction.md)
-- [<span data-ttu-id="6aa24-116">Inspecteur de page - Décomposition de votre application web</span><span class="sxs-lookup"><span data-stu-id="6aa24-116">Page Inspector - Decomposing your Web Application</span></span>](visual-studio-vnext-videos-page-inspector-decomposing-your-web-application.md)
-- [<span data-ttu-id="6aa24-117">Authentification Windows Azure</span><span class="sxs-lookup"><span data-stu-id="6aa24-117">Windows Azure Authentication</span></span>](windows-azure-authentication.md)
-- [<span data-ttu-id="6aa24-118">ASP.NET et Web Tools 2012.2 - Notes de publication</span><span class="sxs-lookup"><span data-stu-id="6aa24-118">ASP.NET and Web Tools 2012.2 Release Notes</span></span>](aspnet-and-web-tools-20122-release-notes-rtw.md)
+- [<span data-ttu-id="966df-105">Fonctionnalités d’édition HTML de Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="966df-105">Visual Studio 2012 HTML Editing Features</span></span>](visual-studio-2012-html-editing-features.md)
+- [<span data-ttu-id="966df-106">Éditeur CSS de Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="966df-106">Visual Studio 2012 CSS Editor</span></span>](visual-studio-2012-css-editor.md)
+- [<span data-ttu-id="966df-107">Éditeur JavaScript de Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="966df-107">Visual Studio 2012 JavaScript Editor</span></span>](visual-studio-2012-javascript-editor.md)
+- [<span data-ttu-id="966df-108">Inspecteur de page de Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="966df-108">Visual Studio 2012 Page Inspector</span></span>](visual-studio-2012-page-inspector.md)
+- [<span data-ttu-id="966df-109">Améliorations de la publication web de Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="966df-109">Visual Studio 2012 Web Publishing Improvements</span></span>](visual-studio-2012-web-publishing-improvements.md)
+- [<span data-ttu-id="966df-110">ASP.NET et Web Tools 2013.1 pour Visual Studio 2012 - Notes de publication</span><span class="sxs-lookup"><span data-stu-id="966df-110">Release Notes for ASP.NET and Web Tools 2013.1 for Visual Studio 2012</span></span>](aspnet-and-web-tools-20131-for-visual-studio-2012.md)
+- [<span data-ttu-id="966df-111">Tâches guidées de l’éditeur HTML et génération d’un gestionnaire d’événements</span><span class="sxs-lookup"><span data-stu-id="966df-111">HTML Editor Smart Tasks and Event Handler Generation</span></span>](visual-studio-vnext-videos-html-editor-smart-tasks-and-event-handler-generation.md)
+- [<span data-ttu-id="966df-112">Indentation hiérarchique de l’éditeur CSS</span><span class="sxs-lookup"><span data-stu-id="966df-112">CSS Editor Hierarchical Indentation</span></span>](visual-studio-vnext-videos-css-editor-hierarchical-indentation.md)
+- [<span data-ttu-id="966df-113">Extraits de code de l’éditeur CSS</span><span class="sxs-lookup"><span data-stu-id="966df-113">CSS Editor Snippets</span></span>](visual-studio-vnext-videos-css-editor-snippets.md)
+- [<span data-ttu-id="966df-114">Sélecteur de couleurs de l’éditeur CSS</span><span class="sxs-lookup"><span data-stu-id="966df-114">CSS Editor Color Picker</span></span>](visual-studio-vnext-videos-css-editor-color-picker.md)
+- [<span data-ttu-id="966df-115">Inspecteur de page - Introduction</span><span class="sxs-lookup"><span data-stu-id="966df-115">Page Inspector - Introduction</span></span>](visual-studio-vnext-videos-page-inspector-introduction.md)
+- [<span data-ttu-id="966df-116">Inspecteur de page - Décomposition de votre application web</span><span class="sxs-lookup"><span data-stu-id="966df-116">Page Inspector - Decomposing your Web Application</span></span>](visual-studio-vnext-videos-page-inspector-decomposing-your-web-application.md)
+- [<span data-ttu-id="966df-117">Authentification Windows Azure</span><span class="sxs-lookup"><span data-stu-id="966df-117">Windows Azure Authentication</span></span>](windows-azure-authentication.md)
+- [<span data-ttu-id="966df-118">ASP.NET et Web Tools 2012.2 - Notes de publication</span><span class="sxs-lookup"><span data-stu-id="966df-118">ASP.NET and Web Tools 2012.2 Release Notes</span></span>](aspnet-and-web-tools-20122-release-notes-rtw.md)

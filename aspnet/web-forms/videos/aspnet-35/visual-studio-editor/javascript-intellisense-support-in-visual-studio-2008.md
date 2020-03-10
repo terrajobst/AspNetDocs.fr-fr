@@ -1,29 +1,29 @@
 ---
 uid: web-forms/videos/aspnet-35/visual-studio-editor/javascript-intellisense-support-in-visual-studio-2008
-title: Prise en charge de JavaScript Intellisense dans Visual Studio 2008 | Microsoft Docs
+title: Prise en charge de JavaScript IntelliSense dans Visual Studio 2008 | Microsoft Docs
 author: JoeStagner
-description: Dans cette vidéo, que je détaille certaines de JavaScript Intellisense intégrée dans Visual Studio 2008. Je montrerai des moyens d’améliorer la featu Intellisense JavaScript...
+description: Dans cette vidéo, je vais mettre en évidence une partie de JavaScript IntelliSense intégrée à Visual Studio 2008. Je vais vous montrer comment améliorer le Feature JavaScript IntelliSense...
 ms.author: riande
 ms.date: 11/15/2007
 ms.assetid: a4429553-d43e-4169-9fb3-086405ec9c93
 msc.legacyurl: /web-forms/videos/aspnet-35/visual-studio-editor/javascript-intellisense-support-in-visual-studio-2008
 msc.type: video
 ms.openlocfilehash: 0b0c52c2a442e0cf8367fe168c6b2f99b1126a6b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396004"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78572876"
 ---
-# <a name="javascript-intellisense-support-in-visual-studio-2008"></a><span data-ttu-id="e55b6-104">Prise en charge de JavaScript IntelliSense dans Visual Studio 2008</span><span class="sxs-lookup"><span data-stu-id="e55b6-104">JavaScript Intellisense Support in Visual Studio 2008</span></span>
+# <a name="javascript-intellisense-support-in-visual-studio-2008"></a><span data-ttu-id="63d68-104">Prise en charge de JavaScript IntelliSense dans Visual Studio 2008</span><span class="sxs-lookup"><span data-stu-id="63d68-104">JavaScript Intellisense Support in Visual Studio 2008</span></span>
 
-<span data-ttu-id="e55b6-105">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="e55b6-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="63d68-105">par [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="63d68-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="e55b6-106">Dans cette vidéo, que je détaille certaines de JavaScript Intellisense intégrée dans Visual Studio 2008.</span><span class="sxs-lookup"><span data-stu-id="e55b6-106">In this video I will highlight some of JavaScript Intellisense built into Visual Studio 2008.</span></span> <span data-ttu-id="e55b6-107">Je montrerai des moyens d’améliorer la fonctionnalité Intellisense JavaScript selon la manière dont vous écrivez votre code JavaScript.</span><span class="sxs-lookup"><span data-stu-id="e55b6-107">I will show ways of improving the Intellisense JavaScript feature by the way you write your JavaScript code.</span></span>
+<span data-ttu-id="63d68-106">Dans cette vidéo, je vais mettre en évidence une partie de JavaScript IntelliSense intégrée à Visual Studio 2008.</span><span class="sxs-lookup"><span data-stu-id="63d68-106">In this video I will highlight some of JavaScript Intellisense built into Visual Studio 2008.</span></span> <span data-ttu-id="63d68-107">Je vais vous montrer comment améliorer la fonctionnalité JavaScript IntelliSense en écrivant votre code JavaScript.</span><span class="sxs-lookup"><span data-stu-id="63d68-107">I will show ways of improving the Intellisense JavaScript feature by the way you write your JavaScript code.</span></span>
 
-[<span data-ttu-id="e55b6-108">&#9654;Regardez la vidéo (11 minutes)</span><span class="sxs-lookup"><span data-stu-id="e55b6-108">&#9654; Watch video (11 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/javascript-intellisense-support-in-visual-studio-2008)
+[<span data-ttu-id="63d68-108">&#9654;Regarder la vidéo (11 minutes)</span><span class="sxs-lookup"><span data-stu-id="63d68-108">&#9654; Watch video (11 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/javascript-intellisense-support-in-visual-studio-2008)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="e55b6-109">[Précédent](new-designer-support-in-visual-studio-2008.md)
-> [Suivant](javascript-debugging-in-visual-studio-2008.md)</span><span class="sxs-lookup"><span data-stu-id="e55b6-109">[Previous](new-designer-support-in-visual-studio-2008.md)
+> <span data-ttu-id="63d68-109">[Précédent](new-designer-support-in-visual-studio-2008.md)
+> [Suivant](javascript-debugging-in-visual-studio-2008.md)</span><span class="sxs-lookup"><span data-stu-id="63d68-109">[Previous](new-designer-support-in-visual-studio-2008.md)
 [Next](javascript-debugging-in-visual-studio-2008.md)</span></span>
