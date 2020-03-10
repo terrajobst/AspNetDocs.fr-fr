@@ -10,11 +10,11 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity
 msc.type: authoredcontent
 ms.openlocfilehash: 4b2c88280df39aa81d60f9508910e8fe5d6db6b8
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519113"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616815"
 ---
 # <a name="account-confirmation-and-password-recovery-with-aspnet-identity-c"></a>Confirmation de compte et récupération de mot deC#passe avec ASP.net Identity ()
 
@@ -69,10 +69,10 @@ Commencez par installer et exécuter [Visual Studio 2017](https://visualstudio.m
 
 1. Créez un projet Web ASP.NET et sélectionnez le modèle MVC. Web Forms également prendre en charge ASP.NET Identity, vous pouvez suivre des étapes similaires dans une application Web Forms.
 2. Modifiez l’authentification en **comptes d’utilisateur individuels**.
-3. Exécutez l’application, sélectionnez le lien **Register** et inscrivez un utilisateur. À ce stade, la seule validation sur l’adresse e-mail se fait avec l'attribut [[EmailAddress]](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.emailaddressattribute(v=vs.110).aspx).
+3. Exécutez l’application, sélectionnez le lien **Register** et inscrivez un utilisateur. À ce stade, la seule validation sur l’e-mail est avec l’attribut [[EmailAddress]](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.emailaddressattribute(v=vs.110).aspx) .
 4. Dans Explorateur de serveurs, accédez à **Data Connections\DefaultConnection\Tables\AspNetUsers**, cliquez avec le bouton droit et sélectionnez **ouvrir la définition de table**.
 
-    L’illustration suivante montre le schéma `AspNetUsers` :
+    L’illustration suivante montre le schéma de `AspNetUsers` :
 
     ![](account-confirmation-and-password-recovery-with-aspnet-identity/_static/image9.png)
 5. Cliquez avec le bouton droit sur la table **AspNetUsers** et sélectionnez **afficher les données**de la table.  
@@ -132,7 +132,7 @@ L' [application MVC 5 avec Facebook, Twitter, LinkedIn et l’authentification G
 
 ## <a name="email-confirmation"></a>Confirmation par e-mail
 
-Il est judicieux de confirmer l’adresse de messagerie à laquelle un nouvel utilisateur s’inscrit afin de vérifier qu’il n’emprunte pas l’identité d’un autre utilisateur (autrement dit, s’il ne s’est pas inscrit auprès de l’e-mail de quelqu’un d’autre). Supposons que vous ayez un forum de discussion : vous voudriez empêcher `"bob@example.com"` de s'inscrire en tant que `"joe@contoso.com"`. ans la confirmation par courrier électronique, `"joe@contoso.com"` pourrait recevoir du courrier indésirable à partir de votre application. Supposons que Bob s’est inscrit accidentellement comme `"bib@example.com"` et n’avait pas remarqué qu’il ne serait pas en mesure d’utiliser la récupération de mot de passe parce que l’application n’a pas son adresse e-mail correcte. La confirmation par courrier électronique fournit uniquement une protection limitée des robots et ne fournit pas de protection contre les spammeurs déterminés. ils ont de nombreux alias de messagerie de travail qu’ils peuvent utiliser pour s’inscrire. Dans l’exemple ci-dessous, l’utilisateur ne peut pas modifier son mot de passe tant que son compte n’a pas été confirmé (en sélectionnant un lien de confirmation reçu sur le compte de messagerie qu’il a inscrit avec). Vous pouvez appliquer ce processus à d’autres scénarios, par exemple en envoyant un lien pour confirmer et réinitialiser le mot de passe sur les nouveaux comptes créés par l’administrateur, en envoyant un e-mail à l’utilisateur lorsqu’il a modifié son profil, et ainsi de suite. En règle générale, vous souhaitez empêcher les nouveaux utilisateurs d'envoyer des données à votre site web avant qu’ils soient confirmés par courrier électronique, par SMS ou via un autre mécanisme. <a id="build"></a>
+Il est judicieux de confirmer l’adresse de messagerie à laquelle un nouvel utilisateur s’inscrit afin de vérifier qu’il n’emprunte pas l’identité d’un autre utilisateur (autrement dit, s’il ne s’est pas inscrit auprès de l’e-mail de quelqu’un d’autre). Supposons que vous disposiez d’un forum de discussion, vous souhaitiez empêcher `"bob@example.com"` de vous inscrire en tant que `"joe@contoso.com"`. Sans confirmation par courrier électronique, `"joe@contoso.com"` pouvez obtenir un courrier indésirable à partir de votre application. Supposons que Bob s’est inscrit accidentellement comme `"bib@example.com"` et n’avait pas remarqué qu’il ne serait pas en mesure d’utiliser la récupération de mot de passe parce que l’application n’a pas son adresse e-mail correcte. La confirmation par courrier électronique fournit uniquement une protection limitée des robots et ne fournit pas de protection contre les spammeurs déterminés. ils ont de nombreux alias de messagerie de travail qu’ils peuvent utiliser pour s’inscrire. Dans l’exemple ci-dessous, l’utilisateur ne peut pas modifier son mot de passe tant que son compte n’a pas été confirmé (en sélectionnant un lien de confirmation reçu sur le compte de messagerie qu’il a inscrit avec). Vous pouvez appliquer ce processus à d’autres scénarios, par exemple en envoyant un lien pour confirmer et réinitialiser le mot de passe sur les nouveaux comptes créés par l’administrateur, en envoyant un e-mail à l’utilisateur lorsqu’il a modifié son profil, et ainsi de suite. En règle générale, vous souhaitez empêcher les nouveaux utilisateurs d'envoyer des données à votre site web avant qu’ils soient confirmés par courrier électronique, par SMS ou via un autre mécanisme. <a id="build"></a>
 
 ## <a name="build-a-more-complete-sample"></a>Créer un exemple plus complet
 
@@ -187,7 +187,7 @@ Le code suivant montre comment envoyer un e-mail à l’aide de la classe [MailM
 [!code-csharp[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample8.cs)]
 
 > [!WARNING]
-> Sécurité - Ne jamais stocker de données sensibles dans votre code source. Le compte et les informations d’identification sont stockés dans l’appSetting. Sur Azure, vous pouvez stocker en toute sécurité ces valeurs sur l'onglet **[Configurer](https://blogs.msdn.com/b/webdev/archive/2014/06/04/queuebackgroundworkitem-to-reliably-schedule-and-run-long-background-process-in-asp-net.aspx)** dans le portail Azure. Consultez [les meilleures pratiques pour le déploiement des mots de passe et autres données sensibles sur ASP.NET et Azure](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md).
+> Sécurité - Ne jamais stocker de données sensibles dans votre code source. Le compte et les informations d’identification sont stockés dans l’appSetting. Sur Azure, vous pouvez stocker ces valeurs en toute sécurité sous l’onglet **[configurer](https://blogs.msdn.com/b/webdev/archive/2014/06/04/queuebackgroundworkitem-to-reliably-schedule-and-run-long-background-process-in-asp-net.aspx)** de la portail Azure. Consultez [meilleures pratiques pour le déploiement de mots de passe et d’autres données sensibles dans ASP.net et Azure](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md).
 
 Entrez vos informations d’identification SendGrid, exécutez l’application, inscrivez-vous avec un alias de messagerie vous pouvez sélectionner le lien confirmer dans votre e-mail. Pour savoir comment faire avec votre compte de messagerie [Outlook.com](http://outlook.com) , consultez Configuration SMTP de John atten [ C# pour l’hôte SMTP Outlook.com](http://typecastexception.com/post/2013/12/20/C-SMTP-Configuration-for-OutlookCom-SMTP-Host.aspx) et son[ASP.net Identity 2,0 : configuration de la validation de compte et des publications d’autorisation à deux facteurs](http://typecastexception.com/post/2014/04/20/ASPNET-Identity-20-Setting-Up-Account-Validation-and-Two-Factor-Authorization.aspx) .
 

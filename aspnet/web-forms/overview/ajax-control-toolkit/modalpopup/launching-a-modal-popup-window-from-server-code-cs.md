@@ -9,11 +9,11 @@ ms.assetid: 2f67d8ef-73ca-447d-a0cc-6e3168431e6a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/launching-a-modal-popup-window-from-server-code-cs
 msc.type: authoredcontent
 ms.openlocfilehash: fec0ce2cdd24333f65201301718440e1a09d930e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599038"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78613294"
 ---
 # <a name="launching-a-modal-popup-window-from-server-code-c"></a>Lancement d’une fenêtre contextuelle modale à partir de code serveur (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle ModalPopup dans la boîte à outils de contrôle AJAX offre un moyen simple de créer une fenêtre contextuelle modale à l’aide de moyens côté client. Toutefois, certains scénarios requièrent que l’ouverture de la fenêtre contextuelle modale soit déclenchée côté serveur.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle ModalPopup dans la boîte à outils de contrôle AJAX offre un moyen simple de créer une fenêtre contextuelle modale à l’aide de moyens côté client. Toutefois, certains scénarios requièrent que l’ouverture de la fenêtre contextuelle modale soit déclenchée côté serveur.
 
@@ -68,4 +68,4 @@ La fonction `$find()` recherche un élément nommé sur la page et attend l’ID
 La fenêtre contextuelle modale s’affiche lorsque l’utilisateur clique sur l’un des boutons ([cliquez pour afficher l’image en taille réelle](launching-a-modal-popup-window-from-server-code-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](using-modalpopup-with-a-repeater-control-cs.md)
+> [Next](using-modalpopup-with-a-repeater-control-cs.md)

@@ -9,11 +9,11 @@ ms.assetid: 2086cb1a-ab78-49ae-9c0b-03891c69776a
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 110ee08f1d0707664ef6268f34ceab9da30a3e61
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74589664"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78610193"
 ---
 # <a name="adding-validation-controls-to-the-editing-and-inserting-interfaces-c"></a>Ajout de contrôles Validation aux interfaces de modification et d’insertion (C#)
 
@@ -33,7 +33,7 @@ Pour fournir une interface de modification ou d’insertion personnalisée, nous
 
 Dans ce didacticiel, nous allons voir combien il est facile d’ajouter des contrôles de validation à la `EditItemTemplate` du TemplateField et `InsertItemTemplate` de fournir une interface utilisateur plus infaillible. Plus précisément, ce didacticiel prend l’exemple créé dans le didacticiel [examen des événements associés à l’insertion, la mise à jour et la suppression](examining-the-events-associated-with-inserting-updating-and-deleting-cs.md) et augmente les interfaces de modification et d’insertion pour inclure la validation appropriée.
 
-## <a name="step-1-replicating-the-example-fromexamining-the-events-associated-with-inserting-updating-and-deletingexamining-the-events-associated-with-inserting-updating-and-deleting-csmd"></a>Étape 1 : réplication de l’exemple à partir de[l’examen des événements associés à l’insertion, la mise à jour et la suppression](examining-the-events-associated-with-inserting-updating-and-deleting-cs.md)
+## <a name="step-1-replicating-the-example-fromexamining-the-events-associated-with-inserting-updating-and-deleting"></a>Étape 1 : réplication de l’exemple à partir de[l’examen des événements associés à l’insertion, la mise à jour et la suppression](examining-the-events-associated-with-inserting-updating-and-deleting-cs.md)
 
 Dans le didacticiel [examen des événements associés à l’insertion, à la mise à jour et à la suppression,](examining-the-events-associated-with-inserting-updating-and-deleting-cs.md) nous avons créé une page qui répertorie les noms et les prix des produits dans un GridView modifiable. En outre, la page incluait un DetailsView dont la propriété `DefaultMode` était définie sur `Insert`, ce qui rendait donc toujours le rendu en mode insertion. À partir de ce DetailsView, l’utilisateur peut entrer le nom et le prix d’un nouveau produit, cliquer sur Insérer et l’avoir ajouté au système (voir la figure 1).
 
