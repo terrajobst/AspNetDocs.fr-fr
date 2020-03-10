@@ -1,111 +1,111 @@
 ---
 uid: signalr/overview/testing-and-debugging/unit-testing-signalr-applications
-title: Tests unitaires d’Applications de SignalR | Microsoft Docs
+title: Tests unitaires des applications Signalr | Microsoft Docs
 author: bradygaster
-description: Cet article décrit comment utiliser les fonctionnalités Unit Testing de SignalR 2.0.
+description: Cet article explique comment utiliser les fonctionnalités de test unitaire de Signalr 2,0.
 ms.author: bradyg
 ms.date: 06/10/2014
 ms.assetid: d1983524-e0d5-4ee6-9d87-1f552f7cb964
 msc.legacyurl: /signalr/overview/testing-and-debugging/unit-testing-signalr-applications
 msc.type: authoredcontent
 ms.openlocfilehash: 2cf2e88f141d89971439dc1fc4979849f8dded47
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113446"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78578672"
 ---
 # <a name="unit-testing-signalr-applications"></a>Tests unitaires des applications SignalR
 
-par [Patrick Fletcher](https://github.com/pfletcher)
+de [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-> Cet article décrit l’aide des fonctionnalités de SignalR 2 Unit Testing.
+> Cet article décrit l’utilisation des fonctionnalités de test unitaire de Signalr 2.
 >
-> ## <a name="software-versions-used-in-this-topic"></a>Versions des logiciels utilisées dans cette rubrique
+> ## <a name="software-versions-used-in-this-topic"></a>Versions logicielles utilisées dans cette rubrique
 >
 >
 > - [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)
 > - .NET 4.5
-> - SignalR version 2
+> - Signalr version 2
 >
 >
 >
 > ## <a name="questions-and-comments"></a>Questions et commentaires
 >
-> Veuillez laisser des commentaires sur la façon dont vous avez apprécié ce didacticiel et ce que nous pouvions améliorer dans les commentaires en bas de la page. Si vous avez des questions qui ne sont pas directement liées à ce didacticiel, vous pouvez les publier à le [ASP.NET SignalR forum](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
+> N’hésitez pas à nous faire part de vos commentaires sur la façon dont vous aimez ce didacticiel et sur ce que nous pourrions améliorer dans les commentaires en bas de la page. Si vous avez des questions qui ne sont pas directement liées au didacticiel, vous pouvez les poster sur le [forum ASP.net signalr](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
 
 <a id="unit"></a>
-## <a name="unit-testing-signalr-applications"></a>Tests unitaires d’applications de SignalR
+## <a name="unit-testing-signalr-applications"></a>Tests unitaires des applications Signalr
 
-Vous pouvez utiliser les fonctionnalités de test unitaire dans SignalR 2 pour créer des tests unitaires pour votre application SignalR. SignalR 2 inclut le [IHubCallerConnectionContext](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.hubs.ihubcallerconnectioncontext(v=vs.118).aspx) interface, ce qui peut être utilisé pour créer un objet factice afin de simuler vos méthodes de concentrateur de test.
+Vous pouvez utiliser les fonctionnalités de test unitaire dans Signalr 2 pour créer des tests unitaires pour votre application Signalr. Signalr 2 comprend l’interface [IHubCallerConnectionContext](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.hubs.ihubcallerconnectioncontext(v=vs.118).aspx) , qui peut être utilisée pour créer un objet fictif afin de simuler vos méthodes de concentrateur pour le test.
 
-Dans cette section, vous allez ajouter des tests unitaires pour l’application créée dans le [didacticiel mise en route](../getting-started/tutorial-getting-started-with-signalr.md) à l’aide de [XUnit.net](https://github.com/xunit/xunit) et [Moq](https://github.com/Moq/moq4).
+Dans cette section, vous allez ajouter des tests unitaires pour l’application créée dans le [didacticiel prise en main](../getting-started/tutorial-getting-started-with-signalr.md) à l’aide de [xUnit.net](https://github.com/xunit/xunit) et [MOQ](https://github.com/Moq/moq4).
 
-XUnit.net permet de contrôler le test ; Moq permet de créer un [simuler](http://en.wikipedia.org/wiki/Mock_object) objet pour le test. Autres infrastructures factices peuvent être utilisés si vous le souhaitez ; [NSubstitute](http://nsubstitute.github.io/) est également un bon choix. Ce didacticiel montre comment configurer l’objet factice de deux manières : Tout d’abord, à l’aide un `dynamic` objet (introduite dans .NET Framework 4) et la seconde, à l’aide d’une interface.
+XUnit.net sera utilisé pour contrôler le test. MOQ sera utilisé pour créer un objet [fictif](http://en.wikipedia.org/wiki/Mock_object) à des fins de test. D’autres infrastructures factices peuvent être utilisées si vous le souhaitez. [NSubstitute](http://nsubstitute.github.io/) est également un bon choix. Ce didacticiel montre comment configurer l’objet factice de deux manières : tout d’abord, à l’aide d’un objet `dynamic` (introduit dans .NET Framework 4) et du second, à l’aide d’une interface.
 
-### <a name="contents"></a>Sommaire
+### <a name="contents"></a>Contenu
 
 Ce didacticiel contient les sections suivantes.
 
-- [Tests unitaires avec dynamique](#dynamic)
-- [Tests unitaires en type](#type)
+- [Tests unitaires avec Dynamic](#dynamic)
+- [Tests unitaires par type](#type)
 
 <a id="dynamic"></a>
-### <a name="unit-testing-with-dynamic"></a>Tests unitaires avec dynamique
+### <a name="unit-testing-with-dynamic"></a>Tests unitaires avec Dynamic
 
-Dans cette section, vous allez ajouter un test unitaire pour l’application créée dans le [didacticiel mise en route](../getting-started/tutorial-getting-started-with-signalr.md) à l’aide d’un objet dynamique.
+Dans cette section, vous allez ajouter un test unitaire pour l’application créée dans le [didacticiel prise en main](../getting-started/tutorial-getting-started-with-signalr.md) à l’aide d’un objet dynamique.
 
-1. Installer le [extension de Test XUnit Runner](https://visualstudiogallery.msdn.microsoft.com/463c5987-f82b-46c8-a97e-b1cde42b9099) pour Visual Studio 2013.
-2. Terminer la [didacticiel mise en route](../getting-started/tutorial-getting-started-with-signalr.md), ou téléchargez l’application terminée à partir de [MSDN Code Gallery](https://code.msdn.microsoft.com/SignalR-Getting-Started-b9d18aa9).
-3. Si vous utilisez la version de téléchargement de l’application de mise en route, ouvrez **Console du Gestionnaire de Package** et cliquez sur **restaurer** pour ajouter le package de SignalR au projet.
+1. Installez l' [extension du testeur xUnit](https://visualstudiogallery.msdn.microsoft.com/463c5987-f82b-46c8-a97e-b1cde42b9099) pour Visual Studio 2013.
+2. Terminez le [didacticiel prise en main](../getting-started/tutorial-getting-started-with-signalr.md)ou téléchargez l’application terminée à partir de [MSDN Code Gallery](https://code.msdn.microsoft.com/SignalR-Getting-Started-b9d18aa9).
+3. Si vous utilisez la version de téléchargement de l’application Prise en main, ouvrez la **console du gestionnaire de package** , puis cliquez sur **restaurer** pour ajouter le package signalr au projet.
 
-    ![Restaurer des Packages](unit-testing-signalr-applications/_static/image1.png)
-4. Ajouter un projet à la solution pour le test unitaire. Avec le bouton droit de votre solution dans **l’Explorateur de solutions** et sélectionnez **ajouter**, **nouveau projet...** . Sous le **c#** nœud, sélectionnez le **Windows** nœud. Sélectionnez **bibliothèque de classes**. Nommez le nouveau projet **TestLibrary** et cliquez sur **OK**.
+    ![Restaurer les packages](unit-testing-signalr-applications/_static/image1.png)
+4. Ajoutez un projet à la solution pour le test unitaire. Dans **Explorateur de solutions** , cliquez avec le bouton droit sur votre solution, puis sélectionnez **Ajouter**, **nouveau projet...** . Sous le **C#** nœud, sélectionnez le nœud **Windows** . Sélectionnez **bibliothèque de classes**. Nommez le nouveau projet **TestLibrary** , puis cliquez sur **OK**.
 
-    ![Créer la bibliothèque de tests](unit-testing-signalr-applications/_static/image2.png)
-5. Ajoutez une référence dans le projet de bibliothèque de test au projet SignalRChat. Cliquez sur le **TestLibrary** de projet et sélectionnez **ajouter**, **référence...** . Sélectionnez le **projets** nœud sous la **Solution** nœud, puis vérifiez **SignalRChat**. Cliquez sur **OK**.
+    ![Créer une bibliothèque de tests](unit-testing-signalr-applications/_static/image2.png)
+5. Ajoutez une référence dans le projet de bibliothèque de tests au projet SignalRChat. Cliquez avec le bouton droit sur le projet **TestLibrary** , puis sélectionnez **Ajouter**, **référence..** .. Sélectionnez le nœud **projets** sous le nœud de la **solution** , puis cochez **SignalRChat**. Cliquez sur **OK**.
 
     ![Ajouter une référence de projet](unit-testing-signalr-applications/_static/image3.png)
-6. Ajoutez les packages SignalR, Moq et XUnit pour le **TestLibrary** projet. Dans le **Console du Gestionnaire de Package**, définissez le **projet par défaut** menu déroulant pour **TestLibrary**. Exécutez les commandes suivantes dans la fenêtre de console :
+6. Ajoutez les packages Signalr, MOQ et XUnit au projet **TestLibrary** . Dans la **console du gestionnaire de package**, définissez la liste déroulante **projet par défaut** sur **TestLibrary**. Exécutez les commandes suivantes dans la fenêtre de console :
 
    - `Install-Package Microsoft.AspNet.SignalR`
    - `Install-Package Moq`
    - `Install-Package XUnit`
 
-     ![Installer des Packages](unit-testing-signalr-applications/_static/image4.png)
-7. Créez le fichier de test. Cliquez sur le **TestLibrary** projet puis cliquez sur **ajouter...** , **Classe**. Nommez la nouvelle classe **Tests.cs**.
+     ![Installer des packages](unit-testing-signalr-applications/_static/image4.png)
+7. Créez le fichier de test. Cliquez avec le bouton droit sur le projet **TestLibrary** , puis cliquez sur **Ajouter...** , **classe**. Nommez la nouvelle classe **tests.cs**.
 8. Remplacez le contenu de Tests.cs par le code suivant.
 
     [!code-csharp[Main](unit-testing-signalr-applications/samples/sample1.cs)]
 
-    Dans le code ci-dessus, un client de test est créé à l’aide de la `Mock` de l’objet à partir de la [Moq](https://github.com/Moq/moq4) bibliothèque, de type [IHubCallerConnectionContext](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.hubs.ihubcallerconnectioncontext(v=vs.118).aspx) (dans SignalR 2.1, affectez `dynamic` pour le type paramètre.) Le `IHubCallerConnectionContext` interface est l’objet de proxy avec lequel vous appelez des méthodes sur le client. Le `broadcastMessage` fonction est ensuite définie pour le client fictif afin qu’il peut être appelé le `ChatHub` classe. Le moteur de test appelle alors la `Send` méthode de la `ChatHub` (classe), qui à son tour appelle la factices `broadcastMessage` (fonction).
+    Dans le code ci-dessus, un client de test est créé à l’aide de l’objet `Mock` de la bibliothèque [MOQ](https://github.com/Moq/moq4) , de type [IHubCallerConnectionContext](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.hubs.ihubcallerconnectioncontext(v=vs.118).aspx) (dans signalr 2,1, assignez `dynamic` pour le paramètre de type.) L’interface `IHubCallerConnectionContext` est l’objet proxy avec lequel vous appelez des méthodes sur le client. La fonction `broadcastMessage` est ensuite définie pour le client fictif afin qu’elle puisse être appelée par la classe `ChatHub`. Le moteur de test appelle ensuite la méthode `Send` de la classe `ChatHub`, qui à son tour appelle la fonction fictive `broadcastMessage`.
 9. Générez la solution en appuyant sur **F6**.
-10. Exécutez le test unitaire. Dans Visual Studio, sélectionnez **Test**, **Windows**, **Explorateur de tests**. Dans la fenêtre Explorateur de tests, cliquez sur **HubsAreMockableViaDynamic** et sélectionnez **exécuter les Tests sélectionnés**.
+10. Exécutez le test unitaire. Dans Visual Studio, sélectionnez **test**, **Windows**, **Explorateur de tests**. Dans la fenêtre Explorateur de tests, cliquez avec le bouton droit sur **HubsAreMockableViaDynamic** et sélectionnez **exécuter les tests sélectionnés**.
 
     ![Explorateur de tests](unit-testing-signalr-applications/_static/image5.png)
-11. Vérifiez que le test a réussi en vérifiant le volet inférieur dans la fenêtre Explorateur de tests. La fenêtre affiche que le test a réussi.
+11. Vérifiez que le test a réussi en vérifiant le volet inférieur dans la fenêtre Explorateur de tests. La fenêtre indique que le test a réussi.
 
     ![Test réussi](unit-testing-signalr-applications/_static/image6.png)
 
 <a id="type"></a>
-### <a name="unit-testing-by-type"></a>Tests unitaires en type
+### <a name="unit-testing-by-type"></a>Tests unitaires par type
 
-Dans cette section, vous allez ajouter un test de l’application créée dans le [didacticiel mise en route](../getting-started/tutorial-getting-started-with-signalr.md) à l’aide d’une interface qui contient la méthode à tester.
+Dans cette section, vous allez ajouter un test pour l’application créée dans le [didacticiel prise en main](../getting-started/tutorial-getting-started-with-signalr.md) à l’aide d’une interface qui contient la méthode à tester.
 
-1. Effectuez les étapes 1 à 7 dans le [tests unitaires avec Dynamic](#dynamic) didacticiel ci-dessus.
+1. Effectuez les étapes 1-7 dans le didacticiel [sur les tests unitaires avec dynamique](#dynamic) ci-dessus.
 2. Remplacez le contenu de Tests.cs par le code suivant.
 
     [!code-csharp[Main](unit-testing-signalr-applications/samples/sample2.cs)]
 
-    Dans le code ci-dessus, une interface est créée en définissant la signature de la `broadcastMessage` pour lequel le moteur de test créera un client fictif de méthode. Un client fictif est ensuite créé à l’aide de la `Mock` objet de type [IHubCallerConnectionContext](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.hubs.ihubcallerconnectioncontext(v=vs.118).aspx) (dans SignalR 2.1, affectez `dynamic` pour le paramètre de type.) Le `IHubCallerConnectionContext` interface est l’objet de proxy avec lequel vous appelez des méthodes sur le client.
+    Dans le code ci-dessus, une interface est créée et définit la signature de la méthode `broadcastMessage` pour laquelle le moteur de test créera un client fictif. Un client fictif est ensuite créé à l’aide de l’objet `Mock`, de type [IHubCallerConnectionContext](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.hubs.ihubcallerconnectioncontext(v=vs.118).aspx) (dans signalr 2,1, assignez `dynamic` pour le paramètre de type.) L’interface `IHubCallerConnectionContext` est l’objet proxy avec lequel vous appelez des méthodes sur le client.
 
-    Le test crée ensuite une instance de `ChatHub`, puis crée une version fictive de la `broadcastMessage` (méthode), qui à son tour, est appelé en appelant le `Send` méthode du concentrateur.
+    Le test crée ensuite une instance de `ChatHub`, puis crée une version fictive de la méthode `broadcastMessage`, qui est appelée à son tour en appelant la méthode `Send` sur le concentrateur.
 3. Générez la solution en appuyant sur **F6**.
-4. Exécutez le test unitaire. Dans Visual Studio, sélectionnez **Test**, **Windows**, **Explorateur de tests**. Dans la fenêtre Explorateur de tests, cliquez sur **HubsAreMockableViaDynamic** et sélectionnez **exécuter les Tests sélectionnés**.
+4. Exécutez le test unitaire. Dans Visual Studio, sélectionnez **test**, **Windows**, **Explorateur de tests**. Dans la fenêtre Explorateur de tests, cliquez avec le bouton droit sur **HubsAreMockableViaDynamic** et sélectionnez **exécuter les tests sélectionnés**.
 
     ![Explorateur de tests](unit-testing-signalr-applications/_static/image7.png)
-5. Vérifiez que le test a réussi en vérifiant le volet inférieur dans la fenêtre Explorateur de tests. La fenêtre affiche que le test a réussi.
+5. Vérifiez que le test a réussi en vérifiant le volet inférieur dans la fenêtre Explorateur de tests. La fenêtre indique que le test a réussi.
 
     ![Test réussi](unit-testing-signalr-applications/_static/image8.png)

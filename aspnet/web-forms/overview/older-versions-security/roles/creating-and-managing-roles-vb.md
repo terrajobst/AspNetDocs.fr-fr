@@ -9,11 +9,11 @@ ms.assetid: 83af9f5f-9a00-4f83-8afc-e98bdd49014e
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/creating-and-managing-roles-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 825e2afb750925637d308b7ceb35e1b02b708c1d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74586284"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78565386"
 ---
 # <a name="creating-and-managing-roles-vb"></a>Création et gestion de rôles (VB)
 
@@ -31,7 +31,7 @@ Il permet généralement de classer les utilisateurs en groupes ou *rôles* , pu
 
 ASP.NET offre une infrastructure de rôles permettant de définir des rôles et de les associer à des comptes d’utilisateur. Avec l’infrastructure des rôles, nous pouvons créer et supprimer des rôles, ajouter des utilisateurs à un rôle ou en supprimer, déterminer l’ensemble des utilisateurs qui appartiennent à un rôle particulier et savoir si un utilisateur appartient à un rôle particulier. Une fois l’infrastructure de rôles configurée, nous pouvons limiter l’accès aux pages rôle par rôle par le biais de règles d’autorisation d’URL et afficher ou masquer des informations ou des fonctionnalités supplémentaires sur une page en fonction des rôles de l’utilisateur actuellement connecté.
 
-Ce didacticiel examine les étapes nécessaires à la configuration de l’infrastructure des rôles. Nous allons ensuite créer des pages Web pour créer et supprimer des rôles. Dans le <a id="_msoanchor_2"> </a>didacticiel [*attribution de rôles aux utilisateurs*](assigning-roles-to-users-vb.md) , nous allons examiner comment ajouter et supprimer des utilisateurs dans des rôles. Et dans le <a id="_msoanchor_3"> </a>didacticiel sur les [*autorisations basées*](role-based-authorization-vb.md) sur les rôles, nous verrons comment limiter l’accès aux pages rôle par rôle, ainsi que comment ajuster les fonctionnalités de page en fonction du rôle de l’utilisateur visiteur. Commençons !
+Ce didacticiel examine les étapes nécessaires à la configuration de l’infrastructure des rôles. Nous allons ensuite créer des pages Web pour créer et supprimer des rôles. Dans le <a id="_msoanchor_2"> </a>didacticiel [*attribution de rôles aux utilisateurs*](assigning-roles-to-users-vb.md) , nous allons examiner comment ajouter et supprimer des utilisateurs dans des rôles. Et dans le <a id="_msoanchor_3"> </a>didacticiel sur les [*autorisations basées*](role-based-authorization-vb.md) sur les rôles, nous verrons comment limiter l’accès aux pages rôle par rôle, ainsi que comment ajuster les fonctionnalités de page en fonction du rôle de l’utilisateur visiteur. C’est parti !
 
 ## <a name="step-1-adding-new-aspnet-pages"></a>Étape 1 : ajout de nouvelles pages ASP.NET
 
@@ -95,7 +95,7 @@ Ajoutez la balise de configuration des rôles suivante au fichier `Web.config`. 
 
 [!code-xml[Main](creating-and-managing-roles-vb/samples/sample5.xml)]
 
-Le balisage ci-dessus définit le `SecurityTutorialsSqlRoleProvider` comme fournisseur par défaut (via l’attribut `defaultProvider` dans l’élément `<roleManager>`). Il définit également le paramètre de `applicationName` de l' `SecurityTutorialsSqlRoleProvider`sur `SecurityTutorials`, qui est le même paramètre de `applicationName` utilisé par le fournisseur d’appartenances (`SecurityTutorialsSqlMembershipProvider`). Bien que cela ne soit pas illustré ici, l' [élément`<add>`](https://msdn.microsoft.com/library/ms164662.aspx) de la `SqlRoleProvider` peut également contenir un attribut `commandTimeout` pour spécifier la durée du délai d’expiration de la base de données, en secondes. La valeur par défaut est 30.
+Le balisage ci-dessus définit le `SecurityTutorialsSqlRoleProvider` comme fournisseur par défaut (via l’attribut `defaultProvider` dans l’élément `<roleManager>`). Il définit également le paramètre de `applicationName` de l' `SecurityTutorialsSqlRoleProvider`sur `SecurityTutorials`, qui est le même paramètre de `applicationName` utilisé par le fournisseur d’appartenances (`SecurityTutorialsSqlMembershipProvider`). Bien que cela ne soit pas illustré ici, l' [élément`<add>`](https://msdn.microsoft.com/library/ms164662.aspx) de la `SqlRoleProvider` peut également contenir un attribut `commandTimeout` pour spécifier la durée du délai d’expiration de la base de données, en secondes. La valeur par défaut est 30.
 
 Avec ce balisage de configuration en place, nous sommes prêts à commencer à utiliser les fonctionnalités de rôle dans notre application.
 

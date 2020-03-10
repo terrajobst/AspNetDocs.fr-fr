@@ -9,11 +9,11 @@ ms.assetid: 406518e9-3817-49ce-8b90-e82bc461e2c0
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/distributed-caching
 msc.type: authoredcontent
 ms.openlocfilehash: 87a7516415895e761d1589fd459b93e5c15c0f85
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456996"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583544"
 ---
 # <a name="distributed-caching-building-real-world-cloud-apps-with-azure"></a>Mise en cache distribuée (création d’applications Cloud réalistes avec Azure)
 
@@ -82,7 +82,7 @@ Azure propose les services de mise en cache suivants : le [cache redims Azure](
 
 Comme mentionné dans le [chapitre sur les meilleures pratiques pour le développement Web](web-development-best-practices.md), il est recommandé d’éviter d’utiliser l’état de session. Si votre application requiert un état de session, la meilleure pratique consiste à éviter le fournisseur en mémoire par défaut, car il n’active pas la montée en charge (plusieurs instances du serveur Web). Le fournisseur d’état de session ASP.NET SQL Server permet à un site qui s’exécute sur plusieurs serveurs Web d’utiliser l’état de session, mais il entraîne un coût de latence élevé par rapport à un fournisseur en mémoire. La meilleure solution si vous devez utiliser l’état de session consiste à utiliser un fournisseur de cache, tel que le [fournisseur d’état de session pour le cache Azure](https://msdn.microsoft.com/library/windowsazure/gg185668.aspx).
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Vous avez vu comment l’application Fix it pouvait implémenter la mise en cache afin d’améliorer le temps de réponse et l’évolutivité, et de permettre à l’application de continuer à être réactive pour les opérations de lecture lorsque la base de données n’est pas disponible. Dans le [chapitre suivant](queue-centric-work-pattern.md) , nous allons vous montrer comment améliorer l’évolutivité et rendre l’application toujours réactive pour les opérations d’écriture.
 
@@ -95,7 +95,7 @@ Documentation
 - [Cache Azure](https://msdn.microsoft.com/library/gg278356.aspx). Documentation officielle MSDN sur la mise en cache dans Azure.
 - [Modèles et pratiques Microsoft-conseils Azure](https://msdn.microsoft.com/library/dn568099.aspx). Voir Guide de mise en cache et modèle de mise en cache.
 - [Failsafe : aide sur les architectures résilientes du Cloud](https://msdn.microsoft.com/library/windowsazure/jj853352.aspx). Livre blanc de Marc Mercuri, Ulrich Homann et Andrew Townhill. Consultez la section relative à la mise en cache.
-- [Meilleures pratiques pour la conception de services à grande échelle sur les services Cloud Azure](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). Heure standard Livre blanc en Mark SIMM et Michael thomassy. Consultez la section relative à la mise en cache distribuée.
+- [Meilleures pratiques pour la conception de services à grande échelle sur les services Cloud Azure](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). W. Livre blanc en Mark SIMM et Michael thomassy. Consultez la section relative à la mise en cache distribuée.
 - [Mise en cache distribuée sur le chemin d’accès à l’évolutivité](https://msdn.microsoft.com/magazine/dd942840.aspx). Un ancien magazine MSDN (2009), mais une présentation clairement écrite de la mise en cache distribuée en général ; va plus loin que les sections de la mise en cache des livres blancs sur les méthodes de secours et les meilleures pratiques.
 
 Vidéos

@@ -2,22 +2,22 @@
 uid: mvc/overview/older-versions-1/controllers-and-routing/index
 title: Contrôleurs et routage | Microsoft Docs
 author: rick-anderson
-description: Dans cet ensemble de didacticiels, vous en savoir plus sur le routage ASP.NET, qui mappe les demandes du navigateur aux actions du contrôleur ASP.NET MVC.
+description: Dans ce didacticiel, vous découvrez le routage ASP.NET, qui mappe les demandes de navigateur aux actions du contrôleur ASP.NET MVC.
 ms.author: riande
 ms.date: 09/28/2011
 ms.assetid: 124df537-428c-4861-b6c2-4830c094fe0c
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing
 msc.type: chapter
 ms.openlocfilehash: 62e8c3c7451373829e2e8fbf65e37a14cfea54df
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123306"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78544071"
 ---
 # <a name="controllers-and-routing"></a>Contrôleurs et routage
 
-> Dans cet ensemble de didacticiels, vous en savoir plus sur le routage ASP.NET, qui mappe les demandes du navigateur aux actions du contrôleur ASP.NET MVC.
+> Dans ce didacticiel, vous découvrez le routage ASP.NET, qui mappe les demandes de navigateur aux actions du contrôleur ASP.NET MVC.
 
 - [Vue d’ensemble du routage ASP.NET MVC (C#)](asp-net-mvc-routing-overview-cs.md)
 - [Présentation des filtres d’actions (C#)](understanding-action-filters-cs.md)

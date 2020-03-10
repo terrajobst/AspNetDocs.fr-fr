@@ -9,11 +9,11 @@ ms.assetid: 44761193-04ba-4990-9f90-145d3c10a716
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
 msc.type: authoredcontent
 ms.openlocfilehash: 18de9b125ee5d10795b9ce1a366918dadf4fc4e3
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595245"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78540263"
 ---
 # <a name="implementing-the-repository-and-unit-of-work-patterns-in-an-aspnet-mvc-application-9-of-10"></a>Implémentation du référentiel et des modèles d’unité de travail dans une application ASP.NET MVC (9 sur 10)
 
@@ -73,7 +73,7 @@ Le référentiel implémente [IDisposable](https://msdn.microsoft.com/library/sy
 
 ## <a name="change-the-student-controller-to-use-the-repository"></a>Changer le contrôleur d’étudiant pour utiliser le référentiel
 
-Dans *StudentController.cs*, remplacez le code actuellement dans la classe par le code suivant. Les modifications sont mises en surbrillance.
+Dans *StudentController.cs*, remplacez le code actuellement dans la classe par le code suivant. Les modifications apparaissent en surbrillance.
 
 [!code-csharp[Main](implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application/samples/sample4.cs?highlight=13-18,44,75,77,102-103,120,137-138,159,172-174,186)]
 

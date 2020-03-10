@@ -2,22 +2,22 @@
 uid: web-forms/overview/deployment/index
 title: Déploiement | Microsoft Docs
 author: rick-anderson
-description: Comment déployer des projets ASP.NET Web Forms à un serveur.
+description: Comment déployer des projets ASP.NET Web Forms sur un serveur.
 ms.author: riande
 ms.date: 08/18/2011
 ms.assetid: 05e4c88f-5101-4277-a323-b6774d98f69e
 msc.legacyurl: /web-forms/overview/deployment
 msc.type: chapter
 ms.openlocfilehash: 1483abc212b5f122ad3e2b88474c42b208bb748e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134291"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640608"
 ---
 # <a name="deployment"></a>Déploiement
 
-> Comment déployer des projets ASP.NET Web Forms à un serveur.
+> Comment déployer des projets ASP.NET Web Forms sur un serveur.
 
 - [Déploiement web ASP.NET avec Visual Studio](visual-studio-web-deployment/index.md)
 
@@ -36,8 +36,8 @@ ms.locfileid: "65134291"
 - [ASP.NET 4 - Introduction au déploiement d’entreprise](deploying-web-applications-in-enterprise-scenarios/index.md)
 
     - [Déployer des applications web dans des scénarios d’entreprise avec Visual Studio 2010](deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
-    - [Déploiement Web d’entreprise : Vue d’ensemble du scénario](deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
-    - [Gestion du cycle de vie des applications : Du développement à la Production](deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
+    - [Déploiement web d’entreprise : vue d’ensemble du scénario](deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
+    - [Gestion du cycle de vie des applications : du développement à la production](deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
 - [ASP.NET 4 - Déploiement d’entreprise : série 1](web-deployment-in-the-enterprise/index.md)
 
     - [Déploiement web dans l’entreprise](web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md)
@@ -55,9 +55,9 @@ ms.locfileid: "65134291"
 
     - [Configuration d’environnements serveur pour le déploiement web](configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md)
     - [Choix de la bonne approche pour le déploiement web](configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md)
-    - [Scénario : Configuration d’un environnement de Test pour le déploiement Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
-    - [Scénario : Configuration d’un environnement de préproduction pour le déploiement Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
-    - [Scénario : Configuration d’un environnement de Production pour le déploiement Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
+    - [Scénario : configuration d’un environnement de test pour le déploiement web](configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
+    - [Scénario : configuration d’un environnement de préproduction pour le déploiement web](configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
+    - [Scénario : configuration d’un environnement de production pour le déploiement web](configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
     - [Configuration d’un serveur web pour la publication Web Deploy (Agent distant)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
     - [Configuration d’un serveur web pour la publication Web Deploy (Gestionnaire Web Deploy)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
     - [Configuration d’un serveur web pour la publication Web Deploy (Déploiement hors connexion)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)

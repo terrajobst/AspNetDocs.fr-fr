@@ -1,6 +1,6 @@
 ---
 uid: signalr/overview/index
-title: Conseils de SignalR | Microsoft Docs
+title: Guide signalr | Microsoft Docs
 author: bradygaster
 description: ''
 ms.author: bradyg
@@ -9,23 +9,23 @@ ms.assetid: e57da75a-1d98-4e3c-8787-f1d7e1eb2d86
 msc.legacyurl: /signalr/overview
 msc.type: book
 ms.openlocfilehash: 8bef8a53f6d47a9274a984e0650125fb538c23f0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380065"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558554"
 ---
-# <a name="signalr-guidance"></a>Conseils de SignalR
+# <a name="signalr-guidance"></a>Guide signalr
 
-- [Prise en main](getting-started/index.md)
+- [Bien démarrer](getting-started/index.md)
 
     - [Introduction à SignalR](getting-started/introduction-to-signalr.md)
     - [Plateformes prises en charge](getting-started/supported-platforms.md)
-    - [Tutoriel : Bien démarrer avec SignalR 2](getting-started/tutorial-getting-started-with-signalr.md)
-    - [Tutoriel : Bien démarrer avec SignalR 2 et MVC 5](getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
-    - [Tutoriel : En temps réel haute fréquence avec SignalR 2](getting-started/tutorial-high-frequency-realtime-with-signalr.md)
-    - [Tutoriel : Serveur de diffusion avec SignalR 2](getting-started/tutorial-server-broadcast-with-signalr.md)
-    - [Atelier pratique : Applications Web en temps réel avec SignalR](getting-started/real-time-web-applications-with-signalr.md)
+    - [Didacticiel : Bien démarrer avec SignalR 2](getting-started/tutorial-getting-started-with-signalr.md)
+    - [Didacticiel : Bien démarrer avec SignalR 2 et MVC 5](getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
+    - [Didacticiel : Temps réel haute fréquence avec SignalR 2](getting-started/tutorial-high-frequency-realtime-with-signalr.md)
+    - [Didacticiel : Diffusion par le serveur avec SignalR 2](getting-started/tutorial-server-broadcast-with-signalr.md)
+    - [Atelier pratique : Applications web temps réel avec SignalR](getting-started/real-time-web-applications-with-signalr.md)
 - [Guide de l’API](guide-to-the-api/index.md)
 
     - [Guide de l’API Hubs - Serveur (C#)](guide-to-the-api/hubs-api-guide-server.md)
@@ -44,7 +44,7 @@ ms.locfileid: "59380065"
     - [Introduction à la sécurité de SignalR](security/introduction-to-security.md)
     - [Authentification et autorisation pour SignalR Hubs](security/hub-authorization.md)
     - [Authentification et autorisation pour les connexions persistantes SignalR](security/persistent-connection-authorization.md)
-- [Performances](performance/index.md)
+- [Performancess](performance/index.md)
 
     - [Performances de SignalR](performance/signalr-performance.md)
     - [Introduction à la montée en puissance parallèle dans SignalR](performance/scaleout-in-signalr.md)
@@ -55,7 +55,7 @@ ms.locfileid: "59380065"
     - [Utilisation des compteurs de performance SignalR dans un rôle web Azure](performance/using-signalr-performance-counters-in-an-azure-web-role.md)
 - [Déploiement et hébergement](deployment/index.md)
 
-    - [Tutoriel : Auto-hébergement de SignalR](deployment/tutorial-signalr-self-host.md)
+    - [Didacticiel : Auto-hébergement de SignalR](deployment/tutorial-signalr-self-host.md)
     - [Utilisation de SignalR avec Web Apps dans Azure App Service](deployment/using-signalr-with-azure-web-sites.md)
 - [Avancé](advanced/index.md)
 
@@ -65,10 +65,10 @@ ms.locfileid: "59380065"
     - [Mise à niveau de projets SignalR 1.x vers la version 2](releases/upgrading-signalr-1x-projects-to-20.md)
 - [Versions antérieures](older-versions/index.md)
 
-    - [Tutoriel : Bien démarrer avec SignalR 1.x](older-versions/tutorial-getting-started-with-signalr.md)
-    - [Tutoriel : Bien démarrer avec SignalR 1.x et MVC 4](older-versions/tutorial-getting-started-with-signalr-and-mvc-4.md)
+    - [Didacticiel : Bien démarrer avec SignalR 1.x](older-versions/tutorial-getting-started-with-signalr.md)
+    - [Didacticiel : Bien démarrer avec SignalR 1.x et MVC 4](older-versions/tutorial-getting-started-with-signalr-and-mvc-4.md)
     - [Temps réel haute fréquence avec SignalR 1.x](older-versions/tutorial-high-frequency-realtime-with-signalr.md)
-    - [Tutoriel : Serveur de diffusion avec ASP.NET SignalR 1.x](older-versions/tutorial-server-broadcast-with-aspnet-signalr.md)
+    - [Didacticiel : Diffusion par le serveur avec ASP.NET SignalR 1.x](older-versions/tutorial-server-broadcast-with-aspnet-signalr.md)
     - [Guide de l’API Hubs - Serveur](older-versions/signalr-1x-hubs-api-guide-server.md)
     - [Guide de l’API SignalR 1.x Hubs - Client JavaScript](older-versions/signalr-1x-hubs-api-guide-javascript-client.md)
     - [Guide de l’API Hubs - Client .NET](older-versions/signalr-1x-hubs-api-guide-net-client.md)

@@ -9,11 +9,11 @@ ms.assetid: ec1cec4c-a75f-47af-a2ba-b1e2f971d24b
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/project-properties
 msc.type: authoredcontent
 ms.openlocfilehash: b2811791a897c9166f6222c23dddc6921e5267ab
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74614952"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78643597"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-project-properties"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : propriétés du projet
 
@@ -23,7 +23,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels vous montre comment déployer (publier) une application Web ASP.NET sur Azure App Service Web Apps ou sur un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou de Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Certaines options de déploiement sont configurées dans les propriétés du projet qui sont stockées dans le fichier projet (fichier *. csproj* ou *. vbproj* ). Dans la plupart des cas, les valeurs par défaut de ces paramètres sont celles que vous souhaitez, mais vous pouvez utiliser l’interface utilisateur des **Propriétés du projet** intégrée à Visual Studio pour utiliser ces paramètres si vous devez les modifier. Dans ce didacticiel, vous allez examiner les paramètres de déploiement dans les **Propriétés du projet**. Vous créez également un fichier d’espace réservé qui entraîne le déploiement d’un dossier vide.
 

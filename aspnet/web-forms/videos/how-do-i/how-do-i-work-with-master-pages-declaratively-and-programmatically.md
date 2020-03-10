@@ -1,24 +1,24 @@
 ---
 uid: web-forms/videos/how-do-i/how-do-i-work-with-master-pages-declaratively-and-programmatically
-title: '[Comment faire] Utiliser des Pages maîtres de façon déclarative et par programme | Microsoft Docs'
+title: '[Comment faire :] Utiliser des pages maîtres de façon déclarative et par programmation | Microsoft Docs'
 author: rick-anderson
-description: Dans cette vidéo Chris Pels affichera plusieurs aspects de la définition et utilisation des pages maîtres dans un site web ASP.NET. Tout d’abord, consultez Comment créer des pages maîtres declarati...
+description: Dans cette vidéo, Chris pixels présente plusieurs aspects de la définition et de l’utilisation des pages maîtres dans un site Web ASP.NET. Tout d’abord, consultez Comment créer des pages maîtres déclaratives...
 ms.author: riande
 ms.date: 02/21/2008
 ms.assetid: 4f5f7805-373f-4dc3-b7f6-219edf7e66a3
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-work-with-master-pages-declaratively-and-programmatically
 msc.type: video
 ms.openlocfilehash: 821ad2015d6cc040e219aec59d96792e715e2d7b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392220"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78574822"
 ---
-# <a name="how-do-i-work-with-master-pages-declaratively-and-programmatically"></a>[Comment faire] Utiliser des Pages maîtres de façon déclarative et par programme
+# <a name="how-do-i-work-with-master-pages-declaratively-and-programmatically"></a>[Comment faire :] Utiliser des pages maîtres de façon déclarative et par programmation
 
-par [Chris Pels](https://twitter.com/chrispels)
+par [Chris pixels](https://twitter.com/chrispels)
 
-Dans cette vidéo Chris Pels affichera plusieurs aspects de la définition et utilisation des pages maîtres dans un site web ASP.NET. Tout d’abord, consultez Comment créer de façon déclarative à l’aide du modèle de page maître ASP.NET et découvrez les informations qui convient le mieux à une page maître par rapport à une page de contenu individuelle. Ensuite, découvrez comment attribuer des pages maîtres à la volée dans une page de contenu individuelle par programmation. Découvrez également comment créer une classe de page de base qui affecte une page maître par programmation pour toutes les pages qui héritent de la classe de base. En outre, découvrez comment définir la page maître dans le fichier web.config. Enfin, découvrez comment accéder aux éléments dans une page maître à partir d’une page de contenu individuelle, y compris certaines meilleures pratiques pour structurer l’accès aux éléments de page maître.
+Dans cette vidéo, Chris pixels présente plusieurs aspects de la définition et de l’utilisation des pages maîtres dans un site Web ASP.NET. Tout d’abord, consultez Comment créer des pages maîtres de manière déclarative à l’aide du modèle de page maître ASP.NET et découvrir les informations les plus adaptées à une page maître par rapport à une page de contenu individuelle. Ensuite, consultez Comment assigner par programmation des pages maîtres à la volée dans une page de contenu individuelle. Découvrez également comment créer une classe de page de base qui assigne une page maître par programmation pour toutes les pages qui héritent de la classe de base. En outre, consultez Comment définir la page maître dans le fichier Web. config. Enfin, consultez Comment accéder aux éléments d’une page maître à partir d’une page de contenu individuelle, y compris quelques pratiques recommandées pour structurer l’accès aux éléments de la page maître.
 
-[&#9654;Regardez la vidéo (29 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-work-with-master-pages-declaratively-and-programmatically)
+[&#9654;Regarder la vidéo (29 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-work-with-master-pages-declaratively-and-programmatically)

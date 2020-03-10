@@ -9,11 +9,11 @@ ms.assetid: 7958d725-e958-4566-a85b-535eeb985f94
 msc.legacyurl: /mvc/overview/getting-started/recommended-resources-for-mvc
 msc.type: authoredcontent
 ms.openlocfilehash: 11f4a7cae8d425873b1828a9e5f51471def954fb
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457152"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78582193"
 ---
 # <a name="mvc-recommended-resources"></a>Ressources recommandées pour MVC
 
@@ -99,7 +99,7 @@ par [Rick Anderson](https://twitter.com/RickAndMSFT)
 - [Sécurité dans ASP.NET MVC](http://www.codeproject.com/Articles/654846/Security-In-ASP-NET-MVC)
 - [Sécurisation de votre application ASP.NET MVC 4](https://blogs.msdn.com/b/rickandy/archive/2012/03/23/securing-your-asp-net-mvc-4-app-and-the-new-allowanonymous-attribute.aspx)
 - [Présentation vidéo de Pluralsight des pratiques de sécurité](http://www.pluralsight-training.net/microsoft/players/PSODPlayer?author=scott-allen&amp;name=mvc3-building-security&amp;mode=live&amp;clip=0&amp;course=aspdotnet-mvc3-intro)
-- [XSRF/CSRF Prevention in ASP.NET MVC and Web Pages (Prévention des attaques XSRF/CSRF dans les pages MVC et Web ASP.NET)](../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md)
+- [Prévention de XSRF/CSRF dans ASP.NET MVC et les pages web](../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md)
 - [OWASP Top 10 pour les développeurs .NET](http://www.troyhunt.com/2010/05/owasp-top-10-for-net-developers-part-1.html)
 - [Utilisation de fournisseurs OAuth avec MVC 4](../older-versions/using-oauth-providers-with-mvc.md)
 - Lutte [contre le piratage de vos Applications ASP.net](https://msdn.microsoft.com/magazine/hh580736.aspx) Article du magazine MSDN de décembre de la 2011 par Adam
@@ -327,7 +327,7 @@ par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 <a id="best"></a>
 
-## <a name="best-practices"></a>Pratiques recommandées
+## <a name="best-practices"></a>Meilleures pratiques
 
 - [Ce qu’il ne faut pas faire dans ASP.NET et ce qu’il faut faire à la place](../../../aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead.md)
 - [Liste de vérification des développeurs Web](http://webdevchecklist.com/aspnet)

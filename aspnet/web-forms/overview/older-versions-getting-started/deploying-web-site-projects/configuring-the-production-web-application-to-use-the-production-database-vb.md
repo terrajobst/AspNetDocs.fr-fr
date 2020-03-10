@@ -9,11 +9,11 @@ ms.assetid: a64a7aa0-6608-449e-83bf-1ef8cceee504
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-the-production-web-application-to-use-the-production-database-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 7fe4f545a76992ad687827af447d9a9e95bea73f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74633663"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78636226"
 ---
 # <a name="configuring-the-production-web-application-to-use-the-production-database-vb"></a>Configuration de l’application web de production pour l’utilisation de la base de données de production (VB)
 

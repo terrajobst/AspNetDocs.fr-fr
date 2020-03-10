@@ -9,11 +9,11 @@ ms.assetid: 61941e64-0c0d-4996-9270-cb8ccfd0cabc
 msc.legacyurl: /visual-studio/overview/2013/creating-web-projects-in-visual-studio
 msc.type: authoredcontent
 ms.openlocfilehash: fbb4cd7afa2506879d47bce980bf0164aad40c2c
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519269"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78555222"
 ---
 # <a name="creating-aspnet-web-projects-in-visual-studio-2013"></a>Création de projets web ASP.NET dans Visual Studio 2013
 
@@ -31,7 +31,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > Pour plus d’informations sur la création de projets Web pour Azure cloud services ou Azure Mobile Services, consultez [prise en main des services Cloud Azure et ASP.net](https://azure.microsoft.com/documentation/articles/cloud-services-dotnet-get-started/) et [création d’une application classement avec Azure Mobile services backend .net](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-backend-windows-store-dotnet-leaderboard/).
 
 <a id="prerequisites"></a>
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Cet article s’applique à [Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=306566) avec [Update 3](https://go.microsoft.com/fwlink/?linkid=397827&amp;clcid=0x409) installé.
 
@@ -54,7 +54,7 @@ Les étapes suivantes montrent comment créer un projet Web :
 3. Dans le volet droit, activez la case à cocher **Ajouter des application Insights au projet** si vous souhaitez une surveillance de l’intégrité et de l’utilisation de votre application. Pour plus d’informations, consultez l’article [Analyse des performances dans les applications web](https://azure.microsoft.com/documentation/articles/app-insights-web-monitor-performance/).
 4. Spécifiez le **nom**du projet, l' **emplacement**et d’autres options, puis cliquez sur **OK**.
 
-    La boîte **de dialogue Nouveau projet ASP.net** s’affiche.
+    La boîte de dialogue **Nouveau projet ASP.NET** apparaît.
 
     ![Boîte de dialogue Nouveau projet](creating-web-projects-in-visual-studio/_static/image2.png)
 5. Cliquez sur un modèle.
@@ -284,7 +284,7 @@ Installe les packages NuGet MVC, Razor et Web pages, crée des dossiers d' *appl
 Installe les packages NuGet WebApi et Newtonsoft. JSON, crée des dossiers d' *application\_de données*, de *contrôleurs*et de *modèles* d’application vides, crée l' *application\_* dossier de démarrage avec le fichier *WebApiConfig.cs* et crée le fichier *global. asax* .
 
 <a id="auth"></a>
-## <a name="authentication-methods"></a>Méthodes d'authentification
+## <a name="authentication-methods"></a>Méthodes d’authentification
 
 Visual Studio 2013 propose plusieurs options d’authentification pour les modèles de Web Forms, MVC et d’API Web :
 
@@ -317,7 +317,7 @@ ASP.NET Identity est un bon choix si vous créez un site Web Internet principale
 
 Pour plus d’informations sur l’option comptes d’utilisateur individuels, consultez les ressources suivantes :
 
-- [www.asp.net/identity](../../../identity/index.md). Documentation relative à ASP.NET Identity sur le site Web ASP.NET.
+- [www.asp.net/Identity](../../../identity/index.md). Documentation relative à ASP.NET Identity sur le site Web ASP.NET.
 - [Créez une application ASP.NET MVC 5 avec Facebook et Google OAuth2 et l’authentification OpenID](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md). Montre également comment personnaliser les données de profil utilisateur.
 - [API Web-services d’authentification externe](../../../web-api/overview/security/external-authentication-services.md)
 - [Ajout de connexions externes à votre application ASP.NET dans Visual Studio 2013](https://blogs.msdn.com/b/webdev/archive/2013/06/27/adding-external-logins-to-your-asp-net-application-in-visual-studio-2013.aspx)
@@ -419,6 +419,6 @@ Entrez une URL qui pointe vers le document de métadonnées. Le document de mét
 Fournissez un URI unique qu’Active Directory peut utiliser pour identifier cette application ou laissez-le vide pour permettre à Visual Studio d’en créer un.
 
 <a id="nextsteps"></a>
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
 Ce document a fourni une aide de base pour la création d’un projet Web ASP.NET dans Visual Studio 2013. Pour plus d’informations sur l’utilisation de pour Visual Studio pour le développement Web, consultez [https://www.asp.net/visual-studio/](../../index.md).

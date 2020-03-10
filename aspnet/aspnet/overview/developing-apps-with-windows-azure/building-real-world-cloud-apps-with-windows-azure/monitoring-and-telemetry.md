@@ -9,11 +9,11 @@ ms.assetid: 7e986ab5-6615-4638-add7-4614ce7b51db
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
 msc.type: authoredcontent
 ms.openlocfilehash: f61810ea7b486b2fa0bbb234edea7541eedde835
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457061"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583145"
 ---
 # <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Surveillance et télémétrie (génération d’applications Cloud réalistes avec Azure)
 
@@ -228,7 +228,7 @@ Azure prend en charge les types de [journalisation suivants pour Web Apps dans A
 Azure prend en charge les types suivants de [journalisation dans les services Cloud](https://docs.microsoft.com/azure/cloud-services/cloud-services-dotnet-diagnostics):
 
 - Suivi System. Diagnostics.
-- Compteurs de performances.
+- Compteurs de performance.
 - Événements Windows.
 - Journaux IIS (HTTP/FREB).
 - Analyse de répertoire personnalisée.
@@ -247,7 +247,7 @@ Vous pouvez également avoir des journaux écrits dans votre compte de stockage 
 
 ![Journaux dans Explorateur de serveurs](http://wacomdpsstorage.blob.core.windows.net/articlesmedia/content-ppe.windowsazure.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/20140115062810/tws-storagelogs.png)
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Il est très simple d’implémenter un système de télémétrie prêt à l’emploi, d’enregistrer la journalisation dans votre propre code et de configurer la journalisation dans Azure. Et lorsque vous rencontrez des problèmes de production, la combinaison d’un système de télémétrie et de journaux personnalisés vous aidera à résoudre rapidement les problèmes avant qu’ils ne deviennent des problèmes majeurs pour vos clients.
 
@@ -255,7 +255,7 @@ Dans le [chapitre suivant](transient-fault-handling.md) , nous allons examiner c
 
 ## <a name="resources"></a>Ressources
 
-Pour plus d'informations, consultez les ressources ci-dessous.
+Pour plus d'informations, voir les ressources ci-dessous.
 
 Documentation principalement sur la télémétrie :
 

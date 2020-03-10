@@ -10,11 +10,11 @@ ms.assetid: c125ca47-606a-4d6f-a1fc-1fc62928af93
 msc.legacyurl: /web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
 msc.type: authoredcontent
 ms.openlocfilehash: a096fd1c54df33b40115907a5c2517b2e3fec5b8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600339"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556202"
 ---
 # <a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Activation des opérations CRUD dans API Web ASP.NET 1
 
@@ -27,7 +27,7 @@ par [Mike Wasson](https://github.com/MikeWasson)
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versions logicielles utilisées dans le didacticiel
 > 
 > 
-> - Visual Studio 2012
+> - Visual Studio 2012
 > - API Web 1 (fonctionne également avec l’API Web 2)
 
 CRUD est l’abréviation de &quot;Create, Read, Update et Delete,&quot; qui sont les quatre opérations de base de données. De nombreux services HTTP modélisent également les opérations CRUD via des API REST ou de type REST.
@@ -36,14 +36,14 @@ Dans ce didacticiel, vous allez créer une API Web très simple pour gérer une 
 
 L’API Products expose les méthodes suivantes.
 
-| Action | Méthode HTTP | URI relatif |
+| Action | HTTP method | URI relatif |
 | --- | --- | --- |
 | Obtenir la liste de tous les produits | GET | /api/products |
 | Obtenir un produit par ID | GET | *ID* /API/Products/ |
 | Obtenir un produit par catégorie | GET | /API/products ? category =*catégorie* |
-| Créer un produit | Publier | /api/products |
+| Créer un produit | POST | /api/products |
 | Mettre à jour un produit | PUT | *ID* /API/Products/ |
-| Supprimer un produit | SUPPR | *ID* /API/Products/ |
+| Supprimer un produit | Suppression | *ID* /API/Products/ |
 
 Notez que certains des URI incluent l’ID de produit dans path. Par exemple, pour obtenir le produit dont l’ID est 28, le client envoie une demande d’extraction pour `http://hostname/api/products/28`.
 
@@ -85,7 +85,7 @@ Un *modèle* est un objet qui représente les données dans votre application. D
 
 Pour l’API ProductStore, nos données sont constituées de produits. nous allons donc créer une nouvelle classe nommée `Product`.
 
-Si Explorateur de solutions n’est pas déjà visible, cliquez sur le menu **affichage** et sélectionnez **Explorateur de solutions**. Dans Explorateur de solutions, cliquez avec le bouton droit sur le dossier **modèles** . Dans le menu contextuel, sélectionnez **Ajouter**, puis **classe**. Nommez la classe &quot;&quot;de produit.
+Si l’Explorateur de solutions n’est pas déjà visible, cliquez sur le menu **Vue** et sélectionnez **Explorateur de solutions**. Dans Explorateur de solutions, cliquez avec le bouton droit sur le dossier **modèles** . Dans le menu contextuel, sélectionnez **Ajouter**, puis **classe**. Nommez la classe &quot;&quot;de produit.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image3.png)
 
@@ -124,7 +124,7 @@ Si vous avez travaillé avec ASP.NET MVC, vous êtes déjà familiarisé avec le
 
 Continuez et supprimez ValuesController, en cliquant avec le bouton droit sur le fichier dans Explorateur de solutions et en sélectionnant **Supprimer.** Ajoutez maintenant un nouveau contrôleur, comme suit :
 
-Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le dossier Controllers. Sélectionnez **Ajouter** , puis **contrôleur**.
+Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le dossier Contrôleurs. Sélectionnez **Ajouter**, puis **Contrôleur**.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image6.png)
 
@@ -135,7 +135,7 @@ Dans l’Assistant Ajout d’un **contrôleur** , nommez le contrôleur &quot;&q
 > [!NOTE]
 > Il n’est pas nécessaire de placer vos contrôleurs dans un dossier nommé contrôleurs. Le nom du dossier n’est pas important. Il s’agit simplement d’un moyen pratique d’organiser vos fichiers sources.
 
-L’Assistant Ajout d’un **contrôleur** crée un fichier nommé ProductsController.cs dans le dossier Controllers. Si ce fichier n’est pas déjà ouvert, double-cliquez sur le fichier pour l’ouvrir. Ajoutez l’instruction **using** suivante :
+L’Assistant Ajout d’un **contrôleur** crée un fichier nommé ProductsController.cs dans le dossier Controllers. Si ce fichier n’est pas déjà ouvert, double-cliquez dessus pour l’ouvrir. Ajoutez les instructions **using** suivantes :
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample4.cs)]
 
@@ -150,7 +150,7 @@ Ajoutez un champ qui contient une instance de **IProductRepository** .
 
 L’API ProductStore expose plusieurs &quot;actions de lecture&quot; en tant que méthodes HTTP d’extraction. Chaque action correspond à une méthode dans la classe `ProductsController`.
 
-| Action | Méthode HTTP | URI relatif |
+| Action | HTTP method | URI relatif |
 | --- | --- | --- |
 | Obtenir la liste de tous les produits | GET | /api/products |
 | Obtenir un produit par ID | GET | *ID* /API/Products/ |

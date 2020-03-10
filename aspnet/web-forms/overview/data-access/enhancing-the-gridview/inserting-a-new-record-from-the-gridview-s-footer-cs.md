@@ -9,11 +9,11 @@ ms.assetid: 49545652-98af-46ba-9dbc-9ab529805d9b
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/inserting-a-new-record-from-the-gridview-s-footer-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 6b337fe395a0ed54b03767111e73ea6d6c0ba23a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74591898"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78590600"
 ---
 # <a name="inserting-a-new-record-from-the-gridviews-footer-c"></a>Insertion d’un nouvel enregistrement à partir du pied de page d’un contrôle GridView (C#)
 

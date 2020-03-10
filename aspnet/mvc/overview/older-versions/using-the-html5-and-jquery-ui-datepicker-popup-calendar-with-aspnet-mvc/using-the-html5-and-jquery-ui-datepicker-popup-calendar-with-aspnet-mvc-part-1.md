@@ -9,11 +9,11 @@ ms.assetid: c23d27f7-b0cf-44f2-8445-fb69e045c674
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1
 msc.type: authoredcontent
 ms.openlocfilehash: c1c2380f24c72f6aabaaacaf975e95288a384ff1
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457620"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78538989"
 ---
 # <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-1"></a>Utilisation du calendrier contextuel HTML5 et de jQuery UI DatePicker avec ASP.NET MVC-partie 1
 
@@ -51,7 +51,7 @@ Vous apprendrez les compétences suivantes :
 - Comment créer des modèles (modifier et afficher des modèles) pour contrôler la mise en forme des données.
 - Comment ajouter le DatePicker de l' [interface utilisateur jQuery](http://jqueryui.com/demos/datepicker/) comme moyen d’entrer des champs de date.
 
-### <a name="getting-started"></a>Mise en route
+### <a name="getting-started"></a>Commencer
 
 Si vous n’avez pas encore l’application de liste de films du projet de démarrage, téléchargez-la : 
 

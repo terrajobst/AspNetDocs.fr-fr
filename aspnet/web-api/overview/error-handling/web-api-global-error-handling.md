@@ -10,17 +10,17 @@ ms.assetid: bffd7863-f63b-4b23-a13c-372b5492e9fb
 msc.legacyurl: /web-api/overview/error-handling/web-api-global-error-handling
 msc.type: authoredcontent
 ms.openlocfilehash: 94f2d6d31d0b37f9bb0077e6258c70a2dfb1918d
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457737"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557280"
 ---
 # <a name="global-error-handling-in-aspnet-web-api-2"></a>Gestion des erreurs globales dans API Web ASP.NET 2
 
 par [David Matson](https://github.com/davidmatson), [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-Cette rubrique fournit une vue d’ensemble de la gestion des erreurs globales dans API Web ASP.NET 2 pour ASP.NET 4. x. À l’heure actuelle, il n’existe pas de moyen simple d’enregistrer ou de gérer les erreurs dans l’API Web. Certaines exceptions non gérées peuvent être traitées via des [filtres d’exception](exception-handling.md), mais il existe plusieurs cas où les filtres d’exception ne peuvent pas être gérés. Par exemple :
+Cette rubrique fournit une vue d’ensemble de la gestion des erreurs globales dans API Web ASP.NET 2 pour ASP.NET 4. x. À l’heure actuelle, il n’existe pas de moyen simple d’enregistrer ou de gérer les erreurs dans l’API Web. Certaines exceptions non gérées peuvent être traitées via des [filtres d’exception](exception-handling.md), mais il existe plusieurs cas où les filtres d’exception ne peuvent pas être gérés. Exemple :
 
 1. Les exceptions lancées à partir des constructeurs de contrôleur.
 2. Les exceptions lancées à partir des gestionnaires de messages.

@@ -9,11 +9,11 @@ ms.assetid: 262843d6-43a2-4f1c-82d9-0b90ae6df0cf
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/creating-an-odata-endpoint
 msc.type: authoredcontent
 ms.openlocfilehash: e68a454398f109dfd089be9c9a44d3fe662acc2f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600430"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556412"
 ---
 # <a name="creating-an-odata-v3-endpoint-with-web-api-2"></a>Création d’un point de terminaison OData v3 avec l’API Web 2
 
@@ -66,7 +66,7 @@ Dans la boîte de dialogue **nouveau projet ASP.net** , sélectionnez le modèle
 
 Un *modèle* est un objet qui représente les données dans votre application. Pour ce didacticiel, nous avons besoin d’un modèle qui représente un produit. Le modèle correspond à notre type d’entité OData.
 
-Dans Explorateur de solutions, cliquez avec le bouton droit sur le dossier modèles. Dans le menu contextuel, sélectionnez **Ajouter** , puis sélectionnez **classe**.
+Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le dossier Modèles. Dans le menu contextuel, sélectionnez **Ajouter**, puis **Classe**.
 
 ![](creating-an-odata-endpoint/_static/image3.png)
 
@@ -90,7 +90,7 @@ Générez le projet maintenant. À l’étape suivante, nous allons utiliser une
 
 Un *contrôleur* est une classe qui gère les requêtes http. Vous définissez un contrôleur distinct pour chaque jeu d’entités dans votre service OData. Dans ce didacticiel, nous allons créer un seul contrôleur.
 
-Dans Explorateur de solutions, cliquez avec le bouton droit sur le dossier Controllers. Sélectionnez **Ajouter** , puis **contrôleur**.
+Dans Explorateur de solutions, cliquez avec le bouton droit sur le dossier Controllers. Sélectionnez **Ajouter**, puis **Contrôleur**.
 
 ![](creating-an-odata-endpoint/_static/image5.png)
 
@@ -152,7 +152,7 @@ Le premier paramètre est un nom convivial pour l’itinéraire. Les clients de 
 
 Dans cette étape, vous allez utiliser Entity Framework pour amorcer la base de données avec des données de test. Cette étape est facultative, mais elle vous permet de tester votre point de terminaison OData immédiatement.
 
-Dans le menu **Outils** , sélectionnez **Gestionnaire de package NuGet**, puis sélectionnez **console du gestionnaire de package**. Dans la fenêtre console du gestionnaire de package, entrez la commande suivante :
+Dans le menu **Outils** , sélectionnez **Gestionnaire de package NuGet**, puis sélectionnez **console du gestionnaire de package**. Dans la fenêtre Console du Gestionnaire de package, entrez la commande suivante :
 
 [!code-console[Main](creating-an-odata-endpoint/samples/sample5.cmd)]
 
@@ -187,7 +187,7 @@ Le *document de service* contient une liste des jeux d’entités pour le point 
 
 ![](creating-an-odata-endpoint/_static/image13.png)
 
-Cliquez sur le bouton **exécuter** . Fiddler envoie une requête HTTP-to à votre application. La réponse doit apparaître dans la liste sessions Web. Si tout fonctionne, le code d’État sera 200.
+Cliquez sur le bouton **Exécuter** . Fiddler envoie une requête HTTP-to à votre application. La réponse doit apparaître dans la liste sessions Web. Si tout fonctionne, le code d’État sera 200.
 
 ![](creating-an-odata-endpoint/_static/image14.png)
 

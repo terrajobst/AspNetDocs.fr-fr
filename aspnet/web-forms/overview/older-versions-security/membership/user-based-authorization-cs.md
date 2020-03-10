@@ -9,11 +9,11 @@ ms.assetid: 3c815a9e-2296-4b9b-b945-776d54989daa
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/user-based-authorization-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 059dbf42956268884dcfdade696491ac39e32da9
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74614665"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78574339"
 ---
 # <a name="user-based-authorization-c"></a>Autorisation basée sur l’utilisateur (C#)
 
@@ -29,7 +29,7 @@ La plupart des applications Web qui offrent des comptes d’utilisateur le font 
 
 ASP.NET permet de définir facilement des règles d’autorisation basées sur l’utilisateur. Avec un peu de balises dans `Web.config`, des pages Web spécifiques ou des répertoires entiers peuvent être verrouillés de façon à ce qu’ils soient accessibles uniquement à un sous-ensemble d’utilisateurs spécifié. Les fonctionnalités au niveau de la page peuvent être activées ou désactivées en fonction de l’utilisateur actuellement connecté par le biais de la programmation et des moyens déclaratifs.
 
-Dans ce didacticiel, nous allons nous intéresser à la limitation de l’accès aux pages et à la restriction des fonctionnalités au niveau des pages par le biais de diverses techniques. Commençons !
+Dans ce didacticiel, nous allons nous intéresser à la limitation de l’accès aux pages et à la restriction des fonctionnalités au niveau des pages par le biais de diverses techniques. C’est parti !
 
 ## <a name="a-look-at-the-url-authorization-workflow"></a>Examen du flux de travail d’autorisation d’URL
 

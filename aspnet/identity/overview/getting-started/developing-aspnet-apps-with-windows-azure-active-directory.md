@@ -10,11 +10,11 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory
 msc.type: authoredcontent
 ms.openlocfilehash: 28425ea8d1312dfc6e14df9677396f2cbcf6f16d
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456723"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583852"
 ---
 # <a name="developing-aspnet-apps-with-azure-active-directory"></a>Développement d’applications ASP.NET avec Azure Active Directory
 
@@ -24,7 +24,7 @@ Microsoft ASP.NET Tools pour Azure Active Directory simplifie l’activation de 
 
 Ce didacticiel vous montre comment créer une application ASP.NET qui est configurée pour l’authentification avec [Azure Active Directory](https://msdn.microsoft.com/library/azure/mt168838.aspx) (Azure AD). Vous allez également apprendre à appeler le API Graph pour obtenir des informations sur l’utilisateur actuellement connecté et sur la manière de déployer l’application sur Azure.
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 1. [Visual Studio Express 2013 pour Web](https://my.visualstudio.com/Downloads?q=visual%20studio%202013#d-2013-express) ou [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013).
 2. [Visual Studio 2013 Update 4](https://www.microsoft.com/download/details.aspx?id=44921) -Update 3 ou version ultérieure est requis.
@@ -34,7 +34,7 @@ Ce didacticiel vous montre comment créer une application ASP.NET qui est config
 
 1. Connectez-vous au [portail de gestion Azure](https://manage.windowsazure.com/).
 2. Tous les comptes Azure contiennent un **répertoire par défaut** , cliquez dessus, puis cliquez sur l’onglet **utilisateurs** en haut de la page (Voir l’image ci-dessous).
-3. Cliquez sur Add User.
+3. Cliquez sur Ajouter un utilisateur.
     ![](developing-aspnet-apps-with-windows-azure-active-directory/_static/image1.png)
 4. Créez un utilisateur avec le rôle d' **administrateur général** . Cliquez sur **utilisateurs** dans le menu supérieur, puis cliquez sur le bouton **Ajouter un utilisateur** dans la barre de commandes.
 5. Dans la boîte de dialogue **Ajouter un utilisateur** , entrez un nom pour le nouvel utilisateur, puis cliquez sur la flèche droite.
@@ -139,7 +139,7 @@ Après avoir exécuté l’application, si l’utilisateur connecté affiche «�
 
 L’un des excellents didacticiels à suivre est l’étude approfondie de Rick Rainey [: sites Web Azure et authentification organisationnelle à l’aide de Azure ad](http://rickrainey.com/2014/08/19/deep-dive-azure-websites-and-organizational-authentication-using-azure-ad/).
 
-## <a name="more-information"></a>Informations supplémentaires
+## <a name="more-information"></a>Plus d'informations
 
 - [Approfondissement : sites Web Azure et authentification organisationnelle à l’aide de Azure AD](http://rickrainey.com/2014/08/19/deep-dive-azure-websites-and-organizational-authentication-using-azure-ad/)
 - [Présentation de la API Graph Azure AD](https://msdn.microsoft.com/library/azure/hh974476.aspx)

@@ -9,11 +9,11 @@ ms.assetid: 75af2e17-6ed3-4d24-8ea1-bc340027c318
 msc.legacyurl: /single-page-application/overview/templates/hottowel-template
 msc.type: authoredcontent
 ms.openlocfilehash: eeab69e75546791978bb09d7823d95caf9dca1a0
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075058"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78578483"
 ---
 # <a name="hot-towel-template"></a>Modèle Hot Towel
 
@@ -45,7 +45,7 @@ Dans le dossier de l’application :
 - Durandal
 - services
 - ViewModels
-- views
+- Vues
 
 Le dossier d’application contient une collection de modules. Ces modules encapsulent les fonctionnalités et déclarent des dépendances sur d’autres modules. Le dossier views contient le code HTML de votre application et le dossier ViewModels contient la logique de présentation des vues (modèle MVVM courant). Le dossier services est idéal pour héberger tous les services courants dont votre application peut avoir besoin, tels que l’extraction de données HTTP ou l’interaction de stockage local. Il est courant que plusieurs ViewModels réutilisent le code des modules de service.
 
@@ -55,15 +55,15 @@ La serviette chaude repose sur la structure ASP.NET MVC familière et puissante.
 
 - Démarrage de l’application\_
 - Contenu
-- Controllers
+- Contrôleurs
 - Modèles
-- Scripts
-- Les vues
+- scripts ;
+- Affichages
 
 ## <a name="featured-libraries"></a>Bibliothèques proposées
 
 - ASP.NET MVC
-- API Web ASP.NET
+- API web ASP.NET
 - Optimisation Web ASP.NET-regroupement et minimisation
 - [Breeze. js](http://Breezejs.com) -gestion de données enrichie
 - [Durandal. js](http://Durandaljs.com) -navigation et vue de la composition
@@ -108,7 +108,7 @@ Le fichier `main.js` définit plusieurs modules de Durandal pour aider l’appli
 
 [!code-javascript[Main](hottowel-template/samples/sample3.js)]
 
-## <a name="views"></a>Les vues
+## <a name="views"></a>Affichages
 
 Les vues se trouvent dans le dossier `App/views`.
 

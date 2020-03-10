@@ -1,110 +1,110 @@
 ---
 uid: mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-7
-title: 'Partie 7 : L’appartenance et autorisation | Microsoft Docs'
+title: 'Partie 7 : appartenance et autorisation | Microsoft Docs'
 author: jongalloway
-description: Cette série de didacticiels décrit en détail les étapes prises pour générer l’exemple d’application ASP.NET MVC Music Store. Partie 7 couvre l’appartenance et l’autorisation.
+description: Cette série de didacticiels détaille toutes les étapes nécessaires à la création de l’exemple d’application ASP.NET MVC Music Store. La partie 7 couvre l’appartenance et l’autorisation.
 ms.author: riande
 ms.date: 10/13/2010
 ms.assetid: c8511ebe-68bc-4240-87c3-d5ced84a3f37
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-7
 msc.type: authoredcontent
 ms.openlocfilehash: a6a1a936e0ea29ea36721ba78f35845401f74c01
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65112465"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78539199"
 ---
-# <a name="part-7-membership-and-authorization"></a>Partie 7 : Appartenance et autorisation
+# <a name="part-7-membership-and-authorization"></a>Partie 7 : appartenance et autorisation
 
 par [Jon Galloway](https://github.com/jongalloway)
 
-> Le Store de musique MVC est une application du didacticiel qui présente et explique étape par étape comment utiliser ASP.NET MVC et Visual Studio pour le développement web.  
+> Le magasin de musique MVC est une application de didacticiel qui présente et explique pas à pas comment utiliser ASP.NET MVC et Visual Studio pour le développement Web.  
 >   
-> Le Store de musique MVC est une implémentation de magasin d’exemple léger qui vend des albums de musique en ligne et implémente l’administration de site de base, connexion de l’utilisateur et les fonctionnalités de panier d’achat.  
+> Le magasin de musique MVC est une implémentation de magasin légère qui vend des albums musicaux en ligne et implémente l’administration de site de base, la connexion utilisateur et la fonctionnalité de panier d’achat.  
 >   
-> Cette série de didacticiels décrit en détail les étapes prises pour générer l’exemple d’application ASP.NET MVC Music Store. Partie 7 couvre l’appartenance et l’autorisation.
+> Cette série de didacticiels détaille toutes les étapes nécessaires à la création de l’exemple d’application ASP.NET MVC Music Store. La partie 7 couvre l’appartenance et l’autorisation.
 
-Notre contrôleur Store Manager est actuellement accessible à toute personne visitant notre site. Nous allons modifier cette option pour restreindre les autorisations aux administrateurs du site.
+Notre contrôleur Store Manager est actuellement accessible à toute personne visitant notre site. Modifions ceci pour restreindre l’autorisation aux administrateurs de site.
 
-## <a name="adding-the-accountcontroller-and-views"></a>Ajout du contrôle AccountController et vues
+## <a name="adding-the-accountcontroller-and-views"></a>Ajout de AccountController et de vues
 
-Une différence entre le modèle d’Application Web de ASP.NET MVC 3 complet et le modèle MVC 3 Application Web ASP.NET vide est que le modèle vide n’inclut pas un contrôleur de compte. Nous allons ajouter un contrôleur de compte en copiant plusieurs fichiers à partir d’une nouvelle application ASP.NET MVC créée à partir du modèle d’Application Web de ASP.NET MVC 3 complet.
+L’une des différences entre le modèle d’application Web ASP.NET MVC 3 complet et le modèle d’application Web vide ASP.NET MVC 3 est que le modèle vide n’inclut pas de contrôleur de compte. Nous allons ajouter un contrôleur de compte en copiant quelques fichiers à partir d’une nouvelle application ASP.NET MVC créée à partir du modèle d’application Web ASP.NET MVC 3 complet.
 
-Créez une application ASP.NET MVC en utilisant le modèle d’Application Web de ASP.NET MVC 3 complète et copiez les fichiers suivants dans les mêmes répertoires dans notre projet :
+Créez une nouvelle application ASP.NET MVC à l’aide du modèle d’application Web ASP.NET MVC 3 complet et copiez les fichiers suivants dans les mêmes répertoires de notre projet :
 
-1. AccountController.cs de copie dans le répertoire Controllers
-2. AccountModels de copie dans le répertoire de modèles
-3. Créer un répertoire de compte dans le répertoire Views et copie toutes les quatre vues dans
+1. Copier AccountController.cs dans le répertoire Controllers
+2. Copier AccountModels dans le répertoire des modèles
+3. Créer un répertoire de compte dans le répertoire views et copier les quatre affichages dans
 
-Modifier l’espace de noms pour les classes de contrôleur et le modèle afin qu’ils commencent par MvcMusicStore. La classe AccountController doit utiliser l’espace de noms MvcMusicStore.Controllers, et la classe AccountModels doit utiliser l’espace de noms MvcMusicStore.Models.
+Modifiez l’espace de noms pour les classes de contrôleur et de modèle afin qu’elles commencent par MvcMusicStore. La classe AccountController doit utiliser l’espace de noms MvcMusicStore. Controllers, et la classe AccountModels doit utiliser l’espace de noms MvcMusicStore. Models.
 
-*Remarque : Ces fichiers sont également disponibles dans le téléchargement de MvcMusicStore-Assets.zip à partir duquel nous copié les fichiers de conception de notre site au début du didacticiel. Les fichiers d’appartenance sont situés dans le répertoire de Code.*
+*Remarque : ces fichiers sont également disponibles dans le téléchargement MvcMusicStore-Assets. zip à partir duquel nous avons copié nos fichiers de conception de site au début du didacticiel. Les fichiers d’appartenance se trouvent dans le répertoire de code.*
 
-La solution de mise à jour doit se présenter comme suit :
+La solution mise à jour doit ressembler à ce qui suit :
 
 ![](mvc-music-store-part-7/_static/image1.png)
 
-## <a name="adding-an-administrative-user-with-the-aspnet-configuration-site"></a>Ajout d’un utilisateur administratif avec le site de Configuration ASP.NET
+## <a name="adding-an-administrative-user-with-the-aspnet-configuration-site"></a>Ajout d’un utilisateur administratif à l’aide du site de configuration ASP.NET
 
-Avant que nous avons besoin d’autorisation dans notre site Web, nous allons devoir créer un utilisateur avec accès. Le moyen le plus simple de créer un utilisateur consiste à utiliser le site Web de Configuration ASP.NET intégré.
+Avant de demander une autorisation sur notre site Web, nous devrons créer un utilisateur avec accès. Le moyen le plus simple de créer un utilisateur consiste à utiliser le site Web de configuration ASP.NET intégré.
 
-Lancer le site Web ASP.NET Configuration en cliquant sur Suivant l’icône dans l’Explorateur de solutions.
+Lancez le site Web de configuration ASP.NET en cliquant sur le suivi de l’icône dans la Explorateur de solutions.
 
 ![](mvc-music-store-part-7/_static/image2.png)
 
-Cette opération lance un site Web de configuration. Cliquez sur l’onglet sécurité sur l’écran d’accueil, puis cliquez sur le lien « Activer les rôles » dans le centre de l’écran.
+Un site Web de configuration est lancé. Cliquez sur l’onglet sécurité sur l’écran d’accueil, puis cliquez sur le lien activer les rôles au centre de l’écran.
 
 ![](mvc-music-store-part-7/_static/image3.png)
 
-Cliquez sur le lien « Créer ou gérer des rôles ».
+Cliquez sur le lien « créer ou gérer des rôles ».
 
 ![](mvc-music-store-part-7/_static/image4.png)
 
-Entrez le nom de rôle « Administrateur » et appuyez sur le bouton Ajouter un rôle.
+Entrez « administrateur » comme nom de rôle, puis cliquez sur le bouton Ajouter un rôle.
 
 ![](mvc-music-store-part-7/_static/image5.png)
 
-Cliquez sur le bouton précédent, puis cliquez sur le lien d’utilisateur de créer sur le côté gauche.
+Cliquez sur le bouton précédent, puis sur le lien créer un utilisateur sur le côté gauche.
 
 ![](mvc-music-store-part-7/_static/image6.png)
 
-Renseignez les champs des informations sur la gauche en utilisant les informations suivantes :
+Renseignez les champs d’informations utilisateur sur la gauche à l’aide des informations suivantes :
 
 | **Champ** | **Valeur** |
 | --- | --- |
 | **Nom d'utilisateur** | Administrateur |
-| **Mot de passe** | password123 ! |
-| **Confirmer le mot de passe** | password123 ! |
-| **Message électronique** | (n’importe quelle adresse de messagerie fonctionneront) |
-| **Question de sécurité** | (comme vous le souhaitez) |
-| **Réponse de sécurité** | (comme vous le souhaitez) |
+| **Mot de passe** | password123! |
+| **Confirmer le mot de passe** | password123! |
+| **Message électronique** | (toute adresse de messagerie fonctionnera) |
+| **Question de sécurité** | (tout ce que vous aimez) |
+| **Réponse de sécurité** | (tout ce que vous aimez) |
 
-*Remarque : Vous pouvez évidemment utiliser n’importe quel mot de passe que vous souhaitez. Les paramètres de sécurité de mot de passe par défaut exigent un mot de passe qui est de 7 caractères et qui contient un caractère non alphanumérique.*
+*Remarque : vous pouvez bien sûr utiliser le mot de passe de votre choix. Les paramètres de sécurité de mot de passe par défaut requièrent un mot de passe de 7 caractères et contiennent un caractère non alphanumérique.*
 
-Sélectionnez le rôle d’administrateur pour cet utilisateur, puis cliquez sur le bouton Créer un utilisateur.
+Sélectionnez le rôle administrateur pour cet utilisateur, puis cliquez sur le bouton créer un utilisateur.
 
 ![](mvc-music-store-part-7/_static/image7.png)
 
-À ce stade, vous devez voir un message indiquant que l’utilisateur a été créé avec succès.
+À ce stade, vous devriez voir un message indiquant que l’utilisateur a été créé avec succès.
 
 ![](mvc-music-store-part-7/_static/image8.png)
 
 Vous pouvez maintenant fermer la fenêtre du navigateur.
 
-## <a name="role-based-authorization"></a>Autorisation basée sur un rôle
+## <a name="role-based-authorization"></a>Autorisation basée sur les rôles
 
-Nous pouvons désormais restreindre l’accès à StoreManagerController à l’aide de l’attribut [Authorize], qui spécifie que l’utilisateur doit être dans le rôle d’administrateur pour accéder à toute action de contrôleur dans la classe.
+À présent, nous pouvons limiter l’accès à StoreManagerController à l’aide de l’attribut [Authorize], en spécifiant que l’utilisateur doit avoir le rôle d’administrateur pour accéder à n’importe quelle action de contrôleur dans la classe.
 
 [!code-csharp[Main](mvc-music-store-part-7/samples/sample1.cs)]
 
-*Remarque : L’attribut [Authorize] peut être placé sur les méthodes d’action spécifique, ainsi qu’au niveau de la classe de contrôleur.*
+*Remarque : l’attribut [Authorize] peut être placé sur des méthodes d’action spécifiques, ainsi que au niveau de la classe du contrôleur.*
 
-Accédez maintenant à /StoreManager fait apparaître une boîte de dialogue Ouverture de session :
+À présent, la navigation vers/StoreManager affiche une boîte de dialogue de connexion :
 
 ![](mvc-music-store-part-7/_static/image9.png)
 
-Après l’ouverture de session avec notre nouveau compte d’administrateur, nous sommes en mesure d’accéder à l’écran Modifier Album comme avant.
+Une fois connecté avec notre nouveau compte d’administrateur, nous pouvons accéder à l’écran de modification de l’album comme auparavant.
 
 > [!div class="step-by-step"]
 > [Précédent](mvc-music-store-part-6.md)

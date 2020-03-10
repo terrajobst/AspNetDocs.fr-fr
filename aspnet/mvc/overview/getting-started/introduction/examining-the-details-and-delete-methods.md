@@ -9,11 +9,11 @@ ms.assetid: f1d2a916-626c-4a54-8df4-77e6b9fff355
 msc.legacyurl: /mvc/overview/getting-started/introduction/examining-the-details-and-delete-methods
 msc.type: authoredcontent
 ms.openlocfilehash: da06815b5c1d76a939fdfb77ce11774081dfb881
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456398"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78582508"
 ---
 # <a name="examining-the-details-and-delete-methods"></a>Examen des méthodes Details et Delete
 
@@ -53,7 +53,7 @@ Une autre méthode courante pour éviter un problème avec les méthodes qui ont
 
 [!code-csharp[Main](examining-the-details-and-delete-methods/samples/sample4.cs)]
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Vous disposez maintenant d’une application MVC ASP.NET complète qui stocke les données dans une base de données de base de données locale. Vous pouvez créer, lire, mettre à jour, supprimer et Rechercher des films.
 

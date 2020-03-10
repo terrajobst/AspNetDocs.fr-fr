@@ -9,11 +9,11 @@ ms.assetid: c0090595-ab3b-4b9b-9e16-7a1891e8cb2f
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/troubleshooting
 msc.type: authoredcontent
 ms.openlocfilehash: b42476fca18b04f4557a216ee205cfd9220023e8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74623583"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78576096"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-troubleshooting"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : dépannage
 
@@ -25,10 +25,10 @@ par [Tom Dykstra](https://github.com/tdykstra)
 
 Cette page décrit certains problèmes courants qui peuvent survenir lorsque vous déployez une application Web ASP.NET à l’aide de Visual Studio. Pour chacune d’elles, une ou plusieurs causes possibles et les solutions correspondantes sont fournies.
 
-Les scénarios indiqués s’appliquent à la fois aux fournisseurs d’hébergement Azure et tiers. Pour plus d’informations sur le dépannage des applications Web dans Azure App Service, consultez les ressources suivantes :
+Les scénarios indiqués s’appliquent à la fois aux fournisseurs d’hébergement Azure et tiers. Pour en savoir plus sur la résolution des applications web dans le Service d’application Microsoft Azure, consultez les ressources suivantes :
 
 - [Résoudre les problèmes d’une application web dans Azure App Service avec Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
-- [Surveiller Web Apps dans Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-monitor//)
+- [Surveiller les applications web dans Microsoft Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-monitor//)
 - [Annonce de la publication du kit de développement logiciel (SDK) Windows Azure 2,0 pour .net](http://https://weblogs.asp.net/scottgu/announcing-the-release-of-windows-azure-sdk-2-0-for-net) (blog de ScottGu, qui montre comment obtenir les journaux de diagnostic dans Visual Studio)
 
 ## <a name="server-error-in--application---current-custom-error-settings-prevent-details-of-the-error-from-being-viewed-remotely"></a>Erreur de serveur dans l’application « / »-les paramètres d’erreur personnalisés actuels empêchent l’affichage à distance des détails de l’erreur
@@ -48,7 +48,7 @@ Pour permettre à l’application d’afficher des messages d’erreur détaill�
 1. Si le fichier Web. config de l’application a un élément customErrors dans l’élément System. Web, remplacez l’attribut mode par « OFF ». Sinon, ajoutez un élément customErrors dans l’élément System. Web avec l’attribut mode défini sur OFF, comme indiqué dans l’exemple suivant : 
 
     [!code-xml[Main](troubleshooting/samples/sample2.xml)]
-2. déployer l'application.
+2. Déployez l’application.
 3. Exécutez l’application et répétez les étapes que vous avez effectuées précédemment, ce qui a provoqué l’erreur. Vous pouvez maintenant voir le message d’erreur réel.
 4. Une fois l’erreur résolue, restaurez le paramètre customErrors d’origine et redéployez l’application.
 
@@ -58,7 +58,7 @@ Pour permettre à l’application d’afficher des messages d’erreur détaill�
 
 Lorsque vous essayez d’exécuter un projet dans Visual Studio, vous recevez une page d’erreur avec un message semblable à l’exemple suivant :
 
-Erreur de serveur dans l'application '/' Impossible de créer le cliché instantané’ContosoUniversity’lorsque ce fichier existe déjà.
+Erreur de serveur dans l’application « / ». Impossible de créer le cliché instantané’ContosoUniversity’lorsque ce fichier existe déjà.
 
 ### <a name="possible-cause-and-solution"></a>Cause possible et solution
 
@@ -276,7 +276,7 @@ Le site déployé n’a pas de sous-dossiers *amd64* et *x86* avec les assemblys
 
 Vous déployez une application qui utilise Migrations Entity Framework Code First et un SGBD comme SQL Server Compact qui stocke sa base de données dans un fichier dans le dossier des données de\_de l’application. Vous avez Migrations Code First configuré pour créer la base de données après votre premier déploiement. Lorsque vous exécutez l’application, vous recevez un message d’erreur semblable à l’exemple suivant :
 
-Le chemin d’accès n’est pas valide. Vérifiez le répertoire de la base de données. [Path = c:\inetpub\wwwroot\App\_Data\DatabaseName.sdf]
+Le chemin d'accès n'est pas valide. Vérifiez le répertoire de la base de données. [Path = c:\inetpub\wwwroot\App\_Data\DatabaseName.sdf]
 
 ### <a name="possible-cause-and-solution"></a>Cause possible et solution
 

@@ -9,11 +9,11 @@ ms.assetid: 493b2a66-816c-485c-8315-952ed1085ccc
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 5d85232ff2cb229d771d517db7173721c9e277bf
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74633516"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78635127"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-to-iis-as-a-test-environment---5-of-12"></a>Déploiement d’une application Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : déploiement vers IIS en tant qu’environnement de test-5 sur 12
 
@@ -25,7 +25,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Pour obtenir un didacticiel qui présente les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions SQL Server autres que SQL Server Compact et montre comment déployer vers Azure App Service Web Apps, consultez [déploiement Web ASP.net à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Ce didacticiel montre comment déployer une application Web ASP.NET sur l’ordinateur local.
 
@@ -112,7 +112,7 @@ Avant la publication, assurez-vous que vous exécutez Visual Studio en mode admi
 
 Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet ContosoUniversity (pas sur le projet CONTOSOUNIVERSITY. dal), puis sélectionnez **publier**.
 
-L’Assistant **publier le site Web** s’affiche.
+L'Assistant **Publier le site Web** s'ouvre.
 
 ![Publish_Web_wizard_Profile_tab](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12/_static/image9.png)
 
@@ -233,7 +233,7 @@ Cette chaîne de connexion supplémentaire vous permet de spécifier un compte d
 
 Vous avez maintenant déployé votre application sur IIS sur votre ordinateur de développement et vous l’avez testée ici. Cela permet de vérifier que le processus de déploiement a copié le contenu de l’application à l’emplacement approprié (à l’exclusion des fichiers que vous ne souhaitez pas déployer) et que Web Deploy configuré IIS correctement au cours du déploiement. Dans le didacticiel suivant, vous allez exécuter un test supplémentaire qui recherche une tâche de déploiement qui n’a pas encore été effectuée : définition des autorisations de dossier sur le dossier *ELMAH* .
 
-## <a name="more-information"></a>Plus d’informations
+## <a name="more-information"></a>Plus d'informations
 
 Pour plus d’informations sur l’exécution d’IIS ou de IIS Express dans Visual Studio, consultez les ressources suivantes :
 

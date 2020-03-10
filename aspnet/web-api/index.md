@@ -1,8 +1,8 @@
 ---
 uid: web-api/index
-title: API Web ASP.NET - ASP.NET 4.x
+title: API Web ASP.NET-ASP.NET 4. x
 author: rick-anderson
-description: Télécharger ASP.NET MVC 4 et générer des services HTTP qui atteignent une large gamme de clients.
+description: Téléchargez ASP.NET MVC 4 et développez des services HTTP qui atteignent un large éventail de clients.
 ms.author: riande
 ms.date: 01/17/2012
 ms.custom: seoapril2019
@@ -10,24 +10,24 @@ ms.assetid: f571ca7a-c06b-400d-8051-f62f9f0bcc9b
 msc.legacyurl: /web-api
 msc.type: categoryindex
 ms.openlocfilehash: c04719e06c6c0900c8f8268b73f833b525ea3dd6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410836"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557728"
 ---
 # <a name="aspnet-web-api"></a>API web ASP.NET
 
 - [Aide](overview/index.md)
 
-    - [Prise en main](overview/getting-started-with-aspnet-web-api/index.md)
+    - [Bien démarrer](overview/getting-started-with-aspnet-web-api/index.md)
 
         - [Bien démarrer avec Web API 2 (C#)](overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md)
         - [Résultats des actions dans l’API Web 2](overview/getting-started-with-aspnet-web-api/action-results.md)
         - [Utilisation de l’API web avec ASP.NET Web Forms](overview/getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md)
         - [Création de pages d’aide de l’API web](overview/getting-started-with-aspnet-web-api/creating-api-help-pages.md)
-        - [Atelier pratique : Créer une Application à Page unique (SPA) avec l’API Web ASP.NET et Angular.js](overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
-    - [Le routage](overview/web-api-routing-and-actions/index.md)
+        - [Atelier pratique : Créer une application à une seule page avec l’API web ASP.NET et Angular.js](overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
+    - [Routage](overview/web-api-routing-and-actions/index.md)
 
         - [Routage dans l’API web](overview/web-api-routing-and-actions/routing-in-aspnet-web-api.md)
         - [Routage et sélection des actions dans l’API web](overview/web-api-routing-and-actions/routing-and-action-selection.md)
@@ -114,8 +114,8 @@ ms.locfileid: "59410836"
         - [Appeler une API web à partir d’un client .NET (C#)](overview/advanced/calling-a-web-api-from-a-net-client.md)
         - [Gestionnaires de messages HTTP dans l’API web](overview/advanced/http-message-handlers.md)
         - [Gestionnaires de messages HttpClient dans l’API web](overview/advanced/httpclient-message-handlers.md)
-        - [Envoi de données de formulaire HTML dans l’API Web : Données de Form-UrlEncode](overview/advanced/sending-html-form-data-part-1.md)
-        - [Envoi de données de formulaire HTML dans l’API Web : Chargement du fichier et MIME à parties multiples](overview/advanced/sending-html-form-data-part-2.md)
+        - [Envoi de données de formulaire HTML dans l’API web : données de formulaire encodées dans l’URL](overview/advanced/sending-html-form-data-part-1.md)
+        - [Envoi de données de formulaire HTML dans l’API web : chargement de fichier et MIME à plusieurs parties](overview/advanced/sending-html-form-data-part-2.md)
         - [Cookies HTTP dans l’API web ASP.NET](overview/advanced/http-cookies.md)
     - [Versions](overview/releases/index.md)
 
@@ -141,10 +141,10 @@ ms.locfileid: "59410836"
     - [Vue d’ensemble et prise en main](videos/getting-started/index.md)
 
         - [API Web ASP.NET](videos/getting-started/aspnet-web-api.md)
-        - [ASP.NET Web API, partie 1 : Votre première API Web](videos/getting-started/your-first-web-api.md)
-        - [ASP.NET Web API, partie 2 : Obtention de données](videos/getting-started/getting-data.md)
-        - [ASP.NET Web API, partie 3 : Supprimer et mettre à jour](videos/getting-started/delete-and-update.md)
-        - [ASP.NET Web API, partie 4 : Pagination et requêtes](videos/getting-started/paging-and-querying.md)
-        - [ASP.NET Web API, partie 5 : Validation personnalisée](videos/getting-started/custom-validation.md)
-        - [ASP.NET Web API, partie 6 : Autorisation](videos/getting-started/authorization.md)
+        - [ASP.NET Web API, partie 1 : Votre première API web](videos/getting-started/your-first-web-api.md)
+        - [ASP.NET Web API, partie 2 : Obtention de données](videos/getting-started/getting-data.md)
+        - [ASP.NET Web API, partie 3 : Supprimer et mettre à jour](videos/getting-started/delete-and-update.md)
+        - [ASP.NET Web API, partie 4 : Pagination et requêtes](videos/getting-started/paging-and-querying.md)
+        - [ASP.NET Web API, partie 5 : Validation personnalisée](videos/getting-started/custom-validation.md)
+        - [ASP.NET Web API, partie 6 : Autorisation](videos/getting-started/authorization.md)
 - [Liste d’exemples d’API web](samples-list.md)

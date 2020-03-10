@@ -9,11 +9,11 @@ ms.assetid: 9e4e687c-b4ec-434f-a4ef-edb0b8f365e4
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/building-an-interface-to-select-one-user-account-from-many-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8057cfbcd33c74376076363bc27940cebd522c08
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74576000"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78642533"
 ---
 # <a name="building-an-interface-to-select-one-user-account-from-many-c"></a>Création d’une interface pour sélectionner un compte d’utilisateur parmi de nombreux comptes (C#)
 
@@ -29,7 +29,7 @@ Dans le <a id="_msoanchor_1"> </a>didacticiel [*attribution de rôles aux utilis
 
 Dans ce didacticiel, nous allons créer une interface utilisateur de ce type. En particulier, notre interface utilisateur se compose d’une série de LinkButtons pour filtrer les résultats en fonction de la lettre de départ du nom d’utilisateur, et d’un contrôle GridView pour afficher les utilisateurs correspondants. Nous allons commencer par répertorier tous les comptes d’utilisateur dans un GridView. Ensuite, à l’étape 3, nous ajouterons le filtre LinkButtons. L’étape 4 examine la pagination des résultats filtrés. L’interface construite dans les étapes 2 à 4 sera utilisée dans les didacticiels suivants pour effectuer des tâches d’administration pour un compte d’utilisateur particulier.
 
-Commençons !
+C’est parti !
 
 ## <a name="step-1-adding-new-aspnet-pages"></a>Étape 1 : ajout de nouvelles pages ASP.NET
 
@@ -241,4 +241,4 @@ Scott Mitchell, auteur de plusieurs ouvrages ASP/ASP. NET et fondateur de 4GuysF
 Cette série de didacticiels a été examinée par de nombreux réviseurs utiles. Le réviseur de leads pour ce didacticiel était Alicja maziarz. Vous souhaitez revoir mes prochains articles MSDN ? Dans ce cas, insérez une ligne à [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Suivant](recovering-and-changing-passwords-cs.md)
+> [Next](recovering-and-changing-passwords-cs.md)

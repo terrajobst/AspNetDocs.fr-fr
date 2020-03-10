@@ -1,107 +1,107 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs
-title: Présentation du routage ASP.NET MVC (c#) | Microsoft Docs
+title: Vue d’ensemble du routageC#ASP.NET MVC () | Microsoft Docs
 author: StephenWalther
-description: Dans ce didacticiel, Stephen Walther montre comment l’infrastructure ASP.NET MVC mappe les demandes du navigateur pour les actions de contrôleur.
+description: Dans ce didacticiel, Stephen Walther montre comment l’infrastructure ASP.NET MVC mappe les demandes de navigateur aux actions de contrôleur.
 ms.author: riande
 ms.date: 08/19/2008
 ms.assetid: 5b39d2d5-4bf9-4d04-94c7-81b84dfeeb31
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 5e1155ca676e7a25b5bfc63e251c6387a010eb34
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123655"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78544141"
 ---
 # <a name="aspnet-mvc-routing-overview-c"></a>Vue d’ensemble du routage ASP.NET MVC (C#)
 
 par [Stephen Walther](https://github.com/StephenWalther)
 
-> Dans ce didacticiel, Stephen Walther montre comment l’infrastructure ASP.NET MVC mappe les demandes du navigateur pour les actions de contrôleur.
+> Dans ce didacticiel, Stephen Walther montre comment l’infrastructure ASP.NET MVC mappe les demandes de navigateur aux actions de contrôleur.
 
-Dans ce didacticiel, vous découvrirez une fonctionnalité importante de toutes les applications ASP.NET MVC appelée *routage ASP.NET*. Le module de routage ASP.NET est chargé du mappage des demandes du navigateur entrantes à des actions de contrôleur MVC particuliers. À la fin de ce didacticiel, vous comprendrez comment la table de routage standard mappe les requêtes à actions du contrôleur.
+Dans ce didacticiel, vous allez découvrir une fonctionnalité importante de chaque application ASP.NET MVC appelée *routage ASP.net*. Le module de routage ASP.NET est chargé de mapper les demandes de navigateur entrantes à des actions de contrôleur MVC particulières. À la fin de ce didacticiel, vous comprendrez comment la table de routage standard mappe les demandes aux actions de contrôleur.
 
-## <a name="using-the-default-route-table"></a>À l’aide de la Table d’itinéraire par défaut
+## <a name="using-the-default-route-table"></a>Utilisation de la table de routage par défaut
 
-Lorsque vous créez une application ASP.NET MVC, l’application est déjà configurée pour utiliser le routage ASP.NET. ASP.NET Routing est configuré dans deux emplacements.
+Lorsque vous créez une application MVC ASP.NET, l’application est déjà configurée pour utiliser le routage ASP.NET. Le routage ASP.NET est configuré à deux emplacements.
 
-Tout d’abord, le routage ASP.NET est activé dans le fichier de configuration de votre application Web (fichier Web.config). Il existe quatre sections dans le fichier de configuration qui sont pertinentes pour le routage : la section system.web.httpModules, la section system.web.httpHandlers, la section system.webserver.modules et la section system.webserver.handlers. Veillez à ne pas supprimer ces sections, car sans ces sections routage ne fonctionnera plus.
+Tout d’abord, le routage ASP.NET est activé dans le fichier de configuration Web de votre application (fichier Web. config). Quatre sections du fichier de configuration sont pertinentes pour le routage : la section System. Web. httpModules, la section System. Web. httpHandlers, la section System. webserver. modules et la section System. webserver. Handlers. Veillez à ne pas supprimer ces sections, car sans ces sections le routage ne fonctionnera plus.
 
-Deuxièmement et plus important encore, une table de routage est créée dans le fichier Global.asax de l’application. Le fichier Global.asax est un fichier spécial qui contient les gestionnaires d’événements pour les événements de cycle de vie des applications ASP.NET. La table de routage est créée lors de l’événement de démarrer l’Application.
+Deuxièmement, et plus important encore, une table de routage est créée dans le fichier global. asax de l’application. Le fichier global. asax est un fichier spécial qui contient des gestionnaires d’événements pour les événements de cycle de vie d’application ASP.NET. La table de routage est créée lors de l’événement de démarrage de l’application.
 
-Le fichier dans le Listing 1 contient le fichier Global.asax de valeur par défaut pour une application ASP.NET MVC.
+Le fichier dans la liste 1 contient le fichier global. asax par défaut pour une application MVC ASP.NET.
 
-**Liste 1 - Global.asax.cs**
+**Liste 1-Global.asax.cs**
 
 [!code-csharp[Main](asp-net-mvc-routing-overview-cs/samples/sample1.cs)]
 
-Quand une application MVC commence, l’Application\_méthode Start() est appelée. Cette méthode, appelle à son tour, la méthode RegisterRoutes(). La méthode RegisterRoutes() crée la table de routage.
+Lors du premier démarrage d’une application MVC, l’application\_méthode Start () est appelée. Cette méthode appelle à son tour la méthode RegisterRoutes (). La méthode RegisterRoutes () crée la table de routage.
 
-La table d’itinéraires par défaut contient un itinéraire unique (nommé par défaut). L’itinéraire par défaut mappe le premier segment d’URL à un nom de contrôleur, le deuxième segment d’URL à une action de contrôleur et le troisième segment à un paramètre nommé **id**.
+La table de routage par défaut contient un seul itinéraire (nommé Default). L’itinéraire par défaut mappe le premier segment d’une URL à un nom de contrôleur, le deuxième segment d’une URL à une action de contrôleur et le troisième segment à un paramètre nommé **ID**.
 
-Imaginez que vous entrez l’URL suivante dans la barre d’adresses de votre navigateur web :
+Imaginez que vous entrez l’URL suivante dans la barre d’adresse de votre navigateur Web :
 
-/ Home/Index/3
+/Home/Index/3
 
-L’itinéraire par défaut est mappé à cette URL pour les paramètres suivants :
+L’itinéraire par défaut mappe cette URL aux paramètres suivants :
 
-- contrôleur = Home
+- contrôleur = page d’hébergement
 
-- action = Index
+- action = index
 
 - id = 3
 
-Lorsque vous demandez l’URL de base/Index/3, le code suivant est exécuté :
+Lorsque vous demandez l’URL/Home/Index/3, le code suivant est exécuté :
 
 HomeController.Index(3)
 
-L’itinéraire par défaut inclut les valeurs par défaut pour tous les trois paramètres. Si vous ne fournissez pas un contrôleur, puis le paramètre de contrôleur par défaut la valeur **accueil**. Si vous ne fournissez pas une action, le paramètre d’action par défaut la valeur **Index**. Enfin, si vous ne fournissez pas un id, le paramètre id par défaut est une chaîne vide.
+L’itinéraire par défaut comprend les valeurs par défaut pour les trois paramètres. Si vous ne fournissez pas de contrôleur, le paramètre de contrôleur a par défaut la valeur **orig**. Si vous ne fournissez pas d’action, le paramètre d’action est défini par défaut sur l' **index**de valeur. Enfin, si vous ne fournissez pas d’ID, le paramètre ID est une chaîne vide par défaut.
 
-Examinons quelques exemples montrant comment l’itinéraire par défaut mappe des URL à actions du contrôleur. Imaginez que vous entrez l’URL suivante dans votre barre d’adresses du navigateur :
+Examinons quelques exemples de la façon dont l’itinéraire par défaut mappe les URL aux actions de contrôleur. Imaginez que vous entrez l’URL suivante dans la barre d’adresse de votre navigateur :
 
-/ Édition familiale
+/Home
 
-En raison de l’itinéraire par défaut, paramètres par défaut entrer cette URL entraîne la méthode Index() de la classe HomeController dans la liste de 2 à appeler.
+En raison des valeurs par défaut des paramètres d’itinéraire par défaut, l’entrée de cette URL entraîne l’appel de la méthode index () de la classe HomeController dans Listing 2.
 
-**Listing 2 - HomeController.cs**
+**Liste 2-HomeController.cs**
 
 [!code-csharp[Main](asp-net-mvc-routing-overview-cs/samples/sample2.cs)]
 
-Dans la liste 2, la classe HomeController inclut une méthode nommée Index() qui accepte un paramètre unique nommé ID. L’URL de base indique à la méthode Index() soit appelée avec une chaîne vide comme valeur du paramètre Id.
+Dans la liste 2, la classe HomeController contient une méthode nommée index () qui accepte un paramètre unique nommé ID. L’URL/Home provoque l’appel de la méthode index () avec une chaîne vide comme valeur du paramètre ID.
 
-En raison de la façon que l’infrastructure MVC appelle les actions de contrôleur, l’URL de base correspond également à la méthode Index() de la classe HomeController dans le Listing 3.
+En raison de la façon dont l’infrastructure MVC appelle les actions de contrôleur, l’URL/Home correspond également à la méthode index () de la classe HomeController dans le Listing 3.
 
-**Liste 3 - HomeController.cs (action Index sans paramètre)**
+**Liste 3-HomeController.cs (action d’index sans paramètre)**
 
 [!code-csharp[Main](asp-net-mvc-routing-overview-cs/samples/sample3.cs)]
 
-La méthode Index() dans le Listing 3 n’accepte pas de tous les paramètres. L’URL de base entraîne cette méthode Index() à appeler. L’URL de base/Index/3 appelle également cette méthode (l’Id est ignoré).
+La méthode index () de la liste 3 n’accepte aucun paramètre. L’URL/Home entraînera l’appel de cette méthode index (). L’URL/Home/Index/3 appelle également cette méthode (l’ID est ignoré).
 
-La base de l’URL correspond également à la méthode Index() de la classe HomeController sur la liste 4.
+L’URL/Home correspond également à la méthode index () de la classe HomeController de la liste 4.
 
-**Liste 4 - HomeController.cs (action Index avec le paramètre nullable)**
+**Liste 4-HomeController.cs (action d’index avec paramètre Nullable)**
 
 [!code-csharp[Main](asp-net-mvc-routing-overview-cs/samples/sample4.cs)]
 
-Dans la liste 4, la méthode Index() a un paramètre de type entier. Étant donné que le paramètre est un paramètre nullable (peut avoir pas la valeur Null), le Index() peut être appelée sans provoquer d’erreur.
+Dans la liste 4, la méthode index () a un paramètre entier. Étant donné que le paramètre est un paramètre Nullable (peut avoir la valeur null), l’index () peut être appelé sans déclencher d’erreur.
 
-Enfin, l’appel à la méthode Index() dans la liste des 5 avec la base de l’URL entraîne une exception depuis le paramètre Id *n’est pas* un paramètre nullable. Si vous tentez d’appeler la méthode Index() puis vous obtenez l’erreur affichée dans la Figure 1.
+Enfin, l’appel de la méthode index () dans la liste 5 avec l’URL/Home provoque une exception, car le paramètre ID *n’est pas* un paramètre Nullable. Si vous tentez d’appeler la méthode index (), vous recevez l’erreur affichée à la figure 1.
 
-**Liste 5 - HomeController.cs (action Index avec le paramètre Id)**
+**Liste 5-HomeController.cs (action d’index avec paramètre ID)**
 
 [!code-csharp[Main](asp-net-mvc-routing-overview-cs/samples/sample5.cs)]
 
-[![Appel d’une action de contrôleur qui attend une valeur de paramètre](asp-net-mvc-routing-overview-cs/_static/image1.jpg)](asp-net-mvc-routing-overview-cs/_static/image1.png)
+[![de l’appel d’une action de contrôleur qui attend une valeur de paramètre](asp-net-mvc-routing-overview-cs/_static/image1.jpg)](asp-net-mvc-routing-overview-cs/_static/image1.png)
 
-**Figure 01**: Appel d’une action de contrôleur qui attend une valeur de paramètre ([cliquez pour afficher l’image en taille réelle](asp-net-mvc-routing-overview-cs/_static/image2.png))
+**Figure 01**: appel d’une action de contrôleur qui attend une valeur de paramètre ([cliquez pour afficher l’image en taille réelle](asp-net-mvc-routing-overview-cs/_static/image2.png))
 
-L’URL de base/Index/3, quant à eux, fonctionne parfaitement avec l’action de contrôleur d’Index dans la liste 5. La demande /Home/Index/3 indique à la méthode Index() à être appelée avec un paramètre d’Id qui a la valeur 3.
+L’URL/Home/Index/3, en revanche, fonctionne parfaitement avec l’action du contrôleur d’index dans la liste 5. La requête/Home/Index/3 provoque l’appel de la méthode index () avec un paramètre ID qui a la valeur 3.
 
 ## <a name="summary"></a>Récapitulatif
 
-L’objectif de ce didacticiel est de vous fournir une brève introduction au routage ASP.NET. Nous avons examiné la table d’itinéraires par défaut que vous obtenez avec une application ASP.NET MVC. Vous avez appris comment l’itinéraire par défaut mappe des URL à actions du contrôleur.
+L’objectif de ce didacticiel était de vous fournir une brève présentation du routage ASP.NET. Nous avons examiné la table de routage par défaut que vous avez obtenue avec une nouvelle application ASP.NET MVC. Vous avez appris comment l’itinéraire par défaut mappe les URL aux actions du contrôleur.
 
 > [!div class="step-by-step"]
 > [Next](understanding-action-filters-cs.md)

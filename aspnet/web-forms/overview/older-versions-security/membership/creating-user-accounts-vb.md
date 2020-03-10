@@ -9,11 +9,11 @@ ms.assetid: 9ef3e893-bebe-4b13-9fe5-8b71720dd85e
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/creating-user-accounts-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 01be198c329f372ddcd529ad8a369f2d3426a9fc
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74628457"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78586820"
 ---
 # <a name="creating-user-accounts-vb"></a>Création de comptes d’utilisateurs (VB)
 
@@ -29,7 +29,7 @@ Dans le <a id="_msoanchor_1"> </a> [didacticiel précédent](creating-the-member
 
 En plus d’apprendre à créer des comptes d’utilisateur, nous devons également mettre à jour le site Web de démonstration que nous avons créé dans le didacticiel *<a id="_msoanchor_2"></a>[d’authentification des formulaires](../introduction/an-overview-of-forms-authentication-vb.md)* , puis amélioré dans le didacticiel sur *<a id="_msoanchor_3"></a>[la configuration de l'authentification par formulaire et les rubriques avancées](../introduction/forms-authentication-configuration-and-advanced-topics-vb.md)* . Notre application Web de démonstration a une page de connexion qui valide les informations d’identification des utilisateurs par rapport à des paires nom d’utilisateur/mot de passe codées en dur. En outre, `Global.asax` comprend du code qui crée des objets `IPrincipal` et `IIdentity` personnalisés pour les utilisateurs authentifiés. Nous allons mettre à jour la page de connexion pour valider les informations d’identification des utilisateurs par rapport à l’infrastructure d’appartenance et supprimer le principal personnalisé et la logique d’identité.
 
-Commençons !
+C’est parti !
 
 ## <a name="the-forms-authentication-and-membership-checklist"></a>Liste de vérification de l’authentification et de l’appartenance aux formulaires
 

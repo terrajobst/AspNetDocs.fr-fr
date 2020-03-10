@@ -9,11 +9,11 @@ ms.assetid: a973ed3e-400c-4925-ace2-0b086b479301
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 468a830f01c48dc39b22bc5d826f80533df65c1a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74574395"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78554284"
 ---
 # <a name="using-a-confirmbutton-in-a-repeater-c"></a>Utilisation d’un ConfirmButton dans un répéteur (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > L’extendeur ConfirmButton dans la boîte à outils de contrôle AJAX crée une fenêtre contextuelle oui/non quand l’utilisateur clique sur un bouton (y compris le contrôle LinkButton). Si l’utilisateur clique sur Oui, l’action du bouton est exécutée, sinon annulée. Cela est également possible dans un Repeater.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 L’extendeur ConfirmButton dans la boîte à outils de contrôle AJAX crée une fenêtre contextuelle oui/non quand l’utilisateur clique sur un bouton (y compris le contrôle LinkButton). Si l’utilisateur clique sur Oui, l’action du bouton est exécutée, sinon annulée. Cela est également possible dans un Repeater.
 
@@ -50,4 +50,4 @@ Cette source de données peut ensuite être utilisée dans un Repeater. Comme d�
 Le bouton confirmer apparaît en regard de chaque entrée de la source de données ([cliquez pour afficher l’image en taille réelle](using-a-confirmbutton-in-a-repeater-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](using-a-confirmbutton-in-a-repeater-vb.md)
+> [Next](using-a-confirmbutton-in-a-repeater-vb.md)

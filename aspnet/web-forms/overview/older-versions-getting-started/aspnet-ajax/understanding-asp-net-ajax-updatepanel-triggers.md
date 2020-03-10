@@ -9,11 +9,11 @@ ms.assetid: faab8503-2984-48a9-8a40-7728461abc50
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-updatepanel-triggers
 msc.type: authoredcontent
 ms.openlocfilehash: b1cc869f373d4f8283b4d92af74707c3f11fef61
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74588826"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78547452"
 ---
 # <a name="understanding-aspnet-ajax-updatepanel-triggers"></a>Présentation des déclencheurs UpdatePanel d’ASP.NET AJAX
 
@@ -53,7 +53,7 @@ De même, l’élément `<asp:PostBackTrigger>` peut être utilisé pour déclen
 
 *Descendants de balisage :*
 
-| **Référence** | **Description** |
+| **Tag** | **Description** |
 | --- | --- |
 | &lt;asp : AsyncPostBackTrigger&gt; | Spécifie un contrôle et un événement qui entraînent une mise à jour de page partielle pour le UpdatePanel qui contient cette référence de déclencheur. |
 | &lt;asp : PostBackTrigger&gt; | Spécifie un contrôle et un événement qui entraînent une mise à jour de page complète (actualisation de page complète). Cette balise peut être utilisée pour forcer une actualisation complète lorsqu’un contrôle déclencherait un rendu partiel. |

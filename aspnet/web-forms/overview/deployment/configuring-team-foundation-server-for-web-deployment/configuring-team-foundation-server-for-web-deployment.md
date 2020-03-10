@@ -1,19 +1,19 @@
 ---
 uid: web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/configuring-team-foundation-server-for-web-deployment
-title: Configuration de Team Foundation Server pour le déploiement de Web | Microsoft Docs
+title: Configuration de Team Foundation Server pour le déploiement Web | Microsoft Docs
 author: jrjlee
-description: Ce didacticiel vous explique comment configurer Team Foundation Server (TFS) 2010 pour créer des solutions et de déployer le contenu web dans différents environnements cibles. Ceci...
+description: Ce didacticiel vous montre comment configurer Team Foundation Server (TFS) 2010 pour générer des solutions et déployer du contenu Web dans différents environnements cibles. ...
 ms.author: riande
 ms.date: 05/04/2012
 ms.assetid: ff55233a-e795-4007-a4fc-861fe1bb590b
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/configuring-team-foundation-server-for-web-deployment
 msc.type: authoredcontent
 ms.openlocfilehash: 638d696abbc5f05957c0ed2eb7ebb65fce7813ea
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133868"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78528391"
 ---
 # <a name="configuring-team-foundation-server-for-web-deployment"></a>Configuration de Team Foundation Server pour le déploiement web
 
@@ -21,57 +21,57 @@ par [Jason Lee](https://github.com/jrjlee)
 
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
-> Ce didacticiel vous explique comment configurer Team Foundation Server (TFS) 2010 pour créer des solutions et de déployer le contenu web dans différents environnements cibles. Cela inclut des scénarios d’intégration continue (CI), où vous déployez automatiquement du contenu chaque fois qu’un développeur apporte une modification. Il peut également inclure des scénarios de déclencheur manuel, où un administrateur peut vouloir déclencher le déploiement d’une build spécifique dans un environnement intermédiaire une fois la build a été vérifiée et validée dans l’environnement de test. Les rubriques de ce didacticiel va vous guider dans le processus d’ensemble de la configuration, y compris :
+> Ce didacticiel vous montre comment configurer Team Foundation Server (TFS) 2010 pour générer des solutions et déployer du contenu Web dans différents environnements cibles. Cela comprend les scénarios d’intégration continue (CI), où vous déployez automatiquement le contenu chaque fois qu’un développeur apporte une modification. Il peut également inclure des scénarios de déclencheurs manuels, dans lesquels un administrateur peut déclencher le déploiement d’une build spécifique dans un environnement intermédiaire une fois que la Build a été vérifiée et validée dans l’environnement de test. Les rubriques de ce didacticiel vous guideront tout au long du processus de configuration, notamment :
 > 
 > - Comment créer un nouveau projet d’équipe dans TFS.
-> - Comment ajouter du contenu à un contrôle de code source.
-> - Comment configurer un serveur de builds pour prendre en charge d’élément de configuration et de déploiement.
-> - Comment créer une définition de build qui inclut la logique de déploiement.
-> - Comment configurer des autorisations pour le déploiement automatisé.
+> - Comment ajouter du contenu au contrôle de code source.
+> - Comment configurer un serveur de builds pour prendre en charge l’intégration continue et le déploiement.
+> - Comment créer une définition de build incluant une logique de déploiement.
+> - Comment configurer des autorisations pour un déploiement automatisé.
 > 
-> Pour obtenir une traduction italienne de ces didacticiels, visitez [ http://www.lucamorelli.it ](http://www.lucamorelli.it).
+> Pour une traduction italienne de ces didacticiels, visitez [http://www.lucamorelli.it](http://www.lucamorelli.it).
 
-Ce didacticiel suppose que vous avez installé TFS 2010 et créé une collection de projets d’équipe dans le cadre du processus de configuration initiale. Le [Guide d’Installation de Team Foundation pour Visual Studio 2010](https://go.microsoft.com/?linkid=9805132) fournit des instructions complètes sur ces tâches.
+Ce didacticiel part du principe que vous avez installé TFS 2010 et créé une collection de projets d’équipe dans le cadre du processus de configuration initial. Le [Guide d’installation de Team Foundation pour Visual Studio 2010](https://go.microsoft.com/?linkid=9805132) fournit des conseils complets sur ces tâches.
 
 ## <a name="context"></a>Contexte
 
-Cela fait partie d’une série de didacticiels en fonction des exigences de déploiement d’entreprise de la société fictive Fabrikam, Inc. Cette série de didacticiels utilise un exemple de solution&#x2014;le [Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md) solution&#x2014;pour représenter une application web avec un niveau réaliste de complexité, y compris une application ASP.NET MVC 3, une Communication de Windows Foundation (WCF) service et un projet de base de données.
+Cette section fait partie d’une série de didacticiels basés sur les exigences de déploiement en entreprise d’une société fictive nommée Fabrikam, Inc. Cette série de didacticiels utilise un&#x2014;exemple de solution de&#x2014;gestion des [contacts](../web-deployment-in-the-enterprise/the-contact-manager-solution.md) pour représenter une application Web avec un niveau de complexité réaliste, y compris une application ASP.NET MVC 3, un service Windows Communication Foundation (WCF) et un projet de base de données.
 
-La méthode de déploiement au cœur de ces didacticiels est basée sur l’approche de fichier de projet de fractionnement décrite dans [comprendre le processus de génération](../web-deployment-in-the-enterprise/understanding-the-build-process.md), dans lequel le processus de génération est contrôlé par deux fichiers de projet&#x2014;contenant un seul les instructions qui s’appliquent à chaque environnement de destination et celui qui contient les paramètres de génération et de déploiement spécifiques à l’environnement de génération. Au moment de la génération, le fichier de projet spécifique à l’environnement est fusionné dans le fichier de projet d’indépendant de l’environnement pour former un ensemble complet d’instructions de génération.
+La méthode de déploiement au cœur de ces didacticiels est basée sur l’approche de fichier de projet fractionné décrite dans [fonctionnement du processus de génération](../web-deployment-in-the-enterprise/understanding-the-build-process.md), dans lequel le processus de génération est&#x2014;contrôlé par deux fichiers projet contenant des instructions de génération qui s’appliquent à chaque environnement de destination, et un qui contient des paramètres de génération et de déploiement spécifiques à l’environnement. Au moment de la génération, le fichier projet spécifique à l’environnement est fusionné dans le fichier projet indépendant de l’environnement pour former un ensemble complet d’instructions de génération.
 
 ## <a name="scenario-overview"></a>Vue d’ensemble du scénario
 
-Le scénario de haut niveau pour ces didacticiels est décrit dans [déploiement Web d’entreprise : Vue d’ensemble du scénario](../deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md). Nous vous recommandons de consulter cette rubrique avant de commencer ce didacticiel.
+Le scénario de haut niveau pour ces didacticiels est décrit dans [déploiement Web d’entreprise : vue d’ensemble du scénario](../deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md). Nous vous recommandons de consulter cette rubrique avant de commencer à utiliser ce didacticiel.
 
 ## <a name="how-to-use-this-tutorial"></a>Comment utiliser ce didacticiel
 
-Si c’est la première fois, vous avez effectué les tâches décrites dans ce didacticiel, ou si vous souhaitez suivre les exemples à l’aide de l’exemple de solution, vous devez appliquer les procédures didacticiels dans l’ordre. Ou bien, vous pouvez utiliser des rubriques individuelles en tant que des conseils pour des tâches spécifiques. Ce didacticiel inclut les rubriques suivantes :
+S’il s’agit de la première fois que vous effectuez les tâches décrites dans ce didacticiel, ou si vous souhaitez suivre les exemples à l’aide de l’exemple de solution, vous devez parcourir les rubriques du didacticiel dans l’ordre. Vous pouvez également utiliser des rubriques individuelles comme aide pour des tâches spécifiques. Ce didacticiel comprend les rubriques suivantes :
 
-- [Création d’un projet d’équipe dans TFS](creating-a-team-project-in-tfs.md). Un projet d’équipe est l’unité de base pour le contrôle de code source, la gestion de processus et build dans TFS. Vous devez créer un projet d’équipe avant que vous pouvez ajouter du contenu pour le contrôle de code source ou de créer des définitions de build.
-- [Ajout de contenu au contrôle de code Source](adding-content-to-source-control.md). Une fois que vous avez créé un projet d’équipe, vous pouvez démarrer l’ajout de contenu au contrôle de code source. Vous devez ajouter vos projets et solutions, ainsi que toutes les dépendances externes, avant que vous pouvez commencer à configurer des builds.
-- [Configuration d’un serveur TFS du serveur de builds pour le déploiement Web](configuring-a-tfs-build-server-for-web-deployment.md). Si vous souhaitez générer le contenu de votre projet d’équipe, vous devez configurer un serveur de builds. Dans la plupart des cas, il doit s’agir sur un ordinateur distinct à partir de votre installation de TFS. Pour configurer un serveur de builds, vous devez installer et configurer le service de build TFS, installez Visual Studio 2010, créer des contrôleurs de build et agents de build, installer des produits ou des composants dont votre code a besoin pour générer avec succès et installer le Internet Information Services (IIS) des outils de déploiement Web (Web Deploy).
-- [Création d’une définition de Build qui prend en charge le déploiement](creating-a-build-definition-that-supports-deployment.md). Avant de commencer queuing ou en déclenchant des générations dans TFS, vous devez créer au moins une définition de build pour votre projet d’équipe. La définition de build définit tous les aspects de la génération, notamment les éléments doivent être inclus dans la build, ce qui doit déclencher la build et Team Build où doit envoyer les sorties de génération. Vous pouvez configurer une définition de build pour exécuter des fichiers de projet personnalisés Microsoft Build Engine (MSBuild), ce qui vous permet d’inclure la logique de déploiement dans vos builds automatisées.
-- [Déploiement d’une Build spécifique](deploying-a-specific-build.md). Dans de nombreux scénarios, vous souhaiterez déployer une build spécifique, plutôt que la build la plus récente, à un environnement cible. Dans ce cas, vous pouvez configurer une définition de build qui déploie le contenu à partir d’un dossier de dépôt spécifique.
-- [Déploiement de configuration des autorisations pour Team Build](configuring-permissions-for-team-build-deployment.md). Si le service de build est contenu doit être déployé dans le cadre d’un processus de génération automatisé, vous devez accorder des autorisations différentes pour le compte de service de build sur tous les serveurs web de destination et les serveurs de base de données.
+- [Création d’un projet d’équipe dans TFS](creating-a-team-project-in-tfs.md). Un projet d’équipe est l’unité principale du contrôle de code source, de la gestion des processus et de la build dans TFS. Vous devez créer un projet d’équipe avant de pouvoir ajouter du contenu au contrôle de code source ou créer des définitions de Build.
+- [Ajout de contenu au contrôle de code source](adding-content-to-source-control.md). Une fois que vous avez créé un projet d’équipe, vous pouvez commencer à ajouter du contenu au contrôle de code source. Vous devez ajouter vos projets et solutions, ainsi que toutes les dépendances externes, avant de pouvoir commencer à configurer des builds.
+- [Configuration d’un serveur de builds TFS pour le déploiement Web](configuring-a-tfs-build-server-for-web-deployment.md). Si vous souhaitez générer le contenu de votre projet d’équipe, vous devez configurer un serveur de builds. Dans la plupart des cas, il doit s’agir d’un ordinateur distinct de votre installation TFS. Pour configurer un serveur de builds, vous devez installer et configurer le service de build TFS, installer Visual Studio 2010, créer des contrôleurs de build et des agents de build, installer tous les produits ou composants dont votre code a besoin pour générer correctement et installer le Outil de déploiement Web Internet Information Services (IIS) (Web Deploy).
+- [Création d’une définition de build qui prend en charge le déploiement](creating-a-build-definition-that-supports-deployment.md). Avant de commencer à mettre en file d’attente ou de déclencher des builds dans TFS, vous devez créer au moins une définition de build pour votre projet d’équipe. La définition de build définit tous les aspects de la génération, y compris les éléments qui doivent être inclus dans la build, ce qui doit déclencher la génération, et où Team Build doit envoyer les sorties de la génération. Vous pouvez configurer une définition de build pour exécuter des fichiers projet Microsoft Build Engine (MSBuild) personnalisés, ce qui vous permet d’inclure la logique de déploiement dans vos builds automatisées.
+- [Déploiement d’une build spécifique](deploying-a-specific-build.md). Dans de nombreux scénarios, vous souhaiterez déployer une build spécifique, plutôt que la version la plus récente, dans un environnement cible. Dans ce cas, vous pouvez configurer une définition de build qui déploie le contenu à partir d’un dossier de dépôt spécifique.
+- [Configuration des autorisations pour le déploiement Team Build](configuring-permissions-for-team-build-deployment.md). Si le service de build doit déployer du contenu dans le cadre d’un processus de génération automatisé, vous devez accorder diverses autorisations au compte de service de build sur tous les serveurs Web et serveurs de base de données de destination.
 
 ## <a name="key-technologies"></a>Technologies clés
 
-Ce didacticiel se concentre sur l’utilisation de ces produits et technologies pour prendre en charge la génération automatisée et déploiement web :
+Ce didacticiel se concentre sur l’utilisation de ces produits et technologies pour prendre en charge le déploiement automatisé de la génération et du Web :
 
 - Visual Studio Team Foundation Server 2010
 - Team Build et MSBuild
 - Web Deploy
 
-Il aborde également le didacticiel sur l’utilisation de Windows Server 2008 R2, IIS 7.5, SQL Server 2008 R2, ASP.NET 4.0 et ASP.NET MVC 3.
+Ce didacticiel aborde également l’utilisation de Windows Server 2008 R2, IIS 7,5, SQL Server 2008 R2, ASP.NET 4,0 et ASP.NET MVC 3.
 
 ## <a name="other-tutorials-in-this-series"></a>Autres didacticiels de cette série
 
-Cela fait partie d’une série de cinq didacticiels sur le déploiement de web-échelle de l’entreprise. Voici les autres didacticiels de la série :
+Ce formulaire fait partie d’une série de cinq didacticiels sur le déploiement Web à l’échelle de l’entreprise. Voici les autres didacticiels de la série :
 
-- [Déploiement d’Applications Web dans les scénarios d’entreprise](../deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md). Ce contenu introduction fournit l’arrière-plan contextuel de la série de didacticiels. Elle décrit le scénario du didacticiel, et illustre comment les tâches et les procédures pas à pas décrit tout au long de la série s’intègrent à un processus d’Application Lifecycle Management (ALM) plus large.
-- [Déploiement de l’entreprise Web](../web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md). Ce didacticiel fournit une présentation conceptuelle de fichiers projet MSBuild, le Pipeline de publication Web (WPP), Web Deploy et autres technologies apparentées. Il explique comment vous pouvez utiliser ces outils ensemble pour gérer les processus de déploiement complexes.
-- [Configuration d’environnements de serveur pour le déploiement Web](../configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md). Ce didacticiel explique comment configurer des serveurs Windows pour prendre en charge différents scénarios de déploiement, y compris le déploiement de package web à distance en utilisant le Service de l’Agent de déploiement Web (l’agent distant) ou le Gestionnaire de déploiement Web et le déploiement de la base de données distante. Il fournit des conseils sur le choix de la méthode de déploiement appropriée pour votre propre environnement, et décrit l’utilisation de Web Farm Framework (WFF) pour répliquer des applications web déployées sur tous les serveurs web dans une batterie de serveurs.
-- [Avancées de déploiement Web d’entreprise](../advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md). Ce didacticiel explique comment effectuer diverses tâches de déploiement plus avancées, telles que la personnalisation des déploiements de base de données pour plusieurs environnements, à l’exclusion de fichiers et dossiers de déploiement et en prenant des applications web en mode hors connexion pendant le processus de déploiement .
+- [Déploiement d’applications Web dans des scénarios d’entreprise](../deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md). Ce contenu de présentation fournit l’arrière-plan contextuel de la série de didacticiels. Il décrit le scénario du didacticiel et illustre comment les tâches et les procédures pas à pas décrites dans la série s’intègrent à un processus plus large Application Lifecycle Management (ALM).
+- [Déploiement Web dans l’entreprise](../web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md). Ce didacticiel fournit une introduction conceptuelle sur les fichiers projet MSBuild, le pipeline de publication Web (WPP), Web Deploy et d’autres technologies associées. Il explique comment vous pouvez utiliser ces outils ensemble pour gérer des processus de déploiement complexes.
+- [Configuration des environnements de serveur pour le déploiement Web](../configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md). Ce didacticiel explique comment configurer des serveurs Windows pour prendre en charge différents scénarios de déploiement, y compris le déploiement de packages Web à distance à l’aide du service de Deployment Agent Web (l’agent distant) ou du gestionnaire de Web Deploy et du déploiement de base de données distante. Il fournit des conseils sur le choix de la méthode de déploiement appropriée pour votre propre environnement et décrit comment utiliser l’infrastructure de batterie de serveurs Web (WFF) pour répliquer des applications Web déployées sur tous les serveurs Web d’une batterie de serveurs.
+- [Déploiement Web d’entreprise avancé](../advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md). Ce didacticiel explique comment effectuer diverses tâches de déploiement plus avancées, telles que la personnalisation des déploiements de bases de données pour plusieurs environnements, à l’exclusion de fichiers et de dossiers du déploiement, et la mise hors connexion des applications Web pendant le processus de déploiement. .
 
 > [!div class="step-by-step"]
 > [Next](creating-a-team-project-in-tfs.md)

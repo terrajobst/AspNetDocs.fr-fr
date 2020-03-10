@@ -9,11 +9,11 @@ ms.assetid: a0b9186c-0912-4fff-916a-6d17e696a50b
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-vb
 msc.type: authoredcontent
 ms.openlocfilehash: aaecf77c1d25f2c99ef4e9948d79fc01b837169b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611684"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78553983"
 ---
 # <a name="handling-postbacks-from-a-popup-control-without-an-updatepanel-vb"></a>Gestion des publications (postback) à partir d’un contrôle de fenêtre contextuelle sans un UpdatePanel (VB)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > L’extendeur PopupControl dans la boîte à outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle quand un autre contrôle est activé. Lorsqu’une publication (postback) se produit dans un tel panneau et qu’il y a plusieurs panneaux sur la page, il est difficile de déterminer le panneau sur lequel l’utilisateur a cliqué.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 L’extendeur PopupControl dans la boîte à outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle quand un autre contrôle est activé. Lorsqu’une publication (postback) se produit dans un tel panneau et qu’il y a plusieurs panneaux sur la page, il est difficile de déterminer le panneau sur lequel l’utilisateur a cliqué.
 
@@ -43,7 +43,7 @@ Lorsque la page est chargée, le code JavaScript ajoute un gestionnaire d’év�
 
 [!code-html[Main](handling-postbacks-from-a-popup-control-without-an-updatepanel-vb/samples/sample3.html)]
 
-Dans le code côté serveur, la valeur du champ masqué doit être lue. Étant donné que les champs de formulaire masqués sont faciles à manipuler, une approche de liste verte pour valider la valeur cachée est requise. Une fois que la zone de texte correcte a été identifiée, la date du calendrier est écrite dans celle-ci.
+Dans le code côté serveur, la valeur du champ masqué doit être lue. Étant donné que les champs de formulaire masqués sont faciles à manipuler, une approche de liste blanche pour valider la valeur cachée est requise. Une fois que la zone de texte correcte a été identifiée, la date du calendrier est écrite dans celle-ci.
 
 [!code-aspx[Main](handling-postbacks-from-a-popup-control-without-an-updatepanel-vb/samples/sample4.aspx)]
 

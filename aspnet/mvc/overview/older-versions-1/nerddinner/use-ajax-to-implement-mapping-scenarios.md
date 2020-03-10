@@ -1,163 +1,163 @@
 ---
 uid: mvc/overview/older-versions-1/nerddinner/use-ajax-to-implement-mapping-scenarios
-title: Utiliser AJAX pour implémenter les scénarios de mappage | Microsoft Docs
+title: Utiliser AJAX pour implémenter des scénarios de mappage | Microsoft Docs
 author: microsoft
-description: Étape 11 montre comment intégrer la prise en charge du mappage AJAX dans notre application NerdDinner, permettant aux utilisateurs qui créent, modification ou affichage dîners pour voir la lettre l...
+description: L’étape 11 montre comment intégrer la prise en charge du mappage AJAX dans notre application NerdDinner, ce qui permet aux utilisateurs qui créent, modifient ou visualisent des dîners de voir le l...
 ms.author: riande
 ms.date: 07/27/2010
 ms.assetid: f731990a-0a81-4d62-81df-87d676cdedd6
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-ajax-to-implement-mapping-scenarios
 msc.type: authoredcontent
 ms.openlocfilehash: 7fc90f978b9f9eca511feca70a3c0d02ec69b940
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125511"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78580114"
 ---
 # <a name="use-ajax-to-implement-mapping-scenarios"></a>Utiliser AJAX pour implémenter des scénarios de mappage
 
-by [Microsoft](https://github.com/microsoft)
+par [Microsoft](https://github.com/microsoft)
 
 [Télécharger PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
-> Il s’agit d’étape 11 a gratuit [« « l’application NerdDinner](introducing-the-nerddinner-tutorial.md) qui présente en détail comment créer un petit mais terminé, l’application web à l’aide d’ASP.NET MVC 1.
+> Il s’agit de l’étape 11 d’un [didacticiel d’application « NerdDinner »](introducing-the-nerddinner-tutorial.md) gratuit qui vous guide dans la création d’une application Web de petite taille, mais complète, à l’aide de ASP.NET MVC 1.
 > 
-> Étape 11 montre comment intégrer la prise en charge du mappage AJAX dans notre application NerdDinner, permettant aux utilisateurs qui créent, modification ou affichage dîners pour voir l’emplacement du dîner graphiquement.
+> L’étape 11 montre comment intégrer la prise en charge du mappage AJAX dans notre application NerdDinner, ce qui permet aux utilisateurs qui créent, modifient ou visualisent des dîners d’afficher l’emplacement du dîner de manière graphique.
 > 
-> Si vous utilisez ASP.NET MVC 3, nous vous recommandons de suivre le [mise en route avec MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) ou [Store de musique MVC](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) didacticiels.
+> Si vous utilisez ASP.NET MVC 3, nous vous recommandons de suivre les [prise en main avec](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) les didacticiels du [magasin de musique](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) MVC 3 ou Mvc.
 
-## <a name="nerddinner-step-11-integrating-an-ajax-map"></a>NerdDinner étape 11 : L’intégration d’une carte d’AJAX
+## <a name="nerddinner-step-11-integrating-an-ajax-map"></a>NerdDinner étape 11 : intégration d’une carte AJAX
 
-Nous allons maintenant rendre notre application un peu plus visuellement attrayante en intégrant la prise en charge du mappage AJAX. Cela permet aux utilisateurs qui créent, modification ou affichage dîners pour voir l’emplacement du dîner graphiquement.
+Nous allons maintenant rendre notre application un peu plus attrayante en intégrant la prise en charge du mappage AJAX. Cela permet aux utilisateurs qui créent, modifient ou visualisent des dîners d’afficher l’emplacement du dîner de manière graphique.
 
-### <a name="creating-a-map-partial-view"></a>Création d’une vue partielle de carte
+### <a name="creating-a-map-partial-view"></a>Création d’une vue partielle de la carte
 
-Nous allons utiliser la fonctionnalité de mappage à plusieurs endroits au sein de notre application. Pour que notre code sec, nous allons encapsuler les fonctionnalités communes de la carte dans un seul modèle partielle qui nous pouvons réutiliser dans plusieurs actions de contrôleur et les vues. Nous nommez cette vue partielle « map.ascx » et le créer dans le répertoire \Views\Dinners.
+Nous allons utiliser la fonctionnalité de mappage à plusieurs endroits de notre application. Pour conserver notre code à sec, nous encapsulerons la fonctionnalité de carte commune dans un modèle partiel unique que nous pouvons réutiliser dans plusieurs actions et vues de contrôleur. Nous allons nommer cette vue partielle « map. ascx » et la créer dans le répertoire \Views\Dinners
 
-Nous pouvons créer la map.ascx partielle en cliquant sur le répertoire \Views\Dinners et en choisissant Add -&gt;afficher la commande de menu. Nous allons nommer la vue « Map.ascx », archivez-le comme une vue partielle et indiquer que nous allons passer une classe de modèle fortement typé « dîner » :
+Nous pouvons créer le mappage map. ascx partiellement en cliquant avec le bouton droit sur le répertoire \Views\Dinners et en choisissant la commande de menu Add-&gt;View. Nous allons nommer la vue « map. ascx », la vérifier en tant que vue partielle et indiquer que nous allons la transmettre à une classe de modèle « dîner » fortement typée :
 
 ![](use-ajax-to-implement-mapping-scenarios/_static/image1.png)
 
-Notre modèle partielle est créé lorsque nous cliquons sur le bouton « Ajouter ». Nous allons ensuite mettre à jour le fichier Map.ascx pour que le contenu suivant :
+Lorsque nous cliquons sur le bouton « Ajouter », notre modèle partiel sera créé. Nous allons ensuite mettre à jour le fichier Map. ascx pour obtenir le contenu suivant :
 
 [!code-aspx[Main](use-ajax-to-implement-mapping-scenarios/samples/sample1.aspx)]
 
-La première &lt;script&gt; points de référence pour la bibliothèque de mappage Microsoft Virtual Earth 6.2. La seconde &lt;script&gt; référence pointe vers un fichier map.js que nous allons créer peu de temps qui doit encapsuler notre logique de mappage Javascript commune. Le &lt;div id = « theMap »&gt; élément est le conteneur HTML que Virtual Earth utilisera pour héberger la carte.
+La première &lt;script&gt; référence pointe vers la bibliothèque de mappage Microsoft Virtual Earth 6,2. La deuxième &lt;script&gt; référence pointe vers un fichier Map. js que nous allons bientôt créer, ce qui encapsule notre logique de mappage JavaScript courante. L’élément &lt;div id = "theMap"&gt; est le conteneur HTML qui sera utilisé par Virtual Earth pour héberger le mappage.
 
-Nous avons ensuite incorporé &lt;script&gt; bloc qui contient deux fonctions JavaScript spécifiques à cette vue. La première fonction utilise jQuery pour AutoEventWireup une fonction qui s’exécute lorsque la page est prête à exécuter un script côté client. Il appelle une fonction d’assistance de LoadMap() nous définirons dans notre fichier de script Map.js pour charger le contrôle de carte virtual earth. La deuxième fonction est un gestionnaire d’événements de rappel qui ajoute un code pin à la carte qui identifie un emplacement.
+Nous disposons ensuite d’un bloc de&gt; de script &lt;incorporé qui contient deux fonctions JavaScript spécifiques à cette vue. La première fonction utilise jQuery pour associer une fonction qui s’exécute lorsque la page est prête à exécuter le script côté client. Elle appelle une fonction d’assistance LoadMap () que nous allons définir dans notre fichier de script map. js pour charger le contrôle de carte Virtual Earth. La deuxième fonction est un gestionnaire d’événements de rappel qui ajoute un code confidentiel à la carte qui identifie un emplacement.
 
-Notez la façon dont nous utilisons une côté serveur &lt;% = %&gt; bloc dans le bloc de script côté client pour incorporer la latitude et la longitude du dîner doivent intervenir dans le code JavaScript. Il s’agit d’une technique utile pour générer des valeurs dynamiques qui peuvent être utilisés par un script côté client (sans nécessiter un AJAX appel distinct sur le serveur pour récupérer les valeurs – ce qui le rend plus rapidement). Le &lt;% = %&gt; blocs doit être exécutée lorsque la vue est rendu sur le serveur, et par conséquent, la sortie du code HTML sera finir avec les valeurs de JavaScript incorporés (par exemple : var latitude = 47.64312 ;).
+Notez que nous utilisons un bloc &lt;% =%&gt; côté serveur dans le bloc de script côté client pour incorporer la latitude et la longitude du dîner que nous voulons mapper dans le JavaScript. Il s’agit d’une technique utile pour générer des valeurs dynamiques qui peuvent être utilisées par un script côté client (sans nécessiter un rappel AJAX distinct sur le serveur pour récupérer les valeurs, ce qui le rend plus rapide). Les blocs &lt;% =%&gt; s’exécutent lors du rendu de la vue sur le serveur, et la sortie du code HTML finit simplement par des valeurs JavaScript incorporées (par exemple : var latitude = 47,64312 ;).
 
-### <a name="creating-a-mapjs-utility-library"></a>Création d’une bibliothèque d’utilitaire Map.js
+### <a name="creating-a-mapjs-utility-library"></a>Création d’une bibliothèque d’utilitaires map. js
 
-Nous allons maintenant créer le fichier Map.js que nous pouvons utiliser pour encapsuler les fonctionnalités de JavaScript pour notre carte (et implémenter les méthodes LoadMap et LoadPin ci-dessus). Nous pouvons faire cela en cliquant sur le répertoire \Scripts au sein de notre projet, puis choisissez le « Add -&gt;un nouvel élément « commande de menu, sélectionnez l’élément de JScript et nommez-le « Map.js ».
+Nous allons maintenant créer le fichier Map. js que nous pouvons utiliser pour encapsuler la fonctionnalité JavaScript pour notre carte (et implémenter les méthodes LoadMap et LoadPin ci-dessus). Pour ce faire, cliquez avec le bouton droit sur le répertoire \Scripts au sein de notre projet, puis choisissez la commande de menu « Add-&gt;New Item », sélectionnez l’élément JScript et nommez-le « map. js ».
 
-Voici le code JavaScript que nous allons ajouter au fichier Map.js qui interagit avec Virtual Earth pour afficher notre carte et de lui ajouter des codes confidentiels d’emplacements pour notre dîners :
+Voici le code JavaScript que nous ajouterons au fichier Map. js qui interagit avec Virtual Earth pour afficher notre carte et y ajouter des codes PIN pour nos dîners :
 
 [!code-javascript[Main](use-ajax-to-implement-mapping-scenarios/samples/sample2.js)]
 
-### <a name="integrating-the-map-with-create-and-edit-forms"></a>L’intégration de la carte à créer et les formulaires de modification
+### <a name="integrating-the-map-with-create-and-edit-forms"></a>Intégration de la carte avec les formulaires créer et modifier
 
-Vous intègrerez désormais la prise en charge de la carte avec nos scénarios Create et Edit existants. La bonne nouvelle est que cela est une tâche assez facile et ne nous amener à modifier l’un de nos code du contrôleur. Étant donné que notre vues Create et Edit partagent une vue partielle « DinnerForm » commune pour implémenter l’interface utilisateur du formulaire dîner, nous pouvons ajouter le mappage au même endroit et avez nos scénarios Create et Edit à utiliser.
+Nous allons maintenant intégrer la prise en charge de la carte à nos scénarios de création et de modification existants. La bonne nouvelle, c’est que c’est assez facile à faire et ne nécessite pas de modifier le code de votre contrôleur. Étant donné que nos vues Create et Edit partagent une vue partielle « DinnerForm » commune pour implémenter l’interface utilisateur du dîner, nous pouvons ajouter la carte à un emplacement et faire en sorte que nos deux scénarios de création et de modification l’utilisent.
 
-Il nous suffit d’action consiste à ouvrir la vue partielle \Views\Dinners\DinnerForm.ascx et mettre à jour pour inclure notre nouveau mappage partielle. Voici l’aspect de la mise à jour DinnerForm une fois que la carte est ajoutée (Remarque : les éléments de formulaire HTML sont omis de l’extrait de code ci-dessous par souci de concision) :
+Tout ce qu’il nous faut faire, c’est d’ouvrir la vue partielle \Views\Dinners\DinnerForm.ascx et de la mettre à jour pour inclure notre nouvelle carte partielle. Voici à quoi ressemblera le DinnerForm mis à jour une fois le mappage ajouté (Remarque : les éléments de formulaire HTML sont omis dans l’extrait de code ci-dessous, par souci de concision) :
 
 [!code-aspx[Main](use-ajax-to-implement-mapping-scenarios/samples/sample3.aspx)]
 
-Le DinnerForm partielle ci-dessus prend un objet de type « DinnerFormViewModel » comme type de modèle (car il a besoin à la fois un objet dîner, mais aussi un SelectList pour remplir l’objet dropdownlist de pays). Notre carte partielle doit simplement un objet de type « Dîner » comme type de modèle, et par conséquent, lorsque nous affichons la carte partielle nous allons simplement la dîner sous-propriété du DinnerFormViewModel en lui passant :
+Le DinnerForm partiel ci-dessus prend un objet de type « DinnerFormViewModel » comme type de modèle (parce qu’il a besoin à la fois d’un objet dîner, ainsi que d’un SelectList pour remplir le DropDownList des pays). Notre mappage partiel a juste besoin d’un objet de type « dîner » comme type de modèle, et par conséquent, lorsque nous rendons le mappage partiel, nous transmettons uniquement la sous-propriété de dîner de DinnerFormViewModel :
 
 [!code-aspx[Main](use-ajax-to-implement-mapping-scenarios/samples/sample4.aspx)]
 
-La fonction JavaScript que nous avons ajouté à la partielle utilise jQuery pour attacher un événement de « flou » dans la zone de texte « Address » HTML. Vous n’avez probablement entendu les onglets ou les événements « focus » qui se déclenchent lorsqu’un utilisateur clique dans une zone de texte. L’inverse est un événement de « flou » qui se déclenche lorsqu’un utilisateur quitte une zone de texte. Le Gestionnaire d’événements ci-dessus efface les valeurs de zone de texte de latitude et longitude lorsque cela se produit et représente le nouvel emplacement de l’adresse sur notre carte. Un gestionnaire d’événements de rappel que nous avons défini dans le fichier map.js met ensuite à jour les zones de texte sur notre formulaire à l’aide des valeurs retournées par virtual earth basé sur l’adresse que nous lui avons longitude et latitude.
+La fonction JavaScript que nous avons ajoutée au partiel utilise jQuery pour attacher un événement « Blur » à la zone de texte HTML « Address ». Vous avez probablement entendu parler des événements de « focus » qui se déclenchent lorsqu’un utilisateur clique sur des tabulations ou dans une zone de texte. L’inverse est un événement de « flou » qui se déclenche quand un utilisateur quitte une zone de texte. Le gestionnaire d’événements ci-dessus efface les valeurs de zone de texte de latitude et de longitude lorsque cela se produit, puis trace le nouvel emplacement d’adresse sur notre carte. Un gestionnaire d’événements de rappel que nous avons défini dans le fichier Map. js met à jour les zones de texte longitude et latitude de notre formulaire à l’aide des valeurs renvoyées par Virtual Earth en fonction de l’adresse que nous lui avons attribuée.
 
-Et maintenant quand nous pouvons exécuter notre application à nouveau et que vous cliquez sur l’onglet « Dîner hôte » que nous verrons une valeur par défaut de mapper affichés ainsi que nos éléments de formulaire standards Dinner :
+Et maintenant, lorsque nous exécutons à nouveau notre application et cliquons sur l’onglet « dîner de l’hôte », une carte par défaut s’affiche avec nos éléments de formulaire dîner standard :
 
 ![](use-ajax-to-implement-mapping-scenarios/_static/image2.png)
 
-Lorsque nous Entrez une adresse et appuyez sur tab de suite, la carte met à jour dynamiquement pour afficher l’emplacement et notre gestionnaire d’événements remplira les zones de texte de latitude/longitude avec les valeurs d’emplacement :
+Lorsque nous entrons une adresse et que vous appuyez ensuite sur TAB, le mappage est mis à jour dynamiquement pour afficher l’emplacement et notre gestionnaire d’événements remplit les zones de texte Latitude/Longitude avec les valeurs d’emplacement :
 
 ![](use-ajax-to-implement-mapping-scenarios/_static/image3.png)
 
-Si nous enregistrer le nouveau dîner et ouvrez de nouveau pour la modification, nous allons trouvé que l’emplacement de la carte s’affiche lorsque la page se charge :
+Si nous enregistrons le nouveau dîner, puis le rouvrez pour le modifier, nous constatons que l’emplacement de la carte s’affiche lorsque la page se charge :
 
 ![](use-ajax-to-implement-mapping-scenarios/_static/image4.png)
 
-Chaque fois que le champ d’adresse est modifié, la carte et les coordonnées de latitude/longitude met à jour.
+Chaque fois que le champ d’adresse est modifié, la carte et les coordonnées de latitude/longitude sont mises à jour.
 
-Maintenant que la carte affiche l’emplacement dîner, nous pouvons également modifier les champs de formulaire de Latitude et Longitude ne soient pas de zones de texte visible pour être à la place les éléments masqués (étant donné que la carte est automatiquement les mettre à jour chaque fois que vous entrez une adresse). Action cela nous allons passer de l’utilisation du programme d’assistance Html.TextBox() HTML à l’aide de la méthode d’assistance Html.Hidden() :
+Maintenant que la carte affiche l’emplacement de dîner, nous pouvons également modifier les champs de formulaire de latitude et de longitude pour qu’ils soient des zones de texte visibles en tant qu’éléments masqués (puisque le mappage est automatiquement mis à jour chaque fois qu’une adresse est entrée). Pour ce faire, nous allons passer de l’utilisation du programme d’assistance HTML HTML. TextBox () à l’utilisation de la méthode d’assistance HTML. Hidden () :
 
 [!code-aspx[Main](use-ajax-to-implement-mapping-scenarios/samples/sample5.aspx)]
 
-Et maintenant nos formulaires sont un peu plus conviviales et éviter l’affichage de la latitude/longitude brute (tout en stockant toujours avec chaque dîner dans la base de données) :
+Désormais, nos formulaires sont un peu plus conviviaux et évitent d’afficher la latitude/longitude brute (tout en les stockant avec chaque dîner dans la base de données) :
 
 ![](use-ajax-to-implement-mapping-scenarios/_static/image5.png)
 
-### <a name="integrating-the-map-with-the-details-view"></a>L’intégration de la carte dans la vue Détails
+### <a name="integrating-the-map-with-the-details-view"></a>Intégration de la carte avec le mode Détails
 
-Maintenant que nous avons le mappage intégré à nos scénarios Create et Edit, nous allons également l’intégrer avec notre scénario de détails. Il nous suffit d’action consiste à appeler &lt;% Html.RenderPartial("map") ; %&gt; au sein de l’affichage des détails.
+Maintenant que nous disposons d’une carte intégrée à nos scénarios de création et de modification, nous allons également l’intégrer dans notre scénario de détails. Tout ce que nous devons faire, c’est d’appeler &lt;% html. RenderPartial (« Map »); %&gt; dans le mode Détails.
 
-Voici à quoi ressemble le code source à la vue Détails complète (avec l’intégration de la carte) :
+Voici ce que le code source de la vue complète des détails (avec intégration de la carte) ressemble à ceci :
 
 [!code-aspx[Main](use-ajax-to-implement-mapping-scenarios/samples/sample6.aspx)]
 
-Et maintenant lorsqu’un utilisateur accède à une URL de /Dinners/détails / [id] ils voient plus d’informations sur le dîner, l’emplacement du dîner sur la carte (complet avec une punaise qu’au moment où dessus affiche le titre du dîner et l’adresse de celui-ci), et dispose d’un lien AJAX RSVP fo r il :
+Désormais, lorsqu’un utilisateur accède à une URL/Dinners/Details/[id], il voit des détails sur le dîner, l’emplacement du dîner sur la carte (avec un code confidentiel qui, lorsqu’il est placé sur, affiche le titre du dîner et de l’adresse) et a un lien AJAX vers RSVP pour celui-ci :
 
 ![](use-ajax-to-implement-mapping-scenarios/_static/image6.png)
 
-### <a name="implementing-location-search-in-our-database-and-repository"></a>L’implémentation de la recherche de l’emplacement dans notre base de données et le référentiel
+### <a name="implementing-location-search-in-our-database-and-repository"></a>Implémentation de la recherche d’emplacement dans la base de données et le référentiel
 
-Pour terminer notre implémentation AJAX, nous allons ajouter un mappage à la page d’accueil de l’application qui permet aux utilisateurs de rechercher graphiquement dîners près d’eux.
+Pour terminer la mise en œuvre d’AJAX, nous allons ajouter une carte à la page d’hébergement de l’application, qui permet aux utilisateurs de rechercher des dîners proches.
 
 ![](use-ajax-to-implement-mapping-scenarios/_static/image7.png)
 
-Nous allons commencer en implémentant la prise en charge au sein de notre couche de référentiels et bases de données pour effectuer efficacement une recherche en fonction des emplacements de radius pour dîners. Nous pourrions utiliser le nouveau [fonctionnalités géospatiales de SQL 2008](https://www.microsoft.com/sqlserver/2008/en/us/spatial-data.aspx) pour implémenter cela, ou vous pouvez également nous pouvons utiliser une approche de fonction SQL Gary Dryden abordé dans l’article ici : [ http://www.codeproject.com/KB/cs/distancebetweenlocations.aspx ](http://www.codeproject.com/KB/cs/distancebetweenlocations.aspx) et Rob Conery créé un blog sur l’utilisation de LINQ to SQL ici : [http://blog.wekeroad.com/2007/08/30/linq-and-geocoding/](http://blog.wekeroad.com/2007/08/30/linq-and-geocoding/)
+Nous commencerons par implémenter la prise en charge au sein de notre couche de base de données et de référentiel de données pour effectuer efficacement une recherche RADIUS basée sur l’emplacement pour les dîners. Nous pourrions utiliser les nouvelles [fonctionnalités géospatiales de SQL 2008](https://www.microsoft.com/sqlserver/2008/en/us/spatial-data.aspx) pour implémenter cela, ou vous pouvez également utiliser une approche de fonction SQL traitée par Gary Dryden dans l’article : [http://www.codeproject.com/KB/cs/distancebetweenlocations.aspx](http://www.codeproject.com/KB/cs/distancebetweenlocations.aspx) et Rob cône blogué sur l’utilisation de avec LINQ to SQL ici : [http://blog.wekeroad.com/2007/08/30/linq-and-geocoding/](http://blog.wekeroad.com/2007/08/30/linq-and-geocoding/)
 
-Pour implémenter cette technique, nous sera ouvrir l’Explorateur de serveurs » » dans Visual Studio, sélectionnez la base de données NerdDinner, puis avec le bouton droit sur le sous-nœud « fonctions » dans cette section et choisir de créer une nouveau « fonction scalaire » :
+Pour implémenter cette technique, nous allons ouvrir le « Explorateur de serveurs » dans Visual Studio, sélectionner la base de données NerdDinner, puis cliquer avec le bouton droit sur le sous-nœud « fonctions » sous celui-ci et choisir de créer une nouvelle « fonction scalaire » :
 
 ![](use-ajax-to-implement-mapping-scenarios/_static/image8.png)
 
-Nous allons coller ensuite dans la fonction DistanceBetween suivante :
+Nous allons ensuite coller la fonction DistanceBetween suivante :
 
 [!code-sql[Main](use-ajax-to-implement-mapping-scenarios/samples/sample7.sql)]
 
-Nous allons ensuite créer une nouvelle fonction table incluse dans SQL Server, que nous appellerons « NearestDinners » :
+Nous allons ensuite créer une fonction table dans SQL Server que nous appelons « NearestDinners » :
 
 ![](use-ajax-to-implement-mapping-scenarios/_static/image9.png)
 
-Cette fonction de la table « NearestDinners » utilise la fonction d’assistance DistanceBetween pour retourner tous les dîners dans 100 miles de la latitude et longitude nous lui fournir :
+Cette fonction de table « NearestDinners » utilise la fonction d’assistance DistanceBetween pour retourner tous les dîners dans un rayon de 100 kilomètres de la latitude et de la longitude que nous fournissons :
 
 [!code-sql[Main](use-ajax-to-implement-mapping-scenarios/samples/sample8.sql)]
 
-Pour appeler cette fonction, nous allons tout d’abord ouvrir le concepteur LINQ to SQL en double-cliquant sur le fichier NerdDinner.dbml au sein de notre annuaire \Models :
+Pour appeler cette fonction, nous allons d’abord ouvrir le concepteur LINQ to SQL en double-cliquant sur le fichier NerdDinner. dbml dans le répertoire \Models :
 
 ![](use-ajax-to-implement-mapping-scenarios/_static/image10.png)
 
-Ensuite, nous allons faire glisser les fonctions NearestDinners et DistanceBetween sur LINQ pour concepteur SQL, ce qui entraîne à ajouter en tant que méthodes sur notre LINQ à SQL NerdDinnerDataContext classe :
+Nous allons ensuite faire glisser les fonctions NearestDinners et DistanceBetween sur le concepteur de LINQ to SQL, ce qui entraîne leur ajout en tant que méthodes sur notre classe de NerdDinnerDataContext LINQ to SQL :
 
 ![](use-ajax-to-implement-mapping-scenarios/_static/image11.png)
 
-Nous pouvons ensuite exposer une méthode de requête « FindByLocation » dans notre classe DinnerRepository qui utilise la fonction NearestDinner pour retourner à venir dîners qui se trouvent dans 100 miles de l’emplacement spécifié :
+Nous pouvons ensuite exposer une méthode de requête « FindByLocation » sur notre classe DinnerRepository qui utilise la fonction NearestDinner pour retourner les dîners à venir qui se trouvent dans 100 kilomètres de l’emplacement spécifié :
 
 [!code-csharp[Main](use-ajax-to-implement-mapping-scenarios/samples/sample9.cs)]
 
-### <a name="implementing-a-json-based-ajax-search-action-method"></a>Implémentation d’une méthode d’Action de recherche AJAX basés sur JSON
+### <a name="implementing-a-json-based-ajax-search-action-method"></a>Implémentation d’une méthode d’action de recherche AJAX basée sur JSON
 
-Nous allons maintenant implémenter une méthode d’action de contrôleur qui tire parti de la nouvelle méthode de référentiel FindByLocation() pour retourner une liste de données dîner qui peuvent être utilisées pour remplir une carte. Nous aurons cette méthode d’action retournent les données Dinner au format JSON (JavaScript Object Notation) afin qu’il peut être facilement manipulé à l’aide de JavaScript sur le client.
+Nous allons maintenant implémenter une méthode d’action de contrôleur qui tire parti de la nouvelle méthode de dépôt FindByLocation () pour retourner une liste de données de dîner qui peut être utilisée pour remplir un mappage. Cette méthode d’action renverra les données du dîner au format JSON (JavaScript Object Notation) afin qu’elles puissent être facilement manipulées à l’aide de JavaScript sur le client.
 
-Pour implémenter cela, nous allons créer une nouvelle classe « SearchController » en cliquant sur le répertoire \Controllers et en choisissant Add -&gt;commande de menu de contrôleur. Nous allons ensuite implémenter une méthode d’action « SearchByLocation » au sein de la nouvelle classe SearchController comme ci-dessous :
+Pour l’implémenter, nous allons créer une nouvelle classe « SearchController » en cliquant avec le bouton droit sur le répertoire \Controllers et en choisissant la commande de menu Add-&gt;Controller. Nous allons ensuite implémenter une méthode d’action « SearchByLocation » dans la nouvelle classe SearchController, comme ci-dessous :
 
 [!code-csharp[Main](use-ajax-to-implement-mapping-scenarios/samples/sample10.cs)]
 
-Méthode d’action de la SearchController SearchByLocation appelle en interne la méthode FindByLocation sur DinnerRepository pour obtenir une liste de dîners à proximité. Au lieu de renvoyer les objets dîner directement au client, cependant, il retourne à la place les objets JsonDinner. La classe JsonDinner expose un sous-ensemble des propriétés de dîner (par exemple : pour des raisons de sécurité qu’il ne divulguer les noms des personnes qui ont répondu pour un dîner). Il inclut également une propriété RSVPCount qui n’existe pas sur dîner – et qui est calculé dynamiquement en comptant le nombre d’objets RSVP associé à un dîner particulier.
+La méthode d’action SearchByLocation de SearchController appelle en interne la méthode FindByLocation sur DinnerRepository pour obtenir une liste de dîners proches. Au lieu de retourner directement les objets du dîner au client, il retourne à la place les objets JsonDinner. La classe JsonDinner expose un sous-ensemble de propriétés de dîner (par exemple : pour des raisons de sécurité, elle ne divulgue pas les noms des personnes qui ont RSVP pour un dîner). Il comprend également une propriété RSVPCount qui n’existe pas sur le dîner, et qui est calculée dynamiquement en comptant le nombre d’objets RSVP associés à un dîner particulier.
 
-Nous utilisons ensuite la méthode d’assistance Json() sur la classe de base du contrôleur retourne la séquence de dîners à l’aide d’un format de transmission basé sur JSON. JSON est un format de texte standard pour représenter des structures de données simples. Voici un exemple d’une liste au format JSON de deux objets JsonDinner aspect lorsque renvoyé à partir de notre méthode d’action :
+Nous utilisons ensuite la méthode d’assistance JSON () sur la classe de base du contrôleur pour retourner la séquence de dîners à l’aide d’un format de câble JSON. JSON est un format de texte standard pour représenter des structures de données simples. Voici un exemple de ce à quoi ressemble une liste JSON de deux objets JsonDinner lorsqu’elle est retournée à partir de notre méthode d’action :
 
 [!code-json[Main](use-ajax-to-implement-mapping-scenarios/samples/sample11.json)]
 
-### <a name="calling-the-json-based-ajax-method-using-jquery"></a>Appel de la méthode AJAX basés sur JSON à l’aide de jQuery
+### <a name="calling-the-json-based-ajax-method-using-jquery"></a>Appel de la méthode AJAX basée sur JSON à l’aide de jQuery
 
-Nous sommes maintenant prêts à mettre à jour de la page d’accueil de l’application NerdDinner à utiliser la méthode d’action de la SearchController SearchByLocation. Action, nous allons ouvrir le modèle de vue /Views/Home/Index.aspx et mettre à jour pour qu’il dispose d’une zone de texte, bouton de recherche, notre carte et un &lt;div&gt; élément nommé dinnerList :
+Nous sommes maintenant prêts à mettre à jour la page d’hébergement de l’application NerdDinner pour utiliser la méthode d’action SearchByLocation de SearchController. Pour ce faire, nous allons ouvrir le modèle de vue/Views/Home/Index.aspx et le mettre à jour pour qu’il dispose d’une zone de texte, d’un bouton de recherche, de notre carte et d’un &lt;élément&gt; div nommé dinnerList :
 
 [!code-aspx[Main](use-ajax-to-implement-mapping-scenarios/samples/sample12.aspx)]
 
@@ -165,29 +165,29 @@ Nous pouvons ensuite ajouter deux fonctions JavaScript à la page :
 
 [!code-html[Main](use-ajax-to-implement-mapping-scenarios/samples/sample13.html)]
 
-La première fonction JavaScript charge la carte lors du premier charge de la page. Les fils de fonction JavaScript deuxième d’un code JavaScript cliquez sur Gestionnaire d’événements sur le bouton de recherche. Lorsque le bouton est enfoncé, il appelle la fonction FindDinnersGivenLocation() JavaScript qui nous ajouterons à notre fichier Map.js :
+La première fonction JavaScript charge la carte lorsque la page se charge pour la première fois. La deuxième fonction JavaScript associe un gestionnaire d’événements Click JavaScript sur le bouton de recherche. Lorsque le bouton est enfoncé, il appelle la fonction JavaScript FindDinnersGivenLocation () que nous ajouterons à notre fichier Map. js :
 
 [!code-javascript[Main](use-ajax-to-implement-mapping-scenarios/samples/sample14.js)]
 
-Cette fonction FindDinnersGivenLocation() appelle la carte. Find() sur le contrôle de la terre virtuel pour centrer sur l’emplacement spécifié. Lorsque le service de carte virtual earth est retournée, la carte. Méthode Find() appelle la méthode de rappel callbackUpdateMapDinners que nous le passé comme argument final.
+Cette fonction FindDinnersGivenLocation () appelle map. Recherchez () sur le contrôle Virtual Earth pour le centrer à l’emplacement indiqué. Lorsque le service de carte Virtual Earth retourne, la carte. La méthode Find () appelle la méthode de rappel callbackUpdateMapDinners que nous lui avons passée comme argument final.
 
-La méthode callbackUpdateMapDinners() est où le vrai travail est terminé. Il utilise la méthode d’assistance de $.post() de jQuery pour effectuer un appel AJAX de méthode d’action de notre SearchController SearchByLocation() – en lui passant la latitude et la longitude de la carte qui vient d’être centrée. Il définit une fonction inline qui sera appelée lorsque la méthode d’assistance $.post() est terminée et les résultats de dîner au format JSON renvoyés par la méthode d’action sera passée à l’aide d’une variable appelée « dîners » de SearchByLocation(). Il effectue une opération foreach via chaque dîner retourné et utilise la longitude et latitude du dîner et autres propriétés pour ajouter un nouveau code pin sur la carte. Il ajoute également une entrée de dîner à la liste HTML de dîners à droite de la carte. Il puis fils-up un événement de pointage pour les repères et la liste HTML afin que les détails concernant le dîner s’affichent lorsqu’un utilisateur pointe dessus :
+La méthode callbackUpdateMapDinners () est l’endroit où le travail réel est effectué. Elle utilise la méthode d’assistance $. poster () de jQuery pour effectuer un appel AJAX à la méthode d’action SearchByLocation () de SearchController, en lui transmettant la latitude et la longitude de la carte qui vient d’être centrée. Il définit une fonction inline qui est appelée lorsque la méthode d’assistance $. postérieure () se termine, et les résultats des dîners au format JSON retournés par la méthode d’action SearchByLocation () lui sont passés à l’aide d’une variable appelée « dîners ». Il effectue ensuite une boucle sur chaque dîner renvoyé et utilise la latitude et la longitude du dîner, ainsi que d’autres propriétés pour ajouter un nouveau code confidentiel sur la carte. Il ajoute également une entrée de dîner à la liste HTML des dîners à droite de la carte. Il associe ensuite un événement de pointage à la liste des clics-infos et à la liste HTML afin que les détails du dîner s’affichent quand un utilisateur pointe dessus :
 
 [!code-html[Main](use-ajax-to-implement-mapping-scenarios/samples/sample15.html)]
 
-Et maintenant quand nous pouvons exécuter l’application et que vous visitez la page d’accueil que nous sont proposées avec une carte. Lorsque nous Entrez le nom d’une ville la carte affiche les dîners à venir près d’elle :
+Et maintenant, lorsque nous exécutons l’application et que nous visitons la page d’hébergement, une carte s’affiche. Lorsque vous entrez le nom d’une ville, la carte affiche les dîners à venir à proximité :
 
 ![](use-ajax-to-implement-mapping-scenarios/_static/image12.png)
 
-Survol d’un dîner affichera les détails à ce sujet.
+Le fait de pointer sur un dîner affiche des détails à son sujet.
 
-En cliquant sur le titre de dîner dans la bulle ou sur le côté droit dans la liste HTML permet d’accéder nous pour le dîner – ce qui nous pouvons ensuite éventuellement Inscrivez-vous au :
+En cliquant sur le titre de dîner dans la bulle ou sur le côté droit de la liste HTML, nous nous rendons au dîner, que nous pouvons ensuite éventuellement RSVP pour :
 
 ![](use-ajax-to-implement-mapping-scenarios/_static/image13.png)
 
 ### <a name="next-step"></a>Étape suivante
 
-Nous avons maintenant implémenté toutes les fonctionnalités d’application de notre application NerdDinner. Nous allons maintenant examiner comment nous pouvons activer automatisée unit test de celui-ci.
+Nous avons maintenant implémenté toutes les fonctionnalités de l’application de notre application NerdDinner. Voyons maintenant comment nous pouvons activer les tests unitaires automatisés de l’informatique.
 
 > [!div class="step-by-step"]
 > [Précédent](use-ajax-to-deliver-dynamic-updates.md)

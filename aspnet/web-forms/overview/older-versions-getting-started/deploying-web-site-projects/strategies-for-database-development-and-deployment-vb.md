@@ -9,11 +9,11 @@ ms.assetid: 07b8905d-78ac-4252-97fb-8675b3fb0bbf
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 1ea4ade32fb05b9e69647ece7d1a4c400fe9fb21
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74616128"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78546549"
 ---
 # <a name="strategies-for-database-development-and-deployment-vb"></a>Stratégies pour le développement et le déploiement des bases de données (VB)
 
@@ -55,9 +55,9 @@ La façon la plus simple de conserver un journal des modifications apportées au
 
 | **Date de modification** | **Modifier les détails** |
 | --- | --- |
-| 2009-02-03 : | Ajout de la `DepartmentID` de colonne (`int`, non NULL) à la table `Employees`. Ajout d’une contrainte de clé étrangère de `Departments.DepartmentID` à `Employees.DepartmentID`. |
-| 2009-02-05 : | Suppression de la `TotalWeight` de colonne de la table `Orders`. Données déjà capturées dans les enregistrements de `OrderDetails` associés. |
-| 2009-02-12 : | Création de la table `ProductCategories`. Il y a trois colonnes : `ProductCategoryID` (`int`, `IDENTITY`, `NOT NULL`), `CategoryName` (`nvarchar(50)`, `NOT NULL`) et `Active` (`bit`, `NOT NULL`). Ajout d’une contrainte de clé primaire à `ProductCategoryID`et une valeur par défaut de 1 à `Active`. |
+| 2009-02-03: | Ajout de la `DepartmentID` de colonne (`int`, non NULL) à la table `Employees`. Ajout d’une contrainte de clé étrangère de `Departments.DepartmentID` à `Employees.DepartmentID`. |
+| 2009-02-05: | Suppression de la `TotalWeight` de colonne de la table `Orders`. Données déjà capturées dans les enregistrements de `OrderDetails` associés. |
+| 2009-02-12: | Création de la table `ProductCategories`. Il y a trois colonnes : `ProductCategoryID` (`int`, `IDENTITY`, `NOT NULL`), `CategoryName` (`nvarchar(50)`, `NOT NULL`) et `Active` (`bit`, `NOT NULL`). Ajout d’une contrainte de clé primaire à `ProductCategoryID`et une valeur par défaut de 1 à `Active`. |
 
 Cette approche présente un certain nombre d’inconvénients. Pour commencer, l’automatisation n’est pas prévue. Chaque fois que ces modifications doivent être appliquées à une base de données (par exemple, lorsque l’application est déployée), un développeur doit implémenter manuellement chaque modification, l’une après l’autre. En outre, si vous devez reconstruire une version particulière de la base de données à partir de la ligne de base à l’aide du journal des modifications, cela prendra davantage de temps que la taille du journal. L’un des inconvénients de cette méthode est que la clarté et le niveau de détail de chaque entrée de journal des modifications sont laissés à la personne qui enregistre la modification. Dans une équipe avec plusieurs développeurs, certains peuvent créer des entrées plus détaillées, plus lisibles ou plus précises que d’autres. En outre, des fautes de frappe et d’autres erreurs d’entrée de données liées à l’homme sont possibles.
 
@@ -91,7 +91,7 @@ Il existe un large éventail d’outils de comparaison de base de données tiers
 > [!NOTE]
 > Au moment de la rédaction de cet article, la version actuelle de SQL Compare était la version 7,1, avec l’édition standard d’un coût de $395. Vous pouvez suivre la procédure en téléchargeant une version d’évaluation gratuite de 14 jours.
 
-Quand la comparaison SQL démarre, la boîte de dialogue projets de comparaison s’ouvre et affiche les projets de comparaison SQL enregistrés. Créez un nouveau projet. Cette opération lance l’Assistant Configuration du projet, qui vous invite à entrer des informations sur les bases de données à comparer (voir la figure 1). Entrez les informations pour les bases de données environnement de développement et de production.
+Quand la comparaison SQL démarre, la boîte de dialogue projets de comparaison s’ouvre et affiche les projets de comparaison SQL enregistrés. Créer un nouveau projet. Cette opération lance l’Assistant Configuration du projet, qui vous invite à entrer des informations sur les bases de données à comparer (voir la figure 1). Entrez les informations pour les bases de données environnement de développement et de production.
 
 [![comparer les bases de données de développement et de production](strategies-for-database-development-and-deployment-vb/_static/image2.jpg)](strategies-for-database-development-and-deployment-vb/_static/image1.jpg)
 

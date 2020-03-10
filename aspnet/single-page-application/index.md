@@ -1,27 +1,27 @@
 ---
 uid: single-page-application/index
-title: ASP.NET Single Page Application | Microsoft Docs
+title: Application à page unique ASP.NET | Microsoft Docs
 author: rick-anderson
-description: Télécharger la mise à jour de ASP.NET automne 2012 et avoir une meilleure expérience de bout en bout pour créer des applications avec des interactions côté client significatives à l’aide de JavaScrip...
+description: Téléchargez la mise à jour de ASP.NET automne 2012 et bénéficiez d’une meilleure expérience de bout en bout pour la création d’applications avec des interactions significatives côté client à l’aide de JavaScrip...
 ms.author: riande
 ms.date: 11/14/2012
 ms.assetid: 4760328c-3d73-4757-a36f-ab80a5b3f611
 msc.legacyurl: /single-page-application
 msc.type: categoryindex
 ms.openlocfilehash: 74ebdc39a81d31fb3c1ef3e5bab1857915cdc247
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400934"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558253"
 ---
-# <a name="aspnet-single-page-application"></a>Application de Page ASP.NET unique
+# <a name="aspnet-single-page-application"></a>Application à page unique ASP.NET
 
 - [Vue d’ensemble](overview/index.md)
 
     - [Introduction](overview/introduction/index.md)
 
-        - [Application à Page unique : Modèle KnockoutJS](overview/introduction/knockoutjs-template.md)
+        - [Application à une seule page : modèle KnockoutJS](overview/introduction/knockoutjs-template.md)
         - [Bibliothèques autres que Knockout](overview/introduction/other-libraries.md)
     - [Modèles](overview/templates/index.md)
 

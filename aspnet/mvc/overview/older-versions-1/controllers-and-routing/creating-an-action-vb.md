@@ -1,37 +1,37 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-vb
-title: Création d’une Action (VB) | Microsoft Docs
+title: Création d’une action (VB) | Microsoft Docs
 author: microsoft
-description: Découvrez comment ajouter une nouvelle action à un contrôleur ASP.NET MVC. En savoir plus sur la configuration requise pour une méthode devant subir une action.
+description: Découvrez comment ajouter une nouvelle action à un contrôleur MVC ASP.NET. En savoir plus sur la configuration requise pour qu’une méthode soit une action.
 ms.author: riande
 ms.date: 03/02/2009
 ms.assetid: c8d93e11-ef78-4a30-afbc-f30419000a60
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-vb
 msc.type: authoredcontent
 ms.openlocfilehash: b1b53bea899deecef203551b23c087944e3990ab
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123446"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78582004"
 ---
 # <a name="creating-an-action-vb"></a>Création d’une action (VB)
 
-by [Microsoft](https://github.com/microsoft)
+par [Microsoft](https://github.com/microsoft)
 
-> Découvrez comment ajouter une nouvelle action à un contrôleur ASP.NET MVC. En savoir plus sur la configuration requise pour une méthode devant subir une action.
+> Découvrez comment ajouter une nouvelle action à un contrôleur MVC ASP.NET. En savoir plus sur la configuration requise pour qu’une méthode soit une action.
 
-L’objectif de ce didacticiel est d’expliquer comment vous pouvez créer une nouvelle action de contrôleur. Vous en savoir plus sur la configuration requise d’une méthode d’action. Vous allez également apprendre à une méthode empêcher l’exposition en tant qu’action.
+L’objectif de ce didacticiel est d’expliquer comment vous pouvez créer une nouvelle action de contrôleur. Vous en saurez plus sur les exigences d’une méthode d’action. Vous apprendrez également comment empêcher une méthode d’être exposée en tant qu’action.
 
-## <a name="adding-an-action-to-a-controller"></a>Ajout d’une Action à un contrôleur
+## <a name="adding-an-action-to-a-controller"></a>Ajout d’une action à un contrôleur
 
-Vous ajoutez une nouvelle action à un contrôleur d’en ajoutant une nouvelle méthode au contrôleur. Par exemple, le contrôleur dans le Listing 1 contient une action nommée Index() et une action nommée SayHello(). Les deux méthodes sont exposées en tant qu’actions.
+Pour ajouter une nouvelle action à un contrôleur, ajoutez une nouvelle méthode au contrôleur. Par exemple, le contrôleur de la liste 1 contient une action nommée index () et une action nommée SayHello (). Les deux méthodes sont exposées en tant qu’actions.
 
-**Liste 1 - Controllers\HomeController.vb**
+**Liste 1-Controllers\HomeController.vb**
 
 [!code-vb[Main](creating-an-action-vb/samples/sample1.vb)]
 
-Pour pouvoir être exposés à l’univers en tant qu’action, une méthode doit remplir certaines conditions :
+Pour être exposé à l’univers en tant qu’action, une méthode doit répondre à certaines exigences :
 
 - La méthode doit être publique.
 - La méthode ne peut pas être une méthode statique.
@@ -39,25 +39,25 @@ Pour pouvoir être exposés à l’univers en tant qu’action, une méthode doi
 - La méthode ne peut pas être un constructeur, un accesseur Get ou un accesseur Set.
 - La méthode ne peut pas avoir de types génériques ouverts.
 - La méthode n’est pas une méthode de la classe de base du contrôleur.
-- La méthode ne peut pas contenir **ref** ou **out** paramètres.
+- La méthode ne peut pas contenir de paramètres **ref** ou **out** .
 
-Notez qu’il n’y a aucune restriction sur le type de retour d’une action de contrôleur. Une action de contrôleur peut retourner une chaîne, une valeur DateTime, une instance de la classe Random, ou void. L’infrastructure ASP.NET MVC convertit tout type de retour n’est pas un résultat d’action dans une chaîne et afficher la chaîne dans le navigateur.
+Notez qu’il n’existe aucune restriction sur le type de retour d’une action de contrôleur. Une action de contrôleur peut retourner une chaîne, une valeur DateTime, une instance de la classe Random ou void. L’infrastructure MVC ASP.NET convertit tout type de retour qui n’est pas un résultat d’action en une chaîne et affiche la chaîne dans le navigateur.
 
-Lorsque vous ajoutez une méthode qui ne viole pas ces exigences à un contrôleur, la méthode est exposée comme une action de contrôleur. Soyez prudent ici. Une action de contrôleur peut être appelée par toute personne connectée à Internet. Ne créez pas, par exemple, une action de contrôleur DeleteMyWebsite().
+Lorsque vous ajoutez une méthode qui ne viole pas ces exigences à un contrôleur, la méthode est exposée en tant qu’action de contrôleur. Soyez prudent ici. Une action de contrôleur peut être appelée par toute personne connectée à Internet. Ne créez pas, par exemple, une action de contrôleur DeleteMyWebsite ().
 
-## <a name="preventing-a-public-method-from-being-invoked"></a>Empêche l’appelé une méthode publique
+## <a name="preventing-a-public-method-from-being-invoked"></a>Empêcher l’appel d’une méthode publique
 
-Si vous devez créer une méthode publique dans une classe de contrôleur et vous ne souhaitez pas exposer la méthode comme une action de contrôleur, puis vous pouvez empêcher l’invoquée à l’aide de la méthode la &lt;NonAction&gt; attribut. Par exemple, le contrôleur dans le Listing 2 contient une méthode publique nommée CompanySecrets() est décorée avec le &lt;NonAction&gt; attribut.
+Si vous avez besoin de créer une méthode publique dans une classe de contrôleur et que vous ne souhaitez pas exposer la méthode en tant qu’action de contrôleur, vous pouvez empêcher la méthode d’être appelée à l’aide de l’attribut &lt;&gt; non-action. Par exemple, le contrôleur de la liste 2 contient une méthode publique nommée CompanySecrets () qui est décorée avec l’attribut &lt;&gt; non-action.
 
-**Listing 2 - Controllers\WorkController.vb**
+**Liste 2-Controllers\WorkController.vb**
 
 [!code-vb[Main](creating-an-action-vb/samples/sample2.vb)]
 
-Si vous tentez d’appeler l’action du contrôleur CompanySecrets() en tapant /Work/CompanySecrets dans la barre d’adresses de votre navigateur vous allez obtenir le message d’erreur dans la Figure 1.
+Si vous tentez d’appeler l’action du contrôleur CompanySecrets () en tapant/Work/CompanySecrets dans la barre d’adresses de votre navigateur, vous obtiendrez le message d’erreur dans la figure 1.
 
-[![Appel d’une méthode NonAction](creating-an-action-vb/_static/image1.jpg)](creating-an-action-vb/_static/image1.png)
+[![de l’appel d’une méthode qui n’est pas une action](creating-an-action-vb/_static/image1.jpg)](creating-an-action-vb/_static/image1.png)
 
-**Figure 01**: Appel d’une méthode NonAction ([cliquez pour afficher l’image en taille réelle](creating-an-action-vb/_static/image2.png))
+**Figure 01**: appel d’une méthode non-action ([cliquez pour afficher l’image en taille réelle](creating-an-action-vb/_static/image2.png))
 
 > [!div class="step-by-step"]
 > [Précédent](creating-a-controller-vb.md)

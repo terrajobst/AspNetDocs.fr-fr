@@ -9,11 +9,11 @@ ms.assetid: 90ebf911-1c46-4470-b876-1335bd0f590f
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler
 msc.type: authoredcontent
 ms.openlocfilehash: baaebd32f08d3c6b861572c5c5a16ec0fb70aaf0
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74589039"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78568564"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler"></a>Configuration d’un serveur web pour la publication Web Deploy (Gestionnaire Web Deploy)
 
@@ -21,7 +21,7 @@ ms.locfileid: "74589039"
 
 > Cette rubrique explique comment configurer un serveur Web Internet Information Services (IIS) pour prendre en charge la publication et le déploiement Web à l’aide du gestionnaire de Web Deploy IIS.
 > 
-> Lorsque vous travaillez avec Web Deploy 2,0 ou une version ultérieure, vous pouvez utiliser trois approches principales pour obtenir vos applications ou sites sur un serveur Web. Vous pouvez effectuer les tâches suivantes :
+> Lorsque vous travaillez avec Web Deploy 2,0 ou une version ultérieure, vous pouvez utiliser trois approches principales pour obtenir vos applications ou sites sur un serveur Web. Vous pouvez :
 > 
 > - Utilisez le *service de l’agent distant Web Deploy*. Cette approche requiert moins de configuration du serveur Web, mais vous devez fournir les informations d’identification d’un administrateur de serveur local pour pouvoir déployer n’importe quoi sur le serveur.
 > - Utilisez le *Gestionnaire de Web Deploy*. Cette approche est beaucoup plus complexe et nécessite plus de travail initial pour configurer le serveur Web. Toutefois, lorsque vous utilisez cette approche, vous pouvez configurer IIS pour permettre aux utilisateurs non-administrateurs d’effectuer le déploiement. Le gestionnaire de Web Deploy est disponible uniquement dans IIS version 7 ou ultérieure.
@@ -86,7 +86,7 @@ Dans ce cas, vous devez installer les éléments suivants :
 
     > [!NOTE]
     > Vous pouvez à présent lancer le Web Platform Installer à tout moment à partir du menu **Démarrer** . Pour ce faire, dans le menu **Démarrer** , cliquez sur **tous les programmes**, puis sur **Microsoft Web Platform Installer**.
-3. En haut de la fenêtre de **Web Platform Installer** , cliquez sur **produits**.
+3. En haut de la fenêtre **Web Platform Installer**, cliquez sur **Produits**.
 4. Sur le côté gauche de la fenêtre, dans le volet de navigation, cliquez sur **frameworks**.
 5. Dans la ligne **Microsoft .NET Framework 4** , si le .NET Framework n’est pas déjà installé, cliquez sur **Ajouter**.
 
@@ -204,7 +204,7 @@ Bien que rien ne vous empêche de déployer du contenu vers le site Web par déf
     > [!NOTE]
     > Dans un environnement de production, vous souhaiterez probablement héberger votre site Web sur le port 80 et configurer un en-tête d’hôte, ainsi que les enregistrements DNS correspondants. Pour plus d’informations sur la configuration des en-têtes d’hôte dans IIS 7, consultez [configurer un en-tête d’hôte pour un site Web (IIS 7)](https://technet.microsoft.com/library/cc753195(WS.10).aspx). Pour plus d’informations sur le rôle de serveur DNS dans Windows Server, consultez [vue d’ensemble du serveur DNS](https://technet.microsoft.com/library/cc770392.aspx) et [serveur DNS](https://technet.microsoft.com/windowsserver/dd448607).
 9. Dans le volet **Actions** , sous **Modifier le Site**, cliquez sur **Liaisons**.
-10. Dans la boîte de dialogue **liaisons de site** , cliquez sur **Ajouter**.
+10. Dans la boîte de dialogue **Liaisons de site Web**, cliquez sur **Ajouter**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler/_static/image12.png)
 11. Dans la boîte de dialogue **Ajouter la liaison de site** , définissez l' **adresse IP** et le **port** correspondant à la configuration de votre site existant.
@@ -214,7 +214,7 @@ Bien que rien ne vous empêche de déployer du contenu vers le site Web par déf
 
     > [!NOTE]
     > La première liaison de site vous permet d’accéder au site localement à l’aide de l’adresse IP et du port ou `http://localhost:85`. La deuxième liaison de site vous permet d’accéder au site à partir d’autres ordinateurs sur le domaine à l’aide du nom de l’ordinateur (par exemple, http://stageweb1:85).
-13. Dans la boîte de dialogue **liaisons de sites** , cliquez sur **Fermer**.
+13. Dans la boîte de dialogue **Liaisons de site Web**, cliquez sur **Fermer**.
 14. Dans le volet **connexions** , cliquez sur **pools d’applications**.
 15. Dans le volet **pools d’applications** , cliquez avec le bouton droit sur le nom de votre pool d’applications, puis cliquez sur **paramètres de base**. Par défaut, le nom de votre pool d’applications correspond au nom de votre site Web (par exemple, **DemoSite**).
 16. Dans la liste **version du CLR .net** , sélectionnez **.NET CLR v 4.0.30319**, puis cliquez sur **OK**.
@@ -240,8 +240,8 @@ L’approche la plus courante consiste à assigner des autorisations au groupe l
 
 1. Dans l’Explorateur Windows, accédez à l’emplacement de votre dossier local.
 2. Cliquez avec le bouton droit sur le dossier, puis cliquez sur **Propriétés**.
-3. Sous l’onglet **sécurité** , cliquez sur **modifier**, puis sur **Ajouter**.
-4. Cliquez sur **emplacements**. Dans la boîte de dialogue **emplacements** , sélectionnez le serveur local, puis cliquez sur **OK**.
+3. Sous l'onglet **Security**, cliquez sur **Edit**, puis sur **Add**.
+4. Cliquez sur **Emplacements**. Dans la boîte de dialogue **emplacements** , sélectionnez le serveur local, puis cliquez sur **OK**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler/_static/image15.png)
 5. Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , tapez **IIS\_IUSRS**, cliquez sur **vérifier les noms**, puis cliquez sur **OK**.
@@ -275,8 +275,8 @@ Par défaut, le service de gestion Web IIS écoute le port TCP 8172. Si le pare-
 
 | Sens | À partir du port | Vers le port | Type de port |
 | --- | --- | --- | --- |
-| Entrant | Tous | 8172 | TCP |
-| Sortant | 8172 | Tous | TCP |
+| Trafic entrant | Any | 8172 | TCP |
+| Règle de trafic sortant | 8172 | Any | TCP |
 
 Pour plus d’informations sur la configuration des règles dans le pare-feu Windows, consultez [configuration de règles de pare-feu](https://technet.microsoft.com/library/dd448559(WS.10).aspx). Pour les pare-feu tiers, consultez la documentation de votre produit.
 

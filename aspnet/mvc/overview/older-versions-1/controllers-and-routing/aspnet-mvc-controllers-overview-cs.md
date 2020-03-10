@@ -1,118 +1,118 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs
-title: Vue d’ensemble du contrôleur ASP.NET MVC (c#) | Microsoft Docs
+title: Vue d’ensemble du contrôleurC#ASP.NET MVC () | Microsoft Docs
 author: StephenWalther
-description: Dans ce didacticiel, Stephen Walther vous présente les contrôleurs ASP.NET MVC. Vous allez apprendre à créer de nouveaux contrôleurs et de retourner différents types de res d’action...
+description: Dans ce didacticiel, Stephen Walther vous présente les contrôleurs MVC ASP.NET. Vous allez apprendre à créer de nouveaux contrôleurs et à retourner différents types de ressources d’action res...
 ms.author: riande
 ms.date: 02/16/2008
 ms.assetid: b985c49a-3668-455c-a366-f85f6bc64b12
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 1a287b37742400a17c2ed53cfd00bfb053b4f3d2
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123605"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78544113"
 ---
 # <a name="aspnet-mvc-controller-overview-c"></a>Vue d’ensemble du contrôleur ASP.NET MVC (C#)
 
 par [Stephen Walther](https://github.com/StephenWalther)
 
-> Dans ce didacticiel, Stephen Walther vous présente les contrôleurs ASP.NET MVC. Vous allez apprendre à créer de nouveaux contrôleurs et de retourner différents types de résultats d’action.
+> Dans ce didacticiel, Stephen Walther vous présente les contrôleurs MVC ASP.NET. Vous allez apprendre à créer de nouveaux contrôleurs et à retourner différents types de résultats d’action.
 
-Ce didacticiel explore le sujet de contrôleurs ASP.NET MVC, les actions de contrôleur et les résultats d’action. Après avoir terminé ce didacticiel, vous comprendrez comment les contrôleurs sont utilisés pour contrôler la façon dont un visiteur interagit avec un site Web ASP.NET MVC.
+Ce didacticiel explore le sujet des contrôleurs MVC ASP.NET, des actions du contrôleur et des résultats d’action. Une fois ce didacticiel terminé, vous comprendrez comment les contrôleurs sont utilisés pour contrôler la façon dont un visiteur interagit avec un site Web MVC ASP.NET.
 
-## <a name="understanding-controllers"></a>Présentation des contrôleurs
+## <a name="understanding-controllers"></a>Fonctionnement des contrôleurs
 
-Contrôleurs MVC sont chargés de répondre aux requêtes effectuées par rapport à un site Web ASP.NET MVC. Chaque demande de navigateur est mappée à un contrôleur spécifique. Par exemple, imaginez que vous entrez l’URL suivante dans la barre d’adresses de votre navigateur :
+Les contrôleurs MVC sont chargés de répondre aux demandes effectuées sur un site Web MVC ASP.NET. Chaque demande de navigateur est mappée à un contrôleur particulier. Par exemple, imaginez que vous entrez l’URL suivante dans la barre d’adresses de votre navigateur :
 
 `http://localhost/Product/Index/3`
 
-Dans ce cas, un contrôleur nommé ProductController est appelé. Le ProductController est responsable de la génération de la réponse à la demande de navigateur. Par exemple, le contrôleur peut retourner une vue particulière dans le navigateur ou le contrôleur peut rediriger l’utilisateur vers un autre contrôleur.
+Dans ce cas, un contrôleur nommé ProductController est appelé. Le ProductController est responsable de la génération de la réponse à la demande du navigateur. Par exemple, le contrôleur peut retourner une vue particulière au navigateur ou le contrôleur peut rediriger l’utilisateur vers un autre contrôleur.
 
-Listing 1 contient un simple contrôleur nommé ProductController.
+La liste 1 contient un contrôleur simple nommé ProductController.
 
 **Listing1 - Controllers\ProductController.cs**
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample1.cs)]
 
-Comme vous pouvez le voir à partir de la liste 1, un contrôleur est simplement une classe (une classe Visual Basic .NET ou c#). Un contrôleur est une classe qui dérive de la classe de base System.Web.Mvc.Controller. Un contrôleur hérite de cette classe de base, un contrôleur hérite de plusieurs méthodes utiles gratuitement (nous y reviendrons ces méthodes dans un instant).
+Comme vous pouvez le voir dans la liste 1, un contrôleur n’est qu’une classe (un C# Visual Basic .net ou une classe). Un contrôleur est une classe qui dérive de la classe System. Web. Mvc. Controller de base. Comme un contrôleur hérite de cette classe de base, un contrôleur hérite de plusieurs méthodes utiles gratuites (nous aborderons ces méthodes dans un instant).
 
-## <a name="understanding-controller-actions"></a>Présentation des Actions de contrôleur
+## <a name="understanding-controller-actions"></a>Compréhension des actions du contrôleur
 
-Un contrôleur expose les actions de contrôleur. Une action est une méthode sur un contrôleur qui est appelée lorsque vous entrez une URL particulière dans la barre d’adresse de votre navigateur. Par exemple, imaginez que vous effectuez une requête pour l’URL suivante :
+Un contrôleur expose des actions de contrôleur. Une action est une méthode sur un contrôleur qui est appelée lorsque vous entrez une URL particulière dans la barre d’adresse de votre navigateur. Par exemple, imaginez que vous faites une demande pour l’URL suivante :
 
 `http://localhost/Product/Index/3`
 
-Dans ce cas, la méthode Index() est appelée sur la classe ProductController. La méthode Index() est un exemple d’une action de contrôleur.
+Dans ce cas, la méthode index () est appelée sur la classe ProductController. La méthode index () est un exemple d’action de contrôleur.
 
-Une action de contrôleur doit être une méthode publique d’une classe de contrôleur. Méthodes c#, par défaut, sont des méthodes privées. Notez que toute méthode publique que vous ajoutez à une classe de contrôleur est exposée comme une action de contrôleur automatiquement (vous devez veiller à ce sujet dans la mesure où une action de contrôleur peut être appelée par n’importe qui dans l’univers en tapant l’URL de droite dans une barre d’adresses du navigateur).
+Une action de contrôleur doit être une méthode publique d’une classe de contrôleur. C#par défaut, les méthodes sont des méthodes privées. Sachez que toute méthode publique que vous ajoutez à une classe de contrôleur est exposée automatiquement en tant qu’action de contrôleur (vous devez faire attention à cela, car une action de contrôleur peut être appelée par n’importe qui dans l’univers en tapant simplement l’URL appropriée dans une barre d’adresses de navigateur).
 
-Il existe certaines exigences supplémentaires qui doivent être satisfaites par une action de contrôleur. Une méthode utilisée comme une action de contrôleur ne peut pas être surchargée. En outre, une action de contrôleur ne peut pas être une méthode statique. Autrement, vous pouvez utiliser pratiquement n’importe quelle méthode comme une action de contrôleur.
+Certaines exigences supplémentaires doivent être satisfaites par une action de contrôleur. Une méthode utilisée comme action de contrôleur ne peut pas être surchargée. En outre, une action de contrôleur ne peut pas être une méthode statique. À part cela, vous pouvez utiliser quasiment n’importe quelle méthode en tant qu’action de contrôleur.
 
-## <a name="understanding-action-results"></a>Présentation des résultats d’Action
+## <a name="understanding-action-results"></a>Compréhension des résultats des actions
 
-Une action de contrôleur retourne ce que l'on appelle un *résultat d’action*. Un résultat d’action est ce que retourne une action de contrôleur en réponse à une demande de navigateur.
+Une action de contrôleur retourne un événement appelé *résultat d’action*. Un résultat d’action est ce qu’une action de contrôleur retourne en réponse à une demande de navigateur.
 
-L’infrastructure ASP.NET MVC prend en charge plusieurs types de résultats d’action, notamment :
+L’infrastructure MVC ASP.NET prend en charge plusieurs types de résultats d’action, notamment :
 
-1. ViewResult - représente HTML et le balisage.
-2. EmptyResult - ne représente aucun résultat.
-3. RedirectResult - représente une redirection vers une nouvelle URL.
-4. JsonResult - représente un résultat de JavaScript Object Notation qui peut être utilisé dans une application AJAX.
-5. JavaScriptResult - représente un script JavaScript.
-6. ContentResult - représente un résultat de texte.
-7. FileContentResult - représente un fichier téléchargeable (avec le contenu binaire).
-8. FilePathResult - représente un fichier téléchargeable (avec un chemin d’accès).
-9. FileStreamResult - représente un fichier téléchargeable (avec un flux de fichier).
+1. ViewResult : représente le code HTML et le balisage.
+2. EmptyResult : ne représente aucun résultat.
+3. RedirectResult : représente une redirection vers une nouvelle URL.
+4. JsonResult : représente un résultat JavaScript Object Notation qui peut être utilisé dans une application AJAX.
+5. JavaScriptResult : représente un script JavaScript.
+6. ContentResult : représente un résultat de texte.
+7. FileContentResult : représente un fichier téléchargeable (avec le contenu binaire).
+8. FilePathResult : représente un fichier téléchargeable (avec un chemin d’accès).
+9. FileStreamResult : représente un fichier téléchargeable (avec un flux de fichier).
 
-Tous ces résultats d’action héritent de la classe ActionResult base.
+Tous ces résultats d’action héritent de la classe de base ActionResult.
 
-Dans la plupart des cas, une action de contrôleur retourne un ViewResult. Par exemple, l’action de contrôleur d’Index dans la liste 2 Retourne un ViewResult.
+Dans la plupart des cas, une action de contrôleur retourne un ViewResult. Par exemple, l’action du contrôleur d’index dans la liste 2 retourne un ViewResult.
 
-**Listing 2 - Controllers\BookController.cs**
+**Liste 2-Controllers\BookController.cs**
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample2.cs)]
 
-Lorsqu’une action retourne un ViewResult, HTML est retourné au navigateur. La méthode Index() dans le Listing 2 Retourne une vue nommée des Index dans le navigateur.
+Lorsqu’une action renvoie un ViewResult, le code HTML est renvoyé au navigateur. La méthode index () de la liste 2 retourne une vue nommée index au navigateur.
 
-Notez que l’action Index() dans le Listing 2 ne retourne pas un ViewResult(). Au lieu de cela, la méthode View() de la classe de base de contrôleur est appelée. Normalement, vous ne retournez un résultat d’action directement. Au lieu de cela, vous appelez une des méthodes suivantes de la classe de base du contrôleur :
+Notez que l’action index () dans la liste 2 ne retourne pas de ViewResult (). Au lieu de cela, la méthode View () de la classe de base Controller est appelée. Normalement, vous ne retournez pas directement un résultat d’action. Au lieu de cela, vous appelez l’une des méthodes suivantes de la classe de base du contrôleur :
 
-1. Vue - retourne un résultat d’action ViewResult.
-2. Rediriger - retourne un résultat d’action RedirectResult.
-3. RedirectToAction - retourne un résultat d’action RedirectToRouteResult.
-4. RedirectToRoute - retourne un résultat d’action RedirectToRouteResult.
-5. JSON - retourne un résultat d’action JsonResult.
-6. JavaScriptResult - retourne un JavaScriptResult.
-7. Contenu : retourne un résultat d’action ContentResult.
-8. Fichier - retourne un FileContentResult, FilePathResult ou FileStreamResult selon les paramètres transmis à la méthode.
+1. View : retourne un résultat d’action ViewResult.
+2. Redirect-retourne un résultat d’action RedirectResult.
+3. RedirectToAction-retourne un résultat d’action RedirectToRouteResult.
+4. RedirectToRoute-retourne un résultat d’action RedirectToRouteResult.
+5. JSON-retourne un résultat d’action JsonResult.
+6. JavaScriptResult-retourne un JavaScriptResult.
+7. Content-renvoie un résultat d’action ContentResult.
+8. File : retourne un FileContentResult, FilePathResult ou FileStreamResult selon les paramètres passés à la méthode.
 
-Par conséquent, si vous souhaitez renvoyer un affichage dans le navigateur, vous appelez la méthode View(). Si vous souhaitez rediriger l’utilisateur à partir de l’action d’un contrôleur à l’autre, vous appelez la méthode RedirectToAction(). Par exemple, l’action Details() dans le Listing 3 affiche une vue ou redirige l’utilisateur vers l’action Index() selon que le paramètre Id a une valeur.
+Par conséquent, si vous souhaitez retourner une vue au navigateur, vous appelez la méthode View (). Si vous souhaitez rediriger l’utilisateur d’une action de contrôleur vers une autre, vous appelez la méthode RedirectToAction (). Par exemple, l’action détails () dans la liste 3 permet d’afficher une vue ou de rediriger l’utilisateur vers l’action index (), selon que le paramètre ID a une valeur.
 
-**Liste 3 - CustomerController.cs**
+**Liste 3-CustomerController.cs**
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample3.cs)]
 
-Le résultat d’action ContentResult est spécial. Vous pouvez utiliser le résultat d’action ContentResult pour retourner un résultat d’action en tant que texte brut. Par exemple, la méthode Index() sur la liste 4 retourne un message en tant que texte brut et pas au format HTML.
+Le résultat de l’action ContentResult est spécial. Vous pouvez utiliser le résultat de l’action ContentResult pour retourner un résultat d’action sous forme de texte brut. Par exemple, la méthode index () de la liste 4 retourne un message sous forme de texte brut et non de code HTML.
 
-**Liste 4 - Controllers\StatusController.cs**
+**Liste 4-Controllers\StatusController.cs**
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample4.cs)]
 
-Lorsque l’action StatusController.Index() est appelée, une vue n’est pas renvoyée. Au lieu de cela, le texte brut « Hello World ! » est retourné au navigateur.
+Lorsque l’action StatusController. index () est appelée, une vue n’est pas retournée. Au lieu de cela, le texte brut « Hello World ! » est retourné au navigateur.
 
-Si une action de contrôleur retourne un résultat qui n’est pas un résultat d’action - par exemple, une date ou un entier - le résultat est encapsulé dans un ContentResult automatiquement. Par exemple, lorsque l’action Index() de la WorkController dans la liste 5 est appelée, la date est retournée automatiquement comme un ContentResult.
+Si une action de contrôleur retourne un résultat qui n’est pas un résultat d’action (par exemple, une date ou un entier), le résultat est automatiquement encapsulé dans un ContentResult. Par exemple, lorsque l’action index () de WorkController dans la liste 5 est appelée, la date est retournée automatiquement en tant que ContentResult.
 
-**Liste 5 - WorkController.cs**
+**Liste 5-WorkController.cs**
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample5.cs)]
 
-L’action Index() dans la liste 5 retourne un objet DateTime. L’infrastructure ASP.NET MVC convertit l’objet DateTime en une chaîne et encapsule la valeur de date/heure dans un ContentResult automatiquement. Le navigateur reçoit la date et l’heure en tant que texte brut.
+L’action index () dans la liste 5 retourne un objet DateTime. L’infrastructure MVC ASP.NET convertit l’objet DateTime en une chaîne et encapsule automatiquement la valeur DateTime dans un ContentResult. Le navigateur reçoit la date et l’heure sous forme de texte brut.
 
 ## <a name="summary"></a>Récapitulatif
 
-L’objectif de ce didacticiel a été pour vous présenter les concepts de contrôleurs ASP.NET MVC, les actions de contrôleur et les résultats d’action de contrôleur. Dans la première section, vous avez appris à ajouter de nouveaux contrôleurs pour un projet ASP.NET MVC. Ensuite, vous avez appris les méthodes publics d’un contrôleur sont exposés à l’univers en tant qu’actions de contrôleur. Enfin, nous avons abordé les différents types de résultats d’action qui peuvent être retournés à partir d’une action de contrôleur. En particulier, nous avons vu comment renvoyer un ViewResult, RedirectToActionResult et ContentResult à partir d’une action de contrôleur.
+L’objectif de ce didacticiel était de vous présenter les concepts des contrôleurs MVC ASP.NET, des actions du contrôleur et des résultats des actions du contrôleur. Dans la première section, vous avez appris à ajouter de nouveaux contrôleurs à un projet MVC ASP.NET. Ensuite, vous avez appris comment les méthodes publiques d’un contrôleur sont exposées à l’univers comme des actions de contrôleur. Enfin, nous avons abordé les différents types de résultats d’action qui peuvent être retournés à partir d’une action de contrôleur. Nous avons notamment abordé la manière de retourner un ViewResult, RedirectToActionResult et ContentResult à partir d’une action de contrôleur.
 
 > [!div class="step-by-step"]
 > [Précédent](creating-an-action-vb.md)

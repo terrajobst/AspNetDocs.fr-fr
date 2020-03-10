@@ -1,63 +1,63 @@
 ---
 uid: mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part5
-title: L’accès aux données de votre modèle à partir d’un contrôleur | Microsoft Docs
+title: Accès aux données de votre modèle à partir d’un contrôleur | Microsoft Docs
 author: shanselman
-description: Il s’agit d’un didacticiel de débutant qui présente les principes de base d’ASP.NET MVC. Créer une application web simple qui lit et écrit à partir d’une base de données.
+description: Il s’agit d’un didacticiel débutant qui présente les notions de base de ASP.NET MVC. Créer une application Web simple qui lit et écrit à partir d’une base de données.
 ms.author: riande
 ms.date: 08/14/2010
 ms.assetid: 004703cd-e0e9-4ba7-9974-1b0475c71222
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part5
 msc.type: authoredcontent
 ms.openlocfilehash: 207ed880977d794d81efdc1ea458d17a68d501d8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65122892"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78543749"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Accès aux données de votre modèle à partir d’un contrôleur
 
 par [Scott Hanselman](https://github.com/shanselman)
 
-> Il s’agit d’un didacticiel de débutant qui présente les principes de base d’ASP.NET MVC. Vous allez créer une application web simple qui lit et écrit à partir d’une base de données. Visitez le [centre d’apprentissage ASP.NET MVC](../../../index.md) pour rechercher d’autres ASP.NET MVC didacticiels et exemples.
+> Il s’agit d’un didacticiel débutant qui présente les notions de base de ASP.NET MVC. Vous allez créer une application Web simple qui lit et écrit à partir d’une base de données. Visitez le [Centre d’apprentissage ASP.NET MVC](../../../index.md) pour trouver d’autres didacticiels et exemples ASP.NET MVC.
 
-Dans cette section, nous allons créer une nouvelle classe MoviesController, et écrire du code qui Récupère nos données de film et l’affiche dans le navigateur à l’aide d’un modèle de vue.
+Dans cette section, nous allons créer une nouvelle classe MoviesController et écrire du code qui récupère nos données de film et les affiche à nouveau dans le navigateur à l’aide d’un modèle de vue.
 
-Cliquez avec le bouton droit sur le dossier Controllers et effectuer une nouvelle MoviesController.
+Cliquez avec le bouton droit sur le dossier Controllers et créez un nouveau MoviesController.
 
-[![Ajouter un contrôleur](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
+[![ajouter un contrôleur](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
 
-Cela créera un nouveau fichier « MoviesController.cs » en dessous de notre dossier \Controllers au sein de notre projet. Nous allons mettre à jour le MovieController pour récupérer la liste de films à partir de notre base de données nouvellement rempli.
+Cela créera un nouveau fichier « MoviesController.cs » sous notre dossier \Controllers au sein de notre projet. Nous allons mettre à jour MovieController pour récupérer la liste des films à partir de notre base de données qui vient d’être remplie.
 
 [!code-csharp[Main](getting-started-with-mvc-part5/samples/sample1.cs)]
 
-Nous exécutons une requête LINQ, afin que nous récupérons uniquement films publiées après l’été 1984. Nous avons besoin d’un modèle de vue pour afficher cette liste de films de retour, par conséquent, avec le bouton droit dans la méthode et sélectionnez Ajouter une vue pour la créer.
+Nous effectuons une requête LINQ pour que nous puissions uniquement récupérer les films publiés après l’été de 1984. Nous aurons besoin d’un modèle de vue pour restituer cette liste de films. par conséquent, cliquez avec le bouton droit dans la méthode, puis sélectionnez Ajouter une vue pour la créer.
 
-Dans la boîte de dialogue Ajouter une vue, nous allons indiquer que nous passons une liste&lt;Movies.Models.Movie&gt; à notre modèle de vue. Contrairement aux fois précédentes nous utilisé la boîte de dialogue Ajouter une vue et que vous avez choisi de créer un modèle « Vide », cette fois, que nous allons indiquer que nous voulons Visual Studio automatiquement « structurer » un modèle de vue pour nous avec du contenu par défaut. Pour cela, nous allons sélectionner l’élément « List » dans le menu « contenu de liste déroulante de l’affichage.
+Dans la boîte de dialogue Ajouter une vue, nous indiquons que nous transmettons une liste&lt;movies. Models. Movie&gt; à notre modèle de vue. Contrairement aux heures précédentes, nous avons utilisé la boîte de dialogue Ajouter une vue et choisi de créer un modèle « vide ». cette fois-ci, nous indiquons que Visual Studio doit automatiquement « échafauder » un modèle de vue pour nous avec un contenu par défaut. Pour ce faire, nous allons sélectionner l’élément « liste » dans le menu déroulant Afficher le contenu.
 
-N’oubliez pas, lorsque vous avez créé une nouvelle classe, vous aurez besoin pour compiler votre application pour qu’elle s’affiche dans la boîte de dialogue Vue ajouter.
+N’oubliez pas qu’une fois que vous avez créé une nouvelle classe, vous devez compiler votre application pour qu’elle s’affiche dans la boîte de dialogue Ajouter une vue.
 
 ![Ajouter une vue](getting-started-with-mvc-part5/_static/image3.png)
 
-Cliquez sur Ajouter et le système génère automatiquement le code pour nous qui affiche notre liste de films pour une vue. Il s’agit d’un bon moment pour modifier le &lt;h2&gt; titre à quelque chose comme « My Movie List » comme nous l’avons fait précédemment avec la vue de Hello World.
+Cliquez sur Ajouter pour que le système génère automatiquement le code pour une vue pour nous qui affiche notre liste de films. C’est le moment idéal pour modifier l’en-tête &lt;H2&gt; par un texte tel que « ma liste de films » comme nous l’avons fait précédemment avec la vue de Hello World.
 
-[![Films - Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part5/_static/image5.png)](getting-started-with-mvc-part5/_static/image4.png)
+[Films ![-Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part5/_static/image5.png)](getting-started-with-mvc-part5/_static/image4.png)
 
-Exécutez votre application et visitez /Movies dans la barre d’adresses. Maintenant, nous avons récupéré des données à partir de la base de données à l’aide d’une requête de base à l’intérieur du contrôleur et renvoyé les données à une vue qui connaît les films. Cette vue puis tourne via la liste de films et crée une table de données pour nous.
+Exécutez votre application et visitez/movies dans la barre d’adresses. À présent, nous avons extrait les données de la base de données à l’aide d’une requête de base dans le contrôleur et j’ai renvoyé les données à une vue qui connaît les films. Cette vue tourne ensuite dans la liste des films et crée une table de données pour nous.
 
-[![Liste de films - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image7.png)](getting-started-with-mvc-part5/_static/image6.png)
+[Liste des films ![-Windows Internet Explorer](getting-started-with-mvc-part5/_static/image7.png)](getting-started-with-mvc-part5/_static/image6.png)
 
-Nous n’implémentation modifier, détails et supprimer des fonctionnalités avec cette application -, ce qui nous évite les liens par défaut que le modèle de structure créé pour nous. Ouvrez le fichier /Movies/Index.aspx et les supprimer.
+Nous n’implémenterons pas les fonctionnalités de modification, de détails et de suppression avec cette application. nous n’avons donc pas besoin des liens par défaut créés pour nous. Ouvrez le fichier/Movies/Index.aspx et supprimez-le.
 
-Voici le code source pour ce que notre modèle de vue mis à jour doit ressembler à une fois que nous apporter ces modifications :
+Voici le code source de ce à quoi doit ressembler notre modèle de vue mis à jour une fois que nous apportons ces modifications :
 
 [!code-aspx[Main](getting-started-with-mvc-part5/samples/sample2.aspx)]
 
-Il consiste à créer des liens que nous ne devons, donc nous allons les supprimer pour cet exemple. Nous conserverons notre créer un nouveau lien, car il s’agit suivant ! Voici à quoi ressemble notre application avec cette colonne supprimée.
+Il crée des liens dont nous n’aurons pas besoin. nous allons donc les supprimer pour cet exemple. Nous allons conserver notre lien créer, car c’est le cas. Voici à quoi ressemble votre application avec cette colonne supprimée.
 
-[![Liste de films - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image9.png)](getting-started-with-mvc-part5/_static/image8.png)
+[Liste des films ![-Windows Internet Explorer](getting-started-with-mvc-part5/_static/image9.png)](getting-started-with-mvc-part5/_static/image8.png)
 
-Nous disposons désormais d’une simple liste de nos données de film. Toutefois, si nous cliquons sur le lien « Créer nouveau », nous obtenons une erreur car il n’est pas connecté ! Nous allons implémenter une méthode d’Action de créer et activer un utilisateur à entrer de nouveaux films dans notre base de données.
+Nous disposons à présent d’une simple liste de nos données de films. Toutefois, si nous cliquons sur le lien « créer nouveau », nous obtenons une erreur, car elle n’est pas raccrochée. Nous allons implémenter une méthode de création d’action et permettre à un utilisateur d’entrer de nouveaux films dans notre base de données.
 
 > [!div class="step-by-step"]
 > [Précédent](getting-started-with-mvc-part4.md)

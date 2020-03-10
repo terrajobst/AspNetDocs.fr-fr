@@ -9,11 +9,11 @@ ms.assetid: 5e2bb092-cb22-4511-ad0a-22ae12dd99b3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 0894c0ac24737e66b6960ef3d48aa17f78c6aa1d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621078"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78528125"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-sql-server-database-update---11-of-12"></a>Déploiement d’une application Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : déploiement d’une mise à jour de base de données SQL Server-11 sur 12
 
@@ -25,7 +25,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Pour obtenir un didacticiel qui présente les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions SQL Server autres que SQL Server Compact et montre comment déployer vers des sites Web Windows Azure, consultez [déploiement web ASP.net à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Ce didacticiel vous montre comment déployer une mise à jour de base de données sur une base de données SQL Server complète. Étant donné que Migrations Code First effectue tout le travail de mise à jour de la base de données, le processus est presque identique à ce que vous avez fait pour SQL Server Compact dans le didacticiel sur le [déploiement d’une mise à jour de base de données](deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md) .
 
@@ -147,7 +147,7 @@ Migrations Code First met à jour la base de données de la même manière que d
 
 Vous avez maintenant déployé avec succès une mise à jour d’application qui comprenait une modification de base de données à l’aide d’une base de données SQL Server.
 
-## <a name="more-information"></a>Plus d’informations
+## <a name="more-information"></a>Plus d'informations
 
 Cette série de didacticiels se termine lors du déploiement d’une application Web ASP.NET sur un fournisseur d’hébergement tiers. Pour plus d’informations sur les sujets abordés dans ces didacticiels, consultez le [plan de contenu de déploiement ASP.net](https://msdn.microsoft.com/library/bb386521(v=vs.110).aspx) sur le site Web MSDN.
 

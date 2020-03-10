@@ -9,11 +9,11 @@ ms.assetid: cc1ad51b-40c3-4c68-8620-9aaa0fd1f6cf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/queue-centric-work-pattern
 msc.type: authoredcontent
 ms.openlocfilehash: 1177336b25479c06706227e5c8ff4d027cdaebb8
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456983"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584818"
 ---
 # <a name="queue-centric-work-pattern-building-real-world-cloud-apps-with-azure"></a>Modèle de travail centré sur la file d’attente (génération d’applications Cloud réalistes avec Azure)
 
@@ -166,7 +166,7 @@ L’interrogation des messages de la file d’attente entraîne des frais de tra
 
 Dans un projet Web, l’ajout de code asynchrone peut automatiquement améliorer les performances, car IIS gère un pool de threads limité. Ce n’est pas le cas dans un projet de rôle de travail. Pour améliorer l’extensibilité du rôle de travail, vous pouvez écrire du code multithread ou utiliser du code asynchrone pour implémenter la [programmation parallèle](https://msdn.microsoft.com/library/ff963553.aspx). L’exemple n’implémente pas la programmation parallèle, mais montre comment rendre le code asynchrone afin de pouvoir implémenter la programmation parallèle.
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Dans ce chapitre, vous avez vu comment améliorer la réactivité, la fiabilité et l’évolutivité des applications en implémentant le modèle de travail centré sur la file d’attente.
 
@@ -186,7 +186,7 @@ Documentation :
 - [Modèles et pratiques Microsoft-conseils Azure](https://msdn.microsoft.com/library/dn568099.aspx). Consultez initiation à la messagerie asynchrone, modèle de canaux et de filtres, modèle de transaction de compensation, modèle de consommateurs concurrents, modèle CQRS.
 - [Passage CQRS](https://msdn.microsoft.com/library/jj554200). Livre électronique sur CQRS par Microsoft Patterns and Practices.
 
-Vidéo :
+Vidéo :
 
 - [Failsafe : création de services Cloud évolutifs et résilients](https://channel9.msdn.com/Series/FailSafe). Série de vidéos en neuf parties par Ulrich Homann, Marc Mercuri et Mark SIMM. Présente des concepts de haut niveau et des principes architecturaux de manière très accessible et intéressante, avec des histoires tirées de l’expérience de l’équipe de conseil clientèle de Microsoft avec les clients réels. Pour obtenir une présentation du service et des files d’attente Azure Storage, consultez épisode 5 à partir de 35:13.
 

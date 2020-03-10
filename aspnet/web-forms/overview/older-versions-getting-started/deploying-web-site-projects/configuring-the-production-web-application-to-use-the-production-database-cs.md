@@ -9,11 +9,11 @@ ms.assetid: 0177dabd-d888-449f-91b2-24190cf5e842
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-the-production-web-application-to-use-the-production-database-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 89941bb6db52316a259ad5f5577721e36f19bd84
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74635874"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78631529"
 ---
 # <a name="configuring-the-production-web-application-to-use-the-production-database-c"></a>Configuration de l’application web de production pour l’utilisation de la base de données de production (C#)
 

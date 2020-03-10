@@ -9,11 +9,11 @@ ms.assetid: 5c76891d-e515-4885-b576-76bd2c494efe
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/ui_and_navigation
 msc.type: authoredcontent
 ms.openlocfilehash: ac1dcaf1ba911fdcaeb3845c6836ec771733d93e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74636821"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78643555"
 ---
 # <a name="ui-and-navigation"></a>Interface utilisateur et navigation
 
@@ -93,11 +93,11 @@ L’attribut `CodeBehind` contenu dans la directive `@Page` spécifie le nom du 
 
 ### <a name="updating-the-master-page"></a>Mise à jour de la page maître
 
-Dans ASP.NET Web Forms, les pages maîtres vous permettent de créer une disposition cohérente pour les pages de votre application. Une seule page maître définit l’apparence et le comportement standard souhaités pour toutes les pages (ou un groupe de pages) dans votre application. Vous pouvez ensuite créer des pages de contenu individuelles qui contiennent le contenu que vous souhaitez afficher, comme expliqué ci-dessus. Lorsque les utilisateurs demandent les pages de contenu, ASP.NET les fusionne avec la page maître pour produire une sortie qui associe la disposition de la page maître au contenu de la page de contenu.
+Dans ASP.NET Web Forms, les pages maîtres vous permettent de créer une mise en page homogène pour les pages de votre application. Une seule page maître définit la présentation et le comportement standard voulus pour toutes les pages (ou un groupe de pages) dans votre application. Vous pouvez ensuite créer des pages de contenu individuelles qui contiennent le contenu que vous souhaitez afficher, comme expliqué ci-dessus. Lorsque les utilisateurs demandent les pages de contenu, ASP.NET les fusionne avec la page maître pour produire une sortie qui associe la disposition de la page maître et le contenu de la page de contenu.
 
 Le nouveau site a besoin d’un seul logo à afficher sur chaque page. Pour ajouter ce logo, vous pouvez modifier le code HTML sur la page maître.
 
-1. Dans **Explorateur de solutions**, recherchez et ouvrez la page **site. Master** .
+1. Dans l' **Explorateur de solutions**, recherchez et ouvrez la page **Site.Master** .
 2. Si la page est en mode **conception** , basculez en mode **source** .
 3. Mettez à jour la page maître en **modifiant ou en ajoutant** le balisage mis en surbrillance en jaune : 
 
@@ -208,7 +208,7 @@ Ce code affiche toutes les catégories de la base de données. Le contrôle **Li
 
 > [!NOTE] 
 > 
-> **Accélératrice**
+> **Conseil**
 > 
 > Quand vous ajoutez du code en tapant lors du développement, vous pouvez être certain qu’un membre valide d’un objet est trouvé, car les contrôles de données fortement typés affichent les membres disponibles en fonction d’IntelliSense. IntelliSense offre des choix de code contextuels à mesure que vous tapez du code, comme des propriétés, des méthodes et des objets.
 
@@ -257,7 +257,7 @@ Vous pouvez maintenant inspecter les données contenues dans le fichier de base 
     **Explorateur de serveurs** s’affiche. 
 
     ![Interface utilisateur et navigation-Explorateur de serveurs](ui_and_navigation/_static/image8.png)
-4. Développez le dossier *tables* .
+4. Développez le dossier *Tables* .
 5. Cliquez avec le bouton droit sur la table **Products**et sélectionnez **afficher les données**de la table.  
  La table **Products** s’affiche. 
 

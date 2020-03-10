@@ -9,11 +9,11 @@ ms.assetid: 0fd07176-b74b-48f0-9fac-0f02e3ffa213
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-5
 msc.type: authoredcontent
 ms.openlocfilehash: fc0463420207eba764014b8ec7123c5150e38247
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445756"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557350"
 ---
 # <a name="create-data-transfer-objects-dtos"></a>Créer des objets de transfert de données (DTO)
 
@@ -21,7 +21,7 @@ par [Mike Wasson](https://github.com/MikeWasson)
 
 [Télécharger le projet terminé](https://github.com/MikeWasson/BookService)
 
-Pour l’instant, notre API Web expose les entités de base de données au client. Le client reçoit des données qui sont mappées directement à vos tables de base de données. Toutefois, cela n’est pas toujours une bonne idée. Parfois, vous souhaitez modifier la forme des données que vous envoyez au client. Vous pouvez par exemple décider d'effectuer les opérations suivantes :
+Pour l’instant, notre API Web expose les entités de base de données au client. Le client reçoit des données qui sont mappées directement à vos tables de base de données. Toutefois, cela n’est pas toujours une bonne idée. Parfois, vous souhaitez modifier la forme des données que vous envoyez au client. Vous pouvez, par exemple, décider d'effectuer les opérations suivantes :
 
 - Supprimez les références circulaires (voir la section précédente).
 - Masquer les propriétés particulières que les clients ne sont pas censés afficher.

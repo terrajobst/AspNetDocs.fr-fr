@@ -9,11 +9,11 @@ ms.assetid: 0ecb03b6-52a0-4731-8c7a-436391d36838
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting/programmatically-setting-the-objectdatasource-s-parameter-values-vb
 msc.type: authoredcontent
 ms.openlocfilehash: f1dd50f46528e8dd51f85e503604d3f0dbc21ad2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74601840"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78577055"
 ---
 # <a name="programmatically-setting-the-objectdatasources-parameter-values-vb"></a>Définition par programmation des valeurs des paramètres d’ObjectDataSource (VB)
 
@@ -37,7 +37,7 @@ Chaque fois que la méthode de `Select` ObjectDataSource est appelée, ObjectDat
 
 Dans ce didacticiel, nous allons examiner l’ajout d’une méthode à notre DAL et BLL qui accepte un paramètre d’entrée unique `Month`, de type `Integer` et retourne un objet `EmployeesDataTable` rempli avec les employés ayant leur anniversaire d’embauche dans le `Month`spécifié. Notre exemple définit ce paramètre par programmation en fonction du mois en cours, en présentant la liste des « anniversaires employés ce mois-ci ».
 
-Commençons !
+C’est parti !
 
 ## <a name="step-1-adding-a-method-toemployeestableadapter"></a>Étape 1 : ajout d’une méthode à`EmployeesTableAdapter`
 

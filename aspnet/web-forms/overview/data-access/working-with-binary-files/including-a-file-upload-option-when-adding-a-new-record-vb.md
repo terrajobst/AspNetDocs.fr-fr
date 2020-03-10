@@ -9,11 +9,11 @@ ms.assetid: 5776281d-4637-4d1e-a65b-2621d2cade44
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 8edaf1754eddd7b03f1c323d1bee13238582fc99
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74596895"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78588052"
 ---
 # <a name="including-a-file-upload-option-when-adding-a-new-record-vb"></a>Inclusion d’une option de chargement de fichier lors de l’ajout d’un nouvel enregistrement (VB)
 

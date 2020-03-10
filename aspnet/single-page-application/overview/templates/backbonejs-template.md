@@ -9,11 +9,11 @@ ms.assetid: 00aca413-f067-4108-9bd1-cf21e64a2646
 msc.legacyurl: /single-page-application/overview/templates/backbonejs-template
 msc.type: authoredcontent
 ms.openlocfilehash: 7297db7d5b35a53b40f9d9162960e529a167bd12
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074889"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558225"
 ---
 # <a name="backbone-template"></a>Modèle Backbone
 
@@ -27,7 +27,7 @@ Le modèle SPA backbone. js est conçu pour vous aider à créer rapidement des 
 
 Le modèle fournit un squelette initial pour le développement d’une application backbone. js dans ASP.NET MVC. Il fournit les fonctionnalités de base de la connexion utilisateur, y compris l’inscription des utilisateurs, la connexion, la réinitialisation du mot de passe et la confirmation de l’utilisateur avec les modèles de messagerie de base.
 
-Conditions requises :
+Configuration requise :
 
 - [ASP.NET et Web Tools mise à jour 2012,2](https://go.microsoft.com/fwlink/?LinkId=282650)
 
@@ -71,7 +71,7 @@ Les événements sont toujours importants lors du développement de composants f
 
 Dans backbone. js, un routeur fournit des méthodes pour le routage des pages côté client et leur connexion aux actions et aux événements. Le modèle définit un routeur unique, dans Router. TS. Le routeur crée les vues activables et conserve l’état lors du basculement des vues. (Les affichages activables sont décrits dans la section suivante.) Au départ, le projet comporte deux vues factices, à l’origine et à propos de. Elle dispose également d’une vue NotFound, qui s’affiche si l’itinéraire n’est pas connu.
 
-**Views**
+**Vues**
 
 Les vues sont définies dans ~/scripts/application/views. Il existe deux types de vues : les vues activables et les vues de boîtes de dialogue modales. Les vues activables sont appelées par le routeur. Lorsqu’une vue activable est affichée, toutes les autres vues activables deviennent inactives. Pour créer une vue activable, étendez la vue avec l’objet `Activable` :
 
@@ -117,7 +117,7 @@ Le modèle a deux contrôleurs MVC : `HomeController` restitue la page initiale
 
 [!code-csharp[Main](backbonejs-template/samples/sample8.cs)]
 
-## <a name="views"></a>Les vues
+## <a name="views"></a>Affichages
 
 Les vues sont conçues pour être modulaires : chaque section d’une page possède sa propre vue dédiée. Dans une application à page unique, il est courant d’inclure des vues qui n’ont pas de contrôleur correspondant. Vous pouvez inclure une vue en appelant `@Html.Partial('myView')`, mais cela est fastidieux. Pour faciliter cette opération, le modèle définit une méthode d’assistance, `IncludeClientViews`, qui affiche toutes les vues dans un dossier spécifié :
 

@@ -1,102 +1,102 @@
 ---
 uid: whitepapers/aspnet4/breaking-changes
-title: ASP.NET 4 dernières modifications | Microsoft Docs
+title: Modifications avec rupture ASP.NET 4 | Microsoft Docs
 author: rick-anderson
-description: Ce document décrit les modifications qui ont été apportées pour la version de .NET Framework version 4 qui peut potentiellement affecter les applications qui ont été créées à l’aide de...
+description: Ce document décrit les modifications apportées à la version 4 du .NET Framework qui peuvent potentiellement affecter les applications qui ont été créées à l’aide de...
 ms.author: riande
 ms.date: 02/10/2010
 ms.assetid: d601c540-f86b-4feb-890c-20c806b3da6c
 msc.legacyurl: /whitepapers/aspnet4/breaking-changes
 msc.type: content
 ms.openlocfilehash: 8ccad3b40a723c92a3164de082e1f94577141008
-ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67411198"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78546248"
 ---
 # <a name="aspnet-4-breaking-changes"></a>Changements importants dans ASP.NET 4
 
-> Ce document décrit les modifications qui ont été apportées pour la version de .NET Framework version 4 qui peut potentiellement affecter les applications qui ont été créées à l’aide de versions antérieures, y compris les versions ASP.NET 4 Bêta 1 et bêta 2.
+> Ce document décrit les modifications apportées à la version 4 du .NET Framework qui peuvent potentiellement affecter les applications qui ont été créées à l’aide de versions antérieures, y compris les versions bêta 1 et bêta 2 de ASP.NET 4.
 > 
 > [Téléchargez ce livre blanc](https://download.microsoft.com/download/7/1/A/71A105A9-89D6-4201-9CC5-AD6A3B7E2F22/ASP_NET_4_Breaking_Changes.pdf)
 
 <a id="0.1__Toc256768952"></a><a id="0.1__Toc256770056"></a>
 
-## <a name="contents"></a>Sommaire
+## <a name="contents"></a>Contenu
 
-[Paramètre ControlRenderingCompatibilityVersion dans le fichier Web.config](#0.1__Toc256770141 "_Toc256770141")  
-[Modifications de la propriété ClientIDMode](#0.1__Toc256770142 "_Toc256770142")  
-[HtmlEncode et UrlEncode désormais encoder des guillemets simples](#0.1__Toc256770143 "_Toc256770143")  
-[Page ASP.NET (.aspx) analyseur est Stricter](#0.1__Toc256770144 "_Toc256770144")  
+[Paramètre ControlRenderingCompatibilityVersion dans le fichier Web. config](#0.1__Toc256770141 "_Toc256770141")  
+[Modifications de ClientIDMode](#0.1__Toc256770142 "_Toc256770142")  
+[HtmlEncode et UrlEncode encodent désormais des guillemets simples](#0.1__Toc256770143 "_Toc256770143")  
+[L’analyseur de page ASP.NET (. aspx) est plus strict](#0.1__Toc256770144 "_Toc256770144")  
 [Fichiers de définition de navigateur mis à jour](#0.1__Toc256770145 "_Toc256770145")  
-[System.Web.Mobile.dll est supprimé à partir du fichier de Configuration Web racine](#0.1__Toc256770146 "_Toc256770146")  
-[Validation de requête ASP.NET](#0.1__Toc256770147 "_Toc256770147")  
-[Par défaut de l’algorithme de hachage est désormais HMACSHA256](#0.1__Toc256770148 "_Toc256770148")  
-[Erreurs de configuration liées à la nouvelle Configuration de racine 4 ASP.NET](#0.1__Toc256770149 "_Toc256770149")  
-[Les Applications ASP.NET 4 enfant ne démarrent pas lorsque sous ASP.NET 2.0 ou ASP.NET 3.5 Applications](#0.1__Toc256770150 "_Toc256770150")  
-[Échec de Sites Web ASP.NET 4 démarrer sur les ordinateurs où SharePoint est installé](#0.1__Toc256770151 "_Toc256770151")  
-[La propriété HttpRequest.FilePath n’inclut plus les valeurs PathInfo](#0.1__Toc256770152 "_Toc256770152")  
-[ASP.NET 2.0 Applications peuvent générer des erreurs HttpException qui référencent eurl.axd](#0.1__Toc256770153 "_Toc256770153")  
-[Gestionnaires d’événements ne peuvent pas être déclenchés pas dans un Document par défaut dans IIS 7 ou IIS 7.5 Mode intégré](#0.1__Toc256770154 "_Toc256770154")  
-[Modifications apportées à l’implémentation de sécurité (CAS) de l’accès de Code ASP.NET](#0.1__Toc256770155 "_Toc256770155")  
-[MembershipUser et autres Types dans le Namespace System.Web.Security ont été déplacés](#0.1__Toc256770156 "_Toc256770156")  
-[Sortie mise en cache des modifications pour faire varier \* en-tête HTTP](#0.1__Toc256770157 "_Toc256770157")  
-[Types de System.Web.Security pour Passport sont obsolètes](#0.1__Toc256770158 "_Toc256770158")  
-[La propriété MenuItem.PopOutImageUrl ne parvient pas à afficher une Image dans ASP.NET 4](#0.1__Toc256770159 "_Toc256770159")  
-[Menu.StaticPopOutImageUrl et échouent Menu.DynamicPopOutImageUrl pour restituer des Images lorsque les chemins d’accès contiennent des barres obliques inverses](#0.1__Toc256770160 "_Toc256770160")  
-[Disclaimer](#0.1__Toc256770161 "_Toc256770161")
+[System. Web. mobile. dll supprimé du fichier de configuration Web racine](#0.1__Toc256770146 "_Toc256770146")  
+[Validation de la demande ASP.NET](#0.1__Toc256770147 "_Toc256770147")  
+[L’algorithme de hachage par défaut est désormais HMACSHA256](#0.1__Toc256770148 "_Toc256770148")  
+[Erreurs de configuration liées à la nouvelle configuration racine ASP.NET 4](#0.1__Toc256770149 "_Toc256770149")  
+[Les applications enfants ASP.NET 4 ne parviennent pas à démarrer quand elles se trouvent sous ASP.NET 2,0 ou ASP.NET 3,5](#0.1__Toc256770150 "_Toc256770150")  
+[Les sites Web ASP.NET 4 ne démarrent pas sur les ordinateurs où SharePoint est installé](#0.1__Toc256770151 "_Toc256770151")  
+[La propriété HttpRequest. FilePath n’intègre plus les valeurs PathInfo](#0.1__Toc256770152 "_Toc256770152")  
+[Les applications ASP.NET 2,0 peuvent générer des erreurs HttpException qui référencent EURL. axd](#0.1__Toc256770153 "_Toc256770153")  
+[Les gestionnaires d’événements peuvent ne pas être déclenchés dans un document par défaut en mode intégré IIS 7 ou IIS 7,5](#0.1__Toc256770154 "_Toc256770154")  
+[Modifications apportées à l’implémentation de la sécurité d’accès du code (CAS) ASP.NET](#0.1__Toc256770155 "_Toc256770155")  
+[MembershipUser et d’autres types dans l’espace de noms System. Web. Security ont été déplacés](#0.1__Toc256770156 "_Toc256770156")  
+[Modifications de la mise en cache de sortie à modifier \* en-tête HTTP](#0.1__Toc256770157 "_Toc256770157")  
+[Les types System. Web. Security pour Passport sont obsolètes](#0.1__Toc256770158 "_Toc256770158")  
+[La propriété MenuItem. PopOutImageUrl ne parvient pas à afficher une image dans ASP.NET 4](#0.1__Toc256770159 "_Toc256770159")  
+[Menu. StaticPopOutImageUrl et menu. DynamicPopOutImageUrl ne pas afficher les images lorsque les chemins d’accès contiennent des barres obliques inverses](#0.1__Toc256770160 "_Toc256770160")  
+[AVERTISSEMENT](#0.1__Toc256770161 "_Toc256770161")
 
 <a id="0.1__ControlRenderingCompatibilityVersio"></a><a id="0.1__Toc245724853"></a><a id="0.1__Toc255587630"></a><a id="0.1__Toc256770141"></a>
 
-## <a name="controlrenderingcompatibilityversion-setting-in-the-webconfig-file"></a>Paramètre ControlRenderingCompatibilityVersion dans le fichier Web.config
+## <a name="controlrenderingcompatibilityversion-setting-in-the-webconfig-file"></a>Paramètre ControlRenderingCompatibilityVersion dans le fichier Web. config
 
-Les contrôles ASP.NET ont été modifiées dans le .NET Framework version 4, afin de vous permettent de spécifier plus précisément comment ils restituent un balisage. Dans les versions précédentes du .NET Framework, certains contrôles émettaient un balisage que vous n’aviez aucun moyen de désactiver. Par défaut, ASP.NET 4 ce type de balisage n’est plus généré.
+Les contrôles ASP.NET ont été modifiés dans le .NET Framework version 4 afin de vous permettre de spécifier plus précisément comment ils restituent le balisage. Dans les versions précédentes du .NET Framework, certains contrôles ont émis un balisage que vous n’aviez pas de moyen de désactiver. Par défaut, ASP.NET 4 ce type de balisage n’est plus généré.
 
-Si vous utilisez Visual Studio 2010 pour mettre à niveau votre application à partir d’ASP.NET 2.0 ou ASP.NET 3.5, l’outil ajoute automatiquement un paramètre pour le `Web.config` fichier conserve le rendu hérité. Toutefois, si vous mettez à niveau une application en changeant le pool d’applications dans IIS pour cibler le .NET Framework 4, ASP.NET utilise le nouveau mode de rendu par défaut. Pour désactiver le nouveau mode de rendu, ajoutez le paramètre suivant dans le `Web.config` fichier :
+Si vous utilisez Visual Studio 2010 pour mettre à niveau votre application à partir de ASP.NET 2,0 ou ASP.NET 3,5, l’outil ajoute automatiquement un paramètre au fichier `Web.config` qui conserve le rendu hérité. Toutefois, si vous mettez à niveau une application en changeant le pool d’applications dans IIS pour cibler le .NET Framework 4, ASP.NET utilise le nouveau mode de rendu par défaut. Pour désactiver le nouveau mode de rendu, ajoutez le paramètre suivant dans le fichier `Web.config` :
 
 [!code-xml[Main](breaking-changes/samples/sample1.xml)]
 
-Les modifications de rendu principale qui affiche le nouveau comportement sont les suivantes :
+Les principales modifications apportées par le nouveau comportement sont les suivantes :
 
-- Le **Image** et **ImageButton** contrôles n’affichent plus une `border="0"` attribut.
-- Le **BaseValidator** contrôles de validation et de la classe qui en dérivent n’affichent plus texte rouge par défaut.
-- Le **HtmlForm** contrôle ne rend pas une **nom** attribut.
-- Le **Table** contrôle n’est plus restitue un `border="0"` attribut.
-- Les contrôles qui ne sont pas conçus pour l’entrée utilisateur (par exemple, le **étiquette** contrôle) n’affichent plus la `disabled="disabled"` attribut si leur **activé** propriété est définie sur **false**(ou s’ils héritent de ce paramètre à partir d’un contrôle conteneur).
+- Les contrôles **image** et **ImageButton** n’affichent plus d’attribut `border="0"`.
+- La classe **BaseValidator** et les contrôles de validation qui dérivent de celle-ci n’affichent plus de texte rouge par défaut.
+- Le contrôle **HtmlForm** ne rend pas un attribut de **nom** .
+- Le contrôle de **table** n’affiche plus d’attribut `border="0"`.
+- Les contrôles qui ne sont pas conçus pour une entrée utilisateur (par exemple, le contrôle **label** ) n’affichent plus l’attribut `disabled="disabled"` si leur propriété **Enabled** a la valeur **false** (ou s’ils héritent ce paramètre d’un contrôle conteneur).
 
 <a id="0.1__Toc245724854"></a><a id="0.1__Toc255587631"></a><a id="0.1__Toc256770142"></a>
 
-## <a name="clientidmode-changes"></a>Modifications de la propriété ClientIDMode
+## <a name="clientidmode-changes"></a>Modifications de ClientIDMode
 
-Le **ClientIDMode** paramètre dans ASP.NET 4 vous permet de spécifier la façon dont ASP.NET génère la **id** attribut pour les éléments HTML. Dans les versions antérieures d’ASP.NET, le comportement par défaut était équivalent à la **AutoID** paramètre **ClientIDMode**. Toutefois, le paramètre par défaut est désormais **prédictible**.
+Le paramètre **ClientIDMode** dans ASP.net 4 vous permet de spécifier comment ASP.NET génère l’attribut **ID** pour les éléments HTML. Dans les versions précédentes de ASP.NET, le comportement par défaut était équivalent au paramètre **AutoID** de **ClientIDMode**. Toutefois, le paramètre par défaut est désormais **prévisible**.
 
-Si vous utilisez Visual Studio 2010 pour mettre à niveau votre application à partir d’ASP.NET 2.0 ou ASP.NET 3.5, l’outil ajoute automatiquement un paramètre pour le `Web.config` fichier pour conserver le comportement des versions antérieures du .NET Framework. Toutefois, si vous mettez à niveau une application en changeant le pool d’applications dans IIS pour cibler le .NET Framework 4, ASP.NET utilise le nouveau mode par défaut. Pour désactiver le nouveau mode ID client, ajoutez le paramètre suivant dans le `Web.config` fichier :
+Si vous utilisez Visual Studio 2010 pour mettre à niveau votre application à partir de ASP.NET 2,0 ou ASP.NET 3,5, l’outil ajoute automatiquement un paramètre au fichier `Web.config` qui conserve le comportement des versions antérieures du .NET Framework. Toutefois, si vous mettez à niveau une application en changeant le pool d’applications dans IIS pour cibler le .NET Framework 4, ASP.NET utilise le nouveau mode par défaut. Pour désactiver le nouveau mode ID client, ajoutez le paramètre suivant dans le fichier `Web.config` :
 
 [!code-xml[Main](breaking-changes/samples/sample2.xml)]
 
 <a id="0.1__Toc245724855"></a><a id="0.1__Toc255587632"></a><a id="0.1__Toc256770143"></a>
 
-## <a name="htmlencode-and-urlencode-now-encode-single-quotation-marks"></a>HtmlEncode et UrlEncode désormais encoder des guillemets simples
+## <a name="htmlencode-and-urlencode-now-encode-single-quotation-marks"></a>HtmlEncode et UrlEncode encodent désormais des guillemets simples
 
-Dans ASP.NET 4, le **HtmlEncode** et **UrlEncode** méthodes de la **HttpUtility** et **HttpServerUtility** classes ont été mis à jour pour encoder le caractère guillemet-apostrophe (') comme suit :
+Dans ASP.NET 4, les méthodes **HtmlEncode** et **UrlEncode** des classes **HttpUtility** et **HttpServerUtility** ont été mises à jour pour encoder le caractère guillemet simple (') comme suit :
 
-- Le **HtmlEncode** méthode encode les instances du guillemet simple sous.
-- Le **UrlEncode** méthode encode les instances du guillemet simple sous la forme % 27.
+- La méthode **HtmlEncode** encode les instances du guillemet simple en tant que'.
+- La méthode **UrlEncode** encode les instances du guillemet simple sous la forme %27.
 
 <a id="0.1__Toc255587633"></a><a id="0.1__Toc256770144"></a><a id="0.1__Toc245724856"></a>
 
-## <a name="aspnet-page-aspx-parser-is-stricter"></a>Page ASP.NET (.aspx) analyseur est Stricter
+## <a name="aspnet-page-aspx-parser-is-stricter"></a>L’analyseur de page ASP.NET (. aspx) est plus strict
 
-L’Analyseur de page pour les pages ASP.NET (`.aspx` fichiers) et les contrôles utilisateur (`.ascx` fichiers) est plus strict dans ASP.NET 4 et rejette les autres instances de balisage non valide. Par exemple, les deux extraits de code suivants est alors analysée avec succès dans les versions antérieures d’ASP.NET, mais génère maintenant des erreurs de l’analyseur dans ASP.NET 4.
+L’analyseur de page pour les pages ASP.NET (fichiers`.aspx`) et les contrôles utilisateur (fichiers`.ascx`) est plus strict dans ASP.NET 4 et rejette davantage d’instances de balisage non valides. Par exemple, les deux extraits de code suivants s’analysent correctement dans les versions antérieures de ASP.NET, mais génèrent désormais des erreurs d’analyse dans ASP.NET 4.
 
 [!code-aspx[Main](breaking-changes/samples/sample3.aspx)]
 
-Notez le point-virgule non valide à la fin de la **HiddenField** balise.
+Notez le point-virgule non valide à la fin de la balise **HiddenField** .
 
 [!code-aspx[Main](breaking-changes/samples/sample4.aspx)]
 
-Notez le non fermés **style** attribut qui s’exécute dans le **CssClass** attribut.
+Notez l’attribut de **style** non fermé qui s’exécute dans l’attribut **CssClass** .
 
 <a id="0.1__Toc255587634"></a><a id="0.1__Toc256770145"></a>
 
@@ -104,378 +104,378 @@ Notez le non fermés **style** attribut qui s’exécute dans le **CssClass** at
 
 Les fichiers de définition de navigateur ont été mis à jour pour inclure des informations sur les navigateurs et les appareils récemment sortis et mis à jour. Des navigateurs et appareils anciens (comme Netscape Navigator) ont été supprimés tandis que de nouveaux navigateurs et appareils (comme Google Chrome et Apple iPhone) ont été ajoutés.
 
-Si votre application contient des définitions de navigateur personnalisées qui héritent de l’une des définitions de navigateur supprimées, une erreur s’affiche. Par exemple, si le `App_Browsers` dossier contient une définition de navigateur qui hérite de la définition de navigateur IE2, vous recevrez le message d’erreur de configuration suivantes :
+Si votre application contient des définitions de navigateur personnalisées qui héritent de l’une des définitions de navigateur supprimées, une erreur s’affiche. Par exemple, si le dossier `App_Browsers` contient une définition de navigateur qui hérite de la définition du navigateur IE2, vous recevrez le message d’erreur de configuration suivant :
 
-- Impossible de trouver l’élément de navigateur ou une passerelle avec l’ID « IE2 ».
+- Le navigateur ou l’élément de passerelle avec l’ID « IE2 » est introuvable.
 
 > [!NOTE]
-> Le **HttpBrowserCapabilities** objet (qui est exposé par la page **Request.Browser** propriété) est régi par les fichiers de définitions de navigateur. Par conséquent, les informations retournées par l’accès à une propriété de cet objet dans ASP.NET 4 peuvent être différentes de celle les informations retournées dans une version antérieure d’ASP.NET.
+> L’objet **HttpBrowserCapabilities** (qui est exposé par la propriété **Request. Browser** de la page) est piloté par les fichiers de définitions de navigateur. Par conséquent, les informations retournées par l’accès à une propriété de cet objet dans ASP.NET 4 peuvent être différentes de celles retournées dans une version antérieure de ASP.NET.
 
-Vous pouvez revenir aux anciens fichiers de définition de navigateur en copiant les fichiers de définition de navigateur dans le dossier suivant :
+Vous pouvez restaurer les anciens fichiers de définition de navigateur en copiant les fichiers de définition de navigateur à partir du dossier suivant :
 
 [!code-console[Main](breaking-changes/samples/sample5.cmd)]
 
-Copiez les fichiers dans le correspondantes `\CONFIG\Browsers` dossier pour ASP.NET 4. Après avoir copié les fichiers, exécutez le compte Aspnet\_outil de ligne de commande regbrowsers.exe.
+Copiez les fichiers dans le dossier `\CONFIG\Browsers` correspondant pour ASP.NET 4. Après avoir copié les fichiers, exécutez l’outil en ligne de commande ASPNET\_RegBrowsers. exe.
 
 <a id="0.1__Toc255587635"></a><a id="0.1__Toc256770146"></a>
 
-## <a name="systemwebmobiledll-removed-from-root-web-configuration-file"></a>System.Web.Mobile.dll supprimée du fichier de Configuration Web racine
+## <a name="systemwebmobiledll-removed-from-root-web-configuration-file"></a>System. Web. mobile. dll supprimé du fichier de configuration Web racine
 
-Dans les versions précédentes d’ASP.NET, une référence à l’assembly System.Web.Mobile.dll a été incluse dans la racine `Web.config` de fichiers dans le **assemblys** section sous. Afin d’améliorer les performances, la référence à cet assembly a été supprimée.
+Dans les versions précédentes de ASP.NET, une référence à l’assembly System. Web. mobile. dll était incluse dans le fichier de `Web.config` racine dans la section **assemblys** sous. Afin d’améliorer les performances, la référence à cet assembly a été supprimée.
 
-L’assembly System.Web.Mobile.dll est incluse dans ASP.NET 4, mais il est déconseillé. Si vous souhaitez utiliser des types de l’assembly System.Web.Mobile.dll, ajoutez une référence à cet assembly à la racine de soit `Web.config` fichier ou à une application `Web.config` fichier. Par exemple, si vous souhaitez utiliser les contrôles mobiles ASP.NET (obsolète), vous devez ajouter une référence à l’assembly System.Web.Mobile.dll à la `Web.config` fichier.
+L’assembly System. Web. mobile. dll est inclus dans ASP.NET 4, mais il est déconseillé. Si vous souhaitez utiliser des types de l’assembly System. Web. mobile. dll, ajoutez une référence à cet assembly dans le fichier de `Web.config` racine ou dans un fichier d' `Web.config` d’application. Par exemple, si vous souhaitez utiliser l’un des contrôles mobiles ASP.NET (déconseillés), vous devez ajouter une référence à l’assembly System. Web. mobile. dll dans le fichier `Web.config`.
 
 <a id="0.1__Toc245724857"></a><a id="0.1__Toc255587636"></a><a id="0.1__Toc256770147"></a>
 
-## <a name="aspnet-request-validation"></a>Validation de requête ASP.NET
+## <a name="aspnet-request-validation"></a>Validation de la demande ASP.NET
 
-La fonctionnalité de validation de demande dans ASP.NET fournit un certain niveau de protection par défaut contre les attaques de cross-site scripting (XSS). Dans les versions précédentes d’ASP.NET, la validation de la demande a été activée par défaut. Toutefois, elle appliquée uniquement aux pages ASP.NET (`.aspx` fichiers et leurs fichiers de classe) et uniquement lorsque ces pages s’exécutait.
+La fonctionnalité de validation de la demande dans ASP.NET fournit un certain niveau de protection par défaut contre les attaques de script entre sites (XSS). Dans les versions précédentes de ASP.NET, la validation de la demande était activée par défaut. Toutefois, il s’applique uniquement aux pages ASP.NET (fichiers`.aspx` et à leurs fichiers de classe) et uniquement lorsque ces pages étaient en cours d’exécution.
 
-Dans ASP.NET 4, par défaut, validation de la demande est activée pour toutes les demandes, car il est activé avant du **BeginRequest** phase d’une requête HTTP. Par conséquent, validation de la demande s’applique aux demandes pour toutes les ressources ASP.NET, pas seulement les demandes de page .aspx. Cela inclut les requêtes telles que les appels de service Web et des gestionnaires HTTP personnalisés. Validation de la demande s’applique également lorsque des modules HTTP personnalisés lisent le contenu d’une requête HTTP.
+Dans ASP.NET 4, par défaut, la validation de la demande est activée pour toutes les demandes, car elle est activée avant la phase **beginRequest** d’une requête http. Par conséquent, la validation de la demande s’applique aux demandes pour toutes les ressources ASP.NET, pas seulement aux demandes de page. aspx. Cela comprend les requêtes telles que les appels de service Web et les gestionnaires HTTP personnalisés. La validation de la demande est également active lorsque les modules HTTP personnalisés lisent le contenu d’une requête HTTP.
 
-Par conséquent, les erreurs de validation de demande peuvent se produire maintenant pour les demandes qui précédemment a-t-elle été déclenchée pas d’erreurs. Pour rétablir le comportement de la fonctionnalité de validation de demande ASP.NET 2.0, ajoutez le paramètre suivant dans le `Web.config` fichier :
+Par conséquent, les erreurs de validation de la demande peuvent maintenant se produire pour les requêtes qui n’ont pas déclenché d’erreurs précédemment. Pour rétablir le comportement de la fonctionnalité de validation de demande ASP.NET 2,0, ajoutez le paramètre suivant dans le fichier `Web.config` :
 
 [!code-xml[Main](breaking-changes/samples/sample6.xml)]
 
-Toutefois, nous vous recommandons d’analyser les erreurs de validation de demande pour déterminer si les gestionnaires existants, modules ou autres codes personnalisés accède à potentiellement unsafe entrées HTTP qui pourraient être XSS les vecteurs d’attaque.
+Toutefois, nous vous recommandons d’analyser les erreurs de validation de la demande pour déterminer si les gestionnaires, les modules ou tout autre code personnalisé existants peuvent accéder à des entrées HTTP potentiellement dangereuses qui pourraient être des vecteurs d’attaque XSS.
 
 <a id="0.1__Toc245724858"></a><a id="0.1__Toc255587637"></a><a id="0.1__Toc256770148"></a>
 
-## <a name="default-hashing-algorithm-is-now-hmacsha256"></a>Par défaut de l’algorithme de hachage est désormais HMACSHA256
+## <a name="default-hashing-algorithm-is-now-hmacsha256"></a>L’algorithme de hachage par défaut est désormais HMACSHA256
 
-ASP.NET utilise des algorithmes de chiffrement et de hachage pour sécuriser des données telles que les cookies d’authentification par formulaire et l’état d’affichage. Par défaut, ASP.NET 4 utilise désormais l’algorithme HMACSHA256 pour les opérations de hachage sur les cookies et l’état d’affichage. Les versions antérieures d’ASP.NET utilisaient l’ancien algorithme HMACSHA1.
+ASP.NET utilise des algorithmes de chiffrement et de hachage pour sécuriser des données telles que les cookies d’authentification par formulaire et l’état d’affichage. Par défaut, ASP.NET 4 utilise désormais l’algorithme HMACSHA256 pour les opérations de hachage sur les cookies et l’état d’affichage. Les versions antérieures de ASP.NET utilisaient l’ancien algorithme HMACSHA1.
 
-Vos applications peuvent être affectées si vous exécutez mixte 2.0/ASP.NET ASP.NET 4 environnements où les données telles que les cookies d’authentification doivent fonctionner across.NET les versions de Framework. Pour configurer une application Web ASP.NET 4 pour utiliser l’ancien algorithme HMACSHA1, ajoutez le paramètre suivant dans le `Web.config` fichier :
+Vos applications peuvent être affectées si vous exécutez des environnements mixtes ASP.NET 2.0/ASP. NET 4 où les données telles que les cookies d’authentification par formulaire doivent fonctionner avec les versions across.NET Framework. Pour configurer une application Web ASP.NET 4 afin d’utiliser l’ancien algorithme HMACSHA1, ajoutez le paramètre suivant dans le fichier `Web.config` :
 
 [!code-xml[Main](breaking-changes/samples/sample7.xml)]
 
 <a id="0.1__Toc245724859"></a><a id="0.1__Toc255587638"></a><a id="0.1__Toc256770149"></a>
 
-## <a name="configuration-errors-related-to-new-aspnet-4-root-configuration"></a>Erreurs de configuration liées à la nouvelle Configuration de racine 4 d’ASP.NET
+## <a name="configuration-errors-related-to-new-aspnet-4-root-configuration"></a>Erreurs de configuration liées à la nouvelle configuration racine ASP.NET 4
 
-Les fichiers de configuration racine (le `machine.config` de fichiers et la racine `Web.config` fichier) pour le .NET Framework 4 (et par conséquent, ASP.NET 4) ont été mis à jour pour inclure la plupart des informations de configuration réutilisable qui, dans ASP.NET 3.5, a été trouvées dans le application `Web.config` fichiers. En raison de la complexité des systèmes de configuration managées IIS 7 et IIS 7.5, exécuter des applications ASP.NET 3.5 sous ASP.NET 4 et sous IIS 7 et IIS 7.5 peut entraîner ASP.NET ou IIS erreurs de configuration.
+Les fichiers de configuration racine (le fichier `machine.config` et le fichier `Web.config` racine) pour le .NET Framework 4 (et par conséquent ASP.NET 4) ont été mis à jour pour inclure la plupart des informations de configuration de réutilisabilité de ASP.NET 3,5 qui se trouvent dans les fichiers de `Web.config` de l’application. En raison de la complexité des systèmes de configuration IIS 7 et IIS 7,5 gérés, l’exécution d’applications ASP.NET 3,5 sous ASP.NET 4 et sous IIS 7 et IIS 7,5 peut entraîner des erreurs de configuration ASP.NET ou IIS.
 
-Nous vous recommandons de mettre à niveau les applications ASP.NET 3.5 vers ASP.NET 4 en utilisant les outils de mise à niveau de projet dans Visual Studio 2010, si cela est possible. Visual Studio 2010 modifie automatiquement l’application ASP.NET 3.5 `Web.config` fichier doit contenir les paramètres appropriés pour ASP.NET 4.
+Nous vous recommandons de mettre à niveau les applications ASP.NET 3,5 vers ASP.NET 4 en utilisant les outils de mise à niveau de projet dans Visual Studio 2010, si possible. Visual Studio 2010 modifie automatiquement le fichier `Web.config` de l’application ASP.NET 3,5 pour qu’il contienne les paramètres appropriés pour ASP.NET 4.
 
-Toutefois, il est un scénario pris en charge pour exécuter des applications ASP.NET 3.5 à l’aide de .NET Framework 4 sans recompilation. Dans ce cas, vous devrez peut-être modifier manuellement l’application `Web.config` fichier avant d’exécuter l’application sous le .NET Framework 4 et sous IIS 7 ou IIS 7.5.
+Toutefois, il s’agit d’un scénario pris en charge pour exécuter des applications ASP.NET 3,5 à l’aide de l' .NET Framework 4 sans recompilation. Dans ce cas, vous devrez peut-être modifier manuellement le fichier `Web.config` de l’application avant d’exécuter l’application sous le .NET Framework 4 et sous IIS 7 ou IIS 7,5.
 
-Les deux sections suivantes décrivent les modifications que vous devrez apporter pour différentes combinaisons de logiciels.
+Les deux sections suivantes décrivent les modifications que vous devrez peut-être apporter pour différentes combinaisons de logiciels.
 
-**Windows Vista SP1 ou Windows Server 2008 SP1, où le correctif logiciel KB958854 ni SP2 sont installés.** Dans cette configuration, le système de configuration IIS 7 fusionne correctement la configuration d’une application managée en comparant le niveau de l’application `Web.config` fichier à ASP.NET 2.0 `machine.config` fichiers. En raison de cet barre d’outils, de niveau application `Web.config` fichiers à partir de .NET Framework 3.5 ou version ultérieure doivent avoir un **system.web.extensions** définition de section de configuration (l’élément) pour ne pas provoquer un échec de validation d’IIS 7.
+**Windows Vista SP1 ou Windows Server 2008 SP1, où ni le correctif logiciel KB958854 ni SP2 ne sont installés.** Dans cette configuration, le système de configuration IIS 7 fusionne de manière incorrecte la configuration managée d’une application en comparant le fichier de `Web.config` au niveau de l’application avec les fichiers de `machine.config` ASP.NET 2,0. Pour cette raison, les fichiers de `Web.config` au niveau de l’application du .NET Framework 3,5 ou version ultérieure doivent avoir une définition de section de configuration **System. Web. extensions** (l’élément) afin de ne pas provoquer d’échec de validation IIS 7.
 
-Toutefois, modifié manuellement au niveau de l’application `Web.config` les entrées de fichier qui ne correspondent pas précisément les définitions de section de configuration réutilisable d’origine qui ont été introduites avec Visual Studio 2008 provoquera des erreurs de configuration ASP.NET. (Les entrées de configuration par défaut qui sont générées par Visual Studio 2008 fonctionnent correctement.) Un problème courant est que modifié manuellement `Web.config` fichiers omettre la **allowDefinition** et **requirePermission** les attributs de configuration qui se trouvent sur différents de section de configuration définitions. Cela provoque une discordance entre la section de configuration abrégé dans le niveau de l’application `Web.config` fichiers et la définition complète dans ASP.NET 4 `machine.config` fichier. Par conséquent, au moment de l’exécution, le système de configuration ASP.NET 4 lève une erreur de configuration.
+Toutefois, les entrées de fichiers `Web.config` au niveau de l’application modifiées manuellement qui ne correspondent pas exactement aux définitions de la section de configuration d’origine qui ont été introduites avec Visual Studio 2008 entraînent des erreurs de configuration ASP.NET. (Les entrées de configuration par défaut générées par Visual Studio 2008 fonctionnent correctement.) Un problème courant est que les fichiers `Web.config` modifiés manuellement ignorent les attributs de configuration **allowDefinition** et **RequirePermission** qui se trouvent dans les différentes définitions de section de configuration. Cela provoque une incompatibilité entre la section de configuration abrégée dans les fichiers de `Web.config` au niveau de l’application et la définition complète dans le fichier de `machine.config` ASP.NET 4. Par conséquent, au moment de l’exécution, le système de configuration ASP.NET 4 lève une erreur de configuration.
 
-**Windows Vista SP2, Windows Server 2008 SP2, Windows 7, Windows Server 2008 R2 et également Windows Vista SP1 et Windows Server 2008 SP1, où le correctif KB958854 est installé.**
+**Windows Vista SP2, Windows Server 2008 SP2, Windows 7, Windows Server 2008 R2 et Windows Vista SP1 et Windows Server 2008 SP1 sur lesquels le correctif logiciel KB958854 est installé.**
 
-Dans ce scénario, le système de configuration native IIS 7 et IIS 7.5 retourne une erreur de configuration, car elle effectue une comparaison de texte sur le **type** attribut qui est défini pour un gestionnaire de section de configuration gérées. Étant donné que tous les `Web.config` les fichiers qui sont générés par Visual Studio 2008 et Visual Studio 2008 SP1 ont « 3.5 » dans la chaîne de type pour le **system.web.extensions** (et associés) gestionnaires de section de configuration et parce que l’ASP.NET 4 `machine.config` fichier a « 4.0 » dans le **type** d’attribut pour les gestionnaires de section de configuration même, les applications qui sont toujours générées dans Visual Studio 2008 ou Visual Studio 2008 SP1 échouent la validation de la configuration dans IIS 7 et IIS 7.5.
+Dans ce scénario, le système de configuration natif IIS 7 et IIS 7,5 retourne une erreur de configuration, car il effectue une comparaison de texte sur l’attribut de **type** défini pour un gestionnaire de section de configuration managée. Étant donné que tous les fichiers `Web.config` générés par Visual Studio 2008 et Visual Studio 2008 SP1 ont « 3,5 » dans la chaîne de type pour le système. les gestionnaires de section de configuration **Web. extensions** (et associés), et étant donné que le fichier de `machine.config` ASP.net 4 a « 4,0 » dans l’attribut de **type** pour les mêmes gestionnaires de section de configuration, les applications générées dans Visual Studio 2008 ou Visual Studio 2008 SP1 échouent toujours à la validation de la configuration dans iis 7 et IIS 7,5.
 
 <a id="0.1__Toc251910248"></a>
 
-### <a name="resolving-these-issues"></a>Résolution des problèmes
+### <a name="resolving-these-issues"></a>Résolution de ces problèmes
 
-La solution de contournement pour le premier scénario consiste à mettre à jour le niveau de l’application `Web.config` fichier en incluant le texte de configuration réutilisable à partir d’un `Web.config` fichier qui a été généré automatiquement par Visual Studio 2008.
+La solution de contournement pour le premier scénario consiste à mettre à jour le fichier `Web.config` au niveau de l’application en incluant le texte de configuration réutilisable à partir d’un fichier `Web.config` qui a été généré automatiquement par Visual Studio 2008.
 
-Solution de contournement pour le premier scénario consiste à installer le Service Pack 2 pour Windows Server 2008 ou de Vista sur votre ordinateur ou à installer le correctif logiciel KB958854 ([https://support.microsoft.com/kb/958854](https://support.microsoft.com/kb/958854)) pour corriger le comportement de fusion et de configuration incorrecte de la Système de configuration IIS. Toutefois, une fois que vous effectuez une de ces actions, votre application sera rencontrerez une erreur de configuration en raison du problème décrit pour le deuxième scénario.
+Une autre solution de contournement pour le premier scénario consiste à installer le Service Pack 2 pour Vista ou Windows Server 2008 sur votre ordinateur ou à installer le correctif logiciel KB958854 ([https://support.microsoft.com/kb/958854](https://support.microsoft.com/kb/958854)) pour résoudre le comportement incorrect de la fusion et de la configuration du système de configuration IIS. Toutefois, une fois que vous avez effectué l’une de ces actions, votre application rencontrera probablement une erreur de configuration en raison du problème décrit pour le deuxième scénario.
 
-La solution de contournement pour le deuxième scénario consiste à supprimer ou commenter tout le **system.web.extensions** définitions à partir du niveau de l’application de groupe de définitions de section de configuration et de la section de configuration `Web.config` fichier. Ces définitions sont généralement en haut du niveau de l’application `Web.config` de fichiers et peuvent être identifiés par le **configSections** élément et ses enfants.
+La solution de contournement pour le deuxième scénario consiste à supprimer ou commenter toutes les définitions de section de configuration **System. Web. extensions** et les définitions de groupe de section de configuration à partir du fichier de `Web.config` au niveau de l’application. Ces définitions se trouvent généralement en haut du fichier de `Web.config` au niveau de l’application et peuvent être identifiées par l’élément **configSections** et ses enfants.
 
-Pour les deux scénarios, il est recommandé de supprimer manuellement le **system.codedom** section, bien que cela n’est pas nécessaire.
+Pour les deux scénarios, il est recommandé de supprimer également manuellement la section **System. CodeDom** , bien que cela ne soit pas obligatoire.
 
 <a id="0.1__Toc252995490"></a><a id="0.1__Toc255587639"></a><a id="0.1__Toc256770150"></a><a id="0.1__Toc245724860"></a>
 
-## <a name="aspnet-4-child-applications-fail-to-start-when-under-aspnet-20-or-aspnet-35-applications"></a>Les Applications ASP.NET 4 enfant ne démarrent pas lorsque sous ASP.NET 2.0 ou ASP.NET 3.5 Applications
+## <a name="aspnet-4-child-applications-fail-to-start-when-under-aspnet-20-or-aspnet-35-applications"></a>Les applications enfants ASP.NET 4 ne parviennent pas à démarrer quand elles se trouvent sous ASP.NET 2,0 ou ASP.NET 3,5
 
-Les applications ASP.NET 4 configurées comme enfants d’applications qui exécutent des versions antérieures d’ASP.NET risquent de ne pas démarrer en raison d’erreurs de configuration ou de compilation. L’exemple suivant montre une structure de répertoire pour une application affectée.
+Les applications ASP.NET 4 configurées comme enfants d’applications qui exécutent des versions antérieures d’ASP.NET risquent de ne pas démarrer en raison d’erreurs de configuration ou de compilation. L’exemple suivant illustre une structure de répertoires pour une application affectée.
 
-`/parentwebapp` (configuré pour utiliser ASP.NET 2.0 ou ASP.NET 3.5)  
+`/parentwebapp` (configuré pour utiliser ASP.NET 2,0 ou ASP.NET 3,5)  
 `/childwebapp` (configuré pour utiliser ASP.NET 4)
 
-L’application dans le `childwebapp` dossier ne parviendra pas à démarrer sur IIS 7 ou IIS 7.5 et il signalera une erreur de configuration. Le texte d’erreur inclut un message similaire à ce qui suit :
+L’application dans le dossier `childwebapp` ne peut pas démarrer sur IIS 7 ou IIS 7,5 et signale une erreur de configuration. Le texte de l’erreur inclura un message similaire à ce qui suit :
 
 - `The requested page cannot be accessed because the related configuration data for the page is invalid.`
 
 - `The configuration section 'configSections' cannot be read because it is missing a section declaration.`
 
-Sur IIS 6, l’application dans le `childwebapp` dossier échouera également à démarrer, mais il signalera une erreur différente. Par exemple, le texte d’erreur peut indiquer les éléments suivants :
+Sur IIS 6, l’application dans le dossier `childwebapp` ne démarre pas non plus, mais signale une erreur différente. Par exemple, le texte d’erreur peut indiquer les éléments suivants :
 
 - `The value for the 'compilerVersion' attribute in the provider options must be 'v4.0' or later if you are compiling for version 4.0 or later of the .NET Framework. To compile this Web application for version 3.5 or earlier of the .NET Framework, remove the 'targetFramework' attribute from the element of the Web.config file`
 
-Ces scénarios se produisent, car les informations de configuration de l’application parent dans le `parentwebapp` dossier fait partie de la hiérarchie des informations de configuration qui détermine les paramètres de configuration fusionnée finale qui sont utilisés par le web de l’enfant application dans le `childwebapp` dossier. Selon que l’application Web ASP.NET 4 s’exécute sur IIS 7 (ou IIS 7.5) ou sur IIS 6, le système de configuration IIS ou le système de compilation ASP.NET 4 retournera une erreur.
+Ces scénarios se produisent parce que les informations de configuration de l’application parente dans le dossier `parentwebapp` font partie de la hiérarchie des informations de configuration qui détermine les paramètres de configuration fusionnés finaux qui sont utilisés par l’application Web enfant dans le dossier `childwebapp`. Selon que l’application Web ASP.NET 4 s’exécute sur IIS 7 (ou IIS 7,5) ou sur IIS 6, le système de configuration IIS ou le système de compilation ASP.NET 4 renvoie une erreur.
 
-Les étapes à suivre pour résoudre ce problème et pour obtenir les enfants ASP.NET 4 application fonctionne varient selon que l’application ASP.NET 4 s’exécute sur IIS 6 ou IIS 7 (ou IIS 7.5).
+Les étapes que vous devez suivre pour résoudre ce problème et faire en sorte que l’application enfant ASP.NET 4 fonctionne varient selon que l’application ASP.NET 4 s’exécute sur IIS 6 ou sur IIS 7 (ou IIS 7,5).
 
-### <a name="step-1-iis-7-or-iis-75-only"></a>Étape 1 (IIS 7 ou IIS 7.5)
+### <a name="step-1-iis-7-or-iis-75-only"></a>Étape 1 (IIS 7 ou IIS 7,5 uniquement)
 
-Cette étape est nécessaire uniquement sur les systèmes d’exploitation qui exécutent IIS 7 ou IIS 7.5, qui inclut Windows Vista, Windows Server 2008, Windows 7 et Windows Server 2008 R2.
+Cette étape est nécessaire uniquement sur les systèmes d’exploitation qui exécutent IIS 7 ou IIS 7,5, y compris Windows Vista, Windows Server 2008, Windows 7 et Windows Server 2008 R2.
 
-Déplacer le **configSections** définition dans le `Web.config` fichier de l’application parent (l’application qui exécute ASP.NET 2.0 ou ASP.NET 3.5) dans la racine `Web.config` fichier pour le.NET Framework 2.0. Le système de configuration native IIS 7 et IIS 7.5 analyse le **configSections** élément quand il fusionne la hiérarchie des fichiers de configuration. Déplacer le **configSections** définition du parent application Web `Web.config` fichier à la racine `Web.config` fichier masque efficacement l’élément à partir du processus de fusion de configuration qui se produit pour les enfants ASP.NET 4 application.
+Déplacez la définition **configSections** dans le fichier `Web.config` de l’application parente (l’application qui exécute ASP.NET 2,0 ou ASP.net 3,5) dans le fichier racine `Web.config` pour the.NET Framework 2,0. Le système de configuration Native IIS 7 et IIS 7,5 analyse l’élément **configSections** lorsqu’il fusionne la hiérarchie des fichiers de configuration. Le déplacement de la définition **configSections** du fichier `Web.config` de l’application Web parent vers le fichier `Web.config` racine masque effectivement l’élément du processus de fusion de configuration qui se produit pour l’application ASP.net 4 enfant.
 
-Sur un système d’exploitation 32 bits ou pour les pools d’application 32 bits, la racine `Web.config` fichier pour ASP.NET 2.0 et ASP.NET 3.5 normalement se trouve dans le dossier suivant :
+Sur un système d’exploitation 32 bits ou pour les pools d’applications 32 bits, le fichier `Web.config` racine pour ASP.NET 2,0 et ASP.NET 3,5 se trouve normalement dans le dossier suivant :
 
 `C:\Windows\Microsoft.NET\Framework\v2.0.50727\CONFIG`
 
-Sur un système d’exploitation 64 bits, ou pour les pools d’application 64 bits, la racine `Web.config` fichier pour ASP.NET 2.0 et ASP.NET 3.5 normalement se trouve dans le dossier suivant :
+Sur un système d’exploitation 64 bits ou pour les pools d’applications 64 bits, le fichier `Web.config` racine pour ASP.NET 2,0 et ASP.NET 3,5 se trouve normalement dans le dossier suivant :
 
 `C:\Windows\Microsoft.NET\Framework64\v2.0.50727\CONFIG`
 
-Si vous exécutez des applications Web 32 bits et 64 bits sur un ordinateur 64 bits, vous devez déplacer le **configSections** élément configuration dans la racine `Web.config` fichiers pour les systèmes 64 bits et 32 bits.
+Si vous exécutez des applications Web 32 bits et 64 bits sur un ordinateur 64 bits, vous devez déplacer l’élément **configSections** vers le haut dans les fichiers de `Web.config` racine pour les systèmes 32 bits et 64 bits.
 
-Lorsque vous placez le **configSections** élément dans la racine `Web.config` de fichiers, collez la section immédiatement après le **configuration** élément. L’exemple suivant montre quelles la partie supérieure de la racine `Web.config` fichier doit se présenter comme lorsque vous avez terminé de déplacer les éléments.
+Lorsque vous placez l’élément **configSections** dans le fichier racine `Web.config`, collez la section juste après l’élément de **configuration** . L’exemple suivant montre à quoi doit ressembler la partie supérieure du fichier `Web.config` racine lorsque vous avez terminé de déplacer les éléments.
 
 > [!NOTE]
-> Dans l’exemple suivant, les lignes ont été encapsulées pour une meilleure lisibilité.
+> Dans l’exemple suivant, les lignes ont été encapsulées pour des raisons de lisibilité.
 
 [!code-xml[Main](breaking-changes/samples/sample8.xml)]
 
 ### <a name="step-2-all-versions-of-iis"></a>Étape 2 (toutes les versions d’IIS)
 
-Cette étape est requise si l’enfant d’ASP.NET 4 application Web est en cours d’exécution sur IIS 6 ou IIS 7 (ou IIS 7.5).
+Cette étape est requise si l’application Web enfant ASP.NET 4 s’exécute sur IIS 6 ou sur IIS 7 (ou IIS 7,5).
 
-Dans le `Web.config` fichier du parent application Web qui est en cours d’exécution ASP.NET 2 ou ASP.NET 3.5, ajoutez un **emplacement** balise spécifie explicitement (pour les systèmes de configuration IIS et ASP.NET) qui uniquement les entrées de configuration s’appliquent à l’application Web parente. L’exemple suivant montre la syntaxe de la **emplacement** élément à ajouter :
+Dans le fichier `Web.config` de l’application Web parente qui exécute ASP.NET 2 ou ASP.NET 3,5, ajoutez une balise d' **emplacement** qui spécifie explicitement (à la fois pour les systèmes de configuration IIS et ASP.net) que les entrées de configuration s’appliquent uniquement à l’application Web parente. L’exemple suivant illustre la syntaxe de l’élément **location** à ajouter :
 
 [!code-xml[Main](breaking-changes/samples/sample9.xml)]
 
-L’exemple suivant montre comment la **emplacement** balise est utilisée pour encapsuler toutes les sections de configuration en commençant par le **appSettings** section et se terminant par **system.webServer**section.
+L’exemple suivant montre comment la balise d' **emplacement** est utilisée pour encapsuler toutes les sections de configuration à partir de la section **appSettings** et se termine par la section **System. webServer** .
 
 [!code-xml[Main](breaking-changes/samples/sample10.xml)]
 
-Lorsque vous avez effectué les étapes 1 et 2, les applications Web ASP.NET 4 enfant peut démarrer sans erreurs.
+Une fois les étapes 1 et 2 terminées, les applications Web enfants ASP.NET 4 démarrent sans erreur.
 
 <a id="0.1__Toc252995491"></a><a id="0.1__Toc255587640"></a><a id="0.1__Toc256770151"></a>
 
-## <a name="aspnet-4-web-sites-fail-to-start-on-computers-where-sharepoint-is-installed"></a>Échec de Sites Web ASP.NET 4 démarrer sur les ordinateurs où SharePoint est installé
+## <a name="aspnet-4-web-sites-fail-to-start-on-computers-where-sharepoint-is-installed"></a>Les sites Web ASP.NET 4 ne démarrent pas sur les ordinateurs où SharePoint est installé
 
-Les serveurs Web exécutant SharePoint ont un `Web.config` fichier qui est déployé à la racine d’un site SharePoint Web (par exemple, `c:\inetpub\wwwroot\web.config` Site Web par défaut). Dans ce `Web.config` fichier, SharePoint définit une confiance partielle personnalisé niveau nommé WSS\_minimale.
+Les serveurs Web qui exécutent SharePoint ont un fichier `Web.config` qui est déployé à la racine d’un site Web SharePoint (par exemple, `c:\inetpub\wwwroot\web.config` pour le site Web par défaut). Dans ce fichier `Web.config`, SharePoint définit un niveau de confiance partielle personnalisé nommé WSS\_minimal.
 
-Si vous essayez d’exécuter un site Web ASP.NET 4 déployé en tant qu’enfant de ce type de site SharePoint Web, vous verrez l’erreur suivante :
+Si vous essayez d’exécuter un site Web ASP.NET 4 qui est déployé en tant qu’enfant de ce type de site Web SharePoint, l’erreur suivante s’affiche :
 
 `Could not find permission set named 'ASP.NET'.`
 
-Cette erreur se produit parce que l’infrastructure de sécurité (CAS) de l’accès de code ASP.NET 4 recherche un jeu d’autorisations nommé ASP.NET. Toutefois, partielle approuver le fichier de configuration qui est référencé par WSS\_minimale ne contient-elle pas les jeux d’autorisations portant ce nom.
+Cette erreur se produit parce que l’infrastructure de sécurité d’accès du code (CAS) de ASP.NET 4 recherche un jeu d’autorisations nommé ASP.NET. Toutefois, le fichier de configuration de confiance partielle référencé par WSS\_minimal ne contient aucun jeu d’autorisations portant ce nom.
 
-Il est actuellement pas une version de SharePoint qui est compatible avec ASP.NET. Par conséquent, vous ne devez pas tenter d’exécuter un site Web ASP.NET 4 comme site enfant sous SharePoint Web sites.
+Actuellement, il n’existe pas de version de SharePoint disponible compatible avec ASP.NET. Par conséquent, vous ne devez pas essayer d’exécuter un site Web ASP.NET 4 en tant que site enfant sous les sites Web SharePoint.
 
 <a id="0.1__Toc255587641"></a><a id="0.1__Toc256770152"></a>
 
-## <a name="the-httprequestfilepath-property-no-longer-includes-pathinfo-values"></a>La propriété HttpRequest.FilePath n’inclut plus les valeurs PathInfo
+## <a name="the-httprequestfilepath-property-no-longer-includes-pathinfo-values"></a>La propriété HttpRequest. FilePath n’intègre plus les valeurs PathInfo
 
-Les versions précédentes d’ASP.NET inclus un **PathInfo** valeur dans la valeur retournée diverses propriétés du fichier chemin d’accès relatif, y compris **HttpRequest.FilePath**,  **HttpRequest.AppRelativeCurrentExecutionFilePath**, et **HttpRequest.CurrentExecutionFilePath**. ASP.NET 4 n’inclut plus le **PathInfo** valeur dans les valeurs de retour à partir de ces propriétés. Au lieu de cela, le **PathInfo** informations sont disponibles dans **HttpRequest.PathInfo**. Par exemple, imaginez le fragment d’URL suivant :
+Les versions précédentes de ASP.NET incluaient une valeur **PathInfo** dans la valeur retournée à partir de différentes propriétés liées au chemin d’accès de fichier, notamment **HttpRequest. FilePath**, **HttpRequest. AppRelativeCurrentExecutionFilePath**et **HttpRequest. CurrentExecutionFilePath**. ASP.NET 4 n’ajoute plus la valeur **PathInfo** dans les valeurs de retour de ces propriétés. Au lieu de cela, les informations **PathInfo** sont disponibles dans **HttpRequest. PathInfo**. Par exemple, imaginez le fragment d’URL suivant :
 
 `/testapp/Action.mvc/SomeAction`
 
-Dans les versions antérieures d’ASP.NET, **HttpRequest** propriétés ont les valeurs suivantes :
+Dans les versions antérieures de ASP.NET, les propriétés **HttpRequest** ont les valeurs suivantes :
 
-**HttpRequest.FilePath**: `/testapp/Action.mvc/SomeAction`
+**HttpRequest. FilePath**: `/testapp/Action.mvc/SomeAction`
 
-**HttpRequest.PathInfo**: (vide)
+**HttpRequest. PathInfo**: (vide)
 
-Dans ASP.NET 4, **HttpRequest** propriétés ont plutôt les valeurs suivantes :
+Dans ASP.NET 4, les propriétés **HttpRequest** ont à la place les valeurs suivantes :
 
-**HttpRequest.FilePath**: `/testapp/Action.mvc`
+**HttpRequest. FilePath**: `/testapp/Action.mvc`
 
-**HttpRequest.PathInfo**: `SomeAction`
+**HttpRequest. PathInfo**: `SomeAction`
 
 <a id="0.1__Toc252995493"></a><a id="0.1__Toc255587642"></a><a id="0.1__Toc256770153"></a><a id="0.1__Toc245724861"></a>
 
-## <a name="aspnet-20-applications-might-generate-httpexception-errors-that-reference-eurlaxd"></a>ASP.NET 2.0 Applications peuvent générer des erreurs HttpException qui référencent eurl.axd
+## <a name="aspnet-20-applications-might-generate-httpexception-errors-that-reference-eurlaxd"></a>Les applications ASP.NET 2,0 peuvent générer des erreurs HttpException qui référencent EURL. axd
 
 Une fois ASP.NET 4 activé sur IIS 6, les applications ASP.NET 2.0 qui s’exécutent sur IIS 6 (dans Windows Server 2003 ou Windows Server 2003 R2) risquent de générer des erreurs comme la suivante :
 
 `System.Web.HttpException: Path '/[yourApplicationRoot]/eurl.axd/[Value]' was not found.`
 
-Cette erreur se produit lorsque ASP.NET détecte qu’un site Web est configuré pour utiliser ASP.NET 4, un composant natif d’ASP.NET 4 transmet une URL sans extension à la partie managée de ASP.NET pour un traitement ultérieur. Toutefois, si les répertoires virtuels qui sont sous un site Web ASP.NET 4 sont configurés pour utiliser ASP.NET 2.0, traitement de l’URL sans extension dans les résultats de cette façon dans une URL modifiée qui contient la chaîne « eurl.axd ». Cette URL modifiée est ensuite envoyé à l’application ASP.NET 2.0. ASP.NET 2.0 ne reconnaît pas le format « eurl.axd ». Par conséquent, ASP.NET 2.0 tente de trouver un fichier nommé `eurl.axd` et exécutez-le. Étant donné que ce fichier n’existe, la requête échoue avec une **HttpException** exception.
+Cette erreur se produit car lorsque ASP.NET détecte qu’un site Web est configuré pour utiliser ASP.NET 4, un composant natif de ASP.NET 4 transmet une URL sans extension à la partie managée de ASP.NET en vue d’un traitement supplémentaire. Toutefois, si les répertoires virtuels situés sous un site Web ASP.NET 4 sont configurés pour utiliser ASP.NET 2,0, le traitement de l’URL sans extension de cette façon génère une URL modifiée qui contient la chaîne « EURL. axd ». Cette URL modifiée est ensuite envoyée à l’application ASP.NET 2,0. ASP.NET 2,0 ne peut pas reconnaître le format « EURL. axd ». Par conséquent, ASP.NET 2,0 tente de trouver un fichier nommé `eurl.axd` et de l’exécuter. Étant donné qu’aucun fichier de ce type n’existe, la requête échoue avec une exception **HttpException** .
 
-Vous pouvez contourner ce problème en utilisant l’une des options suivantes.
+Vous pouvez contourner ce problème à l’aide de l’une des options suivantes.
 
-### <a name="option-1"></a>Option 1
+### <a name="option-1"></a>Option 1 :
 
-Si ASP.NET 4 n’est pas obligatoire pour exécuter le site Web, remappez-le pour utiliser ASP.NET 2.0 à la place.
+Si ASP.NET 4 n’est pas requis pour exécuter le site Web, remappez le site pour utiliser ASP.NET 2,0 à la place.
 
-### <a name="option-2"></a>Option 2
+### <a name="option-2"></a>Option 2 :
 
-Si ASP.NET 4 est requis pour exécuter le site Web, déplacer les répertoires virtuels de ASP.NET 2.0 enfants vers un autre site Web qui est mappé à ASP.NET 2.0.
+Si ASP.NET 4 est requis pour exécuter le site Web, déplacez les répertoires virtuels ASP.NET 2,0 enfants vers un autre site Web mappé à ASP.NET 2,0.
 
 ### <a name="option-3"></a>Option 3
 
-Si elle n’est pas pratique pour remapper le site Web vers ASP.NET 2.0 ou pour modifier l’emplacement d’un répertoire virtuel, désactivez explicitement des URL sans extension de traitement dans ASP.NET 4. Procédez comme suit :
+S’il n’est pas pratique de remapper le site Web à ASP.NET 2,0 ou de modifier l’emplacement d’un répertoire virtuel, désactivez explicitement le traitement des URL sans extension dans ASP.NET 4. Procédez comme suit :
 
 1. Dans le Registre Windows, ouvrez le nœud suivant :
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\4.0.30319.0`
 
-1. Créer un nouveau **DWORD** valeur nommée **EnableExtensionlessUrls**.
-2. Définissez **EnableExtensionlessUrls** à 0. Cela désactive le comportement de l’URL sans extension.
-3. Enregistrez la valeur de Registre et fermez l’Éditeur du Registre.
-4. Exécutez le **iisreset** un outil de ligne de commande, ce qui permet à IIS de lire la nouvelle valeur de Registre.
+1. Créez une nouvelle valeur **DWORD** nommée **EnableExtensionlessUrls**.
+2. Affectez à **EnableExtensionlessUrls** la valeur 0. Cela désactive le comportement des URL sans extension.
+3. Enregistrez la valeur de Registre et fermez l’éditeur du Registre.
+4. Exécutez l’outil en ligne de commande **IISReset** , ce qui amène IIS à lire la nouvelle valeur de registre.
 
 > [!NOTE]
-> Paramètre **EnableExtensionlessUrls** 1 active le comportement de l’URL sans extension. Il s’agit du paramètre par défaut si aucune valeur n’est spécifiée.
+> L’affectation de la valeur 1 à **EnableExtensionlessUrls** active le comportement des URL sans extension. Il s’agit du paramètre par défaut si aucune valeur n’est spécifiée.
 
 <a id="0.1__Toc252995494"></a><a id="0.1__Toc255587643"></a><a id="0.1__Toc256770154"></a><a id="0.1__Toc245724862"></a>
 
-## <a name="event-handlers-might-not-be-not-raised-in-a-default-document-in-iis-7-or-iis-75-integrated-mode"></a>Gestionnaires d’événements ne peuvent pas être déclenchés pas dans un Document par défaut dans IIS 7 ou IIS 7.5 Mode intégré
+## <a name="event-handlers-might-not-be-not-raised-in-a-default-document-in-iis-7-or-iis-75-integrated-mode"></a>Les gestionnaires d’événements peuvent ne pas être déclenchés dans un document par défaut en mode intégré IIS 7 ou IIS 7,5
 
-ASP.NET 4 inclut les modifications qui modifient la **action** attribut du code HTML **formulaire** élément est restitué quand une URL sans extension se traduit par un document par défaut. Voici un exemple d’une URL sans extension résolution à un document par défaut [ http://contoso.com/ ](http://contoso.com/), se traduisant par une demande de [ http://contoso.com/Default.aspx ](http://contoso.com/Default.aspx).
+ASP.NET 4 comprend des modifications qui modifient la façon dont l’attribut **action** de l’élément de **formulaire** HTML est rendu quand une URL sans extension correspond à un document par défaut. Un exemple de résolution d’URL sans extension vers un document par défaut serait [http://contoso.com/](http://contoso.com/), provoquant une demande d' [http://contoso.com/Default.aspx](http://contoso.com/Default.aspx).
 
-ASP.NET 4 affiche maintenant le code HTML **formulaire** l’élément **action** valeur d’attribut comme une chaîne vide lorsqu’une demande est faite à une URL sans extension qui est mappé à ce dernier à un document par défaut. Par exemple, dans les versions antérieures d’ASP.NET, une demande à [ http://contoso.com ](http://contoso.com) entraînerait une demande à `Default.aspx`. Dans ce document, l’ouverture **formulaire** balise serait restituée comme dans l’exemple suivant :
+ASP.NET 4 affiche désormais la valeur d’attribut **action** de l’élément de **formulaire** HTML sous la forme d’une chaîne vide quand une demande est effectuée à une URL sans extension à laquelle un document par défaut est mappé. Par exemple, dans les versions antérieures de ASP.NET, une demande de [http://contoso.com](http://contoso.com) entraînerait une demande de `Default.aspx`. Dans ce document, la balise **Form** d’ouverture serait affichée comme dans l’exemple suivant :
 
 `<form action="Default.aspx" />`
 
-Dans ASP.NET 4, une demande à [ http://contoso.com ](http://contoso.com) entraîne également une demande à `Default.aspx`. Toutefois, ASP.NET restitue maintenant l’ouverture HTML **formulaire** balise comme dans l’exemple suivant :
+Dans ASP.NET 4, une demande de [http://contoso.com](http://contoso.com) entraîne également une demande à `Default.aspx`. Toutefois, ASP.NET affiche maintenant la balise **Form** d’ouverture html comme dans l’exemple suivant :
 
 `<form action="" />`
 
-Cette différence dans la façon dont le **action** attribut est rendu peut entraîner des modifications subtiles dans le mode de traitement d’une publication de formulaire par IIS et ASP.NET. Lorsque le **action** attribut est une chaîne vide, IIS **DefaultDocumentModule** objet crée une demande enfant à `Default.aspx`. Dans la plupart des conditions, cette demande enfant est transparente pour le code d’application et le `Default.aspx` page s’exécute normalement.
+Cette différence dans la façon dont l’attribut d' **action** est rendu peut entraîner des modifications subtiles dans le mode de traitement d’une publication de formulaire par IIS et ASP.net. Lorsque l’attribut **action** est une chaîne vide, l’objet **DefaultDocumentModule** IIS crée une demande enfant pour `Default.aspx`. Dans la plupart des cas, cette demande enfant est transparente pour le code de l’application, et la page `Default.aspx` s’exécute normalement.
 
-Toutefois, en raison d’une interaction potentielle entre le code managé et le mode intégré IIS 7 ou IIS 7.5, les pages .aspx managées peuvent cesser de fonctionner correctement pendant la demande enfant. Si les conditions suivantes sont remplies, la demande enfant à un `Default.aspx` document entraîne une erreur ou un comportement inattendu :
+Toutefois, en raison d’une interaction potentielle entre le code managé et le mode intégré IIS 7 ou IIS 7.5, les pages .aspx managées peuvent cesser de fonctionner correctement pendant la demande enfant. Si les conditions suivantes sont remplies, la demande enfant à un `Default.aspx` document génère une erreur ou un comportement inattendu :
 
-1. Une page .aspx est envoyée au navigateur avec la **formulaire** l’élément **action** attribut défini sur « ».
-2. Le formulaire est publié sur ASP.NET.
-3. Un module HTTP managé lit une partie du corps d’entité. Par exemple, un module lit **Request.Form** ou **Request.Params**. Le corps d’entité de la demande POST est ainsi lu dans la mémoire managée. Le corps d’entité n’est donc plus disponible pour les modules de code natif qui s’exécutent en mode intégré IIS 7 ou IIS 7.5.
-4. IIS **DefaultDocumentModule** objet finalement s’exécute et crée une demande enfant pour le `Default.aspx` document. Toutefois, étant donné que le corps d’entité a déjà été lu par une partie du code managé, aucun corps d’entité n’est disponible pour un envoi à la demande enfant.
-5. Lorsque le pipeline HTTP s’exécute pour la demande enfant, le Gestionnaire de `.aspx` files s’exécute pendant la phase d’exécution des gestionnaires.
-6. Comme il n’existe aucun corps d’entité, il y a aucune variable de formulaire et aucun état d’affichage, et par conséquent, aucune information n’est disponible pour le Gestionnaire de page .aspx déterminer quel événement (le cas échéant) est censé être déclenché. Par conséquent, aucun des gestionnaires d’événements de publication pour la page .aspx concernée ne s’exécute.
+1. Une page. aspx est envoyée au navigateur avec l’attribut **action** de l’élément de **formulaire** défini sur «».
+2. Le formulaire est publié dans ASP.NET.
+3. Un module HTTP managé lit une partie du corps de l’entité. Par exemple, un module lit **Request. Form** ou **Request. params**. Le corps d’entité de la demande POST est ainsi lu dans la mémoire managée. Le corps d’entité n’est donc plus disponible pour les modules de code natif qui s’exécutent en mode intégré IIS 7 ou IIS 7.5.
+4. L’objet **DEFAULTDOCUMENTMODULE** IIS finit par s’exécuter et crée une demande enfant dans le document `Default.aspx`. Toutefois, étant donné que le corps d’entité a déjà été lu par une partie du code managé, aucun corps d’entité n’est disponible pour un envoi à la demande enfant.
+5. Lorsque le pipeline HTTP s’exécute pour la demande enfant, le gestionnaire des fichiers `.aspx` s’exécute pendant la phase d’exécution du gestionnaire.
+6. Étant donné qu’il n’y a pas de corps d’entité, il n’existe aucune variable de formulaire ni aucun État d’affichage, et par conséquent, aucune information n’est disponible pour le gestionnaire de page. aspx pour déterminer l’événement (le cas échéant) supposé être déclenché. Par conséquent, aucun des gestionnaires d’événements de publication pour la page .aspx concernée ne s’exécute.
 
-Vous pouvez contourner ce comportement comme suit :
+Vous pouvez contourner ce comportement des manières suivantes :
 
-- Identifier le module HTTP qui accède au corps d’entité de la demande lors des demandes de document par défaut et déterminer si elle peut être configurée pour exécuter uniquement pour les demandes gérées. En mode intégré d’IIS 7 et IIS 7.5, les modules HTTP peuvent être marqués pour s’exécuter uniquement pour les demandes gérées en ajoutant l’attribut suivant pour le module **System.webServer/modules** entrée :
+- Identifiez le module HTTP qui accède au corps d’entité de la requête pendant les demandes de documents par défaut et déterminez s’il peut être configuré pour s’exécuter uniquement pour les demandes managées. En mode intégré pour IIS 7 et IIS 7,5, les modules HTTP peuvent être marqués pour s’exécuter uniquement pour les demandes managées en ajoutant l’attribut suivant à l’entrée **System. webServer/modules** du module :
 
 - `precondition="managedHandler"`
 
-- Cette désactive de paramètre du module pour les demandes qu’IIS 7 et IIS 7.5 déterminent comme étant non géré de demandes. Pour les demandes de document par défaut, la première demande est vers une URL sans extension. Par conséquent, IIS ne s’exécute pas tous les modules managés qui sont marqués avec une condition préalable du Gestionnaire de code managé lors du traitement de la demande initiale. Par conséquent, les modules managés ne lira pas accidentellement le corps d’entité et par conséquent, le corps d’entité est toujours disponible et n’est transmis à la demande enfant et au document par défaut.
+- Ce paramètre désactive le module pour les demandes qu’IIS 7 et IIS 7,5 déterminent comme des demandes qui ne sont pas gérées. Pour les demandes de document par défaut, la première demande est une URL sans extension. Par conséquent, IIS n’exécute aucun module managé marqué avec une condition préalable du gestionnaire géré pendant le traitement de la requête initiale. Par conséquent, les modules managés ne lisent pas accidentellement le corps de l’entité et le corps de l’entité est donc toujours disponible et est transmis à la demande enfant et au document par défaut.
 
-- Si les modules HTTP problématiques ont à exécuter pour toutes les demandes (pour les fichiers statiques, des URL sans extension de résoudre la **DefaultDocumentModule** objet, pour les demandes gérées, etc.), modifier les pages .aspx concernée ne par explicitement définition de la **Action** la propriété de la page **System.Web.UI.HtmlControls.HtmlForm** contrôle vers une chaîne non vide. Par exemple, si le document par défaut est `Default.aspx`, modifier le code de la page pour définir explicitement la **HtmlForm** du contrôle **Action** propriété à « Default.aspx ».
+- Si les modules HTTP problématiques doivent s’exécuter pour toutes les requêtes (pour les fichiers statiques, pour les URL sans extension qui se résolvent en objet **DefaultDocumentModule** , pour les demandes managées, etc.), modifiez les pages. aspx affectées en définissant explicitement la propriété **action** du contrôle **System. Web. UI. HtmlControls. HtmlForm** de la page sur une chaîne non vide. Par exemple, si le document par défaut est `Default.aspx`, modifiez le code de la page pour définir explicitement la propriété **action** du contrôle **HtmlForm** sur « default. aspx ».
 
 <a id="0.1__Toc255587644"></a><a id="0.1__Toc256770155"></a>
 
-## <a name="changes-to-the-aspnet-code-access-security-cas-implementation"></a>Modifications apportées à l’implémentation de sécurité (CAS) de l’accès de Code ASP.NET
+## <a name="changes-to-the-aspnet-code-access-security-cas-implementation"></a>Modifications apportées à l’implémentation de la sécurité d’accès du code (CAS) ASP.NET
 
-ASP.NET 2.0, et par extension, les fonctionnalités ASP.NET qui ont été ajoutées dans 3.5, utilisez le .NET Framework 1.1 et le modèle de sécurité (CAS) de code 2.0 accès. Toutefois, l’implémentation de CAS dans ASP.NET 4 a été considérablement revue. Par conséquent, les applications ASP.NET de confiance partielle qui s’appuient sur le code de confiance exécuté dans le global assembly cache (GAC) peuvent échouer avec différentes exceptions de sécurité. Les applications de confiance partielle qui s’appuient sur d’importantes modifications apportées à la stratégie d’autorités de certification de l’ordinateur peuvent également échouer avec les exceptions de sécurité.
+ASP.NET 2,0 et, par extension, les fonctionnalités ASP.NET qui ont été ajoutées dans 3,5, utilisent le modèle de sécurité d’accès du code (CAS) .NET Framework 1,1 et 2,0. Toutefois, l’implémentation de CAS dans ASP.NET 4 a été considérablement revue. Par conséquent, les applications ASP.NET de confiance partielle qui reposent sur du code de confiance s’exécutant dans le Global Assembly Cache (GAC) peuvent échouer avec différentes exceptions de sécurité. Les applications de confiance partielle qui reposent sur des modifications approfondies à la stratégie CAS d’ordinateur peuvent également échouer avec des exceptions de sécurité.
 
-Vous pouvez rétablir les applications ASP.NET 4 de confiance partielle pour le comportement ASP.NET 1.1 et 2.0 à l’aide de la nouvelle **legacyCasModel** d’attribut dans le **approbation** élément de configuration, comme indiqué dans l’exemple suivant :
+Vous pouvez rétablir le comportement des applications ASP.NET 4 de confiance partielle sur le comportement de ASP.NET 1,1 et 2,0 à l’aide du nouvel attribut **LegacyCasModel** de l’élément de configuration **Trust** , comme indiqué dans l’exemple suivant :
 
 `<trust level= "Medium" legacyCasModel="true" />`
 
-Lorsque vous rétablissez le modèle CAS hérité, les comportements d’autorités de certification ancien suivants sont activés :
+Lorsque vous revenez au modèle CAS hérité, les anciens comportements d’autorité de certification suivants sont activés :
 
-- Stratégie d’autorités de certification machine est respectée.
-- Plusieurs jeux d’autorisations différents dans un seul domaine d’application est autorisés.
-- Assertions d’autorisation explicite ne sont pas requises pour les assemblys dans le GAC qui sont invoquées lorsque ASP.NET ou tout autre code .NET Framework se trouve sur la pile.
+- La stratégie CAS de l’ordinateur est respectée.
+- Plusieurs jeux d’autorisations différents dans un même domaine d’application sont autorisés.
+- Les assertions d’autorisation explicites ne sont pas requises pour les assemblys dans le GAC qui sont appelés lorsque seul ASP.NET ou autre .NET Framework code se trouve sur la pile.
 
-Un scénario ne peut pas être annulée dans le .NET Framework 4 : les applications de confiance partielle non Web ne peuvent plus appeler certaines API dans des fichiers System.Web.dll et System.Web.Extensions.dll. Dans les versions précédentes du .NET Framework, il était possible pour les applications de confiance partielle non Web accordée explicitement **autorisation AspNetHostingPermission** autorisations. Ces applications peuvent ensuite utiliser **System.Web.HttpUtility**, les types dans les **System.Web.ClientServices.\***  espaces de noms et types liés à l’appartenance, les rôles et les profils. Appel de ces types à partir d’applications de confiance partielle non Web n’est plus pris en charge dans le .NET Framework 4.
+Un scénario ne peut pas être rétabli dans le .NET Framework 4 : les applications de confiance partielle non Web ne peuvent plus appeler certaines API dans System. Web. dll et System. Web. extensions. dll. Dans les versions précédentes de la .NET Framework, il était possible pour les applications de confiance partielle non Web d’accorder explicitement des autorisations **AspNetHostingPermission** . Ces applications peuvent ensuite utiliser **System. Web. HttpUtility**, les types dans les espaces de noms **System. Web. ClientServices.\*** et les types liés à l’appartenance, aux rôles et aux profils. L’appel de ces types à partir d’applications de confiance partielle non Web n’est plus pris en charge dans le .NET Framework 4.
 
 > [!NOTE]
-> Le **HtmlEncode** et **HtmlDecode** fonctionnalités de la **System.Web.HttpUtility** classe a été déplacée vers le nouveau .NET Framework 4  **System.Net.WebUtility** classe. S’il s’agissait de la fonctionnalité ASP.NET seule qui était utilisée, modifier le code de l’application pour utiliser la nouvelle **WebUtility** classe à la place.
+> Les fonctionnalités **HtmlEncode** et **HtmlDecode** de la classe **System. Web. HttpUtility** ont été déplacées vers la nouvelle classe **system .net. WebUtility** 4 .NET Framework 4. Si c’était la seule fonctionnalité ASP.NET utilisée, modifiez le code de l’application pour utiliser la nouvelle classe **WebUtility** à la place.
 
-Voici un résumé succinct des modifications à l’implémentation d’autorités de certification par défaut dans ASP.NET 4 :
+Voici un résumé de haut niveau des modifications apportées à l’implémentation des autorités de certification par défaut dans ASP.NET 4 :
 
-- Domaines d’application ASP.NET sont désormais des domaines d’application homogènes. Uniquement les jeux d’autorisations de confiance partielle et de confiance totale sont disponibles dans un domaine d’application.
-- Jeux d’autorisations de confiance partielle ASP.NET est indépendantes de toute stratégie d’autorités de certification de niveau entreprise, au niveau de l’ordinateur ou au niveau de l’utilisateur.
-- Assemblys ASP.NET fournis dans 3.5 et 3.5 SP1 ont été convertis pour utiliser le modèle de transparence du .NET Framework 4.
-- Utilisation de l’ASP.NET **autorisation AspNetHostingPermission** attribut a été considérablement réduit. La plupart des instances de cet attribut ont été supprimés à partir de la APIs ASP.NET publiques.
-- Assemblys compilés dynamiquement qui sont créés par les fournisseurs de générations ASP.NET ont été mis à jour pour marquer explicitement les assemblys comme étant transparents de.
-- Tous les assemblys ASP.NET sont désormais marquées de manière à ce que l’attribut APTCA est honorée uniquement dans les environnements d’hébergement Web. Niveau de confiance partiel environnements d’hébergement non Web tels que ClickOnce ne sera pas en mesure d’appeler des assemblys ASP.NET.
+- Les domaines d’application ASP.NET sont désormais des domaines d’application homogènes. Seuls les ensembles d’autorisations de confiance partielle et de confiance totale sont disponibles dans un domaine d’application.
+- Les jeux d’autorisations de confiance partielle ASP.NET sont indépendants de toute stratégie CAS au niveau de l’entreprise, de l’ordinateur ou de l’utilisateur.
+- Les assemblys ASP.NET inclus dans 3,5 et 3,5 SP1 ont été convertis pour utiliser le modèle de transparence .NET Framework 4.
+- L’utilisation de l’attribut ASP.NET **AspNetHostingPermission** a été considérablement réduite. La plupart des instances de cet attribut ont été supprimées des API ASP.NET publiques.
+- Les assemblys compilés dynamiquement qui sont créés par les fournisseurs de build ASP.NET ont été mis à jour pour marquer explicitement les assemblys comme étant transparents.
+- Tous les assemblys ASP.NET sont maintenant marqués de sorte que l’attribut APTCA soit respecté uniquement dans les environnements d’hébergement Web. Les environnements d’hébergement non Web partiellement approuvés comme ClickOnce ne pourront pas effectuer d’appel dans des assemblys ASP.NET.
 
-Pour plus d’informations sur le nouveau modèle de sécurité de l’accès de code ASP.NET 4, consultez [à l’aide de Code Access Security dans les Applications ASP.NET](https://msdn.microsoft.com/library/dd984947%28VS.100%29.aspx) sur le site Web MSDN.
+Pour plus d’informations sur le nouveau modèle de sécurité d’accès du code ASP.NET 4, consultez [utilisation de la sécurité d’accès du code dans les Applications ASP.net](https://msdn.microsoft.com/library/dd984947%28VS.100%29.aspx) sur le site Web MSDN.
 
 <a id="0.1__Toc256770156"></a><a id="0.1__Toc245724863"></a><a id="0.1__Toc252995496"></a><a id="0.1__Toc255587645"></a><a id="0.1__Toc245724864"></a>
 
-## <a name="membershipuser-and-other-types-in-the-systemwebsecurity-namespace-have-been-moved"></a>MembershipUser et autres Types dans le Namespace System.Web.Security ont été déplacés.
+## <a name="membershipuser-and-other-types-in-the-systemwebsecurity-namespace-have-been-moved"></a>MembershipUser et d’autres types dans l’espace de noms System. Web. Security ont été déplacés
 
-Certains types qui sont utilisés dans l’appartenance ASP.NET ont été déplacés de `System.Web.dll` au nouvel assembly System.Web.ApplicationServices.dll. Les types ont été déplacés pour résoudre des dépendances de couches architecturales entre des types dans le client et dans des références SKU .NET Framework étendues.
+Certains types qui sont utilisés dans l’appartenance à ASP.NET ont été déplacés de `System.Web.dll` vers le nouvel assembly System. Web. ApplicationServices. dll. Les types ont été déplacés pour résoudre des dépendances de couches architecturales entre des types dans le client et dans des références SKU .NET Framework étendues.
 
-Les projets de site Web n’ont pas de problèmes à la suite de ces types, car System.Web.ApplicationServices.dll a été ajouté à la liste des assemblys référencés qui est utilisée par défaut par le système de compilation ASP.NET. Si vous mettez à niveau un projet de site Web qui a été créé à l’aide d’une version antérieure d’ASP.NET vers ASP.NET 4 en l’ouvrant dans Visual Studio 2010, le projet sera compilé sans erreur.
+Les projets de site Web n’ont pas de problème suite au déplacement de ces types, car System. Web. ApplicationServices. dll a été ajouté à la liste des assemblys référencés qui est utilisée par défaut par le système de compilation ASP.NET. Si vous mettez à niveau un projet de site Web créé à l’aide d’une version antérieure de ASP.NET à ASP.NET 4 en l’ouvrant dans Visual Studio 2010, le projet se compilera sans erreurs.
 
-De même, si vous mettez à niveau un projet d’application Web qui a été créé dans une version antérieure d’ASP.NET vers ASP.NET 4 en l’ouvrant dans Visual Studio 2010, le processus de mise à niveau ajoute une référence à System.Web.ApplicationServices.dll au projet. Par conséquent, mis à niveau Web de projets d’application seront également compilée sans erreurs.
+De même, si vous mettez à niveau un projet d’application Web créé dans une version antérieure de ASP.NET vers ASP.NET 4 en l’ouvrant dans Visual Studio 2010, le processus de mise à niveau ajoute une référence à System. Web. ApplicationServices. dll au projet. Par conséquent, les projets d’application Web mis à niveau seront également compilés sans erreurs.
 
-Les fichiers (binaires) compilés qui ont été créés à l’aide de versions antérieures d’ASP.NET seront exécuteront également sans erreur sur ASP.NET 4, même si les types d’appartenance ont été déplacées vers un autre assembly. Transfert des informations de type a été ajouté à la version d’ASP.NET 4 de `System.Web.dll` qui achemine automatiquement les références d’exécution pour ces types vers le nouvel emplacement pour les types.
+Les fichiers compilés (binaires) qui ont été créés à l’aide des versions antérieures de ASP.NET s’exécuteront également sans erreur sur ASP.NET 4, même si les types d’appartenance ont été déplacés vers un assembly différent. Les informations de transfert de type ont été ajoutées à la version ASP.NET 4 de `System.Web.dll` qui achemine automatiquement les références au moment de l’exécution pour ces types vers le nouvel emplacement pour les types.
 
-Toutefois, les bibliothèques de classes qui utilisent des types d’appartenance spécifique et qui ont été mis à niveau à partir de versions antérieures d’ASP.NET compilation échouera lorsqu’il est utilisé dans un projet ASP.NET 4. Par exemple, un projet de bibliothèque de classes peut échouer compiler et de signaler une erreur semblable à celui-ci :
+Toutefois, les bibliothèques de classes qui utilisent des types d’appartenance spécifiques et qui ont été mis à niveau à partir de versions antérieures de ASP.NET ne peuvent pas être compilées lorsqu’elles sont utilisées dans un projet ASP.NET 4. Par exemple, un projet de bibliothèque de classes peut ne pas réussir à compiler et signaler une erreur telle que la suivante :
 
 - `The type 'System.Web.Security.MembershipUser' is defined in an assembly that is not referenced. You must add a reference to assembly 'System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.`
 
 - `The type name 'MembershipUser' could not be found. This type has been forwarded to assembly 'System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'. Consider adding a reference to that assembly.`
 
-Vous pouvez contourner ce problème en ajoutant une référence dans votre projet de bibliothèque de classes à System.Web.ApplicationServices.dll.
+Vous pouvez contourner ce problème en ajoutant une référence dans votre projet de bibliothèque de classes à System. Web. ApplicationServices. dll.
 
-La liste suivante indique les *System.Web.Security* types qui ont été déplacées de `System.Web.dll` à System.Web.ApplicationServices.dll :
+La liste suivante répertorie les types *System. Web. Security* qui ont été déplacés de `System.Web.dll` vers System. Web. ApplicationServices. dll :
 
-- *System.Web.Security.MembershipCreateStatus*
-- *System.Web.Security.Membership.CreateUserException*
-- *System.Web.Security.MembershipPasswordException*
-- *System.Web.Security.MembershipPasswordFormat*
-- *System.Web.Security.MembershipProvider*
-- *System.Web.Security.MembershipProviderCollection*
-- *System.Web.Security.MembershipUser*
-- *System.Web.Security.MembershipUserCollection*
-- *System.Web.Security.MembershipValidatePasswordEventHandler*
-- *System.Web.Security.ValidatePasswordEventArgs*
-- *System.Web.Security.RoleProvider*
-- <a id="0.1_a"></a>*System.Web.Configuration.MembershipPasswordCompatibilityMode*
+- *System. Web. Security. MembershipCreateStatus*
+- *System. Web. Security. Membership. CreateUserException*
+- *System. Web. Security. MembershipPasswordException*
+- *System. Web. Security. MembershipPasswordFormat*
+- *System. Web. Security. MembershipProvider*
+- *System. Web. Security. MembershipProviderCollection*
+- *System. Web. Security. MembershipUser*
+- *System. Web. Security. MembershipUserCollection*
+- *System. Web. Security. MembershipValidatePasswordEventHandler*
+- *System. Web. Security. ValidatePasswordEventArgs*
+- *System. Web. Security. RoleProvider*
+- <a id="0.1_a"></a>*System. Web. Configuration. MembershipPasswordCompatibilityMode*
 
 <a id="0.1__Toc256770157"></a>
 
-## <a name="output-caching-changes-to-vary--http-header"></a>Sortie mise en cache des modifications pour faire varier \* en-tête HTTP
+## <a name="output-caching-changes-to-vary--http-header"></a>Modifications de la mise en cache de sortie à modifier \* en-tête HTTP
 
-Dans ASP.NET 1.0, un bogue causé mis en cache de pages spécifié `Location="ServerAndClient"` comme un paramètre de cache de sortie pour émettre un `Vary:*` en-tête HTTP dans la réponse. Les navigateurs clients ne mettaient donc jamais en cache la page localement.
+Dans ASP.NET 1,0, un bogue a provoqué des pages mises en cache qui spécifiaient `Location="ServerAndClient"` en tant que paramètre OUTPUT-cache pour émettre un en-tête HTTP `Vary:*` dans la réponse. Les navigateurs clients ne mettaient donc jamais en cache la page localement.
 
-Dans ASP.NET 1.1, le **System.Web.HttpCachePolicy.SetOmitVaryStar** méthode a été ajoutée, vous pouvez appeler pour supprimer le `Vary:*` en-tête. Cette méthode a été choisie parce que la modification de l’en-tête HTTP émis a été considérée comme un risquer d’endommager le changement en temps. Toutefois, les développeurs sont déroutées par le comportement dans ASP.NET, et rapports de bogues indiquent que les développeurs ignorent existants **SetOmitVaryStar** comportement.
+Dans ASP.NET 1,1, la méthode **System. Web. HttpCachePolicy. SetOmitVaryStar** a été ajoutée, ce que vous pouvez appeler pour supprimer l’en-tête `Vary:*`. Cette méthode a été choisie, car la modification de l’en-tête HTTP émis a été considérée comme une modification avec rupture à ce moment-là. Toutefois, les développeurs ont été confondus par le comportement dans ASP.NET, et les rapports de bogues suggèrent que les développeurs n’ont pas conscience du comportement **SetOmitVaryStar** existant.
 
-Dans ASP.NET 4, la décision a été effectuée pour résoudre le problème racine. Le `Vary:*` en-tête HTTP n’est plus émis à partir des réponses qui spécifient la directive suivante :
+Dans ASP.NET 4, la décision a été prise de résoudre le problème racine. L’en-tête HTTP `Vary:*` n’est plus émis à partir des réponses qui spécifient la directive suivante :
 
 `<%@OutputCache Location="ServerAndClient" %>`
 
-Par conséquent, **SetOmitVaryStar** n’est plus nécessaire pour supprimer le `Vary:*` en-tête.
+Par conséquent, **SetOmitVaryStar** n’est plus nécessaire pour supprimer l’en-tête `Vary:*`.
 
-Dans les applications qui spécifient `Location="ServerAndClient"` dans le **@ OutputCache** directive sur une page, vous voyez maintenant le comportement impliqué par le nom de la **emplacement** valeur de l’attribut –, pages seront mises en cache dans le navigateur sans que vous appelez le **SetOmitVaryStar** (méthode).
+Dans les applications qui spécifient `Location="ServerAndClient"` dans la directive **@ OutputCache** sur une page, vous voyez maintenant le comportement impliqué par le nom de la valeur de l’attribut d' **emplacement** , c’est-à-dire que les pages seront mises en cache dans le navigateur sans que vous ayez besoin d’appeler la méthode **SetOmitVaryStar** .
 
-Si les pages de votre application doivent émettre `Vary:*`, appelez le **AppendHeader** méthode, comme dans l’exemple suivant :
+Si des pages de votre application doivent émettre des `Vary:*`, appelez la méthode **AppendHeader** , comme dans l’exemple suivant :
 
 `HttpResponse.AppendHeader("Vary","*");`
 
-Vous pouvez également modifier la valeur de la mise en cache de sortie **emplacement** attribut « Server ».
+Vous pouvez également modifier la valeur de l’attribut **emplacement** de la mise en cache de sortie en « serveur ».
 
 <a id="0.1__Toc255587646"></a><a id="0.1__Toc256770158"></a>
 
-## <a name="systemwebsecurity-types-for-passport-are-obsolete"></a>Types de System.Web.Security pour Passport sont obsolètes
+## <a name="systemwebsecurity-types-for-passport-are-obsolete"></a>Les types System. Web. Security pour Passport sont obsolètes
 
-La prise en charge de Passport intégrée à ASP.NET 2.0 a été obsolètes et non pris en charge pendant quelques années en raison de modifications dans Passport (LiveID maintenant). Par conséquent, les cinq types liés à Passport dans **System.Web.Security** sont désormais marquées avec la **ObsoleteAttribute** attribut.
+La prise en charge de Passport intégrée à ASP.NET 2,0 a été obsolète et n’est pas prise en charge depuis quelques années en raison des modifications apportées à Passport (désormais LiveID). Par conséquent, les cinq types liés à Passport dans **System. Web. Security** sont désormais marqués avec l’attribut **ObsoleteAttribute** .
 
 <a id="0.1__The_MenuItem.PopOutImageUrl_Propert"></a><a id="0.1__Toc256770159"></a>
 
-## <a name="the-menuitempopoutimageurl-property-fails-to-render-an-image-in-aspnet-4"></a>La propriété MenuItem.PopOutImageUrl ne parvient pas à afficher une Image dans ASP.NET 4
+## <a name="the-menuitempopoutimageurl-property-fails-to-render-an-image-in-aspnet-4"></a>La propriété MenuItem. PopOutImageUrl ne parvient pas à afficher une image dans ASP.NET 4
 
-Dans ASP.NET 3.5, le *MenuItem.PopOutImageUrl* propriété vous permet de spécifier l’URL pour une image qui est affichée dans un élément de menu pour indiquer que l’élément de menu a un sous-menu dynamique. L’exemple suivant montre comment spécifier cette propriété dans le balisage dans ASP.NET 3.5.
+Dans ASP.NET 3,5, la propriété *MenuItem. PopOutImageUrl* vous permet de spécifier l’URL d’une image qui est affichée dans un élément de menu pour indiquer que l’élément de menu a un sous-menu dynamique. L’exemple suivant montre comment spécifier cette propriété dans le balisage dans ASP.NET 3,5.
 
 [!code-aspx[Main](breaking-changes/samples/sample11.aspx)]
 
-Suite à une modification de conception dans ASP.NET 4, aucune sortie n’est rendu pour le *PopOutImageUrl* si la propriété est définie pour le *MenuItem* classe. Au lieu de cela, vous devez spécifier une URL d’image directement dans le *Menu* contrôler à l’aide du *StaticPopOutImageUrl* propriété ou le *DynamicPopOutImageUrl* propriété. Lorsque vous travaillez avec un menu statique, le *Menu.StaticPopOutImageUrl* propriété spécifie l’URL d’une image qui est affichée pour indiquer que l’élément de menu statique a un sous-menu, comme illustré dans l’exemple suivant :
+En raison d’un changement de conception dans ASP.NET 4, aucune sortie n’est restituée pour le *PopOutImageUrl* si la propriété est définie pour la classe *MenuItem* . Au lieu de cela, vous devez spécifier une URL d’image directement dans le contrôle de *menu* à l’aide de la propriété *StaticPopOutImageUrl* ou de la propriété *DynamicPopOutImageUrl* . Quand vous utilisez un menu statique, la propriété *menu. StaticPopOutImageUrl* spécifie l’URL d’une image qui est affichée pour indiquer que l’élément de menu statique a un sous-menu, comme illustré dans l’exemple suivant :
 
 [!code-aspx[Main](breaking-changes/samples/sample12.aspx)]
 
-Si vous travaillez avec un menu dynamique, vous utilisez le *Menu.DynamicPopOutImageUrl* propriété pour spécifier l’URL d’une image qui indique qu’un élément de menu dynamique a un sous-menu. L’exemple suivant est similaire au précédent, mais il montre comment définir le *DynamicPopOutImageUrl* propriété pour un menu dynamique.
+Si vous travaillez avec un menu dynamique, vous utilisez la propriété *menu. DynamicPopOutImageUrl* pour spécifier l’URL d’une image qui indique qu’un élément de menu dynamique a un sous-menu. L’exemple suivant est semblable au précédent, mais montre comment définir la propriété *DynamicPopOutImageUrl* pour un menu dynamique.
 
 [!code-aspx[Main](breaking-changes/samples/sample13.aspx)]
 
-Si le *Menu.DynamicPopOutImageUrl* propriété n’est pas définie et la *Menu.DynamicEnableDefaultPopOutImage* propriété est définie sur *false*, aucune image n’est affichée. De même, si le *StaticPopOutImageUrl* propriété n’est pas définie et la *StaticEnableDefaultPopOutImage* propriété est définie sur *false*, aucune image n’est affichée.
+Si la propriété *menu. DynamicPopOutImageUrl* n’est pas définie et que la propriété *menu. DynamicEnableDefaultPopOutImage* est définie sur *false*, aucune image ne s’affiche. De même, si la propriété *StaticPopOutImageUrl* n’est pas définie et que la propriété *StaticEnableDefaultPopOutImage* est définie sur *false*, aucune image ne s’affiche.
 
-Lorsque vous définissez les chemins d’accès de ces propriétés, utilisez une barre oblique (/) au lieu d’une barre oblique inverse (\). Pour plus d’informations, consultez [Menu.StaticPopOutImageUrl et échouer Menu.DynamicPopOutImageUrl restituer des Images lors de chemins d’accès contiennent des barres obliques inverses](#0.1__Menu.StaticPopOutImageUrl_and_Menu. "_Menu.StaticPopOutImageUrl_and_Menu.") ailleurs dans ce document.
+Lorsque vous définissez les chemins d’accès de ces propriétés, utilisez une barre oblique (/) au lieu d’une barre oblique inverse (\). Pour plus d’informations, consultez [menu. StaticPopOutImageUrl et menu. DynamicPopOutImageUrl ne pas afficher les images lorsque les chemins d’accès contiennent des barres obliques inverses](#0.1__Menu.StaticPopOutImageUrl_and_Menu. "_Menu. StaticPopOutImageUrl_and_Menu.") ailleurs dans ce document.
 
 <a id="0.1__Menu.StaticPopOutImageUrl_and_Menu."></a><a id="0.1__Toc256770160"></a>
 
-## <a name="menustaticpopoutimageurl-and-menudynamicpopoutimageurl-fail-to-render-images-when-paths-contain-backslashes"></a>Menu.StaticPopOutImageUrl et Menu.DynamicPopOutImageUrl échouent restituer des Images lorsque les chemins d’accès contiennent des barres obliques inverses
+## <a name="menustaticpopoutimageurl-and-menudynamicpopoutimageurl-fail-to-render-images-when-paths-contain-backslashes"></a>Menu. StaticPopOutImageUrl et menu. DynamicPopOutImageUrl ne pas afficher les images lorsque les chemins d’accès contiennent des barres obliques inverses
 
-Dans ASP.NET 4, les images que vous spécifiez à l’aide de la *Menu.StaticPopOutImageUrl* et *Menu.DynamicPopOutImageUrl* propriétés n’affichera que si le chemin d’accès contient backlashes (\). Il s’agit d’une modification à partir de versions antérieures d’ASP.NET.
+Dans ASP.NET 4, les images que vous spécifiez à l’aide des propriétés *menu. StaticPopOutImageUrl* et *menu. DynamicPopOutImageUrl* ne sont pas restituées si le chemin d’accès contient des points d’ancrage (\). Il s’agit d’une modification par rapport aux versions antérieures de ASP.NET.
 
-L’exemple suivant de *Menu* contrôler balise montre le *StaticPopOutImageUrl* propriété définie à l’aide d’un chemin d’accès qui contient une barre oblique inverse. Dans ASP.NET 4, l’image spécifiée dans la propriété n’est pas rendus.
+L’exemple de balisage de contrôle de *menu* suivant montre le jeu de propriétés *StaticPopOutImageUrl* à l’aide d’un chemin d’accès qui contient une barre oblique inverse. Dans ASP.NET 4, l’image spécifiée dans la propriété n’est pas restituée.
 
 [!code-aspx[Main](breaking-changes/samples/sample14.aspx)]
 
-Pour corriger ce problème, modifiez les valeurs de chemin d’accès qui sont spécifiés dans le *StaticPopOutImageUrl* et *DynamicPopOutImageUrl* propriétés à utiliser des barres obliques (/). L’exemple suivant illustre cette modification :
+Pour corriger ce problème, modifiez les valeurs de chemin d’accès spécifiées dans les propriétés *StaticPopOutImageUrl* et *DynamicPopOutImageUrl* pour qu’elles utilisent des barres obliques (/). L’exemple suivant illustre cette modification :
 
 [!code-aspx[Main](breaking-changes/samples/sample15.aspx)]
 
-Notez que les applications qui ont été migrées à partir de versions antérieures d’ASP.NET vers ASP.NET 4 peuvent également être affectée, car le *MenuItem.PopOutImageUrl* propriété a été modifiée. Pour plus d’informations, consultez [le MenuItem.PopOutImageUrl propriété ne parvient pas à afficher une Image dans ASP.NET 4](#0.1__The_MenuItem.PopOutImageUrl_Propert "_The_MenuItem.PopOutImageUrl_Propert") ailleurs dans ce document.
+Notez que les applications qui ont été migrées à partir de versions antérieures de ASP.NET vers ASP.NET 4 peuvent également être affectées, car la propriété *MenuItem. PopOutImageUrl* a été modifiée. Pour plus d’informations, consultez [la propriété MenuItem. PopOutImageUrl ne parvient pas à afficher une image dans ASP.net 4](#0.1__The_MenuItem.PopOutImageUrl_Propert "_The_MenuItem. PopOutImageUrl_Propert") ailleurs dans ce document.
 
 <a id="0.1__Toc224729061"></a><a id="0.1__Toc255587647"></a><a id="0.1__Toc256770161"></a>
 
@@ -491,7 +491,7 @@ L'utilisateur est tenu d'observer la réglementation relative aux droits d'auteu
 
 Microsoft peut détenir des brevets, avoir déposé des demandes d'enregistrement de brevets ou être titulaire de marques, droits d'auteur ou autres droits de propriété intellectuelle portant sur tout ou partie des éléments qui font l'objet du présent document. Sauf stipulation expresse contraire d'un contrat de licence écrit de Microsoft, la fourniture de ce document n'a pas pour effet de vous concéder une licence sur ces brevets, marques, droits d'auteur ou autres droits de propriété intellectuelle.
 
-Sauf indication contraire, les exemples de sociétés, les organisations, les produits, les noms de domaine, adresses de messagerie, logos, personnes, lieux et événements mentionnés sont fictif et aucune association avec n’importe quel ressemblance organisation, produit, nom de domaine, courrier électronique adresse logo, personne ou des événements est destiné, ou doit être déduite.
+Sauf mention contraire, les exemples de sociétés, d’organisations, de produits, de noms de domaine, d’adresses de messagerie, de logos, de personnes, de lieux et d’événements mentionnés dans le présent document sont fictifs et ne sont pas associés à une société, une organisation, un produit, un nom de domaine, une adresse de messagerie réels une adresse, un logo, une personne, un lieu ou un événement est intentionnel ou doit être déduit.
 
 © 2010 Microsoft Corporation. Tous droits réservés.
 

@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/index
-title: Web API aide - ASP.NET 4.x
+title: Guide de l’API Web-ASP.NET 4. x
 author: rick-anderson
-description: Liste de conseils de l’API Web ASP.NET pour ASP.NET 4.x
+description: API Web ASP.NET de la liste d’instructions pour ASP.NET 4. x
 ms.author: riande
 ms.date: 01/17/2012
 ms.custom: seoapril2019
@@ -10,22 +10,22 @@ ms.assetid: daca6735-b5d3-4ef5-af33-ee682926238b
 msc.legacyurl: /web-api/overview
 msc.type: book
 ms.openlocfilehash: 304c0d71e5e18f9d3f0768464fe39d6e6946600d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422900"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556503"
 ---
 # <a name="web-api-guidance"></a>Guide de l’API Web
 
-- [Prise en main](getting-started-with-aspnet-web-api/index.md)
+- [Bien démarrer](getting-started-with-aspnet-web-api/index.md)
 
     - [Bien démarrer avec Web API 2 (C#)](getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md)
     - [Résultats des actions dans l’API Web 2](getting-started-with-aspnet-web-api/action-results.md)
     - [Utilisation de l’API web avec ASP.NET Web Forms](getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md)
     - [Création de pages d’aide de l’API web](getting-started-with-aspnet-web-api/creating-api-help-pages.md)
-    - [Atelier pratique : Créer une Application à Page unique (SPA) avec l’API Web ASP.NET et Angular.js](getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
-- [Le routage](web-api-routing-and-actions/index.md)
+    - [Atelier pratique : Créer une application à une seule page avec l’API web ASP.NET et Angular.js](getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
+- [Routage](web-api-routing-and-actions/index.md)
 
     - [Routage dans l’API web](web-api-routing-and-actions/routing-in-aspnet-web-api.md)
     - [Routage et sélection des actions dans l’API web](web-api-routing-and-actions/routing-and-action-selection.md)
@@ -112,8 +112,8 @@ ms.locfileid: "59422900"
     - [Appeler une API web à partir d’un client .NET (C#)](advanced/calling-a-web-api-from-a-net-client.md)
     - [Gestionnaires de messages HTTP dans l’API web](advanced/http-message-handlers.md)
     - [Gestionnaires de messages HttpClient dans l’API web](advanced/httpclient-message-handlers.md)
-    - [Envoi de données de formulaire HTML dans l’API Web : Données de Form-UrlEncode](advanced/sending-html-form-data-part-1.md)
-    - [Envoi de données de formulaire HTML dans l’API Web : Chargement du fichier et MIME à parties multiples](advanced/sending-html-form-data-part-2.md)
+    - [Envoi de données de formulaire HTML dans l’API web : données de formulaire encodées dans l’URL](advanced/sending-html-form-data-part-1.md)
+    - [Envoi de données de formulaire HTML dans l’API web : chargement de fichier et MIME à plusieurs parties](advanced/sending-html-form-data-part-2.md)
     - [Cookies HTTP dans l’API web ASP.NET](advanced/http-cookies.md)
 - [Versions](releases/index.md)
 

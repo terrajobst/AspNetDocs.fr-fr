@@ -9,11 +9,11 @@ ms.assetid: c76dbc35-a914-4ee3-919c-4f4d1fa05104
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update
 msc.type: authoredcontent
 ms.openlocfilehash: 3881833bfe2a50a38a357614f92f434a04a8ab08
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74626778"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78567402"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-a-code-update"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : déploiement d’une mise à jour de code
 
@@ -23,13 +23,13 @@ par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels vous montre comment déployer (publier) une application Web ASP.NET sur Azure App Service Web Apps ou sur un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou de Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Après le déploiement initial, votre travail de maintenance et de développement de votre site Web continue, et avant que vous ne souhaitiez déployer une mise à jour. Ce didacticiel vous guide tout au long du processus de déploiement d’une mise à jour de votre code d’application. La mise à jour que vous implémentez et déployez dans ce didacticiel n’implique pas de modification de la base de données. Pour plus d’informations sur le déploiement d’une modification de base de données, consultez le didacticiel suivant.
 
 Rappel : Si vous recevez un message d’erreur ou si une action ne fonctionne pas au fur et à mesure que vous parcourez le didacticiel, veillez à consulter la [page de résolution des problèmes](troubleshooting.md).
 
-## <a name="make-a-code-change"></a>Apporter une modification au code
+## <a name="make-a-code-change"></a>Modifier le code
 
 En guise d’exemple simple de mise à jour de votre application, vous allez ajouter à la page des **enseignants** une liste de cours traités par l’instructeur sélectionné.
 
@@ -53,7 +53,7 @@ Avant de pouvoir utiliser vos profils de publication pour déployer en test, int
 
 1. Ouvrez l’Assistant **publier le site Web** en cliquant avec le bouton droit sur le projet ContosoUniversity, puis en cliquant sur **publier**.
 2. Cliquez sur le profil **test** dans la liste déroulante **Profil** .
-3. Cliquez sur l’onglet **paramètres** .
+3. Cliquez sur l'onglet **Paramètres** .
 4. Sous **DefaultConnection** , dans la section **bases de données** , désactivez la case à cocher **mettre à jour la base de données** .
 5. Cliquez sur l’onglet **Profil** , puis cliquez sur le profil **intermédiaire** dans la liste déroulante **Profil** .
 6. Quand vous êtes invité à enregistrer les modifications apportées au profil de **test** , cliquez sur **Oui**.

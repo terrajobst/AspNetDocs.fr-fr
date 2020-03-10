@@ -1,23 +1,23 @@
 ---
 uid: single-page-application/overview/introduction/index
-title: Introduction à ASP.NET Single Page Application | Microsoft Docs
+title: Présentation de l’application à page unique ASP.NET | Microsoft Docs
 author: rick-anderson
-description: En savoir plus sur ASP.NET unique Application à Page ASP.NET unique Page Application (SPA) vous permet de créer des applications qui incluent des interacti côté client significative...
+description: En savoir plus sur l’application ASP.NET à page unique ASP.NET une application à page unique (SPA) vous aide à créer des applications qui incluent une interaction importante côté client...
 ms.author: riande
 ms.date: 11/14/2012
 ms.assetid: f0643c61-c310-4906-a238-dfc86f09b940
 msc.legacyurl: /single-page-application/overview/introduction
 msc.type: chapter
 ms.openlocfilehash: 73dbc3bee99f22b83cbf2c4eb8f35c3dca3eb94b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113441"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558232"
 ---
-# <a name="introduction-to-aspnet-single-page-application"></a>Introduction à ASP.NET Single Page Application
+# <a name="introduction-to-aspnet-single-page-application"></a>Présentation de l’application à page unique ASP.NET
 
-> Contenu à l’aide du nouveau modèle SPA et Knockoutjs.
+> Contenu pour l’utilisation du nouveau modèle SPA et Knockoutjs.
 
-- [Application à Page unique : Modèle KnockoutJS](knockoutjs-template.md)
+- [Application à une seule page : modèle KnockoutJS](knockoutjs-template.md)
 - [Bibliothèques autres que Knockout](other-libraries.md)

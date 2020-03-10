@@ -1,23 +1,23 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/index
-title: Mise en route avec ASP.NET MVC 3 | Microsoft Docs
+title: Prise en main avec ASP.NET MVC3 | Microsoft Docs
 author: rick-anderson
-description: Les principes fondamentaux de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express.
+description: Notions de base de la création d’une application Web MVC ASP.NET à l’aide de Microsoft Visual Web Developer 2010 Express.
 ms.author: riande
 ms.date: 09/28/2011
 ms.assetid: 67bdeec1-5301-4756-8615-cd9e8c5749e0
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3
 msc.type: chapter
 ms.openlocfilehash: 9bfda277d1ea7a3d99d310c371871879c825299c
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130084"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78540648"
 ---
 # <a name="getting-started-with-aspnet-mvc3"></a>Bien démarrer avec ASP.NET MVC 3
 
-> Les principes fondamentaux de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express.
+> Notions de base de la création d’une application Web MVC ASP.NET à l’aide de Microsoft Visual Web Developer 2010 Express.
 
 - [Bien démarrer avec ASP.NET MVC 3 (C#)](cs/index.md)
 

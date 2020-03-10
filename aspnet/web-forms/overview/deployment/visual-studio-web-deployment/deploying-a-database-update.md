@@ -9,11 +9,11 @@ ms.assetid: 9cad0833-486a-4474-a7f3-7715542ec4ce
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-database-update
 msc.type: authoredcontent
 ms.openlocfilehash: 805eb84c24764cf921291f89054435601dbac48e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74636828"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78547739"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-a-database-update"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : déploiement d’une mise à jour de base de données
 
@@ -23,7 +23,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels vous montre comment déployer (publier) une application Web ASP.NET sur Azure App Service Web Apps ou sur un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou de Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Dans ce didacticiel, vous apportez une modification à la base de données et des modifications de code connexes, vous testez les modifications dans Visual Studio, puis vous déployez la mise à jour dans les environnements de test, intermédiaire et de production.
 
@@ -129,14 +129,14 @@ Pour procéder au déploiement à l’aide du fournisseur dbDacFx, il vous suffi
 
 1. Ouvrez l’Assistant **publier le site Web** en cliquant avec le bouton droit sur le projet ContosoUniversity, puis en cliquant sur **publier**.
 2. Sélectionnez le profil **test** .
-3. Cliquez sur l’onglet **paramètres** .
+3. Cliquez sur l'onglet **Paramètres** .
 4. Sous **DefaultConnection**, sélectionnez **mettre à jour la base de données**.
 5. Désactivez les scripts supplémentaires que vous avez configurés pour s’exécuter pour le déploiement initial :
 
     1. Cliquez sur **configurer les mises à jour de la base de données**.
     2. Dans la boîte de dialogue **configurer les mises à jour de la base de données** , désactivez les cases à cocher en regard de *Grant. SQL* et *ASPNET-Data-dev. SQL*.
     3. Cliquez sur **Fermer**.
-6. Cliquez sur l’onglet **Aperçu** .
+6. Cliquez sur l'onglet **Aperçu** .
 7. Sous **bases de données** et à droite de **DefaultConnection**, cliquez sur le lien **aperçu de la base de données** .
 
     ![Aperçu de la base de données](deploying-a-database-update/_static/image7.png)

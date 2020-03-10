@@ -1,27 +1,27 @@
 ---
 uid: web-forms/videos/authentication/how-to-setup-and-use-cookie-less-authentication-in-an-aspnet-application
-title: Comment configurer et utiliser l’authentification sans Cookie dans une Application ASP.NET | Microsoft Docs
+title: Comment configurer et utiliser l’authentification sans cookie dans une application ASP.NET | Microsoft Docs
 author: JoeStagner
-description: Joe Stagner utilise l’exemple de code précédent pour montrer comment utiliser l’authentification sans cookie. Pour plus d’informations sur cette démonstration, un didacticiel se trouve dans...
+description: Joe Stagner utilise l’exemple de code précédent pour illustrer l’utilisation de l’authentification sans cookie. Pour plus d’informations sur cette démonstration, un didacticiel se trouve...
 ms.author: riande
 ms.date: 07/16/2008
 ms.assetid: 10ba9106-514c-4776-8277-9c31312ceed2
 msc.legacyurl: /web-forms/videos/authentication/how-to-setup-and-use-cookie-less-authentication-in-an-aspnet-application
 msc.type: video
 ms.openlocfilehash: ff6e21dad7598146a681615913dcbd37f72001ee
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404388"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78572848"
 ---
-# <a name="how-to-setup-and-use-cookie-less-authentication-in-an-aspnet-application"></a>Comment le programme d’installation et utilisez l’authentification sans Cookie dans une Application ASP.NET
+# <a name="how-to-setup-and-use-cookie-less-authentication-in-an-aspnet-application"></a>Comment configurer et utiliser l’authentification sans cookie dans une application ASP.NET
 
 par [Joe Stagner](https://github.com/JoeStagner)
 
-Joe Stagner utilise l’exemple de code précédent pour montrer comment utiliser l’authentification sans cookie. Pour plus d’informations sur cette démonstration, se trouve un didacticiel [ici](../../overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-vb.md).
+Joe Stagner utilise l’exemple de code précédent pour illustrer l’utilisation de l’authentification sans cookie. Pour plus d’informations sur cette démonstration, vous trouverez un didacticiel [ici](../../overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-vb.md).
 
-[&#9654;Regardez la vidéo (4 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-to-setup-and-use-cookie-less-authentication-in-an-aspnet-application)
+[&#9654;Regarder la vidéo (4 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-to-setup-and-use-cookie-less-authentication-in-an-aspnet-application)
 
 > [!div class="step-by-step"]
 > [Précédent](how-to-change-the-forms-authentication-properties.md)

@@ -9,11 +9,11 @@ ms.assetid: b9882e53-b3ca-4def-89b0-322846973ccb
 msc.legacyurl: /web-api/overview/security/authentication-filters
 msc.type: authoredcontent
 ms.openlocfilehash: 2ef9e62a6c634237e920b6d7aba2127b835f959d
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075071"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78555887"
 ---
 # <a name="authentication-filters-in-aspnet-web-api-2"></a>Filtres d’authentification dans API Web ASP.NET 2
 

@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/data/using-web-api-with-entity-framework/part-3
-title: Utiliser des Migrations Code First pour amorcer la base de données | Microsoft Docs
+title: Utiliser Migrations Code First pour amorcer la base de données | Microsoft Docs
 author: MikeWasson
 description: ''
 ms.author: riande
@@ -9,53 +9,53 @@ ms.assetid: 76e2013a-65b7-488c-834d-9448ecea378e
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-3
 msc.type: authoredcontent
 ms.openlocfilehash: 257bd06848adb949330856cc71eeb3d685e9d036
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421665"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557455"
 ---
-# <a name="use-code-first-migrations-to-seed-the-database"></a>Utiliser des Migrations Code First pour amorcer la base de données
+# <a name="use-code-first-migrations-to-seed-the-database"></a>Utiliser Migrations Code First pour amorcer la base de données
 
 par [Mike Wasson](https://github.com/MikeWasson)
 
 [Télécharger le projet terminé](https://github.com/MikeWasson/BookService)
 
-Dans cette section, vous allez utiliser [Migrations Code First](https://msdn.microsoft.com/data/jj591621) dans EF pour amorcer la base de données de test.
+Dans cette section, vous allez utiliser [migrations code First](https://msdn.microsoft.com/data/jj591621) dans EF pour amorcer la base de données avec des données de test.
 
-À partir de la **outils** menu, sélectionnez **Gestionnaire de Package NuGet**, puis sélectionnez **Console du Gestionnaire de Package**. Dans la fenêtre de Console du Gestionnaire de Package, entrez la commande suivante :
+Dans le menu **Outils** , sélectionnez **Gestionnaire de package NuGet**, puis sélectionnez **console du gestionnaire de package**. Dans la fenêtre Console du Gestionnaire de package, entrez la commande suivante :
 
 [!code-console[Main](part-3/samples/sample1.cmd)]
 
-Cette commande ajoute un dossier nommé Migrations à votre projet, ainsi qu’un fichier de code nommé Configuration.cs dans le dossier Migrations.
+Cette commande ajoute un dossier nommé migrations à votre projet, ainsi qu’un fichier de code nommé Configuration.cs dans le dossier migrations.
 
 ![](part-3/_static/image1.png)
 
-Ouvrez le fichier Configuration.cs. Ajoutez le code suivant **à l’aide de** instruction.
+Ouvrez le fichier Configuration.cs. Ajoutez l’instruction **using** suivante.
 
 [!code-csharp[Main](part-3/samples/sample2.cs)]
 
-Puis ajoutez le code suivant à la **Configuration.Seed** méthode :
+Ajoutez ensuite le code suivant à la méthode **Configuration. Seed** :
 
 [!code-csharp[Main](part-3/samples/sample3.cs)]
 
-Dans la fenêtre de Console du Gestionnaire de Package, tapez les commandes suivantes :
+Dans la fenêtre console du gestionnaire de package, tapez les commandes suivantes :
 
 [!code-console[Main](part-3/samples/sample4.cmd)]
 
-La première commande génère du code qui crée la base de données, et la deuxième commande exécute ce code. La base de données est créé localement, à l’aide de [LocalDB](https://msdn.microsoft.com/library/hh510202.aspx).
+La première commande génère du code qui crée la base de données, et la deuxième commande exécute ce code. La base de données est créée localement [à l'](https://msdn.microsoft.com/library/hh510202.aspx)aide de la base de données locale.
 
 ![](part-3/_static/image2.png)
 
-## <a name="explore-the-api-optional"></a>Explorer l’API (facultatif)
+## <a name="explore-the-api-optional"></a>Explorez l’API (facultatif)
 
-Appuyez sur F5 pour exécuter l’application en mode débogage. Visual Studio démarre IIS Express et exécute votre application web. Ensuite, Visual Studio lance un navigateur et ouvre la page d’accueil de l’application.
+Appuyez sur F5 pour exécuter l'application en mode débogage. Visual Studio démarre IIS Express et exécute votre application Web. Visual Studio lance ensuite un navigateur et ouvre la page d’hébergement de l’application.
 
-Lorsque Visual Studio s’exécute à un projet web, il affecte un numéro de port. Dans l’image ci-dessous, le numéro de port est 50524. Lorsque vous exécutez l’application, vous verrez un numéro de port différent.
+Lorsque Visual Studio exécute un projet Web, il attribue un numéro de port. Dans l’image ci-dessous, le numéro de port est 50524. Lorsque vous exécutez l’application, vous verrez un numéro de port différent.
 
 ![](part-3/_static/image3.png)
 
-La page d’accueil est implémentée à l’aide d’ASP.NET MVC. En haut de la page, il existe un lien indiquant que « API ». Ce lien vous dirige vers une page d’aide générée automatiquement pour l’API web. (Pour savoir comment cette page d’aide est générée, et comment vous pouvez ajouter votre propre documentation à la page, consultez [création de Pages d’aide pour l’API Web ASP.NET](../../getting-started-with-aspnet-web-api/creating-api-help-pages.md).) Vous pouvez cliquer sur l’aide des liens de page pour afficher les détails sur l’API, y compris le format de demande et de réponse.
+La page d’hébergement est implémentée à l’aide de ASP.NET MVC. En haut de la page se trouve un lien indiquant « API ». Ce lien vous amène à une page d’aide générée automatiquement pour l’API Web. (Pour savoir comment cette page d’aide est générée et comment vous pouvez ajouter votre propre documentation à la page, consultez [création de pages d’aide pour API Web ASP.net](../../getting-started-with-aspnet-web-api/creating-api-help-pages.md).) Vous pouvez cliquer sur la page d’aide Liens pour afficher des détails sur l’API, y compris le format de la demande et de la réponse.
 
 ![](part-3/_static/image4.png)
 
@@ -63,39 +63,39 @@ L’API permet les opérations CRUD sur la base de données. Voici un résumé d
 
 | Auteurs |  |
 | --- | -- |
-| GET api/authors | Obtenir tous les auteurs. |
-| GET api/authors/{id} | Obtenir un auteur par ID. |
-| POST /api/authors | Créer un nouvel auteur. |
+| GET api/authors | Récupération de tous les auteurs. |
+| GET api/authors/{id} | Obtient un auteur par ID. |
+| POST /api/authors | Créez un auteur. |
 | PUT /api/authors/{id} | Mettre à jour un auteur existant. |
 | DELETE /api/authors/{id} | Supprimer un auteur. |
 
 | Livres |  |
 | --- | -- |
-| GET /api/books | Obtenir tous les livres. |
+| GET /api/books | Récupération de tous les livres. |
 | GET /api/books/{id} | Obtenir un livre par ID. |
-| POST /api/books | Créer un nouveau livre. |
+| POST /api/books | Créez un livre. |
 | PUT /api/books/{id} | Mettre à jour un livre existant. |
 | DELETE /api/books/{id} | Supprimer un livre. |
 
 ## <a name="view-the-database-optional"></a>Afficher la base de données (facultatif)
 
-Lorsque vous avez exécuté la commande Update-Database, EF créé la base de données et appelé le `Seed` (méthode). Lorsque vous exécutez l’application localement, EF utilise [LocalDB](https://blogs.msdn.com/b/sqlexpress/archive/2011/07/12/introducing-localdb-a-better-sql-express.aspx). Vous pouvez afficher la base de données dans Visual Studio. À partir de la **vue** menu, sélectionnez **Explorateur d’objets SQL Server**.
+Lorsque vous avez exécuté la commande Update-Database, EF a créé la base de données et a appelé la méthode `Seed`. Lorsque vous exécutez l’application localement, [EF utilise la](https://blogs.msdn.com/b/sqlexpress/archive/2011/07/12/introducing-localdb-a-better-sql-express.aspx)base de données locale. Vous pouvez afficher la base de données dans Visual Studio. Dans le menu **Vue**, sélectionnez **Explorateur d’objets SQL Server**.
 
 ![](part-3/_static/image5.png)
 
-Dans le **se connecter au serveur** boîte de dialogue, dans le **nom du serveur** zone d’édition, tapez « (localdb) \v11.0 ». Laissez le **authentification** option en tant que « Authentification Windows ». Cliquez sur **Connexion**.
+Dans la boîte de dialogue **se connecter au serveur** , dans la zone de texte **nom du serveur** , tapez « (base de données locale) \v11.0 ». Laissez l’option **d’authentification** « authentification Windows ». Cliquez sur **Connexion**.
 
 ![](part-3/_static/image6.png)
 
-Visual Studio se connecte à la base de données locale et affiche les bases de données existantes dans la fenêtre Explorateur d’objets SQL Server. Vous pouvez développer les nœuds pour afficher les tables EF créé.
+Visual Studio se connecte à la base de données locale et affiche vos bases de données existantes dans la fenêtre de Explorateur d’objets SQL Server. Vous pouvez développer les nœuds pour afficher les tables que EF a créées.
 
 ![](part-3/_static/image7.png)
 
-Pour afficher les données, cliquez sur une table et sélectionnez **afficher les données**.
+Pour afficher les données, cliquez avec le bouton droit sur une table, puis sélectionnez **afficher les données**.
 
 ![](part-3/_static/image8.png)
 
-La capture d’écran suivante montre les résultats de la table de la documentation. Notez que EF rempli la base de données avec les données d’amorçage, et le tableau contient la clé étrangère à la table auteurs.
+La capture d’écran suivante montre les résultats de la table Books. Notez que EF a rempli la base de données avec les données de départ et que la table contient la clé étrangère à la table authors.
 
 ![](part-3/_static/image9.png)
 

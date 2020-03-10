@@ -9,11 +9,11 @@ ms.assetid: 298789b4-2964-49f5-a0a8-d4dbeb9ff2c2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-vb
 msc.type: authoredcontent
 ms.openlocfilehash: aa9779c65fb587193dbabde55cc6900283ce239d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599361"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78535846"
 ---
 # <a name="collapsing-and-expanding-a-panel-from-javascript-vb"></a>Réduction et développement d’un panneau à partir de JavaScript (VB)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle CollapsiblePanel dans la boîte à outils de contrôle ASP.NET AJAX étend un panneau et lui offre la possibilité de réduire son contenu et de le développer à nouveau. Ces deux actions peuvent également être déclenchées à partir de code JavaScript personnalisé.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle CollapsiblePanel dans la boîte à outils de contrôle ASP.NET AJAX étend un panneau et lui offre la possibilité de réduire son contenu et de le développer à nouveau. Ces deux actions peuvent également être déclenchées à partir de code JavaScript personnalisé.
 
