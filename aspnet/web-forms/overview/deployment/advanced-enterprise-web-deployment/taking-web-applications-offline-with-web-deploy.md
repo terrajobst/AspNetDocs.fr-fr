@@ -9,17 +9,17 @@ ms.assetid: 3e9f6e7d-8967-4586-94d5-d3a122f12529
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/taking-web-applications-offline-with-web-deploy
 msc.type: authoredcontent
 ms.openlocfilehash: ba60664a0c3daa0650cd7e7cfc4ab9da08df3440
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075136"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78526067"
 ---
 # <a name="taking-web-applications-offline-with-web-deploy"></a>Passage d’applications web hors connexion avec Web Deploy
 
 par [Jason Lee](https://github.com/jrjlee)
 
-[Télécharger le PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
+[Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Cette rubrique explique comment mettre une application Web hors connexion pendant la durée d’un déploiement automatisé à l’aide de l’outil de déploiement Web Internet Information Services (IIS) (Web Deploy). Les utilisateurs qui accèdent à l’application Web sont redirigés vers une application *\_fichier. htm hors connexion* jusqu’à ce que le déploiement soit terminé.
 
@@ -157,7 +157,7 @@ La prochaine fois que vous générez et empaquetez votre projet d’application 
 
 Cette rubrique explique comment mettre une application Web hors connexion pendant la durée d’un déploiement, en publiant une application *\_fichier. htm hors connexion* sur le serveur de destination au début du processus de déploiement et en la supprimant à la fin. Elle a également expliqué comment inclure une *application\_fichier. htm hors connexion* dans un package de déploiement Web.
 
-## <a name="further-reading"></a>Pour aller plus loin
+## <a name="further-reading"></a>informations supplémentaires
 
 Pour plus d’informations sur le processus d’empaquetage et de déploiement, consultez [génération et empaquetage de projets d’application Web](../web-deployment-in-the-enterprise/building-and-packaging-web-application-projects.md), [Configuration des paramètres pour le déploiement de packages Web](../web-deployment-in-the-enterprise/configuring-parameters-for-web-package-deployment.md)et [déploiement de packages Web](../web-deployment-in-the-enterprise/deploying-web-packages.md).
 

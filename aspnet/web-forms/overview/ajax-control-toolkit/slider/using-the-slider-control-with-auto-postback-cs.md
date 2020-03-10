@@ -9,11 +9,11 @@ ms.assetid: 4d85e9fb-91e6-41f2-9c13-754549b19c27
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 785d62108667fddac42994344cde265e82aca8f4
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74598389"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78553619"
 ---
 # <a name="using-the-slider-control-with-auto-postback-c"></a>Utilisation du contrôle Slider avec publication automatique (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle Slider dans la boîte à outils de contrôle AJAX fournit un curseur graphique qui peut être contrôlé à l’aide de la souris. Il est possible de faire de la publication automatique du curseur une fois que sa valeur est modifiée.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle Slider dans la boîte à outils de contrôle AJAX fournit un curseur graphique qui peut être contrôlé à l’aide de la souris. Il est possible de faire de la publication automatique du curseur une fois que sa valeur est modifiée.
 
@@ -58,4 +58,4 @@ Le déplacement du curseur déclenche une publication ([cliquez pour afficher l�
 Ensuite, la date de cette modification est écrite dans l’étiquette ([cliquez pour afficher l’image en taille réelle](using-the-slider-control-with-auto-postback-cs/_static/image6.png))
 
 > [!div class="step-by-step"]
-> [Suivant](databinding-the-slider-control-cs.md)
+> [Next](databinding-the-slider-control-cs.md)

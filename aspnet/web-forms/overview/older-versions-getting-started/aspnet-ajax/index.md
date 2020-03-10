@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/aspnet-ajax/index
-title: ASP.NET 3.5 - AJAX | Microsoft Docs
+title: ASP.NET 3,5-AJAX | Microsoft Docs
 author: rick-anderson
-description: À propos de la bibliothèque AJAX ASP.NET, y compris l’UpdatePanel et mises à jour de page partielle, l’authentification, la localisation et le débogage.
+description: À propos de la bibliothèque ASP.NET AJAX, y compris les UpdatePanel et les mises à jour de pages partielles, l’authentification, la localisation et le débogage.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: b7d13a9f-3d44-431d-bea7-eb2da524de9d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax
 msc.type: chapter
 ms.openlocfilehash: 5ccbab245e8d0fd21094b625d876ab9e0360de94
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109539"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78625810"
 ---
 # <a name="aspnet-35---ajax"></a>ASP.NET 3.5 - AJAX
 
-> À propos de la bibliothèque AJAX ASP.NET, y compris l’UpdatePanel et mises à jour de page partielle, l’authentification, la localisation et le débogage.
+> À propos de la bibliothèque ASP.NET AJAX, y compris les UpdatePanel et les mises à jour de pages partielles, l’authentification, la localisation et le débogage.
 
 - [Présentation des mises à jour de page partielles avec ASP.NET AJAX](understanding-partial-page-updates-with-asp-net-ajax.md)
 - [Présentation des déclencheurs UpdatePanel d’ASP.NET AJAX](understanding-asp-net-ajax-updatepanel-triggers.md)

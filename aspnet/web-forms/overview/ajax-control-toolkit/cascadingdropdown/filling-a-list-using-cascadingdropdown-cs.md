@@ -9,11 +9,11 @@ ms.assetid: f949aafa-fe57-43b0-b722-f0dd33a900be
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs
 msc.type: authoredcontent
 ms.openlocfilehash: b5e9874fb5b6d3e55c8af5b85d12bf1ffacc116b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74574841"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614211"
 ---
 # <a name="filling-a-list-using-cascadingdropdown-c"></a>Remplissage d’une liste avec CascadingDropDown (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle CascadingDropDown dans la boîte à outils de contrôle AJAX étend un contrôle DropDownList afin que les modifications apportées à un contrôle DropDownList chargent les valeurs associées dans un autre DropDownList. (Par exemple, une liste fournit une liste des États-Unis et la liste suivante est ensuite remplie avec les villes principales dans cet État.) La première difficulté à résoudre consiste à remplir une liste déroulante à l’aide de ce contrôle.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle CascadingDropDown dans la boîte à outils de contrôle AJAX étend un contrôle DropDownList afin que les modifications apportées à un contrôle DropDownList chargent les valeurs associées dans un autre DropDownList. (Par exemple, une liste fournit une liste des États-Unis et la liste suivante est ensuite remplie avec les villes principales dans cet État.) La première difficulté à résoudre consiste à remplir une liste déroulante à l’aide de ce contrôle.
 
@@ -64,4 +64,4 @@ Le chargement de la page dans le navigateur déclenche l’remplissage de la lis
 La liste est renseignée automatiquement ([cliquez pour afficher l’image en taille réelle](filling-a-list-using-cascadingdropdown-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](using-cascadingdropdown-with-a-database-cs.md)
+> [Next](using-cascadingdropdown-with-a-database-cs.md)

@@ -9,11 +9,11 @@ ms.assetid: 57666c69-2b0f-423a-a61d-be49547fa585
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4
 msc.type: authoredcontent
 ms.openlocfilehash: 583e782641efea9a9517edb31f7718b28203d756
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457490"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78538947"
 ---
 # <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-4"></a>Utilisation du calendrier contextuel de la fenêtre contextuelle de l’interface utilisateur HTML5 et jQuery avec ASP.NET MVC-partie 4
 
@@ -31,7 +31,7 @@ Pour commencer, ouvrez le fichier *Movie.cs* et ajoutez l’attribut [DataType](
 
 Ce code provoque l’affichage du champ `ReleaseDate` sans l’heure dans les modèles d’affichage et les modèles de modification. Si votre application contient un modèle *date. cshtml* dans le dossier *Views\Shared\EditorTemplates* ou dans le dossier *Views\Movies\EditorTemplates* , ce modèle sera utilisé pour afficher toute propriété de `DateTime` lors de la modification. Dans le cas contraire, le système de création de modèles ASP.NET intégré affiche la propriété en tant que date.
 
-Appuyez sur Ctrl+F5 pour exécuter l’application. Sélectionnez un lien Modifier pour vérifier que le champ d’entrée pour la date de publication n’indique que la date.
+Appuyez sur CTRL+F5 pour exécuter l'application. Sélectionnez un lien Modifier pour vérifier que le champ d’entrée pour la date de publication n’indique que la date.
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/_static/image1.png)
 
@@ -57,7 +57,7 @@ La ligne suivante est une application d’assistance [html. TextBox](https://msd
 
 Le type de `date` est un type d’entrée HTML5 qui permet aux navigateurs prenant en charge HTML5 d’afficher un contrôle de calendrier HTML5. Plus tard, vous ajouterez du JavaScript pour raccorder le sélecteur jQuery à l’élément `Html.TextBox` à l’aide de la classe `datefield`.
 
-Appuyez sur Ctrl+F5 pour exécuter l’application. Vous pouvez vérifier que la propriété `ReleaseDate` dans la vue Edit utilise le modèle Edit, car le modèle affiche &quot;à l’aide du modèle de date&quot; juste avant la zone de texte `ReleaseDate` Text, comme indiqué dans cette image :
+Appuyez sur CTRL+F5 pour exécuter l'application. Vous pouvez vérifier que la propriété `ReleaseDate` dans la vue Edit utilise le modèle Edit, car le modèle affiche &quot;à l’aide du modèle de date&quot; juste avant la zone de texte `ReleaseDate` Text, comme indiqué dans cette image :
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/_static/image2.png)
 
@@ -127,7 +127,7 @@ La section `head` complète est présentée ici :
 
 La méthode d' [assistance de contenu d’URL](https://msdn.microsoft.com/library/system.web.mvc.urlhelper.content.aspx) convertit le chemin d’accès de la ressource en chemin d’accès absolu. Vous devez utiliser `@URL.Content` pour référencer correctement ces ressources lorsque l’application s’exécute sur IIS.
 
-Appuyez sur Ctrl+F5 pour exécuter l’application. Sélectionnez un lien modifier, puis placez le point d’insertion dans le champ **libéré** . Le calendrier contextuel jQuery UI s’affiche.
+Appuyez sur CTRL+F5 pour exécuter l'application. Sélectionnez un lien modifier, puis placez le point d’insertion dans le champ **libéré** . Le calendrier contextuel jQuery UI s’affiche.
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/_static/image7.png)
 

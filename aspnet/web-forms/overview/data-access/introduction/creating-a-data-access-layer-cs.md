@@ -9,11 +9,11 @@ ms.assetid: cfe2a6a0-1e56-4dc8-9537-c8ec76ba96a4
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-data-access-layer-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 5aaf97dc8448dcb7b94ef2e4e23f34fd37ac4426
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74115174"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78605041"
 ---
 # <a name="creating-a-data-access-layer-c"></a>Création d’une couche d’accès aux données (C#)
 
@@ -168,7 +168,7 @@ Ce code n’a pas besoin d’écrire un peu de code spécifique à l’accès au
 
 Chaque objet utilisé dans cet exemple est également fortement typé, ce qui permet à Visual Studio de fournir IntelliSense et la vérification de type au moment de la compilation. Et mieux que tous les DataTables retournés par le TableAdapter peuvent être liés à des contrôles Web de données ASP.NET, tels que GridView, DetailsView, DropDownList, CheckBoxList et plusieurs autres. L’exemple suivant illustre la liaison du DataTable retourné par la méthode **GetProducts ()** à un GridView dans une simple ou trois lignes de code dans la **page\_** le gestionnaire d’événements Load.
 
-AllProducts. aspx
+AllProducts.aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-cs/samples/sample2.aspx)]
 
@@ -422,7 +422,7 @@ Ces données peuvent également être affichées dans n’importe quel ASP. Cont
 
 Nous allons examiner comment afficher ces rapports maître/détail dans les prochains didacticiels. Pour l’instant, cet exemple est conçu pour illustrer l’utilisation de la méthode personnalisée ajoutée à la classe **Northwind. SuppliersRow** .
 
-SuppliersAndProducts. aspx
+SuppliersAndProducts.aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-cs/samples/sample24.aspx)]
 
@@ -469,4 +469,4 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, reportez
 Cette série de didacticiels a été examinée par de nombreux réviseurs utiles. Les réviseurs de leads pour ce didacticiel sont Ron Green, Hilton Giesenow, Denis Patterson, Liz Shulok, Gomez et Carlos Santos. Vous souhaitez revoir mes prochains articles MSDN ? Si c’est le cas, insérez une ligne sur [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Suivant](creating-a-business-logic-layer-cs.md)
+> [Next](creating-a-business-logic-layer-cs.md)

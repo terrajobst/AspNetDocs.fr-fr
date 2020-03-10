@@ -9,11 +9,11 @@ ms.assetid: f44c166e-7e91-48a0-a6f8-d9285f3594e5
 msc.legacyurl: /whitepapers/mvc3-release-notes
 msc.type: content
 ms.openlocfilehash: 504202068f5db4f8614bba02e8066ffecfd15b48
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74619236"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78618047"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC
 
@@ -85,13 +85,13 @@ ms.locfileid: "74619236"
     - [Nouvelle prise en charge de la syntaxe Razor VBHTML](#0.1__Toc274034225)
     - [Contrôle plus granulaire sur ValidateInputAttribute](#0.1__Toc274034226)
     - [Les applications auxiliaires convertissent les traits de soulignement en tirets pour les noms d’attributs HTML spécifiés à l’aide d’objets anonymes](#0.1__Toc274034227)
-    - [Résolutions de bogues](#0.1__Toc274034228)
+    - [Résolution des bogues](#0.1__Toc274034228)
     - [Modifications avec rupture](#0.1__Toc274034229)
     - [Problèmes connus](#0.1__Toc274034230)
 - [AVERTISSEMENT](#0.1__Toc274034231)
 
 <a id="overview"></a>
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Ce document décrit la version de ASP.NET MVC 3 RTM pour Visual Studio 2010. ASP.NET MVC est une infrastructure de développement d’applications Web qui utilise le modèle MVC (Model-View-Controller). Le programme d’installation de ASP.NET MVC 3 comprend les composants suivants :
 
@@ -120,7 +120,7 @@ https://go.microsoft.com/fwlink/?LinkID=208140
 ASP.NET MVC 3 peut être installé et peut s’exécuter côte à côte avec ASP.NET MVC 2.
 
 <a id="software-requirements"></a>
-## <a name="software-requirements"></a>Configuration logicielle requise
+## <a name="software-requirements"></a>Configuration logicielle
 
 Les composants d’exécution ASP.NET MVC 3 requièrent les logiciels suivants :
 
@@ -141,7 +141,7 @@ Des didacticiels et d’autres informations sur ASP.NET MVC sont disponibles sur
 [https://www.asp.net/mvc/](../mvc/index.md)
 
 <a id="support"></a>
-## <a name="support"></a>Prise en charge de
+## <a name="support"></a>Assistance
 
 Cette version est entièrement prise en charge. Pour plus d’informations sur l’obtention d’un support technique, consultez le [site web support Microsoft](https://support.microsoft.com/).
 
@@ -169,7 +169,7 @@ Pour mettre à niveau manuellement une application ASP.NET MVC 2 existante vers 
 
     [!code-console[Main](mvc3-release-notes/samples/sample1.cmd)]
 
-    Remplacez-la par ce qui suit :
+    Remplacez-le par celui-ci :
 
     [!code-console[Main](mvc3-release-notes/samples/sample2.cmd)]
 6. Dans Explorateur de solutions, supprimez la référence à *System. Web. Mvc* (qui pointe vers la dll de la version 2), puis ajoutez une référence à *System. Web. Mvc* (v 3.0.0.0).
@@ -507,7 +507,7 @@ La prise en charge de la modification de la liste des modèles et des moteurs d�
 
 Les modèles par défaut sont les suivants :
 
-vide. Contient un ensemble minimal de fichiers pour un projet MVC ASP.NET, y compris la structure de répertoire par défaut pour les projets MVC ASP.NET, un fichier site. css contenant les styles ASP.NET MVC par défaut et un répertoire de scripts qui contient les fichiers JavaScript par défaut.
+Vide : Contient un ensemble minimal de fichiers pour un projet MVC ASP.NET, y compris la structure de répertoire par défaut pour les projets MVC ASP.NET, un fichier site. css contenant les styles ASP.NET MVC par défaut et un répertoire de scripts qui contient les fichiers JavaScript par défaut.
 
 Application Internet. Contient des exemples de fonctionnalités qui montrent comment utiliser le fournisseur d’appartenances avec ASP.NET MVC.
 
@@ -578,7 +578,7 @@ ClassName (espace de noms)
 
 Dans les versions antérieures, cela aurait été affiché comme suit :
 
-Namespace. ClassName
+Namespace.ClassName
 
 <a id="_Toc276711793"></a>
 ### <a name="granular-request-validation"></a>Validation granulaire des demandes
@@ -648,7 +648,7 @@ La prise en charge de la modification de la liste des modèles et des moteurs d�
 
 Les modèles par défaut sont les suivants :
 
-vide. Contient un ensemble minimal de fichiers pour un projet MVC ASP.NET, y compris la structure de répertoire par défaut pour les projets MVC ASP.NET, un petit fichier. CSS de site contenant les styles ASP.NET MVC par défaut et un répertoire de scripts qui contient les fichiers JavaScript par défaut.
+Vide : Contient un ensemble minimal de fichiers pour un projet MVC ASP.NET, y compris la structure de répertoire par défaut pour les projets MVC ASP.NET, un petit fichier. CSS de site contenant les styles ASP.NET MVC par défaut et un répertoire de scripts qui contient les fichiers JavaScript par défaut.
 
 Application Internet. Contient des exemples de fonctionnalités qui montrent comment utiliser le fournisseur d’appartenances dans ASP.NET MVC.
 
@@ -733,15 +733,15 @@ La nouvelle version comprend la prise en charge de la résolution des dépendanc
 
 ASP.NET MVC comprend des méthodes d’assistance AJAX comme les suivantes :
 
-- Ajax. ActionLink
+- Ajax.ActionLink
 - Ajax. RouteLink
 - Ajax. BeginForm
-- Ajax. BeginRouteForm
+- Ajax.BeginRouteForm
 
 Ces méthodes utilisent JavaScript pour appeler une méthode d’action sur le serveur au lieu d’utiliser une publication (postback) complète. Cette fonctionnalité a été mise à jour pour tirer parti de jQuery de manière discrète. Au lieu d’émettre indiscrètement des scripts clients Inline, ces méthodes d’assistance séparent le comportement du balisage en émettant des attributs HTML5 à l’aide du préfixe *Data-Ajax* . Le comportement est ensuite appliqué au balisage en référençant les fichiers JavaScript appropriés. Assurez-vous que les fichiers JavaScript suivants sont référencés :
 
 - jQuery-1.4.1. js
-- jQuery. discrète. Ajax. js
+- jquery.unobtrusive.ajax.js
 
 Cette fonctionnalité est activée par défaut dans le fichier Web. config dans les nouveaux modèles de projet ASP.NET MVC 3, mais elle est désactivée par défaut pour les projets existants. Pour plus d’informations, consultez [Ajout d’indicateurs à l’ensemble de l’application pour la validation du client et JavaScript discret](#0.1_AddedApplicationWideFlagsForClientValida) plus loin dans ce document.
 
@@ -758,8 +758,8 @@ Cela nécessite que la propriété ViewContext. UnobtrusiveJavaScriptEnabled ait
 Assurez-vous également que les fichiers JavaScript suivants sont référencés.
 
 - jQuery-1.4.1. js
-- jQuery. Validate. js
-- jQuery. Validate. undiscret. js
+- jquery.validate.js
+- jquery.validate.unobtrusive.js
 
 Cette fonctionnalité est activée par défaut dans le fichier Web. config dans les nouveaux modèles de projet ASP.NET MVC 3, mais elle est désactivée par défaut pour les projets existants. Pour plus d’informations, consultez [nouveaux indicateurs à l’ensemble de l’application pour la validation du client et JavaScript discret](#0.1_AddedApplicationWideFlagsForClientValida) plus loin dans ce document.
 
@@ -839,7 +839,7 @@ JsonValueProviderFactory est désormais inscrit par défaut.
 
 L’ordre d’exécution des filtres d’exception a changé pour les filtres d’exception qui ont la même valeur d’ordre. Dans ASP.NET MVC 2 et versions antérieures, les filtres d’exception sur le contrôleur avec le même ordre que ceux sur une méthode d’action ont été exécutés avant les filtres d’exception sur la méthode d’action. C’est généralement le cas lorsque des filtres d’exception ont été appliqués sans valeur d’ordre spécifiée. Dans ASP.NET MVC 3, cet ordre a été inversé afin que le gestionnaire d’exceptions le plus spécifique s’exécute en premier. Comme dans les versions antérieures, si la propriété Order est explicitement spécifiée, les filtres sont exécutés dans l’ordre spécifié.
 
-## <a id="0.1__Toc274034230"></a>Problèmes connus
+## <a id="0.1__Toc274034230"></a>  Problèmes connus
 
 Au cours de l'installation, la boîte de dialogue d'acceptation du CLUF affiche les termes du contrat de licence dans une fenêtre plus petite que prévue.
 
@@ -861,6 +861,6 @@ Il existe un problème connu qui amène l’authentification des formulaires à 
 
 ## <a id="0.1__Toc274034231"></a>AVERTISSEMENT
 
-© 2011 Microsoft Corporation. Tous droits réservés. Ce document est fourni « en l'état ». Les informations et opinions exprimées dans ce document, y compris les URL et autres références à des sites Internet Web, peuvent changer sans préavis. L'utilisation éventuelle de ce document se fait sous votre entière responsabilité.
+© 2011 Microsoft Corporation. Tous droits réservés. Ce document est fourni « en l’état ». Les informations et les points de vue exprimés dans ce document, y compris les URL et autres références à des sites web, peuvent être modifiés sans préavis. Vous assumez tous les risques liés à leur utilisation.
 
 Ce document ne vous donne aucun droit légal de propriété intellectuelle quant aux produits Microsoft. Vous pouvez copier et utiliser ce document à titre de référence interne.

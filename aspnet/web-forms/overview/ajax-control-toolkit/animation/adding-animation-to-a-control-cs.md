@@ -9,11 +9,11 @@ ms.assetid: 0f1fc1f5-9dbd-44e7-931e-387d42f0342b
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/adding-animation-to-a-control-cs
 msc.type: authoredcontent
 ms.openlocfilehash: dd63157fe616c5f6874b7cca11f4ede15018df04
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74607114"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614449"
 ---
 # <a name="adding-animation-to-a-control-c"></a>Ajout d’une animation à un contrôle (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle d’animation dans ASP.NET AJAX Control Toolkit n’est pas seulement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Ce didacticiel montre comment configurer une telle animation.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle d’animation dans ASP.NET AJAX Control Toolkit n’est pas seulement un contrôle, mais une infrastructure entière pour ajouter des animations à un contrôle. Ce didacticiel montre comment configurer une telle animation.
 
@@ -75,4 +75,4 @@ Lorsque vous exécutez ce script, le panneau s’affiche et disparaît en fondu 
 Le panneau est en fondu ([cliquez pour afficher l’image en taille réelle](adding-animation-to-a-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](executing-several-animations-at-the-same-time-cs.md)
+> [Next](executing-several-animations-at-the-same-time-cs.md)

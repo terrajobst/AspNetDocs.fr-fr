@@ -10,11 +10,11 @@ ms.assetid: 2e260430-d13c-4658-bd05-e256fc0d63b8
 msc.legacyurl: /identity/overview/migrations/migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity
 msc.type: authoredcontent
 ms.openlocfilehash: 31f02a0cec3c531c45c37b7aad8456e01e80b5ea
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456112"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616570"
 ---
 # <a name="migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity-c"></a>Migration des données du fournisseur universel pour l’appartenance et les profils utilisateur vers ASP.NET Identity (C#)
 
@@ -41,7 +41,7 @@ Les informations de profil sont stockées sous forme de données XML et binaires
 
 Après la migration de l’application pour utiliser le nouveau système de ASP.NET Identity, les informations de profil sont désérialisées et stockées sous forme de propriétés sur la classe utilisateur. Chaque propriété peut ensuite être mappée sur les colonnes de la table utilisateur. L’avantage ici est que les propriétés peuvent être utilisées directement à l’aide de la classe utilisateur, en plus de ne pas avoir à sérialiser/désérialiser les informations de données à chaque fois qu’elle y accède.
 
-## <a name="getting-started"></a>Mise en route
+## <a name="getting-started"></a>Commencer
 
 1. Créez une nouvelle application ASP.NET 4,5 Web Forms dans Visual Studio 2012. L’exemple actuel utilise le modèle Web Forms, mais vous pouvez également utiliser l’application MVC.  
     ![](migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity/_static/image1.jpg)

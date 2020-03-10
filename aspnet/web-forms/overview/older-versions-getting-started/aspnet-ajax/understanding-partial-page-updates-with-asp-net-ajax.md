@@ -9,11 +9,11 @@ ms.assetid: 54d9df99-1161-4899-b4e8-2679c85915e7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax
 msc.type: authoredcontent
 ms.openlocfilehash: 4b87cb8f58dbd7f27b16bcb0d488ff361770d4fe
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74622944"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78545968"
 ---
 # <a name="understanding-partial-page-updates-with-aspnet-ajax"></a>Présentation des mises à jour de page partielles avec ASP.NET AJAX
 
@@ -106,13 +106,13 @@ Propriétés activées pour le balisage :
 | **Nom de la propriété** | **Type** | **Description** |
 | --- | --- | --- |
 | AllowCustomErrors-redirection | Bool | Spécifie s’il faut utiliser la section d’erreur personnalisée du fichier Web. config pour gérer les erreurs. |
-| AsyncPostBackError-message | String | Obtient ou définit le message d’erreur envoyé au client si une erreur est générée. |
+| AsyncPostBackError-Message | Chaîne | Obtient ou définit le message d’erreur envoyé au client si une erreur est générée. |
 | AsyncPostBack-Timeout | Int32 | Obtient ou définit la durée par défaut pendant laquelle un client doit attendre la fin de la requête asynchrone. |
-| EnableScript-globalisation | Bool | Obtient ou définit une valeur indiquant si la globalisation de script est activée. |
-| EnableScript-localisation | Bool | Obtient ou définit une valeur indiquant si la localisation de script est activée. |
+| EnableScript-Globalization | Bool | Obtient ou définit une valeur indiquant si la globalisation de script est activée. |
+| EnableScript-Localization | Bool | Obtient ou définit une valeur indiquant si la localisation de script est activée. |
 | ScriptLoadTimeout | Int32 | Détermine le nombre de secondes autorisées pour le chargement de scripts dans le client |
 | ScriptMode | Enum (auto, Debug, Release, Inherit) | Obtient ou définit s’il faut restituer les versions Release des scripts |
-| ScriptPath | String | Obtient ou définit le chemin d’accès racine de l’emplacement des fichiers de script à envoyer au client. |
+| ScriptPath | Chaîne | Obtient ou définit le chemin d’accès racine de l’emplacement des fichiers de script à envoyer au client. |
 
 Propriétés de code uniquement :
 
@@ -134,7 +134,7 @@ Méthodes de code publiques :
 
 Descendants de balisage :
 
-| **Référence** | **Description** |
+| **Tag** | **Description** |
 | --- | --- |
 | &lt;AuthenticationService&gt; | Fournit des détails sur le proxy au service d’authentification ASP.NET. |
 | &lt;ProfileService&gt; | Fournit des détails sur le proxy au service de profilage ASP.NET. |
@@ -190,17 +190,17 @@ Propriétés de code uniquement :
 | IsInPartialRendering | bool | Obtient une valeur indiquant si UpdatePanel prend en charge le rendu partiel pour la requête actuelle. |
 | ContentTemplate | ITemplate | Obtient le modèle de balisage pour la demande de mise à jour. |
 | ContentTemplateContainer | Contrôle | Obtient le modèle de programmation pour la demande de mise à jour. |
-| Déclencheurs | UpdatePanel-TriggerCollection | Obtient la liste des déclencheurs associés à l’UpdatePanel actuel. |
+| déclencheurs | UpdatePanel-TriggerCollection | Obtient la liste des déclencheurs associés à l’UpdatePanel actuel. |
 
 Méthodes de code publiques :
 
 | **Nom de la méthode** | **Type** | **Description** |
 | --- | --- | --- |
-| Update () | Void | Met à jour l’UpdatePanel spécifié par programme. Permet à une requête de serveur de déclencher un rendu partiel d’un UpdatePanel qui n’est pas déclenché autrement. |
+| Update() | Void | Met à jour l’UpdatePanel spécifié par programme. Permet à une requête de serveur de déclencher un rendu partiel d’un UpdatePanel qui n’est pas déclenché autrement. |
 
 Descendants de balisage :
 
-| **Référence** | **Description** |
+| **Tag** | **Description** |
 | --- | --- |
 | &lt;ContentTemplate&gt; | Spécifie le balisage à utiliser pour restituer le résultat de rendu partiel. Enfant de &lt;asp : UpdatePanel&gt;. |
 | &lt;Déclencheurs&gt; | Spécifie une collection de *n* contrôles associés à la mise à jour de cet UpdatePanel. Enfant de &lt;asp : UpdatePanel&gt;. |
@@ -269,13 +269,13 @@ Propriétés activées pour le balisage :
 
 | **Nom de la propriété** | **Type** | **Description** |
 | --- | --- | --- |
-| AssociatedUpdate-PanelID | String | Spécifie l’ID de l’UpdatePanel sur lequel ce UpdateProgress doit signaler. |
-| DisplayAfter | int | Spécifie le délai d’attente en millisecondes avant que ce contrôle ne s’affiche après le début de la requête asynchrone. |
+| AssociatedUpdate-PanelID | Chaîne | Spécifie l’ID de l’UpdatePanel sur lequel ce UpdateProgress doit signaler. |
+| DisplayAfter | Int | Spécifie le délai d’attente en millisecondes avant que ce contrôle ne s’affiche après le début de la requête asynchrone. |
 | DynamicLayout | bool | Spécifie si la progression est rendue dynamiquement. |
 
 Descendants de balisage :
 
-| **Référence** | **Description** |
+| **Tag** | **Description** |
 | --- | --- |
 | &lt;ProgressTemplate&gt; | Contient l’ensemble de modèles de contrôle pour le contenu qui sera affiché avec ce contrôle. |
 
@@ -302,4 +302,4 @@ Ensemble, ces outils aident à créer une expérience utilisateur riche et trans
 Scott Cate travaille avec les technologies Web de Microsoft depuis 1997 et est le Président de myKB.com ([www.myKB.com](http://www.myKB.com)), où il se spécialise dans l’écriture d’applications ASP.net axées sur les solutions logicielles de la base de connaissances. Scott peut être contacté par e-mail à [scott.cate@myKB.com](mailto:scott.cate@myKB.com) ou son blog à l’adresse [ScottCate.com](http://ScottCate.com)
 
 > [!div class="step-by-step"]
-> [Suivant](understanding-asp-net-ajax-updatepanel-triggers.md)
+> [Next](understanding-asp-net-ajax-updatepanel-triggers.md)

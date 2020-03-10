@@ -9,11 +9,11 @@ ms.assetid: 1e33d1c6-3f9f-4c26-81e2-2a8f8907bb05
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 72aaca84b8c8d6e558d4c946faa57fa999d48bf8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74570183"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78630577"
 ---
 # <a name="configuring-a-website-that-uses-application-services-c"></a>Configuration d’un site web qui utilise les services d’application (C#)
 
@@ -127,7 +127,7 @@ Vous devez uniquement utiliser l’outil `aspnet_regsql.exe` lors du déploiemen
 
 ### <a name="copying-user-accounts-from-development-to-production"></a>Copie de comptes d’utilisateurs du développement à la production
 
-Lorsque vous utilisez les classes de fournisseur `SqlMembershipProvider` et `SqlRoleProvider` pour stocker les informations des services d’application dans une base de données SQL Server, le compte d’utilisateur et les informations de rôle sont stockés dans diverses tables de base de données, notamment `aspnet_Users`, `aspnet_Membership`, `aspnet_Roles`et `aspnet_UsersInRoles`, entre autres. Si, au cours du développement, vous créez des comptes d’utilisateur dans l’environnement de développement, vous pouvez répliquer ces comptes d’utilisateur en production en copiant les enregistrements correspondants à partir des tables de base de données applicables. Si vous avez utilisé l’Assistant Publication de base de données pour déployer les objets de base de données des services d’application, vous avez peut-être également choisi de copier les enregistrements, ce qui a pour effet que les comptes d’utilisateur créés dans le développement soient également en production. Toutefois, en fonction de vos paramètres de configuration, vous constaterez peut-être que les utilisateurs dont les comptes ont été créés en développement et copiés en production ne sont pas en mesure de se connecter à partir du site Web de production. Que donne ?
+Lorsque vous utilisez les classes de fournisseur `SqlMembershipProvider` et `SqlRoleProvider` pour stocker les informations des services d’application dans une base de données SQL Server, le compte d’utilisateur et les informations de rôle sont stockés dans diverses tables de base de données, notamment `aspnet_Users`, `aspnet_Membership`, `aspnet_Roles`et `aspnet_UsersInRoles`, entre autres. Si, au cours du développement, vous créez des comptes d’utilisateur dans l’environnement de développement, vous pouvez répliquer ces comptes d’utilisateur en production en copiant les enregistrements correspondants à partir des tables de base de données applicables. Si vous avez utilisé l’Assistant Publication de base de données pour déployer les objets de base de données des services d’application, vous avez peut-être également choisi de copier les enregistrements, ce qui a pour effet que les comptes d’utilisateur créés dans le développement soient également en production. Toutefois, en fonction de vos paramètres de configuration, vous constaterez peut-être que les utilisateurs dont les comptes ont été créés en développement et copiés en production ne sont pas en mesure de se connecter à partir du site Web de production. Quelle en est la raison ?
 
 Les classes de fournisseur `SqlMembershipProvider` et `SqlRoleProvider` ont été conçues de telle sorte qu’une base de données unique pouvait servir de magasin d’utilisateurs pour plusieurs applications, où chaque application pourrait, en théorie, avoir des utilisateurs avec des noms d’utilisateur et des rôles qui se chevauchent avec le même nom. Pour permettre cette flexibilité, la base de données gère une liste d’applications dans la table `aspnet_Applications`, et chaque utilisateur est associé à l’une de ces applications. Plus précisément, la table `aspnet_Users` contient une colonne `ApplicationId` qui relie chaque utilisateur à un enregistrement de la table `aspnet_Applications`.
 

@@ -9,11 +9,11 @@ ms.assetid: 17772912-b47b-4557-9ce9-80f22df642f7
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 37574e4cdc86f518d01d12da58cc2862bc77d463
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643198"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78527929"
 ---
 # <a name="validating-user-credentials-against-the-membership-user-store-vb"></a>Validation des informations d’identification de l’utilisateur par rapport au magasin d’utilisateurs d’appartenance (VB)
 
@@ -29,7 +29,7 @@ Dans le <a id="Tutorial05"> </a> [didacticiel précédent](creating-user-account
 
 À l’instar de la création de comptes d’utilisateur, les informations d’identification peuvent être validées par programme ou de façon déclarative. L’API d’appartenance comprend une méthode permettant de valider par programmation les informations d’identification d’un utilisateur par rapport au magasin de l’utilisateur. Et ASP.NET est fourni avec le contrôle Web login, qui restitue une interface utilisateur avec des zones de texte pour le nom d’utilisateur et le mot de passe, ainsi qu’un bouton pour la connexion.
 
-Dans ce didacticiel, nous allons examiner comment valider les informations d’identification d’un utilisateur par rapport au magasin de l’utilisateur d’appartenance à l’aide des deux méthodes de programmation et du contrôle de connexion. Nous verrons également comment personnaliser l’apparence et le comportement du contrôle de connexion. Commençons !
+Dans ce didacticiel, nous allons examiner comment valider les informations d’identification d’un utilisateur par rapport au magasin de l’utilisateur d’appartenance à l’aide des deux méthodes de programmation et du contrôle de connexion. Nous verrons également comment personnaliser l’apparence et le comportement du contrôle de connexion. C’est parti !
 
 ## <a name="step-1-validating-credentials-against-the-membership-user-store"></a>Étape 1 : validation des informations d’identification par rapport au magasin d’utilisateurs d’appartenance
 

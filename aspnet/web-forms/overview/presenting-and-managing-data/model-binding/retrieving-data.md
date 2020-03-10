@@ -9,11 +9,11 @@ ms.assetid: 9f24fb82-c7ac-48da-b8e2-51b3da17e365
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data
 msc.type: authoredcontent
 ms.openlocfilehash: 81cca22cb4752d071d2a68986ae9ac2bed737594
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74633169"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640195"
 ---
 # <a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Récupération et affichage de données avec la liaison de modèle et les Web Forms
 
@@ -121,7 +121,7 @@ Dans le dossier **Models** , ajoutez une classe nommée **UniversityModels.cs**.
 
 Ce didacticiel utilise [migrations code First](https://docs.microsoft.com/ef/ef6/modeling/code-first/migrations/) pour créer des objets et des tables de base de données. Ces tables stockent des informations sur les étudiants et leurs cours.
 
-   1. Sélectionnez **outils** > **Gestionnaire de package NuGet** > **console du gestionnaire de package**.
+   1. Cliquez sur **Outils** > **Gestionnaire de package NuGet** > **Console du Gestionnaire de package**.
 
    2. Dans la **console du gestionnaire de package**, exécutez la commande suivante :  
       `enable-migrations -ContextTypeName ContosoUniversityModelBinding.Models.SchoolContext`
@@ -158,7 +158,7 @@ Avec les données de base de données remplies, vous êtes maintenant prêt à r
 
    [!code-aspx-csharp[Main](retrieving-data/samples/sample6.aspx)]
 
-   Points à noter :
+   Points à noter :
    * Notez la valeur définie pour la propriété `SelectMethod` dans l’élément GridView. Cette valeur spécifie la méthode utilisée pour récupérer les données GridView, que vous créez à l’étape suivante. 
    
    * La propriété `ItemType` est définie sur la classe `Student` créée précédemment. Ce paramètre vous permet de référencer des propriétés de classe dans le balisage. Par exemple, la classe `Student` a une collection nommée `Enrollments`. Vous pouvez utiliser `Item.Enrollments` pour récupérer cette collection, puis utiliser la [syntaxe LINQ](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq) pour récupérer la somme des crédits inscrits de chaque étudiant.
@@ -214,4 +214,4 @@ Dans ce didacticiel, vous avez créé des classes de modèle de données et gén
 Dans le [didacticiel](updating-deleting-and-creating-data.md) suivant de cette série, vous allez activer la mise à jour, la suppression et la création de données.
 
 > [!div class="step-by-step"]
-> [Suivant](updating-deleting-and-creating-data.md)
+> [Next](updating-deleting-and-creating-data.md)

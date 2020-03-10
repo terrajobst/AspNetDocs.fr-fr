@@ -9,11 +9,11 @@ ms.assetid: 04b7591d-106f-4f05-87e9-d416cb65a8a6
 msc.legacyurl: /web-forms/overview/data-access/database-driven-site-maps/building-a-custom-database-driven-site-map-provider-cs
 msc.type: authoredcontent
 ms.openlocfilehash: a3e27b37703b12c9796e8516f0d805aef1fdf8d8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74637259"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78611985"
 ---
 # <a name="building-a-custom-database-driven-site-map-provider-c"></a>Création d’un fournisseur de plan de site personnalisé piloté par une base de données (C#)
 
@@ -189,7 +189,7 @@ Pour des raisons de performances et d’évolutivité, il est important de mettr
 
 ## <a name="step-6-creating-the-custom-site-map-provider"></a>Étape 6 : création du fournisseur de plan de site personnalisé
 
-Pour créer un fournisseur de plan de site personnalisé qui génère le plan de site à partir des catégories et produits de la base de données Northwind, nous devons créer une classe qui étend `StaticSiteMapProvider`. À l’étape 1, j’ai demandé d’ajouter un dossier `CustomProviders` dans le dossier `App_Code` : ajoutez une nouvelle classe à ce dossier nommé `NorthwindSiteMapProvider`. Ajoutez le code suivant à la classe `NorthwindSiteMapProvider` :
+Pour créer un fournisseur de plan de site personnalisé qui génère le plan de site à partir des catégories et produits de la base de données Northwind, nous devons créer une classe qui étend `StaticSiteMapProvider`. À l’étape 1, j’ai demandé d’ajouter un dossier `CustomProviders` dans le dossier `App_Code` : ajoutez une nouvelle classe à ce dossier nommé `NorthwindSiteMapProvider`. Ajoutez le code suivant à la classe `NorthwindSiteMapProvider` :
 
 [!code-csharp[Main](building-a-custom-database-driven-site-map-provider-cs/samples/sample6.cs)]
 
@@ -310,4 +310,4 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, reportez
 Cette série de didacticiels a été examinée par de nombreux réviseurs utiles. Les réviseurs de leads pour ce didacticiel étaient Dave Gardner, Zack Jones, Teresa Murphy et Bernadette Leigh. Vous souhaitez revoir mes prochains articles MSDN ? Si c’est le cas, insérez une ligne sur [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Suivant](building-a-custom-database-driven-site-map-provider-vb.md)
+> [Next](building-a-custom-database-driven-site-map-provider-vb.md)

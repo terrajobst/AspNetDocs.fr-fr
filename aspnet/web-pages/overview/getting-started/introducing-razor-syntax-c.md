@@ -9,11 +9,11 @@ ms.assetid: aa67d304-583b-4bf8-a231-195656cfb587
 msc.legacyurl: /web-pages/overview/getting-started/introducing-razor-syntax-c
 msc.type: authoredcontent
 ms.openlocfilehash: c2f420bb7c2f7d2e31654c20fb9ec7497a30a9f7
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564888"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78641574"
 ---
 # <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-c"></a>Présentation de la programmation Web ASP.NET à l’aide deC#la syntaxe Razor ()
 
@@ -73,7 +73,7 @@ Un *bloc de code* comprend une ou plusieurs instructions de code et est placé e
 
 Résultat affiché dans un navigateur :
 
-![Rasoir-Img2](introducing-razor-syntax-c/_static/image2.jpg)
+![Razor-Img2](introducing-razor-syntax-c/_static/image2.jpg)
 
 ### <a name="3-inside-a-block-you-end-each-code-statement-with-a-semicolon"></a>3. à l’intérieur d’un bloc, vous terminez chaque instruction de code avec un point-virgule
 
@@ -200,7 +200,7 @@ Syntaxe Razor est basé sur une technologie de Microsoft appelée ASP.NET, qui e
 
 Le syntaxe Razor vous donne toute la puissance de ASP.NET, mais à l’aide d’une syntaxe simplifiée qui est plus facile à apprendre si vous êtes débutant et qui vous permet de vous rendre plus productif si vous êtes un expert. Même si cette syntaxe est simple à utiliser, sa relation de famille avec ASP.NET et la .NET Framework signifie que lorsque vos sites Web sont plus sophistiqués, vous bénéficiez de la puissance des infrastructures plus grandes disponibles.
 
-![Rasoir-Img8](introducing-razor-syntax-c/_static/image8.jpg)
+![Razor-Img8](introducing-razor-syntax-c/_static/image8.jpg)
 
 > [!TIP] 
 > 
@@ -709,7 +709,7 @@ La boucle commence par le mot clé `for`, suivi de trois instructions entre pare
 
 À l’intérieur des accolades se trouve le code qui s’exécute pour chaque itération de la boucle. Le balisage crée chaque fois un nouveau paragraphe (`<p>` élément) et ajoute une ligne à la sortie, en affichant la valeur de `i` (le compteur). Lorsque vous exécutez cette page, l’exemple crée 11 lignes affichant la sortie, avec le texte de chaque ligne indiquant le numéro de l’élément.
 
-![Rasoir-Img11](introducing-razor-syntax-c/_static/image11.jpg)
+![Razor-Img11](introducing-razor-syntax-c/_static/image11.jpg)
 
 Si vous utilisez une collection ou un tableau, vous utilisez souvent une boucle `foreach`. Une collection est un groupe d’objets similaires, et la boucle `foreach` vous permet d’effectuer une tâche sur chaque élément de la collection. Ce type de boucle est pratique pour les collections, car contrairement à une boucle `for`, il n’est pas nécessaire d’incrémenter le compteur ou de définir une limite. Au lieu de cela, le `foreach` code de boucle passe simplement par la collection jusqu’à ce qu’il soit terminé.
 
@@ -810,14 +810,14 @@ Comme vous pouvez le voir, les paramètres sont passés dans un ordre différent
 
 ### <a name="try-catch-statements"></a>Instructions Try-Catch
 
-Dans votre code, vous aurez souvent des instructions qui peuvent échouer pour des raisons extérieures à votre contrôle. Par exemple :
+Dans votre code, vous aurez souvent des instructions qui peuvent échouer pour des raisons extérieures à votre contrôle. Exemple :
 
 - Si votre code essaie de créer ou d’accéder à un fichier, toutes sortes d’erreurs peuvent se produire. Le fichier que vous souhaitez peut-être n’existe pas, il est peut-être verrouillé, le code n’a peut-être pas d’autorisations, et ainsi de suite.
 - De même, si votre code tente de mettre à jour des enregistrements dans une base de données, il peut y avoir des problèmes d’autorisations, la connexion à la base de données peut être supprimée, les données à enregistrer peuvent ne pas être valides, etc.
 
 En termes de programmation, ces situations sont appelées *exceptions*. Si votre code rencontre une exception, il génère (lève) un message d’erreur qui est, au mieux, ennuyeux pour les utilisateurs :
 
-![Rasoir-Img14](introducing-razor-syntax-c/_static/image14.jpg)
+![Razor-Img14](introducing-razor-syntax-c/_static/image14.jpg)
 
 Dans les cas où votre code risque de rencontrer des exceptions et afin d’éviter les messages d’erreur de ce type, vous pouvez utiliser des instructions `try/catch`. Dans l’instruction `try`, vous exécutez le code que vous êtes en train de vérifier. Dans une ou plusieurs instructions `catch`, vous pouvez rechercher des erreurs spécifiques (types spécifiques d’exceptions) qui ont pu se produire. Vous pouvez inclure autant d’instructions `catch` que vous le souhaitez pour rechercher les erreurs que vous anticipez.
 

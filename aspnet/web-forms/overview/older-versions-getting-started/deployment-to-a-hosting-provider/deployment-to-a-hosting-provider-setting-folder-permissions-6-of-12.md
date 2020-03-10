@@ -9,11 +9,11 @@ ms.assetid: cd03a188-e947-4f55-9bda-b8bce201d8c6
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-setting-folder-permissions-6-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 85a77a196cf3458bbb2e6308838a846936cd070b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74633505"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78630507"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-setting-folder-permissions---6-of-12"></a>Déploiement d’une application Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : définition des autorisations de dossier-6 sur 12
 
@@ -25,7 +25,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Pour obtenir un didacticiel qui présente les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions SQL Server autres que SQL Server Compact et montre comment déployer vers Azure App Service Web Apps, consultez [déploiement Web ASP.net à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Dans ce didacticiel, vous allez définir les autorisations de dossier pour le dossier *ELMAH* dans le site Web déployé afin que l’application puisse créer des fichiers journaux dans ce dossier.
 
@@ -73,7 +73,7 @@ Vous devez également disposer de l’autorisation en écriture sur le dossier d
 
 Vous avez maintenant terminé toutes les tâches nécessaires pour que Contoso University fonctionne correctement dans IIS sur votre ordinateur local. Dans le didacticiel suivant, vous allez rendre le site accessible au public en le déployant sur un fournisseur d’hébergement.
 
-## <a name="more-information"></a>Plus d’informations
+## <a name="more-information"></a>Plus d'informations
 
 Dans cet exemple, la raison pour laquelle ELMAH n’a pas pu enregistrer les fichiers journaux était relativement évidente. Vous pouvez utiliser le suivi IIS dans les cas où la cause du problème n’est pas si évidente ; consultez [Troubleshooting failed requests using Tracing in IIS 7 (](https://www.iis.net/learn/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis) en anglais) sur le site IIS.net.
 

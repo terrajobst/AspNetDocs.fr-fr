@@ -9,11 +9,11 @@ ms.assetid: 35b40b8f-2ca8-4ab3-9c19-f361a91a3647
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 79491118ba1cbbc8c1b67ca9646a817d941f17ba
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74630927"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78609633"
 ---
 # <a name="an-overview-of-inserting-updating-and-deleting-data-vb"></a>Vue d’ensemble de l’insertion, de la mise à jour et de la suppression de données (VB)
 

@@ -10,11 +10,11 @@ ms.assetid: ce11b017-0ca6-4376-aa9d-a7f3288101de
 msc.legacyurl: /web-api/overview/formats-and-model-binding/bson-support-in-web-api-21
 msc.type: authoredcontent
 ms.openlocfilehash: ccbc0372120301b1cd8d4cdc86bd9fba9404d8ae
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519326"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78622296"
 ---
 # <a name="bson-support-in-aspnet-web-api-21"></a>Prise en charge de BSON dans API Web ASP.NET 2,1
 

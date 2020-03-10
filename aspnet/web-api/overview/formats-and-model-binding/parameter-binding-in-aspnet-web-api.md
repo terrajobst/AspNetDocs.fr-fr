@@ -10,11 +10,11 @@ ms.assetid: e42c8388-04ed-4341-9fdb-41b1b4c06320
 msc.legacyurl: /web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api
 msc.type: authoredcontent
 ms.openlocfilehash: 464cb9b45dc0b62c4da38b7cf612934808854d32
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074902"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557196"
 ---
 # <a name="parameter-binding-in-aspnet-web-api"></a>Liaison de paramètre dans API Web ASP.NET
 
@@ -45,7 +45,7 @@ Pour forcer l’API Web à lire un type complexe à partir de l’URI, ajoutez l
 
 [!code-csharp[Main](parameter-binding-in-aspnet-web-api/samples/sample2.cs)]
 
-Le client peut placer les valeurs de latitude et de longitude dans la chaîne de requête et l’API Web les utilisera pour construire un `GeoPoint`. Par exemple :
+Le client peut placer les valeurs de latitude et de longitude dans la chaîne de requête et l’API Web les utilisera pour construire un `GeoPoint`. Exemple :
 
 `http://localhost/api/values/?Latitude=47.678558&Longitude=-122.130989`
 

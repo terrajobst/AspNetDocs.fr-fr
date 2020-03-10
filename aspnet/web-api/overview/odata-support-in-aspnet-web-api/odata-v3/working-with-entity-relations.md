@@ -9,11 +9,11 @@ ms.assetid: 1e4c2eb4-b6cf-42ff-8a65-4d71ddca0394
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/working-with-entity-relations
 msc.type: authoredcontent
 ms.openlocfilehash: 726a7d51123805e05f6831ef9cd7eaa84b6c44bd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600311"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78598741"
 ---
 # <a name="supporting-entity-relations-in-odata-v3-with-web-api-2"></a>Prise en charge des relations d’entité dans OData v3 avec l’API Web 2
 
@@ -104,7 +104,7 @@ Pour supprimer un lien, ajoutez le code suivant à la classe `ProductsController
 
 [!code-csharp[Main](working-with-entity-relations/samples/sample11.cs)]
 
-Dans cet exemple, la propriété de navigation est une entité `Supplier` unique. Si la propriété de navigation est une collection, l’URI pour supprimer un lien doit inclure une clé pour l’entité associée. Par exemple :
+Dans cet exemple, la propriété de navigation est une entité `Supplier` unique. Si la propriété de navigation est une collection, l’URI pour supprimer un lien doit inclure une clé pour l’entité associée. Exemple :
 
 [!code-console[Main](working-with-entity-relations/samples/sample12.cmd)]
 

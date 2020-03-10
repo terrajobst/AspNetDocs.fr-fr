@@ -9,11 +9,11 @@ ms.assetid: 0c2df5d4-c2dd-486d-b0ed-fe831c6b596c
 msc.legacyurl: /identity
 msc.type: categoryindex
 ms.openlocfilehash: 48e75d6a2a151befe7ea796b149d2d030712d799
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418350"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616976"
 ---
 # <a name="aspnet-identity"></a>ASP.NET Identity
 
@@ -25,7 +25,7 @@ ms.locfileid: "59418350"
         - [Ressources recommandées pour ASP.NET Identity](overview/getting-started/aspnet-identity-recommended-resources.md)
         - [Ajout d’ASP.NET Identity à un projet Web Forms vide ou existant](overview/getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
         - [Développement d’applications ASP.NET avec Azure Active Directory](overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
-        - [ASP.NET Identity : Utilisation du stockage MySQL avec un fournisseur de MySQL EntityFramework (C#)](overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
+        - [ASP.NET Identity : Utilisation du stockage MySQL avec un fournisseur MySQL Entity Framework (C#)](overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
     - [Fonctionnalités et API](overview/features-api/index.md)
 
         - [Bonnes pratiques pour le déploiement des mots de passe et d’autres données sensibles sur ASP.NET et Azure App Service](overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)

@@ -9,11 +9,11 @@ ms.assetid: 21a178de-4c5a-4211-8a9c-74ec576c0f30
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2
 msc.type: authoredcontent
 ms.openlocfilehash: 325cc90eb6e717c47863eda6253e0d48d796386b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455891"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614974"
 ---
 # <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-2"></a>Utilisation du calendrier contextuel de la fenêtre contextuelle de l’interface utilisateur HTML5 et jQuery avec ASP.NET MVC-partie 2
 
@@ -41,7 +41,7 @@ Ouvrez le fichier *Movie.cs* et commentez l’attribut `DataType` sur la propri�
 
 [!code-csharp[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/samples/sample3.cs)]
 
-Appuyez sur Ctrl+F5 pour exécuter l’application.
+Appuyez sur CTRL+F5 pour exécuter l'application.
 
 Notez que la propriété `ReleaseDate` affiche à présent la date et l’heure, car il s’agit de la valeur par défaut quand aucune information de mise en forme n’est fournie.
 
@@ -91,7 +91,7 @@ La classe CSS `loud-1` entraîne l’affichage de la date en texte rouge gras. V
 
 Ce que vous avez fait, c’est créer des modèles personnalisés que ASP.NET utilisera pour afficher des dates. Le modèle plus général (dans le dossier *Views\Shared\DisplayTemplates.* ) affiche une date abrégée simple. Le modèle qui est spécifiquement pour le contrôleur `Movie` (dans le dossier *Views\Movies\DisplayTemplates* ) affiche une date brève qui est également mise en forme en texte rouge en gras.
 
-Appuyez sur Ctrl+F5 pour exécuter l’application. Le navigateur restitue la vue index pour l’application.
+Appuyez sur CTRL+F5 pour exécuter l'application. Le navigateur restitue la vue index pour l’application.
 
 La propriété `ReleaseDate` affiche à présent la date dans une police rouge en gras sans l’heure. Cela vous permet de vérifier que le `DateTime` Helper basé sur un modèle dans le dossier *Views\Movies\DisplayTemplates* est sélectionné sur le `DateTime` Helper basé sur un modèle dans le dossier partagé (*Views\Shared\DisplayTemplates.* ).
 
@@ -99,7 +99,7 @@ La propriété `ReleaseDate` affiche à présent la date dans une police rouge e
 
 Maintenant, renommez le fichier *Views\Movies\DisplayTemplates\DateTime.cshtml* en *Views\Movies\DisplayTemplates\LoudDateTime.cshtml*.
 
-Appuyez sur Ctrl+F5 pour exécuter l’application.
+Appuyez sur CTRL+F5 pour exécuter l'application.
 
 Cette fois, la propriété `ReleaseDate` affiche une date sans l’heure et sans la police rouge gras. Cela montre qu’un modèle qui porte le nom du type de données (dans ce cas `DateTime`) est utilisé automatiquement pour afficher toutes les propriétés de modèle de ce type. Une fois que vous avez renommé le fichier *DateTime. cshtml* en *LoudDateTime. cshtml*, ASP.net n’a plus trouvé de modèle dans le dossier *Views\Movies\DisplayTemplates* , donc il a utilisé le modèle *DateTime. cshtml* à partir du dossier * Views\Movies\Shared\*.
 
@@ -109,7 +109,7 @@ Pour réviser : à ce stade, le champ `ReleaseDate` s’affiche à l’aide du 
 
 ### <a name="using-uihint-to-specify-a-display-template"></a>Utilisation de UIHint pour spécifier un modèle d’affichage
 
-Si votre application Web comporte de nombreux champs `DateTime` et que vous souhaitez afficher par défaut la totalité ou la plupart d’entre elles au format date uniquement, le modèle *DateTime. cshtml* est une bonne approche. Mais que se passe-t-il si vous souhaitez afficher la date et l’heure complètes ? Pas de problème. Vous pouvez créer un modèle supplémentaire et utiliser l’attribut [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) pour spécifier la mise en forme de la date et de l’heure complètes. Vous pouvez ensuite appliquer de manière sélective ce modèle. Vous pouvez utiliser l’attribut [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) au niveau du modèle ou vous pouvez spécifier le modèle à l’intérieur d’une vue. Dans cette section, vous allez apprendre à utiliser l’attribut `UIHint` pour modifier de manière sélective la mise en forme de certaines instances de champs date-heure.
+Si votre application Web comporte de nombreux champs `DateTime` et que vous souhaitez afficher par défaut la totalité ou la plupart d’entre elles au format date uniquement, le modèle *DateTime. cshtml* est une bonne approche. Mais que se passe-t-il si vous souhaitez afficher la date et l’heure complètes ? Aucun problème. Vous pouvez créer un modèle supplémentaire et utiliser l’attribut [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) pour spécifier la mise en forme de la date et de l’heure complètes. Vous pouvez ensuite appliquer de manière sélective ce modèle. Vous pouvez utiliser l’attribut [UIHint](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.uihintattribute.uihint.aspx) au niveau du modèle ou vous pouvez spécifier le modèle à l’intérieur d’une vue. Dans cette section, vous allez apprendre à utiliser l’attribut `UIHint` pour modifier de manière sélective la mise en forme de certaines instances de champs date-heure.
 
 Ouvrez le fichier *Views\Movies\DisplayTemplates\LoudDateTime.cshtml* et remplacez le code existant par ce qui suit :
 
@@ -123,7 +123,7 @@ Ouvrez le fichier *Movie.cs* et ajoutez l’attribut [UIHint](https://msdn.micro
 
 Cela indique à ASP.NET MVC que lorsqu’il affiche la propriété `ReleaseDate` (plus précisément, et pas seulement un objet `DateTime`), il doit utiliser le modèle *LoudDateTime. cshtml* .
 
-Appuyez sur Ctrl+F5 pour exécuter l’application.
+Appuyez sur CTRL+F5 pour exécuter l'application.
 
 Notez que la propriété `ReleaseDate` affiche désormais la date et l’heure dans une grande police verte.
 
@@ -135,7 +135,7 @@ Comme mentionné précédemment, vous pouvez également appliquer un modèle dan
 
 Cela spécifie que le modèle de `LoudDateTime` doit être utilisé pour afficher la propriété de modèle, quels que soient les attributs appliqués au modèle.
 
-Appuyez sur Ctrl+F5 pour exécuter l’application.
+Appuyez sur CTRL+F5 pour exécuter l'application.
 
 Vérifiez que la page d’index des films utilise le modèle *Views\Shared\DisplayTemplates\DateTime.cshtml* (rouge gras) et que la page *Movie\Details* utilise le modèle *Views\Movies\DisplayTemplates\LoudDateTime.cshtml* (grand et vert).
 

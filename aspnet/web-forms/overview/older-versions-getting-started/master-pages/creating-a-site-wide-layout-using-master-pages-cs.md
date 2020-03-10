@@ -9,11 +9,11 @@ ms.assetid: 78f8d194-03b9-44a5-8255-90e7cd1c2ee1
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 1a5e85c443a2a3642ec185ab1897c43cdb2ab1f7
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74619512"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78625390"
 ---
 # <a name="creating-a-site-wide-layout-using-master-pages-c"></a>Création d’une disposition à l’échelle d’un site avec des pages maîtres (C#)
 
@@ -46,7 +46,7 @@ Il s’agit du premier didacticiel d’une série de didacticiels qui explorent 
 
 Ces didacticiels sont destinés à être concis et fournissent des instructions pas à pas avec de nombreuses captures d’écran pour vous guider tout au long du processus. Chaque Didacticiel est disponible dans C# et Visual Basic versions et comprend un téléchargement du code complet utilisé.
 
-Ce didacticiel plus inaugural commence par un examen des principes fondamentaux de la page maître. Nous expliquons comment les pages maîtres fonctionnent, nous allons créer une page maître et les pages de contenu associées à l’aide de Visual Web Developer et voir comment les modifications apportées à une page maître sont immédiatement reflétées dans ses pages de contenu. Commençons !
+Ce didacticiel plus inaugural commence par un examen des principes fondamentaux de la page maître. Nous expliquons comment les pages maîtres fonctionnent, nous allons créer une page maître et les pages de contenu associées à l’aide de Visual Web Developer et voir comment les modifications apportées à une page maître sont immédiatement reflétées dans ses pages de contenu. C’est parti !
 
 ## <a name="understanding-how-master-pages-work"></a>Comprendre le fonctionnement des pages maîtres
 
@@ -255,4 +255,4 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, reportez
 Vous souhaitez revoir mes prochains articles MSDN ? Si c’est le cas, insérez une ligne sur [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com).
 
 > [!div class="step-by-step"]
-> [Suivant](multiple-contentplaceholders-and-default-content-cs.md)
+> [Next](multiple-contentplaceholders-and-default-content-cs.md)

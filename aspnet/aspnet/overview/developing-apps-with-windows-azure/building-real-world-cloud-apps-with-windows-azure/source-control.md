@@ -9,11 +9,11 @@ ms.assetid: 2a0370d3-c2fb-4bf3-88b8-aad5a736c793
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control
 msc.type: authoredcontent
 ms.openlocfilehash: 5a1e0d7cd3c396d4be79c8958422602055eb3db1
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457100"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617452"
 ---
 # <a name="source-control-building-real-world-cloud-apps-with-azure"></a>Contrôle de la source (création d’applications Cloud réalistes avec Azure)
 
@@ -95,7 +95,7 @@ Et ajoutez les fichiers de script au dossier de la solution.
 
 ![Sélection du menu Ajouter un élément existant](source-control/_static/image6.png)
 
-![Ajouter un élément existant (boîte de dialogue)](source-control/_static/image7.png)
+![Boîte de dialogue Ajouter un élément existant](source-control/_static/image7.png)
 
 Les fichiers de script sont désormais inclus dans votre projet et le contrôle de code source effectue le suivi des modifications apportées à leur version, ainsi que des modifications du code source correspondantes.
 
@@ -147,7 +147,7 @@ Visual Studio vous demande si vous souhaitez utiliser TFVC (gestion de version c
 
 Lorsque vous sélectionnez git et que vous cliquez sur **OK**, Visual Studio crée un nouveau référentiel Git local dans votre dossier de solution. Le nouveau référentiel n’a pas encore de fichiers ; vous devez les ajouter au référentiel en exécutant une validation git. Cliquez avec le bouton droit sur la solution dans **Explorateur de solutions**, puis cliquez sur **valider**.
 
-![Commit](source-control/_static/image11.png)
+![Valider](source-control/_static/image11.png)
 
 Visual Studio effectue automatiquement la modification de tous les fichiers projet pour la validation et les répertorie dans **Team Explorer** dans le volet **modifications incluses** . (Si vous ne vouliez pas inclure certains éléments dans la validation, vous pouvez les sélectionner, cliquer avec le bouton droit, puis cliquer sur **exclure**.)
 
@@ -187,7 +187,7 @@ Ce que vous avez vu ici, c’est la façon dont vous utilisez un référentiel G
 
 Il ne s’agit pas de la seule façon dont vous pouvez implémenter une stratégie de branchement agile, bien sûr. Vous pouvez activer le même flux de travail agile à l’aide d’un référentiel de contrôle de code source centralisé.
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Mesurez la réussite de votre système de contrôle de code source en fonction de la rapidité avec laquelle vous pouvez apporter une modification et la mettre en ligne de façon sécurisée et prévisible. Si vous êtes effrayé pour apporter une modification, car vous devez effectuer un ou deux tests manuels sur celui-ci, vous pouvez vous demander ce que vous devez faire au cours d’une opération ou d’un test pour que vous puissiez effectuer cette modification en quelques minutes ou au pire pas plus d’une heure. Une stratégie pour effectuer cette tâche consiste à implémenter l’intégration continue et la livraison continue, que nous aborderons dans le [chapitre suivant](continuous-integration-and-continuous-delivery.md).
 

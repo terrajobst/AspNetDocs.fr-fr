@@ -1,26 +1,26 @@
 ---
 uid: web-pages/videos/introduction/index
-title: Introduction aux Pages Web vidéos | Microsoft Docs
+title: Présentation des vidéos sur les pages Web | Microsoft Docs
 author: rick-anderson
-description: Les vidéos que vous pouvez afficher pour apprendre les notions sur les Pages et WebMatrix.
+description: Les vidéos que vous pouvez consulter pour en savoir plus sur les pages Web et WebMatrix.
 ms.author: riande
 ms.date: 05/18/2012
 ms.assetid: b8a43660-177f-4a00-bb51-be887364c607
 msc.legacyurl: /web-pages/videos/introduction
 msc.type: chapter
 ms.openlocfilehash: e4e9d63ddc701205d9f102e05fe47dd2c552bdf1
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127736"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78631690"
 ---
-# <a name="introduction-to-web-pages-videos"></a>Introduction aux vidéos de Pages Web
+# <a name="introduction-to-web-pages-videos"></a>Présentation des vidéos sur les pages Web
 
-> Les vidéos que vous pouvez afficher pour apprendre les notions sur les Pages et WebMatrix.
+> Les vidéos que vous pouvez consulter pour en savoir plus sur les pages Web et WebMatrix.
 
 > [!NOTE] 
-> WebMatrix n’est plus recommandé comme un environnement de développement intégré pour ASP.NET Web Pages. Utilisez [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou [Visual Studio Code](https://code.visualstudio.com/).
+> WebMatrix n’est plus recommandé en tant qu’environnement de développement intégré pour pages Web ASP.NET. Utilisez [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou [Visual Studio code](https://code.visualstudio.com/).
 
 - [Introduction à ASP.NET Web Pages (5 minutes)](5-minute-introduction-to-aspnet-web-pages.md)
 - [Installer et utiliser l’outil Microsoft WebMatrix](install-and-use-the-microsoft-webmatrix-tool.md)

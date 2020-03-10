@@ -9,11 +9,11 @@ ms.assetid: 2b0df3d9-450b-4ea6-b315-4c9650722cad
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 9e7902bcf8a16c154aee1a982824bfaedeea7d9d
-ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76309234"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78634924"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-webconfig-file-transformations---3-of-12"></a>Déploiement d’une application Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : transformations de fichier Web. config-3 sur 12
 
@@ -25,7 +25,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Pour obtenir un didacticiel qui présente les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions SQL Server autres que SQL Server Compact et montre comment déployer vers Azure App Service Web Apps, consultez [déploiement Web ASP.net à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Ce didacticiel vous montre comment automatiser le processus de modification du fichier *Web. config* lorsque vous le déployez dans différents environnements de destination. La plupart des applications ont des paramètres dans le fichier *Web. config* qui doivent être différents lorsque l’application est déployée. L’automatisation du processus d’apport de ces modifications vous évite de devoir les exécuter manuellement à chaque fois que vous déployez, ce qui serait fastidieux et sujet aux erreurs.
 
@@ -139,7 +139,7 @@ L’attribut `Transform` spécifie que cette chaîne de connexion sera ajoutée 
 
 Vous avez maintenant spécifié toutes les transformations *Web. config* dont vous avez besoin pour déployer l’application Contoso University à des fins de test et de production. Dans le didacticiel suivant, vous devez prendre en charge les tâches de configuration du déploiement qui requièrent la définition des propriétés du projet.
 
-## <a name="more-information"></a>Plus d’informations
+## <a name="more-information"></a>Plus d'informations
 
 Pour plus d’informations sur les sujets traités dans ce didacticiel, consultez le scénario de transformation Web. config dans le [plan de contenu de déploiement ASP.net](https://msdn.microsoft.com/library/bb386521.aspx).
 

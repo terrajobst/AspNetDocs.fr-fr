@@ -1,160 +1,160 @@
 ---
 uid: signalr/overview/older-versions/tutorial-getting-started-with-signalr
-title: 'Tutoriel : Bien démarrer avec SignalR 1.x | Microsoft Docs'
+title: 'Didacticiel : Prise en main avec Signalr 1. x | Microsoft Docs'
 author: bradygaster
-description: Utiliser ASP.NET SignalR pour créer une application de conversation en temps réel dans une page HTML.
+description: Utilisez ASP.NET Signalr pour créer une application de conversation en temps réel dans une page HTML.
 ms.author: bradyg
 ms.date: 02/18/2013
 ms.assetid: fdc3599a-5217-44c1-951f-0eec9812dce7
 msc.legacyurl: /signalr/overview/older-versions/tutorial-getting-started-with-signalr
 msc.type: authoredcontent
 ms.openlocfilehash: 87a90b47ae30bee43e0b0c1e078597db54b8e67d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113873"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78623542"
 ---
-# <a name="tutorial-getting-started-with-signalr-1x"></a>Tutoriel : Bien démarrer avec SignalR 1.x
+# <a name="tutorial-getting-started-with-signalr-1x"></a>Didacticiel : Prise en main avec Signalr 1. x
 
-par [Patrick Fletcher](https://github.com/pfletcher), [Tim Teebken](https://github.com/timlt)
+de [Patrick Fletcher](https://github.com/pfletcher), [Tim Teebken](https://github.com/timlt)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-> Ce didacticiel montre comment utiliser SignalR pour créer une application de conversation en temps réel. Vous ajouter SignalR à une application de web ASP.NET vide et créer une page HTML pour envoyer et afficher des messages.
+> Ce didacticiel montre comment utiliser SignalR pour créer une application de conversation en temps réel. Vous allez ajouter Signalr à une application Web ASP.NET vide et créer une page HTML pour envoyer et afficher des messages.
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Présentation
 
-Ce didacticiel présente le développement de SignalR en montrant comment créer une application de service de conversation simple basée sur navigateur. Vous ajoute la bibliothèque SignalR à une application de web ASP.NET vide, créez une classe de hub pour envoyer des messages aux clients et créer une page HTML qui permet aux utilisateurs d’envoyer et recevoir des messages de conversation. Pour obtenir un didacticiel similaire qui montre comment créer une application de conversation dans MVC 4 à l’aide d’une vue MVC, consultez [bien démarrer avec SignalR et MVC 4](index.md).
+Ce didacticiel présente le développement Signalr en expliquant comment créer une application de conversation simple basée sur un navigateur. Vous allez ajouter la bibliothèque Signalr à une application Web ASP.NET vide, créer une classe de concentrateur pour envoyer des messages aux clients et créer une page HTML qui permet aux utilisateurs d’envoyer et de recevoir des messages de conversation. Pour obtenir un didacticiel similaire qui montre comment créer une application de conversation dans MVC 4 à l’aide d’une vue MVC, consultez [prise en main avec signalr et MVC 4](index.md).
 
 > [!NOTE]
-> Ce didacticiel utilise la version finale (1.x) de SignalR. Pour plus d’informations sur les modifications entre SignalR 1.x et 2.0, consultez [SignalR la mise à niveau les projets 1.x](../releases/upgrading-signalr-1x-projects-to-20.md).
+> Ce didacticiel utilise la version Release (1. x) de Signalr. Pour plus d’informations sur les modifications apportées entre Signalr 1. x et 2,0, consultez [mise à niveau des projets signalr 1. x](../releases/upgrading-signalr-1x-projects-to-20.md).
 
-SignalR est une bibliothèque de .NET open source pour la création d’applications web qui requièrent l’intervention de l’utilisateur en direct ou de mises à jour des données en temps réel. Exemples : applications des réseaux sociaux, jeux multi-utilisateur, météo de collaboration et de news, entreprise ou les applications financières de mise à jour. Il s’agit souvent d’applications en temps réel.
+Signalr est une bibliothèque .NET Open source permettant de créer des applications Web nécessitant des mises à jour en temps réel des données ou des interactions avec l’utilisateur. Exemples : applications sociales, jeux multi-utilisateurs, collaboration professionnelle, Actualités, météo ou mises à jour financières. Il s’agit souvent d’applications en temps réel.
 
-SignalR simplifie le processus de génération d’applications en temps réel. Il inclut une bibliothèque de serveur ASP.NET et une bibliothèque de client JavaScript pour le rendre plus facile à gérer les connexions client-serveur et d’envoyer des mises à jour de contenu aux clients. Vous pouvez ajouter la bibliothèque SignalR à une application ASP.NET existante pour obtenir des fonctionnalités en temps réel.
+Signalr simplifie le processus de création d’applications en temps réel. Il comprend une bibliothèque de serveur ASP.NET et une bibliothèque cliente JavaScript pour faciliter la gestion des connexions client-serveur et l’envoi de mises à jour de contenu aux clients. Vous pouvez ajouter la bibliothèque Signalr à une application ASP.NET existante pour obtenir des fonctionnalités en temps réel.
 
-Le didacticiel présente les tâches de développement SignalR suivantes :
+Ce didacticiel présente les tâches de développement Signalr suivantes :
 
-- Ajout de la bibliothèque de SignalR pour une application web ASP.NET.
-- Création d’une classe de hub pour envoyer le contenu vers les clients.
-- À l’aide de la bibliothèque jQuery SignalR dans une page web pour envoyer des messages et d’afficher les mises à jour à partir du concentrateur.
+- Ajout de la bibliothèque Signalr à une application Web ASP.NET.
+- Création d’une classe de concentrateur pour transmettre le contenu aux clients.
+- Utilisation de la bibliothèque jQuery Signalr dans une page Web pour envoyer des messages et afficher des mises à jour à partir du Hub.
 
-La capture d’écran suivante montre l’application de conversation en cours d’exécution dans un navigateur. Chaque nouvel utilisateur peut publier des commentaires et voir les commentaires ajoutés après que l’utilisateur rejoint la conversation.
+La capture d’écran suivante montre l’application de conversation en cours d’exécution dans un navigateur. Chaque nouvel utilisateur peut poster des commentaires et voir les commentaires ajoutés après que l’utilisateur s’est joint à la conversation.
 
 ![Instances de conversation](tutorial-getting-started-with-signalr/_static/image1.png)
 
-Sections :
+Sections
 
 - [Configurer le projet](#setup)
 - [Exécuter l’exemple](#run)
-- [Examinez le Code](#code)
+- [Examiner le code](#code)
 - [Étapes suivantes](#next)
 
 <a id="setup"></a>
 
 ## <a name="set-up-the-project"></a>Configurer le projet
 
-Cette section montre comment créer une application web ASP.NET vide, ajouter SignalR et créer l’application de conversation.
+Cette section montre comment créer une application Web ASP.NET vide, ajouter Signalr et créer l’application de conversation.
 
 Conditions préalables :
 
-- Visual Studio 2010 SP1 ou 2012. Si vous n’avez pas Visual Studio, consultez [téléchargements ASP.NET](https://www.asp.net/downloads) pour obtenir le Visual Studio 2012 Express outil de développement gratuit.
-- [Microsoft ASP.NET et Web Tools 2012.2](https://go.microsoft.com/fwlink/?LinkId=279941). Pour Visual Studio 2012, ce programme d’installation ajoute les nouvelles fonctionnalités ASP.NET, y compris les modèles de SignalR pour Visual Studio. Pour Visual Studio 2010 SP1, un programme d’installation n’est pas disponible, mais vous pouvez suivre le didacticiel en installant le package NuGet de SignalR comme décrit dans les étapes d’installation.
+- Visual Studio 2010 SP1 ou 2012. Si vous ne disposez pas de Visual Studio, consultez [ASP.net downloads](https://www.asp.net/downloads) pour obtenir l’outil gratuit visual studio 2012 Express Development.
+- [Microsoft ASP.NET et Web Tools 2012,2](https://go.microsoft.com/fwlink/?LinkId=279941). Pour Visual Studio 2012, ce programme d’installation ajoute de nouvelles fonctionnalités ASP.NET, notamment des modèles Signalr à Visual Studio. Pour Visual Studio 2010 SP1, un programme d’installation n’est pas disponible, mais vous pouvez suivre le didacticiel en installant le package NuGet Signalr, comme décrit dans la procédure d’installation.
 
-Les étapes suivantes utilisent Visual Studio 2012 pour créer une Application Web ASP.NET vide et ajouter la bibliothèque SignalR :
+Les étapes suivantes utilisent Visual Studio 2012 pour créer une application Web vide ASP.NET et ajouter la bibliothèque Signalr :
 
-1. Dans Visual Studio, créez une Application Web ASP.NET vide.
+1. Dans Visual Studio, créez une application Web vide ASP.NET.
 
-    ![Créer le site web vide](tutorial-getting-started-with-signalr/_static/image2.png)
-2. Ouvrez le **Console du Gestionnaire de Package** en sélectionnant **outils | Gestionnaire de Package NuGet | Console du Gestionnaire de package**. Entrez la commande suivante dans la fenêtre de console :
+    ![Créer un site Web vide](tutorial-getting-started-with-signalr/_static/image2.png)
+2. Ouvrez la **console du gestionnaire de package** en sélectionnant **Outils | Gestionnaire de package NuGet | Console du gestionnaire de package**. Entrez la commande suivante dans la fenêtre de console :
 
     `Install-Package Microsoft.AspNet.SignalR -Version 1.1.3`
 
-    Cette commande installe la dernière version de SignalR 1.x.
-3. Dans **l’Explorateur de solutions**, cliquez sur le projet, sélectionnez **ajouter | Classe**. Nommez la nouvelle classe **ChatHub**.
-4. Dans **l’Explorateur de solutions** développez le nœud de Scripts. Bibliothèques de scripts pour jQuery et SignalR sont visibles dans le projet.
+    Cette commande installe la dernière version de Signalr 1. x.
+3. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis sélectionnez **Ajouter | Classe**. Nommez la nouvelle classe **ChatHub**.
+4. Dans **Explorateur de solutions** développez le nœud scripts. Les bibliothèques de scripts pour jQuery et Signalr sont visibles dans le projet.
 
     ![Références de bibliothèque](tutorial-getting-started-with-signalr/_static/image3.png)
-5. Remplacez le code dans le **ChatHub** classe par le code suivant.
+5. Remplacez le code de la classe **ChatHub** par le code suivant.
 
     [!code-csharp[Main](tutorial-getting-started-with-signalr/samples/sample1.cs)]
-6. Dans **l’Explorateur de solutions**, cliquez sur le projet, puis cliquez sur **ajouter | Un nouvel élément**. Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **classe d’Application globale** et cliquez sur **ajouter**.
+6. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis cliquez sur **Ajouter | Nouvel élément**. Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez **classe d’application globale** , puis cliquez sur **Ajouter**.
 
     ![Ajouter global](tutorial-getting-started-with-signalr/_static/image4.png)
-7. Ajoutez le code suivant `using` instructions après avoir fourni `using` instructions dans la classe Global.asax.cs.
+7. Ajoutez les instructions `using` suivantes après les instructions `using` fournies dans la classe Global.asax.cs.
 
     [!code-csharp[Main](tutorial-getting-started-with-signalr/samples/sample2.cs)]
-8. Ajoutez la ligne suivante de code dans le `Application_Start` méthode de la classe Global pour inscrire l’itinéraire par défaut pour les concentrateurs SignalR.
+8. Ajoutez la ligne de code suivante à la méthode `Application_Start` de la classe globale pour enregistrer l’itinéraire par défaut pour les concentrateurs Signalr.
 
     [!code-csharp[Main](tutorial-getting-started-with-signalr/samples/sample3.cs)]
-9. Dans **l’Explorateur de solutions**, cliquez sur le projet, puis cliquez sur **ajouter | Un nouvel élément**. Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez Html Page et cliquez sur **ajouter**.
-10. Dans **l’Explorateur de solutions**, avec le bouton droit de la page HTML que vous venez de créer, puis cliquez sur **définir comme Page de démarrage**.
+9. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis cliquez sur **Ajouter | Nouvel élément**. Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez page HTML, puis cliquez sur **Ajouter**.
+10. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur la page HTML que vous venez de créer, puis cliquez sur **définir comme page de démarrage**.
 11. Remplacez le code par défaut dans la page HTML par le code suivant.
 
     [!code-html[Main](tutorial-getting-started-with-signalr/samples/sample4.html)]
-12. **Enregistrer tous les** pour le projet.
+12. **Enregistrer tout** pour le projet.
 
 <a id="run"></a>
 
 ## <a name="run-the-sample"></a>Exécuter l’exemple
 
-1. Appuyez sur F5 pour exécuter le projet en mode débogage. La page HTML se charge dans une instance du navigateur et des invites pour un nom d’utilisateur.
+1. Appuyez sur F5 pour exécuter le projet en mode débogage. La page HTML est chargée dans une instance de navigateur et demande un nom d’utilisateur.
 
     ![Entrer un nom d'utilisateur](tutorial-getting-started-with-signalr/_static/image5.png)
 2. Entrez un nom d’utilisateur.
-3. Copiez l’URL de la ligne d’adresse du navigateur et l’utiliser pour ouvrir les deux autres instances de navigateur. Dans chaque instance du navigateur, entrez un nom d’utilisateur unique.
-4. Dans chaque instance du navigateur, ajoutez un commentaire et cliquez sur **envoyer**. Les commentaires doivent s’afficher dans toutes les instances de navigateur.
+3. Copiez l’URL à partir de la ligne d’adresse du navigateur et utilisez-la pour ouvrir deux autres instances de navigateur. Dans chaque instance de navigateur, entrez un nom d’utilisateur unique.
+4. Dans chaque instance de navigateur, ajoutez un commentaire et cliquez sur **Envoyer**. Les commentaires doivent s’afficher dans toutes les instances de navigateur.
 
     > [!NOTE]
-    > Cette application de conversation simple ne conserve pas le contexte de la discussion sur le serveur. Le hub diffuse des commentaires à tous les utilisateurs actuels. Les utilisateurs qui accèdent à la conversation ultérieurement verrez messages ajoutés à partir du moment qu'où ils joignent.
+    > Cette simple application de conversation ne gère pas le contexte de discussion sur le serveur. Le concentrateur diffuse des commentaires à tous les utilisateurs actuels. Les utilisateurs qui rejoignent la conversation voient les messages ajoutés à partir du moment où ils se joignent.
 
-    La capture d’écran suivante montre l’application de conversation en cours d’exécution dans les trois instances de navigateur, qui sont mis à jour lorsqu’une instance envoie un message :
+    La capture d’écran suivante montre l’application de conversation en cours d’exécution dans trois instances de navigateur, toutes mises à jour lorsqu’une instance envoie un message :
 
     ![Navigateurs de conversation](tutorial-getting-started-with-signalr/_static/image6.png)
-5. Dans **l’Explorateur de solutions**, inspecter la **Documents de Script** nœud pour l’application en cours d’exécution. Il existe un fichier de script nommé **hubs** que la bibliothèque SignalR génère dynamiquement lors de l’exécution. Ce fichier gère la communication entre le script de jQuery et le code côté serveur.
+5. Dans **Explorateur de solutions**, examinez le nœud **documents de script** pour l’application en cours d’exécution. Un fichier de script nommé **hubs** est généré dynamiquement au moment de l’exécution. Ce fichier gère la communication entre le script jQuery et le code côté serveur.
 
-    ![Script de hub généré](tutorial-getting-started-with-signalr/_static/image7.png)
+    ![Script de concentrateur généré](tutorial-getting-started-with-signalr/_static/image7.png)
 
 <a id="code"></a>
 
-## <a name="examine-the-code"></a>Examinez le Code
+## <a name="examine-the-code"></a>Examiner le code
 
-L’application de conversation SignalR montre deux tâches de développement SignalR base : création d’un hub en tant que l’objet principal de coordination sur le serveur et à l’aide de la bibliothèque jQuery de SignalR pour envoyer et recevoir des messages.
+L’application de conversation vocale Signalr montre deux tâches de développement Signalr de base : la création d’un hub en tant qu’objet de coordination principal sur le serveur et l’utilisation de la bibliothèque jQuery de Signalr pour envoyer et recevoir des messages.
 
-### <a name="signalr-hubs"></a>Concentrateurs SignalR
+### <a name="signalr-hubs"></a>Hubs SignalR
 
-Dans l’exemple de code la **ChatHub** classe dérive de la **Microsoft.AspNet.SignalR.Hub** classe. Dérivation à partir de la **Hub** classe est un moyen utile pour créer une application de SignalR. Vous pouvez créer des méthodes publiques sur votre classe de concentrateur et ensuite accéder à ces méthodes en les appelant à partir de scripts jQuery dans une page web.
+Dans l’exemple de code, la classe **ChatHub** dérive de la classe **Microsoft. Aspnet. signalr. Hub** . La dérivation à partir de la classe de **concentrateur** est un moyen utile de générer une application signalr. Vous pouvez créer des méthodes publiques sur votre classe de concentrateur, puis accéder à ces méthodes en les appelant à partir de scripts jQuery dans une page Web.
 
-Dans le code de la conversation, les clients appellent le **ChatHub.Send** méthode pour envoyer un nouveau message. Le concentrateur à son tour envoie le message à tous les clients en appelant **Clients.All.broadcastMessage**.
+Dans le code de conversation, les clients appellent la méthode **ChatHub. Send** pour envoyer un nouveau message. Le Hub envoie ensuite le message à tous les clients en appelant **clients. All. broadcastMessage**.
 
-Le **envoyer** méthode illustre plusieurs concepts de hub :
+La méthode **Send** illustre plusieurs concepts de concentrateur :
 
-- Déclarer des méthodes publiques sur un concentrateur afin que les clients peuvent appeler les.
-- Utilisez le **Microsoft.AspNet.SignalR.Hub.Clients** propriété dynamique à accéder à tous les clients connectés à ce concentrateur.
-- Appeler une fonction de jQuery sur le client (tel que le `broadcastMessage` (fonction)) pour mettre à jour des clients.
+- Déclarez les méthodes publiques sur un concentrateur afin que les clients puissent les appeler.
+- Utilisez la propriété dynamique **Microsoft. Aspnet. signalr. Hub. clients** pour accéder à tous les clients connectés à ce concentrateur.
+- Appelez une fonction jQuery sur le client (par exemple, la fonction `broadcastMessage`) pour mettre à jour les clients.
 
     [!code-csharp[Main](tutorial-getting-started-with-signalr/samples/sample5.cs)]
 
-### <a name="signalr-and-jquery"></a>SignalR et jQuery
+### <a name="signalr-and-jquery"></a>Signalr et jQuery
 
-La page HTML dans l’exemple de code montre comment utiliser la bibliothèque jQuery de SignalR pour communiquer avec un concentrateur SignalR. Les tâches essentielles dans le code déclarez un proxy pour référencer le hub, la déclaration d’une fonction que le serveur peut appeler pour transmettre le contenu aux clients et le démarrage d’une connexion pour envoyer des messages au concentrateur.
+La page HTML de l’exemple de code montre comment utiliser la bibliothèque jQuery Signalr pour communiquer avec un concentrateur Signalr. Les tâches essentielles du code déclarent un proxy pour faire référence au Hub, en déclarant une fonction que le serveur peut appeler pour envoyer du contenu aux clients et en commençant une connexion pour envoyer des messages au Hub.
 
 Le code suivant déclare un proxy pour un concentrateur.
 
 [!code-javascript[Main](tutorial-getting-started-with-signalr/samples/sample6.js)]
 
 > [!NOTE]
-> Dans jQuery, la référence à la classe de serveur et de ses membres est en casse mixte. L’exemple de code fait référence à celle de C# **ChatHub** classe dans jQuery comme **chatHub**.
+> Dans jQuery, la référence à la classe de serveur et à ses membres est en casse mixte. L’exemple de code fait C# référence à la classe **ChatHub** dans jQuery en tant que **ChatHub**.
 
-Le code suivant est la façon dont vous créez une fonction de rappel dans le script. La classe de concentrateur sur le serveur appelle cette fonction pour envoyer des mises à jour de contenu à chaque client. Les deux lignes qu’encoder en HTML le contenu avant de les afficher sont facultatifs et affichent un moyen simple d’empêcher l’injection de script.
+Le code suivant montre comment créer une fonction de rappel dans le script. La classe de concentrateur sur le serveur appelle cette fonction pour transmettre les mises à jour de contenu à chaque client. Les deux lignes qui encodent le contenu au format HTML avant de l’afficher sont facultatives et montrent un moyen simple d’empêcher l’injection de script.
 
 [!code-html[Main](tutorial-getting-started-with-signalr/samples/sample7.html)]
 
-Le code suivant montre comment ouvrir une connexion avec le hub. Le code démarre la connexion et passe une fonction pour gérer l’événement de clic sur le **envoyer** bouton dans la page HTML.
+Le code suivant montre comment ouvrir une connexion avec le Hub. Le code démarre la connexion, puis lui passe une fonction pour gérer l’événement de clic sur le bouton **Envoyer** dans la page html.
 
 > [!NOTE]
-> Cette approche garantit que la connexion est établie avant que le Gestionnaire d’événements s’exécute.
+> Cette approche garantit que la connexion est établie avant l’exécution du gestionnaire d’événements.
 
 [!code-javascript[Main](tutorial-getting-started-with-signalr/samples/sample8.js)]
 
@@ -162,12 +162,12 @@ Le code suivant montre comment ouvrir une connexion avec le hub. Le code démarr
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Vous avez appris que SignalR est une infrastructure pour générer des applications web en temps réel. Vous avez également appris à plusieurs tâches de développement de SignalR : comment ajouter SignalR à une application ASP.NET, comment créer une classe de concentrateur et comment envoyer et recevoir des messages à partir du concentrateur.
+Vous avez appris que Signalr est une infrastructure permettant de créer des applications Web en temps réel. Vous avez également appris plusieurs tâches de développement Signalr : comment ajouter Signalr à une application ASP.NET, comment créer une classe de concentrateur et comment envoyer et recevoir des messages à partir du Hub.
 
-Vous pouvez proposer l’exemple d’application dans ce didacticiel ou d’autres applications de SignalR via Internet en les déployant sur un fournisseur d’hébergement. Microsoft propose d’hébergement web gratuit pour jusqu'à 10 sites web dans un gratuit [compte d’évaluation de Windows Azure](https://www.windowsazure.com/pricing/free-trial/?WT.mc_id=A443DD604). Pour une procédure pas à pas sur la façon de déployer l’exemple d’application SignalR, consultez [publier le SignalR Getting Started, exemple comme un Site Web Windows Azure](https://blogs.msdn.com/b/timlee/archive/2013/02/27/deploy-the-signalr-getting-started-sample-as-a-windows-azure-web-site.aspx). Pour plus d’informations sur la façon de déployer un projet web Visual Studio sur un Site Web de Windows Azure, consultez [déploiement d’une Application ASP.NET sur un Site Web de Windows Azure](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet). (Remarque : Le transport WebSocket n'est pas actuellement pris en charge pour les Sites Web Windows Azure. Le transport WebSocket lorsque n’est pas disponible, SignalR utilise les autres transports disponibles comme décrit dans la section de Transports de la [Introduction à SignalR rubrique](index.md).)
+Vous pouvez rendre l’exemple d’application dans ce didacticiel ou d’autres applications signaler disponibles sur Internet en les déployant sur un fournisseur d’hébergement. Microsoft offre un hébergement Web gratuit pour un maximum de 10 sites Web dans un [compte d’essai gratuit de Windows Azure](https://www.windowsazure.com/pricing/free-trial/?WT.mc_id=A443DD604). Pour obtenir une procédure pas à pas sur le déploiement de l’exemple d’application Signalr, consultez [publier l’exemple signalr prise en main en tant que site Web Windows Azure](https://blogs.msdn.com/b/timlee/archive/2013/02/27/deploy-the-signalr-getting-started-sample-as-a-windows-azure-web-site.aspx). Pour plus d’informations sur le déploiement d’un projet Web Visual Studio sur un site Web Windows Azure, consultez [déploiement d’une Application ASP.net sur un site Web Windows Azure](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet). (Remarque : le transport WebSocket n’est actuellement pas pris en charge pour les sites Web Windows Azure. Lorsque le transport WebSocket n’est pas disponible, Signalr utilise les autres transports disponibles, comme décrit dans la section Transports de la [rubrique Présentation de signalr](index.md).)
 
-Pour en savoir plus les concepts de développements SignalR plus avancés, consultez les sites suivants pour le code source de SignalR et de ressources :
+Pour en savoir plus sur les concepts d’évolution de Signalr plus avancés, visitez les sites suivants pour le code source et les ressources Signalr :
 
-- [Projet de SignalR](http://signalr.net)
-- [SignalR Github et exemples](https://github.com/SignalR/SignalR)
-- [Wiki de SignalR](https://github.com/SignalR/SignalR/wiki)
+- [Projet signalr](http://signalr.net)
+- [Signalr GitHub et exemples](https://github.com/SignalR/SignalR)
+- [Wiki signalr](https://github.com/SignalR/SignalR/wiki)

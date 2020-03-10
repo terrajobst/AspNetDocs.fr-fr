@@ -2,22 +2,22 @@
 uid: web-forms/videos/aspnet-ajax/index
 title: ASP.NET AJAX | Microsoft Docs
 author: rick-anderson
-description: Comment travailler avec ASP.NET AJAX pour créer des pages très réactives, même si vous n’êtes pas un expert de JavaScript.
+description: Méthodes de travail avec ASP.NET AJAX pour créer des pages très réactives, même si vous n’êtes pas un expert JavaScript.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 754b8c66-cefc-42d6-9f02-685efabdfcc6
 msc.legacyurl: /web-forms/videos/aspnet-ajax
 msc.type: chapter
 ms.openlocfilehash: 52cc785a92bc3e902f0f3266333d6157c6a78354
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65116134"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78628624"
 ---
 # <a name="aspnet-ajax"></a>AJAX ASP.NET
 
-> Comment travailler avec ASP.NET AJAX pour créer des pages très réactives, même si vous n’êtes pas un expert de JavaScript.
+> Méthodes de travail avec ASP.NET AJAX pour créer des pages très réactives, même si vous n’êtes pas un expert JavaScript.
 
 - [Bien démarrer avec ASP.NET AJAX](how-do-i-get-started-with-aspnet-ajax.md)
 - [Implémenter les mises à jour de page partielles dynamiques avec ASP.NET AJAX](how-do-i-implement-dynamic-partial-page-updates-with-aspnet-ajax.md)

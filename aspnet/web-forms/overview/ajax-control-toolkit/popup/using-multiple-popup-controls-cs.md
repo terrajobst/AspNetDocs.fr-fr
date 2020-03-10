@@ -9,11 +9,11 @@ ms.assetid: 91511b0b-311d-481f-9e7c-73f07b813b79
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8700fe89af591e8b481e853580b0efa0cddbf1bc
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611650"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78612650"
 ---
 # <a name="using-multiple-popup-controls-c"></a>Utilisation de plusieurs contrôles de fenêtre contextuelle (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > L’extendeur PopupControl dans la boîte à outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle quand un autre contrôle est activé. Il est également possible d’utiliser plusieurs contrôles Popup sur une page.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 L’extendeur PopupControl dans la boîte à outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle quand un autre contrôle est activé. Il est également possible d’utiliser plusieurs contrôles Popup sur une page.
 
@@ -52,4 +52,4 @@ La page contient également deux zones de texte. Pour chaque zone de texte, la f
 Le calendrier s’affiche lorsque l’utilisateur clique dans la zone de texte ([cliquez pour afficher l’image en taille réelle](using-multiple-popup-controls-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](handling-postbacks-from-a-popup-control-with-an-updatepanel-cs.md)
+> [Next](handling-postbacks-from-a-popup-control-with-an-updatepanel-cs.md)

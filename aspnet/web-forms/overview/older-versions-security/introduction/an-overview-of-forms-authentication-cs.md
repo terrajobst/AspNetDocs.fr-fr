@@ -9,11 +9,11 @@ ms.assetid: de2d65b9-aadc-42ba-abe1-4e87e66521a0
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 009c3f84e00d648ede4a15e530ceac2d23e01eec
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74620753"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78546430"
 ---
 # <a name="an-overview-of-forms-authentication-c"></a>Vue d’ensemble de l’authentificationC#par formulaire ()
 
@@ -205,7 +205,7 @@ Comme vous pouvez le voir, il existe trois comptes d’utilisateur valides : Sc
 
 Quand un utilisateur entre des informations d’identification valides, j’ai indiqué qu’elles sont ensuite redirigées vers la « page appropriée ». Qu’est-ce que la page appropriée ? Rappelez-vous que lorsqu’un utilisateur visite une page qu’il n’est pas autorisé à afficher, le FormsAuthenticationModule les redirige automatiquement vers la page de connexion. Dans ce cas, il comprend l’URL demandée dans la chaîne de requête via le paramètre ReturnUrl. Autrement dit, si un utilisateur a tenté de visiter ProtectedPage. aspx et qu’il n’a pas été autorisé à le faire, le FormsAuthenticationModule les redirige vers :
 
-Login. aspx ? ReturnUrl = ProtectedPage. aspx
+Login.aspx?ReturnUrl=ProtectedPage.aspx
 
 Une fois la connexion établie, l’utilisateur doit être redirigé vers ProtectedPage. aspx. Les utilisateurs peuvent également accéder à la page de connexion sur leur propre Volition. Dans ce cas, après avoir connecté l’utilisateur, vous devez l’envoyer à la page default. aspx du dossier racine.
 
@@ -221,7 +221,7 @@ GetAuthCookie est pratique lorsque vous devez modifier le ticket d’authentific
 
 Étant donné que nous voulons nous connecter à l’utilisateur et les rediriger vers la page appropriée, nous allons utiliser RedirectFromLoginPage. Mettez à jour le gestionnaire d’événements Click du LoginButton, en remplaçant les deux lignes TODO commentées par la ligne de code suivante :
 
-FormsAuthentication. RedirectFromLoginPage (UserName. Text, RememberMe. Checked);
+FormsAuthentication.RedirectFromLoginPage(UserName.Text, RememberMe.Checked);
 
 Lorsque vous créez le ticket d’authentification par formulaire, nous utilisons la propriété Text de nom d’utilisateur du nom d’utilisateur pour le paramètre de *nom d’utilisateur* du ticket d’authentification par formulaire et l’état activé de la case à cocher RememberMe pour le paramètre *persistCookie* .
 
@@ -279,7 +279,7 @@ Les objets principal (tels que GenericPrincipal) fournissent des informations su
 
 Nous pouvons déterminer le nom du visiteur actuel à l’aide du code suivant :
 
-chaîne currentUsersName = User.Identity.Name ;
+string currentUsersName = User.Identity.Name;
 
 Lors de l’utilisation de l’authentification par formulaire, un [objet FormsIdentity](https://msdn.microsoft.com/library/system.web.security.formsidentity.aspx) est créé pour la propriété Identity de GenericPrincipal. La classe FormsIdentity retourne toujours la chaîne « Forms » pour sa propriété AuthenticationType et true pour sa propriété IsAuthenticated. La propriété Name retourne le nom d’utilisateur spécifié lors de la création du ticket d’authentification par formulaire. En plus de ces trois propriétés, FormsIdentity comprend l’accès au ticket d’authentification sous-jacent par le biais de sa [propriété ticket](https://msdn.microsoft.com/library/system.web.security.formsidentity.ticket.aspx). La propriété ticket retourne un objet de type [FormsAuthenticationTicket](https://msdn.microsoft.com/library/system.web.security.formsauthenticationticket.aspx), qui a des propriétés telles que expiration, IsPersistent, émis, nom, etc.
 
@@ -289,7 +289,7 @@ Le point important à retirer ici est que le paramètre de *nom d’utilisateur*
 
 Nous allons fournir un message plus personnalisé dans default. aspx. Mettez à jour la page\_chargement du gestionnaire d’événements afin que la chaîne « Bienvenue, *nom d’utilisateur*! » soit affectée à la propriété Text de l’étiquette WelcomeBackMessage.
 
-WelcomeBackMessage. Text = « Welcome Back », + User.Identity.Name + «  ! »;
+WelcomeBackMessage.Text = "Welcome back, " + User.Identity.Name + "!";
 
 La figure 13 montre l’effet de cette modification (lors de la connexion en tant qu’utilisateur Scott).
 

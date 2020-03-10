@@ -1,236 +1,236 @@
 ---
 uid: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/layouts
-title: Présentation des Pages Web ASP.NET - création d’une disposition cohérente | Microsoft Docs
+title: Présentation de la pages Web ASP.NET de la création d’une disposition cohérente | Microsoft Docs
 author: Rick-Anderson
-description: Ce didacticiel vous montre comment utiliser des dispositions pour créer une apparence cohérente pour les pages sur un site qui utilise ASP.NET Web Pages. Il suppose que vous avez effectué le...
+description: Ce didacticiel vous montre comment utiliser les dispositions pour créer un aspect cohérent des pages sur un site qui utilise pages Web ASP.NET. Il part du principe que vous avez terminé...
 ms.author: riande
 ms.date: 05/28/2015
 ms.assetid: c85ec591-f8d7-4882-b763-de6ab9f3df7a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/layouts
 msc.type: authoredcontent
 ms.openlocfilehash: 678eb7089e95e3d221d6b2d82034a62aefa75757
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131833"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78526690"
 ---
-# <a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Présentation des Pages Web ASP.NET - création d’une disposition cohérente
+# <a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Présentation de la pages Web ASP.NET de la création d’une disposition cohérente
 
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Ce didacticiel vous montre comment utiliser *dispositions* pour créer une apparence cohérente pour les pages sur un site qui utilise ASP.NET Web Pages. Il part du principe que vous avez terminé la série via [suppression de la base de données dans ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=251584).
+> Ce didacticiel vous montre comment utiliser les *dispositions* pour créer un aspect cohérent des pages sur un site qui utilise pages Web ASP.net. Elle suppose que vous avez terminé la série [en supprimant les données de la base de données dans pages Web ASP.net](https://go.microsoft.com/fwlink/?LinkId=251584).
 > 
 > Ce que vous allez apprendre :
 > 
-> - Quelles une page de disposition est.
-> - Guide pratique pour combiner des pages de disposition avec un contenu dynamique.
+> - Ce qu’est une page de disposition.
+> - Comment combiner des pages de disposition avec du contenu dynamique.
 > - Comment passer des valeurs à une page de disposition.
 
 ## <a name="about-layouts"></a>À propos des dispositions
 
-Les pages que vous avez créé jusqu'à présent ont tous été terminées, les pages autonome. Elles appartiennent au même site, mais ils n’ont pas tous les éléments courants ou un aspect standard.
+Les pages que vous avez créées jusqu’à présent ont toutes été des pages autonomes. Ils appartiennent tous au même site, mais ils n’ont pas d’éléments communs ou de présentation standard.
 
-La plupart des sites ont une apparence cohérente et une disposition. Par exemple, si vous accédez à la [Microsoft.com/Web](https://www.microsoft.com/web/) de site et observer cet onglet, vous voyez que les pages de tous les adhèrent à la disposition générale et à un thème visuel :
+La plupart des sites ont une apparence et une disposition cohérentes. Par exemple, si vous accédez au site [Microsoft.com/Web](https://www.microsoft.com/web/) et que vous recherchez, vous constatez que les pages adhèrent à une disposition générale et à un thème visuel :
 
-![Représentant la disposition de l’en-tête, zone de navigation, zone de contenu et le pied de la page du site Microsoft.com/Web](layouts/_static/image1.png)
+![Page de site Microsoft.com/web qui indique la disposition de l’en-tête, de la zone de navigation, de la zone de contenu et du pied de page](layouts/_static/image1.png)
 
-Un *inefficace* pour créer cette disposition consisterait à définir un en-tête, la barre de navigation et le pied de page séparément sur chacune de vos pages. Vous serez de dupliquer le même balisage chaque fois. Si vous souhaitez modifier quelque chose (par exemple, mettre à jour le pied de page), vous seriez obligé de modifier chaque page séparément.
+Une méthode *inefficace* pour créer cette disposition consiste à définir séparément un en-tête, une barre de navigation et un pied de page sur chacune de vos pages. Vous devez dupliquer chaque fois le même balisage. Si vous souhaitez modifier une valeur (par exemple, mettre à jour le pied de page), vous devez modifier chaque page séparément.
 
-C’est là *pages de disposition* se présentent sous. Dans ASP.NET Web Pages, vous pouvez définir une page de disposition qui fournit un conteneur global pour les pages sur votre site. Par exemple, la page de disposition peut contenir l’en-tête, la zone de navigation et le pied de page. La page de disposition inclut un espace réservé où le contenu principal s’affiche.
+C’est là qu’interviennent les *pages de disposition* . Dans pages Web ASP.NET, vous pouvez définir une page de disposition qui fournit un conteneur global pour les pages de votre site. Par exemple, la page de disposition peut contenir l’en-tête, la zone de navigation et le pied de page. La page de disposition comprend un espace réservé dans lequel se trouve le contenu principal.
 
-Vous pouvez ensuite définir des pages de contenu individuelles qui contiennent le balisage et le code uniquement pour cette page. Pages de contenu n’êtes pas obligé d’être des pages HTML complets ; ils n’ont pas d’avoir un `<body>` élément. Ils ont également une ligne de code qui indique à ASP.NET quelle page de disposition que vous souhaitez afficher le contenu dans. Il s’agit d’une image qui présente à peu près le fonctionne de cette relation :
+Vous pouvez ensuite définir des pages de contenu individuelles qui contiennent le balisage et le code uniquement pour cette page. Les pages de contenu n’ont pas besoin d’être des pages HTML complètes ; ils n’ont même pas besoin d’un élément `<body>`. Ils ont également une ligne de code qui indique à ASP.NET la page de disposition dans laquelle vous souhaitez afficher le contenu. Voici une image qui montre le fonctionnement de cette relation de manière approximative :
 
-![Diagramme conceptuel qui montre les deux pages de contenu et une page de disposition dans lequel ils tiennent](layouts/_static/image2.png)
+![Diagramme conceptuel qui affiche deux pages de contenu et une page de disposition dans laquelle elles s’ajustent](layouts/_static/image2.png)
 
-Cette interaction est facile à comprendre lorsque vous le voyez en action. Dans ce didacticiel, vous allez modifier vos pages de films pour utiliser une disposition.
+Cette interaction est facile à comprendre lorsque vous la voyez en action. Dans ce didacticiel, vous allez modifier vos pages de films pour utiliser une disposition.
 
-## <a name="adding-a-layout-page"></a>Ajout d’une Page de disposition
+## <a name="adding-a-layout-page"></a>Ajout d’une page de disposition
 
-Vous commencerez par créer une page de disposition qui définit une mise en page typique avec un en-tête, pied de page et une zone pour le contenu principal. Dans le site WebPagesMovies, ajouter une page CSHTML nommée  *\_Layout.cshtml*.
+Vous allez commencer par créer une page de disposition qui définit une mise en page classique avec un en-tête, un pied de page et une zone pour le contenu principal. Sur le site WebPagesMovies, ajoutez une page CSHTML nommée *\_Layout. cshtml*.
 
-Le trait de soulignement ( `_` ) caractère est significatif. Si un nom de la page commence par un trait de soulignement, ASP.NET ne sont pas directement envoyer cette page au navigateur. Cette convention permet de définir les pages qui sont nécessaires pour votre site, mais que les utilisateurs ne doivent pas être en mesure de demander directement.
+Le caractère de trait de soulignement de début (`_`) est significatif. Si le nom d’une page commence par un trait de soulignement, ASP.NET n’envoie pas directement cette page au navigateur. Cette Convention vous permet de définir les pages requises pour votre site, mais que les utilisateurs ne doivent pas être en mesure de demander directement.
 
-Remplacez le contenu de la page avec les éléments suivants :
+Remplacez le contenu de la page par ce qui suit :
 
 [!code-html[Main](layouts/samples/sample1.html)]
 
-Comme vous pouvez le voir, ce balisage est simplement de HTML qui utilise `<div>` éléments pour définir les trois sections de la page plus un plus `<div>` élément pour contenir les trois sections. Le pied de page contient un peu de code Razor : `@DateTime.Now.Year`, qui affichera l’année en cours à cet emplacement dans la page.
+Comme vous pouvez le voir, ce balisage est simplement du code HTML qui utilise `<div>` éléments pour définir trois sections dans la page plus un élément `<div>` pour contenir les trois sections. Le pied de page contient un peu de code Razor : `@DateTime.Now.Year`, qui affiche l’année en cours à cet emplacement dans la page.
 
-Notez qu’il existe un lien vers une feuille de style nommé *Movies.css*. La feuille de style est où les détails de la disposition physique des éléments seront définies. Vous allez créer que dans un instant.
+Notez qu’il existe un lien vers une feuille de style nommée *movies. CSS*. La feuille de style est l’endroit où les détails de la disposition physique des éléments seront définis. Vous allez le créer dans un moment.
 
-La fonctionnalité uniquement inhabituelle dans cette  *\_Layout.cshtml* page est le `@Render.Body()` ligne. Qui est l’espace réservé où le contenu se passera lorsque cette disposition est fusionnée avec une autre page.
+La seule fonctionnalité inhabituelle de cette page *\_Layout. cshtml* est la `@Render.Body()` ligne. Il s’agit de l’espace réservé où le contenu sera placé lorsque cette disposition sera fusionnée avec une autre page.
 
-## <a name="adding-a-css-file"></a>Ajout d’un fichier .css
+## <a name="adding-a-css-file"></a>Ajout d’un fichier. CSS
 
-La meilleure façon de définir la disposition réelle (autrement dit, apparence) des éléments de la page consiste à utiliser des règles de feuille de style en cascade. Afin que vous allez créer un *.css* fichier dont les règles pour votre nouvelle disposition.
+La meilleure façon de définir la disposition réelle (c’est-à-dire, l’apparence) des éléments sur la page consiste à utiliser des règles de feuille de style en cascade (CSS). Vous allez donc créer un fichier *. CSS* contenant les règles de votre nouvelle disposition.
 
-Dans WebMatrix, sélectionnez la racine de votre site. Ensuite, dans le **fichiers** onglet du ruban, cliquez sur la flèche sous le **New** bouton, puis cliquez sur **nouveau dossier**.
+Dans WebMatrix, sélectionnez la racine de votre site. Ensuite, sous l’onglet **fichiers** du ruban, cliquez sur la flèche sous le bouton **nouveau** , puis cliquez sur **nouveau dossier**.
 
-![L’option « Nouveau dossier » sous Nouveau dans le ruban.](layouts/_static/image3.png)
+![L’option « nouveau dossier » sous nouveau dans le ruban.](layouts/_static/image3.png)
 
-Nommez le nouveau dossier *Styles*.
+Nommez les nouveaux *styles*de dossiers.
 
-![Le nouveau dossier d’affectation de noms « Styles »](layouts/_static/image4.png)
+![Attribution d’un nom au nouveau dossier « styles »](layouts/_static/image4.png)
 
-À l’intérieur de la nouvelle *Styles* dossier, créez un fichier nommé *Movies.css*.
+Dans le nouveau dossier *styles* , créez un fichier nommé *movies. CSS*.
 
-![Création d’un fichier Movies.css](layouts/_static/image5.png)
+![Création d’un nouveau fichier movies. CSS](layouts/_static/image5.png)
 
-Remplacez le contenu de la nouvelle *.css* fichier par le code suivant :
+Remplacez le contenu du nouveau fichier *. CSS* par ce qui suit :
 
 [!code-css[Main](layouts/samples/sample2.css)]
 
-Nous ne nous dit pas grand-chose sur ces règles CSS, sauf pour noter deux choses. Un est qu’outre la définition des polices et tailles, les règles d’utilisent le positionnement absolu pour établir l’emplacement de l’en-tête, pied de page et zone de contenu principale. Si vous ne connaissez pas de positionnement dans CSS, vous pouvez lire le [positionnement CSS](http://www.w3schools.com/css/css_positioning.asp) didacticiel sur le site W3Schools.
+Nous n’indiquons pas en grande partie ces règles CSS, sauf pour noter deux choses. L’un est qu’en plus de la définition des polices et des tailles, les règles utilisent le positionnement absolu pour établir l’emplacement de l’en-tête, du pied de page et de la zone de contenu principale. Si vous ne connaissez pas le positionnement en CSS, vous pouvez lire le didacticiel sur le [positionnement CSS](http://www.w3schools.com/css/css_positioning.asp) sur le site W3Schools.
 
-L’autre chose à noter est que, en bas, que nous avons copié les règles de style qui ont été initialement définie individuellement dans le *Movies.cshtml* fichier. Ces règles ont été utilisées dans le [Introduction à l’affichage des données à l’aide des Pages Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=251580) didacticiel pour rendre le `WebGrid` helper restituer un balisage qui ajoutée des bandes à la table. (Si vous prévoyez d’utiliser un *.css* fichier pour les définitions de style, vous pouvez également placer les règles de style pour l’ensemble du site qu’il contient.)
+L’autre chose à noter est que, en bas, nous avons copié les règles de style qui ont été initialement définies individuellement dans le fichier *movies. cshtml* . Ces règles ont été utilisées dans l' [Introduction à l’affichage de données à l’aide d’pages Web ASP.net](https://go.microsoft.com/fwlink/?LinkId=251580) didacticiel permettant de rendre le balisage d' `WebGrid` qui a ajouté des bandes à la table. (Si vous envisagez d’utiliser un fichier *. CSS* pour les définitions de style, vous pouvez également placer les règles de style pour l’ensemble du site.)
 
-## <a name="updating-the-movies-file-to-use-the-layout"></a>La mise à jour le fichier de films pour utiliser la mise en page
+## <a name="updating-the-movies-file-to-use-the-layout"></a>Mise à jour du fichier movies pour utiliser la mise en page
 
-Vous pouvez désormais mettre à jour les fichiers existants dans votre site à utiliser la nouvelle disposition. Ouvrez le *Movies.cshtml* fichier. En haut, en tant que la première ligne de code, ajoutez ce qui suit :
+Vous pouvez maintenant mettre à jour les fichiers existants de votre site pour utiliser la nouvelle disposition. Ouvrez le fichier *movies. cshtml* . En haut, comme première ligne de code, ajoutez ce qui suit :
 
 [!code-csharp[Main](layouts/samples/sample3.cs)]
 
-La page démarre maintenant de cette façon :
+La page commence maintenant de la façon suivante :
 
 [!code-cshtml[Main](layouts/samples/sample4.cshtml?highlight=2)]
 
-Cette ligne de code indique à ASP.NET que quand le *films* page s’exécute, il doit être fusionnée avec la  *\_Layout.cshtml* fichier.
+Cette ligne de code indique à ASP.NET que lorsque la page *movies* s’exécute, elle doit être fusionnée avec le fichier *\_Layout. cshtml* .
 
-Dans la mesure où le *Movies.cshtml* fichier utilise désormais une page de disposition, vous pouvez supprimer le balisage à partir de la *Movies.cshtml* page qui a pris en charge par le  *\_Layout.cshtml*fichier. Prise en charge la `<!DOCTYPE>`, `<html>`, et `<body>` balises. Prise en charge de l’ensemble du `<head>` élément et son contenu, ce qui inclut les règles de style pour la grille, dans la mesure où vous avez maintenant ces règles un *.css* fichier. Si vous y êtes, de modifier l’existant `<h1>` élément à un `<h2>` élément ; si vous avez un `<h1>` élément dans la page de disposition est déjà. Modifier la `<h2>` texte à la « Liste de films ».
+Étant donné que le fichier *movies. cshtml* utilise désormais une page de disposition, vous pouvez supprimer le balisage de la page *movies. cshtml* qui est pris en charge par le fichier *\_Layout. cshtml* . Prenez le `<!DOCTYPE>`, `<html>`et `<body>` balises d’ouverture et de fermeture. Prenez la totalité de l’élément `<head>` et son contenu, qui comprend les règles de style pour la grille, puisque vous disposez désormais de ces règles dans un fichier *. CSS* . Lorsque vous y êtes, remplacez l’élément `<h1>` existant par un élément `<h2>` ; vous avez déjà un élément `<h1>` dans la page de disposition. Remplacez le texte `<h2>` par « liste des films ».
 
-Normalement, vous n’avez à apporter ces types de modifications dans une page de contenu. Lorsque vous commencez votre site avec une page de disposition, vous créez des pages de contenu sans tous ces éléments pour commencer. Dans ce cas, cependant, vous convertissez une page autonome pour qu’il utilise une disposition, par conséquent, il est un peu de nettoyage.
+Normalement, vous n’auriez pas à effectuer ces types de modifications dans une page de contenu. Lorsque vous démarrez votre site à l’aide d’une page de disposition, vous créez des pages de contenu sans que ces éléments commencent par. Dans ce cas, toutefois, vous convertissez une page autonome en une page qui utilise une disposition, ce qui signifie qu’il y a un peu de nettoyage.
 
-Lorsque vous avez terminé, le *Movies.cshtml* page doit ressembler à ce qui suit :
+Lorsque vous avez terminé, la page *movies. cshtml* ressemble à ce qui suit :
 
 [!code-cshtml[Main](layouts/samples/sample5.cshtml)]
 
 ### <a name="testing-the-layout"></a>Test de la disposition
 
-Maintenant, vous pouvez voir l’aspect de la mise en page. Dans WebMatrix, cliquez sur le *Movies.cshtml* page et sélectionnez **lancer dans le navigateur**. Lorsque le navigateur affiche la page, il ressemble à cette page :
+À présent, vous pouvez voir à quoi ressemble la disposition. Dans WebMatrix, cliquez avec le bouton droit sur la page *movies. cshtml* et sélectionnez **lancer dans le navigateur**. Lorsque le navigateur affiche la page, il ressemble à cette page :
 
-![Page de films restitué à l’aide d’une disposition](layouts/_static/image6.png)
+![Page films rendue à l’aide d’une disposition](layouts/_static/image6.png)
 
-ASP.NET a fusionné le contenu de la page Movies.cshtml dans le  *\_Layout.cshtml* page l’endroit exact où la `RenderBody` est de la méthode. Et bien sûr le  *\_Layout.cshtml* page références un *.css* fichier qui définit l’apparence de la page.
+ASP.NET a fusionné le contenu de la page movies. cshtml dans\_la page *Layout. cshtml* juste à l’emplacement où la méthode `RenderBody` est. Et bien sûr, la page *Layout. cshtml de\_* fait référence à un fichier *. CSS* qui définit l’apparence de la page.
 
-## <a name="updating-the-addmovie-page-to-use-the-layout"></a>La mise à jour de la Page AddMovie pour utiliser la mise en page
+## <a name="updating-the-addmovie-page-to-use-the-layout"></a>Mise à jour de la page AddMovie pour utiliser la disposition
 
-L’avantage réel de dispositions est que vous pouvez les utiliser pour toutes les pages de votre site. Ouvrez le *AddMovie.cshtml* page.
+L’avantage réel des dispositions est que vous pouvez les utiliser pour toutes les pages de votre site. Ouvrez la page *AddMovie. cshtml* .
 
-Vous vous souvenez peut-être que le *AddMovie.cshtml* page avait à l’origine des règles CSS qui définissent l’apparence des messages d’erreur de validation. Étant donné que vous avez un *.css* fichier pour votre site maintenant, vous pouvez déplacer ces règles pour le *.css* fichier. Les supprimer à partir de la *AddMovie.cshtml* de fichiers et de les ajouter au bas de la *Movies.css* fichier. Vous migrez les règles suivantes :
+Vous vous souvenez peut-être que la page *AddMovie. cshtml* contenait à l’origine des règles CSS pour définir l’apparence des messages d’erreur de validation. Dans la mesure où vous disposez d’un fichier *. CSS* pour votre site, vous pouvez déplacer ces règles vers le fichier *. CSS* . Supprimez-les du fichier *AddMovie. cshtml* et ajoutez-les au bas du fichier *movies. CSS* . Vous déplacez les règles suivantes :
 
 [!code-css[Main](layouts/samples/sample6.css)]
 
-Maintenant apporter les mêmes types de modifications dans *AddMovie.cshtml* que vous avez effectuées *Movies.cshtml* — ajoutez `Layout="~/_Layout.cshtml;` et supprimer le balisage HTML qui est désormais superflu. Modifier le `<h1>` élément à `<h2>`. Lorsque vous avez terminé, la page ressemblera à ceci :
+Effectuez maintenant les mêmes types de modifications dans *AddMovie. cshtml* que pour *movies. cshtml* : ajoutez `Layout="~/_Layout.cshtml;` et supprimez le balisage HTML qui est désormais superflu. Remplacez l’élément `<h1>` par `<h2>`. Lorsque vous avez terminé, la page ressemblera à l’exemple suivant :
 
 [!code-cshtml[Main](layouts/samples/sample7.cshtml)]
 
-Exécutez la page. Il se présente désormais comme dans cette illustration :
+Exécutez la page. À présent, il ressemble à l’illustration suivante :
 
-![Page Ajouter des films restituée à l’aide d’une disposition](layouts/_static/image7.png)
+![Page « Ajouter des films » rendue à l’aide d’une disposition](layouts/_static/image7.png)
 
-Vous souhaitez apporter des modifications similaires pour les pages du site : *EditMovie.cshtml* et *DeleteMovie.cshtml*. Toutefois, avant de procéder, vous pouvez apporter une autre modification à la disposition qui rend un peu plus flexible.
+Vous souhaitez apporter des modifications similaires aux pages du site, *EditMovie. cshtml* et *DeleteMovie. cshtml*. Toutefois, avant de procéder à cette opération, vous pouvez apporter une autre modification à la disposition qui le rend un peu plus flexible.
 
-## <a name="passing-title-information-to-the-layout-page"></a>Informations de titres de passage à la Page de disposition
+## <a name="passing-title-information-to-the-layout-page"></a>Passage des informations de titre à la page de disposition
 
-Le  *\_Layout.cshtml* a de la page que vous avez créé un `<title>` élément qui est défini sur « Mon Site de film ». La plupart des navigateurs affichent le contenu de cet élément en tant que le texte d’un onglet :
+\_la page *Layout. cshtml* que vous avez créée a un élément `<title>` défini sur « mon site de film ». La plupart des navigateurs affichent le contenu de cet élément sous forme de texte sur un onglet :
 
-![La page &lt;titre&gt; élément se trouvant dans un onglet de navigateur](layouts/_static/image8.png)
+![Élément de&gt; de titre &lt;de la page affiché dans un onglet de navigateur](layouts/_static/image8.png)
 
-Ces informations de titre sont génériques. Vous voulez que le texte du titre pour être plus précis à la page active. (Le texte du titre est également utilisé par les moteurs de recherche pour déterminer ce qui concerne votre page.) Vous pouvez passer des informations à partir d’une page de contenu comme *Movies.cshtml* ou *AddMovie.cshtml* effectue le rendu à la page de disposition, puis utiliser ces informations pour personnaliser le contenu de la page mise en page.
+Ces informations de titre sont génériques. Supposons que vous souhaitiez que le texte du titre soit plus spécifique à la page actuelle. (Le texte du titre est également utilisé par les moteurs de recherche pour déterminer l’objet de votre page.) Vous pouvez transmettre des informations à partir d’une page de contenu comme *movies. cshtml* ou *AddMovie. cshtml* à la page de disposition, puis utiliser ces informations pour personnaliser ce que la page de disposition rend.
 
-Ouvrez le *Movies.cshtml* page à nouveau. Dans le code en haut, ajoutez la ligne suivante :
+Ouvrez de nouveau la page *movies. cshtml* . Dans le code en haut, ajoutez la ligne suivante :
 
 [!code-csharp[Main](layouts/samples/sample8.cs)]
 
-Le `Page` objet n’est disponible sur tous les *.cshtml* pages et est à cet effet, à savoir pour partager des informations entre une page et de sa disposition.
+L’objet `Page` est disponible sur toutes les pages *. cshtml* et est à cet effet, à savoir, pour partager des informations entre une page et sa disposition.
 
-Ouvrez le  *\_Layout.cshtml* page. Modifier le `<title>` élément afin qu’elle ressemble à ce balisage :
+Ouvrez la page *Layout. cshtml\_* . Modifiez l’élément `<title>` afin qu’il ressemble à ce balisage :
 
 [!code-html[Main](layouts/samples/sample9.html)]
 
-Ce code affiche tout ce qui est dans le `Page.Title` propriété directement à cet emplacement dans la page.
+Ce code affiche tout ce qui se trouve dans la propriété `Page.Title` directement à cet emplacement dans la page.
 
-Exécutez le *Movies.cshtml* page. Cette fois l’onglet du navigateur indique ce que vous avez passé en tant que la valeur de `Page.Title`:
+Exécutez la page *movies. cshtml* . Cette fois, l’onglet Browser affiche ce que vous avez passé comme valeur de `Page.Title`:
 
-![Un onglet de navigateur affichant le titre créé dynamiquement](layouts/_static/image9.png)
+![Onglet de navigateur qui indique le titre créé dynamiquement](layouts/_static/image9.png)
 
-Si vous le souhaitez, affichez la source de la page dans le navigateur. Vous pouvez voir que le `<title>` élément est rendu en tant que `<title>List Movies</title>`.
+Si vous le souhaitez, affichez la page source dans le navigateur. Vous pouvez voir que l’élément `<title>` est restitué en tant que `<title>List Movies</title>`.
 
 > [!TIP] 
 > 
-> **L’objet de Page**
+> **Objet page**
 > 
-> Une fonctionnalité utile de `Page` est qu’il s’agit d’un objet dynamique — la `Title` propriété n’est pas un nom fixe ou réservé. Vous pouvez utiliser *n’importe quel* nom pour une valeur de la `Page` objet. Par exemple, vous pouvez aussi facilement transmis le titre à l’aide d’une propriété nommée `Page.CurrentName` ou `Page.MyPage`. La seule restriction est que le nom doit suivre les règles normales pour les propriétés peuvent être nommées. (Par exemple, le nom ne peut pas contenir d’espace.)
+> Une fonctionnalité utile de `Page` est qu’il s’agit d’un objet dynamique : la propriété `Title` n’est pas un nom fixe ou réservé. Vous pouvez utiliser *n’importe quel* nom pour une valeur de l’objet `Page`. Par exemple, vous pouvez aussi facilement avoir passé le titre à l’aide d’une propriété nommée `Page.CurrentName` ou `Page.MyPage`. La seule restriction est que le nom doit respecter les règles normales pour les propriétés qui peuvent être nommées. (Par exemple, le nom ne peut pas contenir d’espace.)
 > 
-> Vous pouvez passer n’importe quel nombre de valeurs à l’aide de la `Page` objet. Si vous souhaitez passer des informations sur les films à la page de disposition, vous pouvez transmettre des valeurs à l’aide de quelque chose comme `Page.MovieTitle` et `Page.Genre` et `Page.MovieYear`. (Ou d’autres noms qui vous a inventé pour stocker les informations.) La seule exigence, qui est probablement évident, est que vous devez utiliser les mêmes noms dans la page de contenu et de la page de disposition.
+> Vous pouvez passer n’importe quel nombre de valeurs à l’aide de l’objet `Page`. Si vous souhaitez transmettre des informations de film à la page de disposition, vous pouvez passer des valeurs à l’aide d’un `Page.MovieTitle` et `Page.Genre` et `Page.MovieYear`. (Ou tout autre nom que vous avez inventé pour stocker les informations.) La seule exigence, ce qui est probablement évidente, est que vous devez utiliser les mêmes noms dans la page de contenu et la page de disposition.
 > 
-> Les informations que vous passez à l’aide de la `Page` objet n’est pas limité à seulement du texte à afficher sur la page de disposition. Vous pouvez passer une valeur à la page de disposition et de code dans la page de disposition permet ensuite la valeur de décider s’il faut afficher une section de la page, ce qui *.css* pour et ainsi de suite. Les valeurs que vous passez le `Page` objet sont comme les autres valeurs que vous utilisez dans le code. Il est simplement que les valeurs proviennent de la page de contenu et sont passés à la page de disposition.
+> Les informations que vous transmettez à l’aide de l’objet `Page` ne sont pas limitées au simple texte à afficher sur la page de disposition. Vous pouvez passer une valeur à la page de disposition, puis le code dans la page de disposition peut utiliser la valeur pour décider s’il faut afficher une section de la page, le fichier *. CSS* à utiliser, etc. Les valeurs que vous transmettez dans l’objet `Page` ressemblent à toutes les autres valeurs que vous utilisez dans le code. Il s’agit simplement de faire en sorte que les valeurs proviennent de la page de contenu et soient passées à la page de disposition.
 
-Ouvrez le *AddMovie.cshtml* page et ajoutez une ligne au début du code qui fournit un titre pour le *AddMovie.cshtml* page :
+Ouvrez la page *AddMovie. cshtml* et ajoutez une ligne en haut du code qui fournit un titre pour la page *AddMovie. cshtml* :
 
 [!code-csharp[Main](layouts/samples/sample10.cs)]
 
-Exécutez le *AddMovie.cshtml* page. Vous voyez le titre de nouveau :
+Exécutez la page *AddMovie. cshtml* . Vous voyez ici le nouveau titre :
 
-![Un onglet de navigateur affichant le titre « Ajouter des films » créé dynamiquement](layouts/_static/image10.png)
+![Onglet de navigateur présentant le titre « ajouter des films » créé dynamiquement](layouts/_static/image10.png)
 
-## <a name="updating-the-remaining-pages-to-use-the-layout"></a>La mise à jour les Pages restantes pour utiliser la mise en page
+## <a name="updating-the-remaining-pages-to-use-the-layout"></a>Mise à jour des pages restantes pour utiliser la disposition
 
-Maintenant, vous pouvez terminer les pages restantes de votre site afin qu’ils utilisent la nouvelle disposition. Ouvrez *EditMovie.cshtml* et *DeleteMovie.cshtml* à son tour et apporter les mêmes modifications dans chacun.
+Vous pouvez maintenant terminer les pages restantes de votre site afin qu’elles utilisent la nouvelle disposition. Ouvrez *EditMovie. cshtml* et *DeleteMovie. cshtml* à tour de main et apportez les mêmes modifications dans chacun d’entre eux.
 
 Ajoutez la ligne de code qui établit un lien vers la page de disposition :
 
 [!code-csharp[Main](layouts/samples/sample11.cs)]
 
-Ajouter une ligne pour définir le titre de la page :
+Ajoutez une ligne pour définir le titre de la page :
 
 [!code-csharp[Main](layouts/samples/sample12.cs)]
 
-ou :
+ou :
 
 [!code-csharp[Main](layouts/samples/sample13.cs)]
 
-Supprimer tout le balisage HTML superflu, laissez en fait, seuls les bits qui se trouvent dans le `<body>` élément (plus le bloc de code en haut).
+Supprimez tout le balisage HTML superflu, en fait, laissez uniquement les bits qui se trouvent à l’intérieur de l’élément `<body>` (plus le bloc de code en haut).
 
-Modifier le `<h1>` élément à être un `<h2>` élément.
+Remplacez l’élément `<h1>` par un élément `<h2>`.
 
-Lorsque vous avez apporté ces modifications, testent chaque et assurez-vous qu’il ne s’affiche correctement et que le titre est correct.
+Une fois ces modifications effectuées, testez chacune d’elles et assurez-vous qu’elles s’affichent correctement et que le titre est correct.
 
-## <a name="parting-thoughts-about-layout-pages"></a>Joint des réflexions sur les Pages de disposition
+## <a name="parting-thoughts-about-layout-pages"></a>Commentaires sur les pages de disposition
 
-Dans ce didacticiel, vous avez créé un  *\_Layout.cshtml* page et utilisé la `RenderBody` méthode pour fusionner le contenu à partir d’une autre page. C’est le modèle de base pour l’utilisation de dispositions dans les Pages Web.
+Dans ce didacticiel, vous avez créé une page *Layout. cshtml\_* et utilisé la méthode `RenderBody` pour fusionner le contenu d’une autre page. Il s’agit du modèle de base pour l’utilisation de dispositions dans des pages Web.
 
-Pages de disposition ont des fonctionnalités supplémentaires que nous n’abordons ici. Par exemple, vous pouvez imbriquer des pages de disposition, une page de disposition permettre à leur tour référencent un autre. Dispositions imbriquées peuvent être utiles si vous travaillez avec des sous-sections d’un site qui nécessitent des dispositions différentes. Vous pouvez également utiliser des méthodes supplémentaires (par exemple, `RenderSection`) pour configurer nommé sections dans la page de disposition.
+Les pages de disposition ont des fonctionnalités supplémentaires que nous n’avions pas abordées ici. Par exemple, vous pouvez imbriquer des pages de disposition ; une page de disposition peut à son tour faire référence à une autre. Les dispositions imbriquées peuvent être utiles si vous utilisez des sous-sections d’un site qui nécessitent des dispositions différentes. Vous pouvez également utiliser des méthodes supplémentaires (par exemple, `RenderSection`) pour configurer des sections nommées dans la page de disposition.
 
-La combinaison de pages de disposition et *.css* fichiers est puissant. Comme vous le verrez dans la prochaine série de didacticiels, dans WebMatrix, vous pouvez créer un site basé sur un *modèle*, ce qui vous donne un site qui possède des fonctionnalités prégénérées qu’il contient. Les modèles de faire bon usage de CSS pour créer des sites qui esthétiques et qui ont des fonctionnalités telles que des menus et des pages de disposition. Voici une capture d’écran de la page d’accueil à partir d’un site basé sur un modèle, montrant les fonctionnalités qui utilisent des pages de disposition et CSS :
+La combinaison des pages de disposition et des fichiers *. CSS* est puissante. Comme vous le verrez dans la série de didacticiels suivante, dans WebMatrix, vous pouvez créer un site basé sur un *modèle*, ce qui vous donne un site avec des fonctionnalités prédéfinies. Les modèles utilisent correctement les pages de disposition et CSS pour créer des sites qui s’affichent parfaitement et qui possèdent des fonctionnalités telles que des menus. Voici une capture d’écran de la page d’hébergement d’un site basé sur un modèle, montrant des fonctionnalités qui utilisent des pages de disposition et CSS :
 
-![Disposition créée par le modèle de site de WebMatrix montrant l’en-tête de zone de navigation, zone de contenu, section facultative et liens de connexion](layouts/_static/image11.png)
+![Disposition créée par le modèle de site WebMatrix, avec l’en-tête, la zone de navigation, la zone de contenu, la section facultative et les liens de connexion](layouts/_static/image11.png)
 
-## <a name="complete-listing-for-movie-page-updated-to-use-a-layout-page"></a>Intégralité de la Page de film (mis à jour pour utiliser une Page de disposition)
+## <a name="complete-listing-for-movie-page-updated-to-use-a-layout-page"></a>Liste complète des pages de films (mise à jour pour utiliser une page de disposition)
 
 [!code-cshtml[Main](layouts/samples/sample14.cshtml)]
 
-## <a name="complete-page-listing-for-add-movie-page-updated-for-layout"></a>Page terminé pour ajouter une Page de film (mis à jour pour la disposition)
+## <a name="complete-page-listing-for-add-movie-page-updated-for-layout"></a>Liste complète des pages pour la page Ajouter un film (mise à jour de la disposition)
 
 [!code-cshtml[Main](layouts/samples/sample15.cshtml)]
 
-## <a name="complete-page-listing-for-delete-movie-page-updated-for-layout"></a>Liste complète de la Page Page du film Delete (mis à jour pour la disposition)
+## <a name="complete-page-listing-for-delete-movie-page-updated-for-layout"></a>Liste complète des pages pour la page de suppression de la vidéo (mise à jour pour la disposition)
 
 [!code-cshtml[Main](layouts/samples/sample16.cshtml)]
 
-## <a name="complete-page-listing-for-edit-movie-page-updated-for-layout"></a>Liste complète de la Page pour la Page de modification du film (mis à jour pour la disposition)
+## <a name="complete-page-listing-for-edit-movie-page-updated-for-layout"></a>Liste complète des pages pour la page de modification de la vidéo (mise à jour de la disposition)
 
 [!code-cshtml[Main](layouts/samples/sample17.cshtml)]
 
-## <a name="coming-up-next"></a>Prochaine
+## <a name="coming-up-next"></a>À venir suivant
 
-Dans le didacticiel suivant, vous allez apprendre à publier votre site sur Internet pour que tout le monde peut le voir.
+Dans le didacticiel suivant, vous apprendrez à publier votre site sur Internet afin que tout le monde puisse le voir.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- [Création d’une zone de recherche cohérent](https://go.microsoft.com/fwlink/?LinkID=202891) — un article qui fournit d’autres détails sur l’utilisation des dispositions. Il décrit également comment passer une valeur à une page de disposition qui affiche ou masque une partie du contenu.
-- [Pages de disposition avec Razor imbriquées](http://www.mikesdotnetting.com/Article/164/Nested-Layout-Pages-with-Razor) , Mike Brind blogs un exemple montrant comment imbriquer des pages de disposition. (Inclut un téléchargement des pages.)
+- [Création d’une apparence cohérente](https://go.microsoft.com/fwlink/?LinkID=202891) : un article qui fournit plus de détails sur l’utilisation des dispositions. Elle explique également comment passer une valeur à une page de disposition qui affiche ou masque une partie du contenu.
+- [Pages de disposition imbriquées avec Razor](http://www.mikesdotnetting.com/Article/164/Nested-Layout-Pages-with-Razor) — Mike saumured Blogs montre comment imbriquer des pages de disposition. (Comprend un téléchargement des pages.)
 
 > [!div class="step-by-step"]
 > [Précédent](deleting-data.md)

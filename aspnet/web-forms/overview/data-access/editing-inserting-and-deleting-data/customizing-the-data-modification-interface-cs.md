@@ -9,11 +9,11 @@ ms.assetid: 22e99600-8d18-4a94-a20e-a3a62bb63798
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/customizing-the-data-modification-interface-cs
 msc.type: authoredcontent
 ms.openlocfilehash: af68d1a0b744a2c1fd9d21a8bf6165bafa4de683
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74624233"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78609451"
 ---
 # <a name="customizing-the-data-modification-interface-c"></a>Personnalisation de l’interface de modification des données (C#)
 

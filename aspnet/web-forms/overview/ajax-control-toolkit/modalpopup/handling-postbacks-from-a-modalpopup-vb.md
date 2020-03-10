@@ -9,11 +9,11 @@ ms.assetid: f70ac2b3-900f-40fa-858f-ab057904506b
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/handling-postbacks-from-a-modalpopup-vb
 msc.type: authoredcontent
 ms.openlocfilehash: df0b71b3e336a0d230869623473bdac24b3dd07b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606625"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78621526"
 ---
 # <a name="handling-postbacks-from-a-modalpopup-vb"></a>Gestion des publications (postback) à partir d’un ModalPopup (VB)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle ModalPopup dans la boîte à outils de contrôle AJAX offre un moyen simple de créer une fenêtre contextuelle modale à l’aide de moyens côté client. Une attention particulière doit être prise lorsqu’une publication (postback) est créée à partir de la fenêtre contextuelle.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle ModalPopup dans la boîte à outils de contrôle AJAX offre un moyen simple de créer une fenêtre contextuelle modale à l’aide de moyens côté client. Une attention particulière doit être prise lorsqu’une publication (postback) est créée à partir de la fenêtre contextuelle.
 

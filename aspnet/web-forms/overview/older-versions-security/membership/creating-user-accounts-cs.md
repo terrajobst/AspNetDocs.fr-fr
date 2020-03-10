@@ -9,11 +9,11 @@ ms.assetid: f175278c-6079-4d91-b9b4-2493ed43d9ec
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/creating-user-accounts-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 955592320e7d36c7ae3b9c03a361bee2183f1776
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74625477"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78631977"
 ---
 # <a name="creating-user-accounts-c"></a>Création de comptes d’utilisateurs (C#)
 
@@ -29,7 +29,7 @@ Dans le <a id="_msoanchor_1"> </a> [didacticiel précédent](creating-the-member
 
 En plus d’apprendre à créer des comptes d’utilisateur, nous devons également mettre à jour le site Web de démonstration que nous avons créé dans le *<a id="_msoanchor_2"></a>[didacticiel d’authentification des formulaires](../introduction/an-overview-of-forms-authentication-cs.md)* , puis amélioré dans le didacticiel sur la configuration de l' *<a id="https://www.asp.net/learn/security/tutorial-03-cs.aspx"></a> authentification par formulaire et les rubriques avancées*. Notre application Web de démonstration a une page de connexion qui valide les informations d’identification des utilisateurs par rapport à des paires nom d’utilisateur/mot de passe codées en dur. En outre, `Global.asax` comprend du code qui crée des objets `IPrincipal` et `IIdentity` personnalisés pour les utilisateurs authentifiés. Nous allons mettre à jour la page de connexion pour valider les informations d’identification des utilisateurs par rapport à l’infrastructure d’appartenance et supprimer le principal personnalisé et la logique d’identité.
 
-Commençons !
+C’est parti !
 
 ## <a name="the-forms-authentication-and-membership-checklist"></a>Liste de vérification de l’authentification et de l’appartenance aux formulaires
 
@@ -63,7 +63,7 @@ Commencez par créer un nouveau dossier dans le projet nommé `Membership`. Ensu
 
 [!code-aspx[Main](creating-user-accounts-cs/samples/sample1.aspx)]
 
-N’oubliez pas que le balisage par défaut de `LoginContent` ContentPlaceHolder affiche un lien permettant d’ouvrir une session ou de se déconnecter du site, selon que l’utilisateur est authentifié ou non. Toutefois, la présence du contrôle de contenu `Content2` remplace le balisage par défaut de la page maître. Comme nous l’avons vu dans *<a id="_msoanchor_6"></a>[ une vue d’ensemble du didacticiel sur l’authentification par formulaire](../introduction/an-overview-of-forms-authentication-cs.md)* , cela s’avère utile dans les pages où vous ne souhaitez pas afficher les options relatives à la connexion dans la colonne de gauche.
+N’oubliez pas que le balisage par défaut de `LoginContent` ContentPlaceHolder affiche un lien permettant d’ouvrir une session ou de se déconnecter du site, selon que l’utilisateur est authentifié ou non. Toutefois, la présence du contrôle de contenu `Content2` remplace le balisage par défaut de la page maître. Comme nous l’avons vu dans *<a id="_msoanchor_6"></a>[une vue d’ensemble du didacticiel sur l’authentification par formulaire](../introduction/an-overview-of-forms-authentication-cs.md)* , cela s’avère utile dans les pages où vous ne souhaitez pas afficher les options relatives à la connexion dans la colonne de gauche.
 
 Toutefois, pour ces cinq pages, nous souhaitons afficher le balisage par défaut de la page maître pour le `LoginContent` ContentPlaceHolder. Par conséquent, supprimez le balisage déclaratif pour le contrôle de contenu `Content2`. Après cela, chacun des balises de la page de cinq pages ne doit contenir qu’un seul contrôle de contenu.
 
@@ -201,10 +201,10 @@ Après avoir créé quelques comptes d’utilisateur, vérifiez que les comptes 
 
 **Figure 10**: Il y a deux utilisateurs dans le magasin d’utilisateurs d’appartenance : Tito et Bruce ([cliquez pour afficher l’image en taille réelle](creating-user-accounts-cs/_static/image30.png))
 
-Alors que le magasin de l’utilisateur d’appartenance comprend désormais les informations de compte Bruce et Tito, nous n’avons pas encore implémenté les fonctionnalités permettant à Bruce ou Tito de se connecter au site. Actuellement, `Login.aspx` valide les informations d’identification de l’utilisateur par rapport à un ensemble codé en dur de paires nom d’utilisateur/mot de passe : il ne valide *pas* les informations d’identification fournies par rapport à l’infrastructure d’appartenance. Pour l’instant, l’affichage des nouveaux comptes d’utilisateur dans les tables `aspnet_Users` et `aspnet_Membership` doit suffire. Dans le didacticiel suivant, *<a id="_msoanchor_9"></a>[validation des informations d’identification de l’utilisateur par rapport au magasinde l’utilisateur d’appartenance](validating-user-credentials-against-the-membership-user-store-cs.md)* , nous allons mettre à jour la page de connexion pour effectuer une validation par rapport au magasin d’appartenance.
+Alors que le magasin de l’utilisateur d’appartenance comprend désormais les informations de compte Bruce et Tito, nous n’avons pas encore implémenté les fonctionnalités permettant à Bruce ou Tito de se connecter au site. Actuellement, `Login.aspx` valide les informations d’identification de l’utilisateur par rapport à un ensemble codé en dur de paires nom d’utilisateur/mot de passe : il ne valide *pas* les informations d’identification fournies par rapport à l’infrastructure d’appartenance. Pour l’instant, l’affichage des nouveaux comptes d’utilisateur dans les tables `aspnet_Users` et `aspnet_Membership` doit suffire. Dans le tutoriel suivant, *<a id="_msoanchor_9"></a>[Validation des informations d’identification de l’utilisateur auprès du magasin de l’utilisateur d’appartenance](validating-user-credentials-against-the-membership-user-store-cs.md)* , nous allons mettre à jour la page de connexion pour effectuer une validation auprès du magasin d’appartenance.
 
 > [!NOTE]
-> Si vous ne voyez aucun utilisateur dans votre base de données `SecurityTutorials.mdf`, cela peut être dû au fait que votre application Web utilise le fournisseur d’appartenances par défaut, `AspNetSqlMembershipProvider`, qui utilise la base de données `ASPNETDB.mdf` comme magasin de l’utilisateur. Pour déterminer s’il s’agit du problème, cliquez sur le bouton Actualiser dans la Explorateur de solutions. Si une base de données nommée `ASPNETDB.mdf` a été ajoutée au dossier `App_Data`, c’est le problème. Revenez à l'étape 4 du didacticiel *<a id="_msoanchor_10"></a>[Création du schéma d’appartenance dans SQL Server](creating-the-membership-schema-in-sql-server-cs.md)* pour obtenir des instructions sur la façon de configurer correctement le fournisseur d’appartenances.
+> Si vous ne voyez aucun utilisateur dans votre base de données `SecurityTutorials.mdf`, cela peut être dû au fait que votre application Web utilise le fournisseur d’appartenances par défaut, `AspNetSqlMembershipProvider`, qui utilise la base de données `ASPNETDB.mdf` comme magasin de l’utilisateur. Pour déterminer s’il s’agit du problème, cliquez sur le bouton Actualiser dans la Explorateur de solutions. Si une base de données nommée `ASPNETDB.mdf` a été ajoutée au dossier `App_Data`, c’est le problème. Revenez à l'étape 4 du tutoriel *<a id="_msoanchor_10"></a>[Création du schéma d’appartenance dans SQL Server](creating-the-membership-schema-in-sql-server-cs.md)* pour obtenir des instructions sur la façon de configurer correctement le fournisseur d’appartenances.
 
 Dans la plupart des scénarios de création de compte d’utilisateur, le visiteur reçoit une interface permettant d’entrer son nom d’utilisateur, son mot de passe, son adresse de messagerie et d’autres informations essentielles, à partir duquel un nouveau compte est créé. Au cours de cette étape, nous avons abordé la création d’une interface à la main, puis vu comment utiliser la méthode `Membership.CreateUser` pour ajouter par programmation le nouveau compte d’utilisateur en fonction des entrées de l’utilisateur. Notre code, cependant, vient de créer le nouveau compte d’utilisateur. Il n’a pas effectué d’actions de suivi, telles que la connexion de l’utilisateur au site sous le compte d’utilisateur juste créé, ou l’envoi d’un e-mail de confirmation à l’utilisateur. Ces étapes supplémentaires nécessiteraient un code supplémentaire dans le gestionnaire d’événements `Click` du bouton.
 

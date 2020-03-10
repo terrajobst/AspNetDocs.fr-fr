@@ -9,11 +9,11 @@ ms.assetid: 8921d7f2-21f0-427a-8b27-2df7251174b0
 msc.legacyurl: /mvc/overview/older-versions/working-with-the-dropdownlist-box-and-jquery/examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper
 msc.type: authoredcontent
 ms.openlocfilehash: 275b20ad964b3e8ddc272a7448f0740ed0891eff
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457607"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614904"
 ---
 # <a name="examining--how--aspnet-mvc-scaffolds-the-dropdownlist-helper"></a>Examen de la façon dont ASP.NET MVC génère un modèle automatique du helper DropDownList
 
@@ -43,7 +43,7 @@ Le code suivant montre le contexte de cette modification :
 
 Le `AlbumId` est requis pour apporter des modifications à un enregistrement d’album.
 
-Appuyez sur Ctrl+F5 pour exécuter l’application. Sélectionnez le lien **administrateur** , puis cliquez sur le lien **créer** pour créer un nouvel album. Vérifiez que les informations de l’album ont été enregistrées. Modifiez un album et vérifiez que les modifications que vous avez apportées sont conservées.
+Appuyez sur CTRL+F5 pour exécuter l'application. Sélectionnez le lien **administrateur** , puis cliquez sur le lien **créer** pour créer un nouvel album. Vérifiez que les informations de l’album ont été enregistrées. Modifiez un album et vérifiez que les modifications que vous avez apportées sont conservées.
 
 ### <a name="the-album-schema"></a>Schéma de l’album
 

@@ -2,22 +2,22 @@
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/index
 title: Modification, insertion et suppression de données | Microsoft Docs
 author: rick-anderson
-description: Ces didacticiels vous permet de voir comment mapper les méthodes du contrôle ObjectDataSource aux méthodes de la couche BLL et comment configurer le GridView, DetailsView et FormView co...
+description: Dans ces didacticiels, vous découvrez comment mapper les méthodes du contrôle ObjectDataSource aux méthodes BLL et comment configurer les co... GridView, DetailsView et FormView.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 9fc60498-ced4-47c6-b2cf-8d464e6aeef8
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data
 msc.type: chapter
 ms.openlocfilehash: 4657a52b05c1cf8a991158f212d6b6ce849ef276
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109054"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78607715"
 ---
 # <a name="editing-inserting-and-deleting-data"></a>Modification, insertion et suppression de données
 
-> Dans ces didacticiels, vous voyez comment mapper les méthodes du contrôle ObjectDataSource aux méthodes de la couche BLL et comment configurer le contrôle GridView, DetailsView, et FormView contrôle pour permettre aux utilisateurs de modifier des données.
+> Dans ces didacticiels, vous découvrez comment mapper des méthodes du contrôle ObjectDataSource à des méthodes BLL et comment configurer les contrôles GridView, DetailsView et FormView pour permettre aux utilisateurs de modifier les données.
 
 - [Vue d’ensemble de l’insertion, de la mise à jour et de la suppression de données (C#)](an-overview-of-inserting-updating-and-deleting-data-cs.md)
 - [Examen des événements associés à l’insertion, à la mise à jour et à la suppression (C#)](examining-the-events-associated-with-inserting-updating-and-deleting-cs.md)

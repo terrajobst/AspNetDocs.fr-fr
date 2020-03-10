@@ -1,6 +1,6 @@
 ---
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/index
-title: Création d’applications Cloud du monde réel avec Azure | Microsoft Docs
+title: Création d’applications Cloud réelles avec Azure | Microsoft Docs
 author: rick-anderson
 description: Création d’applications cloud réelles avec Azure
 ms.author: riande
@@ -9,11 +9,11 @@ ms.assetid: b452a3af-4157-4056-a181-569d1735c239
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure
 msc.type: chapter
 ms.openlocfilehash: 85dea0990364ad9c791c6e2cd632dab644e3575e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118797"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617613"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Création d’applications cloud réelles avec Azure
 
@@ -34,4 +34,4 @@ ms.locfileid: "65118797"
 - [Mise en cache distribuée](distributed-caching.md)
 - [Modèle de fonctionnement centré sur la file d’attente](queue-centric-work-pattern.md)
 - [Autres modèles et conseils](more-patterns-and-guidance.md)
-- [Annexe : La solution exemple d’Application](the-fix-it-sample-application.md)
+- [Annexe : L’exemple d’application Fix It](the-fix-it-sample-application.md)

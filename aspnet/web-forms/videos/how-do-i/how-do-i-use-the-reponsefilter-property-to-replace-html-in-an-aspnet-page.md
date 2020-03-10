@@ -1,24 +1,24 @@
 ---
 uid: web-forms/videos/how-do-i/how-do-i-use-the-reponsefilter-property-to-replace-html-in-an-aspnet-page
-title: '[Comment faire] Utilisez la propriété Reponse.Filter pour remplacer le code HTML dans une Page ASP.NET | Microsoft Docs'
+title: '[Comment faire :] Utilisez la propriété REPONSE. Filter pour remplacer du code HTML dans une page ASP.NET | Microsoft Docs'
 author: rick-anderson
-description: Dans cette vidéo Chris Pels montre comment utiliser la propriété Reponse.Filter pour intercepter et de modifier le code HTML envoyé à une page. Tout d’abord, un exemple de page est créée w...
+description: Dans cette vidéo, Chris pixels montre comment utiliser la propriété REPONSE. Filter pour intercepter et modifier le code HTML envoyé à une page. Tout d’abord, un exemple de page est créé...
 ms.author: riande
 ms.date: 01/29/2009
 ms.assetid: 3e5ae74a-9798-47d8-a2b3-0d8ad42dd4bc
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-use-the-reponsefilter-property-to-replace-html-in-an-aspnet-page
 msc.type: video
 ms.openlocfilehash: 2ebd9162f81f5270c92c6b8d55e2d2dad4660701
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403426"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78602815"
 ---
-# <a name="how-do-i-use-the-reponsefilter-property-to-replace-html-in-an-aspnet-page"></a>[Comment faire] Utilisez la propriété Reponse.Filter pour remplacer le code HTML dans une Page ASP.NET
+# <a name="how-do-i-use-the-reponsefilter-property-to-replace-html-in-an-aspnet-page"></a>[Comment faire :] Utiliser la propriété REPONSE. Filter pour remplacer du code HTML dans une page ASP.NET
 
-par [Chris Pels](https://twitter.com/chrispels)
+par [Chris pixels](https://twitter.com/chrispels)
 
-Dans cette vidéo Chris Pels montre comment utiliser la propriété Reponse.Filter pour intercepter et de modifier le code HTML envoyé à une page. Tout d’abord, un exemple de page est créé avec du texte simple. Ensuite, une classe Stream personnalisée est créée qui sert le flux de remplacement pour le flux actuel qui est envoyé au navigateur de l’utilisateur. Dans cette classe de flux personnalisée, le contenu de la page est récupéré à partir du flux, modifié et puis écrites dans le flux de réponse. Dans cette classe Stream personnalisée, la méthode Write est personnalisée pour remplacer le code HTML dans le flux de réponse de base, altérant ainsi ce qui est envoyé au navigateur de l’utilisateur. Enfin, la nouvelle classe de flux de données est affectée à la propriété Response.Filter dans la Page\_charge l’événement, ce qui, en fournissant le mécanisme permettant de modifier le contenu de la page.
+Dans cette vidéo, Chris pixels montre comment utiliser la propriété REPONSE. Filter pour intercepter et modifier le code HTML envoyé à une page. Tout d’abord, vous créez un exemple de page avec du texte simple. Ensuite, une classe de flux personnalisée est créée, qui sert de flux de remplacement pour le flux actuel envoyé au navigateur de l’utilisateur. Dans cette classe de flux personnalisée, le contenu de la page est récupéré à partir du flux, modifié, puis écrit dans le flux de réponse. Dans cette classe de flux personnalisée, la méthode Write est personnalisée pour remplacer le code HTML dans le flux de réponse de base, ce qui a pour effet de modifier ce qui est envoyé au navigateur de l’utilisateur. Enfin, la nouvelle classe Stream est assignée à la propriété Response. Filter dans la page\_événement Load, ce qui fournit le mécanisme de modification du contenu de la page.
 
-[&#9654;Regardez la vidéo (13 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-reponsefilter-property-to-replace-html-in-an-aspnet-page)
+[&#9654;Regarder la vidéo (13 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-reponsefilter-property-to-replace-html-in-an-aspnet-page)

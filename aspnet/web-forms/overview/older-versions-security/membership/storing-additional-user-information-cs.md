@@ -9,11 +9,11 @@ ms.assetid: 1642132a-1ca5-4872-983f-ab59fc8865d3
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/storing-additional-user-information-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 24b96e86bc93e03d2639b73e35ed1fd1271bac5a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74641450"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78634868"
 ---
 # <a name="storing-additional-user-information-c"></a>Stockage d’informations supplémentaires sur l’utilisateur (C#)
 
@@ -29,7 +29,7 @@ ASP. L’infrastructure d’appartenance de NET offre une interface flexible pou
 
 Souvent, les applications doivent stocker des informations utilisateur supplémentaires non incluses dans l’infrastructure d’appartenance. Par exemple, un détaillant en ligne devra peut-être permettre à chaque utilisateur de stocker ses adresses de livraison et de facturation, les informations de paiement, les préférences de remise et le numéro de téléphone du contact. En outre, chaque commande dans le système est associée à un compte d’utilisateur particulier.
 
-La classe `MembershipUser` n’inclut pas de propriétés telles que `PhoneNumber` ou `DeliveryPreferences` ou `PastOrders`. Comment suivre les informations utilisateur requises par l’application et s’intégrer à l’infrastructure d’appartenance ? Dans ce didacticiel, nous allons répondre à cette question en créant une application de livre d’or très rudimentaire. Dans ce cas, nous examinerons différentes options de modélisation des informations utilisateur dans une base de données, puis voyons comment associer ces données aux comptes d’utilisateur créés par l’infrastructure d’appartenance. Commençons !
+La classe `MembershipUser` n’inclut pas de propriétés telles que `PhoneNumber` ou `DeliveryPreferences` ou `PastOrders`. Comment suivre les informations utilisateur requises par l’application et s’intégrer à l’infrastructure d’appartenance ? Dans ce didacticiel, nous allons répondre à cette question en créant une application de livre d’or très rudimentaire. Dans ce cas, nous examinerons différentes options de modélisation des informations utilisateur dans une base de données, puis voyons comment associer ces données aux comptes d’utilisateur créés par l’infrastructure d’appartenance. C’est parti !
 
 ## <a name="step-1-creating-the-guestbook-applications-data-model"></a>Étape 1 : création du modèle de données de l’application de livre d’or
 

@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/index
-title: Déploiement de projets de Site Web dans Visual Studio 2008 et versions antérieures | Microsoft Docs
+title: Déploiement de projets de site Web dans Visual Studio 2008 et versions antérieures | Microsoft Docs
 author: rick-anderson
-description: Les applications web ASP.NET sont généralement conçues, créé, testé dans un environnement de développement local et doivent être déployées pour un o d’environnement de production...
+description: Les applications Web ASP.NET sont généralement conçues, créées et testées dans un environnement de développement local et doivent être déployées dans un environnement de production...
 ms.author: riande
 ms.date: 05/16/2012
 ms.assetid: 6f72bde8-f2f1-4e4a-94e5-494c3c153c14
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects
 msc.type: chapter
 ms.openlocfilehash: 43c2397ef4ccc5eacb2ff4c5d04f62b9c8c481b7
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134422"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78524058"
 ---
 # <a name="deploying-web-site-projects-in-visual-studio-2008-and-earlier"></a>Déploiement de projets de site web dans Visual Studio 2008 et versions antérieures
 
-> Les applications web ASP.NET sont généralement conçues, créées et testées dans un environnement de développement local et un doivent être déployées dans un environnement de production dès qu’elle sera prête à être publiée. Cette série de didacticiels décrit en détail le processus de déploiement.
+> Les applications Web ASP.NET sont généralement conçues, créées et testées dans un environnement de développement local et doivent être déployées dans un environnement de production une fois qu’elles sont prêtes pour la publication. Cette série de didacticiels détaille le processus de déploiement.
 
 - [Options d’hébergement ASP.NET (C#)](asp-net-hosting-options-cs.md)
 - [Détermination des fichiers qui doivent être déployés (C#)](determining-what-files-need-to-be-deployed-cs.md)

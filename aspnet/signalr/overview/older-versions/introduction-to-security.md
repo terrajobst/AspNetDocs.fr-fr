@@ -1,157 +1,157 @@
 ---
 uid: signalr/overview/older-versions/introduction-to-security
-title: Introduction à la sécurité de SignalR (SignalR 1.x) | Microsoft Docs
+title: Présentation de la sécurité de Signalr (Signalr 1. x) | Microsoft Docs
 author: bradygaster
-description: Décrit les problèmes de sécurité que vous devez prendre en compte lorsque vous développez une application de SignalR.
+description: Décrit les problèmes de sécurité que vous devez prendre en compte lors du développement d’une application Signalr.
 ms.author: bradyg
 ms.date: 10/17/2013
 ms.assetid: 715a4059-d307-4631-abbb-c789c95d6eb4
 msc.legacyurl: /signalr/overview/older-versions/introduction-to-security
 msc.type: authoredcontent
 ms.openlocfilehash: 34172c0a2a15a7ab0d782704d5831ce236f5c989
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65117078"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78536728"
 ---
 # <a name="introduction-to-signalr-security-signalr-1x"></a>Introduction à la sécurité de SignalR (SignalR 1.x)
 
-par [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://github.com/tfitzmac)
+de [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-> Cet article décrit les problèmes de sécurité que vous devez prendre en compte lorsque vous développez une application de SignalR.
+> Cet article décrit les problèmes de sécurité que vous devez prendre en compte lors du développement d’une application Signalr.
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Présentation
 
 Ce document contient les sections suivantes :
 
-- [Concepts de sécurité de SignalR](#concepts)
+- [Concepts de sécurité de signalr](#concepts)
 
     - [Authentification et autorisation](#authentication)
     - [Jeton de connexion](#connectiontoken)
-    - [Réintégration des groupes lors de la reconnexion](#rejoingroup)
-- [Comment SignalR empêche Cross-Site Request Forgery](#csrf)
-- [Recommandations de sécurité de SignalR](#recommendations)
+    - [Rejoindre des groupes lors de la reconnexion](#rejoingroup)
+- [Comment signaler empêche la falsification de requête intersites](#csrf)
+- [Recommandations de sécurité signalr](#recommendations)
 
-    - [Protocole SSL (Socket Layers) sécurisé](#ssl)
-    - [N’utilisez pas de groupes en tant que mécanisme de sécurité](#groupsecurity)
-    - [Gérer en toute sécurité les entrées à partir de clients](#input)
-    - [Rapprocher un changement d’état utilisateur avec une connexion active](#reconcile)
+    - [Protocole SSL (Secure Socket Layers)](#ssl)
+    - [N’utilisez pas de groupes comme mécanisme de sécurité](#groupsecurity)
+    - [Gestion en toute sécurité des entrées des clients](#input)
+    - [Rapprochement d’une modification de l’état de l’utilisateur avec une connexion active](#reconcile)
     - [Fichiers de proxy JavaScript générés automatiquement](#autogen)
     - [Exceptions](#exceptions)
 
 <a id="concepts"></a>
 
-## <a name="signalr-security-concepts"></a>Concepts de sécurité de SignalR
+## <a name="signalr-security-concepts"></a>Concepts de sécurité de signalr
 
 <a id="authentication"></a>
 
 ### <a name="authentication-and-authorization"></a>Authentification et autorisation
 
-SignalR est conçu pour être intégré à la structure d’authentification existante pour une application. Il ne fournit pas toutes les fonctionnalités d’authentification des utilisateurs. Au lieu de cela, vous authentifier les utilisateurs que vous le feriez normalement dans votre application, puis utiliser les résultats de l’authentification dans votre code de SignalR. Par exemple, vous pouvez authentifier vos utilisateurs avec l’authentification par formulaire ASP.NET et ensuite dans votre hub, appliquer les utilisateurs ou rôles sont autorisés à appeler une méthode. Dans votre hub, vous pouvez également passer des informations d’authentification, telles que le nom d’utilisateur ou si un utilisateur appartient à un rôle, au client.
+Signalr est conçu pour être intégré à la structure d’authentification existante pour une application. Il ne fournit aucune fonctionnalité permettant d’authentifier les utilisateurs. Au lieu de cela, vous authentifiez les utilisateurs comme vous le feriez normalement dans votre application, puis vous travaillez avec les résultats de l’authentification dans votre code Signalr. Par exemple, vous pouvez authentifier vos utilisateurs avec l’authentification ASP.NET Forms, puis, dans votre Hub, appliquer les utilisateurs ou les rôles autorisés à appeler une méthode. Dans votre Hub, vous pouvez également transmettre des informations d’authentification, telles que le nom d’utilisateur ou si un utilisateur appartient à un rôle, au client.
 
-SignalR fournit le [Authorize](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.authorizeattribute(v=vs.111).aspx) attribut pour spécifier quels utilisateurs ont accès à une méthode ou le hub. Vous appliquez l’attribut Authorize à un concentrateur ou des méthodes particulières dans un concentrateur. Sans l’attribut Authorize, toutes les méthodes publiques sur le hub sont disponibles pour un client qui est connecté au concentrateur. Pour plus d’informations sur les concentrateurs, consultez [l’authentification et autorisation pour SignalR Hubs](../security/hub-authorization.md).
+Signalr fournit l’attribut [Authorize](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.authorizeattribute(v=vs.111).aspx) pour spécifier les utilisateurs ayant accès à un concentrateur ou à une méthode. Vous appliquez l’attribut Authorize à un concentrateur ou à des méthodes particulières dans un concentrateur. Sans l’attribut Authorize, toutes les méthodes publiques sur le concentrateur sont disponibles pour un client qui est connecté au concentrateur. Pour plus d’informations sur les concentrateurs, consultez [authentification et autorisation pour les concentrateurs signalr](../security/hub-authorization.md).
 
-Le `Authorize` attribut est utilisé uniquement avec les hubs. Pour appliquer des règles d’autorisation lorsque vous utilisez un `PersistentConnection` vous devez substituer la `AuthorizeRequest` (méthode). Pour plus d’informations sur les connexions persistantes, consultez [authentification et autorisation pour les connexions persistantes SignalR](../security/persistent-connection-authorization.md).
+L’attribut `Authorize` est utilisé uniquement avec les hubs. Pour appliquer des règles d’autorisation lors de l’utilisation d’un `PersistentConnection` vous devez remplacer la méthode `AuthorizeRequest`. Pour plus d’informations sur les connexions persistantes, consultez [authentification et autorisation pour les connexions persistantes signalr](../security/persistent-connection-authorization.md).
 
 <a id="connectiontoken"></a>
 
 ### <a name="connection-token"></a>Jeton de connexion
 
-SignalR atténue le risque de l’exécution des commandes nuisibles en validant l’identité de l’expéditeur. Un jeton de connexion, qui contient l’id de connexion et le nom d’utilisateur pour les utilisateurs authentifiés, est transmis entre le client et le serveur pour chaque demande. L’id de connexion est un identificateur unique générée de façon aléatoire par le serveur lorsqu’une nouvelle connexion est créée et est rendue persistante pour la durée de la connexion. Le nom d’utilisateur est fournie par le mécanisme d’authentification pour l’application web. Le jeton de connexion est protégé par chiffrement et une signature numérique.
+Signalr limite le risque d’exécution de commandes malveillantes en validant l’identité de l’expéditeur. Un jeton de connexion, contenant l’ID de connexion et le nom d’utilisateur pour les utilisateurs authentifiés, est transmis entre le client et le serveur pour chaque demande. L’ID de connexion est un identificateur unique qui est généré de manière aléatoire par le serveur lors de la création d’une nouvelle connexion, et il est conservé pendant toute la durée de la connexion. Le nom d’utilisateur est fourni par le mécanisme d’authentification pour l’application Web. Le jeton de connexion est protégé par un chiffrement et une signature numérique.
 
 ![](introduction-to-security/_static/image2.png)
 
-Pour chaque demande, le serveur valide le contenu du jeton pour vous assurer que la demande provient de l’utilisateur spécifié. Le nom d’utilisateur doit correspondre à l’id de connexion. En validant l’id de connexion et le nom d’utilisateur, SignalR empêche un utilisateur malveillant de facilement emprunter l’identité d’un autre utilisateur. Si le serveur ne peut pas valider le jeton de connexion, la demande échoue.
+Pour chaque demande, le serveur valide le contenu du jeton pour s’assurer que la demande provient de l’utilisateur spécifié. Le nom d’utilisateur doit correspondre à l’ID de connexion. En validant à la fois l’ID de connexion et le nom d’utilisateur, Signalr empêche un utilisateur malveillant d’emprunter facilement l’identité d’un autre utilisateur. Si le serveur ne peut pas valider le jeton de connexion, la demande échoue.
 
 ![](introduction-to-security/_static/image4.png)
 
-Car l’id de connexion fait partie du processus de vérification, pas révéler l’id de connexion d’un utilisateur à d’autres utilisateurs ou si vous stockez la valeur sur le client, comme dans un cookie.
+Étant donné que l’ID de connexion fait partie du processus de vérification, vous ne devez pas révéler l’ID de connexion d’un utilisateur à d’autres utilisateurs ou stocker la valeur sur le client, par exemple dans un cookie.
 
 <a id="rejoingroup"></a>
 
-### <a name="rejoining-groups-when-reconnecting"></a>Réintégration des groupes lors de la reconnexion
+### <a name="rejoining-groups-when-reconnecting"></a>Rejoindre des groupes lors de la reconnexion
 
-Par défaut, l’application SignalR nouveau attribuera automatiquement un utilisateur aux groupes appropriés lors de la reconnexion à partir d’une interruption temporaire, par exemple quand une connexion est supprimée et rétablie avant l’expiration de la connexion. Lors de la reconnexion, le client passe un jeton de groupe qui inclut l’id de connexion et les groupes affectés. Le jeton de groupe est numériquement signé et chiffré. Le client conserve le même id de connexion après une reconnexion ; Par conséquent, l’id de connexion transmise par le client reconnecté doit correspondre à l’id de connexion précédente utilisée par le client. Cette vérification empêche tout utilisateur malveillant de transmettre les demandes d’adhésion des groupes non autorisées lors de la reconnexion.
+Par défaut, l’application Signalr réaffecte automatiquement un utilisateur aux groupes appropriés lors de la reconnexion après une interruption temporaire, par exemple lorsqu’une connexion est supprimée et rétablie avant l’expiration du délai de connexion. Lors de la reconnexion, le client passe un jeton de groupe qui comprend l’ID de connexion et les groupes affectés. Le jeton de groupe est signé numériquement et chiffré. Le client conserve le même ID de connexion après une reconnexion ; par conséquent, l’ID de connexion transmis à partir du client reconnecté doit correspondre à l’ID de connexion précédent utilisé par le client. Cette vérification empêche un utilisateur malveillant de transmettre des demandes pour joindre des groupes non autorisés lors de la reconnexion.
 
-Toutefois, il est important de noter que le jeton de groupe n’expire pas. Si un utilisateur appartenait à un groupe dans le passé, mais a été interdit à partir de ce groupe, cet utilisateur peut être en mesure de reproduire un jeton de groupe qui inclut le groupe interdit. Si vous avez besoin de gérer en toute sécurité les utilisateurs qui appartiennent à quels groupes, vous devez stocker ces données sur le serveur, comme dans une base de données. Ensuite, ajoutez une logique à votre application qui vérifie sur le serveur si un utilisateur appartient à un groupe. Pour obtenir un exemple de vérification de l’appartenance au groupe, consultez [utilisation de groupes de](../guide-to-the-api/working-with-groups.md).
+Toutefois, il est important de noter que le jeton de groupe n’expire pas. Si un utilisateur appartenait à un groupe dans le passé, mais qu’il a été exclu de ce groupe, cet utilisateur peut être en mesure de reproduire un jeton de groupe qui comprend le groupe interdit. Si vous devez gérer en toute sécurité les utilisateurs qui appartiennent à des groupes, vous devez stocker ces données sur le serveur, par exemple dans une base de données. Ensuite, ajoutez une logique à votre application qui vérifie sur le serveur si un utilisateur appartient à un groupe. Pour obtenir un exemple de vérification de l’appartenance à un groupe, consultez [utilisation des groupes](../guide-to-the-api/working-with-groups.md).
 
-Réintégration des groupes s’applique uniquement lorsqu’une connexion est reconnectée après une interruption temporaire. Si un utilisateur se déconnecte par la vous obliger à quitter l’application ou le redémarrage de l’application, votre application doit gérer l’ajout de cet utilisateur aux groupes appropriés. Pour plus d’informations, consultez [utilisation de groupes de](../guide-to-the-api/working-with-groups.md).
+La rejointure automatique de groupes s’applique uniquement lorsqu’une connexion est reconnectée après une interruption temporaire. Si un utilisateur se déconnecte en quittant l’application ou le redémarrage de l’application, votre application doit gérer l’ajout de cet utilisateur aux groupes appropriés. Pour plus d’informations, consultez [utilisation des groupes](../guide-to-the-api/working-with-groups.md).
 
 <a id="csrf"></a>
 
-## <a name="how-signalr-prevents-cross-site-request-forgery"></a>Comment SignalR empêche Cross-Site Request Forgery
+## <a name="how-signalr-prevents-cross-site-request-forgery"></a>Comment signaler empêche la falsification de requête intersites
 
-Falsification de demande intersites (CSRF) est une attaque où un site malveillant envoie une demande à un site vulnérable, où l’utilisateur est actuellement connecté. SignalR empêche CSRF en le rendant très peu probable d’un site malveillant pour créer une requête valide pour votre application SignalR.
+La falsification de requête intersites (CSRF) est une attaque dans laquelle un site malveillant envoie une demande à un site vulnérable dans lequel l’utilisateur est actuellement connecté. Signalr empêche les CSRF en rendant très peu probable qu’un site malveillant crée une demande valide pour votre application Signalr.
 
 ### <a name="description-of-csrf-attack"></a>Description de l’attaque CSRF
 
-Voici un exemple d’une attaque CSRF :
+Voici un exemple d’attaque CSRF :
 
-1. Un utilisateur se connecte à `www.example.com`, à l’aide de l’authentification par formulaire.
-2. Le serveur authentifie l’utilisateur. La réponse du serveur inclut un cookie d’authentification.
-3. Sans la déconnexion, l’utilisateur visite un site web malveillant. Ce site malveillant contient le formulaire HTML suivant : 
+1. Un utilisateur se connecte à `www.example.com`à l’aide de l’authentification par formulaire.
+2. Le serveur authentifie l’utilisateur. La réponse du serveur comprend un cookie d’authentification.
+3. Sans déconnexion, l’utilisateur visite un site Web malveillant. Ce site malveillant contient le formulaire HTML suivant : 
 
     [!code-html[Main](introduction-to-security/samples/sample1.html)]
 
-   Notez que l’action de formulaire valide vers le site vulnérable, pas pour le site malveillant. Il s’agit de la partie « cross-site » de falsification de requête Intersites.
-4. L’utilisateur clique sur le bouton Envoyer. Le navigateur inclut le cookie d’authentification avec la demande.
-5. La demande s’exécute sur le serveur example.com avec le contexte de l’utilisateur d’authentification et peut faire tout ce qu’un utilisateur authentifié est autorisé à faire.
+   Notez que l’action de formulaire publie sur le site vulnérable, et non sur le site malveillant. Il s’agit de la partie « inter-sites » de CSRF.
+4. L’utilisateur clique sur le bouton Envoyer. Le navigateur comprend le cookie d’authentification avec la demande.
+5. La demande s’exécute sur le serveur example.com avec le contexte d’authentification de l’utilisateur et peut faire tout ce qu’un utilisateur authentifié est autorisé à faire.
 
-Bien que cet exemple nécessite l’utilisateur clique sur le bouton du formulaire, la page malveillante pourrait aussi facilement exécuter un script qui envoie une requête AJAX à votre application de SignalR. En outre, à l’aide de SSL n’empêche pas une attaque CSRF, car le site malveillant peut envoyer une demande de « https:// ».
+Bien que cet exemple exige que l’utilisateur clique sur le bouton de formulaire, la page malveillante peut tout aussi facilement exécuter un script qui envoie une requête AJAX à votre application Signalr. En outre, l’utilisation de SSL n’empêche pas une attaque CSRF, car le site malveillant peut envoyer une requête « https:// ».
 
-En règle générale, les attaques CSRF sont possibles contre les sites web qui utilisent des cookies pour l’authentification, étant donné que les navigateurs envoient tous les cookies utiles pour le site de destination. Toutefois, les attaques CSRF ne sont pas limités à exploiter les cookies. Par exemple, l’authentification de base et Digest sont également vulnérables. Une fois un utilisateur se connecte avec l’authentification de base ou Digest, le navigateur envoie automatiquement les informations d’identification jusqu'à ce que la session se termine.
+En général, les attaques CSRF sont possibles sur les sites Web qui utilisent des cookies pour l’authentification, car les navigateurs envoient tous les cookies pertinents au site Web de destination. Toutefois, les attaques CSRF ne sont pas limitées à l’exploitation des cookies. Par exemple, l’authentification de base et Digest est également vulnérable. Une fois qu’un utilisateur se connecte avec l’authentification de base ou Digest, le navigateur envoie automatiquement les informations d’identification jusqu’à la fin de la session.
 
-### <a name="csrf-mitigations-taken-by-signalr"></a>Atténuations CSRF prises par SignalR
+### <a name="csrf-mitigations-taken-by-signalr"></a>Atténuations de CSRF effectuées par Signalr
 
-SignalR entreprend les actions suivantes afin d’éviter un site malveillant à partir de la création de demandes de valides à votre application de SignalR. Ces étapes sont effectuées par défaut et ne nécessitent pas d’action dans votre code.
+Signalr effectue les étapes suivantes pour empêcher un site malveillant de créer des demandes valides pour votre application Signalr. Ces étapes sont effectuées par défaut et ne nécessitent aucune action dans votre code.
 
-- **Désactiver des requêtes entre domaines**  
- Par défaut, inter-domaines les demandes sont désactivés dans une application de SignalR pour empêcher les utilisateurs à partir de l’appel d’un point de terminaison SignalR à partir d’un domaine externe. Toute demande qui provient d’un domaine externe est automatiquement considérée comme non valide et est bloqué. Il est recommandé de conserver ce comportement par défaut ; Sinon, un site malveillant pourrait tromper les utilisateurs d’envoyer des commandes à votre site. Si vous avez besoin d’utiliser des requêtes entre domaines, consultez [comment établir une connexion entre domaines](../guide-to-the-api/hubs-api-guide-javascript-client.md#crossdomain) .
-- **Passer un jeton de connexion dans la chaîne de requête, pas de cookie**  
- SignalR transmet le jeton de connexion en tant que valeur de chaîne de requête, plutôt que sous forme de cookie. En ne stockant ne pas le jeton de connexion en tant que cookie, le jeton de connexion n’est pas par inadvertance transféré par le navigateur lorsqu’un code malveillant est détecté. En outre, le jeton de connexion n’est pas conservé au-delà de la connexion actuelle. Par conséquent, un utilisateur malveillant ne peut pas effectuer une requête avec informations d’identification de l’authentification d’un autre utilisateur.
+- **Désactiver les demandes inter-domaines**  
+ Par défaut, les demandes inter-domaines sont désactivées dans une application Signalr pour empêcher les utilisateurs d’appeler un point de terminaison Signalr à partir d’un domaine externe. Toutes les demandes provenant d’un domaine externe sont automatiquement considérées comme non valides et sont bloquées. Il est recommandé de conserver ce comportement par défaut ; dans le cas contraire, un site malveillant pourrait inciter les utilisateurs à envoyer des commandes à votre site. Si vous devez utiliser des requêtes inter-domaines, consultez [Comment établir une connexion inter-domaines](../guide-to-the-api/hubs-api-guide-javascript-client.md#crossdomain) .
+- **Passer le jeton de connexion dans la chaîne de requête, et non le cookie**  
+ Signalr transmet le jeton de connexion en tant que valeur de chaîne de requête, et non en tant que cookie. En ne stockant pas le jeton de connexion en tant que cookie, le jeton de connexion n’est pas transmis par inadvertance par le navigateur lorsque du code malveillant est rencontré. En outre, le jeton de connexion n’est pas conservé au-delà de la connexion actuelle. Par conséquent, un utilisateur malveillant ne peut pas effectuer une demande sous les informations d’identification d’un autre utilisateur.
 - **Vérifier le jeton de connexion**  
- Comme décrit dans la [jeton de connexion](#connectiontoken) section, le serveur sait quels id de connexion est associé à chaque utilisateur authentifié. Le serveur ne traite pas de toute demande d’un id de connexion qui ne correspond pas le nom d’utilisateur. Il est peu probable qu'un utilisateur malveillant permettant de deviner une requête valide, car l’utilisateur malveillant devra connaître le nom d’utilisateur et l’id généré de façon aléatoire la connexion actuelle. Cet id de connexion n’est plus valide dès que la connexion est terminée. Les utilisateurs anonymes ne doivent pas avoir accès à toutes les informations sensibles.
+ Comme décrit dans la section [jeton de connexion](#connectiontoken) , le serveur sait quel ID de connexion est associé à chaque utilisateur authentifié. Le serveur ne traite pas les demandes provenant d’un ID de connexion qui ne correspond pas au nom d’utilisateur. Il est peu probable qu’un utilisateur malveillant puisse deviner une demande valide, car l’utilisateur malveillant doit connaître le nom d’utilisateur et l’ID de connexion actuel généré de manière aléatoire. Cet ID de connexion devient non valide dès que la connexion est terminée. Les utilisateurs anonymes ne doivent pas avoir accès à des informations sensibles.
 
 <a id="recommendations"></a>
 
-## <a name="signalr-security-recommendations"></a>Recommandations de sécurité de SignalR
+## <a name="signalr-security-recommendations"></a>Recommandations de sécurité signalr
 
 <a id="ssl"></a>
 
-### <a name="secure-socket-layers-ssl-protocol"></a>Protocole SSL (Socket Layers) sécurisé
+### <a name="secure-socket-layers-ssl-protocol"></a>Protocole SSL (Secure Socket Layers)
 
-Le protocole SSL utilise le chiffrement pour sécuriser le transport des données entre un client et le serveur. Si votre application SignalR transmet des informations sensibles entre le client et le serveur, utilisez SSL pour le transport. Pour plus d’informations sur la configuration de SSL, consultez [comment configurer SSL sur IIS 7](https://www.iis.net/learn/manage/configuring-security/how-to-set-up-ssl-on-iis).
+Le protocole SSL utilise le chiffrement pour sécuriser le transport de données entre un client et un serveur. Si votre application Signalr transmet des informations sensibles entre le client et le serveur, utilisez SSL pour le transport. Pour plus d’informations sur la configuration de SSL, consultez Configuration de [SSL sur IIS 7](https://www.iis.net/learn/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
 <a id="groupsecurity"></a>
 
-### <a name="do-not-use-groups-as-a-security-mechanism"></a>N’utilisez pas de groupes en tant que mécanisme de sécurité
+### <a name="do-not-use-groups-as-a-security-mechanism"></a>N’utilisez pas de groupes comme mécanisme de sécurité
 
-Les groupes sont un moyen pratique de collecter les utilisateurs liés, mais ils ne sont pas un mécanisme sécurisé pour limiter l’accès à des informations sensibles. Cela est particulièrement vrai lorsque les utilisateurs peuvent rejoindre automatiquement les groupes pendant une reconnexion. Au lieu de cela, envisagez d’ajout d’utilisateurs disposant de privilèges à un rôle et en limitant l’accès à une méthode de concentrateur que les membres de ce rôle. Pour obtenir un exemple de limiter l’accès basé sur un rôle, consultez [l’authentification et autorisation pour SignalR Hubs](../security/hub-authorization.md). Pour obtenir un exemple de vérification de l’accès utilisateur aux groupes lors de la reconnexion, consultez [utilisation de groupes de](../guide-to-the-api/working-with-groups.md).
+Les groupes sont un moyen pratique de collecter des utilisateurs associés, mais ils ne constituent pas un mécanisme sécurisé pour limiter l’accès aux informations sensibles. Cela est particulièrement vrai lorsque les utilisateurs peuvent rejoindre automatiquement des groupes lors d’une reconnexion. Au lieu de cela, envisagez d’ajouter des utilisateurs privilégiés à un rôle et de limiter l’accès à une méthode de concentrateur uniquement aux membres de ce rôle. Pour obtenir un exemple de restriction de l’accès en fonction d’un rôle, consultez la page [authentification et autorisation pour les concentrateurs signalr](../security/hub-authorization.md). Pour obtenir un exemple de vérification de l’accès utilisateur aux groupes lors de la reconnexion, consultez [utilisation des groupes](../guide-to-the-api/working-with-groups.md).
 
 <a id="input"></a>
 
-### <a name="safely-handling-input-from-clients"></a>Gérer en toute sécurité les entrées à partir de clients
+### <a name="safely-handling-input-from-clients"></a>Gestion en toute sécurité des entrées des clients
 
-Toutes les entrées à partir de clients qui sont prévue pour la diffusion à d’autres clients doivent être codées pour vous assurer qu’un utilisateur malveillant n’envoie pas de script à d’autres utilisateurs. Il est préférable encoder les messages sur les clients de réception plutôt que sur le serveur, car votre application SignalR peut-être avoir différents types de clients. Par conséquent, l’encodage HTML fonctionne pour un client web, mais pas pour d’autres types de clients. Par exemple, une méthode de client web pour afficher un message de conversation serait gérer en toute sécurité le nom d’utilisateur et le message en appelant le `html()` (fonction).
+Toutes les entrées des clients destinés à la diffusion vers d’autres clients doivent être codées pour s’assurer qu’un utilisateur malveillant n’envoie pas de script à d’autres utilisateurs. Il est préférable d’encoder les messages sur les clients de réception plutôt que sur le serveur, car votre application Signalr peut avoir de nombreux types de clients différents. Par conséquent, l’encodage HTML fonctionne pour un client Web, mais pas pour d’autres types de clients. Par exemple, une méthode de client Web pour afficher un message de conversation gère en toute sécurité le nom d’utilisateur et le message en appelant la fonction `html()`.
 
 [!code-html[Main](introduction-to-security/samples/sample2.html?highlight=3-4)]
 
 <a id="reconcile"></a>
 
-### <a name="reconciling-a-change-in-user-status-with-an-active-connection"></a>Rapprocher un changement d’état utilisateur avec une connexion active
+### <a name="reconciling-a-change-in-user-status-with-an-active-connection"></a>Rapprochement d’une modification de l’état de l’utilisateur avec une connexion active
 
-Si l’état d’un utilisateur change alors qu’une connexion active existe, l’utilisateur recevra une erreur indiquant que, « l’identité de l’utilisateur ne peut pas modifier pendant une connexion SignalR active ». Dans ce cas, votre application doit reconnecter au serveur pour vous assurer que le nom d’utilisateur et un id de connexion sont coordonnées. Par exemple, si votre application permet à l’utilisateur à se déconnecter, alors qu’une connexion active existe, le nom d’utilisateur pour la connexion ne correspondront plus le nom qui est passé pour la demande suivante. Vous souhaitez arrêter la connexion avant que l’utilisateur se déconnecte et puis redémarrez-le.
+Si l’état d’authentification d’un utilisateur change alors qu’une connexion active existe, l’utilisateur reçoit un message d’erreur indiquant que l’identité de l’utilisateur ne peut pas changer au cours d’une connexion active Signalr. Dans ce cas, votre application doit se reconnecter au serveur pour s’assurer que l’ID de connexion et le nom d’utilisateur sont coordonnés. Par exemple, si votre application autorise l’utilisateur à se déconnecter alors qu’une connexion active existe, le nom d’utilisateur de la connexion ne correspondra plus au nom transmis pour la requête suivante. Vous pouvez arrêter la connexion avant que l’utilisateur se déconnecte, puis la redémarrer.
 
-Toutefois, il est important de noter que la plupart des applications ne devrez pas arrêter et démarrer la connexion manuellement. Si votre application redirige les utilisateurs vers une page séparée après la connexion, tels que le comportement par défaut dans une application Web Forms ou MVC ou actualise la page active après la déconnexion, la connexion active est automatiquement déconnectée et pas nécessitent aucune action supplémentaire.
+Toutefois, il est important de noter que la plupart des applications n’ont pas besoin d’arrêter et de démarrer manuellement la connexion. Si votre application redirige les utilisateurs vers une page distincte après la déconnexion, par exemple le comportement par défaut d’une application Web Forms ou d’une application MVC, ou actualise la page actuelle après la déconnexion, la connexion active est automatiquement déconnectée et ne prend pas nécessite aucune action supplémentaire.
 
 L’exemple suivant montre comment arrêter et démarrer une connexion lorsque l’état de l’utilisateur a changé.
 
 [!code-html[Main](introduction-to-security/samples/sample3.html)]
 
-Ou bien, l’état d’authentification de l’utilisateur peut changer si votre site utilise expiration décalée avec l’authentification par formulaire, et il n’existe aucune activité pour conserver le cookie d’authentification valide. Dans ce cas, l’utilisateur sera déconnecté et le nom d’utilisateur ne correspondront plus le nom d’utilisateur dans le jeton de connexion. Vous pouvez résoudre ce problème en ajoutant un script qui demande périodiquement une ressource sur le serveur web pour conserver le cookie d’authentification valide. L’exemple suivant montre comment demander une ressource toutes les 30 minutes.
+Ou, l’état d’authentification de l’utilisateur peut changer si votre site utilise l’expiration décalée avec l’authentification par formulaire et qu’il n’y a aucune activité pour conserver le cookie d’authentification valide. Dans ce cas, l’utilisateur sera déconnecté et le nom d’utilisateur ne correspondra plus au nom d’utilisateur dans le jeton de connexion. Vous pouvez résoudre ce problème en ajoutant un script qui demande périodiquement une ressource sur le serveur Web afin de conserver le cookie d’authentification valide. L’exemple suivant montre comment demander une ressource toutes les 30 minutes.
 
 [!code-javascript[Main](introduction-to-security/samples/sample4.js)]
 
@@ -159,7 +159,7 @@ Ou bien, l’état d’authentification de l’utilisateur peut changer si votre
 
 ### <a name="automatically-generated-javascript-proxy-files"></a>Fichiers de proxy JavaScript générés automatiquement
 
-Si vous ne souhaitez pas inclure tous les concentrateurs et méthodes dans le fichier de proxy JavaScript pour chaque utilisateur, vous pouvez désactiver la génération automatique du fichier. Vous pouvez choisir cette option si vous disposez de plusieurs concentrateurs et méthodes, mais que vous ne souhaitez pas que tous les utilisateurs de connaître toutes les méthodes. Vous désactivez la génération automatique en définissant **EnableJavaScriptProxies** à **false**.
+Si vous ne souhaitez pas inclure tous les hubs et méthodes dans le fichier proxy JavaScript pour chaque utilisateur, vous pouvez désactiver la génération automatique du fichier. Vous pouvez choisir cette option si vous avez plusieurs hubs et méthodes, mais que vous ne voulez pas que chaque utilisateur soit informé de toutes les méthodes. Vous désactivez la génération automatique en affectant à **EnableJavaScriptProxies** la **valeur false**.
 
 [!code-csharp[Main](introduction-to-security/samples/sample5.cs)]
 
@@ -167,6 +167,6 @@ Pour plus d’informations sur les fichiers de proxy JavaScript, consultez [le p
 
 ### <a name="exceptions"></a>Exceptions
 
-Vous devez éviter de passer des objets d’exception aux clients, car les objets peuvent exposer des informations sensibles aux clients. Au lieu de cela, appelez une méthode sur le client qui affiche le message d’erreur pertinents.
+Vous devez éviter de passer des objets d’exception aux clients, car les objets peuvent exposer des informations sensibles aux clients. Au lieu de cela, appelez une méthode sur le client qui affiche le message d’erreur approprié.
 
 [!code-csharp[Main](introduction-to-security/samples/sample6.cs)]

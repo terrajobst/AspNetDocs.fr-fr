@@ -9,11 +9,11 @@ ms.assetid: 08815768-2702-42ae-ae85-0a59934a11d1
 msc.legacyurl: /visual-studio/overview/2013/release-notes
 msc.type: authoredcontent
 ms.openlocfilehash: d8af9c8e7ee1316a5eac90c5959d07c628154e09
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600439"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557931"
 ---
 # <a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>ASP.NET et Web Tools pour Visual Studio 2013 - Notes de publication
 
@@ -21,7 +21,7 @@ par [Microsoft](https://github.com/microsoft)
 
 > Ce document décrit la version de ASP.NET et Web Tools pour Visual Studio 2013.
 
-## <a name="contents"></a>Sommaire
+## <a name="contents"></a>Contenu
 
 - [Notes d’installation](#TOC1)
 - [Documentation](#TOC2)
@@ -40,7 +40,7 @@ par [Microsoft](https://github.com/microsoft)
 - [ASP.NET Web Forms](#TOC9)
 - [ASP.NET MVC 5](#TOC10)
 - [API Web ASP.NET 2](#TOC11)
-- [Signaleur ASP.NET](#TOC13)
+- [ASP.NET SignalR](#TOC13)
 - [ASP.NET Identity](#TOC8)
 - [Composants Microsoft OWIN](#TOC7)
 - [Entity Framework 6](#ef6)
@@ -59,7 +59,7 @@ Les ASP.NET et Web Tools pour les Visual Studio 2013 sont regroupées dans le pr
 Des didacticiels et d’autres informations sur les ASP.NET et Web Tools pour Visual Studio 2013 sont disponibles sur le [site Web ASP.net](https://www.asp.net/).
 
 <a id="TOC4"></a>
-## <a name="software-requirements"></a>Configuration logicielle requise
+## <a name="software-requirements"></a>Configuration logicielle
 
 ASP.NET et Web Tools nécessite Visual Studio 2013.
 
@@ -131,7 +131,7 @@ Visual Studio 2013 est également fourni avec les éditeurs CoffeeScript et moin
 
 Dans Visual Studio 2013 avec le kit de développement logiciel (SDK) Azure pour .NET 2,2, vous pouvez utiliser **Explorateur de serveurs** pour interagir directement avec vos applications Web distantes. Vous pouvez vous connecter à votre compte Azure, créer des applications Web, configurer des applications, afficher des journaux en temps réel, et bien plus encore. Disponible prochainement après la publication du kit de développement logiciel (SDK) 2,2, vous pourrez exécuter en mode débogage à distance dans Azure. La plupart des nouvelles fonctionnalités de Azure App Service Web Apps fonctionnent également dans Visual Studio 2012 quand vous installez la version actuelle du kit de développement logiciel (SDK) Azure pour .NET.
 
-Pour plus d'informations, voir les ressources suivantes :
+Pour plus d'informations, reportez-vous aux ressources suivantes :
 
 - [Créer une application Web ASP.NET dans Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-get-started/)
 - [Résoudre les problèmes d’une application web dans Azure App Service avec Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
@@ -139,7 +139,7 @@ Pour plus d'informations, voir les ressources suivantes :
 <a id="publish"></a>
 ## <a name="web-publish-enhancements"></a>Améliorations de la publication Web
 
-Visual Studio 2013 comprend des fonctionnalités de publication Web nouvelles et améliorées. Voici quelques-unes d’entre elles :
+Visual Studio 2013 comprend des fonctionnalités de publication Web nouvelles et améliorées. En voici quelques-uns :
 
 - [Automatisez facilement le chiffrement du fichier Web. config](https://go.microsoft.com/fwlink/?LinkId=325529). (Ce lien et les deux points suivants de la documentation sur MSDN qui peuvent ne pas être disponibles jusqu’à la fin de la journée, le 10/17.)
 - Automatisez facilement la mise [hors connexion d’une application pendant le déploiement](https://go.microsoft.com/fwlink/?LinkId=325530).
@@ -166,7 +166,7 @@ Les modèles de projet Web Forms s’intègrent en toute transparence à la nouv
 
 Les modèles de projet Web Forms prennent en charge la nouvelle infrastructure de ASP.NET Identity. En outre, les modèles prennent désormais en charge la création d’un projet Web Forms intranet. Pour plus d’informations, consultez [méthodes d’authentification](creating-web-projects-in-visual-studio.md#auth) dans **création de projets Web ASP.net dans Visual Studio 2013**.
 
-### <a name="bootstrap"></a>Démarrage
+### <a name="bootstrap"></a>Bootstrap
 
 Les modèles de Web Forms utilisent [bootstrap](http://twitter.github.io/bootstrap/) pour fournir une apparence élégante et réactive que vous pouvez facilement personnaliser. Pour plus d’informations, consultez [bootstrap dans les modèles de projet web Visual Studio 2013](creating-web-projects-in-visual-studio.md#bootstrap).
 
@@ -183,7 +183,7 @@ Pour plus d’informations sur la mise à niveau de projets MVC 4 vers MVC 5, co
 
 Les modèles de projet MVC ont été mis à jour pour utiliser ASP.NET Identity pour l’authentification et la gestion des identités. Vous trouverez un didacticiel sur l’authentification Facebook et Google et la nouvelle API d’appartenance dans la [création d’une application ASP.NET MVC 5 avec Facebook et Google OAuth2 et](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md) l’authentification OpenID, ainsi que la [création d’une application MVC ASP.net avec auth et SQL DB et le déploiement sur Azure App service](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database/).
 
-### <a name="bootstrap"></a>Démarrage
+### <a name="bootstrap"></a>Bootstrap
 
 Le modèle de projet MVC a été mis à jour pour utiliser [bootstrap](http://getbootstrap.com/) pour fournir une apparence élégante et réactive que vous pouvez facilement personnaliser. Pour plus d’informations, consultez [bootstrap dans les modèles de projet web Visual Studio 2013](creating-web-projects-in-visual-studio.md#bootstrap).
 
@@ -218,7 +218,7 @@ Le routage d’attributs fournit également une syntaxe pratique pour spécifier
 
 Pour plus d’informations sur le routage d’attributs, consultez [routage d’attributs dans l’API Web 2](../../../web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2.md).
 
-### <a name="oauth-20"></a>OAuth 2,0
+### <a name="oauth-20"></a>OAuth 2.0
 
 L’API Web et les modèles de projet d’application à page unique prennent désormais en charge l’autorisation à l’aide d’OAuth 2,0. OAuth 2,0 est une infrastructure permettant d’autoriser l’accès client aux ressources protégées. Il fonctionne pour un large éventail de clients, notamment des navigateurs et des appareils mobiles.
 
@@ -280,9 +280,9 @@ Le nouveau **HttpRequestContext** suit tout État lié à la demande, mais n’e
 
 Grâce à une autre contribution importante de Brock Allen, ASP.NET prend désormais entièrement en charge le partage des demandes Cross Origin (CORS).
 
-La sécurité du navigateur empêche une page Web d’effectuer des demandes AJAX à un autre domaine. [Cors](http://www.w3.org/TR/cors/) est une norme W3C qui permet à un serveur d’assouplir la stratégie de même origine. À l’aide de CORS, un serveur peut autoriser explicitement certaines demandes Cross-Origin tout en rejetant d’autres.
+La sécurité des navigateurs empêche une page web d’adresser des demandes AJAX à un autre domaine. [Cors](http://www.w3.org/TR/cors/) est une norme W3C qui permet à un serveur d’assouplir la stratégie de même origine. À l’aide de CORS, un serveur peut autoriser explicitement certaines demandes cross-origin lors du refus d’autres.
 
-L’API Web 2 prend désormais en charge CORS, y compris la gestion automatique des demandes préliminaires. Pour plus d’informations, consultez la page [activation des demandes Cross-Origin dans API Web ASP.net](../../../web-api/overview/security/enabling-cross-origin-requests-in-web-api.md).
+L’API Web 2 prend désormais en charge CORS, y compris la gestion automatique des demandes préliminaires. Pour plus d’informations, consultez la section [Activation des demandes multi-origines dans l’API web ASP.NET](../../../web-api/overview/security/enabling-cross-origin-requests-in-web-api.md).
 
 ### <a name="authentication-filters"></a>Filtres d’authentification
 
@@ -395,7 +395,7 @@ Pour faciliter le développement multiplateforme, les clients Silverlight, WinRT
 - NET 4,5
 - Silverlight 5
 - WinRT (.NET pour les applications du Windows Store)
-- Windows Phone 8
+- Windows Phone 8
 
 <a id="selfhost"></a>
 
@@ -597,7 +597,7 @@ Cette section décrit les problèmes connus et les modifications importantes app
 - La restauration d’un [nouveau package ne fonctionne pas avec les projets WiX](https://nuget.codeplex.com/workitem/3598) . elle sera corrigée dans un prochain téléchargement de NuGet. exe et la mise à jour du [package NuGet. CommandLine](http://www.nuget.org/packages/NuGet.CommandLine/) .
 - [La restauration automatique des packages ne fonctionne pas pour les projets dans un dossier de solution](https://nuget.codeplex.com/workitem/3625) , elle sera corrigée dans NuGet 2,8.
 
-### <a name="aspnet-web-api"></a>API Web ASP.NET
+### <a name="aspnet-web-api"></a>API web ASP.NET
 
 1. `ODataQueryOptions<T>.ApplyTo(IQueryable)` ne retourne pas `IQueryable<T>` toujours, car nous avons ajouté la prise en charge de `$select` et `$expand`.
 
@@ -620,11 +620,11 @@ Cette section décrit les problèmes connus et les modifications importantes app
 
     [!code-csharp[Main](release-notes/samples/sample23.cs)]
 
-### <a name="aspnet-mvc"></a>ASP.NET MVC
+### <a name="aspnet-mvc"></a>ASP.NET MVC
 
 1. Si vous utilisez MVC5 et OrgAuth, si vous avez des vues qui effectuent la validation AntiForgerToken, vous pouvez rencontrer l’erreur suivante lorsque vous publiez des données dans la vue :
 
-    **Erreur**:
+    **Erreur** :
 
     *Erreur de serveur dans l’application'/'.*
 

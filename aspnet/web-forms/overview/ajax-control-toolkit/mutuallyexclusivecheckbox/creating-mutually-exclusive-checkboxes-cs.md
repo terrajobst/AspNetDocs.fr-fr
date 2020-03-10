@@ -9,11 +9,11 @@ ms.assetid: 8e11b813-ba0d-4c29-b0f8-f65db6dbef1e
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/mutuallyexclusivecheckbox/creating-mutually-exclusive-checkboxes-cs
 msc.type: authoredcontent
 ms.openlocfilehash: ddc154601752cc856f00dd4f3207952ab7e0e3e0
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606500"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78613070"
 ---
 # <a name="creating-mutually-exclusive-checkboxes-c"></a>Création de cases à cocher mutuellement exclusives (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Lorsque seul un ensemble d’options peut être sélectionné, les cases d’option sont généralement utilisées. Toutefois, il existe un inconvénient : une fois qu’une case d’option est sélectionnée dans un groupe, il n’est pas possible de décocher toutes les cases d’option. Les cases à cocher peuvent être désactivées à tout moment, mais ne sont pas mutuellement exclusives. Ce didacticiel offre le meilleur des deux approches : les cases à cocher qui s’excluent mutuellement.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Lorsque seul un ensemble d’options peut être sélectionné, les cases d’option sont généralement utilisées. Toutefois, il existe un inconvénient : une fois qu’une case d’option est sélectionnée dans un groupe, il n’est pas possible de décocher toutes les cases d’option. Les cases à cocher peuvent être désactivées à tout moment, mais ne sont pas mutuellement exclusives. Ce didacticiel offre le meilleur des deux approches : les cases à cocher qui s’excluent mutuellement.
 
@@ -50,4 +50,4 @@ Enregistrer et exécuter la page : vous pouvez activer ou désactiver les deux 
 Une seule case à cocher peut être activée à la fois ([cliquez pour afficher l’image en taille réelle](creating-mutually-exclusive-checkboxes-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](creating-mutually-exclusive-checkboxes-vb.md)
+> [Next](creating-mutually-exclusive-checkboxes-vb.md)

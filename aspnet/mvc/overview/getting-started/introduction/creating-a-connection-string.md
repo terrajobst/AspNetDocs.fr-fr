@@ -9,11 +9,11 @@ ms.assetid: 6127804d-c1a9-414d-8429-7f3dd0f56e97
 msc.legacyurl: /mvc/overview/getting-started/introduction/creating-a-connection-string
 msc.type: authoredcontent
 ms.openlocfilehash: 20781ad760d3a0e4559ec4c7e18528f3686dcc02
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456515"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78615667"
 ---
 # <a name="creating-a-connection-string-and-working-with-sql-server-localdb"></a>Création d’une chaîne de connexion et utilisation de SQL Server LocalDB
 
@@ -25,7 +25,7 @@ par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 La classe `MovieDBContext` que vous avez créée gère la tâche de connexion à la base de données et de mappage d’objets `Movie` à des enregistrements de base de données. L’une des questions que vous pouvez poser, cependant, est la façon de spécifier la base de données à laquelle elle doit se connecter. Vous n’avez pas besoin de spécifier la base de données à utiliser, [Entity Framework utilisera](https://docs.microsoft.com/sql/database-engine/configure-windows/sql-server-2016-express-localdb)par défaut la base de données locale. Dans cette section, nous allons ajouter de manière explicite une chaîne de connexion dans le fichier *Web. config* de l’application.
 
-## <a name="sql-server-express-localdb"></a>Base de données locale SQL Server Express
+## <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
 La base de données [locale est une](https://docs.microsoft.com/sql/database-engine/configure-windows/sql-server-2016-express-localdb) version allégée de l’SQL Server Express moteur de base de données qui démarre à la demande et s’exécute en mode utilisateur. La base de données locale s’exécute dans un mode d’exécution spécial de SQL Server Express qui vous permet d’utiliser des bases de données en tant que fichiers *. mdf* . En règle générale, les fichiers de base de données de base de données locale sont conservés dans le dossier *application\_Data* d’un projet Web.
 

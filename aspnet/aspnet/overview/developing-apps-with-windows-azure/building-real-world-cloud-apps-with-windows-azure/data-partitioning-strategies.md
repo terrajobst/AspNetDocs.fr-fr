@@ -9,11 +9,11 @@ ms.assetid: 513837a7-cfea-4568-a4e9-1f5901245d24
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
 msc.type: authoredcontent
 ms.openlocfilehash: efc3fa0255aa765e515412c5fa4098303a9d9234
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457022"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617809"
 ---
 # <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>Stratégies de partitionnement des données (création d’applications Cloud réalistes avec Azure)
 
@@ -85,7 +85,7 @@ Conceptuellement, il est facile de voir comment un schéma de partitionnement fo
 
 Les complications sont gérables tant que vous les planifiez avant de passer en production. De nombreuses personnes qui n’ont pas fait cela veulent qu’elles aient été plus tard. En moyenne, notre équipe CAT (Customer Advisory Team) obtient des appels téléphoniques paniqués sur une fois par mois à partir de clients dont les applications sont en cours d’exécution de façon très importante et qui n’ont pas effectué cette planification. Et, par exemple : «aide ! Je place tout dans un magasin de données unique et, dans 45 jours, je n’ai plus d’espace disponible sur le disque !» Et si vous avez beaucoup de logique métier intégrée à la façon dont vous accédez à votre magasin de données et que vous avez des clients qui utilisent votre application, il n’y a pas de temps pour faire un jour pendant la migration. Nous commençons par les efforts Hercule pour aider le client à partitionner ses données à la volée sans temps d’arrêt. C’est très passionnant et très effrayant, et ne vous intéresse pas si vous pouvez éviter ! Si vous envisagez de le faire, il est plus facile de l’intégrer à votre application si l’application croît plus tard.
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Un schéma de partitionnement efficace peut permettre à votre application Cloud de s’adapter à plusieurs pétaoctets de données dans le Cloud sans goulots d’étranglement. Et vous n’avez pas à payer au préalable pour des machines volumineuses ou une infrastructure étendue, comme vous le pourriez si vous exécutiez l’application dans un centre de données local. Dans le Cloud, vous pouvez augmenter la capacité de façon incrémentielle en fonction de vos besoins, et vous payez uniquement pour autant que vous l’utilisez.
 

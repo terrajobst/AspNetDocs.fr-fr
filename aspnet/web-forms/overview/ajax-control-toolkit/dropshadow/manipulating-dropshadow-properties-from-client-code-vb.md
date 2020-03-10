@@ -9,11 +9,11 @@ ms.assetid: 11be4211-2fb9-4e15-b6d4-2aa623d81f3e
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-vb
 msc.type: authoredcontent
 ms.openlocfilehash: a39adb9c06819f6f828add7d762effad430b8570
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74574036"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78613798"
 ---
 # <a name="manipulating-dropshadow-properties-from-client-code-vb"></a>Manipulation des propriétés de DropShadow à partir de code client (VB)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle DropShadow dans la boîte à outils de contrôle AJAX étend un panneau avec une ombre portée. Les propriétés de cet extendeur peuvent également être modifiées à l’aide du code JavaScript du client.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle DropShadow dans la boîte à outils de contrôle AJAX étend un panneau avec une ombre portée. Les propriétés de cet extendeur peuvent également être modifiées à l’aide du code JavaScript du client.
 

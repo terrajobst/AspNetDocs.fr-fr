@@ -9,11 +9,11 @@ ms.assetid: fe3ef85f-bdc6-4e10-9768-25aa565c01d0
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-2
 msc.type: authoredcontent
 ms.openlocfilehash: 7c5ed1bdb4b390c94907b14e208231f16ad42d96
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600359"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78621820"
 ---
 # <a name="part-2-creating-the-domain-models"></a>Partie 2 : création des modèles de domaine
 
@@ -36,7 +36,7 @@ Comme les POCO ne transmettent pas de propriétés supplémentaires qui décrive
 Nous allons créer les POCO suivants :
 
 - Produit
-- Order
+- Trier
 - OrderDetail
 
 Pour créer chaque classe, cliquez avec le bouton droit sur le dossier Models dans Explorateur de solutions. Dans le menu contextuel, sélectionnez **Ajouter** , puis **classe.**
@@ -75,7 +75,7 @@ Un [formateur de type de média](../../formats-and-model-binding/media-formatter
 
 La sérialisation par valeur crée un problème si un graphique d’objet contient des références circulaires. C’est exactement le cas avec les classes `Order` et `OrderDetail`, car chacune contient une référence à l’autre. Le formateur suivra les références, en écrivant chaque objet par valeur, et en suivant des cercles. Par conséquent, nous devons modifier le comportement par défaut.
 
-Dans Explorateur de solutions, développez le dossier de démarrage de l’application\_et ouvrez le fichier nommé WebApiConfig.cs. Ajoutez le code suivant à la classe `WebApiConfig` :
+Dans Explorateur de solutions, développez le dossier de démarrage de l’application\_et ouvrez le fichier nommé WebApiConfig.cs. Ajoutez le code suivant à la classe `WebApiConfig` :
 
 [!code-csharp[Main](using-web-api-with-entity-framework-part-2/samples/sample4.cs?highlight=11)]
 

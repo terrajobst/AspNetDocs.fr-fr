@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/data-access/enhancing-the-gridview/index
-title: Amélioration du contrôle GridView | Microsoft Docs
+title: Amélioration de GridView | Microsoft Docs
 author: rick-anderson
-description: Ces didacticiels montrent comment ajouter une colonne de cases d’option à un contrôle GridView à fournir un moyen intuitif pour sélectionner une seule ligne.
+description: Ces didacticiels montrent comment ajouter une colonne de cases d’option à un contrôle GridView pour fournir un moyen intuitif de sélectionner une seule ligne.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 80010898-5cb0-49ae-a678-cc2f3fe3ca6c
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview
 msc.type: chapter
 ms.openlocfilehash: d4664511d2464ed667e87bb3716aef2000def279
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109506"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78607288"
 ---
 # <a name="enhancing-the-gridview"></a>Amélioration du contrôle GridView
 
-> Ces didacticiels montrent comment ajouter une colonne de cases d’option à un contrôle GridView à fournir un moyen intuitif pour sélectionner une seule ligne.
+> Ces didacticiels montrent comment ajouter une colonne de cases d’option à un contrôle GridView pour fournir un moyen intuitif de sélectionner une seule ligne.
 
 - [Ajout d’une colonne GridView de cases d’option (C#)](adding-a-gridview-column-of-radio-buttons-cs.md)
 - [Ajout d’une colonne GridView de cases à cocher (C#)](adding-a-gridview-column-of-checkboxes-cs.md)

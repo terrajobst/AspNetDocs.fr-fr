@@ -9,18 +9,18 @@ ms.assetid: 8513a57a-2d45-4d6b-881c-15a01c5cbb1c
 msc.legacyurl: /mvc/overview/getting-started/mvc-learning-sequence
 msc.type: authoredcontent
 ms.openlocfilehash: 46b089a896c6b1b92437ff1f5488214a3a0a9838
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455930"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78602514"
 ---
 # <a name="mvc-recommended-tutorials-and-articles"></a>Tutoriels et articles recommandés pour MVC
 
 par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 <a id="pwd"></a>
-## <a name="getting-started"></a>Mise en route
+## <a name="getting-started"></a>Commencer
 
 - [Prise en main avec ASP.NET MVC 5](introduction/getting-started.md) Cette série de 11 parties est un bon point de départ.
 - [Notions de base de Pluralsight ASP.NET MVC 5](https://pluralsight.com/training/Player?author=scott-allen&amp;name=aspdotnet-mvc5-fundamentals-m1-introduction&amp;mode=live&amp;clip=0&amp;course=aspdotnet-mvc5-fundamentals) (cours vidéo)

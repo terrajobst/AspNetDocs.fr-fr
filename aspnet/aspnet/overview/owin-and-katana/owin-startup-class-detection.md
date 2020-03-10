@@ -1,162 +1,162 @@
 ---
 uid: aspnet/overview/owin-and-katana/owin-startup-class-detection
-title: Détection de classe de démarrage OWIN | Microsoft Docs
+title: Détection de la classe de démarrage OWIN | Microsoft Docs
 author: Praburaj
-description: Ce didacticiel montre comment configurer la classe de démarrage OWIN est chargée. Pour plus d’informations sur OWIN, consultez une vue d’ensemble du projet Katana. Ce didacticiel a été...
+description: Ce didacticiel montre comment configurer la classe de démarrage OWIN chargée. Pour plus d’informations sur OWIN, consultez vue d’ensemble du projet Katana. Ce didacticiel était...
 ms.author: riande
 ms.date: 01/28/2019
 ms.assetid: 08257f55-36f4-4e39-9c88-2a5602838c79
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-startup-class-detection
 msc.type: authoredcontent
 ms.openlocfilehash: e1670c32049ec33dd4d1941a091a429d3929c452
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118210"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617046"
 ---
 # <a name="owin-startup-class-detection"></a>Détection de classe de démarrage OWIN
 
-> Ce didacticiel montre comment configurer la classe de démarrage OWIN est chargée. Pour plus d’informations sur OWIN, consultez [une vue d’ensemble du projet Katana](an-overview-of-project-katana.md). Ce didacticiel a été rédigé par Rick Anderson ( [ @RickAndMSFT ](https://twitter.com/#!/RickAndMSFT) ), Praburaj Thiagarajan et Howard Dierking ( [ @howard \_dierking](https://twitter.com/howard_dierking) ).
+> Ce didacticiel montre comment configurer la classe de démarrage OWIN chargée. Pour plus d’informations sur OWIN, consultez [vue d’ensemble du projet Katana](an-overview-of-project-katana.md). Ce didacticiel a été rédigé par Rick Anderson ( [@RickAndMSFT](https://twitter.com/#!/RickAndMSFT) ), Praburaj Thiagarajan et Howard Dierking ( [@howard\_Dierking](https://twitter.com/howard_dierking) ).
 >
-> ## <a name="prerequisites"></a>Prérequis
+> ## <a name="prerequisites"></a>Conditions préalables requises
 >
 > [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
 
 ## <a name="owin-startup-class-detection"></a>Détection de classe de démarrage OWIN
 
- Chaque Application OWIN a une classe de démarrage où vous spécifiez des composants pour le pipeline d’application. Il existe différentes façons, vous pouvez vous connecter à votre classe de démarrage avec le runtime, selon le modèle d’hébergement que vous choisissez (OwinHost, IIS et IIS Express). La classe de démarrage présentée dans ce didacticiel peut être utilisée dans chaque application d’hébergement. Vous vous connectez à la classe de démarrage avec l’hébergement runtime à l’aide d’une de ces approches :
+ Chaque application OWIN a une classe Startup dans laquelle vous spécifiez les composants du pipeline d’application. Vous pouvez connecter votre classe Startup à l’exécution de différentes manières, selon le modèle d’hébergement que vous choisissez (OwinHost, IIS et IIS-Express). La classe Startup présentée dans ce didacticiel peut être utilisée dans toutes les applications d’hébergement. Vous connectez la classe Startup au runtime d’hébergement à l’aide de l’une des approches suivantes :
 
-1. **Convention de dénomination**: Recherche de Katana pour une classe nommée `Startup` dans l’espace de noms mise en correspondance le nom d’assembly ou de l’espace de noms global.
-2. **Attribut de OwinStartup**: Il s’agit de l’approche que prendra la plupart des développeurs pour spécifier la classe de démarrage. L’attribut suivant définit la classe de démarrage le `TestStartup` classe dans le `StartupDemo` espace de noms.
+1. **Convention d’affectation de noms**: Katana recherche une classe nommée `Startup` dans l’espace de noms correspondant au nom de l’assembly ou à l’espace de noms global.
+2. **Attribut OwinStartup**: il s’agit de l’approche adoptée par la plupart des développeurs pour spécifier la classe Startup. L’attribut suivant définit la classe Startup sur la classe `TestStartup` de l’espace de noms `StartupDemo`.
 
     [!code-csharp[Main](owin-startup-class-detection/samples/sample1.cs)]
 
-   Le `OwinStartup` attribut remplace la convention d’affectation de noms. Vous pouvez également spécifier un nom convivial avec cet attribut, toutefois, à l’aide d’un nom convivial, vous devez également utiliser le `appSetting` élément dans le fichier de configuration.
-3. **L’élément appSetting dans le fichier de Configuration**: Le `appSetting` élément remplace la `OwinStartup` attribut et la convention d’affectation de noms. Vous pouvez avoir plusieurs classes de démarrage (chacun utilisant une `OwinStartup` attribut) et configurer la classe de démarrage qui sera chargé dans un fichier de configuration à l’aide de balisage similaire à ce qui suit :
+   L’attribut `OwinStartup` remplace la Convention d’affectation de noms. Vous pouvez également spécifier un nom convivial avec cet attribut. Toutefois, l’utilisation d’un nom convivial nécessite également l’utilisation de l’élément `appSetting` dans le fichier de configuration.
+3. **Élément AppSetting dans le fichier de configuration**: l’élément `appSetting` remplace l’attribut `OwinStartup` et la Convention d’affectation des noms. Vous pouvez avoir plusieurs classes de démarrage (chacune utilisant un attribut `OwinStartup`) et configurer la classe de démarrage qui sera chargée dans un fichier de configuration à l’aide d’un balisage similaire à ce qui suit :
 
     [!code-xml[Main](owin-startup-class-detection/samples/sample2.xml)]
 
-   La clé suivante, qui spécifie explicitement l’assembly et la classe de démarrage peut également être utilisée :
+   La clé suivante, qui spécifie explicitement la classe de démarrage et l’assembly peut également être utilisée :
 
     [!code-xml[Main](owin-startup-class-detection/samples/sample3.xml)]
 
-   Le code XML suivant dans le fichier de configuration spécifie un nom de classe de démarrage convivial `ProductionConfiguration`.
+   Le code XML suivant dans le fichier de configuration spécifie un nom de classe de démarrage convivial de `ProductionConfiguration`.
 
     [!code-xml[Main](owin-startup-class-detection/samples/sample4.xml)]
 
-   Le balisage ci-dessus doit être utilisé par le code suivant `OwinStartup` attribut qui spécifie un nom convivial et provoque la `ProductionStartup2` classe à exécuter.
+   Le balisage ci-dessus doit être utilisé avec l’attribut `OwinStartup` suivant qui spécifie un nom convivial et provoque l’exécution de la classe `ProductionStartup2`.
 
     [!code-csharp[Main](owin-startup-class-detection/samples/sample5.cs?highlight=1,16)]
-4. Pour désactiver la détection de démarrage OWIN ajouter la `appSetting owin:AutomaticAppStartup` avec la valeur `"false"` dans le fichier web.config.
+4. Pour désactiver la découverte du démarrage OWIN, ajoutez la `appSetting owin:AutomaticAppStartup` avec la valeur `"false"` dans le fichier Web. config.
 
     [!code-xml[Main](owin-startup-class-detection/samples/sample6.xml)]
 
-## <a name="create-an-aspnet-web-app-using-owin-startup"></a>Créer une application de Web ASP.NET à l’aide de démarrage OWIN
+## <a name="create-an-aspnet-web-app-using-owin-startup"></a>Créer une application Web ASP.NET à l’aide du démarrage OWIN
 
-1. Créez une application de web Asp.Net vide et nommez-la **StartupDemo**. -Installez `Microsoft.Owin.Host.SystemWeb` à l’aide du Gestionnaire de package NuGet. À partir de la **outils** menu, sélectionnez **Gestionnaire de Package NuGet**, puis **Console du Gestionnaire de Package**. Entrez la commande suivante :
+1. Créez une application Web Asp.Net vide et nommez-la **StartupDemo**. -Installer `Microsoft.Owin.Host.SystemWeb` à l’aide du gestionnaire de package NuGet. Dans le menu **Outils** , sélectionnez **Gestionnaire de package NuGet**, puis **console du gestionnaire de package**. Entrez la commande suivante :
 
     [!code-powershell[Main](owin-startup-class-detection/samples/sample7.ps1)]
-2. Ajouter une classe de démarrage OWIN. Dans Visual Studio 2017, cliquez sur le projet et sélectionnez **ajouter une classe**. - dans le **ajouter un nouvel élément** boîte de dialogue, entrez *OWIN* dans le champ de recherche, puis remplacez le nom par Startup.cs, puis sélectionnez **ajouter**.
+2. Ajoutez une classe de démarrage OWIN. Dans Visual Studio 2017, cliquez avec le bouton droit sur le projet et sélectionnez **Ajouter une classe**.-dans la boîte de dialogue **Ajouter un nouvel élément** , entrez *OWIN* dans le champ de recherche, puis remplacez le nom par Startup.cs, puis sélectionnez **Ajouter**.
 
      ![](owin-startup-class-detection/_static/image1.png)
 
-   La prochaine fois que vous souhaitez ajouter un *classe de démarrage Owin*, il sera dans disponible à partir de la **ajouter** menu.
+   La prochaine fois que vous voudrez ajouter une *classe de démarrage Owin*, celle-ci sera disponible dans le menu **Ajouter** .
 
      ![](owin-startup-class-detection/_static/image2.png)
 
-   Ou bien, vous pouvez cliquez sur le projet et sélectionnez **ajouter**, puis sélectionnez **un nouvel élément**, puis sélectionnez le **classe de démarrage Owin**.
+   Vous pouvez également cliquer avec le bouton droit sur le projet, sélectionner **Ajouter**, puis sélectionner **nouvel élément**, puis sélectionner la **classe de démarrage Owin**.
 
      ![](owin-startup-class-detection/_static/image3.png)
 
-- Remplacez le code généré dans le *Startup.cs* fichier par le code suivant :
+- Remplacez le code généré dans le fichier *Startup.cs* par le code suivant :
 
     [!code-csharp[Main](owin-startup-class-detection/samples/sample8.cs?highlight=5,7,15-28,31-34)]
 
-  Le `app.Use` expression lambda est utilisée pour enregistrer le composant d’intergiciel (middleware) spécifié au pipeline OWIN. Dans ce cas, nous configurons la journalisation des demandes entrantes avant de répondre à la demande entrante. Le `next` paramètre est le délégué ( [Func](https://msdn.microsoft.com/library/bb534960(v=vs.100).aspx) &lt; [tâche](https://msdn.microsoft.com/library/dd321424(v=vs.100).aspx) &gt; ) au composant suivant dans le pipeline. Le `app.Run` raccorde le pipeline aux demandes entrantes de l’expression lambda et fournit le mécanisme de réponse.
+  L’expression lambda `app.Use` est utilisée pour inscrire le composant d’intergiciel (middleware) spécifié dans le pipeline OWIN. Dans ce cas, nous allons configurer la journalisation des demandes entrantes avant de répondre à la demande entrante. Le paramètre `next` est le délégué ( [Func](https://msdn.microsoft.com/library/bb534960(v=vs.100).aspx) &lt; [Task](https://msdn.microsoft.com/library/dd321424(v=vs.100).aspx) &gt;) au composant suivant dans le pipeline. L’expression lambda `app.Run` raccorde le pipeline aux demandes entrantes et fournit le mécanisme de réponse.
      > [!NOTE]
-     > Dans le code ci-dessus nous avons mis en commentaire le `OwinStartup` attribut et nous allons s’appuyer sur la convention de l’exécution de la classe nommée `Startup` .-Press ***F5*** pour exécuter l’application. Cliquez sur Actualiser plusieurs fois.
+     > Dans le code ci-dessus, nous avons commenté l’attribut `OwinStartup` et nous nous appuyons sur la Convention d’exécution de la classe nommée `Startup`.-Appuyez sur ***F5*** pour exécuter l’application. L’actualisation a été atteinte plusieurs fois.
 
-    ![](owin-startup-class-detection/_static/image4.png) Remarque : Le nombre indiqué dans les images dans ce didacticiel ne correspondra pas le numéro que vous voyez. La chaîne de milliseconde est utilisée pour afficher une nouvelle réponse lorsque vous actualisez la page.
-  Vous pouvez voir les informations de trace dans le **sortie** fenêtre.
+    ![](owin-startup-class-detection/_static/image4.png) Remarque : le nombre indiqué dans les images de ce didacticiel ne correspond pas au nombre que vous voyez. La chaîne de millisecondes est utilisée pour afficher une nouvelle réponse quand vous actualisez la page.
+  Vous pouvez voir les informations de trace dans la fenêtre **sortie** .
 
     ![](owin-startup-class-detection/_static/image5.png)
 
-## <a name="add-more-startup-classes"></a>Ajouter plusieurs Classes de démarrage
+## <a name="add-more-startup-classes"></a>Ajouter d’autres classes de démarrage
 
-Dans cette section, nous allons ajouter une autre classe de démarrage. Vous pouvez ajouter plusieurs classe de démarrage OWIN à votre application. Par exemple, vous souhaiterez peut-être créer des classes de démarrage pour le développement, test et production.
+Dans cette section, nous allons ajouter une autre classe de démarrage. Vous pouvez ajouter plusieurs classes de démarrage OWIN à votre application. Par exemple, vous souhaiterez peut-être créer des classes de démarrage pour le développement, les tests et la production.
 
-1. Créez une nouvelle classe de démarrage OWIN et nommez-le `ProductionStartup`.
+1. Créez une nouvelle classe de démarrage OWIN et nommez-la `ProductionStartup`.
 2. Remplacez le code généré par ce qui suit :
 
     [!code-csharp[Main](owin-startup-class-detection/samples/sample9.cs?highlight=14-18)]
-3. Appuyez sur F5 de contrôle pour exécuter l’application. Le `OwinStartup` attribut spécifie la classe de démarrage de production est exécutée.
+3. Appuyez sur CTRL + F5 pour exécuter l’application. L’attribut `OwinStartup` spécifie la classe de démarrage de production qui est exécutée.
 
     ![](owin-startup-class-detection/_static/image6.png)
-4. Créez une autre classe de démarrage OWIN et nommez-le `TestStartup`.
+4. Créez une autre classe de démarrage OWIN et nommez-la `TestStartup`.
 5. Remplacez le code généré par ce qui suit :
 
     [!code-csharp[Main](owin-startup-class-detection/samples/sample10.cs?highlight=6,14-18)]
 
-   Le `OwinStartup` surcharge attribut ci-dessus spécifie `TestingConfiguration` en tant que le *convivial* nom de la classe de démarrage.
-6. Ouvrez le *web.config* fichier, puis ajoutez la clé de démarrage OWIN application qui spécifie le nom convivial de la classe de démarrage :
+   La surcharge d’attribut `OwinStartup` ci-dessus spécifie `TestingConfiguration` comme nom *convivial* de la classe Startup.
+6. Ouvrez le fichier *Web. config* et ajoutez la clé de démarrage de l’application OWIN qui spécifie le nom convivial de la classe Startup :
 
     [!code-xml[Main](owin-startup-class-detection/samples/sample11.xml?highlight=3-5)]
-7. Appuyez sur F5 de contrôle pour exécuter l’application. L’élément de paramètres d’application est prioritaire et le test de configuration est exécutée.
+7. Appuyez sur CTRL + F5 pour exécuter l’application. L’élément paramètres de l’application prend l’antécédent et la configuration de test est exécutée.
 
     ![](owin-startup-class-detection/_static/image7.png)
-8. Supprimer le *convivial* nom de la `OwinStartup` d’attribut dans la `TestStartup` classe.
+8. Supprimez le nom *convivial* de l’attribut `OwinStartup` dans la classe `TestStartup`.
 
     [!code-csharp[Main](owin-startup-class-detection/samples/sample12.cs)]
-9. Remplacer la clé de démarrage OWIN application dans le *web.config* fichier par le code suivant :
+9. Remplacez la clé de démarrage de l’application OWIN dans le fichier *Web. config* par ce qui suit :
 
     [!code-xml[Main](owin-startup-class-detection/samples/sample13.xml)]
-10. Rétablir le `OwinStartup` attribut dans chaque classe pour le code d’attribut par défaut généré par Visual Studio :
+10. Rétablissez l’attribut `OwinStartup` de chaque classe sur le code d’attribut par défaut généré par Visual Studio :
 
     [!code-csharp[Main](owin-startup-class-detection/samples/sample14.cs)]
 
-    Chacune des clés de démarrage OWIN application ci-dessous entraînera la classe de production s’exécute.
+    Chacune des clés de démarrage d’application OWIN ci-dessous entraîne l’exécution de la classe de production.
 
     [!code-xml[Main](owin-startup-class-detection/samples/sample15.xml)]
 
-    La dernière clé de démarrage spécifie la méthode de configuration de démarrage. La clé de démarrage OWIN application suivante vous permet de modifier le nom de la classe de configuration à `MyConfiguration` .
+    La dernière clé de démarrage spécifie la méthode de configuration de démarrage. La clé de démarrage de l’application OWIN suivante vous permet de modifier le nom de la classe de configuration pour `MyConfiguration`.
 
     [!code-xml[Main](owin-startup-class-detection/samples/sample16.xml)]
 
-## <a name="using-owinhostexe"></a>À l’aide d’Owinhost.exe
+## <a name="using-owinhostexe"></a>Utilisation de Owinhost. exe
 
-1. Remplacez le fichier Web.config par le balisage suivant :
+1. Remplacez le fichier Web. config par le balisage suivant :
 
     [!code-xml[Main](owin-startup-class-detection/samples/sample17.xml?highlight=3-6)]
 
-   La dernière clé de wins, donc dans ce cas `TestStartup` est spécifié.
-2. Installer Owinhost à partir de la PMC :
+   La dernière clé gagne, donc dans ce cas `TestStartup` est spécifié.
+2. Installez Owinhost à partir de l’PMC :
 
     [!code-console[Main](owin-startup-class-detection/samples/sample18.cmd)]
-3. Accédez au dossier d’application (le dossier qui contient le *Web.config* fichier) et dans une invite de commande et tapez :
+3. Accédez au dossier d’application (le dossier contenant le fichier *Web. config* ) et, à l’invite de commandes, tapez :
 
     [!code-console[Main](owin-startup-class-detection/samples/sample19.cmd)]
 
-   Affiche la fenêtre de commande :
+   La fenêtre de commande affiche :
 
     [!code-console[Main](owin-startup-class-detection/samples/sample20.cmd)]
-4. Lancer un navigateur avec l’URL `http://localhost:5000/`.
+4. Lancez un navigateur avec l’URL `http://localhost:5000/`.
 
     ![](owin-startup-class-detection/_static/image8.png)
 
-   OwinHost respecté les conventions de démarrage répertoriées ci-dessus.
-5. Dans la fenêtre de commande, appuyez sur ENTRÉE pour quitter OwinHost.
-6. Dans le `ProductionStartup` de classe, ajoutez l’attribut OwinStartup suivant qui spécifie un nom convivial de *ProductionConfiguration*.
+   OwinHost a respecté les conventions de démarrage indiquées ci-dessus.
+5. Dans la fenêtre commande, appuyez sur entrée pour quitter OwinHost.
+6. Dans la classe `ProductionStartup`, ajoutez l’attribut OwinStartup suivant qui spécifie un nom convivial de *ProductionConfiguration*.
 
     [!code-csharp[Main](owin-startup-class-detection/samples/sample21.cs)]
-7. Dans l’invite de commandes tapez :
+7. À l’invite de commandes et tapez :
 
     [!code-console[Main](owin-startup-class-detection/samples/sample22.cmd)]
 
-   Chargement de la classe de démarrage de Production.
+   La classe de démarrage de production est chargée.
     ![](owin-startup-class-detection/_static/image9.png)
 
-   Notre application a plusieurs classes de démarrage et dans cet exemple, nous avons différée quelle classe de démarrage pour charger jusqu'à l’exécution.
-8. Tester les options de démarrage runtime suivantes :
+   Notre application possède plusieurs classes de démarrage et, dans cet exemple, nous avons différé la classe de démarrage à charger jusqu’à l’exécution.
+8. Testez les options de démarrage du runtime suivantes :
 
     [!code-console[Main](owin-startup-class-detection/samples/sample23.cmd)]

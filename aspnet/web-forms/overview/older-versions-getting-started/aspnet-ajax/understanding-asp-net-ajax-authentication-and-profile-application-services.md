@@ -9,11 +9,11 @@ ms.assetid: 6ab4efb6-aab6-45ac-ad2c-bdec5848ef9e
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-authentication-and-profile-application-services
 msc.type: authoredcontent
 ms.openlocfilehash: cab9acb1ffd75cca87f6c575a6abdd000235828e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74635678"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640531"
 ---
 # <a name="understanding-aspnet-ajax-authentication-and-profile-application-services"></a>Présentation de l’authentification et des services d’application de profil d’ASP.NET AJAX
 
@@ -57,12 +57,12 @@ Une fois que le service d’authentification AJAX est activé et configuré, le 
 
 La méthode Login () commence une demande d’authentification des informations d’identification de l’utilisateur. Cette méthode est asynchrone et ne bloque pas l’exécution.
 
-*Paramètres*
+*Paramètres :*
 
-| **Nom du paramètre** | **C.-à-d** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | userName | Requis. Nom d’utilisateur à authentifier. |
-| mot de passe du . | Facultatif (valeur par défaut : null). Mot de passe de l'utilisateur. |
+| mot de passe | Facultatif (valeur par défaut : null). Mot de passe de l'utilisateur. |
 | isPersistent | Facultatif (false par défaut). Indique si le cookie d’authentification de l’utilisateur doit être rendu persistant entre les sessions. Si la valeur est false, l’utilisateur se déconnecte lorsque le navigateur est fermé ou que la session expire. |
 | redirectUrl | Facultatif (valeur par défaut : null). URL à laquelle rediriger le navigateur en cas d’authentification réussie. Si ce paramètre a la valeur null ou est une chaîne vide, aucune redirection ne se produit. |
 | customInfo | Facultatif (valeur par défaut : null). Ce paramètre est actuellement inutilisé et est réservé à une utilisation ultérieure. |
@@ -70,7 +70,7 @@ La méthode Login () commence une demande d’authentification des informations 
 | failedCallback | Facultatif (valeur par défaut : null). Fonction à appeler lorsque la connexion a échoué. S’il est spécifié, ce paramètre remplace la propriété defaultFailedCallback. |
 | userContext | Facultatif (valeur par défaut : null). Données de contexte d’utilisateur personnalisées qui doivent être passées aux fonctions de rappel. |
 
-*Valeur de retour :*
+*Return Value :*
 
 Cette fonction n’inclut pas de valeur de retour. Toutefois, un certain nombre de comportements sont inclus à la fin d’un appel à cette fonction :
 
@@ -82,16 +82,16 @@ Cette fonction n’inclut pas de valeur de retour. Toutefois, un certain nombre 
 
 La méthode Logout () supprime le cookie des informations d’identification et déconnecte l’utilisateur actuel de l’application Web.
 
-*Paramètres*
+*Paramètres :*
 
-| **Nom du paramètre** | **C.-à-d** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | redirectUrl | Facultatif (valeur par défaut : null). URL à laquelle rediriger le navigateur en cas d’authentification réussie. Si ce paramètre a la valeur null ou est une chaîne vide, aucune redirection ne se produit. |
 | logoutCompletedCallback | Facultatif (valeur par défaut : null). Fonction à appeler lorsque la déconnexion s’est terminée avec succès. S’il est spécifié, ce paramètre remplace la propriété defaultLogoutCompleted. |
 | failedCallback | Facultatif (valeur par défaut : null). Fonction à appeler lorsque la connexion a échoué. S’il est spécifié, ce paramètre remplace la propriété defaultFailedCallback. |
 | userContext | Facultatif (valeur par défaut : null). Données de contexte d’utilisateur personnalisées qui doivent être passées aux fonctions de rappel. |
 
-*Valeur de retour :*
+*Return Value :*
 
 Cette fonction n’inclut pas de valeur de retour. Toutefois, un certain nombre de comportements sont inclus à la fin d’un appel à cette fonction :
 
@@ -107,11 +107,11 @@ La référence de fonction spécifiée par cette propriété doit avoir la signa
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample2.js)]
 
-*Paramètres*
+*Paramètres :*
 
-| **Nom du paramètre** | **C.-à-d** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
-| erreur | Spécifie les informations sur l’erreur. |
+| error | Spécifie les informations sur l’erreur. |
 | userContext | Spécifie les informations de contexte utilisateur fournies lors de l’appel de la fonction de connexion ou de déconnexion. |
 | methodName | Nom de la méthode appelante. |
 
@@ -123,9 +123,9 @@ La référence de fonction spécifiée par cette propriété doit avoir la signa
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample3.js)]
 
-*Paramètres*
+*Paramètres :*
 
-| **Nom du paramètre** | **C.-à-d** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | validCredentials | Spécifie si l’utilisateur a fourni des informations d’identification valides. `true` si l’utilisateur s’est connecté avec succès ; sinon `false`. |
 | userContext | Spécifie les informations de contexte utilisateur fournies lors de l’appel de la fonction de connexion. |
@@ -139,9 +139,9 @@ La référence de fonction spécifiée par cette propriété doit avoir la signa
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample4.js)]
 
-*Paramètres*
+*Paramètres :*
 
-| **Nom du paramètre** | **C.-à-d** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | result | Ce paramètre sera toujours `null`; elle est réservée à une utilisation ultérieure. |
 | userContext | Spécifie les informations de contexte utilisateur fournies lors de l’appel de la fonction de connexion. |
@@ -203,9 +203,9 @@ Le champ propriétés expose toutes les données de profil configurées en tant 
 
 Charge une liste sélectionnée ou toutes les propriétés à partir du serveur.
 
-*Paramètres*
+*Paramètres :*
 
-| **Nom du paramètre** | **C.-à-d** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | propertyNames | Facultatif (valeur par défaut : null). Propriétés à charger à partir du serveur. |
 | loadCompletedCallback | Facultatif (valeur par défaut : null). Fonction à appeler lorsque le chargement est terminé. |
@@ -220,9 +220,9 @@ Si le paramètre `propertyNames` n’est pas fourni, toutes les propriétés con
 
 La méthode Save () enregistre la liste de propriétés spécifiée (ou toutes les propriétés) dans le profil ASP.NET de l’utilisateur.
 
-*Paramètres*
+*Paramètres :*
 
-| **Nom du paramètre** | **C.-à-d** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | propertyNames | Facultatif (valeur par défaut : null). Propriétés à enregistrer sur le serveur. |
 | saveCompletedCallback | Facultatif (valeur par défaut : null). Fonction à appeler lorsque l’enregistrement est terminé. |
@@ -241,11 +241,11 @@ La référence de fonction spécifiée par cette propriété doit avoir la signa
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample9.js)]
 
-*Paramètres*
+*Paramètres :*
 
-| **Nom du paramètre** | **C.-à-d** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
-| Erreur du | Spécifie les informations sur l’erreur. |
+| Erreur | Spécifie les informations sur l’erreur. |
 | userContext | Spécifie les informations de contexte utilisateur fournies lorsque la fonction de chargement ou d’enregistrement a été appelée. |
 | methodName | Nom de la méthode appelante. |
 
@@ -257,9 +257,9 @@ La référence de fonction spécifiée par cette propriété doit avoir la signa
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample10.js)]
 
-*Paramètres*
+*Paramètres :*
 
-| **Nom du paramètre** | **C.-à-d** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | numPropsSaved | Spécifie le nombre de propriétés qui ont été enregistrées. |
 | userContext | Spécifie les informations de contexte utilisateur fournies lorsque la fonction de chargement ou d’enregistrement a été appelée. |
@@ -273,9 +273,9 @@ La référence de fonction spécifiée par cette propriété doit avoir la signa
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample11.js)]
 
-*Paramètres*
+*Paramètres :*
 
-| **Nom du paramètre** | **C.-à-d** |
+| **Nom du paramètre** | **Signification** |
 | --- | --- |
 | numPropsLoaded | Spécifie le nombre de propriétés chargées. |
 | userContext | Spécifie les informations de contexte utilisateur fournies lorsque la fonction de chargement ou d’enregistrement a été appelée. |

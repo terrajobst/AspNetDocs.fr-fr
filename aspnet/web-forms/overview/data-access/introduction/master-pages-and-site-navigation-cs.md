@@ -9,11 +9,11 @@ ms.assetid: 5aee8202-a4e3-4aa9-8a95-cd5d156cea4c
 msc.legacyurl: /web-forms/overview/data-access/introduction/master-pages-and-site-navigation-cs
 msc.type: authoredcontent
 ms.openlocfilehash: e1ddd43524a61ff2e012171eba1a8dc8efbf8f1d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74587510"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78530841"
 ---
 # <a name="master-pages-and-site-navigation-c"></a>Pages maîtres et navigation dans un site (C#)
 
@@ -51,7 +51,7 @@ Pour créer une page maître, cliquez avec le bouton droit sur le nom du projet 
 
 Définissez la disposition de page à l’ensemble du site dans la page maître. Vous pouvez utiliser la Mode Création et ajouter la disposition ou les contrôles Web dont vous avez besoin, ou vous pouvez ajouter manuellement la balise manuellement en mode Source. Dans ma page maître, j’utilise des [feuilles de style en cascade](http://www.w3schools.com/css/default.asp) pour le positionnement et les styles avec les paramètres CSS définis dans le `Style.css`de fichier externe. Bien que vous ne soyez pas en mesure de déterminer à partir du balisage illustré ci-dessous, les règles CSS sont définies de sorte que le contenu de la `<div>`de navigation est positionné de façon absolue afin qu’il apparaisse à gauche et ait une largeur fixe de 200 pixels.
 
-Site. Master
+Site.master
 
 [!code-aspx[Main](master-pages-and-site-navigation-cs/samples/sample1.aspx)]
 
@@ -219,7 +219,7 @@ Nous allons afficher une liste non triée à l’aide d’un répéteur, mais ce
 
 **Figure 13**: ajouter un nouveau contrôle utilisateur Web au dossier `UserControls` ([cliquez pour afficher l’image en taille réelle](master-pages-and-site-navigation-cs/_static/image31.png))
 
-SectionLevelTutorialListing. ascx
+SectionLevelTutorialListing.ascx
 
 [!code-aspx[Main](master-pages-and-site-navigation-cs/samples/sample12.aspx)]
 

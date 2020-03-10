@@ -10,11 +10,11 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider
 msc.type: authoredcontent
 ms.openlocfilehash: 2f0b47d45bce82c71d1864536309f9e2ffed2d63
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519126"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616913"
 ---
 # <a name="implementing-a-custom-mysql-aspnet-identity-storage-provider"></a>Implémentation d’un fournisseur de stockage ASP.NET Identity MySQL personnalisé
 
@@ -40,7 +40,7 @@ Vous pouvez télécharger le fournisseur de stockage MySQL complet sur [Aspnet. 
 
 ## <a name="the-steps-you-will-perform"></a>Les étapes à effectuer
 
-Dans ce tutoriel vous allez :
+Ce didacticiel vous apprendra à effectuer les opérations suivantes :
 
 1. Créer une base de données MySQL sur Azure
 2. Créer les tables ASP.NET Identity dans MySQL
@@ -121,7 +121,7 @@ Si nécessaire, installez [Visual Studio Express 2013 pour Web](https://go.micro
 5. Cliquez avec le bouton droit sur le projet IdentityMySQLDemo, sélectionnez **Ajouter**, **référence, solution, projets,** sélectionnez le projet Aspnet. Identity. MySQL, puis cliquez sur **OK**.
 6. Dans le projet IdentityMySQLDemo, remplacez toutes les références à  
     `using Microsoft.AspNet.Identity.EntityFramework;`  
-   avec  
+   par  
      `using AspNet.Identity.MySQL;`
 7. Dans IdentityModels.cs, définissez **ApplicationDbContext** pour qu’elle dérive de **MySqlDatabase** et incluez un constructeur qui prend un seul paramètre avec le nom de la connexion.  
 

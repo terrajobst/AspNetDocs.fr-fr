@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/getting-started/database-first-development/generating-views
-title: 'Tutoriel : Générer des vues pour EF Database First avec une application ASP.NET MVC'
+title: 'Didacticiel : générer des affichages pour EF Database First avec l’application MVC ASP.NET'
 description: Ce didacticiel se concentre sur l’utilisation de la génération de modèles automatique ASP.NET pour générer les contrôleurs et les vues.
 author: Rick-Anderson
 ms.author: riande
@@ -10,15 +10,15 @@ ms.assetid: 669367cf-8e30-4eb6-821d-10a7d9bb906c
 msc.legacyurl: /mvc/overview/getting-started/database-first-development/generating-views
 msc.type: authoredcontent
 ms.openlocfilehash: e71e13e22d8a72e1699cfc70d4d93af603edba5b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65121224"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616206"
 ---
-# <a name="tutorial-generate-views-for-ef-database-first-with-aspnet-mvc-app"></a>Tutoriel : Générer des vues pour EF Database First avec une application ASP.NET MVC
+# <a name="tutorial-generate-views-for-ef-database-first-with-aspnet-mvc-app"></a>Didacticiel : générer des affichages pour EF Database First avec l’application MVC ASP.NET
 
-À l’aide de la structure ASP.NET MVC et Entity Framework, vous pouvez créer une application web qui fournit une interface à une base de données existante. Cette série de didacticiels vous montre comment générer du code qui permet aux utilisateurs d’afficher, modifier, créer et supprimer automatiquement les données qui résident dans une table de base de données. Le code généré correspond aux colonnes dans la table de base de données.
+À l’aide de la génération de modèles automatique MVC, Entity Framework et ASP.NET, vous pouvez créer une application Web qui fournit une interface à une base de données existante. Cette série de didacticiels vous montre comment générer automatiquement du code qui permet aux utilisateurs d’afficher, de modifier, de créer et de supprimer des données qui se trouvent dans une table de base de données. Le code généré correspond aux colonnes dans la table de base de données.
 
 Ce didacticiel se concentre sur l’utilisation de la génération de modèles automatique ASP.NET pour générer les contrôleurs et les vues.
 
@@ -26,69 +26,69 @@ Dans ce didacticiel, vous avez effectué les actions suivantes :
 
 > [!div class="checklist"]
 > * Ajouter une structure
-> * Ajouter des liens vers des vues
-> * Afficher les vues de l’étudiant
-> * Afficher les vues de l’inscription
+> * Ajouter des liens vers de nouvelles vues
+> * Afficher les vues des élèves
+> * Afficher les affichages d’inscription
 
-## <a name="prerequisite"></a>Prérequis
+## <a name="prerequisite"></a>Condition préalable
 
-* [Créer des modèles d’application et les données du web](creating-the-web-application.md)
+* [Créer l’application Web et les modèles de données](creating-the-web-application.md)
 
 ## <a name="add-scaffold"></a>Ajouter une structure
 
-Vous êtes prêt à générer du code qui fournira les opérations de données standard pour les classes de modèle. Vous ajoutez le code en ajoutant un élément d’une structure. Il existe de nombreuses options pour le type de la structure que vous pouvez ajouter ; Dans ce didacticiel, la structure inclura un contrôleur et des vues qui correspondent aux modèles Student et d’inscription, que vous avez créé dans la section précédente.
+Vous êtes prêt à générer du code qui fournira des opérations de données standard pour les classes de modèle. Vous ajoutez le code en ajoutant un élément de génération de modèles automatique. Il existe de nombreuses options pour le type de génération de modèles automatique que vous pouvez ajouter. dans ce didacticiel, l’échafaudage inclut un contrôleur et des vues qui correspondent aux modèles d’étudiant et d’inscription que vous avez créés dans la section précédente.
 
-Pour maintenir la cohérence dans votre projet, vous allez ajouter le nouveau contrôleur à l’objet de **contrôleurs** dossier. Avec le bouton droit le **contrôleurs** dossier, puis sélectionnez **ajouter** > **nouvel élément structuré**.
+Pour maintenir la cohérence dans votre projet, vous allez ajouter le nouveau contrôleur au dossier **contrôleurs** existants. Cliquez avec le bouton droit sur le dossier **Controllers** , puis sélectionnez **Ajouter** > **nouvel élément de génération de modèles**automatique.
 
-Sélectionnez le **contrôleur MVC 5 avec vues, utilisant Entity Framework** option. Cette option génère le contrôleur et les vues pour la mise à jour, suppression, création et affichage des données dans votre modèle.
+Sélectionnez le **contrôleur MVC 5 avec affichages, à l’aide de l’option Entity Framework** . Cette option génère le contrôleur et les vues pour la mise à jour, la suppression, la création et l’affichage des données dans votre modèle.
 
-![Ajoutez un contrôleur mvc](generating-views/_static/image2.png)
+![Ajouter un contrôleur MVC](generating-views/_static/image2.png)
 
-Sélectionnez **étudiant (ContosoSite.Models)** pour la classe de modèle et sélectionnez le **ContosoUniversityDataEntities (ContosoSite.Models)** pour la classe de contexte. Conservez le nom de contrôleur en tant que **StudentsController**.
+Sélectionnez **Student (ContosoSite. Models)** pour la classe de modèle et sélectionnez **ContosoUniversityDataEntities (ContosoSite. Models)** pour la classe de contexte. Conservez le nom du contrôleur en tant que **StudentsController**.
 
 Cliquez sur **Ajouter**.
 
-Si vous recevez une erreur, il peut être, car vous n’avez pas généré le projet dans la section précédente. Dans ce cas, essayez de générer le projet et puis ajoutez de nouveau l’élément généré automatiquement.
+Si vous recevez une erreur, cela peut être dû au fait que vous n’avez pas généré le projet dans la section précédente. Si c’est le cas, essayez de générer le projet, puis ajoutez de nouveau l’élément de génération de modèles automatique.
 
-Une fois le processus de génération de code terminé, vous verrez un nouveau contrôleur et les vues dans votre projet **contrôleurs** et **vues** > **étudiants** dossiers .
+Une fois le processus de génération de code terminé, vous verrez un nouveau contrôleur et des vues dans les **contrôleurs** et les **vues** de votre **projet > dossiers** Student.
 
-Effectuez de nouveau les mêmes étapes, mais ajouter une structure pour le **inscription** classe. Une fois terminé, vous avez un **EnrollmentsController.cs** fichier et un dossier sous **vues** nommé **les inscriptions** avec les vues Create, Delete, détails, Edit et Index.
+Effectuez à nouveau les mêmes étapes, mais ajoutez une structure pour la classe d' **inscription** . Lorsque vous avez terminé, vous disposez d’un fichier **EnrollmentsController.cs** et d’un dossier sous **affichages** nommé **inscriptions** avec les vues créer, supprimer, détails, modifier et index.
 
-## <a name="add-links-to-new-views"></a>Ajouter des liens vers des vues
+## <a name="add-links-to-new-views"></a>Ajouter des liens vers de nouvelles vues
 
-Pour le rendre plus facile pour vous permettent d’accéder à vos nouvelles vues, vous pouvez ajouter deux liens hypertexte dans les vues d’Index pour les étudiants et les inscriptions. Ouvrez le fichier à **vues** > **domestique** > *Index.cshtml*, qui est la page d’accueil de votre site. Ajoutez le code suivant sous le jumbotron.
+Pour faciliter la navigation vers vos nouveaux affichages, vous pouvez ajouter quelques liens hypertexte aux vues d’index pour les élèves et les inscriptions. Ouvrez le fichier dans **affichages** >  > d' *index. cshtml*, qui est la page **d’hébergement de** votre site. Ajoutez le code suivant sous Jumbotron.
 
 [!code-cshtml[Main](generating-views/samples/sample1.cshtml)]
 
-Pour la méthode ActionLink, le premier paramètre est le texte à afficher dans le lien. Le deuxième paramètre est l’action et le troisième paramètre est le nom du contrôleur. Par exemple, le premier lien pointe vers l’action de l’Index dans StudentsController. Le lien hypertexte est construit à partir de ces valeurs. Le premier lien finalement mène à la **Index.cshtml** fichier inclus dans le **vues/étudiants** dossier.
+Pour la méthode ActionLink, le premier paramètre est le texte à afficher dans le lien. Le deuxième paramètre est l’action et le troisième paramètre est le nom du contrôleur. Par exemple, le premier lien pointe vers l’action d’index dans StudentsController. Le lien hypertexte réel est construit à partir de ces valeurs. Le premier lien prend finalement les utilisateurs dans le fichier **index. cshtml** dans le dossier **views/** Student.
 
-## <a name="display-student-views"></a>Afficher les vues de l’étudiant
+## <a name="display-student-views"></a>Afficher les vues des élèves
 
-Vous allez vérifier que le code ajouté à votre projet correctement affiche une liste des étudiants et permet aux utilisateurs de modifier, créer ou supprimer les enregistrements d’étudiants dans la base de données.
+Vous allez vérifier que le code ajouté à votre projet affiche correctement une liste des étudiants et permet aux utilisateurs de modifier, de créer ou de supprimer les enregistrements des étudiants dans la base de données.
 
-Avec le bouton droit le **vues** > **accueil** > *Index.cshtml* et sélectionnez **afficher dans le navigateur**. Sur la page d’accueil application, sélectionnez **liste d’étudiants**.
+Cliquez avec le bouton droit sur les **vues** > fichier d’accès à **distance** > d' *index. cshtml* , puis sélectionnez **afficher dans le navigateur**. Sur la page d’hébergement de l’application, sélectionnez **liste des élèves**.
 
 ![](generating-views/_static/image6.png)
 
-Sur le **Index** page, notez la liste des étudiants et des liens pour modifier ces données. Sélectionnez le **créer un nouveau** lier et fournir des valeurs pour un nouvel étudiant. Cliquez sur **créer**et notez le nouvel étudiant est ajouté à votre liste.
+Dans la page **index** , notez la liste des étudiants et des liens pour modifier ces données. Sélectionnez le lien **créer un nouveau** et fournissez des valeurs pour un nouvel étudiant. Cliquez sur **créer**, et notez que le nouvel étudiant est ajouté à votre liste.
 
-Sur le **Index** page, sélectionnez le **modifier** lien et modifier certains des valeurs d’un étudiant. Cliquez sur **enregistrer**et notez l’enregistrement d’étudiant a été modifié.
+De retour sur la page **index** , sélectionnez le lien **modifier** , puis modifiez certaines des valeurs d’un étudiant. Cliquez sur **Enregistrer**et notez que l’enregistrement de l’étudiant a été modifié.
 
-Enfin, sélectionnez le **supprimer** lier et confirmer que vous souhaitez supprimer l’enregistrement en cliquant sur le **supprimer** bouton.
+Enfin, sélectionnez le lien **supprimer** et confirmez que vous souhaitez supprimer l’enregistrement en cliquant sur le bouton **supprimer** .
 
-Sans écrire de code, vous avez ajouté des vues qui effectuent des opérations courantes sur les données dans la table Student.
+Sans écrire de code, vous avez ajouté des vues qui effectuent des opérations courantes sur les données de la table Student.
 
-Vous avez peut-être remarqué que l’étiquette de texte pour un champ est basé sur la propriété de base de données (tel que **LastName**) qui n’est pas nécessairement ce que vous voulez afficher sur la page web. Par exemple, vous pouvez préférer l’étiquette à être **nom**. Vous pouvez résoudre ce affichage problème ultérieurement dans ce didacticiel.
+Vous avez peut-être remarqué que l’étiquette de texte d’un champ est basée sur la propriété de base de données (par exemple **LastName**) qui n’est pas nécessairement ce que vous souhaitez afficher sur la page Web. Par exemple, vous préférerez peut-être l’étiquette comme **nom de famille**. Vous allez résoudre ce problème d’affichage plus tard dans le didacticiel.
 
-## <a name="display-enrollment-views"></a>Afficher les vues de l’inscription
+## <a name="display-enrollment-views"></a>Afficher les affichages d’inscription
 
-Votre base de données inclut une relation un-à-plusieurs entre les tables Student et d’inscription et une relation un-à-plusieurs entre les tables de la Course et Enrollment. Les vues pour l’inscription gèrent correctement ces relations. Accédez à la page d’accueil de votre site, puis sélectionnez le **liste des inscriptions** lien, puis le **créer un nouveau** lien.
+Votre base de données comprend une relation un-à-plusieurs entre les tables des étudiants et les inscriptions, et une relation un-à-plusieurs entre les tables de cours et d’inscription. Les vues de l’inscription gèrent correctement ces relations. Accédez à la page d’hébergement de votre site, puis sélectionnez le lien **liste des inscriptions** , puis **créer un** lien.
 
-La vue affiche un formulaire pour la création d’un nouvel enregistrement d’inscription. En particulier, notez que le formulaire contient un **CourseID** liste déroulante et un **StudentID** liste déroulante. Les deux sont remplies avec les valeurs des tables connexes.
+La vue affiche un formulaire pour la création d’un nouvel enregistrement d’inscription. En particulier, Notez que le formulaire contient une liste déroulante **CourseID** et une liste déroulante **StudentID** . Les deux sont renseignés avec les valeurs des tables associées.
 
-En outre, la validation de valeurs fournies est automatiquement appliquée en fonction du type de données du champ. **Niveau** nécessite un nombre, un message d’erreur s’affiche si vous essayez de fournir une valeur incompatible : *Le niveau de champ doit être un nombre.*
+En outre, la validation des valeurs fournies est appliquée automatiquement en fonction du type de données du champ. La **qualité** requiert un nombre. par conséquent, un message d’erreur s’affiche si vous essayez de fournir une valeur incompatible : *le champ grade doit être un nombre.*
 
-Vous avez vérifié que les vues générées automatiquement permettent aux utilisateurs de travailler avec les données dans la base de données. Dans le didacticiel suivant de cette série, vous mettez à jour de la base de données et effectuez les modifications correspondantes dans l’application web.
+Vous avez vérifié que les vues générées automatiquement permettent aux utilisateurs de travailler avec les données de la base de données. Dans le didacticiel suivant de cette série, vous allez mettre à jour la base de données et effectuer les modifications correspondantes dans l’application Web.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -96,9 +96,9 @@ Dans ce didacticiel, vous avez effectué les actions suivantes :
 
 > [!div class="checklist"]
 > * Structure ajoutée
-> * Liens ajoutés à des vues
-> * Vues affichées étudiant
-> * Vues affichées d’inscription
+> * Ajout de liens vers de nouvelles vues
+> * Affichages des élèves affichés
+> * Affichages d’inscription affichés
 
 Passez au didacticiel suivant pour apprendre à modifier la base de données.
 > [!div class="nextstepaction"]

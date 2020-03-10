@@ -9,11 +9,11 @@ ms.assetid: f50a5cdb-c06a-46ed-aa14-fc5b049dc8dc
 msc.legacyurl: /mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication
 msc.type: authoredcontent
 ms.openlocfilehash: c14149d802bfc0a227a839a2981dc3e8a3849c25
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457594"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78538443"
 ---
 # <a name="aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication"></a>Application ASP.NET MVC 5 avec authentification à deux facteurs par SMS et e-mail
 
@@ -26,7 +26,7 @@ par [Rick Anderson](https://twitter.com/RickAndMSFT)
 - [Créer une application MVC ASP.NET](#createMvc)
 - [Configurer SMS pour l’authentification à deux facteurs](#SMS)
 - [Activer l’authentification à deux facteurs](#enable2)
-- [Ressources supplémentaires](#addRes)
+- [Ressources supplémentaires pour MSBuild](#addRes)
 
 <a id="createMvc"></a>
 ## <a name="create-an-aspnet-mvc-app"></a>Créer une application MVC ASP.NET
@@ -52,7 +52,7 @@ Ce didacticiel fournit des instructions sur l’utilisation de Twilio ou de ASPS
 2. **Installation de packages supplémentaires ou ajout de références de service**  
   
    Twilio  
-   Dans la Console du gestionnaire de package, entrez la commande suivante :  
+   Dans la Console du Gestionnaire de Package, entrez la commande suivante :  
     `Install-Package Twilio`  
   
    ASPSMS:  

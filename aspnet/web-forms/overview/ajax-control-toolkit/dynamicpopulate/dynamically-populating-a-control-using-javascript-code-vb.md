@@ -9,11 +9,11 @@ ms.assetid: 90582e54-3e90-432a-9da5-689fb39ed56b
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-using-javascript-code-vb
 msc.type: authoredcontent
 ms.openlocfilehash: b2bd5b1571ccebc9baa501b29743aecdb4543fb2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599225"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78613763"
 ---
 # <a name="dynamically-populating-a-control-using-javascript-code-vb"></a>Remplissage dynamique d’un contrôle avec du code JavaScript (VB)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle DynamicPopulate dans la boîte à outils de contrôle ASP.NET AJAX appelle un service Web (ou une méthode de page) et remplit la valeur résultante dans un contrôle cible sur la page, sans actualisation de page. Il est également possible de déclencher le remplissage à l’aide de code JavaScript côté client personnalisé.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle `DynamicPopulate` de la boîte à outils de contrôle ASP.NET AJAX appelle un service Web (ou une méthode de page) et remplit la valeur résultante dans un contrôle cible sur la page, sans actualisation de page. Il est également possible de déclencher le remplissage à l’aide de code JavaScript côté client personnalisé.
 

@@ -1,28 +1,28 @@
 ---
 uid: web-pages/index
-title: ASP.NET Web Pages | Microsoft Docs
+title: Pages Web ASP.NET | Microsoft Docs
 author: rick-anderson
-description: Téléchargez WebMatrix et apprenez à créer rapidement des pages web dans une solution légère pour combiner du code serveur avec HTML.
+description: Télécharger WebMatrix & apprendre à créer rapidement des pages Web d’une manière légère pour combiner du code serveur avec du code HTML.
 ms.author: riande
 ms.date: 05/18/2012
 ms.assetid: 5418ba96-ff49-4a43-9cbb-09dea4949d23
 msc.legacyurl: /web-pages
 msc.type: categoryindex
 ms.openlocfilehash: 56bf82e22b3562893ef842a90d42aa7b6ff5858f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65114530"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640951"
 ---
 # <a name="aspnet-web-pages"></a>Pages web ASP.NET
 
 > [!NOTE] 
-> WebMatrix n’est plus recommandé comme un environnement de développement intégré pour ASP.NET Web Pages. Utilisez [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou [Visual Studio Code](https://code.visualstudio.com/).
+> WebMatrix n’est plus recommandé en tant qu’environnement de développement intégré pour pages Web ASP.NET. Utilisez [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou [Visual Studio code](https://code.visualstudio.com/).
 
 - [Aide](overview/index.md)
 
-    - [Prise en main](overview/getting-started/index.md)
+    - [Bien démarrer](overview/getting-started/index.md)
 
         - [Programmer ASP.NET Web Pages dans Visual Studio](overview/getting-started/program-asp-net-web-pages-in-visual-studio.md)
         - [Introduction à la syntaxe Razor de la programmation web ASP.NET](overview/getting-started/introducing-razor-syntax-c.md)
@@ -32,7 +32,7 @@ ms.locfileid: "65114530"
         - [Ajout de fonctionnalités de réseaux sociaux à votre site web](overview/getting-started/13-adding-social-networking-to-your-web-site.md)
         - [Introduction à ASP.NET Web Pages](overview/getting-started/introducing-aspnet-web-pages-2/index.md)
 
-            - [Prise en main](overview/getting-started/introducing-aspnet-web-pages-2/getting-started.md)
+            - [Bien démarrer](overview/getting-started/introducing-aspnet-web-pages-2/getting-started.md)
             - [Principes de base de la programmation](overview/getting-started/introducing-aspnet-web-pages-2/intro-to-web-pages-programming.md)
             - [Affichage des données](overview/getting-started/introducing-aspnet-web-pages-2/displaying-data.md)
             - [Principes de base des formulaires HTML](overview/getting-started/introducing-aspnet-web-pages-2/form-basics.md)
@@ -41,7 +41,7 @@ ms.locfileid: "65114530"
             - [Suppression de données de la base de données](overview/getting-started/introducing-aspnet-web-pages-2/deleting-data.md)
             - [Création d’une disposition cohérente](overview/getting-started/introducing-aspnet-web-pages-2/layouts.md)
             - [Publication d’un site avec WebMatrix](overview/getting-started/introducing-aspnet-web-pages-2/publishing.md)
-    - [Le routage](overview/routing/index.md)
+    - [Routage](overview/routing/index.md)
 
         - [Création d’URL lisibles dans les sites ASP.NET Web Pages](overview/routing/creating-readable-urls-in-aspnet-web-pages-sites.md)
     - [Interface utilisateur, dispositions et thèmes](overview/ui-layouts-and-themes/index.md)
@@ -73,7 +73,7 @@ ms.locfileid: "65114530"
         - [Ajout de la sécurité et de l’appartenance](overview/security/16-adding-security-and-membership.md)
         - [Activation de la connexion à partir de sites externes dans un site ASP.NET Web Pages](overview/security/enabling-login-from-external-sites-in-an-aspnet-web-pages-site.md)
         - [Utilisation d’un CAPTCHA pour empêcher les programmes automatisés (robots) d’utiliser votre site web ASP.NET](overview/security/using-a-catpcha-to-prevent-automated-programs-bots-from-using-your-aspnet-web-site.md)
-    - [Performances](overview/performance-and-traffic/index.md)
+    - [Performancess](overview/performance-and-traffic/index.md)
 
         - [Mise en cache pour améliorer les performances de votre site web](overview/performance-and-traffic/15-caching-to-improve-the-performance-of-your-website.md)
         - [Analyse du trafic](overview/performance-and-traffic/14-analyzing-traffic.md)
@@ -102,7 +102,7 @@ ms.locfileid: "65114530"
         - [Créer une page de modification des données dans WebMatrix](videos/introduction/create-an-edit-data-page-in-webmatrix.md)
         - [Créer une page de suppression des données dans WebMatrix](videos/introduction/create-a-delete-data-page-in-webmatrix.md)
         - [Publier un site web sur Internet avec WebMatrix](videos/introduction/publish-a-website-to-the-internet-using-webmatrix.md)
-    - [Pages ASP.NET Razor](videos/aspnet-razor-pages/index.md)
+    - [ASP.NET Razor Pages](videos/aspnet-razor-pages/index.md)
 
         - [Bien démarrer avec WebMatrix et ASP.NET Web Pages](videos/aspnet-razor-pages/getting-started-with-webmatrix-and-aspnet-web-pages.md)
         - [Introduction à la syntaxe Razor de la programmation web ASP.NET](videos/aspnet-razor-pages/introduction-to-aspnet-web-programming-using-the-razor-syntax.md)

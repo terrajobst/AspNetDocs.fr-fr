@@ -9,11 +9,11 @@ ms.assetid: 9f05ccb1-2004-4661-ad8b-c370e6c09c8e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/unstructured-blob-storage
 msc.type: authoredcontent
 ms.openlocfilehash: f48b2be755b84dff9b2672bd348c73107602c6dd
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456789"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617312"
 ---
 # <a name="unstructured-blob-storage-building-real-world-cloud-apps-with-azure"></a>Stockage d’objets BLOB non structuré (création d’applications Cloud réalistes avec Azure)
 
@@ -127,7 +127,7 @@ Si vous examinez le code HTML de la page qui s’affiche, vous voyez l’URL qui
 
 [!code-cshtml[Main](unstructured-blob-storage/samples/sample13.cshtml?highlight=11)]
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Vous avez vu comment l’application Fix it stocke des images dans le service BLOB et uniquement des URL d’image dans la base de données SQL. L’utilisation du service BLOB permet de conserver la base de données SQL beaucoup plus petite que ce qui serait le cas, ce qui permet une mise à l’échelle jusqu’à un nombre quasiment illimité de tâches et peut être effectuée sans écrire beaucoup de code.
 

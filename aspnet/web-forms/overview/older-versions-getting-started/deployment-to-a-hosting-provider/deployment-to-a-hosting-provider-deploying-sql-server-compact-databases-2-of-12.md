@@ -9,11 +9,11 @@ ms.assetid: c3c76516-4c48-4153-bd03-d70e3a3edbb0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 56ceabc79947967846d342354fd033510be5f05a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74625539"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78568116"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-sql-server-compact-databases---2-of-12"></a>Déploiement d’une application Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : déploiement de bases de données SQL Server Compact-2 sur 12
 
@@ -25,7 +25,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Pour obtenir un didacticiel qui présente les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions SQL Server autres que SQL Server Compact et montre comment déployer vers Azure App Service Web Apps, consultez [déploiement Web ASP.net à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Ce didacticiel montre comment configurer deux bases de données SQL Server Compact et le moteur de base de données pour le déploiement.
 
@@ -73,11 +73,11 @@ Générez le projet, puis, dans **Explorateur de solutions** cliquez sur **Affic
 
 Développez le dossier **bin** pour voir les dossiers **amd64** et **x86** , puis sélectionnez ces dossiers, cliquez avec le bouton droit et sélectionnez **inclure dans le projet**.
 
-![amd64_and_x86_in_Solution_Explorer. png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image2.png)
+![amd64_and_x86_in_Solution_Explorer.png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image2.png)
 
 Les icônes de dossier changent pour indiquer que le dossier a été inclus dans le projet.
 
-![Solution_Explorer_amd64_included. png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image3.png)
+![Solution_Explorer_amd64_included.png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image3.png)
 
 ## <a name="configuring-code-first-migrations-for-application-database-deployment"></a>Configuration de Migrations Code First pour le déploiement d’une base de données d’application
 
@@ -108,7 +108,7 @@ Ensuite, activez Migrations Code First.
 
 La première étape consiste à s’assurer que le projet ContosoUniversity est défini comme projet de démarrage. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet ContosoUniversity et sélectionnez **définir comme projet de démarrage**. Migrations Code First Rechercher la chaîne de connexion de base de données dans le projet de démarrage.
 
-Dans le menu **Outils** , cliquez sur **Gestionnaire de package NuGet** , puis sur **console du gestionnaire de package**.
+Dans le menu **Outils**, cliquez sur **Gestionnaire de package NuGet**, puis sur **Console du Gestionnaire de package**.
 
 ![Selecting_Package_Manager_Console](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image6.png)
 
@@ -153,13 +153,13 @@ Cliquez avec le bouton droit sur le fichier *School. sdf* , puis cliquez sur **s
 
 Dans la fenêtre **console du gestionnaire de package** , entrez la commande « Add-migration initial » pour créer la migration initiale et la nommer « initial ».
 
-![Add-migration_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image11.png)
+![add-migration_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image11.png)
 
 Migrations Code First crée un autre fichier de classe dans le dossier *migrations* , et cette classe contient le code qui crée le schéma de la base de données.
 
 Dans la **console du gestionnaire de package**, entrez la commande Update-Database pour créer la base de données et exécuter la méthode **Seed** .
 
-![mise à jour-database_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image12.png)
+![update-database_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image12.png)
 
 (Si vous recevez une erreur indiquant qu’une table existe déjà et ne peut pas être créée, cela est probablement dû au fait que vous avez exécuté l’application après avoir supprimé la base de données et avant d’avoir exécuté `update-database`. Dans ce cas, supprimez de nouveau le fichier *School. sdf* et relancez la commande `update-database`.)
 
@@ -206,7 +206,7 @@ Revenez à l’onglet **sécurité** , cliquez sur **créer un utilisateur**, pu
 
 Fermez le navigateur. Dans **Explorateur de solutions**, cliquez sur le bouton Actualiser pour afficher le nouveau fichier *Aspnet. sdf* .
 
-![New_aspnet. sdf_in_Solution_Explorer](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image25.png)
+![New_aspnet.sdf_in_Solution_Explorer](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image25.png)
 
 Cliquez avec le bouton droit sur **Aspnet. sdf** et sélectionnez **inclure dans le projet**.
 
@@ -216,7 +216,7 @@ Dans cette section, vous allez renommer les bases de données afin que les versi
 
 Dans **Explorateur de solutions**, cliquez sur **Actualiser** , puis développez le dossier application\_Data pour afficher la base de données School que vous avez créée précédemment. cliquez dessus avec le bouton droit et sélectionnez **inclure dans le projet**.
 
-![Including_School. sdf_in_project](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image26.png)
+![Including_School.sdf_in_project](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image26.png)
 
 Renommez *Aspnet. sdf* en *ASPNET-prod. sdf*.
 
@@ -234,7 +234,7 @@ Remplacez « Aspnet. sdf » par « aspnet-Dev. sdf » et remplacez « Schoo
 
 Le moteur de base de données SQL Server Compact et les deux bases de données sont maintenant prêts à être déployés. Dans le didacticiel suivant, vous configurez des transformations de fichier *Web. config* automatiques pour les paramètres qui doivent être différents dans les environnements de développement, de test et de production. (Parmi les paramètres qui doivent être modifiés sont les chaînes de connexion, mais vous allez les configurer ultérieurement lorsque vous créez un profil de publication.)
 
-## <a name="more-information"></a>Plus d’informations
+## <a name="more-information"></a>Plus d'informations
 
 Pour plus d’informations sur NuGet, consultez [gérer les bibliothèques de projets avec NuGet](https://msdn.microsoft.com/magazine/hh547106.aspx) et [la documentation NuGet](http://docs.nuget.org/docs/start-here/overview). Si vous ne souhaitez pas utiliser NuGet, vous devez apprendre à analyser un package NuGet pour déterminer ce qu’il fait lorsqu’il est installé. (Par exemple, il peut configurer des transformations *Web. config* , configurer des scripts PowerShell pour qu’ils s’exécutent au moment de la génération, etc.) Pour en savoir plus sur le fonctionnement de NuGet, consultez la page [création et publication d’un package et d’un](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package) [fichier de configuration et des transformations de code source](http://docs.nuget.org/docs/creating-packages/configuration-file-and-source-code-transformations).
 

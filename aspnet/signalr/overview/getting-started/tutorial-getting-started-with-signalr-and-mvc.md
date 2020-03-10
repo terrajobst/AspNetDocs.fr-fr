@@ -10,11 +10,11 @@ msc.legacyurl: /signalr/overview/getting-started/tutorial-getting-started-with-s
 msc.type: authoredcontent
 ms.topic: tutorial
 ms.openlocfilehash: 5671e4f0123ca2b0cb5314336cf4411467feac70
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600482"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537043"
 ---
 # <a name="tutorial-real-time-chat-with-signalr-2-and-mvc-5"></a>Didacticiel : conversation en temps réel avec Signalr 2 et MVC 5
 
@@ -23,15 +23,15 @@ Ce didacticiel montre comment utiliser ASP.NET Signalr 2 pour créer une applica
 Dans ce didacticiel, vous avez effectué les actions suivantes :
 
 > [!div class="checklist"]
-> * Configurer le projet
-> * Exécuter l'exemple
+> * Configuration du projet
+> * Exécution de l'exemple
 > * Examiner le code
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables requises
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) avec la charge de travail de **développement Web et ASP.net** .
+* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) avec la charge de travail **Développement ASP.NET et web**.
 
 ## <a name="set-up-the-project"></a>Configurer le projet
 
@@ -190,12 +190,12 @@ Pour plus d’informations sur Signalr, consultez les ressources suivantes :
 
 * [Wiki signalr](https://github.com/SignalR/SignalR/wiki)
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
 Dans ce didacticiel, vous avez effectué les actions suivantes :
 
 > [!div class="checklist"]
-> * Configurer le projet
+> * Configuration du projet
 > * Exécution de l’exemple
 > * Examen du code
 

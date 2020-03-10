@@ -9,11 +9,11 @@ ms.assetid: c205805f-efdd-4fa7-9616-f26eab180611
 msc.legacyurl: /mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
 msc.type: authoredcontent
 ms.openlocfilehash: d3689147a3bc3aa1f4180c377d2483a94bdd95a9
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457659"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78538534"
 ---
 # <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Profiler et déboguer votre application ASP.NET MVC avec Glimpse
 
@@ -27,7 +27,7 @@ par [Rick Anderson](https://twitter.com/RickAndMSFT)
 - [Liaison de données](#mb)
 - [Itinéraires](#route)
 - [Utilisation de l’aperçu sur Azure](#da)
-- [Ressources supplémentaires](#addRes)
+- [Ressources supplémentaires pour MSBuild](#addRes)
 
 <a id="ig"></a>
 ## <a name="installing-glimpse"></a>Installation de l’aperçu
@@ -96,7 +96,7 @@ L' [onglet liaison de modèle](http://getglimpse.com/Docs/Model-Binding-Tab) fou
 ![vue de liaison du modèle aperçu](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image11.png)
 
 <a id="route"></a>
-## <a name="routes"></a>Itinéraires
+## <a name="routes"></a>Routes
 
  L’onglet itinéraires d’aperçu peut vous aider à déboguer et à comprendre le routage. Dans l’image ci-dessous, l’itinéraire du produit est sélectionné (et il s’affiche en vert, une convention d’aperçu). ![nom de produit sélectionné](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image12.png) les contraintes de routage, les zones et les jetons de données sont également affichés. Pour plus d’informations, consultez [itinéraires d’aperçu](http://getglimpse.com/Docs/Routes-Tab) et [routage d’attributs dans ASP.NET MVC 5](https://blogs.msdn.com/b/webdev/archive/2013/10/17/attribute-routing-in-asp-net-mvc-5.aspx) . 
 

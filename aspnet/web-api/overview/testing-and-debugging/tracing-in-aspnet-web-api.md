@@ -1,129 +1,129 @@
 ---
 uid: web-api/overview/testing-and-debugging/tracing-in-aspnet-web-api
-title: Le traçage dans ASP.NET Web API 2 | Microsoft Docs
+title: Traçage dans API Web ASP.NET 2 | Microsoft Docs
 author: MikeWasson
-description: Montre comment activer le suivi dans l’API Web ASP.NET.
+description: Montre comment activer le traçage dans API Web ASP.NET.
 ms.author: riande
 ms.date: 02/25/2014
 ms.assetid: 66a837e9-600b-4b72-97a9-19804231c64a
 msc.legacyurl: /web-api/overview/testing-and-debugging/tracing-in-aspnet-web-api
 msc.type: authoredcontent
 ms.openlocfilehash: a01acb649556d06ab9828ceab0fcbdf363bbc0d1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405896"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78598552"
 ---
-# <a name="tracing-in-aspnet-web-api-2"></a>Le traçage dans ASP.NET Web API 2
+# <a name="tracing-in-aspnet-web-api-2"></a>Traçage dans API Web ASP.NET 2
 
 par [Mike Wasson](https://github.com/MikeWasson)
 
-> Lorsque vous essayez de déboguer une application basée sur le web, rien ne vaut pour un bon jeu de journaux de suivi. Ce didacticiel montre comment activer le suivi dans l’API Web ASP.NET. Vous pouvez utiliser cette fonctionnalité pour effectuer le suivi de ce que fait l’infrastructure API Web avant et après que qu’il appelle votre contrôleur. Vous pouvez également l’utiliser pour effectuer le suivi de votre propre code.
+> Lorsque vous essayez de déboguer une application Web, il n’y a pas de substitut pour un bon ensemble de journaux de suivi. Ce didacticiel montre comment activer le suivi dans API Web ASP.NET. Vous pouvez utiliser cette fonctionnalité pour suivre ce que fait l’infrastructure de l’API Web avant et après l’appel de votre contrôleur. Vous pouvez également l’utiliser pour effectuer le suivi de votre propre code.
 >
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versions des logiciels utilisées dans le didacticiel
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versions logicielles utilisées dans le didacticiel
 >
-> - [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) (fonctionne également avec Visual Studio 2015)
-> - Web API 2
-> - [Microsoft.AspNet.WebApi.Tracing](http://www.nuget.org/packages/Microsoft.AspNet.WebApi.Tracing)
+> - [Visual studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) (fonctionne également avec visual studio 2015)
+> - API Web 2
+> - [Microsoft. AspNet. WebApi. Tracing](http://www.nuget.org/packages/Microsoft.AspNet.WebApi.Tracing)
 
-## <a name="enable-systemdiagnostics-tracing-in-web-api"></a>Activer System.Diagnostics Tracing in Web API
+## <a name="enable-systemdiagnostics-tracing-in-web-api"></a>Activer le suivi System. Diagnostics dans l’API Web
 
-Tout d’abord, nous allons créer un nouveau projet d’Application Web ASP.NET. Dans Visual Studio, à partir de la **fichier** menu, sélectionnez **New** > **projet**. Sous **modèles**, **Web**, sélectionnez **Application Web ASP.NET**.
+Tout d’abord, nous allons créer un projet d’application Web ASP.NET. Dans Visual Studio, dans le menu **fichier** , sélectionnez **nouveau** > **projet**. Sous **modèles**, **Web**, sélectionnez **application Web ASP.net**.
 
 [![](tracing-in-aspnet-web-api/_static/image2.png)](tracing-in-aspnet-web-api/_static/image1.png)
 
-Choisissez le modèle de projet API Web.
+Choisissez le modèle de projet d’API Web.
 
 [![](tracing-in-aspnet-web-api/_static/image4.png)](tracing-in-aspnet-web-api/_static/image3.png)
 
-À partir de la **outils** menu, sélectionnez **Gestionnaire de Package NuGet**, puis **Console de gestion de Package**.
+Dans le menu **Outils** , sélectionnez **Gestionnaire de package NuGet**, puis **console de gestion de package**.
 
-Dans la fenêtre de Console du Gestionnaire de Package, tapez les commandes suivantes.
+Dans la fenêtre console du gestionnaire de package, tapez les commandes suivantes.
 
 [!code-console[Main](tracing-in-aspnet-web-api/samples/sample1.cmd)]
 
-La première commande installe le dernier package de suivi d’API Web. Il met également à jour les principaux packages d’API Web. La deuxième commande met à jour le package WebApi.WebHost vers la dernière version.
+La première commande installe le dernier package de suivi d’API Web. Il met également à jour les packages d’API Web principaux. La deuxième commande met à jour le package WebApi. WebHost vers la dernière version.
 
 > [!NOTE]
-> Si vous souhaitez cibler une version spécifique de l’API Web, utilisez - indicateur de Version lorsque vous installez le package de suivi.
+> Si vous souhaitez cibler une version spécifique de l’API Web, utilisez l’indicateur-version lorsque vous installez le package de suivi.
 
-Ouvrez le fichier WebApiConfig.cs dans l’application\_dossier de démarrage. Ajoutez le code suivant à la **inscrire** (méthode).
+Ouvrez le fichier WebApiConfig.cs dans le dossier de démarrage de l’application\_. Ajoutez le code suivant à la méthode **Register** .
 
 [!code-csharp[Main](tracing-in-aspnet-web-api/samples/sample2.cs?highlight=6)]
 
-Ce code ajoute la [SystemDiagnosticsTraceWriter](https://msdn.microsoft.com/library/system.web.http.tracing.systemdiagnosticstracewriter.aspx) classe au pipeline API Web. Le **SystemDiagnosticsTraceWriter** classe écrit des traces à [System.Diagnostics.Trace](https://msdn.microsoft.com/library/system.diagnostics.trace).
+Ce code ajoute la classe [SystemDiagnosticsTraceWriter](https://msdn.microsoft.com/library/system.web.http.tracing.systemdiagnosticstracewriter.aspx) au pipeline de l’API Web. La classe **SystemDiagnosticsTraceWriter** écrit les traces dans [System. Diagnostics. trace](https://msdn.microsoft.com/library/system.diagnostics.trace).
 
-Pour voir les traces, exécutez l’application dans le débogueur. Dans le navigateur, accédez à `/api/values`.
+Pour afficher les traces, exécutez l’application dans le débogueur. Dans un navigateur, accédez à `/api/values`.
 
 ![](tracing-in-aspnet-web-api/_static/image5.png)
 
-Les instructions de trace sont écrits dans la fenêtre Sortie dans Visual Studio. (À partir de la **vue** menu, sélectionnez **sortie**).
+Les instructions de suivi sont écrites dans la fenêtre sortie de Visual Studio. (Dans le menu **affichage** , sélectionnez **sortie**).
 
 [![](tracing-in-aspnet-web-api/_static/image7.png)](tracing-in-aspnet-web-api/_static/image6.png)
 
-Étant donné que **SystemDiagnosticsTraceWriter** écrit des traces à **System.Diagnostics.Trace**, vous pouvez inscrire des écouteurs de suivi supplémentaires ; par exemple, pour écrire des traces dans un fichier journal. Pour plus d’informations sur les enregistreurs de trace, consultez le [écouteurs de suivi](https://msdn.microsoft.com/library/4y5y10s7.aspx) sujet sur MSDN.
+Étant donné que **SystemDiagnosticsTraceWriter** écrit des traces dans **System. Diagnostics. trace**, vous pouvez inscrire des écouteurs de suivi supplémentaires. par exemple, pour écrire des traces dans un fichier journal. Pour plus d’informations sur les enregistreurs de trace, consultez la rubrique relative aux [écouteurs de suivi](https://msdn.microsoft.com/library/4y5y10s7.aspx) sur MSDN.
 
-### <a name="configuring-systemdiagnosticstracewriter"></a>Configuration SystemDiagnosticsTraceWriter
+### <a name="configuring-systemdiagnosticstracewriter"></a>Configuration de SystemDiagnosticsTraceWriter
 
-Le code suivant montre comment configurer le writer de suivi.
+Le code suivant montre comment configurer l’enregistreur de trace.
 
 [!code-csharp[Main](tracing-in-aspnet-web-api/samples/sample3.cs)]
 
-Il existe deux paramètres que vous pouvez contrôler :
+Vous pouvez contrôler deux paramètres :
 
-- IsVerbose : Si la valeur est false, chaque trace contient un minimum d’informations. Si la valeur est true, les suivis inclure plus d’informations.
-- MinimumLevel : Définit le niveau de suivi minimale. Les niveaux de suivi, dans l’ordre, sont Debug, Infos, avertissement, erreur et irrécupérable.
+- IsVerbose : si la valeur est false, chaque trace contient des informations minimales. Si la valeur est true, les traces contiennent davantage d’informations.
+- MinimumLevel : définit le niveau de trace minimal. Les niveaux de suivi, dans l’ordre, sont Debug, info, Warn, Error et fatal.
 
-## <a name="adding-traces-to-your-web-api-application"></a>Ajout des Traces à votre Application API Web
+## <a name="adding-traces-to-your-web-api-application"></a>Ajout de traces à votre application API Web
 
-Ajout d’un writer de suivi vous donne un accès immédiat aux traces créées par le pipeline API Web. Vous pouvez également utiliser l’enregistreur de trace pour effectuer le suivi de votre propre code :
+L’ajout d’un enregistreur de trace vous donne un accès immédiat aux traces créées par le pipeline de l’API Web. Vous pouvez également utiliser le générateur de trace pour tracer votre propre code :
 
 [!code-csharp[Main](tracing-in-aspnet-web-api/samples/sample4.cs)]
 
-Pour obtenir le writer de suivi, appelez **HttpConfiguration.Services.GetTraceWriter**. À partir d’un contrôleur, cette méthode est accessible via la **ApiController.Configuration** propriété.
+Pour accéder au writer de trace, appelez **HttpConfiguration. services. GetTraceWriter**. À partir d’un contrôleur, cette méthode est accessible via la propriété **ApiController. Configuration** .
 
-Pour écrire une trace, vous pouvez appeler la **ITraceWriter.Trace** (méthode) directement, mais la [ITraceWriterExtensions](https://msdn.microsoft.com/library/system.web.http.tracing.itracewriterextensions.aspx) classe définit certaines méthodes d’extension qui sont plus convivial. Par exemple, le **Info** méthode illustrée ci-dessus crée une trace avec niveau de trace **Info**.
+Pour écrire une trace, vous pouvez appeler directement la méthode **ITraceWriter. trace** , mais la classe [ITraceWriterExtensions](https://msdn.microsoft.com/library/system.web.http.tracing.itracewriterextensions.aspx) définit des méthodes d’extension plus conviviales. Par exemple, la méthode **info** présentée ci-dessus crée une trace avec les **informations**de niveau de suivi.
 
-## <a name="web-api-tracing-infrastructure"></a>Infrastructure de traçage d’API Web
+## <a name="web-api-tracing-infrastructure"></a>Infrastructure de suivi des API Web
 
-Cette section décrit comment écrire un writer de suivi personnalisé pour l’API Web.
+Cette section décrit comment écrire un enregistreur de trace personnalisé pour l’API Web.
 
-Le package Microsoft.AspNet.WebApi.Tracing est basé sur une infrastructure de suivi plus général dans l’API Web. Au lieu d’utiliser Microsoft.AspNet.WebApi.Tracing, vous pouvez également incorporer dans une autre bibliothèque de journalisation/suivi, tel que [NLog](http://nlog-project.org/) ou [log4net](http://logging.apache.org/log4net/).
+Le package Microsoft. AspNet. WebApi. Tracing repose sur une infrastructure de suivi plus générale dans l’API Web. Au lieu d’utiliser Microsoft. AspNet. WebApi. Tracing, vous pouvez également brancher une autre bibliothèque de suivi/journalisation, telle que [nlog](http://nlog-project.org/) ou [log4net](http://logging.apache.org/log4net/).
 
-Pour collecter des traces, vous devez implémenter le **ITraceWriter** interface. Voici un exemple simple :
+Pour collecter des traces, implémentez l’interface **ITraceWriter** . Voici un exemple simple :
 
 [!code-csharp[Main](tracing-in-aspnet-web-api/samples/sample5.cs)]
 
-Le **ITraceWriter.Trace** méthode crée une trace. L’appelant spécifie un niveau de la catégorie et de la trace. La catégorie peut être n’importe quelle chaîne définie par l’utilisateur. Votre implémentation de **Trace** doit effectuer les opérations suivantes :
+La méthode **ITraceWriter. trace** crée une trace. L’appelant spécifie une catégorie et un niveau de suivi. La catégorie peut être n’importe quelle chaîne définie par l’utilisateur. Votre implémentation de **trace** doit effectuer les opérations suivantes :
 
-1. Créer un nouveau **TraceRecord**. L’initialiser avec la demande, la catégorie et le niveau de trace, comme indiqué. Ces valeurs sont fournies par l’appelant.
-2. Appeler le *traceAction* déléguer. À l’intérieur de ce délégué, l’appelant est censé remplir le reste de la **TraceRecord**.
-3. Écrire le **TraceRecord**, à l’aide de toute technique de journalisation que vous le souhaitez. L’exemple présenté ici appelle simplement **System.Diagnostics.Trace**.
+1. Créez un nouveau **TraceRecord**. Initialisez-le avec la requête, la catégorie et le niveau de suivi, comme indiqué. Ces valeurs sont fournies par l’appelant.
+2. Appelez le délégué *traceAction* . À l’intérieur de ce délégué, l’appelant est censé remplir le reste du **TraceRecord**.
+3. Écrivez **TraceRecord**en utilisant une technique de journalisation de votre choix. L’exemple illustré ici appelle simplement **System. Diagnostics. trace**.
 
-## <a name="setting-the-trace-writer"></a>Définition de l’enregistreur de Trace
+## <a name="setting-the-trace-writer"></a>Définition de l’enregistreur de trace
 
-Pour activer le suivi, vous devez configurer des API Web à utiliser votre **ITraceWriter** implémentation. Cela via le **HttpConfiguration** de l’objet, comme indiqué dans le code suivant :
+Pour activer le suivi, vous devez configurer l’API Web pour utiliser votre implémentation de **ITraceWriter** . Pour ce faire, utilisez l’objet **HttpConfiguration** , comme indiqué dans le code suivant :
 
 [!code-csharp[Main](tracing-in-aspnet-web-api/samples/sample6.cs)]
 
-Writer de suivi qu’une seule peut être active. Par défaut, les API Web définit un &quot;nulle&quot; suivi qui ne fait rien. (Le &quot;nulle&quot; suivi existe afin que le code de traçage n’a pas vérifier si le writer de suivi est **null** avant d’écrire une trace.)
+Un seul enregistreur de suivi peut être actif. Par défaut, l’API Web définit un &quot;de non-op&quot; un traceur qui ne fait rien. (Le &quot;non-op&quot; audit existe afin que le code de traçage n’ait pas à vérifier si le writer de trace est **null** avant d’écrire une trace.)
 
-## <a name="how-web-api-tracing-works"></a>Comment Web API suivi Works
+## <a name="how-web-api-tracing-works"></a>Fonctionnement du suivi d’API Web
 
-Le suivi dans l’API Web utilise un *façade* modèle : Lorsque le traçage est activé, les API Web encapsule les différentes parties du pipeline de requête avec les classes qui effectuent des appels de trace.
+Le suivi dans l’API Web utilise un modèle de *façade* : lorsque le suivi est activé, l’API Web encapsule diverses parties du pipeline de requête avec des classes qui effectuent des appels de trace.
 
-Par exemple, lorsque vous sélectionnez un contrôleur, le pipeline utilise le **IHttpControllerSelector** interface. Avec le suivi activé, le pipeline insère une classe qui implémente **IHttpControllerSelector** mais via les appels à l’implémentation réelle :
+Par exemple, lors de la sélection d’un contrôleur, le pipeline utilise l’interface **IHttpControllerSelector** . Lorsque le suivi est activé, le pipeline insère une classe qui implémente **IHttpControllerSelector** mais appelle l’implémentation réelle :
 
-![Suivi de l’API Web utilise le modèle de façade.](tracing-in-aspnet-web-api/_static/image8.png)
+![Le suivi de l’API Web utilise le modèle de façade.](tracing-in-aspnet-web-api/_static/image8.png)
 
-Avantages de cette conception :
+Les avantages de cette conception sont les suivants :
 
-- Si vous n’ajoutez pas d’un writer de suivi, les composants de suivi ne sont pas instanciés et n’ont aucun impact sur les performances.
-- Si vous remplacez des services par défaut comme **IHttpControllerSelector** avec votre propre implémentation personnalisée, le traçage ne concerne pas, car le suivi est effectué par l’objet de wrapper.
+- Si vous n’ajoutez pas d’enregistreur de trace, les composants de suivi ne sont pas instanciés et n’ont pas d’impact sur les performances.
+- Si vous remplacez des services par défaut tels que **IHttpControllerSelector** par votre propre implémentation personnalisée, le suivi n’est pas affecté, car le suivi est effectué par l’objet de wrapper.
 
-Vous pouvez également remplacer l’infrastructure de suivi API Web entière avec votre propre infrastructure personnalisé, en remplaçant la valeur par défaut **ITraceManager** service :
+Vous pouvez également remplacer l’ensemble de l’infrastructure de trace de l’API Web par votre propre infrastructure personnalisée, en remplaçant le service **ITraceManager** par défaut :
 
 [!code-csharp[Main](tracing-in-aspnet-web-api/samples/sample7.cs)]
 
-Implémentez **ITraceManager.Initialize** pour initialiser votre système de suivi. N’oubliez pas que cela remplace le *entière* framework de trace, y compris tout le code de suivi qui est intégré à l’API Web.
+Implémentez **ITraceManager. Initialize** pour initialiser votre système de suivi. N’oubliez pas que cela remplace l' *intégralité* de l’infrastructure de trace, y compris l’ensemble du code de traçage intégré à l’API Web.

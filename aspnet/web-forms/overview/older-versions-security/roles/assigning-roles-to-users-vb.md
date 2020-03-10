@@ -9,11 +9,11 @@ ms.assetid: fd208ee9-69cc-4467-9783-b4e039bdd1d3
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/assigning-roles-to-users-vb
 msc.type: authoredcontent
 ms.openlocfilehash: b53df4494eb0faef7c5e4547c2bf95e5fb071298
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74577862"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78625327"
 ---
 # <a name="assigning-roles-to-users-vb"></a>Attribution de rôles aux utilisateurs (VB)
 
@@ -29,7 +29,7 @@ Le <a id="_msoanchor_1"> </a> [didacticiel précédent](creating-and-managing-ro
 
 Dans ce didacticiel, nous allons créer deux pages ASP.NET pour faciliter la gestion de ce que les utilisateurs appartiennent aux rôles. La première page inclut des fonctionnalités pour voir ce que les utilisateurs appartiennent à un rôle donné, les rôles auxquels un utilisateur particulier appartient et la possibilité d’affecter ou de supprimer un utilisateur spécifique d’un rôle particulier. Dans la deuxième page, nous augmenterons le contrôle CreateUserWizard afin qu’il inclue une étape pour spécifier les rôles auxquels l’utilisateur nouvellement créé appartient. Cela est utile dans les scénarios où un administrateur est en mesure de créer des comptes d’utilisateur.
 
-Commençons !
+C’est parti !
 
 ## <a name="listing-what-users-belong-to-what-roles"></a>Liste des utilisateurs appartenant aux rôles
 

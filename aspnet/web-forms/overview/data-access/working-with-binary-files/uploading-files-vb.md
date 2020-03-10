@@ -9,11 +9,11 @@ ms.assetid: f7c00fbd-652c-433d-8ed3-0e5168a4d4df
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/uploading-files-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 6e0d57ef2f1e8132f19777a7d14e94611c68adcd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74615247"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78548565"
 ---
 # <a name="uploading-files-vb"></a>Chargement de fichiers (VB)
 

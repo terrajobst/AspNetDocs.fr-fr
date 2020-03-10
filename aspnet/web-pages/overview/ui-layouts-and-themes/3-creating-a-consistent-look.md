@@ -1,221 +1,221 @@
 ---
 uid: web-pages/overview/ui-layouts-and-themes/3-creating-a-consistent-look
-title: Création d’une disposition cohérente dans ASP.NET Web Pages (Razor) Sites | Microsoft Docs
+title: Création d’une disposition cohérente dans les sites pages Web ASP.NET (Razor) | Microsoft Docs
 author: Rick-Anderson
-description: Pour le rendre plus efficace de créer des pages web pour votre site, vous pouvez créer des blocs réutilisables de contenu (par exemple, les en-têtes et pieds de page) pour votre site Web et vous c...
+description: Pour améliorer l’efficacité de la création de pages Web pour votre site, vous pouvez créer des blocs de contenu réutilisables (tels que des en-têtes et des pieds de page) pour votre site Web et c...
 ms.author: riande
 ms.date: 03/10/2014
 ms.assetid: d7bd001b-6db2-4422-9b78-f3d08b743b00
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/3-creating-a-consistent-look
 msc.type: authoredcontent
 ms.openlocfilehash: 3f63ce68ae4c13970ac0df196167ace0b22b592c
-ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67411253"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78627448"
 ---
-# <a name="creating-a-consistent-layout-in-aspnet-web-pages-razor-sites"></a>Création d’une disposition cohérente dans les Sites ASP.NET Web Pages (Razor)
+# <a name="creating-a-consistent-layout-in-aspnet-web-pages-razor-sites"></a>Création d’une disposition cohérente dans les sites pages Web ASP.NET (Razor)
 
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Cet article explique comment vous pouvez utiliser des pages de disposition dans un site Web ASP.NET Web Pages (Razor) pour créer des blocs réutilisables de contenu (par exemple, les en-têtes et pieds de page) et pour créer une apparence cohérente pour toutes les pages du site.
+> Cet article explique comment vous pouvez utiliser les pages de disposition d’un site Web pages Web ASP.NET (Razor) pour créer des blocs de contenu réutilisables (tels que des en-têtes et des pieds de page) et créer une apparence cohérente pour toutes les pages du site.
 > 
 > **Ce que vous allez apprendre :** 
 > 
-> - Comment créer des blocs réutilisables de contenu tels que les en-têtes et pieds de page.
-> - Comment créer une apparence cohérente pour toutes les pages de votre site à l’aide d’une mise en page.
+> - Comment créer des blocs de contenu réutilisables comme des en-têtes et des pieds de page.
+> - Comment créer une apparence cohérente pour toutes les pages de votre site à l’aide d’une disposition.
 > - Comment passer des données au moment de l’exécution à une page de disposition.
 > 
-> Voici les fonctionnalités d’ASP.NET introduites dans l’article :
+> Voici les fonctionnalités ASP.NET présentées dans l’article :
 > 
-> - Blocs de contenu, qui sont des fichiers qui contiennent le contenu au format HTML à insérer dans plusieurs pages.
-> - Pages de disposition, qui sont des pages qui contiennent du contenu au format HTML qui peut être partagé par les pages sur le site Web.
-> - Le `RenderPage`, `RenderBody`, et `RenderSection` méthodes, qui indiquent à ASP.NET où insérer des éléments de page.
-> - Le `PageData` dictionnaire qui vous permet de partager des données entre les blocs de contenu et les pages de disposition.
+> - Blocs de contenu, qui sont des fichiers contenant du contenu au format HTML à insérer dans plusieurs pages.
+> - Les pages de disposition, qui sont des pages qui contiennent du contenu au format HTML qui peuvent être partagées par des pages du site Web.
+> - Les méthodes `RenderPage`, `RenderBody`et `RenderSection`, qui indiquent à ASP.NET où insérer les éléments de page.
+> - Le dictionnaire `PageData` qui vous permet de partager des données entre des blocs de contenu et des pages de disposition.
 >   
 > 
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versions des logiciels utilisées dans le didacticiel
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versions logicielles utilisées dans le didacticiel
 > 
 > 
-> - ASP.NET Web Pages (Razor) 3
+> - Pages Web ASP.NET (Razor) 3
 >   
 > 
-> Ce didacticiel fonctionne également avec ASP.NET Web Pages 2.
+> Ce didacticiel fonctionne également avec pages Web ASP.NET 2.
 
-## <a name="about-layout-pages"></a>Sur les Pages de disposition
+## <a name="about-layout-pages"></a>À propos des pages de disposition
 
-De nombreux sites Web dont le contenu s’affiche sur chaque page, comme un en-tête et pied de page ou une zone qui indique aux utilisateurs qu’ils êtes connectés. ASP.NET vous permet de créer un fichier distinct avec un bloc de contenu qui permettre contenir du texte, balisage et code, tout comme une page web normale. Vous pouvez ensuite insérer le bloc de contenu dans d’autres pages sur le site où vous souhaitez que les informations s’affichent. De cette façon, que vous n’êtes pas obligé de copier et coller le même contenu dans chaque page. Création de contenu courants comme ceci rend également plus facile à mettre à jour votre site. Si vous devez modifier le contenu, vous pouvez simplement mettre à jour un seul fichier, et les modifications sont alors répercutées partout où le contenu a été inséré.
+De nombreux sites Web contiennent du contenu qui s’affiche sur chaque page, comme un en-tête et un pied de page, ou une zone qui indique aux utilisateurs qu’ils sont connectés. ASP.NET vous permet de créer un fichier distinct avec un bloc de contenu qui peut contenir du texte, du balisage et du code, tout comme une page Web standard. Vous pouvez ensuite insérer le bloc de contenu dans d’autres pages du site où vous souhaitez afficher les informations. De cette façon, vous n’êtes pas obligé de copier et coller le même contenu dans chaque page. La création d’un contenu courant comme celui-ci facilite également la mise à jour de votre site. Si vous avez besoin de modifier le contenu, vous pouvez simplement mettre à jour un seul fichier, et les modifications sont reflétées partout où le contenu a été inséré.
 
-Le diagramme suivant illustre la façon dont contenu bloque le travail. Lorsqu’un navigateur demande une page à partir du serveur web, ASP.NET insère des blocs de contenu au point où la `RenderPage` méthode est appelée dans la page principale. La page terminé (fusionnée) est ensuite envoyée au navigateur.
+Le diagramme suivant illustre le fonctionnement des blocs de contenu. Quand un navigateur demande une page du serveur Web, ASP.NET insère les blocs de contenu au point où la méthode `RenderPage` est appelée dans la page principale. La page terminé (fusionnée) est ensuite envoyée au navigateur.
 
-![Diagramme conceptuel montrant comment la méthode RenderPage insère une page référencée dans la page actuelle.](3-creating-a-consistent-look/_static/image1.jpg)
+![Diagramme conceptuel montrant comment la méthode RenderPage insère une page référencée dans la page active.](3-creating-a-consistent-look/_static/image1.jpg)
 
-Dans cette procédure, vous allez créer une page qui fait référence à deux blocs de contenu (un en-tête et un pied de page) qui sont trouvent dans des fichiers distincts. Vous pouvez utiliser ces mêmes blocs de contenu dans n’importe quelle page de votre site. Lorsque vous avez terminé, vous obtiendrez une page comme celle-ci :
+Dans cette procédure, vous allez créer une page qui référence deux blocs de contenu (un en-tête et un pied de page) situés dans des fichiers distincts. Vous pouvez utiliser ces mêmes blocs de contenu dans n’importe quelle page de votre site. Une fois que vous avez terminé, vous obtenez une page semblable à celle-ci :
 
-![Capture d’écran montrant une page dans le navigateur qui résulte de l’exécution d’une page qui inclut les appels à la méthode RenderPage.](3-creating-a-consistent-look/_static/image2.png)
+![Capture d’écran montrant une page dans le navigateur qui résulte de l’exécution d’une page qui comprend des appels à la méthode RenderPage.](3-creating-a-consistent-look/_static/image2.png)
 
-1. Dans le dossier racine de votre site Web, créez un fichier nommé *Index.cshtml*.
+1. Dans le dossier racine de votre site Web, créez un fichier nommé *index. cshtml*.
 2. Remplacez le balisage existant par le code suivant :
 
     [!code-html[Main](3-creating-a-consistent-look/samples/sample1.html)]
-3. Dans le dossier racine, créez un dossier nommé *partagé*.
+3. Dans le dossier racine, créez un dossier nommé *Shared*.
 
     > [!NOTE]
-    > Il est courant pour stocker les fichiers qui sont partagées entre les pages web dans un dossier nommé *partagé*.
-4. Dans le *partagé* dossier, créez un fichier nommé  *\_Header.cshtml*.
-5. Remplacer le contenu existant avec les éléments suivants :
+    > Il est courant de stocker les fichiers partagés entre les pages Web dans un dossier nommé *Shared*.
+4. Dans le dossier *partagé* , créez un fichier nommé *\_Header. cshtml*.
+5. Remplacez tout contenu existant par ce qui suit :
 
     [!code-html[Main](3-creating-a-consistent-look/samples/sample2.html)]
 
-    Notez que le nom de fichier est  *\_Header.cshtml*, un trait de soulignement (\_) comme préfixe. ASP.NET ne sont pas envoyer une page au navigateur si son nom commence par un trait de soulignement. Cela empêche les personnes à partir de la demande (par inadvertance ou autre) ces pages directement. Il est judicieux d’utiliser un trait de soulignement pour les pages de nom comportant des blocs de contenu, car vous ne veux pas vraiment les utilisateurs soient en mesure de demander ces pages &#8212; elles existent strictement pour être inséré dans les autres pages.
-6. Dans le *partagé* dossier, créez un fichier nommé  *\_Footer.cshtml* et remplacez son contenu par le code suivant :
+    Notez que le nom de fichier est *\_Header. cshtml*, avec un trait de soulignement (\_) comme préfixe. ASP.NET n’envoie pas de page au navigateur si son nom commence par un trait de soulignement. Cela empêche les personnes de demander (par inadvertance ou autrement) ces pages directement. Il est judicieux d’utiliser un trait de soulignement pour nommer les pages qui contiennent des blocs de contenu, car vous ne souhaitez pas vraiment que les utilisateurs soient en &#8212; mesure de demander l’insertion de ces pages dans d’autres pages.
+6. Dans le dossier *partagé* , créez un fichier nommé *\_footer. cshtml* et remplacez le contenu par ce qui suit :
 
     [!code-html[Main](3-creating-a-consistent-look/samples/sample3.html)]
-7. Dans le *Index.cshtml* page, ajoutez les deux appels à la `RenderPage` méthode, comme indiqué ici :
+7. Dans la page *index. cshtml* , ajoutez deux appels à la méthode `RenderPage`, comme illustré ici :
 
     [!code-html[Main](3-creating-a-consistent-look/samples/sample4.html)]
 
-    Cet exemple montre comment insérer un bloc de contenu dans une page web. Vous appelez le `RenderPage` (méthode) et lui transmettre le nom du fichier dont le contenu à insérer à ce stade. Ici, vous insérez le contenu de la  *\_Header.cshtml* et  *\_Footer.cshtml* de fichiers dans le *Index.cshtml* fichier.
-8. Exécutez le *Index.cshtml* page dans un navigateur. (Dans WebMatrix, dans le **fichiers** espace de travail, cliquez sur le fichier, puis sélectionnez **lancer dans le navigateur**.)
-9. Dans le navigateur, affichez la source de la page. (Par exemple, dans Internet Explorer, avec le bouton droit de la page, puis **afficher la Source**.)
+    Cela montre comment insérer un bloc de contenu dans une page Web. Vous appelez la méthode `RenderPage` et lui transmettez le nom du fichier dont vous souhaitez insérer le contenu à ce stade. Ici, vous insérez le contenu des fichiers *\_Header. cshtml* et *\_footer. cshtml* dans le fichier *index. cshtml* .
+8. Exécutez la page *index. cshtml* dans un navigateur. (Dans WebMatrix, dans l’espace de travail **fichiers** , cliquez avec le bouton droit sur le fichier, puis sélectionnez **lancer dans le navigateur**.)
+9. Dans le navigateur, affichez la page source. (Par exemple, dans Internet Explorer, cliquez avec le bouton droit sur la page, puis cliquez sur **afficher la source**.)
 
-    Cela vous permet de voir le balisage de page web qui est envoyé au navigateur, qui combine le balisage de page d’index avec les blocs de contenu. L’exemple suivant montre la page source qui est restituée pour *Index.cshtml*. Les appels à `RenderPage` insérés dans *Index.cshtml* ont été remplacés par le contenu réel des fichiers d’en-tête et pied de page.
+    Cela vous permet de voir le balisage de la page Web qui est envoyé au navigateur, qui combine le balisage de la page d’index avec les blocs de contenu. L’exemple suivant illustre la source de la page rendue pour *index. cshtml*. Les appels à `RenderPage` que vous avez insérés dans *index. cshtml* ont été remplacés par le contenu réel des fichiers d’en-tête et de pied de page.
 
     [!code-html[Main](3-creating-a-consistent-look/samples/sample5.html)]
 
-## <a name="creating-a-consistent-look-using-layout-pages"></a>Création d’une apparence cohérente à l’aide des Pages de disposition
+## <a name="creating-a-consistent-look-using-layout-pages"></a>Création d’une apparence cohérente à l’aide des pages de disposition
 
-Jusqu'à présent, vous avez vu qu’il est facile d’inclure le même contenu sur plusieurs pages. Une approche plus structurée pour créer une apparence cohérente pour un site consiste à utiliser les pages de disposition. Une page de disposition définit la structure d’une page web, mais ne contient pas de contenu réel. Une fois que vous avez créé une page de disposition, vous pouvez créer des pages web qui contiennent le contenu et les lier à la page de disposition. Lorsque ces pages sont affichés, ils amèneront mis en forme en fonction de la page de disposition. (Dans ce sens, une page de disposition agit comme une sorte de modèle pour le contenu qui est défini dans d’autres pages.)
+Jusqu’à présent, vous savez qu’il est facile d’inclure le même contenu sur plusieurs pages. Une approche plus structurée de la création d’une apparence cohérente pour un site consiste à utiliser des pages de disposition. Une page de disposition définit la structure d’une page Web, mais ne contient pas de contenu réel. Une fois que vous avez créé une page de disposition, vous pouvez créer des pages Web qui contiennent le contenu, puis les lier à la page de disposition. Lorsque ces pages sont affichées, elles sont formatées en fonction de la page de disposition. (Dans ce sens, une page de disposition agit comme un type de modèle pour le contenu qui est défini dans d’autres pages.)
 
-La page de disposition s’apparente à n’importe quelle page HTML, sauf qu’il contient un appel à la `RenderBody` (méthode). La position de la `RenderBody` méthode dans la page de disposition détermine où les informations à partir de la page de contenu seront incluses.
+La page de disposition est similaire à une page HTML, à la différence qu’elle contient un appel à la méthode `RenderBody`. La position de la méthode `RenderBody` dans la page de disposition détermine l’emplacement où les informations de la page de contenu seront incluses.
 
-Le diagramme suivant montre les pages de contenu et les pages de disposition sont associées au moment de l’exécution pour produire la page web terminé. Le navigateur demande une page de contenu. La page de contenu a un code qui spécifie la page de disposition à utiliser pour la structure de la page. Dans la page de disposition, le contenu est inséré au point où la `RenderBody` méthode est appelée. Contenu de blocs peuvent également être insérées dans la page de disposition en appelant le `RenderPage` (méthode), la façon que vous l’avez fait dans la section précédente. Lorsque la page web est terminée, il est envoyé au navigateur.
+Le diagramme suivant montre comment les pages de contenu et les pages de disposition sont combinées au moment de l’exécution pour produire la page Web terminée. Le navigateur demande une page de contenu. La page de contenu contient du code qui spécifie la page de disposition à utiliser pour la structure de la page. Dans la page disposition, le contenu est inséré au point où la méthode `RenderBody` est appelée. Les blocs de contenu peuvent également être insérés dans la page de disposition en appelant la méthode `RenderPage`, comme vous l’avez fait dans la section précédente. Une fois la page Web terminée, elle est envoyée au navigateur.
 
-![Capture d’écran montrant une page dans le navigateur qui résulte de l’exécution d’une page qui inclut les appels à la méthode RenderBody.](3-creating-a-consistent-look/_static/image3.jpg)
+![Capture d’écran montrant une page dans le navigateur qui résulte de l’exécution d’une page qui comprend des appels à la méthode RenderBody.](3-creating-a-consistent-look/_static/image3.jpg)
 
-La procédure suivante montre comment créer une disposition des pages de contenu et un lien hypertexte à celui-ci.
+La procédure suivante montre comment créer une page de disposition et lier des pages de contenu à celle-ci.
 
-1. Dans le *partagé* dossier de votre site Web, créez un fichier nommé  *\_Layout1.cshtml*.
-2. Remplacer le contenu existant avec les éléments suivants :
+1. Dans le dossier *partagé* de votre site Web, créez un fichier nommé *\_layout1. cshtml*.
+2. Remplacez tout contenu existant par ce qui suit :
 
     [!code-html[Main](3-creating-a-consistent-look/samples/sample6.html)]
 
-    Vous utilisez la `RenderPage` méthode dans une page de disposition pour insérer des blocs de contenu. Une page de disposition peut contenir qu’un seul appel à la `RenderBody` (méthode).
-3. Dans le *partagé* dossier, créez un fichier nommé  *\_Header2.cshtml* et remplacer le contenu existant par le code suivant :
+    Vous utilisez la méthode `RenderPage` dans une page de disposition pour insérer des blocs de contenu. Une page de disposition ne peut contenir qu’un seul appel à la méthode `RenderBody`.
+3. Dans le dossier *partagé* , créez un fichier nommé *\_Header2. cshtml* et remplacez le contenu existant par ce qui suit :
 
     [!code-html[Main](3-creating-a-consistent-look/samples/sample7.html)]
-4. Dans le dossier racine, créez un nouveau dossier et nommez-le *Styles*.
-5. Dans le *Styles* dossier, créez un fichier nommé *Site.css* et ajoutez les définitions de style suivantes :
+4. Dans le dossier racine, créez un nouveau dossier et nommez-le *styles*.
+5. Dans le dossier *styles* , créez un fichier nommé *site. CSS* et ajoutez les définitions de style suivantes :
 
     [!code-css[Main](3-creating-a-consistent-look/samples/sample8.css)]
 
     Ces définitions de style sont ici uniquement pour montrer comment les feuilles de style peuvent être utilisées avec les pages de disposition. Si vous le souhaitez, vous pouvez définir vos propres styles pour ces éléments.
-6. Dans le dossier racine, créez un fichier nommé *Content1.cshtml* et remplacer le contenu existant par le code suivant :
+6. Dans le dossier racine, créez un fichier nommé *Content1. cshtml* et remplacez le contenu existant par ce qui suit :
 
     [!code-cshtml[Main](3-creating-a-consistent-look/samples/sample9.cshtml)]
 
-    Il s’agit d’une page qui utilise une page de disposition. Le bloc de code en haut de la page indique quelle page de disposition à utiliser pour formater ce contenu.
-7. Exécutez *Content1.cshtml* dans un navigateur. La page rendue utilise le format et la feuille de style définis dans  *\_Layout1.cshtml* et le texte (contenu) définies dans *Content1.cshtml*.
+    Il s’agit d’une page qui utilise une page de disposition. Le bloc de code en haut de la page indique la page de disposition à utiliser pour mettre en forme ce contenu.
+7. Exécutez *Content1. cshtml* dans un navigateur. La page rendue utilise le format et la feuille de style définis dans *\_layout1. cshtml* et le texte (contenu) défini dans *Content1. cshtml*.
 
     ![[image]](3-creating-a-consistent-look/_static/image4.png)
 
-    Vous pouvez répéter l’étape 6 pour créer des pages de contenu supplémentaires qui peuvent alors partager la même page de disposition.
+    Vous pouvez répéter l’étape 6 pour créer des pages de contenu supplémentaires qui peuvent ensuite partager la même page de disposition.
 
     > [!NOTE]
-    > Vous pouvez configurer votre site afin que vous puissiez utiliser automatiquement de la même page de disposition pour toutes les pages de contenu dans un dossier. Pour plus d’informations, consultez [personnalisation du comportement de l’échelle du Site pour ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202906).
+    > Vous pouvez configurer votre site pour que vous puissiez utiliser automatiquement la même page de disposition pour toutes les pages de contenu d’un dossier. Pour plus d’informations, consultez [Personnalisation du comportement à l’ensemble du site pour pages Web ASP.net](https://go.microsoft.com/fwlink/?LinkId=202906).
 
-## <a name="designing-layout-pages-that-have-multiple-content-sections"></a>Conception de Pages de disposition qui ont plusieurs Sections de contenu
+## <a name="designing-layout-pages-that-have-multiple-content-sections"></a>Conception de pages de disposition comportant plusieurs sections de contenu
 
-Une page de contenu peut avoir plusieurs sections, ce qui est utile si vous souhaitez utiliser des dispositions qui ont contenu remplaçable dans plusieurs zones. Dans la page de contenu, vous attribuez un nom unique chaque section. (La section par défaut est laissée sans nom.) Dans la page de disposition, vous allez ajouter un `RenderBody` méthode pour spécifier où doit apparaître la section sans nom (valeur par défaut). Vous ajoutez ensuite distinct `RenderSection` méthodes afin de restituer des sections nommées individuellement.
+Une page de contenu peut avoir plusieurs sections, ce qui est utile si vous souhaitez utiliser des dispositions qui ont plusieurs zones avec du contenu remplaçable. Dans la page contenu, attribuez un nom unique à chaque section. (La section par défaut n’a pas de nom.) Dans la page disposition, vous ajoutez une méthode `RenderBody` pour spécifier l’emplacement où la section sans nom (par défaut) doit apparaître. Vous ajoutez ensuite des méthodes `RenderSection` distinctes afin de rendre les sections nommées individuellement.
 
-Le diagramme suivant illustre la façon dont ASP.NET gère un contenu qui est divisé en plusieurs sections. Chaque section nommée est contenue dans un bloc de section dans la page de contenu. (Ils sont nommés `Header` et `List` dans l’exemple.) Le framework insère section contenue dans la page de disposition au point où la `RenderSection` méthode est appelée. La section sans nom (valeur par défaut) est insérée au point où la `RenderBody` méthode est appelée, comme vous l’avez vu précédemment.
+Le diagramme suivant montre comment ASP.NET gère le contenu qui est divisé en plusieurs sections. Chaque section nommée est contenue dans un bloc de section de la page de contenu. (Ils sont nommés `Header` et `List` dans l’exemple.) Le Framework insère la section de contenu dans la page de disposition à l’endroit où la méthode `RenderSection` est appelée. La section sans nom (valeur par défaut) est insérée au point où la méthode `RenderBody` est appelée, comme vous l’avez vu précédemment.
 
 ![Diagramme conceptuel montrant comment la méthode RenderSection insère des sections de références dans la page actuelle.](3-creating-a-consistent-look/_static/image5.jpg)
 
-Cette procédure montre comment créer une page de contenu qui a plusieurs sections de contenu et le rendu à l’aide d’une page de disposition qui prend en charge plusieurs sections de contenu.
+Cette procédure indique comment créer une page de contenu qui contient plusieurs sections de contenu et comment la restituer à l’aide d’une page de disposition qui prend en charge plusieurs sections de contenu.
 
-1. Dans le *partagé* dossier, créez un fichier nommé  *\_Layout2.cshtml*.
-2. Remplacer le contenu existant avec les éléments suivants :
+1. Dans le dossier *partagé* , créez un fichier nommé *\_Layout2. cshtml*.
+2. Remplacez tout contenu existant par ce qui suit :
 
     [!code-html[Main](3-creating-a-consistent-look/samples/sample10.html)]
 
-    Vous utilisez la `RenderSection` méthode pour restituer des sections de l’en-tête et la liste.
-3. Dans le dossier racine, créez un fichier nommé *Content2.cshtml* et remplacer le contenu existant par le code suivant :
+    Vous utilisez la méthode `RenderSection` pour restituer les sections d’en-tête et de liste.
+3. Dans le dossier racine, créez un fichier nommé *Content2. cshtml* et remplacez le contenu existant par ce qui suit :
 
     [!code-cshtml[Main](3-creating-a-consistent-look/samples/sample11.cshtml)]
 
-    Cette page de contenu contient un bloc de code en haut de la page. Chaque section nommée est contenue dans un bloc de section. Le reste de la page contient la section de contenu par défaut (sans nom).
-4. Exécutez *Content2.cshtml* dans un navigateur.
+    Cette page de contenu contient un bloc de code en haut de la page. Chaque section nommée est contenue dans un bloc de section. Le reste de la page contient la section de contenu (sans nom) par défaut.
+4. Exécutez *Content2. cshtml* dans un navigateur.
 
-    ![Capture d’écran montrant une page dans le navigateur qui résulte de l’exécution d’une page qui inclut les appels à la méthode RenderSection.](3-creating-a-consistent-look/_static/image6.png)
+    ![Capture d’écran montrant une page dans le navigateur qui résulte de l’exécution d’une page qui comprend des appels à la méthode RenderSection.](3-creating-a-consistent-look/_static/image6.png)
 
-## <a name="making-content-sections-optional"></a>Rendre des Sections de contenu facultatif
+## <a name="making-content-sections-optional"></a>Rendre les sections de contenu facultatives
 
-En règle générale, les sections que vous créez dans une page de contenu doivent correspondre les sections qui sont définies dans la page de disposition. Vous pouvez obtenir des erreurs si un des éléments suivants se produit :
+Normalement, les sections que vous créez dans une page de contenu doivent correspondre aux sections définies dans la page de disposition. Vous pouvez recevoir des erreurs si l’un des éléments suivants se produit :
 
-- La page de contenu contient une section qui ne dispose d’aucune section correspondante dans la page de disposition.
-- La page de disposition contient une section pour lequel il n’existe aucun contenu.
-- La page de disposition inclut des appels de méthode qui tentent de restituer la même section plusieurs fois.
+- La page de contenu contient une section qui n’a pas de section correspondante dans la page de disposition.
+- La page de disposition contient une section pour laquelle il n’existe aucun contenu.
+- La page de disposition comprend des appels de méthode qui essaient d’afficher plusieurs fois la même section.
 
-Toutefois, vous pouvez remplacer ce comportement pour une section nommée en déclarant la section facultative dans la page de disposition. Cela vous permet de définir plusieurs pages de contenu qui peuvent partager une page de disposition, mais qui peuvent ou non avoir un contenu d’une section spécifique.
+Toutefois, vous pouvez substituer ce comportement pour une section nommée en déclarant la section comme étant facultative dans la page de disposition. Cela vous permet de définir plusieurs pages de contenu qui peuvent partager une page de disposition, mais qui peuvent avoir ou non du contenu pour une section spécifique.
 
-1. Ouvrez *Content2.cshtml* et supprimer la section suivante :
+1. Ouvrez *Content2. cshtml* et supprimez la section suivante :
 
     [!code-cshtml[Main](3-creating-a-consistent-look/samples/sample12.cshtml)]
-2. Enregistrez la page et exécutez-le dans un navigateur. Un message d’erreur s’affiche, étant donné que le contenu d’une section définie dans la page de disposition, à savoir la section d’en-tête ne fournit pas la page de contenu.
+2. Enregistrez la page, puis exécutez-la dans un navigateur. Un message d’erreur s’affiche, car la page de contenu ne fournit pas de contenu pour une section définie dans la page de disposition, à savoir la section d’en-tête.
 
-    ![Capture d’écran montrant l’erreur qui se produit si vous exécutez une page qui appelle la méthode de RenderSection, mais la section correspondante n’est pas fournie.](3-creating-a-consistent-look/_static/image7.png)
-3. Dans le *partagé* dossier, ouvrez le  *\_Layout2.cshtml* page et remplacez cette ligne :
+    ![Capture d’écran qui montre l’erreur qui se produit si vous exécutez une page qui appelle la méthode RenderSection, mais que la section correspondante n’est pas fournie.](3-creating-a-consistent-look/_static/image7.png)
+3. Dans le dossier *partagé* , ouvrez la page *\_Layout2. cshtml* et remplacez la ligne suivante :
 
     [!code-javascript[Main](3-creating-a-consistent-look/samples/sample13.js)]
 
-    avec le code suivant :
+    par le code suivant :
 
     [!code-javascript[Main](3-creating-a-consistent-look/samples/sample14.js)]
 
-    Comme alternative, vous pouvez remplacer la ligne de code précédente par le bloc de code suivant, qui produit les mêmes résultats :
+    Vous pouvez également remplacer la ligne de code précédente par le bloc de code suivant, qui produit les mêmes résultats :
 
     [!code-cshtml[Main](3-creating-a-consistent-look/samples/sample15.cshtml)]
-4. Exécutez le *Content2.cshtml* page dans un navigateur à nouveau. (Si cette page est encore ouvert dans le navigateur, vous pouvez simplement l’actualiser.) Cette fois la page s’affiche sans erreur, bien qu’elle n’ait aucun en-tête.
+4. Exécutez à nouveau la page *Content2. cshtml* dans un navigateur. (Si cette page est toujours ouverte dans le navigateur, il vous suffit de l’actualiser.) Cette fois, la page s’affiche sans erreur, même si elle n’a pas d’en-tête.
 
-## <a name="passing-data-to-layout-pages"></a>Passage de données pour les Pages de disposition
+## <a name="passing-data-to-layout-pages"></a>Passage de données à des pages de disposition
 
-Vous pouvez avoir des données définies dans la page de contenu dont vous avez besoin pour faire référence à dans une page de disposition. Dans ce cas, vous devez passer les données à partir de la page de contenu à la page de disposition. Par exemple, vous souhaiterez peut-être afficher l’état de connexion d’un utilisateur, ou vous souhaiterez peut-être afficher ou masquer les zones de contenu basées sur l’entrée d’utilisateur.
+Vous pouvez avoir des données définies dans la page de contenu à laquelle vous devez faire référence dans une page de disposition. Si c’est le cas, vous devez passer les données de la page de contenu à la page de disposition. Par exemple, vous souhaiterez peut-être afficher l’état de la connexion d’un utilisateur, ou vous pouvez afficher ou masquer les zones de contenu en fonction de l’entrée de l’utilisateur.
 
-Pour passer des données à partir d’une page de contenu à une page de disposition, vous pouvez placer des valeurs dans le `PageData` propriété de la page de contenu. Le `PageData` propriété est une collection de paires nom/valeur qui contiennent les données que vous voulez passer entre les pages. Dans la page de disposition, vous pouvez lire des valeurs de la `PageData` propriété.
+Pour passer des données d’une page de contenu à une page de disposition, vous pouvez placer des valeurs dans la propriété `PageData` de la page de contenu. La propriété `PageData` est une collection de paires nom/valeur qui contiennent les données que vous souhaitez passer entre les pages. Dans la page disposition, vous pouvez ensuite lire les valeurs en dehors de la propriété `PageData`.
 
-Voici un autre diagramme. Il montre comment ASP.NET peut utiliser le `PageData` propriété pour transmettre des valeurs à partir d’une page de contenu à la page de disposition. Lorsque ASP.NET commence la construction de la page web, il crée le `PageData` collection. Dans la page de contenu, vous écrivez du code pour placer des données le `PageData` collection. Les valeurs dans le `PageData` collection est également accessible par d’autres sections de la page de contenu ou des blocs de contenu supplémentaires.
+Voici un autre diagramme. Celui-ci montre comment ASP.NET peut utiliser la propriété `PageData` pour passer des valeurs d’une page de contenu à la page de disposition. Quand ASP.NET commence à générer la page Web, il crée la collection `PageData`. Dans la page de contenu, vous écrivez du code pour placer des données dans la collection `PageData`. Les valeurs de la collection `PageData` sont également accessibles par d’autres sections de la page de contenu ou par des blocs de contenu supplémentaires.
 
-![Diagramme conceptuel qui montre comment une page de contenu peut remplir un dictionnaire PageData et transmettre ces informations à la page de disposition.](3-creating-a-consistent-look/_static/image8.jpg)
+![Diagramme conceptuel qui montre comment une page de contenu peut remplir un dictionnaire PageData et passer ces informations à la page de disposition.](3-creating-a-consistent-look/_static/image8.jpg)
 
-La procédure suivante montre comment passer des données à partir d’une page de contenu à une page de disposition. Lorsque la page s’exécute, il affiche un bouton qui permet à l’utilisateur de masquer ou afficher une liste qui est définie dans la page de disposition. Lorsque les utilisateurs cliquent sur le bouton, il définit une valeur vrai/faux (booléenne) dans le `PageData` propriété. La page de disposition lit cette valeur et si elle est false, masque la liste. La valeur est également utilisée dans la page de contenu pour déterminer s’il faut afficher le **masquer la liste** bouton ou le **afficher la liste de** bouton.
+La procédure suivante indique comment passer des données d’une page de contenu à une page de disposition. Lorsque la page s’exécute, elle affiche un bouton qui permet à l’utilisateur de masquer ou d’afficher une liste définie dans la page de disposition. Quand les utilisateurs cliquent sur le bouton, il définit une valeur true/false (Boolean) dans la propriété `PageData`. La page de disposition lit cette valeur et, si elle est définie sur false, masque la liste. La valeur est également utilisée dans la page de contenu pour déterminer s’il faut afficher le bouton **masquer la liste** ou le bouton **afficher la liste** .
 
 ![[image]](3-creating-a-consistent-look/_static/image9.jpg)
 
-1. Dans le dossier racine, créez un fichier nommé *Content3.cshtml* et remplacer le contenu existant par le code suivant :
+1. Dans le dossier racine, créez un fichier nommé *Content3. cshtml* et remplacez le contenu existant par ce qui suit :
 
     [!code-cshtml[Main](3-creating-a-consistent-look/samples/sample16.cshtml)]
 
-    Le code stocke deux éléments de données dans le `PageData` propriété &#8212; le titre de la page web et de la valeur true ou de false pour spécifier s’il faut afficher la liste.
+    Le code stocke deux éléments de données dans la propriété &#8212; `PageData` le titre de la page Web et true ou false pour spécifier s’il faut afficher une liste.
 
-    Notez que ASP.NET vous permet de mettre un balisage HTML dans la page de manière conditionnelle à l’aide d’un bloc de code. Par exemple, le `if/else` bloc dans le corps de la page détermine le formulaire à afficher selon que `PageData["ShowList"]` est définie sur true.
-2. Dans le *partagé* dossier, créez un fichier nommé  *\_Layout3.cshtml* et remplacer le contenu existant par le code suivant :
+    Notez que ASP.NET vous permet de placer le balisage HTML dans la page de manière conditionnelle à l’aide d’un bloc de code. Par exemple, le bloc `if/else` dans le corps de la page détermine le formulaire à afficher selon que `PageData["ShowList"]` a la valeur true.
+2. Dans le dossier *partagé* , créez un fichier nommé *\_Layout3. cshtml* et remplacez le contenu existant par ce qui suit :
 
     [!code-cshtml[Main](3-creating-a-consistent-look/samples/sample17.cshtml)]
 
-    La page de disposition inclut une expression dans le `<title>` élément qui obtient la valeur de titre de la `PageData` propriété. Il utilise également le `ShowList` valeur de la `PageData` propriété afin de déterminer s’il faut afficher le bloc de contenu de liste.
-3. Dans le *partagé* dossier, créez un fichier nommé  *\_List.cshtml* et remplacer le contenu existant par le code suivant :
+    La page de disposition comprend une expression dans l’élément `<title>` qui obtient la valeur de titre de la propriété `PageData`. Elle utilise également la valeur `ShowList` de la propriété `PageData` pour déterminer s’il faut afficher le bloc de contenu de la liste.
+3. Dans le dossier *partagé* , créez un fichier nommé *\_List. cshtml* et remplacez le contenu existant par ce qui suit :
 
     [!code-html[Main](3-creating-a-consistent-look/samples/sample18.html)]
-4. Exécutez le *Content3.cshtml* page dans un navigateur. La page s’affiche avec la liste visible sur le côté gauche de la page et un **masquer la liste** bouton du bas.
+4. Exécutez la page *Content3. cshtml* dans un navigateur. La page s’affiche avec la liste visible sur le côté gauche de la page et un bouton **masquer la liste** en bas.
 
-    ![Capture d’écran montrant la page qui inclut la liste et un bouton intitulé « Masquer la liste ».](3-creating-a-consistent-look/_static/image10.png)
-5. Cliquez sur **masquer la liste**. Disparaît de la liste et le bouton se transforme en **afficher la liste de**.
+    ![Capture d’écran montrant la page qui comprend la liste et un bouton indiquant « masquer la liste ».](3-creating-a-consistent-look/_static/image10.png)
+5. Cliquez sur **masquer la liste**. La liste disparaît et le bouton devient **afficher la liste**.
 
-    ![Capture d’écran montrant la page qui n’inclut pas la liste et un bouton intitulé « Afficher la liste ».](3-creating-a-consistent-look/_static/image11.png)
-6. Cliquez sur le **afficher la liste de** bouton et la liste s’affiche de nouveau.
+    ![Capture d’écran montrant la page qui n’inclut pas la liste et un bouton indiquant « afficher la liste ».](3-creating-a-consistent-look/_static/image11.png)
+6. Cliquez sur le bouton **afficher la liste** pour afficher à nouveau la liste.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-[Personnalisation du comportement de l’échelle du Site pour ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202906)
+[Personnalisation du comportement à l’ensemble du site pour pages Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202906)

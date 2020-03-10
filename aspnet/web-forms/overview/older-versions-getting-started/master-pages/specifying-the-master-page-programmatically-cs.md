@@ -9,11 +9,11 @@ ms.assetid: 7c4a3445-2440-4aee-b9fd-779c05e6abb2
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 0db23ea05ba001c2bf9fc5330a60a767caa568a0
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74590508"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78625488"
 ---
 # <a name="specifying-the-master-page-programmatically-c"></a>Spécification de la page maître par programmation (C#)
 

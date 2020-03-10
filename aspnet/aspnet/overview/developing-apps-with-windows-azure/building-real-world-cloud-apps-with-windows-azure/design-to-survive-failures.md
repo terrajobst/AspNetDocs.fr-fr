@@ -9,11 +9,11 @@ ms.assetid: 364ce84e-5af8-4e08-afc9-75a512b01f84
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/design-to-survive-failures
 msc.type: authoredcontent
 ms.openlocfilehash: 348232af531b5d53dc3cb46d6d2c7931d95a572d
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457126"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617725"
 ---
 # <a name="design-to-survive-failures-building-real-world-cloud-apps-with-azure"></a>Conception pour survivre aux défaillances (création d’applications Cloud réalistes avec Azure)
 
@@ -98,7 +98,7 @@ Sachez également que tous les services Cloud n’ont même pas de contrat SLA. 
 
 Certains services de Cloud Computing peuvent délibérément refuser le service si votre application les utilise. C’est ce que l’on appelle la *limitation*. Si un service a un contrat SLA, il doit indiquer les conditions dans lesquelles vous pouvez être limité, et la conception de votre application doit éviter ces conditions et réagir de manière appropriée à la limitation si elle se produit. Par exemple, si les demandes à un service commencent à échouer lorsque vous dépassez un certain nombre par seconde, vous souhaitez vous assurer que les nouvelles tentatives automatiques ne se produisent pas si rapidement qu’elles provoquent la poursuite de la limitation. Nous aurons plus d’informations sur la limitation dans le [chapitre relatif à la gestion des erreurs temporaires](transient-fault-handling.md).
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Ce chapitre a essayé de vous aider à comprendre pourquoi une application Cloud réelle doit être conçue pour survivre aux défaillances de manière appropriée. À compter du [chapitre suivant](monitoring-and-telemetry.md), les autres modèles de cette série décrivent plus en détail certaines stratégies que vous pouvez utiliser pour effectuer cette opération :
 

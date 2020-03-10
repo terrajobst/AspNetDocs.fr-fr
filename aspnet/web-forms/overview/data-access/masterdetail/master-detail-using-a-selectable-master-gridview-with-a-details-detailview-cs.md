@@ -9,11 +9,11 @@ ms.assetid: 0f982827-f8f9-420d-b36b-57b23f5aa519
 msc.legacyurl: /web-forms/overview/data-access/masterdetail/master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 04c427341f063729bd23b416a96f5acb20702792
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74632488"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78621064"
 ---
 # <a name="masterdetail-using-a-selectable-master-gridview-with-a-details-detailview-c"></a>Représentation maître/détail utilisant un GridView maître pouvant être sélectionné avec une DetailView des détails (C#)
 

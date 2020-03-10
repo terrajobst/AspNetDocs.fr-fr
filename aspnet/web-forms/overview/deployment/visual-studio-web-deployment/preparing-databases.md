@@ -9,11 +9,11 @@ ms.assetid: ae4def81-fa37-4883-a13e-d9896cbf6c36
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/preparing-databases
 msc.type: authoredcontent
 ms.openlocfilehash: cdcb3578725c41e3c801afd54e6d34455bc4b281
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74618532"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78636996"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : préparation pour le déploiement de base de données
 
@@ -23,7 +23,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels vous montre comment déployer (publier) une application Web ASP.NET sur Azure App Service Web Apps ou sur un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou de Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Ce didacticiel montre comment préparer le projet pour le déploiement de base de données. La structure de la base de données et certaines (pas toutes) des données dans les deux bases de données de l’application doivent être déployées dans des environnements de test, intermédiaire et de production.
 
@@ -220,7 +220,7 @@ Les deux bases de données sont maintenant prêtes à être déployées et vous 
 
 Dans le didacticiel suivant, vous configurez les paramètres de projet qui affectent le déploiement et vous configurez des transformations de fichier *Web. config* automatiques pour les paramètres qui doivent être différents dans l’application déployée.
 
-## <a name="more-information"></a>Plus d’informations
+## <a name="more-information"></a>Plus d'informations
 
 Pour plus d’informations sur NuGet, consultez [gérer les bibliothèques de projets avec NuGet](https://msdn.microsoft.com/magazine/hh547106.aspx) et [la documentation NuGet](http://docs.nuget.org/docs/start-here/overview). Si vous ne souhaitez pas utiliser NuGet, vous devez apprendre à analyser un package NuGet pour déterminer ce qu’il fait lorsqu’il est installé. (Par exemple, il peut configurer des transformations *Web. config* , configurer des scripts PowerShell pour qu’ils s’exécutent au moment de la génération, etc.) Pour en savoir plus sur le fonctionnement de NuGet, consultez [création et publication d’un package et d’un](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package) [fichier de configuration et de transformations de code source](http://docs.nuget.org/docs/creating-packages/configuration-file-and-source-code-transformations).
 

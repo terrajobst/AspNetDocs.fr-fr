@@ -9,11 +9,11 @@ ms.assetid: 6755d8d9-14be-4a1d-86e5-1a6110f3dea8
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-auto-postback-with-cascadingdropdown-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8bccd716814e7de544798010cecbc148ec50b5cd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74574492"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78535951"
 ---
 # <a name="using-auto-postback-with-cascadingdropdown-c"></a>Utilisation de la publication (postback) automatique avec CascadingDropDown (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle CascadingDropDown dans la boîte à outils de contrôle AJAX étend un contrôle DropDownList afin que les modifications apportées à un contrôle DropDownList chargent les valeurs associées dans un autre DropDownList. Toutefois, lors de l’utilisation du contrôle CascadingDropDown, ASP. La fonctionnalité AutoPostBack du contrôle DropDownList de NET ne fonctionne pas, car le chargement asynchrone des données dans la liste génère une publication (postback) (inutile) proprement dite. Avec du code JavaScript, cet effet peut être évité.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle CascadingDropDown dans la boîte à outils de contrôle AJAX étend un contrôle DropDownList afin que les modifications apportées à un contrôle DropDownList chargent les valeurs associées dans un autre DropDownList. (Par exemple, une liste fournit une liste des États-Unis et la liste suivante est ensuite remplie avec les villes principales dans cet État.) Toutefois, lors de l’utilisation du contrôle CascadingDropDown, ASP. La fonctionnalité AutoPostBack du contrôle DropDownList de NET ne fonctionne pas, car le chargement asynchrone des données dans la liste génère une publication (postback) (inutile) proprement dite. Avec du code JavaScript, cet effet peut être évité.
 

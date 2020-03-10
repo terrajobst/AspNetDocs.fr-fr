@@ -9,11 +9,11 @@ ms.assetid: 20acee16-c70c-41e9-b38f-92bfcf9a4c1c
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-oauth-20-authorization-server
 msc.type: authoredcontent
 ms.openlocfilehash: 39c78ee57f791a94af7a5fb66c3ac42d7239760f
-ms.sourcegitcommit: b95316530fa51087d6c400ff91814fe37e73f7e8
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000685"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617109"
 ---
 # <a name="owin-oauth-20-authorization-server"></a>Serveur d’autorisation OAuth 2.0 OWIN
 

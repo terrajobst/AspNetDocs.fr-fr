@@ -9,11 +9,11 @@ ms.assetid: cad00de1-3c68-4ff4-a436-54236d449459
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
 ms.openlocfilehash: 37f45d8f12e3ab5c485718bcf2c59934ad272118
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457951"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78615254"
 ---
 # <a name="accessing-your-models-data-from-a-controller-vb"></a>Accès aux données de votre modèle à partir d’un contrôleur (VB)
 
@@ -31,7 +31,7 @@ par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 Dans cette section, vous allez créer une classe de `MoviesController` et écrire du code qui récupère les données de film et les affiche dans le navigateur à l’aide d’un modèle de vue. Veillez à créer votre application avant de continuer.
 
-Cliquez avec le bouton droit sur le dossier *Controllers* et créez un contrôleur de `MoviesController`. Sélectionnez les options suivantes :
+Cliquez avec le bouton droit sur le dossier *Controllers* et créez un contrôleur de `MoviesController`. Sélectionnez les options suivantes :
 
 - Nom du contrôleur : **MoviesController**. (Il s'agit du paramètre par défaut.)
 - Modèle : **contrôleur avec des actions et des vues en lecture/écriture, à l’aide de Entity Framework**.

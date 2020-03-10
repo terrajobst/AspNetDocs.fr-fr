@@ -4,14 +4,14 @@ Ce document aborde le processus de contribution aux articles et exemples de code
 
 ## <a name="how-to-make-a-simple-correction-or-suggestion"></a>Comment effectuer une correction ou suggestion simple
 
-Les articles sont stockés dans le dépôt en tant que fichiers Markdown. Pour apporter des modifications simples au contenu d’un fichier Markdown, dans le navigateur, vous devez sélectionner le lien **Modifier** dans le coin supérieur droit de la fenêtre du navigateur. (Dans une fenêtre de navigateur étroite, développez la barre **Options** pour voir le lien **Modifier**.) Suivez les instructions pour créer une demande de tirage (pull request). Nous examinerons la demande de tirage et l’accepterons ou suggérerons des modifications.
+Les articles sont stockés dans le dépôt en tant que fichiers Markdown. Pour apporter des modifications simples au contenu d’un fichier Markdown, dans le navigateur, vous devez sélectionner le lien **Modifier** dans le coin supérieur droit de la fenêtre du navigateur. (Dans une fenêtre de navigateur fine, développez la barre d' **options** pour afficher le lien **modifier** .) Suivez les instructions pour créer une demande de tirage (pull request). Nous examinerons la demande de tirage et l’accepterons ou suggérerons des modifications.
 
 ## <a name="how-to-make-a-more-complex-submission"></a>Comment effectuer une soumission plus complexe
 
 Vous devez avoir une connaissance élémentaire de [Git et GitHub.com](https://guides.github.com/activities/hello-world/).
 
-* Ouvrez un [problème](https://github.com/aspnet/AspNetDocs/issues/new) décrivant ce que vous voulez faire, par exemple changer un article existant ou en créer un. Nous demandons souvent le plan des nouvelles rubriques suggérées. Attendez l’approbation de l’équipe avant de vous investir davantage.
-* Branche le [aspnet/AspNetDocs](https://github.com/aspnet/AspNetDocs/) dépôt et créer une branche pour vos modifications.
+* Ouvrez un [problème](https://github.com/dotnet/AspNetDocs/issues/new) décrivant ce que vous voulez faire, par exemple changer un article existant ou en créer un. Nous demandons souvent le plan des nouvelles rubriques suggérées. Attendez l’approbation de l’équipe avant de vous investir davantage.
+* Dupliquez le référentiel [dotnet/AspNetDocs](https://github.com/dotnet/AspNetDocs/) et créez une branche pour vos modifications.
 * Soumettez une demande de tirage dans la branche master avec vos modifications.
 * Si votre demande de tirage se voit attribuer l’étiquette « cla-required », [signez le contrat CLA (Contribution License Agreement)](https://cla.dotnetfoundation.org/).
 * Répondez aux commentaires sur la demande de tirage.
@@ -24,11 +24,11 @@ Si vous utilisez Visual Studio Code pour contribuer à la documentation ASP.NET,
 
 ## <a name="markdown-syntax"></a>Syntaxe Markdown
 
-Les articles sont écrits en [DFM (DocFX Flavored Markdown)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), qui est un sur-ensemble de [GFM (GitHub Flavored Markdown)](https://guides.github.com/features/mastering-markdown/). Pour obtenir des exemples de syntaxe DFM pour les fonctionnalités de l’interface utilisateur couramment utilisés dans la documentation d’ASP.NET, consultez [métadonnées et modèle Markdown](https://github.com/dotnet/docs/blob/master/styleguide/template.md) dans le guide de style de référentiel de documentation de .NET.
+Les articles sont écrits en [DFM (DocFX Flavored Markdown)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), qui est un sur-ensemble de [GFM (GitHub Flavored Markdown)](https://guides.github.com/features/mastering-markdown/). Pour obtenir des exemples de syntaxe DFM pour les fonctionnalités de l’interface utilisateur communément utilisées dans la documentation ASP.NET, consultez [modèle de métadonnées et de démarques](https://github.com/dotnet/docs/blob/master/styleguide/template.md) dans le Guide de style du référentiel .net docs.
 
 ## <a name="folder-structure-conventions"></a>Conventions relatives à la structure des dossiers
 
-Pour chaque fichier Markdown, un dossier pour les images et un dossier pour l’exemple de code peuvent exister. Si l’article est [signalr/overview/advanced/dependency-injection.md](https://github.com/aspnet/AspNetDocs/blob/master/aspnet/signalr/overview/advanced/dependency-injection.md), les images sont dans [signalr/overview/avancé/injection de dépendances /\_statique](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/signalr/overview/advanced/dependency-injection/_static) et l’exemple de projet d’application fichiers se trouvent dans [signalr/overview/avancé/dépendance-injection/samples](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/signalr/overview/advanced/dependency-injection/samples). Une image dans le *signalr/overview/advanced/dependency-injection.md* fichier est restitué par le code Markdown suivant :
+Pour chaque fichier Markdown, un dossier pour les images et un dossier pour l’exemple de code peuvent exister. Si l’article est [signalr/vue d’ensemble/avancé/dépendance-injection. MD](https://github.com/dotnet/AspNetDocs/blob/master/aspnet/signalr/overview/advanced/dependency-injection.md), les images sont dans [signalr/vue d’ensemble/avancé/dépendance-injection/\_statique](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/signalr/overview/advanced/dependency-injection/_static) et les exemples de fichiers de projet d’application se trouvent dans [signalr/vue d’ensemble/avancé/dépendance-injection/échantillons](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/signalr/overview/advanced/dependency-injection/samples). Une image dans le fichier *signalr/vue d’ensemble/avancé/dependency-injection. MD* est rendue par la démarque suivante :
 
 ```md
 ![description of image for alt attribute](dependency-injection/_static/image1.png)
@@ -113,8 +113,8 @@ DocFX nécessite :
 ### <a name="windows-instructions"></a>Instructions pour Windows
 
 * Téléchargez et décompressez *docfx.zip* à partir des [versions DocFX](https://github.com/dotnet/docfx/releases).
-* Ajoutez DocFX à votre chemin (PATH).
-* Dans un interpréteur de commandes, accédez à la *aspnet* dossier qui contient le *docfx.json* et exécutez la commande suivante :
+* Ajoutez DocFX à votre chemin d’accès.
+* Dans une interface de commande, accédez au dossier *ASPNET* qui contient le fichier *docfx. JSON* et exécutez la commande suivante :
 
   ```console
   docfx --serve
@@ -139,7 +139,7 @@ DocFX nécessite :
   alias docfx-serve='mono $HOME/bin/docfx/docfx.exe --serve'
   ```
 
-* Dans un interpréteur de commandes, accédez à la *aspnet* dossier qui contient le *docfx.json* et exécutez la commande suivante pour générer et traiter les documents par le biais de son alias :
+* Dans une interface de commande, accédez au dossier *ASPNET* qui contient le fichier *docfx. JSON* et exécutez la commande suivante pour générer et desservir les documents par le biais de son alias :
 
   ```console
   docfx-serve
@@ -149,7 +149,7 @@ DocFX nécessite :
 
 ## <a name="voice-and-tone"></a>Style et ton
 
-Notre objectif est d’écrire une documentation facile à comprendre par le plus grand nombre. À cette fin, nous avons établi des instructions sur le style que nos collaborateurs sont invités à suivre. Pour plus d’informations, consultez [instructions voix et au ton](https://github.com/dotnet/docs/blob/master/styleguide/voice-tone.md) dans le référentiel .NET.
+Notre objectif est d’écrire une documentation facile à comprendre par le plus grand nombre. À cette fin, nous avons établi des instructions sur le style que nos collaborateurs sont invités à suivre. Pour plus d’informations, consultez les [instructions relatives à la voix et au ton](https://github.com/dotnet/docs/blob/master/styleguide/voice-tone.md) dans le référentiel .net.
 
 ## <a name="microsoft-writing-style-guide"></a>Guide de style d’écriture Microsoft
 
@@ -157,4 +157,4 @@ Le [Guide de style d’écriture Microsoft](https://docs.microsoft.com/style-gui
 
 ## <a name="redirects"></a>Redirections
 
-Si vous supprimez un article, changez son nom de fichier ou déplacez-le vers un autre dossier, créez une redirection afin que les personnes qui ont créé un signet pour l’article ne reçoivent pas une erreur *404 Non trouvé*. Ajoutez les redirections au [fichier de redirection dans la branche master](https://github.com/aspnet/AspNetDocs/blob/master/.openpublishing.redirection.json).
+Si vous supprimez un article, changez son nom de fichier ou déplacez-le vers un autre dossier, créez une redirection afin que les personnes qui ont créé un signet pour l’article ne reçoivent pas une erreur *404 Non trouvé*. Ajoutez les redirections au [fichier de redirection dans la branche master](https://github.com/dotnet/AspNetDocs/blob/master/.openpublishing.redirection.json).

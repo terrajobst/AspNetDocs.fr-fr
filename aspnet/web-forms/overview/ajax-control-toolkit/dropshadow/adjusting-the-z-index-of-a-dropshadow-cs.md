@@ -9,11 +9,11 @@ ms.assetid: 14133833-e518-4347-87b9-6b6f71f14a77
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 12bc7f0430f1f30ff964cd9547ee1e9b0aa7423c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74574294"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78613882"
 ---
 # <a name="adjusting-the-z-index-of-a-dropshadow-c"></a>Ajustement de l’index-Z d’un DropShadow (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle DropShadow dans la boîte à outils de contrôle AJAX étend un panneau avec une ombre portée. Toutefois, cette ombre est parfois en conflit avec d’autres contrôles, par exemple le contrôle de menu ASP.NET. Lorsqu’une entrée de menu s’affiche, elle apparaît derrière l’ombre portée.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle DropShadow dans la boîte à outils de contrôle AJAX étend un panneau avec une ombre portée. Toutefois, cette ombre est parfois en conflit avec d’autres contrôles, par exemple le contrôle de menu ASP.NET. Lorsqu’une entrée de menu s’affiche, elle apparaît derrière l’ombre portée.
 
@@ -63,4 +63,4 @@ Avant : l’entrée de menu n’est pas visible ([cliquez pour afficher l’ima
 Après : l’entrée de menu s’affiche ([cliquez pour afficher l’image en taille réelle](adjusting-the-z-index-of-a-dropshadow-cs/_static/image6.png))
 
 > [!div class="step-by-step"]
-> [Suivant](manipulating-dropshadow-properties-from-client-code-cs.md)
+> [Next](manipulating-dropshadow-properties-from-client-code-cs.md)

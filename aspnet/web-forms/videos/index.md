@@ -9,11 +9,11 @@ ms.assetid: f215d6b9-8a84-4bd8-8881-e9527d814950
 msc.legacyurl: /web-forms/videos
 msc.type: book
 ms.openlocfilehash: 0082330e75a905469c66b04277d70416555c30c3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59397212"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78633636"
 ---
 # <a name="videos"></a>Vidéos
 
@@ -73,7 +73,7 @@ ms.locfileid: "59397212"
     - [Détecter les fonctionnalités du navigateur dans des pages web ASP.NET](how-do-i/how-do-i-detect-browser-capabilities-in-aspnet-web-pages.md)
     - [Mapper un contrôle serveur ASP.NET à l’adaptateur utilisé pour l’afficher](how-do-i/how-do-i-map-an-aspnet-server-control-to-the-adaptor-used-to-render-it.md)
     - [Passer des informations d’une page à une autre avec une chaîne de requête](how-do-i/how-do-i-pass-information-from-one-page-to-another-using-a-query-string.md)
-    - [Utiliser le compte aspnet\_merge.exe utilitaire pour fusionner des assemblys](how-do-i/how-do-i-use-the-aspnet_mergeexe-utility-to-merge-assemblies.md)
+    - [Utiliser l’utilitaire ASPNET\_Merge. exe pour fusionner des assemblys](how-do-i/how-do-i-use-the-aspnet_mergeexe-utility-to-merge-assemblies.md)
     - [Implémenter une publication (postback) entre pages dans ASP.NET](how-do-i/how-do-i-implement-a-cross-page-postback-in-aspnet.md)
     - [Ajouter des contrôles à une page web ASP.NET par programmation](how-do-i/how-do-i-add-controls-to-an-aspnet-web-page-programmatically.md)
     - [Utiliser un champ masqué pour stocker et manipuler des informations côté client](how-do-i/how-do-i-use-a-hidden-field-to-store-and-manipulate-client-side-information.md)
@@ -221,16 +221,16 @@ ms.locfileid: "59397212"
     - [[Introduction à ASP.NET 2.0 :] concepts de base d’ASP.NET 2.0](migrating/intro-to-aspnet-20-aspnet-20-fundamentals.md)
     - [[Introduction à ASP.NET 2.0 :] éléments de l’interface utilisateur](migrating/intro-to-aspnet-20-user-interface-elements.md)
     - [[Migration depuis] ASP classique vers ASP.NET](migrating/migrating-from-classic-asp-to-aspnet.md)
-    - [Introduction à ASP.NET pour les développeurs JSP : Bienvenue dans ASP.NET 2.0](migrating/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
-    - [Introduction à ASP.NET pour les développeurs JSP : Création d’Applications](migrating/intro-to-aspnet-for-jsp-developers-building-applications.md)
-    - [Introduction à ASP.NET pour les développeurs ColdFusion : Ajout d’ASP.NET à votre répertoire](migrating/intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire.md)
-    - [Introduction à ASP.NET pour les développeurs ColdFusion : Création d’une Application ASP.NET](migrating/introduction-to-aspnet-for-coldfusion-developers-building-an-aspnet-application.md)
+    - [Introduction à ASP.NET pour les développeurs JSP : bienvenue dans ASP.NET 2.0](migrating/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
+    - [Introduction à ASP.NET pour les développeurs JSP : création d’applications](migrating/intro-to-aspnet-for-jsp-developers-building-applications.md)
+    - [Introduction à ASP.NET pour les développeurs ColdFusion : ajout d’ASP.NET à vos compétences](migrating/intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire.md)
+    - [Introduction à ASP.NET pour les développeurs ColdFusion : création d’une application ASP.NET](migrating/introduction-to-aspnet-for-coldfusion-developers-building-an-aspnet-application.md)
     - [Interopérabilité entre PHP et la plateforme Windows](migrating/interop-between-php-and-the-windows-platform.md)
 - [Création d’applications 2.0](building-20-applications/index.md)
 
     - [[Leçon 1 :] Bien démarrer avec Visual Web Developer Express](building-20-applications/lesson-1-getting-started-with-visual-web-developer-express.md)
     - [[Leçon 2 :] Création d’une interface utilisateur Web Forms](building-20-applications/lesson-2-creating-a-web-forms-user-interface.md)
-    - [[Leçon 3 :] Description des événements et de publication (postback)](building-20-applications/lesson-3-understanding-more-about-events-and-postback.md)
+    - [[Leçon 3 :] Présentation des événements et de la publication (postback)](building-20-applications/lesson-3-understanding-more-about-events-and-postback.md)
     - [[Leçon 4 :] Présentation de l’état d’une application web](building-20-applications/lesson-4-understanding-web-application-state.md)
     - [[Leçon 5 :] Débogage et traçage de votre site web](building-20-applications/lesson-5-debugging-and-tracing-your-website.md)
     - [[Leçon 6 :] Utilisation de feuilles de style et de pages maîtres](building-20-applications/lesson-6-working-with-stylesheets-and-master-pages.md)
@@ -353,15 +353,15 @@ ms.locfileid: "59397212"
         - [Utiliser des datasets et des filtres depuis une application ASP](data-access/adonet-data-services/how-to-work-with-datasets-and-filters-from-an-asp-application.md)
     - [Utilisation de LINQ](data-access/how-do-i-with-linq/index.md)
 
-        - [LINQ to SQL : vue d’ensemble](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
-        - [LINQ to SQL : Modèle de données](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
-        - [LINQ to SQL : Interrogation de la base de données](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
-        - [LINQ to SQL : La mise à jour de la base de données](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
-        - [LINQ to SQL : LinqDataSource](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-linqdatasource.md)
-        - [LINQ to SQL : LinqDataSource personnalisée](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
-        - [LINQ to SQL : À l’aide de procédures stockées](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
-        - [LINQ to SQL : La mise à jour avec des procédures stockées](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
-        - [LINQ to SQL : Exécution de SQL arbitraire](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
+        - [LINQ to SQL : Vue d’ensemble](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
+        - [LINQ to SQL : Modèle de données](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
+        - [LINQ to SQL : Interrogation de la base de données](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
+        - [LINQ to SQL : Mise à jour de la base de données](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
+        - [LINQ to SQL : LinqDataSource](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-linqdatasource.md)
+        - [LINQ to SQL : LinqDataSource personnalisée](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
+        - [LINQ to SQL : Utilisation de procédures stockées](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
+        - [LINQ to SQL : Mise à jour avec des procédures stockées](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
+        - [LINQ to SQL : Exécution de SQL arbitraire](data-access/how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
     - [Vidéos sur LINQ de l’équipe VB](data-access/linq-videos-from-the-vb-team/index.md)
 
         - [Bien démarrer avec LINQ](data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq.md)
@@ -410,7 +410,7 @@ ms.locfileid: "59397212"
         - [Prise en charge d’ASP.NET AJAX dans Visual Studio 2008](aspnet-35/aspnet-ajax/aspnet-ajax-support-in-visual-studio-2008.md)
         - [Ajout de la fonctionnalité AJAX à une page ASP.NET existante](aspnet-35/aspnet-ajax/adding-ajax-functionality-to-an-existing-aspnet-page.md)
         - [Création et utilisation d’un service Web activé pour AJAX dans un site web](aspnet-35/aspnet-ajax/creating-and-using-an-ajax-enabled-web-service-in-a-web-site.md)
-        - [ASP.NET AJAX : Une démonstration d’ASP.NET AJAX](aspnet-35/aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
+        - [ASP.NET AJAX : Une démonstration d’ASP.NET AJAX](aspnet-35/aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
         - [ADO.NET Data Services avec prise en charge d’ASP.NET AJAX](aspnet-35/aspnet-ajax/adonet-data-services-with-aspnet-ajax-support.md)
         - [Introduction à l’histoire d’ASP.NET Ajax](aspnet-35/aspnet-ajax/introduction-to-aspnet-ajax-history.md)
         - [Utilisation de la combinaison de scripts pour améliorer les performances d’AJAX](aspnet-35/aspnet-ajax/using-script-combining-to-improve-ajax-performance.md)
@@ -445,7 +445,7 @@ ms.locfileid: "59397212"
 
         - [Chart Control](net-4/chart/aspnet-4-quick-hit-chart-control.md)
         - [Présentation du nouveau contrôle Chart dans Visual Studio 2010](net-4/chart/aspnet-4-how-do-i-introducing-the-new-chart-control-in-visual-studio-2010.md)
-    - [Fonctionnalités de base](net-4/core/index.md)
+    - [Principal](net-4/core/index.md)
 
         - [Démarrage automatique](net-4/core/aspnet-4-quick-hit-auto-start.md)
         - [Nettoyer les fichiers Web.Config](net-4/core/aspnet-4-quick-hit-clean-webconfig-files.md)
@@ -461,12 +461,12 @@ ms.locfileid: "59397212"
         - [Contrôle de menu sans table](net-4/markup-control/aspnet-4-quick-hit-tableless-menu-control.md)
         - [Balises div de champ masqué](net-4/markup-control/aspnet-4-quick-hit-hidden-field-divs.md)
         - [Style de contrôle désactivé](net-4/markup-control/aspnet-4-quick-hit-disabled-control-styling.md)
-    - [Performances](net-4/performance/index.md)
+    - [Performancess](net-4/performance/index.md)
 
         - [État sélectif d’une vue](net-4/performance/aspnet-4-quick-hit-selective-view-state.md)
         - [Compression d’état facile](net-4/performance/aspnet-4-quick-hit-easy-state-compression.md)
         - [Utiliser la propriété ViewStateMode pour la gestion de ViewState](net-4/performance/how-do-i-use-the-viewstatemode-property-for-managing-viewstate.md)
-    - [Le routage](net-4/routing/index.md)
+    - [Routage](net-4/routing/index.md)
 
         - [Redirection permanente](net-4/routing/aspnet-4-quick-hit-permanent-redirect.md)
         - [Routage WebForms impératif](net-4/routing/aspnet-4-quick-hit-imperative-webforms-routing.md)

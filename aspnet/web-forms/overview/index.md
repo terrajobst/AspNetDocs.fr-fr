@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/index
-title: Web Forms ASP.NET conseils | Microsoft Docs
+title: Guide de Web Forms ASP.NET | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,15 +9,15 @@ ms.assetid: b3fb4480-0f41-495b-add6-163ca92dc8a3
 msc.legacyurl: /web-forms/overview
 msc.type: book
 ms.openlocfilehash: 4b38d6b54f53508f7b568207fe7f1a624a7af5f3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402269"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78639446"
 ---
-# <a name="aspnet-web-forms-guidance"></a>Conseils de formulaires Web ASP.NET
+# <a name="aspnet-web-forms-guidance"></a>Aide Web Forms ASP.NET
 
-- [Prise en main](getting-started/index.md)
+- [Bien démarrer](getting-started/index.md)
 
     - [Bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2013](getting-started/getting-started-with-aspnet-45-web-forms/index.md)
 
@@ -53,7 +53,7 @@ ms.locfileid: "59402269"
 
     - [Créer une application Web Forms ASP.NET sécurisée avec inscription de l’utilisateur, confirmation par e-mail et réinitialisation du mot de passe (C#)](security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset.md)
     - [Créer une application Web Forms ASP.NET avec authentification à deux facteurs par SMS (C#)](security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication.md)
-- [Performances](performance-and-caching/index.md)
+- [Performancess](performance-and-caching/index.md)
 
     - [Utilisation de méthodes asynchrones dans ASP.NET 4.5](performance-and-caching/using-asynchronous-methods-in-aspnet-45.md)
 - [Déploiement](deployment/index.md)
@@ -75,8 +75,8 @@ ms.locfileid: "59402269"
     - [ASP.NET 4 - Introduction au déploiement d’entreprise](deployment/deploying-web-applications-in-enterprise-scenarios/index.md)
 
         - [Déployer des applications web dans des scénarios d’entreprise avec Visual Studio 2010](deployment/deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
-        - [Déploiement Web d’entreprise : Vue d’ensemble du scénario](deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
-        - [Gestion du cycle de vie des applications : Du développement à la Production](deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
+        - [Déploiement web d’entreprise : vue d’ensemble du scénario](deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
+        - [Gestion du cycle de vie des applications : du développement à la production](deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
     - [ASP.NET 4 - Déploiement d’entreprise : série 1](deployment/web-deployment-in-the-enterprise/index.md)
 
         - [Déploiement web dans l’entreprise](deployment/web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md)
@@ -94,9 +94,9 @@ ms.locfileid: "59402269"
 
         - [Configuration d’environnements serveur pour le déploiement web](deployment/configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md)
         - [Choix de la bonne approche pour le déploiement web](deployment/configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md)
-        - [Scénario : Configuration d’un environnement de Test pour le déploiement Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
-        - [Scénario : Configuration d’un environnement de préproduction pour le déploiement Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
-        - [Scénario : Configuration d’un environnement de Production pour le déploiement Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
+        - [Scénario : configuration d’un environnement de test pour le déploiement web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
+        - [Scénario : configuration d’un environnement de préproduction pour le déploiement web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
+        - [Scénario : configuration d’un environnement de production pour le déploiement web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
         - [Configuration d’un serveur web pour la publication Web Deploy (Agent distant)](deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
         - [Configuration d’un serveur web pour la publication Web Deploy (Gestionnaire Web Deploy)](deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
         - [Configuration d’un serveur web pour la publication Web Deploy (Déploiement hors connexion)](deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)
@@ -130,14 +130,14 @@ ms.locfileid: "59402269"
 
     - [ASP.NET 4 - Tailspin Spyworks](older-versions-getting-started/tailspin-spyworks/index.md)
 
-        - [Partie 1 : Fichier -> Nouveau projet](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1.md)
-        - [Partie 2 : Couche d’accès aux données](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
-        - [Partie 3 : Mise en page et Menu catégorie](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
-        - [Partie 4 : Liste des produits](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4.md)
-        - [Partie 5 : Logique métier](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
-        - [Partie 6 : Appartenance ASP.NET](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-6.md)
-        - [Partie 7 : Ajout de fonctionnalités](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7.md)
-        - [Partie 8 : Pages finales, gestion des exceptions et Conclusion](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8.md)
+        - [Partie 1 : Fichier -> Nouveau projet](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1.md)
+        - [Partie 2 : Couche d’accès aux données](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
+        - [Partie 3 : Mise en page et menu Catégorie](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
+        - [Partie 4 : Liste des produits](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4.md)
+        - [Partie 5 : Logique métier](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
+        - [Partie 6 : Appartenance ASP.NET](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-6.md)
+        - [Partie 7 : Ajout de fonctionnalités](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7.md)
+        - [Partie 8 : Pages finales, gestion des exceptions et conclusion](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8.md)
     - [ASP.NET 4 - Bien démarrer avec Entity Framework 4 et Web Forms](older-versions-getting-started/getting-started-with-ef/index.md)
 
         - [Bien démarrer avec Entity Framework 4.0 Database First](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
@@ -150,9 +150,9 @@ ms.locfileid: "59402269"
         - [Bien démarrer avec Entity Framework 4.0 Database First - Partie 8](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
     - [ASP.NET 4 - Continuer avec Entity Framework 4 et Web Forms](older-versions-getting-started/continuing-with-ef/index.md)
 
-        - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 1 : Mise en route](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
-        - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 2 : Ajout d’une couche de logique métier et les Tests unitaires](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
-        - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 3 : Tri et filtrage](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
+        - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 1 : prise en main](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
+        - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 2 : ajout d’une couche de logique métier et de tests unitaires](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+        - [Entity Framework 4.0 et le contrôle ObjectDataSource, partie 3 : tri et filtrage](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
         - [Gestion des accès concurrentiels avec Entity Framework 4.0 dans ASP.NET 4](older-versions-getting-started/continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)
         - [Optimisation des performances avec Entity Framework 4.0 dans ASP.NET 4](older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
         - [Nouveautés d’Entity Framework 4.0](older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4.md)
@@ -236,7 +236,7 @@ ms.locfileid: "59402269"
         - [Utilisateurs et rôles sur un site web de production (VB)](older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-vb.md)
 - [Versions antérieures - Ajax Control Toolkit](ajax-control-toolkit/index.md)
 
-    - [Prise en main](ajax-control-toolkit/getting-started/index.md)
+    - [Bien démarrer](ajax-control-toolkit/getting-started/index.md)
 
         - [Bien démarrer avec AJAX Control Toolkit (C#)](ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-cs.md)
         - [Utilisation de contrôles AJAX Control Toolkit et extendeurs de contrôle (C#)](ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-cs.md)

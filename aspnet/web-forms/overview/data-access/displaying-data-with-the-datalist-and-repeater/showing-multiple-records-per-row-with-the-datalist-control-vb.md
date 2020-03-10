@@ -9,11 +9,11 @@ ms.assetid: f555c531-bf33-4699-9987-42dbfef23c1f
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/showing-multiple-records-per-row-with-the-datalist-control-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 17283dae192896fbaa48f1d7fe49afdbaf4c9a02
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74627522"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78611341"
 ---
 # <a name="showing-multiple-records-per-row-with-the-datalist-control-vb"></a>Affichage de plusieurs enregistrements par ligne avec le contrôle DataList (VB)
 

@@ -1,433 +1,433 @@
 ---
 uid: web-forms/overview/moving-to-aspnet-20/configuration-and-instrumentation
-title: Configuration et l’Instrumentation | Microsoft Docs
+title: Configuration et instrumentation | Microsoft Docs
 author: microsoft
-description: Voici les principales modifications de configuration et l’instrumentation dans ASP.NET 2.0. La nouvelle API de configuration ASP.NET permet des modifications de configuration qu’il veut pr...
+description: Des modifications majeures ont été apportées à la configuration et à l’instrumentation dans ASP.NET 2,0. La nouvelle API de configuration ASP.NET permet d’apporter des modifications de configuration...
 ms.author: riande
 ms.date: 02/20/2005
 ms.assetid: 21ebbaee-7ed8-45ae-b6c1-c27c88342e48
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/configuration-and-instrumentation
 msc.type: authoredcontent
 ms.openlocfilehash: cd5bedce5459e8cf8e72df8de69ebd82f2d97789
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131719"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78626027"
 ---
 # <a name="configuration-and-instrumentation"></a>Configuration et instrumentation
 
-by [Microsoft](https://github.com/microsoft)
+par [Microsoft](https://github.com/microsoft)
 
-> Voici les principales modifications de configuration et l’instrumentation dans ASP.NET 2.0. La nouvelle API de configuration ASP.NET permet des modifications de configuration être apportée par programmation. En outre, existent de nombreux nouveaux paramètres de configuration permettant de nouvelles configurations et l’instrumentation.
+> Des modifications majeures ont été apportées à la configuration et à l’instrumentation dans ASP.NET 2,0. La nouvelle API de configuration ASP.NET permet d’effectuer des modifications de configuration par programme. En outre, de nombreux nouveaux paramètres de configuration existent pour les nouvelles configurations et l’instrumentation.
 
-Voici les principales modifications de configuration et l’instrumentation dans ASP.NET 2.0. La nouvelle API de configuration ASP.NET permet des modifications de configuration être apportée par programmation. En outre, existent de nombreux nouveaux paramètres de configuration permettant de nouvelles configurations et l’instrumentation.
+Des modifications majeures ont été apportées à la configuration et à l’instrumentation dans ASP.NET 2,0. La nouvelle API de configuration ASP.NET permet d’effectuer des modifications de configuration par programme. En outre, de nombreux nouveaux paramètres de configuration existent pour les nouvelles configurations et l’instrumentation.
 
-Dans ce module, nous aborderons l’API de configuration d’ASP.NET car il est lié à la lecture et écriture aux fichiers de configuration ASP.NET et nous donnerons également instrumentation ASP.NET. Nous aborderons également les nouvelles fonctionnalités disponibles dans le suivi ASP.NET.
+Dans ce module, nous aborderons l’API de configuration de ASP.NET en ce qui concerne la lecture et l’écriture dans les fichiers de configuration ASP.NET, et nous aborderons également l’instrumentation ASP.NET. Nous aborderons également les nouvelles fonctionnalités disponibles dans le suivi ASP.NET.
 
-## <a name="aspnet-configuration-api"></a>API de Configuration ASP.NET
+## <a name="aspnet-configuration-api"></a>API de configuration ASP.NET
 
-L’API de configuration ASP.NET vous permet de développer, déployer et gérer des données de configuration d’application à l’aide d’une interface de programmation unique. Vous pouvez utiliser l’API de configuration pour développer et modifier des configurations ASP.NET complètes par programme sans modifier directement le code XML dans les fichiers de configuration. En outre, vous pouvez utiliser l’API de configuration dans les applications de console et les scripts que vous développez, dans les outils de gestion basée sur le Web et dans les composants logiciels enfichables Microsoft Management Console (MMC).
+L’API de configuration ASP.NET vous permet de développer, de déployer et de gérer des données de configuration d’application à l’aide d’une seule interface de programmation. Vous pouvez utiliser l’API de configuration pour développer et modifier des configurations ASP.NET complètes par programme sans modifier directement le code XML dans les fichiers de configuration. En outre, vous pouvez utiliser l’API de configuration dans les applications console et les scripts que vous développez, dans les outils de gestion basés sur le Web et dans les composants logiciels enfichables de la console MMC (Microsoft Management Console).
 
-Les deux outils de gestion de la configuration suivants utilisent l’API de configuration et sont inclus avec le .NET Framework version 2.0 :
+Les deux outils de gestion de configuration suivants utilisent l’API de configuration et sont inclus avec le .NET Framework version 2,0 :
 
-- Le composant logiciel enfichable MMC d’ASP.NET, qui utilise l’API de configuration pour simplifier les tâches d’administration, en fournissant une vue intégrée des données de configuration local de tous les niveaux de la hiérarchie de configuration.
-- L’outil d’Administration de Site Web, ce qui vous permet de gérer les paramètres de configuration pour les applications locales et distantes, y compris les sites hébergés.
+- Le composant logiciel enfichable MMC ASP.NET, qui utilise l’API de configuration pour simplifier les tâches d’administration, en fournissant une vue intégrée des données de configuration locales à partir de tous les niveaux de la hiérarchie de configuration.
+- L’outil Administration de site Web, qui vous permet de gérer les paramètres de configuration pour les applications locales et distantes, y compris les sites hébergés.
 
-L’API de configuration ASP.NET comprend un ensemble d’objets de gestion ASP.NET que vous pouvez utiliser pour configurer des sites et applications Web par programme. Objets de gestion sont implémentées comme une bibliothèque de classes .NET Framework. Le modèle de programmation d’API de configuration permet de garantir la fiabilité et la cohérence du code en appliquant des types de données au moment de la compilation. Pour faciliter la gestion des configurations d’application, l’API de configuration vous permet d’afficher les données fusionnées à partir de tous les points dans la hiérarchie de configuration comme une collection unique, au lieu d’afficher les données en tant que collections distinctes à partir de différents fichiers de configuration. En outre, l’API de configuration vous permet de manipuler des configurations de l’ensemble de l’application sans modifier directement le code XML dans les fichiers de configuration. Enfin, l’API simplifie les tâches de configuration en prenant en charge des outils d’administration, telles que l’outil d’Administration de Site Web. L’API de configuration simplifie le déploiement en prenant en charge la création des fichiers de configuration sur un ordinateur et l’exécution des scripts de configuration sur plusieurs ordinateurs.
+L’API de configuration ASP.NET comprend un ensemble d’objets de gestion ASP.NET que vous pouvez utiliser pour configurer des sites Web et des applications par programme. Les objets de gestion sont implémentés sous la forme d’une bibliothèque de classes .NET Framework. Le modèle de programmation de l’API de configuration permet de garantir la cohérence et la fiabilité du code en appliquant des types de données au moment de la compilation. Pour faciliter la gestion des configurations d’application, l’API de configuration vous permet d’afficher les données fusionnées à partir de tous les points de la hiérarchie de configuration en tant que collection unique, au lieu d’afficher les données sous forme de collections distinctes de différentes fichiers de configuration. En outre, l’API de configuration vous permet de manipuler des configurations d’application entières sans modifier directement le code XML dans les fichiers de configuration. Enfin, l’API simplifie les tâches de configuration en prenant en charge les outils d’administration, tels que l’outil Administration de site Web. L’API de configuration simplifie le déploiement en prenant en charge la création de fichiers de configuration sur un ordinateur et en exécutant des scripts de configuration sur plusieurs ordinateurs.
 
 > [!NOTE]
 > L’API de configuration ne prend pas en charge la création d’applications IIS.
 
-## <a name="working-with-local-and-remote-configuration-settings"></a>Utilisation des paramètres de Configuration locaux et distants
+## <a name="working-with-local-and-remote-configuration-settings"></a>Utilisation des paramètres de configuration locaux et distants
 
-Un objet de Configuration représente l’affichage fusionné des paramètres de configuration qui s’appliquent à une entité physique spécifique, tel qu’un ordinateur, ou à une entité logique, telle qu’une application ou un site Web. L’entité logique spécifiée peut exister sur l’ordinateur local ou sur un serveur distant. Lorsqu’il n’existe aucun fichier de configuration pour une entité spécifiée, l’objet de Configuration représente les paramètres de configuration par défaut, comme défini par le fichier Machine.config.
+Un objet de configuration représente l’affichage fusionné des paramètres de configuration qui s’appliquent à une entité physique spécifique, telle qu’un ordinateur, ou à une entité logique, telle qu’une application ou un site Web. L’entité logique spécifiée peut exister sur l’ordinateur local ou sur un serveur distant. Si aucun fichier de configuration n’existe pour une entité spécifiée, l’objet de configuration représente les paramètres de configuration par défaut définis par le fichier machine. config.
 
-Vous pouvez obtenir un objet de Configuration en utilisant l’une des méthodes de configuration open à partir des classes suivantes :
+Vous pouvez obtenir un objet de configuration à l’aide de l’une des méthodes de configuration ouvertes des classes suivantes :
 
 1. La classe ConfigurationManager, si votre entité est une application cliente.
 2. La classe WebConfigurationManager, si votre entité est une application Web.
 
-Ces méthodes retournent un objet de Configuration, qui à son tour fournit les méthodes et propriétés requises pour gérer les fichiers de configuration sous-jacents. Vous pouvez accéder à ces fichiers pour lire ou écrire.
+Ces méthodes retournent un objet de configuration qui, à son tour, fournit les méthodes et propriétés requises pour gérer les fichiers de configuration sous-jacents. Vous pouvez accéder à ces fichiers pour la lecture ou l’écriture.
 
 ### <a name="reading"></a>Lecture
 
-Vous utilisez la méthode GetSection ou GetSectionGroup pour lire les informations de configuration. L’utilisateur ou le processus qui lit doit avoir autorisations de lecture sur tous les fichiers de configuration dans la hiérarchie.
+Vous utilisez la méthode GetSection ou GetSectionGroup pour lire les informations de configuration. L’utilisateur ou le processus qui lit doit avoir des autorisations de lecture sur tous les fichiers de configuration de la hiérarchie.
 
 > [!NOTE]
-> Si vous utilisez une méthode GetSection statique qui accepte un paramètre de chemin d’accès, le paramètre path doit faire référence à l’application dans laquelle le code est en cours d’exécution. Sinon, le paramètre est ignoré et les informations de configuration pour l’application en cours d’exécution sont retournées.
+> Si vous utilisez une méthode GetSection statique qui accepte un paramètre Path, le paramètre Path doit faire référence à l’application dans laquelle le code s’exécute. Sinon, le paramètre est ignoré et les informations de configuration de l’application en cours d’exécution sont retournées.
 
 ### <a name="writing"></a>Écriture
 
-Vous utilisez une des méthodes d’enregistrement pour écrire les informations de configuration. L’utilisateur ou le processus qui écrit doit avoir les autorisations sur le fichier de configuration et le répertoire au niveau de hiérarchie de configuration en cours d’écriture, ainsi qu’autorisations de lecture sur tous les fichiers de configuration dans la hiérarchie.
+Vous utilisez l’une des méthodes Save pour écrire des informations de configuration. L’utilisateur ou le processus qui écrit doit avoir des autorisations d’écriture sur le fichier de configuration et le répertoire au niveau de la hiérarchie de configuration actuelle, ainsi que des autorisations de lecture sur tous les fichiers de configuration de la hiérarchie.
 
-Pour générer un fichier de configuration qui représente les paramètres de configuration hérités pour une entité spécifiée, utilisez une des méthodes de sauvegarde de la configuration suivante :
+Pour générer un fichier de configuration qui représente les paramètres de configuration hérités pour une entité spécifiée, utilisez l’une des méthodes Save-Configuration suivantes :
 
-1. La méthode Save pour créer un nouveau fichier de configuration.
+1. Méthode Save pour créer un nouveau fichier de configuration.
 2. La méthode SaveAs pour générer un nouveau fichier de configuration à un autre emplacement.
 
-## <a name="configuration-classes-and-namespaces"></a>Espaces de noms et Classes de configuration
+## <a name="configuration-classes-and-namespaces"></a>Classes et espaces de noms de configuration
 
-De nombreuses classes de configuration et les méthodes sont similaires entre eux. Le tableau suivant décrit les classes de configuration plus couramment utilisés et les espaces de noms.
+De nombreuses classes et méthodes de configuration sont similaires. Le tableau suivant décrit les classes de configuration et les espaces de noms les plus couramment utilisés.
 
-| **Classe de configuration ou d’espace de noms** | **Description** |
+| **Classe de configuration ou espace de noms** | **Description** |
 | --- | --- |
-| [System.Configuration](https://msdn.microsoft.com/library/system.configuration.aspx) espace de noms | Contient les classes de configuration principale pour toutes les applications .NET Framework. Classes de gestionnaires de section sont utilisés pour obtenir des données de configuration d’une section à partir de méthodes, telles que GetSection et GetSectionGroup. Ces deux méthodes ne sont pas statiques. |
-| Classe de System.Configuration.Configuration | Représente un jeu de données de configuration pour un ordinateur, application, répertoire Web ou autre ressource. Cette classe contient des méthodes utiles, telles que GetSection et GetSectionGroup, pour la mise à jour des paramètres de configuration et obtenir des références aux sections et groupes. Cette classe est utilisée comme type de retour pour les méthodes qui obtiennent des données de configuration au moment du design, telles que les méthodes des classes WebConfigurationManager et ConfigurationManager. |
-| Espace de noms System.Web.Configuration | Contient les classes de gestionnaire de section pour les sections de configuration ASP.NET définies par [les paramètres de Configuration ASP.NET](https://msdn.microsoft.com/library/b5ysx397.aspx). Classes de gestionnaires de section sont utilisés pour obtenir des données de configuration d’une section à partir de méthodes, telles que GetSection et GetSectionGroup. |
-| Classe de System.Web.Configuration.WebConfigurationManager | Fournit des méthodes utiles pour obtenir des références aux paramètres de configuration d’exécution et au moment du design. Ces méthodes utilisent la classe System.Configuration.Configuration comme type de retour. Vous pouvez utiliser la méthode GetSection statique de cette classe ou de la méthode GetSection non statique de la classe System.Configuration.ConfigurationManager indifféremment. Pour les configurations d’application Web, la classe System.Web.Configuration.WebConfigurationManager est recommandée au lieu de la classe System.Configuration.ConfigurationManager. |
-| [System.Configuration.Provider](https://msdn.microsoft.com/library/system.configuration.provider.aspx) espace de noms | Fournit un moyen de personnaliser et étendre le fournisseur de configuration. C’est la classe de base pour toutes les classes de fournisseur dans le système de configuration. |
-| [System.Web.Management](https://msdn.microsoft.com/library/system.web.management.aspx) namespace | Contient des classes et interfaces pour gérer et surveiller l’intégrité des applications Web. À proprement parler, cet espace de noms ne fait pas partie de l’API de configuration. Par exemple, le suivi et déclenchement des événements s’effectue par les classes de cet espace de noms. |
-| [System.Management.Instrumentation](https://msdn.microsoft.com/library/system.management.instrumentation.aspx) namespace | Fournit les classes nécessaires pour l’instrumentation d’applications pour exposer leurs informations de gestion et événements via Windows Management Instrumentation (WMI) aux consommateurs potentiels. Contrôle d’état ASP.NET utilise WMI pour remettre des événements. À proprement parler, cet espace de noms ne fait pas partie de l’API de configuration. |
+| Espace de noms [System. Configuration](https://msdn.microsoft.com/library/system.configuration.aspx) | Contient les classes de configuration principales pour toutes les applications .NET Framework. Les classes de gestionnaire de section permettent d’obtenir des données de configuration pour une section à partir de méthodes, telles que GetSection et GetSectionGroup. Ces deux méthodes sont non statiques. |
+| System. Configuration. Configuration (classe) | Représente un ensemble de données de configuration pour un ordinateur, une application, un répertoire Web ou une autre ressource. Cette classe contient des méthodes utiles, telles que GetSection et GetSectionGroup, pour la mise à jour des paramètres de configuration et l’obtention de références à des sections et des groupes de sections. Cette classe est utilisée comme type de retour pour les méthodes qui obtiennent des données de configuration au moment du design, telles que les méthodes des classes WebConfigurationManager et ConfigurationManager. |
+| Espace de noms System. Web. Configuration | Contient les classes de gestionnaire de section pour les sections de configuration ASP.NET définies dans [paramètres de configuration de ASP.net](https://msdn.microsoft.com/library/b5ysx397.aspx). Les classes de gestionnaire de section permettent d’obtenir des données de configuration pour une section à partir de méthodes, telles que GetSection et GetSectionGroup. |
+| System. Web. Configuration. WebConfigurationManager, classe | Fournit des méthodes utiles pour obtenir des références aux paramètres de configuration au moment de l’exécution et au moment du Design. Ces méthodes utilisent la classe System. Configuration. Configuration comme type de retour. Vous pouvez utiliser la méthode GetSection statique de cette classe ou la méthode GetSection non statique de la classe System. Configuration. ConfigurationManager de manière interchangeable. Pour les configurations d’application Web, la classe System. Web. Configuration. WebConfigurationManager est recommandée à la place de la classe System. Configuration. ConfigurationManager. |
+| Espace de noms [System. Configuration. Provider](https://msdn.microsoft.com/library/system.configuration.provider.aspx) | Fournit un moyen de personnaliser et d’étendre le fournisseur de configuration. Il s’agit de la classe de base pour toutes les classes de fournisseur dans le système de configuration. |
+| Espace de noms [System. Web. Management](https://msdn.microsoft.com/library/system.web.management.aspx) | Contient des classes et des interfaces pour la gestion et la surveillance de l’intégrité des applications Web. Strictement parlant, cet espace de noms n’est pas considéré comme faisant partie de l’API de configuration. Par exemple, le traçage et le déclenchement d’événements sont réalisés par les classes de cet espace de noms. |
+| Espace de noms [System. Management. Instrumentation](https://msdn.microsoft.com/library/system.management.instrumentation.aspx) | Fournit les classes nécessaires à l’instrumentation d’applications pour exposer leurs informations et événements de gestion via Windows Management Instrumentation (WMI) aux consommateurs potentiels. ASP.NET Health Monitoring utilise WMI pour remettre les événements. Strictement parlant, cet espace de noms n’est pas considéré comme faisant partie de l’API de configuration. |
 
-## <a name="reading-from-aspnet-configuration-files"></a>Lecture de fichiers de Configuration ASP.NET
+## <a name="reading-from-aspnet-configuration-files"></a>Lecture à partir des fichiers de configuration ASP.NET
 
-La classe WebConfigurationManager est la classe de base pour la lecture à partir de fichiers de configuration ASP.NET. Il existe essentiellement trois étapes pour la lecture des fichiers de configuration ASP.NET :
+La classe WebConfigurationManager est la classe principale pour la lecture à partir des fichiers de configuration ASP.NET. Il existe trois étapes pour la lecture des fichiers de configuration ASP.NET :
 
-1. Obtenez un objet de Configuration à l’aide de la méthode OpenWebConfiguration.
+1. Obtenir un objet de configuration à l’aide de la méthode OpenWebConfiguration.
 2. Obtenir une référence à la section souhaitée dans le fichier de configuration.
-3. Lire les informations souhaitées à partir du fichier de configuration.
+3. Lisez les informations souhaitées dans le fichier de configuration.
 
-La Configuration d’objet représente ne représente pas un fichier de configuration particulier. Au lieu de cela, il représente un affichage fusionné de la configuration d’un ordinateur, une application ou un site Web. L’exemple de code suivant instancie un objet de Configuration représentant la configuration d’une application Web appelée *ProductInfo*.
+L’objet de configuration représenté ne représente pas un fichier de configuration particulier. Au lieu de cela, il représente une vue fusionnée de la configuration d’un ordinateur, d’une application ou d’un site Web. L’exemple de code suivant instancie un objet de configuration représentant la configuration d’une application Web appelée *ProductInfo*.
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample1.cs)]
 
 > [!NOTE]
-> Notez que si le chemin d’accès /ProductInfo n’existe pas, le code ci-dessus retournera la configuration par défaut comme spécifié dans le fichier machine.config.
+> Notez que si le chemin d’accès/ProductInfo n’existe pas, le code ci-dessus retourne la configuration par défaut telle qu’elle est spécifiée dans le fichier machine. config.
 
-Une fois que vous avez l’objet de Configuration, vous pouvez ensuite utiliser la méthode GetSection ou GetSectionGroup pour Explorer les paramètres de configuration. L’exemple suivant obtient une référence aux paramètres d’emprunt d’identité pour l’application ProductInfo ci-dessus :
+Une fois que vous disposez de l’objet de configuration, vous pouvez utiliser la méthode GetSection ou GetSectionGroup pour analyser les paramètres de configuration. L’exemple suivant obtient une référence aux paramètres d’emprunt d’identité pour l’application ProductInfo ci-dessus :
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample2.cs)]
 
-## <a name="writing-to-aspnet-configuration-files"></a>Écriture dans des fichiers de Configuration ASP.NET
+## <a name="writing-to-aspnet-configuration-files"></a>Écriture dans des fichiers de configuration ASP.NET
 
-Comme dans la lecture à partir de fichiers de configuration, la classe WebConfigurationManager est la base pour l’écriture dans les fichiers de configuration Asp.NET. Il existe également trois étapes d’écriture dans des fichiers de configuration ASP.NET.
+Comme pour la lecture à partir des fichiers de configuration, la classe WebConfigurationManager est le cœur de l’écriture dans les fichiers de configuration Asp.NET. Il y a également trois étapes pour écrire dans des fichiers de configuration ASP.NET.
 
-1. Obtenez un objet de Configuration à l’aide de la méthode OpenWebConfiguration.
+1. Obtenir un objet de configuration à l’aide de la méthode OpenWebConfiguration.
 2. Obtenir une référence à la section souhaitée dans le fichier de configuration.
-3. Écrire les informations souhaitées à partir du fichier de configuration à l’aide de l’enregistrer ou enregistrer sous (méthode).
+3. Écrivez les informations souhaitées à partir du fichier de configuration à l’aide de la méthode Save ou SaveAs.
 
-Le code suivant modifie le **déboguer** attribut de la &lt;compilation&gt; élément False :
+Le code suivant modifie l’attribut **Debug** de l’élément &lt;compilation&gt; en false :
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample3.cs)]
 
-Lorsque ce code est exécuté, le **déboguer** attribut de la &lt;compilation&gt; élément a la valeur False pour le *webApp* fichier web.config de l’application.
+Quand ce code est exécuté, l’attribut de **débogage** de l’élément de&gt; de compilation &lt;est défini sur false pour le fichier Web. config de l’application *webapp* .
 
-## <a name="systemwebmanagement-namespace"></a>System.Web.Management Namespace
+## <a name="systemwebmanagement-namespace"></a>Espace de noms System. Web. Management
 
-L’espace de noms System.Web.Management fournit les classes et interfaces pour gérer et surveiller l’intégrité des applications ASP.NET.
+L’espace de noms System. Web. Management fournit les classes et les interfaces permettant de gérer et de surveiller l’intégrité des applications ASP.NET.
 
-Journalisation s’effectue en définissant une règle qui associe les événements à un fournisseur. La règle définit le type d’événements qui sont envoyés au fournisseur. Les événements de base suivants sont disponibles pour vous connecter :
+La journalisation s’effectue en définissant une règle qui associe des événements à un fournisseur. La règle définit le type des événements qui sont envoyés au fournisseur. Vous pouvez consigner les événements de base suivants :
 
-| **WebBaseEvent** | La classe d’événements de base pour tous les événements. Contient les propriétés pour tous les événements tels que le code d’événement, code de détail des événements, la date et l’heure à laquelle l’événement a été déclenché, séquence nombre, le message d’événement et les détails de l’événement. |
+| **WebBaseEvent** | Classe d’événements de base pour tous les événements. Contient les propriétés requises pour tous les événements tels que le code d’événement, le code de détail de l’événement, la date et l’heure de déclenchement de l’événement, le numéro de séquence, le message d’événement et les détails de l’événement. |
 | --- | --- |
-| **WebManagementEvent** | La classe d’événements de base pour les événements de gestion, telles que la durée de vie des applications, demande, erreurs et événements d’audit. |
-| **WebHeartbeatEvent** | L’événement généré par l’application dans des intervalles réguliers pour capturer les informations d’état de runtime utile. |
-| **WebAuditEvent** | La classe de base pour les événements d’audit de sécurité, qui sont utilisés pour marquer des conditions telles qu’une défaillance d’autorisation, échec du déchiffrement, *etc.* |
-| **WebRequestEvent** | La classe de base pour tous les événements de demande d’information. |
-| **WebBaseErrorEvent** | La classe de base pour tous les événements indiquant les conditions d’erreur. |
+| **WebManagementEvent** | Classe d’événements de base pour les événements de gestion, tels que la durée de vie de l’application, les demandes, les erreurs et les événements d’audit. |
+| **WebHeartbeatEvent** | Événement généré par l’application à intervalles réguliers pour capturer des informations utiles sur l’état d’exécution. |
+| **WebAuditEvent** | Classe de base pour les événements d’audit de sécurité, qui sont utilisés pour marquer des conditions telles que l’échec de l’autorisation, l’échec du déchiffrement, *etc.* |
+| **WebRequestEvent** | Classe de base pour tous les événements de requête d’information. |
+| **WebBaseErrorEvent** | Classe de base pour tous les événements indiquant des conditions d’erreur. |
 
-Les types de fournisseurs disponibles vous permettent de vous permet d’envoyer la sortie des événements Observateur d’événements SQL Server, Windows Management Instrumentation (WMI) et la messagerie. Les fournisseurs préconfigurés et les mappages d’événement réduisent la quantité de travail nécessaire pour obtenir la sortie des événements consigné.
+Les types de fournisseurs disponibles vous permettent d’envoyer une sortie d’événement à observateur d’événements, SQL Server, Windows Management Instrumentation (WMI) et à la messagerie électronique. Les fournisseurs et les mappages d’événements préconfigurés réduisent la quantité de travail nécessaire pour enregistrer la sortie de l’événement.
 
-ASP.NET 2.0 utilise le journal des événements fournisseur out-of-the-box pour consigner des événements en fonction des domaines d’application démarrage et arrêt, ainsi que pour la journalisation de toutes les exceptions non gérées. Cela permet d’aborder certains des scénarios de base. Par exemple, supposons que votre application lève une exception, mais l’utilisateur n’enregistre pas l’erreur et vous ne pouvez pas le reproduire. Avec la règle de journal des événements par défaut, vous ne pourrez pas recueillir les informations d’exception et la pile pour obtenir une meilleure idée de quel type d’erreur s’est produite. Un autre exemple s’applique si votre application perd l’état de session. Dans ce cas, vous pouvez rechercher dans le journal des événements pour déterminer si le domaine d’application est recyclé, et pourquoi le domaine d’application arrêtée en premier lieu.
+ASP.NET 2,0 utilise le fournisseur de journaux des événements prêt à l’emploi pour consigner les événements en fonction des domaines d’application qui démarrent et s’arrêtent, ainsi que la journalisation des exceptions non gérées. Cela permet de couvrir certains des scénarios de base. Par exemple, supposons que votre application lève une exception, mais que l’utilisateur n’enregistre pas l’erreur et que vous ne pouvez pas la reproduire. Avec la règle de journalisation des événements par défaut, vous pouvez collecter les informations sur les exceptions et les piles pour obtenir une meilleure idée du type d’erreur qui s’est produit. Un autre exemple s’applique si votre application perd l’état de session. Dans ce cas, vous pouvez consulter le journal des événements pour déterminer si le domaine d’application est en cours de recyclage et pourquoi le domaine d’application s’est arrêté en premier lieu.
 
-En outre, l’intégrité système de surveillance est extensible. Par exemple, vous pouvez définir des événements Web personnalisés, les déclencher au sein de votre application, puis définir une règle pour envoyer les informations d’événement à un fournisseur tel que votre adresse de messagerie. Cela vous permet de lier facilement votre instrumentation des fournisseurs de contrôle d’intégrité. Autre exemple, vous pouvez déclencher un événement chaque fois qu’une commande est traitée et définir une règle qui envoie chaque événement à la base de données SQL Server. Vous pouvez également déclencher un événement lorsqu’un utilisateur ne parvient pas à se connecter plusieurs fois dans une ligne et la configuration de l’événement pour utiliser les fournisseurs de messagerie.
+En outre, le système de contrôle d’intégrité est extensible. Par exemple, vous pouvez définir des événements Web personnalisés, les activer dans votre application, puis définir une règle pour envoyer les informations d’événement à un fournisseur tel que votre adresse de messagerie. Cela vous permet de lier facilement votre instrumentation aux fournisseurs de contrôle d’intégrité. Autre exemple : vous pouvez déclencher un événement chaque fois qu’une commande est traitée et configurer une règle qui envoie chaque événement à la base de données SQL Server. Vous pouvez également déclencher un événement lorsqu’un utilisateur ne parvient pas à se connecter plusieurs fois sur une ligne et à configurer l’événement pour qu’il utilise les fournisseurs de messagerie.
 
-La configuration pour les événements et les fournisseurs par défaut est stockée dans le fichier Web.config global. Le fichier Web.config global stocke tous les paramètres sur le Web qui étaient stockés dans le fichier Machine.config dans ASP.NET 1 x. Le fichier Web.config global se trouve dans le répertoire suivant :
+La configuration des fournisseurs et des événements par défaut est stockée dans le fichier Web. config global. Le fichier Web. config global stocke tous les paramètres Web qui étaient stockés dans le fichier machine. config dans ASP.NET 1x. Le fichier Web. config global se trouve dans le répertoire suivant :
 
 `%windir%\Microsoft.Net\Framework\v2.0.*\config\Web.config`
 
-Le &lt;healthMonitoring&gt; section du fichier Web.config global fournit des paramètres de configuration par défaut. Vous pouvez remplacer ces paramètres ou configurer vos propres paramètres en implémentant la &lt;healthMonitoring&gt; section dans le fichier Web.config pour votre application.
+La section &lt;healthMonitoring&gt; du fichier Web. config global fournit des paramètres de configuration par défaut. Vous pouvez remplacer ces paramètres ou configurer vos propres paramètres en implémentant la section &lt;healthMonitoring&gt; dans le fichier Web. config de votre application.
 
-Le &lt;healthMonitoring&gt; section du fichier Web.config global contient les éléments suivants :
+La section &lt;healthMonitoring&gt; du fichier Web. config global contient les éléments suivants :
 
-| **providers** | Contient les fournisseurs défini pour l’Observateur d’événements, WMI et SQL Server. |
+| **fournisseurs** | Contient les fournisseurs configurés pour le observateur d’événements, WMI et SQL Server. |
 | --- | --- |
-| **eventMappings** | Contient des mappages pour les différentes classes WebBase. Vous pouvez étendre cette liste si vous générez votre propre classe d’événements. Génération de votre propre classe d’événements vous donne une granularité plus fine sur les fournisseurs de pour que vous envoyez des informations. Par exemple, vous pouvez configurer des exceptions non gérées à envoyer à SQL Server, lors de l’envoi de vos propres événements personnalisés à la messagerie électronique. |
-| **rules** | Lie l’eventMappings au fournisseur. |
-| **buffering** | Utilisé avec les fournisseurs de messagerie et de SQL Server pour déterminer la fréquence à laquelle les événements de vidage au fournisseur. |
+| **eventMappings** | Contient des mappages pour les différentes classes webbase. Vous pouvez étendre cette liste si vous générez votre propre classe d’événements. La génération de votre propre classe d’événements vous offre une granularité plus fine des fournisseurs auxquels vous envoyez des informations. Par exemple, vous pouvez configurer des exceptions non gérées à envoyer à SQL Server, tout en envoyant vos propres événements personnalisés à la messagerie. |
+| **matière** | Lie le eventMappings au fournisseur. |
+| **mise en tampon** | Utilisé avec SQL Server et les fournisseurs de messagerie pour déterminer la fréquence à laquelle les événements doivent être vidés sur le fournisseur. |
 
-Voici un exemple de code à partir du fichier Web.config global.
+Vous trouverez ci-dessous un exemple de code issu du fichier Web. config global.
 
 [!code-xml[Main](configuration-and-instrumentation/samples/sample4.xml)]
 
-## <a name="how-to-store-events-to-event-viewer"></a>Comment stocker des événements à l’Observateur d’événements
+## <a name="how-to-store-events-to-event-viewer"></a>Comment stocker des événements dans observateur d’événements
 
-Comme mentionné précédemment, le fournisseur pour la journalisation des événements de l’événement visionneuse est configurée pour vous dans le fichier Web.config global. Par défaut, tous les événements selon **WebBaseErrorEvent** et **WebFailureAuditEvent** sont enregistrés. Vous pouvez ajouter des règles supplémentaires pour consigner des informations supplémentaires dans le journal des événements. Par exemple, si vous souhaitez consigner tous les événements (*c'est-à-dire*, chaque événement basé sur **WebBaseEvent**), vous pouvez ajouter la règle suivante à votre fichier Web.config :
+Comme mentionné précédemment, le fournisseur de journalisation des événements dans le observateur d’événements est configuré pour vous dans le fichier Web. config global. Par défaut, tous les événements basés sur **WebBaseErrorEvent** et **WebFailureAuditEvent** sont journalisés. Vous pouvez ajouter des règles supplémentaires pour consigner des informations supplémentaires dans le journal des événements. Par exemple, si vous souhaitez consigner tous les événements (*c’est-à-dire*, tous les événements basés sur **WebBaseEvent**), vous pouvez ajouter la règle suivante à votre fichier Web. config :
 
 [!code-xml[Main](configuration-and-instrumentation/samples/sample5.xml)]
 
-Cette règle se lient le **tous les événements** table d’événements pour le fournisseur du journal des événements. EventMapping et le fournisseur sont inclus dans le fichier Web.config global.
+Cette règle lie la table d’événements **all events** au fournisseur de journaux des événements. EventMapping et le fournisseur sont tous les deux inclus dans le fichier Web. config global.
 
-## <a name="how-to-store-events-to-sql-server"></a>Comment stocker des événements vers SQL Server
+## <a name="how-to-store-events-to-sql-server"></a>Comment stocker des événements dans SQL Server
 
-Cette méthode utilise la **ASPNETDB** base de données, qui est généré par le compte Aspnet\_regsql.exe outil. Le fournisseur par défaut utilise la chaîne de connexion LocalSqlServer, qui utilise soit une basée sur le fichier de base de données dans l’application\_dossier de données ou l’instance SQLExpress locale de SQL Server. La chaîne de connexion LocalSqlServer et le SqlProvider sont configurés dans le fichier Web.config global.
+Cette méthode utilise la base de données **aspnetdb** , qui est générée par l’outil ASPNET\_RegSql. exe. Le fournisseur par défaut utilise la chaîne de connexion LocalSqlServer, qui utilise soit une base de données basée sur des fichiers dans le dossier de données de l’application\_, soit l’instance SQLExpress locale de SQL Server. La chaîne de connexion LocalSqlServer et la valeur SqlProvider sont configurées dans le fichier Web. config global.
 
-La chaîne de connexion LocalSqlServer dans le fichier Web.config global se présente comme suit :
+La chaîne de connexion LocalSqlServer dans le fichier Web. config global ressemble à ceci :
 
 [!code-xml[Main](configuration-and-instrumentation/samples/sample6.xml)]
 
-Si vous souhaitez utiliser une autre instance de SQL Server, vous devez utiliser le compte Aspnet\_regsql.exe outil, qui se trouve dans le % windir%\Microsoft.Net\Framework\v2.0.\* dossier. Utiliser le compte Aspnet\_outil regsql.exe pour générer un personnalisé **ASPNETDB** de base de données sur l’instance de SQL Server, puis ajouter la chaîne de connexion à votre fichier de configuration d’applications, et puis ajoutez un fournisseur à l’aide de la nouvelle chaîne de connexion. Une fois que vous avez le **ASPNETDB** base de données créée, vous devez définir une règle pour lier un eventMapping à la sqlProvider.
+Si vous souhaitez utiliser une autre instance de SQL Server, vous devez utiliser l’outil ASPNET\_RegSql. exe, qui se trouve dans le%windir%\Microsoft.Net\Framework\v2.0. dossier de\*. Utilisez l’outil ASPNET\_RegSql. exe pour générer une base de données **aspnetdb** personnalisée sur l’instance de SQL Server, puis ajoutez la chaîne de connexion à votre fichier de configuration d’applications, puis ajoutez un fournisseur à l’aide de la nouvelle chaîne de connexion. Une fois que vous avez créé la base de données **aspnetdb** , vous devez définir une règle pour lier un EventMapping à SqlProvider.
 
-Si vous utilisez la valeur par défaut SqlProvider ou que vous configurez votre propre fournisseur, vous devez ajouter une règle de liaison du fournisseur avec une table d’événements. La règle suivante lie le nouveau fournisseur que vous avez créé ci-dessus pour le **tous les événements** table d’événements. Cette règle enregistrera tous les événements en fonction de **WebBaseEvent** et les envoyer à MySqlWebEventProvider qui utilise la chaîne de connexion MYASPNETDB. Le code suivant ajoute une règle pour lier le fournisseur avec une table d’événements :
+Que vous utilisiez la valeur par défaut SqlProvider ou configurez votre propre fournisseur, vous devez ajouter une règle qui lie le fournisseur à une table d’événements. La règle suivante lie le nouveau fournisseur que vous avez créé ci-dessus à la table des événements **tous les événements** . Cette règle journalise tous les événements basés sur **WebBaseEvent** et les envoie au MySqlWebEventProvider qui utilisera la chaîne de connexion MYASPNETDB. Le code suivant ajoute une règle pour lier le fournisseur à une table d’événements :
 
 [!code-xml[Main](configuration-and-instrumentation/samples/sample7.xml)]
 
-Si vous souhaitez envoyer uniquement les erreurs de SQL Server, vous pouvez ajouter la règle suivante :
+Si vous souhaitez envoyer uniquement des erreurs à SQL Server, vous pouvez ajouter la règle suivante :
 
 [!code-xml[Main](configuration-and-instrumentation/samples/sample8.xml)]
 
-## <a name="how-to-forward-events-to-wmi"></a>Comment transférer les événements à WMI
+## <a name="how-to-forward-events-to-wmi"></a>Comment transférer des événements à WMI
 
-Vous pouvez également transférer les événements à WMI. Le fournisseur WMI est configuré pour vous dans le fichier Web.config global par défaut.
+Vous pouvez également transférer les événements à WMI. Le fournisseur WMI est configuré pour vous dans le fichier Web. config global par défaut.
 
 L’exemple de code suivant ajoute une règle pour transférer les événements à WMI :
 
 [!code-xml[Main](configuration-and-instrumentation/samples/sample9.xml)]
 
-Vous devez ajouter une règle pour associer un eventMapping au fournisseur et également à une application d’écouteur pour écouter les événements WMI. L’exemple de code suivant ajoute une règle pour lier le fournisseur WMI pour les **tous les événements** table d’événements :
+Vous devrez ajouter une règle pour associer un eventMapping au fournisseur, ainsi qu’une application d’écouteur WMI pour écouter les événements. L’exemple de code suivant ajoute une règle pour lier le fournisseur WMI à la table d’événements **all events** :
 
 [!code-xml[Main](configuration-and-instrumentation/samples/sample10.xml)]
 
-## <a name="how-to-forward-events-to-email"></a>Comment transférer des événements à la messagerie
+## <a name="how-to-forward-events-to-email"></a>Comment transférer des événements à un e-mail
 
-Vous pouvez également transférer les événements à la messagerie électronique. Veillez aux règles d’événement mapper à votre fournisseur de messagerie, comme vous pouvez involontairement envoyez-vous un grand nombre d’informations qui peuvent être mieux adaptés pour SQL Server ou le journal des événements. Il existe deux fournisseurs de messagerie ; SimpleMailWebEventProvider et TemplatedMailWebEventProvider. Chacun a les mêmes attributs de configuration, à l’exception les attributs « modèle » et « detailedTemplateErrors », qui sont disponibles uniquement sur le TemplatedMailWebEventProvider.
+Vous pouvez également transférer des événements à la messagerie. Soyez prudent quant aux règles d’événement que vous mappez à votre fournisseur de messagerie, car vous pouvez involontairement vous envoyer un grand nombre d’informations qui peuvent être mieux adaptées à SQL Server ou au journal des événements. Il existe deux fournisseurs de courrier électronique : SimpleMailWebEventProvider et TemplatedMailWebEventProvider. Chacun a les mêmes attributs de configuration, à l’exception des attributs « template » et « detailedTemplateErrors », qui sont tous deux uniquement disponibles sur le TemplatedMailWebEventProvider.
 
 > [!NOTE]
-> Aucune de ces fournisseurs de messagerie n’est configuré pour vous. Vous devez les ajouter à votre fichier Web.config.
+> Aucun de ces fournisseurs de messagerie n’est configuré pour vous. Vous devez les ajouter à votre fichier Web. config.
 
-La principale différence entre ces fournisseurs de deux messagerie est que SimpleMailWebEventProvider envoie des messages électroniques dans un modèle générique ne peut pas être modifié. L’exemple de fichier Web.config ajoute ce fournisseur de messagerie à la liste des fournisseurs configurés à l’aide de la règle suivante :
+La principale différence entre ces deux fournisseurs de courrier électronique est que SimpleMailWebEventProvider envoie des e-mails dans un modèle générique qui ne peuvent pas être modifiés. L’exemple de fichier Web. config ajoute ce fournisseur de messagerie à la liste des fournisseurs configurés à l’aide de la règle suivante :
 
 [!code-xml[Main](configuration-and-instrumentation/samples/sample11.xml)]
 
-La règle suivante est également ajoutée pour lier le fournisseur de messagerie pour le **tous les événements** table d’événements :
+La règle suivante est également ajoutée pour lier le fournisseur de messagerie à la table **des événements all events** :
 
 [!code-xml[Main](configuration-and-instrumentation/samples/sample12.xml)]
 
-## <a name="aspnet-20-tracing"></a>ASP.NET 2.0 de suivi
+## <a name="aspnet-20-tracing"></a>Suivi ASP.NET 2,0
 
-Il existe trois améliorations majeures pour le suivi dans ASP.NET 2.0.
+Il existe trois améliorations majeures apportées au suivi dans ASP.NET 2,0.
 
-1. Fonctionnalité intégrée de traçage
+1. Fonctionnalités de suivi intégrées
 2. Accès par programme aux messages de trace
-3. Amélioration de suivi au niveau de l’application
+3. Suivi amélioré au niveau de l’application
 
-## <a name="integrated-tracing-functionality"></a>Intégré la fonctionnalité de suivi
+## <a name="integrated-tracing-functionality"></a>Fonctionnalités de suivi intégrées
 
-Vous pouvez acheminer les messages émis par la classe de System.Diagnostics.Trace pour la sortie de traçage ASP.NET et d’acheminer les messages émis par le traçage ASP.NET vers System.Diagnostics.Trace. Vous pouvez également transférer des événements d’instrumentation ASP.NET vers System.Diagnostics.Trace. Cette fonctionnalité est fournie par la nouvelle **writeToDiagnosticsTrace** attribut de la &lt;trace&gt; élément. Lorsque cette valeur booléenne est true, les messages de Trace ASP.NET sont transférées à l’infrastructure de suivi System.Diagnostics pour une utilisation par tous les écouteurs qui sont inscrits pour afficher les messages de Trace.
+Vous pouvez maintenant acheminer les messages émis par la classe System. Diagnostics. trace vers la sortie de traçage ASP.NET et router les messages émis par le suivi ASP.NET vers System. Diagnostics. Trace. Vous pouvez également transférer les événements d’instrumentation ASP.NET à System. Diagnostics. Trace. Cette fonctionnalité est fournie par le nouvel attribut **WriteToDiagnosticsTrace** de l’élément &lt;trace&gt;. Lorsque cette valeur booléenne est true, les messages de trace ASP.NET sont transférés à l’infrastructure de suivi System. Diagnostics pour être utilisés par tous les écouteurs inscrits pour afficher les messages de trace.
 
-## <a name="programmatic-access-to-trace-messages"></a>Accès par programme aux Messages de Trace
+## <a name="programmatic-access-to-trace-messages"></a>Accès par programme aux messages de trace
 
-ASP.NET 2.0 permet d’accéder par programmation à tous les messages de trace via le **TraceContextRecord** classe et le **TraceRecords** collection. Le moyen le plus efficace d’accéder à des messages de trace consiste à inscrire une **TraceContextEventHandler** délégué (également nouveau dans ASP.NET 2.0) pour gérer le nouveau **TraceFinished** événement. Vous pouvez ensuite parcourir les messages de trace comme vous le souhaitez.
+ASP.NET 2,0 autorise l’accès par programmation à tous les messages de trace via la classe **TraceContextRecord** et la collection **TraceRecords** . La méthode la plus efficace pour accéder aux messages de trace consiste à inscrire un délégué **TraceContextEventHandler** (également nouveau dans ASP.NET 2,0) pour gérer le nouvel événement **TraceFinished** . Vous pouvez ensuite parcourir les messages de trace comme vous le souhaitez.
 
-L’exemple de code suivant illustre cela :
+L’exemple de code suivant illustre ceci :
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample13.cs)]
 
-Dans l’exemple ci-dessus, j’ai boucler dans la collection TraceRecords et puis écrire chaque message dans le flux de réponse.
+Dans l’exemple ci-dessus, j’effectue une boucle dans la collection TraceRecords, puis j’écris chaque message dans le flux de réponse.
 
-## <a name="improved-application-level-tracing"></a>Amélioration de suivi au niveau de l’Application
+## <a name="improved-application-level-tracing"></a>Suivi amélioré au niveau de l’application
 
-Suivi au niveau de l’application est amélioré par le biais de l’introduction du nouveau **mostRecent** attribut de la &lt;trace&gt; élément. Cet attribut spécifie si la sortie de traçage au niveau de l’application plus récente est affichée et que les données de trace plus anciennes au-delà des limites qui sont indiquées par requestLimit sont ignorées. Si la valeur est false, les données de trace sont affichées pour les demandes jusqu'à ce que l’attribut requestLimit est atteint.
+Le suivi au niveau de l’application est amélioré par le biais de l’introduction du nouvel attribut **mostRecent** de l’élément &lt;trace&gt;. Cet attribut spécifie si la sortie de traçage au niveau de l’application la plus récente est affichée et que les données de trace plus anciennes au-delà des limites indiquées par requestLimit sont ignorées. Si la valeur est false, les données de trace sont affichées pour les demandes jusqu’à ce que l’attribut requestLimit soit atteint.
 
-## <a name="aspnet-command-line-tools"></a>Outils de ligne de commande ASP.NET
+## <a name="aspnet-command-line-tools"></a>Outils en ligne de commande ASP.NET
 
-Il existe plusieurs outils de ligne de commande afin de faciliter la configuration d’ASP.NET. Les développeurs ASP.NET doivent être familiarisés avec le compte aspnet\_regiis.exe outil. ASP.NET 2.0 fournit trois autres outils de ligne de commande afin de faciliter la configuration.
+Il existe plusieurs outils en ligne de commande pour faciliter la configuration de ASP.NET. Les développeurs ASP.NET doivent être familiarisés avec l’outil ASPNET\_regiis. exe. ASP.NET 2,0 fournit trois autres outils en ligne de commande pour faciliter la configuration.
 
-Les outils de ligne de commande suivants sont disponibles :
+Les outils en ligne de commande suivants sont disponibles :
 
 | **Outil** | **Utilisation** |
 | --- | --- |
-| **aspnet\_regiis.exe** | Permet l’inscription d’ASP.NET avec IIS. Il existe deux versions de cette outils fournis avec ASP.NET 2.0, un pour les systèmes 32 bits (dans le dossier de Framework) et un pour les systèmes 64 bits (dans le dossier Framework64.) La version 64 bits ne sera pas installée sur un système d’exploitation 32 bits. |
-| **aspnet\_regsql.exe** | L’outil d’inscription de ASP.NET SQL Server est utilisé pour créer une base de données Microsoft SQL Server pour une utilisation par les fournisseurs SQL Server dans ASP.NET, ou pour ajouter ou supprimer des options de base de données existante. Le compte Aspnet\_regsql.exe fichier se trouve dans [dossier drive:]\WINDOWS\Microsoft.NET\Framework\versionNumber sur votre serveur Web. |
-| **aspnet\_regbrowsers.exe** | L’outil d’inscription du navigateur ASP.NET analyse et compile des définitions de navigateur de l’échelle du système dans un assembly et installe l’assembly dans le global assembly cache. L’outil utilise les fichiers de définition de navigateur (. Fichiers de navigateur) à partir du sous-répertoire de navigateurs .NET Framework. L’outil se trouve dans le répertoire %SystemRoot%\Microsoft.NET\Framework\version\. |
-| **aspnet\_compiler.exe** | L’outil de Compilation ASP.NET vous permet de compiler une application Web ASP.NET, en place ou pour un déploiement vers un emplacement cible tel qu’un serveur de production. Dans une compilation sur place permet de performances de l’application, car les utilisateurs finaux ne rencontrent pas de retard lors de la première demande à l’application tandis que l’application est compilée. |
+| **\_ASPNET regiis. exe** | Permet l’inscription de ASP.NET avec IIS. Deux versions de cet outil sont fournies avec ASP.NET 2,0, une pour les systèmes 32 bits (dans le dossier Framework) et l’autre pour les systèmes 64 bits (dans le dossier Framework64). La version 64 bits n’est pas installée sur un système d’exploitation 32 bits. |
+| **\_ASPNET RegSql. exe** | L’outil d’inscription ASP.NET SQL Server permet de créer une base de données Microsoft SQL Server pour une utilisation par les fournisseurs d’SQL Server dans ASP.NET, ou d’ajouter ou de supprimer des options d’une base de données existante. Le fichier Aspnet\_RegSql. exe se trouve dans le dossier [Drive :] \WINDOWS\Microsoft.NET\Framework\versionNumber sur votre serveur Web. |
+| **\_ASPNET RegBrowsers. exe** | L’outil d’inscription du navigateur ASP.NET analyse et compile toutes les définitions de navigateur à l’ensemble du système dans un assembly et installe l’assembly dans le Global Assembly Cache. L’outil utilise les fichiers de définition de navigateur (. BROWSER Files) à partir du sous-répertoire des navigateurs .NET Framework. L’outil se trouve dans le répertoire%SystemRoot%\Microsoft.NET\Framework\version\ |
+| **\_ASPNET compiler. exe** | L’outil de compilation ASP.NET vous permet de compiler une application Web ASP.NET, soit sur place, soit pour le déploiement vers un emplacement cible tel qu’un serveur de production. La compilation sur place aide les performances de l’application, car les utilisateurs finaux ne rencontrent pas de délai lors de la première requête de l’application pendant la compilation de l’application. |
 
-Étant donné que le compte aspnet\_regiis.exe outil n’est pas nouvelle sur ASP.NET 2.0, nous ne traiterons pas une ici.
+Étant donné que l’outil ASPNET\_regiis. exe n’est pas nouveau dans ASP.NET 2,0, nous ne l’aborderons pas ici.
 
-## <a name="aspnet-sql-server-registration-tool---aspnetregsqlexe"></a>ASP.NET SQL Server Registration Tool - aspnet\_regsql.exe
+## <a name="aspnet-sql-server-registration-tool---aspnet_regsqlexe"></a>Outil d’inscription ASP.NET SQL Server-ASPNET\_RegSql. exe
 
-Vous pouvez définir plusieurs types d’options à l’aide de l’outil d’inscription du serveur SQL ASP.NET. Vous pouvez spécifier une connexion SQL, spécifier les services d’application ASP.NET utilisent SQL Server pour gérer les informations, indiquer quelle base de données ou de la table est utilisée pour la dépendance de cache SQL et ajouter ou supprimer la prise en charge pour l’utilisation de SQL Server pour stocker les procédures et l’état de session.
+Vous pouvez définir plusieurs types d’options à l’aide de l’outil ASP.NET SQL Server Registration. Vous pouvez spécifier une connexion SQL, spécifier les services d’application ASP.NET à utiliser SQL Server pour gérer les informations, indiquer la base de données ou la table utilisée pour la dépendance de cache SQL, et ajouter ou supprimer la prise en charge de l’utilisation de SQL Server pour stocker des procédures et l’état de session.
 
-Plusieurs services d’application ASP.NET s’appuient sur un fournisseur pour gérer le stockage et la récupération des données à partir d’une source de données. Chaque fournisseur est spécifique à la source de données. ASP.NET inclut un fournisseur SQL Server pour les fonctionnalités ASP.NET suivantes :
+Plusieurs services d’application ASP.NET s’appuient sur un fournisseur pour gérer le stockage et la récupération de données à partir d’une source de données. Chaque fournisseur est spécifique à la source de données. ASP.NET comprend un fournisseur SQL Server pour les fonctionnalités ASP.NET suivantes :
 
-- L’appartenance (le [SqlMembershipProvider](https://msdn.microsoft.com/library/system.web.security.sqlmembershipprovider.aspx) classe).
-- Gestion des rôles (la [SqlRoleProvider](https://msdn.microsoft.com/library/system.web.security.sqlroleprovider.aspx) classe).
-- Profil (le [SqlProfileProvider](https://msdn.microsoft.com/library/system.web.profile.sqlprofileprovider.aspx) classe).
-- Personnalisation de WebParts (la [SqlPersonalizationProvider](https://msdn.microsoft.com/library/system.web.ui.webcontrols.webparts.sqlpersonalizationprovider.aspx) classe).
-- Événements Web (le [SqlWebEventProvider](https://msdn.microsoft.com/library/system.web.management.sqlwebeventprovider.aspx) classe).
+- Appartenance (classe [SqlMembershipProvider](https://msdn.microsoft.com/library/system.web.security.sqlmembershipprovider.aspx) ).
+- Gestion des rôles (classe [SqlRoleProvider](https://msdn.microsoft.com/library/system.web.security.sqlroleprovider.aspx) ).
+- Profile (classe [SqlProfileProvider](https://msdn.microsoft.com/library/system.web.profile.sqlprofileprovider.aspx) ).
+- Composants WebPart personnalisation (classe [SqlPersonalizationProvider](https://msdn.microsoft.com/library/system.web.ui.webcontrols.webparts.sqlpersonalizationprovider.aspx) ).
+- Événements Web (classe [SqlWebEventProvider](https://msdn.microsoft.com/library/system.web.management.sqlwebeventprovider.aspx) ).
 
-Lorsque vous installez ASP.NET, le fichier Machine.config de votre serveur inclut des éléments de configuration qui spécifient les fournisseurs SQL Server pour chacune des fonctionnalités ASP.NET qui s’appuient sur un fournisseur. Ces fournisseurs sont configurés par défaut, pour se connecter à une instance utilisateur locale de SQL Server Express 2005. Si vous modifiez la chaîne de connexion par défaut utilisée par les fournisseurs, puis avant de pouvoir utiliser les fonctionnalités ASP.NET configurées dans la configuration d’ordinateur, vous devez installer la base de données SQL Server et les éléments de base de données pour votre fonctionnalité choisie à l’aide de Aspnet\_regsql.exe. Si la base de données que vous spécifiez avec l’outil d’inscription SQL n’existe pas déjà (aspnetdb sera la base de données par défaut si aucune n’est spécifiée sur la ligne de commande), puis l’utilisateur actuel doit disposer des droits nécessaires pour créer des bases de données dans SQL Server, ainsi que pour créer le e de schéma éléments s’effectue dans une base de données.
+Quand vous installez ASP.NET, le fichier machine. config de votre serveur comprend des éléments de configuration qui spécifient des fournisseurs de SQL Server pour chacune des fonctionnalités ASP.NET qui reposent sur un fournisseur. Ces fournisseurs sont configurés par défaut pour se connecter à une instance utilisateur locale de SQL Server Express 2005. Si vous modifiez la chaîne de connexion par défaut utilisée par les fournisseurs, avant de pouvoir utiliser l’une des fonctionnalités ASP.NET configurées dans la configuration de l’ordinateur, vous devez installer la base de données SQL Server et les éléments de base de données pour la fonctionnalité choisie à l’aide de ASPNET\_RegSql. exe. Si la base de données que vous spécifiez avec l’outil d’inscription SQL n’existe pas déjà (aspnetdb est la base de données par défaut si aucune n’est spécifiée sur la ligne de commande), l’utilisateur actuel doit disposer des droits nécessaires pour créer des bases de données dans SQL Server et pour créer le schéma e lements dans une base de données.
 
 ### <a name="sql-cache-dependency"></a>Dépendance de cache SQL
 
-Une fonctionnalité avancée de la mise en cache de sortie ASP.NET est la dépendance de cache SQL. Dépendance de cache SQL prend en charge deux modes de fonctionnement différents : un qui utilise une implémentation ASP.NET d’interrogation de table et un second mode qui utilise les fonctionnalités de notification de requête de SQL Server 2005. L’outil d’inscription SQL peut être utilisé pour configurer le mode d’interrogation de table de l’opération.
+Une fonctionnalité avancée de la mise en cache de sortie ASP.NET est la dépendance de cache SQL. La dépendance de cache SQL prend en charge deux modes de fonctionnement différents : un qui utilise une implémentation ASP.NET de l’interrogation de table et un second mode qui utilise les fonctionnalités de notification de requête de SQL Server 2005. L’outil d’inscription SQL peut être utilisé pour configurer le mode d’interrogation de table de l’opération.
 
 ### <a name="session-state"></a>État de session
 
-Par défaut, les informations et les valeurs d’état de session sont stockées dans la mémoire au sein du processus ASP.NET. Vous pouvez également stocker les données de session dans une base de données SQL Server, où il peut être partagé par plusieurs serveurs Web. Si la base de données que vous spécifiez pour l’état de session avec l’outil d’inscription SQL n’existe pas déjà, l’utilisateur actuel doit avoir les droits nécessaires pour créer des bases de données dans SQL Server, ainsi que pour créer des éléments de schéma dans une base de données. Si la base de données n’existe pas, l’utilisateur actuel doit avoir les droits nécessaires pour créer des éléments de schéma dans la base de données existante.
+Par défaut, les valeurs et les informations d’état de session sont stockées en mémoire dans le processus ASP.NET. Vous pouvez également stocker les données de session dans une base de données SQL Server, où elles peuvent être partagées par plusieurs serveurs Web. Si la base de données que vous spécifiez pour l’état de session avec l’outil d’inscription SQL n’existe pas encore, l’utilisateur actuel doit disposer des droits nécessaires pour créer des bases de données dans SQL Server, ainsi que pour créer des éléments de schéma dans une base de données. Si la base de données existe, l’utilisateur actuel doit disposer des droits nécessaires pour créer des éléments de schéma dans la base de données existante.
 
-Pour installer la base de données des États de session sur SQL Server, exécutez le compte Aspnet\_regsql.exe outil et fournir les informations suivantes avec la commande :
+Pour installer la base de données d’état de session sur SQL Server, exécutez l’outil ASPNET\_RegSql. exe et fournissez les informations suivantes avec la commande :
 
-- Le nom du serveur SQL de l’instance, à l’aide de la **-S** option.
-- Les informations d’identification d’ouverture de session d’un compte qui a l’autorisation de créer une base de données sur un ordinateur exécutant SQL Server. Utiliser le **-E** possibilité d’utiliser l’utilisateur actuellement connecté, ou utiliser le **- U** option pour spécifier un ID d’utilisateur avec le **-P** option pour spécifier un mot de passe.
-- Le **- ssadd** une option de ligne de commande pour ajouter la base de données des États de session.
+- Nom de l’instance de SQL Server, à l’aide de l’option **-S** .
+- Les informations d’identification d’un compte qui a l’autorisation de créer une base de données sur un ordinateur exécutant SQL Server. Utilisez l’option **-E** pour utiliser l’utilisateur actuellement connecté, ou utilisez l’option **-U** pour spécifier un ID d’utilisateur avec l’option **-P** pour spécifier un mot de passe.
+- Option de ligne de commande **-ssadd** pour ajouter la base de données d’état de session.
 
-Par défaut, vous ne pouvez pas utiliser le compte Aspnet\_outil regsql.exe pour installer la base de données des États de session sur un ordinateur exécutant SQL Server 2005 Express Edition.
+Par défaut, vous ne pouvez pas utiliser l’outil ASPNET\_RegSql. exe pour installer la base de données d’état de session sur un ordinateur exécutant SQL Server 2005 Express Edition.
 
-### <a name="the-aspnet-browser-registration-tool---aspnetregbrowsersexe"></a>L’outil d’inscription de navigateur ASP.NET - aspnet\_regbrowsers.exe
+### <a name="the-aspnet-browser-registration-tool---aspnet_regbrowsersexe"></a>Outil d’inscription du navigateur ASP.NET-ASPNET\_RegBrowsers. exe
 
-Dans ASP.NET version 1.1, le fichier Machine.config contenait une section appelée &lt;browserCaps&gt;. Cette section contenue une série d’entrées XML qui définissait les configurations pour différents navigateurs selon une expression régulière. Pour ASP.NET version 2.0, un nouveau. Fichier BROWSER définit les paramètres d’un navigateur à l’aide d’entrées XML. Vous ajoutez des informations sur une nouvelle fenêtre de navigateur en ajoutant une nouvelle. Fichier de navigateur dans le dossier situé dans %SystemRoot%\Microsoft.NET\Framework\version\CONFIG\Browsers sur votre système.
+Dans ASP.NET version 1,1, le fichier machine. config contenait une section appelée &lt;browserCaps&gt;. Cette section contient une série d’entrées XML qui ont défini les configurations de différents navigateurs sur la base d’une expression régulière. Pour ASP.NET version 2,0, nouveau. Le fichier BROWSER définit les paramètres d’un navigateur particulier à l’aide d’entrées XML. Vous ajoutez des informations sur un nouveau navigateur en ajoutant un nouveau. Fichier BROWSER dans le dossier situé dans%SystemRoot%\Microsoft.NET\Framework\version\CONFIG\Browsers sur votre système.
 
-Car une application ne lit pas un fichier .config chaque fois qu’elle nécessite des informations du navigateur, vous pouvez créer un nouveau. Fichier du navigateur et exécution Aspnet\_regbrowsers.exe pour ajouter les modifications requises à l’assembly. Cela permet d’accéder immédiatement aux nouvelles informations du navigateur pour ne pas avoir à fermer toutes vos applications pour recueillir les informations sur le serveur. Une application peut accéder aux fonctionnalités du navigateur via la propriété de navigateur de la requête HTTP actuelle.
+Comme une application ne lit pas un fichier. config à chaque fois qu’elle a besoin d’informations de navigateur, vous pouvez créer un nouveau. Fichier BROWSER et exécutez ASPNET\_RegBrowsers. exe pour ajouter les modifications requises à l’assembly. Cela permet au serveur d’accéder immédiatement aux nouvelles informations du navigateur, de sorte que vous n’avez pas besoin d’arrêter l’une de vos applications pour récupérer les informations. Une application peut accéder aux fonctionnalités du navigateur via la propriété Browser de l’objet HttpRequest actuel.
 
-Les options suivantes sont disponibles lors de l’exécution aspnet\_regbrowser.exe :
+Les options suivantes sont disponibles lors de l’exécution de ASPNET\_regbrowser. exe :
 
 | **Option** | **Description** |
 | --- | --- |
-| **-?** | Affiche le compte Aspnet\_regbbrowsers.exe texte d’aide dans la fenêtre de commande. |
-| **-i** | Crée l’assembly de fonctionnalités de navigateur de runtime et l’installe dans le global assembly cache. |
-| **-u** | Désinstalle l’assembly de fonctionnalités de navigateur de runtime à partir du global assembly cache. |
+| **-?** | Affiche le texte d’aide\_regbbrowsers. exe de ASPNET dans la fenêtre de commande. |
+| **-i** | Crée l’assembly de fonctionnalités du navigateur Runtime et l’installe dans le Global Assembly Cache. |
+| **-u** | Désinstalle l’assembly des fonctionnalités du navigateur Runtime de la Global Assembly Cache. |
 
-## <a name="the-aspnet-compilation-tool---aspnetcompilerexe"></a>L’outil de Compilation ASP.NET - aspnet\_compiler.exe
+## <a name="the-aspnet-compilation-tool---aspnet_compilerexe"></a>Outil de compilation ASP.NET-ASPNET\_compiler. exe
 
-L’outil de Compilation ASP.NET peut être utilisé de deux façons : pour la compilation sur place et de la compilation pour le déploiement, où un répertoire de sortie cible est spécifié.
+L’outil de compilation ASP.NET peut être utilisé de deux manières générales : pour la compilation sur place et la compilation pour le déploiement, où un répertoire de sortie cible est spécifié.
 
-### <a name="compiling-an-application-in-placehttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[Compilation d’une Application en Place](https://msdn.microsoft.com/library/ms229863.aspx)
+### <a name="compiling-an-application-in-place"></a>[Compilation d’une application sur place](https://msdn.microsoft.com/library/ms229863.aspx)
 
-L’outil de Compilation ASP.NET peut compiler une application en place, autrement dit, il reproduit le comportement de faire plusieurs demandes à l’application, ce qui entraîne la compilation normale. Les utilisateurs d’un site précompilé pas un retard peut être dû à une compilation de la page sur la première demande.
+L’outil de compilation ASP.NET peut compiler une application en place, autrement dit, il imite le comportement d’exécution de plusieurs demandes à l’application, provoquant ainsi la compilation normale. Les utilisateurs d’un site précompilé ne subiront pas de délai en raison de la compilation de la page lors de la première demande.
 
-Lorsque vous précompilez un site en place, les éléments suivants s’appliquent :
+Lorsque vous précompilez un site sur place, les éléments suivants s’appliquent :
 
-- Le site conserve ses fichiers et la structure de répertoires.
-- Vous devez disposer des compilateurs pour tous les langages de programmation utilisés par le site sur le serveur.
-- En cas de n’importe quel fichier compilation, l’ensemble du site échoue.
+- Le site conserve ses fichiers et sa structure de répertoires.
+- Vous devez avoir des compilateurs pour tous les langages de programmation utilisés par le site sur le serveur.
+- Si la compilation d’un fichier échoue, la compilation du site entier échoue.
 
-Vous pouvez également recompiler une application sur place après avoir ajouté les nouveaux fichiers de code source. L’outil compile uniquement les fichiers nouveaux ou modifiés, sauf si vous incluez le **- c** option.
+Vous pouvez également recompiler une application en place après y ajouter de nouveaux fichiers sources. L’outil compile uniquement les fichiers nouveaux ou modifiés, sauf si vous incluez l’option **-c** .
 
 > [!NOTE]
-> Compilation d’une application qui contient une application imbriquée ne compile pas l’application imbriquée. L’application imbriquée doit être compilée séparément.
+> La compilation d’une application qui contient une application imbriquée ne compile pas l’application imbriquée. L’application imbriquée doit être compilée séparément.
 
-### <a name="compiling-an-application-for-deploymenthttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[Compilation d’une Application pour le déploiement](https://msdn.microsoft.com/library/ms229863.aspx)
+### <a name="compiling-an-application-for-deployment"></a>[Compilation d’une application pour le déploiement](https://msdn.microsoft.com/library/ms229863.aspx)
 
-Vous compilez une application pour le déploiement (compilation vers un emplacement cible) en spécifiant le paramètre targetDir. Le targetDir peut être le dernier emplacement pour l’application Web, ou l’application compilée peut être encore déployée. À l’aide de la **-u** option compile l’application de sorte que vous pouvez apporter des modifications à certains fichiers dans l’application compilée sans la recompiler. ASPNET\_compiler.exe établit une distinction entre les types de fichiers statiques et dynamiques et les traite différemment lors de la création de l’application résultante.
+Vous compilez une application pour le déploiement (compilation sur un emplacement cible) en spécifiant le paramètre targetDir. TargetDir peut être l’emplacement final de l’application Web, ou l’application compilée peut être déployée davantage. L’utilisation de l’option **-u** compile l’application de telle sorte que vous pouvez apporter des modifications à certains fichiers de l’application compilée sans la recompiler. ASPNET\_compiler. exe fait la distinction entre les types de fichiers statiques et dynamiques, et les gère différemment lors de la création de l’application résultante.
 
-- Types de fichiers statiques sont ceux qui ne pas avoir un compilateur associé ou fournisseur, tels que les fichiers dont la propriété de build nommés ont les extensions .css, .gif, .htm, .html, .jpg, .js et ainsi de suite. Ces fichiers sont simplement copiés vers l’emplacement cible, et leurs places relatives dans la structure de répertoires conservés.
-- Types de fichier dynamique sont ceux qui ont un compilateur associé ou de génération de fournisseur, y compris les fichiers avec les extensions de nom de fichier spécifiques à ASP.NET telles que .asax, .ascx, .ashx, .aspx, .browser, .master et ainsi de suite. L’outil de Compilation ASP.NET génère des assemblys à partir de ces fichiers. Si le **-u** option est omise, l’outil crée également des fichiers avec l’extension de nom de fichier. COMPILED qui mappent les fichiers source d’origine à leur assembly. Pour vous assurer que la structure de répertoires de la source de l’application est conservée, l’outil génère des fichiers d’espace réservé dans les emplacements correspondants dans l’application cible.
+- Les types de fichiers statiques sont ceux qui n’ont pas de compilateur ou de fournisseur de générations associé, tels que les fichiers dont le nom possède des extensions telles que. CSS,. gif,. htm,. html,. jpg,. js, etc. Ces fichiers sont simplement copiés vers l’emplacement cible, avec leurs emplacements relatifs conservés dans la structure de répertoires.
+- Les types de fichiers dynamiques sont ceux qui ont un compilateur ou un fournisseur de générations associé, y compris les fichiers avec des extensions de nom de fichier spécifiques à ASP.NET telles que. asax,. ascx,. ashx,. aspx,. Browser,. Master, et ainsi de suite. L’outil de compilation ASP.NET génère des assemblys à partir de ces fichiers. Si l’option **-u** est omise, l’outil crée également des fichiers avec l’extension de nom de fichier. COMPILÉ qui mappe les fichiers sources d’origine à leur assembly. Pour vous assurer que la structure de répertoires de la source de l’application est préservée, l’outil génère des fichiers d’espace réservé aux emplacements correspondants dans l’application cible.
 
-Vous devez utiliser le **-u** option pour indiquer que le contenu de l’application compilée peut être modifié. Sinon, les modifications suivantes sont ignorées ou provoquent des erreurs d’exécution.
+Vous devez utiliser l’option **-u** pour indiquer que le contenu de l’application compilée peut être modifié. Sinon, les modifications suivantes sont ignorées ou provoquent des erreurs d’exécution.
 
-Le tableau suivant décrit comment la Compilation ASP.NET tool gère différents types de fichier lorsque le **-u** option est incluse.
+Le tableau suivant décrit comment l’outil de compilation ASP.NET gère les différents types de fichiers lorsque l’option **-u** est incluse.
 
-| **Type de fichier** | **Action de compilateur** |
+| **Type de fichier** | **Action du compilateur** |
 | --- | --- |
-| .ascx, .aspx, .master | Ces fichiers sont répartis entre le balisage et code source, qui inclut les fichiers code-behind et tout code qui est placé entre &lt;script runat = « server »&gt; éléments. Code source est compilé dans des assemblys, avec des noms qui sont dérivés d’un algorithme de hachage, et les assemblys sont placés dans le répertoire Bin. Aucun code inline, qui est, le code placé entre le **&lt; %** et **% &gt;** des crochets, est inclus avec le balisage et pas compilé. Nouveaux fichiers portant le même nom que les fichiers source sont créés pour contenir le balisage et placés dans les répertoires de sortie correspondante. |
-| .ashx, .asmx | Ces fichiers ne sont pas compilés et sont déplacés vers les répertoires de sortie comme et pas compilé. Si vous souhaitez avoir compilé le code du gestionnaire, placez le code dans les fichiers de code source dans l’application\_répertoire de Code. |
-| .cs, .vb, .jsl, .cpp (sans fichiers code-behind pour les types de fichiers répertoriés précédemment) | Ces fichiers sont compilés et inclus en tant que ressource dans les assemblys qui y fait référence. Fichiers sources ne sont pas copiés dans le répertoire de sortie. Si un fichier de code n’est pas référencé, il n’est pas compilé. |
-| Types de fichiers personnalisés | Ces fichiers ne sont pas compilés. Ces fichiers sont copiés vers les répertoires de sortie correspondants. |
-| Dans l’application, les fichiers de code source\_sous-répertoire de Code | Ces fichiers sont compilés dans des assemblys et placés dans le répertoire Bin. |
-| fichiers .resx et .resource dans l’application\_GlobalResources sous-répertoire | Ces fichiers sont compilés dans des assemblys et placés dans le répertoire Bin. Aucune application\_GlobalResources sous-répertoire est créé sous le répertoire de sortie principal, et aucun fichier .resx ou .resources situé dans le répertoire source n’est copiés vers les répertoires de sortie. |
-| fichiers .resx et .resource dans l’application\_LocalResources sous-répertoire | Ces fichiers ne sont pas compilés et sont copiés vers les répertoires de sortie correspondants. |
-| fichiers .skin dans l’application\_sous-répertoire de thèmes | Les fichiers .skin et les fichiers de thème statiques ne sont pas compilés et sont copiés vers les répertoires de sortie correspondants. |
-| Browser les fichiers Web.config statique types des assemblys déjà présents dans le répertoire Bin | Ces fichiers sont copiés tels quels dans les répertoires de sortie. |
+| .ascx, .aspx, .master | Ces fichiers sont répartis dans le balisage et le code source, qui comprend à la fois les fichiers code-behind et tout code qui est inclus dans &lt;script runat = "Server"&gt; éléments. Le code source est compilé dans des assemblys, avec des noms dérivés d’un algorithme de hachage, et les assemblys sont placés dans le répertoire bin. Tout code inline, autrement dit, le code placé entre les **&lt;%** et **%&gt;** crochets, est inclus avec le balisage et n’est pas compilé. De nouveaux fichiers portant le même nom que les fichiers sources sont créés pour contenir le balisage et placés dans les répertoires de sortie correspondants. |
+| .ashx, .asmx | Ces fichiers ne sont pas compilés et sont déplacés dans les répertoires de sortie en tant que, et ne sont pas compilés. Si vous souhaitez que le code du gestionnaire soit compilé, placez le code dans les fichiers de code source de l’application\_répertoire de code. |
+| . cs,. vb,. jsl et. cpp (à l’exclusion des fichiers code-behind pour les types de fichiers répertoriés précédemment) | Ces fichiers sont compilés et inclus en tant que ressource dans les assemblys qui les référencent. Les fichiers sources ne sont pas copiés dans le répertoire de sortie. Si un fichier de code n’est pas référencé, il n’est pas compilé. |
+| Types de fichiers personnalisés | Ces fichiers ne sont pas compilés. Ces fichiers sont copiés dans les répertoires de sortie correspondants. |
+| Fichiers de code source dans l’application\_sous-répertoire de code | Ces fichiers sont compilés dans des assemblys et placés dans le répertoire bin. |
+| fichiers. resx et. Resource dans l’application\_sous-répertoire GlobalResources | Ces fichiers sont compilés dans des assemblys et placés dans le répertoire bin. Aucune application\_sous-répertoire GlobalResources n’est créée sous le répertoire de sortie principal, et aucun fichier. resx ou. Resources situé dans le répertoire source n’est copié dans les répertoires de sortie. |
+| fichiers. resx et. Resource dans l’application\_sous-répertoire LocalResources | Ces fichiers ne sont pas compilés et sont copiés dans les répertoires de sortie correspondants. |
+| fichiers. Skin dans le sous-répertoire des thèmes de l’application\_ | Les fichiers. Skin et les fichiers de thème statiques ne sont pas compilés et sont copiés dans les répertoires de sortie correspondants. |
+| . Browser types de fichiers statiques Web. config déjà présents dans le répertoire bin | Ces fichiers sont copiés tels quels dans les répertoires de sortie. |
 
-Le tableau suivant décrit comment la Compilation ASP.NET tool gère différents types de fichier lorsque le **-u** option est omise.
+Le tableau suivant décrit comment l’outil de compilation ASP.NET gère les différents types de fichiers lorsque l’option **-u** est omise.
 
-| **Type de fichier** | **Action de compilateur** |
+| **Type de fichier** | **Action du compilateur** |
 | --- | --- |
-| .aspx, .asmx, .ashx, .master | Ces fichiers sont répartis entre le balisage et code source, qui inclut les fichiers code-behind et tout code qui est placé entre &lt;script runat = « server »&gt; éléments. Code source est compilé dans des assemblys, avec des noms qui sont dérivés d’un algorithme de hachage. Les assemblys résultants sont placés dans le répertoire Bin. Aucun code inline, qui est, le code placé entre le **&lt; %** et **% &gt;** des crochets, est inclus avec le balisage et pas compilé. Le compilateur crée de nouveaux fichiers pour contenir le balisage avec le même nom que les fichiers sources. Ces fichiers résultants sont placés dans le répertoire Bin. Le compilateur crée également des fichiers avec le même nom que les fichiers sources, mais avec l’extension. COMPILED qui contiennent des informations de mappage. La barre d’outils. Fichiers compilés sont placés dans les répertoires de sortie correspondant à l’emplacement d’origine des fichiers sources. |
-| .ascx | Ces fichiers sont répartis entre le balisage et le code source. Code source est compilé dans des assemblys et placé dans le répertoire Bin, dont les noms sont dérivés d’un algorithme de hachage. Aucun fichier de balisage n’est générés. |
-| .cs, .vb, .jsl, .cpp (sans fichiers code-behind pour les types de fichiers répertoriés précédemment) | Le code source qui est référencé par les assemblys générés à partir des fichiers .aspx, .ascx et/ou .ashx est compilé dans des assemblys et placé dans le répertoire Bin. Aucun fichier source n’est copiées. |
-| Types de fichiers personnalisés | Ces fichiers sont compilés comme des fichiers dynamiques. Selon le type de fichier que dont ils dépendent, le compilateur peut placer des fichiers de mappage dans les répertoires de sortie. |
-| Fichiers dans l’application\_sous-répertoire de Code | Les fichiers de code source dans ce sous-répertoire sont compilés dans des assemblys et placés dans le répertoire Bin. |
-| Fichiers dans l’application\_GlobalResources sous-répertoire | Ces fichiers sont compilés dans des assemblys et placés dans le répertoire Bin. Aucune application\_GlobalResources sous-répertoire est créé sous le répertoire de sortie principal. Si le fichier de configuration spécifie appliesTo = « All », les fichiers .resx et .resources sont copiés vers les répertoires de sortie. Ils ne sont pas copiés s’ils sont référencés par un [BuildProvider](https://msdn.microsoft.com/library/system.web.configuration.buildprovider.aspx). |
-| fichiers .resx et .resource dans l’application\_LocalResources sous-répertoire | Ces fichiers sont compilés dans des assemblys avec des noms uniques et placés dans le répertoire Bin. Aucun fichier .resx ou .resource n’est copiés vers les répertoires de sortie. |
-| fichiers .skin dans l’application\_sous-répertoire de thèmes | Thèmes sont compilés dans des assemblys et placés dans le répertoire Bin. Les fichiers de stub sont créés pour les fichiers .skin et placés dans le répertoire de sortie correspondant. Les fichiers statiques (par exemple, .css) sont copiés vers les répertoires de sortie. |
-| Browser les fichiers Web.config statique types des assemblys déjà présents dans le répertoire Bin | Ces fichiers sont copiés tels quels dans le répertoire de sortie. |
+| .aspx, .asmx, .ashx, .master | Ces fichiers sont répartis dans le balisage et le code source, qui comprend à la fois les fichiers code-behind et tout code qui est inclus dans &lt;script runat = "Server"&gt; éléments. Le code source est compilé en assemblys, avec les noms dérivés d’un algorithme de hachage. Les assemblys résultants sont placés dans le répertoire bin. Tout code inline, autrement dit, le code placé entre les **&lt;%** et **%&gt;** crochets, est inclus avec le balisage et n’est pas compilé. Le compilateur crée des fichiers qui contiennent le balisage portant le même nom que les fichiers sources. Ces fichiers résultants sont placés dans le répertoire bin. Le compilateur crée également des fichiers portant le même nom que les fichiers sources, mais avec l’extension. COMPILÉ qui contient des informations de mappage. La. Les fichiers COMPILÉs sont placés dans les répertoires de sortie correspondant à l’emplacement d’origine des fichiers sources. |
+| .ascx | Ces fichiers sont répartis dans le balisage et le code source. Le code source est compilé dans des assemblys et placé dans le répertoire bin, avec les noms dérivés d’un algorithme de hachage. Aucun fichier de balisage n’est généré. |
+| . cs,. vb,. jsl et. cpp (à l’exclusion des fichiers code-behind pour les types de fichiers répertoriés précédemment) | Le code source qui est référencé par les assemblys générés à partir des fichiers. ascx,. ashx ou. aspx est compilé dans des assemblys et placé dans le répertoire bin. Aucun fichier source n’est copié. |
+| Types de fichiers personnalisés | Ces fichiers sont compilés comme des fichiers dynamiques. Selon le type de fichier sur lequel ils sont basés, le compilateur peut placer des fichiers de mappage dans les répertoires de sortie. |
+| Fichiers de l’application\_sous-répertoire de code | Les fichiers de code source de ce sous-répertoire sont compilés dans des assemblys et placés dans le répertoire bin. |
+| Fichiers de l’application\_sous-répertoire GlobalResources | Ces fichiers sont compilés dans des assemblys et placés dans le répertoire bin. Aucune application\_sous-répertoire GlobalResources n’est créée sous le répertoire de sortie principal. Si le fichier de configuration spécifie appliesTo = « All », les fichiers. resx et. Resources sont copiés dans les répertoires de sortie. Ils ne sont pas copiés s’ils sont référencés par un [BuildProvider](https://msdn.microsoft.com/library/system.web.configuration.buildprovider.aspx). |
+| fichiers. resx et. Resource dans l’application\_sous-répertoire LocalResources | Ces fichiers sont compilés dans des assemblys avec des noms uniques et placés dans le répertoire bin. Aucun fichier. resx ou. Resource n’est copié dans les répertoires de sortie. |
+| fichiers. Skin dans le sous-répertoire des thèmes de l’application\_ | Les thèmes sont compilés dans des assemblys et placés dans le répertoire bin. Les fichiers stub sont créés pour les fichiers. Skin et placés dans le répertoire de sortie correspondant. Les fichiers statiques (tels que. CSS) sont copiés dans les répertoires de sortie. |
+| . Browser types de fichiers statiques Web. config déjà présents dans le répertoire bin | Ces fichiers sont copiés tels quels dans le répertoire de sortie. |
 
-### <a name="fixed-assembly-nameshttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[Noms d’Assembly fixe](https://msdn.microsoft.com/library/ms229863.aspx##)
+### <a name="fixed-assembly-names"></a>[Noms d’assemblys fixes](https://msdn.microsoft.com/library/ms229863.aspx##)
 
-Certains scénarios, tels que le déploiement d’une application Web à l’aide de MSI Windows Installer, requièrent l’utilisation de noms de fichiers cohérentes et contenu, ainsi que les structures de répertoire cohérentes pour identifier les assemblys ou les paramètres de configuration pour les mises à jour. Dans ce cas, vous pouvez utiliser la **- fixednames** option pour spécifier que l’outil de Compilation ASP.NET doit compiler un assembly pour chaque fichier source au lieu d’utiliser l’emplacement où plusieurs pages sont compilées dans des assemblys. Cette opération peut générer un grand nombre d’assemblys, si vous êtes concerné par l’évolutivité, vous devez utiliser cette option avec précaution.
+Certains scénarios, tels que le déploiement d’une application Web à l’aide de l’Windows Installer MSI, requièrent l’utilisation d’un nom de fichier et d’un contenu cohérents, ainsi que des structures de répertoire cohérentes pour identifier les assemblys ou les paramètres de configuration des mises à jour. Dans ce cas, vous pouvez utiliser l’option **-fixednames** pour spécifier que l’outil de compilation ASP.net doit compiler un assembly pour chaque fichier source au lieu d’utiliser le où plusieurs pages sont compilées dans des assemblys. Cela peut entraîner un grand nombre d’assemblys. par conséquent, si vous vous intéressez à l’évolutivité, vous devez utiliser cette option avec précaution.
 
-### <a name="strong-name-compilationhttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[Compilation avec nom fort](https://msdn.microsoft.com/library/ms229863.aspx##)
+### <a name="strong-name-compilation"></a>[Compilation avec nom fort](https://msdn.microsoft.com/library/ms229863.aspx##)
 
-Le **- aptca**, **- delaysign**, **- keycontainer** et **- keyfile** options sont fournies afin que vous puissiez utiliser Aspnet\_ Compiler.exe créer fortement nommés assemblys sans utiliser le [Strong Name Tool (Sn.exe)](https://msdn.microsoft.com/library/k5b5tt23.aspx) séparément. Ces options correspondent respectivement à **AllowPartiallyTrustedCallersAttribute**, **AssemblyDelaySignAttribute**, **AssemblyKeyNameAttribute**et  **AssemblyKeyFileAttribute**.
+Les options **-APTCA**, **-delaysign**, **-keycontainer** et **-keyfile** sont fournies afin que vous puissiez utiliser ASPNET\_compiler. exe pour créer des assemblys à nom fort sans utiliser l' [outil Strong Name Tool (SN. exe)](https://msdn.microsoft.com/library/k5b5tt23.aspx) séparément. Ces options correspondent, respectivement, à **AllowPartiallyTrustedCallersAttribute**, à **AssemblyDelaySignAttribute**, à **AssemblyKeyNameAttribute**et à **AssemblyKeyFileAttribute**.
 
-Discussion de ces attributs est en dehors de la portée de ce cours.
+La discussion de ces attributs n’est pas abordée dans le cadre de ce cours.
 
 ## <a name="labs"></a>Laboratoires
 
-Chacune des pratiques suivantes s’appuie sur les laboratoires précédentes. Vous devez les exécuter dans l’ordre.
+Chacun des laboratoires suivants s’appuie sur les laboratoires précédents. Vous devrez les exécuter dans l’ordre.
 
-## <a name="lab-1-using-the-configuration-api"></a>Atelier pratique 1 : À l’aide de l’API de Configuration
+## <a name="lab-1-using-the-configuration-api"></a>Atelier 1 : utilisation de l’API de configuration
 
-1. Créer un nouveau site Web appelé *mod9lab*.
-2. Ajouter un nouveau fichier de Configuration Web au site.
-3. Ajoutez le code suivant au fichier web.config :
+1. Créez un nouveau site Web appelé *mod9lab*.
+2. Ajoutez un nouveau fichier de configuration Web au site.
+3. Ajoutez le code suivant au fichier Web. config :
 
 [!code-xml[Main](configuration-and-instrumentation/samples/sample14.xml)]
 
-Cela garantit que vous êtes autorisé à enregistrer les modifications au fichier web.config.
+Cela permet de s’assurer que vous avez l’autorisation d’enregistrer les modifications apportées au fichier Web. config.
 
-1. Ajouter un nouveau contrôle étiquette à Default.aspx et modifiez le code pour **lblDebugStatus**.
-2. Ajouter un nouveau contrôle de bouton à Default.aspx.
-3. Modifier l’ID du contrôle de bouton à **btnToggleDebug** et le texte à **basculer l’état de débogage**.
-4. Ouvrez le mode Code pour le fichier code-behind de Default.aspx et ajoutez un **à l’aide de** instruction pour **System.Web.Configuration** comme suit :
+1. Ajoutez un nouveau contrôle Label à default. aspx et remplacez l’ID par **lblDebugStatus**.
+2. Ajoutez un nouveau contrôle Button à default. aspx.
+3. Modifiez l’ID du contrôle Button en **btnToggleDebug** et le texte pour **basculer l’état de débogage**.
+4. Ouvrez le mode code pour le fichier code-behind de default. aspx et ajoutez une instruction **using** pour **System. Web. Configuration** comme suit :
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample15.cs)]
 
-1. Ajoutez deux variables privées à la classe et une Page\_méthode Init comme indiqué ci-dessous :
+1. Ajoutez deux variables privées à la classe et une page\_méthode Init comme indiqué ci-dessous :
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample16.cs)]
 
-1. Ajoutez le code suivant à la Page\_charge :
+1. Ajoutez le code suivant à la page\_charge :
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample17.cs)]
 
-1. Enregistrez et parcourir default.aspx. Notez que le contrôle d’étiquette affiche l’état de débogage actuel.
-2. Double-cliquez sur le contrôle de bouton dans le concepteur et ajoutez le code suivant à l’événement Click du contrôle Button :
+1. Enregistrez et parcourez default. aspx. Notez que le contrôle Label affiche l’état actuel du débogage.
+2. Double-cliquez sur le contrôle Button dans le concepteur et ajoutez le code suivant à l’événement Click pour le contrôle Button :
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample18.cs)]
 
-1. Enregistrer et parcourir default.aspx, puis cliquez sur le bouton.
-2. Ouvrez le fichier web.config après chaque bouton, cliquez sur et observez le **déboguer** d’attribut dans le &lt;compilation&gt; section.
+1. Enregistrez et parcourez default. aspx, puis cliquez sur le bouton.
+2. Ouvrez le fichier Web. config après chaque clic de bouton et observez l’attribut de **débogage** dans la section&gt; &lt;compilation.
 
-## <a name="lab-2-logging-application-restarts"></a>Atelier 2 : Redémarrage de l’Application de journalisation
+## <a name="lab-2-logging-application-restarts"></a>Atelier 2 : redémarrage de l’application de journalisation
 
-Dans cet atelier, vous allez créer le code qui vous permet d’activer/désactiver la journalisation des arrêts d’application, les startups et recompilations dans l’Observateur d’événements.
+Dans ce laboratoire, vous allez créer du code qui vous permettra de basculer la journalisation des arrêts de l’application, des démarrages et des recompilations dans le observateur d’événements.
 
-1. Ajoutez un contrôle DropDownList à default.aspx et remplacez l’ID ddlLogAppEvents.
-2. Définir le **AutoPostBack** propriété pour l’objet DropDownList pour **true**.
-3. Ajoutez trois éléments à la collection d’éléments de la liste DropDownList. Rendre le **texte** pour le premier élément *Select Value* et la valeur -1. Rendre le **texte** et **valeur** du deuxième élément **True** et **texte** et **valeur** du troisième élément **False**.
-4. Ajouter une nouvelle étiquette à default.aspx. Modifier l’ID à **lblLogAppEvents**.
-5. Afficher le code-behind de default.aspx et ajoutez une nouvelle déclaration d’une variable de type HealthMonitoringSection comme indiqué ci-dessous :
+1. Ajoutez un DropDownList à default. aspx et remplacez l’ID par ddlLogAppEvents.
+2. Affectez la valeur **true**à la propriété **AutoPostBack** du DropDownList.
+3. Ajoutez trois éléments à la collection Items pour le DropDownList. Créez le **texte** du premier élément et *Sélectionnez* la valeur-1. Définissez le **texte** et la **valeur** du deuxième élément sur **true** et le **texte** et la **valeur** du troisième élément **false**.
+4. Ajoutez une nouvelle étiquette à default. aspx. Remplacez l’ID par **lblLogAppEvents**.
+5. Ouvrez la vue code-behind pour default. aspx et ajoutez une nouvelle déclaration pour une variable de type HealthMonitoringSection comme indiqué ci-dessous :
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample19.cs)]
 
-1. Ajoutez le code suivant pour le code existant dans la Page\_Init :
+1. Ajoutez le code suivant au code existant dans la page\_init :
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample20.cs)]
 
-1. Double-cliquez sur l’objet DropDownList et ajoutez le code suivant à l’événement SelectedIndexChanged :
+1. Double-cliquez sur DropDownList et ajoutez le code suivant à l’événement SelectedIndexChanged :
 
 [!code-csharp[Main](configuration-and-instrumentation/samples/sample21.cs)]
 
-1. Accédez à default.aspx.
-2. La valeur est la liste déroulante **False**.
-3. Effacer le journal des applications dans l’Observateur d’événements.
-4. Cliquez sur le bouton pour modifier l’attribut de débogage pour l’application.
-5. Actualiser le journal des applications dans l’Observateur d’événements. 
+1. Parcourez default. aspx.
+2. Définissez la liste déroulante sur **false**.
+3. Effacez le journal des applications dans la observateur d’événements.
+4. Cliquez sur le bouton pour modifier l’attribut de débogage de l’application.
+5. Actualisez le journal des applications dans le observateur d’événements. 
 
-    1. Des événements ont été enregistrés ?
-    2. Pourquoi ou pourquoi pas ?
-6. La valeur est la liste déroulante **True.**
-7. Cliquez sur le bouton pour afficher ou masquer l’attribut de débogage pour l’application.
-8. Actualiser la connexion de l’Application l’Observateur d’événements. 
+    1. Des événements ont-ils été enregistrés ?
+    2. Pourquoi ou pourquoi ?
+6. Définissez la liste déroulante sur **true.**
+7. Cliquez sur le bouton pour basculer l’attribut de débogage de l’application.
+8. Actualisez la connexion de l’application à la observateur d’événements. 
 
-    1. Des événements ont été enregistrés ?
-    2. Quel était le motif de l’arrêt de l’application ?
-9. Expérimentez à activer et désactiver la journalisation et examiner les modifications apportées au fichier web.config.
+    1. Des événements ont-ils été enregistrés ?
+    2. Quelle était la raison de l’arrêt de l’application ?
+9. Expérimentez l’activation et la désactivation de la journalisation et observez les modifications apportées au fichier Web. config.
 
 ## <a name="more-information"></a>Informations supplémentaires :
 
-ASP.NET du 2.0 modèle de fournisseur, vous pouvez créer vos propres fournisseurs pour l’instrumentation non seulement de l’application, mais de nombreuses autres utilisations telles que l’appartenance, profils, etc. Pour plus d’informations sur l’écriture d’un fournisseur personnalisé pour consigner les événements d’application dans un fichier texte, visitez [ce lien](https://msdn.microsoft.com/library/default.asp?url=/library/dnaspp/html/ASPNETProvMod_Prt6.asp).
+Le modèle de fournisseur de ASP.NET 2.0 vous permet de créer vos propres fournisseurs pour non seulement l’instrumentation d’application, mais aussi pour de nombreuses autres utilisations, telles que l’appartenance, les profils, etc. Pour plus d’informations sur l’écriture d’un fournisseur personnalisé pour enregistrer des événements d’application dans un fichier texte, visitez [ce lien](https://msdn.microsoft.com/library/default.asp?url=/library/dnaspp/html/ASPNETProvMod_Prt6.asp).

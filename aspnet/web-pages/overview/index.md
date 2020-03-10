@@ -1,6 +1,6 @@
 ---
 uid: web-pages/overview/index
-title: Conseils de Pages Web | Microsoft Docs
+title: Aide sur les pages Web | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,15 +9,15 @@ ms.assetid: 1a2ed0e8-63da-4110-9896-e2731d86f7c4
 msc.legacyurl: /web-pages/overview
 msc.type: book
 ms.openlocfilehash: b4c9e9eb85f6ba9a1e2b2d0a1bbaf027ee25bc0d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381846"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640818"
 ---
-# <a name="web-pages-guidance"></a>Conseils de Pages Web
+# <a name="web-pages-guidance"></a>Aide sur les pages Web
 
-- [Prise en main](getting-started/index.md)
+- [Bien démarrer](getting-started/index.md)
 
     - [Programmer ASP.NET Web Pages dans Visual Studio](getting-started/program-asp-net-web-pages-in-visual-studio.md)
     - [Introduction à la syntaxe Razor de la programmation web ASP.NET](getting-started/introducing-razor-syntax-c.md)
@@ -27,7 +27,7 @@ ms.locfileid: "59381846"
     - [Ajout de fonctionnalités de réseaux sociaux à votre site web](getting-started/13-adding-social-networking-to-your-web-site.md)
     - [Introduction à ASP.NET Web Pages](getting-started/introducing-aspnet-web-pages-2/index.md)
 
-        - [Prise en main](getting-started/introducing-aspnet-web-pages-2/getting-started.md)
+        - [Bien démarrer](getting-started/introducing-aspnet-web-pages-2/getting-started.md)
         - [Principes de base de la programmation](getting-started/introducing-aspnet-web-pages-2/intro-to-web-pages-programming.md)
         - [Affichage des données](getting-started/introducing-aspnet-web-pages-2/displaying-data.md)
         - [Principes de base des formulaires HTML](getting-started/introducing-aspnet-web-pages-2/form-basics.md)
@@ -36,7 +36,7 @@ ms.locfileid: "59381846"
         - [Suppression de données de la base de données](getting-started/introducing-aspnet-web-pages-2/deleting-data.md)
         - [Création d’une disposition cohérente](getting-started/introducing-aspnet-web-pages-2/layouts.md)
         - [Publication d’un site avec WebMatrix](getting-started/introducing-aspnet-web-pages-2/publishing.md)
-- [Le routage](routing/index.md)
+- [Routage](routing/index.md)
 
     - [Création d’URL lisibles dans les sites ASP.NET Web Pages](routing/creating-readable-urls-in-aspnet-web-pages-sites.md)
 - [Interface utilisateur, dispositions et thèmes](ui-layouts-and-themes/index.md)
@@ -68,7 +68,7 @@ ms.locfileid: "59381846"
     - [Ajout de la sécurité et de l’appartenance](security/16-adding-security-and-membership.md)
     - [Activation de la connexion à partir de sites externes dans un site ASP.NET Web Pages](security/enabling-login-from-external-sites-in-an-aspnet-web-pages-site.md)
     - [Utilisation d’un CAPTCHA pour empêcher les programmes automatisés (robots) d’utiliser votre site web ASP.NET](security/using-a-catpcha-to-prevent-automated-programs-bots-from-using-your-aspnet-web-site.md)
-- [Performances](performance-and-traffic/index.md)
+- [Performancess](performance-and-traffic/index.md)
 
     - [Mise en cache pour améliorer les performances de votre site web](performance-and-traffic/15-caching-to-improve-the-performance-of-your-website.md)
     - [Analyse du trafic](performance-and-traffic/14-analyzing-traffic.md)

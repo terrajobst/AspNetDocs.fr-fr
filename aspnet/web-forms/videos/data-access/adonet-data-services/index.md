@@ -9,11 +9,11 @@ ms.assetid: e0af2f02-b132-4ad4-b881-f6b5ab86b1ae
 msc.legacyurl: /web-forms/videos/data-access/adonet-data-services
 msc.type: chapter
 ms.openlocfilehash: 77ef8f8ce0f9b42e28878d0d56c00eab9e245bf4
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106774"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78631361"
 ---
 # <a name="adonet-data-services"></a>ADO.NET Data Services
 

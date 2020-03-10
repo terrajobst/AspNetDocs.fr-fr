@@ -9,11 +9,11 @@ ms.assetid: e454c67d-a86e-4119-a858-eb04bbec2dff
 msc.legacyurl: /mvc/overview/older-versions-1/views/creating-custom-html-helpers-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 264ff9850bad397826b45649d52fbfefafc53a01
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74594529"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78600239"
 ---
 # <a name="creating-custom-html-helpers-c"></a>Création de helpers HTML personnalisés (C#)
 
@@ -33,17 +33,17 @@ Une application auxiliaire HTML est simplement une méthode qui retourne une cha
 
 L’infrastructure MVC ASP.NET comprend l’ensemble suivant de programme d’assistance HTML standard (il ne s’agit pas d’une liste complète) :
 
-- Html. ActionLink ()
-- Html. BeginForm ()
-- Html. CheckBox ()
-- Html. DropDownList ()
-- Html. EndForm ()
-- Html. Hidden ()
-- Html. ListBox ()
-- Html. mot de passe ()
-- Html. RadioButton ()
+- Html.ActionLink()
+- Html.BeginForm()
+- Html.CheckBox()
+- Html.DropDownList()
+- Html.EndForm()
+- Html.Hidden()
+- Html.ListBox()
+- Html.Password()
+- Html.RadioButton()
 - Html. TextArea ()
-- Html. TextBox ()
+- Html.TextBox()
 
 Par exemple, prenons le formulaire de la liste 1. Ce formulaire est rendu à l’aide de deux des applications auxiliaires HTML standard (voir la figure 1). Ce formulaire utilise les méthodes d’assistance `Html.BeginForm()` et `Html.TextBox()` pour restituer un formulaire HTML simple.
 

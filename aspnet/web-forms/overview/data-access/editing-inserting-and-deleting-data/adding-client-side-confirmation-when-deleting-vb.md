@@ -9,11 +9,11 @@ ms.assetid: 6331e02e-c465-4cdf-bd3f-f07680c289d6
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-vb
 msc.type: authoredcontent
 ms.openlocfilehash: addb5a1fdc5793309388c5f06b44fb3b145bc102
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74589364"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78610515"
 ---
 # <a name="adding-client-side-confirmation-when-deleting-vb"></a>Ajout d’une confirmation côté client lors de la suppression (VB)
 

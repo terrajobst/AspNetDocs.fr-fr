@@ -9,11 +9,11 @@ ms.assetid: 49d8a66c-3ea8-4087-839f-179d1d94512a
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 2b9cdb5af6f33171b191d5a80473c7796eb098d9
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74589324"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78608387"
 ---
 # <a name="handling-bll--and-dal-level-exceptions-in-an-aspnet-page-c"></a>Gestion des exceptions de niveau BLL et DAL dans une page ASP.NET (C#)
 
@@ -35,7 +35,7 @@ Comme nous l’avons vu dans le [didacticiel précédent](examining-the-events-a
 
 Nous avons déjà examiné les événements qui se déclenchent au cours de l’étape 1 et vu comment ils peuvent être utilisés pour personnaliser les paramètres d’entrée ou pour annuler l’opération. Dans ce didacticiel, nous allons attirer l’attention sur les événements qui se déclenchent une fois l’opération terminée. Grâce à ces gestionnaires d’événements de publication, nous pouvons, entre autres, déterminer si une exception s’est produite pendant l’opération et la gérer de manière appropriée, en affichant un message d’erreur convivial et informatif à l’écran plutôt que par défaut au ASP.NET standard Page d’exception.
 
-Pour illustrer l’utilisation de ces événements de publication, nous allons créer une page qui répertorie les produits dans un GridView modifiable. Lors de la mise à jour d’un produit, si une exception est levée, notre page ASP.NET affiche un message succinct au-dessus du contrôle GridView qui explique qu’un problème s’est produit. Commençons !
+Pour illustrer l’utilisation de ces événements de publication, nous allons créer une page qui répertorie les produits dans un GridView modifiable. Lors de la mise à jour d’un produit, si une exception est levée, notre page ASP.NET affiche un message succinct au-dessus du contrôle GridView qui explique qu’un problème s’est produit. C’est parti !
 
 ## <a name="step-1-creating-an-editable-gridview-of-products"></a>Étape 1 : création d’un contrôle GridView modifiable de produits
 

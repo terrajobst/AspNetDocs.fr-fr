@@ -9,11 +9,11 @@ ms.assetid: 14873c5d-81a9-455b-bd71-30fb555583e7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 33367d5e3c4b5c8fa039ee20704054ba508e717a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74615001"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78643401"
 ---
 # <a name="displaying-a-custom-error-page-vb"></a>Affichage d’une page d’erreur personnalisée (VB)
 

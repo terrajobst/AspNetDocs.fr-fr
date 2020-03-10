@@ -9,11 +9,11 @@ ms.assetid: afa59dfa-fef1-43d3-8fdd-aea3be36ed3c
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/numericupdown/creating-a-numeric-up-down-control-with-a-web-service-backend-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 2bf6e1b27180589d39e308de62b5be1f47fa8fe2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606363"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78612993"
 ---
 # <a name="creating-a-numeric-updown-control-with-a-web-service-backend-vb"></a>Création d’un contrôle Haut/bas numérique avec un backend de service web (VB)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Au lieu de laisser un utilisateur taper une valeur dans une case à cocher, un contrôle numérique haut/PG. (qui existe sur Windows et d’autres systèmes d’exploitation) peut s’avérer plus confortable. Par défaut, le contrôle NumericUpDown augmente ou diminue toujours une valeur de 1, mais un service Web prouve plus de flexibilité.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Au lieu de laisser un utilisateur taper une valeur dans une case à cocher, un contrôle numérique haut/PG. (qui existe sur Windows et d’autres systèmes d’exploitation) peut s’avérer plus confortable. Par défaut, le contrôle de `NumericUpDown` augmente ou diminue toujours une valeur de 1, mais un service Web prouve plus de flexibilité.
 

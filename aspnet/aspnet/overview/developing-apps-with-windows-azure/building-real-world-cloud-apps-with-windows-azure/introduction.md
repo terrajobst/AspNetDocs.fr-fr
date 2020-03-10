@@ -9,11 +9,11 @@ ms.assetid: accfa16a-ab15-4c26-9ad4-babdc2a77d2e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction
 msc.type: authoredcontent
 ms.openlocfilehash: b88573b3702b755b155e8da35f5f8a67931bafc6
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457113"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617592"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Création d’applications Cloud réalistes avec Azure
 
@@ -25,7 +25,7 @@ par [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitte
 > 
 > Le contenu est basé sur une présentation développée par Scott Guthrie et livrée par lui à la Conférence des développeurs norvégiens (norvégiens) en juin de 2013 (partie[1](http://vimeo.com/68215538) [, partie 2)](http://vimeo.com/68215602)et à Microsoft Tech Ed Australie en septembre 2013 ([partie 1](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR324), [partie 2](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR325)). De [nombreuses autres](more-patterns-and-guidance.md#acknowledgments) ont mis à jour et augmenté le contenu lors de sa transition de la vidéo au format écrit.
 
-## <a name="intended-audience"></a>Public visé
+## <a name="intended-audience"></a>Public concerné
 
 Les développeurs qui s’intéressent au développement pour le Cloud, qui envisagent de migrer vers le Cloud ou qui sont nouveaux dans le développement Cloud, trouveront ici une vue d’ensemble concise des concepts et pratiques les plus importants qu’ils doivent connaître. Les concepts sont illustrés par des exemples concrets et chaque chapitre est lié à d’autres ressources pour obtenir des informations plus approfondies. Les exemples et les liens vers des ressources supplémentaires sont pour les infrastructures et les services Microsoft, mais les principes illustrés s’appliquent également à d’autres infrastructures de développement Web et à d’autres environnements Cloud.
 
@@ -102,7 +102,7 @@ Ce livre électronique explique les treize modèles recommandés pour le dévelo
 - [Annexe : L’exemple d’application Fix It](the-fix-it-sample-application.md)
 
     - Problèmes connus
-    - Pratiques recommandées
+    - Meilleures pratiques
     - Comment télécharger, générer, exécuter et déployer.
 
 Ces modèles s’appliquent à tous les environnements Cloud, mais nous allons les illustrer à l’aide d’exemples basés sur des technologies et des services Microsoft, tels que Visual Studio, Team Foundation Service, ASP.NET et Azure.
@@ -154,7 +154,7 @@ Tout cela a lieu automatiquement. Tout ce que vous avez à faire, c’est créer
 Pour obtenir un didacticiel pas à pas rapide et facile qui montre comment créer une application Web dans Visual Studio et la déployer sur un site Web Azure, consultez prise en [main d’Azure et de ASP.net](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-get-started/).
 
 <a id="summary"></a>
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Cette introduction a fourni une liste de rubriques abordées par le livre, des captures d’écran de l’exemple d’application et une brève présentation de l’Web Apps dans Azure App Service environnement Cloud. L’un des grands avantages du développement d’applications dans et pour le Cloud est qu’il est facile d’automatiser des tâches de développement répétitives, telles que la création d’un environnement de test et le déploiement de votre code vers celui-ci. La procédure à suivre est l’objet du [chapitre suivant](automate-everything.md).
 

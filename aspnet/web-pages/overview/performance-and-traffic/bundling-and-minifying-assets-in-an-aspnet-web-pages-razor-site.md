@@ -1,25 +1,25 @@
 ---
 uid: web-pages/overview/performance-and-traffic/bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site
-title: Regroupement et minimisation des ressources dans une application Web Pages (Razor) Site | Microsoft Docs
+title: Regroupement et minimisation de ressources dans un site pages Web ASP.NET (Razor) | Microsoft Docs
 author: microsoft
-description: Regroupement et minimisation manières pour accélérer votre site. Regroupement de permet de combiner plusieurs fichiers JavaScript (.js) ou plusieurs styles CSS (...)
+description: Le regroupement et la minimisation sont des moyens de rendre votre site plus rapide. Le regroupement vous permet de combiner plusieurs fichiers JavaScript (. js) ou plusieurs feuilles de style en cascade (...
 ms.author: riande
 ms.date: 06/21/2012
 ms.assetid: 8906f1e9-4b66-4a03-8e8a-9e9debf8ed91
 msc.legacyurl: /web-pages/overview/performance-and-traffic/bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site
 msc.type: authoredcontent
 ms.openlocfilehash: 5e42111ad71ec65581e56c73822e23ecd5fcbd58
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59400449"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78635708"
 ---
 # <a name="bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site"></a>Bundles et minimisation des ressources dans un site ASP.NET Web Pages (Razor)
 
-by [Microsoft](https://github.com/microsoft)
+par [Microsoft](https://github.com/microsoft)
 
-> Regroupement et minimisation manières pour accélérer votre site. Regroupement vous permet de combiner plusieurs JavaScript (*.js*) fichiers ou la feuille de style en cascade multiples (*.css*) de sorte qu’ils peuvent être téléchargés comme une unité, plutôt qu’une à la fois. Minimisation resserre les espaces blancs et effectue d’autres types de compression pour rendre les fichiers téléchargés en tant que petit un éventuel.
+> Le regroupement et la minimisation sont des moyens de rendre votre site plus rapide. Le regroupement vous permet de combiner plusieurs fichiers JavaScript ( *. js*) ou plusieurs fichiers de feuille de style en cascade ( *. CSS*) afin qu’ils puissent être téléchargés en tant qu’unité, plutôt qu’un à la fois. La minimisation élimine l’espace blanc et effectue d’autres types de compression pour rendre les fichiers téléchargés aussi petits que possible.
 > 
 > > [!NOTE]
-> > La version RC de ASP.NET Web Pages 2 ne prend pas en charge regroupement et minimisation, car le package qui contient les éléments requis n’est pas encore disponible dans Microsoft WebMatrix. Veuillez nous excuser pour ce désagrément. Le package est censé être disponible dans la version finale d’ASP.NET Web Pages 2 et WebMatrix 2.
+> > La version RC de pages Web ASP.NET 2 ne prend pas en charge le regroupement et la minimisation, car le package qui contient les éléments requis n’est pas encore disponible dans Microsoft WebMatrix. Veuillez nous excuser pour ce désagrément. Le package doit être disponible dans la version finale de pages Web ASP.NET 2 et WebMatrix 2.

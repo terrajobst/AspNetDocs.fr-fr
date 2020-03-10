@@ -1,23 +1,23 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc4/index
-title: Bien démarrer avec ASP.NET MVC 4 | Microsoft Docs
+title: Prise en main avec ASP.NET MVC 4 | Microsoft Docs
 author: rick-anderson
-description: Cette série de didacticiels vous apprend les notions de base de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express Service Pack 1, w...
+description: Cette série de didacticiels vous apprend les bases de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express Service Pack 1, w...
 ms.author: riande
 ms.date: 02/15/2012
 ms.assetid: a35183ac-cbcb-4070-9233-6331cde921ad
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4
 msc.type: chapter
 ms.openlocfilehash: a73935f74d696bad9070c56b506d3aa2dbcceb25
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65129857"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78599651"
 ---
 # <a name="getting-started-with-aspnet-mvc-4"></a>Bien démarrer avec ASP.NET MVC 4
 
-> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express Service Pack 1, qui est une version gratuite de Microsoft Visual Studio.
+> Cette série de didacticiels vous apprend les bases de la création d’une application Web ASP.NET MVC à l’aide de Microsoft Visual Web Developer 2010 Express Service Pack 1, qui est une version gratuite de Microsoft Visual Studio.
 
 - [Introduction à ASP.NET MVC 4](intro-to-aspnet-mvc-4.md)
 - [Ajout d’un contrôleur](adding-a-controller.md)

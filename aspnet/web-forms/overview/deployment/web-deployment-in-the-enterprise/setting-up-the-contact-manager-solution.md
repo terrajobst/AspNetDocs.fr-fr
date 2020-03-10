@@ -1,19 +1,19 @@
 ---
 uid: web-forms/overview/deployment/web-deployment-in-the-enterprise/setting-up-the-contact-manager-solution
-title: Configuration de la Solution de gestionnaire de contacts | Microsoft Docs
+title: Configuration de la solution du gestionnaire de contacts | Microsoft Docs
 author: jrjlee
-description: Cette rubrique décrit comment télécharger et configurer la solution de Contact Manager pour exécuter localement sur une station de travail de développeur.
+description: Cette rubrique explique comment télécharger et configurer la solution gestionnaire de contacts pour une exécution locale sur une station de travail de développeur.
 ms.author: riande
 ms.date: 05/04/2012
 ms.assetid: 200b973c-776b-4a9b-9e82-39fda6120a52
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/setting-up-the-contact-manager-solution
 msc.type: authoredcontent
 ms.openlocfilehash: d9774ee01cb0515d7e733b24baa661f2648bd7c4
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131039"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78629856"
 ---
 # <a name="setting-up-the-contact-manager-solution"></a>Configuration de la solution Gestionnaire de contacts
 
@@ -21,103 +21,103 @@ par [Jason Lee](https://github.com/jrjlee)
 
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
-> Cette rubrique décrit comment télécharger et configurer la solution de Contact Manager pour exécuter localement sur une station de travail de développeur.
+> Cette rubrique explique comment télécharger et configurer la solution gestionnaire de contacts pour une exécution locale sur une station de travail de développeur.
 
 ## <a name="system-requirements"></a>Configuration système requise
 
-Pour exécuter la solution de Contact Manager localement et effectuer les autres tâches décrites dans ce didacticiel, vous devez installer ce logiciel sur votre station de travail de développeur :
+Pour exécuter la solution du gestionnaire de contacts localement et effectuer les autres tâches décrites dans ce didacticiel, vous devez installer ce logiciel sur votre station de travail de développeur :
 
-- Visual Studio 2010 Service Pack 1, Premium ou Édition intégrale
-- Internet Information Services (IIS) 7.5 Express
-- SQL Server Express 2008 R2
-- IIS outil de déploiement Web (Web Deploy) 2.1 ou version ultérieure
-- ASP.NET 4.0
+- Visual Studio 2010 Service Pack 1, édition Premium ou édition intégrale
+- Services Internet (IIS) 7.5 Express
+- SQL Server Express 2008 R2
+- Outil de déploiement Web IIS (Web Deploy) 2,1 ou version ultérieure
+- ASP.NET 4,0
 - ASP.NET MVC
 - .NET Framework 4
 - .NET Framework 3.5 SP1
 
-À l’exception de Visual Studio 2010, vous pouvez télécharger et installer les dernières versions de tous ces produits et les composants par le biais du [Web Platform Installer](https://go.microsoft.com/?linkid=9805118).
+À l’exception de Visual Studio 2010, vous pouvez télécharger et installer les dernières versions de tous ces produits et composants par le biais du [Web Platform Installer](https://go.microsoft.com/?linkid=9805118).
 
-## <a name="download-and-extract-the-solution"></a>Téléchargez et extrayez la Solution
+## <a name="download-and-extract-the-solution"></a>Télécharger et extraire la solution
 
-Vous pouvez télécharger l’exemple d’application Gestionnaire de contacts à partir de MSDN Code Gallery [ici](https://code.msdn.microsoft.com/Deploying-Web-Applications-9d9093c0).
+Vous pouvez télécharger l’exemple d’application du gestionnaire de contacts à partir de la Galerie de code MSDN [ici](https://code.msdn.microsoft.com/Deploying-Web-Applications-9d9093c0).
 
-## <a name="configure-and-run-the-solution"></a>Configurer et exécuter la Solution
+## <a name="configure-and-run-the-solution"></a>Configuration et exécution de la solution
 
-Pour configurer et exécuter la solution de gestionnaire de contacts sur votre ordinateur local, vous devez effectuer ces étapes :
+Pour configurer et exécuter la solution gestionnaire de contacts sur votre ordinateur local, vous devez effectuer les étapes principales suivantes :
 
-1. Si vous n’avez pas déjà, créez une base de services d’application ASP.NET locale avec les fonctionnalités de gestion des appartenances et de rôles est activées.
-2. Modifier les chaînes de connexion dans le *web.config* fichiers pour pointer vers votre instance locale de SQL Server Express.
+1. Si vous n’en avez pas déjà un, créez une base de données des services d’application ASP.NET locale avec les fonctionnalités d’appartenance et de gestion des rôles activées.
+2. Modifiez les chaînes de connexion dans les fichiers *Web. config* pour pointer vers votre instance de SQL Server Express locale.
 3. Exécutez la solution à partir de Visual Studio 2010.
 
-Le reste de cette section fournit plus d’informations sur comment effectuer chacune de ces tâches.
+Le reste de cette section fournit des conseils supplémentaires sur la façon d’effectuer chacune de ces tâches.
 
-**Pour créer la base de données de services d’application**
+**Pour créer la base de données des services d’application**
 
-1. Ouvrez une invite de commandes de Visual Studio 2010. Pour ce faire, sur le **Démarrer** menu, pointez sur **tous les programmes**, cliquez sur **Microsoft Visual Studio 2010**, cliquez sur **Visual Studio Tools**, puis Cliquez sur **invite de commandes Visual Studio (2010)**.
-2. À l’invite de commandes, tapez la commande suivante et appuyez sur ENTRÉE :
+1. Ouvrez une invite de commandes de Visual Studio 2010. Pour ce faire, dans le menu **Démarrer** , pointez **sur tous les programmes**, cliquez sur **Microsoft Visual Studio 2010**, sur **Visual Studio Tools**, puis sur invite de **commandes de Visual Studio (2010)** .
+2. À l’invite de commandes, tapez la commande suivante, puis appuyez sur entrée :
 
     [!code-console[Main](setting-up-the-contact-manager-solution/samples/sample1.cmd)]
 
-    1. Utilisez le **– C** commutateur pour spécifier la chaîne de connexion pour votre serveur de base de données.
-    2. Utilisez le **– A** commutateur pour spécifier les fonctionnalités que vous souhaitez ajouter à la base de données de services de l’application. Dans ce cas, **m** indique que vous souhaitez ajouter la prise en charge pour le fournisseur d’appartenances et **r** indique que vous souhaitez ajouter la prise en charge pour le Gestionnaire de rôles.
-    3. Utilisez le **– d** commutateur pour spécifier un nom pour votre base de données de services d’application. Si vous omettez ce commutateur, l’utilitaire crée une base de données portant le nom par défaut **aspnetdb**.
-3. Lorsque la base de données a été créé avec succès, l’invite de commandes affiche une confirmation.
+    1. Utilisez le commutateur **– C** pour spécifier la chaîne de connexion de votre serveur de base de données.
+    2. Utilisez le commutateur **– A** pour spécifier les fonctionnalités des services d’application que vous souhaitez ajouter à la base de données. Dans ce cas, **m** indique que vous souhaitez ajouter la prise en charge pour le fournisseur d’appartenances et **r** indique que vous souhaitez ajouter la prise en charge du gestionnaire de rôles.
+    3. Utilisez le commutateur **– d** pour spécifier un nom pour votre base de données de services d’application. Si vous omettez ce commutateur, l’utilitaire crée une base de données avec le nom par défaut **aspnetdb**.
+3. Lorsque la base de données a été créée avec succès, l’invite de commandes affiche une confirmation.
 
     ![](setting-up-the-contact-manager-solution/_static/image1.png)
 
 > [!NOTE]
-> Pour plus d’informations sur le compte aspnet\_regsql utilitaire, consultez [ASP.NET SQL Server Registration Tool (Aspnet\_regsql.exe)](https://msdn.microsoft.com/library/ms229862(v=vs.100).aspx).
+> Pour plus d’informations sur l’utilitaire ASPNET\_RegSql, consultez [ASP.NET SQL Server Registration Tool (aspnet\_RegSql. exe)](https://msdn.microsoft.com/library/ms229862(v=vs.100).aspx).
 
-L’étape suivante consiste à vous assurer que les chaînes de connexion dans la solution Gestionnaire de contacts pointent vers votre instance locale de SQL Server Express.
+L’étape suivante consiste à s’assurer que les chaînes de connexion dans la solution du gestionnaire de contacts pointent vers votre instance locale de SQL Server Express.
 
 **Pour mettre à jour les chaînes de connexion**
 
-1. Ouvrez la solution de gestionnaire de contacts dans Visual Studio 2010.
-2. Dans le **l’Explorateur de solutions** fenêtre, développez le **ContactManager.Mvc** de projet, puis double-cliquez sur le **Web.config** nœud.
+1. Ouvrez la solution gestionnaire de contacts dans Visual Studio 2010.
+2. Dans la fenêtre **Explorateur de solutions** , développez le projet **ContactManager. Mvc** , puis double-cliquez sur le nœud **Web. config** .
 
     > [!NOTE]
-    > Le projet ContactManager.Mvc inclut deux *web.config* fichiers. Vous devez modifier le fichier au niveau du projet.
+    > Le projet ContactManager. Mvc comprend deux fichiers *Web. config* . Vous devez modifier le fichier au niveau du projet.
 
     ![](setting-up-the-contact-manager-solution/_static/image2.png)
-3. Dans le **connectionStrings** élément, vérifiez que la chaîne de connexion nommée **ApplicationServices** pointe vers votre base de services d’application ASP.NET locale.
+3. Dans l’élément **connectionStrings** , vérifiez que la chaîne de connexion nommée **ApplicationServices** pointe vers votre base de données ASP.net application services locale.
 
     [!code-xml[Main](setting-up-the-contact-manager-solution/samples/sample2.xml)]
-4. Dans le **l’Explorateur de solutions** fenêtre, développez le **ContactManager.Service** de projet, puis double-cliquez sur le **Web.config** nœud.
+4. Dans la fenêtre **Explorateur de solutions** , développez le projet **ContactManager. service** , puis double-cliquez sur le nœud **Web. config** .
 
     ![](setting-up-the-contact-manager-solution/_static/image3.png)
-5. Dans le **connectionStrings** élément, dans la chaîne de connexion nommée **ContactManagerContext**, vérifiez que le **Source de données** propriété est définie sur votre instance locale de SQL Server Express. Vous n’avez pas besoin de modifier quoi que ce soit d’autre dans la chaîne de connexion.
+5. Dans l’élément **connectionStrings** , dans la chaîne de connexion nommée **ContactManagerContext**, vérifiez que la propriété de la **source de données** est définie sur votre instance locale de SQL Server Express. Vous n’avez pas besoin de modifier quoi que ce soit d’autre dans la chaîne de connexion.
 
     [!code-xml[Main](setting-up-the-contact-manager-solution/samples/sample3.xml)]
 6. Enregistrez tous les fichiers ouverts.
 
-Vous devez maintenant être prêt à exécuter la solution de gestionnaire de contacts sur votre ordinateur local.
+Vous devez maintenant être prêt à exécuter la solution du gestionnaire de contacts sur votre ordinateur local.
 
 > [!NOTE]
-> Si vous suivez ces étapes sans d’abord créer une base de données de services d’application, ASP.NET crée la base de données la première fois que vous essayez de créer un utilisateur. Toutefois, création manuelle de la base de données vous donne un contrôle plus important sur l’ensemble de fonctionnalités de services application que vous souhaitez prendre en charge.
+> Si vous suivez ces étapes sans créer au préalable une base de données de services d’application, ASP.NET crée la base de données la première fois que vous tentez de créer un utilisateur. Toutefois, la création manuelle de la base de données vous donne beaucoup plus de contrôle sur l’ensemble de fonctionnalités des services d’application que vous souhaitez prendre en charge.
 
-**Pour exécuter la solution de gestionnaire de contacts**
+**Pour exécuter la solution du gestionnaire de contacts**
 
 1. Dans Visual Studio 2010, appuyez sur F5.
-2. Internet Explorer démarre et demande l’URL de l’application ASP.NET MVC 3 Contact Manager. Par défaut, l’application affiche le **tous les Contacts** page.
+2. Internet Explorer démarre et demande l’URL de l’application ASP.NET MVC 3 du gestionnaire de contacts. Par défaut, l’application affiche la page **tous les contacts** .
 
     ![](setting-up-the-contact-manager-solution/_static/image4.png)
-3. Ajouter plusieurs contacts et vérifiez que l’application fonctionne comme prévu.
+3. Ajoutez quelques contacts, puis vérifiez que l’application fonctionne comme prévu.
 
     ![](setting-up-the-contact-manager-solution/_static/image5.png)
-4. Accédez à `http://localhost:50114/Account/Register` (ajuster l’URL si vous hébergez l’application sur un port différent). Ajouter un nom d’utilisateur, une adresse e-mail et un mot de passe et vérifiez que vous êtes en mesure d’inscrire un compte avec succès.
+4. Accédez à `http://localhost:50114/Account/Register` (ajustez l’URL si vous hébergez l’application sur un autre port). Ajoutez un nom d’utilisateur, une adresse de messagerie et un mot de passe, puis vérifiez que vous êtes en mesure d’inscrire correctement un compte.
 
     ![](setting-up-the-contact-manager-solution/_static/image6.png)
-5. Accédez à `http://localhost:50114/Account/LogOn` (ajuster l’URL si vous hébergez l’application sur un port différent). Vérifiez que vous êtes en mesure d’ouvrir une session en utilisant le compte que vous venez de créer.
+5. Accédez à `http://localhost:50114/Account/LogOn` (ajustez l’URL si vous hébergez l’application sur un autre port). Vérifiez que vous êtes en mesure d’ouvrir une session à l’aide du compte que vous venez de créer.
 
     ![](setting-up-the-contact-manager-solution/_static/image7.png)
 6. Fermez Internet Explorer pour arrêter le débogage.
 
 ## <a name="conclusion"></a>Conclusion
 
-À ce stade, la solution de Contact Manager doit être entièrement configurée pour s’exécuter sur votre ordinateur local. Lorsque vous travaillez via les autres rubriques dans ce didacticiel, vous pouvez utiliser la solution en tant que référence.
+À ce stade, la solution du gestionnaire de contacts doit être entièrement configurée pour s’exécuter sur votre ordinateur local. Vous pouvez utiliser la solution comme référence lorsque vous travaillez dans les autres rubriques de ce didacticiel.
 
-La rubrique suivante, [présentation du fichier de projet](understanding-the-project-file.md), explique comment vous pouvez utiliser les fichiers de projet Microsoft Build Engine (MSBuild) personnalisés au sein de la solution de Contact Manager pour contrôler le processus de déploiement.
+La rubrique suivante, qui décrit [le fichier projet](understanding-the-project-file.md), explique comment vous pouvez utiliser les fichiers de projet de Microsoft Build Engine personnalisé (MSBuild) dans la solution du gestionnaire de contacts pour contrôler le processus de déploiement.
 
 > [!div class="step-by-step"]
 > [Précédent](the-contact-manager-solution.md)

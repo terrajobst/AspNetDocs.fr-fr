@@ -6,15 +6,15 @@ ms.author: riande
 ms.date: 12/03/2019
 uid: samesite/kbs-samesite
 ms.openlocfilehash: 5774fe9e3dcced8c572a24d2e696abc4b67f2b2e
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074876"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78545009"
 ---
 # <a name="kb-articles-that-support-samesite-in-net-framework"></a>Articles de la base de connaissances qui prennent en charge SameSite dans .NET Framework
 
-| Version du produit | Cumulée | Update |
+| Version du produit | Cumulée | Mise à jour |
 | ------------- | ------------- | --- |
 | **Windows 10 1909 et Windows Server, version 1909** | | |
 | .NET Framework 4.8  | [Catalogue](https://www.catalog.update.microsoft.com/Search.aspx?q=4533002)  | [4533002](https://support.microsoft.com/en-us/help/4533002) |
@@ -50,4 +50,4 @@ Le tableau suivant concerne les versions antérieures de Windows et Windows Serv
 | .NET Framework 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 | [Catalogue](https://www.catalog.update.microsoft.com/Search.aspx?q=4533012)  | [4533012](https://support.microsoft.com/en-us/help/4533012) |
 | .NET Framework 4.8  | [Catalogue](https://www.catalog.update.microsoft.com/Search.aspx?q=4533005)  | [4533005](https://support.microsoft.com/en-us/help/4533005) |
 | **Windows Server 2008** | |
-| .NET Framework 4.6  | [Catalogue](https://www.catalog.update.microsoft.com/Search.aspx?q=4533012)  | [4533012](https://support.microsoft.com/en-us/help/4533012) |
+| .NET Framework 4.6  | [Catalogue](https://www.catalog.update.microsoft.com/Search.aspx?q=4533012)  | [4533012](https://support.microsoft.com/en-us/help/4533012) |

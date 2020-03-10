@@ -2,16 +2,16 @@
 uid: tutorials
 title: Didacticiels ASP.NET | Microsoft Docs
 author: tdykstra
-description: Liste des guides pas à pas pour le développement d’applications ASP.NET.
+description: Liste de guides pas à pas pour le développement d’applications ASP.NET.
 ms.assetid: fddf8e5e-c055-4f81-b691-78deef871112
 ms.author: riande
 ms.date: 09/20/2017
 ms.openlocfilehash: 106b4b88d2e7de90900b7a73570ecd6140e2db66
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113193"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558169"
 ---
 # <a name="aspnet-tutorials"></a>Didacticiels ASP.NET
 
@@ -20,7 +20,7 @@ ms.locfileid: "65113193"
 Les guides pas à pas suivants pour le développement d’applications ASP.NET sont disponibles.
 
 > [!NOTE]
-> Vous recherchez des didacticiels ASP.NET Core ?  Rechercher les [ici](https://docs.microsoft.com/aspnet/core/tutorials/).
+> Vous recherchez des didacticiels de ASP.NET Core ?  Trouvez-les [ici](https://docs.microsoft.com/aspnet/core/tutorials/).
 
 ## <a name="web-forms"></a>Web Forms
 
@@ -60,7 +60,7 @@ Les guides pas à pas suivants pour le développement d’applications ASP.NET s
 * [Bien démarrer avec Web API 2 (C#)](web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md)
 * [Utilisation de l’API web avec ASP.NET Web Forms](web-api/overview/getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md)
 * [Création de pages d’aide de l’API web](web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages.md)
-* [Atelier pratique : Créer une Application à Page unique (SPA) avec l’API Web ASP.NET et Angular.js](web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
+* [Atelier pratique : Créer une application à une seule page avec l’API web ASP.NET et Angular.js](web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
 * [Créer une API REST avec le routage d’attributs dans Web API 2](web-api/overview/web-api-routing-and-actions/create-a-rest-api-with-attribute-routing.md)
 * [Utilisation de Web API 2 avec Entity Framework 6](web-api/overview/data/using-web-api-with-entity-framework/index.md)
 * [Appel de l’API web à partir d’une application Windows Phone 8 (C#)](web-api/overview/mobile-clients/calling-web-api-from-a-windows-phone-8-application.md)
@@ -78,8 +78,8 @@ Les guides pas à pas suivants pour le développement d’applications ASP.NET s
 * [Héberger Web API 2 dans un rôle Azure Worker](web-api/overview/hosting-aspnet-web-api/host-aspnet-web-api-in-an-azure-worker-role.md)
 * [Injection de dépendances dans Web API 2](web-api/overview/advanced/dependency-injection.md)
 * [Appeler une API web à partir d’un client .NET (C#)](web-api/overview/advanced/calling-a-web-api-from-a-net-client.md)
-* [Envoi de données de formulaire HTML dans l’API Web : Données de Form-UrlEncode](web-api/overview/advanced/sending-html-form-data-part-1.md)
-* [Envoi de données de formulaire HTML dans l’API Web : Chargement du fichier et MIME à parties multiples](web-api/overview/advanced/sending-html-form-data-part-2.md)
+* [Envoi de données de formulaire HTML dans l’API web : données de formulaire encodées dans l’URL](web-api/overview/advanced/sending-html-form-data-part-1.md)
+* [Envoi de données de formulaire HTML dans l’API web : chargement de fichier et MIME à plusieurs parties](web-api/overview/advanced/sending-html-form-data-part-2.md)
 
 ## <a name="web-pages"></a>Pages web
 
@@ -112,11 +112,11 @@ Les guides pas à pas suivants pour le développement d’applications ASP.NET s
 
 ## <a name="aspnet-signalr"></a>SignalR ASP.NET
 
-* [Tutoriel : Bien démarrer avec SignalR 2](signalr/overview/getting-started/tutorial-getting-started-with-signalr.md)
-* [Tutoriel : Bien démarrer avec SignalR 2 et MVC 5](signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
-* [Tutoriel : En temps réel haute fréquence avec SignalR 2](signalr/overview/getting-started/tutorial-high-frequency-realtime-with-signalr.md)
-* [Tutoriel : Serveur de diffusion avec SignalR 2](signalr/overview/getting-started/tutorial-server-broadcast-with-signalr.md)
-* [Atelier pratique : Applications Web en temps réel avec SignalR](signalr/overview/getting-started/real-time-web-applications-with-signalr.md)
+* [Didacticiel : Bien démarrer avec SignalR 2](signalr/overview/getting-started/tutorial-getting-started-with-signalr.md)
+* [Didacticiel : Bien démarrer avec SignalR 2 et MVC 5](signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
+* [Didacticiel : Temps réel haute fréquence avec SignalR 2](signalr/overview/getting-started/tutorial-high-frequency-realtime-with-signalr.md)
+* [Didacticiel : Diffusion par le serveur avec SignalR 2](signalr/overview/getting-started/tutorial-server-broadcast-with-signalr.md)
+* [Atelier pratique : Applications web temps réel avec SignalR](signalr/overview/getting-started/real-time-web-applications-with-signalr.md)
 * [Tests unitaires des applications SignalR](signalr/overview/testing-and-debugging/unit-testing-signalr-applications.md)
 * [Activation du traçage SignalR](signalr/overview/testing-and-debugging/enabling-signalr-tracing.md)
 * [Montée en puissance parallèle de SignalR avec Azure Service Bus](signalr/overview/performance/scaleout-with-windows-azure-service-bus.md)
@@ -124,14 +124,14 @@ Les guides pas à pas suivants pour le développement d’applications ASP.NET s
 * [Montée en puissance parallèle de SignalR avec SQL Server](signalr/overview/performance/scaleout-with-sql-server.md)
 * [Test de la densité des connexions SignalR avec Crank](signalr/overview/performance/signalr-connection-density-testing-with-crank.md)
 * [Utilisation des compteurs de performance SignalR dans un rôle web Azure](signalr/overview/performance/using-signalr-performance-counters-in-an-azure-web-role.md)
-* [Tutoriel : Auto-hébergement de SignalR](signalr/overview/deployment/tutorial-signalr-self-host.md)
+* [Didacticiel : Auto-hébergement de SignalR](signalr/overview/deployment/tutorial-signalr-self-host.md)
 * [Utilisation de SignalR avec Web Apps dans Azure App Service](signalr/overview/deployment/using-signalr-with-azure-web-sites.md)
 
 ## <a name="aspnet-identity"></a>ASP.NET Identity
 
 * [Ajout d’ASP.NET Identity à un projet Web Forms vide ou existant](identity/overview/getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
 * [Développement d’applications ASP.NET avec Azure Active Directory](identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
-* [ASP.NET Identity : Utilisation du stockage MySQL avec un fournisseur de MySQL EntityFramework (C#)](identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
+* [ASP.NET Identity : Utilisation du stockage MySQL avec un fournisseur MySQL Entity Framework (C#)](identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
 * [Confirmation de compte et récupération de mot de passe avec ASP.NET Identity (C#)](identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
 * [Authentification à deux facteurs par SMS et e-mail avec ASP.NET Identity](identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
 * [Implémentation d’un fournisseur de stockage ASP.NET Identity MySQL personnalisé](identity/overview/extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider.md)

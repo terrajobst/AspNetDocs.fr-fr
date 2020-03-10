@@ -9,11 +9,11 @@ ms.assetid: 27591afa-3c14-47e6-8323-573f8f7aa862
 msc.legacyurl: /web-forms/videos/how-do-i
 msc.type: chapter
 ms.openlocfilehash: 12c988e64c5b724e04b6fc5f8eddc6a181764e1d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65114919"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78639985"
 ---
 # <a name="how-do-i"></a>Comment faire
 
@@ -73,7 +73,7 @@ ms.locfileid: "65114919"
 - [Détecter les fonctionnalités du navigateur dans des pages web ASP.NET](how-do-i-detect-browser-capabilities-in-aspnet-web-pages.md)
 - [Mapper un contrôle serveur ASP.NET à l’adaptateur utilisé pour l’afficher](how-do-i-map-an-aspnet-server-control-to-the-adaptor-used-to-render-it.md)
 - [Passer des informations d’une page à une autre avec une chaîne de requête](how-do-i-pass-information-from-one-page-to-another-using-a-query-string.md)
-- [Utiliser le compte aspnet\_merge.exe utilitaire pour fusionner des assemblys](how-do-i-use-the-aspnet_mergeexe-utility-to-merge-assemblies.md)
+- [Utiliser l’utilitaire ASPNET\_Merge. exe pour fusionner des assemblys](how-do-i-use-the-aspnet_mergeexe-utility-to-merge-assemblies.md)
 - [Implémenter une publication (postback) entre pages dans ASP.NET](how-do-i-implement-a-cross-page-postback-in-aspnet.md)
 - [Ajouter des contrôles à une page web ASP.NET par programmation](how-do-i-add-controls-to-an-aspnet-web-page-programmatically.md)
 - [Utiliser un champ masqué pour stocker et manipuler des informations côté client](how-do-i-use-a-hidden-field-to-store-and-manipulate-client-side-information.md)

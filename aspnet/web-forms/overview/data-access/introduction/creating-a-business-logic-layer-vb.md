@@ -9,11 +9,11 @@ ms.assetid: 142e5181-29ce-4bb9-907b-2a0becf7928b
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-business-logic-layer-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 2ee4789ea9567b7bcd70eb63695e0b1d73076dc2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74572627"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78605384"
 ---
 # <a name="creating-a-business-logic-layer-vb"></a>Création d’une couche de logique métier (VB)
 
@@ -147,7 +147,7 @@ Malheureusement, nous ne pouvons pas spécifier de contrôles de limites, tels q
 
 Ensuite, créez un gestionnaire d’événements pour l’événement `ColumnChanging` qui permet de s’assurer que les valeurs de colonne `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`et `ReorderLevel` (si ce n’est pas `NULL`) sont supérieures ou égales à zéro. Si une colonne de ce type est hors limites, levez une `ArgumentException`.
 
-ProductsDataTable. ColumnChanging. vb
+ProductsDataTable.ColumnChanging.vb
 
 [!code-vb[Main](creating-a-business-logic-layer-vb/samples/sample5.vb)]
 

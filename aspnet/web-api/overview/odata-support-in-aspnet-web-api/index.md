@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/index
-title: OData dans l’API Web ASP.NET - ASP.NET 4.x
+title: OData dans API Web ASP.NET-ASP.NET 4. x
 author: rick-anderson
-description: Comment créer des points de terminaison OData dans l’API Web ASP.NET pour ASP.NET 4.x
+description: Comment créer des points de terminaison OData dans API Web ASP.NET pour ASP.NET 4. x
 ms.author: riande
 ms.date: 08/17/2012
 ms.custom: seoapril2019
@@ -10,15 +10,15 @@ ms.assetid: 9151c605-e911-4f24-95b5-ca310b105abf
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api
 msc.type: chapter
 ms.openlocfilehash: 6d84b458a02b63b24334b137afdb5b710d91c5ee
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133168"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78598762"
 ---
-# <a name="odata-in-aspnet-web-api"></a>OData dans l’API Web ASP.NET
+# <a name="odata-in-aspnet-web-api"></a>OData dans API Web ASP.NET
 
-> Comment créer des points de terminaison OData dans l’API Web ASP.NET pour ASP.NET 4.x. OData est un protocole d’accès aux données pour le web. Il fournit un moyen uniform pour interroger et manipuler des jeux de données. API Web prend en charge la Version 3 et Version 4 du protocole OData.
+> Comment créer des points de terminaison OData dans API Web ASP.NET pour ASP.NET 4. x. OData est un protocole d’accès aux données pour le Web. Il offre un moyen uniforme d’interroger et de manipuler des jeux de données. L’API Web prend en charge la version 3 et la version 4 du protocole OData.
 
 - [OData v4](odata-v4/index.md)
 

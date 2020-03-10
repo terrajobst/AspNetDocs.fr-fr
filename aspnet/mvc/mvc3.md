@@ -9,11 +9,11 @@ ms.assetid: dddc8812-a0bc-49f9-aafb-caf2064c2b8c
 msc.legacyurl: /mvc/mvc3
 msc.type: content
 ms.openlocfilehash: 421a06c89d4dbcb05d4080033813cc6558b7c698
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74586747"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616409"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC
 

@@ -9,11 +9,11 @@ ms.assetid: 70d5d106-b547-442c-a7fd-3492b3e3d646
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/reorderlist/using-postbacks-with-reorderlist-cs
 msc.type: authoredcontent
 ms.openlocfilehash: f83201fc6fd458e730b6bb5ffee184d303b52e90
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611385"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78627231"
 ---
 # <a name="using-postbacks-with-reorderlist-c"></a>Utilisation de publications (postback) avec ReorderList (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle ReorderList dans la boîte à outils de contrôle AJAX fournit une liste qui peut être réorganisée par l’utilisateur par glisser-déplacer. Chaque fois que la liste est réorganisée, une publication (postback) informe le serveur de la modification.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle `ReorderList` dans la boîte à outils de contrôle AJAX fournit une liste qui peut être réorganisée par l’utilisateur par glisser-déplacer. Chaque fois que la liste est réorganisée, une publication (postback) informe le serveur de la modification.
 
@@ -65,4 +65,4 @@ Enfin, pour activer les fonctionnalités de ASP.NET AJAX et de Control Toolkit, 
 Chaque réorganisation déclenche une publication ([cliquez pour afficher l’image en taille réelle](using-postbacks-with-reorderlist-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](drag-and-drop-via-reorderlist-cs.md)
+> [Next](drag-and-drop-via-reorderlist-cs.md)

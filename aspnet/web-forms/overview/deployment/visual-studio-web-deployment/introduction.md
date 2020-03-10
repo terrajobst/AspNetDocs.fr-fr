@@ -9,11 +9,11 @@ ms.assetid: 24ad086d-865e-433c-9ac9-05f1a553da16
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/introduction
 msc.type: authoredcontent
 ms.openlocfilehash: 96dd31d949633e001fc595621bedbf74e98000fc
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74640238"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78642218"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-introduction"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : introduction
 
@@ -31,7 +31,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Ce contenu est également disponible en tant que livre électronique gratuit dans [la Galerie de livres électroniques TechNet](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#ASPNETWebDeploymentusingVisualStudio).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Ces didacticiels vous guident tout au long du déploiement d’une application Web ASP.NET incluant des bases de données SQL Server. Vous allez d’abord effectuer un déploiement sur IIS sur votre ordinateur de développement local à des fins de test, puis Web Apps dans Azure App Service et Azure SQL Database pour la mise en lots et la production. Vous verrez comment déployer à l’aide de la publication en un clic de Visual Studio, et vous verrez comment déployer à l’aide de la ligne de commande.
 
@@ -39,7 +39,7 @@ Le nombre de didacticiels peut rendre le processus de déploiement décourageant
 
 Les didacticiels sont conçus pour s’exécuter en séquence, et chaque partie repose sur le composant précédent. Vous pouvez ignorer des parties qui ne sont pas pertinentes pour votre situation, mais vous devrez peut-être ajuster les procédures dans les didacticiels ultérieurs.
 
-## <a name="intended-audience"></a>Public visé
+## <a name="intended-audience"></a>Public concerné
 
 Les didacticiels sont destinés aux développeurs ASP.NET qui travaillent dans des environnements où :
 
@@ -49,7 +49,7 @@ Les didacticiels sont destinés aux développeurs ASP.NET qui travaillent dans d
 Le déploiement à partir du [contrôle de code source](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control.md) à l’aide d’un processus de [livraison continue](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery.md) n’est pas abordé dans ces didacticiels, à l’exception d’un didacticiel qui montre comment déployer à partir de la ligne de commande. Pour plus d’informations sur la livraison continue, consultez les ressources suivantes :
 
 - [Intégration continue et livraison continue (création d’applications Cloud réalistes avec Windows Azure)](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery.md)
-- [Déployer une application Web dans Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-deploy/)
+- [Déploiement d’une application web dans Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-deploy/)
 - [Déploiement d’applications Web dans des scénarios d’entreprise](../deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md) (un ancien ensemble de didacticiels écrits pour Visual Studio 2010, qui contient toujours des informations utiles pour les environnements d’entreprise.)
 
 ## <a name="using-a-third-party-hosting-provider"></a>Utilisation d’un fournisseur d’hébergement tiers
@@ -110,13 +110,13 @@ Les commentaires sur les didacticiels sont les bienvenus et, lorsque le didactic
 
 <a id="prerequisites"></a>
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Ce didacticiel a été rédigé pour les produits suivants :
 
 - Windows 8 ou Windows 7.
 - Visual Studio 2012 ou Visual Studio 2012 Express pour le Web avec [la dernière mise à jour](https://go.microsoft.com/fwlink/?LinkId=272486).
-- [Kit de développement logiciel (SDK) Azure pour Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkId=254364)
+- [Kit de développement logiciel (SDK) Azure pour Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkId=254364)
 
 Vous pouvez suivre le didacticiel à l’aide de Visual Studio 2010 SP1 ou Visual Studio 2013, mais certaines captures d’écran seront différentes et certaines fonctionnalités seront différentes.
 
@@ -137,7 +137,7 @@ Les instructions et les captures d’écran sont basées sur Windows 8, mais les
 
 D’autres logiciels sont requis pour suivre le didacticiel, mais vous n’avez pas besoin d’installer ce logiciel encore. Ce didacticiel vous guide tout au long des étapes d’installation du service informatique lorsque vous en avez besoin.
 
-## <a name="download-the-sample-application"></a>Télécharger l’exemple d’application
+## <a name="download-the-sample-application"></a>Téléchargement de l'exemple d'application
 
 L’application que vous déploierez est nommée Contoso University et a déjà été créée pour vous. Il s’agit d’une version simplifiée d’un site Web universitaire, basée librement sur l’application Contoso University décrite dans les [didacticiels Entity Framework sur le site ASP.net](https://asp.net/entity-framework/tutorials).
 
@@ -198,4 +198,4 @@ Les fonctionnalités suivantes de l’application affectent la manière dont vou
 Dans ce premier didacticiel de la série, vous avez téléchargé l’exemple de projet Visual Studio et les fonctionnalités du site revu qui affectent la façon dont vous déployez l’application. Dans les didacticiels suivants, vous préparez le déploiement en configurant certains de ces éléments à traiter automatiquement. D’autres que vous devez prendre en charge manuellement.
 
 > [!div class="step-by-step"]
-> [Suivant](preparing-databases.md)
+> [Next](preparing-databases.md)

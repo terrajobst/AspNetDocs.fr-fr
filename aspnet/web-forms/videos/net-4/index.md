@@ -2,22 +2,22 @@
 uid: web-forms/videos/net-4/index
 title: .NET 4 | Microsoft Docs
 author: rick-anderson
-description: Les nouvelles fonctionnalités ASP.NET et les fonctionnalités disponibles dans le .NET Framework 4.
+description: Les nouvelles fonctionnalités et fonctionnalités ASP.NET disponibles dans le .NET Framework 4.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: bac10aee-6731-4a0f-84d7-9eef5e560ae5
 msc.legacyurl: /web-forms/videos/net-4
 msc.type: chapter
 ms.openlocfilehash: 47d4c49762768351246402b48373374f99fd636f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128466"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78618096"
 ---
 # <a name="net-4"></a>.NET 4
 
-> Les nouvelles fonctionnalités ASP.NET et les fonctionnalités disponibles dans le .NET Framework 4.
+> Les nouvelles fonctionnalités et fonctionnalités ASP.NET disponibles dans le .NET Framework 4.
 
 - [Ajax](ajax/index.md)
 
@@ -29,7 +29,7 @@ ms.locfileid: "65128466"
 
     - [Chart Control](chart/aspnet-4-quick-hit-chart-control.md)
     - [Présentation du nouveau contrôle Chart dans Visual Studio 2010](chart/aspnet-4-how-do-i-introducing-the-new-chart-control-in-visual-studio-2010.md)
-- [Fonctionnalités de base](core/index.md)
+- [Principal](core/index.md)
 
     - [Démarrage automatique](core/aspnet-4-quick-hit-auto-start.md)
     - [Nettoyer les fichiers Web.Config](core/aspnet-4-quick-hit-clean-webconfig-files.md)
@@ -45,12 +45,12 @@ ms.locfileid: "65128466"
     - [Contrôle de menu sans table](markup-control/aspnet-4-quick-hit-tableless-menu-control.md)
     - [Balises div de champ masqué](markup-control/aspnet-4-quick-hit-hidden-field-divs.md)
     - [Style de contrôle désactivé](markup-control/aspnet-4-quick-hit-disabled-control-styling.md)
-- [Performances](performance/index.md)
+- [Performancess](performance/index.md)
 
     - [État sélectif d’une vue](performance/aspnet-4-quick-hit-selective-view-state.md)
     - [Compression d’état facile](performance/aspnet-4-quick-hit-easy-state-compression.md)
     - [Utiliser la propriété ViewStateMode pour la gestion de ViewState](performance/how-do-i-use-the-viewstatemode-property-for-managing-viewstate.md)
-- [Le routage](routing/index.md)
+- [Routage](routing/index.md)
 
     - [Redirection permanente](routing/aspnet-4-quick-hit-permanent-redirect.md)
     - [Routage WebForms impératif](routing/aspnet-4-quick-hit-imperative-webforms-routing.md)

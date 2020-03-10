@@ -9,11 +9,11 @@ ms.assetid: 8b013630-842c-4d44-a6fc-c6be43e7210f
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-configuring-project-properties-4-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 6e63e75dca3d776fb9a1bd7e420ef48891daac69
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569811"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78625859"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-configuring-project-properties---4-of-12"></a>Déploiement d’une application Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : configuration des propriétés d’un projet-4 sur 12
 
@@ -25,7 +25,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Pour obtenir un didacticiel qui présente les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions SQL Server autres que SQL Server Compact et montre comment déployer vers Azure App Service Web Apps, consultez [déploiement Web ASP.net à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Certaines options de déploiement sont configurées dans les propriétés du projet qui sont stockées dans le fichier projet (fichier *. csproj* ou *. vbproj* ). Dans la plupart des cas, les valeurs par défaut de ces paramètres sont celles que vous souhaitez, mais vous pouvez utiliser l’interface utilisateur des **Propriétés du projet** intégrée à Visual Studio pour utiliser ces paramètres si vous devez les modifier. Dans ce didacticiel, vous allez examiner les paramètres de déploiement dans les **Propriétés du projet**. Vous créez également un fichier d’espace réservé qui entraîne le déploiement d’un dossier vide.
 

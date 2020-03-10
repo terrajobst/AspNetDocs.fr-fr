@@ -9,11 +9,11 @@ ms.assetid: 82b8dea0-f062-4ee4-8784-3ffa30fbb1ca
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/command-line-deployment
 msc.type: authoredcontent
 ms.openlocfilehash: 13cfe4492398b59f2c80394689cc113ccb218c60
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74634202"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78630920"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-command-line-deployment"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : déploiement à partir de la ligne de commande
 
@@ -23,7 +23,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels vous montre comment déployer (publier) une application Web ASP.NET sur Azure App Service Web Apps ou sur un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou de Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Ce didacticiel vous montre comment appeler le pipeline de publication Web de Visual Studio à partir de la ligne de commande. Cela est utile pour les scénarios où vous souhaitez [automatiser le processus de déploiement](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery.md) au lieu de le faire manuellement dans Visual Studio, généralement à l’aide d’un [système de contrôle de version de code source](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control.md).
 
@@ -102,7 +102,7 @@ Trois méthodes de publication sont prises en charge pour la publication à part
 
 La configuration et la plateforme de build doivent être définies dans Visual Studio ou sur la ligne de commande. Les profils de publication incluent des propriétés nommées `LastUsedBuildConfiguration` et `LastUsedPlatform`, mais vous ne pouvez pas définir ces propriétés afin de déterminer la façon dont le projet est généré. Pour plus d’informations, consultez [MSBuild : comment définir la propriété de configuration sur le](http://sedodream.com/2012/10/27/MSBuildHowToSetTheConfigurationProperty.aspx) blog de Sayed Hashimi.
 
-## <a name="deploy-to-staging"></a>Déployer dans un environnement intermédiaire
+## <a name="deploy-to-staging"></a>Déployer vers un environnement intermédiaire
 
 Pour effectuer un déploiement sur Azure, vous devez ajouter le mot de passe à la ligne de commande. Si vous avez enregistré le mot de passe dans le profil de publication dans Visual Studio, il est stocké sous forme chiffrée dans le fichier *. pubxml. User* . MSBuild n’accède pas à ce fichier quand vous effectuez un déploiement de ligne de commande. vous devez donc passer le mot de passe dans un paramètre de ligne de commande.
 

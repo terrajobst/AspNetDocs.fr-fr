@@ -9,11 +9,11 @@ ms.assetid: 9c8f0054-e319-46f8-80c0-35b606d2fbd4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 6c28cc958a1de9844627ae16175a5aed153993a8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74607262"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614554"
 ---
 # <a name="databinding-to-an-accordion-c"></a>Liaison de données à un Accordion (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle accordéon dans le kit d’outils de contrôle AJAX fournit plusieurs volets et permet à l’utilisateur d’en afficher un à la fois. Les panneaux sont généralement déclarés dans la page elle-même, mais la liaison à une source de données offre plus de flexibilité.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle accordéon dans le kit d’outils de contrôle AJAX fournit plusieurs volets et permet à l’utilisateur d’en afficher un à la fois. Les panneaux sont généralement déclarés dans la page elle-même, mais la liaison à une source de données offre plus de flexibilité.
 
@@ -62,4 +62,4 @@ Pour conclure cet exemple, vous devez définir les deux classes CSS qui sont ré
 Les données de l’accordéon proviennent directement de la source de données ([cliquez pour afficher l’image en taille réelle](databinding-to-an-accordion-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](dynamically-adding-an-accordion-pane-cs.md)
+> [Next](dynamically-adding-an-accordion-pane-cs.md)

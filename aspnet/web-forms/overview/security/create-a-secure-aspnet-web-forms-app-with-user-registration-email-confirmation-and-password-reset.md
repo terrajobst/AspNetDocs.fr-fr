@@ -1,187 +1,186 @@
 ---
 uid: web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset
-title: Créer une application Web Forms ASP.NET sécurisée avec inscription des utilisateurs, par e-mail de réinitialisation de mot de passe et de confirmation (c#) | Microsoft Docs
+title: Créer une application ASP.NET Web Forms sécurisée avec inscription de l’utilisateur, confirmation par e-mailC#et réinitialisation du mot de passe () | Microsoft Docs
 author: Erikre
-description: Ce didacticiel vous montre comment créer une application Web Forms ASP.NET avec inscription utilisateur, confirmation par courrier électronique et mot de passe réinitialisé à l’aide du membre de l’identité ASP.NET...
+description: Ce didacticiel vous montre comment créer une application ASP.NET Web Forms avec l’inscription de l’utilisateur, la confirmation par courrier électronique et la réinitialisation du mot de passe à l’aide du membre ASP.NET Identity...
 ms.author: riande
 ms.date: 10/02/2014
 ms.assetid: 0a8d6044-5fab-4213-82d6-5618d5601358
 msc.legacyurl: /web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset
 msc.type: authoredcontent
 ms.openlocfilehash: af3653bc164810126bc3bf8f1b1794d75642d807
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133800"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78625152"
 ---
 # <a name="create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset-c"></a>Créer une application Web Forms ASP.NET sécurisée avec inscription de l’utilisateur, confirmation par e-mail et réinitialisation du mot de passe (C#)
 
 par [Erik Reitan](https://github.com/Erikre)
 
-> Ce didacticiel vous montre comment créer une application Web Forms ASP.NET avec inscription de l’utilisateur, confirmation par courrier électronique et mot de passe réinitialisé à l’aide du système d’appartenance ASP.NET Identity. Ce didacticiel a été basé sur de Rick Anderson [didacticiel MVC](../../../mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md).
+> Ce didacticiel vous montre comment créer une application ASP.NET Web Forms avec l’inscription de l’utilisateur, la confirmation par courrier électronique et la réinitialisation du mot de passe à l’aide du système d’appartenance ASP.NET Identity. Ce didacticiel est basé sur le [didacticiel MVC](../../../mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md)de Rick Anderson.
 
 ## <a name="introduction"></a>Introduction
 
-Ce didacticiel vous guide à travers les étapes requises pour créer une application Web Forms ASP.NET à l’aide de Visual Studio et ASP.NET 4.5 pour créer une application Web Forms sécurisée avec inscription des utilisateurs, envoyer par courrier électronique de confirmation et le mot de passe de la réinitialisation.
+Ce didacticiel vous guide tout au long des étapes nécessaires à la création d’une application ASP.NET Web Forms à l’aide de Visual Studio et ASP.NET 4,5 pour créer une application Web Forms sécurisée avec l’inscription de l’utilisateur, la confirmation par e-mail et la réinitialisation du mot de passe.
 
-### <a name="tutorial-tasks-and-information"></a>Tâches de didacticiel et les informations sur :
+### <a name="tutorial-tasks-and-information"></a>Tâches et informations sur le didacticiel :
 
-- [Créer un site Web ASP.NET application Forms](#createWebForms)
+- [Créer une application de Web Forms ASP.NET](#createWebForms)
 - [Raccorder SendGrid](#SG)
-- [Demander Confirmation de l’E-mail avant de journal dans](#require)
-- [Réinitialisation et la récupération de mot de passe](#reset)
-- [Renvoyer le lien de Confirmation de courrier électronique](#rsend)
+- [Exiger une confirmation par courrier électronique avant la connexion](#require)
+- [Récupération et réinitialisation du mot de passe](#reset)
+- [Renvoyer le lien de confirmation par E-mail](#rsend)
 - [Résolution des problèmes de l’application](#dbg)
 - [Ressources supplémentaires pour MSBuild](#addRes)
 
 <a id="createWebForms"></a>
-## <a name="create-an-aspnet-web-forms-app"></a>Créer une application Web Forms ASP.NET
+## <a name="create-an-aspnet-web-forms-app"></a>Créer une application de Web Forms ASP.NET
 
-Démarrez en installant et en cours d’exécution [Visual Studio Express 2013 pour le Web](https://go.microsoft.com/fwlink/?LinkId=299058) ou [Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=306566). Installer [Visual Studio 2013 Update 3](https://go.microsoft.com/fwlink/?LinkId=390465) ou une version ultérieure ainsi.
+Commencez par installer et exécuter [Visual Studio Express 2013 pour le Web](https://go.microsoft.com/fwlink/?LinkId=299058) ou [Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=306566). Installez [Visual Studio 2013 Update 3](https://go.microsoft.com/fwlink/?LinkId=390465) ou une version ultérieure.
 
 > [!NOTE]
-> Avertissement : Vous devez installer [Visual Studio 2013 Update 3](https://go.microsoft.com/fwlink/?LinkId=390465) ou une version ultérieure pour suivre ce didacticiel.
+> AVERTISSEMENT : vous devez installer [Visual Studio 2013 Update 3](https://go.microsoft.com/fwlink/?LinkId=390465) ou version ultérieure pour suivre ce didacticiel.
 
-1. Créez un projet (**fichier**  - &gt; **nouveau projet**) et sélectionnez le **Application Web ASP.NET** modèle et la plus récente du .NET Framework version à partir de la **nouveau projet** boîte de dialogue.
-2. À partir de la **nouveau projet ASP.NET** boîte de dialogue, sélectionnez le **Web Forms** modèle. Laissez l’authentification par défaut à **Comptes d’utilisateur individuels**. Si vous souhaitez héberger l’application dans Azure, laissez le **hôte dans le cloud** case est cochée.   
- Ensuite, cliquez sur **OK** pour créer le nouveau projet.  
-    ![Boîte de dialogue Nouveau projet ASP.NET](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/_static/image1.png)
-3. Activer Secure Sockets Layer (SSL) pour le projet. Suivez les étapes disponibles dans le **activer SSL pour le projet** section de la [mise en route de la série de didacticiels de Web Forms](../getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md#SSLWebForms).
-4. Exécutez l’application, cliquez sur le **inscrire** lier et inscrire un nouvel utilisateur. À ce stade, la seule validation de l’e-mail est basée sur le [[EmailAddress]](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.emailaddressattribute(v=vs.110).aspx) attribut pour garantir l’adresse e-mail est bien formé. Vous allez modifier le code pour ajouter l’e-mail de confirmation. Fermez la fenêtre du navigateur.
-5. Dans **Explorateur de serveurs** de Visual Studio (**vue**  - &gt; **Explorateur de serveurs**), accédez à **données\ de données DefaultConnection\Tables\AspNetUsers**, avec le bouton droit cliquez et sélectionnez **ouvrir la définition de la table**. 
+1. Créez un projet (**fichier** -&gt; **nouveau projet**), puis sélectionnez le modèle d' **application Web ASP.net** et la dernière version de .NET Framework dans la boîte de dialogue **nouveau projet** .
+2. Dans la boîte de dialogue **nouveau projet ASP.net** , sélectionnez le modèle **Web Forms** . Laissez l’authentification par défaut en tant que **comptes d’utilisateur individuels**. Si vous souhaitez héberger l’application dans Azure, activez la case à cocher **hôte dans le Cloud** .   
+ Cliquez ensuite sur **OK** pour créer le nouveau projet.  
+    ![Boîte de dialogue New ASP.NET Project](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/_static/image1.png)
+3. Activez protocole SSL (SSL) pour le projet. Suivez les étapes disponibles dans la section **activer SSL pour le projet** de la [série prise en main avec Web Forms didacticiel](../getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md#SSLWebForms).
+4. Exécutez l’application, cliquez sur le lien **Register** et inscrivez un nouvel utilisateur. À ce stade, la seule validation sur l’e-mail est basée sur l’attribut [[EmailAddress]](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.emailaddressattribute(v=vs.110).aspx) pour garantir que l’adresse de messagerie est bien formée. Vous allez modifier le code pour ajouter une confirmation par courrier électronique. Fermez la fenêtre du navigateur.
+5. Dans **Explorateur de serveurs** de Visual Studio (**afficher** -&gt; **Explorateur de serveurs**), accédez à **Data Connections\DefaultConnection\Tables\AspNetUsers**, cliquez avec le bouton droit et sélectionnez **ouvrir la définition de table**. 
 
-    L’illustration suivante montre le `AspNetUsers` schéma de table :
+    L’illustration suivante montre le schéma de la table `AspNetUsers` :
 
     ![Schéma de la table AspNetUsers](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/_static/image2.png)
-6. Dans **Explorateur de serveurs**, avec le bouton droit sur le **AspNetUsers** de table et sélectionnez **afficher les données de Table**.  
+6. Dans **Explorateur de serveurs**, cliquez avec le bouton droit sur la table **AspNetUsers** et sélectionnez **afficher les données**de la table.  
   
     ![Données de la table AspNetUsers](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/_static/image3.png)  
- À ce stade le courrier électronique pour l’utilisateur inscrit n’a pas été confirmé.
-7. Cliquez sur la ligne, puis sélectionnez Supprimer pour supprimer l’utilisateur. Vous ajoutez de nouveau ce courrier électronique à l’étape suivante et envoyer un message de confirmation à l’adresse de messagerie.
+ À ce stade, l’e-mail de l’utilisateur inscrit n’a pas été confirmé.
+7. Cliquez sur la ligne et sélectionnez Supprimer pour supprimer l’utilisateur. Vous ajouterez à nouveau cet e-mail à l’étape suivante et envoyerez un message de confirmation à l’adresse de messagerie.
 
-## <a name="email-confirmation"></a>E-mail de Confirmation
+## <a name="email-confirmation"></a>Confirmation par e-mail
 
-Il est recommandé de confirmer l’adresse de messagerie lors de l’inscription d’un nouvel utilisateur pour vérifier qu’ils ne sont pas emprunter l’identité d’une autre personne (autrement dit, ils n’ont pas inscrit auprès de quelqu'un d’autre e-mail). Supposons que vous ayez un forum de discussion : vous voudriez empêcher `"bob@cpandl.com"` de s'inscrire en tant que `"joe@contoso.com"`. ans la confirmation par courrier électronique, `"joe@contoso.com"` pourrait recevoir du courrier indésirable à partir de votre application. Supposons que Bob accidentellement inscrit en tant que `"bib@cpandl.com"` et vous l’auriez pas remarqué, il ne serait pas en mesure d’utiliser la récupération de mot de passe, car l’application n’a pas son adresse de messagerie correcte. E-mail de confirmation fournit uniquement une protection limitée des robots et ne fournit pas une protection à partir des expéditeurs de courrier indésirable déterminés.
+Il est recommandé de confirmer l’e-mail lors de l’inscription d’un nouvel utilisateur afin de vérifier qu’il n’emprunte pas l’identité d’un autre utilisateur (autrement dit, s’il ne s’est pas inscrit auprès de l’e-mail de quelqu’un d’autre). Supposons que vous disposiez d’un forum de discussion, vous souhaitiez empêcher `"bob@cpandl.com"` de vous inscrire en tant que `"joe@contoso.com"`. Sans confirmation par courrier électronique, `"joe@contoso.com"` pouvez obtenir un courrier indésirable à partir de votre application. Supposons que Bob s’est inscrit accidentellement comme `"bib@cpandl.com"` et n’avait pas remarqué qu’il ne serait pas en mesure d’utiliser la récupération de mot de passe parce que l’application n’a pas son adresse e-mail correcte. La confirmation par courrier électronique fournit uniquement une protection limitée des robots et ne fournit pas de protection contre les spammeurs déterminés.
 
-En règle générale, vous souhaitez empêcher les nouveaux utilisateurs à partir de la validation des données à votre site Web avant qu’ils ont été confirmés par un message électronique, un SMS ou un autre mécanisme. Dans les sections ci-dessous, nous activer la confirmation de courrier électronique et modifier le code pour empêcher les utilisateurs qui vient d’être inscrits de se connecter jusqu'à ce que leur adresse de messagerie a été confirmée. Vous allez utiliser le service de messagerie SendGrid dans ce didacticiel.
+En général, vous souhaitez empêcher les nouveaux utilisateurs de publier des données sur votre site Web avant qu’ils n’aient été confirmés par e-mail, par courrier électronique ou par un autre mécanisme. Dans les sections ci-dessous, nous allons activer la confirmation par courrier électronique et modifier le code pour empêcher les utilisateurs nouvellement inscrits de se connecter jusqu’à ce que leur adresse de messagerie soit confirmée. Vous utiliserez le service de messagerie SendGrid dans ce didacticiel.
 
 <a id="SG"></a>
 ## <a name="hook-up-sendgrid"></a>Se connecter à SendGrid
 
-SendGrid a changé son API depuis la rédaction de ce didacticiel. Pour obtenir des instructions en cours de SendGrid, consultez [SendGrid](http://sendgrid.com/) ou [activer la récupération de confirmation et le mot de passe du compte](xref:security/authentication/accconfirm#enable-account-confirmation-and-password-recovery).
+SendGrid a changé son API depuis que ce didacticiel a été écrit. Pour obtenir les instructions SendGrid actuelles, consultez [SendGrid](http://sendgrid.com/) ou [activer la confirmation de compte et la récupération de mot de passe](xref:security/authentication/accconfirm#enable-account-confirmation-and-password-recovery).
 
-Bien que ce didacticiel montre uniquement comment ajouter la notification par courrier électronique via [SendGrid](http://sendgrid.com/), vous pouvez envoyer un e-mail à l’aide de SMTP et d'autres mécanismes (consultez [les ressources additionnelles](#addRes)).
+Bien que ce didacticiel montre uniquement comment ajouter des notifications par courrier électronique via [SendGrid](http://sendgrid.com/), vous pouvez envoyer des e-mails à l’aide de SMTP et d’autres mécanismes (voir [ressources supplémentaires](#addRes)).
 
-1. Dans Visual Studio, ouvrez le **Console du Gestionnaire de Package** (**outils**  - &gt; **Gestionnaire de Package NuGet**  - &gt; **Console du Gestionnaire de package**), puis entrez la commande suivante :  
+1. Dans Visual Studio, ouvrez la **console du gestionnaire de package** (**Outils** -&gt; gestionnaire de **package NuGet** -&gt; **console du gestionnaire de package**), puis entrez la commande suivante :  
     `Install-Package SendGrid`
-2. Accédez à la [page d’inscription Azure SendGrid](https://azure.microsoft.com/gallery/store/sendgrid/sendgrid-azure/) et vous inscrire gratuitement compte SendGrid. Vous pouvez également vous inscrire pour un compte SendGrid gratuit directement sur [site de SendGrid](http://www.sendgrid.com).
-3. À partir de **l’Explorateur de solutions** ouvrir le *IdentityConfig.cs* de fichiers dans le *application\_Démarrer* dossier et ajoutez le code suivant mis en surbrillance en jaune pour le `EmailService` classe permettant de configurer **SendGrid**:
+2. Accédez à la [page d’inscription à Azure SendGrid](https://azure.microsoft.com/gallery/store/sendgrid/sendgrid-azure/) et inscrivez-vous pour obtenir un compte SendGrid gratuit. Vous pouvez également vous inscrire pour obtenir un compte SendGrid gratuit directement sur le [site de SendGrid](http://www.sendgrid.com).
+3. À partir de **Explorateur de solutions** Ouvrez le fichier *IdentityConfig.cs* dans le dossier de démarrage de l' *application\_* et ajoutez le code suivant mis en surbrillance en jaune à la classe `EmailService` pour configurer **SendGrid**:
 
     [!code-csharp[Main](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/samples/sample1.cs?highlight=3,5,8-37)]
-4. En outre, ajoutez le code suivant `using` instructions au début de la *IdentityConfig.cs* fichier : 
+4. Ajoutez également les instructions `using` suivantes au début du fichier *IdentityConfig.cs* : 
 
     [!code-csharp[Main](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/samples/sample2.cs?highlight=1-4)]
-5. Pour simplifier cet exemple, vous allez stocker les valeurs de compte de service de messagerie dans le `appSettings` section de la *web.config* fichier. Ajoutez le code XML suivant mis en surbrillance en jaune pour le *web.config* fichier à la racine de votre projet :
+5. Pour simplifier cet exemple, vous allez stocker les valeurs du compte de service de messagerie dans la section `appSettings` du fichier *Web. config* . Ajoutez le code XML suivant mis en surbrillance en jaune au fichier *Web. config* à la racine de votre projet :
 
     [!code-xml[Main](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/samples/sample3.xml?highlight=2-5)]
 
     > [!WARNING]
-    > Sécurité - Ne jamais stocker de données sensibles dans votre code source. Dans cet exemple, le compte et les informations d’identification sont stockées dans le **appSetting** section de la *Web.config* fichier.  Sur Azure, vous pouvez stocker en toute sécurité ces valeurs sur l'onglet **[Configurer](https://blogs.msdn.com/b/webdev/archive/2014/06/04/queuebackgroundworkitem-to-reliably-schedule-and-run-long-background-process-in-asp-net.aspx)** dans le portail Azure. Pour plus d’informations, consultez rubrique de Rick Anderson [meilleures pratiques pour le déploiement des mots de passe et autres données sensibles sur ASP.NET et Azure](https://go.microsoft.com/fwlink/?LinkId=513141).
-6. Ajoutez les valeurs de service de messagerie pour refléter vos valeurs de l’authentification SendGrid (nom d’utilisateur et mot de passe) pour que vous puissiez réussie Envoyer e-mail à partir de votre application. Veillez à utiliser le nom de votre compte SendGrid plutôt que l’adresse de messagerie que vous avez fourni SendGrid.
+    > Sécurité - Ne jamais stocker de données sensibles dans votre code source. Dans cet exemple, le compte et les informations d’identification sont stockés dans la section **appSetting** du fichier *Web. config* . Sur Azure, vous pouvez stocker ces valeurs en toute sécurité sous l’onglet **[configurer](https://blogs.msdn.com/b/webdev/archive/2014/06/04/queuebackgroundworkitem-to-reliably-schedule-and-run-long-background-process-in-asp-net.aspx)** de la portail Azure. Pour obtenir des informations connexes, consultez la rubrique de Rick Anderson intitulée [meilleures pratiques pour le déploiement de mots de passe et d’autres données sensibles dans ASP.net et Azure](https://go.microsoft.com/fwlink/?LinkId=513141).
+6. Ajoutez les valeurs du service de messagerie pour refléter vos valeurs d’authentification SendGrid (nom d’utilisateur et mot de passe) afin de pouvoir envoyer des messages électroniques à partir de votre application. Veillez à utiliser le nom de votre compte SendGrid plutôt que l’adresse de messagerie que vous avez fournie SendGrid.
 
-### <a name="enable-email-confirmation"></a>Activer la Confirmation de courrier électronique
+### <a name="enable-email-confirmation"></a>Activer la confirmation par courrier électronique
 
  Pour activer la confirmation par courrier électronique, vous allez modifier le code d’inscription en procédant comme suit.  
 
-1. Dans le *compte* dossier, ouvrez le *Register.aspx.cs* code-behind et mettre à jour le `CreateUser_Click` méthode pour permettre les modifications suivantes : 
+1. Dans le dossier *Account* , ouvrez le code-behind *Register.aspx.cs* et mettez à jour la méthode `CreateUser_Click` pour activer les modifications en surbrillance suivantes : 
 
     [!code-csharp[Main](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/samples/sample4.cs?highlight=9-11)]
-2. Dans **l’Explorateur de solutions**, avec le bouton droit *Default.aspx* et sélectionnez **définir comme Page de démarrage**.
-3. Exécutez l’application en appuyant sur **F5.** Une fois la page s’affiche, cliquez sur le **inscrire** lien pour afficher la page d’inscription.
-4. Entrez votre adresse électronique et le mot de passe, puis cliquez sur le **inscrire** bouton pour envoyer un e-mail via SendGrid.  
-   L’état actuel de votre projet et de code permet à l’utilisateur pour se connecter une fois qu’elles terminent le formulaire d’inscription, même si elles ne l’avez pas confirmé son compte.
-5. Vérifiez votre compte de messagerie, puis cliquez sur le lien pour confirmer votre adresse de messagerie.  
-   Une fois que vous envoyez le formulaire d’inscription, vous serez connecté.  
-    ![Exemple de site Web - connecté](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/_static/image4.png)
+2. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur *default. aspx* , puis sélectionnez **définir comme page de démarrage**.
+3. Exécutez l’application en appuyant sur **F5.** Une fois la page affichée, cliquez sur le lien **Register** pour afficher la page Register.
+4. Entrez votre adresse de messagerie et votre mot de passe, puis cliquez sur le bouton **Register** pour envoyer un message électronique via SendGrid.  
+   L’état actuel de votre projet et du code permettra à l’utilisateur de se connecter une fois qu’il aura terminé le formulaire d’inscription, même s’il n’a pas confirmé son compte.
+5. Vérifiez votre compte de messagerie et cliquez sur le lien pour confirmer votre adresse de messagerie.  
+   Une fois que vous avez envoyé le formulaire d’inscription, vous êtes connecté.  
+    ![Exemple de site Web connecté](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/_static/image4.png)
 
 <a id="require"></a>
-## <a name="require-email-confirmation-before-log-in"></a>Demander Confirmation de l’E-mail avant de journal dans
+## <a name="require-email-confirmation-before-log-in"></a>Exiger une confirmation par courrier électronique avant la connexion
 
-Bien que vous avez confirmé que le compte de messagerie, à ce stade vous serait inutile de cliquer sur le lien contenu dans l’e-mail de vérification pour être entièrement connectés. Dans la section suivante, vous allez modifier le code exigeant que les nouveaux utilisateurs pour avoir un e-mail de confirmation avant d’être enregistrées (authentifié).
+Bien que vous ayez confirmé le compte de messagerie, à ce stade, il n’est pas nécessaire de cliquer sur le lien contenu dans l’e-mail de vérification pour être entièrement connecté. Dans la section suivante, vous allez modifier le code nécessitant que les nouveaux utilisateurs disposent d’un e-mail confirmé avant qu’ils ne soient connectés (authentifié).
 
-1. Dans **l’Explorateur de solutions** de Visual Studio, mettre à jour le `CreateUser_Click` événement dans le *Register.aspx.cs* code-behind contenue dans le *comptes* dossier avec le modifications en surbrillance suivantes : 
+1. Dans **Explorateur de solutions** de Visual Studio, mettez à jour l’événement `CreateUser_Click` dans le code-behind *Register.aspx.cs* contenu dans le dossier *Accounts* avec les modifications en surbrillance suivantes : 
 
     [!code-csharp[Main](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/samples/sample5.cs?highlight=13-14,17-21)]
-2. Mise à jour le `LogIn` méthode dans le *Login.aspx.cs* code-behind avec les modifications suivantes : 
+2. Mettez à jour la méthode `LogIn` dans le code-behind *login.aspx.cs* avec les modifications en surbrillance suivantes : 
 
     [!code-csharp[Main](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/samples/sample6.cs?highlight=9-19,45-46)]
 
 ### <a name="run-the-application"></a>Exécution de l'application
 
- Maintenant que vous avez implémenté le code pour vérifier si l’adresse de messagerie d’un utilisateur a été confirmé, vous pouvez vérifier les fonctionnalités à la fois sur le **inscrire** et **connexion** pages. 
+ Maintenant que vous avez implémenté le code pour vérifier si l’adresse de messagerie d’un utilisateur a été confirmée, vous pouvez vérifier la fonctionnalité à la fois dans les pages **Register** et **login** . 
 
-1. Supprimez tous les comptes dans le **AspNetUsers** table qui contient l’alias de messagerie que vous souhaitez tester.
-2. Exécutez l’application (**F5**) et vérifiez que vous ne pouvez pas inscrire en tant qu’utilisateur jusqu'à ce que vous avez confirmé votre adresse de messagerie.
-3. Avant de confirmer votre nouveau compte via le courrier électronique qui a été envoyé uniquement, tentent de se connecter avec le nouveau compte.  
- Vous verrez que vous ne parvenez pas à se connecter et que vous devez avoir un compte de messagerie confirmée.
-4. Après avoir confirmé votre adresse de messagerie, ouvrez une session l’application.
+1. Supprimez les comptes de la table **AspNetUsers** qui contiennent l’alias de messagerie que vous souhaitez tester.
+2. Exécutez l’application (**F5**) et vérifiez que vous ne pouvez pas vous inscrire en tant qu’utilisateur tant que vous n’avez pas confirmé votre adresse de messagerie.
+3. Avant de confirmer votre nouveau compte via l’e-mail qui vient d’être envoyé, essayez de vous connecter avec le nouveau compte.  
+ Vous verrez que vous ne pouvez pas vous connecter et que vous devez disposer d’un compte de messagerie confirmé.
+4. Une fois que vous avez confirmé votre adresse de messagerie, connectez-vous à l’application.
 
 <a id="reset"></a>
-## <a name="password-recovery-and-reset"></a>Réinitialisation et la récupération de mot de passe
+## <a name="password-recovery-and-reset"></a>Récupération et réinitialisation du mot de passe
 
-1. Dans Visual Studio, supprimez les caractères de commentaire de la `Forgot` méthode dans le *Forgot.aspx.cs* code-behind contenue dans le *compte* dossier, afin que la méthode apparaît comme suit : 
+1. Dans Visual Studio, supprimez les caractères de commentaire de la méthode `Forgot` dans le code-behind *Forgot.aspx.cs* contenu dans le dossier *Account* , afin que la méthode apparaisse comme suit : 
 
     [!code-csharp[Main](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/samples/sample7.cs?highlight=16-18)]
-2. Ouvrez le *Login.aspx* page. Remplacez le balisage à la fin de la **loginForm** section comme indiqué ci-dessous : 
+2. Ouvrez la page *login. aspx* . Remplacez le balisage près de la fin de la section **loginForm** comme indiqué ci-dessous : 
 
     [!code-aspx[Main](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/samples/sample8.aspx?highlight=52-53)]
-3. Ouvrez le *Login.aspx.cs* code-behind et supprimez les commentaires de la ligne suivante de code mis en surbrillance en jaune à partir de la `Page_Load` Gestionnaire d’événements : 
+3. Ouvrez le code-behind *login.aspx.cs* et supprimez les marques de commentaire de la ligne de code suivante mise en surbrillance en jaune à partir du gestionnaire d’événements `Page_Load` : 
 
     [!code-csharp[Main](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/samples/sample9.cs?highlight=5)]
-4. Exécutez l’application en appuyant sur **F5.** Une fois la page s’affiche, cliquez sur le **connectez-vous** lien.
-5. Cliquez sur le **votre mot de passe oublié ?** lien pour afficher le **mot de passe oublié** page.
-6. Entrez votre adresse e-mail et cliquez sur le **envoyer** bouton pour envoyer un e-mail à votre adresse de ce qui vous permettra de réinitialiser votre mot de passe.   
-   Vérifiez votre compte de messagerie, puis cliquez sur le lien pour afficher le **réinitialiser le mot de passe** page.
-7. Sur le **réinitialiser le mot de passe** , entrez votre e-mail, le mot de passe et le mot de passe confirmé. Ensuite, appuyez sur la **réinitialiser** bouton.  
-   Lorsque vous a correctement réinitialisez votre mot de passe, le **mot de passe modifié** page s’affichera. Vous pouvez maintenant vous connecter avec votre nouveau mot de passe.
+4. Exécutez l’application en appuyant sur **F5.** Une fois la page affichée, cliquez sur le lien **se connecter** .
+5. Cliquez sur le lien **vous avez oublié votre mot de passe ?** pour afficher la page **mot de passe oublié** .
+6. Entrez votre adresse de messagerie, puis cliquez sur le bouton **Envoyer** pour envoyer un e-mail à votre adresse, ce qui vous permettra de réinitialiser votre mot de passe.   
+   Vérifiez votre compte de messagerie et cliquez sur le lien pour afficher la page **Réinitialiser le mot de passe** .
+7. Dans la page **Réinitialiser le mot de passe** , entrez votre adresse e-mail, le mot de passe et le mot de passe confirmé. Ensuite, appuyez sur le bouton **Réinitialiser** .  
+   Lorsque vous avez correctement réinitialisé votre mot de passe, la page **modification du mot de passe** s’affiche. Vous pouvez maintenant vous connecter avec votre nouveau mot de passe.
 
 <a id="rsend"></a>
-## <a name="resend-email-confirmation-link"></a>Renvoyer le lien de Confirmation de courrier électronique
+## <a name="resend-email-confirmation-link"></a>Renvoyer le lien de confirmation par E-mail
 
-Une fois qu’un utilisateur crée un compte local, un lien de confirmation lui est envoyé par e-mail, qu’il doit utiliser avant de pouvoir se connecter. Si l’utilisateur supprime accidentellement l’e-mail de confirmation ou l’e-mail n’arrive jamais, ils doivent le lien de confirmation envoyé à nouveau. Les modifications suivantes du code montrent comment faire cela.
+Une fois qu’un utilisateur crée un compte local, un lien de confirmation lui est envoyé par e-mail, qu’il doit utiliser avant de pouvoir se connecter. Si l’utilisateur supprime accidentellement l’e-mail de confirmation ou si l’e-mail n’arrive jamais, il a besoin du lien de confirmation renvoyé. Les modifications suivantes du code montrent comment faire cela.
 
-
-1. Dans Visual Studio, ouvrez le **Login.aspx.cs** code-behind et ajoutez le Gestionnaire d’événements suivant après le `LogIn` Gestionnaire d’événements :   
+1. Dans Visual Studio, ouvrez le code-behind **login.aspx.cs** et ajoutez le gestionnaire d’événements suivant après le `LogIn` gestionnaire d’événements :   
 
     [!code-csharp[Main](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/samples/sample10.cs)]
-2. Modifier le `LogIn` Gestionnaire d’événements dans le *Login.aspx.cs* code-behind en modifiant le code mis en surbrillance en jaune comme suit : 
+2. Modifiez le gestionnaire d’événements `LogIn` dans le code-behind *login.aspx.cs* en modifiant le code mis en surbrillance en jaune comme suit : 
 
     [!code-csharp[Main](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/samples/sample11.cs?highlight=15-17)]
-3. Mise à jour le *Login.aspx* page en ajoutant le code mis en surbrillance en jaune comme suit : 
+3. Mettez à jour la page *login. aspx* en ajoutant le code mis en surbrillance en jaune comme suit : 
 
     [!code-aspx[Main](create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset/samples/sample12.aspx?highlight=45-46)]
-4. Supprimez tous les comptes dans le **AspNetUsers** table qui contient l’alias de messagerie que vous souhaitez tester.
-5. Exécutez l’application (**F5**) et inscrire votre adresse de messagerie.
-6. Avant de confirmer votre nouveau compte via le courrier électronique qui a été envoyé uniquement, tentent de se connecter avec le nouveau compte.  
-   Vous verrez que vous ne parvenez pas à se connecter et que vous devez avoir un compte de messagerie confirmée. En outre, vous pouvez désormais renvoyer un message de confirmation à votre compte de messagerie.
-7. Entrez votre adresse de messagerie et le mot de passe, puis appuyez sur la **renvoyer confirmation** bouton.
-8. Après avoir confirmé votre adresse de messagerie basée sur le message électronique qui vient d’être envoyé, connectez-vous à l’application.
+4. Supprimez les comptes de la table **AspNetUsers** qui contiennent l’alias de messagerie que vous souhaitez tester.
+5. Exécutez l’application (**F5**) et inscrivez votre adresse de messagerie.
+6. Avant de confirmer votre nouveau compte via l’e-mail qui vient d’être envoyé, essayez de vous connecter avec le nouveau compte.  
+   Vous verrez que vous ne pouvez pas vous connecter et que vous devez disposer d’un compte de messagerie confirmé. En outre, vous pouvez à présent renvoyer un message de confirmation à votre compte de messagerie.
+7. Entrez votre adresse de messagerie et votre mot de passe, puis appuyez sur le bouton de **confirmation de renvoi** .
+8. Une fois que vous avez confirmé votre adresse de messagerie en fonction du message électronique que vous venez d’envoyer, connectez-vous à l’application.
 
 <a id="dbg"></a>
 ## <a name="troubleshooting-the-app"></a>Résolution des problèmes de l’application
 
-Si vous ne recevez un e-mail contenant le lien pour vérifier vos informations d’identification :
+Si vous ne recevez pas de courrier électronique contenant le lien permettant de vérifier vos informations d’identification :
 
 - Vérifiez votre dossier des courriers indésirables.
-- Connectez-vous à votre compte SendGrid, puis cliquez sur le [lien activité de messagerie](https://sendgrid.com/logs/index).
-- Être certain que vous avez utilisé le nom de votre compte d’utilisateur SendGrid comme un *Web.config* valeur plutôt que votre adresse de messagerie du compte SendGrid.
+- Connectez-vous à votre compte SendGrid et cliquez sur le [lien activité de messagerie](https://sendgrid.com/logs/index).
+- Assurez-vous que vous avez utilisé le nom de votre compte d’utilisateur SendGrid en tant que valeur *Web. config* plutôt que votre adresse de messagerie de compte SendGrid.
 
 <a id="addRes"></a>
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- [Des liens vers les ressources recommandées sur ASP.NET Identity](../../../identity/overview/getting-started/aspnet-identity-recommended-resources.md)
-- [Confirmation de compte et de récupération de mot de passe avec ASP.NET Identity](../../../identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
-- [Série de didacticiels ASP.NET Web Forms - ajouter le fournisseur OAuth 2.0](../getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md#OAuthWebForms)
-- [Déployer une application de formulaires Web ASP.NET sécurisée avec appartenance, OAuth et base de données SQL dans Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/)
-- [Série de didacticiels Web Forms ASP.NET - activer SSL pour le projet](../getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md#SSLWebForms)
+- [Liens vers les ressources ASP.NET Identity recommandées](../../../identity/overview/getting-started/aspnet-identity-recommended-resources.md)
+- [Confirmation de compte et récupération de mot de passe avec ASP.NET Identity](../../../identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
+- [Série de didacticiels Web Forms ASP.NET-ajouter un fournisseur OAuth 2,0](../getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md#OAuthWebForms)
+- [Déployer une application ASP.NET Web Forms sécurisée avec appartenance, OAuth et SQL Database à Azure App Service](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/)
+- [Série de didacticiels ASP.NET Web Forms-activer SSL pour le projet](../getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md#SSLWebForms)

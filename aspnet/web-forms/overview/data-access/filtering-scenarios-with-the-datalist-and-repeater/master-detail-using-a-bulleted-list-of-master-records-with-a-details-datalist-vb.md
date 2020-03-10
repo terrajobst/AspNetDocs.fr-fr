@@ -9,11 +9,11 @@ ms.assetid: ee20742f-6fb7-49a0-a009-058fe363aacb
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 81d72c666925e89729464e7ea696bde8d323e277
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74641695"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78605958"
 ---
 # <a name="masterdetail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb"></a>Représentation maître/détail avec une liste à puces des enregistrements maîtres avec une DataList des détails (VB)
 

@@ -1,23 +1,23 @@
 ---
 uid: web-forms/videos/tailspin-spyworks/index
-title: Tailspin Spyworks | Microsoft Docs
+title: SpyWorks Tailspin | Microsoft Docs
 author: rick-anderson
-description: Comment utiliser les nouvelles fonctionnalités dans ASP.NET 4 pour créer un magasin en ligne, y compris les achats, extraction et administration.
+description: Comment utiliser les nouvelles fonctionnalités de ASP.NET 4 pour créer un magasin en ligne, notamment des achats, des retraits et des tâches d’administration.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 8aa371f8-913c-4ed2-98b0-f76abf15669d
 msc.legacyurl: /web-forms/videos/tailspin-spyworks
 msc.type: chapter
 ms.openlocfilehash: 715ba4530604805faf9023e3606608b9d73b323e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133721"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78627609"
 ---
 # <a name="tailspin-spyworks"></a>Tailspin Spyworks
 
-> Comment utiliser les nouvelles fonctionnalités dans ASP.NET 4 pour créer un magasin en ligne, y compris les achats, extraction et administration.
+> Comment utiliser les nouvelles fonctionnalités de ASP.NET 4 pour créer un magasin en ligne, notamment des achats, des retraits et des tâches d’administration.
 
 - [Tailspin Spyworks - Création et utilisation du contrôle Popular Products](tailspin-spyworks-creating-and-using-the-popular-products-control.md)
 - [Tailspin Spyworks - Implémentation du contrôle Also Purchased](tailspin-spyworks-implementing-and-using-the-also-purchased-control.md)

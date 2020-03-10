@@ -9,11 +9,11 @@ ms.assetid: 18c31709-3f9d-4d93-8b01-f1356bf610b4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 001233d866d8a731d93d6900f714cd2060f3d08c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599335"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78613952"
 ---
 # <a name="using-a-confirmbutton-in-a-repeater-vb"></a>Utilisation d’un ConfirmButton dans un répéteur (VB)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > L’extendeur ConfirmButton dans la boîte à outils de contrôle AJAX crée une fenêtre contextuelle oui/non quand l’utilisateur clique sur un bouton (y compris le contrôle LinkButton). Si l’utilisateur clique sur Oui, l’action du bouton est exécutée, sinon annulée. Cela est également possible dans un Repeater.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 L’extendeur ConfirmButton dans la boîte à outils de contrôle AJAX crée une fenêtre contextuelle oui/non quand l’utilisateur clique sur un bouton (y compris le contrôle LinkButton). Si l’utilisateur clique sur Oui, l’action du bouton est exécutée, sinon annulée. Cela est également possible dans un Repeater.
 

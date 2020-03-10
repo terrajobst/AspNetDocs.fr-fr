@@ -9,11 +9,11 @@ ms.assetid: e6ee90bf-32a5-4987-a384-15cc7dd30c8a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 13ac0da5ca53756aa7c660cdc47c96f0c865b006
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611315"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78627147"
 ---
 # <a name="using-textboxwatermark-in-a-formview-c"></a>Utilisation de TextBoxWatermark dans un FormView (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle TextBoxWatermark dans la boîte à outils du contrôle AJAX étend une zone de texte afin qu’un texte s’affiche dans la zone. Lorsqu’un utilisateur clique sur la zone, il est vidé. Si l’utilisateur quitte la zone sans entrer de texte, le texte prérempli réapparaît. Cela est également possible dans un contrôle FormView.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle `TextBoxWatermark` dans le kit d’outils de contrôle AJAX étend une zone de texte pour qu’un texte s’affiche dans la zone. Lorsqu’un utilisateur clique sur la zone, il est vidé. Si l’utilisateur quitte la zone sans entrer de texte, le texte prérempli réapparaît. Cela est également possible dans un contrôle de `FormView`.
 
@@ -52,4 +52,4 @@ Désormais, lorsque l’utilisateur passe en mode insertion du contrôle `FormVi
 Le filigrane dans le champ provient de l’extendeur ([cliquez pour afficher l’image en taille réelle](using-textboxwatermark-in-a-formview-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](using-textboxwatermark-with-validation-controls-cs.md)
+> [Next](using-textboxwatermark-with-validation-controls-cs.md)

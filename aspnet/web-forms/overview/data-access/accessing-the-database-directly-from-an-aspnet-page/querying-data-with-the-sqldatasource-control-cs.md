@@ -9,11 +9,11 @@ ms.assetid: 60512d6a-b572-4b7a-beb3-3e44b4d2020c
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 5bda42965f7d1db71b207c0b76e251b8fff64e31
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606220"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78626426"
 ---
 # <a name="querying-data-with-the-sqldatasource-control-c"></a>Interrogation des données avec le contrôle SqlDataSource (C#)
 
@@ -222,4 +222,4 @@ Pour plus d’informations sur les sujets abordés dans ce didacticiel, reportez
 Cette série de didacticiels a été examinée par de nombreux réviseurs utiles. Les réviseurs de leads pour ce didacticiel étaient Suzanne Connery, Bernadette Leigh et David SURU. Vous souhaitez revoir mes prochains articles MSDN ? Si c’est le cas, insérez une ligne sur [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Suivant](using-parameterized-queries-with-the-sqldatasource-cs.md)
+> [Next](using-parameterized-queries-with-the-sqldatasource-cs.md)

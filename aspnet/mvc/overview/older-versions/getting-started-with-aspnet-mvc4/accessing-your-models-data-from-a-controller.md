@@ -9,11 +9,11 @@ ms.assetid: 61e0206d-7f32-4018-992d-0a51b48b37dc
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
 ms.openlocfilehash: 7c4aa34567ac4fb31d1ed874cf65986c4e779e66
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456164"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78540389"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Accès aux données de votre modèle à partir d’un contrôleur
 
@@ -26,7 +26,7 @@ Dans cette section, vous allez créer une classe de `MoviesController` et écrir
 
 **Générez l’application** avant de passer à l’étape suivante.
 
-Cliquez avec le bouton droit sur le dossier *Controllers* et créez un contrôleur de `MoviesController`. Les options ci-dessous n’apparaissent pas tant que vous ne générez pas votre application. Sélectionnez les options suivantes :
+Cliquez avec le bouton droit sur le dossier *Controllers* et créez un contrôleur de `MoviesController`. Les options ci-dessous n’apparaissent pas tant que vous ne générez pas votre application. Sélectionnez les options suivantes :
 
 - Nom du contrôleur : **MoviesController**. (Il s’agit de la valeur par défaut. )
 - Modèle : **contrôleur MVC avec des actions et des vues en lecture/écriture, à l’aide de Entity Framework**.

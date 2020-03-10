@@ -9,13 +9,13 @@ ms.assetid: cc764f3b-6921-486a-8f44-c6ccd1249acd
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-controller
 msc.type: authoredcontent
 ms.openlocfilehash: 194a8a7398e163f0c37164a8724f98b16444984b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457217"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78615807"
 ---
-# <a name="adding-a-controller"></a>Ajout d'un contrôleur
+# <a name="adding-a-controller"></a>Ajour d’un contrôleur
 
 par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
@@ -80,7 +80,7 @@ Nous allons modifier légèrement l’exemple pour pouvoir passer des informatio
 
 ![](adding-a-controller/_static/image7.png)
 
-Dans l’exemple ci-dessus, le segment d’URL (`Parameters`) n’est pas utilisé, les paramètres `name` et `numTimes` sont passés en tant que [chaînes de requête](http://en.wikipedia.org/wiki/Query_string). Le point d’interrogation, ?, (point d’interrogation) dans l’URL ci-dessus, il s’agit d’un séparateur, et les chaînes de requête suivent. Le caractère &amp; sépare les chaînes de requête.
+Dans l’exemple ci-dessus, le segment d’URL (`Parameters`) n’est pas utilisé, les paramètres `name` et `numTimes` sont passés en tant que [chaînes de requête](http://en.wikipedia.org/wiki/Query_string). Le caractère générique ? (point d’interrogation) dans l’URL ci-dessus, il s’agit d’un séparateur, et les chaînes de requête suivent. Le caractère &amp; sépare les chaînes de requête.
 
 Remplacez la méthode Welcome par le code suivant :
 

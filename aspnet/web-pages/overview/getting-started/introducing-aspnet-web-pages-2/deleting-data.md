@@ -1,60 +1,60 @@
 ---
 uid: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/deleting-data
-title: Présentation des Pages Web ASP.NET - suppression de la base de données | Microsoft Docs
+title: Présentation de la pages Web ASP.NET-suppression de données de base de données | Microsoft Docs
 author: Rick-Anderson
-description: Ce didacticiel vous montre comment supprimer une entrée de la base de données individuelle. Il part du principe que vous avez terminé la série grâce à la mise à jour des données de base de données dans ASP.NET Web PA...
+description: Ce didacticiel vous montre comment supprimer une entrée de base de données individuelle. Il part du principe que vous avez terminé la série pour mettre à jour les données de la base de données dans ASP.NET Web PA...
 ms.author: riande
 ms.date: 01/02/2018
 ms.assetid: 75b5c1cf-84bd-434f-8a86-85c568eb5b09
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/deleting-data
 msc.type: authoredcontent
 ms.openlocfilehash: c8620fc1abc61d514bdc039c66f7a84e67e89abe
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133498"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78629037"
 ---
-# <a name="introducing-aspnet-web-pages---deleting-database-data"></a>Présentation des Pages Web ASP.NET - suppression de la base de données
+# <a name="introducing-aspnet-web-pages---deleting-database-data"></a>Présentation de la pages Web ASP.NET-suppression de données de base de données
 
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Ce didacticiel vous montre comment supprimer une entrée de la base de données individuelle. Il part du principe que vous avez terminé la série via [la mise à jour la base de données dans ASP.NET Web Pages](updating-data.md).
+> Ce didacticiel vous montre comment supprimer une entrée de base de données individuelle. Il part du principe que vous avez terminé la série via la [mise à jour des données de la base de données dans pages Web ASP.net](updating-data.md).
 > 
 > Ce que vous allez apprendre :
 > 
-> - La sélection d’un enregistrement individuel à partir d’une liste d’enregistrements.
+> - Comment sélectionner un enregistrement individuel à partir d’une liste d’enregistrements.
 > - Comment supprimer un enregistrement unique d’une base de données.
-> - Comment vérifier que l’utilisateur a cliqué sur un bouton spécifique dans un formulaire.
+> - Comment vérifier qu’un clic a été effectué sur un bouton spécifique dans un formulaire.
 >   
 > 
-> Fonctionnalités technologies abordées :
+> Fonctionnalités/technologies présentées :
 > 
-> - Le `WebGrid` helper.
-> - Le code SQL `Delete` commande.
-> - Le `Database.Execute` méthode à exécuter une instance SQL `Delete` commande.
+> - Le programme d’assistance `WebGrid`.
+> - Commande SQL `Delete`.
+> - La méthode `Database.Execute` pour exécuter une commande SQL `Delete`.
 
-## <a name="what-youll-build"></a>Ce que vous allez générer
+## <a name="what-youll-build"></a>Contenu
 
-Dans le didacticiel précédent, vous avez appris à mettre à jour un enregistrement de base de données existant. Ce didacticiel est similaire, mais au lieu de la mise à jour l’enregistrement, vous allez le supprimer. Les processus sont similaires, sauf que la suppression est plus simple, ce didacticiel est donc court.
+Dans le didacticiel précédent, vous avez appris à mettre à jour un enregistrement de base de données existant. Ce didacticiel est similaire, à ceci près qu’au lieu de mettre à jour l’enregistrement, vous allez le supprimer. Les processus sont pratiquement les mêmes, mais la suppression est plus simple. ce didacticiel est donc concis.
 
-Dans le *films* page, vous allez mettre à jour le `WebGrid` helper afin qu’elle affiche un **supprimer** lien en regard de chaque film pour accompagner le **modifier** lien que vous avez ajouté précédemment.
+Dans la page *films* , vous allez mettre à jour le `WebGrid` Helper afin qu’il affiche un lien **supprimer** en regard de chaque film pour accompagner le lien de **modification** que vous avez ajouté précédemment.
 
-![Page de films montrant un lien Supprimer pour chaque film](deleting-data/_static/image1.png)
+![Page films présentant un lien supprimer pour chaque film](deleting-data/_static/image1.png)
 
-Comme avec la modification, lorsque vous cliquez sur le **supprimer** lien, il permet d’accéder à une autre page, où les informations de film sont déjà dans un formulaire :
+Comme pour la modification, lorsque vous cliquez sur le lien **supprimer** , vous accédez à une autre page, où les informations sur le film se trouvent déjà dans un formulaire :
 
 ![Supprimer la page de film avec un film affiché](deleting-data/_static/image2.png)
 
-Vous pouvez ensuite cliquer sur le bouton pour supprimer définitivement un enregistrement.
+Vous pouvez ensuite cliquer sur le bouton pour supprimer définitivement l’enregistrement.
 
-## <a name="adding-a-delete-link-to-the-movie-listing"></a>Ajout d’un lien de suppression à la liste de films
+## <a name="adding-a-delete-link-to-the-movie-listing"></a>Ajout d’un lien supprimer à la liste des films
 
-Vous commencerez en ajoutant un **supprimer** lier à la `WebGrid` helper. Ce lien est similaire à la **modifier** lien que vous avez ajouté dans le didacticiel précédent.
+Vous allez commencer par ajouter un lien **supprimer** à l’application auxiliaire `WebGrid`. Ce lien est similaire au lien **modifier** que vous avez ajouté dans un didacticiel précédent.
 
-Ouvrez le *Movies.cshtml* fichier.
+Ouvrez le fichier *movies. cshtml* .
 
-Modifier le `WebGrid` balisage dans le corps de la page en ajoutant une colonne. Voici le balisage modifié :
+Modifiez le balisage `WebGrid` dans le corps de la page en ajoutant une colonne. Voici le balisage modifié :
 
 [!code-html[Main](deleting-data/samples/sample1.html?highlight=9-10)]
 
@@ -62,110 +62,110 @@ La nouvelle colonne est celle-ci :
 
 [!code-html[Main](deleting-data/samples/sample2.html)]
 
-La manière de configurer la grille, le **modifier** colonne est plus à gauche dans la grille et le **supprimer** colonne est plus à droite. (Il existe une virgule après le `Year` colonne maintenant, au cas où vous n’avez pas remarquer que.) Il n’a rien de spécial sur où ces colonnes lien go, et vous pouvez aussi facilement les placer en regard de chacun des autres. Dans ce cas, ils sont distincts pour les rendre plus difficile à se mélanger.
+La façon dont la grille est configurée, la colonne de **modification** est la plus à gauche dans la grille et la colonne de **suppression** est la plus à droite. (Il y a une virgule après la `Year` colonne maintenant, au cas où vous ne l’auriez pas remarqué.) Il n’y a rien de spécial quant à l’emplacement de ces colonnes de lien, et vous pourriez les placer facilement les unes à côté des autres. Dans ce cas, ils sont distincts pour compliquer la combinaison.
 
-![Page de films avec des liens de modification et les détails marquée pour montrer qu’ils ne sont pas en regard de chacun des autres](deleting-data/_static/image3.png)
+![Page films avec les liens de modification et détails marqués pour montrer qu’ils ne sont pas les uns à côté des autres](deleting-data/_static/image3.png)
 
-La nouvelle colonne affiche un lien (`<a>` élément) dont le texte indique « Supprimer ». La cible du lien (son `href` attribut) est un code qui au final correspond à quelque chose comme cette URL, avec la `id` valeur différente pour chaque film :
+La nouvelle colonne affiche un lien (élément`<a>`) dont le texte indique « Delete ». La cible du lien (son attribut `href`) est du code qui se résout finalement en un type similaire à cette URL, avec la valeur `id` différente pour chaque film :
 
 [!code-css[Main](deleting-data/samples/sample3.css)]
 
-Ce lien appellera une page nommée *DeleteMovie* et passez-lui l’ID du film que vous avez sélectionné.
+Ce lien appellera une page nommée *DeleteMovie* et lui transmet l’ID de la vidéo que vous avez sélectionnée.
 
-Ce didacticiel n’entrerai pas dans les détails de la construction de ce lien, car il est presque identique à la **modifier** lien du didacticiel précédent ([la mise à jour la base de données dans ASP.NET Web Pages](updating-data.md)).
+Ce didacticiel n’aborde pas en détail la façon dont ce lien est construit, car il est quasiment identique au lien **Edit** du didacticiel précédent ([mise à jour des données de la base de données dans pages Web ASP.net](updating-data.md)).
 
-## <a name="creating-the-delete-page"></a>Création de la Page Delete
+## <a name="creating-the-delete-page"></a>Création de la page de suppression
 
-Vous pouvez désormais créer la page qui sera la cible pour le **supprimer** lien dans la grille.
+Vous pouvez maintenant créer la page qui sera la cible du lien **supprimer** dans la grille.
 
 > [!NOTE] 
 > 
-> **Important** la technique de tout d’abord sélectionner un enregistrement à supprimer, puis en utilisant une page distincte et un bouton pour confirmer le processus est extrêmement importante pour la sécurité. Comme vous avez lu dans les didacticiels précédents, ce qui *n’importe quel* tri de modification à votre site Web doit *toujours* être effectuée à l’aide d’un formulaire &mdash; , autrement dit, en utilisant une opération HTTP POST. Si vous l’avez fait possible de modifier le site suffit de cliquer sur un lien (c'est-à-dire, en utilisant une opération GET), les personnes pourrait faire des demandes simples à votre site et supprimer vos données. Même un moteur de recherche qui est l’indexation de votre site peut supprimer par inadvertance des données simplement en suivant les liens.
+> **Important** La technique de la première sélection d’un enregistrement à supprimer, puis l’utilisation d’une page et d’un bouton distincts pour confirmer le processus est extrêmement importante pour la sécurité. Comme vous avez lu *dans les* didacticiels précédents, la modification de votre site Web doit *toujours* être effectuée à l’aide d’un formulaire &mdash; à l’aide d’une opération http postale. Si vous avez fait en sorte qu’il soit possible de modifier le site simplement en cliquant sur un lien (c’est-à-dire à l’aide d’une opération d’extraction), les utilisateurs peuvent effectuer des requêtes simples sur votre site et supprimer vos données. Même un robot de moteur de recherche qui indexe votre site peut supprimer par inadvertance des données en suivant les liens ci-dessous.
 > 
-> Lorsque votre application permet de modifier un enregistrement, vous devez présenter l’enregistrement à l’utilisateur pour la modification de toute façon. Mais vous pouvez être tenté d’ignorer cette étape pour la suppression d’un enregistrement. N’ignorez pas cette étape, cependant. (Il est également utile pour les utilisateurs voient l’enregistrement et de confirmer qu’ils vous supprimez l’enregistrement ils destinés.)
+> Lorsque votre application permet aux utilisateurs de modifier un enregistrement, vous devez tout de même présenter l’enregistrement à l’utilisateur pour le modifier. Mais vous pouvez être tenté d’ignorer cette étape pour supprimer un enregistrement. N’ignorez pas cette étape. (Il est également utile pour les utilisateurs de voir l’enregistrement et de confirmer qu’ils suppriment l’enregistrement auquel ils sont destinés.)
 > 
-> Dans un ensemble de didacticiels suivant, vous verrez comment ajouter la fonctionnalité de connexion pour un utilisateur devra se connecter avant la suppression d’un enregistrement.
+> Dans une série de didacticiels suivante, vous verrez comment ajouter une fonctionnalité de connexion afin qu’un utilisateur ait à se connecter avant de supprimer un enregistrement.
 
-Créez une page nommée *DeleteMovie.cshtml* et remplacer celui qui figure dans le fichier avec le balisage suivant :
+Créez une page nommée *DeleteMovie. cshtml* et remplacez ce qui se trouve dans le fichier par le balisage suivant :
 
 [!code-cshtml[Main](deleting-data/samples/sample4.cshtml)]
 
-Ce balisage est similaire à la *EditMovie* pages, à ceci près qu’au lieu d’utiliser des zones de texte (`<input type="text">`), le balisage comprend `<span>` éléments. Il n’existe rien ici à modifier. Il vous suffit est d’afficher les détails de films afin que les utilisateurs peuvent s’assurer qu’ils vous supprimez le film de droite.
+Ce balisage est similaire aux pages *EditMovie* , sauf qu’au lieu d’utiliser des zones de texte (`<input type="text">`), le balisage comprend `<span>` éléments. Il n’y a rien à modifier. Il vous suffit d’afficher les détails du film pour que les utilisateurs puissent s’assurer qu’ils suppriment le film approprié.
 
-Le balisage contient déjà un lien qui permet à l’utilisateur de revenir à la page de liste de films.
+Le balisage contient déjà un lien qui permet à l’utilisateur de revenir à la page de liste des films.
 
-Comme dans le *EditMovie* page, l’ID du film sélectionné est stocké dans un champ masqué. (Il est passé dans la page en premier lieu en tant que valeur de chaîne de requête.) Il existe un `Html.ValidationSummary` appel qui affiche les erreurs de validation. Dans ce cas, l’erreur peut être qu’aucun ID de film a été passé à la page ou que l’ID de film n’est pas valide. Cette situation peut se produire si une personne a exécuté cette page sans un film en sélectionnant d’abord le *films* page.
+Comme dans la page *EditMovie* , l’ID du film sélectionné est stocké dans un champ masqué. (Elle est transmise dans la page à la première place sous la forme d’une valeur de chaîne de requête.) Il y a un appel de `Html.ValidationSummary` qui affichera des erreurs de validation. Dans ce cas, l’erreur peut être qu’aucun ID de film n’a été transmis à la page ou que l’ID de film n’est pas valide. Cette situation peut se produire si quelqu’un a exécuté cette page sans avoir au préalable sélectionné un film dans la page *films* .
 
-La légende du bouton est **supprimer un film**, et son attribut de nom est défini sur `buttonDelete`. Le `name` attribut servira dans le code pour identifier le bouton qui a envoyé le formulaire.
+La légende du bouton est **supprimer le film**et son attribut de nom est défini sur `buttonDelete`. L’attribut `name` sera utilisé dans le code pour identifier le bouton qui a envoyé le formulaire.
 
-Vous devrez écrire du code pour 1) lire les détails de film lorsque la page s’affiche tout d’abord et (2) supprimer le film lorsque l’utilisateur clique sur le bouton.
+Vous devrez écrire du code sur 1) lire les détails du film lorsque la page est affichée pour la première fois et 2) supprimer le film lorsque l’utilisateur clique sur le bouton.
 
-## <a name="adding-code-to-read-a-single-movie"></a>Ajout de Code pour lire un film
+## <a name="adding-code-to-read-a-single-movie"></a>Ajout de code pour lire un seul film
 
-En haut de la *DeleteMovie.cshtml* page, ajoutez le bloc de code suivant :
+En haut de la page *DeleteMovie. cshtml* , ajoutez le bloc de code suivant :
 
 [!code-cshtml[Main](deleting-data/samples/sample5.cshtml)]
 
-Ce balisage est le même que le code correspondant dans le *EditMovie* page. Il obtient l’ID de film en dehors de la chaîne de requête et utilise l’ID pour lire un enregistrement à partir de la base de données. Le code inclut le test de validation (`IsInt()` et `row != null`) pour vous assurer que l’ID de film passé à la page est valide.
+Ce balisage est identique au code correspondant dans la page *EditMovie* . Elle récupère l’ID de film de la chaîne de requête et utilise l’ID pour lire un enregistrement de la base de données. Le code comprend le test de validation (`IsInt()` et `row != null`) pour s’assurer que l’ID de film passé à la page est valide.
 
-N’oubliez pas que ce code doit s’exécutent uniquement la première fois que la page s’exécute. Vous ne souhaitez pas relire l’enregistrement de film à partir de la base de données lorsque l’utilisateur clique sur le **supprimer un film** bouton. Par conséquent, du code pour lire le film est à l’intérieur d’un test qui dit que `if(!IsPost)` &mdash; , autrement dit, *si la demande n’est pas une opération post (envoi d’un formulaire)*.
+N’oubliez pas que ce code ne doit s’exécuter que lors de la première exécution de la page. Vous ne souhaitez pas relire l’enregistrement de film de la base de données quand l’utilisateur clique sur le bouton **supprimer le film** . Par conséquent, le code permettant de lire le film est à l’intérieur d’un test qui indique `if(!IsPost)` &mdash; autrement dit, *si la demande n’est pas une opération de publication (envoi de formulaire)* .
 
-## <a name="adding-code-to-delete-the-selected-movie"></a>Ajout de Code pour supprimer le film sélectionné
+## <a name="adding-code-to-delete-the-selected-movie"></a>Ajout de code pour supprimer le film sélectionné
 
-Pour supprimer le film lorsque l’utilisateur clique sur le bouton, ajoutez le code suivant à l’intérieur de l’accolade fermante de la `@` bloc :
+Pour supprimer le film lorsque l’utilisateur clique sur le bouton, ajoutez le code suivant juste à l’intérieur de l’accolade fermante du bloc `@` :
 
 [!code-csharp[Main](deleting-data/samples/sample6.cs)]
 
-Ce code est similaire au code de mise à jour un enregistrement existant, mais il est plus simple. Le code exécute essentiellement une SQL `Delete` instruction.
+Ce code est similaire au code de mise à jour d’un enregistrement existant, mais plus simple. Le code exécute une instruction SQL `Delete`.
 
- Comme dans le *EditMovie* page, le code se trouve dans un `if(IsPost)` bloc. Cette fois-ci, le `if()` condition est un peu plus compliquée : 
+ Comme dans la page *EditMovie* , le code se trouve dans un bloc `if(IsPost)`. Cette fois-ci, la condition de `if()` est un peu plus compliquée : 
 
 [!code-csharp[Main](deleting-data/samples/sample7.cs)]
 
-Il existe deux conditions ici. La première est que la page est soumise, comme vous l’avez vu avant &mdash; `if(IsPost)`.
+Deux conditions s’imposent ici. La première est que la page est envoyée, comme vous l’avez vu avant &mdash; `if(IsPost)`.
 
-La deuxième condition est `!Request["buttonDelete"].IsEmpty()`, ce qui signifie que la demande a un objet nommé `buttonDelete`. Il est vrai, c’est un moyen indirect de bouton qui a envoyé le formulaire de test. Si un formulaire contient plusieurs boutons d’envoi, uniquement le nom du bouton sur lequel l’utilisateur a cliqué sur apparaît dans la demande. Par conséquent, logiquement, si le nom d’un bouton spécifique apparaît dans la demande &mdash; ou comme indiqué dans le code, si ce bouton n’est pas vide &mdash; qui est le bouton qui a envoyé le formulaire.
+La deuxième condition est `!Request["buttonDelete"].IsEmpty()`, ce qui signifie que la demande a un objet nommé `buttonDelete`. Il est vrai qu’il s’agit d’un moyen indirect de tester le bouton qui a envoyé le formulaire. Si un formulaire contient plusieurs boutons Envoyer, seul le nom du bouton sur lequel l’utilisateur a cliqué apparaît dans la demande. Par conséquent, logiquement, si le nom d’un bouton particulier apparaît dans la demande &mdash; ou comme indiqué dans le code, si ce bouton n’est pas vide &mdash; c’est le bouton qui a envoyé le formulaire.
 
-Le `&&` moyen de l’opérateur « et » (AND logique). Par conséquent, l’ensemble `if` condition est...
+L’opérateur `&&` signifie « and » (AND logique). Par conséquent, la condition `if` entière est...
 
-*Cette demande est une publication (pas une demande de première)*  
+*Cette demande est une publication (et non une demande initiale)*  
   
  AND  
   
-*Le* `buttonDelete` *bouton a été le bouton qui a envoyé le formulaire.*
+*Le* *bouton `buttonDelete`était le bouton qui a envoyé le formulaire.*
 
-Ce formulaire (en réalité, cette page) contienne un seul bouton, c’est pourquoi le test supplémentaire pour `buttonDelete` techniquement n’est pas obligatoire. Cependant, vous êtes sur le point d’effectuer une opération qui va supprimer définitivement les données. Vous voulez donc veillez possible que vous effectuez l’opération uniquement lorsque l’utilisateur a explicitement demandé. Par exemple, que vous développée plus loin de cette page et ajouté des autres boutons. Même dans ce cas, le code qui supprime le film s’exécute uniquement si le `buttonDelete` bouton l’utilisateur a cliqué.
+Ce formulaire (en fait, cette page) ne contient qu’un seul bouton. par conséquent, le test supplémentaire pour `buttonDelete` n’est techniquement pas nécessaire. Toutefois, vous allez effectuer une opération qui supprimera définitivement les données. Vous souhaitez donc être aussi sûr que possible d’effectuer l’opération uniquement lorsque l’utilisateur l’a demandée explicitement. Par exemple, supposons que vous développiez cette page par la suite et y ajoutiez d’autres boutons. Même si vous avez cliqué sur le bouton `buttonDelete`, le code qui supprime le film s’exécutera uniquement.
 
-Comme dans le *EditMovie* page, vous obtenez l’ID à partir du champ masqué et puis exécutez la commande SQL. La syntaxe pour la `Delete` instruction est :
+Comme dans la page *EditMovie* , vous récupérez l’ID à partir du champ masqué, puis exécutez la commande SQL. La syntaxe de l’instruction `Delete` est la suivante :
 
 `DELETE FROM table WHERE ID = value`
 
-Il est essentiel d’inclure la `WHERE` clause et le code. Si vous omettez la clause WHERE, *tous les enregistrements dans la table seront supprimés*. Comme vous l’avez vu, vous passez la valeur d’ID pour la commande SQL à l’aide d’un espace réservé.
+Il est essentiel d’inclure la clause `WHERE` et l’ID. Si vous omettez la clause WHERE, *tous les enregistrements de la table seront supprimés*. Comme vous l’avez vu, vous transmettez la valeur d’ID à la commande SQL à l’aide d’un espace réservé.
 
-## <a name="testing-the-movie-delete-process"></a>Tester le processus de suppression de film
+## <a name="testing-the-movie-delete-process"></a>Test du processus de suppression du film
 
-Vous pouvez maintenant tester. Exécutez le *films* page, puis cliquez sur **supprimer** en regard d’un film. Lorsque le *DeleteMovie* page s’affiche, cliquez sur **supprimer un film**.
+Vous pouvez maintenant tester. Exécutez la page *films* , puis cliquez sur **supprimer** en regard d’un film. Lorsque la page *DeleteMovie* s’affiche, cliquez sur **supprimer le film**.
 
-![Supprimer la page de film avec le bouton Supprimer un film mis en surbrillance](deleting-data/_static/image4.png)
+![Page supprimer le film avec le bouton supprimer le film mis en surbrillance](deleting-data/_static/image4.png)
 
-Lorsque vous cliquez sur le bouton, le code supprime les films et retourne à la liste de films. Vous pouvez y rechercher le film supprimé et confirmez qu’il est bien été supprimé.
+Lorsque vous cliquez sur le bouton, le code supprime les films et retourne à la liste des films. Vous pouvez y rechercher le film supprimé et confirmer qu’il a été supprimé.
 
-## <a name="coming-up-next"></a>Prochaine
+## <a name="coming-up-next"></a>À venir suivant
 
-Le didacticiel suivant vous montre comment accorder à toutes les pages sur votre site d’une apparence commune et la disposition.
+Le didacticiel suivant vous montre comment donner une apparence et une disposition communes à toutes les pages sur votre site.
 
-## <a name="complete-listing-for-movie-page-updated-with-delete-links"></a>Intégralité de la Page de film (mis à jour avec les liens de suppression)
+## <a name="complete-listing-for-movie-page-updated-with-delete-links"></a>Liste complète des pages de films (mise à jour avec les liens supprimer)
 
 [!code-cshtml[Main](deleting-data/samples/sample8.cshtml)]
 
-## <a name="complete-listing-for-deletemovie-page"></a>Liste complète de la Page de DeleteMovie
+## <a name="complete-listing-for-deletemovie-page"></a>Liste complète de la page DeleteMovie
 
 [!code-cshtml[Main](deleting-data/samples/sample9.cshtml)]
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- [Introduction à la programmation Web ASP.NET en utilisant la syntaxe Razor](../introducing-razor-syntax-c.md)
-- [Instruction DELETE de SQL](http://www.w3schools.com/sql/sql_delete.asp) sur le site W3Schools
+- [Présentation de la programmation Web ASP.NET à l’aide de la syntaxe Razor](../introducing-razor-syntax-c.md)
+- [Instruction SQL Delete](http://www.w3schools.com/sql/sql_delete.asp) sur le site W3Schools
 
 > [!div class="step-by-step"]
 > [Précédent](updating-data.md)

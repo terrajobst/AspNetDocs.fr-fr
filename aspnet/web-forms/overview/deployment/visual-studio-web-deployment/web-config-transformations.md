@@ -9,11 +9,11 @@ ms.assetid: 5a2a927b-14cb-40bc-867a-f0680f9febd7
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/web-config-transformations
 msc.type: authoredcontent
 ms.openlocfilehash: a9d39547c94a63003442ba6fe1257693dde24b05
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621787"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78632831"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-webconfig-file-transformations"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : transformations de fichiers Web. config
 
@@ -23,7 +23,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels vous montre comment déployer (publier) une application Web ASP.NET sur Azure App Service Web Apps ou sur un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou de Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Ce didacticiel vous montre comment automatiser le processus de modification du fichier *Web. config* lorsque vous le déployez dans différents environnements de destination. La plupart des applications ont des paramètres dans le fichier *Web. config* qui doivent être différents lorsque l’application est déployée. L’automatisation du processus d’apport de ces modifications vous évite de devoir les exécuter manuellement à chaque fois que vous déployez, ce qui serait fastidieux et sujet aux erreurs.
 
@@ -47,7 +47,7 @@ Si les paramètres du fichier *Web. config* que vous souhaitez modifier se trouv
 
 Dans **Explorateur de solutions**, développez *Web. config* pour voir les fichiers de transformation *Web. Debug. config* et *Web. Release. config* qui sont créés par défaut pour les deux configurations de build par défaut.
 
-![Web. config_transform_files](web-config-transformations/_static/image1.png)
+![Web.config_transform_files](web-config-transformations/_static/image1.png)
 
 Vous pouvez créer des fichiers de transformation pour les configurations de build personnalisées en cliquant avec le bouton droit sur le fichier Web. config et en choisissant **Ajouter des transformations de configuration** dans le menu contextuel. Pour ce didacticiel, vous n’avez pas besoin de le faire, et l’option de menu est désactivée, car vous n’avez créé aucune configuration de build personnalisée.
 
@@ -142,7 +142,7 @@ Vous avez maintenant fait autant que possible avec les transformations *Web. con
 
 Dans le didacticiel suivant, vous devez prendre en charge les tâches de configuration du déploiement qui requièrent la définition des propriétés du projet.
 
-## <a name="more-information"></a>Plus d’informations
+## <a name="more-information"></a>Plus d'informations
 
 Pour plus d’informations sur les sujets traités dans ce didacticiel, consultez [utilisation des transformations Web. config pour modifier les paramètres dans le fichier Web. config de destination ou le fichier app. config lors du déploiement](https://go.microsoft.com/fwlink/p/?LinkId=282413#transforms) dans le plan de contenu de déploiement Web pour Visual Studio et ASP.net.
 

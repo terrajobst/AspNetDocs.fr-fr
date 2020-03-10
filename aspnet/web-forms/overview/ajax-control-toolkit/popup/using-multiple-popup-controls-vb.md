@@ -9,11 +9,11 @@ ms.assetid: 4da43d77-f6c4-43a8-9124-f1e8e1c8f0a2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-vb
 msc.type: authoredcontent
 ms.openlocfilehash: e1f4ff64e9fdf48ea63b75c97acd53a64b5ab5ce
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611590"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78612531"
 ---
 # <a name="using-multiple-popup-controls-vb"></a>Utilisation de plusieurs contrôles de fenêtre contextuelle (VB)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > L’extendeur PopupControl dans la boîte à outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle quand un autre contrôle est activé. Il est également possible d’utiliser plusieurs contrôles Popup sur une page.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 L’extendeur PopupControl dans la boîte à outils de contrôle AJAX offre un moyen simple de déclencher une fenêtre contextuelle quand un autre contrôle est activé. Il est également possible d’utiliser plusieurs contrôles Popup sur une page.
 

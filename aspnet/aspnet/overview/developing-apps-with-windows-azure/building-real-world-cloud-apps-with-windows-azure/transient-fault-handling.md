@@ -9,11 +9,11 @@ ms.assetid: 7ead83bc-c08c-4b26-8617-00e07292e35c
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling
 msc.type: authoredcontent
 ms.openlocfilehash: e798cb83cfb97db63fef6dc38c8f62804461d01b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456853"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617326"
 ---
 # <a name="transient-fault-handling-building-real-world-cloud-apps-with-azure"></a>Gestion des erreurs temporaires (création d’applications Cloud réalistes avec Azure)
 
@@ -72,7 +72,7 @@ Il n’y a pas de stratégie de nouvelle tentative adaptée à une seule taille.
 
 Pour SQL Database de l’aide sur les stratégies de nouvelle tentative, consultez [résoudre les erreurs temporaires et les erreurs de connexion à SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-connectivity-issues/).
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Une stratégie de nouvelle tentative/interruption peut aider à rendre les erreurs temporaires invisibles au client la plupart du temps, et Microsoft fournit des infrastructures que vous pouvez utiliser pour réduire votre travail à l’implémentation d’une stratégie, que vous utilisiez ADO.NET, Entity Framework ou le service de stockage Azure.
 
@@ -80,7 +80,7 @@ Dans le [chapitre suivant](distributed-caching.md), nous allons examiner comment
 
 ## <a name="resources"></a>Ressources
 
-Pour plus d'informations, voir les ressources suivantes :
+Pour plus d'informations, reportez-vous aux ressources suivantes :
 
 Documentation
 

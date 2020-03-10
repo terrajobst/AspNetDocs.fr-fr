@@ -1,23 +1,23 @@
 ---
 uid: web-pages/overview/getting-started/index
-title: Bien démarrer avec ASP.NET Web Pages | Microsoft Docs
+title: Prise en main avec pages Web ASP.NET | Microsoft Docs
 author: rick-anderson
-description: En savoir plus sur ASP.NET Web Pages ASP.NET Web Pages et la nouvelle syntaxe Razor fournissent un moyen rapide, abordable et simple de combiner du code serveur avec HTML t...
+description: En savoir plus sur pages Web ASP.NET pages Web ASP.NET et la nouvelle syntaxe Razor offrir une méthode rapide, simple et légère pour combiner du code serveur avec HTML t...
 ms.author: riande
 ms.date: 05/18/2012
 ms.assetid: 99253c4e-a125-4c21-85e7-a6dd74d93892
 msc.legacyurl: /web-pages/overview/getting-started
 msc.type: chapter
 ms.openlocfilehash: 50a249d0e64cff2a8c4f16f38f530b6d52f755de
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133171"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640923"
 ---
-# <a name="getting-started-with-aspnet-web-pages"></a>Mise en route avec ASP.NET Web Pages
+# <a name="getting-started-with-aspnet-web-pages"></a>Prise en main avec pages Web ASP.NET
 
-> Les Pages Web et les WebMatrix sont ainsi que comment installer tous les éléments, de prise en main et de déployer des sites.
+> Les pages Web et WebMatrix, ainsi que l’installation, la prise en main et le déploiement des sites.
 
 - [Programmer ASP.NET Web Pages dans Visual Studio](program-asp-net-web-pages-in-visual-studio.md)
 - [Introduction à la syntaxe Razor de la programmation web ASP.NET](introducing-razor-syntax-c.md)
@@ -27,7 +27,7 @@ ms.locfileid: "65133171"
 - [Ajout de fonctionnalités de réseaux sociaux à votre site web](13-adding-social-networking-to-your-web-site.md)
 - [Introduction à ASP.NET Web Pages](introducing-aspnet-web-pages-2/index.md)
 
-    - [Prise en main](introducing-aspnet-web-pages-2/getting-started.md)
+    - [Bien démarrer](introducing-aspnet-web-pages-2/getting-started.md)
     - [Principes de base de la programmation](introducing-aspnet-web-pages-2/intro-to-web-pages-programming.md)
     - [Affichage des données](introducing-aspnet-web-pages-2/displaying-data.md)
     - [Principes de base des formulaires HTML](introducing-aspnet-web-pages-2/form-basics.md)

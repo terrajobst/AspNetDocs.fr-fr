@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/index
-title: Modification et suppression des données via le contrôle DataList | Microsoft Docs
+title: Modification et suppression de données via la DataList | Microsoft Docs
 author: rick-anderson
-description: Ces didacticiels montrent comment modifier le contrôle DataList afin qu’il permet utilise de modifier des données.
+description: Ces didacticiels montrent comment ajuster le contrôle DataList afin qu’il autorise l’utilisation de modifier les données.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: a6f02826-428a-49b1-ab2c-8e080b72f51e
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist
 msc.type: chapter
 ms.openlocfilehash: b19b983272988cc6802e56541a8dfed052eead04
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133530"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78610914"
 ---
 # <a name="editing-and-deleting-data-through-the-datalist"></a>Modification et suppression des données via le contrôle DataList
 
-> Ces didacticiels montrent comment modifier le contrôle DataList afin qu’il permet utilise de modifier des données.
+> Ces didacticiels montrent comment ajuster le contrôle DataList afin qu’il autorise l’utilisation de modifier les données.
 
 - [Vue d’ensemble de la modification et de la suppression de données dans le contrôle DataList (C#)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs.md)
 - [Réalisation de mises à jour par lots (C#)](performing-batch-updates-cs.md)
