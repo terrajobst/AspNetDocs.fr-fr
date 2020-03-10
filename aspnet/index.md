@@ -8,11 +8,11 @@ title: Documentation d’ASP.NET
 ms.date: 08/24/2018
 description: Découvrez comment développer des applications web ASP.NET. Obtenez de la documentation, des exemples de code, des tutoriels et bien plus encore.
 ms.openlocfilehash: 6309704444d60d42d49c3a8f1683045dc503e761
-ms.sourcegitcommit: cd35be4b25eb05724a5f074214bbdf6573349eda
-ms.translationtype: HT
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70161696"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616423"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -99,7 +99,7 @@ ms.locfileid: "70161696"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Vue d’ensemble du modèle MVC d’ASP.NET Core</h3>
+                                                    <h3>Vue d’ensemble d’ASP.NET Core MVC</h3>
                                                     <p>Découvrez comment créer des applications web et des API avec le modèle de conception MVC.</p>
                                                 </div>
                                             </div>
@@ -153,7 +153,7 @@ ms.locfileid: "70161696"
                         </ul>
                     </li>
                     <li>
-                        <a href="#core_tutorials">Tutoriels</a>
+                        <a href="#core_tutorials">Didacticiels</a>
                         <ul id="core_tutorials" class="cardsZ">
                             <li>
                                 <div class="container intro">
@@ -568,7 +568,7 @@ ms.locfileid: "70161696"
                         </ul>
                     </li>
                     <li>
-                        <a href="#aspnet_tutorials">Tutoriels</a>
+                        <a href="#aspnet_tutorials">Didacticiels</a>
                         <ul id="aspnet_tutorials" class="cardsZ">
                             <li>
                                 <div class="container intro">
