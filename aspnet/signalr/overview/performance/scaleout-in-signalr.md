@@ -1,19 +1,19 @@
 ---
 uid: signalr/overview/performance/scaleout-in-signalr
-title: Introduction à la montée en puissance parallèle dans SignalR | Microsoft Docs
+title: Présentation de ScaleOut dans Signalr | Microsoft Docs
 author: bradygaster
-description: Versions des logiciels utilisés dans cette rubrique Visual Studio 2013, .NET 4.5 SignalR les versions précédentes de la version 2 de cette rubrique pour plus d’informations sur les versions antérieures de...
+description: Versions logicielles utilisées dans cette rubrique Visual Studio 2013 .NET 4,5 Signalr version 2 versions précédentes de cette rubrique pour plus d’informations sur les versions antérieures de...
 ms.author: bradyg
 ms.date: 06/10/2014
 ms.assetid: 7e781fc1-1c1f-45a8-bc1d-338e96dbe9c9
 msc.legacyurl: /signalr/overview/performance/scaleout-in-signalr
 msc.type: authoredcontent
 ms.openlocfilehash: 14dc22f99a43b566903c59fb23b7d419350f4a25
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113838"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78579232"
 ---
 # <a name="introduction-to-scaleout-in-signalr"></a>Introduction au scale-out dans SignalR
 
@@ -21,43 +21,43 @@ par [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://git
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-> ## <a name="software-versions-used-in-this-topic"></a>Versions des logiciels utilisées dans cette rubrique
+> ## <a name="software-versions-used-in-this-topic"></a>Versions logicielles utilisées dans cette rubrique
 >
 >
 > - [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)
 > - .NET 4.5
-> - SignalR version 2
+> - Signalr version 2
 >
 >
 >
 > ## <a name="previous-versions-of-this-topic"></a>Versions précédentes de cette rubrique
 >
-> Pour plus d’informations sur les versions antérieures de SignalR, consultez [les Versions antérieures de SignalR](../older-versions/index.md).
+> Pour plus d’informations sur les versions antérieures de Signalr, consultez [versions antérieures de signalr](../older-versions/index.md).
 >
 > ## <a name="questions-and-comments"></a>Questions et commentaires
 >
-> Veuillez laisser des commentaires sur la façon dont vous avez apprécié ce didacticiel et ce que nous pouvions améliorer dans les commentaires en bas de la page. Si vous avez des questions qui ne sont pas directement liées à ce didacticiel, vous pouvez les publier à le [ASP.NET SignalR forum](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
+> N’hésitez pas à nous faire part de vos commentaires sur la façon dont vous aimez ce didacticiel et sur ce que nous pourrions améliorer dans les commentaires en bas de la page. Si vous avez des questions qui ne sont pas directement liées au didacticiel, vous pouvez les poster sur le [forum ASP.net signalr](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
 
-En règle générale, il existe deux façons de mettre à l’échelle une application web : *monter en puissance* et *monter en charge*.
+En général, il existe deux façons de mettre à l’échelle une application Web : *montée* en puissance et *montée*en charge.
 
-- Monter en puissance implique l’utilisation d’un plus grand serveur (ou une plus grande machine virtuelle) avec plus de RAM, UC, etc.
-- Monter en charge signifie ajouter davantage de serveurs pour gérer la charge.
+- La montée en puissance implique l’utilisation d’un serveur de plus grande taille (ou d’une machine virtuelle plus grande) avec davantage de RAM, de processeurs, etc.
+- La montée en charge signifie l’ajout de serveurs supplémentaires pour gérer la charge.
 
-Le problème de montée en puissance est vite appuyé sur une limite de la taille de l’ordinateur. En outre, vous devez monter en charge. Toutefois, lorsque vous faites évoluer, les clients peuvent obtenir acheminés vers différents serveurs. Un client qui est connecté à un seul serveur ne recevra pas les messages envoyés à partir d’un autre serveur.
+Le problème de la mise à l’échelle est que vous atteignez rapidement une limite de la taille de la machine. Au-delà, vous devez effectuer une montée en charge. Toutefois, lorsque vous mettez à l’échelle, les clients peuvent être acheminés vers différents serveurs. Un client connecté à un serveur ne reçoit pas les messages envoyés à partir d’un autre serveur.
 
 ![](scaleout-in-signalr/_static/image1.png)
 
-Une solution consiste à transférer les messages entre les serveurs, à l’aide d’un composant appelé un *fond de panier*. Avec un fond de panier est activée, chaque instance d’application envoie des messages au fond de panier, et le fond de panier les transfère vers les autres instances de l’application. (En électronique, un fond de panier est un groupe de connecteurs parallèles. Par analogie, un fond de panier SignalR connecte plusieurs serveurs.)
+Une solution consiste à transférer les messages entre les serveurs, à l’aide d’un composant appelé *backplane*. Quand un fond de panier est activé, chaque instance d’application envoie des messages au fond de panier et le fond de panier les transfère aux autres instances de l’application. (En électronique, un fond de panier est un groupe de connecteurs parallèles. Par analogie, un fond de panier Signalr connecte plusieurs serveurs.)
 
 ![](scaleout-in-signalr/_static/image2.png)
 
-SignalR fournit actuellement trois fonds de panier :
+Signalr propose actuellement trois plans de perfectionnement :
 
-- **Azure Service Bus**. Service Bus est une infrastructure de messagerie qui permet aux composants envoyer des messages d’une manière faiblement couplée.
-- **Redis**. Redis est un magasin de clé-valeur en mémoire. Redis prend en charge un modèle de publication/abonnement (« pub/sub ») pour envoyer des messages.
-- **SQL Server**. Le fond de panier de SQL Server écrit les messages dans les tables SQL. Le fond de panier utilise Service Broker de messagerie efficace. Toutefois, elle fonctionne également si Service Broker n’est pas activé.
+- **Azure Service Bus**. Service Bus est une infrastructure de messagerie qui permet aux composants d’envoyer des messages d’une manière faiblement couplée.
+- **ReDim**. Redims est un magasin clé-valeur en mémoire. Redims prend en charge un modèle de publication/abonnement (« Pub/Sub ») pour l’envoi de messages.
+- **SQL Server**. Le fond de panier SQL Server écrit des messages dans des tables SQL. Le fond de panier utilise Service Broker pour une messagerie efficace. Toutefois, il fonctionne également si Service Broker n’est pas activé.
 
-Si vous déployez votre application sur Azure, envisagez d’utiliser le fond de panier de Redis à l’aide [Cache Redis Azure](https://azure.microsoft.com/services/cache/). Si vous déployez sur votre propre batterie de serveurs, envisagez de SQL Server ou des fonds de panier de Redis.
+Si vous déployez votre application sur Azure, envisagez d’utiliser le backplane ReDim à l’aide du [cache redims Azure](https://azure.microsoft.com/services/cache/). Si vous effectuez un déploiement sur votre propre batterie de serveurs, envisagez les SQL Server ou les redirections ReDim.
 
 Les rubriques suivantes contiennent des didacticiels pas à pas pour chaque fond de panier :
 
@@ -67,24 +67,24 @@ Les rubriques suivantes contiennent des didacticiels pas à pas pour chaque fond
 
 ## <a name="implementation"></a>Implémentation
 
-Dans SignalR, chaque message est envoyé via un bus de messages. Un bus de messages implémente le [IMessageBus](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.messaging.imessagebus(v=vs.100).aspx) interface, qui fournit une abstraction de publication/abonnement. Les fonds de panier fonctionnent en remplaçant la valeur par défaut **IMessageBus** avec un bus conçu ce fond de panier. Par exemple, le bus de messages pour Redis est [RedisMessageBus](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.redis.redismessagebus(v=vs.100).aspx), et il utilise le cache Redis [pub/sub](http://redis.io/topics/pubsub) mécanisme pour envoyer et recevoir des messages.
+Dans Signalr, chaque message est envoyé via un bus de messages. Un bus de messages implémente l’interface [IMessageBus](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.messaging.imessagebus(v=vs.100).aspx) , qui fournit une abstraction de publication/abonnement. Ces plans fonctionnent en remplaçant le **IMessageBus** par défaut par un bus conçu pour ce backplane. Par exemple, le bus de messages pour les insertions est [RedisMessageBus](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.redis.redismessagebus(v=vs.100).aspx), et il utilise le mécanisme de [Pub/Sub](http://redis.io/topics/pubsub) redims pour envoyer et recevoir des messages.
 
-Chaque instance de serveur se connecte à l’infrastructure d’intégration via le bus. Lorsqu’un message est envoyé, il est placé dans le fond de panier, et le fond de panier envoie à chaque serveur. Lorsqu’un serveur reçoit un message du fond de panier, il place le message dans sa mémoire cache locale. Le serveur remet ensuite les messages aux clients à partir de sa mémoire cache locale.
+Chaque instance de serveur se connecte au fond de panier via le bus. Lorsqu’un message est envoyé, il passe au fond de panier et le fond de panier l’envoie à tous les serveurs. Lorsqu’un serveur reçoit un message du fond de panier, il place le message dans son cache local. Le serveur remet ensuite les messages aux clients à partir de son cache local.
 
-Pour chaque connexion client, progression du client dans la lecture du flux de message est suivie à l’aide d’un curseur. (Un curseur représente une position dans le flux de message.) Si un client se déconnecte, puis se reconnecte, il demande le bus de messages reçus après la valeur du curseur du client. La même chose se produit lorsqu’une connexion utilise [interrogation longue](../getting-started/introduction-to-signalr.md#transports). Après l’achèvement d’une requête d’interrogation longue, le client ouvre une nouvelle connexion et vous demande des messages reçus après le curseur.
+Pour chaque connexion client, la progression du client lors de la lecture du flux de messages est suivie à l’aide d’un curseur. (Un curseur représente une position dans le flux de message.) Si un client se déconnecte, puis se reconnecte, il demande au bus les messages arrivés après la valeur de curseur du client. La même chose se produit lorsqu’une connexion utilise une [interrogation longue](../getting-started/introduction-to-signalr.md#transports). Après la fin d’une demande d’interrogation longue, le client ouvre une nouvelle connexion et demande les messages arrivés après le curseur.
 
-Le fonctionnement du mécanisme curseur même si un client est acheminé vers un autre serveur sur se reconnecter. Le fond de panier tient compte de tous les serveurs, et peu importe le serveur auquel le client se connecte.
+Le mécanisme de curseur fonctionne même si un client est routé vers un autre serveur lors de la reconnexion. Le fond de panier est conscient de tous les serveurs et peu importe le serveur auquel se connecte le client.
 
 ## <a name="limitations"></a>Limitations
 
-À l’aide d’un fond de panier, le débit de message maximale est inférieur à ce que c’est lorsque les clients communiquent directement avec un seul nœud serveur. C’est parce que le fond de panier transfère tous les messages à tous les nœuds, donc le fond de panier peut devenir un goulot d’étranglement. Si cette limitation est un problème dépend de l’application. Par exemple, voici quelques scénarios classiques de SignalR :
+À l’aide d’un fond de panier, le débit maximal de messages est plus faible que lorsque les clients communiquent directement avec un nœud de serveur unique. Cela est dû au fait que le fond de panier transmet chaque message à chaque nœud, de sorte que le fond de panier peut devenir un goulot d’étranglement. Le fait que cette limitation soit un problème dépend de l’application. Par exemple, voici quelques scénarios de Signalr classiques :
 
-- [Diffusion de serveur](../getting-started/tutorial-server-broadcast-with-signalr.md) (par exemple, les cotations boursières) : Fonds de panier fonctionnent bien pour ce scénario, étant donné que le serveur contrôle la fréquence à laquelle les messages sont envoyés.
-- [Client à](../getting-started/tutorial-getting-started-with-signalr.md) (par exemple, chat) : Dans ce scénario, le fond de panier peut être un goulot d’étranglement si le nombre de messages évolue avec le nombre de clients ; Autrement dit, si le taux de messages augmente proportionnellement à sa plus de clients joindre.
-- [En temps réel haute fréquence](../getting-started/tutorial-high-frequency-realtime-with-signalr.md) (par exemple, des jeux en temps réel) : Fond de panier n’est pas recommandée pour ce scénario.
+- [Diffusion](../getting-started/tutorial-server-broadcast-with-signalr.md) sur le serveur (par exemple, cotation boursière) : les plans sont adaptés à ce scénario, car le serveur contrôle la vitesse à laquelle les messages sont envoyés.
+- [Client à client](../getting-started/tutorial-getting-started-with-signalr.md) (par exemple, conversation) : dans ce scénario, le fond de panier peut être un goulot d’étranglement si le nombre de messages est mis à l’échelle avec le nombre de clients ; autrement dit, si le taux de messages augmente proportionnellement au fur et à mesure que d’autres clients se joignent.
+- [Haute fréquence en temps réel](../getting-started/tutorial-high-frequency-realtime-with-signalr.md) (par exemple, jeux en temps réel) : un backplane n’est pas recommandé pour ce scénario.
 
-## <a name="enabling-tracing-for-signalr-scaleout"></a>Activation du suivi pour la montée en puissance parallèle de SignalR
+## <a name="enabling-tracing-for-signalr-scaleout"></a>Activation du suivi pour Signalr ScaleOut
 
-Pour activer le suivi pour les fonds de panier, ajoutez les sections suivantes au fichier web.config, sous la racine **configuration** élément :
+Pour activer le suivi des plans, ajoutez les sections suivantes au fichier Web. config, sous l’élément de **configuration** racine :
 
 [!code-html[Main](scaleout-in-signalr/samples/sample1.html)]

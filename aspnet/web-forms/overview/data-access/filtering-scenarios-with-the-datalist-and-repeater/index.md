@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/index
-title: Scénarios de filtrage avec les contrôles DataList et Repeater | Microsoft Docs
+title: Filtrage des scénarios avec les contrôles DataList et Repeater | Microsoft Docs
 author: rick-anderson
-description: Dans ces didacticiels, vous allez apprendre à afficher les rapports maître/détail à l’aide des listes déroulantes pour les enregistrements maîtres et un contrôle DataList pour plus d’informations.
+description: Dans ces didacticiels, vous allez voir comment afficher des rapports maître/détail à l’aide de listes déroulantes pour les enregistrements principaux et un contrôle DataList pour plus d’informations.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 80b17464-8395-4b82-8f11-5d8ee1351d53
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater
 msc.type: chapter
 ms.openlocfilehash: f45fb29c03db21a34419c14150c88b6b58ea05d0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109064"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78590327"
 ---
 # <a name="filtering-scenarios-with-the-datalist-and-repeater"></a>Scénarios de filtrage avec les contrôles DataList et Repeater
 
-> Dans ces didacticiels, vous allez apprendre à afficher les rapports maître/détail à l’aide des listes déroulantes pour les enregistrements maîtres et un contrôle DataList pour plus d’informations.
+> Dans ces didacticiels, vous allez voir comment afficher des rapports maître/détail à l’aide de listes déroulantes pour les enregistrements principaux et un contrôle DataList pour plus d’informations.
 
 - [Filtrage maître/détail avec une DropDownList (C#)](master-detail-filtering-with-a-dropdownlist-datalist-cs.md)
 - [Filtrage maître/détail sur deux pages (C#)](master-detail-filtering-acess-two-pages-datalist-cs.md)

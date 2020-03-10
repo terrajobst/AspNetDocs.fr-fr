@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/jquery-validate/cdnjqueryvalidate16
-title: jQuery Validate 1.6 | Microsoft Docs
+title: jQuery Validate 1,6 | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,11 +9,11 @@ ms.assetid: 5c890d81-a1a9-4b4f-9221-6947978ae336
 msc.legacyurl: /ajax/cdn/jquery-validate/cdnjqueryvalidate16
 msc.type: content
 ms.openlocfilehash: e42a53f6d79a14800dab05c87e0943db470c2b7d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59388086"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78585098"
 ---
 # <a name="jquery-validate-16"></a>jQuery Validate 1.6
 

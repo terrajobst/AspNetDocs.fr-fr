@@ -9,11 +9,11 @@ ms.assetid: a89d6f32-b71b-4036-8ff7-5f8ac2a6eca8
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: c5281a42596d95e725b32e652c75785abe0fd64e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74640573"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78573464"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-migrating-to-sql-server---10-of-12"></a>Déploiement d’une application Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : migration vers SQL Server-10 sur 12
 
@@ -25,7 +25,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Pour obtenir un didacticiel qui présente les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions SQL Server autres que SQL Server Compact et montre comment déployer vers Azure App Service Web Apps, consultez [déploiement Web ASP.net à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Ce didacticiel vous montre comment effectuer une migration de SQL Server Compact vers SQL Server. Cela peut être utile pour tirer parti des fonctionnalités de SQL Server que SQL Server Compact ne prend pas en charge, telles que les procédures stockées, les déclencheurs, les vues ou la réplication. Pour plus d’informations sur les différences entre les SQL Server Compact et les SQL Server, consultez le didacticiel sur le [déploiement de SQL Server Compact](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md) .
 
@@ -112,7 +112,7 @@ L’onglet **Package/Publication SQL** est normalement désactivé, car il spéc
 
 Cliquez sur **Importer à partir de Web. config**.
 
-![Selecting_Import_from_Web. config](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image5.png)
+![Selecting_Import_from_Web.config](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image5.png)
 
 Visual Studio recherche des chaînes de connexion dans le fichier *Web. config* , en trouve un pour la base de données d’appartenance et une pour la base de données School, et ajoute une ligne correspondant à chaque chaîne de connexion dans le tableau **entrées de la base de données** . Les chaînes de connexion qu’il trouve correspondent aux bases de données SQL Server Compact existantes, et l’étape suivante consiste à configurer le mode et l’emplacement de déploiement de ces bases de données.
 
@@ -224,7 +224,7 @@ Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet Co
 
 Sélectionnez l’onglet **Profil** .
 
-Cliquez sur **gérer les profils**.
+Cliquez sur **Manage Profiles (Gérer les profils)** .
 
 Sélectionnez **test**, cliquez sur **supprimer**, puis sur **Fermer**.
 
@@ -281,7 +281,7 @@ Sur la même page, cliquez sur **créer un utilisateur**. Sur les serveurs de Cy
 Renseignez les champs requis dans la page Propriétés de l' **utilisateur SQL** :
 
 - Entrez « ContosoUniversityUser » comme nom.
-- Entrez un mot de passe
+- Entrez un mot de passe.
 - Sélectionnez **contosouSchool** comme base de données par défaut.
 - Activez la case à cocher **contosouSchool** .
 
@@ -347,7 +347,7 @@ Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet Co
 
 Sélectionnez l’onglet **Profil** .
 
-Cliquez sur **gérer les profils**.
+Cliquez sur **Manage Profiles (Gérer les profils)** .
 
 Sélectionnez **production**, cliquez sur **supprimer**, puis sur **Fermer**.
 
@@ -414,7 +414,7 @@ Ouvrez la fenêtre de console du gestionnaire de package.
 
 Dans la liste déroulante **projet par défaut** , sélectionnez le projet CONTOSOUNIVERSITY. dal.
 
-Entrez la commande suivante :
+Entrez la commande suivante :
 
 [!code-powershell[Main](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/samples/sample9.ps1)]
 

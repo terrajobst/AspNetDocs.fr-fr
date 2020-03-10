@@ -9,11 +9,11 @@ ms.assetid: 1f42e332-78dc-438b-9e35-0c97aa0ad929
 msc.legacyurl: /web-forms/overview/data-access/custom-button-actions-with-the-datalist-and-repeater/custom-buttons-in-the-datalist-and-repeater-cs
 msc.type: authoredcontent
 ms.openlocfilehash: e8cb1054068327c25e057b6df1cc7506feec8d37
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74601773"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78576390"
 ---
 # <a name="custom-buttons-in-the-datalist-and-repeater-c"></a>Boutons personnalisés dans les contrôles DataList et Repeater (C#)
 
@@ -145,4 +145,4 @@ Bonne programmation !
 Cette série de didacticiels a été examinée par de nombreux réviseurs utiles. Le réviseur de leads pour ce didacticiel était de Denis Patterson. Vous souhaitez revoir mes prochains articles MSDN ? Si c’est le cas, insérez une ligne sur [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Suivant](custom-buttons-in-the-datalist-and-repeater-vb.md)
+> [Next](custom-buttons-in-the-datalist-and-repeater-vb.md)

@@ -1,290 +1,290 @@
 ---
 uid: web-forms/overview/getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project
-title: À l’aide de l’inspecteur de Page pour Visual Studio 2012 dans ASP.NET Web Forms | Microsoft Docs
+title: Utilisation de Inspecteur de page pour Visual Studio 2012 dans ASP.NET Web Forms | Microsoft Docs
 author: rick-anderson
-description: L’inspecteur de page pour Visual Studio 2012 est un outil de développement web avec un navigateur intégré. Sélectionnez n’importe quel élément dans le navigateur intégré et l’inspecteur de Page...
+description: Inspecteur de page pour Visual Studio 2012 est un outil de développement Web avec un navigateur intégré. Sélectionnez un élément dans le navigateur intégré, puis Inspecteur de page...
 ms.author: riande
 ms.date: 08/15/2012
 ms.assetid: 2ece0bf4-aae5-4ff4-8f62-28e0819d4f86
 msc.legacyurl: /web-forms/overview/getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project
 msc.type: authoredcontent
 ms.openlocfilehash: c165bbea505b4cb8eae1312cdd587f4ed36541a0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127946"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78575921"
 ---
 # <a name="using-page-inspector-for-visual-studio-2012-in-aspnet-web-forms"></a>Utilisation de l’Inspecteur de page pour Visual Studio 2012 dans Web Forms ASP.NET
 
 par Tim Ammann
 
-> L’inspecteur de page pour Visual Studio 2012 est un outil de développement web avec un navigateur intégré. Sélectionnez n’importe quel élément dans le navigateur intégré et l’inspecteur de Page instantanément met en surbrillance l’élément source et CSS. Vous pouvez parcourir n’importe quelle page dans votre application, rapidement rechercher les sources de balisage rendu et utiliser les outils de navigateur directement dans l’environnement Visual Studio.
+> Inspecteur de page pour Visual Studio 2012 est un outil de développement Web avec un navigateur intégré. Sélectionnez un élément dans le navigateur intégré, puis Inspecteur de page met instantanément en surbrillance la source et le CSS de l’élément. Vous pouvez parcourir n’importe quelle page de votre application, rechercher rapidement les sources du balisage rendu et utiliser les outils de navigation directement dans l’environnement Visual Studio.
 > 
-> Ce didacticiel montre comment activer le Mode d’Inspection rapidement rechercher et modifier les règles CSS et du texte dans votre projet web. Ce didacticiel utilise un projet d’Application Web Forms, mais vous pouvez également utiliser l’inspecteur de Page pour les projets de Site Web et [MVC](https://go.microsoft.com/?linkid=9802002) applications.
+> Ce didacticiel montre comment activer Mode d’inspection, puis Rechercher et modifier rapidement les règles CSS et le texte dans votre projet Web. Le didacticiel utilise un projet d’application Web Forms, mais vous pouvez également utiliser des Inspecteur de page pour les projets de site Web et les applications [MVC](https://go.microsoft.com/?linkid=9802002) .
 > 
-> Le didacticiel comporte les sections suivantes :
+> Ce didacticiel contient les sections suivantes :
 > 
-> [Composants requis](#_1_prerequisites)
+> [Conditions préalables](#_1_prerequisites)
 > 
-> [Créer une Application Web](#_2_creating_a)
+> [Créer une application Web](#_2_creating_a)
 > 
-> [Utiliser l’inspecteur de Page pour afficher l’Application](#_3_using_page)
+> [Utiliser Inspecteur de page pour afficher l’application](#_3_using_page)
 > 
-> [Activer le Mode d’Inspection](#_4_inspection_mode)
+> [Activer Mode d’inspection](#_4_inspection_mode)
 > 
-> [Utiliser l’inspecteur de Page pour apporter des modifications au balisage](#_5_using_page)
+> [Utiliser Inspecteur de page pour apporter des modifications au balisage](#_5_using_page)
 > 
-> [Mode d’inspection et de la fenêtre HTML](#_6_inspection_mode)
+> [Mode d’inspection et la fenêtre HTML](#_6_inspection_mode)
 > 
-> [Aperçu des modifications dans la fenêtre Styles CSS](#_7_previewing_css)
+> [Aperçu des modifications CSS dans la fenêtre styles](#_7_previewing_css)
 > 
-> [CSS Auto Sync](#css_auto_sync)
+> [Synchronisation automatique CSS](#css_auto_sync)
 > 
-> [À l’aide du sélecteur de couleurs CSS](#css_color_picker)
+> [Utilisation du sélecteur de couleurs CSS](#css_color_picker)
 
 <a id="_prerequisites"></a><a id="_1_prerequisites"></a>
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - [Visual Studio 2012](https://www.microsoft.com/visualstudio/11) ou [Visual Studio Express 2012 pour le Web](https://www.microsoft.com/visualstudio/11/downloads#express-web).
 
 > [!NOTE]
-> Pour obtenir la dernière version de l’inspecteur de Page, utilisez [Web Platform Installer](https://go.microsoft.com/fwlink/?LinkId=255386) pour installer le kit SDK Azure pour .NET 2.0.
+> Pour obtenir la dernière version de Inspecteur de page, utilisez [Web Platform Installer](https://go.microsoft.com/fwlink/?LinkId=255386) pour installer le kit de développement logiciel (SDK) Azure pour .NET 2,0.
 
-Inspecteur de page est fourni avec les outils de développement Web de Microsoft. La dernière version est 1.3. Pour vérifier quelle version vous avez, exécutez Visual Studio, puis sélectionnez **propos de Microsoft Visual Studio** à partir de la **aide** menu.
+Inspecteur de page est fourni avec Microsoft Web Developer Tools. La version la plus récente est 1,3. Pour vérifier la version que vous avez, exécutez Visual Studio et sélectionnez à **propos de Microsoft Visual Studio** dans le menu **aide** .
 
 <a id="_creating_a_web"></a><a id="_2_creating_a"></a>
 
-## <a name="create-a-web-application"></a>Créer une Application Web
+## <a name="create-a-web-application"></a>Créer une application Web
 
-Tout d’abord, vous allez créer une application web que vous utiliserez avec l’inspecteur de Page. Dans Visual Studio, choisissez **fichier** &gt; **nouveau projet**. Sur la gauche, développez **Visual C#**, sélectionnez **Web**, puis sélectionnez **Application ASP.NET Web Forms**.
+Tout d’abord, vous allez créer une application Web que vous utiliserez Inspecteur de page avec. Dans Visual Studio, choisissez **fichier** &gt; **nouveau projet**. À gauche, développez **visuel C#** , sélectionnez **Web**, puis sélectionnez **ASP.NET Web Forms application**.
 
-![Nouvelle Application Web Forms](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image1.png)
+![Nouvelle Web Forms application](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image1.png)
 
 Cliquez sur **OK**.
 
-L’application s’ouvre dans **Source** vue.
+L’application s’ouvre en mode **source** .
 
-![Nouvelle Application Web Forms en mode Source](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image2.png)
+![Nouvelle Web Forms application en mode Source](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image2.png)
 
-Maintenant que vous avez une application fonctionne avec, vous pouvez utiliser l’inspecteur de Page pour examiner et modifiez-le.
+Maintenant que vous disposez d’une application à utiliser, vous pouvez utiliser Inspecteur de page pour l’examiner et la modifier.
 
 <a id="_starting_page_inspector"></a><a id="_3_starting_page"></a><a id="_3_using_page"></a>
 
-## <a name="use-page-inspector-to-view-the-application"></a>Utiliser l’inspecteur de Page pour afficher l’Application
+## <a name="use-page-inspector-to-view-the-application"></a>Utiliser Inspecteur de page pour afficher l’application
 
-Ensuite, vous allez afficher l’application avec l’inspecteur de Page. Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis choisissez **afficher dans l’inspecteur de Page**.
+Ensuite, vous allez afficher l’application avec Inspecteur de page. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis choisissez **afficher dans inspecteur de page**.
 
-![Afficher dans l’inspecteur de Page](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image3.png)
+![Afficher dans l'inspecteur de page](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image3.png)
 
-Par défaut, lors de l’inspecteur de Page se lance pour la première fois, elle est ancrée sous forme de fenêtre étroit sur le côté gauche de l’environnement Visual Studio. Laisser ancrée sur le côté gauche et le définir sur une largeur qui est à l’aise pour vous, ou l’ancre dans les zones de l’outil sur le haut, bas ou à droite :
+Par défaut, lorsque Inspecteur de page démarre pour la première fois, il est ancré sous la forme d’une fenêtre étroite sur le côté gauche de l’environnement Visual Studio. Laissez-le ancré sur le côté gauche et affectez-lui une largeur qui vous convient, ou ancrez-le dans l’une des zones d’outils en haut, en bas ou à droite :
 
-![Positionne l’inspecteur de page d’accueil](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image4.png)
+![Inspecteur de page les positions d’ancrage](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image4.png)
 
-Si vous détacher de la fenêtre de l’inspecteur de Page, vous pouvez placer il hors de Visual Studio, ou même sur un deuxième écran si vous en avez pas. Toutefois, dans l’ordre à ALT + TAB entre l’inspecteur de Page et de Visual Studio lorsque la fenêtre d’inspecteur de Page est non attachée, accédez à **outils** &gt; **Options** &gt;  **Environnement** &gt; **onglets et Windows**, puis, sous **onglet bien**, désactivez la case à cocher appelée **fenêtres d’outils flottante restent toujours affichés en haut de la fenêtre principale**:
+Si vous détachez la fenêtre de Inspecteur de page, vous pouvez la placer en dehors de Visual Studio, ou même sur un deuxième écran, le cas échéant. Toutefois, pour pouvoir appuyer sur ALT + TAB entre Inspecteur de page et Visual Studio lorsque la fenêtre de Inspecteur de page n’est pas ancrée, accédez à **outils** &gt; **Options** &gt; **environnement** &gt; **onglets et fenêtres**, et sous **onglets**, désactivez la case à cocher appelée **fenêtres outil flottant toujours rester au-dessus de la fenêtre principale**:
 
-![Décochez la case de windows outil flottante ALT + TAB entre Visual Studio et la fenêtre d’inspecteur de Page non ancrée](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image5.png)
+![Désactivez la case à cocher fenêtres outil flottantes pour ALT + TAB entre Visual Studio et la fenêtre de Inspecteur de page désancrée.](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image5.png)
 
-Le volet supérieur de la fenêtre de l’inspecteur de Page affiche la page actuelle dans une fenêtre de navigateur. Le volet inférieur affiche la page dans le balisage HTML sur la gauche, et certains onglets à droite qui vous permettent d’inspecter les différents aspects de la page. Le volet inférieur est similaire à la [outils de développement F12](https://msdn.microsoft.com/ie/aa740478) dans Internet Explorer. (Toutefois, contrairement aux outils de développement, vous pouvez utiliser l’inspecteur de Page directement dans Visual Studio.)
+Le volet supérieur de la fenêtre Inspecteur de page affiche la page actuelle dans une fenêtre de navigateur. Le volet inférieur affiche la page dans le balisage HTML à gauche, ainsi que certains onglets à droite qui vous permettent d’inspecter différents aspects de la page. Le volet inférieur est semblable au [outils de développement F12](https://msdn.microsoft.com/ie/aa740478) dans Internet Explorer. (Toutefois, contrairement aux outils de développement, vous pouvez utiliser Inspecteur de page directement dans Visual Studio.)
 
 ![Inspecteur de page](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image6.png)
 
-Dans ce didacticiel, vous allez utiliser le volet navigateur de l’inspecteur de Page et le **HTML** et **Styles** onglets pour vous aider à rapidement naviguer et apporter des modifications à l’application.
+Dans ce didacticiel, vous allez utiliser le volet navigateur Inspecteur de page, ainsi que les onglets **HTML** et **styles** pour vous aider à naviguer rapidement et à apporter des modifications à l’application.
 
 <a id="_4_inspection_mode"></a>
-## <a name="enable-inspection-mode"></a>Activer le Mode d’Inspection
+## <a name="enable-inspection-mode"></a>Activer Mode d’inspection
 
-Ensuite, vous verrez comment le Mode d’Inspection de l’inspecteur de Page fonctionne. Dans la fenêtre Inspecteur de Page, cliquez sur le **inspecter** bouton.
+Vous verrez ensuite comment le Mode d’inspection de Inspecteur de page fonctionne. Dans la fenêtre Inspecteur de page, cliquez sur le bouton **inspecter** .
 
 ![Inspecter l’élément](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image7.png)
 
-Pour afficher le mode d’inspection en action, déplacez votre souris sur différentes parties de la page dans la fenêtre de navigateur de l’inspecteur de Page. Comme vous le faites, le pointeur de la souris passe à un signe plus volumineux, et la mise en surbrillance de l’élément en dessous :
+Pour voir le mode inspection en action, déplacez votre souris sur les différentes parties de la page dans la fenêtre du navigateur Inspecteur de page. Comme c’est le cas, le pointeur de la souris se transforme en un plus grand signe plus, et l’élément sous est mis en surbrillance :
 
-![Survole div.content-wrapper](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image8.png)
+![Pointage sur div. Content-Wrapper](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image8.png)
 
-Lorsque vous déplacez le pointeur de la souris, notez que
+Au fur et à mesure que vous déplacez le pointeur de la souris, Notez que
 
-- Le contenu de **Source** afficher change pour afficher le balisage correspondant à l’élément sélectionné dans la page. Le balisage approprié est mis en surbrillance. Si la source est dans un autre fichier, ce fichier est ouvert en mode Source avec le balisage pertinents mis en surbrillance.
+- Le contenu en mode **source** change pour afficher le balisage correspondant à l’élément sélectionné sur la page. La balise appropriée est mise en surbrillance. Si la source se trouve dans un autre fichier, ce fichier est ouvert en mode Source avec le balisage approprié mis en surbrillance.
 
-- Le balisage affiché dans le **HTML** onglet dans l’inspecteur de Page change également pour correspondre à l’élément sélectionné dans la page. Dans le **HTML** onglet, le balisage approprié est indiqué.
+- Le balisage affiché sous l’onglet **HTML** dans inspecteur de page change également pour correspondre à l’élément sélectionné sur la page. Dans l’onglet **HTML** , le balisage approprié est décrit.
 
-- Le **Styles** onglet affiche les règles CSS relatives à la sélection actuelle.
+- L’onglet **styles** affiche les règles CSS qui s’appliquent à la sélection actuelle.
 
 <a id="_5_using_page"></a>
 
-## <a name="use-page-inspector-to-make-changes-to-markup"></a>Utiliser l’inspecteur de Page pour apporter des modifications au balisage
+## <a name="use-page-inspector-to-make-changes-to-markup"></a>Utiliser Inspecteur de page pour apporter des modifications au balisage
 
-Vous voyez à présent comment vous pouvez utiliser l’inspecteur de Page pour rechercher et d’apporter des modifications au balisage ou de texte dont l’emplacement n’est peut-être pas immédiatement évident.
+À présent, vous verrez comment utiliser Inspecteur de page pour rechercher et apporter des modifications au balisage ou au texte dont l’emplacement peut ne pas être immédiatement évident.
 
-Placer l’inspecteur de Page en Mode d’Inspection et puis faites défiler vers le bas de la page d’accueil.
+Placez Inspecteur de page dans Mode d’inspection puis faites défiler vers le bas de la page d’hébergement.
 
-Dès que vous entrez la zone de pied de page, l’inspecteur de Page ouvre le *Site.Master* fichier de disposition dans **Source** vue dans un onglet temporaire à droite des autres onglets et met en surbrillance de la section du maître page que vous avez avez sélectionné. Cela vous montre comment l’inspecteur de Page peuvent rechercher et afficher le contenu sur une page qui proviennent en fait un autre fichier que celui que vous avez ouvert à l’origine.
+Dès que vous entrez dans la zone de pied de page, Inspecteur de page ouvre le fichier de disposition *site. Master* en mode **source** dans un onglet temporaire à droite des autres onglets et met en surbrillance la section de la page maître que vous avez sélectionnée. Cela vous montre comment Inspecteur de page pouvez rechercher et afficher le contenu d’une page qui peut provenir d’un fichier différent de celui que vous avez ouvert à l’origine.
 
-![Met en évidence de pied de page en Mode d’Inspection](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image9.png)
+![Le pied de page met en surbrillance Mode d’inspection](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image9.png)
 
-Dans la fenêtre de navigateur de l’inspecteur de Page, déplacez votre pointeur de la souris sur la ligne avec les informations de copyright <a id="a"> </a>Notez.
+Dans la fenêtre du navigateur Inspecteur de page, déplacez le pointeur de la souris sur la ligne <a id="a"> </a>avec la mention de droits d’auteur.
 
-Dans le *Site.Master* page, la ligne correspondante est mise en surbrillance.
+Dans la page *site. Master* , la ligne correspondante est mise en surbrillance.
 
-![Ligne de pied de page copyright mis en surbrillance](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image10.png)
+![Ligne de copyright du pied de page en surbrillance](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image10.png)
 
-Ajouter du texte à la fin de la ligne dans le *Site.Master* fichier.
+Ajoutez du texte à la fin de la ligne dans le fichier *site. Master* .
 
-&lt;p&gt;&amp;copier ; &lt;%: DateTime.Now.Year %&gt; -mon Rocks d’Application ASP.NET !&lt; /p&gt;
+&lt;p&gt;&amp;copie ; &lt;% : DateTime. Now. Year%&gt;-My ASP.NET application Rocks !&lt;/p&gt;
 
-Maintenant, appuyez sur Ctrl + Alt + Entrée ou cliquez sur la barre de mise à jour pour afficher les résultats dans la fenêtre de navigateur de l’inspecteur de Page.
+Maintenant, appuyez sur Ctrl + Alt + Entrée ou cliquez sur la barre de mise à jour pour afficher les résultats dans la fenêtre du navigateur Inspecteur de page.
 
-![Mon Rocks Application ASP.NET !](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image11.png)
+![Mon application ASP.NET Rocks !](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image11.png)
 
-Vous considériez sans doute que le pied de page a été sur le *Default.aspx* page, mais il est avéré pour être dans la page de disposition principale et l’inspecteur de Page trouvé pour vous.
+Vous avez peut-être pensé que le pied de page était sur la page *default. aspx* , mais il se trouvait dans la page de disposition maître et inspecteur de page l’a trouvé pour vous.
 
 <a id="_6_inspection_mode"></a>
 
-## <a name="inspection-mode-and-the-html-window"></a>Mode d’inspection et de la fenêtre HTML
+## <a name="inspection-mode-and-the-html-window"></a>Mode d’inspection et la fenêtre HTML
 
-Ensuite, vous aurez un rapide coup de œil à la fenêtre HTML et comment il mappe les éléments pour vous.
+Ensuite, vous aurez un aperçu rapide de la fenêtre HTML et de la façon dont elle mappe les éléments pour vous.
 
-Placez l’inspecteur de Page en Mode d’Inspection.
+Placez Inspecteur de page dans Mode d’inspection.
 
 ![Inspecter l’élément](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image12.png)
 
-Cliquez sur la partie supérieure de la page indiquant que « votre logo ici ». Vous examinez un élément particulier plus en détail, afin de l’affichage dans la fenêtre du navigateur ne change plus lorsque vous déplacez le pointeur de la souris.
+Cliquez sur la partie supérieure de la page qui indique « votre logo ici ». Vous examinez un élément particulier plus en détail. par conséquent, l’affichage dans la fenêtre du navigateur ne change plus lorsque vous déplacez le pointeur de la souris.
 
-Maintenant déplacer le pointeur de la souris vers le **HTML** fenêtre. Lorsque vous déplacez le pointeur de la souris, l’inspecteur de Page décrit l’élément dans le **HTML** fenêtre et met en surbrillance l’élément correspondant dans la fenêtre du navigateur.
+Déplacez maintenant le pointeur de la souris vers la fenêtre **HTML** . Lorsque vous déplacez le pointeur de la souris, Inspecteur de page présente l’élément dans la fenêtre **HTML** et met en surbrillance l’élément correspondant dans la fenêtre du navigateur.
 
 ![Fenêtre HTML](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image13.png)
 
-Comme auparavant, l’inspecteur de Page ouvre le *Site.Master* fichier pour vous dans un onglet temporaire. Cliquez sur l’onglet Site.Master, et le balisage correspondant est mis en surbrillance dans le &lt;en-tête&gt; section :
+Comme précédemment, Inspecteur de page ouvre le fichier *site. Master* pour vous dans un onglet temporaire. cliquez sur l’onglet site. Master et le balisage correspondant est mis en surbrillance dans la section &lt;en-tête&gt; :
 
 ![Balisage en surbrillance](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image14.png)
 
 <a id="_using_page_inspector"></a><a id="_7_previewing_css"></a>
 
-## <a name="preview-css-changes-in-the-styles-window"></a>Aperçu des modifications dans la fenêtre Styles CSS
+## <a name="preview-css-changes-in-the-styles-window"></a>Aperçu des modifications CSS dans la fenêtre styles
 
-Ensuite, vous verrez comment vous pouvez utiliser l’inspecteur de Page **Styles** fenêtre pour afficher un aperçu des modifications apportées à CSS.
+Vous verrez ensuite comment vous pouvez utiliser la fenêtre Inspecteur de page **styles** pour afficher un aperçu des modifications apportées à CSS.
 
-Cliquez sur le **inspecter** bouton à placer l’inspecteur de Page en Mode d’Inspection.
+Cliquez sur le bouton **inspecter** pour placer Inspecteur de page dans mode d’inspection.
 
-Dans la fenêtre de navigateur de l’inspecteur de Page, placez le pointeur de la souris sur la section « Page d’accueil » jusqu'à ce que le **div.content-wrapper** étiquette s’affiche.
+Dans la fenêtre du navigateur Inspecteur de page, déplacez le pointeur de la souris sur la section « page d’hébergement » jusqu’à ce que l’étiquette **div. Content-Wrapper** apparaisse.
 
-![Vous placez le curseur sur les éléments](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image15.png)
+![Pointage sur les éléments](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image15.png)
 
-Cliquez sur une seule fois dans la section div.content-wrapper, et puis déplacez le pointeur de la souris vers le **Styles** fenêtre. Sous le sélecteur de classe wrapper de .content .featured, désactivez et activez la case à cocher pour la propriété de couleur d’arrière-plan.
+Cliquez une fois dans la section div. Content-Wrapper, puis placez le pointeur de la souris dans la fenêtre **styles** . Sous le sélecteur de classe. featured. Content-Wrapper, désactivez et activez la case à cocher de la propriété Background-color.
 
-![Couleur d’arrière-plan clair](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image16.png)
+![Effacer la couleur d’arrière-plan](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image16.png)
 
-Notez comment la modification affiche un aperçu d’instantanément dans la fenêtre de navigateur de l’inspecteur de Page.
+Notez la manière dont les préversions changent instantanément dans la fenêtre du navigateur Inspecteur de page.
 
-Sélectionnez la case à cocher à nouveau, puis double-cliquez sur la valeur de propriété et remplacez-le par `red`. La modification s’affiche immédiatement :
+Activez à nouveau la case à cocher, puis double-cliquez sur la valeur de la propriété et remplacez-la par `red`. La modification apparaît immédiatement :
 
 ![Couleur d’arrière-plan rouge](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image17.png)
 
-Le **Styles** rend fenêtre facilement tester et de prévisualiser les CSS qui change avant de valider les modifications apportées au style de feuille de lui-même.
+La fenêtre **styles** facilite le test et l’aperçu des modifications CSS avant de valider les modifications apportées à la feuille de style elle-même.
 
 <a id="css_auto_sync"></a>
 ## <a name="css-auto-sync"></a>Synchronisation automatique CSS
 
 > [!NOTE]
-> Cette fonctionnalité nécessite la version 1.3 de l’inspecteur de Page.
+> Cette fonctionnalité nécessite la version 1,3 de Inspecteur de page.
 
-La fonctionnalité de synchronisation automatique CSS vous permet de modifier directement un fichier CSS et voir les modifications immédiatement dans le navigateur de l’inspecteur de Page.
+La fonctionnalité de synchronisation automatique CSS vous permet de modifier directement un fichier CSS et de voir immédiatement les modifications dans le navigateur Inspecteur de page.
 
-Cliquez sur **inspecter** à placer l’inspecteur de Page en Mode d’Inspection.
+Cliquez sur **inspecter** pour placer Inspecteur de page dans mode d’inspection.
 
-Dans le navigateur de l’inspecteur de Page, placez le pointeur de la souris sur la section « Page d’accueil » jusqu'à ce que le **div.content-wrapper** étiquette s’affiche. Cliquez une fois pour sélectionner cet élément.
+Dans le navigateur Inspecteur de page, déplacez le pointeur de la souris sur la section « page d’hébergement » jusqu’à ce que l’étiquette **div. Content-Wrapper** apparaisse. Cliquez une fois pour sélectionner cet élément.
 
-Le **Styles** fenêtre affiche toutes les règles CSS pour cet élément. Faites défiler jusqu'à find .featured .content-wrapper du sélecteur de classe. Cliquez sur « .featured .content-wrapper ». Inspecteur de page ouvre le fichier CSS qui définit ce style (Site.css) et met en évidence le style CSS correspondant.
+La fenêtre **styles** affiche toutes les règles CSS pour cet élément. Faites défiler la liste pour rechercher le sélecteur de classe. featured. Content-wrapper. Cliquez sur « . featured. Content-wrapper ». Inspecteur de page ouvre le fichier CSS qui définit ce style (site. CSS) et met en surbrillance le style CSS correspondant.
 
 ![Fichier CSS](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image18.png)
 
-Modifiez maintenant la valeur de `background-color` sur « rouge ». La modification s’affiche immédiatement dans le navigateur de l’inspecteur de Page.
+À présent, remplacez la valeur de `background-color` par « Red ». La modification s’affiche immédiatement dans le navigateur Inspecteur de page.
 
-![Navigateur de l’inspecteur de page](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image19.png)
+![Navigateur de Inspecteur de page](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image19.png)
 
 <a id="css_color_picker"></a>
 
-## <a name="using-the-css-color-picker"></a>À l’aide du sélecteur de couleurs CSS
+## <a name="using-the-css-color-picker"></a>Utilisation du sélecteur de couleurs CSS
 
-Ensuite, vous allez apprendre à utiliser l’inspecteur de Page pour rapidement rechercher et modifier le code CSS pour le texte mis en surbrillance dans l’application par défaut. Dans cet exemple, vous avez décidé que vous ne la surbrillance bleue et souhaitez remplacer par une autre couleur.
+Ensuite, vous allez apprendre à utiliser Inspecteur de page pour rechercher et modifier rapidement le CSS pour le texte mis en surbrillance dans l’application par défaut. Dans cet exemple, vous avez décidé que vous n’aimez pas la mise en surbrillance bleue et que vous souhaitez la remplacer par une autre couleur.
 
-Cliquez sur le **inspecter** bouton.
+Cliquez sur le bouton **inspecter** .
 
 ![Inspecter l’élément](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image20.png)
 
-Dans la fenêtre de navigateur de l’inspecteur de Page, placez le pointeur de la souris sur la mise en surbrillance « vidéos, didacticiels et exemples » texte afin que le code CSS « marquer « étiquette s’affiche.
+Dans la fenêtre du navigateur Inspecteur de page, déplacez le pointeur de la souris sur le texte « vidéos, didacticiels et exemples » en surbrillance pour afficher l’étiquette « marque » CSS.
 
-![Vous placez le curseur sur l’élément de la marque](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image21.png)
+![Pointage sur l’élément Mark](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image21.png)
 
-Cliquez sur le texte pour le sélectionner. Le sélecteur de mark CSS correspondant s’affiche en bas de la **Styles** fenêtre.
+Cliquez sur le texte pour le sélectionner. Le sélecteur de marque CSS correspondant apparaît en bas de la fenêtre **styles** .
 
-![Sélecteur de marque dans la fenêtre Styles](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image22.png)
+![marquer le sélecteur dans la fenêtre styles](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image22.png)
 
-Cliquez sur le sélecteur d’interrogation. Cette opération ouvre le *Site.css* fichier pour l’application web. Cliquez sur l’onglet Site.css et les CSS correspondants pour le sélecteur est mis en surbrillance :
+Cliquez sur le sélecteur de marque. Cela ouvre le fichier *site. CSS* pour l’application Web. Cliquez sur l’onglet site. CSS pour mettre en surbrillance le CSS correspondant du sélecteur :
 
-![Sélecteur de marque dans la feuille de style](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image23.png)
+![marquer le sélecteur dans la feuille de style](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image23.png)
 
-Sélectionnez et supprimez la ligne avec la propriété de couleur d’arrière-plan.
+Sélectionnez et supprimez la ligne avec la propriété Background-color.
 
-Vous allez maintenant utiliser le nouveau sélecteur de couleurs CSS de 2012 Visual Studio pour choisir une nouvelle couleur pour le **marquer** propriété de couleur d’arrière-plan.
+Vous allez maintenant utiliser le nouveau sélecteur de couleurs CSS de Visual Studio 2012 pour choisir une nouvelle couleur pour la propriété **marquer** la couleur d’arrière-plan.
 
 <a id="_using_the_visual"></a>
 
-### <a name="using-the-visual-studio-2012-css-color-picker"></a>À l’aide du sélecteur de couleurs CSS de Visual Studio 2012
+### <a name="using-the-visual-studio-2012-css-color-picker"></a>Utilisation du sélecteur de couleurs CSS de Visual Studio 2012
 
-L’éditeur CSS dans Visual Studio 2012 a un sélecteur de couleurs qui permet de facilement choisir et insérer des couleurs. Il a une barre de couleurs simple et un sélecteur « pop-down » qui offre un contrôle plus précis.
+L’éditeur CSS dans Visual Studio 2012 possède un sélecteur de couleurs qui facilite la sélection et l’insertion de couleurs. Il possède une barre de couleurs simple et un sélecteur « indépendant » qui offre un contrôle plus précis.
 
-Le sélecteur de couleurs inclut une palette de couleurs standard prend en charge les noms de couleurs standard, les codes de hachage, les couleurs RGB, RGBA, HSL et HSLA et gère une liste des couleurs que vous avez utilisé le plus récemment dans le document.
+Le sélecteur de couleurs contient une palette de couleurs standard, prend en charge les couleurs standard, les codes de hachage, les couleurs RVB, RVBA, TSL et HSLA, et conserve une liste des couleurs que vous avez utilisées le plus récemment dans le document.
 
-Sur la ligne où la propriété de couleur d’arrière-plan a été, tapez « bc » et appuyez sur la flèche vers le bas une fois.
+Sur la ligne où la propriété Background-color était, tapez « BC » et appuyez une fois sur la flèche bas.
 
-Lorsque vous tapez le premier caractère de chaque mot dans une propriété séparées par des traits d’union comme « couleur d’arrière-plan », IntelliSense filtre la liste pour afficher uniquement les propriétés qui correspondent à :
+Quand vous tapez le premier caractère de chaque mot dans une propriété séparée par un trait d’Union comme « background-color », IntelliSense filtre la liste pour afficher uniquement les propriétés correspondantes :
 
-![Valeurs IntelliSense filtré](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image24.png)
+![Valeurs filtrées IntelliSense](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image24.png)
 
-Tapez maintenant un signe deux-points. Lorsque vous le faites, le nom de propriété de couleur d’arrière-plan complet est inséré. Type **#** ou **RVB (**, et la barre de sélecteur de couleurs s’affiche :
+À présent, tapez un signe deux-points. Dans ce cas, le nom complet de la propriété Background-color est inséré. Tapez **#** ou **RVB (** , et la barre du sélecteur de couleurs s’affiche :
 
-![La barre de sélecteur de couleurs CSS](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image25.png)
+![Barre du sélecteur de couleurs CSS](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image25.png)
 
-Pour observer le fonctionne de la barre de sélecteur de couleurs, cliquez sur ses couleurs avec le pointeur de la souris, ou appuyez sur la touche de direction bas et puis utilisez les touches de direction gauche et droite pour parcourir les couleurs. Lorsque vous visitez une couleur, la valeur correspondante pour la propriété de couleur d’arrière-plan est affiché en aperçu :
+Pour voir comment fonctionne la barre du sélecteur de couleurs, cliquez sur ses couleurs à l’aide du pointeur de la souris, ou appuyez sur la touche de direction bas, puis utilisez les touches de direction gauche et droite pour parcourir les couleurs. Lorsque vous visitez une couleur, la valeur correspondante pour la propriété Background-color est aperçu :
 
-![valeur de propriété de couleur d’arrière-plan aperçu](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image26.png)
+![couleur d’arrière-plan-aperçu de la valeur de propriété](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image26.png)
 
-À ce stade, vous pouvez appuyer sur ENTRÉE pour sélectionner la valeur, puis un point-virgule ( ;) pour terminer l’entrée CSS. Pour l’instant, passez à la section suivante afin que vous puissiez voir le fonctionnement de la couleur sélecteur contextuel déroulante.
+À ce stade, vous pouvez appuyer sur entrée pour sélectionner la valeur, puis un point-virgule (;) pour terminer l’entrée CSS. Pour le moment, passez à la section suivante pour voir comment fonctionne la fenêtre contextuelle du sélecteur de couleurs.
 
-#### <a name="using-the-color-picker-pop-down"></a>À l’aide du sélecteur de couleur Pop en bas
+#### <a name="using-the-color-picker-pop-down"></a>Utilisation de la fenêtre contextuelle du sélecteur de couleurs
 
-Lors de la barre de couleurs n’a pas la couleur exacte que vous recherchez, vous pouvez utiliser le sélecteur de couleurs contextuelle déroulante.
+Si la barre de couleurs n’a pas la couleur exacte que vous recherchez, vous pouvez utiliser le menu contextuel du sélecteur de couleurs.
 
-Pour l’ouvrir, cliquez sur le double chevron à l’extrémité droite de la barre de couleurs, ou appuyez sur la flèche vers le bas une ou deux fois sur le clavier.
+Pour l’ouvrir, cliquez sur le double Chevron à l’extrémité droite de la barre de couleurs, ou appuyez sur la flèche bas une fois ou deux fois sur le clavier.
 
-![Sélecteur de couleur CSS Pop-bas](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image27.png)
+![Menu contextuel du sélecteur de couleurs CSS](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image27.png)
 
-Cliquez sur une couleur dans la barre verticale sur la droite. Voici un dégradé de cette couleur dans la fenêtre principale. Choisissez une couleur directement à partir de la barre verticale en appuyant sur entrée, ou cliquez sur n’importe quel point dans la fenêtre principale de choisir avec une précision supérieure.
+Cliquez sur une couleur à partir de la barre verticale à droite. Cela montre un dégradé pour cette couleur dans la fenêtre principale. Choisissez une couleur directement à partir de la barre verticale en appuyant sur entrée ou en cliquant sur n’importe quel point dans la fenêtre principale pour choisir avec une plus grande précision.
 
-S’il est une couleur à l’écran que vous souhaitez utiliser (il n’a pas à l’intérieur de l’interface utilisateur de Visual Studio), vous pouvez capturer sa valeur à l’aide de l’outil Pipette dans le coin inférieur droit.
+S’il y a une couleur sur l’écran de l’ordinateur que vous souhaitez utiliser (il n’est pas nécessaire qu’il se trouve à l’intérieur de l’interface utilisateur de Visual Studio), vous pouvez capturer sa valeur à l’aide de l’outil pipette situé en bas à droite.
 
-Vous pouvez également modifier l’opacité d’une couleur en déplaçant le curseur en bas du sélecteur de couleurs. Procédant ainsi, les modifications de valeurs pour différentes valeurs RVBA de couleur, car le format RVBA peut représenter l’opacité.
+Vous pouvez également modifier l’opacité d’une couleur en déplaçant le curseur en bas du sélecteur de couleurs. Cela modifie les valeurs de couleur en valeurs RVBA, car le format RVBA peut représenter l’opacité.
 
-Une fois que vous avez choisi une couleur, appuyez sur entrée, puis tapez un point-virgule pour terminer l’entrée de la couleur d’arrière-plan dans le *Site.css* fichier.
+Une fois que vous avez choisi une couleur, appuyez sur entrée, puis tapez un point-virgule pour terminer l’entrée de couleur d’arrière-plan dans le fichier *site. CSS* .
 
 <a id="_the_update_bar"></a>
 
-### <a name="the-page-inspector-update-bar"></a>La barre de mise à jour d’inspecteur de Page
+### <a name="the-page-inspector-update-bar"></a>Barre de mise à jour Inspecteur de page
 
-Inspecteur de page détecte immédiatement la modification apportée à la *Site.css* fichier (ou à n’importe quel fichier dans l’application) et affiche une alerte dans une barre de mise à jour.
+Inspecteur de page détecte immédiatement la modification apportée au fichier *site. CSS* (ou à n’importe quel fichier de l’application) et affiche une alerte dans une barre de mise à jour.
 
 ![Barre de mise à jour](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image28.png)
 
-Pour enregistrer tous vos fichiers et actualisez le navigateur de l’inspecteur de Page, appuyez sur Ctrl + Alt + Entrée ou cliquez sur la barre de mise à jour. La modification de la couleur de surbrillance apparaît dans le navigateur :
+Pour enregistrer tous vos fichiers et actualiser le navigateur Inspecteur de page, appuyez sur Ctrl + Alt + Entrée ou cliquez sur la barre de mise à jour. La modification de la couleur de surbrillance s’affiche dans le navigateur :
 
-![Couleur de surbrillance modifié](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image29.png)
+![Couleur de surbrillance modifiée](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image29.png)
 
-<a id="_using_page_inspector_1"></a>Notez que vous avez actualisé aisément le navigateur de l’inspecteur de Page directement à partir de l’environnement Visual Studio. À l’aide de l’inspecteur de Page au lieu d’un navigateur externe vous permet de rester dans l’éditeur lorsque vous développez vos applications web.
+<a id="_using_page_inspector_1"></a>Notez que vous avez facilement actualisé le Inspecteur de page navigateur à partir de l’environnement Visual Studio. L’utilisation de Inspecteur de page au lieu d’un navigateur externe vous permet de rester dans l’éditeur lorsque vous développez vos applications Web.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Présentation de l’inspecteur de Page](https://channel9.msdn.com/posts/visual-studio-vnext-introducing-page-inspector) (vidéo Channel 9)
+[Présentation de inspecteur de page](https://channel9.msdn.com/posts/visual-studio-vnext-introducing-page-inspector) (vidéo Channel 9)
 
-[Messages d’erreur de l’inspecteur de page](https://go.microsoft.com/?linkid=9813062) (MSDN)
+[Inspecteur de page des messages d’erreur](https://go.microsoft.com/?linkid=9813062) (MSDN)

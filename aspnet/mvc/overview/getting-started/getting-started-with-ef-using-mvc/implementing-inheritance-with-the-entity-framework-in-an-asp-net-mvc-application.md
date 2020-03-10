@@ -10,11 +10,11 @@ ms.assetid: 08834147-77ec-454a-bb7a-d931d2a40dab
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/implementing-inheritance-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
 ms.openlocfilehash: 73a01ed47b0935a1a9734c197377470defb1fe36
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519386"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583061"
 ---
 # <a name="tutorial-implement-inheritance-with-ef-in-an-aspnet-mvc-5-app"></a>Didacticiel : implémenter l’héritage avec EF dans une application ASP.NET MVC 5
 
@@ -22,7 +22,7 @@ Dans le didacticiel précédent, vous avez géré les exceptions d’accès conc
 
 Dans la programmation orientée objet, vous pouvez utiliser [l’héritage](http://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)) pour faciliter la [réutilisation du code](http://en.wikipedia.org/wiki/Code_reuse). Dans ce didacticiel, vous allez modifier les classes `Instructor` et `Student` afin qu’elles dérivent d’une classe de base `Person` qui contient des propriétés telles que `LastName`, communes aux formateurs et aux étudiants. Vous n’ajouterez ni ne modifierez aucune page web, mais vous modifierez une partie du code et ces modifications seront automatiquement répercutées dans la base de données.
 
-Dans ce didacticiel, vous allez effectuer les actions suivantes :
+Dans ce didacticiel, vous avez effectué les actions suivantes :
 
 > [!div class="checklist"]
 > * Apprendre à mapper l’héritage à la base de données
@@ -33,7 +33,7 @@ Dans ce didacticiel, vous allez effectuer les actions suivantes :
 > * Tester l’implémentation
 > * Déployer sur Azure
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Conditions préalables requises
 
 * [Gestion des accès concurrentiels](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 
@@ -167,9 +167,9 @@ Vous trouverez des liens vers d’autres ressources de Entity Framework dans l' 
 
 Pour plus d’informations sur cette structure d’héritage et les autres, consultez modèle d’héritage [TPT](https://msdn.microsoft.com/data/jj618293) et [modèle d’héritage TPH](https://msdn.microsoft.com/data/jj618292) sur MSDN. Dans le prochain didacticiel, vous allez apprendre à gérer divers scénarios Entity Framework relativement avancés.
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
-Dans ce didacticiel, vous allez effectuer les actions suivantes :
+Dans ce didacticiel, vous avez effectué les actions suivantes :
 
 > [!div class="checklist"]
 > * Appris à mapper l’héritage à la base de données
@@ -177,7 +177,7 @@ Dans ce didacticiel, vous allez effectuer les actions suivantes :
 > * Mettez à jour Student et Instructor
 > * Ajout d’une personne au modèle
 > * Migrations créées et mises à jour
-> * Implémentation testée
+> * Testez l’implémentation
 > * Déployé sur Azure
 
 Passez à l’article suivant pour en savoir plus sur les sujets qui sont utiles lorsque vous allez au-delà des principes de base du développement d’applications Web ASP.NET qui utilisent Entity Framework Code First.

@@ -9,11 +9,11 @@ ms.assetid: 52d6c941-2cd9-442f-9872-2c798d6d90cd
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices
 msc.type: authoredcontent
 ms.openlocfilehash: dfd8a3ac2328d3f17dfbe36e68b37d181177b0f4
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457087"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583460"
 ---
 # <a name="web-development-best-practices-building-real-world-cloud-apps-with-azure"></a>Meilleures pratiques pour le développement Web (création d’applications Cloud réalistes avec Azure)
 
@@ -126,7 +126,7 @@ Et cette prise en charge asynchrone n’est pas seulement pour les insertions, l
 
 Il existe une version `Async` de la méthode `ToList`, car, dans ce code, il s’agit de la méthode qui entraîne l’envoi d’une requête à la base de données. Les méthodes `Where` et `OrderByDescending` configurent uniquement la requête, tandis que la méthode `ToListAsync` exécute la requête et stocke la réponse dans la variable `result`.
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Vous pouvez implémenter les meilleures pratiques de développement Web décrites ici dans n’importe quelle infrastructure de programmation Web et n’importe quel environnement Cloud, mais nous avons des outils dans ASP.NET et Windows Azure pour faciliter la tâche. Si vous suivez ces modèles, vous pouvez facilement augmenter la capacité de votre niveau Web et réduire vos dépenses, car chaque serveur sera en mesure de gérer davantage de trafic.
 

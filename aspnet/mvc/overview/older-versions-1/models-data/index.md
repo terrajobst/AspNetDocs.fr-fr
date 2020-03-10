@@ -2,22 +2,22 @@
 uid: mvc/overview/older-versions-1/models-data/index
 title: Modèles (données) | Microsoft Docs
 author: rick-anderson
-description: Dans cette série de didacticiels, vous allez apprendre à utiliser ASP.NET MVC avec Entity Framework de Microsoft. Au cours de ce didacticiel, vous générez une application web...
+description: Dans cette série de didacticiels, vous allez apprendre à utiliser ASP.NET MVC avec l’Entity Framework Microsoft. Au cours de ce didacticiel, vous allez créer une application Web...
 ms.author: riande
 ms.date: 09/28/2011
 ms.assetid: 9086d8a8-7952-4a7e-82a7-724d48178555
 msc.legacyurl: /mvc/overview/older-versions-1/models-data
 msc.type: chapter
 ms.openlocfilehash: e4e4cce840d46ceceeb3ea77db91ad99d73ef483
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65117589"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78581150"
 ---
 # <a name="models-data"></a>Modèles (données)
 
-> Dans cette série de didacticiels, vous allez apprendre à utiliser ASP.NET MVC avec Entity Framework de Microsoft. Au cours de ce didacticiel, vous générez une application web qui montre comment sélectionner, insérer, mettre à jour et supprimer des données de base de données à l’aide d’Entity Framework.
+> Dans cette série de didacticiels, vous allez apprendre à utiliser ASP.NET MVC avec l’Entity Framework Microsoft. Au cours de ce didacticiel, vous allez créer une application Web qui illustre comment sélectionner, insérer, mettre à jour et supprimer des données de base de données à l’aide de l’Entity Framework.
 
 - [Création de classes de modèle avec Entity Framework (C#)](creating-model-classes-with-the-entity-framework-cs.md)
 - [Création de classes de modèle avec LINQ to SQL (C#)](creating-model-classes-with-linq-to-sql-cs.md)

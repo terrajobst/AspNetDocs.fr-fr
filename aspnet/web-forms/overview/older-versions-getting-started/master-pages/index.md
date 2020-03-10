@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/index
-title: ASP.NET 3.5 - Pages maîtres de formulaires Web | Microsoft Docs
+title: ASP.NET 3,5-pages maîtres Web Forms | Microsoft Docs
 author: rick-anderson
-description: Comment créer et utiliser des pages maîtres ASP.NET et des pages de contenu pour créer une disposition cohérente dans les applications Web Forms.
+description: Comment créer et utiliser des pages maîtres et des pages de contenu ASP.NET pour créer une disposition cohérente dans les applications Web Forms.
 ms.author: riande
 ms.date: 11/04/2011
 ms.assetid: bc30f0ec-cf8f-4a33-9eee-513be872ac9c
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages
 msc.type: chapter
 ms.openlocfilehash: 3847269a495d54b0986bab245023daff4a43386a
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134151"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78585882"
 ---
 # <a name="aspnet-35---web-forms-master-pages"></a>ASP.NET 3.5 - Pages maîtres Web Forms
 
-> Comment créer et utiliser des pages maîtres ASP.NET et des pages de contenu pour créer une disposition cohérente dans les applications Web Forms.
+> Comment créer et utiliser des pages maîtres et des pages de contenu ASP.NET pour créer une disposition cohérente dans les applications Web Forms.
 
 - [Création d’une disposition à l’échelle d’un site avec des pages maîtres (C#)](creating-a-site-wide-layout-using-master-pages-cs.md)
 - [ContentPlaceHolders multiples et contenu par défaut (C#)](multiple-contentplaceholders-and-default-content-cs.md)

@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/index
-title: Bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2013 | Microsoft Docs
+title: Prise en main avec ASP.NET 4,5 Web Forms et Visual Studio 2013 | Microsoft Docs
 author: rick-anderson
-description: Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Visual Studio 2013 Express pour le Web. Un outils Visual...
+description: Cette série de didacticiels vous apprend les bases de la création d’une application ASP.NET Web Forms à l’aide de ASP.NET 4,5 et Visual Studio 2013 Express pour le Web. Un Visua...
 ms.author: riande
 ms.date: 04/09/2012
 ms.assetid: dc6aa59a-9cb0-4a81-b5f3-ec545a0e958d
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms
 msc.type: chapter
 ms.openlocfilehash: 75ac7d454462a7f7f1e071ce5ee9d892eb329c6f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131392"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78571889"
 ---
 # <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2013"></a>Bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2013
 
-> Cette série de didacticiels vous apprend les notions de base de la création d’une application Web Forms ASP.NET à l’aide de ASP.NET 4.5 et Microsoft Visual Studio Express 2013 pour le Web. Un projet Visual Studio 2013 avec le code source c# est disponible pour accompagner cette série de didacticiels.
+> Cette série de didacticiels vous apprend les bases de la création d’une application ASP.NET Web Forms à l’aide de ASP.NET 4,5 et Microsoft Visual Studio Express 2013 pour le Web. Un projet Visual Studio 2013 avec C# le code source est disponible pour accompagner cette série de didacticiels.
 
 - [Bien démarrer avec Web Forms et Visual Studio](introduction-and-overview.md)
 - [Créer le projet](create-the-project.md)

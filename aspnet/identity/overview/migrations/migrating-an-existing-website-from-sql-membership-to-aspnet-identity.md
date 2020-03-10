@@ -10,11 +10,11 @@ ms.assetid: 220d3d75-16b2-4240-beae-a5b534f06419
 msc.legacyurl: /identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity
 msc.type: authoredcontent
 ms.openlocfilehash: 633229cc4311d151121bf6a91b9fa8aeecca1197
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456151"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583726"
 ---
 # <a name="migrating-an-existing-website-from-sql-membership-to-aspnet-identity"></a>Migration d’un site web existant de l’appartenance SQL vers ASP.NET Identity
 
@@ -85,11 +85,11 @@ Pour que les classes ASP.NET Identity soient prêtes à l’emploi avec les donn
 
 | **IdentityUser** | **Type** | **IdentityRole** | **IdentityUserRole** | **IdentityUserLogin** | **IdentityUserClaim** |
 | --- | --- | --- | --- | --- | --- |
-| ID | chaîne | ID | RoleId | ProviderKey | ID |
-| Nom d’utilisateur | chaîne | Nom | UserId | UserId | ClaimType |
+| Id | chaîne | Id | RoleId | ProviderKey | Id |
+| Utilisateur | chaîne | Nom | UserId | UserId | ClaimType |
 | PasswordHash | chaîne |  |  | LoginProvider | ClaimValue |
 | SecurityStamp | chaîne |  |  |  | ID de\_de l’utilisateur |
-| Email | chaîne |  |  |  |  |
+| Messagerie | chaîne |  |  |  |  |
 | EmailConfirmed | bool |  |  |  |  |
 | PhoneNumber | chaîne |  |  |  |  |
 | PhoneNumberConfirmed | bool |  |  |  |  |
@@ -101,11 +101,11 @@ Nous devons disposer de tables pour chacun de ces modèles avec des colonnes cor
 
 | **Classe** | **Table** | **Clé primaire** | **Clé étrangère** |
 | --- | --- | --- | --- |
-| IdentityUser | AspnetUsers | ID |  |
-| IdentityRole | AspnetRoles | ID |  |
+| IdentityUser | AspnetUsers | Id |  |
+| IdentityRole | AspnetRoles | Id |  |
 | IdentityUserRole | AspnetUserRole | UserId + RoleId | ID d'\_utilisateur-&gt;AspnetUsers RoleId-&gt;AspnetRoles |
 | IdentityUserLogin | AspnetUserLogins | ProviderKey+UserId + LoginProvider | AspnetUsers UserId-&gt; |
-| IdentityUserClaim | AspnetUserClaims | ID | ID d'\_utilisateur-&gt;AspnetUsers |
+| IdentityUserClaim | AspnetUserClaims | Id | ID d'\_utilisateur-&gt;AspnetUsers |
 
 Ces informations nous permettent de créer des instructions SQL pour créer des tables. Nous pouvons soit écrire chaque instruction individuellement, soit générer le script entier à l’aide des commandes PowerShell EntityFramework que nous pouvons ensuite modifier en fonction des besoins. Pour ce faire, dans VS, ouvrez la **console du gestionnaire de package** à partir du menu **affichage** ou **Outils** .
 
@@ -129,7 +129,7 @@ Dans l’instruction SQL ci-dessus, les informations relatives à chaque utilisa
 
 Ce fichier de script est spécifique à cet exemple. Pour les applications qui ont des tables supplémentaires, les développeurs peuvent suivre une approche similaire pour ajouter des propriétés supplémentaires sur la classe de modèle utilisateur et les mapper aux colonnes de la table AspnetUsers. Pour exécuter le script,
 
-1. Ouvrez l'Explorateur de serveurs. Développez la connexion « ApplicationServices » pour afficher les tables. Cliquez avec le bouton droit sur le nœud tables et sélectionnez l’option « nouvelle requête ».
+1. Ouvrez l’Explorateur de serveurs. Développez la connexion « ApplicationServices » pour afficher les tables. Cliquez avec le bouton droit sur le nœud tables et sélectionnez l’option « nouvelle requête ».
 
     ![](migrating-an-existing-website-from-sql-membership-to-aspnet-identity/_static/image7.png)
 2. Dans la fenêtre de requête, copiez et collez l’intégralité du script SQL à partir du fichier migrations. Sql. Exécutez le fichier de script en appuyant sur la flèche « exécuter ».

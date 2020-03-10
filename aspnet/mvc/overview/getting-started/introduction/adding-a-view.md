@@ -6,11 +6,11 @@ ms.author: riande
 ms.date: 01/23/2019
 uid: mvc/overview/getting-started/introduction/adding-a-view
 ms.openlocfilehash: 0bc6ac06d12aaee4b2a11c1bf246f9f20f0be017
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456645"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78582718"
 ---
 # <a name="adding-a-view"></a>Ajout d’une vue
 

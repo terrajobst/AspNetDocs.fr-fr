@@ -9,11 +9,11 @@ ms.assetid: b651dc58-93c7-4f83-a74e-3b99f6d60848
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs
 msc.type: authoredcontent
 ms.openlocfilehash: e26b8e841f86272a158b0c09b62ab2790d01d191
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74571477"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78592742"
 ---
 # <a name="an-overview-of-inserting-updating-and-deleting-data-c"></a>Vue d’ensemble de l’insertion, de la mise à jourC#et de la suppression de données ()
 
@@ -376,4 +376,4 @@ Bonne programmation !
 [Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept livres ASP/ASP. net et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec des technologies Web Microsoft depuis 1998. Scott travaille en tant que consultant, formateur et auteur indépendant. Son dernier livre est [*Sams vous apprend vous-même ASP.NET 2,0 en 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve sur [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
 > [!div class="step-by-step"]
-> [Suivant](examining-the-events-associated-with-inserting-updating-and-deleting-cs.md)
+> [Next](examining-the-events-associated-with-inserting-updating-and-deleting-cs.md)

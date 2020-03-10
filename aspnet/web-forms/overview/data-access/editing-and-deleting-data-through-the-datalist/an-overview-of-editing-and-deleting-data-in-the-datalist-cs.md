@@ -9,11 +9,11 @@ ms.assetid: c3b0c86e-fe98-41ee-b26f-ca38cddaa75e
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/an-overview-of-editing-and-deleting-data-in-the-datalist-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 481c9a14b1ebfe36ffcddd0237701bc04266e393
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74629539"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78594555"
 ---
 # <a name="an-overview-of-editing-and-deleting-data-in-the-datalist-c"></a>Vue d’ensemble de la modification et de la suppression deC#données dans le contrôle DataList ()
 
@@ -301,4 +301,4 @@ Bonne programmation !
 Cette série de didacticiels a été examinée par de nombreux réviseurs utiles. Les réviseurs de leads pour ce didacticiel étaient Zack Jones, Ken Pespisa et Randy Schmidt. Vous souhaitez revoir mes prochains articles MSDN ? Si c’est le cas, insérez une ligne sur [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Suivant](performing-batch-updates-cs.md)
+> [Next](performing-batch-updates-cs.md)

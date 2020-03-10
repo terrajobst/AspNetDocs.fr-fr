@@ -10,11 +10,11 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity
 msc.type: authoredcontent
 ms.openlocfilehash: 21baedf6285b411f89627df9ca25d47a2a42e387
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519100"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584412"
 ---
 # <a name="overview-of-custom-storage-providers-for-aspnet-identity"></a>Vue d’ensemble des fournisseurs de stockage personnalisés pour ASP.NET Identity
 
@@ -29,7 +29,7 @@ par [Tom FitzMacken](https://github.com/tfitzmac)
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versions logicielles utilisées dans le didacticiel
 > 
 > 
-> - Visual Studio 2013 avec mise à jour 2
+> - Visual Studio 2013 avec Update 2
 > - ASP.NET Identity 2
 
 ## <a name="introduction"></a>Introduction
@@ -38,7 +38,7 @@ Par défaut, le système de ASP.NET Identity stocke les informations utilisateur
 
 ASP.NET Identity est inclus par défaut dans la plupart des modèles de Visual Studio 2013. Vous pouvez récupérer des mises à jour de ASP.NET Identity par le biais du [package NuGet d’identité Microsoft ASPNET Identity](http://www.nuget.org/packages/Microsoft.AspNet.Identity.EntityFramework/).
 
-Cette rubrique comprend les sections suivantes :
+Cette rubrique comporte les sections suivantes :
 
 - [Comprendre l’architecture](#architecture)
 - [Comprendre les données stockées](#data)
@@ -70,7 +70,7 @@ Pour implémenter un fournisseur de stockage personnalisé, vous devez comprendr
 
 | Données | Description |
 | --- | --- |
-| Utilisateurs du | Utilisateurs inscrits de votre site Web. Comprend l’ID d’utilisateur et le nom d’utilisateur. Peut inclure un mot de passe haché si les utilisateurs se connectent avec des informations d’identification spécifiques à votre site (plutôt que d’utiliser les informations d’identification d’un site externe comme Facebook) et un tampon de sécurité pour indiquer si des modifications ont été apportées aux informations d’identification de l’utilisateur. Peut également inclure l’adresse de messagerie, le numéro de téléphone, si l’authentification à deux facteurs est activée, le nombre actuel de connexions ayant échoué et si un compte a été verrouillé. |
+| Utilisateurs | Utilisateurs inscrits de votre site Web. Comprend l’ID d’utilisateur et le nom d’utilisateur. Peut inclure un mot de passe haché si les utilisateurs se connectent avec des informations d’identification spécifiques à votre site (plutôt que d’utiliser les informations d’identification d’un site externe comme Facebook) et un tampon de sécurité pour indiquer si des modifications ont été apportées aux informations d’identification de l’utilisateur. Peut également inclure l’adresse de messagerie, le numéro de téléphone, si l’authentification à deux facteurs est activée, le nombre actuel de connexions ayant échoué et si un compte a été verrouillé. |
 | Revendications utilisateur | Ensemble d’instructions (ou de revendications) sur l’utilisateur qui représente l’identité de l’utilisateur. Peut permettre une plus grande expression de l’identité de l’utilisateur que le permet d’obtenir des rôles. |
 | Connexions utilisateur | Informations sur le fournisseur d’authentification externe (par exemple, Facebook) à utiliser lors de la connexion à un utilisateur. |
 | Rôles | Groupes d’autorisations pour votre site. Comprend l’ID de rôle et le nom de rôle (par exemple, « admin » ou « Employee »). |
@@ -86,7 +86,7 @@ Pour une implémentation MySQL des référentiels de données pour ASP.NET Ident
 
 Dans la couche d’accès aux données, vous fournissez la logique pour enregistrer les données de ASP.NET Identity dans votre source de données. La couche d’accès aux données de votre fournisseur de stockage personnalisé peut inclure les classes suivantes pour stocker les informations d’utilisateur et de rôle.
 
-| Classe | Description | Exemple |
+| Class | Description | Exemple |
 | --- | --- | --- |
 | Contexte | Encapsule les informations pour se connecter à votre mécanisme de persistance et exécuter des requêtes. Cette classe est centrale à votre couche d’accès aux données. Les autres classes de données requièrent une instance de cette classe pour effectuer leurs opérations. Vous allez également initialiser vos classes Store avec une instance de cette classe. | [MySQLDatabase](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/MySQLDatabase.cs) |
 | Stockage utilisateur | Stocke et récupère les informations utilisateur (telles que le nom d’utilisateur et le hachage de mot de passe). | [UserTable (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/UserTable.cs) |
@@ -216,7 +216,7 @@ L’exemple suivant illustre une classe de magasin de rôles. Le paramètre gén
 
 - **IRoleStore&lt;TRole&gt;**  
   L’interface [IRoleStore](https://msdn.microsoft.com/library/dn468195.aspx) définit les méthodes à implémenter dans votre classe de magasin de rôles. Elle contient des méthodes pour la création, la mise à jour, la suppression et la récupération de rôles.
-- **RoleStore&lt;TRole&gt;**  
+- **Au rolestore&lt;TRole&gt;**  
   Pour personnaliser au rolestore, créez une classe qui implémente l’interface IRoleStore. Il vous suffit d’implémenter cette classe si vous souhaitez utiliser des rôles sur votre système. Le constructeur qui accepte un paramètre nommé *base de données* de type ExampleDatabase n’est qu’une illustration de la manière de passer votre classe d’accès aux données. Par exemple, dans l’implémentation MySQL, ce constructeur accepte un paramètre de type MySQLDatabase.  
   
   Pour une implémentation complète, consultez [au rolestore (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/RoleStore.cs) .

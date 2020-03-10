@@ -9,11 +9,11 @@ ms.assetid: 7871dc05-2750-470f-8b4c-3a52511949bc
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
 ms.openlocfilehash: d29cb172d642b67947b461d1a7e55d01872bb8c2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74592439"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78579820"
 ---
 # <a name="updating-related-data-with-the-entity-framework-in-an-aspnet-mvc-application-6-of-10"></a>Mise à jour des données associées avec l’Entity Framework dans une application MVC ASP.NET (6 sur 10)
 
@@ -37,7 +37,7 @@ Les illustrations suivantes montrent les pages que vous allez utiliser.
 
 ## <a name="customize-the-create-and-edit-pages-for-courses"></a>Personnaliser les pages Create et Edit pour les cours
 
-Quand une entité de cours est créée, elle doit avoir une relation à un département existant. Pour faciliter cela, le code du modèle généré automatiquement inclut des méthodes de contrôleur, et des vues Create et Edit qui incluent une liste déroulante pour sélectionner le département. La liste déroulante définit la `Course.DepartmentID` propriété de clé étrangère, et c’est l’ensemble des Entity Framework nécessaires pour charger la propriété de navigation `Department` avec l’entité de `Department` appropriée. Vous utilisez le code du modèle généré automatiquement, mais que vous modifiez un peu pour ajouter la gestion des erreurs et trier la liste déroulante.
+Quand une entité Course est créée, elle doit avoir une relation avec un département existant. Pour faciliter cela, le code du modèle généré automatiquement inclut des méthodes de contrôleur, et des vues Create et Edit qui incluent une liste déroulante pour sélectionner le département. La liste déroulante définit la `Course.DepartmentID` propriété de clé étrangère, et c’est l’ensemble des Entity Framework nécessaires pour charger la propriété de navigation `Department` avec l’entité de `Department` appropriée. Vous utilisez le code du modèle généré automatiquement, mais que vous modifiez un peu pour ajouter la gestion des erreurs et trier la liste déroulante.
 
 Dans *CourseController.cs*, supprimez les quatre méthodes `Edit` et `Create` et remplacez-les par le code suivant :
 
@@ -106,7 +106,7 @@ Remplacez la méthode `HttpPost` `Edit` par le code suivant. qui gère les mises
 Le code effectue les actions suivantes :
 
 - Obtient l'entité `Instructor` en cours à partir de la base de données à l’aide d’un chargement hâtif de la propriété de navigation `OfficeAssignment`. C’est identique à ce que vous avez fait dans la méthode `HttpGet` `Edit`.
-- Met à jour l’entité `Instructor` récupérée avec les valeurs du classeur de modèles. La surcharge [TryUpdateModel](https://msdn.microsoft.com/library/dd470908(v=vs.108).aspx) utilisée vous permet de *liste verte* les propriétés que vous souhaitez inclure. Cela empêche la post-publication, comme expliqué dans [le deuxième didacticiel](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md).
+- Met à jour l’entité `Instructor` récupérée avec les valeurs du classeur de modèles. La surcharge [TryUpdateModel](https://msdn.microsoft.com/library/dd470908(v=vs.108).aspx) utilisée vous permet de *liste blanche* les propriétés que vous souhaitez inclure. Cela empêche la post-publication, comme expliqué dans [le deuxième didacticiel](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md).
 
     [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample10.cs)]
 - Si l’emplacement du Bureau est vide, affecte à la propriété `Instructor.OfficeAssignment` la valeur NULL afin que la ligne associée dans la table `OfficeAssignment` soit supprimée.
@@ -130,13 +130,13 @@ Les formateurs peuvent donner un nombre quelconque de cours. Maintenant, vous al
 
 La relation entre les entités `Course` et `Instructor` est plusieurs-à-plusieurs, ce qui signifie que vous n’avez pas d’accès direct à la table de jointure. Au lieu de cela, vous allez ajouter et supprimer des entités dans la propriété de navigation `Instructor.Courses`.
 
-L’interface utilisateur qui vous permet de changer les cours auxquels un formateur est affecté est un groupe de cases à cocher. Une case à cocher est affichée pour chaque cours de la base de données, et ceux auxquels le formateur est actuellement affecté sont sélectionnés. L’utilisateur peut cocher ou décocher les cases pour changer les affectations de cours. Si le nombre de cours était bien plus important, vous souhaiterez probablement utiliser une méthode différente de présentation des données dans la vue, mais vous utiliseriez la même méthode de manipulation des propriétés de navigation pour créer ou supprimer des relations.
+L’interface utilisateur qui vous permet de changer les cours auxquels un formateur est affecté est un groupe de cases à cocher. Une case à cocher est affichée pour chaque cours de la base de données, et ceux auxquels le formateur est actuellement affecté sont sélectionnés. L’utilisateur peut cocher ou décocher les cases pour modifier les affectations de cours. Si le nombre de cours était bien plus important, vous souhaiterez probablement utiliser une méthode différente de présentation des données dans la vue, mais vous utiliseriez la même méthode de manipulation des propriétés de navigation pour créer ou supprimer des relations.
 
 Pour fournir des données à la vue pour la liste de cases à cocher, vous utilisez une classe de modèle de vue. Créez *AssignedCourseData.cs* dans le dossier *ViewModels* et remplacez le code existant par le code suivant :
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample13.cs)]
 
-Dans *InstructorController.cs*, remplacez la méthode `HttpGet` `Edit` par le code suivant. Les modifications sont mises en surbrillance.
+Dans *InstructorController.cs*, remplacez la méthode `HttpGet` `Edit` par le code suivant. Les modifications apparaissent en surbrillance.
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample14.cs?highlight=5,8,12-27)]
 
@@ -144,7 +144,7 @@ Le code ajoute un chargement hâtif pour la propriété de navigation `Courses` 
 
 Le code de la méthode `PopulateAssignedCourseData` lit toutes les entités `Course` afin de charger une liste de cours à l’aide de la classe de modèle de vue. Pour chaque cours, le code vérifie s’il existe dans la propriété de navigation `Courses` du formateur. Pour créer une recherche efficace en vérifiant si un cours est affecté à l’instructeur, les cours affectés à l’instructeur sont placés dans une collection [HashSet](https://msdn.microsoft.com/library/bb359438.aspx) . La propriété `Assigned` est définie sur `true` pour les cours auxquels l’instructeur est affecté. La vue utilise cette propriété pour déterminer quelles cases doivent être affichées cochées. Enfin, la liste est passée à la vue dans une propriété `ViewBag`.
 
-Ensuite, ajoutez le code qui est exécuté quand l’utilisateur clique sur **Save**. Remplacez la méthode `HttpPost` `Edit` par le code suivant, qui appelle une nouvelle méthode qui met à jour la propriété de navigation `Courses` de l’entité `Instructor`. Les modifications sont mises en surbrillance.
+Ensuite, ajoutez le code qui est exécuté quand l’utilisateur clique sur **Save**. Remplacez la méthode `HttpPost` `Edit` par le code suivant, qui appelle une nouvelle méthode qui met à jour la propriété de navigation `Courses` de l’entité `Instructor`. Les modifications apparaissent en surbrillance.
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample15.cs?highlight=3,7,20,33,37-65)]
 

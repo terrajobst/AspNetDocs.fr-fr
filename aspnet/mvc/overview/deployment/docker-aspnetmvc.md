@@ -2,17 +2,17 @@
 uid: mvc/overview/deployment/docker
 title: Migration d’applications ASP.NET MVC vers des conteneurs Windows
 description: Découvrez comment prendre une application ASP.NET MVC et l’exécuter dans un conteneur Docker Windows
-keywords: Windows Containers,Docker,ASP.NET MVC
+keywords: Conteneurs Windows, Dockr, ASP. NET MVC
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/14/2018
 ms.assetid: c9f1d52c-b4bd-4b5d-b7f9-8f9ceaf778c4
 ms.openlocfilehash: ef184f4256c20e2a66de8fd2d4f8e67f07d9a086
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053426"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583628"
 ---
 # <a name="migrating-aspnet-mvc-applications-to-windows-containers"></a>Migration d’applications ASP.NET MVC vers des conteneurs Windows
 
@@ -33,18 +33,18 @@ Le déplacement de votre application implique les étapes suivantes :
 
 L’[application terminée](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) se trouve sur GitHub.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
-L’ordinateur de développement doit avoir les logiciels suivants :
+L’ordinateur de développement doit disposer des logiciels suivants :
 
-- [Mise à jour anniversaire de Windows 10](https://www.microsoft.com/software-download/windows10/) (ou version ultérieure) ou [Windows Server 2016](https://www.microsoft.com/cloud-platform/windows-server) (ou version ultérieure)
+- [Mise à jour anniversaire Windows 10](https://www.microsoft.com/software-download/windows10/) (ou version ultérieure) ou [Windows Server 2016](https://www.microsoft.com/cloud-platform/windows-server) (ou version ultérieure)
 - [Docker pour Windows](https://docs.docker.com/docker-for-windows/), version stable 1.13.0 ou 1.12 bêta 26 (ou versions plus récentes)
 - [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
 > [!IMPORTANT]
 > Si vous utilisez Windows Server 2016, suivez les instructions indiquées dans [Déploiement d’un hôte de conteneurs – Windows Server](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment).
 
-Une fois installé et démarré Docker, avec le bouton droit sur l’icône de barre d’état, sélectionnez **basculer vers les conteneurs Windows**. Cette opération est nécessaire pour exécuter des images Docker basées sur Windows. Cette commande prend quelques secondes :
+Après l’installation et le démarrage de Docker, cliquez avec le bouton droit de la souris sur l’icône de la barre d’état, puis sélectionnez **Switch to Windows containers** (Basculer vers les conteneurs Windows). Cette opération est nécessaire pour exécuter des images Docker basées sur Windows. Cette commande prend quelques secondes :
 
 ![Conteneur Windows][windows-container]
 
@@ -60,7 +60,7 @@ Collectez à un seul emplacement toutes les ressources à charger dans une image
 
 ![Connexion pour la publication][publish-connection]
 
-Ouvrez la section **Options de publication des fichiers** sous l’onglet **Paramètres**. Sélectionnez **Précompiler durant la publication**. Cette optimisation signifie que, quand vous compilez les vues dans le conteneur Docker, vous copiez les vues précompilées.
+Ouvrez la section **options de publication de fichier** de l’onglet **paramètres** . Sélectionnez **précompiler pendant la publication**. Cette optimisation signifie que, quand vous compilez les vues dans le conteneur Docker, vous copiez les vues précompilées.
 
 ![Paramètres de publication][publish-settings]
 
@@ -68,10 +68,10 @@ Cliquez sur **Publier** ; Visual Studio copie alors toutes les ressources néce
 
 ## <a name="build-the-image"></a>Générer l’image
 
-Créer un nouveau fichier nommé *Dockerfile* pour définir votre image Docker. *Fichier Dockerfile* contient des instructions pour créer l’image finale et inclut des noms de l’image de base, les composants requis, l’application que vous souhaitez exécuter et autres images de configuration. *Fichier Dockerfile* est l’entrée de la `docker build` commande qui crée l’image.
+Créez un nouveau fichier nommé *fichier dockerfile* pour définir votre image d’ancrage. *Fichier dockerfile* contient des instructions pour générer l’image finale et inclut tous les noms d’images de base, les composants requis, l’application que vous souhaitez exécuter et d’autres images de configuration. *Fichier dockerfile* est l’entrée de la commande `docker build` qui crée l’image.
 
-Dans cet exercice, vous allez générer une image basée sur le `microsoft/aspnet` image se trouve sur [Docker Hub](https://hub.docker.com/r/microsoft/aspnet/).
-L’image de base, `microsoft/aspnet`, est une image Windows Server. Elle contient Windows Server Core, IIS et ASP.NET 4.7.2. Quand vous exécutez cette image dans votre conteneur, elle démarre automatiquement IIS et tous les sites web installés.
+Pour cet exercice, vous allez créer une image basée sur l’image `microsoft/aspnet` située sur le [hub d’ancrage](https://hub.docker.com/r/microsoft/aspnet/).
+L’image de base, `microsoft/aspnet`, est une image Windows Server. Il contient Windows Server Core, IIS et ASP.NET 4.7.2. Quand vous exécutez cette image dans votre conteneur, elle démarre automatiquement IIS et tous les sites web installés.
 
 Le fichier Dockerfile qui crée votre image ressemble à ceci :
 
@@ -85,15 +85,15 @@ FROM microsoft/aspnet
 COPY ./bin/Release/PublishOutput/ /inetpub/wwwroot
 ```
 
-Ce fichier Dockerfile ne comprend pas de commande `ENTRYPOINT`. Vous n’en avez pas besoin. Lorsque vous exécutez Windows Server avec IIS, le processus IIS est le point d’entrée, qui est configuré pour démarrer dans l’image de base aspnet.
+Ce fichier Dockerfile ne comprend pas de commande `ENTRYPOINT`. Vous n’en avez pas besoin. Lors de l’exécution de Windows Server avec IIS, le processus IIS est le point d’entrée, qui est configuré pour démarrer dans l’image de base Aspnet.
 
-Exécutez la commande de génération Docker pour créer l’image qui exécute votre application ASP.NET. Pour ce faire, ouvrez une fenêtre PowerShell dans le répertoire de votre projet et tapez la commande suivante dans le répertoire de solution :
+Exécutez la commande de génération Docker pour créer l’image qui exécute votre application ASP.NET. Pour ce faire, ouvrez une fenêtre PowerShell dans le répertoire de votre projet et tapez la commande suivante dans le répertoire de la solution :
 
 ```console
 docker build -t mvcrandomanswers .
 ```
 
-Cette commande génère la nouvelle image en suivant les instructions dans votre fichier Dockerfile, d’affectation de noms (-t marquage) l’image en tant que mvcrandomanswers. Celles-ci peuvent inclure l’extraction de l’image de base du [Hub Docker](http://hub.docker.com), puis l’ajout de votre application à cette image.
+Cette commande génère la nouvelle image à l’aide des instructions de votre fichier dockerfile, en nommant (-t tagging) l’image en tant que mvcrandomanswers. Celles-ci peuvent inclure l’extraction de l’image de base du [Hub Docker](http://hub.docker.com), puis l’ajout de votre application à cette image.
 
 Une fois cette commande terminée, vous pouvez exécuter la commande `docker images` pour afficher des informations sur la nouvelle image :
 
@@ -114,7 +114,7 @@ docker run -d --name randomanswers mvcrandomanswers
 
 L’argument `-d` indique à Docker de démarrer l’image en mode détaché. Cela signifie que l’image Docker s’exécute déconnectée de l’interpréteur de commandes actuel.
 
-Dans de nombreux exemples de docker, vous pouvez voir -p pour mapper les ports de conteneur et l’hôte. L’image d’aspnet par défaut a déjà configuré le conteneur pour écouter sur le port 80 et l’exposer.
+Dans de nombreux exemples d’ancrage, vous pouvez voir-p mapper le conteneur et les ports hôtes. L’image ASPNET par défaut a déjà configuré le conteneur pour écouter sur le port 80 et l’exposer.
 
 La portion `--name randomanswers` donne un nom au conteneur en cours d’exécution. Vous pouvez utiliser ce nom au lieu de l’ID de conteneur dans la plupart des commandes.
 
@@ -122,7 +122,7 @@ La portion `--name randomanswers` donne un nom au conteneur en cours d’exécut
 
 ## <a name="verify-in-the-browser"></a>Vérifier dans le navigateur
 
-Une fois le démarrage du conteneur, connectez-vous au conteneur en cours d’exécution à l’aide `http://localhost` dans l’exemple indiqué. Tapez cette URL dans votre navigateur ; vous devriez voir le site en cours d’exécution.
+Une fois le conteneur démarré, connectez-vous au conteneur en cours d’exécution à l’aide de `http://localhost` dans l’exemple indiqué. Tapez cette URL dans votre navigateur ; vous devriez voir le site en cours d’exécution.
 
 > [!NOTE]
 > Certains logiciels VPN ou proxy peuvent vous empêcher d’accéder à votre site.
@@ -134,7 +134,7 @@ Le répertoire d’exemples sur GitHub contient un [script PowerShell](https://g
 ./run.ps1
 ```
 
-La commande ci-dessus génère l’image affiche la liste des images sur votre ordinateur et démarre un conteneur.
+La commande ci-dessus génère l’image, affiche la liste des images sur votre ordinateur et démarre un conteneur.
 
 Pour arrêter le conteneur, exécutez une commande `docker stop` :
 

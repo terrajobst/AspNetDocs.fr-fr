@@ -9,151 +9,151 @@ ms.assetid: 04d5f142-5f62-494a-b5ea-4f3d068d34cb
 msc.legacyurl: /single-page-application/overview/templates/emberjs-template
 msc.type: authoredcontent
 ms.openlocfilehash: 1aefa46dd0841b1b06675409cc8a09f9a218d7ac
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113509"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78578504"
 ---
 # <a name="emberjs-template"></a>Modèle EmberJS
 
 par [Xinyang Qiu](https://github.com/xqiu)
 
-> Le modèle MVC EmberJS est rédigé par Nathan Totten, Thiago Santos et Xinyang Qiu.
+> Le modèle MVC EmberJS est écrit par Nathan Totten, Thiago Santos et Xinyang Qiu.
 > 
-> [Télécharger le modèle EmberJS MVC](https://go.microsoft.com/fwlink/?LinkId=282647)
+> [Télécharger le modèle MVC EmberJS](https://go.microsoft.com/fwlink/?LinkId=282647)
 
-Le modèle EmberJS SPA est conçu pour vous aider à créer rapidement des applications web côté client interactives à l’aide de EmberJS.
+Le modèle SPA EmberJS est conçu pour vous aider à créer rapidement des applications Web interactives côté client à l’aide de EmberJS.
 
-« Single-page application » (SPA) est le terme général qui désigne une application web qui charge une seule page HTML et puis met à jour la page dynamiquement, au lieu de charger de nouvelles pages. Après le chargement de page initial, le SPA s’entretient avec le serveur via les demandes AJAX.
+« Une application à page unique » (SPA) est le terme général pour une application Web qui charge une seule page HTML, puis met à jour la page dynamiquement, au lieu de charger de nouvelles pages. Après le chargement initial de la page, le SPA discute avec le serveur via des demandes AJAX.
 
 ![](emberjs-template/_static/image1.png)
 
-AJAX n’est pas nouveau, mais aujourd'hui, il existe des infrastructures JavaScript qui le rendent plus facile créer et gérer une grande application SPA sophistiquée. En outre, HTML5 et CSS3 sont qu’il soit plus facile de créer des interfaces utilisateur riches.
+AJAX n’est pas nouveau, mais aujourd’hui, il existe des infrastructures JavaScript qui facilitent la création et la maintenance d’une application SPA sophistiquée de grande taille. En outre, HTML 5 et CSS3 facilitent la création d’interfaces utilisateur riches.
 
-Le modèle de SPA EmberJS utilise le [Ember](http://emberjs.com/) bibliothèque JavaScript pour gérer les mises à jour de la page à partir de demandes AJAX. Ember.js utilise la liaison de données pour synchroniser la page avec les dernières données. De cette façon, il est inutile d’écrire du code qui vous guide à travers les données JSON et met à jour le modèle DOM. Au lieu de cela, vous placez des attributs déclaratifs dans le code HTML qui indiquent Ember.js comment présenter les données.
+Le modèle SPA EmberJS utilise la bibliothèque JavaScript [Ember](http://emberjs.com/) pour gérer les mises à jour de page à partir des demandes Ajax. Ember. js utilise la liaison de données pour synchroniser la page avec les données les plus récentes. De cette façon, vous n’êtes pas obligé d’écrire le code qui parcourt les données JSON et met à jour le DOM. Au lieu de cela, vous placez des attributs déclaratifs dans le code HTML qui indiquent à Ember. js comment présenter les données.
 
-Sur le côté serveur, le modèle EmberJS est presque identique à la [les modèle KnockoutJS SPA](../introduction/knockoutjs-template.md). Il utilise ASP.NET MVC pour traiter les documents HTML et ASP.NET Web API pour gérer les demandes AJAX à partir du client. Pour plus d’informations sur ces aspects du modèle, reportez-vous à la [modèle KnockoutJS](../introduction/knockoutjs-template.md) documentation. Cette rubrique se concentre sur les différences entre le modèle Knockout et le modèle EmberJS.
+Côté serveur, le modèle EmberJS est presque identique au [modèle KNOCKOUTJS Spa](../introduction/knockoutjs-template.md). Il utilise ASP.NET MVC pour servir des documents HTML et API Web ASP.NET pour gérer les requêtes AJAX à partir du client. Pour plus d’informations sur ces aspects du modèle, reportez-vous à la documentation du [modèle KnockoutJS](../introduction/knockoutjs-template.md) . Cette rubrique se concentre sur les différences entre le modèle Knockout et le modèle EmberJS.
 
-## <a name="create-an-emberjs-spa-template-project"></a>Créer un projet de modèle EmberJS SPA
+## <a name="create-an-emberjs-spa-template-project"></a>Créer un projet de modèle SPA EmberJS
 
-Téléchargez et installez le modèle en cliquant sur le bouton Télécharger ci-dessus. Vous devrez peut-être redémarrer Visual Studio.
+Téléchargez et installez le modèle en cliquant sur le bouton de téléchargement ci-dessus. Vous devrez peut-être redémarrer Visual Studio.
 
-Dans le **modèles** volet, sélectionnez **modèles installés** et développez le **Visual C#** nœud. Sous **Visual C#**, sélectionnez **Web**. Dans la liste des modèles de projet, sélectionnez **ASP.NET MVC 4 Web Application**. Nommez le projet et cliquez sur **OK**.
+Dans le volet **modèles** , sélectionnez **modèles installés** , puis développez le nœud **visuel C#**  . Sous **visuel C#** , sélectionnez **Web**. Dans la liste des modèles de projet, sélectionnez **application Web ASP.NET MVC 4**. Nommez le projet, puis cliquez sur **OK**.
 
 ![](emberjs-template/_static/image2.png)
 
-Dans le **nouveau projet** Assistant, sélectionnez **Ember.js SPA projet**.
+Dans l’Assistant **nouveau projet** , sélectionnez le **projet Ember. js Spa**.
 
 ![](emberjs-template/_static/image4.png)
 
 ## <a name="emberjs-spa-template-overview"></a>Vue d’ensemble du modèle EmberJS SPA
 
-Le modèle EmberJS utilise une combinaison de jQuery, Ember.js, Handlebars.js pour créer une interface utilisateur interactive sans heurts.
+Le modèle EmberJS utilise une combinaison de jQuery, Ember. js, guidon. js pour créer une interface utilisateur lisse et interactive.
 
-Ember.js est une bibliothèque JavaScript qui utilise un modèle MVC côté client.
+Ember. js est une bibliothèque JavaScript qui utilise un modèle MVC côté client.
 
-- Un *modèle*, écrit dans le langage de création de modèles Handlebars, décrit l’interface utilisateur. En mode de mise en production, le [compilateur de Handlebars](https://github.com/Myslik/csharp-ember-handlebars) sert à regrouper et compiler le modèle handlebars.
-- Un *modèle* stocke les données d’application qu’il obtient à partir du serveur (listes de tâches et éléments de tâche).
-- Un *contrôleur* stocke l’état de l’application. Contrôleurs présentent souvent des données de modèle pour les modèles correspondants.
-- Un *vue* se traduit par des événements primitifs à partir de l’application et transmet ces au contrôleur.
-- Un *routeur* gère l’état de l’application, synchronisation des modèles et des URL.
+- Un *modèle*, écrit dans le langage de création de guidon, décrit l’interface utilisateur de l’application. En mode mise en sortie, le [compilateur guidon](https://github.com/Myslik/csharp-ember-handlebars) est utilisé pour regrouper et compiler le modèle de guidon.
+- Un *modèle* stocke les données d’application qu’il obtient à partir du serveur (listes TODO et éléments TODO).
+- Un *contrôleur* stocke l’état de l’application. Les contrôleurs présentent souvent des données de modèle aux modèles correspondants.
+- Une *vue* traduit les événements primitifs de l’application et les transmet au contrôleur.
+- Un *routeur* gère l’état de l’application, en conservant la synchronisation des URL et des modèles.
 
-En outre, la bibliothèque Ember données peut être utilisée pour synchroniser des objets JSON (obtenus à partir du serveur via une API RESTful) et les modèles de client.
+En outre, la bibliothèque de données Ember peut être utilisée pour synchroniser des objets JSON (obtenus à partir du serveur via une API RESTful) et les modèles clients.
 
-Le modèle EmberJS SPA organise les scripts en huit couches :
+Le modèle SPA EmberJS organise les scripts en huit couches :
 
-- WebAPI\_adapter.js, webapi\_serializer.js : Étend la bibliothèque de données de Ember pour travailler avec l’API Web ASP.NET.
-- Scripts/Helpers.js : Définit les nouveaux programmes d’assistance Ember Handlebars.
-- Scripts/app.js: Crée l’application et configure l’adaptateur et le sérialiseur.
-- Modèles/application/scripts/\*.js : Définit les modèles.
-- Scripts/application/vues/\*.js : Définit les affichages.
-- Scripts/application/contrôleurs/\*.js : Définit les contrôleurs.
-- Scripts/application/itinéraires, Scripts/app/router.js : Définit les itinéraires.
-- Modèles /\*.hbs : Définit les modèles handlebars.
+- WebAPI\_adapter. js, WebAPI\_serializer. js : étend la bibliothèque de données Ember pour qu’elle fonctionne avec API Web ASP.NET.
+- Scripts/Helper. js : définit les nouvelles applications auxiliaires de GUID de Ember.
+- Scripts/App. js : crée l’application et configure l’adaptateur et le sérialiseur.
+- Scripts/App/Models/\*. js : définit les modèles.
+- Scripts/app/views/\*. js : définit les vues.
+- Scripts/App/Controllers/\*. js : définit les contrôleurs.
+- Scripts/application/itinéraires, scripts/App/Router. js : définit les itinéraires.
+- Templates/\*. BH : définit les modèles de guidon.
 
-Examinons quelques-unes de ces scripts plus en détail.
+Examinons quelques-uns de ces scripts plus en détail.
 
 ## <a name="models"></a>Modèles
 
-Les modèles sont définis dans le dossier Scripts / / modèles d’application. Il existe deux fichiers de modèle : todoItem.js et todoList.js.
+Les modèles sont définis dans le dossier scripts/App/Models. Il existe deux fichiers de modèle : todoItem. js et todoList. js.
 
-**TODO.Model.js** définit les modèles côté client (navigateur) pour les listes de tâches. Il existe deux classes de modèle : todoItem et todoList. Dans Ember, les modèles sont des sous-classes de DS. Modèle. Un modèle peut avoir des propriétés avec des attributs :
+**TODO. Model. js** définit les modèles côté client (navigateur) pour les listes de tâches. Il existe deux classes de modèle : todoItem et todoList. Dans Ember, les modèles sont des sous-classes de DS. Modélisation. Un modèle peut avoir des propriétés avec des attributs :
 
 [!code-javascript[Main](emberjs-template/samples/sample1.js)]
 
-Les modèles peuvent définir des relations à d’autres modèles :
+Les modèles peuvent définir des relations avec d’autres modèles :
 
 [!code-css[Main](emberjs-template/samples/sample2.css)]
 
-Les modèles peuvent les propriétés qui lient à d’autres propriétés calculées :
+Les modèles peuvent avoir des propriétés calculées qui sont liées à d’autres propriétés :
 
 [!code-javascript[Main](emberjs-template/samples/sample3.js)]
 
-Les modèles peuvent avoir des fonctions de l’Observateur, qui sont appelées lorsqu’une propriété observée change :
+Les modèles peuvent avoir des fonctions observateur, qui sont appelées lorsqu’une propriété observée change :
 
 [!code-javascript[Main](emberjs-template/samples/sample4.js)]
 
 ## <a name="views"></a>Affichages
 
-Les vues sont définies dans le dossier Scripts/application/vues. Une vue se traduit par des événements de l’interface utilisateur de l’application. Un gestionnaire d’événements peut rappeler aux fonctions du contrôleur, ou simplement appeler directement le contexte de données.
+Les affichages sont définis dans le dossier scripts/app/views. Une vue traduit les événements à partir de l’interface utilisateur de l’application. Un gestionnaire d’événements peut rappeler des fonctions de contrôleur ou simplement appeler directement le contexte de données.
 
-Par exemple, le code suivant provient de views/TodoItemEditView.js. Il définit la gestion des événements pour un champ de texte d’entrée.
+Par exemple, le code suivant provient de views/TodoItemEditView. js. Il définit la gestion des événements pour un champ de texte d’entrée.
 
 [!code-javascript[Main](emberjs-template/samples/sample5.js)]
 
 ## <a name="controller"></a>Contrôleur
 
-Les contrôleurs sont définis dans le dossier Scripts/application/contrôleurs. Pour représenter un modèle unique, étendre `Ember.ObjectController`:
+Les contrôleurs sont définis dans le dossier scripts/App/Controllers. Pour représenter un modèle unique, étendez `Ember.ObjectController`:
 
 [!code-javascript[Main](emberjs-template/samples/sample6.js)]
 
-Un contrôleur peut également représenter une collection de modèles en étendant `Ember.ArrayController`. Par exemple, le TodoListController représente un tableau de `todoList` objets. Le contrôleur de trie par ID de la liste des tâches, dans l’ordre décroissant :
+Un contrôleur peut également représenter une collection de modèles en étendant `Ember.ArrayController`. Par exemple, TodoListController représente un tableau d’objets `todoList`. Le contrôleur trie par ID todoList, dans l’ordre décroissant :
 
 [!code-javascript[Main](emberjs-template/samples/sample7.js)]
 
-Le contrôleur définit une fonction nommée `addTodoList`, qui crée une nouvelle liste des tâches et l’ajoute dans le tableau. Pour voir comment cette fonction est appelée, ouvrez le fichier de modèle nommé todoListTemplate.html, dans le dossier de modèles. Le code de modèle suivant lie un bouton à la `addTodoList` (fonction) :
+Le contrôleur définit une fonction nommée `addTodoList`, qui crée un nouveau todoList et l’ajoute au tableau. Pour voir comment cette fonction est appelée, ouvrez le fichier de modèle nommé todoListTemplate. html dans le dossier modèles. Le code de modèle suivant lie un bouton à la fonction `addTodoList` :
 
 [!code-html[Main](emberjs-template/samples/sample8.html)]
 
-Le contrôleur contient également un `error` propriété, qui contient un message d’erreur. Voici le code du modèle pour afficher le message d’erreur (également dans todoListTemplate.html) :
+Le contrôleur contient également une propriété `error`, qui contient un message d’erreur. Voici le code du modèle permettant d’afficher le message d’erreur (également dans todoListTemplate. html) :
 
 [!code-html[Main](emberjs-template/samples/sample9.html)]
 
 ## <a name="routes"></a>Routes
 
-Router.js définit les itinéraires et le modèle par défaut à afficher, les jeux de l’état de l’application et correspond à des URL pour les itinéraires :
+Router. js définit les itinéraires et le modèle par défaut à afficher, définit l’état de l’application et met en correspondance les URL avec les itinéraires :
 
 [!code-javascript[Main](emberjs-template/samples/sample10.js)]
 
-TodoListRoute.js charge les données pour le TodoListRoute en substituant la fonction setupController :
+TodoListRoute. js charge des données pour TodoListRoute en remplaçant la fonction setupController :
 
 [!code-javascript[Main](emberjs-template/samples/sample11.js)]
 
-Ember utilise les conventions d’affectation de noms pour faire correspondre les URL, les noms de routes, contrôleurs et modèles. Pour plus d’informations, consultez [ http://emberjs.com/guides/routing/defining-your-routes/ ](http://emberjs.com/guides/routing/defining-your-routes/) à la documentation EmberJS.
+Ember utilise des conventions d’affectation de noms pour faire correspondre les URL, les noms d’itinéraires, les contrôleurs et les modèles. Pour plus d’informations, consultez [http://emberjs.com/guides/routing/defining-your-routes/](http://emberjs.com/guides/routing/defining-your-routes/) dans la documentation EmberJS.
 
 ## <a name="templates"></a>Modèles
 
-Le dossier de modèles contient quatre modèles :
+Le dossier modèles contient quatre modèles :
 
-- application.HBS : Le modèle par défaut qui est affiché lorsque l’application est démarrée.
-- About.HBS : Le modèle pour l’itinéraire « / environ ».
-- index.HBS : Le modèle pour la racine « / » itinéraire.
-- todoList.hbs : Le modèle pour le « / todo « itinéraire.
-- \_navbar.HBS : Le modèle définit le menu de navigation.
+- application. BH : modèle par défaut qui est rendu lorsque l’application est démarrée.
+- about. BH : modèle pour l’itinéraire « /about ».
+- index. BH : modèle pour l’itinéraire racine « / ».
+- todoList. BH : modèle pour l’itinéraire « /todo ».
+- \_barre de navigation. BH : le modèle définit le menu de navigation.
 
-Le modèle d’application agit comme une page maître. Il contient un en-tête, un pied de page et un « {{outlet}} » pour insérer d’autres modèles dans en fonction de l’itinéraire. Pour plus d’informations sur les modèles d’application dans Ember, consultez [ http://guides.emberjs.com/v1.10.0/templates/the-application-template// ](http://guides.emberjs.com/v1.10.0/templates/the-application-template/).
+Le modèle d’application agit comme une page maître. Elle contient un en-tête, un pied de page et un « {{Outlet}} » pour insérer d’autres modèles dans en fonction de l’itinéraire. Pour plus d’informations sur les modèles d’application dans Ember, consultez [http://guides.emberjs.com/v1.10.0/templates/the-application-template//](http://guides.emberjs.com/v1.10.0/templates/the-application-template/).
 
-Le « / todoList « modèle contient deux expressions de boucle. La boucle extérieure est `{{#each controller}}`et la boucle est `{{#each todos}}`. Le code suivant montre un intégré `Ember.Checkbox` afficher un texte personnalisé `App.TodoItemEditView`, ainsi qu’un lien avec un `deleteTodo` action.
+Le modèle « /todoList » contient deux expressions de boucle. La boucle extérieure est `{{#each controller}}`, et la boucle interne est `{{#each todos}}`. Le code suivant illustre une vue intégrée `Ember.Checkbox`, une `App.TodoItemEditView`personnalisée et un lien avec une action `deleteTodo`.
 
 [!code-html[Main](emberjs-template/samples/sample12.html)]
 
-Le `HtmlHelperExtensions` (classe), définie dans Controllers/HtmlHelperExtensions.cs, définit une assistance afin de mettre en cache et insérer le modèle de fichiers quand **déboguer** a la valeur **true** dans le fichier Web.config. Cette fonction est appelée à partir du fichier de vue ASP.NET MVC défini dans Views/Home/App.cshtml :
+La classe `HtmlHelperExtensions`, définie dans Controllers/HtmlHelperExtensions. cs, définit une fonction d’assistance pour mettre en cache et insérer des fichiers modèles lorsque **Debug** a la valeur **true** dans le fichier Web. config. Cette fonction est appelée à partir du fichier de vue MVC ASP.NET défini dans views/domotique/App. cshtml :
 
 [!code-cshtml[Main](emberjs-template/samples/sample13.cshtml)]
 
 Appelée sans argument, la fonction affiche tous les fichiers de modèle dans le dossier de modèles. Vous pouvez également spécifier un sous-dossier ou un fichier de modèle spécifique.
 
-Lorsque **déboguer** est **false** dans le fichier Web.config, l’application inclut l’élément de lot « ~/bundles/templates ». Cet élément de regroupement est ajouté dans BundleConfig.cs, à l’aide de la bibliothèque de compilateur Handlebars :
+Lorsque **Debug** a la **valeur false** dans Web. config, l’application comprend l’élément Bundle « ~/bundles/Templates ». Cet élément de regroupement est ajouté dans BundleConfig.cs, à l’aide de la bibliothèque du compilateur guidon :
 
 [!code-csharp[Main](emberjs-template/samples/sample14.cs)]

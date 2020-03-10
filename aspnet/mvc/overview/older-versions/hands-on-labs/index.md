@@ -1,23 +1,23 @@
 ---
 uid: mvc/overview/older-versions/hands-on-labs/index
-title: ASP.NET MVC 4 Hands On Labs | Microsoft Docs
+title: Ateliers pratiques ASP.NET MVC 4 | Microsoft Docs
 author: rick-anderson
-description: Apprenez à développer avec ASP.NET MVC avec ces ateliers de sur mains
+description: Découvrez comment développer avec ASP.NET MVC avec ces ateliers pratiques
 ms.author: riande
 ms.date: 02/18/2013
 ms.assetid: eb23eb99-bfca-4043-9b48-2cf7838dd754
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs
 msc.type: chapter
 ms.openlocfilehash: 02ef51cd3320df200920cba19a59d8ab23836c95
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023146"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78560136"
 ---
-# <a name="aspnet-mvc-4-hands-on-labs"></a>ASP.NET MVC 4 Hands On Labs
+# <a name="aspnet-mvc-4-hands-on-labs"></a>Ateliers pratiques ASP.NET MVC 4
 
-Apprenez à développer avec ASP.NET MVC avec ces ateliers de sur mains
+Découvrez comment développer avec ASP.NET MVC avec ces ateliers pratiques
 
 - [Nouveautés d’ASP.NET MVC 4](whats-new-in-aspnet-mvc-4.md)
 - [Concepts de base d’ASP.NET MVC 4](aspnet-mvc-4-fundamentals.md)

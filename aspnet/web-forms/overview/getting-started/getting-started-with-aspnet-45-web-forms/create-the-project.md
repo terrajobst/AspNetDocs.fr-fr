@@ -9,11 +9,11 @@ ms.assetid: 2ce36f78-8ecb-4ab1-b748-6d0ab633ea3f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
 msc.type: authoredcontent
 ms.openlocfilehash: 62918b17f42e54dfe4e45a08927b1039dcbb7012
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74576064"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78571987"
 ---
 # <a name="create-the-project"></a>Créer le projet
 
@@ -40,7 +40,7 @@ Dans ce didacticiel, vous allez créer, examiner et exécuter le projet par déf
 
     ![Créer l’élément de menu projet-nouveau projet](create-the-project/_static/image1.png)
 3. Sélectionnez les **modèles** -&gt; le groupe **Visual C#**  -&gt; de modèles **Web** sur la gauche.
-4. Choisissez le modèle **application Web ASP.net** dans la colonne centrale.  
+4. Choisissez le modèle **Application Web ASP.NET** dans la colonne centrale.  
  Cette série de didacticiels utilise .NET Framework 4.5.2.
 5. Nommez votre projet *WingtipToys* et choisissez le bouton **OK** . 
 
@@ -49,7 +49,7 @@ Dans ce didacticiel, vous allez créer, examiner et exécuter le projet par déf
     > [!NOTE]
     > Le nom du projet dans cette série de didacticiels est **WingtipToys**. Il est recommandé d’utiliser ce nom de projet *exact* afin que le code fourni dans la série de didacticiels fonctionne comme prévu.
 
-6. Cliquez sur le bouton **modifier l’authentification** . Sélectionnez **des comptes d’utilisateur individuels** , puis cliquez sur le bouton **OK** .
+6. Cliquez sur le bouton **Modifier l’authentification**. Sélectionnez **des comptes d’utilisateur individuels** , puis cliquez sur le bouton **OK** .
 
 7. Sélectionnez le modèle **Web Forms** , puis cliquez sur le bouton **OK** .
 
@@ -96,7 +96,7 @@ Visual Studio crée des dossiers et des fichiers initiaux pour votre projet. Les
 | *Default. aspx* | En général, première page affichée lorsque l’application est exécutée dans un navigateur. |
 | *Site. Master* | Page qui vous permet de créer une disposition cohérente et d’utiliser le comportement standard pour les pages de votre application. |
 | *Global. asax* | Fichier facultatif qui contient du code pour répondre aux événements au niveau de l’application et au niveau de la session déclenchés par ASP.NET ou par les modules HTTP. |
-| *Web. config* | Données de configuration pour une application. |
+| *Web.config* | Données de configuration pour une application. |
 
 ### <a name="running-the-default-web-application"></a>Exécution de l’application Web par défaut
 

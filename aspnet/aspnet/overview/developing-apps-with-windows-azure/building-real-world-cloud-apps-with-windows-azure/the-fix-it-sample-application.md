@@ -9,11 +9,11 @@ ms.assetid: 1bc333c5-f096-4ea7-b170-779accc21c1a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
 msc.type: authoredcontent
 ms.openlocfilehash: 896196bdb6a6b0d12a6c798ead510e37dd38a9fc
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456879"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583446"
 ---
 # <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Annexe : exemple d’application Fix it (création d’applications Cloud réalistes avec Azure)
 
@@ -84,7 +84,7 @@ Les exemples de scripts d’automatisation PowerShell ont été écrits uniqueme
 ASP.NET empêche automatiquement les utilisateurs malveillants de tenter d’effectuer des attaques de script entre sites en entrant un script dans les zones de texte entrée utilisateur. Et le service d’assistance du `DisplayFor` MVC utilisé pour afficher les titres des tâches et les notes encodent automatiquement les valeurs qu’il envoie au navigateur. Mais dans une application de production, vous souhaiterez peut-être prendre des mesures supplémentaires. Pour plus d’informations, consultez [validation de la demande dans ASP.net](https://msdn.microsoft.com/library/hh882339.aspx).
 
 <a id="bestpractices"></a>
-## <a name="best-practices"></a>Meilleures pratiques
+## <a name="best-practices"></a>meilleures pratiques recommandées.
 
 Voici quelques problèmes qui ont été résolus après avoir été découverts dans la révision du code et les tests de la version d’origine de l’application Fix it. Certains ont été provoqués par le codeur d’origine qui n’a pas conscience d’une bonne pratique particulière, tout simplement parce que le code a été écrit rapidement et n’était pas destiné aux logiciels publiés. Nous répertorions les problèmes ici, au cas où nous avons appris cette revue et les tests, qui peuvent être utiles aux personnes qui développent également des applications Web.
 
@@ -96,7 +96,7 @@ La classe `FixItTaskRepository` doit supprimer l’instance `DbContext` Entity F
 
 Notez que AutoFac supprimera automatiquement l’instance de `FixItTaskRepository`, nous n’avons donc pas besoin de la supprimer explicitement.
 
-Une autre option consiste à supprimer la variable de membre `DbContext` de `FixItTaskRepository`et à créer une variable `DbContext` locale dans chaque méthode de dépôt, à l’intérieur d’une instruction `using`. Par exemple :
+Une autre option consiste à supprimer la variable de membre `DbContext` de `FixItTaskRepository`et à créer une variable `DbContext` locale dans chaque méthode de dépôt, à l’intérieur d’une instruction `using`. Exemple :
 
 [!code-csharp[Main](the-fix-it-sample-application/samples/sample2.cs)]
 
@@ -322,7 +322,7 @@ Ces instructions supposent que vous avez déjà téléchargé et exécuté la so
     Si le script échoue ou génère des erreurs, telles que « New-AzureWebsite : Call Set-AzureSubscription et SELECT-AzureSubscription First », vous n’avez peut-être pas terminé la configuration de Azure PowerShell.
 
     Une fois le script terminé, vous pouvez utiliser le Portail de gestion Azure pour voir les ressources qui ont été créées, comme indiqué dans le chapitre [automatiser tout](automate-everything.md) .
-10. Pour déployer le projet FixIt dans le nouvel environnement Azure, utilisez le script *AzureWebsite. ps1* . Par exemple :
+10. Pour déployer le projet FixIt dans le nouvel environnement Azure, utilisez le script *AzureWebsite. ps1* . Exemple :
 
     [!code-console[Main](the-fix-it-sample-application/samples/sample28.cmd)]
 

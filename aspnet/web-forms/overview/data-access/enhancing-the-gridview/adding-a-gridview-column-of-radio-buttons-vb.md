@@ -9,11 +9,11 @@ ms.assetid: 2e31b60b-8723-4f14-b7ee-37859454dc3b
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-radio-buttons-vb
 msc.type: authoredcontent
 ms.openlocfilehash: ee67a4556c65d2c9570bf15b42fc3c8e5f555bda
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74593195"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78590789"
 ---
 # <a name="adding-a-gridview-column-of-radio-buttons-vb"></a>Ajout d’une colonne GridView de cases d’option (VB)
 
