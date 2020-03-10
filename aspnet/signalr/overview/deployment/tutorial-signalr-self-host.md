@@ -9,11 +9,11 @@ ms.assetid: 400db427-27af-4f2f-abf0-5486d5e024b5
 msc.legacyurl: /signalr/overview/deployment/tutorial-signalr-self-host
 msc.type: authoredcontent
 ms.openlocfilehash: 41c8c3803923e76ef238a5c5937cbe7f81e6aa82
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74578575"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558680"
 ---
 # <a name="tutorial-signalr-self-host"></a>Didacticiel : auto-hôte Signalr
 
@@ -49,7 +49,7 @@ de [Patrick Fletcher](https://github.com/pfletcher)
 >
 > N’hésitez pas à nous faire part de vos commentaires sur la façon dont vous aimez ce didacticiel et sur ce que nous pourrions améliorer dans les commentaires en bas de la page. Si vous avez des questions qui ne sont pas directement liées au didacticiel, vous pouvez les poster sur le [forum ASP.net signalr](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Un serveur Signalr est généralement hébergé dans une application ASP.NET dans IIS, mais il peut également être auto-hébergé (comme dans une application console ou un service Windows) à l’aide de la bibliothèque auto-hôte. Cette bibliothèque, comme la totalité de Signalr 2, repose sur OWIN ([Open Web interface pour .net](http://owin.org)). OWIN définit une abstraction entre les serveurs Web .NET et les applications Web. OWIN découple l’application Web du serveur, ce qui fait de OWIN idéal pour l’auto-hébergement d’une application Web dans votre propre processus, en dehors d’IIS.
 

@@ -1,27 +1,27 @@
 ---
 uid: mvc/overview/getting-started/index
-title: Mise en route de ASP.NET MVC | Microsoft Docs
+title: Prise en main MVC ASP.NET | Microsoft Docs
 author: rick-anderson
-description: En savoir plus sur ASP.NET MVC ASP.NET MVC offre un moyen puissant, basé sur des modèles pour créer des sites Web dynamiques qui permettent une séparation claire des préoccupations et ce g...
+description: En savoir plus sur ASP.NET MVC ASP.NET MVC vous offre une méthode puissante et basée sur des modèles pour créer des sites Web dynamiques qui permet une séparation claire des préoccupations et de ce g...
 ms.author: riande
 ms.date: 08/31/2011
 ms.assetid: d916dbe0-1895-491b-8bb6-93f4594ce757
 msc.legacyurl: /mvc/overview/getting-started
 msc.type: chapter
 ms.openlocfilehash: 8e25c3a01634df6c3d9c81df8ab1738cc079d341
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65121124"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583012"
 ---
-# <a name="aspnet-mvc-getting-started"></a>Mise en route de ASP.NET MVC
+# <a name="aspnet-mvc-getting-started"></a>Prise en main MVC ASP.NET
 
-> Le guide suivant explique ASP.NET MVC et montre comment commencer.
+> L’aide suivante explique ce qu’est ASP.NET MVC et montre comment commencer.
 
-- [Bien démarrer avec ASP.NET MVC 5](introduction/index.md)
+- [Prise en main d’ASP.NET MVC 5](introduction/index.md)
 
-    - [Prise en main](introduction/getting-started.md)
+    - [Bien démarrer](introduction/getting-started.md)
     - [Ajout d’un contrôleur](introduction/adding-a-controller.md)
     - [Ajout d’une vue](introduction/adding-a-view.md)
     - [Ajout d’un modèle](introduction/adding-a-model.md)

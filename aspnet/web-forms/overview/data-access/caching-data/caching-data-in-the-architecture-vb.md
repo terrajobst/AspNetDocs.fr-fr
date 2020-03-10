@@ -9,11 +9,11 @@ ms.assetid: 5e189dd7-f4f9-4f28-9b3a-6cb7d392e9c7
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-in-the-architecture-vb
 msc.type: authoredcontent
 ms.openlocfilehash: dc991a205fa7e61f604bc0f26e9b24b3faefd3d3
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74607494"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78551008"
 ---
 # <a name="caching-data-in-the-architecture-vb"></a>Mise en cache de données dans l’architecture (VB)
 

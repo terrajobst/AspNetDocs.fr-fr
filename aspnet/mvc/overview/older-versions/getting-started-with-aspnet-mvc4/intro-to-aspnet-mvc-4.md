@@ -9,11 +9,11 @@ ms.assetid: ed66530a-04d5-49eb-b76a-85be1f57c437
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4
 msc.type: authoredcontent
 ms.openlocfilehash: 51709a9c6ddb39b8fcd1cd94cd08d530a595825a
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455540"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78599644"
 ---
 # <a name="intro-to-aspnet-mvc-4"></a>Introduction à ASP.NET MVC
 
@@ -49,7 +49,7 @@ L’application vous permet également d’ajouter, de modifier et de supprimer 
 
 ![](intro-to-aspnet-mvc-4/_static/image2.png)
 
-## <a name="getting-started"></a>Mise en route
+## <a name="getting-started"></a>Commencer
 
 Commencez par exécuter Visual Studio Express 2012 ou Visual Web Developer 2010 Express. La plupart des captures d’écran de cette série utilisent Visual Studio Express 2012, mais vous pouvez suivre ce didacticiel avec Visual Studio 2010/SP1, Visual Studio 2012, Visual Studio Express 2012 ou Visual Web Developer 2010 Express. Sélectionnez **nouveau projet** dans la page de **démarrage** .
 

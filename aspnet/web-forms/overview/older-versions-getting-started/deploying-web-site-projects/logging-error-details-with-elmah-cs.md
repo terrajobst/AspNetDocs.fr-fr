@@ -9,11 +9,11 @@ ms.assetid: 11f6fe44-64ef-4a38-a3b4-35c7bb992352
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-elmah-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 5018023eced23e7a70eab90e649f85862c548940
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74570481"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78573429"
 ---
 # <a name="logging-error-details-with-elmah-c"></a>Journalisation des détails des erreurs avec ELMAH (C#)
 
@@ -31,7 +31,7 @@ Une autre difficulté est axée sur la complexité de la surveillance de l’int
 
 Une alternative au système de contrôle d’intégrité est la journalisation des erreurs modules et gestionnaires (ELMAH), un système de journalisation des erreurs Open source gratuit créé par [Atif Aziz](http://www.raboof.com/). La différence la plus notable entre les deux systèmes est que ELAMH permet d’afficher une liste d’erreurs et les détails d’une erreur spécifique à partir d’une page Web et en tant que flux RSS. ELMAH est plus facile à configurer que le monitoring d’intégrité, car il ne consigne que les erreurs. En outre, ELMAH inclut la prise en charge des applications ASP.NET 1. x, ASP.NET 2,0 et ASP.NET 3,5, et est livré avec un large éventail de fournisseurs de sources de journaux.
 
-Ce didacticiel vous guide tout au long des étapes d’ajout de ELMAH à une application ASP.NET. Commençons !
+Ce didacticiel vous guide tout au long des étapes d’ajout de ELMAH à une application ASP.NET. C’est parti !
 
 > [!NOTE]
 > Le système de contrôle d’intégrité et les ELMAH ont leurs propres jeux de professionnels et inconvénients. Je vous encourage à essayer les deux systèmes et à choisir celui qui convient le mieux à vos besoins.

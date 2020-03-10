@@ -10,11 +10,11 @@ ms.assetid: 2fc4797c-38ef-4cc7-926c-ca431c4739e8
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/action-results
 msc.type: authoredcontent
 ms.openlocfilehash: f00ac0db453053e53d6d6942dd1557b409f4167b
-ms.sourcegitcommit: 4b324a11131e38f920126066b94ff478aa9927f8
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985835"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557056"
 ---
 # <a name="action-results-in-web-api-2"></a>Résultats des actions dans l’API Web 2
 
@@ -42,7 +42,7 @@ Le reste de cette rubrique décrit chaque option plus en détail.
 
 ## <a name="void"></a>void
 
-Si le type de retour `void`est, l’API Web retourne simplement une réponse http vide avec le code d’État 204 (aucun contenu).
+Si le type de retour est `void`, l’API Web retourne simplement une réponse HTTP vide avec le code d’État 204 (aucun contenu).
 
 Exemple de contrôleur :
 

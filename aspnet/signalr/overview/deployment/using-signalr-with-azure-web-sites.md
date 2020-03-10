@@ -1,116 +1,116 @@
 ---
 uid: signalr/overview/deployment/using-signalr-with-azure-web-sites
-title: À l’aide de SignalR avec Web Apps dans Azure App Service | Microsoft Docs
+title: Utilisation de Signalr avec Web Apps dans Azure App Service | Microsoft Docs
 author: bradygaster
-description: Ce document décrit comment configurer une application de SignalR qui s’exécute sur Microsoft Azure. Versions des logiciels utilisaient dans le didacticiel Visual Studio 2013 ou vis...
+description: Ce document explique comment configurer une application Signalr qui s’exécute sur Microsoft Azure. Versions logicielles utilisées dans le didacticiel Visual Studio 2013 ou...
 ms.author: bradyg
 ms.date: 07/01/2015
 ms.assetid: 2a7517a0-b88c-4162-ade3-9bf6ca7062fd
 msc.legacyurl: /signalr/overview/deployment/using-signalr-with-azure-web-sites
 msc.type: authoredcontent
 ms.openlocfilehash: 0e6a18bdbe9cc47e89b5a458753845afb53595f1
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128142"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558701"
 ---
 # <a name="using-signalr-with-web-apps-in-azure-app-service"></a>Utilisation de SignalR avec Web Apps dans Azure App Service
 
-par [Patrick Fletcher](https://github.com/pfletcher)
+de [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-> Ce document décrit comment configurer une application de SignalR qui s’exécute sur Microsoft Azure.
+> Ce document explique comment configurer une application Signalr qui s’exécute sur Microsoft Azure.
 >
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versions des logiciels utilisées dans le didacticiel
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versions logicielles utilisées dans le didacticiel
 >
 >
 > - [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013) ou Visual Studio 2012
 > - .NET 4.5
-> - SignalR version 2
-> - Azure SDK 2.3 pour Visual Studio 2013 ou 2012
+> - Signalr version 2
+> - Kit de développement logiciel (SDK) Azure 2,3 pour Visual Studio 2013 ou 2012
 >
 >
 >
 > ## <a name="questions-and-comments"></a>Questions et commentaires
 >
-> Veuillez laisser des commentaires sur la façon dont vous avez apprécié ce didacticiel et ce que nous pouvions améliorer dans les commentaires en bas de la page. Si vous avez des questions qui ne sont pas directement liées à ce didacticiel, vous pouvez les publier à le [ASP.NET SignalR forum](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR), [StackOverflow.com](http://stackoverflow.com/), ou le [forums Microsoft Azure](https://social.msdn.microsoft.com/Forums/windowsazure/home?category=windowsazureplatform).
+> N’hésitez pas à nous faire part de vos commentaires sur la façon dont vous aimez ce didacticiel et sur ce que nous pourrions améliorer dans les commentaires en bas de la page. Si vous avez des questions qui ne sont pas directement liées au didacticiel, vous pouvez les poster sur le [forum ASP.net signalr](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR), [StackOverflow.com](http://stackoverflow.com/), ou sur les [forums Microsoft Azure](https://social.msdn.microsoft.com/Forums/windowsazure/home?category=windowsazureplatform).
 
 ## <a name="table-of-contents"></a>Sommaire
 
 - [Introduction](#introduction)
-- [Déploiement d’une application Web de SignalR sur Azure App Service](#deploying)
-- [L’activation du protocole WebSocket sur Azure App Service](#websocket)
-- [À l’aide de l’infrastructure d’intégration du Cache Redis Azure](#backplane)
+- [Déploiement d’une application Web Signalr sur Azure App Service](#deploying)
+- [Activation de WebSockets sur Azure App Service](#websocket)
+- [Utilisation du fond de panier du cache Redims Azure](#backplane)
 - [Étapes suivantes](#nextsteps)
 
 <a id="introduction"></a>
 ## <a name="introduction"></a>Introduction
 
-ASP.NET SignalR peut servir à récupérer un nouveau niveau d’interactivité entre serveurs et web ou les clients .NET. Quand ils sont hébergés dans Azure, des applications SignalR peuvent tirer parti de haut niveau de disponibilité, évolutives et performantes environnement en cours d’exécution dans le cloud fournit.
+ASP.NET Signalr peut être utilisé pour mettre en place un nouveau niveau d’interactivité entre les serveurs et les clients Web ou .NET. Lorsqu’ils sont hébergés dans Azure, les applications Signalr peuvent tirer parti de l’environnement hautement disponible, évolutif et performant qui s’exécute dans le Cloud.
 
 <a id="deploying"></a>
-## <a name="deploying-a-signalr-web-app-to-azure-app-service"></a>Déploiement d’une application Web de SignalR sur Azure App Service
+## <a name="deploying-a-signalr-web-app-to-azure-app-service"></a>Déploiement d’une application Web Signalr sur Azure App Service
 
-SignalR n’ajoute pas les complications particuliers pour déployer une application dans Azure et un déploiement à un serveur local. Une application qui utilise SignalR peut être hébergée dans Azure sans modification de configuration ou d’autres paramètres (Cependant, pour la prise en charge du protocole WebSocket, consultez [l’activation du protocole WebSocket sur Azure App Service](#websocket) ci-dessous.) Pour ce didacticiel, vous allez déployer l’application créée dans le [Getting Started Tutorial](../getting-started/tutorial-getting-started-with-signalr.md) vers Azure.
+Signalr n’ajoute pas de complications particulières au déploiement d’une application sur Azure par rapport au déploiement sur un serveur local. Une application qui utilise Signalr peut être hébergée dans Azure sans aucune modification de configuration ou d’autres paramètres (Toutefois, pour la prise en charge de WebSockets, consultez [activation de WebSockets sur Azure App service](#websocket) ci-dessous). Pour ce didacticiel, vous allez déployer l’application créée dans le [didacticiel prise en main](../getting-started/tutorial-getting-started-with-signalr.md) sur Azure.
 
-**Composants requis**
+**Conditions préalables**
 
-- Visual Studio 2013. Si vous n’avez pas Visual Studio, Visual Studio 2013 Express pour le Web est inclus dans l’installation du SDK Azure.
-- [Azure SDK 2.3 pour Visual Studio 2013](https://go.microsoft.com/fwlink/?linkid=324322&clcid=0x409) ou [Azure SDK 2.3 pour Visual Studio 2012](https://go.microsoft.com/fwlink/p/?linkid=323511).
-- Pour suivre ce didacticiel, vous aurez besoin un abonnement Azure. Vous pouvez [activer vos avantages d’abonné MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/), ou [souscrire un abonnement d’évaluation](https://azure.microsoft.com/pricing/free-trial/).
+- Visual Studio 2013. Si vous n’avez pas Visual Studio, Visual Studio 2013 Express pour le Web est inclus dans l’installation du kit de développement logiciel (SDK) Azure.
+- [Azure sdk 2,3 pour Visual Studio 2013](https://go.microsoft.com/fwlink/?linkid=324322&clcid=0x409) ou le [Kit de développement logiciel (sdk) Azure 2,3 pour Visual Studio 2012](https://go.microsoft.com/fwlink/p/?linkid=323511).
+- Pour suivre le didacticiel, vous devez disposer d'un abonnement Azure. Vous pouvez [activer les avantages de votre abonnement MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)ou vous [inscrire pour bénéficier d’un abonnement d’évaluation](https://azure.microsoft.com/pricing/free-trial/).
 
-### <a name="deploying-a-signalr-web-app-to-azure"></a>Déploiement d’une application web de SignalR vers Azure
+### <a name="deploying-a-signalr-web-app-to-azure"></a>Déploiement d’une application Web Signalr sur Azure
 
-1. Terminer la [Getting Started Tutorial](../getting-started/tutorial-getting-started-with-signalr.md), ou téléchargez le projet terminé sur [galerie de Code](https://code.msdn.microsoft.com/SignalR-Getting-Started-b9d18aa9).
-2. Dans Visual Studio, sélectionnez **Build**, **publier le SignalR Chat**.
-3. Dans la boîte de dialogue « Publier le site Web », sélectionnez « Sites Web Windows Azure ».
+1. Suivez le [didacticiel prise en main](../getting-started/tutorial-getting-started-with-signalr.md)ou téléchargez le projet terminé à partir de la [Galerie de code](https://code.msdn.microsoft.com/SignalR-Getting-Started-b9d18aa9).
+2. Dans Visual Studio, sélectionnez **générer**, **publier signalr chat**.
+3. Dans la boîte de dialogue publier le site Web, sélectionnez « sites Web Windows Azure ».
 
-    ![Sélectionnez les Sites Web Azure](using-signalr-with-azure-web-sites/_static/image1.png)
-4. Si vous n’êtes pas connecté à votre compte Microsoft, cliquez sur **se connecter...**  dans la boîte de dialogue « Sélectionner un Site Web existant », puis connectez-vous.
+    ![Sélectionner les sites Web Azure](using-signalr-with-azure-web-sites/_static/image1.png)
+4. Si vous n’êtes pas connecté à votre compte Microsoft, cliquez sur **se connecter...** dans la boîte de dialogue « Sélectionner un site Web existant », puis connectez-vous.
 
-    ![Sélectionnez le Site Web existant](using-signalr-with-azure-web-sites/_static/image2.png)    ![Se connecter à Azure](using-signalr-with-azure-web-sites/_static/image3.png)
-5. Dans la boîte de dialogue « Sélectionner un Site Web existant », cliquez sur **New**.
+    ![Sélectionner un site Web existant](using-signalr-with-azure-web-sites/_static/image2.png)    ![Se connecter à Azure](using-signalr-with-azure-web-sites/_static/image3.png)
+5. Dans la boîte de dialogue « Sélectionner un site Web existant », cliquez sur **nouveau**.
 
     ![Nouveau site Web](using-signalr-with-azure-web-sites/_static/image4.png)
-6. Dans la boîte de dialogue « Créer un site sur Windows Azure », entrez un nom d’application unique. Dans la liste déroulante région, sélectionnez la région la plus proche pour vous. Cliquez sur **Créer**.
+6. Dans la boîte de dialogue « créer un site sur Windows Azure », entrez un nom d’application unique. Sélectionnez la région la plus proche de vous dans la liste déroulante région. Cliquez sur **Créer**.
 
     ![Créer un site sur Azure](using-signalr-with-azure-web-sites/_static/image5.png)
-7. Dans la boîte de dialogue « Publier le site Web », cliquez sur **publier**.
+7. Dans la boîte de dialogue publier le site Web, cliquez sur **publier**.
 
     ![Publier le site](using-signalr-with-azure-web-sites/_static/image6.png)
-8. Lorsque l’application a terminé la publication, l’application de conversation de SignalR hébergée dans Azure App Service Web Apps s’ouvre dans un navigateur.
+8. Une fois que l’application a terminé la publication, l’application Signalr chat hébergée dans Azure App Service Web Apps s’ouvre dans un navigateur.
 
-    ![Site dans un navigateur](using-signalr-with-azure-web-sites/_static/image7.png)
+    ![Ouverture de site dans un navigateur](using-signalr-with-azure-web-sites/_static/image7.png)
 
 <a id="websocket"></a>
-### <a name="enabling-websockets-on-azure-app-service-web-apps"></a>L’activation du protocole WebSocket sur Azure App Service Web Apps
+### <a name="enabling-websockets-on-azure-app-service-web-apps"></a>Activation de WebSockets sur Azure App Service Web Apps
 
-WebSocket doit être explicitement activée dans votre application web à utiliser dans une application SignalR ; Sinon, les autres protocoles seront utilisés (voir [Transports et les solutions de secours](../getting-started/introduction-to-signalr.md#transports) pour plus d’informations).
+Les WebSockets doivent être explicitement activés dans votre application Web pour être utilisés dans une application Signalr. dans le cas contraire, d’autres protocoles seront utilisés (consultez [transports et secours](../getting-started/introduction-to-signalr.md#transports) pour plus d’informations).
 
-Pour pouvoir utiliser les WebSockets sur Azure App Service Web Apps, vous devez l’activer dans la section de configuration de l’application web. Pour ce faire, ouvrez votre application web dans le [portail de gestion](https://manage.windowsazure.com/)et sélectionnez Configurer.
+Pour utiliser WebSockets sur Azure App Service Web Apps, activez-le dans la section de configuration de l’application Web. Pour ce faire, ouvrez votre application Web dans le [portail de gestion Azure](https://manage.windowsazure.com/), puis sélectionnez configurer.
 
 ![Onglet Configurer](using-signalr-with-azure-web-sites/_static/image8.png)
 
-En haut de la page de configuration, assurez-vous que le .NET 4.5 est utilisée pour votre application web.
+En haut de la page de configuration, assurez-vous que .NET 4,5 est utilisé pour votre application Web.
 
-![Paramètre de .NET framework version 4.5](using-signalr-with-azure-web-sites/_static/image9.png)
+![Paramètre .NET Framework version 4,5](using-signalr-with-azure-web-sites/_static/image9.png)
 
-Dans la page de configuration, dans le **WebSockets** , sélectionnez **sur**.
+Sur la page Configuration, dans le paramètre **WebSockets** , sélectionnez **activé**.
 
-![Paramètre de protocole WebSocket : Activé](using-signalr-with-azure-web-sites/_static/image10.png)
+![Paramètre WebSocket : activé](using-signalr-with-azure-web-sites/_static/image10.png)
 
-Au bas de la page de Configuration, sélectionnez **enregistrer** pour enregistrer vos modifications.
+En bas de la page Configuration, sélectionnez **Enregistrer** pour enregistrer vos modifications.
 
 ![Enregistrer les paramètres](using-signalr-with-azure-web-sites/_static/image11.png)
 
 <a id="backplane"></a>
-## <a name="using-the-azure-redis-cache-backplane"></a>À l’aide de l’infrastructure d’intégration du Cache Redis Azure
+## <a name="using-the-azure-redis-cache-backplane"></a>Utilisation du fond de panier du cache Redims Azure
 
-Si vous utilisez plusieurs instances de votre application web, et les utilisateurs de ces instances doivent interagir avec eux (afin que, par exemple, les messages de conversation créées dans une seule instance peuvent atteindre les utilisateurs connectés à d’autres instances), le [du Cache Redis Azure fond de panier](../performance/scaleout-with-redis.md) doit être implémentée dans votre application.
+Si vous utilisez plusieurs instances pour votre application Web et que les utilisateurs de ces instances doivent interagir les uns avec les autres (par exemple, les messages de conversation créés dans une instance peuvent atteindre les utilisateurs connectés à d’autres instances), le [fond de panier du cache](../performance/scaleout-with-redis.md) d’inversion Azure doit être implémenté dans votre application.
 
 <a id="nextsteps"></a>
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les applications Web dans Azure App Service, consultez [vue d’ensemble des applications Web](https://azure.microsoft.com/documentation/articles/app-service-web-overview/).
+Pour plus d’informations sur les Web Apps dans Azure App Service, consultez [Web Apps Overview](https://azure.microsoft.com/documentation/articles/app-service-web-overview/).

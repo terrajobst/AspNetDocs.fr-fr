@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/jquery-validate/cdnjqueryvalidate1111
-title: jQuery Validation 1.11.1 | Microsoft Docs
+title: 1\.11.1 de validation jQuery | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,11 +9,11 @@ ms.assetid: 80fabf47-395f-458a-a72f-6ca12b269081
 msc.legacyurl: /ajax/cdn/jquery-validate/cdnjqueryvalidate1111
 msc.type: content
 ms.openlocfilehash: 6009370d90f3e5993a3c25b2b17d5685ed4ba5f1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59405779"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78544575"
 ---
 # <a name="jquery-validation-1111"></a>jQuery Validation 1.11.1
 
@@ -23,4 +23,4 @@ Les fichiers suivants sont hébergés sur le CDN :
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.js
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.min.js
-- Localisation des fichiers au https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/localization/messages\_##.js où ## est le code de localisation.
+- Fichiers de localisation au https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/localization/messages\_##.js où # # est le code Loc.

@@ -1,287 +1,287 @@
 ---
 uid: whitepapers/aspnet-and-web-tools-20122-release-notes
-title: ASP.NET et Web Tools 2012.2 Notes de publication | Microsoft Docs
+title: Notes de publication de ASP.NET et Web Tools 2012,2 | Microsoft Docs
 author: rick-anderson
-description: Notes de publication pour ASP.NET et Web Tools 2012.2.
+description: Notes de publication pour ASP.NET et Web Tools 2012,2.
 ms.author: riande
 ms.date: 02/14/2013
 ms.assetid: bdb18d02-9f61-4676-836d-6fdea94f9282
 msc.legacyurl: /whitepapers/aspnet-and-web-tools-20122-release-notes
 msc.type: content
 ms.openlocfilehash: a4ea1d7c146309e1d5e8be944d496e9fd87bca3e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125711"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78523778"
 ---
 # <a name="aspnet-and-web-tools-20122-release-notes"></a>ASP.NET et Web Tools 2012.2 - Notes de publication
 
-> Ce document décrit la version d’ASP.NET et Web Tools 2012.2. Il est une mise à jour des outils de Visual Studio Web et ASP.NET.
+> Ce document décrit la version de ASP.NET et Web Tools 2012,2. Il s’agit d’une mise à jour des outils Web Visual Studio et de ASP.NET.
 
 - [Notes d’installation](#_Installation)
 - [Documentation](#_Documentation)
-- [Prise en charge](#_Support)
+- [Support](#_Support)
 - [Configuration logicielle requise](#_Software_Requirements)
-- [Nouvelles fonctionnalités dans ASP.NET et Web Tools 2012.2](#_New_Features_in)
+- [Nouvelles fonctionnalités de ASP.NET et Web Tools 2012,2](#_New_Features_in)
 
     - [Outillage](#_Tooling)
     - [Publication Web](#_Web_Publishing)
-    - [Modèles ASP.NET MVC](#_Templates)
+    - [Modèles MVC ASP.NET](#_Templates)
     - [API Web ASP.NET](#_ASP.NET_Web_API)
 
     - [ASP.NET SignalR](#_ASP.NET_SignalR)
     - [URL conviviales ASP.NET](#_ASP.NET_Friendly_URLs)
-- [Problèmes connus et les modifications avec rupture](#_Known_Issues_and)
+- [Problèmes connus et modifications avec rupture](#_Known_Issues_and)
 
 <a id="_Installation"></a>
-## <a name="installation-notes"></a>Notes d’installation
+## <a name="installation-notes"></a>Notes d'installation
 
-ASP.NET et Web Tools 2012.2 pour Visual Studio 2012 peuvent être installé à l’aide de [Web Platform installer](https://www.microsoft.com/web/handlers/webpi.ashx?command=getinstallerredirect&appid=ASPDOTNETandWebTools2012_2). Il s’agit d’une mise à jour pour Visual Studio 2012 ou Visual Studio Express 2012 pour le Web, ce qui est nécessaire. Si vous n’avez pas installé Visual Studio, Visual Studio Express 2012 pour le Web sera installé.
+ASP.NET et Web Tools 2012,2 pour Visual Studio 2012 peuvent être installés à l’aide de [Web Platform Installer](https://www.microsoft.com/web/handlers/webpi.ashx?command=getinstallerredirect&appid=ASPDOTNETandWebTools2012_2). Il s’agit d’une mise à jour de Visual Studio 2012 ou Visual Studio Express 2012 pour le Web, ce qui est nécessaire. Si vous n’avez pas installé Visual Studio, Visual Studio Express 2012 pour le Web sera installé.
 
-Vous pouvez également installer manuellement ASP.NET et Web Tools 2012.2. Vous devez disposer de Visual Studio 2012 ou Visual Studio Express 2012 pour le Web installé. Puis utilisez les instructions suivantes : 
+Vous pouvez également installer ASP.NET et Web Tools 2012,2 manuellement. Vous devez avoir installé Visual Studio 2012 ou Visual Studio Express 2012 pour le Web. Utilisez ensuite les instructions suivantes : 
 
-1. Télécharger [ASP.NET et Web Frameworks 2012.2](https://download.microsoft.com/download/6/5/6/6562AFBE-9503-4E64-970C-1427133FCD73/AspNetWebTools2012Setup.exe) programme d’installation à partir du centre de téléchargement.
-2. Lorsque demandées par invite cliquez sur Exécuter. Vous pouvez également enregistrer le fichier pour l’exécuter ultérieurement.
-3. Vérifiez la version de Visual Studio, vous mettrez à jour. Pour cela, en lançant le Visual Studio que vous souhaitez mettre à jour. Cliquez ensuite sur l’élément de menu Aide.   
+1. Téléchargez le programme d’installation [ASP.net et Web frameworks 2012,2](https://download.microsoft.com/download/6/5/6/6562AFBE-9503-4E64-970C-1427133FCD73/AspNetWebTools2012Setup.exe) à partir du centre de téléchargement.
+2. Quand vous y êtes invité, cliquez sur Exécuter. Vous pouvez également enregistrer le fichier pour l’exécuter plus tard.
+3. Vérifiez la version de Visual Studio que vous allez mettre à jour. Pour ce faire, vous pouvez lancer le Visual Studio que vous souhaitez mettre à jour. Cliquez ensuite sur l’élément de menu aide.   
     ![](aspnet-and-web-tools-20122-release-notes/_static/image1.jpg)
-4. Si vous voyez l’élément de menu &quot;sur Microsoft Visual Studio 2012 pour Web&quot; puis téléchargez [Web Developer Tools 2012.2 - Visual Studio Express 2012 pour Web](https://go.microsoft.com/fwlink/?LinkID=282228). Sinon, téléchargez [Web Developer Tools 2012.2 - Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=282228).
-5. Lorsque demandées par invite cliquez sur Exécuter. Vous pouvez également enregistrer le fichier pour l’exécuter ultérieurement.
+4. Si vous voyez l’élément de menu &quot;sur Microsoft Visual Studio 2012 pour le&quot; Web, téléchargez [web Outils de développement 2012,2-Visual Studio Express 2012 pour le Web](https://go.microsoft.com/fwlink/?LinkID=282228). Sinon, téléchargez [le outils de développement Web 2012,2-Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=282228).
+5. Quand vous y êtes invité, cliquez sur Exécuter. Vous pouvez également enregistrer le fichier pour l’exécuter plus tard.
 
 > [!NOTE]
-> Version d’ASP.NET et Web Tools 2012.2 n’inclut pas de SQL Server Data Tools. SQL Server et les bases de données SQL Windows Azure fournit un ensemble plus riche de base de données, y compris le développement reposant sur le projet hors connexion, la comparaison de schémas et les fonctionnalités de déploiement de base de données amélioré des outils. Pour plus d’informations ou pour installer SQL Server Data Tools visitez [ https://go.microsoft.com/fwlink/?LinkID=237127 ](https://go.microsoft.com/fwlink/?LinkID=237127).
+> ASP.NET et Web Tools version 2012,2 n’inclut pas SQL Server Data Tools. SQL Server et les bases de données SQL Windows Azure offrent un ensemble plus riche d’outils de base de données, notamment le développement hors connexion, la comparaison de schémas et les capacités de déploiement de base de données améliorées. Pour plus d’informations ou pour installer SQL Server Data Tools visitez [https://go.microsoft.com/fwlink/?LinkID=237127](https://go.microsoft.com/fwlink/?LinkID=237127).
 
 <a id="_Documentation"></a>
 ## <a name="documentation"></a>Documentation
 
-Didacticiels et autres informations sur ASP.NET et Web Tools 2012.2 sont disponibles à partir du site web ASP.NET ( https://www.asp.net).
+Des didacticiels et d’autres informations sur ASP.NET et Web Tools 2012,2 sont disponibles sur le site Web ASP.NET (https://www.asp.net).
 
 <a id="_Support"></a>
 ## <a name="support"></a>Assistance
 
-ASP.NET et Web Tools 2012.2 est officiellement publiées et prises en charge. Vous pouvez utiliser votre canal de support normal. Vous pouvez également publier des questions sur les forums ASP.NET ([https://forums.asp.net/](https://forums.asp.net/)), où les membres de la Communauté ASP.NET peuvent souvent fournir un support informel.
+ASP.NET et Web Tools 2012,2 est officiellement publié et pris en charge. Vous pouvez utiliser votre canal de support normal. Vous pouvez également poser des questions sur les Forums ASP.NET ([https://forums.asp.net/](https://forums.asp.net/)), où les membres de la communauté ASP.net sont souvent en mesure de fournir un support informel.
 
 <a id="_Software_Requirements"></a>
 ## <a name="software-requirements"></a>Configuration logicielle
 
-ASP.NET et Web Tools 2012.2 nécessite Visual Studio 2012 ou Visual Studio Express 2012 pour le Web.
+La ASP.NET et Web Tools 2012,2 nécessite Visual Studio 2012 ou Visual Studio Express 2012 pour le Web.
 
 <a id="_New_Features_in"></a>
-## <a name="new-features-in-aspnet-and-web-tools-20122"></a>Nouvelles fonctionnalités dans ASP.NET et Web Tools 2012.2
+## <a name="new-features-in-aspnet-and-web-tools-20122"></a>Nouvelles fonctionnalités de ASP.NET et Web Tools 2012,2
 
-Cette section décrit les fonctionnalités qui ont été introduites dans la version d’ASP.NET et Web Tools 2012.2.
+Cette section décrit les fonctionnalités qui ont été introduites dans la version 2012,2 de ASP.NET et Web Tools.
 
 <a id="_Tooling"></a>
 ### <a name="tooling"></a>Outillage
 
 - Inspecteur de page 
 
-    - Prend en charge de mappage de sélection de JavaScript autorisant l’inspecteur de Page mapper les éléments qui ont été ajoutés dynamiquement à la page sur le code JavaScript correspondant.
+    - Prend en charge le mappage de sélection JavaScript qui permet à Inspecteur de page de mapper des éléments qui ont été ajoutés dynamiquement à la page vers le code JavaScript correspondant.
     - La possibilité de voir les mises à jour CSS en temps réel.
-    - Pour plus d’informations, consultez [la synchronisation automatique CSS et JavaScript de sélection de mappage dans l’inspecteur de Page](https://blogs.msdn.com/b/webdev/archive/2012/12/14/css-auto-sync-and-javascript-selection-mapping-in-page-inspector.aspx).
+    - Pour plus d’informations, consultez [synchronisation automatique de CSS et mappage de sélection JavaScript dans inspecteur de page](https://blogs.msdn.com/b/webdev/archive/2012/12/14/css-auto-sync-and-javascript-selection-mapping-in-page-inspector.aspx).
 - Éditeur 
 
-    - Prend en charge la coloration syntaxique des JsRender, Handlebars, CoffeeScript et angulaires.
-    - L’éditeur HTML fournit Intellisense pour les liaisons de Knockout.
-    - MOINS modification et le compilateur prend en charge pour activer la création de CSS dynamique à l’aide d’inférieur.
-    - Coller le code JSON comme une classe .NET. À l’aide de cette commande Collage spécial pour coller JSON dans un langage c# ou VB.NET fichier de code et Visual Studio génère automatiquement des classes .NET déduits à partir de JSON.
-- Prise en charge de l’émulateur mobile ajoute des points d’extensibilité afin que les émulateurs de fournisseurs tiers peuvent être installées comme une extension VSIX. Les émulateurs installés seront afficheront dans la liste déroulante F5, afin que les développeurs peuvent afficher un aperçu de leurs sites Web sur une variété de périphériques mobiles. En savoir plus sur cette fonctionnalité dans l’entrée de blog de Scott Hanselman sur [la nouvelle intégration BrowserStack avec Visual Studio](http://www.hanselman.com/blog/CrossBrowserDebuggingIntegratedIntoVisualStudioWithBrowserStack.aspx).
+    - Prenez en charge la mise en évidence de la syntaxe pour CoffeeScript, angulaires, guidon et JsRender.
+    - L’éditeur HTML fournit IntelliSense pour les liaisons Knockout.
+    - MOINS de modifications et de prise en charge du compilateur pour activer la génération CSS dynamique à l’aide de moins.
+    - Collez le code JSON en tant que classe .NET. À l’aide de cette commande de collage spéciale pour C# coller JSON dans un fichier de code ou VB.net, Visual Studio génère automatiquement des classes .net déduites du JSON.
+- La prise en charge de l’émulateur mobile ajoute des hooks d’extensibilité afin que les émulateurs tiers puissent être installés en tant que VSIX. Les émulateurs installés s’affichent dans la liste déroulante F5, afin que les développeurs puissent afficher un aperçu de leurs sites Web sur divers appareils mobiles. Pour plus d’informations sur cette fonctionnalité, consultez l’entrée de blog de Scott Hanselman sur [la nouvelle intégration BrowserStack avec Visual Studio](http://www.hanselman.com/blog/CrossBrowserDebuggingIntegratedIntoVisualStudioWithBrowserStack.aspx).
 
 <a id="_Web_Publishing"></a>
-### <a name="web-publishing"></a>Publication Web
+### <a name="web-publishing"></a>publication Web
 
-- Projets de site Web ont désormais la même expérience de publication en tant que projets d’Application Web, y compris la publication sur les Sites Web Windows Azure.
-- Publication sélective &#8211; pour un ou plusieurs fichiers, vous pouvez effectuer les actions suivantes (après la publication vers un point de terminaison Web Deploy) : 
+- Les projets de site Web ont désormais la même expérience de publication que les projets d’application Web, notamment la publication sur les sites Web Windows Azure.
+- Publication &#8211; sélective pour un ou plusieurs fichiers vous pouvez effectuer les actions suivantes (après la publication sur un point de terminaison de Web Deploy) : 
 
     - Publier les fichiers sélectionnés.
-    - Voir la différence entre un fichier local et un fichier distant.
-    - Mettre à jour le fichier local avec le fichier distant ou mettre à jour le fichier distant avec le fichier local.
+    - Consultez la différence entre un fichier local et un fichier distant.
+    - Mettez à jour le fichier local avec le fichier distant ou mettez à jour le fichier distant avec le fichier local.
 
 <a id="_Templates"></a>
-### <a name="aspnet-mvc-templates"></a>Modèles ASP.NET MVC
+### <a name="aspnet-mvc-templates"></a>Modèles MVC ASP.NET
 
-- Le nouveau modèle d’Application Facebook facilite l’écriture des applications facile de canevas Facebook. En quelques étapes simples, vous pouvez créer une application Facebook qui obtient des données à partir d’un utilisateur connecté et s’intègre avec ses amis. Le modèle inclut une nouvelle bibliothèque pour prendre en charge de tous les éléments impliqués dans la création d’une application Facebook, y compris l’authentification, autorisations, l’accès aux données Facebook et bien plus encore. Pour plus d’informations sur l’utilisation du modèle d’Application Facebook consultez [ https://go.microsoft.com/fwlink/?LinkID=269921 ](https://go.microsoft.com/fwlink/?LinkID=269921).
-- Un nouveau modèle MVC d’Application à Page unique permet aux développeurs de créer des applications web côté client interactives à l’aide de HTML 5, CSS 3 et le Knockout populaires et les bibliothèques JavaScript jQuery, en haut de l’API Web ASP.NET. Le modèle inclut une application de liste « todo » qui montre les pratiques courantes pour la création d’une application JavaScript HTML5 qui utilise une API de serveur RESTful. Vous trouverez plus d’informations sur [ https://www.asp.net/single-page-application ](../single-page-application/index.md).
-- Vous pouvez maintenant créer une extension VSIX qui ajoute de nouveaux modèles à la boîte de dialogue Nouveau projet de MVC ASP.NET. Découvrez comment ici : [https://go.microsoft.com/fwlink/?LinkId=275019](https://go.microsoft.com/fwlink/?LinkId=275019)
-- Package de FixedDisplayModes &#8211; modèles de projet MVC ont été mis à jour pour inclure le nouveau package NuGet de « FixedDisplayModes », qui contient une solution de contournement pour un bogue dans MVC 4. Pour plus d’informations sur le correctif contenu dans le package, consultez ce billet de blog ([https://blogs.msdn.com/b/rickandy/archive/2012/09/17/asp-net-mvc-4-mobile-caching-bug-fixed.aspx](https://blogs.msdn.com/b/rickandy/archive/2012/09/17/asp-net-mvc-4-mobile-caching-bug-fixed.aspx)) à partir de l’équipe MVC.
+- Le nouveau modèle d’application Facebook facilite l’écriture d’applications de canevas Facebook. En quelques étapes simples, vous pouvez créer une application Facebook qui obtient les données d’un utilisateur connecté et s’intègre à ses amis. Le modèle comprend une nouvelle librairie qui se charge de tous les raccordements qu’implique la création d’une application Facebook, notamment l’authentification, les autorisations, l’accès aux données Facebook, etc. Pour plus d’informations sur l’utilisation du modèle d’application Facebook, consultez [https://go.microsoft.com/fwlink/?LinkID=269921](https://go.microsoft.com/fwlink/?LinkID=269921).
+- Un nouveau modèle MVC d’application à une page permet aux développeurs de créer des applications Web côté client interactives à l’aide des codes HTML 5, CSS 3, ainsi que des bibliothèques JavaScript prisées Knockout et jQuery, sur l’API Web ASP.NET. Le modèle comprend une application de liste « TODO » qui illustre les pratiques courantes de création d’une application JavaScript HTML5 qui utilise une API de serveur RESTful. Pour plus d’informations, consultez [https://www.asp.net/single-page-application](../single-page-application/index.md).
+- Vous pouvez maintenant créer une extension VSIX qui ajoute de nouveaux modèles à la boîte de dialogue Nouveau projet ASP.NET MVC. Découvrez comment : [https://go.microsoft.com/fwlink/?LinkId=275019](https://go.microsoft.com/fwlink/?LinkId=275019)
+- Les modèles &#8211; de projet MVC du package FixedDisplayModes ont été mis à jour pour inclure le nouveau package NuGet « FixedDisplayModes », qui contient une solution de contournement pour un bogue dans MVC 4. Pour plus d’informations sur le correctif contenu dans le package, reportez-vous à ce billet de blog ([https://blogs.msdn.com/b/rickandy/archive/2012/09/17/asp-net-mvc-4-mobile-caching-bug-fixed.aspx](https://blogs.msdn.com/b/rickandy/archive/2012/09/17/asp-net-mvc-4-mobile-caching-bug-fixed.aspx)) de l’équipe Mvc.
 
 <a id="_ASP.NET_Web_API"></a>
 ### <a name="aspnet-web-api"></a>API web ASP.NET
 
-API Web ASP.NET a été amélioré avec plusieurs nouvelles fonctionnalités :
+API Web ASP.NET a été améliorée avec plusieurs nouvelles fonctionnalités :
 
-- ASP.NET Web API OData
-- Suivi de l’API Web ASP.NET
-- Page d’aide de l’API Web ASP.NET
+- API Web ASP.NET OData
+- Suivi des API Web ASP.NET
+- API Web ASP.NET la page d’aide
 
-#### <a name="aspnet-web-api-odata"></a>ASP.NET Web API OData
+#### <a name="aspnet-web-api-odata"></a>API Web ASP.NET OData
 
-ASP.NET Web API OData vous donne la flexibilité que nécessaire pour créer des points de terminaison OData avec une logique métier riches sur n’importe quelle source de données. Avec ASP.NET Web API OData vous contrôler la quantité de sémantique OData que vous souhaitez exposer. ASP.NET Web API OData est inclus dans les modèles de projet ASP.NET MVC 4 et est également disponible à partir de NuGet ([http://www.nuget.org/packages/microsoft.aspnet.webapi.odata](http://www.nuget.org/packages/microsoft.aspnet.webapi.odata)).
+API Web ASP.NET OData vous offre la flexibilité dont vous avez besoin pour créer des points de terminaison OData avec une logique métier enrichie sur n’importe quelle source de données. Avec API Web ASP.NET OData, vous contrôlez la quantité de sémantique OData que vous souhaitez exposer. API Web ASP.NET OData est inclus avec les modèles de projet ASP.NET MVC 4 et est également disponible à partir de NuGet ([http://www.nuget.org/packages/microsoft.aspnet.webapi.odata](http://www.nuget.org/packages/microsoft.aspnet.webapi.odata)).
 
-ASP.NET Web API OData prend actuellement en charge les fonctionnalités suivantes :
+API Web ASP.NET OData prend actuellement en charge les fonctionnalités suivantes :
 
-- Activer la sémantique de requête OData en appliquant l’attribut [Queryable].
-- Valider les requêtes OData et restreindre l’ensemble des options de requête pris en charge, les opérateurs et fonctions facilement.
-- Liaison de paramètre à ODataQueryOptions directement pour obtenir une représentation d’arborescence de syntaxe abstraite de la requête qui peut être validée et appliquée à un IQueryable ou d’un IEnumerable.
-- Activer la pagination pilotée par service et nouvelle génération de lien de page en spécifiant des limites de résultat sur [Queryable] attribut.
-- Demander un nombre inline, le nombre total de ressources correspondants à l’aide de $inlinecount.
-- Contrôler la propagation de null.
-- N’importe quel/tous les opérateurs $filter.
-- Déduire un entity data model par convention ou explicitement personnaliser un modèle d’une manière similaire au Code First Entity Framework.
-- Entité d’exposer définit en dérivant de EntitySetController.
-- Conventions de simples et personnalisables pour exposer les propriétés de navigation, manipuler des liens et l’implémentation des actions OData.
-- Simplifié de routage à l’aide de la méthode d’extension MapODataRoute.
-- Prise en charge pour le contrôle de version en exposant plusieurs modèles EDM.
-- Exposer $metadata et document de service pour pouvoir générer des clients (.NET, Windows Phone, Windows Store, etc.) pour votre API Web.
-- Prise en charge pour les formats verbose OData Atom, JSON et JSON.
-- Créer, mettre à jour, partiellement mise à jour (PATCH) et supprimer des entités.
-- Interroger et manipuler des relations entre les entités.
-- Créer des liens de relation associer à vos routes.
+- Activez la sémantique de requête OData en appliquant l’attribut [interrogeable].
+- Validez facilement les requêtes OData et restreignez l’ensemble des options de requête, des opérateurs et des fonctions pris en charge.
+- Le paramètre est lié directement à ODataQueryOptions pour obtenir une représentation sous forme d’arborescence de syntaxe abstraite de la requête qui peut ensuite être validée et appliquée à un IQueryable ou IEnumerable.
+- Activez la pagination pilotée par le service et la génération de lien de page suivante en spécifiant des limites de résultats sur l’attribut [Queryable].
+- Demandez un nombre Inline du nombre total de ressources correspondantes à l’aide de $inlinecount.
+- Contrôle la propagation de la valeur null.
+- Tout ou partie des opérateurs dans $filter.
+- Déduire un modèle EDM (Entity Data Model) par convention ou personnaliser explicitement un modèle d’une manière similaire à Entity Framework code-First.
+- Exposer des jeux d’entités par dérivation à partir de EntitySetController.
+- Conventions simples et personnalisables pour l’exposition des propriétés de navigation, la manipulation des liens et l’implémentation d’actions OData.
+- Routage simplifié à l’aide de la méthode d’extension MapODataRoute.
+- Prise en charge du contrôle de version en exposant plusieurs modèles EDM.
+- Exposez les $metadata et le document de service afin de pouvoir générer des clients (.NET, Windows Phone, Windows Store, etc.) pour votre API Web.
+- Prise en charge des formats détaillés OData Atom, JSON et JSON.
+- Créer, mettre à jour, mettre à jour partiellement (PATCH) et supprimer des entités.
+- Interroger et manipuler des relations entre des entités.
+- Créez des liens de relation qui s’associent à vos itinéraires.
 - Types complexes.
-- Héritage de Type d’entité.
+- Héritage de type d’entité.
 - Propriétés de la collection.
 - Enums.
 - Actions OData.
-- Basé sur les mêmes fondements que WCF Data Services, à savoir ODataLib ([http://www.nuget.org/packages/microsoft.data.odata](http://www.nuget.org/packages/microsoft.data.odata)).
+- Repose sur la même base que WCF Data Services, à savoir ODataLib ([http://www.nuget.org/packages/microsoft.data.odata](http://www.nuget.org/packages/microsoft.data.odata)).
 
-Pour plus d’informations sur l’API Web ASP.NET OData, consultez [ https://go.microsoft.com/fwlink/?LinkId=271141 ](https://go.microsoft.com/fwlink/?LinkId=271141).
+Pour plus d’informations sur API Web ASP.NET OData, consultez [https://go.microsoft.com/fwlink/?LinkId=271141](https://go.microsoft.com/fwlink/?LinkId=271141).
 
-#### <a name="aspnet-web-api-tracing"></a>Suivi de l’API Web ASP.NET
+#### <a name="aspnet-web-api-tracing"></a>Suivi des API Web ASP.NET
 
-Le suivi de l’API Web ASP.NET s’intègre les données de suivi à partir de votre API web avec le suivi .NET. Il est désormais activé par défaut dans le modèle de projet API Web. Données de suivi pour votre site web API sont envoyé à la fenêtre de sortie et sont accessible via IntelliTrace. Le suivi d’API Web ASP.NET vous permet à des informations de trace de votre API Web quand ils sont hébergés sur Windows Azure grâce à une intégration [Diagnostics Windows Azure](https://msdn.microsoft.com/library/windowsazure/hh411529.aspx). Vous pouvez également installer et activer le suivi d’API Web ASP.NET dans toute application utilisant le package NuGet de traçage ASP.NET Web API ([http://www.nuget.org/packages/microsoft.aspnet.webapi.tracing](http://www.nuget.org/packages/microsoft.aspnet.webapi.tracing)).
+API Web ASP.NET le suivi intègre les données de suivi de vos API Web avec le suivi .NET. Il est désormais activé par défaut dans le modèle de projet d’API Web. Les données de suivi de vos API Web sont envoyées à la fenêtre sortie et sont rendues disponibles par le biais d’IntelliTrace. Le suivi des API Web ASP.NET vous permet de suivre les informations relatives à votre API Web lorsque celles-ci sont hébergées sur Windows Azure grâce à l’intégration avec [windows Azure Diagnostics](https://msdn.microsoft.com/library/windowsazure/hh411529.aspx). Vous pouvez également installer et activer le suivi API Web ASP.NET dans n’importe quelle application à l’aide du package NuGet API Web ASP.NET Tracing ([http://www.nuget.org/packages/microsoft.aspnet.webapi.tracing](http://www.nuget.org/packages/microsoft.aspnet.webapi.tracing)).
 
-Pour plus d’informations sur la configuration et à l’aide du suivi d’API Web ASP.NET, consultez [ https://go.microsoft.com/fwlink/?LinkID=269874 ](https://go.microsoft.com/fwlink/?LinkID=269874).
+Pour plus d’informations sur la configuration et l’utilisation de API Web ASP.NET le suivi, consultez [https://go.microsoft.com/fwlink/?LinkID=269874](https://go.microsoft.com/fwlink/?LinkID=269874).
 
-#### <a name="aspnet-web-api-help-page"></a>Page d’aide de l’API Web ASP.NET
+#### <a name="aspnet-web-api-help-page"></a>API Web ASP.NET la page d’aide
 
-La Page d’aide ASP.NET Web API est désormais incluse par défaut dans le modèle de projet API Web. La Page d’aide ASP.NET Web API génère automatiquement la documentation pour les API, y compris les points de terminaison HTTP, les méthodes HTTP prises en charge, les paramètres et les charges de message de demande et de réponse exemple web. Documentation est automatiquement extraites de commentaires dans votre code. Vous pouvez également ajouter la Page d’aide ASP.NET Web API pour toute application utilisant le package NuGet de Page aide ASP.NET Web API ([http://www.nuget.org/packages/microsoft.aspnet.webapi.helppage](http://www.nuget.org/packages/microsoft.aspnet.webapi.helppage)).
+La page d’aide API Web ASP.NET est désormais incluse par défaut dans le modèle de projet d’API Web. La page d’aide API Web ASP.NET génère automatiquement la documentation des API Web, y compris les points de terminaison HTTP, les méthodes HTTP prises en charge, les paramètres et les charges utiles des messages de demande et de réponse. La documentation est extraite automatiquement des commentaires dans votre code. Vous pouvez également ajouter la page d’aide API Web ASP.NET à n’importe quelle application à l’aide du package NuGet API Web ASP.NET page d’aide ([http://www.nuget.org/packages/microsoft.aspnet.webapi.helppage](http://www.nuget.org/packages/microsoft.aspnet.webapi.helppage)).
 
-Pour plus d’informations sur la configuration et la personnalisation de la voir Page d’aide ASP.NET Web API [ https://go.microsoft.com/fwlink/?LinkId=271140 ](https://go.microsoft.com/fwlink/?LinkId=271140).
+Pour plus d’informations sur l’installation et la personnalisation de la page d’aide API Web ASP.NET, consultez [https://go.microsoft.com/fwlink/?LinkId=271140](https://go.microsoft.com/fwlink/?LinkId=271140).
 
 <a id="_ASP.NET_SignalR"></a>
 ### <a name="aspnet-signalr"></a>SignalR ASP.NET
 
-ASP.NET SignalR permet de facilement ajouter des fonctionnalités web en temps réel à votre application ASP.NET, à l’aide du protocole WebSocket s’il est disponible et automatiquement revenir aux autres techniques lorsqu’il n’est pas.
+ASP.NET Signalr vous permet d’ajouter facilement des fonctionnalités Web en temps réel à votre application ASP.NET, en utilisant WebSockets si elles sont disponibles et en revenant automatiquement à d’autres techniques quand ce n’est pas le cas.
 
-Pour plus d’informations sur l’utilisation de SignalR ASP.NET, consultez [ https://go.microsoft.com/fwlink/?LinkId=271271 ](https://go.microsoft.com/fwlink/?LinkId=271271).
+Pour plus d’informations sur l’utilisation de ASP.NET signaler, consultez [https://go.microsoft.com/fwlink/?LinkId=271271](https://go.microsoft.com/fwlink/?LinkId=271271).
 
 <a id="_ASP.NET_Friendly_URLs"></a>
 ### <a name="aspnet-friendly-urls"></a>URL conviviales ASP.NET
 
-ASP.NET FriendlyURLs facilite pour les développeurs de formulaires web générer le nettoyeur recherche URL (sans l’extension .aspx). Elle ne nécessite peu à aucune configuration et peut être utilisé avec les applications ASP.NET v4.0 existantes. La fonctionnalité FriendlyURLs facilite également aux développeurs d’ajouter la prise en charge mobile à leurs applications, en prenant en charge le basculement entre les vues mobiles et de bureau.
+ASP.NET FriendlyURLs permet aux développeurs de Web Forms de générer facilement des URL d’aspect plus propre (sans l’extension. aspx). Elle nécessite peu ou pas de configuration et peut être utilisée avec les applications ASP.NET v 4.0 existantes. La fonctionnalité FriendlyURLs permet également aux développeurs d’ajouter plus facilement un support mobile à leurs applications, en prenant en charge le basculement entre les vues de bureau et mobiles.
 
-Pour plus d’informations sur l’installation et à l’aide des URL conviviales ASP.NET, consultez [ http://www.hanselman.com/blog/IntroducingASPNETFriendlyUrlsCleanerURLsEasierRoutingAndMobileViewsForASPNETWebForms.aspx ](http://www.hanselman.com/blog/IntroducingASPNETFriendlyUrlsCleanerURLsEasierRoutingAndMobileViewsForASPNETWebForms.aspx).
+Pour plus d’informations sur l’installation et l’utilisation des URL conviviales ASP.NET, consultez [http://www.hanselman.com/blog/IntroducingASPNETFriendlyUrlsCleanerURLsEasierRoutingAndMobileViewsForASPNETWebForms.aspx](http://www.hanselman.com/blog/IntroducingASPNETFriendlyUrlsCleanerURLsEasierRoutingAndMobileViewsForASPNETWebForms.aspx).
 
 <a id="_Known_Issues_and"></a>
-## <a name="known-issues-and-breaking-changes"></a>Problèmes connus et les modifications avec rupture
+## <a name="known-issues-and-breaking-changes"></a>Problèmes connus et modifications avec rupture
 
-Cette section décrit les problèmes connus et les modifications avec rupture qui se trouvent dans la version d’ASP.NET et Web Tools 2012.2.
+Cette section décrit les problèmes connus et les modifications avec rupture qui se trouvent dans la version 2012,2 de ASP.NET et Web Tools.
 
 ### <a name="installation-issues"></a>Problèmes d’installation
 
 #### <a name="out-of-order-installs-of-visual-studio-2012"></a>Installations en désordre de Visual Studio 2012
 
-Installer une supplémentaires référence (SKU) de Visual Studio 2012 après que l’installation d’ASP.NET et Web Tools 2012.2 nécessitera une opération de réparation. Examinez la séquence suivante :
+L’installation d’une référence supplémentaire de Visual Studio 2012 après l’installation du ASP.NET et Web Tools 2012,2 nécessite une opération de réparation. Examinez la séquence suivante :
 
 1. Installer Visual Studio 2012 Express pour le Web
-2. Installer ASP.NET et Web Tools 2012.2
+2. Installer ASP.NET et Web Tools 2012,2
 3. Installer Visual Studio 2012 Professional, Premium ou Ultimate
 
-Étape 2 entraînerait uniquement l’installation des mises à jour pour Express pour le Web. Pour vous assurer que la référence (SKU) supplémentaire installé lors de l’étape 3 contienne la mise à jour, vous devrez réparer ASP.NET et Web Tools 2012.2 pour installer les mises à jour pour la dernière référence (SKU) installé. Cela s’applique également si les références (SKU) à l’étape 1 et 3 sont inversés.
+L’étape 2 se traduirait par l’installation des mises à jour d’Express pour le Web. Pour vous assurer que la référence (SKU) supplémentaire installée à l’étape 3 contient la mise à jour, vous devez réparer la ASP.NET et Web Tools 2012,2 pour installer les mises à jour de la dernière référence installée. Cela s’applique également si les références SKU à l’étape 1 et 3 sont inversées.
 
-#### <a name="installing-microsoft-aspnet-and-web-tools-20122-when-visual-studio-is-open"></a>L’installation de Microsoft ASP.NET et Web Tools 2012.2 lorsque Visual Studio est ouvert
+#### <a name="installing-microsoft-aspnet-and-web-tools-20122-when-visual-studio-is-open"></a>Installation de Microsoft ASP.NET et Web Tools 2012,2 quand Visual Studio est ouvert
 
-Si Visual Studio est ouvert pendant l’installation de Microsoft ASP.NET et Web Tools 2012.2, Visual Studio peuvent se terminer dans un état incorrect. Il est recommandé aux utilisateurs de fermer toutes les instances de Visual Studio avant de procéder à l’installation.
+Si VS est ouvert pendant l’installation de Microsoft ASP.NET et Web Tools 2012,2, Visual Studio peut se retrouver dans un état incorrect. Il est recommandé que les utilisateurs ferment toutes les instances de Visual Studio avant de procéder à l’installation.
 
-#### <a name="canceling-aspnet-and-web-tools-20122-setup-in-the-middle-of-installation"></a>Annulation de l’installation d’ASP.NET et Web Tools 2012.2 au milieu de l’installation
+#### <a name="canceling-aspnet-and-web-tools-20122-setup-in-the-middle-of-installation"></a>Annulation de l’installation de ASP.NET et Web Tools 2012,2 au milieu de l’installation
 
-L’annulation de ASP.NET et Web Tools 2012.2 le programme d’installation au milieu de l’installation laissera Visual Studio dans un état incorrect. Pour résoudre ce problème de suivi ces étapes : 
+L’annulation du programme d’installation de ASP.NET et Web Tools 2012,2 au milieu de l’installation laisse Visual Studio dans un état incorrect. Pour résoudre ce problème, procédez comme suit : 
 
-- Accédez à Ajout de suppression de programmes
-- Désinstallez Microsoft ASP.NET et Web Tools 2012.2, le cas échéant.
-- Réinstallez Microsoft ASP.NET et Web Tools 2012.2
+- Accédez à Ajout/Suppression de programmes.
+- Désinstallez Microsoft ASP.NET et Web Tools 2012,2, le cas échéant.
+- Réinstaller Microsoft ASP.NET et Web Tools 2012,2
 
-#### <a name="after-uninstalling-aspnet-and-web-tools-20122-the-aspnet-mvc-4-templates-and-razor-v2-web-site-templates-are-missing"></a>Après la désinstallation de ASP.NET et Web Tools 2012.2 ASP.NET MVC 4 modèles et les modèles de Site Web de Razor v2 sont manquants
+#### <a name="after-uninstalling-aspnet-and-web-tools-20122-the-aspnet-mvc-4-templates-and-razor-v2-web-site-templates-are-missing"></a>Après la désinstallation de ASP.NET et Web Tools 2012,2, les modèles ASP.NET MVC 4 et les modèles de site Web Razor v2 sont manquants
 
-ASP.NET et Web Tools 2012.2 désinstallation entraîne tous ASP.NET MVC 4 et les modèles de sites Web Razor v2 à partir de Visual Studio 2012.
+La désinstallation de ASP.NET et Web Tools 2012,2 désinstalle également tous les modèles de site Web ASP.NET MVC 4 et Razor v2 de Visual Studio 2012.
 
-La solution de contournement consiste à réparer votre installation de Visual Studio 2012 pour réinstaller ASP.NET MVC 4 et les modèles de sites Web Razor v2.
+La solution de contournement consiste à réparer votre installation de Visual Studio 2012 pour réinstaller les modèles de site Web ASP.NET MVC 4 et Razor v2.
 
-### <a name="tooling-issues"></a>Problèmes d’outils
+### <a name="tooling-issues"></a>Problèmes liés aux outils
 
 #### <a name="nuget-error-reported-during-project-creation"></a>Erreur NuGet signalée lors de la création du projet
 
-Après avoir installé ASP.NET et Web Tools 2012.2, vous pouvez voir l’erreur suivante lors de la création d’un projet MVC 4
+Après l’installation de ASP.NET et Web Tools 2012,2, l’erreur suivante peut s’afficher lors de la création d’un projet MVC 4
 
 ![](aspnet-and-web-tools-20122-release-notes/_static/image1.png)
 
-ASP.NET et Web Tools 2012.2 est fourni NuGet 2.1 et mettra à niveau l’extension dans Visual Studio 2012. Dans certains cas, le programme d’installation VSIX échoue correctement mettre à jour l’extension VSIX. Les étapes suivantes permettent de résoudre le problème :
+Le ASP.NET et Web Tools 2012,2 envoie NuGet 2,1 et met à niveau l’extension dans Visual Studio 2012. Dans certains cas, le programme d’installation VSIX ne parvient pas à mettre à jour correctement le VSIX. Les étapes suivantes vous permettront de résoudre ce problème :
 
-1. Démarrez Visual Studio 2012 en tant qu’administrateur
-2. Accédez à outils -&gt;Extensions et mises à jour et désinstaller NuGet.
+1. Démarrer Visual Studio 2012 en tant qu’administrateur
+2. Accédez à outils-&gt;extensions et mises à jour et désinstallez NuGet.
 3. Fermez Visual Studio.
-4. Accédez au dossier d’installation ASP.NET et Web Tools 2012.2 :
+4. Accédez au dossier d’installation de ASP.NET et Web Tools 2012,2 :
 
-    1. Pour Visual Studio 2012 : **Program Files\Microsoft ASP.NET\ASP.NET Web Stack\Visual Studio 2012**
-    2. Pour Visual Studio 2012 Express pour le Web : **Program Files\Microsoft ASP.NET\ASP.NET Web Stack\Visual Studio Express 2012 pour le Web**
-5. Double cliquez sur le NuGet.Tools.vsix réinstaller NuGet
+    1. Pour Visual Studio 2012 : **Program Files\Microsoft ASP. NET\ASP.NET Web Stack\Visual Studio 2012**
+    2. Pour Visual Studio 2012 Express pour le Web : **Program Files\Microsoft ASP. NET\ASP.NET Web Stack\Visual Studio Express 2012 pour le Web**
+5. Double-cliquez sur NuGet. Tools. VSIX pour réinstaller NuGet
 
 ### <a name="web-api-issues"></a>Problèmes d’API Web
 
-#### <a name="parsing-issues-in-filter-and-datetime-literals"></a>L’analyse des problèmes dans $filter et les littéraux de date/heure
+#### <a name="parsing-issues-in-filter-and-datetime-literals"></a>Analyse des problèmes dans les littéraux $filter et DateTime
 
-L’analyseur URI OData ne parvient pas à analyser correctement les littéraux datetime partielle. Par exemple, $filter = date/heure de début eq « 2012-12-31T12:00' ne parvient pas à analyser correctement. Une solution de contournement consiste à utiliser le littéral complète, $filter = date/heure de début eq « 2012-12-31T12:00:00 ».
+L’analyseur d’URI OData ne parvient pas à analyser correctement les littéraux datetime partiels. Par exemple, $filter = Start EQ DateTime' 2012-12-31T12:00 'ne parvient pas à analyser correctement. Une solution de contournement consiste à utiliser le littéral complet, $filter = Start EQ DateTime' 2012-12-31T12:00:00 '.
 
-#### <a name="odata-doesnt-support-case-insensitive-property-names"></a>OData ne prend pas en charge les noms de propriété de non-respect de la casse.
+#### <a name="odata-doesnt-support-case-insensitive-property-names"></a>OData ne prend pas en charge les noms de propriété ne respectant pas la casse.
 
-OData ne prend en charge les noms de propriété de non-respect de la casse dans les requêtes OData et le chemin d’accès odata. Consultez les éléments de travail :
+OData ne prend pas en charge les noms de propriété ne respectant pas la casse dans les requêtes OData et le chemin d’accès OData. Consultez WorkItems :
 
 - [http://aspnetwebstack.codeplex.com/workitem/366](http://aspnetwebstack.codeplex.com/workitem/366)
 - [http://aspnetwebstack.codeplex.com/workitem/704](http://aspnetwebstack.codeplex.com/workitem/704)
 
-Si les utilisateurs ont une casse différente sur le côté serveur et côté client javascript, ils seront probablement rencontrer ce problème. Ce problème est inhérent dans le protocole odata. Toutefois, le nombre d’utilisateurs signale ce problème. Pour contourner ce problème, les utilisateurs doivent corriger leur cas de l’URL.
+Si les utilisateurs ont une casse différente côté client JavaScript et côté serveur, ils rencontreront probablement ce problème. Ce problème est lié à la conception dans le protocole OData. Toutefois, de nombreux utilisateurs signalent ce problème. Pour contourner ce comportement, les utilisateurs doivent corriger leurs cas dans l’URL.
 
-#### <a name="default-odata-routing-conventions-doesnt-support-postput-on-navigation-property"></a>OData par défaut conventions de routage ne prend pas en charge POST/PUT sur la propriété de navigation.
+#### <a name="default-odata-routing-conventions-doesnt-support-postput-on-navigation-property"></a>Les conventions de routage OData par défaut ne prennent pas en charge la propriété de navigation de publication/PUT.
 
-OData par défaut conventions de routage ne prend pas en charge POST/PUT sur la propriété de navigation. Consultez l’élément de travail [ http://aspnetwebstack.codeplex.com/workitem/366 ](http://aspnetwebstack.codeplex.com/workitem/366). Nous sommes pas cette convention couramment utilisée dans les conventions par défaut.
+Les conventions de routage OData par défaut ne prennent pas en charge la propriété de navigation de publication/PUT. Consultez WorkItem [http://aspnetwebstack.codeplex.com/workitem/366](http://aspnetwebstack.codeplex.com/workitem/366). Nous ne disposons pas de cette Convention couramment utilisée dans les conventions par défaut.
 
-Pour contourner ce problème, les utilisateurs doivent étendre nouvelle convention de routage pour prendre en charge.
+Pour contourner ce contournement, les utilisateurs doivent étendre une nouvelle Convention de routage pour la prendre en charge.
 
-### <a name="facebook-template-issues"></a>Problèmes liés aux modèles de Facebook
+### <a name="facebook-template-issues"></a>Problèmes liés aux modèles Facebook
 
-#### <a name="facebook-application-template-only-works-using-net-45"></a>Modèle d’Application Facebook fonctionne uniquement à l’aide de .NET 4.5
+#### <a name="facebook-application-template-only-works-using-net-45"></a>Le modèle d’application Facebook fonctionne uniquement avec .NET 4,5
 
-Vous devez sélectionner le .NET 4.5 dans la liste déroulante framework dans la boîte de dialogue Nouveau projet pour voir le modèle d’Application Facebook dans ASP.NET MVC 4.
+Vous devez sélectionner .NET 4,5 dans la liste déroulante Framework de la boîte de dialogue Nouveau projet pour voir le modèle d’application Facebook dans ASP.NET MVC 4.
 
 #### <a name="real-time-update-controller"></a>Contrôleur de mise à jour en temps réel
 
-Le modèle d’Application Facebook permet à utilisateur facilement créer un contrôleur d’API Web pour gérer les mises à jour en temps réel à partir de Facebook. Si votre ordinateur de développement est derrière un NAT, votre contrôleur peut ne pas fonctionne sans configuration de réseau supplémentaire. Pour plus d’informations, voir ici : [http://facebook.stackoverflow.com/questions/5259467/can-a-computer-behind-a-nat-router-receive-realtime-updates-from-facebook](http://facebook.stackoverflow.com/questions/5259467/can-a-computer-behind-a-nat-router-receive-realtime-updates-from-facebook)
+Le modèle d’application Facebook permet à l’utilisateur de créer facilement un contrôleur d’API Web pour gérer les mises à jour en temps réel à partir de Facebook. Si votre ordinateur de développement se trouve derrière NAT, votre contrôleur peut ne pas fonctionner sans configuration réseau supplémentaire. Pour plus d’informations, voir ici : [http://facebook.stackoverflow.com/questions/5259467/can-a-computer-behind-a-nat-router-receive-realtime-updates-from-facebook](http://facebook.stackoverflow.com/questions/5259467/can-a-computer-behind-a-nat-router-receive-realtime-updates-from-facebook)
 
-#### <a name="query-string-values-conflict-with-facebook-oauth-parameters"></a>Requête de valeurs de chaîne sont en conflit avec les paramètres Facebook OAuth
+#### <a name="query-string-values-conflict-with-facebook-oauth-parameters"></a>Les valeurs de chaîne de requête sont en conflit avec les paramètres OAuth Facebook
 
-Les champs suivants sont en conflit avec l’appel de la boîte de dialogue Facebook OAuth sauvegarder URL. N’ajoutez pas de vos propres valeurs de chaîne de requête avec les noms suivants : code d’erreur, erreur\_description, erreur\_raison.
+Les champs suivants sont en conflit avec l’URL de rappel de la boîte de dialogue OAuth Facebook. N’ajoutez pas vos propres valeurs de chaîne de requête avec les noms suivants : code, erreur, erreur\_Description, erreur\_raison.
 
-#### <a name="using-page-inspector-with-facebook-template"></a>À l’aide de l’inspecteur de Page avec le modèle pour Facebook
+#### <a name="using-page-inspector-with-facebook-template"></a>Utilisation de Inspecteur de page avec le modèle Facebook
 
-Vous ne pouvez pas utiliser la fonctionnalité de l’inspecteur de Page dans Visual Studio 2012 pendant le débogage de votre Application Facebook. L’inspecteur de Page ne prend pas en charge les iframes.
+Vous ne pouvez pas utiliser la fonctionnalité Inspecteur de page dans Visual Studio 2012 lors du débogage de votre application Facebook. Le Inspecteur de page ne prend pas en charge les iframes pour le moment.
 
-### <a name="single-page-application-template-issues"></a>Problèmes de modèle d’Application monopage
+### <a name="single-page-application-template-issues"></a>Problèmes liés aux modèles d’application à page unique
 
-#### <a name="with-jquery-19knockout-221-update-when-running-default-mvc-spa-project-new-todo-item-edit-enter-focus-event-is-not-handled-properly"></a>Avec JQuery 1.9/Knockout 2.2.1 mise à jour lors de l’exécution du projet de SPA de MVC par défaut, nouveau modifier d’élément todo Entrez événement focus n’est pas géré correctement.
+#### <a name="with-jquery-19knockout-221-update-when-running-default-mvc-spa-project-new-todo-item-edit-enter-focus-event-is-not-handled-properly"></a>Avec la mise à jour de JQuery 1.9/Knockout 2.2.1, lors de l’exécution du projet SPA MVC par défaut, la modification de l’événement de focus d’un nouvel élément TODO n’est pas gérée correctement.
 
-Avec JQuery 1.9/Knockout 2.2.1 mise à jour, lorsque vous exécutez le projet d’application à page unique MVC par défaut, nouveau modifier d’élément todo entrez n’est plus le focus à la zone d’édition pour les éléments todo après avoir entré le nouvel élément todo dans la liste de tâches.
+Avec la mise à jour de JQuery 1.9/Knockout 2.2.1, lors de l’exécution du projet SPA MVC par défaut, le nouvel élément TODO Edit Enter n’est plus ciblé vers la nouvelle zone d’édition de l’élément TODO après avoir entré le nouvel élément TODO dans la liste TODO.
 
-Référence de la solution de contournement [ http://knockoutjs.com/documentation/hasfocus-binding.html ](http://knockoutjs.com/documentation/hasfocus-binding.html)et corriger similaire à l’exemple de code suivant :
+Pour faire référence à la solution de contournement [http://knockoutjs.com/documentation/hasfocus-binding.html](http://knockoutjs.com/documentation/hasfocus-binding.html), et apporter un correctif similaire à l’exemple de code suivant :
 
-Fichier todo.model.js  
- fonction todolist(data), ajoutez suivantes :  
- **self.isSelected = ko.observable(false);**
+Fichier TODO. Model. js  
+ todolist de fonction (données), ajoutez ce qui suit :  
+ **Self. isSelected = Ko. observable (false);**
 
-fonction todoList.prototype.addTodo, ajoutez le texte blacked suivant :  
- **self.isSelected(true);**  
- self.newTodoTitle(&quot;&quot;);
+fonction todoList. prototype. addTodo, ajoutez le texte noir suivant :  
+ **Self. isSelected (true);**  
+ Self. newTodoTitle (&quot;&quot;);
 
-Fichier index.cshtml, ajoutez le texte blacked suivant :  
- &lt;form data-bind=&quot;submit: addTodo&quot;&gt;  
- &lt;entrée de classe =&quot;addTodo&quot; type =&quot;texte&quot; data-bind =&quot;valeur : newTodoTitle, espace réservé : 'Type here to add', blurOnEnter: true, **hasfocus: isSelected**, event: { blur: addTodo }&quot; /&gt;  
- &lt;/form&gt;
+Fichier index. cshtml, ajoutez le texte noir suivant :  
+ &lt;de formulaire données-liaison =&quot;envoyer : addTodo&quot;&gt;  
+ &lt;entrée Class =&quot;addTodo&quot; type =&quot;Text&quot; Data-bind =&quot;valeur : newTodoTitle, PlaceHolder : « type here to Add », blurOnEnter : true, **HasFocus : IsSelected**, Event : {Blur : addTodo}&quot; /&gt;  
+ &lt;/formulaire&gt;

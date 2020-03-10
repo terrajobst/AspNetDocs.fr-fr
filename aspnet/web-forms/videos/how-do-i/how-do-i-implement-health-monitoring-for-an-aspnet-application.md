@@ -1,24 +1,24 @@
 ---
 uid: web-forms/videos/how-do-i/how-do-i-implement-health-monitoring-for-an-aspnet-application
-title: '[Comment faire]  Implémenter le contrôle d’intégrité pour une Application ASP.NET ? | Microsoft Docs'
+title: '[Comment faire :]  Implémenter le contrôle d’intégrité pour une application ASP.NET ? | Microsoft Docs'
 author: rick-anderson
-description: Dans cette vidéo Chris Pels sera montrent comment implémenter l’intégrité de la surveillance pour obtenir des informations d’exécution détaillées pour une application ASP.NET. Découvrez la puissante et...
+description: Dans cette vidéo, Chris pixels montre comment implémenter la surveillance de l’intégrité pour obtenir des informations détaillées sur l’exécution d’une application ASP.NET. Découvrez les fonctionnalités puissantes et...
 ms.author: riande
 ms.date: 11/05/2007
 ms.assetid: b3abd282-840a-42e3-ac27-cddbb22c5e33
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-implement-health-monitoring-for-an-aspnet-application
 msc.type: video
 ms.openlocfilehash: 18b84615d60deac2f06122d3d2b9689dc8efb09a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402854"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78567717"
 ---
-# <a name="how-do-i--implement-health-monitoring-for-an-aspnet-application"></a>[Comment faire]  Implémenter le contrôle d’intégrité pour une Application ASP.NET ?
+# <a name="how-do-i--implement-health-monitoring-for-an-aspnet-application"></a>[Comment faire :]  Implémenter le contrôle d’intégrité pour une application ASP.NET ?
 
-par [Chris Pels](https://twitter.com/chrispels)
+par [Chris pixels](https://twitter.com/chrispels)
 
-Dans cette vidéo Chris Pels sera montrent comment implémenter l’intégrité de la surveillance pour obtenir des informations d’exécution détaillées pour une application ASP.NET. Découvrez les options de configuration puissant et flexible de contrôle, y compris d’état d’intégrité de la surveillance des événements, également appelés événements web, fournisseurs de stockage des données, les règles pour les événements de mappage aux fournisseurs de profils pour les paramètres couramment utilisés et buffermode pour optimiser intégrité de la surveillance pour de meilleures performances. Puis consultez un exemple d’application web en action avec contrôle d’intégrité activé l’écriture d’événements dans le journal des événements Windows.
+Dans cette vidéo, Chris pixels montre comment implémenter la surveillance de l’intégrité pour obtenir des informations détaillées sur l’exécution d’une application ASP.NET. Découvrez les options de configuration puissantes et flexibles pour la surveillance de l’intégrité, notamment les événements de contrôle d’intégrité, les événements Web, les fournisseurs pour le stockage des données, les règles de mappage des événements aux fournisseurs, les profils pour les paramètres couramment utilisés et les bufferMode à optimiser. surveillance de l’intégrité pour des performances optimales. Voyez ensuite un exemple d’application Web en action avec le contrôle d’intégrité activé pour écrire des événements dans le journal des événements Windows.
 
-[&#9654;Regardez la vidéo (21 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-implement-health-monitoring-for-an-aspnet-application)
+[&#9654;Regarder la vidéo (21 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-implement-health-monitoring-for-an-aspnet-application)

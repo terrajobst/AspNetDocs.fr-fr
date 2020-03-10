@@ -1,28 +1,28 @@
 ---
 uid: signalr/overview/older-versions/index
-title: Les Versions antérieures de SignalR | Microsoft Docs
+title: Versions antérieures de signalr | Microsoft Docs
 author: bradygaster
-description: Documentation relative aux versions antérieures de SignalR.
+description: Documentation relative aux versions antérieures de Signalr.
 ms.author: bradyg
 ms.date: 09/19/2014
 ms.assetid: 607f4617-380f-41fa-bf46-147e82bb8124
 msc.legacyurl: /signalr/overview/older-versions
 msc.type: chapter
 ms.openlocfilehash: f992ea30d6d4c26da105a688f42e420af86a523a
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65117118"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558519"
 ---
-# <a name="signalr-older-versions"></a>Versions antérieures de SignalR
+# <a name="signalr-older-versions"></a>Versions antérieures de signalr
 
-> Documentation relative aux versions antérieures de SignalR.
+> Documentation relative aux versions antérieures de Signalr.
 
-- [Tutoriel : Bien démarrer avec SignalR 1.x](tutorial-getting-started-with-signalr.md)
-- [Tutoriel : Bien démarrer avec SignalR 1.x et MVC 4](tutorial-getting-started-with-signalr-and-mvc-4.md)
+- [Didacticiel : Bien démarrer avec SignalR 1.x](tutorial-getting-started-with-signalr.md)
+- [Didacticiel : Bien démarrer avec SignalR 1.x et MVC 4](tutorial-getting-started-with-signalr-and-mvc-4.md)
 - [Temps réel haute fréquence avec SignalR 1.x](tutorial-high-frequency-realtime-with-signalr.md)
-- [Tutoriel : Serveur de diffusion avec ASP.NET SignalR 1.x](tutorial-server-broadcast-with-aspnet-signalr.md)
+- [Didacticiel : Diffusion par le serveur avec ASP.NET SignalR 1.x](tutorial-server-broadcast-with-aspnet-signalr.md)
 - [Guide de l’API Hubs - Serveur](signalr-1x-hubs-api-guide-server.md)
 - [Guide de l’API SignalR 1.x Hubs - Client JavaScript](signalr-1x-hubs-api-guide-javascript-client.md)
 - [Guide de l’API Hubs - Client .NET](signalr-1x-hubs-api-guide-net-client.md)

@@ -9,11 +9,11 @@ ms.assetid: 07ec7d37-023f-43ea-b471-60b08ce338f7
 msc.legacyurl: /web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications
 msc.type: authoredcontent
 ms.openlocfilehash: 1b47f1ade3619cfd010260352f6a96985ab3598b
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445711"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78555019"
 ---
 # <a name="troubleshoot-web-api2-apps-that-work-in-visual-studio-and-fail-on-a-production-iis-server"></a>Résoudre les problèmes liés aux applications API2 Web qui fonctionnent dans Visual Studio et qui échouent sur un serveur IIS de production
 
@@ -29,23 +29,23 @@ En général, les applications d’API Web utilisent plusieurs verbes HTTP : r�
 
 ## <a name="what-causes-http-405-errors"></a>Causes des erreurs HTTP 405
 
-La première étape pour apprendre à résoudre les erreurs HTTP 405 consiste à comprendre ce qu’une erreur HTTP 405 signifie réellement. Le document principal relatif à HTTP est la [norme RFC 2616](http://www.ietf.org/rfc/rfc2616.txt), qui définit le code d’état HTTP 405 comme ***méthode non autorisée***et décrit ce code d’État comme une situation où &quot;la méthode spécifiée dans la ligne de demande n’est pas autorisée pour le ressource identifiée par l’URI de demande.&quot; en d’autres termes, le verbe HTTP n’est pas autorisé pour l’URL spécifique demandée par un client HTTP.
+La première étape pour apprendre à résoudre les erreurs HTTP 405 consiste à comprendre ce qu’une erreur HTTP 405 signifie réellement. Le document principal relatif à HTTP est la [norme RFC 2616](http://www.ietf.org/rfc/rfc2616.txt), qui définit le code d’état HTTP 405 comme ***méthode non autorisée***et décrit ce code d’État comme une situation dans laquelle &quot;la méthode spécifiée dans la ligne de demande n’est pas autorisée pour la ressource identifiée par l’URI de demande.&quot; en d’autres termes, le verbe HTTP n’est pas autorisé pour l’URL spécifique demandée par un client HTTP.
 
 Pour résumer, voici quelques-unes des méthodes HTTP les plus utilisées, telles que définies dans le document RFC 2616, RFC 4918 et RFC 5789 :
 
 | Méthode HTTP | Description |
 | --- | --- |
-| **Télécharger** | Cette méthode est utilisée pour récupérer des données d’un URI, et il s’agit probablement de la méthode HTTP la plus utilisée. |
+| **GET** | Cette méthode est utilisée pour récupérer des données d’un URI, et il s’agit probablement de la méthode HTTP la plus utilisée. |
 | **HEAD** | Cette méthode est très similaire à la méthode d’extraction, à la différence qu’elle n’extrait pas réellement les données de l’URI de la demande. elle récupère simplement l’état HTTP. |
-| **Publier** | Cette méthode est généralement utilisée pour envoyer de nouvelles données à l’URI. La publication est souvent utilisée pour envoyer des données de formulaire. |
-| **POSÉ** | Cette méthode est généralement utilisée pour envoyer des données brutes à l’URI. PUT est souvent utilisé pour envoyer des données JSON ou XML à des applications API Web. |
+| **POST** | Cette méthode est généralement utilisée pour envoyer de nouvelles données à l’URI. La publication est souvent utilisée pour envoyer des données de formulaire. |
+| **PUT** | Cette méthode est généralement utilisée pour envoyer des données brutes à l’URI. PUT est souvent utilisé pour envoyer des données JSON ou XML à des applications API Web. |
 | **DELETE** | Cette méthode permet de supprimer des données d’un URI. |
 | **OPTIONS** | Cette méthode est généralement utilisée pour récupérer la liste des méthodes HTTP prises en charge pour un URI. |
 | **COPIER LE DÉPLACEMENT** | Ces deux méthodes sont utilisées avec WebDAV et leur but est explicite. |
 | **MKCOL** | Cette méthode est utilisée avec WebDAV et elle est utilisée pour créer une collection (par exemple, un répertoire) à l’URI spécifié. |
 | **PROPFIND PROPPATCH** | Ces deux méthodes sont utilisées avec WebDAV et sont utilisées pour interroger ou définir les propriétés d’un URI. |
 | **VERROUILLER LE DÉVERROUILLAGE** | Ces deux méthodes sont utilisées avec WebDAV et sont utilisées pour verrouiller/déverrouiller la ressource identifiée par l’URI de requête lors de la création. |
-| **CORRECTIF** | Cette méthode est utilisée pour modifier une ressource HTTP existante. |
+| **PATCH** | Cette méthode est utilisée pour modifier une ressource HTTP existante. |
 
 Quand l’une de ces méthodes HTTP est configurée pour une utilisation sur le serveur, le serveur répond avec l’état HTTP et d’autres données appropriées pour la demande. (Par exemple, une méthode d’extraction peut recevoir une réponse HTTP 200 ***OK*** , et une méthode put peut recevoir une réponse http 201 ***créée*** .)
 
@@ -69,7 +69,7 @@ Dans cet exemple, le client HTTP a envoyé une requête JSON valide à l’URL p
 
 ## <a name="resolve-http-405-errors"></a>Résoudre les erreurs HTTP 405
 
-Il existe plusieurs raisons pour lesquelles un verbe HTTP spécifique peut ne pas être autorisé, mais il existe un scénario principal qui est la cause principale de cette erreur dans IIS : plusieurs gestionnaires sont définis pour le même verbe/méthode et l’un des gestionnaires bloque le gestionnaire attendu de traitement de la requête. À titre d’explication, IIS traite les gestionnaires de premier à dernier en fonction des entrées du gestionnaire de commandes dans les fichiers *ApplicationHost. config* et *Web. config* , où la première combinaison correspondante de Path, Verb, Resource, etc., sera utilisée pour gérer demande.
+Il existe plusieurs raisons pour lesquelles un verbe HTTP spécifique peut ne pas être autorisé, mais il existe un scénario principal qui est la cause principale de cette erreur dans IIS : plusieurs gestionnaires sont définis pour le même verbe/méthode, et l’un des gestionnaires bloque le gestionnaire attendu du traitement de la requête. À titre d’explication, IIS traite les gestionnaires de premier à dernier en fonction des entrées du gestionnaire de commandes dans les fichiers *ApplicationHost. config* et *Web. config* , où la première combinaison correspondante de Path, Verb, Resource, etc., sera utilisée pour gérer la requête.
 
 L’exemple suivant est un extrait d’un fichier *ApplicationHost. config* pour un serveur IIS qui retournait une erreur HTTP 405 lors de l’utilisation de la méthode put pour envoyer des données à une application API Web. Dans cet extrait, plusieurs gestionnaires HTTP sont définis, et chaque gestionnaire a un ensemble différent de méthodes HTTP pour lequel il est configuré : la dernière entrée de la liste est le gestionnaire de contenu statique, qui est le gestionnaire par défaut utilisé une fois que les autres gestionnaires ont eu un chanc e pour examiner la requête :
 

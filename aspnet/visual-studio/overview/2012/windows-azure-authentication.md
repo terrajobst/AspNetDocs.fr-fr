@@ -9,11 +9,11 @@ ms.assetid: a3cef801-a54b-4ebd-93c3-55764e2e14b1
 msc.legacyurl: /visual-studio/overview/2012/windows-azure-authentication
 msc.type: authoredcontent
 ms.openlocfilehash: ce98effe18dd739504fb0d5453bae8a46c3ba102
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457477"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557861"
 ---
 # <a name="windows-azure-authentication"></a>Authentification Windows Azure
 
@@ -27,7 +27,7 @@ par [Rick Anderson](https://twitter.com/RickAndMSFT)
 >
 > Windows Azure Active Directory est actuellement disponible en version [préliminaire gratuite](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
 
-## <a name="requirements"></a>Conditions requises :
+## <a name="requirements"></a>Configuration requise :
 
 - Visual Studio 2012 ou [Visual Studio Express 2012](https://www.microsoft.com/visualstudio/11/products/express)
 - Extensions [Web Tools pour Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=282228&amp;clcid=0x409) ou [Extensions web tools pour Visual Studio Express 2012](https://go.microsoft.com/fwlink/?LinkID=282231&amp;clcid=0x409)

@@ -9,11 +9,11 @@ ms.assetid: 13a5a423-9235-4dde-b408-2fd10f791d63
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/core-differences-between-iis-and-the-asp-net-development-server-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 7fea3939bd910a052340215c207013e2269f32a2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74617531"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78642596"
 ---
 # <a name="core-differences-between-iis-and-the-aspnet-development-server-c"></a>Différences principales entre IIS et le serveur de développement ASP.NET (C#)
 

@@ -9,11 +9,11 @@ ms.assetid: 53767e05-c8ab-42e1-a94b-22d906195200
 msc.legacyurl: /mvc/overview/older-versions/working-with-the-dropdownlist-box-and-jquery/using-the-dropdownlist-helper-with-aspnet-mvc
 msc.type: authoredcontent
 ms.openlocfilehash: 6375bb2be158cea18309ffa71c71ac3e67bc91ed
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457867"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78538744"
 ---
 # <a name="using-the-dropdownlist-helper-with-aspnet-mvc"></a>Utilisation du helper DropDownList avec ASP.NET MVC
 
@@ -42,7 +42,7 @@ Vous apprendrez les compétences suivantes :
 - Comment utiliser le programme d’assistance [DropDownList](https://msdn.microsoft.com/library/system.web.mvc.html.selectextensions.dropdownlist.aspx) pour sélectionner des données de catégorie.
 - Comment ajouter une boîte de dialogue **jQuery** pour ajouter de nouvelles catégories.
 
-### <a name="getting-started"></a>Mise en route
+### <a name="getting-started"></a>Commencer
 
 Commencez par Télécharger le projet de démarrage avec le lien suivant, [Télécharger](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=15829). Dans l’Explorateur Windows, cliquez avec le bouton droit sur le fichier *DDL\_Starter. zip* , puis sélectionnez Propriétés. Dans la boîte de dialogue **Propriétés DDL\_Starter. zip** , sélectionnez débloquer.
 

@@ -9,11 +9,11 @@ ms.assetid: a8d776af-4735-4612-87f6-9f326587f2d3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 3385e1019d9e7a9263fd9513c39b25eb85febbb5
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74582013"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78564441"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-database-update---9-of-12"></a>Déploiement d’une application Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio ou Visual Web Developer : déploiement d’une mise à jour de base de données-9 sur 12
 
@@ -25,7 +25,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Pour obtenir un didacticiel qui présente les fonctionnalités de déploiement introduites après la version RC de Visual Studio 2012, montre comment déployer des éditions SQL Server autres que SQL Server Compact et montre comment déployer vers Azure App Service Web Apps, consultez [déploiement Web ASP.net à l’aide de Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Dans ce didacticiel, vous apportez une modification à la base de données et des modifications de code connexes, vous testez les modifications dans Visual Studio, puis vous déployez la mise à jour à la fois dans les environnements de test et de production.
 

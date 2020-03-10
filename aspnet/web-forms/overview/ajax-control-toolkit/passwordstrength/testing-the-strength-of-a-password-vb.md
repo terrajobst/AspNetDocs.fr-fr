@@ -9,11 +9,11 @@ ms.assetid: 9215a37f-3133-4887-8ed2-3689f3a53551
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-vb
 msc.type: authoredcontent
 ms.openlocfilehash: b614e1788eeafc175dd792ec6d3e4619f9ea2b7a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606249"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78627301"
 ---
 # <a name="testing-the-strength-of-a-password-vb"></a>Test de la force d’un mot de passe (VB)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Les mots de passe sont nécessaires presque n’importe où, de sorte que les utilisateurs paresseux ont tendance à choisir des mots de passe simples faciles à rompre. Le contrôle PasswordStrength dans ASP.NET AJAX Control Toolkit peut vérifier la qualité d’un mot de passe.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Les mots de passe sont nécessaires presque n’importe où, de sorte que les utilisateurs paresseux ont tendance à choisir des mots de passe simples faciles à rompre. Le contrôle `PasswordStrength` de la boîte à outils de contrôle AJAX ASP.NET peut vérifier la qualité d’un mot de passe.
 

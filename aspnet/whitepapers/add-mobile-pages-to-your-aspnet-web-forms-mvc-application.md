@@ -1,112 +1,112 @@
 ---
 uid: whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application
-title: 'Procédure : Ajouter des Pages mobiles à vos formulaires Web ASP.NET / MVC Application | Microsoft Docs'
+title: 'Comment : ajouter des pages mobiles à votre application ASP.NET Web Forms/MVC | Microsoft Docs'
 author: rick-anderson
-description: Cette procédure décrit différentes façons de servir des pages optimisées pour les appareils mobiles à partir de vos pages Web Forms ASP.NET / application MVC et suggère architecturales et...
+description: Cette rubrique décrit les différentes façons de fournir des pages optimisées pour les appareils mobiles à partir de votre application ASP.NET Web Forms/MVC, et suggère l’architecture et...
 ms.author: riande
 ms.date: 01/20/2011
 ms.assetid: 3124f28e-cc32-418a-afe3-519fa56f4c36
 msc.legacyurl: /whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application
 msc.type: content
 ms.openlocfilehash: 63c555358d06a9506bb5c8c993800c3307108192
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65114446"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78572736"
 ---
-# <a name="how-to-add-mobile-pages-to-your-aspnet-web-forms--mvc-application"></a>Procédure : Ajouter des pages mobiles à votre application ASP.NET Web Forms / MVC
+# <a name="how-to-add-mobile-pages-to-your-aspnet-web-forms--mvc-application"></a>Comment : ajouter des pages mobiles à votre application ASP.NET Web Forms/MVC
 
 > **S’applique à**
 > 
-> - Version de Web Forms ASP.NET 4.0
-> - ASP.NET MVC version 3.0
+> - ASP.NET Web Forms version 4,0
+> - ASP.NET MVC version 3,0
 > 
 > **Résumé**
 > 
-> Cette procédure décrit différentes façons de servir des pages optimisées pour les appareils mobiles à partir de vos pages Web Forms ASP.NET / application MVC et suggère architecturales et les problèmes à prendre en compte lorsque vous ciblez une large gamme de périphériques de conception. Ce document explique également pourquoi ASP.NET Mobile Controls à partir d’ASP.NET 2.0 à 3.5 sont désormais obsolètes et présente des alternatives modernes.
+> Ce guide décrit les différentes façons de fournir des pages optimisées pour les appareils mobiles à partir de votre application ASP.NET Web Forms/MVC, et suggère des problèmes d’architecture et de conception à prendre en compte lors du ciblage d’un large éventail d’appareils. Ce document explique également pourquoi les contrôles mobiles ASP.NET de ASP.NET 2,0 à 3,5 sont désormais obsolètes et aborde certaines alternatives modernes.
 
-## <a name="contents"></a>Sommaire
+## <a name="contents"></a>Contenu
 
-- Vue d'ensemble
-- Options architecturales
-- Détection de navigateurs et de périphériques
-- Comment les applications Web Forms ASP.NET peuvent présenter des pages spécifiques à mobile
+- Présentation
+- Options d’architecture
+- Détection des navigateurs et des appareils
+- Comment les applications Web Forms ASP.NET peuvent présenter des pages spécifiques aux appareils mobiles
 - Comment les applications ASP.NET MVC peuvent présenter des pages spécifiques à mobile
 - Ressources supplémentaires
 
-Pour obtenir des exemples de code téléchargeables illustrant les techniques de ce livre blanc pour ASP.NET Web Forms et MVC, consultez [Mobile Apps & Sites avec ASP.NET](https://docs.microsoft.com/aspnet/mobile/overview).
+Pour obtenir des exemples de code téléchargeables illustrant les techniques de ce livre blanc pour ASP.NET Web Forms et MVC, consultez [Mobile Apps & sites avec ASP.net](https://docs.microsoft.com/aspnet/mobile/overview).
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Présentation
 
-Les appareils mobiles – smartphones, téléphones et tablettes – continuent de croître en popularité comme approche visant à accéder au Web. Pour de nombreux développeurs web et orientées sur le web des entreprises, cela signifie qu’il est plus en plus important de fournir une formidable expérience de navigation pour les visiteurs à l’aide de ces appareils.
+Appareils mobiles : smartphones, téléphones et tablettes : continuez à augmenter leur popularité en tant que moyen d’accéder au Web. Pour de nombreux développeurs Web et entreprises orientées Web, cela signifie qu’il est de plus en plus important de fournir une expérience de navigation exceptionnelle aux visiteurs qui utilisent ces appareils.
 
-### <a name="how-earlier-versions-of-aspnet-supported-mobile-browsers"></a>Versions antérieures des navigateurs mobiles ASP.NET pris en charge
+### <a name="how-earlier-versions-of-aspnet-supported-mobile-browsers"></a>Comment les versions antérieures de ASP.NET prenait en charge les navigateurs mobiles
 
-Les versions d’ASP.NET 2.0 à 3.5 inclus *ASP.NET Mobile Controls*: un ensemble de contrôles de serveur pour les appareils mobiles dans le *System.Web.Mobile.dll* assembly et le  *System.Web.UI.MobileControls* espace de noms. L’assembly est toujours inclus dans ASP.NET 4, mais il est déconseillé. Les développeurs sont invités à migrer vers des approches plus modernes, tels que ceux décrits dans ce document.
+Les versions 2,0 à 3,5 comprenaient les *contrôles mobiles ASP.net*: un ensemble de contrôles serveur pour les périphériques mobiles dans l’assembly *System. Web. mobile. dll* et l’espace de noms *System. Web. UI. MobileControls* . L’assembly est toujours inclus dans ASP.NET 4, mais il est déconseillé. Les développeurs sont invités à migrer vers des approches plus modernes, telles que celles décrites dans ce document.
 
-Pourquoi ASP.NET Mobile Controls ont été marqués comme étant obsolète parce que leur conception est axée sur les téléphones mobiles qui étaient courantes autour de 2005 et versions antérieures. Les contrôles sont principalement conçus pour restituer un balisage WML ou cHTML (au lieu de HTML standard) pour les navigateurs WAP de l’époque. Mais WAP, WML et cHTML ne sont plus pertinentes pour la plupart des projets, étant donné que HTML est devenu le langage de balisage omniprésent pour les navigateurs mobiles et de bureau similaires.
+La raison pour laquelle les contrôles mobiles ASP.NET ont été marqués comme obsolètes est que leur conception est axée sur les téléphones mobiles qui étaient courantes autour de 2005 et des versions antérieures. Les contrôles sont principalement conçus pour restituer le balisage WML ou cHTML (au lieu du code HTML normal) pour les navigateurs WAP de cette ère. Mais WAP, WML et cHTML ne sont plus pertinents pour la plupart des projets, car HTML est devenu le langage de balisage omniprésent pour les navigateurs mobiles et de bureau.
 
-### <a name="the-challenges-of-supporting-mobile-devices-today"></a>Les problèmes de prise en charge des appareils mobiles aujourd'hui
+### <a name="the-challenges-of-supporting-mobile-devices-today"></a>Défis actuels de la prise en charge des appareils mobiles
 
-Bien que les navigateurs mobiles prennent désormais en charge quasiment tous les HTML, vous toujours pose nombreux défis visant à créer des expériences exceptionnelles de navigation mobiles :
+Bien que les navigateurs mobiles prennent désormais presque en charge le format HTML, vous serez toujours confronté à de nombreux défis quand vous cherchiez à créer des expériences de navigation mobile exceptionnelles :
 
-- ***Taille de l’écran*** : appareils mobiles varient considérablement dans le formulaire, et leurs écrans sont souvent beaucoup plus petite que les moniteurs de bureau. Par conséquent, vous devrez peut-être concevoir des dispositions de page complètement différente pour eux.
-- ***Entrée des méthodes*** – certains appareils ont les claviers, certains ont des pointes de lecture, d’autres personnes utilisent la fonctionnalité tactile. Vous devrez peut-être envisager de navigation de plusieurs méthodes d’entrée de données et des mécanismes.
-- ***Conformité aux normes*** – nombreux navigateurs mobiles ne prennent pas en charge les dernières normes HTML, CSS et JavaScript.
-- ***La bande passante*** : performances du réseau données cellulaires varie fortement et certains utilisateurs finaux se trouvent sur les tarifs qui facturent en mégaoctets.
+- ***Taille*** de l’écran : les périphériques mobiles varient considérablement en termes de format et leurs écrans sont souvent beaucoup plus petits que les moniteurs de bureau. Par conséquent, vous devrez peut-être concevoir des mises en page entièrement différentes pour celles-ci.
+- ***Méthodes d’entrée*** : certains appareils ont des pavés tactiles, d’autres ont des styluses, d’autres utilisent Touch. Vous devrez peut-être prendre en compte plusieurs mécanismes de navigation et méthodes d’entrée de données.
+- ***Conformité aux normes*** : de nombreux navigateurs mobiles ne prennent pas en charge les dernières normes html, CSS et JavaScript.
+- ***Bande passante*** : les performances du réseau de données cellulaires varient d’un caractère à l’autres, et certains utilisateurs finaux sont sur les tarifs facturés au mégaoctet.
 
-Il n’existe aucune solution uniformisée ; votre application devra ressemblent et se comportent différemment en fonction de l’appareil qui y accède. Selon le niveau de prise en charge mobile que vous souhaitez, cela peut être un défi pour les développeurs web plus grand que le bureau « entre les navigateurs » a toujours été.
+Il n’existe pas de solution unique et adaptée à tous. votre application doit s’afficher et se comporter différemment en fonction de l’appareil qui y accède. En fonction du niveau de prise en charge mobile que vous souhaitez, il peut s’agir d’un défi plus important pour les développeurs Web que les « conflits de navigateur ».
 
-Développeurs qui approchent de prise en charge de navigateur mobile pour la première fois souvent initialement pense qu’il est seulement important de prendre en charge peut-être les smartphones plus sophistiquées et plus récents (par exemple, Windows Phone 7, iPhone ou Android), étant donné que les développeurs possèdent souvent personnellement par appareils. Toutefois, les téléphones moins chers sont toujours extrêmement populaires, et leurs propriétaires les utilisez pour parcourir le web – en particulier dans les pays où les téléphones mobiles sont plus faciles à obtenir qu’une connexion haut débit. Votre entreprise devrez décider quelles gamme d’appareils pour prendre en charge en tenant compte de ses clients susceptibles de. Si vous créez une brochure en ligne pour une application spa d’intégrité de luxe, vous pouvez être une décision économique seulement pour cibler des smartphones avancées, tandis que si vous créez un système de réservation de ticket pour le cinéma, vous devez probablement pour prendre en compte pour les visiteurs avec fonctionnalité moins puissante téléphones.
+Les développeurs qui abordent la prise en charge des navigateurs mobiles pour la première fois sont souvent considérés comme étant importants pour prendre en charge les smartphones les plus récents et les plus sophistiqués (par exemple, Windows Phone 7, iPhone ou Android), peut-être parce que les développeurs sont souvent personnellement propriétaires de tels appareil. Toutefois, les téléphones les plus chers sont toujours extrêmement populaires et leurs propriétaires les utilisent pour naviguer sur le Web, en particulier dans les pays où les téléphones mobiles sont plus faciles à obtenir qu’une connexion large bande. Votre entreprise doit décider de la plage d’appareils à prendre en compte en considérant ses clients probables. Si vous créez une brochure en ligne pour un spa d’intégrité de luxe, vous pouvez prendre une décision commerciale uniquement pour cibler des smartphones avancés, tandis que si vous créez un système de réservation de tickets pour un Cinema, vous devrez probablement tenir compte des visiteurs avec des fonctionnalités moins puissantes numéros.
 
-## <a name="architectural-options"></a>Options architecturales
+## <a name="architectural-options"></a>Options d’architecture
 
-Avant de passer aux détails techniques spécifiques de ASP.NET Web Forms ou MVC, notez que les développeurs web ont en général les trois options principales pour prendre en charge des navigateurs mobiles :
+Avant d’accéder aux détails techniques spécifiques de ASP.NET Web Forms ou MVC, sachez que les développeurs Web en général disposent de trois options principales pour la prise en charge des navigateurs mobiles :
 
-1. ***Ne faites rien :*** vous pouvez simplement créer une application web standard, orienté bureautique et s’appuient sur les navigateurs mobiles pour la rendre de façon acceptable. 
+1. ***Ne rien faire :*** Il vous suffit de créer une application Web standard et orientée bureau, et de vous appuyer sur des navigateurs mobiles pour le rendre acceptable. 
 
-    - **Avantage**: C’est l’option la moins coûteux à implémenter et gérer : des tâches ne supplémentaires
-    - **Inconvénient**: Offre l’expérience de l’utilisateur final pire : 
+    - **Avantage**: il s’agit de l’option la plus économique pour mettre en œuvre et gérer, pas de travail supplémentaire
+    - **Inconvénient**: donne le pire expérience de l’utilisateur final : 
 
-        - Les smartphones dernier peut rendre votre code HTML tout aussi bien en tant qu’un navigateur de bureau, mais les utilisateurs seront obligés toujours effectuer un zoom et faire défiler horizontalement et verticalement pour consommer votre contenu sur un petit écran. Ceci est loin d’être optimale.
-        - Appareils plus anciens et les téléphones peuvent échouer rendre votre balisage d’une manière satisfaisante.
-        - Même sur les périphériques tablette dernière (dont les écrans peuvent être aussi volumineux que les écrans d’ordinateurs portables), interaction différentes règles s’appliquent. Entrées tactiles fonctionnement mieux avec des boutons plus volumineux et des liens spread plus éloigné, et il n’existe aucun moyen de la souris un curseur de la souris au-dessus d’un menu volant.
-2. ***Résoudre le problème sur le client* –** avec usage modéré des CSS et [amélioration progressive](http://en.wikipedia.org/wiki/Progressive_enhancement) vous pouvez créer le balisage, les styles et les scripts qui s’adaptent à n’importe quel navigateur les exécute. Par exemple, avec [les requêtes de média CSS 3](http://www.w3.org/TR/2010/CR-css3-mediaqueries-20100727/), vous pouvez créer une disposition qui transforme en une disposition de colonne unique sur les appareils dont les écrans sont plus étroits qu’un seuil défini. 
+        - Les derniers smartphones peuvent afficher votre code HTML tout aussi bien qu’un navigateur de bureau, mais les utilisateurs sont toujours obligés de zoomer et de faire défiler horizontalement et verticalement pour consommer votre contenu sur un petit écran. Cette solution est loin d’être optimale.
+        - Les appareils plus anciens et les téléphones de fonctionnalités risquent de ne pas pouvoir afficher votre balisage de manière satisfaisante.
+        - Même sur les derniers appareils tablettes (dont les écrans peuvent être aussi volumineux que les écrans des ordinateurs portables), différentes règles d’interaction s’appliquent. Les entrées tactiles fonctionnent mieux avec les plus grands boutons et liens, et il n’existe aucun moyen de pointer le curseur de la souris sur un menu volant.
+2. ***Résoudre le problème sur le client* :** avec une utilisation soigneuse de CSS et une [amélioration progressive](http://en.wikipedia.org/wiki/Progressive_enhancement) , vous pouvez créer des balises, des styles et des scripts qui s’adaptent à n’importe quel navigateur qui les exécute. Par exemple, avec les [requêtes de média CSS 3](http://www.w3.org/TR/2010/CR-css3-mediaqueries-20100727/), vous pouvez créer une disposition à plusieurs colonnes qui convertit une disposition de colonne unique sur les appareils dont les écrans sont plus étroits qu’un seuil choisi. 
 
-    - **Avantage**: Optimise le rendu de l’appareil en cours d’utilisation, même pour les appareils de futures inconnus en fonction de toutes les caractéristiques d’entrée et écran sont-ils spécifique
-    - **Avantage**: Facilement vous permet de partager la logique côté serveur sur tous les types d’appareils – duplication minimale de code ou l’effort
-    - **Inconvénient**: Les appareils mobiles sont donc différents à partir d’appareils de bureau que pourrait vraiment vous vos pages mobiles à être totalement différente de vos pages de bureau, affichant des informations différentes. Ces variations peuvent être inefficaces ou impossible d’atteindre efficacement via CSS seul, surtout en considérant comment incohérente anciens appareils interprètent les règles CSS. Cela est particulièrement vrai pour les attributs de CSS 3.
-    - **Inconvénient**: Ne fournit aucune prise en charge pour différents logique côté serveur et des flux de travail pour différents appareils. Vous ne peut pas, par exemple, implémenter un workflow simplifié du retrait panier d’achat pour les utilisateurs mobiles au moyen de CSS seul.
-    - **Inconvénient**: Utilisation de la bande passante inefficace. Serveur vous devrez peut-être transmettre le balisage et les styles qui s’appliquent à tous les appareils possible, même si l’appareil cible utilise uniquement un sous-ensemble de ces informations.
-3. ***Résoudre le problème sur le serveur* –** si votre serveur sait quel appareil accède à, ou du moins les caractéristiques de ces périphériques, tels que sa taille d’écran et la méthode d’entrée, et qu’il s’agisse d’un appareil mobile : il peut s’exécuter une logique différente et balisage HTML différent sortie. 
+    - **Avantage**: optimise le rendu pour l’appareil spécifique en cours d’utilisation, même pour les futurs appareils inconnus en fonction de l’écran et des caractéristiques d’entrée dont il dispose.
+    - **Avantage**: vous permet de partager facilement la logique côté serveur sur tous les types d’appareils : duplication minimale du code ou de l’effort
+    - **Inconvénient**: les appareils mobiles sont tellement différents des appareils de bureau que vous pouvez vraiment souhaiter que vos pages mobiles soient complètement différentes de celles de votre bureau, en présentant différentes informations. Ces variations peuvent être inefficaces ou impossibles à réaliser de manière fiable par le biais de CSS uniquement, en tenant compte notamment de la façon dont les appareils plus anciens interprètent les règles CSS. Cela est particulièrement vrai pour les attributs CSS 3.
+    - **Inconvénient**: ne fournit pas de prise en charge pour divers flux de travail et logique côté serveur pour différents appareils. Vous ne pouvez pas, par exemple, implémenter un flux de travail de validation de panier d’achat simplifié pour les utilisateurs mobiles au moyen de CSS uniquement.
+    - **Inconvénient**: utilisation inefficace de la bande passante. Vous devrez peut-être transmettre le balisage et les styles qui s’appliquent à tous les appareils possibles, même si l’appareil cible n’utilise qu’un sous-ensemble de ces informations.
+3. ***Résoudre le problème sur le serveur* :** Si votre serveur connaît l’appareil qui y accède, ou au moins les caractéristiques de ce périphérique, telles que sa taille d’écran et sa méthode d’entrée, et s’il s’agit d’un périphérique mobile, il peut exécuter une logique différente et générer une autre balise HTML. 
 
-    - **Avantage :** Flexibilité maximale. Il n’existe aucune limite à combien vous pouvez varier votre logique côté serveur pour les mobiles ou optimiser votre balisage pour la disposition souhaitée, spécifique au périphérique.
-    - **Avantage :** Utilisation de la bande passante efficace. Il vous suffit de vous transmettre le balisage et les informations de style qui va utiliser l’appareil cible.
-    - **Inconvénient :** Force parfois la répétition d’effort ou de code (par exemple, ce qui vous créer des copies similaires mais légèrement différentes de vos pages Web Forms ou les vues MVC). Où possible que vous serez factoriser logique commune dans une couche sous-jacente ou service, mais toujours, certaines parties de votre code d’interface utilisateur ou de balisage peut-être être dupliqués et de la maintenance en parallèle.
-    - **Inconvénient :** Détection de l’appareil n’est pas triviale. Il requiert une liste ou une base de données de types d’appareils connus et de leurs caractéristiques (qui ne peuvent toujours être parfaitement à jour) et n’est pas garanti pour faire correspondre chaque requête entrante. Ce document décrit certaines options et leurs pièges ultérieurement.
+    - **Avantage :** Flexibilité maximale. Il n’y a aucune limite à la variation de la logique côté serveur pour les appareils mobiles ou à l’optimisation de votre balisage pour la mise en page souhaitée spécifique à l’appareil.
+    - **Avantage :** Utilisation efficace de la bande passante. Vous devez uniquement transmettre les informations de balisage et de style que l’appareil cible va utiliser.
+    - **Inconvénient :** Impose parfois des répétitions d’effort ou de code (par exemple, en créant des copies similaires, mais légèrement différentes, de vos pages Web Forms ou vues MVC). Dans la mesure du possible, vous allez factoriser la logique commune dans une couche ou un service sous-jacent, mais il se peut que certaines parties du code ou du balisage de l’interface utilisateur doivent être dupliquées, puis maintenues en parallèle.
+    - **Inconvénient :** La détection des appareils n’est pas simple. Elle nécessite une liste ou une base de données de types d’appareils connus et leurs caractéristiques (qui ne sont pas toujours parfaitement à jour) et n’est pas garantie de correspondre précisément à chaque demande entrante. Ce document décrit quelques options et leurs pièges plus tard.
 
-Pour obtenir les meilleurs résultats, la plupart des développeurs trouver que dont ils ont besoin de combiner des options (2) et (3). Des différences mineures stylistiques sont mieux prise en charge sur le client à l’aide de CSS ou même JavaScript, alors que les différences majeures dans le balisage, les flux de travail ou les données sont plus efficacement implémentés dans le code côté serveur.
+Pour obtenir les meilleurs résultats, la plupart des développeurs doivent combiner les options (2) et (3). Les différences stylistiques mineures sont mieux adaptées sur le client à l’aide de CSS ou même de JavaScript, tandis que les principales différences entre les données, le flux de travail ou le balisage sont implémentées le plus efficacement dans le code côté serveur.
 
-### <a name="this-paper-focuses-on-server-side-techniques"></a>Ce document se concentre sur les techniques de côté serveur
+### <a name="this-paper-focuses-on-server-side-techniques"></a>Ce document se concentre sur les techniques côté serveur
 
-Dans la mesure où ASP.NET Web Forms et MVC sont les deux technologies principalement côté serveur, ce livre blanc se concentrera sur les techniques de côté serveur qui permettent de générer différents balisages et une logique pour les navigateurs mobiles. Bien sûr, vous pouvez également combiner cela avec n’importe quelle technique côté client (par exemple, CSS 3 les requêtes de média, amélioration progressive JavaScript), mais qui est plus une question de conception web de développement ASP.NET.
+Étant donné que ASP.NET Web Forms et MVC sont tous deux essentiellement des technologies côté serveur, ce livre blanc se concentre sur les techniques côté serveur qui vous permettent de produire différentes balises et logiques pour les navigateurs mobiles. Bien entendu, vous pouvez également combiner cela avec toute technique côté client (par exemple, les requêtes de média CSS 3, le JavaScript d’amélioration progressive), mais c’est plus une question de conception Web que le développement ASP.NET.
 
-## <a name="browser-and-device-detection"></a>Détection de navigateurs et de périphériques
+## <a name="browser-and-device-detection"></a>Détection des navigateurs et des appareils
 
-Le composant clé requis pour toutes les techniques de côté serveur pour prendre en charge des appareils mobiles consiste à savoir de quel appareil à l’aide de votre visiteur. En fait, encore mieux que de savoir le nombre de fabricant et modèle de cet appareil est de connaître le *caractéristiques* de l’appareil. Caractéristiques peuvent inclure :
+La condition essentielle pour toutes les techniques côté serveur pour la prise en charge des appareils mobiles consiste à savoir quel appareil votre visiteur utilise. En fait, il est même préférable de connaître le fabricant et le numéro de modèle de cet appareil en connaissant les *caractéristiques* de l’appareil. Les caractéristiques peuvent inclure :
 
-- Il est un appareil mobile ?
-- Méthode d’entrée (clavier/souris, tactile, clavier, joystick,...)
+- S’agit-il d’un appareil mobile ?
+- Méthode d’entrée (souris/clavier, toucher, clavier, manette de jeu,...)
 - Taille de l’écran (physiquement et en pixels)
-- Formats de supports multimédias et données pris en charge
+- Formats de données et de média pris en charge
 - Etc.
 
-Il est préférable de prendre des décisions basées sur les caractéristiques que le numéro de modèle, car, vous serez mieux équipé pour contrôler les appareils.
+Il est préférable de prendre des décisions basées sur des caractéristiques que le numéro de modèle, car vous serez alors mieux armé pour gérer les futurs appareils.
 
-### <a name="using-aspnets-built-in-browser-detection-support"></a>Utilisation d’ASP. Prise en charge de la détection de navigateur intégré du NET
+### <a name="using-aspnets-built-in-browser-detection-support"></a>Utilisation d’ASP. Prise en charge intégrée de la détection du navigateur par le réseau
 
-Les développeurs ASP.NET Web Forms et MVC peuvent découvrir immédiatement des caractéristiques importantes d’un navigateur visite en inspectant les propriétés de la *Request.Browser* objet. Par exemple, consultez
+ASP.NET Web Forms et les développeurs MVC peuvent découvrir immédiatement les caractéristiques importantes d’un navigateur visité en inspectant les propriétés de l’objet *Request. Browser* . Par exemple, consultez
 
 - Request.Browser.IsMobileDevice
 - Request.Browser.MobileDeviceManufacturer, Request.Browser.MobileDeviceModel
@@ -114,169 +114,169 @@ Les développeurs ASP.NET Web Forms et MVC peuvent découvrir immédiatement des
 - Request.Browser.SupportsXmlHttp
 - ...et beaucoup d’autres
 
-Dans les coulisses, la plate-forme ASP.NET correspond à entrant *Agent utilisateur* en-tête HTTP de (UA) par rapport aux expressions régulières dans un ensemble de fichiers XML de définition de navigateur. Par défaut la plateforme comprend des définitions pour de nombreux périphériques mobiles courants, et vous pouvez ajouter des fichiers de définition de navigateur personnalisés pour d’autres que vous voulez reconnaître. Pour plus d’informations, consultez la page MSDN [contrôles serveur Web ASP.NET et les fonctionnalités du navigateur](https://msdn.microsoft.com/library/x3k2ssx2.aspx).
+En arrière-plan, la plateforme ASP.NET correspond à l’en-tête HTTP UA ( *user-agent* ) entrant par rapport aux expressions régulières dans un ensemble de fichiers XML de définition de navigateur. Par défaut, la plateforme comprend des définitions pour de nombreux périphériques mobiles courants et vous pouvez ajouter des fichiers de définition de navigateur personnalisés pour d’autres que vous souhaitez reconnaître. Pour plus d’informations, consultez la page MSDN [ASP.net les contrôles serveur Web et les fonctionnalités du navigateur](https://msdn.microsoft.com/library/x3k2ssx2.aspx).
 
-### <a name="using-the-wurfl-device-database-via-51degreesmobi-foundation"></a>À l’aide de la base de données WURFL appareil via 51Degrees.mobi Foundation
+### <a name="using-the-wurfl-device-database-via-51degreesmobi-foundation"></a>Utilisation de la base de données d’appareils WURFL via 51Degrees.mobi Foundation
 
-Bien que ASP. Prise en charge de la détection de navigateur intégré du NET sera suffisant pour de nombreuses applications, il existe deux principaux cas lorsqu’il ne peut pas être suffisamment :
+Pendant l’ASP. La prise en charge intégrée de la détection du navigateur de .net suffira à de nombreuses applications, mais il existe deux cas principaux dans lesquels il peut ne pas suffire :
 
-- ***Vous souhaitez reconnaître les derniers appareils***(sans création manuelle des fichiers de définition de navigateur pour eux). Notez que les fichiers de définition de navigateur du .NET 4 ne sont pas assez récentes pour reconnaître le Windows Phone 7, les téléphones Android, les navigateurs Opera Mobile ou iPad d’Apple.
-- ***Vous avez besoin des informations plus détaillées sur les fonctionnalités de l’appareil***. Vous devrez peut-être savoir sur la méthode d’entrée d’un appareil (par exemple, tactiles vs du pavé numérique) ou quel audio met en forme le navigateur prend en charge. Ces informations n’est pas disponibles dans les fichiers de définition de navigateur standards.
+- ***Vous souhaitez reconnaître les appareils les plus récents***(sans créer manuellement de fichiers de définition de navigateur pour eux). Notez que les fichiers de définition de navigateur de .NET 4 ne sont pas suffisamment récents pour reconnaître Windows Phone 7, les téléphones Android, les navigateurs mobiles Opera ou Apple iPad.
+- ***Vous avez besoin d’informations plus détaillées sur les fonctionnalités de l’appareil***. Vous devrez peut-être en savoir plus sur la méthode d’entrée d’un appareil (par exemple, tactile ou le clavier) ou sur les formats audio pris en charge par le navigateur. Ces informations ne sont pas disponibles dans les fichiers de définition de navigateur standard.
 
-Le [ *Wireless Universal Resource File* projet (WURFL)](http://wurfl.sourceforge.net/) conserve beaucoup plus à jour et détaillées d’informations sur les appareils mobiles en cours d’utilisation dès aujourd'hui.
+Le [projet WURFL ( *Wireless Universal Resource File* )](http://wurfl.sourceforge.net/) gère des informations plus récentes et détaillées sur les appareils mobiles utilisés aujourd’hui.
 
-La bonne nouvelle pour les développeurs .NET est que ASP. Fonctionnalité de détection de navigateur du NET étant extensible, il est possible d’améliorer afin de surmonter ces problèmes. Par exemple, vous pouvez ajouter l’open source [ *51Degrees.mobi Foundation* ](https://github.com/51Degrees/dotNET-Device-Detection) bibliothèque à votre projet. Il s’agit une IHttpModule d’ASP.NET ou d’un navigateur capacités du fournisseur (utilisable sur les applications Web Forms et MVC), qui lit les données WURFL et le raccorde à ASP directement. Mécanisme de détection du navigateur intégré du NET. Une fois que vous avez installé le module, *Request.Browser* contiendra soudain beaucoup plus précises des informations détaillées : il correctement reconnaîtra la plupart des appareils précédemment mentionnés et répertorier leurs capacités (y compris fonctionnalités supplémentaires telles que de la méthode d’entrée). Consultez la documentation du projet pour plus d’informations.
+La bonne nouvelle pour les développeurs .NET est qu’ASP. La fonctionnalité de détection du navigateur .net est extensible. il est donc possible de l’améliorer pour surmonter ces problèmes. Par exemple, vous pouvez ajouter la bibliothèque open source [*51Degrees.mobi Foundation*](https://github.com/51Degrees/dotNET-Device-Detection) à votre projet. Il s’agit d’un fournisseur de fonctionnalités ASP.NET IHttpModule ou Browser (utilisable sur les applications Web Forms et MVC), qui lit directement les données WURFL et les raccorde à ASP. Mécanisme de détection de navigateur intégré au réseau. Une fois que vous avez installé le module, *Request. Browser* contient soudainement des informations plus précises et détaillées : il reconnaît correctement un grand nombre des appareils mentionnés précédemment et répertorie leurs fonctionnalités (y compris des fonctionnalités supplémentaires telles que la méthode d’entrée). Pour plus d’informations, consultez la documentation du projet.
 
-## <a name="how-web-forms-applications-can-present-mobile-specific-pages"></a>Comment les applications Web Forms peuvent présenter des pages spécifiques à mobile
+## <a name="how-web-forms-applications-can-present-mobile-specific-pages"></a>Comment Web Forms applications peuvent présenter des pages spécifiques à mobile
 
-Par défaut, voici comment une toute nouvelle application Web Forms affiche sur les appareils mobiles courants :
+Par défaut, voici comment une nouvelle Web Forms application s’affiche sur les appareils mobiles courants :
 
 ![](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/_static/image1.png)
 
-Clairement, ni mise en forme soit très mobile-friendly : cette page a été conçue pour un moniteur de grande taille, en mode paysage, pas pour un petit écran orienté en mode portrait. Par conséquent, que pouvez-vous faire à ce sujet ?
+En clair, aucune disposition n’est très conviviale : cette page a été conçue pour une grande analyse orientée paysage, et non pour un petit écran orienté portrait. Que pouvez-vous faire ?
 
-Comme indiqué plus haut dans ce document, il existe de nombreuses façons de personnaliser vos pages pour les appareils mobiles. Certaines techniques sont basées sur serveur, d’autres exécutent sur le client.
+Comme nous l’avons vu plus haut dans ce document, il existe de nombreuses façons de personnaliser vos pages pour les appareils mobiles. Certaines techniques sont basées sur un serveur, d’autres s’exécutent sur le client.
 
-### <a name="creating-a-mobile-specific-master-page"></a>Création d’une page maître spécifique mobile
+### <a name="creating-a-mobile-specific-master-page"></a>Création d’une page maître mobile
 
-Selon vos besoins, vous pourrez peut-être utiliser le même Web Forms pour tous les visiteurs, mais deux séparer les pages maîtres : un pour les visiteurs du bureau, un autre pour les visiteurs mobiles. Cela vous donne la flexibilité de la modification de la feuille de style CSS ou votre balisage HTML de niveau supérieur en fonction des appareils mobiles, sans vous obliger à dupliquer la logique de page.
+En fonction de vos besoins, vous pourrez peut-être utiliser le même Web Forms pour tous les visiteurs, mais avoir deux pages maîtres distinctes : une pour les visiteurs du bureau, une autre pour les visiteurs mobiles. Cela vous donne la possibilité de modifier la feuille de style CSS ou votre balise HTML de niveau supérieur pour l’adapter aux appareils mobiles, sans avoir à vous obliger à dupliquer toute logique de page.
 
-Il est facile à réaliser. Par exemple, vous pouvez ajouter un gestionnaire PreInit telle que la suivante à un formulaire Web :
+C’est facile à faire. Par exemple, vous pouvez ajouter un gestionnaire de préinit comme celui-ci à un formulaire Web :
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample1.cs)]
 
-Maintenant, créez une page maître nommée Mobile.Master dans le dossier de niveau supérieur de votre application, et il sera utilisé lors de la détection d’un appareil mobile. Votre page maître mobile peut faire référence à une feuille de style CSS spécifiques à mobile si nécessaire. Visiteurs bureau continueront de voir votre page maître par défaut, pas celui mobile.
+Créez maintenant une page maître appelée mobile. Master dans le dossier de niveau supérieur de votre application, et elle sera utilisée lorsqu’un appareil mobile est détecté. Votre page maître mobile peut faire référence à une feuille de style CSS spécifique à mobile si nécessaire. Les visiteurs du Bureau verront toujours votre page maître par défaut, pas la page mobile.
 
-### <a name="creating-independent-mobile-specific-web-forms"></a>Création de formulaires de Web mobiles spécifiques indépendants
+### <a name="creating-independent-mobile-specific-web-forms"></a>Création de Web Forms indépendantes des appareils mobiles
 
-Pour une flexibilité maximale, vous pouvez aller plus loin que le simple fait de disposer des pages maîtres distincts pour différents types d’appareil. Vous pouvez implémenter deux *totalement séparer les ensembles de pages Web Forms* – un défini pour les navigateurs de bureau, un autre défini pour les mobiles. Cela fonctionne mieux si vous souhaitez présenter des informations très différentes ou des flux de travail aux visiteurs mobiles. Le reste de cette section décrit cette approche en détail.
+Pour une flexibilité maximale, vous pouvez aller plus loin que le simple fait d’avoir des pages maîtres distinctes pour différents types d’appareils. Vous pouvez implémenter deux *jeux de pages de Web Forms entièrement distincts* , un ensemble pour les navigateurs de bureau, un autre pour les appareils mobiles. Cela fonctionne mieux si vous souhaitez présenter des informations ou des flux de travail très différents aux visiteurs mobiles. Le reste de cette section décrit cette approche en détail.
 
-En supposant que vous disposez déjà d’une application Web Forms conçue pour les navigateurs de bureau, le plus simple pour continuer consiste à créer un sous-dossier appelé « Mobile » au sein de votre projet et créer vos pages mobiles il. Vous pouvez construire un sous-site entière, avec ses propres pages maîtres, les feuilles de style et les pages, en utilisant les mêmes techniques que vous utiliseriez pour toute autre application Web Forms. Vous ne devez pas nécessairement produire un mobile équivalent pour *chaque* page dans votre site de bureau ; vous pouvez choisir de quel sous-ensemble de fonctionnalités de sens pour les visiteurs mobiles.
+En supposant que vous disposiez déjà d’une application Web Forms conçue pour les navigateurs de bureau, le moyen le plus simple consiste à créer un sous-dossier appelé « mobile » dans votre projet et à y créer vos pages mobiles. Vous pouvez créer un sous-site entier, avec ses propres pages maîtres, feuilles de style et pages, à l’aide des mêmes techniques que celles que vous utiliseriez pour n’importe quelle autre application Web Forms. Vous n’avez pas nécessairement besoin de produire un équivalent mobile pour *chaque* page de votre site de bureau. vous pouvez choisir le sous-ensemble de fonctionnalités le plus approprié pour les visiteurs mobiles.
 
-Vos pages mobiles peuvent partager des ressources de statiques courants (tels que des images, JavaScript ou CSS fichiers) avec vos pages régulières si vous le souhaitez. Étant donné que votre dossier « Mobile » sera *pas* être marquée comme une application distincte quand ils sont hébergés dans IIS (c’est juste un sous-dossier simple des pages Web Forms), il sera également partager les mêmes configuration, les données de Session et les autres infrastructure en tant que votre pages de bureau.
+Vos pages mobiles peuvent partager des ressources statiques courantes (telles que des images, des fichiers JavaScript ou CSS) avec vos pages normales si vous le souhaitez. Étant donné que votre dossier « mobile » n’est *pas* marqué comme une application distincte lorsqu’il est hébergé dans IIS (il s’agit simplement d’un sous-dossier simple de pages Web Forms), il partage également les mêmes données de configuration, de session et d’autres infrastructures que les pages de votre bureau.
 
 > [!NOTE]
-> Étant donné que cette approche implique généralement une duplication de code (pages mobiles sont susceptibles de partager certaines similitudes avec pages bureau), il est important de factoriser toute entreprise logique ou des données accès code commun dans une couche sous-jacente partagée ou un service. Sinon, vous allez double l’effort de création et gestion de votre application.
+> Étant donné que cette approche implique généralement une duplication de code (les pages mobiles sont susceptibles de partager des similarités avec les pages du bureau), il est important de prendre en compte toute logique métier ou code d’accès aux données commun dans une couche ou un service sous-jacent partagé. Dans le cas contraire, vous doublez l’effort de création et de maintenance de votre application.
 
-#### <a name="redirecting-mobile-visitors-to-your-mobile-pages"></a>Redirection des visiteurs mobiles à vos pages mobiles
+#### <a name="redirecting-mobile-visitors-to-your-mobile-pages"></a>Redirection des visiteurs mobiles vers vos pages mobiles
 
-Il est souvent utile de rediriger les visiteurs mobiles vers les pages mobiles uniquement sur le *premier* demander dans leur session de navigation (et non à chaque requête dans leur session), car :
+Il est souvent pratique de rediriger les visiteurs des appareils mobiles vers les pages mobiles uniquement lors de la *première* requête de leur session de navigation (et non à chaque demande dans leur session), car :
 
-- Vous pouvez autoriser puis facilement des visiteurs mobiles d’accès à vos pages de bureau s’ils le souhaitent – placez simplement un lien sur votre page maître qui mène à « Version de bureau ». Le visiteur n’être redirigé vers une page mobile, car il n’est plus la première demande dans sa session.
-- Il permet d’éviter le risque d’interférence avec des demandes de ressources dynamiques partagées entre les parties mobiles et de bureau de votre site (par exemple, si vous disposez d’un formulaire Web courantes qui affichent des parties de bureau et mobiles de votre site dans un IFRAME, ou que certains gestionnaires d’Ajax)
+- Vous pouvez ensuite facilement permettre aux visiteurs mobiles d’accéder aux pages de votre bureau, le cas échéant, de simplement placer un lien sur votre page maître qui passe à « version du bureau ». Le visiteur n’est pas redirigé vers une page mobile, car il ne s’agit plus de la première demande dans sa session.
+- Cela évite le risque d’interférence avec les demandes pour toutes les ressources dynamiques partagées entre les composants mobiles et de bureau de votre site (par exemple, si vous avez un formulaire Web commun qui s’affiche à la fois dans un IFRAME ou certains gestionnaires Ajax)
 
-Pour ce faire, vous pouvez placer votre logique de redirection dans un **Session\_Démarrer** (méthode). Par exemple, ajoutez la méthode suivante à votre fichier Global.asax.cs :
+Pour ce faire, vous pouvez placer votre logique de redirection dans une **Session\_méthode Start** . Par exemple, ajoutez la méthode suivante à votre fichier Global.asax.cs :
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample2.cs)]
 
-#### <a name="configuring-forms-authentication-to-respect-your-mobile-pages"></a>Configuration de l’authentification par formulaire afin de respecter vos pages mobiles
+#### <a name="configuring-forms-authentication-to-respect-your-mobile-pages"></a>Configuration de l’authentification par formulaire pour respecter vos pages mobiles
 
-Notez que l’authentification par formulaire fait certaines hypothèses sur où il peut rediriger les visiteurs pendant et après le processus d’authentification :
+Notez que l’authentification par formulaire fait certaines suppositions quant à l’emplacement où elle peut rediriger les visiteurs pendant et après le processus d’authentification :
 
-- Lorsqu’un utilisateur doit être authentifié, l’authentification par formulaire les redirige vers votre page de connexion du bureau, qu’ils soient un utilisateur de bureau ou mobile (car il a seulement un concept de *un* URL de connexion). En supposant que vous souhaitez appliquer un style votre page de connexion mobile différemment, vous avez besoin améliorer votre page de connexion de bureau afin qu’il redirige les utilisateurs mobiles vers une page de connexion de mobile distinct. Par exemple, ajoutez le code suivant à votre **desktop** login page code-behind : 
+- Lorsqu’un utilisateur doit être authentifié, l’authentification par formulaire les redirige vers la page de connexion du bureau, qu’il s’agisse d’un ordinateur de bureau ou d’un utilisateur mobile (parce qu’il n’a qu’un *concept d’URL* de connexion). En supposant que vous souhaitiez appliquer un style différent à votre page de connexion mobile, vous devez améliorer la page de connexion de votre bureau afin qu’il redirige les utilisateurs mobiles vers une page de connexion mobile distincte. Par exemple, ajoutez le code suivant à la page de connexion du **Bureau** code-behind : 
 
     [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample3.cs)]
-- Une fois un utilisateur se connecte, l’authentification par formulaire sera par défaut les redirige vers votre page d’accueil bureau (car il a seulement un concept de *un* page par défaut). Vous avez besoin améliorer votre page de connexion mobile afin qu’il redirige vers la page d’accueil de mobile après un journal réussie. Par exemple, ajoutez le code suivant à votre **mobile** login page code-behind : 
+- Une fois que l’utilisateur a réussi à se connecter, l’authentification par formulaire les redirige par défaut vers la page d’hébergement de votre bureau (car elle n’a qu’un concept d' *une* page par défaut). Vous devez améliorer votre page de connexion mobile afin qu’elle redirige vers la page d’hébergement mobile après une connexion réussie. Par exemple, ajoutez le code suivant à votre page de connexion **mobile** code-behind : 
 
     [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample4.cs)]
   
-  Ce code suppose que votre page comporte un contrôle de serveur de connexion appelé LoginUser, comme dans le modèle de projet par défaut.
+  Ce code suppose que votre page a un contrôle serveur de connexion appelé LoginUser, comme dans le modèle de projet par défaut.
 
 ### <a name="working-with-output-caching"></a>Utilisation de la mise en cache de sortie
 
-Si vous utilisez la mise en cache de sortie, prenez garde que par défaut qu'il est possible pour un utilisateur du Bureau à visiter une certaine URL (à l’origine de sa sortie doit être mis en cache), suivie d’un utilisateur mobile puis reçoit la sortie de postes de travail mis en cache. Cet avertissement s’applique si vous êtes simplement varying votre page maître par type de périphérique ou l’implémentation de totalement distincts de Web Forms par type d’appareil.
+Si vous utilisez la mise en cache de sortie, Méfiez-vous que, par défaut, un utilisateur de bureau peut consulter une certaine URL (provoquant la mise en cache de sa sortie), puis un utilisateur mobile qui reçoit ensuite la sortie du bureau mis en cache. Cet avertissement s’applique si vous faites simplement varier votre page maître par type d’appareil ou si vous implémentez des Web Forms entièrement séparés par type d’appareil.
 
-Pour éviter ce problème, vous pouvez demander à ASP.NET pour faire varier l’entrée du cache selon que le visiteur utilise un appareil mobile. Ajoutez un paramètre VaryByCustom à la déclaration de OutputCache de votre page comme suit :
+Pour éviter ce problème, vous pouvez demander à ASP.NET de faire varier l’entrée du cache selon que le visiteur utilise ou non un appareil mobile. Ajoutez un paramètre VaryByCustom à la déclaration OutputCache de votre page comme suit :
 
 [!code-aspx[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample5.aspx)]
 
-Ensuite, définissez *isMobileDevice* comme un cache personnalisé substituer des paramètre en ajoutant la méthode suivante à votre fichier Global.asax.cs :
+Ensuite, définissez *IsMobileDevice* en tant que paramètre de cache personnalisé en ajoutant la substitution de méthode suivante à votre fichier global.asax.cs :
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample6.cs)]
 
-Il s’assure que les visiteurs mobiles de la page ne reçoivent des sortie précédemment placée dans le cache par un visiteur de bureau.
+Cela permet de s’assurer que les visiteurs mobiles de la page ne reçoivent pas la sortie placée précédemment dans le cache par un visiteur du bureau.
 
-### <a name="a-working-example"></a>Un exemple fonctionnel
+### <a name="a-working-example"></a>Exemple fonctionnel
 
-Pour découvrir ces techniques en action, téléchargez [exemples de code de ce livre blanc](https://docs.microsoft.com/aspnet/mobile/overview). L’exemple d’application Web Forms redirige automatiquement les utilisateurs mobiles à un ensemble de pages mobiles spécifiques dans un sous-dossier appelé Mobile. Le balisage et le style de ces pages est optimisée pour les navigateurs mobiles, comme vous pouvez le constater dans les captures d’écran suivante :
+Pour voir ces techniques en action, téléchargez les [exemples de code de ce livre blanc](https://docs.microsoft.com/aspnet/mobile/overview). L’exemple d’application Web Forms redirige automatiquement les utilisateurs mobiles vers un ensemble de pages spécifiques à mobile dans un sous-dossier appelé mobile. Le balisage et le style de ces pages sont mieux optimisés pour les navigateurs mobiles, comme vous pouvez le constater dans les captures d’écran suivantes :
 
 ![](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/_static/image2.png)
 
-Pour plus de conseils sur l’optimisation de votre balisage et du CSS pour les navigateurs mobiles, consultez la section « Styling pages mobiles pour les navigateurs mobiles » plus loin dans ce document.
+Pour plus d’informations sur l’optimisation de vos balises et CSS pour les navigateurs mobiles, consultez la section « stylisation des pages mobiles pour les navigateurs mobiles » plus loin dans ce document.
 
 ## <a name="how-aspnet-mvc-applications-can-present-mobile-specific-pages"></a>Comment les applications ASP.NET MVC peuvent présenter des pages spécifiques à mobile
 
-Dans la mesure où le modèle Model-View-Controller dissocie la logique d’application (dans les contrôleurs) de la logique de présentation (dans les vues), vous pouvez choisir à partir d’une des approches suivantes pour gérer la prise en charge mobile dans le code côté serveur :
+Étant donné que le modèle Model-View-Controller dissocie la logique d’application (dans les contrôleurs) de la logique de présentation (dans les affichages), vous pouvez choisir l’une des approches suivantes pour gérer la prise en charge des appareils mobiles dans le code côté serveur :
 
-1. ***Utiliser les contrôleurs et les vues même pour les navigateurs de bureau et mobiles, mais afficher les vues différentes mises en page Razor selon le type de périphérique*** Cette option fonctionne mieux si vous affichez des données identiques sur tous les appareils, mais que vous souhaitez simplement fournir différentes feuilles de style CSS ou de modifier quelques éléments HTML de niveau supérieur pour les mobiles.
-2. ***Utiliser les contrôleurs de mêmes pour les navigateurs de bureau et mobiles, mais en effectuer le rendu des vues différentes selon le type d’appareil***. Cette option fonctionne mieux si vous êtes afficher à peu près les mêmes données et de fournir aux mêmes workflows pour les utilisateurs finaux, mais souhaitez restituer un balisage HTML très différent en fonction de l’appareil utilisé.
-3. ***Créer des zones séparées pour les navigateurs de bureau et mobiles, mise en œuvre des contrôleurs indépendants et les vues pour chaque*** Cette option fonctionne mieux si vous êtes affichage très différents écrans, contenant des informations différentes et début de l’utilisateur à travers différents flux de travail optimisé pour les types de périphériques. Cela peut signifier une répétition de code, mais vous pouvez réduire qui en factorisant logique commune dans une couche ou un service sous-jacent.
+1. ***utiliser les mêmes contrôleurs et vues pour les navigateurs de bureau et mobiles, mais afficher les vues avec différentes dispositions Razor en fonction du type d’appareil *.** Cette option fonctionne mieux si vous affichez des données identiques sur tous les appareils, mais que vous souhaitez simplement fournir des feuilles de style CSS différentes ou modifier quelques éléments HTML de niveau supérieur pour les appareils mobiles.
+2. ***Utilisez les mêmes contrôleurs pour les navigateurs de bureau et mobiles, mais Affichez des vues différentes selon le type d’appareil***. Cette option fonctionne mieux si vous affichez approximativement les mêmes données et fournissez les mêmes flux de travail pour les utilisateurs finaux, mais que vous souhaitez afficher des balises HTML très différentes pour les adapter à l’appareil utilisé.
+3. ***créer des zones distinctes pour les navigateurs de bureau et mobiles, en implémentant des contrôleurs et des vues indépendants pour chaque *.** Cette option fonctionne mieux si vous affichez des écrans très différents, contenant des informations différentes et conduisant l’utilisateur à l’aide de différents flux de travail optimisés pour leur type d’appareil. Cela peut signifier une répétition de code, mais vous pouvez réduire cela en factorisant une logique commune dans une couche ou un service sous-jacent.
 
-Si vous souhaitez prendre le **premier** option et modifier uniquement la mise en page Razor par type d’appareil, il est très facile. Il suffit de modifier votre \_ViewStart.cshtml de fichiers comme suit :
+Si vous souhaitez prendre la **première** option et modifier uniquement la disposition Razor par type d’appareil, c’est très facile. Il vous suffit de modifier votre \_fichier ViewStart. cshtml comme suit :
 
 [!code-cshtml[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample7.cshtml)]
 
-Vous pouvez désormais créer une disposition mobile appelée \_LayoutMobile.cshtml avec une structure de page et CSS règles optimisé pour les appareils mobiles.
+Vous pouvez maintenant créer une disposition spécifique à mobile appelée \_LayoutMobile. cshtml avec une structure de page et des règles CSS optimisées pour les appareils mobiles.
 
-Si vous souhaitez prendre le **deuxième** option rendu des vues totalement différente en fonction du type d’appareil du visiteur, consultez [billet de blog de Scott Hanselman](http://www.hanselman.com/blog/ABetterASPNETMVCMobileDeviceCapabilitiesViewEngine.aspx).
+Si vous souhaitez que la **deuxième** option affiche des affichages entièrement différents en fonction du type d’appareil du visiteur, consultez le billet [de blog de Scott Hanselman](http://www.hanselman.com/blog/ABetterASPNETMVCMobileDeviceCapabilitiesViewEngine.aspx).
 
-Le reste de ce document se concentre sur la **troisième** option-Création des contrôleurs distincts *et* vues pour les appareils mobiles, afin de contrôler exactement quel sous-ensemble de fonctionnalités est disponible pour les visiteurs mobiles.
+Le reste de ce document se concentre sur la **troisième** option : la création de contrôleurs *et* de vues distincts pour les appareils mobiles. vous pouvez ainsi contrôler exactement le sous-ensemble de fonctionnalités qui sont proposées aux visiteurs mobiles.
 
-### <a name="setting-up-a-mobile-area-within-your-aspnet-mvc-application"></a>Configuration d’une zone Mobile au sein de votre application ASP.NET MVC
+### <a name="setting-up-a-mobile-area-within-your-aspnet-mvc-application"></a>Configuration d’une zone mobile au sein de votre application ASP.NET MVC
 
-Vous pouvez ajouter une zone appelée « Mobile » pour une application ASP.NET MVC de façon normale : avec le bouton droit sur le nom de votre projet dans l’Explorateur de solutions, puis cliquez sur Ajouter à zone. Vous pouvez ensuite ajouter des contrôleurs et des vues comme vous le feriez pour n’importe quel autre zone dans une application ASP.NET MVC. Par exemple, ajouter à votre zone Mobile un nouveau contrôleur appelé HomeController pour agir en tant que page d’accueil pour les visiteurs mobiles.
+Vous pouvez ajouter une zone appelée « mobile » à une application ASP.NET MVC existante de manière normale : cliquez avec le bouton droit sur le nom de votre projet dans Explorateur de solutions, puis choisissez Ajouter à la zone. Vous pouvez ensuite ajouter des contrôleurs et des vues comme vous le feriez pour n’importe quelle autre zone au sein d’une application MVC ASP.NET. Par exemple, ajoutez à votre zone mobile un nouveau contrôleur appelé HomeController pour agir en tant que page d’accueil pour les visiteurs mobiles.
 
-### <a name="ensuring-the-url-mobile-reaches-the-mobile-homepage"></a>En garantissant la /Mobile URL atteint la page d’accueil mobile
+### <a name="ensuring-the-url-mobile-reaches-the-mobile-homepage"></a>Vérification que l’URL/mobile atteint la page d’accueil mobile
 
-Si vous souhaitez que l’URL /Mobile pour atteindre l’action de l’Index sur HomeController à l’intérieur de votre zone Mobile, vous devez apporter deux modifications mineures à votre configuration de routage. Tout d’abord, mettez à jour votre classe MobileAreaRegistration afin que HomeController est le contrôleur par défaut dans votre région Mobile, comme indiqué dans le code suivant :
+Si vous souhaitez que l’URL/mobile atteigne l’action d’index sur le HomeController à l’intérieur de votre zone mobile, vous devez apporter deux petites modifications à votre configuration de routage. Tout d’abord, mettez à jour votre classe MobileAreaRegistration pour que le HomeController soit le contrôleur par défaut dans votre zone mobile, comme illustré dans le code suivant :
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample8.cs)]
 
-Cela signifie que la page d’accueil mobile maintenant se trouve à /Mobile, plutôt que/Mobile/Home, car « Home » est désormais l’implicitement les nom de contrôleur par défaut pour les pages mobiles.
+Cela signifie que la page d’accueil mobile se trouve à présent dans/mobile, plutôt que/Mobile/Home, car « Accueil » est maintenant le nom de contrôleur par défaut implicite pour les pages mobiles.
 
-Ensuite, notez qu’en ajoutant un deuxième HomeController à votre application (par exemple, mobile celle qui, en plus un bureau existant), vous allez avez interrompu votre page d’accueil de postes de travail régulière. Elle échoue avec l’erreur «*plusieurs types ont été trouvés, qui correspondent le contrôleur nommé « Accueil »* ». Pour résoudre ce problème, vous devez mettre à jour votre configuration de routage de niveau supérieur (dans Global.asax.cs) pour spécifier que votre bureau HomeController doit être prioritaires lorsqu’il existe une ambiguïté :
+Ensuite, Notez qu’en ajoutant un deuxième HomeController à votre application (par exemple, le point de vue mobile, en plus de l’ordinateur de bureau existant), vous aurez endommagé votre page d’accueil de bureau standard. Elle échoue avec l’erreur «*plusieurs types trouvés qui correspondent au contrôleur nommé «orig »* ». Pour résoudre ce cas, mettez à jour votre configuration de routage de niveau supérieur (dans Global.asax.cs) pour spécifier que votre HomeController de bureau doit prendre la priorité lorsqu’il existe une ambiguïté :
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample9.cs)]
 
-Maintenant l’erreur passera et l’URL http :\/\/*votresite*/ atteindra la page d’accueil de bureau et http :\/\/*yoursite*/mobile/ sera Atteindre la page d’accueil mobile.
+L’erreur disparaît alors et l’URL http :\/\/*yoursite*/atteindra la page d’accueil du bureau et http :\/\/*yoursite*/mobile/atteindra la page d’accueil mobile.
 
-### <a name="redirecting-mobile-visitors-to-your-mobile-area"></a>Redirection des visiteurs mobiles à votre zone mobile
+### <a name="redirecting-mobile-visitors-to-your-mobile-area"></a>Redirection des visiteurs mobiles vers votre zone mobile
 
-Il existe plusieurs points d’extensibilité différents dans ASP.NET MVC, donc il existe de nombreuses méthodes possibles pour injecter la logique de redirection. Une option intéressante consiste à créer un attribut de filtre, tel que [RedirectMobileDevicesToMobileArea], qui effectue une redirection si les conditions suivantes sont remplies :
+Il existe de nombreux points d’extensibilité différents dans ASP.NET MVC, de sorte qu’il existe de nombreuses façons d’injecter la logique de redirection. Une option intéressante consiste à créer un attribut de filtre, [RedirectMobileDevicesToMobileArea], qui effectue une redirection si les conditions suivantes sont remplies :
 
-1. Il est la première requête dans la session utilisateur (par exemple, Session.IsNewSession est égal à true)
-2. La demande provient d’un navigateur mobile (par exemple, Request.Browser.IsMobileDevice est égal à true)
-3. L’utilisateur n’est pas déjà demandant une ressource dans la zone mobile (par exemple, le *chemin d’accès* partie de l’URL ne commence pas par /Mobile)
+1. Il s’agit de la première requête dans la session de l’utilisateur (par exemple, session. IsNewSession est égal à true)
+2. La requête provient d’un navigateur mobile (par exemple, Request. Browser. IsMobileDevice est égal à true)
+3. L’utilisateur n’a pas encore demandé de ressource dans la zone mobile (autrement dit, la partie *chemin d’accès* de l’URL ne commence pas par/mobile)
 
-L’exemple téléchargeable accompagnant ce livre blanc inclut une implémentation de cette logique. Il est implémenté comme un filtre d’autorisation, dérivé de AuthorizeAttribute, ce qui signifie qu’il puisse fonctionner correctement même si vous utilisez la mise en cache de sortie (dans le cas contraire, si un accès de première visiteur bureau certaine une URL, la sortie de postes de travail peuvent être mis en cache et les prise en charge pour visiteurs mobiles suivantes).
+L’exemple téléchargeable inclus dans ce livre blanc inclut une implémentation de cette logique. Elle est implémentée en tant que filtre d’autorisation, dérivé de AuthorizeAttribute, ce qui signifie qu’elle peut fonctionner correctement même si vous utilisez la mise en cache de sortie (sinon, si un visiteur du Bureau accède pour la première fois à une certaine URL, la sortie du Bureau peut être mise en cache, puis traitée à visiteurs itinérants suivants).
 
-Comme il s’agit d’un filtre, vous pouvez choisir d’appliquer à des contrôleurs spécifiques et des actions, par exemple,
+Comme il s’agit d’un filtre, vous pouvez choisir de l’appliquer à des contrôleurs et des actions spécifiques, par exemple,
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample10.cs)]
 
-… ou vous pouvez l’appliquer à tous les contrôleurs et les actions comme un MVC 3 *filtre global* dans votre fichier Global.asax.cs :
+… vous pouvez également l’appliquer à tous les contrôleurs et actions sous la forme d’un *filtre global* MVC 3 dans votre fichier global.asax.cs :
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample11.cs)]
 
 L’exemple téléchargeable montre également comment vous pouvez créer des sous-classes de cet attribut qui redirigent vers des emplacements spécifiques au sein de votre zone mobile. Cela signifie, par exemple, que vous pouvez :
 
-- Inscrire un filtre global comme indiqué ci-dessus qui envoie des visiteurs mobiles à la page d’accueil mobile par défaut.
-- Également appliquer un filtre de [RedirectMobileDevicesToMobileProductPage] spéciaux à une action « Afficher le produit » qui accepte les visiteurs mobiles à la version mobile de n’importe quelle page de produit qu’ils avaient demandé.
-- S’appliquent également autres sous-classes spéciales du filtre à des actions spécifiques, en redirigeant les visiteurs mobiles vers la page mobile équivalente
+- Inscrivez un filtre global comme indiqué ci-dessus, qui envoie par défaut les visiteurs mobiles à la page d’accueil mobile.
+- Appliquez également un filtre [RedirectMobileDevicesToMobileProductPage] spécial à une action « afficher le produit » qui amène les visiteurs mobiles à la version mobile de n’importe quelle page produit demandée.
+- Appliquer également d’autres sous-classes spéciales du filtre à des actions spécifiques, en redirigeant les visiteurs mobiles vers la page mobile équivalente
 
-### <a name="configuring-forms-authentication-to-respect-your-mobile-pages"></a>Configuration de l’authentification par formulaire afin de respecter vos pages mobiles
+### <a name="configuring-forms-authentication-to-respect-your-mobile-pages"></a>Configuration de l’authentification par formulaire pour respecter vos pages mobiles
 
-Si vous utilisez l’authentification par formulaire, vous devez noter que lorsqu’un utilisateur doit se connecter, il redirige automatiquement l’utilisateur à une seule « session » URL spécifique, qui est par défaut **/compte / d’ouverture de session**. Cela signifie que les utilisateurs mobiles peuvent être redirigés vers votre action bureau « connexion ».
+Si vous utilisez l’authentification par formulaire, vous devez noter que lorsqu’un utilisateur doit se connecter, il redirige automatiquement l’utilisateur vers une seule URL de « connexion » spécifique, qui est par défaut **/Account/Logon**. Cela signifie que les utilisateurs mobiles peuvent être redirigés vers l’action « connexion » de votre bureau.
 
-Pour éviter ce problème, ajouter une logique à votre bureau action « session » afin qu’il redirige les utilisateurs mobiles à nouveau à une action mobile « connexion ». Si vous utilisez la valeur par défaut du modèle d’application ASP.NET MVC, action mettre à jour du contrôle AccountController d’ouverture de session comme suit :
+Pour éviter ce problème, ajoutez une logique à l’action « connexion » de votre bureau afin qu’il redirige les utilisateurs mobiles vers une action « connexion » mobile. Si vous utilisez le modèle d’application ASP.NET MVC par défaut, mettez à jour l’action d’ouverture de session de AccountController comme suit :
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample12.cs)]
 
-… puis implémentez une action de « connexion » spécifiques à mobile approprié sur un contrôleur appelé AccountController dans votre zone Mobile.
+… puis implémentez une action « ouvrir une session » propre au mobile sur un contrôleur appelé AccountController dans votre zone mobile.
 
 ### <a name="working-with-output-caching"></a>Utilisation de la mise en cache de sortie
 
-Si vous utilisez le filtre [OutputCache], vous devez forcer l’entrée de cache à varient selon le type d’appareil. Par exemple, écrire :
+Si vous utilisez le filtre [OutputCache], vous devez forcer l’entrée du cache à varier selon le type d’appareil. Par exemple, écrivez :
 
 [!code-javascript[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample13.js)]
 
@@ -284,79 +284,79 @@ Ensuite, ajoutez la méthode suivante à votre fichier Global.asax.cs :
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample14.cs)]
 
-Il s’assure que les visiteurs mobiles de la page ne reçoivent des sortie précédemment placée dans le cache par un visiteur de bureau.
+Cela permet de s’assurer que les visiteurs mobiles de la page ne reçoivent pas la sortie placée précédemment dans le cache par un visiteur du bureau.
 
-### <a name="a-working-example"></a>Un exemple fonctionnel
+### <a name="a-working-example"></a>Exemple fonctionnel
 
-Pour découvrir ces techniques en action, téléchargez [code de ce livre blanc associé exemples](https://docs.microsoft.com/aspnet/mobile/overview). L’exemple inclut une application ASP.NET MVC 3 (Release Candidate) améliorée pour prendre en charge des appareils mobiles à l’aide des méthodes décrites ci-dessus.
+Pour voir ces techniques en action, téléchargez les [exemples associés au code de ce livre blanc](https://docs.microsoft.com/aspnet/mobile/overview). L’exemple comprend une application ASP.NET MVC 3 (version Release Candidate) améliorée pour la prise en charge des appareils mobiles à l’aide des méthodes décrites ci-dessus.
 
-## <a name="further-guidance-and-suggestions"></a>Autres conseils et suggestions
+## <a name="further-guidance-and-suggestions"></a>Conseils et suggestions supplémentaires
 
-La discussion suivante s’applique à la fois aux Web Forms et les développeurs MVC qui utilisent les techniques décrites dans ce document.
+La discussion suivante s’applique à la fois aux Web Forms et aux développeurs MVC qui utilisent les techniques décrites dans ce document.
 
 ### <a name="enhancing-your-redirection-logic-using-51degreesmobi-foundation"></a>Amélioration de votre logique de redirection à l’aide de 51Degrees.mobi Foundation
 
-La logique de redirection indiquée dans ce document peut être tout à fait suffisante pour votre application, mais elle ne fonctionnera pas si vous avez besoin désactiver des sessions, soit avec les navigateurs mobiles qui rejettent les cookies (il ne peut pas avoir de sessions), car il ne sait pas si une requête donnée la première condition à partir de ce visiteur.
+La logique de redirection indiquée dans ce document peut être parfaitement suffisante pour votre application, mais elle ne fonctionne pas si vous devez désactiver les sessions, ou avec des navigateurs mobiles qui rejettent les cookies (ces sessions ne peuvent pas avoir de sessions), car elles ne savent pas si une demande donnée est le premier de ce visiteur.
 
-Vous avez appris déjà comment le 51Degrees.mobi open source Foundation peut améliorer la précision de ASP. Détection du navigateur du NET. Il a également une fonctionnalité intégrée pour rediriger les visiteurs mobiles à des emplacements spécifiques configurés dans le fichier Web.config. Il est en mesure de fonctionner sans selon les Sessions ASP.NET (et par conséquent, les cookies) en stockant un journal temporaire des hachages des en-têtes HTTP et les adresses IP de visiteurs, par conséquent, il sait ou non chaque requête est la première à partir d’un visiteur donné.
+Vous avez déjà appris comment la base open source 51Degrees.mobi Foundation peut améliorer la précision d’ASP. Détection du navigateur du réseau. Il offre également une capacité intégrée de rediriger les visiteurs mobiles vers des emplacements spécifiques configurés dans Web. config. Il peut fonctionner sans dépendre des sessions ASP.NET (et donc des cookies) en stockant un journal temporaire des hachages des en-têtes HTTP et des adresses IP des visiteurs. il sait donc si chaque demande est la première d’un centre de données donné.
 
-L’élément suivant est ajouté à la section fiftyOne du fichier web.config redirige la première demande à partir d’un appareil mobile détecté à la page ~ / Mobile/Default.aspx. Toutes les demandes vers les pages du dossier Mobile seront *pas* redirigé, quel que soit le type d’appareil. Si le périphérique mobile a été inactif pendant une période de 20 minutes ou plus de l’appareil seront oubliées et les demandes suivantes seront traités en tant que nouveaux dans le cadre de la redirection.
+L’élément suivant ajouté à la section fiftyOne du fichier Web. config redirige la première requête à partir d’un appareil mobile détecté vers la page ~/Mobile/Default.aspx. Les requêtes sur les pages du dossier mobile ne sont *pas* redirigées, quel que soit le type d’appareil. Si le périphérique mobile a été inactif pendant une période de 20 minutes ou plus, l’appareil sera oublié et les demandes ultérieures seront traitées comme nouvelles dans le cadre de la redirection.
 
 [!code-xml[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample15.xml)]
 
-Pour plus d’informations, consultez [51degrees.mobi documentation Foundation](https://github.com/51Degrees/dotNET-Device-Detection).
+Pour plus d’informations, consultez [la documentation 51Degrees.mobi Foundation](https://github.com/51Degrees/dotNET-Device-Detection).
 
 > [!NOTE]
-> Vous *pouvez* fonctionnalité de redirection de la Fondation utilisation 51Degrees.mobi sur les applications ASP.NET MVC, mais vous devez définir votre configuration de redirection en termes d’URL simples, pas en termes de paramètres de routage ou en plaçant les filtres MVC sur les actions. Il s’agit, car (au moment de la rédaction) 51Degrees.mobi Foundation ne reconnaît pas les filtres ou routage.
+> Vous *pouvez* utiliser la fonctionnalité de redirection de 51Degrees.mobi Foundation sur les applications ASP.NET MVC, mais vous devrez définir la configuration de la redirection en termes d’URL brutes, non en termes de paramètres de routage ou en plaçant des filtres MVC sur les actions. Cela est dû au fait que (au moment de l’écriture) 51Degrees.mobi Foundation ne reconnaît pas les filtres ou le routage.
 
-### <a name="disabling-transcoders-and-proxy-servers"></a>La désactivation des transcodeurs et les serveurs Proxy
+### <a name="disabling-transcoders-and-proxy-servers"></a>Désactivation des transcodeurs et des serveurs proxy
 
-Opérateurs de réseau mobile ont deux objectifs large dans leur approche internet mobile :
+Les opérateurs de réseau mobile ont deux objectifs généraux dans leur approche de l’Internet mobile :
 
-1. Fournir en tant que le contenu approprié autant que possible
-2. Maximiser le nombre de clients qui peuvent partager la bande passante limitée radio
+1. Fournir le contenu le plus pertinent possible
+2. Maximiser le nombre de clients pouvant partager la bande passante réseau limitée
 
-Étant donné que la plupart des pages web ont été conçus pour les grands écrans en taille réelle de bureau et les connexions haut débit rapide-ligne fixe, de nombreux opérateurs utilisent *transcodeurs* ou *serveurs proxy* qui modifier dynamiquement le contenu web. Ils peuvent modifier votre balisage HTML ou les CSS en fonction des écrans plus petits (en particulier pour « téléphones » qui ne disposent pas de la puissance de traitement pour gérer des dispositions complexes), et ils peuvent recompresser vos images (vous réduisez considérablement leur qualité) pour améliorer les vitesses de remise de page.
+Étant donné que la plupart des pages Web ont été conçues pour des écrans de grande taille et des connexions haut débit fixe, de nombreux opérateurs utilisent des *transcodeurs* ou des *serveurs proxy* qui modifient dynamiquement le contenu Web. Ils peuvent modifier votre balisage HTML ou CSS pour les adapter à des écrans plus petits (en particulier pour les « téléphones fonctionnalité » qui manquent de puissance de traitement pour gérer des dispositions complexes) et peuvent recompresser vos images (ce qui réduit considérablement leur qualité) pour améliorer les vitesses de remise des pages.
 
-Mais si vous avez pris l’effort nécessaire pour produire une version optimisés pour mobile de votre site, vous ne souhaitez probablement l’opérateur de réseau à interférer avec lui les autres. Vous pouvez ajouter la ligne suivante à la Page\_événement de chargement dans n’importe quel formulaire de Web ASP.NET :
+Toutefois, si vous avez pris le temps de créer une version optimisée pour le mobile de votre site, vous ne souhaiterez sans doute pas que l’opérateur de réseau interfère avec lui. Vous pouvez ajouter la ligne suivante à la page\_événement de chargement dans n’importe quel formulaire Web ASP.NET :
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample16.cs)]
 
-Ou, pour un contrôleur ASP.NET MVC, vous pouvez ajouter la substitution de méthode suivante pour qu’il s’applique à toutes les actions sur ce contrôleur :
+Ou, pour un contrôleur ASP.NET MVC, vous pouvez ajouter le remplacement de méthode suivant afin qu’il s’applique à toutes les actions sur ce contrôleur :
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample17.cs)]
 
-Le message HTTP résultant informe transcodeurs conformes W3C et les proxys ne pas de modifier un contenu. Bien sûr, il n’y a aucune garantie que les opérateurs de réseau mobile respectera ce message.
+Le message HTTP qui en résulte informe les transcodeurs conformes au W3C et les proxys de ne pas modifier le contenu. Bien entendu, il n’y a aucune garantie que les opérateurs de réseau mobile respecteront ce message.
 
-### <a name="styling-mobile-pages-for-mobile-browsers"></a>Style des pages mobiles pour les navigateurs mobiles
+### <a name="styling-mobile-pages-for-mobile-browsers"></a>Définition de styles pour les pages mobiles pour les navigateurs mobiles
 
-N’entre pas dans le cadre de ce document pour décrire en détail quels types de travail de balisage HTML correctement ou que les techniques de conception web optimiser la facilité d’utilisation sur des appareils. Il a à vous permet de trouver une disposition suffisamment simple, optimisé pour un écran en taille réelle mobile, sans utiliser non fiables HTML ou des astuces de positionnement CSS. Une technique importante intéressant de mentionner, cependant, est la *balise méta du viewport*.
+Ce document décrit en détail les genres de balises HTML qui fonctionnent correctement ou les techniques de conception Web qui optimisent la convivialité sur des appareils particuliers. C’est à vous de trouver une disposition suffisamment simple, optimisée pour un écran de taille mobile, sans utiliser des astuces de positionnement HTML ou CSS non fiables. Une technique importante qui mérite d’être mentionnée est cependant la *balise méta*de la fenêtre d’affichage.
 
-Certains navigateurs mobiles modernes, dans un effort affichage des pages web destiné à des moniteurs de bureau, restituent la page sur un canevas virtuel, également appelée « fenêtre d’affichage » (par exemple, la fenêtre d’affichage virtuel est 980 pixels de large sur iPhone et 850 pixels de larges sur Opera Mobile par défaut), puis mettre à l’échelle le résultat vers le bas pour tenir sur pixels physiques de l’écran. L’utilisateur peut ensuite faire un zoom et un panoramique autour de cette fenêtre d’affichage. Cela présente l’avantage qu’il permet au navigateur pour afficher la page dans sa disposition prévue, mais il est également présente un inconvénient : qu’il force le zoom et le panoramique, qui n’est pas pratique pour l’utilisateur. Si vous créez pour mobile, il est préférable de conception pour un écran étroit afin qu’aucun zoom ou le défilement horizontal n’est nécessaire.
+Certains navigateurs mobiles modernes, dans un effort d’affichage des pages Web destinées aux moniteurs de bureau, effectuent le rendu de la page sur un canevas virtuel, également appelé « Viewport » (par exemple, la fenêtre d’affichage virtuelle est de 980 pixels de grande largeur sur iPhone, et 850 pixels de largeur sur Opera Mobile par défaut), puis mettre à l’échelle le résultat en fonction des pixels physiques de l’écran. L’utilisateur peut ensuite effectuer un zoom avant et un panoramique sur cette fenêtre d’affichage. Cela présente l’avantage de permettre au navigateur d’afficher la page dans sa disposition prévue, mais il présente également l’inconvénient de forcer le zoom et la panoramisation, ce qui est peu pratique pour l’utilisateur. Si vous concevez pour un appareil mobile, il est préférable de concevoir un écran étroit afin qu’aucun zoom ou défilement horizontal ne soit nécessaire.
 
-Indiquer le navigateur mobile à la largeur la fenêtre d’affichage doit être est via le non standard *viewport* balise meta. Par exemple, si vous ajoutez le code suivant à la section HEAD de votre page,
+Pour indiquer au navigateur mobile la largeur de la fenêtre d’affichage, vous pouvez utiliser la balise méta non standard *Viewport* . Par exemple, si vous ajoutez le code suivant à la section d’en-tête de votre page,
 
 [!code-html[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample18.html)]
 
-… prise en charge des navigateurs de smartphone puis disposer de la page sur un canevas large virtuel 480 pixels. Cela signifie que si vos éléments HTML définissent leurs largeurs en termes de pourcentage, les pourcentages sont interprétés en ce qui concerne cette largeur de 480 pixels, pas la largeur de la fenêtre d’affichage par défaut. Par conséquent, l’utilisateur est moins susceptible d’avoir à zoomer et faire défiler horizontalement – considérablement améliorer l’expérience de navigation mobile.
+… la prise en charge des navigateurs smartphone aura pour disposition la page sur un canevas virtuel de 480 pixels de largeur. Cela signifie que si vos éléments HTML définissent leurs largeurs en pourcentage, les pourcentages sont interprétés par rapport à cette largeur de 480 pixels, et non à la largeur de la fenêtre d’affichage par défaut. Par conséquent, l’utilisateur est moins susceptible d’avoir à effectuer un zoom et un panoramique horizontalement, ce qui améliore considérablement l’expérience de navigation mobile.
 
-Si vous souhaitez que la largeur de la fenêtre d’affichage pour faire correspondre les pixels physiques de l’appareil, vous pouvez spécifier les éléments suivants :
+Si vous souhaitez que la largeur de la fenêtre d’affichage corresponde aux pixels physiques de l’appareil, vous pouvez spécifier les éléments suivants :
 
 [!code-html[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample19.html)]
 
-Pour que cela fonctionne correctement, vous devez forcer pas explicitement les éléments de dépasser cette largeur (par exemple, en utilisant un *largeur* attribut ou propriété CSS), sinon le navigateur est contraint d’utiliser une plus grande fenêtre d’affichage, quel que soit. Voir aussi : [plus de détails sur la balise viewport non standard](https://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html).
+Pour que cela fonctionne correctement, vous ne devez pas forcer explicitement les éléments à dépasser cette largeur (par exemple, à l’aide d’un attribut *Width* ou d’une propriété CSS), sinon le navigateur sera contraint d’utiliser une fenêtre d’affichage plus grande, quelle que soit la valeur. Voir aussi : [plus de détails sur la balise Viewport non standard](https://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html).
 
-Prise en charge de la plupart des smartphones *orientation double*: ils peuvent être conservées en mode portrait ou paysage. Par conséquent, il est important de ne pas faire d’hypothèses concernant la largeur d’écran en pixels. Même dites-vous que la largeur d’écran est fixe, car l’utilisateur permettre réorienter leur appareil pendant qu’elles sont sur votre page.
+La plupart des smartphones modernes prennent en charge l' *orientation double*: ils peuvent être en mode portrait ou paysage. Il est donc important de ne pas faire d’hypothèses sur la largeur de l’écran en pixels. Ne supposez même pas que la largeur de l’écran est fixe, car l’utilisateur peut réorienter son appareil pendant qu’il se trouve sur votre page.
 
-Les appareils Windows Mobile et Blackberry plus anciens peuvent également accepter les balises de métadonnées suivantes dans l’en-tête de page pour indiquer leur contenu a été optimisé pour les mobiles et ne doivent donc pas être transformés.
+Les appareils Windows Mobile et BlackBerry plus anciens peuvent également accepter les balises meta suivantes dans l’en-tête de page pour leur indiquer que le contenu a été optimisé pour les appareils mobiles et ne doit donc pas être transformé.
 
 [!code-html[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample20.html)]
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-Pour obtenir la liste des émulateurs de périphérique mobile et de simulateurs, vous pouvez utiliser pour tester votre application de web mobile ASP.NET, consultez la page [simuler des appareils mobiles courants pour le test](../mobile/device-simulators.md).
+Pour obtenir une liste des émulateurs et simulateurs d’appareils mobiles que vous pouvez utiliser pour tester votre application Web mobile ASP.NET, consultez la page [simuler des appareils mobiles populaires à des fins de test](../mobile/device-simulators.md).
 
 ## <a name="credits"></a>Crédits
 
 - Auteur principal : Steven Sanderson
-- Réviseurs / autres rédacteurs de contenu : James Rosewell, Mikael Söderström, Scott Hanselman, Scott Hunter
+- Réviseurs/rédacteurs de contenu supplémentaires : James Rosewell, Mikael Söderström, Scott Hanselman, Scott Hunter

@@ -6,11 +6,11 @@ ms.author: riande
 ms.date: 2/15/2019
 uid: samesite/vbWF
 ms.openlocfilehash: 8979edecc5acf7dac81b9f53d31af00389f4727c
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77458440"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78544995"
 ---
 # <a name="samesite-cookie-sample-for-aspnet-472-vb-webforms"></a>Exemple de cookie SameSite pour les WebForms ASP.NET 4.7.2 VB
 .NET Framework 4,7 dispose d’une prise en charge intégrée de l’attribut [SameSite](https://www.owasp.org/index.php/SameSite) , mais il adhère à la norme d’origine.
@@ -70,7 +70,7 @@ L’attribut sameSite par défaut pour l’état de session est également défi
 
 La mise à jour de novembre 2019 de .NET a modifié les paramètres par défaut pour l’authentification par formulaire et la session sur `lax` comme le paramètre le plus compatible. Toutefois, si vous incorporez des pages dans des IFRAME, vous devrez peut-être rétablir ce paramètre sur aucun, puis ajouter le code d' [interception](#interception) indiqué ci-dessous pour ajuster le comportement `none` en fonction de la fonctionnalité du navigateur.
 
-### <a name="running-the-sample"></a>Exécution de l’exemple
+### <a name="running-the-sample"></a>Exécution de l'exemple
 
 Si vous exécutez l’exemple de projet, chargez votre débogueur de navigateur sur la page initiale et utilisez-le pour afficher la collection de cookies pour le site.
 Pour ce faire, dans Edge et chrome, appuyez sur `F12` sélectionnez l’onglet `Application` et cliquez sur l’URL du site sous l’option `Cookies` dans la section `Storage`.
@@ -136,7 +136,7 @@ Public Shared Sub AdjustSpecificCookieSettings()
 End Sub
 ```
 
-## <a name="more-information"></a>Informations supplémentaires
+## <a name="more-information"></a>Plus d'informations
 
 [Mises à jour chrome](https://www.chromium.org/updates/same-site)
 

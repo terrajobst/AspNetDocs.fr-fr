@@ -9,11 +9,11 @@ ms.assetid: 9ed8ccb5-5f31-4eb4-976d-cabf4b45ca09
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 13d213ef4baf493a4f05a82daae8d2dc3b0aa61b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74604602"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78551274"
 ---
 # <a name="debugging-stored-procedures-vb"></a>Débogage des procédures stockées (VB)
 

@@ -9,11 +9,11 @@ ms.assetid: 0a1917e0-884a-4576-8e93-9ed660faae51
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-cs
 msc.type: authoredcontent
 ms.openlocfilehash: fef55edf12a024e4dd66e2a18ea371ab4dac861f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606443"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78627413"
 ---
 # <a name="fighting-bots-c"></a>Lutte contre les robots (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Les robots automatisés mettent en plâtre des journaux et d’autres sites Web avec spam, en envoyant des formulaires de commentaires sans aucune intervention de l’utilisateur. Le contrôle NoBot dans ASP.NET AJAX Control Toolkit peut aider à combattre ces robots.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Les robots automatisés mettent en plâtre des journaux et d’autres sites Web avec spam, en envoyant des formulaires de commentaires sans aucune intervention de l’utilisateur. Le contrôle NoBot dans ASP.NET AJAX Control Toolkit peut aider à combattre ces robots.
 
@@ -68,4 +68,4 @@ Quand vous exécutez ce script et que vous désactivez JavaScript ou que vous en
 Ce message d’erreur peut avoir été provoqué par un bot ([cliquez pour afficher l’image en taille réelle](fighting-bots-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](fighting-bots-vb.md)
+> [Next](fighting-bots-vb.md)

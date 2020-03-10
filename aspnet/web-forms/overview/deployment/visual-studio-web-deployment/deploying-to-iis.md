@@ -9,11 +9,11 @@ ms.assetid: 8bf2c4fb-4ee5-4841-bfc2-03462c1f7a7a
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
 msc.type: authoredcontent
 ms.openlocfilehash: 738318cce442fdc5d58dd1e4c992d4941be2487e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74591245"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640601"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : déploiement à tester
 
@@ -23,7 +23,7 @@ Cette série de didacticiels montre comment déployer (publier) une application 
 
 Pour obtenir une version actuelle du déploiement sur Azure, consultez [créer une application web ASP.net core dans Azure](/azure/app-service/app-service-web-get-started-dotnet).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Dans ce didacticiel, vous allez déployer une application Web ASP.NET sur Internet Information Server (IIS) sur votre ordinateur local.
 
@@ -115,7 +115,7 @@ Vous êtes maintenant prêt à publier une application Web sur IIS. Toutefois, c
 
 <a id="sqlexpress"></a>
 
-## <a name="install-sql-server-express"></a>Installer SQL Server Express
+## <a name="install-sql-server-express"></a>Installation de SQL Server Express
 
 La base de données locale n’étant pas conçue pour fonctionner dans IIS, votre environnement de test doit avoir SQL Server Express installé. Si vous utilisez Visual Studio 2010 SQL Server Express, il est déjà installé par défaut. Si vous utilisez Visual Studio 2012 ou une version ultérieure, installez SQL Server Express.
 
@@ -174,13 +174,13 @@ Vous pouvez configurer le profil de publication pour exécuter le script Grant d
 
 1. Dans Visual Studio, ouvrez le fichier *Grant. SQL* que vous avez créé précédemment.
 
-2. Sélectionnez **se connecter**. 
+2. Sélectionnez **Connecter**. 
 
-    ![Bouton de connexion](deploying-to-iis/_static/image11.png)
+    ![Bouton Se connecter](deploying-to-iis/_static/image11.png)
 
-3. Dans la boîte de dialogue **se connecter au serveur** , entrez *.\SQLEXPRESS* comme **nom de serveur**. Sélectionnez **se connecter**.
+3. Dans la boîte de dialogue **se connecter au serveur** , entrez *.\SQLEXPRESS* comme **nom de serveur**. Sélectionnez **Connecter**.
 
-4. Dans la liste déroulante base de données, sélectionnez **ContosoUniversity**. Sélectionnez **exécuter**. 
+4. Dans la liste déroulante base de données, sélectionnez **ContosoUniversity**. Sélectionnez **Exécuter**. 
 
    ![](deploying-to-iis/_static/image12.png)
 
@@ -380,7 +380,7 @@ Vous avez maintenant déployé votre application sur IIS sur votre ordinateur de
 
 Cela permet de vérifier que le processus de déploiement a copié le contenu de l’application à l’emplacement approprié (à l’exclusion des fichiers que vous ne souhaitez pas déployer) et que Web Deploy configuré IIS correctement au cours du déploiement. Dans le didacticiel suivant, vous allez exécuter un test supplémentaire qui recherche une tâche de déploiement qui n’a pas encore été effectuée : définition des autorisations de dossier sur le dossier de l' *Elm* .
 
-## <a name="more-information"></a>Plus d'informations
+## <a name="more-information"></a>Informations complémentaires
 
 Pour plus d’informations sur l’exécution d’IIS ou de IIS Express dans Visual Studio, consultez les ressources suivantes :
 

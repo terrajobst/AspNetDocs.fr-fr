@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/getting-started/code-editing-in-web-forms-pages
-title: Modification du code Web Forms ASP.NET dans Visual Studio 2013 | Microsoft Docs
+title: Modification du code ASP.NET Web Forms dans Visual Studio 2013 | Microsoft Docs
 author: Erikre
 description: ''
 ms.author: riande
@@ -9,28 +9,28 @@ ms.assetid: 5344b74e-b888-479a-92bc-601a33bd61a2
 msc.legacyurl: /web-forms/overview/getting-started/code-editing-in-web-forms-pages
 msc.type: authoredcontent
 ms.openlocfilehash: 3473ad476fbbebc58e12586334b4600f57cf17ed
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134239"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78632747"
 ---
 # <a name="code-editing-aspnet-web-forms-in-visual-studio-2013"></a>Édition du code Web Forms ASP.NET dans Visual Studio 2013
 
 par [Erik Reitan](https://github.com/Erikre)
 
-Dans de nombreuses pages Web Form ASP.NET, écrivez du code dans Visual Basic, c# ou un autre langage. L’éditeur de code dans Visual Studio peut vous aider à écrire rapidement du code tout en vous aidant à éviter les erreurs. En outre, l’éditeur fournit des méthodes créer du code réutilisable pour aider à réduire la quantité de travail, que vous devez effectuer.
+Dans de nombreuses pages Web Forms ASP.NET, vous écrivez du code C#dans Visual Basic, ou dans un autre langage. L’éditeur de code de Visual Studio peut vous aider à écrire du code rapidement tout en vous aidant à éviter les erreurs. En outre, l’éditeur vous permet de créer du code réutilisable pour réduire la quantité de travail que vous devez effectuer.
 
 Cette procédure pas à pas illustre différentes fonctionnalités de l’éditeur de code Visual Studio.
 
 Pendant cette procédure pas à pas, vous allez apprendre à :
 
-- Corrigez les erreurs de code inline.
+- Corriger les erreurs de codage en ligne.
 - Refactoriser et renommer le code.
-- Renommer des variables et des objets.
+- Renommez les variables et les objets.
 - Insérer des extraits de code.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Pour exécuter cette procédure pas à pas, vous avez besoin des éléments suivants :
 
@@ -38,144 +38,144 @@ Pour exécuter cette procédure pas à pas, vous avez besoin des éléments su
 
     > [!NOTE] 
     > 
-    > Microsoft Visual Studio 2013 et Microsoft Visual Studio Express 2013 pour le Web seront souvent être appelé Visual Studio tout au long de cette série de didacticiels.  
+    > Microsoft Visual Studio 2013 et Microsoft Visual Studio Express 2013 pour le Web sont souvent appelés Visual Studio dans cette série de didacticiels.  
     >   
-    > Si vous utilisez Visual Studio, cette procédure pas à pas suppose que vous avez choisi le **développement Web** collection de paramètres de la première fois que vous avez démarré Visual Studio. Pour plus d'informations, voir [Procédure : Sélectionnez les paramètres d’environnement de développement de Web](https://msdn.microsoft.com/library/ff521558.aspx).
+    > Si vous utilisez Visual Studio, cette procédure pas à pas suppose que vous avez sélectionné la collection de paramètres **développement Web** la première fois que vous avez démarré Visual Studio. Pour plus d’informations, consultez [Comment : sélectionner les paramètres de l’environnement de développement Web](https://msdn.microsoft.com/library/ff521558.aspx).
 
-## <a name="creating-a-web-application-project-and-a-page"></a>Création d’un projet d’application Web et une Page
+## <a name="creating-a-web-application-project-and-a-page"></a>Création d’un projet d’application Web et d’une page
 
 <a id="sectionToggle0"></a>
 
-Dans cette partie de la procédure pas à pas, vous créez un projet d’application Web et ajoutez une nouvelle page à celui-ci.
+Dans cette partie de la procédure pas à pas, vous allez créer un projet d’application Web et lui ajouter une nouvelle page.
 
 ### <a name="to-create-a-web-application-project"></a>Pour créer un projet d’application Web
 
 1. Ouvrez Microsoft Visual Studio.
 2. Dans le menu **Fichier**, sélectionnez **Nouveau projet**.  
-    ![Menu fichier](code-editing-in-web-forms-pages/_static/image1.png)
+    ![menu fichier](code-editing-in-web-forms-pages/_static/image1.png)
 
     La boîte de dialogue **Nouveau projet** s’affiche.
-3. Sélectionnez le **modèles**  - &gt; **Visual C#**  - &gt; **Web** groupe de modèles sur la gauche.
-4. Choisissez le **Application Web ASP.NET** modèle dans la colonne centrale.
-5. Nommez votre projet ***BasicWebApp*** et cliquez sur le **OK** bouton.   
+3. Sélectionnez les **modèles** -&gt; le groupe **Visual C#**  -&gt; de modèles **Web** sur la gauche.
+4. Choisissez le modèle **Application Web ASP.NET** dans la colonne centrale.
+5. Nommez votre projet ***BasicWebApp*** et cliquez sur le bouton **OK** .   
 ![Boîte de dialogue Nouveau projet](code-editing-in-web-forms-pages/_static/image2.png)
-6. Ensuite, sélectionnez le **Web Forms** modèle et cliquez sur le **OK** bouton pour créer le projet.  
-![Boîte de dialogue Nouveau projet ASP.NET](code-editing-in-web-forms-pages/_static/image3.png)  
+6. Ensuite, sélectionnez le modèle **Web Forms** , puis cliquez sur le bouton **OK** pour créer le projet.  
+![Boîte de dialogue New ASP.NET Project](code-editing-in-web-forms-pages/_static/image3.png)  
 
-    Visual Studio crée un nouveau projet qui inclut les fonctionnalités prégénérées basée sur le modèle Web Forms.
+    Visual Studio crée un projet qui comprend des fonctionnalités prégénérées basées sur le modèle de Web Forms.
 
-## <a name="creating-a-new-aspnet-web-forms-page"></a>Création d’une Page ASP.NET Web Forms
+## <a name="creating-a-new-aspnet-web-forms-page"></a>Création d’une nouvelle page de Web Forms ASP.NET
 
-Lorsque vous créez une nouvelle application Web Forms à l’aide du **Application Web ASP.NET** modèle de projet, Visual Studio ajoute une page ASP.NET (page Web Forms) nommée *Default.aspx*, ainsi que plusieurs autres fichiers et les dossiers. Vous pouvez utiliser la *Default.aspx* page comme page d’accueil pour votre application Web. Toutefois, pour cette procédure pas à pas, vous créez et travailler avec une nouvelle page.
+Quand vous créez une application de Web Forms à l’aide du modèle de projet d' **application Web ASP.net** , Visual Studio ajoute une page ASP.net (page Web Forms) nommée *default. aspx*, ainsi que plusieurs autres fichiers et dossiers. Vous pouvez utiliser la page *default. aspx* comme page d’hébergement de votre application Web. Toutefois, pour cette procédure pas à pas, vous allez créer et utiliser une nouvelle page.
 
 ### <a name="to-add-a-page-to-the-web-application"></a>Pour ajouter une page à l’application Web
 
-1. Dans **l’Explorateur de solutions**, cliquez sur le nom d’application Web (dans ce didacticiel est le nom de l’application **BasicWebSite**), puis cliquez sur **ajouter**  - &gt; **Un nouvel élément**.   
+1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le nom de l’application Web (dans ce didacticiel, le nom de l’application est **BasicWebSite**), puis cliquez sur **Ajouter** -&gt; **nouvel élément**.   
 La boîte de dialogue **Ajouter un nouvel élément** s’affiche.
-2. Sélectionnez le **Visual C#**  - &gt; **Web** groupe de modèles sur la gauche. Ensuite, sélectionnez **Web Form** à partir du milieu de liste et nommez-le *PremièrePageWeb.aspx*.   
-    ![Ajouter un nouvel élément](code-editing-in-web-forms-pages/_static/image4.png)
-3. Cliquez sur **ajouter** pour ajouter la page Web Forms à votre projet.  
+2. Sélectionnez le **groupe C# Visual** -&gt; des modèles **Web** sur la gauche. Ensuite, sélectionnez **Web Form** dans la liste du milieu, puis nommez-le *FirstWebPage. aspx*.   
+    ![Boîte de dialogue Ajouter un nouvel élément](code-editing-in-web-forms-pages/_static/image4.png)
+3. Cliquez sur **Ajouter** pour ajouter la page de Web Forms à votre projet.  
  Visual Studio crée la page et l’ouvre.
-4. Ensuite, définissez cette nouvelle page comme page de démarrage par défaut. Dans **l’Explorateur de solutions**, avec le bouton droit de la nouvelle page nommée *PremièrePageWeb.aspx* et sélectionnez **définir comme Page de démarrage**. La prochaine fois que vous exécutez cette application pour tester notre progression, vous verrez automatiquement cette nouvelle page dans le navigateur.
+4. Ensuite, définissez cette nouvelle page comme page de démarrage par défaut. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur la nouvelle page nommée *FirstWebPage. aspx* , puis sélectionnez **définir comme page de démarrage**. La prochaine fois que vous exécuterez cette application pour tester notre progression, vous verrez automatiquement cette nouvelle page dans le navigateur.
 
-## <a name="correcting-inline-coding-errors"></a>Correction des erreurs de codage de Inline
+## <a name="correcting-inline-coding-errors"></a>Correction des erreurs de codage en ligne
 
-L’éditeur de code dans Visual Studio vous aide à éviter les erreurs que vous écrivez du code, et si vous avez apporté une erreur, l’éditeur de code vous aide à corriger l’erreur. Dans cette partie de la procédure pas à pas, vous allez écrire une ligne de code qui illustrent les fonctionnalités de correction d’erreur dans l’éditeur.
+L’éditeur de code dans Visual Studio vous permet d’éviter les erreurs lors de l’écriture du code, et si vous avez effectué une erreur, l’éditeur de code vous aide à corriger l’erreur. Dans cette partie de la procédure pas à pas, vous allez écrire une ligne de code qui illustre les fonctionnalités de correction d’erreur dans l’éditeur.
 
 ### <a name="to-correct-simple-coding-errors-in-visual-studio"></a>Pour corriger les erreurs de codage simples dans Visual Studio
 
-1. Dans **conception** , double-cliquez sur la page vierge pour créer un gestionnaire pour le **charge** événement pour la page.   
-   Vous utilisez le Gestionnaire d’événements uniquement comme un lieu d’écrire du code.
-2. Dans le gestionnaire, tapez la ligne suivante qui contient une erreur et la presse **entrée**:
+1. En mode **conception** , double-cliquez sur la page vierge pour créer un gestionnaire pour l’événement de **chargement** de la page.   
+   Vous utilisez le gestionnaire d’événements uniquement comme emplacement pour écrire du code.
+2. Dans le gestionnaire, tapez la ligne suivante qui contient une erreur et appuyez sur **entrée**:
 
     [!code-csharp[Main](code-editing-in-web-forms-pages/samples/sample1.cs)]
 
-   Quand vous appuyez sur **entrée**, l’éditeur de code place soulignements verts et rouge (appellent généralement &quot;ondulée&quot; lignes) sous les zones du code qui ont des problèmes. Un soulignement vert indique un avertissement. Un trait de soulignement rouge indique une erreur indiquant que vous devez corriger. 
+   Lorsque vous appuyez sur **entrée**, l’éditeur de code place les traits de soulignement vert et rouge (appelez communément &quot;lignes&quot; ondulées) sous les zones du code qui présentent des problèmes. Un trait de soulignement vert indique un avertissement. Un trait de soulignement rouge indique une erreur que vous devez corriger. 
 
-    Maintenez le pointeur de la souris sur `myStr` pour afficher une info-bulle qui vous indique sur l’avertissement. En outre, maintenez votre pointeur sur le trait de soulignement rouge pour voir le message d’erreur.
+    Maintenez le pointeur de la souris sur `myStr` pour afficher une info-bulle qui vous indique l’avertissement. Placez également le pointeur de la souris sur le trait de soulignement rouge pour afficher le message d’erreur.
 
-    L’illustration suivante montre le code avec des traits de soulignement.
+    L’illustration suivante montre le code avec les traits de soulignement.
 
-    ![Texte de bienvenue en mode conception](code-editing-in-web-forms-pages/_static/image5.png "texte de bienvenue en mode Design")  
-   L’erreur doit être résolu en ajoutant un point-virgule `;` à la fin de la ligne. L’avertissement vous informe simplement de que vous n’avez pas utilisé le `myStr` encore de variable.  
+    ![Texte de bienvenue dans Mode Création](code-editing-in-web-forms-pages/_static/image5.png "Texte de bienvenue en mode Design")  
+   L’erreur doit être corrigée en ajoutant un point-virgule `;` à la fin de la ligne. L’avertissement vous avertit simplement que vous n’avez pas encore utilisé la variable `myStr`.  
 
     > [!NOTE] 
     > 
-    > Vous permet d’afficher votre code en cours mise en forme de paramètres dans Visual Studio en sélectionnant **outils**  - &gt; **Options**  - &gt; **polices et Couleurs**.
+    > Vous pouvez afficher les paramètres de mise en forme de code actuels dans Visual Studio en sélectionnant **outils** -**Options** de &gt; -&gt; **les polices et les couleurs**.
 
 ## <a name="refactoring-and-renaming"></a>Refactorisation et changement de nom
 
-La refactorisation est une méthodologie logicielle qui implique la restructuration de votre code pour le rendre plus facile à comprendre et à gérer, tout en conservant ses fonctionnalités. Un exemple simple peut être qu’écrire du code dans un gestionnaire d’événements pour obtenir des données à partir d’une base de données. Lorsque vous développez votre page, vous découvrez que vous avez besoin accéder aux données à partir de plusieurs gestionnaires différents. Par conséquent, vous refactorisez du code de la page en créant une méthode d’accès aux données dans la page et en insérant des appels à la méthode dans les gestionnaires.
+La refactorisation est une méthodologie logicielle qui implique la restructuration de votre code pour le rendre plus facile à comprendre et à gérer, tout en préservant ses fonctionnalités. Un exemple simple peut être d’écrire du code dans un gestionnaire d’événements pour obtenir des données d’une base de données. Lorsque vous développez votre page, vous découvrez que vous devez accéder aux données à partir de différents gestionnaires. Par conséquent, vous refactorisez le code de la page en créant une méthode d’accès aux données dans la page et en insérant des appels à la méthode dans les gestionnaires.
 
-L’éditeur de code inclut des outils pour vous aider à effectuer diverses tâches de refactorisation. Dans cette procédure pas à pas, vous allez travailler avec deux techniques de refactorisation : renommer des variables et l’extraction des méthodes. Autres options de refactorisation incluent l’encapsulation des champs, la promotion des variables locales pour les paramètres de méthode et la gestion des paramètres de méthode. La disponibilité de ces options de refactorisation dépend de l’emplacement dans le code.
+L’éditeur de code comprend des outils pour vous aider à effectuer diverses tâches de refactorisation. Dans cette procédure pas à pas, vous allez utiliser deux techniques de refactorisation : renommer des variables et extraire des méthodes. Les autres options de refactorisation incluent l’encapsulation de champs, la promotion de variables locales en paramètres de méthode et la gestion des paramètres de méthode. La disponibilité de ces options de refactorisation dépend de l’emplacement dans le code.
 
-### <a name="refactoring-code"></a>Refactorisation du Code
+### <a name="refactoring-code"></a>Refactorisation du code
 
-Un scénario de refactorisation courant consiste à créer (extract) une méthode à partir du code qui se trouve dans un autre membre, tel qu’une méthode. Cela réduit la taille du membre d’origine et rend le code extrait réutilisable.
+Un scénario de refactorisation courant consiste à créer (extraire) une méthode à partir d’un code qui se trouve à l’intérieur d’un autre membre, tel qu’une méthode. Cela réduit la taille du membre d’origine et rend le code extrait réutilisable.
 
-Dans cette partie de la procédure pas à pas, vous écrire un code simple et ensuite extraire une méthode à partir de celui-ci. Refactorisation est prise en charge pour c#, vous allez donc créer une page qui utilise c# comme langage de programmation.
+Dans cette partie de la procédure pas à pas, vous allez écrire du code simple, puis en extraire une méthode. La refactorisation est prise C#en charge pour. vous allez donc créer une C# page qui utilise comme langage de programmation.
 
-### <a name="to-extract-a-method-in-a-c-page"></a>Pour extraire une méthode dans une page c#
+### <a name="to-extract-a-method-in-a-c-page"></a>Pour extraire une méthode dans une C# page
 
-1. Basculez vers **conception** vue.
-2. Dans le **boîte à outils**, à partir de la **Standard** onglet, faites glisser un [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) contrôle sur la page.
-3. Double-cliquez sur le **bouton** contrôle pour créer un gestionnaire pour son [cliquez sur](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.click.aspx) événement, puis ajoutez le code en surbrillance suivant :
+1. Basculez en mode **Design** .
+2. Dans la **boîte à outils**, sous l’onglet **standard** , faites glisser un contrôle [bouton](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.aspx) sur la page.
+3. Double-cliquez sur le contrôle **Button** pour créer un gestionnaire pour son événement [Click](https://msdn.microsoft.com/library/system.web.ui.webcontrols.button.click.aspx) , puis ajoutez le code en surbrillance suivant :
 
     [!code-csharp[Main](code-editing-in-web-forms-pages/samples/sample2.cs?highlight=3-16)]
 
-   Le code crée un **ArrayList** objet, utilise une boucle pour le charger avec des valeurs, puis utilise une autre boucle pour afficher le contenu de la **ArrayList** objet.
-4. Appuyez sur **CTRL + F5** à exécuter la page, puis cliquez sur le **bouton** pour vous assurer que vous voyez la sortie suivante :   
+   Le code crée un objet **ArrayList** , utilise une boucle pour le charger avec des valeurs, puis utilise une autre boucle pour afficher le contenu de l’objet **ArrayList** .
+4. Appuyez sur **CTRL + F5** pour exécuter la page, puis cliquez sur le **bouton** pour vous assurer que la sortie suivante s’affiche :   
 
     [!code-html[Main](code-editing-in-web-forms-pages/samples/sample3.html)]
-5. Revenir à l’éditeur de code, puis sélectionnez les lignes suivantes dans le Gestionnaire d’événements.   
+5. Revenez à l’éditeur de code, puis sélectionnez les lignes suivantes dans le gestionnaire d’événements.   
 
     [!code-html[Main](code-editing-in-web-forms-pages/samples/sample4.html)]
-6. Avec le bouton droit de la sélection, cliquez sur **refactoriser**, puis choisissez **extraire la méthode**. 
+6. Cliquez avec le bouton droit sur la sélection, cliquez sur **Refactoriser**, puis choisissez **extraire la méthode**. 
 
-    Le **extraire la méthode** boîte de dialogue s’affiche.
-7. Dans le **nouveau nom de la méthode** , tapez **DisplayArray**, puis cliquez sur **OK**. 
+    La boîte de dialogue **extraire la méthode** s’affiche.
+7. Dans la zone **nouveau nom** de la méthode, tapez **DisplayArray**, puis cliquez sur **OK**. 
 
-    L’éditeur de code crée une nouvelle méthode nommée `DisplayArray`et place un appel à la nouvelle méthode dans le **cliquez sur** Gestionnaire où la boucle a été initialement.
+    L’éditeur de code crée une nouvelle méthode nommée `DisplayArray`et place un appel à la nouvelle méthode dans le gestionnaire de **clic** où la boucle était à l’origine.
 
     [!code-csharp[Main](code-editing-in-web-forms-pages/samples/sample5.cs?highlight=12)]
-8. Appuyez sur **CTRL + F5** à exécuter de nouveau la page, cliquez sur le **bouton**.
+8. Appuyez sur **CTRL + F5** pour réexécuter la page et cliquez sur le **bouton**.
 
-    La page fonctionne comme avant. Le `DisplayArray` méthode peut désormais être appel depuis n’importe où dans la classe de page.
+    La page fonctionne de la même façon qu’auparavant. La méthode `DisplayArray` peut désormais être appelée à partir de n’importe où dans la classe page.
 
-## <a name="renaming-variables"></a>Renommer des Variables
+## <a name="renaming-variables"></a>Attribution d’un nouveau nom aux variables
 
-Lorsque vous travaillez avec des variables, ainsi que des objets, vous souhaiterez peut-être les renommer une fois qu’ils sont déjà référencés dans votre code. Toutefois, le changement de nom des variables et objets peut provoquer le code arrêter l’exécution si vous omettez de renommer une des références. Par conséquent, vous pouvez utiliser la refactorisation pour effectuer le changement de nom.
+Lorsque vous utilisez des variables, ainsi que des objets, vous souhaiterez peut-être les renommer une fois qu’ils sont déjà référencés dans votre code. Toutefois, l’attribution d’un nouveau nom aux variables et aux objets peut entraîner l’arrêt du code si vous omettez de renommer l’une des références. Par conséquent, vous pouvez utiliser la refactorisation pour effectuer l’attribution d’un nouveau nom.
 
 ### <a name="to-use-refactoring-to-rename-a-variable"></a>Pour utiliser la refactorisation pour renommer une variable
 
-1. Dans le **cliquez sur** Gestionnaire d’événements, recherchez la ligne suivante :
+1. Dans le gestionnaire d’événements **Click** , recherchez la ligne suivante :
 
     [!code-csharp[Main](code-editing-in-web-forms-pages/samples/sample6.cs)]
-2. Cliquez sur le nom de variable `alist`, choisissez **refactoriser**, puis choisissez **renommer**.
+2. Cliquez avec le bouton droit sur le nom de la variable `alist`, choisissez **Refactoriser**, puis **Renommer**.
 
-    Le **renommer** boîte de dialogue s’affiche.
-3. Dans le **nouveau nom** , tapez **ArrayList1** et assurez-vous que le **aperçu des modifications de référence** case à cocher a été sélectionné. Cliquez ensuite sur **OK**.
+    La boîte de dialogue **Renommer** s’affiche.
+3. Dans la zone **nouveau nom** , tapez **ArrayList1** et assurez-vous que la case à cocher **aperçu des modifications** de la référence a été sélectionnée. Cliquez ensuite sur **OK**.
 
-    Le **aperçu des modifications** boîte de dialogue apparaît et affiche une arborescence qui contient toutes les références à la variable que vous renommez.
-4. Cliquez sur **appliquer** pour fermer la **aperçu des modifications** boîte de dialogue.
+    La boîte de dialogue **aperçu des modifications** s’affiche et affiche une arborescence qui contient toutes les références à la variable que vous renommez.
+4. Cliquez sur **appliquer** pour fermer la boîte de dialogue **aperçu des modifications** .
 
-    Les variables qui font référence en particulier à l’instance que vous avez sélectionnés sont renommés. Notez, cependant, que la variable `alist` dans la ligne suivante n’est pas renommé.
+    Les variables qui font spécifiquement référence à l’instance que vous avez sélectionnée sont renommées. Notez, toutefois, que la variable `alist` dans la ligne suivante n’est pas renommée.
 
     [!code-csharp[Main](code-editing-in-web-forms-pages/samples/sample7.cs)]
 
-    La variable `alist` dans cette ligne n’est pas renommé, car il ne représente pas la même valeur que la variable `alist` que vous avez renommé. La variable `alist` dans le `DisplayArray` déclaration est une variable locale pour cette méthode. Cela illustre qu’à l’aide de la refactorisation pour renommer des variables est différente de celle simplement effectuer une action de rechercher et remplacer dans l’éditeur ; Renomme les variables avec une connaissance de la sémantique de la variable qui fonctionne avec la refactorisation.
+    La variable `alist` de cette ligne n’est pas renommée, car elle ne représente pas la même valeur que la variable `alist` que vous avez renommée. La variable `alist` dans la déclaration `DisplayArray` est une variable locale pour cette méthode. Cela illustre le fait que l’utilisation de la refactorisation pour renommer des variables est différente de l’exécution d’une action de recherche et remplacement dans l’éditeur ; la refactorisation renomme les variables avec une connaissance de la sémantique de la variable avec laquelle elle travaille.
 
-## <a name="inserting-snippets"></a>Insertion d’extraits de code
+## <a name="inserting-snippets"></a>Insertion d'extraits de code
 
-Comme il existe de nombreuses tâches de codage que les développeurs Web Forms souvent amené à effectuer, l’éditeur de code fournit une bibliothèque d’extraits de code ou de blocs de code préécrit. Vous pouvez insérer ces extraits de code dans votre page.
+Comme il existe de nombreuses tâches de codage que Web Forms les développeurs doivent souvent effectuer, l’éditeur de code fournit une bibliothèque d’extraits de code, ou des blocs de code préécrit. Vous pouvez insérer ces extraits de code dans votre page.
 
-Chaque langue que vous utilisez dans Visual Studio présente de légères différences dans la façon de qu'insérer des extraits de code. Pour plus d’informations sur l’insertion des extraits de code, consultez [extraits de Code IntelliSense Visual Basic](https://msdn.microsoft.com/library/18yz4be4.aspx). Pour plus d’informations sur l’insertion des extraits de code dans Visual c#, consultez [extraits de Code Visual C#](https://msdn.microsoft.com/library/z41h7fat.aspx).
+Chaque langage que vous utilisez dans Visual Studio présente de légères différences dans la façon d’insérer des extraits de code. Pour plus d’informations sur l’insertion d’extraits de code, consultez [Visual Basic des extraits de code IntelliSense](https://msdn.microsoft.com/library/18yz4be4.aspx). Pour plus d’informations sur l’insertion d' C#extraits de code dans Visual, consultez [extraits de code visuels C# ](https://msdn.microsoft.com/library/z41h7fat.aspx).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Cette procédure pas à pas a illustré les fonctionnalités de base de l’éditeur de code Visual Studio 2010 pour corriger les erreurs dans votre code, la refactorisation de code, renommer des variables et insertion des extraits de code dans votre code. Fonctionnalités supplémentaires dans l’éditeur peuvent rendre le développement d’application rapide et facile. Vous pouvez, par exemple, décider d'effectuer les opérations suivantes :
+Cette procédure pas à pas a illustré les fonctionnalités de base de l’éditeur de code Visual Studio 2010 pour corriger les erreurs dans votre code, refactorisation du code, attribution d’un nouveau nom aux variables et insertion d’extraits de code dans votre code. Les fonctionnalités supplémentaires de l’éditeur peuvent faciliter et accélérer le développement d’applications. Vous pouvez, par exemple, décider d'effectuer les opérations suivantes :
 
-- En savoir plus sur les fonctionnalités d’IntelliSense, telles que la modification des options IntelliSense, la gestion des extraits de code et recherche d’extraits de code en ligne. Pour plus d’informations, consultez [Utilisation d’IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx).
-- Découvrez comment créer vos propres extraits de code. Pour plus d’informations, consultez [création et utilisation des extraits de Code IntelliSense](https://msdn.microsoft.com/library/ms165392.aspx)
-- En savoir plus sur les fonctionnalités spécifiques à Visual Basic IntelliSense des extraits de code, comme la personnalisation des extraits de code et de résolution des problèmes. Pour plus d’informations, consultez [extraits de Code IntelliSense Visual Basic](https://msdn.microsoft.com/library/18yz4be4.aspx)
-- En savoir plus sur c#-fonctionnalités spécifiques d’IntelliSense, telles que des extraits de code et de refactorisation. Pour plus d’informations, consultez [Visual c# IntelliSense](https://msdn.microsoft.com/library/43f44291.aspx).
+- En savoir plus sur les fonctionnalités d’IntelliSense, telles que la modification des options IntelliSense, la gestion des extraits de code et la recherche d’extraits de code en ligne. Pour plus d'informations, consultez [Using IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx).
+- Découvrez comment créer vos propres extraits de code. Pour plus d’informations, consultez [création et utilisation d’extraits de code IntelliSense](https://msdn.microsoft.com/library/ms165392.aspx) .
+- En savoir plus sur les fonctionnalités spécifiques à Visual Basic des extraits de code IntelliSense, tels que la personnalisation des extraits de code et la résolution des problèmes. Pour plus d’informations, consultez [Visual Basic des extraits de code IntelliSense](https://msdn.microsoft.com/library/18yz4be4.aspx)
+- En savoir plus sur C#les fonctionnalités spécifiques à IntelliSense, telles que la refactorisation et les extraits de code. Pour plus d’informations, [consultez C# Visual IntelliSense](https://msdn.microsoft.com/library/43f44291.aspx).

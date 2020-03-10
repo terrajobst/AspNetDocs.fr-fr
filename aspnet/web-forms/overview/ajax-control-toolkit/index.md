@@ -1,28 +1,28 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/index
-title: Versions antérieures - Ajax Control Toolkit | Microsoft Docs
+title: Versions antérieures-AJAX Control Toolkit | Microsoft Docs
 author: rick-anderson
-description: La prise en main avec les outils de contrôle Ajax et comment utiliser certains des contrôles plus populaires. DevExpress tient à jour que les versions gratuite et open source Ajax contr...
+description: Comment prendre en main la boîte à outils de contrôle AJAX et comment utiliser certains des contrôles les plus populaires. DevExpress gère les... Ajax Free et open source...
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 76242ce9-e611-41d2-95e8-dc5f406d4bfc
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit
 msc.type: chapter
 ms.openlocfilehash: d7d0426ed427f3b8fc8c7f9c2fe1518b1887d695
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65115371"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78554144"
 ---
 # <a name="older-versions---ajax-control-toolkit"></a>Versions antérieures - Ajax Control Toolkit
 
-> La prise en main avec les outils de contrôle Ajax et comment utiliser certains des contrôles plus populaires. DevExpress maintient que les versions gratuite et open source Ajax Control Toolkit.
+> Comment prendre en main la boîte à outils de contrôle AJAX et comment utiliser certains des contrôles les plus populaires. DevExpress gère la boîte à outils de contrôle AJAX gratuite et Opened source.
 > 
 > 
-> ![](index/_static/image1.png) DevExpress, les développeurs de logiciel primé Web Forms ASP.NET, MVC et contrôles d’interface utilisateur de HTML5 et infrastructures, a pris le relais la maintenance d’ASP.NET AJAX Control Toolkit faire en sorte que cette bibliothèque open source hautement demandée à un état fiable. [En savoir plus](https://go.devexpress.com/AjaxControlToolkit_ASP_Resources_Tutorials.aspx).
+> ![](index/_static/image1.png) DevExpress, les développeurs de ASP.NET WebForms primés, de contrôles et d’infrastructures d’interface utilisateur MVC et HTML5, ont pris en charge la maintenance de ASP.NET AJAX Control Toolkit pour ramener cette bibliothèque open source hautement sollicitée à un état fiable. [En savoir plus](https://go.devexpress.com/AjaxControlToolkit_ASP_Resources_Tutorials.aspx).
 
-- [Prise en main](getting-started/index.md)
+- [Bien démarrer](getting-started/index.md)
 
     - [Bien démarrer avec AJAX Control Toolkit (C#)](getting-started/get-started-with-the-ajax-control-toolkit-cs.md)
     - [Utilisation de contrôles AJAX Control Toolkit et extendeurs de contrôle (C#)](getting-started/using-ajax-control-toolkit-controls-and-control-extenders-cs.md)

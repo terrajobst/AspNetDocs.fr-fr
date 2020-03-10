@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: 228194a7b35e116cabae6d819e7a3a8060a3ef6a
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.openlocfilehash: 92fa428608d4ac2bf56d3c6dc9c50f1449295869
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074915"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78544512"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Réseau de distribution de contenu Microsoft Ajax
 
@@ -22,7 +22,7 @@ ms.locfileid: "77074915"
 >
 > Le CDN Microsoft Ajax n’a pas de contrat SLA au-dessus et au-delà de l’utilisation d’un Azure CDN.
 >
-> Utilisez [ce problème GitHub](https://github.com/aspnet/AspNetDocs/issues/116) pour signaler des problèmes avec le CDN Microsoft Ajax.
+> Utilisez [ce problème GitHub](https://github.com/dotnet/AspNetDocs/issues/116) pour signaler des problèmes avec le CDN Microsoft Ajax.
 
 ## <a name="table-of-contents"></a>Sommaire
 
@@ -1180,8 +1180,8 @@ Les versions suivantes des mises en production [http://hammerjs.github.io/](http
 Les versions suivantes de la bibliothèque ASP.NET AJAX sont hébergées sur le CDN. Cliquez sur chaque lien pour afficher la liste réelle des fichiers.
 
 - [ASP.NET Web Forms et Ajax version 4.5.2](cdnajax452.md "ASP.NET Web Forms et Ajax 4.5.2")
-- [ASP.NET Web Forms et Ajax version 4](cdnajax4.md "ASP.NET Web Forms et Ajax 4")
-- [ASP.NET AJAX version 3,5](cdnajax35.md "ASP.NET Ajax 3.5")
+- [ASP.NET Web Forms et Ajax version 4](cdnajax4.md "ASP.NET Web Forms et Ajax 4")
+- [ASP.NET AJAX version 3,5](cdnajax35.md "ASP.NET Ajax 3.5")
 
 <a id="ASPNET_MVC_Releases_on_the_CDN_16"></a>
 

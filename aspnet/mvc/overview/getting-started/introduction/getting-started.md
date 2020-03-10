@@ -7,12 +7,12 @@ ms.date: 10/04/2018
 ms.assetid: f3d8adbe-55e7-4fd4-84a8-7155bc45c676
 msc.legacyurl: /mvc/overview/getting-started/introduction/getting-started
 msc.type: authoredcontent
-ms.openlocfilehash: c74daa37f68dda641cae97d3b0c19718f62d474d
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.openlocfilehash: ca39bc37c757c0452cf56624c8e37c04df4b41f2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456385"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78602766"
 ---
 # <a name="getting-started-with-aspnet-mvc-5"></a>Prise en main de ASP.NET MVC 5
 
@@ -20,7 +20,7 @@ par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 [!INCLUDE [consider RP](../../../../includes/razor.md)]
 
-Ce didacticiel vous apprend les bases de la création d’une application Web ASP.NET MVC 5 à l’aide de [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Le code source final du didacticiel se trouve sur [GitHub](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie).
+Ce didacticiel vous apprend les bases de la création d’une application Web ASP.NET MVC 5 à l’aide de [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Le code source final du didacticiel se trouve sur [GitHub](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie).
 
 Ce didacticiel a été rédigé [par Scott Guthrie](https://weblogs.asp.net/scottgu/) (Twitter[@scottgu](https://twitter.com/scottgu) ), [scott Hanselman](http://www.hanselman.com/blog/) (Twitter : [@shanselman](https://twitter.com/shanselman) ) et [Rick Anderson](https://twitter.com/RickAndMSFT) ( [@RickAndMSFT](https://twitter.com/#!/RickAndMSFT) )
 
@@ -67,7 +67,7 @@ Pour obtenir la liste des didacticiels actuels, consultez [Articles recommandés
 
 Voulez-vous que le site terminé s’exécute en tant qu’application Web en direct ? Vous pouvez déployer une version complète de l’application sur votre compte Azure en cliquant simplement sur le bouton suivant.
 
-[![](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie&amp;WT.mc_id=deploy_azure_aspnet)
+[![](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/dotnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie&amp;WT.mc_id=deploy_azure_aspnet)
 
 Vous avez besoin d’un compte Azure pour déployer cette solution sur Azure. Si vous n’avez pas encore de compte, utilisez l’une des options suivantes pour en créer un :
 

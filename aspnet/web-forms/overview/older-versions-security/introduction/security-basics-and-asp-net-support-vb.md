@@ -9,11 +9,11 @@ ms.assetid: ab68a92b-fc81-40a4-a7dc-406625d2c5d4
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 99e986013cb5a923ddb150022013e3a75852ce55
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621611"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78575340"
 ---
 # <a name="security-basics-and-aspnet-support-vb"></a>Concepts de base et prise en charge de la sécurité par ASP.NET (VB)
 
@@ -40,7 +40,7 @@ Il s’agit du premier didacticiel d’une série de didacticiels qui explorent 
 
 Ces didacticiels sont destinés à être concis et fournissent des instructions pas à pas avec de nombreuses captures d’écran pour vous guider tout au long du processus. Chaque Didacticiel est disponible dans C# et Visual Basic versions et comprend un téléchargement du code complet utilisé. (Ce premier didacticiel se concentre sur les concepts de sécurité d’un point de vue de haut niveau et ne contient donc pas de code associé.)
 
-Dans ce didacticiel, nous aborderons les concepts de sécurité importants et les fonctionnalités disponibles dans ASP.NET pour vous aider à implémenter l’authentification par formulaire, l’autorisation, les comptes d’utilisateurs et les rôles. Commençons !
+Dans ce didacticiel, nous aborderons les concepts de sécurité importants et les fonctionnalités disponibles dans ASP.NET pour vous aider à implémenter l’authentification par formulaire, l’autorisation, les comptes d’utilisateurs et les rôles. C’est parti !
 
 > [!NOTE]
 > La sécurité est un aspect important de toute application qui s’étend aux décisions physiques, technologiques et de stratégie, et qui requiert un degré élevé de connaissance de la planification et du domaine. Cette série de didacticiels n’est pas conçue comme un guide pour le développement d’applications Web sécurisées. Au lieu de cela, elle se concentre spécifiquement sur l’authentification par formulaire, l’autorisation, les comptes d’utilisateurs et les rôles. Bien que certains concepts de sécurité en rapport avec ces problèmes soient abordés dans cette série, d’autres ne sont pas explorés.
@@ -69,7 +69,7 @@ Le flux de travail d’authentification Windows utilise l’une des techniques d
 
 - Authentification de base
 - Authentification Digest
-- authentification Windows intégrée
+- Authentification Windows intégrée
 
 Les trois techniques fonctionnent à peu près de la même façon : lorsqu’une demande anonyme non autorisée arrive, le serveur Web renvoie une réponse HTTP indiquant que l’autorisation est requise pour continuer. Le navigateur affiche ensuite une boîte de dialogue modale qui invite l’utilisateur à entrer son nom d’utilisateur et son mot de passe (voir figure 1). Ces informations sont ensuite renvoyées au serveur Web via un en-tête HTTP.
 

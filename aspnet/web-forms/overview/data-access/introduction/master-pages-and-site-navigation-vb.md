@@ -9,11 +9,11 @@ ms.assetid: 022801d8-a327-4d0c-8780-6094c9cee00d
 msc.legacyurl: /web-forms/overview/data-access/introduction/master-pages-and-site-navigation-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 4a2b5ba8c1781f1194f951a44661a8f7dd095f41
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74578887"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78530519"
 ---
 # <a name="master-pages-and-site-navigation-vb"></a>Pages maîtres et navigation dans un site (VB)
 
@@ -51,7 +51,7 @@ Pour créer une page maître, cliquez avec le bouton droit sur le nom du projet 
 
 Définissez la disposition de page à l’ensemble du site dans la page maître. Vous pouvez utiliser la Mode Création et ajouter la disposition ou les contrôles Web dont vous avez besoin, ou vous pouvez ajouter manuellement la balise manuellement en mode Source. Dans ma page maître, j’utilise des [feuilles de style en cascade](http://www.w3schools.com/css/default.asp) pour le positionnement et les styles avec les paramètres CSS définis dans le `Style.css`de fichier externe. Bien que vous ne soyez pas en mesure de déterminer à partir du balisage illustré ci-dessous, les règles CSS sont définies de sorte que le contenu de la `<div>`de navigation est positionné de façon absolue afin qu’il apparaisse à gauche et ait une largeur fixe de 200 pixels.
 
-Site. Master
+Site.master
 
 [!code-aspx[Main](master-pages-and-site-navigation-vb/samples/sample1.aspx)]
 
@@ -219,11 +219,11 @@ Nous allons afficher une liste non triée à l’aide d’un répéteur, mais ce
 
 **Figure 13**: ajouter un nouveau contrôle utilisateur Web au dossier `UserControls` ([cliquez pour afficher l’image en taille réelle](master-pages-and-site-navigation-vb/_static/image31.png))
 
-SectionLevelTutorialListing. ascx
+SectionLevelTutorialListing.ascx
 
 [!code-aspx[Main](master-pages-and-site-navigation-vb/samples/sample12.aspx)]
 
-SectionLevelTutorialListing. ascx. vb
+SectionLevelTutorialListing.ascx.vb
 
 [!code-vb[Main](master-pages-and-site-navigation-vb/samples/sample13.vb)]
 

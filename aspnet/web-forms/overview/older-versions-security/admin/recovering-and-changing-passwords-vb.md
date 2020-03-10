@@ -9,11 +9,11 @@ ms.assetid: f9adcb5d-6d70-4885-a3bf-ed95efb4da1a
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/recovering-and-changing-passwords-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 0ed1df9455af94a86ce59ecc06c55846a4880596
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74618752"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78629212"
 ---
 # <a name="recovering-and-changing-passwords-vb"></a>Récupération et changement des mots de passe (VB)
 
@@ -144,7 +144,7 @@ La propriété `MailDefinition` n’est pas unique à la classe PasswordRecovery
 
 ### <a name="programmatically-resetting-a-users-password"></a>Réinitialisation par programmation du mot de passe d’un utilisateur
 
-Lors de la réinitialisation du mot de passe d’un utilisateur, le contrôle PasswordRecovery appelle la [méthode`ResetPassword`](https://msdn.microsoft.com/library/system.web.security.membershipuser.resetpassword.aspx)de l’objet `MembershipUser`. Cette méthode a deux surcharges :
+Lors de la réinitialisation du mot de passe d’un utilisateur, le contrôle PasswordRecovery appelle la [méthode`ResetPassword`](https://msdn.microsoft.com/library/system.web.security.membershipuser.resetpassword.aspx)de l’objet `MembershipUser`. Cette méthode comporte deux surcharges :
 
 - **[`ResetPassword`](https://msdn.microsoft.com/library/d94bdzz2.aspx)** : réinitialise le mot de passe d’un utilisateur. Utilisez cette surcharge si `RequiresQuestionAndAnswer` a la valeur false.
 - **[`ResetPassword(securityAnswer)`](https://msdn.microsoft.com/library/d90zte4w.aspx)** -réinitialise le mot de passe d’un utilisateur uniquement si le *securityAnswer* fourni est correct. Utilisez cette surcharge si `RequiresQuestionAndAnswer` a la valeur true.

@@ -9,11 +9,11 @@ ms.assetid: 423498f7-1a4b-44a1-b342-5f39d0bcf94f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/aspnet-error-handling
 msc.type: authoredcontent
 ms.openlocfilehash: 9514142ca50b33470a3f4c033e4f8e319a9ee09b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74636467"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78566681"
 ---
 # <a name="aspnet-error-handling"></a>Gestion des erreurs ASP.NET
 
@@ -33,7 +33,7 @@ Dans ce didacticiel, vous allez modifier l’exemple d’application Wingtip Toy
 - Comment afficher des messages d’erreur qui ne compromettent pas la sécurité.
 - Comment implémenter des modules de journalisation des erreurs et des gestionnaires d’erreurs (ELMAH).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Les applications ASP.NET doivent être en mesure de gérer les erreurs qui se produisent pendant l’exécution de manière cohérente. ASP.NET utilise le common language runtime (CLR), qui offre un moyen de notifier les erreurs aux applications de façon uniforme. Lorsqu’une erreur se produit, une exception est levée. Une exception est une erreur, une condition ou un comportement inattendu rencontré par une application.
 
@@ -53,8 +53,8 @@ Le runtime a un ensemble de base d’exceptions dérivant de la classe `SystemEx
 
 Dans une application ASP.NET Web Forms, les exceptions peuvent être gérées en fonction d’une hiérarchie de gestion spécifique. Une exception peut être gérée aux niveaux suivants :
 
-- Niveau de l’application
-- Niveau de page
+- Niveau d’application
+- Niveau page
 - Niveau de code
 
 Quand une application gère des exceptions, des informations supplémentaires sur l’exception héritée de la classe d’exception peuvent souvent être récupérées et affichées à l’utilisateur. Outre le niveau de l’application, de la page et du code, vous pouvez également gérer les exceptions au niveau du module HTTP et à l’aide d’un gestionnaire personnalisé IIS.
@@ -139,7 +139,7 @@ Mettez à jour la configuration en ajoutant une section `customErrors` au fichie
 2. Ajoutez la section `customErrors` au fichier *Web. config* dans le nœud `<system.web>` comme suit :   
 
     [!code-xml[Main](aspnet-error-handling/samples/sample8.xml?highlight=3-5)]
-3. Enregistrez le fichier *Web. config* .
+3. Enregistrez le fichier *Web.config* .
 
 La section `customErrors` spécifie le mode, qui a la valeur « on ». Elle spécifie également le `defaultRedirect`, qui indique à l’application la page à laquelle accéder lorsqu’une erreur se produit. En outre, vous avez ajouté un élément d’erreur spécifique qui spécifie comment gérer une erreur 404 lorsqu’une page est introuvable. Plus loin dans ce didacticiel, vous allez ajouter une gestion des erreurs supplémentaire qui capturera les détails d’une erreur au niveau de l’application.
 
@@ -317,7 +317,7 @@ Merci pour les opérations suivantes. J’espère que cet ensemble de didacticie
 
 En savoir plus sur le déploiement de votre application Web sur Microsoft Azure, consultez [déployer une application secure ASP.NET Web Forms avec appartenance, OAuth et SQL Database sur un site Web Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/).
 
-## <a name="free-trial"></a>Essai gratuit
+## <a name="free-trial"></a>Version d’évaluation gratuite
 
 [Microsoft Azure-essai gratuit](https://azure.microsoft.com/pricing/free-trial/)  
  La publication de votre site Web sur Microsoft Azure vous permet de gagner du temps, de la maintenance et des dépenses. Il s’agit d’un processus rapide pour déployer votre application Web sur Azure. Lorsque vous devez gérer et surveiller votre application Web, Azure propose un large éventail d’outils et de services. Gérez les données, le trafic, l’identité, les sauvegardes, la messagerie, le support et les performances dans Azure. Tout cela est fourni dans une approche très économique.

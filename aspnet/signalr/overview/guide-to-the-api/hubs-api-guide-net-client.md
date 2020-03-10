@@ -9,11 +9,11 @@ ms.assetid: 6d02d9f7-94e5-4140-9f51-5a6040f274f6
 msc.legacyurl: /signalr/overview/guide-to-the-api/hubs-api-guide-net-client
 msc.type: authoredcontent
 ms.openlocfilehash: d3536f1c15cd7dad7cd660becf0577e5c131f707
-ms.sourcegitcommit: 295cf898a4c87e264b0c35c7254b0fa4169f2278
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057007"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78578791"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---net-client-c"></a>Guide de l’API des hubs Signalr ASP.NET-C#client .net ()
 
@@ -42,7 +42,7 @@ ms.locfileid: "74057007"
 >
 > N’hésitez pas à nous faire part de vos commentaires sur la façon dont vous aimez ce didacticiel et sur ce que nous pourrions améliorer dans les commentaires en bas de la page. Si vous avez des questions qui ne sont pas directement liées au didacticiel, vous pouvez les poster sur le [forum ASP.net signalr](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Présentation
 
 Ce document contient les sections suivantes :
 
@@ -85,7 +85,7 @@ Les liens vers les rubriques de référence sur les API concernent la version .N
 
 <a id="clientsetup"></a>
 
-## <a name="client-setup"></a>Installation du client
+## <a name="client-setup"></a>Configuration cliente
 
 Installez le package NuGet [Microsoft. Aspnet. signalr. client](http://nuget.org/packages/Microsoft.AspNet.SignalR.Client) (et non le package [Microsoft. Aspnet. signalr](http://nuget.org/packages/microsoft.aspnet.signalr) ). Ce package prend en charge WinRT, Silverlight, WPF, l’application console et les clients Windows Phone, pour .NET 4 et .NET 4,5.
 

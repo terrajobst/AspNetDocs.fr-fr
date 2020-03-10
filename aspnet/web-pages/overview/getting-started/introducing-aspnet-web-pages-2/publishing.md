@@ -1,215 +1,215 @@
 ---
 uid: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/publishing
-title: 'Présentation des Pages Web ASP.NET : publication d’un Site à l’aide de WebMatrix | Microsoft Docs'
+title: Présentation de la pages Web ASP.NET de la publication d’un site à l’aide de WebMatrix | Microsoft Docs
 author: Rick-Anderson
-description: Ce didacticiel est le dernier volet de l’ensemble de didacticiels qui présente ASP.NET Web Pages et WebMatrix de Microsoft. Il explique comment publier votre site t...
+description: Ce didacticiel est la dernière version de l’ensemble de didacticiels qui introduit pages Web ASP.NET et Microsoft WebMatrix. Il explique comment publier votre site t...
 ms.author: riande
 ms.date: 05/28/2015
 ms.assetid: 7e85c70e-1a88-4408-8b3d-29611c7713ed
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/publishing
 msc.type: authoredcontent
 ms.openlocfilehash: 49a841dbda183bf1d59153b83f694c9f517e0b94
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127750"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78633615"
 ---
-# <a name="introducing-aspnet-web-pages---publishing-a-site-by-using-webmatrix"></a>Présentation des Pages Web ASP.NET - publication d’un Site à l’aide de WebMatrix
+# <a name="introducing-aspnet-web-pages---publishing-a-site-by-using-webmatrix"></a>Présentation de la pages Web ASP.NET de la publication d’un site à l’aide de WebMatrix
 
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Ce didacticiel est le dernier volet de l’ensemble de didacticiels qui présente ASP.NET Web Pages et WebMatrix de Microsoft. Il explique comment publier votre site sur Internet afin que d’autres peuvent utiliser. Il part du principe que vous avez terminé la série via [création d’une zone de recherche cohérents pour les Sites ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=251585).
+> Ce didacticiel est la dernière version de l’ensemble de didacticiels qui introduit pages Web ASP.NET et Microsoft WebMatrix. Il explique comment publier votre site sur Internet afin que d’autres personnes puissent l’utiliser. Il part du principe que vous avez terminé la série en [créant une apparence cohérente pour les Sites pages Web ASP.net](https://go.microsoft.com/fwlink/?LinkId=251585).
 > 
 > Vous allez apprendre à publier votre site à l’aide de :
 > 
 > - Microsoft Azure
-> - Société d’hébergement Web
+> - Entreprise d’hébergement Web
 
-## <a name="about-publishing-your-site"></a>Sur la publication de votre Site
+## <a name="about-publishing-your-site"></a>À propos de la publication de votre site
 
-Jusqu'à présent, vous avez fait tout votre travail sur un ordinateur local, notamment le test de vos pages. Pour exécuter votre<em>.cshtml</em> pages, vous avez utilisé le serveur web qui est intégré à WebMatrix, à savoir IIS Express. Mais bien sûr, aucune autre peut voir le site que vous avez créé à l’exception de vous. Pour d’autres permettent de travailler avec votre site, vous devez le publier sur Internet.
+Jusqu’à maintenant, vous avez effectué tout votre travail sur un ordinateur local, y compris le test de vos pages. Pour exécuter vos pages<em>. cshtml</em> , vous avez utilisé le serveur Web intégré à WebMatrix, à savoir IIS Express. Mais bien entendu, personne ne peut voir le site que vous avez créé, à l’exception de vous. Pour permettre à d’autres personnes de travailler avec votre site, vous devez le publier sur Internet.
 
-Sauf si vous avez déjà accès à un serveur web public, publication signifie que vous devez disposer d’un compte avec un *plateforme cloud* ou un *fournisseur d’hébergement*. Une plateforme cloud, tels que Microsoft Azure, fournit une infrastructure de la demande pour vos applications. Un fournisseur d’hébergement est une société qui possède des serveurs web accessible publiquement et qui sera louer vous espace pour votre site. Hébergement des plans d’exécution à partir de quelques dollars par mois (ou même gratuits) pour les sites de petite taille à plusieurs centaines de dollars par mois pour les sites Web commerciaux de haut volume.
+À moins que vous n’ayez déjà accès à un serveur Web public, la publication signifie que vous devez disposer d’un compte avec une *plateforme Cloud* ou un *fournisseur d’hébergement*. Une plateforme Cloud, telle que Microsoft Azure, fournit une infrastructure à la demande pour vos applications. Un fournisseur d’hébergement est une société qui possède des serveurs Web accessibles publiquement et qui vous loueront de l’espace pour votre site. Les plans d’hébergement s’exécutent à partir de quelques dollars par mois (voire gratuitement) pour les petits sites à plusieurs centaines de dollars par mois pour les sites Web commerciaux à volume élevé.
 
 > [!NOTE]
-> Vous aurez peut-être accès à un serveur web publique via le fournisseur de services internet (ISP) qui vous permet d’obtenir le service internet à la maison. Toutefois, votre fournisseur d’hébergement doit prendre en charge les Pages Web ASP.NET. De nombreux ISP ne, mais il est toujours intéressant de vérification.
+> Vous pouvez avoir accès à un serveur Web public par le biais du fournisseur de services Internet (ISP) que vous utilisez pour obtenir le service Internet chez vous. Toutefois, votre fournisseur d’hébergement doit prendre en charge pages Web ASP.NET. De nombreux ISP ne le sont pas, mais il est toujours intéressant de le vérifier.
 
-Dans ce didacticiel, nous allons vous donner une vue d’ensemble de la publication. Il n’est pas pratique fournir des détails précis pour tout, étant donné que le processus diffère légèrement pour chaque fournisseur d’hébergement. Mais, vous obtiendrez une bonne idée du fonctionnement du processus.
+Dans ce didacticiel, nous allons vous fournir une vue d’ensemble de la publication. Il n’est pas pratique de fournir des détails exacts pour tout, car le processus diffère légèrement pour chaque fournisseur d’hébergement. Mais vous allez avoir une bonne idée du fonctionnement du processus.
 
 Ce didacticiel contient quatre sections :
 
 1. [Configuration de la page par défaut](#defaultpage)
-2. Publication (choisissez une des opérations suivantes)  
- A. [Publication de votre Site vers Microsoft Azure](#azure)  
- B. [Publication de votre Site pour une société d’hébergement Web](#host)
-3. [La mise à jour le Site actif : Republication](#update)
+2. Publication (choisissez l’une des options suivantes)  
+ a. [Publication de votre site sur Microsoft Azure](#azure)  
+ b. [Publication de votre site sur une société d’hébergement Web](#host)
+3. [Mise à jour du site actif : republication](#update)
 
 <a id="defaultpage"></a>
 ## <a name="setting-up-the-default-page"></a>Configuration de la page par défaut
 
-Lorsqu’un utilisateur accède à l’adresse de base pour votre site web, la page par défaut pour votre site s’affiche à l’utilisateur. Par exemple, lorsque *Default.htm* est défini comme la page par défaut pour le site à l’adresse `www.contoso.com`, puis en accédant à `www.contoso.com` est identique à la navigation vers `www.contoso.com/Default.htm`.
+Quand un utilisateur accède à l’adresse de base de votre site Web, la page par défaut de votre site s’affiche pour l’utilisateur. Par exemple, lorsque *default. htm* est défini comme page par défaut pour le site sur `www.contoso.com`, la navigation vers `www.contoso.com` revient à accéder à `www.contoso.com/Default.htm`.
 
-Actuellement, votre site utilise **Default.cshtml** en tant que la page par défaut. Cette page est parfaite pour votre page par défaut, mais dans ce didacticiel vous n’avez ajouté aucun contenu à cette page afin de s’afficher une page vierge. Ouvrez Default.cshtml et remplacez le contenu par le code suivant.
+Actuellement, votre site utilise **default. cshtml** comme page par défaut. Cette page convient à votre page par défaut, mais dans ce didacticiel, vous n’avez ajouté aucun contenu à cette page pour qu’elle affiche une page vierge. Ouvrez default. cshtml et remplacez le contenu par le code suivant.
 
 [!code-cshtml[Main](publishing/samples/sample1.cshtml)]
 
-Votre site est maintenant prêt pour la publication. Tout d’abord, vous verrez comment déployer le site vers Azure, puis comment le déployer pour une société d’hébergement web. L’option fonctionne pour votre site web et vous ne devez suivre une des options de déploiement.
+Votre site est maintenant prêt pour la publication. Tout d’abord, vous verrez comment déployer le site sur Azure, puis comment le déployer dans une société d’hébergement Web. L’une ou l’autre option fonctionne pour votre site Web, et vous devez uniquement suivre l’une des options de déploiement.
 
 <a id="azure"></a>
-## <a name="publishing-your-site-to-microsoft-azure"></a>Publication de votre Site vers Microsoft Azure
+## <a name="publishing-your-site-to-microsoft-azure"></a>Publication de votre site sur Microsoft Azure
 
-Ce didacticiel vous indiquera tout d’abord comment déployer votre site sur Microsoft Azure. En vous connectant avec un compte Microsoft, vous pouvez créer jusqu'à 10 sites gratuits sur Azure. Ces sites gratuits fournissent un moyen pratique pour tester vos sites. Vous pouvez toujours supprimer ce site exemple ultérieurement pour éviter d’utiliser tous vos sites gratuits. Vous pouvez créer un compte d’essai gratuit en quelques minutes. Pour plus d’informations, consultez [version d’évaluation gratuite Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
+Ce didacticiel vous montrera tout d’abord comment déployer votre site sur Microsoft Azure. En vous connectant avec un compte Microsoft, vous pouvez créer jusqu’à 10 sites gratuits sur Azure. Ces sites gratuits offrent un moyen pratique de tester vos sites. Vous pouvez toujours supprimer cet exemple de site ultérieurement pour éviter d’utiliser tous vos sites gratuits. Vous pouvez créer un compte d’essai gratuit en quelques minutes. Pour plus d’informations, consultez [Essai gratuit Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
 
-Dans le ruban de WebMatrix, cliquez sur le **publier** bouton.
+Dans le ruban WebMatrix, cliquez sur le bouton **publier** .
 
-!['Publish' bouton dans le ruban de WebMatrix](publishing/_static/image1.png)
+![Bouton « publier » dans le ruban WebMatrix](publishing/_static/image1.png)
 
-Le **publier votre Site** boîte de dialogue s’affiche. Si vous n’avez pas connecté à votre compte Microsoft, la boîte de dialogue contiendra une **prise en main Azure** lien. Cliquez sur ce lien.
+La boîte de dialogue **publier votre site** s’affiche. Si vous n’êtes pas connecté à votre compte Microsoft, la boîte de dialogue contient un lien **prise en main d’Azure** . Cliquez sur ce lien.
 
-![Publiez votre site](publishing/_static/image2.png)
+![Publier votre site](publishing/_static/image2.png)
 
-Si vous n’avez pas connecté à un compte Microsoft, vous obtenez à nouveau la possibilité de se connecter. Vous devez vous connecter à un compte Microsoft pour publier votre site sur Azure.
+Si vous n’êtes pas connecté à un compte Microsoft, vous avez à nouveau la possibilité de vous connecter. Vous devez vous connecter à un compte Microsoft pour publier votre site sur Azure.
 
 ![Se connecter](publishing/_static/image3.png)
 
-Après vous être connecté à votre compte Microsoft, la boîte de dialogue contient des liens pour créer un nouveau site sur Azure ou vous connecter à un de vos sites existants sur Azure.
+Une fois connecté à votre compte Microsoft, la boîte de dialogue contient des liens permettant de créer un nouveau site sur Azure ou de se connecter à l’un de vos sites existants sur Azure.
 
-![Créer un nouveau Site](publishing/_static/image4.png)
+![Créer un site](publishing/_static/image4.png)
 
 Sélectionnez **créer un nouveau site**.
 
-Si vous avez nommé votre projet **WebPagesMovies**, le nom par défaut pour votre site sera **webpagesmovies.azurewebsites.net**. Ce nom par défaut est probablement pas disponible, comme indiqué par le point d’exclamation rouge.
+Si vous avez nommé votre projet **WebPagesMovies**, le nom par défaut de votre site sera **webpagesmovies.azurewebsites.net**. Ce nom par défaut n’est probablement pas disponible, comme indiqué par le point d’exclamation rouge.
 
 ![nom du site Web par défaut](publishing/_static/image5.png)
 
-Modifier le nom du site à un élément qui est disponible, puis sélectionnez un emplacement qui est proche de votre emplacement.
+Remplacez le nom du site par un nom qui est disponible, puis sélectionnez un emplacement proche de votre emplacement.
 
 ![nom du site modifié](publishing/_static/image6.png)
 
 Cliquez sur **OK**.
 
-WebMatrix performss un test pour déterminer si le serveur est compatible avec votre site.
+WebMatrix permet d’effectuer un test pour déterminer si le serveur est compatible avec votre site.
 
 ![test de compatibilité](publishing/_static/image7.png)
 
-Sélectionnez **continuer**.
+Sélectionnez **Continuer**.
 
 Les résultats du test de compatibilité sont affichés.
 
 ![résultat de la compatibilité](publishing/_static/image8.png)
 
-Sélectionnez **continuer**.
+Sélectionnez **Continuer**.
 
-WebMatrix affiche les fichiers et les bases de données qui seront publiés sur le site. Dans la mesure où il s’agit de la première fois que vous publiez le site, tous les fichiers sont répertoriés. Vous pouvez désactiver un fichier qui n’est pas prêt à être publié. Dans les publications ultérieures, seuls les fichiers qui ont été modifiés seront affichera. Consultez [la mise à jour le Site actif : Republication](#update).
+WebMatrix affiche les fichiers et les bases de données qui seront publiés sur le site. Comme c’est la première fois que vous publiez le site, tous les fichiers sont répertoriés. Vous pouvez décocher un fichier qui n’est pas prêt à être publié. Dans les publications suivantes, seuls les fichiers qui ont été modifiés seront affichés. Consultez [mise à jour du site actif : republication](#update).
 
-![Aperçu de la publication](publishing/_static/image9.png)
+![Publier l’aperçu](publishing/_static/image9.png)
 
-Sélectionnez **continuer**.
+Sélectionnez **Continuer**.
 
-Une fois que le site a été déployé sur Azure, un message s’affiche indiquant que le déploiement terminé.
+Une fois que le site a été déployé sur Azure, un message s’affiche pour indiquer que le déploiement est terminé.
 
 ![publication terminée](publishing/_static/image10.png)
 
-Votre site et la base de données ont été publiés sur Azure et sont désormais disponibles au public. Cliquez sur le lien dans le message indiquant la fin de la publication, et vous voyez maintenant votre site déployé. Vous ou toute personne ayant accès à Internet peut ajouter ou modifier des enregistrements dans la base de données.
+Votre site et votre base de données ont été publiés sur Azure et sont désormais disponibles pour le public. Cliquez sur le lien dans le message indiquant que la publication est terminée, et vous verrez maintenant votre site déployé. Vous ou quiconque disposant d’un accès à Internet pouvez ajouter ou modifier des enregistrements dans la base de données.
 
 ![](publishing/_static/image11.png)
 
 <a id="host"></a>
-## <a name="publishing-your-site-to-a-web-hosting-company"></a>Publication de votre Site pour une société d’hébergement Web
+## <a name="publishing-your-site-to-a-web-hosting-company"></a>Publication de votre site sur une société d’hébergement Web
 
-Si vous décidez de ne pas publier sur Azure, vous pouvez à la place publier votre site pour une société d’hébergement web.
+Si vous décidez de ne pas publier sur Azure, vous pouvez publier votre site vers une société d’hébergement Web.
 
-Cliquez sur le **rechercher un hébergement web** lien.
+Cliquez sur le lien **Rechercher l’hébergement Web** .
 
-![Bouton de « Rechercher un hébergement web » dans la boîte de dialogue Paramètres de publication](publishing/_static/image12.png)
+![Bouton « Rechercher l’hébergement Web » dans la boîte de dialogue Paramètres de publication](publishing/_static/image12.png)
 
-Vous accédez à une page sur le site de Microsoft qui répertorie les fournisseurs d’hébergement qui prennent en charge ASP.NET.
+Vous accédez à une page sur le site Microsoft qui répertorie les fournisseurs d’hébergement qui prennent en charge ASP.NET.
 
-![Page sur le site de Microsoft qui répertorie les fournisseurs d’hébergement](publishing/_static/image13.png)
+![Page sur le site Microsoft qui répertorie les fournisseurs d’hébergement](publishing/_static/image13.png)
 
-Évidemment, il peut être difficile de savoir exactement quelles fonctionnalités d’hébergement que vous pouvez avoir besoin sur le long terme. Voici quelques éléments à prendre en compte :
+Évidemment, il peut être difficile de savoir maintenant exactement quelles fonctionnalités d’hébergement vous pouvez avoir besoin à long terme. Voici quelques points à prendre en compte :
 
-- Dans le cadre du site WebPagesMovies, vous n’êtes pas obligé de disposer d’un module complémentaire distinct pour SQL Server, qui souvent les coûts supplémentaires. Dans votre site, vous êtes à l’aide de SQL Server Compact Edition, qui est autonome. Toutefois, vous devrez peut-être accès à SQL Server pour un travail de site Web futures que procéder. Si vous pensez que vous pouvez, assurez-vous que vous pouvez ajouter ultérieurement des capacités de SQL Server.
+- Dans le cadre du site WebPagesMovies, vous n’avez pas besoin d’avoir un module complémentaire distinct pour SQL Server, ce qui est souvent un coût supplémentaire. Dans votre site, vous utilisez l’édition SQL Server Compact, qui est autonome. Toutefois, vous aurez peut-être besoin d’un accès SQL Server pour de futurs travaux de site Web. Si vous pensez que c’est possible, assurez-vous que vous pouvez ajouter SQL Server fonctionnalité ultérieurement.
 - Vérifiez si le fournisseur d’hébergement prend en charge le protocole de publication Web Deploy. Vous pouvez publier à l’aide du protocole FTP, mais il est plus pratique d’utiliser Web Deploy.
 
-Certains sites proposent une période d’essai gratuite. Une version d’évaluation gratuite est un bon moyen de tenter de publier et d’hébergement pendant que vous êtes toujours expérimenter WebMatrix et ASP.NET Web Pages.
+Certains sites proposent une période d’évaluation gratuite. Une version d’évaluation gratuite est un bon moyen d’essayer la publication et l’hébergement, alors que vous avez toujours expérimentation avec WebMatrix et pages Web ASP.NET.
 
-Choisissez une qui vous convient. Pour ce didacticiel, nous avons sélectionné DiscountASP.NET, car bien que nous étions en train de créer le didacticiel, cette société avait une promotion permettant d’héberger un site gratuit pendant quelques mois.
+Choisissez celui que vous souhaitez. Pour ce didacticiel, nous avons sélectionné DiscountASP.NET, car pendant la création du didacticiel, cette entreprise avait une promotion qui permettait aux utilisateurs d’héberger un site gratuitement pendant quelques mois.
 
 > [!NOTE]
-> Notre choix d’un fournisseur d’hébergement pour ce didacticiel ne doit pas être interprété comme une approbation de cette société plutôt que les autres. Mais nous avons dû choisir un à titre d’illustration et DiscountASP.NET est une des nombreuses sociétés qui prend en charge des Pages Web ASP.NET et le protocole Web Deploy pour la publication.
+> Le choix d’un fournisseur d’hébergement pour ce didacticiel ne doit pas être interprété comme une endossement de l’entreprise. Toutefois, nous avons dû choisir un exemple, et DiscountASP.NET est l’une des nombreuses entreprises qui prennent en charge pages Web ASP.NET et le protocole Web Deploy pour la publication.
 
-En règle générale, une fois que vous avez inscrit avec le fournisseur d’hébergement, la société vous envoie un e-mail contenant un nom d’utilisateur et le mot de passe, l’URL du serveur de web et ainsi de suite. Si la société d’hébergement prend en charge le protocole Web Deploy, ils peuvent envoyer vous un fichier qui contient les paramètres de publication, ou vous permettent de télécharger un. Un fichier de paramètres de publication simplifie le processus pour vous.
+En général, une fois que vous vous êtes inscrit auprès du fournisseur d’hébergement, la société vous envoie un e-mail contenant un nom d’utilisateur et un mot de passe, l’URL du serveur Web, etc. Si la société d’hébergement prend en charge Web Deploy protocole, elle peut vous envoyer un fichier contenant les paramètres de publication, ou vous permettre d’en télécharger un. Un fichier de paramètres de publication simplifie le processus pour vous.
 
-Lorsque vous êtes inscrit et que vous êtes prêt à publier, cliquez sur le **publier** bouton dans le ruban de WebMatrix. Le **paramètres de publication** boîte de dialogue s’affiche.
+Une fois que vous êtes inscrit et que vous êtes prêt à publier, cliquez sur le bouton **publier** dans le ruban WebMatrix. La boîte de dialogue **paramètres de publication** s’affiche.
 
-Si le fournisseur d’hébergement vous avons envoyé un fichier de paramètres de publication, cliquez sur le **importer les paramètres de publication** lier, puis importez le fichier. Si vous n’avez pas un fichier de paramètres de publication, renseignez les champs en utilisant les valeurs de la société d’hébergement vous avons envoyé par courrier électronique. Voici à quoi le **paramètres de publication** boîte de dialogue peut se présenter comme lorsque vous avez terminé :
+Si le fournisseur d’hébergement vous a envoyé un fichier de paramètres de publication, cliquez sur le lien **Importer les paramètres de publication** et importez le fichier. Si vous n’avez pas de fichier de paramètres de publication, renseignez les champs en utilisant les valeurs que la société d’hébergement vous a envoyées par courrier électronique. Voici à quoi peut ressembler la boîte de dialogue **paramètres de publication** lorsque vous avez terminé :
 
-![Renseignez les paramètres de publication dans la boîte de dialogue Publier les paramètres](publishing/_static/image14.png)
+![Les paramètres de publication sont renseignés dans la boîte de dialogue « Paramètres de publication »](publishing/_static/image14.png)
 
-Cliquez sur **valider la connexion**. Si tout est OK, la boîte de dialogue indique **connecté avec succès**, ce qui signifie qu’il peut communiquer avec le serveur d’hébergement du fournisseur.
+Cliquez sur **valider la connexion**. Si tout est correct, la boîte de dialogue signale **correctement la connexion**, ce qui signifie qu’elle peut communiquer avec le serveur du fournisseur d’hébergement.
 
-![Message de réussite si publier les paramètres sont corrects](publishing/_static/image15.png)
+![Message de réussite si les paramètres de publication sont corrects](publishing/_static/image15.png)
 
-S’il existe un problème, WebMatrix fait de son mieux pour vous indiquer l’origine du problème :
+En cas de problème, WebMatrix fait de son mieux pour vous indiquer le problème :
 
-![Message d’erreur s’il existe un problème avec les paramètres de publication](publishing/_static/image16.png)
+![Message d’erreur en cas de problème avec les paramètres de publication](publishing/_static/image16.png)
 
-Cliquez sur **enregistrer** pour enregistrer vos paramètres. WebMatrix propose effectuer un test pour vous assurer qu’il peut communiquer correctement avec le site d’hébergement :
+Cliquez sur **Save** pour enregistrer vos paramètres. WebMatrix propose d’effectuer un test pour s’assurer qu’il peut communiquer correctement avec le site d’hébergement :
 
-![Message offre pour effectuer un test du processus de publication](publishing/_static/image17.png)
+![Offre de message pour effectuer un test du processus de publication](publishing/_static/image17.png)
 
-Cliquez sur **Oui**. WebMatrix télécharge les fichiers d’exemple au fournisseur d’hébergement. Lorsque le test de compatibilité est effectué, WebMatrix signale les résultats :
+Cliquez sur **Oui**. WebMatrix charge certains fichiers d’exemple dans le fournisseur d’hébergement. Lorsque le test de compatibilité est terminé, WebMatrix signale les résultats :
 
 ![Résultats du test de publication](publishing/_static/image18.png)
 
-Si vous êtes prêt à l’emploi, continuez et cliquez sur **continuer** pour démarrer le processus de publication réellement. WebMatrix détermine quels fichiers sont dans votre site et se trouvent déjà sur le serveur hôte (maintenant, aucun), puis vous donne un aperçu du processus de publication :
+Si vous êtes prêt, continuez et cliquez sur **Continuer** pour démarrer le processus de publication pour le réel. WebMatrix détermine les fichiers qui se trouvent dans votre site et qui sont déjà sur le serveur hôte (pour le moment, aucun) et vous donne un aperçu du processus de publication :
 
-![Aperçu des fichiers à télécharger le processus de publication](publishing/_static/image19.png)
+![Aperçu des fichiers que le processus de publication doit télécharger](publishing/_static/image19.png)
 
-La liste des fichiers à publier inclut les pages web que vous avez créée comme *Movies.cshtml*. La liste inclut également des fichiers pour les programmes d’assistance que vous avez installé, les fichiers pour exécuter SQL Server Compact Edition pour votre base de données et ainsi de suite. Par conséquent, les processus de publication d’initial peut être importante.
+La liste des fichiers à publier comprend les pages Web que vous avez créées comme *movies. cshtml*. La liste comprend également des fichiers pour les applications auxiliaires que vous avez installées, les fichiers à exécuter SQL Server Compact édition de votre base de données, et ainsi de suite. Par conséquent, le processus de publication initial peut être substantiel.
 
-Cliquez sur **Continuer**. WebMatrix copie vos fichiers au serveur d’hébergement du fournisseur. Une fois terminé, les résultats sont signalés dans la barre d’état :
+Cliquez sur **Continuer**. WebMatrix copie vos fichiers sur le serveur du fournisseur d’hébergement. Une fois l’opération terminée, les résultats sont signalés dans la barre d’État :
 
-![Message de barre d’état lorsque le processus de publication terminée avec succès](publishing/_static/image20.png)
+![Message de la barre d’État lorsque le processus de publication s’est terminé avec succès](publishing/_static/image20.png)
 
-Pour afficher votre site dynamique, cliquez sur le lien dans la barre d’état. Ajouter *films* à l’URL, et vous verrez la *Movies.cshtml* fichier que vous avez créé :
+Pour afficher votre site actif, cliquez sur le lien dans la barre d’État. Ajoutez des *films* à l’URL pour voir le fichier *movies. cshtml* que vous avez créé :
 
-![Le site en direct affichant la page de films](publishing/_static/image21.png)
+![Site actif avec la page films](publishing/_static/image21.png)
 
 <a id="update"></a>
-## <a name="updating-the-live-site-republishing"></a>La mise à jour le Site actif : Republication
+## <a name="updating-the-live-site-republishing"></a>Mise à jour du site actif : republication
 
-Une fois que vous avez publié votre site (vers Azure ou une société d’hébergement web), il existe deux copies de ce dernier &mdash; la version sur votre ordinateur et la version sur le fournisseur de services. Vous souhaiterez probablement continuer à développer le site (si rien d’autre, dans le cadre de l’ensemble du didacticiel suivant). Lorsque vous le faites, vous devez republier votre site pour copier les modifications depuis votre ordinateur au fournisseur de services. Le processus de publication dans WebMatrix peut déterminer ce que les fichiers ont été modifiés sur votre site et de publier uniquement les fichiers.
+Une fois que vous avez publié votre site (vers Azure ou une société d’hébergement Web), il existe deux copies de l’informatique &mdash; la version sur votre ordinateur et la version sur le fournisseur de services. Vous souhaiterez probablement poursuivre le développement du site (si rien d’autre, dans le cadre de l’ensemble suivant du didacticiel). Dans ce cas, vous devez republier votre site pour copier les modifications de votre ordinateur vers le fournisseur de services. Le processus de publication dans WebMatrix peut déterminer les fichiers qui ont été modifiés sur votre site et publier uniquement ces fichiers.
 
-Pour voir comment fonctionnement la republication, ouvrez le *Movies.cshtml* de site, apportez une petite modification, puis enregistrez le fichier. Par exemple, remplacez le titre par `Movies - Updated`.
+Pour voir comment fonctionne la republication, ouvrez le site *movies. cshtml* , apportez une petite modification, puis enregistrez le fichier. Par exemple, remplacez le titre par `Movies - Updated`.
 
-Cliquez sur le **publier** bouton du ruban. WebMatrix détermine ce qui est modifié et affiche un aperçu des fichiers qu'il publie.
+Cliquez sur le bouton **publier** dans le ruban. WebMatrix détermine ce qui a changé et vous montre un aperçu des fichiers qu’il va publier.
 
-![La boîte de dialogue « Publier » montrant modifiées fichiers prêts à être republication](publishing/_static/image22.png)
+![La boîte de dialogue « publier » qui indique les fichiers modifiés prêts pour la republication](publishing/_static/image22.png)
 
 > [!IMPORTANT] 
 > 
-> Par défaut, WebMatrix publie votre base de données (*.sdf* fichier) uniquement la première fois que vous publierez le site. Une fois votre site est publié et les personnes interagissent avec le site Web, la base de données sur le site a en général, les données du site réel. Vous devez être très attention à ne pas remplacer la base de données en direct avec le *.sdf* fichier qui se trouve sur votre ordinateur, qui contient généralement des données de test uniquement. C’est pourquoi vous voyez l’avertissement **publication remplacera les bases de données distantes**, et pourquoi la case à cocher *WebPagesMovies.sdf* est désactivée par défaut.
+> Par défaut, WebMatrix publie votre base de données (fichier *. sdf* ) uniquement la première fois que vous publiez le site. Une fois que votre site est publié et que les utilisateurs interagissent avec le site Web, la base de données sur le site actif dispose généralement des données réelles du site. Vous devez veiller à ne pas remplacer la base de données active par le fichier *. sdf* qui se trouve sur votre ordinateur, qui contient généralement uniquement des données de test. C’est pour cette raison que la **publication d’avertissement remplace toutes les bases de données distantes**et pourquoi la case à cocher de *WebPagesMovies. sdf* est désactivée par défaut.
 
-Cliquez sur **Continuer**. WebMatrix publie les fichiers modifiés et affiche un message de réussite, semblable à celle de la première fois que vous avez publié.
+Cliquez sur **Continuer**. WebMatrix publie les fichiers modifiés et affiche un message de réussite, comme c’est le cas lors de la première publication.
 
-Accédez au site en direct (vous pouvez cliquer sur le lien dans le message de réussite si elle n’est toujours affichée) et vérifiez que votre modification a été publiée.
+Accédez au site actif (vous pouvez cliquer sur le lien dans le message de réussite s’il est toujours affiché) et vérifier que votre modification a été publiée.
 
 > [!TIP] 
 > 
-> **Modification des fichiers à distance**
+> **Modification à distance de fichiers**
 > 
-> Comme alternative à la modification de votre site, puis republication, vous pouvez modifier les fichiers distants directement dans WebMatrix. Dans ce scénario, vous ouvrez un fichier qui se trouve sur le fournisseur de services et WebMatrix télécharge une copie de celle-ci, vous pouvez modifier. Chaque fois que vous enregistrez le fichier, WebMatrix envoie les modifications apportées au site.
+> Comme alternative à la modification de votre site, puis à la republication, vous pouvez modifier les fichiers distants directement dans WebMatrix. Dans ce scénario, vous ouvrez un fichier qui se trouve sur le fournisseur de services, et WebMatrix en télécharge une copie que vous pouvez modifier. Chaque fois que vous enregistrez le fichier, WebMatrix envoie les modifications au site.
 > 
-> Modifier à distance est un moyen simple pour apporter des modifications à votre site dynamique. Toutefois, les modifications de cette façon ne sont pas synchronisées avec les fichiers dans votre site local. Pour synchroniser les fichiers locaux avec le site distant, vous pouvez télécharger les fichiers à distance. Ce processus fonctionne comme la publication, à l’exception dans l’ordre inverse.
+> La modification à distance est un moyen facile d’apporter des modifications à votre site actif. Toutefois, les modifications que vous apportez de cette façon ne sont pas synchronisées avec les fichiers de votre site local. Pour synchroniser les fichiers locaux avec le site distant, vous pouvez télécharger les fichiers distants. Ce processus fonctionne de façon très similaire à la publication, sauf en sens inverse.
 > 
-> Nous ne décrirons plus sur les mode de modification à distance et à distance-téléchargement installations de WebMatrix ici. Elles sont particulièrement utiles si plusieurs personnes de travailler sur le même site sur des ordinateurs différents. Pour plus d’informations, consultez [publier et modifier un Site distant avec la version bêta 2 de WebMatrix](https://go.microsoft.com/fwlink/?LinkId=251591).
+> Nous ne décrirons pas ici plus d’informations sur les fonctionnalités d’édition à distance et de téléchargement à distance de WebMatrix. Elles sont très utiles si plusieurs personnes doivent travailler sur le même site sur différents ordinateurs. Pour plus d’informations, consultez [publier et modifier un site distant avec WebMatrix 2 Beta](https://go.microsoft.com/fwlink/?LinkId=251591).
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- [Forum de WebMatrix ASP.NET Web Pages ASP.NET](https://forums.asp.net/1224.aspx/1?WebMatrix+and+ASP+NET+Web+Pages), un endroit idéal pour poser des questions et obtenez des réponses.
+- [ASP.net webmatrix pages Web ASP.net forum](https://forums.asp.net/1224.aspx/1?WebMatrix+and+ASP+NET+Web+Pages), un endroit idéal pour poser des questions et obtenir des réponses.
 
 > [!div class="step-by-step"]
 > [Précédent](layouts.md)

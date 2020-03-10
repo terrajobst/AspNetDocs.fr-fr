@@ -1,27 +1,27 @@
 ---
 uid: mvc/videos/mvc-2/music-store/mvc-music-store-part-3-views-and-viewmodels
-title: 'Magasin de musique MVC, partie 3 : Views et ViewModels | Microsoft Docs'
+title: 'Magasin de musique MVC, partie 3 : vues et ViewModels | Microsoft Docs'
 author: jongalloway
-description: Jon continue le didacticiel Store de musique MVC avec une introduction aux pages maîtres, vues et ViewModels.
+description: Jon continue le didacticiel sur le magasin de musique MVC avec une présentation des affichages, ViewModels et MasterPages.
 ms.author: riande
 ms.date: 06/22/2010
 ms.assetid: ffe5e656-9078-4ec7-85bb-3d7300942e87
 msc.legacyurl: /mvc/videos/mvc-2/music-store/mvc-music-store-part-3-views-and-viewmodels
 msc.type: video
 ms.openlocfilehash: 6d278b226ac8388222f32e9dfb8311b05b26a5cd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390556"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558841"
 ---
-# <a name="mvc-music-store-part-3-views-and-viewmodels"></a>Magasin de musique MVC, partie 3 : Vues et modèles de vue
+# <a name="mvc-music-store-part-3-views-and-viewmodels"></a>Magasin de musique MVC, partie 3 : vues et ViewModels
 
 par [Jon Galloway](https://github.com/jongalloway)
 
-Jon continue le didacticiel Store de musique MVC avec une introduction aux pages maîtres, vues et ViewModels.
+Jon continue le didacticiel sur le magasin de musique MVC avec une présentation des affichages, ViewModels et MasterPages.
 
-[&#9654;Regardez la vidéo (13 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc-music-store-part-3-views-and-viewmodels)
+[&#9654;Regarder la vidéo (13 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/mvc-music-store-part-3-views-and-viewmodels)
 
 > [!div class="step-by-step"]
 > [Précédent](mvc-music-store-part-2-controllers.md)

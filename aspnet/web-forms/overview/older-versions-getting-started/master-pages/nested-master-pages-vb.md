@@ -9,11 +9,11 @@ ms.assetid: 14d9aa1b-4dca-43a0-aa9d-a6e891fee019
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/nested-master-pages-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 9bb39712855c37f5cbcbb447f7691e9451b8dc92
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74642317"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78571847"
 ---
 # <a name="nested-master-pages-vb"></a>Pages maîtres imbriquées (VB)
 
@@ -185,7 +185,7 @@ Ces deux défis sont exposés lorsque nous créons la page maître imbriquée et
 
 Notre première tâche consiste à créer la page maître imbriquée qui sera utilisée par les pages de la section Administration. Comme nous l’avons vu à l’étape 2, lors de l’ajout d’une nouvelle page maître imbriquée, nous devons spécifier la page maître parente de la page maître imbriquée. Toutefois, nous avons deux pages maîtres de niveau supérieur : `Site.master` et `Alternate.master`. Rappelez-vous que nous avons créé `Alternate.master` dans le didacticiel précédent et écrit du code dans la classe `BasePage` qui définissait la propriété `MasterPageFile` de l’objet `Page` au moment de l’exécution sur `Site.master` ou `Alternate.master` selon la valeur de la variable de session `MyMasterPage`.
 
-Comment configurer notre page maître imbriquée afin qu’elle utilise la page maître de niveau supérieur appropriée ? Deux options s’offrent à vous :
+Comment configurer notre page maître imbriquée afin qu’elle utilise la page maître de niveau supérieur appropriée ? Deux solutions s’offrent à nous :
 
 - Créez deux pages maîtres imbriquées, `AdminNestedSite.master` et `AdminNestedAlternate.master`, et liez-les aux pages maîtres de niveau supérieur `Site.master` et `Alternate.master`, respectivement. Dans `BasePage`, nous définissons le `MasterPageFile` de l’objet `Page` sur la page maître imbriquée appropriée.
 - Créer une page maître imbriquée unique et faire en sorte que les pages de contenu utilisent cette page maître particulière. Ensuite, lors de l’exécution, nous aurions besoin de définir la propriété `MasterPageFile` de la page maître imbriquée sur la page maître de niveau supérieur appropriée au moment de l’exécution. (Comme vous l’avez peut-être déjà dû, les pages maîtres ont également une propriété `MasterPageFile`.)

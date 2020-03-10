@@ -9,15 +9,15 @@ ms.assetid: 48f7feb3-872f-485d-b96f-e30011ff8c4a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/whats-new-in-aspnet-mvc-4
 msc.type: authoredcontent
 ms.openlocfilehash: 4235f4fe666cdeb7d0821127a2b349f2ff30cd6e
-ms.sourcegitcommit: 295cf898a4c87e264b0c35c7254b0fa4169f2278
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057031"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78539437"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Nouveautés d’ASP.NET MVC 4
 
-Par l' [équipe Web camps](https://twitter.com/webcamps)
+par l' [équipe Web camps](https://twitter.com/webcamps)
 
 [Télécharger le kit de formation Web camps](https://aka.ms/webcamps-training-kit)
 
@@ -45,7 +45,7 @@ Dans ce laboratoire pratique, vous allez apprendre à :
 <a id="Prerequisites"></a>
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Configuration requise
+### <a name="prerequisites"></a>Conditions préalables requises
 
 Pour effectuer ce laboratoire, vous devez disposer des éléments suivants :
 
@@ -101,7 +101,7 @@ Dans cet exercice, vous allez découvrir les améliorations apportées aux modè
     > [!NOTE]
     > Vous allez personnaliser ultérieurement la solution Photogallery ASP.NET MVC 4 que vous créez maintenant.
 
-    ![Création d’un nouveau projet](whats-new-in-aspnet-mvc-4/_static/image1.png "Création d’un nouveau projet")
+    ![Création d’un nouveau projet](whats-new-in-aspnet-mvc-4/_static/image1.png "Création d’un projet")
 
     *Création d’un nouveau projet*
 3. Dans la boîte de dialogue **nouveau projet ASP.NET MVC 4** , sélectionnez le modèle de projet **application Internet** , puis cliquez sur **OK**. Assurez-vous que vous avez sélectionné Razor comme moteur de vue.
@@ -203,12 +203,12 @@ ASP.NET MVC 4 facilite le développement de sites Web pour les navigateurs mobil
 
         Le modèle de projet application mobile comprend la bibliothèque mobile jQuery, qui est une bibliothèque open source pour la compatibilité avec les navigateurs mobiles. jQuery Mobile applique une amélioration progressive aux navigateurs mobiles qui prennent en charge CSS et JavaScript. L’amélioration progressive permet à tous les navigateurs d’afficher le contenu de base d’une page Web, alors qu’il permet uniquement aux navigateurs les plus puissants d’afficher le contenu enrichi. Les fichiers JavaScript et CSS, inclus dans le style jQuery mobile, aident les navigateurs mobiles à adapter le contenu à l’écran sans apporter de modification au balisage de la page.
 
-        ![jQuery-mobile-Library-inclus dans le modèle](whats-new-in-aspnet-mvc-4/_static/image12.png)
+        ![jQuery-mobile-library-included-in-the-template](whats-new-in-aspnet-mvc-4/_static/image12.png)
 
         *bibliothèque mobile jQuery incluse dans le modèle*
     - **Balisage HTML5**
 
-        ![Mobile-application-modèle-utilisation-HTML5-balisage](whats-new-in-aspnet-mvc-4/_static/image13.png)
+        ![Mobile-application-template-using-HTML5-markup](whats-new-in-aspnet-mvc-4/_static/image13.png)
 
         *Modèle d’application mobile utilisant le balisage HTML5, (login. cshtml et index. cshtml)*
 4. Appuyez sur **F5** pour exécuter la solution.
@@ -318,7 +318,7 @@ Dans cette tâche, vous allez créer un simulacre du service photo pour récupé
 
     *Test du service de photos factice*
 
-Dans une implémentation réelle, vous pouvez utiliser [API Web ASP.net](../../../../web-api/index.md) pour implémenter le service de Galerie de photos. API Web ASP.NET est une infrastructure qui facilite la création de services HTTP qui atteignent un large éventail de clients, y compris des navigateurs et des appareils mobiles. L'API Web ASP.NET est une plate-forme idéale pour générer des applications RESTful sur le .NET Framework.
+Dans une implémentation réelle, vous pouvez utiliser [API Web ASP.net](../../../../web-api/index.md) pour implémenter le service de Galerie de photos. ASP.NET Web API est une infrastructure qui facilite le développement de services HTTP disponibles sur un large éventail de clients, tels que des navigateurs et des appareils mobiles. L'API Web ASP.NET est une plate-forme idéale pour générer des applications RESTful sur le .NET Framework.
 
 <a id="Task_2_-_Displaying_the_Photo_Gallery"></a>
 #### <a name="task-2---displaying-the-photo-gallery"></a>Tâche 2 : affichage de la Galerie de photos
@@ -397,7 +397,7 @@ L’une des principales mises à jour dans ASP.NET MVC 4 est la prise en charge 
 
     - **Views/Shared/\_Layout. mobile. cshtml**: est une disposition basée sur mobile jQuery optimisée pour un écran plus petit. Lorsque le site Web reçoit une demande d’un navigateur mobile, il remplace la disposition d’origine (\_Layout. cshtml) par celle-ci.
     - Composant View-Switcher : est constitué de la vue partielle **Views/Shared/\_ViewSwitcher. cshtml** et du contrôleur **ViewSwitcherController.cs** . Ce composant affiche un lien sur les navigateurs mobiles pour permettre aux utilisateurs de basculer vers la version de bureau de la page.  
-        ![Projet de Galerie de photos avec prise en charge mobile](whats-new-in-aspnet-mvc-4/_static/image23.png "Phprojet de Galerie nchronisation avec prise en charge de mobile»)
+        ![Projet de Galerie de photos avec prise en charge mobile](whats-new-in-aspnet-mvc-4/_static/image23.png "Projet de Galerie de photos avec prise en charge mobile")
 
         *Projet de Galerie de photos avec prise en charge mobile*
 4. Inscrivez les offres groupées mobiles. Pour ce faire, ouvrez le fichier **global.asax.cs** et ajoutez la ligne suivante.
@@ -516,7 +516,7 @@ Dans cette tâche, vous allez explorer l’exemple d’implémentation d’un co
 
     - La méthode **HttpContext. ClearOverriddenBrowser ()** supprime tout agent utilisateur substitué pour la demande actuelle.
     - La méthode **HttpContext. SetOverriddenBrowser ()** remplace la valeur réelle de l’agent utilisateur de la demande à l’aide de l’agent utilisateur spécifié.  
-        ![Contrôleur ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image31.png "ViewSwitcher Controller ")  
+        ![Contrôleur ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image31.png "Contrôleur ViewSwitcher")  
 *Contrôleur ViewSwitcher*
 
         La substitution du navigateur est une fonctionnalité principale de ASP.NET MVC 4, qui est également disponible même si vous n’installez pas le package jQuery. mobile. MVC. Toutefois, cette fonctionnalité affecte uniquement l’affichage, la disposition et la vue partielle, et n’affecte pas les fonctionnalités qui dépendent de l’objet Request. Browser.
@@ -538,7 +538,7 @@ Dans cette tâche, vous allez mettre à jour la disposition du Bureau pour inclu
     ![Sélecteur de vue rendu dans la vue du Bureau](whats-new-in-aspnet-mvc-4/_static/image32.png "Sélecteur de vue rendu dans la vue du Bureau")
 
     *Sélecteur de vue rendu dans la vue du Bureau*
-7. Revenez à la vue mobile et accédez à la page à **propos** de (http://localhost [port]/Home/about). Notez que, même si vous n’avez pas créé de vue about. mobile. cshtml, la page about est affichée à l’aide de la disposition mobile (\_Layout. mobile. cshtml).
+7. Revenez à la vue mobile et accédez à la page à **propos** de (http://localhost[port]/Home/about). Notez que, même si vous n’avez pas créé de vue about. mobile. cshtml, la page about est affichée à l’aide de la disposition mobile (\_Layout. mobile. cshtml).
 
     ![Page à propos de](whats-new-in-aspnet-mvc-4/_static/image33.png "Page About")
 
@@ -589,7 +589,7 @@ Vous avez maintenant 3 dispositions dans votre application ASP.NET MVC 4 :
 7. Appuyez sur **F5** pour exécuter l’application et parcourir le site dans l' **émulateur de Windows Phone**.
 8. Ouvrez un **simulateur iPhone** (voir l' [annexe C](#AppendixC) pour obtenir des instructions sur l’installation et la configuration d’un simulateur iPhone), puis accédez au site. Notez que chaque téléphone utilise le modèle spécifique.
 
-    ![Utilisation de vues-différentes-for-each-mobile-appareil2](whats-new-in-aspnet-mvc-4/_static/image35.png)
+    ![Using-different-views-for-each-mobile-device2](whats-new-in-aspnet-mvc-4/_static/image35.png)
 
     *Utilisation de différents affichages pour chaque appareil mobile*
 
@@ -598,7 +598,7 @@ Vous avez maintenant 3 dispositions dans votre application ASP.NET MVC 4 :
 <a id="Exercise_4_Using_Asynchronous_Controllers"></a>
 ### <a name="exercise-4-using-asynchronous-controllers"></a>Exercice 4 : utilisation de contrôleurs asynchrones
 
-Microsoft .NET Framework 4,5 introduit de nouvelles fonctionnalités de C# langage dans et Visual Basic pour fournir une nouvelle base pour l’asynchronie dans la programmation .net. Cette nouvelle Fondation rend la programmation asynchrone similaire à-et à propos de la programmation synchrone aussi simple que synchrone. Vous êtes maintenant en mesure d’écrire des méthodes d’action asynchrones dans ASP.NET MVC 4 à l’aide de la classe **AsyncController** . Vous pouvez utiliser des méthodes d’action asynchrones pour les requêtes à long terme et non liées à l’UC. Cela évite que le serveur Web n’exécute le travail pendant le traitement de la requête. La classe AsyncController est généralement utilisée pour les appels de service Web de longue durée.
+Microsoft .NET Framework 4,5 introduit de nouvelles fonctionnalités de C# langage dans et Visual Basic pour fournir une nouvelle base pour l’asynchronie dans la programmation .net. Cette nouvelle Fondation rend la programmation asynchrone similaire à-et à propos de la programmation synchrone aussi simple que synchrone. Vous êtes maintenant en mesure d’écrire des méthodes d’action asynchrones dans ASP.NET MVC 4 à l’aide de la classe **AsyncController** . Vous pouvez utiliser des méthodes d'action asynchrones pour des requêtes à durée d'exécution longue et n'utilisant pas le processeur de manière intensive. Cela permet de ne pas bloquer le serveur Web pendant le traitement de la requête. La classe AsyncController est généralement utilisée pour les appels de service Web de longue durée.
 
 Cet exercice explique les principes fondamentaux de l’opération asynchrone dans ASP.NET MVC 4. Si vous souhaitez approfondir votre expérience, vous pouvez consulter l’article suivant : [ [https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)
 
@@ -933,7 +933,7 @@ Cette annexe vous indique comment créer un nouveau site Web à partir de Window
 7. Dans la page **tableau de bord** , sous la section **Aperçu rapide** , cliquez sur le lien **Télécharger le profil de publication** .
 
     > [!NOTE]
-    > Le *profil de publication* contient toutes les informations requises pour publier une application Web sur un site Web Windows Azure pour chaque méthode de publication activée. Le profil de publication contient les URL, les informations d’identification de l’utilisateur et les chaînes de base de données requises pour se connecter et s’authentifier auprès de chacun des points de terminaison pour lesquels une méthode de publication est activée. **Microsoft WebMatrix 2**, **Microsoft Visual Studio Express pour le web** et **Microsoft Visual Studio 2012** prennent en charge la lecture des profils de publication pour automatiser la configuration de ces programmes pour la publication d’applications Web sur les sites Web Windows Azure.
+    > Le *profil de publication* contient toutes les informations requises pour publier une application Web sur un site Web Windows Azure pour chaque méthode de publication activée. Le profil de publication contient les URL, les informations d'identification de l'utilisateur et les chaînes de base de données nécessaires pour la connexion et l'authentification auprès de chacun des points de terminaison pour lesquels une méthode de publication est activée. **Microsoft WebMatrix 2**, **Microsoft Visual Studio Express pour le web** et **Microsoft Visual Studio 2012** prennent en charge la lecture des profils de publication pour automatiser la configuration de ces programmes pour la publication d’applications Web sur les sites Web Windows Azure.
 
     ![Téléchargement du profil de publication du site Web](whats-new-in-aspnet-mvc-4/_static/image67.png "Téléchargement du profil de publication du site Web")
 

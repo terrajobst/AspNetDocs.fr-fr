@@ -9,11 +9,11 @@ ms.assetid: fd2a1c52-d717-44af-8a61-67c8279bb26e
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/filteredtextbox/allowing-only-certain-characters-in-a-text-box-cs
 msc.type: authoredcontent
 ms.openlocfilehash: d1e367becd574e31d24fca8545f76b1ed3c4d85e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611753"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78554235"
 ---
 # <a name="allowing-only-certain-characters-in-a-text-box-c"></a>Autoriser seulement certains caractères dans une zone de texte (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Les contrôles de validation ASP.NET peuvent garantir que seuls certains caractères sont autorisés dans l’entrée utilisateur. Toutefois, cela n’empêche toujours pas les utilisateurs de taper des caractères non valides et de tenter d’envoyer le formulaire.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Les contrôles de validation ASP.NET peuvent garantir que seuls certains caractères sont autorisés dans l’entrée utilisateur. Toutefois, cela n’empêche toujours pas les utilisateurs de taper des caractères non valides et de tenter d’envoyer le formulaire.
 
@@ -59,4 +59,4 @@ Exécutez la page et essayez d’entrer une lettre si JavaScript est activé, ma
 Seuls les chiffres peuvent être entrés ([cliquez pour afficher l’image en taille réelle](allowing-only-certain-characters-in-a-text-box-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](allowing-only-certain-characters-in-a-text-box-vb.md)
+> [Next](allowing-only-certain-characters-in-a-text-box-vb.md)

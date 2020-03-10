@@ -9,11 +9,11 @@ ms.assetid: 6b073fc6-524d-453d-be7c-0c30986de391
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/adding-validation-controls-to-the-datalist-s-editing-interface-vb
 msc.type: authoredcontent
 ms.openlocfilehash: f952a7bb95e956a2ad935f8bdef5c3efa7437ecb
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621947"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78594520"
 ---
 # <a name="adding-validation-controls-to-the-datalists-editing-interface-vb"></a>Ajout de contrôles Validation aux interfaces de modification du contrôle DataList (VB)
 
@@ -29,7 +29,7 @@ Dans les didacticiels de modification de DataList jusqu’à présent, les inter
 
 Dans ce didacticiel, nous allons voir combien il est facile d’ajouter des contrôles de validation aux `EditItemTemplate` DataList afin de fournir une interface utilisateur de modification plus simple. Plus précisément, ce didacticiel prend l’exemple créé dans le didacticiel précédent et augmente l’interface de modification pour inclure la validation appropriée.
 
-## <a name="step-1-replicating-the-example-fromhandling-bll--and-dal-level-exceptionshandling-bll-and-dal-level-exceptions-vbmd"></a>Étape 1 : réplication de l’exemple à partir de la[gestion des exceptions de niveau BLL et dal](handling-bll-and-dal-level-exceptions-vb.md)
+## <a name="step-1-replicating-the-example-fromhandling-bll--and-dal-level-exceptions"></a>Étape 1 : réplication de l’exemple à partir de la[gestion des exceptions de niveau BLL et dal](handling-bll-and-dal-level-exceptions-vb.md)
 
 Dans le didacticiel [gestion des exceptions de niveau BLL et dal](handling-bll-and-dal-level-exceptions-vb.md) , nous avons créé une page qui répertorie les noms et les prix des produits dans une DataList modifiable à deux colonnes. L’objectif de ce didacticiel est d’augmenter l’interface de modification de DataList pour inclure des contrôles de validation. En particulier, notre logique de validation :
 

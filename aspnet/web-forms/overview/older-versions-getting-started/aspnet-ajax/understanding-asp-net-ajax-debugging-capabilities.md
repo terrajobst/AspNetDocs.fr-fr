@@ -9,11 +9,11 @@ ms.assetid: 7f9380c6-19f7-4c82-a019-916ec6dffc9c
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-debugging-capabilities
 msc.type: authoredcontent
 ms.openlocfilehash: 08ced380f3551407d757524dbc84b5feeeb5482b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74601463"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78629506"
 ---
 # <a name="understanding-aspnet-ajax-debugging-capabilities"></a>Présentation des fonctionnalités de débogage d’ASP.NET AJAX
 
@@ -218,11 +218,11 @@ La classe Sys. Debug expose plusieurs fonctions différentes qui peuvent être u
 
 | **Nom de la fonction** | **Description** |
 | --- | --- |
-| Assert (condition, message, displayCaller) | Déclare que le paramètre condition a la valeur true. Si la condition testée a la valeur false, une boîte de message est utilisée pour afficher la valeur du paramètre de message. Si le paramètre displayCaller a la valeur true, la méthode affiche également des informations sur l’appelant. |
+| assert(condition, message, displayCaller) | Déclare que le paramètre condition a la valeur true. Si la condition testée a la valeur false, une boîte de message est utilisée pour afficher la valeur du paramètre de message. Si le paramètre displayCaller a la valeur true, la méthode affiche également des informations sur l’appelant. |
 | clearTrace() | Efface les instructions de sortie des opérations de suivi. |
 | échec (message) | Provoque l’arrêt de l’exécution du programme et l’arrêt du débogueur. Le paramètre de message peut être utilisé pour indiquer la raison de l’échec. |
 | trace (message) | Écrit le paramètre de message dans la sortie de trace. |
-| traceDump (objet, nom) | Renvoie les données d’un objet dans un format lisible. Le paramètre Name peut être utilisé pour fournir une étiquette pour le vidage de trace. Tous les sous-objets dans l’objet qui est vidé sont écrits par défaut. |
+| traceDump(object, name) | Renvoie les données d’un objet dans un format lisible. Le paramètre Name peut être utilisé pour fournir une étiquette pour le vidage de trace. Tous les sous-objets dans l’objet qui est vidé sont écrits par défaut. |
 
 Le suivi côté client peut être utilisé à peu près de la même façon que les fonctionnalités de suivi disponibles dans ASP.NET. Il permet d’afficher facilement différents messages sans interrompre le déroulement de l’application. La liste 5 illustre un exemple d’utilisation de la fonction sys. Debug. trace pour écrire dans le journal des traces. Cette fonction prend simplement le message qui doit être écrit en tant que paramètre.
 

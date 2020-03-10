@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/getting-started/index
-title: Mise en route avec ASP.NET Web Forms | Microsoft Docs
+title: Prise en main avec ASP.NET Web Forms | Microsoft Docs
 author: rick-anderson
-description: En savoir plus sur ASP.NET Web Forms ASP.NET Web Forms vous permet de générer des sites Web dynamiques à l’aide d’un modèle familier de glisser-déplacer, pilotée par événements. Une aire de conception et de hund...
+description: En savoir plus sur ASP.NET Web Forms ASP.NET Web Forms vous permet de créer des sites Web dynamiques à l’aide d’un modèle de glisser-déplacer familier, piloté par les événements. Une aire de conception et Hund...
 ms.author: riande
 ms.date: 08/08/2011
 ms.assetid: f645d3b1-1092-43c6-a28a-074b413924b4
 msc.legacyurl: /web-forms/overview/getting-started
 msc.type: chapter
 ms.openlocfilehash: d76e65ae807b1da97d07199e7f0fce21fbf14af6
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133433"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78632719"
 ---
-# <a name="getting-started-with-aspnet-web-forms"></a>Mise en route avec ASP.NET Web Forms
+# <a name="getting-started-with-aspnet-web-forms"></a>Prise en main avec ASP.NET Web Forms
 
-> Le modèle Web Forms et comment créer des pages et utiliser des contrôles.
+> Le modèle Web Forms et la manière de créer des pages et d’utiliser des contrôles.
 
 - [Bien démarrer avec Web Forms ASP.NET 4.5 et Visual Studio 2013](getting-started-with-aspnet-45-web-forms/index.md)
 

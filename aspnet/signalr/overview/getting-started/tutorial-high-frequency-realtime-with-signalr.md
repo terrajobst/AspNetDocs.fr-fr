@@ -10,11 +10,11 @@ msc.legacyurl: /signalr/overview/getting-started/tutorial-high-frequency-realtim
 msc.type: authoredcontent
 ms.topic: tutorial
 ms.openlocfilehash: 2503e90735d6cfa445ee08c9e43f8443aa106096
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600455"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558624"
 ---
 # <a name="tutorial-create-high-frequency-real-time-app-with-signalr-2"></a>Didacticiel : créer une application en temps réel haute fréquence avec Signalr 2
 
@@ -27,7 +27,7 @@ Les concepts présentés dans ce didacticiel ont des applications en temps réel
 Dans ce didacticiel, vous avez effectué les actions suivantes :
 
 > [!div class="checklist"]
-> * Configurer le projet
+> * Configuration du projet
 > * Créer l’application de base
 > * Mapper au concentrateur au démarrage de l’application
 > * Ajouter le client
@@ -38,11 +38,11 @@ Dans ce didacticiel, vous avez effectué les actions suivantes :
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables requises
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) avec la charge de travail de **développement Web et ASP.net** .
+* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) avec la charge de travail **Développement ASP.NET et web**.
 
-## <a name="set-up-the-project"></a>Configurer le projet
+## <a name="set-up-the-project"></a>Configuration du projet
 
 Dans cette section, vous allez créer le projet dans Visual Studio 2017.
 
@@ -62,7 +62,7 @@ Cette section montre comment utiliser Visual Studio 2017 pour créer une applica
 
     Cette étape crée le fichier de classe *MoveShapeHub.cs* . Simultanément, elle ajoute un ensemble de fichiers de script et de références d’assembly qui prennent en charge Signalr au projet.
 
-1. Sélectionnez **outils** > **Gestionnaire de package NuGet** > **console du gestionnaire de package**.
+1. Cliquez sur **Outils** > **Gestionnaire de package NuGet** > **Console du Gestionnaire de package**.
 
 1. Dans la **console du gestionnaire de package**, exécutez la commande suivante :
 
@@ -240,12 +240,12 @@ Pour plus d’informations sur Signalr, consultez les ressources suivantes :
 
 * [Wiki signalr](https://github.com/SignalR/SignalR/wiki)
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
 Dans ce didacticiel, vous avez effectué les actions suivantes :
 
 > [!div class="checklist"]
-> * Configurer le projet
+> * Configuration du projet
 > * Création de l’application de base
 > * Mappé au concentrateur au démarrage de l’application
 > * Ajout du client

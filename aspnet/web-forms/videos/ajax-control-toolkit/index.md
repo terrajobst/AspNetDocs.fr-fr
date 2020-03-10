@@ -1,23 +1,23 @@
 ---
 uid: web-forms/videos/ajax-control-toolkit/index
-title: AJAX Control Toolkit | Microsoft Docs
+title: Boîte à outils de contrôle AJAX | Microsoft Docs
 author: rick-anderson
-description: Comment créer très réactive ASP.NET Web pages à l’aide d’Ajax Control Toolkit.
+description: Comment créer des pages Web ASP.NET très réactives à l’aide de la boîte à outils de contrôle AJAX.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 6f7b1c74-cc73-42f9-8ef0-8b3d058dabfa
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit
 msc.type: chapter
 ms.openlocfilehash: c92d686cdb7883efbb5e5b2997e4a490f83607f0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131522"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78638928"
 ---
 # <a name="ajax-control-toolkit"></a>Ajax Control Toolkit
 
-> Comment créer très réactive ASP.NET Web pages à l’aide d’Ajax Control Toolkit.
+> Comment créer des pages Web ASP.NET très réactives à l’aide de la boîte à outils de contrôle AJAX.
 
 - [Bien démarrer avec le kit de ressources ASP.NET AJAX](how-do-i-get-started-with-the-aspnet-ajax-control-toolkit.md)
 - [Extendeur de contrôle CascadingDropDown d’ASP.NET AJAX](how-do-i-use-the-aspnet-ajax-cascadingdropdown-control-extender.md)

@@ -9,11 +9,11 @@ ms.assetid: 9715a121-fa55-4f1b-a5d2-fb3f6cd8be8f
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/setting-folder-permissions
 msc.type: authoredcontent
 ms.openlocfilehash: 410525bb2e3f6e5a0be6d7d6b33fb3a40509041a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74614940"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78576061"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-setting-folder-permissions"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : définition des autorisations des dossiers
 
@@ -23,7 +23,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels vous montre comment déployer (publier) une application Web ASP.NET sur Azure App Service Web Apps ou sur un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou de Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Dans ce didacticiel, vous allez définir les autorisations de dossier pour le dossier *ELMAH* dans le site Web déployé afin que l’application puisse créer des fichiers journaux dans ce dossier.
 
@@ -67,7 +67,7 @@ Testez en provoquant à nouveau une erreur de la même façon (demandez une URL 
 
 Vous avez maintenant terminé toutes les tâches nécessaires pour que Contoso University fonctionne correctement dans IIS sur votre ordinateur local. Dans le didacticiel suivant, vous allez rendre le site accessible au public en le déployant sur Azure.
 
-## <a name="more-information"></a>Plus d'informations
+## <a name="more-information"></a>Informations complémentaires
 
 Dans cet exemple, la raison pour laquelle ELMAH n’a pas pu enregistrer les fichiers journaux était relativement évidente. Vous pouvez utiliser le suivi IIS dans les cas où la cause du problème n’est pas si évidente ; consultez [Troubleshooting failed requests using Tracing in IIS 7 (](https://www.iis.net/learn/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis) en anglais) sur le site IIS.net.
 

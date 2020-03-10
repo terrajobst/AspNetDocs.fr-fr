@@ -1,6 +1,6 @@
 ---
 uid: signalr/overview/older-versions/scaleout-with-sql-server
-title: Montée en puissance parallèle de SignalR avec SQL Server (SignalR 1.x) | Microsoft Docs
+title: Signalr ScaleOut avec SQL Server (Signalr 1. x) | Microsoft Docs
 author: bradygaster
 description: ''
 ms.author: bradyg
@@ -9,11 +9,11 @@ ms.assetid: 1dca7967-8296-444a-9533-837eb284e78c
 msc.legacyurl: /signalr/overview/older-versions/scaleout-with-sql-server
 msc.type: authoredcontent
 ms.openlocfilehash: 8674b06a2a751c9a7b1c6c9b19782974d0602a62
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386558"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78536469"
 ---
 # <a name="signalr-scaleout-with-sql-server-signalr-1x"></a>Scale-out de SignalR avec SQL Server (SignalR 1.x)
 
@@ -21,41 +21,41 @@ par [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://git
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-Dans ce didacticiel, vous allez utiliser SQL Server pour distribuer les messages sur une application de SignalR est déployée dans deux instances distinctes d’IIS. Vous pouvez également exécuter ce didacticiel sur un ordinateur de test unique, mais pour obtenir l’effet, vous devez déployer l’application de SignalR à deux ou plusieurs serveurs. Vous devez également installer SQL Server sur l’un des serveurs ou sur un serveur dédié distinct. Une autre option consiste à exécuter le didacticiel à l’aide de machines virtuelles sur Azure.
+Dans ce didacticiel, vous allez utiliser SQL Server pour distribuer des messages à travers une application Signalr déployée dans deux instances IIS distinctes. Vous pouvez également exécuter ce didacticiel sur un seul ordinateur de test, mais pour obtenir un effet complet, vous devez déployer l’application Signalr sur deux serveurs ou plus. Vous devez également installer SQL Server sur l’un des serveurs, ou sur un serveur dédié distinct. Une autre option consiste à exécuter le didacticiel à l’aide de machines virtuelles sur Azure.
 
 ![](scaleout-with-sql-server/_static/image1.png)
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
-Microsoft SQL Server 2005 ou version ultérieure. Le fond de panier prend en charge les éditions de bureau et serveur de SQL Server. Il ne prend pas en charge SQL Server Compact Edition ou la base de données SQL Azure. (Si votre application est hébergée sur Azure, envisagez le fond de panier de Service Bus à la place.)
+Microsoft SQL Server 2005 ou version ultérieure. Le fond de panier prend en charge les éditions Desktop et Server de SQL Server. Il ne prend pas en charge l’édition ou la Azure SQL Database SQL Server Compact. (Si votre application est hébergée sur Azure, envisagez plutôt le Service Bus backplane.)
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Présentation
 
-Avant de passer au didacticiel détaillé, Voici un aperçu rapide de la procédure à suivre.
+Avant d’accéder au didacticiel détaillé, voici un aperçu rapide de ce que vous allez faire.
 
-1. Créer une nouvelle base de données vide. Le fond de panier créera les tables nécessaires dans cette base de données.
+1. Créez une nouvelle base de données vide. Le fond de panier crée les tables nécessaires dans cette base de données.
 2. Ajoutez ces packages NuGet à votre application : 
 
-    - [Microsoft.AspNet.SignalR](http://nuget.org/packages/Microsoft.AspNet.SignalR)
-    - [Microsoft.AspNet.SignalR.SqlServer](http://nuget.org/packages/Microsoft.AspNet.SignalR.SqlServer)
-3. Créez une application de SignalR.
-4. Ajoutez le code suivant à global.asax de façon à configurer le fond de panier : 
+    - [Microsoft. AspNet. Signalr](http://nuget.org/packages/Microsoft.AspNet.SignalR)
+    - [Microsoft. AspNet. Signalr. SqlServer](http://nuget.org/packages/Microsoft.AspNet.SignalR.SqlServer)
+3. Créer une application Signalr.
+4. Ajoutez le code suivant à global. asax pour configurer le fond de panier : 
 
     [!code-csharp[Main](scaleout-with-sql-server/samples/sample1.cs)]
 
 ## <a name="configure-the-database"></a>Configurer la base de données
 
-Décider si l’application utilisera l’authentification Windows ou l’authentification SQL Server pour accéder à la base de données. Tous les cas, assurez-vous que l’utilisateur de base de données dispose des autorisations pour vous connecter, créer des schémas et créer des tables.
+Déterminez si l’application doit utiliser l’authentification Windows ou l’authentification SQL Server pour accéder à la base de données. Quelle que soit la valeur, assurez-vous que l’utilisateur de base de données dispose des autorisations nécessaires pour se connecter, créer des schémas et créer des tables.
 
-Créer une base de données pour le fond de panier à utiliser. Vous pouvez donner à la base de données n’importe quel nom. Vous n’avez pas besoin de créer des tables dans la base de données ; le fond de panier créera les tables nécessaires.
+Créez une nouvelle base de données pour le fond de panier à utiliser. Vous pouvez attribuer à la base de données n’importe quel nom. Vous n’avez pas besoin de créer de tables dans la base de données ; le fond de panier crée les tables nécessaires.
 
 ![](scaleout-with-sql-server/_static/image2.png)
 
 ## <a name="enable-service-broker"></a>Activer Service Broker
 
-Il est recommandé d’activer Service Broker pour la base de données de fond de panier. Service Broker fournit une prise en charge native pour la messagerie et files d’attente dans SQL Server, ce qui permet de recevoir des mises à jour plus efficacement le fond de panier. (Toutefois, le fond de panier fonctionne également sans Service Broker.)
+Il est recommandé d’activer Service Broker pour la base de données de fond de panier. Service Broker fournit une prise en charge native de la messagerie et de la mise en file d’attente dans SQL Server, ce qui permet au fond de panier de recevoir des mises à jour plus efficacement. (Toutefois, le fond de panier fonctionne également sans Service Broker.)
 
-Pour vérifier si le Service Broker est activée, interrogez la **est\_broker\_activé** colonne dans le **sys.databases** vue de catalogue.
+Pour vérifier si la Service Broker est activée, interrogez la colonne **is\_Broker\_activée** de l’affichage catalogue **sys. databases** .
 
 [!code-sql[Main](scaleout-with-sql-server/samples/sample2.sql)]
 
@@ -66,55 +66,55 @@ Pour activer Service Broker, utilisez la requête SQL suivante :
 [!code-sql[Main](scaleout-with-sql-server/samples/sample3.sql)]
 
 > [!NOTE]
-> Si cette requête s’affiche en interblocage, vérifiez qu’il n’existe aucune application connectée à la base de données.
+> Si cette requête semble se bloquer, assurez-vous qu’aucune application n’est connectée à la base de la base de la.
 
-Si vous avez activé le suivi, les traces montrera également si Service Broker est activé.
+Si vous avez activé le suivi, les traces indiquent également si Service Broker est activé.
 
-## <a name="create-a-signalr-application"></a>Créer une Application de SignalR
+## <a name="create-a-signalr-application"></a>Créer une application Signalr
 
-Créez une application de SignalR en suivant une de ces didacticiels :
+Créez une application Signalr en suivant l’un des didacticiels suivants :
 
-- [Bien démarrer avec SignalR](../getting-started/tutorial-getting-started-with-signalr.md)
-- [Bien démarrer avec SignalR et MVC 4](tutorial-getting-started-with-signalr-and-mvc-4.md)
+- [Prise en main avec Signalr](../getting-started/tutorial-getting-started-with-signalr.md)
+- [Prise en main avec Signalr et MVC 4](tutorial-getting-started-with-signalr-and-mvc-4.md)
 
-Ensuite, nous allons modifier l’application de conversation pour prendre en charge la montée en puissance parallèle avec SQL Server. Tout d’abord, ajoutez le package NuGet de SignalR.SqlServer à votre projet. Dans Visual Studio, à partir de la **outils** menu, sélectionnez **Gestionnaire de Package NuGet**, puis sélectionnez **Console du Gestionnaire de Package**. Dans la fenêtre de Console du Gestionnaire de Package, entrez la commande suivante :
+Ensuite, nous allons modifier l’application de conversation pour prendre en charge ScaleOut avec SQL Server. Tout d’abord, ajoutez le package NuGet Signalr. SqlServer à votre projet. Dans Visual Studio, dans le menu **Outils** , sélectionnez **Gestionnaire de package NuGet**, puis sélectionnez **console du gestionnaire de package**. Dans la fenêtre Console du Gestionnaire de package, entrez la commande suivante :
 
 [!code-powershell[Main](scaleout-with-sql-server/samples/sample4.ps1)]
 
-Ensuite, ouvrez le fichier Global.asax. Ajoutez le code suivant à la **Application\_Démarrer** méthode :
+Ensuite, ouvrez le fichier global. asax. Ajoutez le code suivant à l' **Application\_méthode Start** :
 
 [!code-csharp[Main](scaleout-with-sql-server/samples/sample5.cs)]
 
-## <a name="deploy-and-run-the-application"></a>Déployer et exécuter l’Application
+## <a name="deploy-and-run-the-application"></a>Déployer et exécuter l’application
 
-Préparez vos instances de Windows Server pour déployer l’application de SignalR.
+Préparez vos instances de Windows Server pour déployer l’application Signalr.
 
-Ajouter le rôle IIS. Inclut des fonctionnalités de « Développement d’applications », y compris le protocole WebSocket.
+Ajoutez le rôle IIS. Inclut des fonctionnalités de développement d’applications, notamment le protocole WebSocket.
 
 ![](scaleout-with-sql-server/_static/image4.png)
 
-Incluent également le Service de gestion (répertorié sous « Outils de gestion »).
+Incluez également le service de gestion (listé sous outils d’administration).
 
 ![](scaleout-with-sql-server/_static/image5.png)
 
-**Installer Web Deploy 3.0.** Lorsque vous exécutez le Gestionnaire des services Internet, il vous invite à installer Microsoft Web Platform, ou vous pouvez [télécharger le programme d’installation](https://go.microsoft.com/fwlink/?LinkId=255386). Dans le programme d’installation de la plateforme, recherchez de Web Deploy et installer Web Deploy 3.0
+**Installez Web Deploy 3,0.** Lorsque vous exécutez le gestionnaire des services Internet, vous êtes invité à installer Microsoft Web Platform ou vous pouvez [Télécharger le programme d’installation](https://go.microsoft.com/fwlink/?LinkId=255386). Dans le programme d’installation de la plateforme, recherchez Web Deploy et installez Web Deploy 3,0
 
 ![](scaleout-with-sql-server/_static/image6.png)
 
-Vérifiez que le Service de gestion Web est en cours d’exécution. Si ce n’est pas le cas, démarrez le service. (Si vous ne voyez pas Service de gestion Web dans la liste des services de Windows, assurez-vous que vous avez installé le Service de gestion lorsque vous avez ajouté le rôle IIS.)
+Vérifiez que le service de gestion Web est en cours d’exécution. Si ce n’est pas le cas, démarrez le service. (Si vous ne voyez pas service de gestion Web dans la liste des services Windows, assurez-vous que vous avez installé le service de gestion lorsque vous avez ajouté le rôle IIS.)
 
-Enfin, ouvrir le port 8172 pour TCP. C’est le port qui utilise l’outil Web Deploy.
+Enfin, ouvrez le port 8172 pour TCP. Il s’agit du port utilisé par l’outil Web Deploy.
 
-Vous êtes maintenant prêt à déployer le projet de Visual Studio à partir de votre ordinateur de développement sur le serveur. Dans l’Explorateur de solutions, avec le bouton droit de la solution, puis cliquez sur **publier**.
+Vous êtes maintenant prêt à déployer le projet Visual Studio à partir de votre ordinateur de développement sur le serveur. Dans Explorateur de solutions, cliquez avec le bouton droit sur la solution, puis cliquez sur **publier**.
 
-Pour plus de documentation sur le déploiement web, consultez [plan de contenu de déploiement Web pour Visual Studio et ASP.NET](../../../whitepapers/aspnet-web-deployment-content-map.md).
+Pour obtenir une documentation plus détaillée sur le déploiement Web, consultez [mappage de contenu de déploiement Web pour Visual Studio et ASP.net](../../../whitepapers/aspnet-web-deployment-content-map.md).
 
-Si vous déployez l’application à deux serveurs, vous pouvez ouvrir chaque instance dans une fenêtre de navigateur distincte et voir qu’ils reçoivent des messages SignalR à partir de l’autre. (Bien sûr, dans un environnement de production, les deux serveurs passait souvent derrière un équilibreur de charge.)
+Si vous déployez l’application sur deux serveurs, vous pouvez ouvrir chaque instance dans une fenêtre de navigateur distincte et voir qu’ils reçoivent tous les messages Signalr de l’autre. (Bien sûr, dans un environnement de production, les deux serveurs se trouvent derrière un équilibreur de charge.)
 
 ![](scaleout-with-sql-server/_static/image7.png)
 
-Après avoir exécuté l’application, vous pouvez voir que SignalR a automatiquement créé des tables dans la base de données :
+Après avoir exécuté l’application, vous pouvez voir que Signalr a créé automatiquement des tables dans la base de données :
 
 ![](scaleout-with-sql-server/_static/image8.png)
 
-SignalR gère les tables. Tant que votre application est déployée, ne pas supprimer des lignes, modifier la table et ainsi de suite.
+Signalr gère les tables. Tant que votre application est déployée, ne supprimez pas les lignes, modifiez la table, et ainsi de suite.

@@ -7,11 +7,11 @@ ms.author: riande
 ms.date: 10/29/2018
 msc.type: content
 ms.openlocfilehash: 5299d9ab057c3096773955a7461e77a80673ebfe
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74586763"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584510"
 ---
 # <a name="configuration-builders-for-aspnet"></a>Générateurs de configuration pour ASP.NET
 
@@ -82,7 +82,7 @@ Utilisez l’une des approches suivantes pour injecter à la fois `<appSettings/
 
 * Avec la `EnvironmentConfigBuilder` en mode de `Strict` par défaut et les noms de clé appropriés dans le fichier de configuration. Le code et le balisage précédents adoptent cette approche. À l’aide de cette approche, vous **ne pouvez pas** avoir des clés portant le même nom dans `<appSettings/>` et `<connectionStrings/>`.
 * Utilisez deux `EnvironmentConfigBuilder`s en mode `Greedy` avec des préfixes et des `stripPrefix`distincts. Avec cette approche, l’application peut lire `<appSettings/>` et `<connectionStrings/>` sans avoir besoin de mettre à jour le fichier de configuration. La section suivante, [stripPrefix](#stripprefix), montre comment procéder.
-* Utilisez deux `EnvironmentConfigBuilder`s en mode `Greedy` avec des préfixes distincts. Avec cette approche, vous ne pouvez pas avoir de noms de clé en double, car les noms de clé doivent différer par le préfixe.  Par exemple :
+* Utilisez deux `EnvironmentConfigBuilder`s en mode `Greedy` avec des préfixes distincts. Avec cette approche, vous ne pouvez pas avoir de noms de clé en double, car les noms de clé doivent différer par le préfixe.  Exemple :
 
 [!code-xml[Main](config-builder/MyConfigBuilders/WebPrefix.config?name=snippet&highlight=11-99)]
 
@@ -103,7 +103,7 @@ Le code précédent définit les valeurs de propriété sur :
 
 Par exemple, en utilisant le fichier *Web. config* précédent, les clés/valeurs dans l’image précédente de l’éditeur d’environnement et le code précédent, les valeurs suivantes sont définies :
 
-|  Clé              | Value |
+|  Clé              | Valeur |
 | ----------------- | ------------ |
 |     AppSetting_ServiceID           | AppSetting_ServiceID à partir de variables env|
 |    AppSetting_default            | Valeur AppSetting_default de env |
@@ -136,11 +136,11 @@ Le code précédent définit les valeurs de propriété sur :
 
 Par exemple, en utilisant le fichier *Web. config* précédent, les clés/valeurs dans l’image précédente de l’éditeur d’environnement et le code précédent, les valeurs suivantes sont définies :
 
-|  Clé              | Value |
+|  Clé              | Valeur |
 | ----------------- | ------------ |
 |     ServiceID           | AppSetting_ServiceID à partir de variables env|
-|    default            | Valeur AppSetting_default de env |
-|    default         | ConnStr_default Val de env|
+|    par défaut            | Valeur AppSetting_default de env |
+|    par défaut         | ConnStr_default Val de env|
 
 ### <a name="tokenpattern"></a>tokenPattern
 
@@ -280,7 +280,7 @@ Détails de l’attribut :
 * `jsonMode` - `[Flat|Sectional]`. `Flat` est la valeur par défaut. Lorsque `jsonMode` est `Flat`, le fichier JSON est une source de clé/valeur unique. Les `EnvironmentConfigBuilder` et `AzureKeyVaultConfigBuilder` sont également des sources de clé/valeur à plat unique. Lorsque le `SimpleJsonConfigBuilder` est configuré en mode `Sectional` :
 
   * Le fichier JSON est divisé de façon conceptuelle juste au niveau supérieur en plusieurs dictionnaires.
-  * Chacun des dictionnaires est appliqué uniquement à la section de configuration qui correspond au nom de propriété de niveau supérieur associé. Par exemple :
+  * Chacun des dictionnaires est appliqué uniquement à la section de configuration qui correspond au nom de propriété de niveau supérieur associé. Exemple :
 
 ```json
     {

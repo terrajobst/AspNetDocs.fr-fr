@@ -9,11 +9,11 @@ ms.date: 08/10/2019
 msc.legacyurl: ''
 msc.type: content
 ms.openlocfilehash: aa4f627bca99f0a7ffbbb53ea45ebdcf0850fd89
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519360"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537344"
 ---
 # <a name="aspnet-overview"></a>Vue d’ensemble d’ASP.NET
 
@@ -33,7 +33,7 @@ Chaque infrastructure cible un style de développement différent. Celui que vou
 
 Vous trouverez ci-dessous une vue d’ensemble de chacun des frameworks et des idées de choix entre eux. Si vous préférez une présentation vidéo, consultez la page [création de sites Web avec ASP.net](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/Making-Websites-with-ASPNET) et [qu’est-ce que les outils Web ?](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/what-is-web-tools)
 
-|   | Si vous avez une expérience dans | Style de développement | Expertise |
+|   | Si vous avez une expérience dans | Style de développement | Pointu |
 |-----------|----------------------|-----------------------------------------------------|----------------|
 | Web Forms | Win Forms, WPF, .NET | Développement rapide à l’aide d’une bibliothèque de contrôles enrichie qui encapsulent le balisage HTML | RAD de niveau intermédiaire, avancé |
 | MVC       | Ruby on rails, .NET  | Contrôle total sur le balisage HTML, le code et le balisage séparés, et les tests faciles à écrire. Le meilleur choix pour les applications mobiles et les applications à page unique (SPA). | Niveau intermédiaire, avancé |
@@ -51,9 +51,9 @@ ASP.NET MVC est un outil puissant, basé sur les modèles, qui vous permet de g�
 
 [En savoir plus sur MVC](mvc/index.md)
 
-### <a name="aspnet-web-pages"></a>Pages Web relatives à ASP.NET
+### <a name="aspnet-web-pages"></a>Pages web ASP.NET
 
-Les pages Web ASP.NET et la syntaxe Razor permettent de combiner de façon rapide, accessible et simple un code serveur avec des données HTML pour créer un contenu Web dynamique. Connectez-vous à des bases de données, ajoutez de la vidéo, établissez des liens vers des sites de réseaux sociaux et incluez de nombreuses fonctionnalités qui vous aideront à créer de superbes sites conformes aux normes Web les plus récentes.
+Pages Web ASP.NET et le syntaxe Razor offrent une méthode rapide, simple et légère pour combiner du code serveur et du code HTML pour créer du contenu Web dynamique. Connectez-vous à des bases de données, ajoutez de la vidéo, établissez des liens vers des sites de réseaux sociaux et incluez de nombreuses fonctionnalités qui vous aideront à créer de superbes sites conformes aux normes Web les plus récentes.
 
 [En savoir plus sur les pages Web](web-pages/index.md)
 
@@ -65,7 +65,7 @@ En outre, les trois frameworks ne sont pas entièrement indépendants et le choi
 
 ## <a name="web-apis"></a>API web
 
-ASP.NET Web API est une infrastructure qui facilite le développement de services HTTP disponibles sur un large éventail de clients, tels que des navigateurs et des appareils mobiles. ASP.NET Web API est la plateforme idéale pour développer des applications RESTful sous .NET Framework.
+ASP.NET Web API est une infrastructure qui facilite le développement de services HTTP disponibles sur un large éventail de clients, tels que des navigateurs et des appareils mobiles. L'API Web ASP.NET est une plate-forme idéale pour générer des applications RESTful sur le .NET Framework.
 
 [En savoir plus sur l'API web](web-api/index.md)
 

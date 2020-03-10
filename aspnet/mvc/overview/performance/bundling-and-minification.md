@@ -9,13 +9,13 @@ ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
 ms.openlocfilehash: 61bfe5dbac04b57e1461183b66ead2f01fe0734c
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457763"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78538597"
 ---
-# <a name="bundling-and-minification"></a>Groupement et minimisation
+# <a name="bundling-and-minification"></a>Bundles et minimisation
 
 par [Rick Anderson](https://twitter.com/RickAndMSFT)
 
@@ -61,7 +61,7 @@ En plus de supprimer les commentaires et les espaces superflus, les noms de vari
 
 Le tableau suivant présente plusieurs différences importantes entre la liste de toutes les ressources individuellement et l’utilisation du regroupement et de la minimisation (B/M) dans l’exemple de programme.
 
-|  | **Utilisation de B/M** | **Sans B/M** | **Modification** |
+|  | **Utilisation de B/M** | **Sans B/M** | **Changement** |
 | --- | --- | --- | --- |
 | **Demandes de fichier** | 9 | 34 | 256% |
 | **Ko envoyés** | 3.26 | 11.92 | 266% |
@@ -239,7 +239,7 @@ L’espace de noms `System.Web.Optimization` est implémenté dans *System. Web.
 - [L’utilisation de CDN et expire pour améliorer les performances des sites Web](https://blogs.msdn.com/b/rickandy/archive/2011/05/21/using-cdns-to-improve-web-site-performance.aspx) par Rick Anderson [@RickAndMSFT](https://twitter.com/#!/RickAndMSFT)
 - [Réduire le temps RTT (aller-retour)](https://developers.google.com/speed/docs/best-practices/rtt)
 
-## <a name="contributors"></a>Contributeurs
+## <a name="contributors"></a>Contributors
 
 - Hao Kung
 - [Howard Dierking](https://twitter.com/#!/howard_dierking)

@@ -9,11 +9,11 @@ ms.assetid: 416438a1-3b2f-4d27-bf53-6b76223c33bf
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-production
 msc.type: authoredcontent
 ms.openlocfilehash: ddc3d15f0436c4c3a24491cf0377111768da67df
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74617641"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78632782"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : déploiement en production
 
@@ -23,7 +23,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels vous montre comment déployer (publier) une application Web ASP.NET sur Azure App Service Web Apps ou sur un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou de Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Dans ce didacticiel, vous allez configurer un compte Microsoft Azure, créer des environnements intermédiaires et de production, puis déployer votre application Web ASP.NET dans les environnements intermédiaire et de production à l’aide de la fonctionnalité de publication en un clic de Visual Studio.
 
@@ -33,7 +33,7 @@ Rappel : Si vous recevez un message d’erreur ou si une action ne fonctionne p
 
 ## <a name="get-a-microsoft-azure-account"></a>Obtenir un compte Microsoft Azure
 
-Si vous n’avez pas encore de compte Azure, vous pouvez créer un compte d’évaluation gratuit en quelques minutes. Pour plus d’informations, consultez [version d’évaluation gratuite d’Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
+Si vous n’avez pas encore de compte Azure, vous pouvez créer un compte d’évaluation gratuit en quelques minutes. Pour plus d’informations, consultez [Essai gratuit Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
 
 ## <a name="create-a-staging-environment"></a>Créer un environnement intermédiaire
 
@@ -55,7 +55,7 @@ Dans cette section du didacticiel, vous allez créer une application Web et une 
     L’Assistant **nouveau site Web-création personnalisée** s’ouvre. L’Assistant **création personnalisée** vous permet de créer un site Web et une base de données en même temps.
 3. Dans l’étape **créer un site Web** de l’Assistant, entrez une chaîne dans la zone **URL** à utiliser comme URL unique pour l’environnement intermédiaire de votre application. Par exemple, entrez ContosoUniversity-staging123 (y compris des nombres aléatoires à la fin pour le rendre unique au cas où l’intermédiaire de ContosoUniversity est pris).
 
-    L’URL complète se compose de ce que vous entrez ici et du suffixe qui s’affiche en regard de la zone de texte.
+    L’URL complète se composera du texte entré dans cette zone, ainsi que du suffixe affiché en regard de la zone.
 4. Dans la liste déroulante **région** , choisissez la région la plus proche de vous.
 
     Ce paramètre spécifie le centre de données dans lequel votre application Web s’exécutera.
@@ -67,12 +67,12 @@ Dans cette section du didacticiel, vous allez créer une application Web et une 
 
     ![Créer une étape de site Web](deploying-to-production/_static/image1.png)
 
-    L’Assistant passe à l’étape **spécifier les paramètres de la base de données** .
+    L’Assistant passe à l’étape **Specify database settings** .
 8. Dans la zone **nom** , entrez *ContosoUniversity* plus un nombre aléatoire pour le rendre unique, par exemple *ContosoUniversity123*.
 9. Dans la zone **serveur** , sélectionnez **nouveau SQL Database serveur**.
 10. Entrez un nom d’administrateur et un mot de passe.
 
-    Vous n’entrez pas de nom et de mot de passe existants ici. Vous entrez un nouveau nom et un mot de passe que vous définissez maintenant pour une utilisation ultérieure lorsque vous accédez à la base de données.
+    Vous n’entrez pas de nom et de mot de passe existants ici. Vous entrez de nouveaux nom et mot de passe que vous définissez maintenant pour les utiliser ultérieurement lorsque vous accédez à la base de données.
 11. Dans la zone **région** , choisissez la même région que celle que vous avez choisie pour l’application Web.
 
     Le fait de conserver le serveur Web et le serveur de base de données dans la même région vous offre les meilleures performances et réduit les dépenses.
@@ -110,14 +110,14 @@ Maintenant que vous avez créé une application Web et une base de données pour
     ![enregistrement du fichier. publishsettings](deploying-to-production/_static/image6.png)
 
     > [!WARNING]
-    > Sécurité : le fichier *. publishsettings* contient vos informations d’identification (non codées) utilisées pour gérer vos abonnements et services Azure. La meilleure pratique de sécurité pour ce fichier est de le stocker temporairement en dehors de vos répertoires sources (par exemple, dans le dossier bibliothèques \ Documents), puis de le supprimer une fois l’importation terminée. Un utilisateur malveillant qui accède au fichier *. publishsettings* peut modifier, créer et supprimer vos services Azure.
+    > Sécurité : le fichier *. publishsettings* contient vos informations d’identification (non codées) utilisées pour gérer vos abonnements et services Azure. Pour des raisons de sécurité, il est recommandé de stocker ce fichier temporairement en dehors de vos répertoires sources (par exemple, dans le dossier Bibliothèques\Documents), puis de le supprimer une fois l'importation terminée. Un utilisateur malveillant qui accède au fichier *. publishsettings* peut modifier, créer et supprimer vos services Azure.
 
 ### <a name="create-a-publish-profile"></a>Créer un profil de publication
 
 1. Dans Visual Studio, cliquez avec le bouton droit sur le projet ContosoUniversity dans **Explorateur de solutions** , puis sélectionnez **publier** dans le menu contextuel.
 
-    L’Assistant **publier le site Web** s’ouvre.
-2. Cliquez sur l’onglet **Profil** .
+    L'Assistant **Publier le site Web** s'ouvre.
+2. Cliquez sur l’onglet **Profil**.
 3. Cliquez sur **Importer**.
 4. Accédez au fichier *. publishsettings* que vous avez téléchargé précédemment, puis cliquez sur **ouvrir**.
 
@@ -198,13 +198,13 @@ Pour ce didacticiel, vous allez créer un fichier *robots. txt* .
 
     Vous souhaitez que les moteurs de recherche cataloguent votre application de production. vous devez donc exclure ce fichier du déploiement de production. Pour ce faire, vous configurez un paramètre dans le profil de publication de production lorsque vous le créez.
 
-### <a name="deploy-to-staging"></a>Déployer dans un environnement intermédiaire
+### <a name="deploy-to-staging"></a>Déployer vers un environnement intermédiaire
 
 1. Ouvrez l’Assistant **publier le site Web** en cliquant avec le bouton droit sur le projet Contoso University et en cliquant sur **publier**.
 2. Assurez-vous que le profil **intermédiaire** est sélectionné.
 3. Cliquez sur **Publier**.
 
-    La fenêtre **sortie** indique les actions de déploiement effectuées et signale la réussite du déploiement. Le navigateur par défaut s’ouvre automatiquement à l’URL de l’application Web déployée.
+    La fenêtre **Output** indique les actions de déploiement entreprises et signale la réussite du déploiement. Le navigateur par défaut s’ouvre automatiquement à l’URL de l’application Web déployée.
 
 ## <a name="test-in-the-staging-environment"></a>Test dans l’environnement intermédiaire
 
@@ -287,7 +287,7 @@ Vous avez maintenant déployé et testé votre application Web avec succès et e
 Dans le didacticiel suivant, vous allez mettre à jour le code de l’application et déployer la modification dans les environnements de test, intermédiaire et de production.
 
 > [!NOTE]
-> Lorsque votre application est en cours d’utilisation dans l’environnement de production, vous devez implémenter un plan de récupération. Autrement dit, vous devez sauvegarder régulièrement vos bases de données de l’application de production vers un emplacement de stockage sécurisé, et vous devez conserver plusieurs générations de ces sauvegardes. Lorsque vous mettez à jour la base de données, vous devez effectuer une copie de sauvegarde immédiatement avant la modification. Ensuite, si vous faites une erreur et que vous ne la Découvrez pas tant que vous ne l’avez pas déployée en production, vous pourrez toujours récupérer la base de données dans l’État où elle se trouvait avant qu’elle ne soit endommagée. Pour plus d’informations, consultez [Azure SQL Database la sauvegarde et la restauration](https://msdn.microsoft.com/library/windowsazure/jj650016.aspx).
+> Lorsque votre application est en cours d’utilisation dans l’environnement de production, vous devez implémenter un plan de récupération. Autrement dit, vous devez sauvegarder régulièrement vos bases de données de l’application de production vers un emplacement de stockage sécurisé, et vous devez conserver plusieurs générations de ces sauvegardes. Lorsque vous mettez à jour la base de données, vous devez effectuer une copie de sauvegarde immédiatement avant la modification. Ensuite, si vous faites une erreur et que vous ne la Découvrez pas tant que vous ne l’avez pas déployée en production, vous pourrez toujours récupérer la base de données dans l’État où elle se trouvait avant qu’elle ne soit endommagée. Pour en savoir plus, consultez [Sauvegarde et restauration d’une base de données Azure SQL](https://msdn.microsoft.com/library/windowsazure/jj650016.aspx).
 > 
 > 
 > [!NOTE]

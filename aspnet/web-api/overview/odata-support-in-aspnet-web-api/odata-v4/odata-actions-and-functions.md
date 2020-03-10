@@ -1,107 +1,107 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-actions-and-functions
-title: Actions et fonctions dans OData v4 à l’aide d’ASP.NET Web API 2.2 | Microsoft Docs
+title: Actions et fonctions dans OData v4 à l’aide de API Web ASP.NET 2,2 | Microsoft Docs
 author: MikeWasson
-description: Dans OData, les fonctions et les actions sont un moyen pour ajouter des comportements côté serveur qui ne sont pas facilement définies en tant qu’opérations CRUD sur les entités. Ce didacticiel montre comment...
+description: Dans OData, les actions et les fonctions sont un moyen d’ajouter des comportements côté serveur qui ne sont pas facilement définis en tant qu’opérations CRUD sur les entités. Ce didacticiel montre comment...
 ms.author: riande
 ms.date: 06/27/2014
 ms.assetid: 0e6fb03c-b16d-4bb0-ab0b-552bd2b6ece1
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-actions-and-functions
 msc.type: authoredcontent
 ms.openlocfilehash: f5af94e93e5b7f2351d40febbf1a468d635c9db1
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133153"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556223"
 ---
-# <a name="actions-and-functions-in-odata-v4-using-aspnet-web-api-22"></a>Actions et fonctions dans OData v4 à l’aide d’ASP.NET Web API 2.2
+# <a name="actions-and-functions-in-odata-v4-using-aspnet-web-api-22"></a>Actions et fonctions dans OData v4 à l’aide de API Web ASP.NET 2,2
 
 par [Mike Wasson](https://github.com/MikeWasson)
 
-> Dans OData, les fonctions et les actions sont un moyen pour ajouter des comportements côté serveur qui ne sont pas facilement définies en tant qu’opérations CRUD sur les entités. Ce didacticiel montre comment ajouter des fonctions et les actions à un point de terminaison de v4 OData, à l’aide de Web API 2.2. Le didacticiel s’appuie sur le didacticiel [créer une Using ASP.NET Web API 2 OData v4 point de terminaison](create-an-odata-v4-endpoint.md)
+> Dans OData, les actions et les fonctions sont un moyen d’ajouter des comportements côté serveur qui ne sont pas facilement définis en tant qu’opérations CRUD sur les entités. Ce didacticiel montre comment ajouter des actions et des fonctions à un point de terminaison OData v4, à l’aide de l’API Web 2,2. Le didacticiel s’appuie sur le didacticiel [créer un point de terminaison OData v4 à l’aide de API Web ASP.NET 2](create-an-odata-v4-endpoint.md)
 >
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versions des logiciels utilisées dans le didacticiel
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versions logicielles utilisées dans le didacticiel
 >
-> - Web API 2.2
+> - API Web 2,2
 > - OData v4
 > - Visual Studio 2013 (Téléchargez Visual Studio 2017 [ici](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017))
 > - .NET 4.5
 >
-> ## <a name="tutorial-versions"></a>Versions de didacticiels
+> ## <a name="tutorial-versions"></a>Versions du didacticiel
 >
-> Pour OData Version 3, consultez [Actions OData dans ASP.NET Web API 2](../odata-v3/odata-actions.md).
+> Pour OData version 3, consultez [actions OData dans API Web ASP.NET 2](../odata-v3/odata-actions.md).
 
-La différence entre *actions* et *fonctions* est que les actions peuvent avoir des effets secondaires, et n’est pas le cas des fonctions. Les actions et les fonctions peuvent retourner des données. Certaines utilisations pour les actions sont les suivantes :
+La différence entre les *actions* et les *fonctions* est que les actions peuvent avoir des effets secondaires, et non des fonctions. Les actions et les fonctions peuvent retourner des données. Certaines utilisations des actions sont les suivantes :
 
 - Transactions complexes.
 - Manipulation de plusieurs entités à la fois.
-- Ce qui permet des mises à jour uniquement certaines propriétés d’une entité.
-- Envoi de données qui n’est pas une entité.
+- Autorisation des mises à jour uniquement pour certaines propriétés d’une entité.
+- Envoi de données qui ne sont pas une entité.
 
-Les fonctions sont utiles pour renvoyer des informations qui ne correspondant pas directement à une entité ou une collection.
+Les fonctions sont utiles pour retourner des informations qui ne correspondent pas directement à une entité ou à une collection.
 
-Une action (ou une fonction) peut cibler une seule entité ou une collection. Dans la terminologie d’OData, il s’agit du *liaison*. Vous pouvez également avoir &quot;indépendant&quot; actions/fonctions, qui sont appelées en tant qu’opérations statiques sur le service.
+Une action (ou fonction) peut cibler une entité ou une collection unique. Dans la terminologie OData, il s’agit de la *liaison*. Vous pouvez également disposer d' &quot;&quot; actions/fonctions indépendantes, qui sont appelées comme des opérations statiques sur le service.
 
-## <a name="example-adding-an-action"></a>Exemple : Ajout d’une action
+## <a name="example-adding-an-action"></a>Exemple : ajout d’une action
 
 Nous allons définir une action pour évaluer un produit.
 
 > [!NOTE]
-> Ce didacticiel s’appuie sur le didacticiel [créer une Using ASP.NET Web API 2 OData v4 point de terminaison](create-an-odata-v4-endpoint.md)
+> Ce didacticiel s’appuie sur le didacticiel [créer un point de terminaison OData v4 à l’aide de API Web ASP.NET 2](create-an-odata-v4-endpoint.md)
 
-Tout d’abord, ajoutez un `ProductRating` modèle pour représenter les évaluations.
+Tout d’abord, ajoutez un modèle de `ProductRating` pour représenter les évaluations.
 
 [!code-csharp[Main](odata-actions-and-functions/samples/sample1.cs)]
 
-Ajoutez également un **DbSet** à la `ProductsContext` classe, afin qu’EF crée une table de contrôle d’accès dans la base de données.
+Ajoutez également un **DbSet** à la classe `ProductsContext`, afin que EF crée une table d’évaluation dans la base de données.
 
 [!code-csharp[Main](odata-actions-and-functions/samples/sample2.cs)]
 
-### <a name="add-the-action-to-the-edm"></a>Ajoutez l’Action à l’EDM
+### <a name="add-the-action-to-the-edm"></a>Ajouter l’action à l’EDM
 
 Dans WebApiConfig.cs, ajoutez le code suivant :
 
 [!code-csharp[Main](odata-actions-and-functions/samples/sample3.cs)]
 
-Le **EntityTypeConfiguration.Action** méthode ajoute une action à l’entity data model (EDM). Le **paramètre** méthode spécifie un paramètre typé pour l’action.
+La méthode **EntityTypeConfiguration. action** ajoute une action au modèle EDM (Entity Data Model). La méthode de **paramètre** spécifie un paramètre typé pour l’action.
 
-Ce code définit également l’espace de noms pour le modèle EDM. L’espace de noms est important, car l’URI pour l’action inclut le nom d’action complet :
+Ce code définit également l’espace de noms pour le modèle EDM. L’espace de noms est important car l’URI de l’action comprend le nom d’action complet :
 
 [!code-console[Main](odata-actions-and-functions/samples/sample4.cmd)]
 
 > [!NOTE]
-> Dans une configuration IIS par défaut, le point dans cette URL entraîne IIS retourner l’erreur 404. Vous pouvez résoudre ce problème en ajoutant la section suivante à votre fichier Web.Config :
+> Dans une configuration IIS standard, le point dans cette URL entraîne le renvoi de l’erreur 404 par IIS. Pour résoudre ce risque, ajoutez la section suivante à votre fichier Web. config :
 
 [!code-xml[Main](odata-actions-and-functions/samples/sample5.xml)]
 
-### <a name="add-a-controller-method-for-the-action"></a>Ajouter une méthode de contrôleur pour l’Action
+### <a name="add-a-controller-method-for-the-action"></a>Ajouter une méthode de contrôleur pour l’action
 
-Pour activer la &quot;taux&quot; action, ajoutez la méthode suivante à `ProductsController`:
+Pour activer l’action&quot; rate &quot;, ajoutez la méthode suivante à `ProductsController`:
 
 [!code-csharp[Main](odata-actions-and-functions/samples/sample6.cs)]
 
-Notez que le nom de méthode correspond au nom de l’action. Le **[HttpPost]** attribut spécifie la méthode est une méthode HTTP POST.
+Notez que le nom de la méthode correspond au nom de l’action. L’attribut **[HttpPost]** spécifie que la méthode est une méthode http postale.
 
-Pour appeler l’action, le client envoie une requête HTTP POST comme suit :
+Pour appeler l’action, le client envoie une requête HTTP HTTP semblable à la suivante :
 
 [!code-console[Main](odata-actions-and-functions/samples/sample7.cmd)]
 
-Le &quot;taux&quot; action est liée aux instances de produit, par conséquent, l’URI de l’action est le nom d’action complet ajouté à l’URI de l’entité. (Souvenez-vous que nous définissons l’espace de noms EDM &quot;ProductService&quot;, de sorte que le nom d’action complet est &quot;ProductService.Rate&quot;.)
+L’action &quot;rate&quot; est liée aux instances de produit. l’URI de l’action est donc le nom d’action complet ajouté à l’URI de l’entité. (Rappelez-vous que nous définissons l’espace de noms EDM sur &quot;ProductService&quot;, le nom d’action complet est donc &quot;ProductService. rate&quot;.)
 
-Le corps de la demande contient les paramètres d’action comme une charge utile JSON. API Web convertit automatiquement la charge utile JSON pour un **ODataActionParameters** objet, qui est simplement un dictionnaire de valeurs de paramètre. Utilisez ce dictionnaire pour accéder aux paramètres dans votre méthode de contrôleur.
+Le corps de la requête contient les paramètres d’action sous la forme d’une charge utile JSON. L’API Web convertit automatiquement la charge utile JSON en objet **ODataActionParameters** , qui est simplement un dictionnaire de valeurs de paramètre. Utilisez ce dictionnaire pour accéder aux paramètres de votre méthode de contrôleur.
 
-Si le client envoie les paramètres d’action au bon format, la valeur de **ModelState.IsValid** a la valeur false. Cochez cette case dans votre méthode de contrôleur et renvoie une erreur si **IsValid** a la valeur false.
+Si le client envoie les paramètres d’action dans un format incorrect, la valeur de **ModelState. IsValid** est false. Cochez cet indicateur dans votre méthode de contrôleur et retournez une erreur si **IsValid** a la valeur false.
 
 [!code-csharp[Main](odata-actions-and-functions/samples/sample8.cs)]
 
-## <a name="example-adding-a-function"></a>Exemple : Ajout d’une fonction
+## <a name="example-adding-a-function"></a>Exemple : ajout d’une fonction
 
-Maintenant nous allons ajouter une fonction OData qui retourne le produit le plus cher. Comme avant, la première étape est Ajout de la fonction à l’EDM. Dans WebApiConfig.cs, ajoutez le code suivant.
+À présent, nous allons ajouter une fonction OData qui retourne le produit le plus onéreux. Comme précédemment, la première étape consiste à ajouter la fonction à l’EDM. Dans WebApiConfig.cs, ajoutez le code suivant.
 
 [!code-csharp[Main](odata-actions-and-functions/samples/sample9.cs)]
 
-Dans ce cas, la fonction est liée à la collection de produits, plutôt que des instances individuelles de produit. Les clients appeler la fonction en envoyant une demande GET :
+Dans ce cas, la fonction est liée à la collection Products, plutôt qu’à des instances de produit individuelles. Les clients appellent la fonction en envoyant une requête d’extraction :
 
 [!code-console[Main](odata-actions-and-functions/samples/sample10.cmd)]
 
@@ -109,32 +109,32 @@ Voici la méthode de contrôleur pour cette fonction :
 
 [!code-csharp[Main](odata-actions-and-functions/samples/sample11.cs)]
 
-Notez que le nom de méthode correspond au nom de fonction. Le **[HttpGet]** attribut spécifie la méthode est une méthode HTTP GET.
+Notez que le nom de la méthode correspond au nom de la fonction. L’attribut **[HttpGet]** spécifie que la méthode est une méthode http d’extraction.
 
 Voici la réponse HTTP :
 
 [!code-console[Main](odata-actions-and-functions/samples/sample12.cmd)]
 
-## <a name="example-adding-an-unbound-function"></a>Exemple : Ajout d’une fonction non liée
+## <a name="example-adding-an-unbound-function"></a>Exemple : ajout d’une fonction indépendante
 
-L’exemple précédent a été une fonction liée à une collection. Dans l’exemple suivant, nous allons créer un *indépendant* (fonction). Fonctions indépendantes sont appelées en tant qu’opérations statiques sur le service. La fonction dans cet exemple retourne la taxe pour un code postal donné.
+L’exemple précédent était une fonction liée à une collection. Dans l’exemple suivant, nous allons créer une fonction *indépendante* . Les fonctions indépendantes sont appelées en tant qu’opérations statiques sur le service. Dans cet exemple, la fonction retourne les taxes de vente pour un code postal donné.
 
-Dans le fichier WebApiConfig, ajoutez la fonction à l’EDM :
+Dans le fichier WebApiConfig, ajoutez la fonction au modèle EDM :
 
 [!code-csharp[Main](odata-actions-and-functions/samples/sample13.cs)]
 
-Notez que nous appelons **fonction** directement sur le **ODataModelBuilder**, plutôt qu’au type d’entité ou de la collection. Le Générateur de modèles vous indique que la fonction est indépendante.
+Notez que nous appelons la **fonction** directement sur le **ODataModelBuilder**, au lieu du type d’entité ou de la collection. Cela indique au générateur de modèles que la fonction est détachée.
 
 Voici la méthode de contrôleur qui implémente la fonction :
 
 [!code-csharp[Main](odata-actions-and-functions/samples/sample14.cs)]
 
-Peu importe quel contrôleur API Web vous placer cette méthode dans. Vous pouvez le placer `ProductsController`, ou définir un contrôleur séparé. Le **[ODataRoute]** attribut définit le modèle d’URI pour la fonction.
+Peu importe le contrôleur d’API Web dans lequel vous placez cette méthode. Vous pouvez le placer dans `ProductsController`ou définir un contrôleur séparé. L’attribut **[ODataRoute]** définit le modèle d’URI pour la fonction.
 
-Voici un exemple de demande client :
+Voici un exemple de demande de client :
 
 [!code-console[Main](odata-actions-and-functions/samples/sample15.cmd)]
 
-La réponse HTTP :
+Réponse HTTP :
 
 [!code-console[Main](odata-actions-and-functions/samples/sample16.cmd)]

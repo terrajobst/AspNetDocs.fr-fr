@@ -9,11 +9,11 @@ ms.assetid: c1a35f18-bab9-41f7-8497-15530c37a09d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-localization
 msc.type: authoredcontent
 ms.openlocfilehash: 003e7939accd7a68dab97441b3d999bca835b85a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600854"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78566219"
 ---
 # <a name="understanding-aspnet-ajax-localization"></a>Présentation de la localisation d’ASP.NET AJAX
 
@@ -57,12 +57,12 @@ Les scripts de culture neutre ne doivent pas inclure d’identificateur de cultu
 
 Le tableau suivant récapitule les conventions d’affectation des noms de fichiers avec des exemples :
 
-| NomFichier | Signification |
+| Nom de fichier | Signification |
 | --- | --- |
-| Script. js | Script indépendant de la culture Release-version. |
-| Script. Debug. js | Script indépendant de la culture Debug-version. |
-| Script. en-US. js | Une version Release en anglais, États-Unis script. |
-| Script.debug.es-CO. js | Un script Columbia-version Debug espagnol. |
+| Script.js | Script indépendant de la culture Release-version. |
+| Script.debug.js | Script indépendant de la culture Debug-version. |
+| Script.en-US.js | Une version Release en anglais, États-Unis script. |
+| Script.debug.es-CO.js | Un script Columbia-version Debug espagnol. |
 
 ## <a name="walkthrough-create-an-localized-embedded-script"></a>Procédure pas à pas : création d’un script incorporé, localisé
 
@@ -101,7 +101,7 @@ Pour ceux qui ne connaissent pas la syntaxe des expressions régulières JavaScr
 
 [!code-aspx[Main](understanding-asp-net-ajax-localization/samples/sample4.aspx)]
 
-1. Appuyez sur la touche F5. Si vous y êtes invité, activez le débogage. Lorsque la page est chargée, appuyez sur le bouton supprimer. Notez que vous êtes invité en anglais (sauf si votre ordinateur est configuré pour préférer les ressources espagnoles par défaut) pour la confirmation.
+1. Appuyez sur F5. Si vous y êtes invité, activez le débogage. Lorsque la page est chargée, appuyez sur le bouton supprimer. Notez que vous êtes invité en anglais (sauf si votre ordinateur est configuré pour préférer les ressources espagnoles par défaut) pour la confirmation.
 2. Fermez la fenêtre du navigateur et revenez à default. aspx. Dans la directive @Page en-tête, remplacez auto pour culture et UICulture par es-ES. Appuyez de nouveau sur F5 pour lancer l’application Web dans le navigateur. Cette fois, Notez que vous êtes invité à supprimer le fichier en espagnol :
 
 [![](understanding-asp-net-ajax-localization/_static/image2.png)](understanding-asp-net-ajax-localization/_static/image1.png)

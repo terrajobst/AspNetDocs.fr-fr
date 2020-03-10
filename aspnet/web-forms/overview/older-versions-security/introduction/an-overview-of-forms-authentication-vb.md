@@ -9,11 +9,11 @@ ms.assetid: 83267f7d-64d9-41ee-82cf-da91b1bf534d
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-vb
 msc.type: authoredcontent
 ms.openlocfilehash: d8ceb6b5290300992e52199caa9314c573de1942
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74626410"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78633902"
 ---
 # <a name="an-overview-of-forms-authentication-vb"></a>Vue d’ensemble de l’authentification par formulaire (VB)
 
@@ -205,7 +205,7 @@ Comme vous pouvez le voir, il existe trois comptes d’utilisateur valides : Sc
 
 Quand un utilisateur entre des informations d’identification valides, j’ai indiqué qu’elles sont ensuite redirigées vers la page appropriée. Qu’est-ce que la page appropriée ? Rappelez-vous que lorsqu’un utilisateur visite une page qu’il n’est pas autorisé à afficher, le FormsAuthenticationModule les redirige automatiquement vers la page de connexion. Dans ce cas, il comprend l’URL demandée dans la chaîne de requête via le paramètre ReturnUrl. Autrement dit, si un utilisateur a tenté de visiter ProtectedPage. aspx et qu’il n’a pas été autorisé à le faire, le FormsAuthenticationModule les redirige vers :
 
-Login. aspx ? ReturnUrl = ProtectedPage. aspx
+Login.aspx?ReturnUrl=ProtectedPage.aspx
 
 Une fois la connexion établie, l’utilisateur doit être redirigé vers ProtectedPage. aspx. Les utilisateurs peuvent également accéder à la page de connexion sur leur propre Volition. Dans ce cas, après avoir connecté l’utilisateur, vous devez l’envoyer à la page default. aspx du dossier racine.
 
@@ -221,7 +221,7 @@ GetAuthCookie est pratique lorsque vous devez modifier le ticket d’authentific
 
 Étant donné que nous voulons nous connecter à l’utilisateur et les rediriger vers la page appropriée, nous allons utiliser RedirectFromLoginPage. Mettez à jour le gestionnaire d’événements Click du LoginButton, en remplaçant les deux lignes TODO commentées par la ligne de code suivante :
 
-FormsAuthentication. RedirectFromLoginPage (UserName. Text, RememberMe. Checked)
+FormsAuthentication.RedirectFromLoginPage(UserName.Text, RememberMe.Checked)
 
 Lorsque vous créez le ticket d’authentification par formulaire, nous utilisons la propriété Text de nom d’utilisateur du nom d’utilisateur pour le paramètre de *nom d’utilisateur* du ticket d’authentification par formulaire et l’état activé de la case à cocher RememberMe pour le paramètre *persistCookie* .
 

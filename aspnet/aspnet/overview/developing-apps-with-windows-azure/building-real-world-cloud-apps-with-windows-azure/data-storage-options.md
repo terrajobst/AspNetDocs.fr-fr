@@ -9,11 +9,11 @@ ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
 ms.openlocfilehash: 9357ed5aef39bed501cdac9ac26d46c884d4fae0
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457178"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617802"
 ---
 # <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Options de stockage des données (création d’applications Cloud réalistes avec Azure)
 
@@ -151,7 +151,7 @@ Voici quelques questions à prendre en compte lorsque vous choisissez une approc
 
 Nous recommandons généralement de connaître la réponse aux questions de chacune de ces catégories avant de choisir vos solutions de stockage de données.
 
-En outre, votre charge de travail peut avoir des exigences spécifiques que certaines plateformes peuvent prendre en charge mieux que d’autres. Par exemple :
+En outre, votre charge de travail peut avoir des exigences spécifiques que certaines plateformes peuvent prendre en charge mieux que d’autres. Exemple :
 
 - Votre application nécessite-t-elle des fonctionnalités d’audit ?
 - Quelles sont vos exigences en matière de longévité des données : avez-vous besoin de fonctionnalités d’archivage ou de purge automatiques ?
@@ -168,7 +168,7 @@ Il est également facile de créer des bases de données à l’aide du portail.
 
 Cliquez sur **nouveau--Data Services** -- **SQL Database** -- **création rapide**, entrez un nom de base de données, choisissez un serveur déjà présent dans votre compte ou créez-en un nouveau, puis cliquez sur **créer une SQL Database**.
 
-![New SQL Database](data-storage-options/_static/image9.png)
+![Nouvelle base de données SQL](data-storage-options/_static/image9.png)
 
 Patientez quelques secondes, et une base de données dans Azure vous est prête à être utilisée.
 
@@ -256,13 +256,13 @@ Si vous souhaitez utiliser SQL Server sur une machine virtuelle, vous pouvez uti
 
 Lorsque vous créez une machine virtuelle avec une image SQL Server, nous évaluons le coût de la licence SQL Server par heure en fonction de votre utilisation de la machine virtuelle. Si vous avez un projet qui ne sera exécuté que pendant quelques mois, il est moins cher de payer à l’heure. Si vous pensez que votre projet va durer des années, il est moins onéreux d’acheter la licence comme vous le feriez normalement.
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Le Cloud Computing permet de combiner et de faire correspondre les approches de stockage des données pour répondre au mieux aux besoins de votre application. Si vous créez une nouvelle application, réfléchissez bien aux questions répertoriées ici afin de choisir des approches qui continueront à fonctionner correctement lorsque votre application se développe. Le [chapitre suivant](data-partitioning-strategies.md) explique certaines stratégies de partitionnement que vous pouvez utiliser pour combiner plusieurs approches de stockage de données.
 
 ## <a name="resources"></a>Ressources
 
-Pour plus d'informations, consultez les ressources ci-dessous.
+Pour plus d'informations, voir les ressources ci-dessous.
 
 Choix d’une plateforme de base de données :
 

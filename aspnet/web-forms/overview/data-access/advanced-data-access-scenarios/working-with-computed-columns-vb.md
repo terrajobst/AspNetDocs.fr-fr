@@ -9,11 +9,11 @@ ms.assetid: 5811b8ff-ed56-40fc-9397-6b69ae09a8f6
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-vb
 msc.type: authoredcontent
 ms.openlocfilehash: e425d7363c2cdea6efb0ba51f3fc2b6a5330bf2a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74603119"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78524485"
 ---
 # <a name="working-with-computed-columns-vb"></a>Utilisation de colonnes calculées (VB)
 
@@ -111,7 +111,7 @@ Quand vous cliquez sur terminer, l’Assistant crée les quatre procédures stoc
 
 ## <a name="step-4-including-the-computed-column-in-the-tableadapter-s-main-query"></a>Étape 4 : inclusion de la colonne calculée dans la requête principale du TableAdapter
 
-Nous devons maintenant mettre à jour le TableAdapter et le DataTable créés à l’étape 3 pour inclure le `FullContactName` colonne calculée. Cette opération s'effectue en deux étapes :
+Nous devons maintenant mettre à jour le TableAdapter et le DataTable créés à l’étape 3 pour inclure le `FullContactName` colonne calculée. Cela implique deux étapes :
 
 1. Mise à jour de la procédure stockée `Suppliers_Select` pour retourner le `FullContactName` colonne calculée, et
 2. Mise à jour du DataTable pour inclure une colonne `FullContactName` correspondante.

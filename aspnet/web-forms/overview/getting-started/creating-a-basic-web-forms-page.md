@@ -9,11 +9,11 @@ ms.assetid: a2f1c635-0817-4a9a-8c13-d5b5d29727c0
 msc.legacyurl: /web-forms/overview/getting-started/creating-a-basic-web-forms-page
 msc.type: authoredcontent
 ms.openlocfilehash: 5d13a51128eecd92a82cfd06054448582a348e11
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445675"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78629758"
 ---
 # <a name="using-visual-studio-2013-to-create-a-basic-aspnet-45-web-forms-page"></a>Utilisation de Visual Studio 2013 pour créer une page de Web Forms de base ASP.NET 4,5
 
@@ -32,7 +32,7 @@ Cette procédure pas à pas décrit notamment les tâches suivantes :
 - Ajout de gestionnaires d’événements.
 - Exécution et test d’une page à partir de Visual Studio.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Pour exécuter cette procédure pas à pas, vous avez besoin des éléments suivants :
 
@@ -58,11 +58,11 @@ Dans cette partie de la procédure pas à pas, vous allez créer un projet d’a
 
     La boîte de dialogue **Nouveau projet** s’affiche.
 3. Sélectionnez les **modèles** -&gt; le groupe **Visual C#**  -&gt; de modèles **Web** sur la gauche.
-4. Choisissez le modèle **application Web ASP.net** dans la colonne centrale.
+4. Choisissez le modèle **Application Web ASP.NET** dans la colonne centrale.
 5. Nommez votre projet ***BasicWebApp*** et cliquez sur le bouton **OK** .   
-![boîte de dialogue Nouveau projet](creating-a-basic-web-forms-page/_static/image2.png)
+![Boîte de dialogue Nouveau projet](creating-a-basic-web-forms-page/_static/image2.png)
 6. Ensuite, sélectionnez le modèle **Web Forms** , puis cliquez sur le bouton **OK** pour créer le projet.  
-![boîte de dialogue Nouveau projet ASP.NET](creating-a-basic-web-forms-page/_static/image3.png)  
+![Boîte de dialogue New ASP.NET Project](creating-a-basic-web-forms-page/_static/image3.png)  
 
     Visual Studio crée un projet qui comprend des fonctionnalités prégénérées basées sur le modèle de Web Forms. Elle vous fournit non seulement une page main *. aspx* , une page *about. aspx* , une page *contact. aspx* , mais inclut également la fonctionnalité d’appartenance qui inscrit les utilisateurs et enregistre leurs informations d’identification afin qu’ils puissent se connecter à votre site Web. Quand une nouvelle page est créée, par défaut, Visual Studio affiche la page en mode **source** , où vous pouvez voir les éléments HTML de la page. L’illustration suivante montre ce que vous pouvez voir en mode **source** si vous avez créé une nouvelle page Web nommée *BasicWebApp. aspx*.  
     ![Mode Source](creating-a-basic-web-forms-page/_static/image4.png)
@@ -101,7 +101,7 @@ Quand vous créez une application de Web Forms à l’aide du modèle de projet 
 2. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le nom de l’application Web (dans ce didacticiel, le nom de l’application est **BasicWebSite**), puis cliquez sur **Ajouter** -&gt; **nouvel élément**.   
 La boîte de dialogue **Ajouter un nouvel élément** s’affiche.
 3. Sélectionnez le **groupe C# Visual** -&gt; des modèles **Web** sur la gauche. Ensuite, sélectionnez **Web Form** dans la liste du milieu, puis nommez-le *FirstWebPage. aspx*.   
-    ![boîte de dialogue Ajouter un nouvel élément](creating-a-basic-web-forms-page/_static/image6.png)
+    ![Boîte de dialogue Ajouter un nouvel élément](creating-a-basic-web-forms-page/_static/image6.png)
 4. Cliquez sur **Ajouter** pour ajouter la page Web à votre projet.  
 Visual Studio crée la page et l’ouvre.
 
@@ -162,7 +162,7 @@ Notez que vous devrez peut-être développer la fenêtre **boîte à outils** à
 
     ![Trois contrôles dans Mode Création](creating-a-basic-web-forms-page/_static/image9.png "Trois contrôles en mode Design")
 
-### <a name="setting-control-properties"></a>Définition des propriétés de contrôle
+### <a name="setting-control-properties"></a>Définition des propriétés du contrôle
 
 Visual Studio vous permet de définir les propriétés des contrôles sur la page de différentes façons. Dans cette partie de la procédure pas à pas, vous allez définir les propriétés en mode **Design** et en mode **source** .
 
@@ -180,7 +180,7 @@ Visual Studio vous permet de définir les propriétés des contrôles sur la pag
 
     > [!NOTE] 
     > 
-    > Tous les contrôles se trouvent à l’intérieur d’un élément de **formulaire** , qui a également l’attribut **runat =&quot;Server&quot;** . L’attribut **runat =&quot;server&quot;** et le préfixe **asp :** pour les balises de contrôle marquent les contrôles afin qu’ils soient traités par ASP.net sur le serveur lors de l’exécution de la page. Du code en dehors de **&lt;forme runat =&quot;server&quot;&gt;** et **&lt;script runat =&quot;Server&quot;** &gt;éléments sont envoyés sans modification au navigateur, ce qui explique pourquoi le code ASP.net doit se trouver à l’intérieur d’un élément dont la balise d’ouverture contient l’attribut **runat =&quot;server&quot;** .
+    > Tous les contrôles se trouvent à l’intérieur d’un élément de **formulaire** , qui a également l’attribut **runat =&quot;Server&quot;** . L’attribut **runat =&quot;server&quot;** et le préfixe **asp :** pour les balises de contrôle marquent les contrôles afin qu’ils soient traités par ASP.net sur le serveur lors de l’exécution de la page. Du code en dehors de **&lt;forme runat =&quot;server&quot;&gt;** et **&lt;script runat =&quot;Server&quot;&gt;** éléments sont envoyés sans modification au navigateur, ce qui explique pourquoi le code ASP.net doit se trouver à l’intérieur d’un élément dont la balise d’ouverture contient l’attribut **runat =&quot;Server&quot;** .
 4. Ensuite, vous allez ajouter une propriété supplémentaire au contrôle [label](https://msdn.microsoft.com/library/system.web.ui.webcontrols.label.aspx) . Placez le point d’insertion directement après **asp : label** dans la balise **&lt;asp : label&gt;** , puis appuyez sur la **barre d’espace**.
 
     Une liste déroulante s’affiche pour afficher la liste des propriétés disponibles que vous pouvez définir pour un contrôle [label](https://msdn.microsoft.com/library/system.web.ui.webcontrols.label.aspx) . Cette fonctionnalité, appelée **IntelliSense**, vous aide en mode **source** avec la syntaxe des contrôles serveur, des éléments HTML et d’autres éléments de la page. L’illustration suivante montre la liste déroulante **IntelliSense** pour le contrôle [label](https://msdn.microsoft.com/library/system.web.ui.webcontrols.label.aspx) .

@@ -1,19 +1,19 @@
 ---
 uid: webhooks/diagnostics/index
-title: Diagnostics de WebHooks ASP.NET | Microsoft Docs
+title: Diagnostics du webhook ASP.NET | Microsoft Docs
 author: rick-anderson
-description: Articles sur les Diagnostics de WebHooks ASP.NET
+description: Articles sur les diagnostics de webhook ASP.NET
 ms.author: riande
 ms.date: 10/14/2016
 ms.assetid: b5f3d8b0-6964-47a4-954e-c7722e88707b
 ms.openlocfilehash: 8c9c24d29f968f7a6e5f2c61c459098af689c5c6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023006"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78566639"
 ---
-# <a name="aspnet-webhooks-diagnostics"></a>Diagnostics de WebHooks ASP.NET
+# <a name="aspnet-webhooks-diagnostics"></a>Diagnostics du webhook ASP.NET
 
 * [Journalisation](logging.md)
 * [Débogage](debugging.md)

@@ -9,11 +9,11 @@ ms.assetid: 362ade25-3965-4fb2-88d2-835c4786244f
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-cs
 msc.type: authoredcontent
 ms.openlocfilehash: f1287e180151b3034a7b90ef4b3f1fbe68354a09
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74576978"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78588283"
 ---
 # <a name="including-a-file-upload-option-when-adding-a-new-record-c"></a>Inclusion d’une option de chargement de fichier lors de l’ajout d’un nouvel enregistrement (C#)
 

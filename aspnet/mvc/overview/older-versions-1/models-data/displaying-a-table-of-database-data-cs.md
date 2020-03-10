@@ -9,11 +9,11 @@ ms.assetid: d6e758b6-6571-484d-a132-34ee6c47747a
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 3c908d030076fc8400190ef3cf1672632ac1ed6b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74589466"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78543140"
 ---
 # <a name="displaying-a-table-of-database-data-c"></a>Affichage d’une table de données de la base de données (C#)
 
@@ -31,11 +31,11 @@ Nous allons afficher l’ensemble des enregistrements de la table de base de don
 
 <a id="0.3_table01"></a>
 
-| **Nom de la colonne** | **Type de données** | **Autoriser les valeurs null** |
+| **Nom de la colonne** | **Type de données** | **Null autorisé** |
 | --- | --- | --- |
-| ID | int | False |
-| Titre | Nvarchar (200) | False |
-| MetaDirectory | NVarchar (50) | False |
+| Id | Int | False |
+| Titre | Nvarchar(200) | False |
+| Directeur | NVarchar(50) | False |
 | DateReleased | DateTime | False |
 
 Pour représenter le tableau films dans notre application ASP.NET MVC, nous devons créer une classe de modèle. Dans ce didacticiel, nous utilisons le Entity Framework Microsoft pour créer nos classes de modèle.
@@ -53,7 +53,7 @@ Pour lancer l’Assistant Entity Data Model, procédez comme suit :
 Une fois que vous avez cliqué sur le bouton Ajouter, l’Assistant Entity Data Model s’affiche (voir figure 1). Pour terminer l’Assistant, procédez comme suit :
 
 1. Dans l’étape **choisir le contenu du modèle** , sélectionnez l’option **générer à partir de la base de données** .
-2. Dans l’étape **choisir votre connexion de données** , utilisez la connexion de données *MoviesDB. mdf* et le nom *MoviesDBEntities* pour les paramètres de connexion. Cliquez sur le bouton **suivant** .
+2. Dans l’étape **choisir votre connexion de données** , utilisez la connexion de données *MoviesDB. mdf* et le nom *MoviesDBEntities* pour les paramètres de connexion. Cliquez sur le bouton **Suivant**.
 3. Dans l’étape **choisir vos objets de base de données** , développez le nœud tables, puis sélectionnez le tableau films. Entrez les *modèles* d’espace de noms, puis cliquez sur le bouton **Terminer** .
 
 [![de la création de classes LINQ to SQL](displaying-a-table-of-database-data-cs/_static/image1.jpg)](displaying-a-table-of-database-data-cs/_static/image1.png)

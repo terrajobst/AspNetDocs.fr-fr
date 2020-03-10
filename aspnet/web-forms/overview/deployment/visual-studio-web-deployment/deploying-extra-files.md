@@ -9,11 +9,11 @@ ms.assetid: 1cd91055-84bc-42c6-9d80-646f41429d4d
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-extra-files
 msc.type: authoredcontent
 ms.openlocfilehash: eaa3141c22980f0c816e2f33b5597ac9fe69c23c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74594906"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78548411"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-extra-files"></a>Déploiement Web ASP.NET à l’aide de Visual Studio : déploiement de fichiers supplémentaires
 
@@ -23,7 +23,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 
 > Cette série de didacticiels vous montre comment déployer (publier) une application Web ASP.NET sur Azure App Service Web Apps ou sur un fournisseur d’hébergement tiers, à l’aide de Visual Studio 2012 ou de Visual Studio 2010. Pour plus d’informations sur la série, consultez [le premier didacticiel de la série](introduction.md).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Ce didacticiel montre comment étendre le pipeline de publication Web de Visual Studio pour effectuer une tâche supplémentaire pendant le déploiement. La tâche consiste à copier les fichiers supplémentaires qui ne se trouvent pas dans le dossier du projet vers le site Web de destination.
 
@@ -77,7 +77,7 @@ Si vous utilisez la publication en un clic, vous pouvez vérifier dans la fenêt
 
 Cette série de didacticiels se termine lors du déploiement d’une application Web ASP.NET sur un fournisseur d’hébergement tiers. Pour plus d’informations sur les sujets abordés dans ces didacticiels, consultez le [plan de contenu de déploiement ASP.net](https://go.microsoft.com/fwlink/p/?LinkId=282413).
 
-## <a name="more-information"></a>Plus d'informations
+## <a name="more-information"></a>Informations complémentaires
 
 Si vous savez comment utiliser des fichiers MSBuild, vous pouvez automatiser de nombreuses autres tâches de déploiement en écrivant du code dans les fichiers *. pubxml* (pour les tâches spécifiques au profil) ou le fichier Project *. WPP. targets* (pour les tâches qui s’appliquent à tous les profils). Pour plus d’informations sur les fichiers *. pubxml* et *. WPP. targets* , consultez [procédure : modifier les paramètres de déploiement dans les fichiers de profil de publication (. pubxml) et le fichier. WPP. targets dans les projets Web Visual Studio](https://msdn.microsoft.com/library/ff398069). Pour une présentation de base du code MSBuild, consultez **l’anatomie d’un fichier projet dans une** [série de déploiement d’entreprise : présentation du fichier projet](../web-deployment-in-the-enterprise/understanding-the-project-file.md). Pour savoir comment utiliser des fichiers MSBuild pour effectuer des tâches dans vos propres scénarios, consultez cet ouvrage : à l' [intérieur du Microsoft Build Engine : utilisation de MSBuild et Team Foundation Build](http://msbuildbook.com) par Sayed ibraham Hashimi et William Bartholomew.
 

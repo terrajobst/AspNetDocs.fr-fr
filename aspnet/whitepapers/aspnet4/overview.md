@@ -9,11 +9,11 @@ ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
 ms.openlocfilehash: ecde48f6bd88ee5f569bfeb8b70c26a50bc869c2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74576871"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78630171"
 ---
 # <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Vue d’ensemble du développement web ASP.NET 4 et Visual Studio 2010
 
@@ -496,7 +496,7 @@ Pour remplacer complètement la fonctionnalité de définition des fonctionnalit
 
 #### <a name="caching-the-httpbrowsercapabilities-object"></a>Mise en cache de l’objet HttpBrowserCapabilities
 
-L’exemple précédent présente un problème, à savoir que le code s’exécute chaque fois que le fournisseur personnalisé est appelé afin d’accéder à l’objet *HttpBrowserCapabilities* . Cela peut se produire plusieurs fois lors de chaque demande. Dans l’exemple, le code du fournisseur ne fait pas grand-chose. Toutefois, si le code de votre fournisseur personnalisé effectue un travail significatif afin d’accéder à l’objet *HttpBrowserCapabilities* , cela peut affecter les performances. Pour éviter ce problème, vous pouvez mettre en cache l’objet *HttpBrowserCapabilities* . Suivez les étapes ci-dessous :
+L’exemple précédent présente un problème, à savoir que le code s’exécute chaque fois que le fournisseur personnalisé est appelé afin d’accéder à l’objet *HttpBrowserCapabilities* . Cela peut se produire plusieurs fois lors de chaque demande. Dans l’exemple, le code du fournisseur ne fait pas grand-chose. Toutefois, si le code de votre fournisseur personnalisé effectue un travail significatif afin d’accéder à l’objet *HttpBrowserCapabilities* , cela peut affecter les performances. Pour éviter ce problème, vous pouvez mettre en cache l’objet *HttpBrowserCapabilities* . Procédez comme suit :
 
 1. Créez une classe qui dérive de *HttpCapabilitiesProvider*, comme celle de l’exemple suivant : 
 
@@ -927,8 +927,8 @@ Par défaut, lorsqu’une application Web ou un site Web cible le .NET Framework
 
 La valeur de *controlRenderingCompatibility* est une chaîne, ce qui permet d’éventuelles nouvelles définitions de version dans les futures versions. Dans la version actuelle, les valeurs suivantes sont prises en charge pour cette propriété :
 
-- « 3,5 ». Ce paramètre indique un rendu et un balisage hérités. Le balisage rendu par les contrôles est de 100% à compatibilité descendante et le paramètre de la propriété *xhtmlConformance* est respecté.
-- « 4,0 ». Si la propriété a ce paramètre, les contrôles serveur Web ASP.NET effectuent les opérations suivantes :
+- "3.5". Ce paramètre indique un rendu et un balisage hérités. Le balisage rendu par les contrôles est de 100% à compatibilité descendante et le paramètre de la propriété *xhtmlConformance* est respecté.
+- "4.0". Si la propriété a ce paramètre, les contrôles serveur Web ASP.NET effectuent les opérations suivantes :
 - La propriété *xhtmlConformance* est toujours traitée comme « strict ». Par conséquent, les contrôles affichent le balisage XHTML 1,0 strict.
 - La désactivation des contrôles non-entrée n’affiche plus les styles non valides.
 - les éléments *div* autour des champs masqués sont maintenant stylisés, de sorte qu’ils n’interfèrent pas avec les règles CSS créées par l’utilisateur.
@@ -979,8 +979,8 @@ Par défaut, les contrôles serveur Web ASP.NET suivants qui prennent en charge 
 - *FormView*
 - *Connexion*
 - *PasswordRecovery*
-- *Connaissant*
-- *Création*
+- *ChangePassword*
+- *Assistant*
 - *CreateUserWizard*
 
 Une nouvelle propriété nommée *RenderOuterTable* a été ajoutée à ces contrôles pour permettre la suppression de la table externe du balisage. Prenons l’exemple suivant d’un contrôle *FormView* :
@@ -1081,7 +1081,7 @@ Le contrôle restitue le code HTML similaire à ce qui suit :
 
 [!code-html[Main](overview/samples/sample88.html)]
 
-Dans ASP.NET 3,5 SP1, bien que vous puissiez modifier le contenu du modèle, vous disposez toujours d’un contrôle limité sur la sortie du contrôle de l' *Assistant* . Dans ASP.NET 4, vous pouvez créer un modèle *LayoutTemplate* et insérer des contrôles d' *espace réservé* (à l’aide de noms réservés) pour spécifier la façon dont vous souhaitez que le contrôle de l' *Assistant* s’affiche. L’exemple suivant illustre ce qui suit :
+Dans ASP.NET 3,5 SP1, bien que vous puissiez modifier le contenu du modèle, vous disposez toujours d’un contrôle limité sur la sortie du contrôle de l' *Assistant* . Dans ASP.NET 4, vous pouvez créer un modèle *LayoutTemplate* et insérer des contrôles d' *espace réservé* (à l’aide de noms réservés) pour spécifier la façon dont vous souhaitez que le contrôle de l' *Assistant* s’affiche. L’exemple suivant illustre cela :
 
 [!code-aspx[Main](overview/samples/sample89.aspx)]
 
@@ -1100,7 +1100,7 @@ Le seul code HTML qui n’est pas défini par l’utilisateur est un élément *
 
 <a id="0.2_dyndata"></a><a id="0.2__Toc253429274"></a><a id="0.2__Toc243304648"></a><a id="0.2__Toc224729042"></a>
 
-## <a name="aspnet-mvc"></a>ASP.NET MVC
+## <a name="aspnet-mvc"></a>ASP.NET MVC
 
 ASP.NET MVC a été introduit comme Framework complémentaire pour ASP.NET 3,5 SP1 en mars 2009. Visual Studio 2010 comprend ASP.NET MVC 2, qui comprend de nouvelles fonctionnalités et fonctionnalités.
 
@@ -1364,13 +1364,13 @@ Les sites Web suivants fournissent des informations supplémentaires sur ASP.NET
 
 Ce document est une version préliminaire et peut être modifié substantiellement avant le lancement de la mise en production commerciale finale du logiciel qu’il décrit.
 
-Les informations contenues dans ce document représentent l'opinion actuelle de Microsoft Corporation sur les points cités à la date de publication. Microsoft s’adapte aux conditions fluctuantes du marché et cette opinion ne doit pas être interprétée comme un engagement de la part de Microsoft ; de plus, Microsoft ne peut pas garantir la véracité de toute information présentée après la date de publication.
+Les informations contenues dans ce document correspondent à la connaissance que Microsoft Corporation possède des problèmes abordés à la date de la publication. Microsoft devant répondre à des conditions de marché qui évoluent, ce document ne doit pas être considéré comme un engagement de sa part, et Microsoft ne peut pas garantir l’exactitude des informations présentées à la date de la publication.
 
-Ce livre blanc est fourni à titre d'information uniquement. MICROSOFT N’APPORTE AUCUNE GARANTIE, EXPRESSE OU IMPLICITE, À CE DOCUMENT.
+Ce livre blanc est fourni à titre d'information uniquement. MICROSOFT NE FOURNIT AUCUNE GARANTIE, EXPRESSE, IMPLICITE OU LÉGALE, QUANT AUX INFORMATIONS CONTENUES DANS CE DOCUMENT.
 
 L'utilisateur est tenu d'observer la réglementation relative aux droits d'auteur applicable dans son pays. Aucune partie de ce document ne peut être reproduite, stockée ou introduite dans un système de restitution, ou transmise à quelque fin ou par quelque moyen que ce soit (électronique, mécanique, photocopie, enregistrement ou autre) sans la permission expresse et écrite de Microsoft Corporation.
 
-Microsoft peut détenir des brevets, avoir déposé des demandes d'enregistrement de brevets ou être titulaire de marques, droits d'auteur ou autres droits de propriété intellectuelle portant sur tout ou partie des éléments qui font l'objet du présent document. Sauf si stipulation expresse contraire d'un contrat de licence écrit de Microsoft, la fourniture de ce document n'a pas pour effet de vous concéder une licence sur ces brevets, marques, droits d'auteur ou autres droits de propriété intellectuelle.
+Microsoft peut détenir des brevets, avoir déposé des demandes d'enregistrement de brevets ou être titulaire de marques, droits d'auteur ou autres droits de propriété intellectuelle portant sur tout ou partie des éléments qui font l'objet du présent document. Sauf stipulation expresse contraire d'un contrat de licence écrit de Microsoft, la fourniture de ce document n'a pas pour effet de vous concéder une licence sur ces brevets, marques, droits d'auteur ou autres droits de propriété intellectuelle.
 
 Sauf mention contraire, les exemples de sociétés, d’organisations, de produits, de noms de domaine, d’adresses de messagerie, de logos, de personnes, de lieux et d’événements mentionnés dans le présent document sont fictifs et ne sont pas associés à une société, une organisation, un produit, un nom de domaine, une adresse de messagerie réels une adresse, un logo, une personne, un lieu ou un événement est intentionnel ou doit être déduit.
 
@@ -1378,4 +1378,4 @@ Sauf mention contraire, les exemples de sociétés, d’organisations, de produi
 
 Microsoft et Windows sont soit des marques déposées de Microsoft Corporation, soit des marques de Microsoft Corporation aux États-Unis d'Amérique et/ou dans d'autres pays.
 
-Les noms de sociétés et de produits réels mentionnés dans la présente documentation peuvent être des marques de leurs propriétaires respectifs.
+Les noms des sociétés et des produits mentionnés dans le présent document peuvent être des marques de leurs propriétaires respectifs.

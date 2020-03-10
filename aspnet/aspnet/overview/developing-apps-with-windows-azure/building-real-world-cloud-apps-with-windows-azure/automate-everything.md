@@ -9,11 +9,11 @@ ms.assetid: ba6e6baa-9b9f-471f-b39d-b007a3addadc
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/automate-everything
 msc.type: authoredcontent
 ms.openlocfilehash: e741a753a36ebdaefbff8eee0b38911785c716ac
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457165"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584944"
 ---
 # <a name="automate-everything-building-real-world-cloud-apps-with-azure"></a>Automatiser tout (création d’applications Cloud réalistes avec Azure)
 
@@ -49,13 +49,13 @@ Pour l’application Fix it, nous avons créé des scripts Windows PowerShell qu
 
 Le premier script que nous allons examiner est appelé *New-AzureWebsiteEnv. ps1*. Il crée un environnement Azure sur lequel vous pouvez déployer l’application Fix it à des fins de test. Les principales tâches exécutées par ce script sont les suivantes :
 
-- Créez une application web.
-- Créez un compte de stockage. (Requis pour les objets BLOB et les files d’attente, comme vous le verrez dans les chapitres ultérieurs.)
+- Créer une application web.
+- Créer un compte de stockage. (Requis pour les objets BLOB et les files d’attente, comme vous le verrez dans les chapitres ultérieurs.)
 - Créez un serveur SQL Database et deux bases de données : une base de données d’application et une base de données d’appartenance.
 - Stockez les paramètres dans Azure que l’application utilisera pour accéder au compte de stockage et aux bases de données.
 - Créer des fichiers de paramètres qui seront utilisés pour automatiser le déploiement.
 
-### <a name="run-the-script"></a>Exécuter le script
+### <a name="run-the-script"></a>Exécutez le script
 
 > [!NOTE]
 > Cette partie du chapitre présente des exemples de scripts et les commandes que vous entrez afin de les exécuter. Il s’agit d’une démonstration qui ne fournit pas tout ce que vous devez savoir pour exécuter les scripts. Pour obtenir des instructions pas à pas, consultez l' [annexe : l’exemple d’application Fix it](the-fix-it-sample-application.md#deploybase).
@@ -84,7 +84,7 @@ Sous l’onglet **configurer** de l’application Web, vous pouvez voir que les 
 
 ![appSettings et connectionStrings](automate-everything/_static/image6.png)
 
-Le dossier *Automation* contient désormais également un fichier *&lt;WebSiteName&gt;. pubxml* . Ce fichier stocke les paramètres que MSBuild utilisera pour déployer l’application dans l’environnement Azure que vous venez de créer. Par exemple :
+Le dossier *Automation* contient désormais également un fichier *&lt;WebSiteName&gt;. pubxml* . Ce fichier stocke les paramètres que MSBuild utilisera pour déployer l’application dans l’environnement Azure que vous venez de créer. Exemple :
 
 [!code-xml[Main](automate-everything/samples/sample1.xml)]
 
@@ -239,7 +239,7 @@ Une fois l’opération terminée, le navigateur s’ouvre et affiche le site en
 
 ![Réparer une application déployée sur Windows Azure](automate-everything/_static/image7.png)
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Avec ces scripts, vous pouvez être certain que les mêmes étapes seront toujours exécutées dans le même ordre en utilisant les mêmes options. Cela permet de s’assurer que chaque développeur de l’équipe ne manque pas de tâche ou de déployer un élément personnalisé sur son propre ordinateur qui ne fonctionnera pas de la même façon dans l’environnement d’un autre membre de l’équipe ou en production.
 

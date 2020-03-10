@@ -1,19 +1,19 @@
 ---
 uid: web-forms/overview/deployment/web-deployment-in-the-enterprise/configuring-parameters-for-web-package-deployment
-title: Configuration des paramètres de déploiement du Package Web | Microsoft Docs
+title: Configuration des paramètres pour le déploiement de packages Web | Microsoft Docs
 author: jrjlee
-description: Cette rubrique décrit comment définir des valeurs de paramètre, telles que les noms d’application web Internet Information Services (IIS), les chaînes de connexion et les points de terminaison de service...
+description: Cette rubrique explique comment définir des valeurs de paramètre, comme les noms d’application Web Internet Information Services (IIS), les chaînes de connexion et les points de terminaison de service,...
 ms.author: riande
 ms.date: 05/04/2012
 ms.assetid: 37947d79-ab1e-4ba9-9017-52e7a2757414
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/configuring-parameters-for-web-package-deployment
 msc.type: authoredcontent
 ms.openlocfilehash: f04ace98d81a33053b10cab7e40dbd75a6c0992c
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108725"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78544953"
 ---
 # <a name="configuring-parameters-for-web-package-deployment"></a>Configuration des paramètres pour le déploiement de package web
 
@@ -21,113 +21,113 @@ par [Jason Lee](https://github.com/jrjlee)
 
 [Télécharger PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
-> Cette rubrique explique comment définir des valeurs de paramètre, telles que les noms d’application web Internet Information Services (IIS), les chaînes de connexion et les points de terminaison de service, lorsque vous déployez un package web sur un serveur web IIS à distance.
+> Cette rubrique explique comment définir des valeurs de paramètre, comme les noms d’application Web Internet Information Services (IIS), les chaînes de connexion et les points de terminaison de service, lorsque vous déployez un package Web sur un serveur Web IIS distant.
 
-Lorsque vous générez un projet d’application web, la génération et le processus d’empaquetage génère trois fichiers de clés :
+Quand vous générez un projet d’application Web, le processus de génération et d’empaquetage génère trois fichiers de clé :
 
-- Un *[nom_projet] .zip* fichier. Il s’agit de package de déploiement web pour votre projet d’application web. Ce package contient tous les assemblys, les fichiers, les scripts de base de données et les ressources nécessaires pour recréer votre application web sur un serveur web IIS à distance.
-- Un *[nom_projet].deploy.cmd* fichier. Contient un ensemble de commandes paramétrables de Web Deploy (MSDeploy.exe) qui publier votre package de déploiement web sur un serveur web IIS à distance.
-- Un *[nom_projet]. SetParameters.xml* fichier. Cela fournit un ensemble de valeurs de paramètre à la commande MSDeploy.exe. Vous pouvez mettre à jour les valeurs dans ce fichier et passer à Web Deploy comme paramètre de ligne de commande lorsque vous déployez votre package web.
+- Un fichier *[nom du projet]. zip* . Il s’agit du package de déploiement Web pour votre projet d’application Web. Ce package contient tous les assemblys, fichiers, scripts de base de données et ressources nécessaires à la recréation de votre application Web sur un serveur Web IIS distant.
+- Un fichier *[nom du projet]. deploy. cmd* . Contient un ensemble de commandes Web Deploy paramétrées (MSDeploy. exe) qui publient votre package de déploiement Web sur un serveur Web IIS distant.
+- Un *[nom du projet]. Fichier SetParameters. xml* . Cela fournit un ensemble de valeurs de paramètre à la commande MSDeploy. exe. Vous pouvez mettre à jour les valeurs de ce fichier et les transmettre à Web Deploy en tant que paramètre de ligne de commande lorsque vous déployez votre package Web.
 
 > [!NOTE]
-> Pour plus d’informations sur la génération et le processus d’empaquetage, consultez [génération et empaquetage Web Application Projects](building-and-packaging-web-application-projects.md).
+> Pour plus d’informations sur le processus de génération et d’empaquetage, consultez [génération et empaquetage de projets d’application Web](building-and-packaging-web-application-projects.md).
 
-Le *SetParameters.xml* généré dynamiquement à partir de votre fichier de projet d’application web et des fichiers de configuration au sein de votre projet. Lorsque vous générez et empaqueter votre projet, le Pipeline de publication Web (WPP) détecte automatiquement un grand nombre des variables qui sont susceptibles de changer entre les environnements de déploiement, telles que l’application web IIS de destination et les chaînes de connexion de base de données. Ces valeurs sont automatiquement paramétrés dans le package de déploiement web et ajoutés à la *SetParameters.xml* fichier. Par exemple, si vous ajoutez une chaîne de connexion à la *web.config* fichier dans votre projet d’application web, le processus de génération détecte cette modification et ajoutera une entrée à la *SetParameters.xml* fichier en conséquence.
+Le fichier *SetParameters. xml* est généré dynamiquement à partir de votre fichier projet d’application Web et de tous les fichiers de configuration de votre projet. Lorsque vous générez et empaquetez votre projet, le pipeline de publication Web (WPP) détecte automatiquement un grand nombre de variables susceptibles d’être modifiées entre les environnements de déploiement, comme l’application Web IIS de destination et les chaînes de connexion à la base de données. Ces valeurs sont automatiquement paramétrées dans le package de déploiement Web et ajoutées au fichier *SetParameters. xml* . Par exemple, si vous ajoutez une chaîne de connexion au fichier *Web. config* dans votre projet d’application Web, le processus de génération détecte cette modification et ajoute une entrée au fichier *SetParameters. xml* en conséquence.
 
-Dans de nombreux cas, ce paramétrage automatique sera suffisant. Toutefois, si vos utilisateurs ont besoin pour faire varier les autres paramètres entre les environnements de déploiement, telles que les paramètres de l’application ou l’URL du point de terminaison de service, vous devez indiquer les fournisseurs de services pour paramétrer ces valeurs dans le package de déploiement et ajouter des entrées correspondantes à la *SetParameters.xml* fichier. Les sections qui suivent expliquent comment effectuer cette opération.
+Dans de nombreux cas, ce paramétrage automatique sera suffisant. Toutefois, si vos utilisateurs doivent modifier d’autres paramètres entre des environnements de déploiement, tels que les paramètres d’application ou les URL de point de terminaison de service, vous devez indiquer au WPP de paramétrer ces valeurs dans le package de déploiement et d’ajouter les entrées correspondantes au fichier *SetParameters. xml* . Les sections qui suivent expliquent comment procéder.
 
 ### <a name="automatic-parameterization"></a>Paramétrage automatique
 
-Lorsque vous générez et empaquetez une application web, les fournisseurs de services seront paramétrer automatiquement ces éléments :
+Lorsque vous générez et Empaquetez une application Web, le WPP va automatiquement paramétrer les éléments suivants :
 
-- La destination IIS web les nom et chemin d’accès de l’application.
-- Toute connexion des chaînes dans votre *web.config* fichier.
-- Chaînes de connexion pour les bases de données que vous ajoutez à la **Package/Publication SQL** onglet dans les pages de propriétés de projet.
+- Le chemin d’accès et le nom de l’application Web IIS de destination.
+- Toutes les chaînes de connexion dans votre fichier *Web. config* .
+- Chaînes de connexion pour toutes les bases de données que vous ajoutez à l’onglet **Package/Publication SQL** dans les pages de propriétés du projet.
 
-Par exemple, si vous deviez générer et empaqueter le [Contact Manager](the-contact-manager-solution.md) génère l’exemple de solution sans toucher le processus de paramétrage de quelque façon, les fournisseurs de services cette *ContactManager.Mvc.SetParameters.xml* fichier :
+Par exemple, si vous deviez créer et empaqueter l’exemple de solution du [Gestionnaire de contacts](the-contact-manager-solution.md) sans toucher au processus de paramétrage, le WPP générera ce fichier *ContactManager. Mvc. SetParameters. xml* :
 
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample1.xml)]
 
 Dans ce cas :
 
-- Le **nom de l’Application Web IIS** paramètre est le chemin d’accès IIS où vous souhaitez déployer l’application web. La valeur par défaut provient de la **Package/Publication Web** page dans les pages de propriétés de projet.
-- Le **ApplicationServices-Web.config Connection String** paramètre a été généré à partir d’un **ajouter/connectionStrings** élément dans le *web.config* fichier. Il représente la chaîne de connexion que l’application doit utiliser pour contacter la base de données d’appartenance. La valeur que vous fournissez ici sera remplacé dans déployé *web.config* fichier. La valeur par défaut provient de l’avant le déploiement *web.config* fichier.
+- Le paramètre nom de l' **application Web IIS** est le chemin d’accès IIS dans lequel vous souhaitez déployer l’application Web. La valeur par défaut est extraite de la page **Web Package/Publication** dans les pages de propriétés du projet.
+- Le paramètre de **chaîne de connexion ApplicationServices-Web. config** a été généré à partir d’un élément **connectionStrings/Add** dans le fichier *Web. config* . Il représente la chaîne de connexion que l’application doit utiliser pour contacter la base de données d’appartenance. La valeur que vous fournissez ici sera remplacée par le fichier *Web. config* déployé. La valeur par défaut est extraite du fichier *Web. config* de prédéploiement.
 
-Les fournisseurs de services ajuste également ces propriétés dans le package de déploiement qu’il génère. Vous pouvez fournir des valeurs pour ces propriétés lorsque vous installez le package de déploiement. Si vous installez le package manuellement via le Gestionnaire IIS, comme décrit dans [installer manuellement des Packages Web](manually-installing-web-packages.md), l’Assistant installation vous invite à fournir des valeurs pour tous les paramètres. Si vous installez le package à distance en utilisant le *. deploy.cmd* de fichiers, comme décrit dans [déploiement des Packages Web](deploying-web-packages.md), Web Deploy ressemblera à ce *SetParameters.xml* fichier Indiquez les valeurs de paramètre. Vous pouvez modifier les valeurs dans le *SetParameters.xml* fichier manuellement, ou vous pouvez personnaliser le fichier dans le cadre d’un processus de génération et de déploiement automatisé. Ce processus est décrit plus en détail plus loin dans cette rubrique.
+Le WPP paramètre également ces propriétés dans le package de déploiement qu’il génère. Vous pouvez fournir des valeurs pour ces propriétés lors de l’installation du package de déploiement. Si vous installez le package manuellement via le gestionnaire des services Internet (IIS), comme décrit dans [installation manuelle de packages Web](manually-installing-web-packages.md), l’Assistant installation vous invite à fournir des valeurs pour tous les paramètres. Si vous installez le package à distance à l’aide du fichier *. deploy. cmd* , comme décrit dans [déploiement de Packages Web](deploying-web-packages.md), Web Deploy examine ce fichier *SetParameters. xml* pour fournir les valeurs de paramètre. Vous pouvez modifier les valeurs dans le fichier *SetParameters. xml* manuellement, ou vous pouvez personnaliser le fichier dans le cadre d’un processus de génération et de déploiement automatisés. Ce processus est décrit plus en détail plus loin dans cette rubrique.
 
 ### <a name="custom-parameterization"></a>Paramétrage personnalisé
 
-Dans les scénarios de déploiement plus complexes, vous aurez souvent besoin de paramétrer des propriétés supplémentaires avant de déployer votre projet. En règle générale, vous devez paramétrer toutes les propriétés et paramètres qui varient entre les environnements de destination. Celles-ci peuvent inclure :
+Dans les scénarios de déploiement plus complexes, vous souhaiterez souvent paramétrer des propriétés supplémentaires avant de déployer votre projet. En règle générale, vous devez paramétrer les propriétés et les paramètres qui varient d’un environnement de destination à l’autre. Il peut s’agir des éléments suivants :
 
-- Des points de terminaison dans le *web.config* fichier.
-- Paramètres d’application dans le *web.config* fichier.
-- Toutes les autres propriétés déclaratives que vous souhaitez invitent les utilisateurs à spécifier.
+- Points de terminaison de service dans le fichier *Web. config* .
+- Paramètres d’application dans le fichier *Web. config* .
+- Toutes les autres propriétés déclaratives que vous souhaitez inviter les utilisateurs à spécifier.
 
-Pour paramétrer ces propriétés le plus simple consiste à ajouter un *parameters.xml* fichier dans le dossier racine de votre projet d’application web. Par exemple, dans la solution Gestionnaire de contacts, le projet ContactManager.Mvc inclut un *parameters.xml* fichier dans le dossier racine.
+Le moyen le plus simple de paramétrer ces propriétés consiste à ajouter un fichier *Parameters. xml* au dossier racine de votre projet d’application Web. Par exemple, dans la solution du gestionnaire de contacts, le projet ContactManager. Mvc comprend un fichier *Parameters. xml* dans le dossier racine.
 
 ![](configuring-parameters-for-web-package-deployment/_static/image1.png)
 
-Si vous ouvrez ce fichier, vous verrez qu’il contient un seul **paramètre** entrée. L’entrée utilise une requête XML Path Language (XPath) pour localiser et de paramétrer l’URL de point de terminaison du service ContactService Windows Communication Foundation (WCF) dans le *web.config* fichier.
+Si vous ouvrez ce fichier, vous verrez qu’il contient une seule entrée de **paramètre** . L’entrée utilise une requête XPath (XML Path Language) pour rechercher et paramétrer l’URL de point de terminaison du service ContactService Windows Communication Foundation (WCF) dans le fichier *Web. config* .
 
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample2.xml)]
 
-En plus du paramétrage de l’URL de point de terminaison dans le package de déploiement, les fournisseurs de services ajoute également une entrée correspondante à la *SetParameters.xml* fichier est généré en même temps que le package de déploiement.
+Outre le paramétrage de l’URL de point de terminaison dans le package de déploiement, le WPP ajoute également une entrée correspondante au fichier *SetParameters. xml* qui est généré en même temps que le package de déploiement.
 
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample3.xml)]
 
-Si vous installez manuellement le package de déploiement, le Gestionnaire IIS vous invitera pour l’adresse de point de terminaison de service en même temps que les propriétés qui ont été paramétré automatiquement. Si vous installez le package de déploiement en exécutant la *. deploy.cmd* fichier, vous pouvez modifier le *SetParameters.xml* fichier pour fournir une valeur pour l’adresse de point de terminaison de service ainsi que des valeurs pour le propriétés qui ont été paramétrées automatiquement.
+Si vous installez manuellement le package de déploiement, le gestionnaire des services Internet vous invite à indiquer l’adresse du point de terminaison de service en même temps que les propriétés qui ont été paramétrées automatiquement. Si vous installez le package de déploiement en exécutant le fichier *. deploy. cmd* , vous pouvez modifier le fichier *SetParameters. xml* pour fournir une valeur pour l’adresse de point de terminaison de service ainsi que des valeurs pour les propriétés qui ont été paramétrées automatiquement.
 
-Pour plus d’informations sur la création d’un *parameters.xml* de fichiers, consultez [Comment : Utilisez des paramètres pour configurer les paramètres lorsqu’un Package de déploiement est installé](https://msdn.microsoft.com/library/ff398068.aspx). La procédure nommée **à utiliser des paramètres de déploiement pour les paramètres du fichier Web.config** fournit des instructions détaillées.
+Pour plus d’informations sur la création d’un fichier *Parameters. xml* , consultez [Comment : utiliser des paramètres pour configurer les paramètres de déploiement lors de l’installation d’un package](https://msdn.microsoft.com/library/ff398068.aspx). La procédure nommée **pour utiliser les paramètres de déploiement pour le fichier Web. config** fournit des instructions pas à pas.
 
-## <a name="modifying-the-setparametersxml-file"></a>Modification du fichier SetParameters.xml
+## <a name="modifying-the-setparametersxml-file"></a>Modification du fichier SetParameters. Xml
 
-Si vous envisagez de déployer le package d’application web manuellement&#x2014;en exécutant la *. deploy.cmd* fichier ou en exécutant MSDeploy.exe à partir de la ligne de commande&#x2014;rien ne vous modifier manuellement le  *SetParameters.xml* fichier avant le déploiement. Toutefois, si vous travaillez sur une solution à l’échelle de l’entreprise, vous devez déployer un package d’application web en tant que partie d’un processus de génération et de déploiement plus vastes et automatisé. Dans ce scénario, vous avez besoin de Microsoft Build Engine (MSBuild) pour modifier le *SetParameters.xml* fichier pour vous. Vous pouvez faire à l’aide de MSBuild **XmlPoke** tâche.
+Si vous envisagez de déployer le package d'&#x2014;application Web manuellement en exécutant le fichier *. deploy. cmd* ou en exécutant MSDeploy. exe à partir&#x2014;de la ligne de commande, rien ne vous empêche de modifier manuellement le fichier *SetParameters. xml* avant le déploiement. Toutefois, si vous travaillez sur une solution à l’échelle de l’entreprise, vous devrez peut-être déployer un package d’application Web dans le cadre d’un processus de génération et de déploiement plus étendu et automatisé. Dans ce scénario, vous avez besoin du Microsoft Build Engine (MSBuild) pour modifier le fichier *SetParameters. xml* pour vous. Pour ce faire, vous pouvez utiliser la tâche MSBuild **XmlPoke** .
 
-Le [solution d’exemple de gestionnaire de contacts](the-contact-manager-solution.md) illustre ce processus. Les exemples de code qui suivent ont été modifiées pour afficher uniquement les détails pertinents pour cet exemple.
+L' [exemple de solution du gestionnaire de contacts](the-contact-manager-solution.md) illustre ce processus. Les exemples de code suivants ont été modifiés pour afficher uniquement les détails pertinents pour cet exemple.
 
 > [!NOTE]
-> Pour une vue d’ensemble plus large dans le fichier du modèle de projet dans l’exemple de solution et une introduction aux fichiers de projet personnalisé en général, consultez [présentation du fichier projet](understanding-the-project-file.md) et [comprendre le processus de génération](understanding-the-build-process.md).
+> Pour obtenir une vue d’ensemble plus générale du modèle de fichier projet dans l’exemple de solution et une introduction aux fichiers projet personnalisés en général, consultez [Présentation du fichier projet](understanding-the-project-file.md) et [Présentation du processus de génération](understanding-the-build-process.md).
 
-Tout d’abord, les valeurs de paramètre d’intérêt sont définies en tant que propriétés dans le fichier de projet spécifique à l’environnement (par exemple, *Env-Dev.proj*).
+Tout d’abord, les valeurs de paramètre intéressantes sont définies en tant que propriétés dans le fichier projet spécifique à l’environnement (par exemple, *env-dev. proj*).
 
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample4.xml)]
 
 > [!NOTE]
-> Pour obtenir des conseils sur la façon de personnaliser les fichiers de projet spécifique à l’environnement pour vos propres environnements serveur, consultez [configurer les propriétés de déploiement pour un environnement cible](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
+> Pour obtenir des conseils sur la personnalisation des fichiers projet spécifiques à l’environnement pour vos propres environnements de serveur, consultez [configurer les propriétés de déploiement pour un environnement cible](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
 
-Ensuite, le *Publish.proj* fichier importe ces propriétés. Étant donné que chaque *SetParameters.xml* fichier est associé un *. deploy.cmd* de fichiers et nous avons finalement que le fichier projet pour appeler chaque *. deploy.cmd* de fichiers, le projet fichier crée une MSBuild *élément* pour chaque *. deploy.cmd* de fichiers et définit les propriétés dignes d’intérêt en tant que *métadonnées d’élément*.
+Ensuite, le fichier *Publish. proj* importe ces propriétés. Étant donné que chaque fichier *SetParameters. xml* est associé à un fichier *. deploy. cmd* et que nous souhaitons finalement que le fichier projet appelle chaque fichier *. deploy. cmd* , le fichier projet crée *un élément* MSBuild pour chaque fichier *. deploy. cmd* et définit les propriétés intéressantes comme *métadonnées d’élément*.
 
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample5.xml)]
 
 Dans ce cas :
 
-- Le **ParametersXml** valeur des métadonnées indique l’emplacement de la *SetParameters.xml* fichier.
-- Le **IisWebAppName** valeur est le chemin d’accès IIS à laquelle vous souhaitez déployer l’application web.
-- Le **MembershipDBConnectionString** valeur est la chaîne de connexion pour la base de données d’appartenance et le **MembershipDBConnectionName** valeur est la **nom** attribut du paramètre correspondant dans le *SetParameters.xml* fichier.
-- Le **ServiceEndpointValue** valeur est l’adresse de point de terminaison pour le service WCF sur le serveur de destination et le **ServiceEndpointParamName** valeur est l’attribut de nom du paramètre correspondant dans le *SetParameters.xml* fichier.
+- La valeur de métadonnées **ParametersXml** indique l’emplacement du fichier *SetParameters. xml* .
+- La valeur **IisWebAppName** est le chemin d’accès IIS vers lequel vous souhaitez déployer l’application Web.
+- La valeur **MembershipDBConnectionString** est la chaîne de connexion pour la base de données d’appartenance, et la valeur **MembershipDBConnectionName** est l’attribut **Name** du paramètre correspondant dans le fichier *SetParameters. xml* .
+- La valeur **ServiceEndpointValue** est l’adresse du point de terminaison du service WCF sur le serveur de destination, et la valeur **ServiceEndpointParamName** est l’attribut Name du paramètre correspondant dans le fichier *SetParameters. xml* .
 
-Enfin, dans le *Publish.proj* fichier, le **PublishWebPackages** cible utilise la **XmlPoke** tâche pour modifier ces valeurs dans le *SetParameters.xml* fichier.
+Enfin, dans le fichier *Publish. proj* , la cible **PublishWebPackages** utilise la tâche **XmlPoke** pour modifier ces valeurs dans le fichier *SetParameters. xml* .
 
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample6.xml)]
 
-Vous remarquerez que chaque **XmlPoke** tâche spécifie quatre valeurs d’attribut :
+Vous remarquerez que chaque tâche **XmlPoke** spécifie quatre valeurs d’attribut :
 
-- Le **XmlInputPath** attribut indique à la tâche où trouver le fichier que vous souhaitez modifier.
-- Le **requête** attribut est une requête XPath qui identifie le nœud XML que vous souhaitez modifier.
-- Le **valeur** attribut est la nouvelle valeur que vous souhaitez insérer dans le nœud XML sélectionné.
-- Le **Condition** attribut est le critère sur lequel la tâche doit s’exécuter ou non. Dans ce cas, la condition permet de s’assurer que vous n’essayez pas d’insérer une valeur null ou vide dans le *SetParameters.xml* fichier.
+- L’attribut **XmlInputPath** indique à la tâche où trouver le fichier que vous souhaitez modifier.
+- L’attribut de **requête** est une requête XPath qui identifie le nœud XML que vous souhaitez modifier.
+- L’attribut **value** est la nouvelle valeur que vous souhaitez insérer dans le nœud XML sélectionné.
+- L’attribut **condition** est le critère sur lequel la tâche doit être exécutée ou non. Dans ce cas, la condition garantit que vous n’essayez pas d’insérer une valeur null ou vide dans le fichier *SetParameters. xml* .
 
 ## <a name="conclusion"></a>Conclusion
 
-Cette rubrique décrit le rôle de la *SetParameters.xml* de fichiers et expliqué comment il est généré lorsque vous générez un projet d’application web. Vous avez appris comment vous pouvez paramétrer des paramètres supplémentaires en ajoutant un *parameters.xml* fichier à votre projet. Il décrit également comment vous pouvez modifier le *SetParameters.xml* fichier en tant que partie d’un processus de génération plus vastes et automatisés, à l’aide de la **XmlPoke** tâche dans vos fichiers projet.
+Cette rubrique a décrit le rôle du fichier *SetParameters. xml* et a expliqué comment elle est générée lorsque vous générez un projet d’application Web. Il a expliqué comment vous pouvez paramétrer des paramètres supplémentaires en ajoutant un fichier *Parameters. xml* à votre projet. Elle a également décrit comment vous pouvez modifier le fichier *SetParameters. xml* dans le cadre d’un processus de génération automatisé plus grand, à l’aide de la tâche **XmlPoke** dans vos fichiers projet.
 
-La rubrique suivante, [déploiement des Packages Web](deploying-web-packages.md), décrit comment déployer un package web en exécutant la *. deploy.cmd* de fichiers ou commandes directement à l’aide de MSDeploy.exe. Dans les deux cas, vous pouvez spécifier votre *SetParameters.xml* fichier en tant que paramètre de déploiement.
+La rubrique suivante, [déploiement de packages Web](deploying-web-packages.md), décrit comment vous pouvez déployer un package Web en exécutant le fichier *. deploy. cmd* ou en utilisant les commandes msdeploy. exe directement. Dans les deux cas, vous pouvez spécifier votre fichier *SetParameters. xml* en tant que paramètre de déploiement.
 
 ## <a name="further-reading"></a>informations supplémentaires
 
-Pour plus d’informations sur la façon de créer des packages web, consultez [génération et empaquetage Web Application Projects](building-and-packaging-web-application-projects.md). Pour obtenir des conseils sur la façon de les déployer un package web, consultez [déploiement des Packages Web](deploying-web-packages.md). Pour connaître la procédure pas à pas comment créer un *parameters.xml* de fichiers, consultez [Comment : Utilisez des paramètres pour configurer les paramètres lorsqu’un Package de déploiement est installé](https://msdn.microsoft.com/library/ff398068.aspx).
+Pour plus d’informations sur la création de packages Web, consultez [génération et empaquetage de projets d’application Web](building-and-packaging-web-application-projects.md). Pour obtenir des conseils sur le déploiement réel d’un package Web, consultez [déploiement de packages Web](deploying-web-packages.md). Pour obtenir une procédure pas à pas sur la création d’un fichier *Parameters. xml* , consultez [Comment : utiliser des paramètres pour configurer les paramètres de déploiement lors de l’installation d’un package](https://msdn.microsoft.com/library/ff398068.aspx).
 
-Pour obtenir des informations plus générales sur le paramétrage de Web Deploy, consultez [paramétrage de déploiement Web en Action](https://go.microsoft.com/?linkid=9805119) (billet de blog).
+Pour plus d’informations générales sur le paramétrage dans Web Deploy, consultez [Web Deploy le paramétrage en action](https://go.microsoft.com/?linkid=9805119) (billet de blog).
 
 > [!div class="step-by-step"]
 > [Précédent](building-and-packaging-web-application-projects.md)

@@ -1,23 +1,23 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/index
-title: Bien démarrer avec EF 5 avec MVC 4 | Microsoft Docs
+title: Prise en main avec EF 5 à l’aide de MVC 4 | Microsoft Docs
 author: rick-anderson
-description: Principes de base de l’utilisation d’Entity Framework 5 pour afficher et modifier des données dans une application ASP.NET MVC 4.
+description: Notions de base de l’utilisation de Entity Framework 5 pour afficher et modifier des données dans une application ASP.NET MVC 4.
 ms.author: riande
 ms.date: 10/26/2013
 ms.assetid: 5bd2e5db-8053-459e-9246-08731a4c8036
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4
 msc.type: chapter
 ms.openlocfilehash: 3d13ece23ab84be36cf8ddf7db63c60fdc0b1bda
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65112882"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78540214"
 ---
 # <a name="getting-started-with-ef-5-using-mvc-4"></a>Bien démarrer avec EF 5 avec MVC 4
 
-> Principes de base de l’utilisation d’Entity Framework 5 pour afficher et modifier des données dans une application ASP.NET MVC 4.
+> Notions de base de l’utilisation de Entity Framework 5 pour afficher et modifier des données dans une application ASP.NET MVC 4.
 
 - [Création d’un modèle de données Entity Framework](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)
 - [Implémentation de la fonctionnalité CRUD de base](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md)

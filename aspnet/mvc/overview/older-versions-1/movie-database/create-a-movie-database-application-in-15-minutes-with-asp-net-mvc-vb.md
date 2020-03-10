@@ -9,11 +9,11 @@ ms.assetid: e4ba9786-734c-4eb3-91bb-089793325d0d
 msc.legacyurl: /mvc/overview/older-versions-1/movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 0ce8161d29a8ab4005e2b20462b08c9e10ee815a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595731"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78541887"
 ---
 # <a name="create-a-movie-database-application-in-15-minutes-with-aspnet-mvc-vb"></a>Créer une application de base de données de films en 15 minutes avec ASP.NET MVC (VB)
 
@@ -49,7 +49,7 @@ Pour créer notre application, vous devez effectuer les étapes suivantes :
 4. Créer le contrôleur MVC ASP.NET
 5. Créer les vues MVC ASP.NET
 
-## <a name="preliminaries"></a>Préliminaires
+## <a name="preliminaries"></a>Étapes préalables
 
 Pour générer une application ASP.NET MVC, vous avez besoin de Visual Studio 2008 ou de Visual Web Developer 2008 Express. Vous devez également télécharger l’infrastructure MVC ASP.NET.
 
@@ -120,11 +120,11 @@ Ensuite, nous devons créer une nouvelle table de base de données. Dans la fen�
 
 <a id="0.2_table01"></a>
 
-| **Nom de la colonne** | **Type de données** | **Autoriser les valeurs null** |
+| **Nom de la colonne** | **Type de données** | **Null autorisé** |
 | --- | --- | --- |
-| ID | int | False |
-| Titre | Nvarchar (100) | False |
-| MetaDirectory | Nvarchar (100) | False |
+| Id | Int | False |
+| Titre | Nvarchar(100) | False |
+| Directeur | Nvarchar(100) | False |
 | DateReleased | DateTime | False |
 
 La première colonne, la colonne ID, possède deux propriétés spéciales. Tout d’abord, vous devez marquer la colonne ID en tant que colonne de clé primaire. Après avoir sélectionné la colonne ID, cliquez sur le bouton **définir la clé primaire** (il s’agit de l’icône qui ressemble à une clé). Deuxièmement, vous devez marquer la colonne ID en tant que colonne d’identité. Dans la Fenêtre Propriétés de colonne, faites défiler jusqu’à la section Spécification d’identité et développez-la. Remplacez la valeur de la propriété **is Identity** par la valeur **Yes**. Lorsque vous avez terminé, le tableau doit ressembler à la figure 4.
@@ -158,7 +158,7 @@ Pour lancer l’Assistant Entity Data Model, procédez comme suit :
 Une fois que vous avez cliqué sur le bouton Ajouter, l’Assistant Entity Data Model s’affiche (voir figure 6). Pour terminer l’Assistant, procédez comme suit :
 
 1. Dans l’étape **choisir le contenu du modèle** , sélectionnez l’option **générer à partir de la base de données** .
-2. Dans l’étape **choisir votre connexion de données** , utilisez la connexion de données *MoviesDB. mdf* et le nom *MoviesDBEntities* pour les paramètres de connexion. Cliquez sur le bouton **suivant** .
+2. Dans l’étape **choisir votre connexion de données** , utilisez la connexion de données *MoviesDB. mdf* et le nom *MoviesDBEntities* pour les paramètres de connexion. Cliquez sur le bouton **Suivant**.
 3. Dans l’étape **choisir vos objets de base de données** , développez le nœud tables, puis sélectionnez le tableau films. Entrez l’espace de noms *MovieApp. Models* , puis cliquez sur le bouton **Terminer** .
 
 [![la boîte de dialogue Nouveau projet](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image6.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image11.png)
@@ -179,7 +179,7 @@ Double-cliquez sur le nom de la classe sur l’aire du concepteur et remplacez l
 
 L’étape suivante consiste à créer le contrôleur MVC ASP.NET. Un contrôleur est chargé de contrôler la manière dont un utilisateur interagit avec une application MVC ASP.NET.
 
-Suivez les étapes ci-dessous :
+Procédez comme suit :
 
 1. Dans la fenêtre Explorateur de solutions, cliquez avec le bouton droit sur le dossier Controllers et sélectionnez l’option de menu **Ajouter, contrôleur**.
 2. Dans la boîte de dialogue Ajouter un contrôleur, entrez le nom *HomeController* et cochez la case **Ajouter des méthodes d’action pour les scénarios créer, mettre à jour et détails** (voir figure 8).
@@ -211,7 +211,7 @@ La liste des films est transmise à la vue. Tout ce qui est passé à la méthod
 
 [!code-vb[Main](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/samples/sample2.vb)]
 
-La méthode index () renvoie une vue nommée index. Nous devons créer cette vue pour afficher la liste des enregistrements de la base de données de films. Suivez les étapes ci-dessous :
+La méthode index () renvoie une vue nommée index. Nous devons créer cette vue pour afficher la liste des enregistrements de la base de données de films. Procédez comme suit :
 
 Vous devez générer votre projet (sélectionnez l’option de menu **Générer, générer la solution**) avant d’ouvrir la boîte de dialogue **Ajouter une vue** , ou aucune classe ne s’affichera dans la liste déroulante classe de **données d’affichage** .
 
@@ -257,7 +257,7 @@ Cette seconde méthode Create () a été modifiée dans la classe HomeController
 
 [!code-vb[Main](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/samples/sample4.vb)]
 
-Visual Studio facilite la création du formulaire pour la création d’un nouvel enregistrement de base de données de films (voir la figure 12). Suivez les étapes ci-dessous :
+Visual Studio facilite la création du formulaire pour la création d’un nouvel enregistrement de base de données de films (voir la figure 12). Procédez comme suit :
 
 1. Cliquez avec le bouton droit sur la méthode Create () dans l’éditeur de code, puis sélectionnez l’option de menu **Ajouter une vue**.
 2. Vérifiez que la case à cocher **créer une vue fortement typée** est activée.

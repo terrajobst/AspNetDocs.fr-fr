@@ -1,23 +1,23 @@
 ---
 uid: mvc/overview/older-versions-1/getting-started-with-mvc/index
-title: Bien démarrer avec MVC | Microsoft Docs
+title: Prise en main avec MVC | Microsoft Docs
 author: rick-anderson
-description: Il s’agit d’une série de didacticiels pour débutants qui présente ASP.NET MVC. Créer une application web simple qui lit et écrit à partir d’une base de données.
+description: Il s’agit d’une série de didacticiels débutant qui introduit ASP.NET MVC. Créer une application Web simple qui lit et écrit à partir d’une base de données.
 ms.author: riande
 ms.date: 11/08/2011
 ms.assetid: 057f01bf-0ad9-488a-ae75-c8f85b8e1f23
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc
 msc.type: chapter
 ms.openlocfilehash: 2a205549510393af32e1306e924a5f53c60dd4e0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65122696"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78543525"
 ---
 # <a name="getting-started-with-mvc"></a>Bien démarrer avec MVC
 
-> Il s’agit d’une série de didacticiels pour débutants qui présente ASP.NET MVC. Créer une application web simple qui lit et écrit à partir d’une base de données.
+> Il s’agit d’une série de didacticiels débutant qui introduit ASP.NET MVC. Créer une application Web simple qui lit et écrit à partir d’une base de données.
 
 - [Introduction à ASP.NET MVC](getting-started-with-mvc-part1.md)
 - [Ajout d’un contrôleur](getting-started-with-mvc-part2.md)

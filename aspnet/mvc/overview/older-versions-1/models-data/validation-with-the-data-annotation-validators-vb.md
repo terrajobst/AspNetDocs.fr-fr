@@ -1,87 +1,87 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/validation-with-the-data-annotation-validators-vb
-title: Validation avec les validateurs d’Annotation de données (VB) | Microsoft Docs
+title: Validation avec les validateurs d’annotation de données (VB) | Microsoft Docs
 author: microsoft
-description: Tirez parti du Binder de modèle de Annotation de données pour effectuer la validation au sein d’une application ASP.NET MVC. Découvrez comment utiliser les différents types de programme de validation...
+description: Tirez parti du Binder de modèle d’annotation de données pour effectuer la validation dans une application MVC ASP.NET. Découvrez comment utiliser les différents types de validateurs...
 ms.author: riande
 ms.date: 05/29/2009
 ms.assetid: 0d23ff2b-f2ec-434a-be3b-1180beeccba3
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validation-with-the-data-annotation-validators-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 00150575baabc659f7dd0c07349cde52105f6c8b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65117572"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78542083"
 ---
 # <a name="validation-with-the-data-annotation-validators-vb"></a>Validation avec les validateurs d’annotation de données (VB)
 
-by [Microsoft](https://github.com/microsoft)
+par [Microsoft](https://github.com/microsoft)
 
-> Tirez parti du Binder de modèle de Annotation de données pour effectuer la validation au sein d’une application ASP.NET MVC. Découvrez comment utiliser les différents types d’attributs de validateur et de les manipuler dans Microsoft Entity Framework.
+> Tirez parti du Binder de modèle d’annotation de données pour effectuer la validation dans une application MVC ASP.NET. Découvrez comment utiliser les différents types d’attributs de validateur et les utiliser dans le Entity Framework Microsoft.
 
-Dans ce didacticiel, vous allez apprendre à utiliser les validateurs d’Annotation de données pour effectuer la validation dans une application ASP.NET MVC. L’avantage d’utiliser les validateurs d’Annotation de données est qu’ils vous permettent d’effectuer la validation en ajoutant un ou plusieurs attributs, tels que requis ou attribut StringLength simplement : pour une propriété de classe.
+Dans ce didacticiel, vous allez apprendre à utiliser les validateurs d’annotation de données pour effectuer la validation dans une application MVC ASP.NET. L’avantage de l’utilisation des validateurs d’annotation de données est qu’ils vous permettent d’effectuer une validation simplement en ajoutant un ou plusieurs attributs, tels que l’attribut Required ou StringLength, à une propriété de classe.
 
-Avant de pouvoir utiliser les validateurs d’Annotation de données, vous devez télécharger le classeur de modèles des Annotations de données. Vous pouvez télécharger l’exemple de classeur du modèle d’Annotations de données depuis le site Web CodePlex en cliquant sur [ici](http://aspnet.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=24471).
+Avant de pouvoir utiliser les validateurs d’annotation de données, vous devez télécharger le Binder de modèle d’annotations de données. Vous pouvez télécharger l’exemple de Binder de modèle d’annotations de données à partir du site Web CodePlex en cliquant [ici](http://aspnet.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=24471).
 
-Il est important de comprendre que le Binder de modèle des Annotations de données n’est pas officiellement partie de l’infrastructure Microsoft ASP.NET MVC. Bien que le Binder de modèle des Annotations de données a été créé par l’équipe Microsoft ASP.NET MVC, Microsoft n’offre pas de prise en charge de produit officielle pour le classeur de modèles des Annotations de données décrit et utilisé dans ce didacticiel.
+Il est important de comprendre que le Binder de modèle d’annotations de données n’est pas une partie officielle de l’infrastructure Microsoft ASP.NET MVC. Bien que le Binder de modèle d’annotations de données ait été créé par l’équipe Microsoft ASP.NET MVC, Microsoft n’offre pas de support produit officiel pour le Binder de modèle d’annotations de données décrit et utilisé dans ce didacticiel.
 
-## <a name="using-the-data-annotation-model-binder"></a>À l’aide du Binder de modèle de données Annotation
+## <a name="using-the-data-annotation-model-binder"></a>Utilisation du Binder de modèle d’annotation de données
 
-Pour pouvoir utiliser le classeur de modèles des Annotations de données dans une application ASP.NET MVC, vous devez d’abord ajouter une référence à l’assembly Microsoft.Web.Mvc.DataAnnotations.dll et le fichier System.ComponentModel.DataAnnotations.dll. Sélectionnez l’option de menu **projet, ajouter une référence**. Cliquez ensuite sur le **Parcourir** onglet et accédez à l’emplacement où vous avez téléchargé (et décompressé) l’exemple de classeur de modèles Annotations de données (voir **Figure 1**).
+Pour pouvoir utiliser le Binder de modèle d’annotations de données dans une application ASP.NET MVC, vous devez d’abord ajouter une référence à l’assembly Microsoft. Web. Mvc. DataAnnotations. dll et à l’assembly System. ComponentModel. DataAnnotations. dll. Sélectionnez l’option de menu **projet, ajouter une référence**. Ensuite, cliquez sur l’onglet **Parcourir** et accédez à l’emplacement où vous avez téléchargé (et décompressé) l’exemple de Binder de modèle d’annotations de données (voir la **figure 1**).
 
 [![](validation-with-the-data-annotation-validators-vb/_static/image2.png)](validation-with-the-data-annotation-validators-vb/_static/image1.png)
 
-**Figure 1**: Ajout d’une référence vers le classeur de modèles de données Annotations ([cliquez pour afficher l’image en taille réelle](validation-with-the-data-annotation-validators-vb/_static/image3.png))
+**Figure 1**: ajout d’une référence au classeur de modèles d’annotations de données ([cliquez pour afficher l’image en taille réelle](validation-with-the-data-annotation-validators-vb/_static/image3.png))
 
-Sélectionnez l’assembly Microsoft.Web.Mvc.DataAnnotations.dll et l’assembly de fichier System.ComponentModel.DataAnnotations.dll, cliquez sur le **OK** bouton.
+Sélectionnez l’assembly Microsoft. Web. Mvc. DataAnnotations. dll et l’assembly System. ComponentModel. DataAnnotations. dll, puis cliquez sur le bouton **OK** .
 
-Vous ne pouvez pas utiliser l’assembly de fichier System.ComponentModel.DataAnnotations.dll inclus avec .NET Framework Service Pack 1 avec le Binder de modèle des Annotations de données. Vous devez utiliser la version de l’assembly de fichier System.ComponentModel.DataAnnotations.dll inclus avec le téléchargement de modèle des Annotations de données, exemple de classeur.
+Vous ne pouvez pas utiliser l’assembly System. ComponentModel. DataAnnotations. dll inclus avec .NET Framework Service Pack 1 avec le Binder de modèle d’annotations de données. Vous devez utiliser la version de l’assembly System. ComponentModel. DataAnnotations. dll inclus avec le téléchargement de l’exemple de Binder de modèle d’annotations de données.
 
-Enfin, vous devez enregistrer le classeur de modèles DataAnnotations dans le fichier Global.asax. Ajoutez la ligne suivante de code à l’Application\_Start() Gestionnaire d’événements afin que l’Application\_méthode Start() ressemble à ceci :
+Enfin, vous devez inscrire le Binder de modèle DataAnnotations dans le fichier global. asax. Ajoutez la ligne de code suivante au gestionnaire d’événements de l’application\_Start () afin que la méthode d’application\_Start () ressemble à ceci :
 
 [!code-vb[Main](validation-with-the-data-annotation-validators-vb/samples/sample1.vb)]
 
-Cette ligne de code enregistre le DataAnnotationsModelBinder en tant que le binder de modèle par défaut pour l’ensemble de l’application ASP.NET MVC.
+Cette ligne de code inscrit le DataAnnotationsModelBinder comme Binder de modèle par défaut pour l’application ASP.NET MVC entière.
 
-## <a name="using-the-data-annotation-validator-attributes"></a>En utilisant les attributs de validateur d’Annotation données
+## <a name="using-the-data-annotation-validator-attributes"></a>Utilisation des attributs du validateur d’annotation de données
 
-Lorsque vous utilisez le classeur de modèles des Annotations de données, vous utilisez les attributs de validateur pour effectuer la validation. L’espace de noms System.ComponentModel.DataAnnotations inclut les attributs du programme de validation suivants :
+Lorsque vous utilisez le Binder de modèle d’annotations de données, vous utilisez des attributs de validateur pour effectuer la validation. L’espace de noms System. ComponentModel. DataAnnotations comprend les attributs de validateur suivants :
 
-- Plage : vous permet de valider si la valeur d’une propriété se situe entre une plage de valeurs spécifiée.
-- RegularExpression – permet de valider si la valeur d’une propriété correspond à un modèle d’expression régulière spécifiée.
-- Requis : vous permet de marquer une propriété en fonction des besoins.
-- StringLength – permet de spécifier une longueur maximale pour une propriété de chaîne.
-- Validation : classe de base pour tous les attributs du programme de validation.
+- Plage : vous permet de vérifier si la valeur d’une propriété est comprise entre une plage de valeurs spécifiée.
+- RegularExpression : vous permet de vérifier si la valeur d’une propriété correspond à un modèle d’expression régulière spécifié.
+- Obligatoire : vous permet de marquer une propriété en fonction des besoins.
+- StringLength : vous permet de spécifier une longueur maximale pour une propriété de type chaîne.
+- Validation : classe de base pour tous les attributs de validateur.
 
 > [!NOTE] 
 > 
-> Si vos besoins de validation ne sont pas satisfaites par un des validateurs standards vous avez toujours la possibilité de créer un attribut de validateur personnalisé en héritant d’un nouvel attribut de validateur de l’attribut de Validation de base.
+> Si vos besoins de validation ne sont pas satisfaisants par l’un des validateurs standard, vous avez toujours la possibilité de créer un attribut de validateur personnalisé en héritant d’un nouvel attribut de validateur de l’attribut de validation de base.
 
-La classe Product dans **liste 1** illustre l’utilisation de ces attributs de validateur. Les propriétés Name, Description et prix unitaire sont marquées comme requis. La propriété Name doit avoir une longueur de chaîne qui est inférieur à 10 caractères. Enfin, la propriété UnitPrice doit correspondre à un modèle d’expression régulière qui représente un montant en devise.
+La classe Product de la **Liste 1** illustre comment utiliser ces attributs de validateur. Les propriétés Name, description et UnitPrice sont marquées comme obligatoires. La propriété Name doit avoir une longueur de chaîne inférieure à 10 caractères. Enfin, la propriété UnitPrice doit correspondre à un modèle d’expression régulière qui représente un montant en devise.
 
 [!code-vb[Main](validation-with-the-data-annotation-validators-vb/samples/sample2.vb)]
 
 **Liste 1**: Models\Product.vb
 
-La classe Product illustre comment utiliser un attribut supplémentaire : l’attribut DisplayName. L’attribut DisplayName vous permet de modifier le nom de la propriété lorsque la propriété est affichée dans un message d’erreur. Au lieu d’afficher le message d’erreur « le champ prix unitaire est requis », vous pouvez afficher le message d’erreur « le champ prix est requis ».
+La classe Product illustre l’utilisation d’un attribut supplémentaire : l’attribut DisplayName. L’attribut DisplayName vous permet de modifier le nom de la propriété lorsque la propriété est affichée dans un message d’erreur. Au lieu d’afficher le message d’erreur « le champ PrixUnitaire est requis », vous pouvez afficher le message d’erreur « le champ Price est requis ».
 
 > [!NOTE] 
 > 
-> Si vous souhaitez personnaliser entièrement le message d’erreur affiché par un programme de validation vous pouvez ensuite affecter un message d’erreur personnalisé pour la propriété de message d’erreur du validateur comme suit : `<Required(ErrorMessage:="This field needs a value!")>`
+> Si vous souhaitez personnaliser complètement le message d’erreur affiché par un validateur, vous pouvez assigner un message d’erreur personnalisé à la propriété ErrorMessage du validateur comme suit : `<Required(ErrorMessage:="This field needs a value!")>`
 
-Vous pouvez utiliser la classe Product dans **liste 1** avec l’action de contrôleur Create() dans **Listing 2**. Cette action de contrôleur réaffiche la vue Create lors de l’état du modèle contient des erreurs.
+Vous pouvez utiliser la classe Product de la **Liste 1** avec l’action créer () du contrôleur dans la **liste 2**. Cette action de contrôleur réaffiche la vue Create lorsque l’état du modèle contient des erreurs.
 
 [!code-vb[Main](validation-with-the-data-annotation-validators-vb/samples/sample3.vb)]
 
-**Listing 2**: Controllers\ProductController.vb
+**Liste 2**: Controllers\ProductController.vb
 
-Enfin, vous pouvez créer la vue dans **Listing 3** en double-cliquant sur l’action Create() et en sélectionnant l’option de menu **ajouter une vue**. Créer une vue fortement typée avec la classe Product comme classe de modèle. Sélectionnez **créer** dans la liste de contenu de liste déroulante des vues (consultez **Figure 2**).
+Enfin, vous pouvez créer la vue dans la **liste 3** en cliquant avec le bouton droit sur l’action créer () et en sélectionnant l’option de menu **Ajouter une vue**. Créez une vue fortement typée avec la classe Product comme classe de modèle. Sélectionnez **créer** dans la liste déroulante Afficher le contenu (voir **figure 2**).
 
 [![](validation-with-the-data-annotation-validators-vb/_static/image5.png)](validation-with-the-data-annotation-validators-vb/_static/image4.png)
 
-**Figure 2**: Ajout de la vue Create
+**Figure 2**: ajout de la vue Create
 
 [!code-aspx[Main](validation-with-the-data-annotation-validators-vb/samples/sample4.aspx)]
 
@@ -89,57 +89,57 @@ Enfin, vous pouvez créer la vue dans **Listing 3** en double-cliquant sur l’a
 
 > [!NOTE] 
 > 
-> Supprimer le champ Id du formulaire de création généré par le **ajouter une vue** option de menu. Étant donné que le champ Id correspond à une colonne d’identité, vous ne souhaitez autoriser les utilisateurs à entrer une valeur pour ce champ.
+> Supprimez le champ ID de l’option créer un formulaire généré par l’option de menu **Ajouter une vue** . Étant donné que le champ ID correspond à une colonne d’identité, vous ne souhaitez pas autoriser les utilisateurs à entrer une valeur pour ce champ.
 
-Si vous envoyez le formulaire pour la création d’un produit et vous n’entrez pas de valeurs pour les champs requis, l’erreur de validation des messages dans **Figure 3** sont affichés.
+Si vous envoyez le formulaire de création d’un produit et que vous n’entrez pas de valeurs pour les champs obligatoires, les messages d’erreur de validation de la **figure 3** s’affichent.
 
 [![](validation-with-the-data-annotation-validators-vb/_static/image7.png)](validation-with-the-data-annotation-validators-vb/_static/image6.png)
 
-**Figure 3**: Champs obligatoires sont manquants
+**Figure 3**: champs obligatoires manquants
 
-Si vous entrez un montant en devise non valide, puis le message d’erreur dans **Figure 4** s’affiche.
+Si vous entrez un montant de devise non valide, le message d’erreur de la **figure 4** s’affiche.
 
 [![](validation-with-the-data-annotation-validators-vb/_static/image9.png)](validation-with-the-data-annotation-validators-vb/_static/image8.png)
 
-**Figure 4**: Montant en devise non valide
+**Figure 4**: montant de devise non valide
 
-## <a name="using-data-annotation-validators-with-the-entity-framework"></a>À l’aide des validateurs d’annotations de données avec Entity Framework
+## <a name="using-data-annotation-validators-with-the-entity-framework"></a>Utilisation de validateurs d’annotation de données avec le Entity Framework
 
-Si vous utilisez Microsoft Entity Framework pour générer vos classes de modèle de données vous ne pouvez pas appliquer les attributs du validateur directement à vos classes. Étant donné que l’Entity Framework Designer génère les classes de modèle, les modifications apportées aux classes de modèle seront remplacées la prochaine fois que vous apportez des modifications dans le concepteur.
+Si vous utilisez Microsoft Entity Framework pour générer vos classes de modèle de données, vous ne pouvez pas appliquer les attributs du validateur directement à vos classes. Étant donné que le Entity Framework Designer génère les classes de modèle, toutes les modifications que vous apportez aux classes de modèle seront remplacées la prochaine fois que vous apportez des modifications dans le concepteur.
 
-Si vous souhaitez utiliser les validateurs avec les classes générées par Entity Framework vous devez créer des classes de données de métadonnées. Vous appliquez les validateurs à la classe méta de données au lieu d’appliquer les validateurs à la classe réelle.
+Si vous souhaitez utiliser les validateurs avec les classes générées par le Entity Framework vous devez créer des classes de métadonnées. Vous appliquez les validateurs à la classe de métadonnées au lieu d’appliquer les validateurs à la classe réelle.
 
-Par exemple, imaginez que vous avez créé une classe de film à l’aide d’Entity Framework (consultez **Figure 5**). En outre, imaginez que vous souhaitez rendre le titre du film et le directeur propriétés requises de propriétés. Dans ce cas, vous pouvez créer la classe partielle et la classe méta de données dans **liste 4**.
+Par exemple, imaginez que vous avez créé une classe Movie à l’aide de l’Entity Framework (voir **figure 5**). Imaginez, en outre, que vous voulez que les propriétés titre du film et directeur soient les propriétés requises. Dans ce cas, vous pouvez créer la classe partielle et la classe de métadonnées dans la **liste 4**.
 
 [![](validation-with-the-data-annotation-validators-vb/_static/image11.png)](validation-with-the-data-annotation-validators-vb/_static/image10.png)
 
-**Figure 5**: Classe Movie générée par Entity Framework
+**Figure 5**: classe Movie générée par Entity Framework
 
 [!code-vb[Main](validation-with-the-data-annotation-validators-vb/samples/sample5.vb)]
 
 **Liste 4**: Models\Movie.vb
 
-Le fichier dans **liste 4** contient deux classes nommées film et MovieMetaData. La classe Movie est une classe partielle. Il correspond à la classe partielle générée par Entity Framework qui est contenue dans le fichier DataModel.Designer.vb.
+Le fichier figurant dans la **liste 4** contient deux classes nommées Movie et MovieMetaData. La classe Movie est une classe partielle. Elle correspond à la classe partielle générée par la Entity Framework contenue dans le fichier DataModel. Designer. vb.
 
-Actuellement, le .NET framework ne prend pas en charge les propriétés partielles. Par conséquent, il n’existe aucun moyen d’appliquer les attributs du programme de validation aux propriétés de la classe Movie définis dans le fichier DataModel.Designer.vb en appliquant les attributs du programme de validation aux propriétés de la classe Movie défini dans le fichier dans **liste 4**.
+Actuellement, le .NET Framework ne prend pas en charge les propriétés partielles. Par conséquent, il n’existe aucun moyen d’appliquer les attributs du validateur aux propriétés de la classe Movie définie dans le fichier DataModel. Designer. vb en appliquant les attributs du validateur aux propriétés de la classe Movie définie dans le fichier de la **liste 4**.
 
-Notez que la classe partielle du film est décorée avec un attribut MetadataType qui pointe vers la classe MovieMetaData. La classe MovieMetaData contient les propriétés du proxy pour les propriétés de la classe Movie.
+Notez que la classe partielle Movie est décorée avec un attribut de type de données qui pointe vers la classe MovieMetaData. La classe MovieMetaData contient des propriétés de proxy pour les propriétés de la classe Movie.
 
-Les attributs du programme de validation sont appliqués aux propriétés de la classe MovieMetaData. Les propriétés du titre, le réalisateur et DateReleased sont marquées en tant que propriétés requises. Une chaîne contenant moins de 5 caractères doit être attribuée à la propriété directeur. Enfin, l’attribut DisplayName est appliqué à la propriété DateReleased pour afficher un message d’erreur comme « le champ de Date Released est requis. » au lieu de l’erreur « le champ DateReleased est requis. »
+Les attributs du validateur sont appliqués aux propriétés de la classe MovieMetaData. Les propriétés titre, directeur et DateReleased sont toutes marquées comme étant des propriétés requises. Une chaîne contenant moins de 5 caractères doit être affectée à la propriété Director. Enfin, l’attribut DisplayName est appliqué à la propriété DateReleased pour afficher un message d’erreur tel que « le champ date de publication est obligatoire. » au lieu de l’erreur « le champ DateReleased est obligatoire. »
 
 > [!NOTE] 
 > 
-> Notez que les propriétés de proxy dans la classe MovieMetaData n’avez pas besoin représenter les mêmes types que les propriétés correspondantes dans la classe Movie. Par exemple, la propriété directeur est une propriété de chaîne dans la classe Movie et une propriété d’objet dans la classe MovieMetaData.
+> Notez que les propriétés de proxy dans la classe MovieMetaData n’ont pas besoin de représenter les mêmes types que les propriétés correspondantes dans la classe Movie. Par exemple, la propriété Director est une propriété de type chaîne dans la classe Movie et une propriété Object dans la classe MovieMetaData.
 
-La page dans **Figure 6** illustre les messages d’erreur retournés lorsque vous entrez des valeurs non valides pour les propriétés de film.
+La page de la **figure 6** illustre les messages d’erreur retournés lorsque vous entrez des valeurs non valides pour les propriétés du film.
 
 [![](validation-with-the-data-annotation-validators-vb/_static/image13.png)](validation-with-the-data-annotation-validators-vb/_static/image12.png)
 
-**Figure 6**: À l’aide de validateurs avec Entity Framework ([cliquez pour afficher l’image en taille réelle](validation-with-the-data-annotation-validators-vb/_static/image14.png))
+**Figure 6**: utilisation de validateurs avec l’Entity Framework ([cliquez pour afficher l’image en taille réelle](validation-with-the-data-annotation-validators-vb/_static/image14.png))
 
 ## <a name="summary"></a>Récapitulatif
 
-Dans ce didacticiel, vous avez appris à tirer parti du Binder de modèle de Annotation de données pour effectuer la validation au sein d’une application ASP.NET MVC. Vous avez appris comment utiliser les différents types d’attributs de validateur comme requis et les attributs de StringLength. Vous avez également appris comment utiliser ces attributs lorsque vous travaillez avec Microsoft Entity Framework.
+Dans ce didacticiel, vous avez appris à tirer parti du Binder de modèle d’annotation de données pour effectuer la validation dans une application MVC ASP.NET. Vous avez appris à utiliser les différents types d’attributs de validateur, tels que les attributs requis et StringLength. Vous avez également appris à utiliser ces attributs lorsque vous travaillez avec le Entity Framework Microsoft.
 
 > [!div class="step-by-step"]
 > [Précédent](validating-with-a-service-layer-vb.md)

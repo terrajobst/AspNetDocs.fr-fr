@@ -9,11 +9,11 @@ ms.assetid: cd330dd9-6254-4305-9351-dd727384c83b
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/configuring-the-data-access-layer-s-connection-and-command-level-settings-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8fe7a5a2e410b47c8c2be62851f2b7b775d60209
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74604902"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78551939"
 ---
 # <a name="configuring-the-data-access-layers-connection--and-command-level-settings-c"></a>Configuration des paramètres de niveau connexion et commande de la couche d’accès aux données (C#)
 

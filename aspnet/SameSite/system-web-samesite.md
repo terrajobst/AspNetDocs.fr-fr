@@ -5,12 +5,12 @@ description: Découvrez comment utiliser pour SameSite des cookies dans ASP.NET
 ms.author: riande
 ms.date: 2/15/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: edb368910b24be2d042afe3c19ffa1fb23245443
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.openlocfilehash: 7987a5d6c9b3a82679d42a2d381d471d56f495c2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455701"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78546745"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>Utiliser des cookies SameSite dans ASP.NET
 
@@ -133,7 +133,7 @@ Par conséquent, l’application s’arrête en mode chrome, ou vous pouvez inte
 
 La prise en charge de SameSite a été implémentée pour la première fois dans .NET 4.7.2 à l’aide de la [norme draft 2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07#section-4.1).
 
-Le 19 novembre 2019 mises à jour pour Windows a mis à jour .NET 4.7.2 + de la norme 2016 à la norme 2019. Des mises à jour supplémentaires sont à venir pour d’autres versions de Windows. Pour plus d’informations, consultez <xref:samesite/kbs-samesite>.
+Le 19 novembre 2019 mises à jour pour Windows a mis à jour .NET 4.7.2 + de la norme 2016 à la norme 2019. Des mises à jour supplémentaires sont à venir pour d’autres versions de Windows. Pour plus d'informations, consultez <xref:samesite/kbs-samesite>.
 
  Le brouillon 2019 de la spécification SameSite :
 
@@ -177,7 +177,7 @@ Ces détections sont les agents de navigateur les plus courants qui prennent en 
 * Votre application peut voir les navigateurs que nos sites de test n’ont pas.
 * Vous devez être prêt à ajouter des détections si nécessaire pour votre environnement.
 
-Le mode de mise en place de la détection dépend de la version de .NET et de l’infrastructure Web que vous utilisez. Le code suivant peut être appelé au <xref:HTTP.HttpCookie> site d’appel :
+Le mode de mise en place de la détection dépend de la version de .NET et de l’infrastructure Web que vous utilisez. Le code suivant peut être appelé sur le site d’appel de [HttpCookie](/dotnet/api/system.web.httpcookie) :
 
 [!code-csharp[](sample/SameSiteCheck.cs?name=snippet)]
 
@@ -248,6 +248,8 @@ Google ne rend pas les versions de chrome plus anciennes disponibles. Suivez les
 * [Chrome 74 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/638880/)
 * Si vous n’utilisez pas une version 64 bits de Windows, vous pouvez utiliser la [visionneuse OmahaProxy](https://omahaproxy.appspot.com/) pour rechercher la branche de chrome qui correspond au chrome 74 (v 74.0.3729.108) à l’aide [des instructions fournies par chrome](https://www.chromium.org/getting-involved/download-chromium).
 
+À partir de la version `80.0.3975.0`de la version de la balise de service, les tests d’atténuation temporaire de type Lax + postal peuvent être désactivés à des fins de test à l’aide du nouvel indicateur `--enable-features=SameSiteDefaultChecksMethodRigorously` pour permettre le test des sites et des services dans l’état final éventuel de la fonctionnalité dans laquelle l’atténuation a été supprimée. Pour plus d’informations, consultez [mises à jour](https://www.chromium.org/updates/same-site) des projets de chrome SameSite
+
 #### <a name="test-with-chrome-80"></a>Test avec chrome 80 +
 
 [Téléchargez](https://www.google.com/chrome/) une version de chrome qui prend en charge son nouvel attribut. Au moment de la rédaction de cet article, la version actuelle est chrome 80. Chrome 80 a besoin que l’indicateur `chrome://flags/#same-site-by-default-cookies` activé pour utiliser le nouveau comportement. Vous devez également activer (`chrome://flags/#cookies-without-same-site-must-be-secure`) pour tester le comportement à venir pour les cookies pour lesquels aucun attribut sameSite n’est activé. Le chrome 80 est sur la cible pour que le commutateur traite les cookies sans l’attribut en tant que `SameSite=Lax`, bien qu’avec une période de grâce minutée pour certaines requêtes. Pour désactiver la période de grâce minutée, chrome 80 peut être lancé avec l’argument de ligne de commande suivant :
@@ -302,6 +304,7 @@ Mettez à jour le *fichier Web. config* pour inclure les paramètres de configur
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 * [Modifications de cookie SameSite à venir dans ASP.NET et ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+* [Conseils pour le test et le débogage de SameSite par défaut et «SameSite = None ; Sécuriser les cookies](https://www.chromium.org/updates/same-site/test-debug)
 * [Blog du chrome : développeurs : Préparez-vous à la nouvelle SameSite = None ; Sécuriser les paramètres de cookie](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 * [Explication des cookies SameSite](https://web.dev/samesite-cookies-explained/)
 * [Mises à jour chrome](https://www.chromium.org/updates/same-site)

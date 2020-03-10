@@ -9,11 +9,11 @@ ms.assetid: 94421d86-68c4-4471-bf5f-82d654a17252
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-1
 msc.type: authoredcontent
 ms.openlocfilehash: a76a18f2bd95969358452085ef342fdca8a386e2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600329"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556076"
 ---
 # <a name="part-1-overview-and-creating-the-project"></a>Partie 1 : vue d’ensemble et création du projet
 
@@ -33,9 +33,9 @@ Les administrateurs peuvent créer, supprimer ou modifier des produits :
 
 ![](using-web-api-with-entity-framework-part-1/_static/image2.png)
 
-## <a name="skills-youll-learn"></a>Compétences que vous allez apprendre
+## <a name="skills-youll-learn"></a>Compétences
 
-Voici ce que vous allez apprendre :
+Vous apprendrez les compétences suivantes :
 
 - Comment utiliser Entity Framework avec API Web ASP.NET.
 - Comment utiliser Knockout. js pour créer une interface utilisateur dynamique du client.
@@ -43,12 +43,12 @@ Voici ce que vous allez apprendre :
 
 Bien que ce didacticiel soit autonome, vous pouvez commencer par lire les didacticiels suivants :
 
-- [Votre première API Web ASP.NET](../../getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md)
+- [Votre première API Web ASP.NET (en anglais)](../../getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md)
 - [Création d’une API Web qui prend en charge les opérations CRUD](../creating-a-web-api-that-supports-crud-operations.md)
 
 Une connaissance de [ASP.NET MVC](../../../../mvc/index.md) est également utile.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 À un niveau élevé, voici l’architecture de l’application :
 
@@ -92,4 +92,4 @@ Dans Explorateur de solutions, développez le dossier Content et ouvrez le fichi
 [!code-css[Main](using-web-api-with-entity-framework-part-1/samples/sample1.css)]
 
 > [!div class="step-by-step"]
-> [Suivant](using-web-api-with-entity-framework-part-2.md)
+> [Next](using-web-api-with-entity-framework-part-2.md)

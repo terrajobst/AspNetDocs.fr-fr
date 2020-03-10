@@ -1,81 +1,81 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8
-title: 'Partie 8 : Pages finales, gestion des exceptions et Conclusion | Microsoft Docs'
+title: 'Partie 8 : pages finales, gestion des exceptions et conclusion | Microsoft Docs'
 author: JoeStagner
-description: Cette série de didacticiels décrit en détail les étapes prises pour générer l’exemple d’application Tailspin Spyworks. Partie 8 ajoute une page de contact, sur la page et l’exception...
+description: Cette série de didacticiels détaille toutes les étapes nécessaires à la création de l’exemple d’application Tailspin SpyWorks. La partie 8 ajoute une page de contact, à propos de la page et de l’exception...
 ms.author: riande
 ms.date: 07/21/2010
 ms.assetid: 5aeadf8f-39f3-4f07-a78f-1c310c64fb23
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8
 msc.type: authoredcontent
 ms.openlocfilehash: 707dc9d87ae324a7897c971a451e40bc54c96cb3
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130605"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78586883"
 ---
-# <a name="part-8-final-pages-exception-handling-and-conclusion"></a>Partie 8 : Pages finales, gestion des exceptions et conclusion
+# <a name="part-8-final-pages-exception-handling-and-conclusion"></a>Partie 8 : pages finales, gestion des exceptions et conclusion
 
 par [Joe Stagner](https://github.com/JoeStagner)
 
-> Tailspin Spyworks montre comment extrêmement simple est de créer des applications puissantes et évolutives pour la plate-forme .NET. Il montre comment utiliser les nouvelles fonctionnalités dans ASP.NET 4 pour créer un magasin en ligne, y compris les achats, extraction et administration.
+> Tailspin SpyWorks montre combien il est très simple de créer des applications puissantes et évolutives pour la plate-forme .NET. Il montre comment utiliser les nouvelles fonctionnalités de ASP.NET 4 pour créer un magasin en ligne, y compris l’achat, l’extraction et l’administration.
 > 
-> Cette série de didacticiels décrit en détail les étapes prises pour générer l’exemple d’application Tailspin Spyworks. Partie 8 ajoute une page de contact, sur la page et la gestion des exceptions. Il s’agit de la conclusion de la série.
+> Cette série de didacticiels détaille toutes les étapes nécessaires à la création de l’exemple d’application Tailspin SpyWorks. La partie 8 ajoute une page de contact, à propos de la gestion des exceptions et des pages. Il s’agit de la conclusion de la série.
 
-## <a id="_Toc260221680"></a>  Contactez Page (envoi de message électronique à partir d’ASP.NET)
+## <a id="_Toc260221680"></a>Page de contact (envoi d’e-mails à partir de ASP.NET)
 
-Créer une page nommée ContactUs.aspx
+Créer une nouvelle page nommée contactus. aspx
 
-À l’aide du concepteur, créez le formulaire suivant, en notant spécial pour inclure le ToolkitScriptManager et le contrôle d’édition à partir de la AjaxControlToolkit. .
+À l’aide du concepteur, créez le formulaire suivant en tenant compte de l’ToolkitScriptManager et du contrôle de l’éditeur du AjaxControlToolkit. .
 
 ![](tailspin-spyworks-part-8/_static/image1.jpg)
 
-Double-cliquez sur le bouton « Submit » pour générer un gestionnaire d’événements dans le fichier code-behind et implémenter une méthode pour envoyer les informations de contact sous forme d’e-mail.
+Double-cliquez sur le bouton « Submit » (envoyer) pour générer un gestionnaire d’événements Click dans le fichier code-behind et implémenter une méthode pour envoyer les informations de contact en tant que courrier électronique.
 
 [!code-csharp[Main](tailspin-spyworks-part-8/samples/sample1.cs)]
 
-Ce code nécessite que votre fichier web.config contient une entrée dans la section de configuration qui spécifie le serveur SMTP à utiliser pour l’envoi du message électronique.
+Ce code requiert que votre fichier Web. config contienne une entrée dans la section de configuration qui spécifie le serveur SMTP à utiliser pour l’envoi de messages électroniques.
 
 [!code-xml[Main](tailspin-spyworks-part-8/samples/sample2.xml)]
 
-## <a id="_Toc260221681"></a>  Sur la Page
+## <a id="_Toc260221681"></a>Page à propos de
 
-Créez une page nommée AboutUs.aspx et ajoutez le contenu que vous le souhaitez.
+Créez une page nommée aboutus. aspx et ajoutez le contenu de votre choix.
 
-## <a id="_Toc260221682"></a>  Gestionnaire d’exceptions global
+## <a id="_Toc260221682"></a>Gestionnaire d’exceptions global
 
-Enfin, tout au long de l’application nous avons levée des exceptions et des circonstances imprévues autrement à froid également cause non prise en charge des exceptions dans notre application web.
+Enfin, tout au long de l’application, nous avons levé des exceptions et il existe des circonstances imprévues qui, à froid, provoquent également des exceptions non gérées dans notre application Web.
 
-Nous voulons jamais une exception non gérée à afficher pour un visiteur du site web.
+Nous ne voulons pas qu’une exception non gérée soit affichée à un visiteur de site Web.
 
 ![](tailspin-spyworks-part-8/_static/image2.jpg)
 
-Outre une expérience utilisateur terrible les exceptions non gérées peuvent également être un problème de sécurité.
+Hormis le fait qu’il s’agit d’une terrible expérience utilisateur, les exceptions non gérées peuvent également constituer un problème de sécurité.
 
-Pour résoudre ce problème, nous implémenterons un gestionnaire d’exceptions global.
+Pour résoudre ce problème, nous allons implémenter un gestionnaire d’exceptions global.
 
-Pour ce faire, ouvrez le fichier Global.asax et notez le Gestionnaire d’événements prégénérées.
+Pour ce faire, ouvrez le fichier global. asax et notez le gestionnaire d’événements prégénérés suivant.
 
 [!code-csharp[Main](tailspin-spyworks-part-8/samples/sample3.cs)]
 
-Ajoutez du code pour implémenter l’Application\_Gestionnaire d’erreurs comme suit.
+Ajoutez du code pour implémenter l’application\_gestionnaire d’erreurs comme suit.
 
 [!code-csharp[Main](tailspin-spyworks-part-8/samples/sample4.cs)]
 
-Ensuite, ajoutez une page nommée Error.aspx à la solution et ajoutez cet extrait de balisage.
+Ajoutez ensuite une page nommée Error. aspx à la solution et ajoutez cet extrait de balisage.
 
 [!code-aspx[Main](tailspin-spyworks-part-8/samples/sample5.aspx)]
 
-Maintenant, dans la Page\_charger d’extraction de gestionnaire d’événements les messages d’erreur de l’objet Request.
+À présent, dans la page\_gestionnaire d’événements de chargement, extrayez les messages d’erreur de l’objet de requête.
 
 [!code-csharp[Main](tailspin-spyworks-part-8/samples/sample6.cs)]
 
-## <a id="_Toc260221683"></a>  Conclusion
+## <a id="_Toc260221683"></a>Achèvement
 
-Nous avons vu que Web Forms ASP.NET facilite la création d’un site Web sophistiqué avec un accès de base de données, l’appartenance, AJAX, etc. assez rapidement.
+Nous avons vu que ASP.NET Web Forms vous permet de créer facilement un site Web sophistiqué avec accès aux bases de données, appartenance, AJAX, etc. assez rapidement.
 
-J’espère que ce didacticiel vous a donné les outils que vous avez besoin pour commencer à créer votre propre WebForms ASP.NET applications !
+Nous espérons que ce didacticiel vous a fourni les outils dont vous avez besoin pour commencer à créer vos propres applications WebForms ASP.NET.
 
 > [!div class="step-by-step"]
 > [Précédent](tailspin-spyworks-part-7.md)

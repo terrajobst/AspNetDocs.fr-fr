@@ -9,11 +9,11 @@ ms.assetid: 22ca8efa-7cd1-45a7-b9ce-ce6eb3b3ff95
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-at-application-startup-cs
 msc.type: authoredcontent
 ms.openlocfilehash: a0b55b0df1b7843120de284891e16178df23fabe
-ms.sourcegitcommit: fe5c7512383a9b0a05d321ff10d3cca1611556f0
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70386543"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78576908"
 ---
 # <a name="caching-data-at-application-startup-c"></a>Mise en cache de données au démarrage de l’application (C#)
 
@@ -157,7 +157,7 @@ La figure 7 illustre la page affichée dans un navigateur. La sortie est la mêm
 
 **Figure 7**: les données des fournisseurs mises en cache s’affichent dans un GridView ([cliquez pour afficher l’image en taille réelle](caching-data-at-application-startup-cs/_static/image17.png))
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 La plupart des modèles de données contiennent une quantité équitable de données statiques, généralement implémentées sous la forme de tables de choix. Étant donné que ces informations sont statiques, il n’y a aucune raison d’accéder continuellement à la base de données chaque fois que ces informations doivent être affichées. En outre, en raison de sa nature statique, lors de la mise en cache des données, il n’est pas nécessaire d’effectuer une expiration. Dans ce didacticiel, nous avons vu comment prendre ces données et les mettre en cache dans le cache de données, l’état de l’application et par le biais d’une variable de membre statique. Ces informations sont mises en cache au démarrage de l’application et restent dans le cache tout au long de la durée de vie de l’application.
 
@@ -167,7 +167,7 @@ Bonne programmation !
 
 ## <a name="about-the-author"></a>À propos de l’auteur
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept livres ASP/ASP. net et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec des technologies Web Microsoft depuis 1998. Scott travaille en tant que consultant, formateur et auteur indépendant. Son dernier ouvrage est [*SAM animer vous-même ASP.NET 2.0 des dernières 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve sur [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), auteur de sept livres ASP/ASP. net et fondateur de [4GuysFromRolla.com](http://www.4guysfromrolla.com), travaille avec des technologies Web Microsoft depuis 1998. Scott travaille en tant que consultant, formateur et auteur indépendant. Son dernier livre est [*Sams vous apprend vous-même ASP.NET 2,0 en 24 heures*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Il peut être contacté à [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou via son blog, qui se trouve sur [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
 ## <a name="special-thanks-to"></a>Remerciements à
 

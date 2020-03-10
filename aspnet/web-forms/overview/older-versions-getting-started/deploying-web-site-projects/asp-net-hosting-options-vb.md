@@ -9,11 +9,11 @@ ms.assetid: 492f5ae2-bad7-4107-89a9-f04a9525dee7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 4293114002aee15ddace1a3f19c240f35e6065f5
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74620762"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78641091"
 ---
 # <a name="aspnet-hosting-options-vb"></a>Options d’hébergement ASP.NET (VB)
 
@@ -42,7 +42,7 @@ Il s’agit de la première d’une série de didacticiels qui examinent les ét
 - Stratégies de mise à jour fluide de la base de données en production avec les modifications effectuées pendant le développement.
 - Techniques pour la journalisation des erreurs qui se produisent lors de la production et méthodes pour notifier les développeurs lorsqu’une erreur se produit.
 
-Ces didacticiels sont destinés à être concis et à fournir des instructions pas à pas avec de nombreuses captures d’écran pour vous guider tout au long du processus. Ce didacticiel plus inaugural fournit une vue d’ensemble du processus de déploiement de ASP.NET et des conseils sur la recherche d’un fournisseur d’hébergement Web. Commençons !
+Ces didacticiels sont destinés à être concis et à fournir des instructions pas à pas avec de nombreuses captures d’écran pour vous guider tout au long du processus. Ce didacticiel plus inaugural fournit une vue d’ensemble du processus de déploiement de ASP.NET et des conseils sur la recherche d’un fournisseur d’hébergement Web. C’est parti !
 
 ## <a name="an-overview-of-the-aspnet-deployment-process"></a>Vue d’ensemble du processus de déploiement ASP.NET
 

@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-security-guidance
-title: Conseils de sécurité pour ASP.NET Web API 2 OData - ASP.NET 4.x
+title: Guide de sécurité pour API Web ASP.NET 2 OData-ASP.NET 4. x
 author: MikeWasson
-description: Décrit les problèmes de sécurité à prendre en compte lors de l’exposition d’un jeu de données via OData pour ASP.NET Web API 2 sur ASP.NET 4.x.
+description: Décrit les problèmes de sécurité à prendre en compte lors de l’exposition d’un jeu de données par le biais d’OData pour API Web ASP.NET 2 sur ASP.NET 4. x.
 ms.author: riande
 ms.date: 02/06/2013
 ms.custom: seoapril2019
@@ -10,70 +10,70 @@ ms.assetid: b91e6424-1544-4747-bd0b-d1f8418c9653
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-security-guidance
 msc.type: authoredcontent
 ms.openlocfilehash: 8194a368cb0629c30e32ec05bf4bed150d442ad8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59393507"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556496"
 ---
-# <a name="security-guidance-for-aspnet-web-api-2-odata"></a>Conseils de sécurité pour ASP.NET Web API 2 OData
+# <a name="security-guidance-for-aspnet-web-api-2-odata"></a>Guide de sécurité pour API Web ASP.NET 2 OData
 
 par [Mike Wasson](https://github.com/MikeWasson)
 
-Cette rubrique décrit certains des problèmes de sécurité dont vous devez tenir compte lors de l’exposition d’un jeu de données via OData pour ASP.NET Web API 2 sur ASP.NET 4.x.
+Cette rubrique décrit certains des problèmes de sécurité que vous devez prendre en compte lors de l’exposition d’un jeu de données par le biais d’OData pour API Web ASP.NET 2 sur ASP.NET 4. x.
 
-## <a name="edm-security"></a>Sécurité du modèle EDM
+## <a name="edm-security"></a>Sécurité EDM
 
-La sémantique de requête est basée sur l’entity data model (EDM), pas les types de modèle sous-jacent. Vous pouvez exclure une propriété de l’EDM, et il ne sera pas visible à la requête. Par exemple, supposons que votre modèle inclut un type d’employé avec une propriété de salaire. Vous souhaiterez peut-être exclure cette propriété de l’EDM pour la masquer à partir de clients.
+La sémantique de requête est basée sur le modèle EDM (Entity Data Model), et non sur les types de modèles sous-jacents. Vous pouvez exclure une propriété du modèle EDM et celle-ci ne sera pas visible par la requête. Par exemple, supposons que votre modèle comprenne un type d’employé avec une propriété de salaire. Vous souhaiterez peut-être exclure cette propriété de l’EDM pour la masquer sur les clients.
 
-Il existe deux façons d’exclure une propriété à partir du modèle EDM. Vous pouvez définir le **[IgnoreDataMember]** attribut sur la propriété dans la classe de modèle :
+Il existe deux façons d’exclure une propriété du modèle EDM. Vous pouvez définir l’attribut **[IgnoreDataMember]** sur la propriété dans la classe de modèle :
 
 [!code-csharp[Main](odata-security-guidance/samples/sample1.cs)]
 
-Vous pouvez également supprimer par programmation la propriété à partir du modèle EDM :
+Vous pouvez également supprimer la propriété de l’EDM par programme :
 
 [!code-csharp[Main](odata-security-guidance/samples/sample2.cs)]
 
-## <a name="query-security"></a>Sécurité de la requête
+## <a name="query-security"></a>Sécurité des requêtes
 
-Un client malveillant ou naïve peut être en mesure de construire une requête qui prend beaucoup de temps à exécuter. Dans le pire des cas cela peut perturber l’accès à votre service.
+Un client malveillant ou naïve peut être en mesure de créer une requête dont l’exécution prend beaucoup de temps. Dans le pire des cas, cela peut perturber l’accès à votre service.
 
-Le **[Queryable]** attribut est un filtre d’action qui analyse, valide et applique la requête. Le filtre convertit les options de requête dans une expression LINQ. Lorsque le contrôleur OData retourne un **IQueryable** type, le **IQueryable** fournisseur LINQ convertit l’expression LINQ dans une requête. Par conséquent, les performances dépendent du fournisseur LINQ qui est utilisé, ainsi que sur les caractéristiques particulières de votre schéma de base de données ou le jeu de données.
+L’attribut **[interrogeable]** est un filtre d’action qui analyse, valide et applique la requête. Le filtre convertit les options de requête en une expression LINQ. Lorsque le contrôleur OData retourne un type **IQueryable** , le fournisseur LINQ **IQueryable** convertit l’expression LINQ en une requête. Par conséquent, les performances dépendent du fournisseur LINQ utilisé, ainsi que des caractéristiques particulières de votre schéma de base de données ou de base de données.
 
-Pour plus d’informations sur l’utilisation des options de requête OData dans l’API Web ASP.NET, consultez [prenant en charge des Options de requête OData](supporting-odata-query-options.md).
+Pour plus d’informations sur l’utilisation des options de requête OData dans API Web ASP.NET, consultez [prise en charge des options de requête OData](supporting-odata-query-options.md).
 
-Si vous savez que tous les clients sont de confiance (par exemple, un environnement d’entreprise), ou si votre jeu de données est petite, les performances des requêtes peut-être pas un problème. Sinon, vous devez envisager les recommandations suivantes.
+Si vous savez que tous les clients sont approuvés (par exemple, dans un environnement d’entreprise), ou si votre jeu de données est petit, les performances des requêtes peuvent ne pas être un problème. Dans le cas contraire, vous devez prendre en compte les recommandations suivantes.
 
-- Tester votre service avec différentes requêtes et la base de données de profil.
-- Activer la pagination orientée serveur éviter le renvoi d’un jeu de données volumineux dans une seule requête. Pour plus d’informations, consultez [Server-Driven pagination](supporting-odata-query-options.md#server-paging). 
+- Testez votre service avec diverses requêtes et profilez la base de la base de
+- Activez la pagination pilotée par le serveur pour éviter de retourner un jeu de données volumineux dans une requête. Pour plus d’informations, consultez [pagination pilotée par le serveur](supporting-odata-query-options.md#server-paging). 
 
     [!code-csharp[Main](odata-security-guidance/samples/sample3.cs)]
-- Vous devez $filter et $orderby ? Certaines applications peuvent autoriser la pagination, à l’aide de $top et $skip de client, mais désactive les autres options de requête. 
+- Avez-vous besoin d' $filter et de $orderby ? Certaines applications peuvent autoriser la pagination du client, en utilisant $top et $skip, mais désactiver les autres options de requête. 
 
     [!code-csharp[Main](odata-security-guidance/samples/sample4.cs)]
-- Pensez à restreindre $orderby aux propriétés dans un index cluster. Le tri des données volumineuses sans index cluster est lente. 
+- Envisagez de limiter les $orderby aux propriétés dans un index cluster. Le tri des données volumineuses sans index cluster est lent. 
 
     [!code-csharp[Main](odata-security-guidance/samples/sample5.cs)]
-- Nombre maximal de nœuds : Le **MaxNodeCount** propriété sur **[Queryable]** définit le nombre maximal de nœuds nombre autorisé dans l’arborescence de syntaxe $filter. La valeur par défaut est 100, mais peut vouloir définir une valeur inférieure, car un grand nombre de nœuds peut être lent à compiler. Cela est particulièrement vrai si vous utilisez LINQ to Objects (par exemple, les requêtes LINQ sur une collection en mémoire, sans l’utilisation d’un fournisseur LINQ intermédiaire). 
+- Nombre maximal de nœuds : la propriété **maxNodeCount** sur **[Queryable]** définit le nombre maximal de nœuds autorisés dans l’arborescence de syntaxe $Filter. La valeur par défaut est 100, mais vous pouvez définir une valeur inférieure, car un grand nombre de nœuds peut être lent à compiler. Cela est particulièrement vrai si vous utilisez des LINQ to Objects (par exemple, des requêtes LINQ sur une collection en mémoire, sans utiliser de fournisseur LINQ intermédiaire). 
 
     [!code-csharp[Main](odata-security-guidance/samples/sample6.cs)]
-- Envisagez de désactiver les fonctions any() et all(), car ceux-ci peuvent être lentes. 
+- Envisagez de désactiver les fonctions any () et All (), car elles peuvent être lentes. 
 
     [!code-csharp[Main](odata-security-guidance/samples/sample7.cs)]
-- Si les propriétés de chaîne contient des chaînes de grande taille&#8212;par exemple, une description de produit ou une entrée de blog&#8212;envisager de désactiver les fonctions de chaîne. 
+- Si des propriétés de chaîne contiennent des&#8212;chaînes volumineuses, par exemple, une description de&#8212;produit ou une entrée de blog, envisagez de désactiver les fonctions de chaîne. 
 
     [!code-csharp[Main](odata-security-guidance/samples/sample8.cs)]
-- Envisagez d’interdiction de filtrage sur les propriétés de navigation. Filtrage sur les propriétés de navigation peut entraîner une jointure, qui peut être lente, en fonction de votre schéma de base de données. Le code suivant montre un validateur de requête qui empêche le filtrage sur les propriétés de navigation. Pour plus d’informations sur les validateurs de requête, consultez [Validation de requête](supporting-odata-query-options.md#query-validation). 
+- Envisagez de ne pas autoriser le filtrage sur les propriétés de navigation. Le filtrage sur les propriétés de navigation peut entraîner une jointure, qui peut être lente, en fonction de votre schéma de base de données. Le code suivant illustre un validateur de requête qui empêche le filtrage sur les propriétés de navigation. Pour plus d’informations sur les validateurs de requête, consultez [validation de requête](supporting-odata-query-options.md#query-validation). 
 
     [!code-csharp[Main](odata-security-guidance/samples/sample9.cs)]
-- Envisagez de limiter les requêtes $filter en écrivant un validateur personnalisé pour votre base de données. Par exemple, considérez ces deux requêtes : 
+- Envisagez de limiter $filter requêtes en écrivant un validateur personnalisé pour votre base de données. Par exemple, considérez ces deux requêtes : 
 
-  - Tous les films avec les acteurs dont le nom commence par « A ».
-  - Tous les films publiées en 1994.
+  - Tous les films avec des acteurs dont le nom commence par « A ».
+  - Tous les films publiés dans 1994.
 
-    À moins que les films sont indexés par des acteurs, la première requête peut nécessiter le moteur de base de données à analyser l’intégralité de la liste de films. Tandis que la deuxième requête peut être acceptable, en supposant que films sont indexés par année de sortie.
+    À moins que les films ne soient indexés par des acteurs, la première requête peut nécessiter que le moteur de base de base de base de l’analyse la liste complète des films. Tandis que la deuxième requête peut être acceptable, en supposant que les films sont indexés par année de sortie.
 
-    Le code suivant montre un validateur qui permet de filtrer sur les propriétés « ReleaseYear » et « Title », mais aucune autre propriété.
+    Le code suivant illustre un validateur qui autorise le filtrage sur les propriétés « ReleaseYear » et « title », mais pas sur d’autres propriétés.
 
     [!code-csharp[Main](odata-security-guidance/samples/sample10.cs)]
-- En règle générale, envisagez les fonctions de $filter que vous avez besoin. Si vos clients n’avez pas besoin de l’expressivité complète de $filter, vous pouvez limiter les fonctions admises.
+- En général, réfléchissez aux fonctions de $filter dont vous avez besoin. Si vos clients n’ont pas besoin de l’expressivité complète de $filter, vous pouvez limiter les fonctions autorisées.

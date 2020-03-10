@@ -9,11 +9,11 @@ ms.assetid: 41d1abba-97a5-4a45-9b44-d05624c19777
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-vb
 msc.type: authoredcontent
 ms.openlocfilehash: e7a3286bcf7ca844f5dcfa4848c15e0bd4767c0f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74598553"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78553563"
 ---
 # <a name="using-the-slider-control-with-auto-postback-vb"></a>Utilisation du contrôle Slider avec publication automatique (VB)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle Slider dans la boîte à outils de contrôle AJAX fournit un curseur graphique qui peut être contrôlé à l’aide de la souris. Il est possible de faire de la publication automatique du curseur une fois que sa valeur est modifiée.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle Slider dans la boîte à outils de contrôle AJAX fournit un curseur graphique qui peut être contrôlé à l’aide de la souris. Il est possible de faire de la publication automatique du curseur une fois que sa valeur est modifiée.
 

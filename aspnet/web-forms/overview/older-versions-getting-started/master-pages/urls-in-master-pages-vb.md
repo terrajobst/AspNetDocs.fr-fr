@@ -9,11 +9,11 @@ ms.assetid: 43d1e83c-0092-4dcf-977c-e709c4dce7c3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/urls-in-master-pages-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 01627988f68bb619969a5fe3cfaae68fe70b5d4f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74588238"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78548110"
 ---
 # <a name="urls-in-master-pages-vb"></a>URL dans les pages maîtres (VB)
 
@@ -58,7 +58,7 @@ Ensuite, mettez à jour le fichier `Web.sitemap` pour inclure une nouvelle entr�
 
 [!code-xml[Main](urls-in-master-pages-vb/samples/sample3.xml)]
 
-La page de `Default.aspx` nouvellement créée doit avoir quatre contrôles de contenu correspondant aux quatre ContentPlaceHolders dans `Site.master`. Ajoutez du texte au contrôle de contenu référençant le `MainContent` ContentPlaceHolder, puis accédez à la page via un navigateur. Comme le montre la figure 2, le navigateur ne peut pas trouver le fichier image `PoweredByASPNET.gif`. Qu'est-ce qui se passe?
+La page de `Default.aspx` nouvellement créée doit avoir quatre contrôles de contenu correspondant aux quatre ContentPlaceHolders dans `Site.master`. Ajoutez du texte au contrôle de contenu référençant le `MainContent` ContentPlaceHolder, puis accédez à la page via un navigateur. Comme le montre la figure 2, le navigateur ne peut pas trouver le fichier image `PoweredByASPNET.gif`. Comment cela se fait-il ?
 
 La page de contenu `~/Admin/Default.aspx` reçoit le même code HTML pour la région `footerContent` que la page `About.aspx` :
 

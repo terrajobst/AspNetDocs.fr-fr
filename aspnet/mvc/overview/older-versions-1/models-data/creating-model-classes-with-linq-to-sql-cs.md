@@ -9,11 +9,11 @@ ms.assetid: f84b4a16-e8bb-49e8-87a0-1832879a3501
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-linq-to-sql-cs
 msc.type: authoredcontent
 ms.openlocfilehash: c27d1ffac3846fe4bc13b32c2ae91a63b2493126
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74590214"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78543539"
 ---
 # <a name="creating-model-classes-with-linq-to-sql-c"></a>Création de classes de modèle avec LINQ to SQL (C#)
 
@@ -61,11 +61,11 @@ Nous devons ajouter une table à notre base de données qui représente nos film
 
 Nous devons ajouter les colonnes suivantes à la table de base de données :
 
-| **Nom de la colonne** | **Type de données** | **Autoriser les valeurs null** |
+| **Nom de la colonne** | **Type de données** | **Null autorisé** |
 | --- | --- | --- |
-| ID | int | False |
-| Titre | Nvarchar (200) | False |
-| MetaDirectory | Nvarchar (50) | False |
+| Id | Int | False |
+| Titre | Nvarchar(200) | False |
+| Directeur | Nvarchar(50) | False |
 
 Vous devez effectuer deux opérations spéciales dans la colonne ID. Tout d’abord, vous devez marquer la colonne ID en tant que colonne de clé primaire en sélectionnant la colonne dans la Concepteur de tables et en cliquant sur l’icône d’une clé. LINQ to SQL vous oblige à spécifier vos colonnes de clé primaire lors de l’exécution d’insertions ou de mises à jour sur la base de données.
 

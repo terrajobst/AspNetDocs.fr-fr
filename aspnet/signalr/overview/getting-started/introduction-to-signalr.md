@@ -9,11 +9,11 @@ ms.assetid: 0fab5e35-8c1f-43d4-8635-b8aba8766a71
 msc.legacyurl: /signalr/overview/getting-started/introduction-to-signalr
 msc.type: authoredcontent
 ms.openlocfilehash: 8dbc31a5c8d59fa55dc5b513c1a51d24d18a685f
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519399"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78536434"
 ---
 # <a name="introduction-to-signalr"></a>Introduction à SignalR
 
@@ -39,7 +39,7 @@ Signalr fournit une API simple pour la création d’appels de procédure distan
 
 ![Appel de méthodes avec Signalr](introduction-to-signalr/_static/image1.png)
 
-SignalR traite automatiquement la gestion des connexions et vous permet de diffuser des messages à tous les clients connectés simultanément, comme une salle de conversation. Vous pouvez également envoyer des messages à des clients spécifiques. La connexion entre le client et le serveur est permanente, contrairement à une connexion HTTP classique qui est rétablie pour chaque communication.
+Signalr gère automatiquement la gestion des connexions et vous permet de diffuser des messages à tous les clients connectés simultanément, comme une salle de conversation. Vous pouvez également envoyer des messages à des clients spécifiques. La connexion entre le client et le serveur est persistante, contrairement à une connexion HTTP classique, qui est rétablie pour chaque communication.
 
 Signalr prend en charge les fonctionnalités « push du serveur », dans lesquelles le code serveur peut appeler le code client dans le navigateur à l’aide d’appels de procédure distante (RPC), plutôt que du modèle de demande-réponse actuellement sur le Web.
 

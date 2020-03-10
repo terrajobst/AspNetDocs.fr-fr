@@ -9,11 +9,11 @@ ms.assetid: a2d7f33b-8c4a-4b48-9fb1-9139cf9b9878
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-introduction-1-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: ea88da1e6d510f706fc7ca370cfa32974c1243f8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74587730"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78525633"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-introduction---1-of-12"></a>Déploiement d’une application Web ASP.NET avec SQL Server Compact à l’aide de Visual Studio : Introduction-1 sur 12
 
@@ -31,7 +31,7 @@ par [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Si vous avez des questions qui ne sont pas directement liées au didacticiel, vous pouvez les poster sur le [Forum de déploiement ASP.net](https://forums.asp.net/26.aspx/1?Configuration+and+Deployment).
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Ces didacticiels vous guident tout au long du déploiement d’IIS sur votre ordinateur de développement local à des fins de test, puis à un fournisseur d’hébergement tiers. L’application que vous déploierez utilise une base de données d’application et une base de données d’appartenance ASP.NET. Vous commencez à utiliser SQL Server Compact et le déploiement sur SQL Server Compact, et les didacticiels ultérieurs vous montrent comment déployer des modifications de base de données et comment migrer vers SQL Server.
 
@@ -39,7 +39,7 @@ Le nombre de didacticiels (11) et une page de dépannage sont susceptibles de co
 
 Les didacticiels sont conçus pour s’exécuter en séquence, et chaque partie repose sur le composant précédent. Toutefois, vous pouvez ignorer des parties qui ne sont pas pertinentes pour votre situation. (Les éléments ignorés peuvent vous obliger à ajuster les procédures dans les didacticiels ultérieurs.)
 
-## <a name="intended-audience"></a>Public visé
+## <a name="intended-audience"></a>Public concerné
 
 Les didacticiels sont destinés aux développeurs ASP.NET qui travaillent dans des organisations de petite taille ou d’autres environnements où :
 
@@ -77,7 +77,7 @@ Lorsqu’une erreur se produit pendant le déploiement, ou si le site déployé 
 
 Les commentaires sur les didacticiels sont les bienvenus et, lorsque le didacticiel est mis à jour, chaque effort sera tenu pour prendre en compte les corrections ou les suggestions relatives aux améliorations fournies dans les commentaires du didacticiel.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Avant de commencer, assurez-vous que vous disposez de Windows 7 ou d’une version ultérieure et que l’un des produits suivants est installé sur votre ordinateur :
 
@@ -139,4 +139,4 @@ Les fonctionnalités suivantes de l’application affectent la manière dont vou
 Dans ce premier didacticiel de la série, vous avez téléchargé l’exemple de projet Visual Studio et les fonctionnalités du site revu qui affectent la façon dont vous déployez l’application. Dans les didacticiels suivants, vous préparez le déploiement en configurant certains de ces éléments à traiter automatiquement. D’autres que vous devez prendre en charge manuellement.
 
 > [!div class="step-by-step"]
-> [Suivant](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md)
+> [Next](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md)

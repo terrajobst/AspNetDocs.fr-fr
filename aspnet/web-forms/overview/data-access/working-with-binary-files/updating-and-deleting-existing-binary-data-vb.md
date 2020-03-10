@@ -9,11 +9,11 @@ ms.assetid: 3a052ced-9cf5-47b8-a400-934f0b687c26
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 27ff6941008b4e7bf6d632e4c248fd1d35fb3589
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621294"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78587667"
 ---
 # <a name="updating-and-deleting-existing-binary-data-vb"></a>Mise à jour et suppression de données binaires existantes (VB)
 

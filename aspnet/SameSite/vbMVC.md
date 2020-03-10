@@ -6,11 +6,11 @@ ms.author: riande
 ms.date: 2/15/2019
 uid: samesite/vbMVC
 ms.openlocfilehash: f6effce6075f94fb58ce10ec08bf010fab8b4b56
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77458468"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78547809"
 ---
 # <a name="samesite-cookie-sample-for-aspnet-472-vb-mvc"></a>Exemple de cookie SameSite pour ASP.NET 4.7.2 VB MVC
 
@@ -93,7 +93,7 @@ Un gestionnaire de cookies doit être défini sur *chaque* composant qui le pren
 
 Le SystemWebCookieManager est utilisé pour éviter des [problèmes connus](https://github.com/aspnet/AspNetKatana/wiki/System.Web-response-cookie-integration-issues) avec l’intégration de cookie de réponse.
 
-### <a name="running-the-sample"></a>Exécution de l’exemple
+### <a name="running-the-sample"></a>Exécution de l'exemple
 
 Si vous exécutez l’exemple de projet, chargez votre débogueur de navigateur sur la page initiale et utilisez-le pour afficher la collection de cookies pour le site.
 Pour ce faire, dans Edge et chrome, appuyez sur `F12` sélectionnez l’onglet `Application` et cliquez sur l’URL du site sous l’option `Cookies` dans la section `Storage`.
@@ -158,7 +158,7 @@ Public Shared Sub AdjustSpecificCookieSettings()
 End Sub
 ```
 
-## <a name="more-information"></a>Informations supplémentaires
+## <a name="more-information"></a>Plus d'informations
  
 [Mises à jour chrome](https://www.chromium.org/updates/same-site)
 

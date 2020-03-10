@@ -9,11 +9,11 @@ ms.assetid: 0edcd653-f24a-41aa-aef4-75f868fe5ac2
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 3b039b22bef38ae6ebf80be070820dc1638f87f4
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74618656"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78567010"
 ---
 # <a name="specifying-the-master-page-programmatically-vb"></a>Spécification de la page maître par programmation (VB)
 

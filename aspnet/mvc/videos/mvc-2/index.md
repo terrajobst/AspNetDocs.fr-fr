@@ -9,11 +9,11 @@ ms.assetid: 68968b8a-4f60-449e-8639-978fc40aed70
 msc.legacyurl: /mvc/videos/mvc-2
 msc.type: chapter
 ms.openlocfilehash: d2ddf52b01b8a1ae0e6c3b8db104d16775d144e6
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65120174"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537372"
 ---
 # <a name="aspnet-mvc-2"></a>ASP.NET MVC
 
@@ -35,10 +35,10 @@ ms.locfileid: "65120174"
     - [Affichage d’une table de données de la base de données](how-do-i/displaying-a-table-of-database-data.md)
     - [Présentation d’ASP.NET MVC - Vidéo technique de 80 minutes pour les développeurs, création de NerdDinner](how-do-i/what-is-aspnet-mvc-80-minute-technical-video-for-developers-building-nerddinner.md)
     - [Pourquoi ASP.NET MVC ? - Vidéo de présentation de 3 minutes pour les décideurs](how-do-i/why-aspnet-mvc-3-minute-overview-video-for-decision-makers.md)
-    - [ASP.NET MVC : Comment de 10 minutes vidéo technique pour les développeurs](how-do-i/aspnet-mvc-how-10-minute-technical-video-for-developers.md)
+    - [Utilisation d’ASP.NET MVC - Vidéo technique de 10 minutes pour les développeurs](how-do-i/aspnet-mvc-how-10-minute-technical-video-for-developers.md)
     - [Retourner des données au format JSON pour un appel AJAX dans une application web ASP.NET MVC](how-do-i/how-do-i-return-json-formatted-data-for-an-ajax-call-in-an-aspnet-mvc-web-application.md)
     - [Utiliser des données dans des vues partielles ASP.NET MVC](how-do-i/how-do-i-work-with-data-in-aspnet-mvc-partial-views.md)
-    - [Implémenter des modèles de vue pour gérer les données des vues ASP.NET MVC](how-do-i/how-do-i-implement-view-models-to-manage-data-for-aspnet-mvc-views.md)
+    - [Implémenter des modèles de vue pour gérer les données des vues MVC ASP.NET](how-do-i/how-do-i-implement-view-models-to-manage-data-for-aspnet-mvc-views.md)
     - [Créer un helper HTML personnalisé pour une application MVC](how-do-i/how-do-i-create-a-custom-html-helper-for-an-mvc-application.md)
     - [Utiliser des classeurs de modèles dans une application MVC](how-do-i/how-do-i-work-with-model-binders-in-an-mvc-application.md)
     - [Utiliser des attributs HttpVerbs dans une application MVC](how-do-i/how-do-i-use-httpverbs-attributes-in-an-mvc-application.md)
@@ -52,12 +52,12 @@ ms.locfileid: "65120174"
     - [Meilleurs parcours d’apprentissage d’ASP.NET MVC](how-do-i/how-to-best-learn-asp-net-mvc.md)
 - [ASP.NET MVC - Fonctionnalité Nous contacter](aspnet-mvc-for-the-rest-of-us/index.md)
 
-    - [ASP.NET MVC pour le reste d'entre nous : Partie 1](aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-1.md)
-    - [ASP.NET MVC pour le reste d'entre nous : Partie 2](aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-2.md)
-    - [ASP.NET MVC pour le reste d'entre nous : Partie 3](aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-3.md)
-    - [ASP.NET MVC pour le reste d'entre nous : Partie 4](aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-4.md)
+    - [ASP.NET MVC - Fonctionnalité Nous contacter : Partie 1](aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-1.md)
+    - [ASP.NET MVC - Fonctionnalité Nous contacter : Partie 2](aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-2.md)
+    - [ASP.NET MVC - Fonctionnalité Nous contacter : Partie 3](aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-3.md)
+    - [ASP.NET MVC - Fonctionnalité Nous contacter : Partie 4](aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-4.md)
 - [Magasin de musique](music-store/index.md)
 
-    - [Store de musique MVC, partie 1 : Introduction, outils et Structure de projet](music-store/mvc-music-store-part-1-intro-tools-and-project-structure.md)
-    - [Store de musique MVC, partie 2 : Contrôleurs](music-store/mvc-music-store-part-2-controllers.md)
-    - [Store de musique MVC, partie 3 : Views et ViewModels](music-store/mvc-music-store-part-3-views-and-viewmodels.md)
+    - [Magasin de musique MVC, partie 1 : Introduction, outils et structure du projet](music-store/mvc-music-store-part-1-intro-tools-and-project-structure.md)
+    - [Magasin de musique MVC, partie 2 : Contrôleurs](music-store/mvc-music-store-part-2-controllers.md)
+    - [Magasin de musique MVC, partie 3 : Vues et ViewModels](music-store/mvc-music-store-part-3-views-and-viewmodels.md)

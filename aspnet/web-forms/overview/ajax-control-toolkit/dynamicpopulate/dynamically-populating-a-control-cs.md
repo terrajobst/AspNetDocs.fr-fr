@@ -9,11 +9,11 @@ ms.assetid: e1fec43e-1daf-49d2-b0c7-7f1b930455cc
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 24f88e44e0f878127314774d4e8846f80133413e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599295"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78535804"
 ---
 # <a name="dynamically-populating-a-control-c"></a>Remplissage dynamique d’un contrôle (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle DynamicPopulate dans la boîte à outils de contrôle ASP.NET AJAX appelle un service Web (ou une méthode de page) et remplit la valeur résultante dans un contrôle cible sur la page, sans actualisation de page.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle `DynamicPopulate` de la boîte à outils de contrôle ASP.NET AJAX appelle un service Web (ou une méthode de page) et remplit la valeur résultante dans un contrôle cible sur la page, sans actualisation de page. Ce didacticiel montre comment le configurer.
 
@@ -69,4 +69,4 @@ Exécutez la page ASP.NET dans le navigateur, puis cliquez sur le bouton. vous r
 Un clic sur le bouton permet de récupérer la date à partir du serveur ([cliquez pour afficher l’image en taille réelle](dynamically-populating-a-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](dynamically-populating-a-control-using-javascript-code-cs.md)
+> [Next](dynamically-populating-a-control-using-javascript-code-cs.md)

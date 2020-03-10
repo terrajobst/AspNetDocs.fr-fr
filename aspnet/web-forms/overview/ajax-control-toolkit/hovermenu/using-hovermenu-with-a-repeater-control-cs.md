@@ -9,11 +9,11 @@ ms.assetid: e7700e7b-edc3-4183-a713-70e507cc7490
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 3e38b91d837c65191d4b3797fa31ef6112a1f070
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606721"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78578126"
 ---
 # <a name="using-hovermenu-with-a-repeater-control-c"></a>Utilisation de HoverMenu avec un contrôle Repeater (C#)
 
@@ -23,7 +23,7 @@ par [Christian Wenz](https://github.com/wenz)
 
 > Le contrôle HoverMenu dans la boîte à outils de contrôle AJAX fournit un effet de contextuel simple : lorsque le pointeur de la souris est placé sur un élément, une fenêtre contextuelle s’affiche à la position spécifiée. Il est également possible d’utiliser ce contrôle dans un Repeater.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Présentation
 
 Le contrôle `HoverMenu` dans la boîte à outils de contrôle AJAX fournit un effet de contextuel simple : lorsque le pointeur de la souris se trouve au-dessus d’un élément, une fenêtre contextuelle s’affiche à la position spécifiée. Il est également possible d’utiliser ce contrôle dans un Repeater.
 
@@ -56,4 +56,4 @@ Ensuite, ajoutez un panneau qui sert de fenêtre contextuelle modale :
 Le menu sensitif apparaît en regard de chaque élément dans le répéteur ([cliquez pour afficher l’image en taille réelle](using-hovermenu-with-a-repeater-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Suivant](using-hovermenu-with-a-repeater-control-vb.md)
+> [Next](using-hovermenu-with-a-repeater-control-vb.md)

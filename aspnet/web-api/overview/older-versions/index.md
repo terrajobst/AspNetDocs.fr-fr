@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/older-versions/index
-title: Documentation sur les Versions antérieures de l’API Web - ASP.NET 4.x
+title: Documentation sur les versions antérieures de l’API Web-ASP.NET 4. x
 author: rick-anderson
-description: Documentation sur les versions antérieures de l’API Web pour ASP.NET 4.x.
+description: Documentation sur les versions antérieures de l’API Web pour ASP.NET 4. x.
 ms.author: riande
 ms.date: 10/23/2014
 ms.custom: seoapril2019
@@ -10,15 +10,15 @@ ms.assetid: f5bc7426-27c6-492c-914f-b9d2eb49753d
 msc.legacyurl: /web-api/overview/older-versions
 msc.type: chapter
 ms.openlocfilehash: 9ef642b52d61d7737b37d4499564d71a3bedcd8a
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109114"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556146"
 ---
-# <a name="documentation-on-older-versions-of-web-api"></a>Documentation sur les Versions antérieures de l’API Web
+# <a name="documentation-on-older-versions-of-web-api"></a>Documentation sur les versions antérieures de l’API Web
 
-> Documentation sur les versions antérieures de l’API Web pour ASP.NET 4.x.
+> Documentation sur les versions antérieures de l’API Web pour ASP.NET 4. x.
 
 - [Activation des opérations CRUD dans Web API 1](creating-a-web-api-that-supports-crud-operations.md)
 - [Utilisation d’ASP.NET Web API 1 avec Entity Framework 5](using-web-api-1-with-entity-framework-5/index.md)

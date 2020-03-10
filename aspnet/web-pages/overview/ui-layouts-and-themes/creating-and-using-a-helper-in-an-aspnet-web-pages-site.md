@@ -1,82 +1,82 @@
 ---
 uid: web-pages/overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site
-title: Création et utilisation d’une application d’assistance dans une application Web Pages (Razor) Site | Microsoft Docs
+title: Création et utilisation d’un programme d’assistance dans un site pages Web ASP.NET (Razor) | Microsoft Docs
 author: Rick-Anderson
-description: Cet article décrit comment créer une application auxiliaire dans un site Web ASP.NET Web Pages (Razor). Une application d’assistance est un composant réutilisable qui inclut le code et le balisage perf...
+description: Cet article explique comment créer une application auxiliaire dans un site Web pages Web ASP.NET (Razor). Une application d’assistance est un composant réutilisable qui comprend le code et le balisage des performances...
 ms.author: riande
 ms.date: 02/17/2014
 ms.assetid: 46bff772-01e0-40f0-9ae6-9e18c5442ee6
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site
 msc.type: authoredcontent
 ms.openlocfilehash: 380663951094c9fc7d5f0601e30995fa073a204b
-ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410965"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78563510"
 ---
-# <a name="creating-and-using-a-helper-in-an-aspnet-web-pages-razor-site"></a>Création et utilisation d’une application auxiliaire dans un Site ASP.NET Web Pages (Razor)
+# <a name="creating-and-using-a-helper-in-an-aspnet-web-pages-razor-site"></a>Création et utilisation d’un programme d’assistance dans un site pages Web ASP.NET (Razor)
 
 par [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Cet article décrit comment créer une application auxiliaire dans un site Web ASP.NET Web Pages (Razor). Un *helper* est un composant réutilisable qui inclut le code et le balisage pour effectuer une tâche qui peut être fastidieux ou complexes.
+> Cet article explique comment créer une application auxiliaire dans un site Web pages Web ASP.NET (Razor). Une *application auxiliaire* est un composant réutilisable qui comprend du code et des balises pour effectuer une tâche qui peut être fastidieuse ou complexe.
 > 
 > **Ce que vous allez apprendre :** 
 > 
-> - Comment créer et utiliser une simple application d’assistance.
+> - Comment créer et utiliser une application auxiliaire simple.
 > 
-> Voici les fonctionnalités d’ASP.NET introduites dans l’article :
+> Voici les fonctionnalités ASP.NET présentées dans l’article :
 > 
-> - Le `@helper` syntaxe.
+> - Syntaxe de `@helper`.
 >   
 > 
-> ## <a name="software-versions-used-in-the-tutorial"></a>Versions des logiciels utilisées dans le didacticiel
+> ## <a name="software-versions-used-in-the-tutorial"></a>Versions logicielles utilisées dans le didacticiel
 > 
 > 
-> - ASP.NET Web Pages (Razor) 3
+> - Pages Web ASP.NET (Razor) 3
 >   
 > 
-> Ce didacticiel fonctionne également avec ASP.NET Web Pages 2.
+> Ce didacticiel fonctionne également avec pages Web ASP.NET 2.
 
-## <a name="overview-of-helpers"></a>Vue d’ensemble des programmes d’assistance
+## <a name="overview-of-helpers"></a>Vue d’ensemble des applications auxiliaires
 
-Si vous avez besoin effectuer les mêmes tâches dans différentes pages de votre site, vous pouvez utiliser un programme d’assistance. Les Pages Web ASP.NET inclut un nombre de programmes d’assistance, et beaucoup d’autres que vous pouvez télécharger et installer. (Une liste de helpers intégrés dans ASP.NET Web Pages est répertoriée dans le [référence rapide de l’API ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202907).) Si aucun des programmes d’assistance existants répondent à vos besoins, vous pouvez créer votre propre application auxiliaire.
+Si vous devez effectuer les mêmes tâches sur des pages différentes de votre site, vous pouvez utiliser une application auxiliaire. Pages Web ASP.NET inclut un certain nombre d’applications auxiliaires, et il existe de nombreux autres que vous pouvez télécharger et installer. (Une liste des applications d’assistance intégrées dans pages Web ASP.NET est répertoriée dans la [référence rapide de l’API ASP.net](https://go.microsoft.com/fwlink/?LinkId=202907).) Si aucune des applications d’assistance existantes ne répond à vos besoins, vous pouvez créer votre propre application d’assistance.
 
-Une application d’assistance vous permet d’utiliser un bloc de code commun sur plusieurs pages. Vous voulez que dans votre page souvent créer un élément de la Remarque qui est défini en dehors des paragraphes normaux. Peut-être la remarque est créée en tant qu’un `<div>` élément qui a un style sous forme de zone avec une bordure. Plutôt que d’ajouter ce même balisage à une page chaque fois que vous souhaitez afficher une note, vous pouvez empaqueter le balisage comme une application d’assistance. Vous pouvez ensuite insérer la Remarque avec une seule ligne de code n’importe où vous en avez besoin.
+Une application d’assistance vous permet d’utiliser un bloc de code commun sur plusieurs pages. Supposons que, dans votre page, vous souhaitiez souvent créer un élément note qui est séparé des paragraphes normaux. Par exemple, la note est créée en tant qu’élément `<div>` qui a pour style une bordure. Au lieu d’ajouter ce même balisage à une page chaque fois que vous souhaitez afficher une note, vous pouvez empaqueter le balisage en tant qu’application d’assistance. Vous pouvez ensuite insérer la note avec une seule ligne de code partout où vous en avez besoin.
 
-À l’aide d’un programme d’assistance ainsi de rend le code dans chacune de vos pages plus simple et plus facile à lire. Elle rend également plus facile à maintenir votre site, car si vous avez besoin modifier l’apparence de notes, vous pouvez modifier le balisage au même endroit.
+L’utilisation d’une application d’assistance de ce type rend le code dans chacune de vos pages plus simple et plus facile à lire. Il facilite également la maintenance de votre site, car si vous avez besoin de modifier l’apparence des notes, vous pouvez modifier le balisage à un seul endroit.
 
-## <a name="creating-a-helper"></a>Création d’une application auxiliaire
+## <a name="creating-a-helper"></a>Création d’une application d’assistance
 
-Cette procédure vous montre comment créer l’application d’assistance qui crée une note, comme décrit précédemment. Il s’agit d’un exemple simple, mais l’application d’assistance personnalisée peut inclure un balisage et le code ASP.NET dont vous avez besoin.
+Cette procédure vous montre comment créer l’application auxiliaire qui crée la note, comme décrit précédemment. Il s’agit d’un exemple simple, mais le programme d’assistance personnalisé peut inclure tout code de balisage et ASP.NET dont vous avez besoin.
 
-1. Dans le dossier racine du site Web, créez un dossier nommé *application\_Code*. Il s’agit d’un nom de dossier réservé dans ASP.NET où vous pouvez placer le code des composants tels que des programmes d’assistance.
-2. Dans le *application\_Code* dossier créer un nouveau *.cshtml* de fichier et nommez-le *MyHelpers.cshtml*.
-3. Remplacez le contenu existant par le suivant :
+1. Dans le dossier racine du site Web, créez un dossier nommé *App\_code*. Il s’agit d’un nom de dossier réservé dans ASP.NET où vous pouvez placer du code pour des composants tels que des applications auxiliaires.
+2. Dans le dossier *App\_code* , créez un nouveau fichier *. cshtml* , puis nommez-le *MyHelpers. cshtml*.
+3. Remplacez le contenu existant par ce qui suit :
 
     [!code-cshtml[Main](creating-and-using-a-helper-in-an-aspnet-web-pages-site/samples/sample1.cshtml)]
 
-    Le code utilise le `@helper` syntaxe pour déclarer une nouvelle application auxiliaire nommée `MakeNote`. Ce programme d’assistance particulier vous permet de passer un paramètre nommé `content` qui peut contenir une combinaison de texte et des balises. Le programme d’assistance insère la chaîne dans le corps de la Remarque à l’aide du `@content` variable.
+    Le code utilise la syntaxe `@helper` pour déclarer un nouveau programme d’assistance nommé `MakeNote`. Cette aide particulière vous permet de passer un paramètre nommé `content` qui peut contenir une combinaison de texte et de balises. Le programme d’assistance insère la chaîne dans le corps de la note à l’aide de la variable `@content`.
 
-    Notez que le fichier est nommé *MyHelpers.cshtml*, mais l’application d’assistance est nommée `MakeNote`. Vous pouvez placer plusieurs programmes d’assistance personnalisés dans un seul fichier.
+    Notez que le fichier est nommé *MyHelpers. cshtml*, mais que le programme d’assistance est nommé `MakeNote`. Vous pouvez placer plusieurs applications d’assistance personnalisées dans un seul fichier.
 4. Enregistrez et fermez le fichier.
 
-## <a name="using-the-helper-in-a-page"></a>À l’aide du programme d’assistance dans une Page
+## <a name="using-the-helper-in-a-page"></a>Utilisation de l’application auxiliaire dans une page
 
-1. Dans le dossier racine, créez un fichier vide appelé *TestHelper.cshtml*.
+1. Dans le dossier racine, créez un fichier vide nommé *TestHelper. cshtml*.
 2. Ajoutez le code suivant au fichier :
 
     [!code-html[Main](creating-and-using-a-helper-in-an-aspnet-web-pages-site/samples/sample2.html)]
 
-    Pour appeler l’application d’assistance que vous avez créé, utilisez `@` suivi par le nom du fichier où l’application d’assistance est, un point, puis le nom d’assistance. (Si vous aviez plusieurs dossiers le *application\_Code* dossier, vous pouvez utiliser la syntaxe `@FolderName.FileName.HelperName` pour appeler votre application auxiliaire dans n’importe quelle imbriquées au niveau du dossier). Le texte que vous ajoutez de guillemets entre parenthèses est le texte qui affiche l’application d’assistance dans le cadre de la note dans la page web.
-3. Enregistrez la page et l’exécuter dans un navigateur. Le programme d’assistance génère directement l’élément de note où vous avez appelé l’application d’assistance : entre les deux paragraphes.
+    Pour appeler le programme d’assistance que vous avez créé, utilisez `@` suivi du nom du fichier d’assistance, d’un point, puis du nom de l’assistance. (Si vous avez plusieurs dossiers dans l' *application\_* dossier de code, vous pouvez utiliser la syntaxe `@FolderName.FileName.HelperName` pour appeler votre application auxiliaire dans n’importe quel niveau de dossier imbriqué). Le texte que vous ajoutez entre parenthèses est le texte que le programme d’assistance affichera dans le cadre de la note dans la page Web.
+3. Enregistrez la page et exécutez-la dans un navigateur. L’application d’assistance génère l’élément note juste là où vous avez appelé le programme d’assistance : entre les deux paragraphes.
 
-    ![Capture d’écran affichant la page dans le navigateur et comment l’application d’assistance généré le balisage qui place une zone autour du texte spécifié.](creating-and-using-a-helper-in-an-aspnet-web-pages-site/_static/image1.png)
+    ![Capture d’écran montrant la page dans le navigateur et comment le balisage généré par le programme d’assistance place une zone autour du texte spécifié.](creating-and-using-a-helper-in-an-aspnet-web-pages-site/_static/image1.png)
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-[Un menu horizontal en tant qu’un helper Razor](http://mikepope.com/blog/DisplayBlog.aspx?permalink=2341). Cette entrée de blog par Mike Pope montre comment créer un menu horizontal en tant qu’une assistance à l’aide de balisage, CSS et le code.
+[Menu horizontal comme application auxiliaire Razor](http://mikepope.com/blog/DisplayBlog.aspx?permalink=2341). Cette entrée de blog de Mike pape montre comment créer un menu horizontal en tant qu’application auxiliaire en utilisant le balisage, le code CSS et le code.
 
-[En tirant parti de HTML5 dans ASP.NET Web Pages des programmes d’assistance pour WebMatrix et ASP.NET MVC3](http://geekswithblogs.net/wildturtle/archive/2010/11/08/html5-in-asp.net-web-pages-helpers-for-webmatrix-and_aspnet_mvc3.aspx). Cette entrée de blog par Sam Abraham montre une application d’assistance qui restitue une HTML5 `Canvas` élément.
+[Tirer parti de HTML5 dans pages Web ASP.net helpers pour WebMatrix et ASP.net MvC3](http://geekswithblogs.net/wildturtle/archive/2010/11/08/html5-in-asp.net-web-pages-helpers-for-webmatrix-and_aspnet_mvc3.aspx). Ce billet de blog de Sam Abraham affiche une assistance qui rend un élément `Canvas` HTML5.
 
-[La différence entre @Helpers et @Functions dans WebMatrix](http://www.mikesdotnetting.com/Article/173/The-Difference-Between-@Helpers-and-@Functions-In-WebMatrix). Décrit cette entrée de blog par Mike Brind `@helper` syntaxe et `@function` syntaxe et quand les utiliser.
+[La différence entre @Helpers et @Functions dans WebMatrix](http://www.mikesdotnetting.com/Article/173/The-Difference-Between-@Helpers-and-@Functions-In-WebMatrix). Cette entrée de blog de Mike salée décrit `@helper` syntaxe et `@function` syntaxe et le moment où l’utiliser.
