@@ -9,11 +9,11 @@ ms.assetid: 213eea41-1ab4-4371-8b24-1a1a66c515de
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/creating-stored-procedures-and-user-defined-functions-with-managed-code-cs
 msc.type: authoredcontent
 ms.openlocfilehash: c6aec9ca70fe3ab568b3d17fea6bfd56671edc03
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74605406"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78533536"
 ---
 # <a name="creating-stored-procedures-and-user-defined-functions-with-managed-code-c"></a>Création de procédures stockées et de fonctions définies par l’utilisateur avec du code managé (C#)
 
@@ -136,7 +136,7 @@ Tous les objets de base de données managés ont accès à un [objet`SqlContext`
 
 ## <a name="step-4-deploying-the-managed-stored-procedure"></a>Étape 4 : déploiement de la procédure stockée managée
 
-Une fois ce code terminé, nous sommes prêts à le déployer dans la base de données Northwind. Le déploiement d’une SQL Server projet compile le code dans un assembly, inscrit l’assembly auprès de la base de données et crée les objets correspondants dans la base de données, en les liant aux méthodes appropriées dans l’assembly. L’ensemble exact de tâches effectuées par l’option de déploiement est plus précisément orthographié à l’étape 13. Cliquez avec le bouton droit sur le nom du projet `ManagedDatabaseConstructs` dans le Explorateur de solutions et choisissez l’option déployer. Toutefois, le déploiement échoue avec l’erreur suivante : syntaxe incorrecte à côté de « EXTERNAL ». Vous devrez peut-être définir le niveau de compatibilité de la base de données actuelle sur une valeur plus élevée pour activer cette fonctionnalité. Consultez l’aide de la procédure stockée `sp_dbcmptlevel`.
+Une fois ce code terminé, nous sommes prêts à le déployer dans la base de données Northwind. Le déploiement d’une SQL Server projet compile le code dans un assembly, inscrit l’assembly auprès de la base de données et crée les objets correspondants dans la base de données, en les liant aux méthodes appropriées dans l’assembly. L’ensemble exact de tâches effectuées par l’option de déploiement est plus précisément orthographié à l’étape 13. Cliquez avec le bouton droit sur le nom du projet `ManagedDatabaseConstructs` dans le Explorateur de solutions et choisissez l’option déployer. Toutefois, le déploiement échoue avec l’erreur suivante : syntaxe incorrecte à côté de « EXTERNAL ». Vous devrez peut-être affecter au niveau de compatibilité de la base de données actuelle une valeur plus élevée pour activer cette fonctionnalité. Consultez l’aide de la procédure stockée `sp_dbcmptlevel`.
 
 Ce message d’erreur se produit lorsque vous tentez d’inscrire l’assembly auprès de la base de données Northwind. Pour pouvoir inscrire un assembly avec une base de données SQL Server 2005, le niveau de compatibilité de la base de données doit être défini sur 90. Par défaut, les nouvelles bases de données SQL Server 2005 ont un niveau de compatibilité de 90. Toutefois, les bases de données créées à l’aide de Microsoft SQL Server 2000 ont un niveau de compatibilité par défaut de 80. Étant donné que la base de données Northwind était initialement une base de données Microsoft SQL Server 2000, son niveau de compatibilité est actuellement défini sur 80 et doit donc être augmenté à 90 pour pouvoir inscrire des objets de base de données gérés.
 

@@ -1,95 +1,95 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-cs
-title: À l’aide de contrôles AJAX Control Toolkit et extendeurs de contrôle (c#) | Microsoft Docs
+title: Utilisation des contrôles et des extendeurs de contrôle AJAXC#Control Toolkit () | Microsoft Docs
 author: microsoft
-description: Découvrez comment ajouter des contrôles AJAX Control Toolkit et extendeurs à vos pages ASP.NET.
+description: Découvrez comment ajouter des contrôles et des extendeurs AJAX Control Toolkit à vos pages ASP.NET.
 ms.author: riande
 ms.date: 05/12/2009
 ms.assetid: c1e6b51c-3bc3-4bf7-9916-9991197af3dd
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/getting-started/using-ajax-control-toolkit-controls-and-control-extenders-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 1acafaadaf373b488b9e85b7ba31f08cd3b53e85
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127101"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78535412"
 ---
 # <a name="using-ajax-control-toolkit-controls-and-control-extenders-c"></a>Utilisation de contrôles AJAX Control Toolkit et extendeurs de contrôle (C#)
 
-by [Microsoft](https://github.com/microsoft)
+par [Microsoft](https://github.com/microsoft)
 
-> Découvrez comment ajouter des contrôles AJAX Control Toolkit et extendeurs à vos pages ASP.NET.
+> Découvrez comment ajouter des contrôles et des extendeurs AJAX Control Toolkit à vos pages ASP.NET.
 
-AJAX Control Toolkit contient un ensemble de contrôles et les extendeurs de contrôle. Dans ce bref didacticiel, vous allez apprendre à ajouter des contrôles et extendeurs de contrôle à une page ASP.NET.
+Le kit d’outils de contrôle AJAX contient un ensemble de contrôles et d’extendeurs de contrôle. Dans ce bref didacticiel, vous allez apprendre à ajouter des contrôles et des extendeurs de contrôle à une page ASP.NET.
 
 > [!NOTE] 
 > 
-> Pour obtenir des instructions sur l’installation de la boîte à outils de contrôle AJAX et l’ajout d’AJAX Control Toolkit à la boîte à outils Visual Studio/Visual Web Developer, consultez le didacticiel [bien démarrer avec AJAX Control Toolkit](get-started-with-the-ajax-control-toolkit-cs.md).
+> Pour obtenir des instructions sur l’installation d’AJAX Control Toolkit et l’ajout d’AJAX Control Toolkit à la boîte à outils Visual Studio/Visual Web Developer, consultez le didacticiel [prise en main de la](get-started-with-the-ajax-control-toolkit-cs.md)boîte à outils de contrôle AJAX.
 
-## <a name="using-ajax-control-toolkit-controls"></a>À l’aide de contrôles AJAX Control Toolkit
+## <a name="using-ajax-control-toolkit-controls"></a>Utilisation des contrôles d’outils de contrôle AJAX
 
-Un contrôle AJAX Control Toolkit fonctionne exactement comme un contrôle ASP.NET normal. Vous pouvez faire glisser le contrôle à partir de la boîte à outils vers une page ASP.NET. Vous pouvez ajouter le contrôle à la page en mode Création ou de vue de Source.
+Un contrôle de la boîte à outils de contrôle AJAX fonctionne comme un contrôle ASP.NET normal. Vous pouvez faire glisser le contrôle de la boîte à outils vers une page ASP.NET. Vous pouvez ajouter le contrôle à la page en Mode Création ou en mode Source.
 
-Il existe un besoin particulier lorsque vous utilisez les contrôles à partir de la boîte à outils de contrôle AJAX. La page doit contenir un contrôle ScriptManager. Le contrôle ScriptManager est responsable de l’y compris tous le JavaScript nécessaires requis par les contrôles AJAX Control Toolkit.
+Il existe une exigence spéciale lors de l’utilisation des contrôles à partir de la boîte à outils de contrôle AJAX. La page doit contenir un contrôle ScriptManager. Le contrôle ScriptManager est chargé d’inclure tous les scripts JavaScript nécessaires pour les contrôles du kit d’outils de contrôle AJAX.
 
-Par exemple, l’onglet AJAX Control Toolkit inclut un contrôle nommé du contrôle. Ce contrôle affiche un éditeur HTML complet. Suivez ces étapes pour ajouter le contrôle d’édition à une page :
+Par exemple, l’onglet AJAX Control Toolkit comprend un contrôle nommé le contrôle Editor. Ce contrôle affiche un éditeur HTML enrichi. Pour ajouter le contrôle Editor à une page, procédez comme suit :
 
-1. Créer une nouvelle page ASP.NET nommée ShowEditor.aspx
-2. Sélectionnez le contrôle ScriptManager sous l’onglet Extensions AJAX dans la boîte à outils et faites glisser le contrôle sur la page.
-3. Sélectionnez le contrôle d’édition sous l’onglet AJAX Control Toolkit dans la boîte à outils et faites glisser le contrôle sur la page (voir Figure 1). Le concepteur doit ressembler à la Figure 2.
-4. Exécuter le site web en sélectionnant l’option de menu **déboguer, démarrer le débogage** ou appuyant sur la touche F5.
-5. Vous devez voir la page dans la Figure 3.
+1. Créer une nouvelle page ASP.NET nommée ShowEditor. aspx
+2. Sélectionnez le contrôle ScriptManager sous l’onglet Extensions AJAX de la boîte à outils et faites glisser le contrôle sur la page.
+3. Sélectionnez le contrôle de l’éditeur sous l’onglet AJAX Control Toolkit de la boîte à outils, puis faites glisser le contrôle sur la page (voir figure 1). Le concepteur doit ressembler à la figure 2.
+4. Exécutez le site Web en sélectionnant l’option de menu **Déboguer, démarrer le débogage ou en** appuyant sur la touche F5.
+5. La page de la figure 3 doit s’afficher.
 
-[![Sélection du contrôle de l’éditeur HTML](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image1.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image1.png)
+[![sélection du contrôle de l’éditeur HTML](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image1.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image1.png)
 
-**Figure 01**: Sélection du contrôle de l’éditeur HTML ([cliquez pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image2.png))
+**Figure 01**: sélection du contrôle de l’éditeur HTML ([cliquez pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image2.png))
 
-[![Concepteur de Visual Studio avec le contrôle ScriptManager et modifier](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image2.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image3.png)
+[![le concepteur Visual Studio avec ScriptManager et le contrôle d’édition](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image2.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image3.png)
 
-**Figure 02**: Concepteur de Visual Studio avec le contrôle ScriptManager et Edit ([cliquez pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image4.png))
+**Figure 02**: concepteur Visual Studio avec ScriptManager et le contrôle d’édition ([cliquez pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image4.png))
 
-[![La page DisplayEditor.aspx](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image3.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image5.png)
+[![la page DisplayEditor. aspx](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image3.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image5.png)
 
-**Figure 03**: La page DisplayEditor.aspx ([cliquez pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image6.png))
+**Figure 03**: page DisplayEditor. aspx ([cliquez pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image6.png))
 
-## <a name="using-ajax-control-toolkit-control-extenders"></a>À l’aide des extendeurs de contrôle de boîte à outils de contrôle AJAX
+## <a name="using-ajax-control-toolkit-control-extenders"></a>Utilisation d’extendeurs de contrôle du kit d’outils de contrôle AJAX
 
-AJAX Control Toolkit contient également des extendeurs de contrôle. Comme son nom l’indique, un extendeur de contrôle étend les fonctionnalités d’un contrôle existant. Par exemple, l’extendeur du contrôle ConfirmButton étend le contrôle de bouton ASP.NET standard. L’extendeur modifie le comportement de s contrôle bouton pour que le bouton affiche une boîte de dialogue de confirmation lorsque vous cliquez dessus.
+La boîte à outils de contrôle AJAX contient également des extendeurs de contrôle. Comme son nom l’indique, un extendeur de contrôle étend les fonctionnalités d’un contrôle existant. Par exemple, l’extendeur de contrôle ConfirmButton étend le contrôle de bouton ASP.NET standard. L’extendeur modifie le comportement des contrôles de bouton afin que le bouton affiche une boîte de dialogue de confirmation lorsque vous cliquez dessus.
 
-Un extendeur de contrôle, comme un contrôle AJAX Control Toolkit, requiert un contrôle ScriptManager. Avant de commencer à l’aide des extendeurs de contrôle dans la page, vous devez ajouter un contrôle ScriptManager à une page.
+Un extendeur de contrôle, tout comme un contrôle de boîte à outils de contrôle AJAX, requiert un contrôle ScriptManager. Vous devez ajouter un contrôle ScriptManager à une page avant de commencer à utiliser les extendeurs de contrôle dans la page.
 
-Suivez ces étapes pour utiliser l’extendeur du contrôle ConfirmButton :
+Procédez comme suit pour utiliser l’extendeur de contrôle ConfirmButton :
 
-1. Créer une nouvelle page ASP.NET nommée ShowConfirmButton.aspx
-2. Ajouter un contrôle ScriptManager à la page en faisant glisser le contrôle sur la page sous l’onglet Extensions AJAX.
-3. Ajouter un contrôle de bouton standard à la page en faisant glisser le bouton sous l’onglet Standard dans la boîte à outils vers l’aire du concepteur.
-4. Cliquez sur le **ajouter un extendeur** option de tâche (voir Figure 4).
-5. Dans la boîte de dialogue Choisir un extendeur, sélectionnez ConfirmButtonExtender (voir Figure 5) et cliquez sur le bouton OK.
-6. Sélectionnez le contrôle de bouton dans le concepteur et développez les extendeurs, Button1\_nœud ConfirmButtonExtender dans la fenêtre Propriétés (voir Figure 6). Affectez la valeur *vraiment ?* à la propriété ConfirmText la valeur.
-7. Exécuter la page en sélectionnant l’option de menu **déboguer, démarrer le débogage** ou appuyez sur la touche F5.
+1. Créer une nouvelle page ASP.NET nommée ShowConfirmButton. aspx
+2. Ajoutez un contrôle ScriptManager à la page en faisant glisser le contrôle sur la page à partir de sous l’onglet Extensions AJAX.
+3. Ajoutez un contrôle bouton standard à la page en faisant glisser le bouton situé sous l’onglet standard de la boîte à outils vers l’aire du concepteur.
+4. Cliquez sur l’option Ajouter une tâche d' **extendeur** (voir figure 4).
+5. Dans la boîte de dialogue Choisir un extendeur, sélectionnez ConfirmButtonExtender (voir la figure 5), puis cliquez sur le bouton OK.
+6. Sélectionnez le contrôle Button dans le concepteur et développez le nœud extendeurs, button1\_ConfirmButtonExtender dans le Fenêtre Propriétés (voir figure 6). Affectez *vraiment* la valeur à la propriété ConfirmText.
+7. Exécutez la page en sélectionnant l’option de menu **Déboguer, démarrer le débogage** ou appuyez sur la touche F5.
 
-[![L’option de tâche Ajouter un extendeur](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image4.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image7.png)
+[![l’option Ajouter une tâche d’extendeur](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image4.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image7.png)
 
-**Figure 04**: L’option de tâche Ajouter un extendeur ([cliquez pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image8.png))
+**Figure 04**: option de tâche Ajouter un extendeur ([cliquez pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image8.png))
 
-[![En sélectionnant l’extendeur du contrôle ConfirmButton](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image5.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image9.png)
+[![sélection de l’extendeur de contrôle ConfirmButton](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image5.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image9.png)
 
-**Figure 05**: En sélectionnant l’extendeur du contrôle ConfirmButton ([cliquez pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image10.png))
+**Figure 05**: sélection de l’extendeur de contrôle ConfirmButton ([Cliquer pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image10.png))
 
-[![Définition d’une propriété ConfirmButton](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image6.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image11.png)
+[![définition d’une propriété ConfirmButton](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image6.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image11.png)
 
-**Figure 06**: Définition d’une propriété ConfirmButton ([cliquez pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image12.png))
+**Figure 06**: définition d’une propriété ConfirmButton ([cliquez pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image12.png))
 
-Lorsque la page s’ouvre, vous devez voir un bouton. Lorsque vous cliquez sur le bouton, vous obtenez la boîte de dialogue de confirmation dans la Figure 7.
+Lorsque la page s’ouvre, vous devez voir un bouton. Lorsque vous cliquez sur le bouton, vous recevez la boîte de dialogue de confirmation de la figure 7.
 
-[![Affichage de la boîte de dialogue de confirmation](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image7.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image13.png)
+[![affichage de la boîte de dialogue de confirmation](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image7.jpg)](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image13.png)
 
-**Figure 07**: Affichage de la boîte de dialogue de confirmation ([cliquez pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image14.png))
+**Figure 07**: affichage de la boîte de dialogue de confirmation ([cliquez pour afficher l’image en taille réelle](using-ajax-control-toolkit-controls-and-control-extenders-cs/_static/image14.png))
 
-Notez que vous normalement ne faites pas glisser un extendeur de contrôle sur une page. Au lieu de cela, vous utilisez le **ajouter un extendeur** option pour ajouter un extendeur à un contrôle que vous avez déjà ajouté à une page de tâche. Notez, en outre, que vous définissez contrôle propriétés extendeur en ouvrant la feuille de propriétés pour le contrôle en cours d’extension.
+Notez que vous ne faites pas normalement glisser un extendeur de contrôle sur une page. Au lieu de cela, vous utilisez l’option de tâche **Ajouter un extendeur** pour ajouter un extendeur à un contrôle que vous avez déjà ajouté à une page. Notez, en outre, que vous définissez les propriétés d’extendeur de contrôle en ouvrant la feuille de propriétés du contrôle qui est étendu.
 
-Un seul contrôle ASP.NET peut être étendu par plusieurs extendeurs de contrôle. La feuille de propriétés pour le contrôle en cours d’extension répertorie tous les extendeurs de contrôle associés au contrôle.
+Un seul contrôle ASP.NET peut être étendu par plusieurs extendeurs de contrôle. La feuille de propriétés du contrôle qui est étendu répertorie tous les extendeurs de contrôle associés au contrôle.
 
 > [!div class="step-by-step"]
 > [Précédent](get-started-with-the-ajax-control-toolkit-cs.md)

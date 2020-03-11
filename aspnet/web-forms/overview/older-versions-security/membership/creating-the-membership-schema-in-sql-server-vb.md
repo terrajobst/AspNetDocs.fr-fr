@@ -9,11 +9,11 @@ ms.assetid: 112a674d-716f-41a6-99b8-4074d65a54c0
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/creating-the-membership-schema-in-sql-server-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 96fd72d1f368b1f7947ef0a2293161d97aaf7065
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74580733"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78632054"
 ---
 # <a name="creating-the-membership-schema-in-sql-server-vb"></a>Création du schéma d’appartenance dans SQL Server (VB)
 
@@ -33,7 +33,7 @@ Comme indiqué dans le <a id="Tutorial1"> </a>didacticiel sur la [*sécurité et
 
 Ce didacticiel commence par examiner les techniques permettant d’ajouter le schéma nécessaire à la base de données afin d’utiliser le `SqlMembershipProvider`. À la suite de cela, nous examinerons les tables clés dans le schéma et nous étudierons leur objectif et leur importance. Ce didacticiel se termine par une présentation de la façon d’indiquer à une application ASP.NET le fournisseur que l’infrastructure d’appartenance doit utiliser.
 
-Commençons !
+C’est parti !
 
 ## <a name="step-1-deciding-where-to-place-the-user-store"></a>Étape 1 : choix de l’emplacement du magasin d’utilisateurs
 
@@ -206,9 +206,9 @@ Le tableau 1 illustre ce à quoi peuvent ressembler ces trois colonnes pour les 
 
 | **Technique de stockage&lt;\_O3A\_p/&gt;** | **Mot de passe&lt;\_O3A\_p/&gt;** | **PasswordFormat&lt;\_O3A\_p/&gt;** | **PasswordSalt&lt;\_O3A\_p/&gt;** |
 | --- | --- | --- | --- |
-| Effacer | MySecret! | 0 | tTnkPlesqissc2y2SMEygA = = |
-| Haché | 2oXm6sZHWbTHFgjgkGQsc2Ec9ZM = | 1 | wFgjUfhdUFOCKQiI61vtiQ = = |
-| Chiffré | 62RZgDvhxykkqsMchZ0Yly7HS6onhpaoCYaRxV8g0F4CW56OXUU3e7Inza9j9BKp | 2 | LSRzhGS/AA/oqAXGLHJNBw = = |
+| Effacer | MySecret! | 0 | tTnkPlesqissc2y2SMEygA== |
+| Haché | 2oXm6sZHWbTHFgjgkGQsc2Ec9ZM= | 1 | wFgjUfhdUFOCKQiI61vtiQ== |
+| Chiffré | 62RZgDvhxykkqsMchZ0Yly7HS6onhpaoCYaRxV8g0F4CW56OXUU3e7Inza9j9BKp | 2 | LSRzhGS/aa/oqAXGLHJNBw== |
 
 **Tableau 1**: exemples de valeurs pour les champs liés au mot de passe lors du stockage du mot de passe mysecret !
 
@@ -247,21 +247,21 @@ Outre les attributs `name` et `type`, l’élément `<add>` contient des attribu
 | **Définition de&lt;\_O3A\_p/&gt;** | **Description&lt;\_O3A\_p/&gt;** |
 | --- | --- |
 | `ApplicationName` | Souvenez-vous que l’infrastructure d’appartenance permet de partitionner un seul magasin d’utilisateur entre plusieurs applications. Ce paramètre indique le nom de la partition d’application utilisée par le fournisseur d’appartenances. Si cette valeur n’est pas explicitement spécifiée, elle est définie, au moment de l’exécution, à la valeur du chemin d’accès de la racine virtuelle de l’application. |
-| `commandTimeout` | Spécifie la valeur du délai d’expiration de la commande SQL (en secondes). La valeur par défaut est 30. |
-| `connectionStringName` | Nom de la chaîne de connexion dans l’élément `<connectionStrings>` à utiliser pour se connecter à la base de données du magasin de l’utilisateur. Cette valeur est obligatoire. |
+| `commandTimeout` | Spécifie la valeur du délai d’expiration de la commande SQL (en secondes). La valeur par défaut est 30. |
+| `connectionStringName` | Nom de la chaîne de connexion dans l’élément `<connectionStrings>` à utiliser pour se connecter à la base de données du magasin de l’utilisateur. Cette valeur est requise. |
 | `description` | Fournit une description conviviale du fournisseur inscrit. |
 | `enablePasswordRetrieval` | Spécifie si les utilisateurs peuvent récupérer leur mot de passe oublié. La valeur par défaut est `false`. |
 | `enablePasswordReset` | Indique si les utilisateurs sont autorisés à réinitialiser leur mot de passe. La valeur par défaut est `true`. |
 | `maxInvalidPasswordAttempts` | Nombre maximal de tentatives de connexion qui peuvent se produire pour un utilisateur donné pendant la `passwordAttemptWindow` spécifiée avant que l’utilisateur ne soit verrouillé. La valeur par défaut est 5. |
 | `minRequiredNonalphanumericCharacters` | Nombre minimal de caractères non alphanumériques qui doivent apparaître dans le mot de passe d’un utilisateur. Cette valeur doit être comprise entre 0 et 128 ; la valeur par défaut est 1. |
 | `minRequiredPasswordLength` | Nombre minimal de caractères requis dans un mot de passe. Cette valeur doit être comprise entre 0 et 128 ; la valeur par défaut est 7. |
-| `name` | Nom du fournisseur inscrit. Cette valeur est obligatoire. |
+| `name` | Nom du fournisseur inscrit. Cette valeur est requise. |
 | `passwordAttemptWindow` | Nombre de minutes pendant lesquelles les échecs de tentatives de connexion sont suivis. Si un utilisateur fournit des informations d’identification de connexion non valides `maxInvalidPasswordAttempts` fois dans cette fenêtre spécifiée, il est verrouillé. La valeur par défaut est 10. |
-| `PasswordFormat` | Format de stockage du mot de passe : `Clear`, `Hashed`ou `Encrypted`. La valeur par défaut est `Hashed`, |
+| `PasswordFormat` | Format de stockage du mot de passe : `Clear`, `Hashed`ou `Encrypted`. La valeur par défaut est `Hashed`. |
 | `passwordStrengthRegularExpression` | Si elle est fournie, cette expression régulière est utilisée pour évaluer la force du mot de passe sélectionné par l’utilisateur lors de la création d’un nouveau compte ou lors de la modification de son mot de passe. La valeur par défaut est une chaîne vide. |
 | `requiresQuestionAndAnswer` | Spécifie si un utilisateur doit répondre à sa question de sécurité lors de la récupération ou de la réinitialisation de son mot de passe. La valeur par défaut est `true`. |
 | `requiresUniqueEmail` | Indique si tous les comptes d’utilisateur d’une partition d’application donnée doivent avoir une adresse de messagerie unique. La valeur par défaut est `true`. |
-| `type` | Spécifie le type du fournisseur. Cette valeur est obligatoire. |
+| `type` | Spécifie le type du fournisseur. Cette valeur est requise. |
 
 **Tableau 2**: paramètres de configuration d’appartenance et de `SqlMembershipProvider`
 

@@ -9,11 +9,11 @@ ms.assetid: 59c01998-9326-4ecb-9392-cb9615962140
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-cs
 msc.type: authoredcontent
 ms.openlocfilehash: a3e9562035cb24987b01fcdff5fbfb5fa8a1f894
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74629741"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78589998"
 ---
 # <a name="efficiently-paging-through-large-amounts-of-data-c"></a>Pagination efficace dans de grandes quantités de données (C#)
 
@@ -153,7 +153,7 @@ Dans la section précédente, nous avons créé la méthode DAL comme une instru
 
 **Figure 6**: ajouter une nouvelle procédure stockée pour la pagination des produits
 
-Cette procédure stockée doit accepter deux paramètres d’entrée d’entier : `@startRowIndex` et `@maximumRows` et utiliser la fonction `ROW_NUMBER()` ordonnée par le champ `ProductName`, en ne retournant que les lignes supérieures à la `@startRowIndex` spécifiée et inférieure ou égale à `@startRowIndex` + s. Entrez le script suivant dans la nouvelle procédure stockée, puis cliquez sur l’icône Enregistrer pour ajouter la procédure stockée à la base de données.
+Cette procédure stockée doit accepter deux paramètres d’entrée d’entier : `@startRowIndex` et `@maximumRows` et utiliser la fonction `ROW_NUMBER()` ordonnée par le champ `ProductName`, en ne retournant que les lignes supérieures à la `@startRowIndex` spécifiée et inférieure ou égale à `@startRowIndex` + s.`@maximumRow` Entrez le script suivant dans la nouvelle procédure stockée, puis cliquez sur l’icône Enregistrer pour ajouter la procédure stockée à la base de données.
 
 [!code-sql[Main](efficiently-paging-through-large-amounts-of-data-cs/samples/sample7.sql)]
 
@@ -300,10 +300,10 @@ Un article de mine, [pagination personnalisée dans ASP.NET 2,0 avec SQL Server 
 
 |  | **Durée moyenne (s)** | **Lectures** |
 | --- | --- | --- |
-| **Profileur SQL de pagination par défaut** | 1,411 | 383 |
-| **Profileur SQL de pagination personnalisée** | 0,002 | 29 |
-| **Suivi ASP.NET de pagination par défaut** | 2,379 | *NON APPLICABLE* |
-| **Suivi de ASP.NET de pagination personnalisé** | 0,029 | *NON APPLICABLE* |
+| **Profileur SQL de pagination par défaut** | 1.411 | 383 |
+| **Profileur SQL de pagination personnalisée** | 0.002 | 29 |
+| **Suivi ASP.NET de pagination par défaut** | 2.379 | *N/A* |
+| **Suivi de ASP.NET de pagination personnalisé** | 0.029 | *N/A* |
 
 Comme vous pouvez le voir, la récupération d’une page de données particulière requiert 354 moins de lectures en moyenne et s’est terminée en une fraction du temps. Au niveau de la page ASP.NET, la page a pu s’afficher à une date proche<sup>de 1/100 après</sup> l’utilisation de la pagination par défaut. Pour plus d’informations sur ces résultats, consultez [mon article](http://aspnet.4guysfromrolla.com/articles/031506-1.aspx) , ainsi que le code et une base de données que vous pouvez télécharger pour reproduire ces tests dans votre propre environnement.
 

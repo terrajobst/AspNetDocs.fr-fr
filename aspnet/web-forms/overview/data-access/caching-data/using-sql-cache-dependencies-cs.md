@@ -9,11 +9,11 @@ ms.assetid: 0e91842c-7f10-4aed-8c23-4ee3e2774014
 msc.legacyurl: /web-forms/overview/data-access/caching-data/using-sql-cache-dependencies-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 5bc27a08e39606c25b8f99d6ea057d2a853f08a6
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611986"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78550420"
 ---
 # <a name="using-sql-cache-dependencies-c"></a>Utilisation de dépendances de cache SQL (C#)
 
@@ -21,7 +21,7 @@ par [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Télécharger le code](https://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_61_CS.zip) ou [Télécharger le PDF](using-sql-cache-dependencies-cs/_static/datatutorial61cs1.pdf)
 
-> La stratégie de mise en cache la plus simple consiste à autoriser l’expiration des données mises en cache après une période spécifiée. Toutefois, cette approche simple signifie que les données mises en cache ne gèrent aucune association avec sa source de données sous-jacente, ce qui entraîne des données périmées qui sont conservées trop longtemps ou qui ont expiré trop tôt. Une meilleure approche consiste à utiliser la classe SqlCacheDependency afin que les données restent mises en cache jusqu’à ce que ses données sous-jacentes aient été modifiées dans la base de données SQL. Ce didacticiel vous montre comment procéder.
+> La stratégie de mise en cache la plus simple consiste à autoriser l’expiration des données mises en cache après une période spécifiée. Toutefois, cette approche simple signifie que les données mises en cache ne gèrent aucune association avec sa source de données sous-jacente, ce qui entraîne des données périmées qui sont conservées trop longtemps ou qui ont expiré trop tôt. Une meilleure approche consiste à utiliser la classe SqlCacheDependency afin que les données restent mises en cache jusqu’à ce que ses données sous-jacentes aient été modifiées dans la base de données SQL. Ce didacticiel vous explique les procédures.
 
 ## <a name="introduction"></a>Introduction
 
