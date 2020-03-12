@@ -8,12 +8,12 @@ ms.date: 11/28/2017
 ms.custom: seoapril2019
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 3e35c2bc0e46dfdb4544b772775eddd533f27be3
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 2717d93f47be9d4a6548731d8deeca312b25f39f
+ms.sourcegitcommit: 9e3ca74997a67c18589729d4b7303799905473eb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78556797"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79084053"
 ---
 # <a name="get-started-with-aspnet-web-api-2-c"></a>Prise en main de API Web ASP.NET 2C#()
 
@@ -29,7 +29,7 @@ API Web ASP.NET est une infrastructure permettant de créer des API Web en plus 
 
 ## <a name="software-versions-used-in-the-tutorial"></a>Versions logicielles utilisées dans le didacticiel
 
-- [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+- [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 - API Web 2
 
 Pour obtenir une version plus récente de ce didacticiel [, consultez créer une API Web avec ASP.net Core et Visual Studio pour Windows](https://docs.microsoft.com/aspnet/core/tutorials/first-web-api) .
@@ -67,7 +67,7 @@ Nommez la classe &quot;&quot;de produit. Ajoutez les propriétés suivantes à l
 
 [!code-csharp[Main](tutorial-your-first-web-api/samples/sample1.cs)]
 
-## <a name="adding-a-controller"></a>Ajour d’un contrôleur
+## <a name="adding-a-controller"></a>Ajout d'un contrôleur
 
 Dans l’API web, un *contrôleur* est un objet qui gère les requêtes HTTP. Nous allons ajouter un contrôleur qui peut retourner une liste de produits ou un seul produit spécifié par ID.
 
@@ -104,7 +104,7 @@ Le contrôleur définit deux méthodes qui retournent des produits :
 - La méthode `GetAllProducts` retourne l’intégralité de la liste de produits sous la forme d’un type de **&gt;de produit IEnumerable&lt;** .
 - La méthode `GetProduct` recherche un seul produit par son ID.
 
-C’est tout ! Vous disposez d’une API Web opérationnelle. Chaque méthode sur le contrôleur correspond à un ou plusieurs URI :
+Et voilà ! Vous disposez d’une API Web opérationnelle. Chaque méthode sur le contrôleur correspond à un ou plusieurs URI :
 
 | Méthode du contrôleur | URI |
 | --- | --- |
@@ -165,7 +165,7 @@ Si vous entrez un ID non valide, le serveur renvoie une erreur HTTP :
 
 ## <a name="using-f12-to-view-the-http-request-and-response"></a>Utilisation de la touche F12 pour afficher la requête et la réponse HTTP
 
-Lorsque vous utilisez un service HTTP, il peut être très utile de voir les messages de requête et de demande HTTP. Pour ce faire, vous pouvez utiliser les outils de développement F12 dans Internet Explorer 9. Dans Internet Explorer 9, appuyez sur **F12** pour ouvrir les outils. Cliquez sur l’onglet **réseau** , puis appuyez sur **Démarrer la capture**. Revenez maintenant à la page Web et appuyez sur **F5** pour recharger la page Web. Internet Explorer capture le trafic HTTP entre le navigateur et le serveur Web. La vue Résumé affiche tout le trafic réseau d’une page :
+Lorsque vous utilisez un service HTTP, il peut être très utile de voir les messages de requête et de réponse HTTP. Pour ce faire, vous pouvez utiliser les outils de développement F12 dans Internet Explorer 9. Dans Internet Explorer 9, appuyez sur **F12** pour ouvrir les outils. Cliquez sur l’onglet **réseau** , puis appuyez sur **Démarrer la capture**. Revenez maintenant à la page Web et appuyez sur **F5** pour recharger la page Web. Internet Explorer capture le trafic HTTP entre le navigateur et le serveur Web. La vue Résumé affiche tout le trafic réseau d’une page :
 
 ![](tutorial-your-first-web-api/_static/image14.png)
 
